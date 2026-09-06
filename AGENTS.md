@@ -63,7 +63,8 @@
 
 本项目提供 `interview-quiz` skill，用于只读抽查 `c++interview/` 与 `llm-algo-leetcode/` 中的 C++、Algorithm 知识，并在独立目录维护错题和复习计划。
 
-- 使用 `$interview-quiz` 开始一轮面试抽查；未指定时生成 10 道题，一次回答一道。
-- 使用 `$interview-quiz review` 只复习到期错题。
+- 使用 `$interview-quiz [cpp|algorithm|all]` 开始一轮面试抽查；未指定范围时使用 `all`，生成 10 道题，一次回答一道。
+- 使用 `$interview-quiz review [cpp|algorithm|all]` 只复习指定范围内的到期错题。
 - 派生数据写入 `interview-review/`，不得修改、移动或删除上述两个知识源。
 - 默认遗忘曲线间隔为 1、3、7、14、30 天；用户明确指定节奏时，以用户设置为准。
+- 错误或部分正确的反馈必须包含具体 C++ 代码、算法输入输出或反例，不能只给抽象解释。

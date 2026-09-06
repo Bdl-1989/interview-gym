@@ -190,6 +190,11 @@
   },
   "active": "b08d6c4903cf1add",
   "lastOpenFiles": [
+    "interview-review/sessions/2026-09-06.md",
+    "interview-review/wrong-answers.md",
+    "interview-review/sessions",
+    "interview-review/review-schedule.md",
+    "interview-review",
     "c++interview/Problems/NeumannNeighborProblem/Recursive/README.md",
     "c++interview/Problems/NeumannNeighborProblem/Recursive/Neumann2_4_12.exe",
     "c++interview/Problems/NeumannNeighborProblem/Recursive/Neumann2_4_12.cpp",
@@ -202,9 +207,7 @@
     "c++interview/Problems/RoundRobinProblem/README.md",
     "c++interview/Problems/RoundRobinProblem/MatchTable.exe",
     "c++interview/Problems/RoundRobinProblem/MatchTable.cpp",
-    "c++interview/Problems/NeumannNeighborProblem/Recursive",
     "c++interview/Problems/NeumannNeighborProblem/README.md",
-    "c++interview/Problems/NeumannNeighborProblem/Formula",
     "c++interview/Problems/KnapsackProblem/README.md",
     "c++interview/Problems/ChessboardCoverageProblem/README.md",
     "c++interview/DesignPattern/SingletonPattern/README.md",
@@ -232,9 +235,6 @@
     "interview/Problems/RoundRobinProblem/README.md",
     "interview/Problems/NeumannNeighborProblem/README.md",
     "interview/Problems/KnapsackProblem/README.md",
-    "interview/Problems/ChessboardCoverageProblem/README.md",
-    "interview/DesignPattern/SingletonPattern/README.md",
-    "interview/DesignPattern/README.md",
-    "llm-algo-leetcode/docs/00_Prerequisites/03_Python_OOP_and_Utility_Patterns.md"
+    "interview/Problems/ChessboardCoverageProblem/README.md"
   ]
 }

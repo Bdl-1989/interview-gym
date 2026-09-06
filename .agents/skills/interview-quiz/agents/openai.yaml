@@ -1,4 +1,4 @@
 interface:
   display_name: "Interview Quiz"
   short_description: "从当前 C++ 与 Algorithm 知识生成面试抽查并维护遗忘曲线错题集"
-  default_prompt: "使用 $interview-quiz，从当前项目的 c++interview/ 与 llm-algo-leetcode/ 生成 10 道面试题，逐题提问并记录错题与复习日期。"
+  default_prompt: "使用 $interview-quiz all，从当前项目的全部已配置题库生成 10 道面试题，逐题提问；错题解析必须包含具体代码或反例，并记录复习日期。"
