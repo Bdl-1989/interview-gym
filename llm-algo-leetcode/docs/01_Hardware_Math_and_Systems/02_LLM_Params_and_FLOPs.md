@@ -1,0 +1,294 @@
+# 02. LLM Params and FLOPs | 大模型参数量与算力推导
+
+**难度：** Medium | **环境：** CPU-first | **标签：** `数值基础`, `参数估算`, `FLOPs` | **目标人群：** 基础概念补齐者
+
+> 🚀 **云端运行环境**
+>
+> 本章节的实战代码可以点击以下链接在免费 GPU 算力平台上直接运行：
+>
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datawhalechina/llm-algo-leetcode/blob/main/01_Hardware_Math_and_Systems/02_LLM_Params_and_FLOPs.ipynb)
+> [![Open In Studio](https://img.shields.io/badge/Open%20In-ModelScope-blueviolet?logo=alibabacloud)](https://modelscope.cn/my/mynotebook) *(国内推荐：魔搭社区免费实例)*
+
+
+---
+
+## 本节导读
+
+先把参数量的构成拆开，再把前向推理与完整训练的 FLOPs 粗算清楚，这样后面的训练成本、吞吐评估和模型选型才会有统一的底座。
+
+这一页是 `Part 01` 的规模估算基础，主要服务参数量、训练 FLOPs 和 LoRA 资源预算判断，也为 `Profiling 专题` 提供吞吐估算的共同口径。本节是 **CPU-first；GPU 用于扩展验证**：CPU 练习可以验证参数量、FLOPs 和数量级估算；它不能证明实际 step time、GPU 利用率、显存峰值或某个模型的真实吞吐。完成后，你应该能用模型结构和 token 数做数量级预算，并指出公式忽略了哪些项；真实资源结论仍需放入固定 workload 测量。
+
+**关键词：** `parameters`, `FLOPs`, `MFU`
+
+估算还会受到 tied weights、实现细节、dtype 和 runtime 临时缓冲影响。对应显存优化路线的 Task1（规模与预算认知），也为训练微调路线的模型选型提供基础。需要真实训练资源结论时进入 73；如果要比较 checkpoint / offload 对峰值的影响，再进入 76，本节不单独产出 73–76 报告。
+
+---
+
+## 前置阅读
+**导语：** 本页沿着“参数量 → FLOPs → 训练成本”计算，得到后续微调项目需要的数量级估算。
+
+- [Group 0B: PyTorch Tensors and Autograd | 0B: PyTorch 张量与自动求导](../00_Prerequisites/0B.md)
+- [01. Data Types and Precision | 大模型的数据格式与混合精度](./01_Data_Types_and_Precision.md)
+
+## 相关阅读
+**导语：** 如果想继续把参数规模直觉接到显存预算、并行成本和微调方案判断上，可以沿这条主线继续往下看。
+- [06. VRAM Calculation and ZeRO | 显存计算与 ZeRO 优化](./06_VRAM_Calculation_and_ZeRO.md)
+- [22. MoE Parameter and Compute | MoE 模型参数量计算](./22_MoE_Parameter_and_Compute.md)
+- [10. LoRA Tutorial | LoRA 教程](../02_PyTorch_Algorithms/10_LoRA_Tutorial.md)
+
+---
+## Q1：假设隐藏层维度为 $d$，词表大小为 $V$。请推导一个 Decoder 的总参数量，并比较标准 FFN 与 SwiGLU。
+
+<details>
+<summary>点击展开查看解析</summary>
+
+我们把 Transformer 拆解为三大部分（忽略极小的 bias 和 LayerNorm 的权重，它们对百亿参数的占比不到千分之一）：
+
+**1. 嵌入层 (Embedding Layer) 与 输出层 (LM Head)**
+- Token Embedding: 形状 $[V, d]$，参数量为 $V \times d$。
+- LM Head (输出映射): 形状 $[d, V]$，参数量为 $V \times d$。
+- *(注：很多模型如 Gemma/Qwen 会共享这两个权重，参数量减半。这里我们假设不共享)*。
+
+**2. 注意力机制 (Multi-Head Attention, MHA)**
+在每个 Decoder 块中：
+- 投影 Q, K, V：三个形状为 $[d, d]$ 的矩阵。参数量 $3d^2$。
+- 投影 Output (O)：一个形状为 $[d, d]$ 的矩阵。参数量 $d^2$。
+- **MHA 总参数量 = $4d^2$**。
+*(如果采用 GQA，K 和 V 的参数量会大幅减少，这里按最原始的 MHA 计算)*。
+
+**3. 前馈神经网络 (Feed Forward Network, FFN / MLP)**
+在标准 GPT 架构中，隐藏层会先升维到 $4d$，再降维回 $d$：
+- 升维矩阵 $W_{up}$：$[d, 4d]$，参数量 $4d^2$。
+- 降维矩阵 $W_{down}$：$[4d, d]$，参数量 $4d^2$。
+- **FFN 总参数量 = $8d^2$**。
+*(如果在 LLaMA 中使用 SwiGLU，维度会变为 $\frac{8}{3}d$，但有 3 个矩阵，总参数量依然是 $3 \times \frac{8}{3}d^2 = 8d^2$)*。
+
+**综上所述：**
+- 一个 Block 的参数量 = $4d^2$ (Attn) + $8d^2$ (MLP) = **$12d^2$**。
+- 总参数量 $\approx 2Vd + L \times 12d^2$。
+
+*以一个约 7B 参数规模的配置为例：$d=4096, L=32, V=32000$*
+*Block 参数 = $32 \times 12 \times 4096^2 \approx 6.4 \text{ Billion}$*
+*Embedding = $2 \times 32000 \times 4096 \approx 0.26 \text{ Billion}$*
+*总计约 6.7B，也就是所谓的 7B 模型！*
+</details>
+### Q1小验证：参数量计算
+
+实现一个函数，按照 `Embedding + Attention + SwiGLU FFN + LayerNorm + LM Head` 的方式估算 Transformer 参数量。
+
+```python
+def calculate_transformer_params(vocab_size, hidden_dim, num_layers, intermediate_size=None, tie_embeddings=False):
+    """按 dense Decoder-only Transformer 的简化结构估算参数量。
+
+    忽略 bias、具体 norm 变体和 MoE 路由差异；结果用于数量级预算，
+    不替代具体模型 config 或 checkpoint 的参数统计。
+    """
+    if min(vocab_size, hidden_dim, num_layers) <= 0:
+        raise ValueError('vocab_size、hidden_dim 和 num_layers 必须为正数')
+    if intermediate_size is not None and intermediate_size <= 0:
+        raise ValueError('intermediate_size 必须为正数')
+    if intermediate_size is None:
+        intermediate_size = 4 * hidden_dim
+
+    embedding_params = vocab_size * hidden_dim
+    attention_params = num_layers * (4 * hidden_dim * hidden_dim)
+    ffn_params = num_layers * (3 * hidden_dim * intermediate_size)
+    layernorm_params = num_layers * (2 * hidden_dim)
+    lm_head_params = 0 if tie_embeddings else vocab_size * hidden_dim
+
+    total_params = embedding_params + attention_params + ffn_params + layernorm_params + lm_head_params
+    return total_params
+```
+
+
+```python
+def test_calculate_transformer_params():
+    try:
+        result = calculate_transformer_params(1000, 64, 2, 256, tie_embeddings=True)
+        assert result == 195328, f"错误：期望 195328，实际 {result}"
+
+        result = calculate_transformer_params(1000, 64, 2, 256, tie_embeddings=False)
+        assert result == 259328, f"错误：期望 259328，实际 {result}"
+
+        result = calculate_transformer_params(32000, 4096, 32, 11008, tie_embeddings=False)
+        assert result > 6000000000, f"错误：LLaMA 级别模型参数量应大于 6B，实际 {result}"
+
+        print("✅ 参数量函数测试通过！")
+    except AssertionError as e:
+        print(f"❌ 测试失败: {e}")
+    except Exception as e:
+        print(f"❌ 运行错误: {e}")
+
+test_calculate_transformer_params()
+```
+
+### Q1扩展验证：估算 LLaMA-7B 的参数量
+
+使用上面的函数估算一个 7B 级模型的大致参数规模，并观察各模块的占比。
+
+```python
+vocab_size = 32000
+hidden_dim = 4096
+num_layers = 32
+intermediate_size = 11008
+
+total_params = calculate_transformer_params(vocab_size, hidden_dim, num_layers, intermediate_size, tie_embeddings=False)
+print(f"估算参数量: {total_params / 1e9:.2f}B")
+print("提示：不同实现会因为是否共享词嵌入、是否计入偏置而略有差异。")
+```
+
+## Q2：前向传播 (Inference / Forward Pass) 的 FLOPs 是怎么计算的？
+
+<details>
+<summary>点击展开查看解析</summary>
+
+在了解了参数量之后，我们来看大模型在进行推理（前向传播）时需要多少算力。
+
+**核心数量级估算：对 dense Transformer，1 个参数处理 1 个 Token 常用约 2 次浮点运算（FLOPs）估算。**
+为什么是 2 次？因为在矩阵乘法 $Y = W \times X$ 中，对于每一个权重元素，我们需要做一次**乘法**和一次**加法**（Multiply-Accumulate, MAC）。
+
+**推理 FLOPs 公式：**
+$$ C_{forward} \approx 2 \times P \times T $$
+其中：
+- $C_{forward}$ 是前向传播需要的计算量（FLOPs）
+- $P$ 是模型的总参数量（Parameters）
+- $T$ 是处理的 Token 数量（Tokens）
+
+*(注：这里忽略了 Attention 矩阵乘积、归一化、激活函数、padding 和其他算子；占比会随序列长度、模型结构和 batch 改变，不能固定写成 99%。)*
+</details>
+### Q2小验证：训练与推理 FLOPs 计算
+
+大模型训练常用近似公式：`训练 FLOPs ≈ 6 × 参数量 × token 数`。它适合做 dense Transformer 的数量级预算，不是对每个模型和 workload 都精确成立。
+
+```python
+def calculate_training_flops(num_params_b, num_tokens, flops_per_param_token=6):
+    """粗估 dense Transformer 训练 FLOPs。
+
+    默认 6 FLOPs/parameter/token 是 forward、backward 的教学近似，
+    不包含序列长度相关的 attention 项、MoE 路由或 checkpoint 重算。
+    """
+    if num_params_b < 0 or num_tokens < 0 or flops_per_param_token < 0:
+        raise ValueError('参数量、token 数和 FLOPs 系数不能为负数')
+    return num_params_b * 1_000_000_000 * num_tokens * flops_per_param_token
+```
+
+
+```python
+def test_calculate_training_flops():
+    try:
+        result = calculate_training_flops(7, 1_000_000_000_000)
+        assert result == 42_000_000_000_000_000_000_000, f"错误：期望 4.2e22，实际 {result}"
+
+        result = calculate_training_flops(1, 1_000_000, flops_per_param_token=6)
+        assert result == 6_000_000_000_000_000, f"错误：期望 6e15，实际 {result}"
+
+        print("✅ FLOPs 函数测试通过！")
+    except AssertionError as e:
+        print(f"❌ 测试失败: {e}")
+    except Exception as e:
+        print(f"❌ 运行错误: {e}")
+
+test_calculate_training_flops()
+```
+
+### Q2扩展验证：估算训练时间
+
+给定 GPU 的理论算力、GPU 数量和利用率，估算完成训练需要的时间。
+
+```python
+def estimate_training_time(num_params_b, num_tokens, gpu_tflops, num_gpus, efficiency=0.35):
+    """按理论 FLOPs 和假设效率估算训练时间，不是实测时间。"""
+    if gpu_tflops <= 0 or num_gpus <= 0 or not 0 < efficiency <= 1:
+        raise ValueError('gpu_tflops、num_gpus 必须为正数，efficiency 必须在 (0, 1]')
+    total_flops = calculate_training_flops(num_params_b, num_tokens)
+    effective_flops = gpu_tflops * 1e12 * num_gpus * efficiency
+    hours = total_flops / effective_flops / 3600
+    return hours
+```
+
+## Q3：训练 (Training) 时包含前向和反向传播，总 FLOPs 是多少？
+
+<details>
+<summary>点击展开查看解析</summary>
+
+训练不仅包含前向传播计算损失，还包含反向传播计算梯度。
+
+在反向传播中，我们需要：
+1. 计算激活值（Activations）的梯度，以便将误差继续向后传（大约需要 $2 \times P \times T$ FLOPs）。
+2. 计算权重（Weights）的梯度，用于模型参数更新（大约也需要 $2 \times P \times T$ FLOPs）。
+
+因此，反向传播的计算量大约是前向传播的 **2 倍**。
+
+**训练 FLOPs 公式（数量级近似）：**
+$$ C_{train} = C_{forward} + C_{backward} \approx 2PT + 4PT = 6 \times P \times T $$
+
+**实战估算：**
+假设我们要从头预训练一个 LLaMA-7B（70亿参数）模型，训练数据量是 1T（1万亿）个 Tokens。
+需要的总理论算力 $C = 6 \times (7 \times 10^9) \times (1 \times 10^{12}) = 4.2 \times 10^{22}$ FLOPs。
+
+如果你手里有 1000 张 A100 (每张卡假设实际算力能跑出 150 TFLOPs，即 $1.5 \times 10^{14}$ FLOPs/s)，那么训练耗时：
+$$ \text{Time} = \frac{4.2 \times 10^{22}}{1000 \times 1.5 \times 10^{14}} = 2.8 \times 10^5 \text{ 秒} \approx 3.2 \text{ 天} $$
+</details>
+### Q3小验证：场景应用
+
+把参数量、FLOPs 和训练时间串联起来，感受公式在工程中的作用。
+
+```python
+scenarios = [
+    ('1x A100 80GB', 312, 1, 0.35),
+    ('8x A100 80GB', 312, 8, 0.35),
+    ('8x H100 80GB', 500, 8, 0.45),
+]
+
+print('LLaMA-7B 训练时间粗估（1T tokens）：')
+print('-' * 70)
+for name, gpu_tflops, num_gpus, eff in scenarios:
+    hours = estimate_training_time(7, 1_000_000_000_000, gpu_tflops, num_gpus, eff)
+    print(f"{name:<16} {hours:>12.1f} 小时  ({hours/24:>8.1f} 天)")
+```
+
+## Q4：训练大模型时，什么是算力利用率 (MFU, Model FLOPs Utilization)？
+
+<details>
+<summary>点击展开查看解析</summary>
+
+通过前面的 Q3 我们算出了**理论所需算力**。但在实际工程中，硬件不会把所有时间都花在矩阵乘法上。这就引入了 MFU；它是观察模型计算利用率的一个重要指标，但不能单独代表训练工程质量。
+
+- **理论算力 (Peak FLOPs)**：显卡说明书上写的算力。比如 A100 BF16 理论峰值是 312 TFLOPs（每秒执行 312 万亿次浮点运算）。
+- **实际算力 (Observed FLOPs)**：即我们用 $6PT$ 算出的整个训练所需的理论运算量，除以跑完这些步骤所花的**实际时间**。
+- **MFU = 实际模型 FLOPs / 硬件理论峰值 FLOPs**。实际模型 FLOPs 通常需要结合模型结构和 token 数估算，不能直接把一个时间占比当成 MFU。
+
+**为什么 MFU 很难达到 100%？**
+因为在真正的训练集群中，存在 **Memory-bound (显存墙)** 和 **Communication (通信瓶颈)**。GPU 很多时间在等待数据从内存搬运过来，或者在等其他机器的 All-Reduce 数据传过来，并没有在做有效的乘加运算。
+
+目前顶级的工业界预训练集群，MFU 通常在 **40% 到 60%** 之间。如果你微调时的 MFU 只有 10%，说明你的代码里存在严重的通信或 IO 阻塞（比如没开梯度累加，或者数据读取成了瓶颈）。
+</details>
+### Q4小验证：计算时间占比与瓶颈分解
+
+把计算、显存等待和通信等待拆开，观察时间线上哪些部分在拖慢执行。下面的函数计算的是教学用的计算时间占比，不是严格 MFU。
+
+
+```python
+def compute_time_fraction(compute_ms, memory_wait_ms, comm_wait_ms):
+    total_ms = compute_ms + memory_wait_ms + comm_wait_ms
+    if total_ms <= 0:
+        return {'mfu': 0.0, 'dominant_stall': 'none'}
+    compute_fraction = compute_ms / total_ms
+    stalls = {'memory': memory_wait_ms, 'communication': comm_wait_ms}
+    dominant = max(stalls, key=stalls.get)
+    return {
+        'compute_time_fraction': round(compute_fraction, 3),
+        'dominant_stall': dominant,
+        'stall_ratio': round((memory_wait_ms + comm_wait_ms) / total_ms, 3),
+    }
+
+cases = [
+    (100, 30, 20),
+    (100, 60, 40),
+    (100, 10, 5),
+]
+for case in cases:
+    print(case, '->', compute_time_fraction(*case))
+print('A high compute-time fraction does not by itself prove high MFU')
+
+```
