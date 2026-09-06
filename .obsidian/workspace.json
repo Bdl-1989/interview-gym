@@ -190,6 +190,7 @@
   },
   "active": "b08d6c4903cf1add",
   "lastOpenFiles": [
+    "README.md",
     "interview-review/sessions/2026-09-06.md",
     "interview-review/wrong-answers.md",
     "interview-review/sessions",
@@ -234,7 +235,6 @@
     "interview/Problems/TubingProblem/README.md",
     "interview/Problems/RoundRobinProblem/README.md",
     "interview/Problems/NeumannNeighborProblem/README.md",
-    "interview/Problems/KnapsackProblem/README.md",
-    "interview/Problems/ChessboardCoverageProblem/README.md"
+    "interview/Problems/KnapsackProblem/README.md"
   ]
 }
