@@ -1,29 +1,30 @@
 ---
 name: interview-quiz
-description: "从当前工作区的 c++interview 与 llm-algo-leetcode 知识生成交互式面试抽查，逐题评估回答并维护独立的错题集与遗忘曲线复习计划。仅在用户调用 $interview-quiz 或明确要求面试抽查时使用。"
+description: "从当前工作区的 c++interview、llm-algo-leetcode 与 InterviewGuide 知识生成交互式面试抽查，逐题评估回答并维护独立的错题集与遗忘曲线复习计划。仅在用户调用 $interview-quiz 或明确要求面试抽查时使用。"
 ---
 
 # Interview Quiz
 
-这是一个面向当前知识库的面试抽查流程。默认读取工作区根目录下的 `c++interview/` 和 `llm-algo-leetcode/`，不得修改、移动或删除其中任何文件。
+这是一个面向当前知识库的面试抽查流程。默认读取工作区根目录下的 `c++interview/`、`llm-algo-leetcode/` 和 `InterviewGuide/`，不得修改、移动或删除其中任何文件。
 
 ## Invocation
 
-- 用户调用 `$interview-quiz`（或明确说“面试抽查”）时启动一轮。
-- 用户调用 `$interview-quiz review` 时只进行到期错题复习，不新建完整题单。
-- 用户可指定题数、题库范围或难度；范围参数为 `cpp`、`algorithm`、`all`，未指定时使用 `all` 并生成 10 题。
+- 用户调用 `$interview-quiz`（或明确说“面试抽查”）时启动一轮新题抽查；即使存在到期错题，也不得自动切换到复习模式。
+- 仅当用户调用 `$interview-quiz review` 时，才进行到期错题复习，不新建完整题单。
+- 用户可指定题数、题库范围或难度；范围参数为 `cpp`、`algorithm`、`guide`、`all`，未指定时使用 `all` 并生成 10 题。
 
 ## Source selection
 
 - `cpp`：只读取 `c++interview/`。
 - `algorithm`：只读取 `llm-algo-leetcode/`。
-- `all`：读取所有已配置题库；当前包括以上两个目录，未来新增题库时自动纳入，不要求用户改调用方式。
+- `guide`：只读取 `InterviewGuide/`。
+- `all`：读取所有已配置题库；当前包括以上三个目录，未来新增题库时自动纳入，不要求用户改调用方式。
 - 题库范围不明确或参数未知时，先询问用户，不猜测目录含义。
 
 ## Quiz workflow
 
 1. 先检查两个知识源的目录和相关文件，优先使用 Markdown、README、源码注释及可读的 notebook 文本；题目必须能回溯到具体文件路径。
-2. 读取 `interview-review/` 下的复习数据（不存在时创建），优先抽取已到期错题，再用未覆盖主题补足本轮题数。
+2. 区分调用模式：普通抽查从所选题库中优先抽取尚未在历史 session 中出现过的主题，绝不插入到期错题；显式 `review` 模式才读取并抽取所选范围内已到期错题。普通抽查的未覆盖主题不足时，再选择历史题目复测，并明确告知用户。
 3. 一次只提出一道题，不提前展示标准答案。等待用户回答后，再给出：判定（正确/部分正确/错误）、简短依据、来源路径、改进要点，然后继续下一题。
 4. 允许用户说“跳过”“结束”；结束时仍保存已经回答的题目，并汇总得分、薄弱主题和下一次复习日期。
 5. 一轮结束后更新 `interview-review/wrong-answers.md`、`interview-review/review-schedule.md` 和 `interview-review/sessions/YYYY-MM-DD.md`。这些文件是派生资料，不得回写两个知识源。
