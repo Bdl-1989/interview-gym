@@ -1,0 +1,7305 @@
+1
+00:00:00,040 --> 00:00:01,630
+
+if you're trying to build a desktop
+
+2
+00:00:01,630 --> 00:00:01,640
+if you're trying to build a desktop
+ 
+
+3
+00:00:01,640 --> 00:00:04,550
+if you're trying to build a desktop
+application in C++ finding a good GUI
+
+4
+00:00:04,550 --> 00:00:04,560
+application in C++ finding a good GUI
+ 
+
+5
+00:00:04,560 --> 00:00:06,710
+application in C++ finding a good GUI
+framework to use can be tricky I mean
+
+6
+00:00:06,710 --> 00:00:06,720
+framework to use can be tricky I mean
+ 
+
+7
+00:00:06,720 --> 00:00:07,909
+framework to use can be tricky I mean
+don't get me wrong there are so many
+
+8
+00:00:07,909 --> 00:00:07,919
+don't get me wrong there are so many
+ 
+
+9
+00:00:07,919 --> 00:00:09,190
+don't get me wrong there are so many
+different options out there you could
+
+10
+00:00:09,190 --> 00:00:09,200
+different options out there you could
+ 
+
+11
+00:00:09,200 --> 00:00:12,110
+different options out there you could
+use something like qt or WX widgets I
+
+12
+00:00:12,110 --> 00:00:12,120
+use something like qt or WX widgets I
+ 
+
+13
+00:00:12,120 --> 00:00:13,589
+use something like qt or WX widgets I
+mean they seem to be popular they're
+
+14
+00:00:13,589 --> 00:00:13,599
+mean they seem to be popular they're
+ 
+
+15
+00:00:13,599 --> 00:00:15,549
+mean they seem to be popular they're
+crossplatform what's the problem the
+
+16
+00:00:15,549 --> 00:00:15,559
+crossplatform what's the problem the
+ 
+
+17
+00:00:15,559 --> 00:00:18,230
+crossplatform what's the problem the
+problem is I hate them I mean does
+
+18
+00:00:18,230 --> 00:00:18,240
+problem is I hate them I mean does
+ 
+
+19
+00:00:18,240 --> 00:00:20,710
+problem is I hate them I mean does
+anybody actually have a good experience
+
+20
+00:00:20,710 --> 00:00:20,720
+anybody actually have a good experience
+ 
+
+21
+00:00:20,720 --> 00:00:23,589
+anybody actually have a good experience
+using like qt or WX widgets to build a
+
+22
+00:00:23,589 --> 00:00:23,599
+using like qt or WX widgets to build a
+ 
+
+23
+00:00:23,599 --> 00:00:25,589
+using like qt or WX widgets to build a
+C++ application not to mention the
+
+24
+00:00:25,589 --> 00:00:25,599
+C++ application not to mention the
+ 
+
+25
+00:00:25,599 --> 00:00:27,189
+C++ application not to mention the
+complex licensing model that goes behind
+
+26
+00:00:27,189 --> 00:00:27,199
+complex licensing model that goes behind
+ 
+
+27
+00:00:27,199 --> 00:00:28,790
+complex licensing model that goes behind
+some of these that might cost you quite
+
+28
+00:00:28,790 --> 00:00:28,800
+some of these that might cost you quite
+ 
+
+29
+00:00:28,800 --> 00:00:30,589
+some of these that might cost you quite
+a bit of money so what do you do what do
+
+30
+00:00:30,589 --> 00:00:30,599
+a bit of money so what do you do what do
+ 
+
+31
+00:00:30,599 --> 00:00:31,990
+a bit of money so what do you do what do
+you do if you just quickly want to make
+
+32
+00:00:31,990 --> 00:00:32,000
+you do if you just quickly want to make
+ 
+
+33
+00:00:32,000 --> 00:00:34,190
+you do if you just quickly want to make
+an app in C++ why is everything so
+
+34
+00:00:34,190 --> 00:00:34,200
+an app in C++ why is everything so
+ 
+
+35
+00:00:34,200 --> 00:00:35,270
+an app in C++ why is everything so
+difficult well before we answer that
+
+36
+00:00:35,270 --> 00:00:35,280
+difficult well before we answer that
+ 
+
+37
+00:00:35,280 --> 00:00:36,510
+difficult well before we answer that
+question let's step back a little bit
+
+38
+00:00:36,510 --> 00:00:36,520
+question let's step back a little bit
+ 
+
+39
+00:00:36,520 --> 00:00:38,470
+question let's step back a little bit
+why are you using C++ to build an
+
+40
+00:00:38,470 --> 00:00:38,480
+why are you using C++ to build an
+ 
+
+41
+00:00:38,480 --> 00:00:41,310
+why are you using C++ to build an
+application because if you're not there
+
+42
+00:00:41,310 --> 00:00:41,320
+application because if you're not there
+ 
+
+43
+00:00:41,320 --> 00:00:43,310
+application because if you're not there
+are so many things you could use I mean
+
+44
+00:00:43,310 --> 00:00:43,320
+are so many things you could use I mean
+ 
+
+45
+00:00:43,320 --> 00:00:44,950
+are so many things you could use I mean
+if it's just something simple then maybe
+
+46
+00:00:44,950 --> 00:00:44,960
+if it's just something simple then maybe
+ 
+
+47
+00:00:44,960 --> 00:00:46,430
+if it's just something simple then maybe
+you could consider writing a web app
+
+48
+00:00:46,430 --> 00:00:46,440
+you could consider writing a web app
+ 
+
+49
+00:00:46,440 --> 00:00:48,350
+you could consider writing a web app
+that runs in like a web browser that
+
+50
+00:00:48,350 --> 00:00:48,360
+that runs in like a web browser that
+ 
+
+51
+00:00:48,360 --> 00:00:50,670
+that runs in like a web browser that
+would be easily crossplatform out of the
+
+52
+00:00:50,670 --> 00:00:50,680
+would be easily crossplatform out of the
+ 
+
+53
+00:00:50,680 --> 00:00:52,709
+would be easily crossplatform out of the
+box including mobile devices and really
+
+54
+00:00:52,709 --> 00:00:52,719
+box including mobile devices and really
+ 
+
+55
+00:00:52,719 --> 00:00:54,709
+box including mobile devices and really
+anything with a good web browser and if
+
+56
+00:00:54,709 --> 00:00:54,719
+anything with a good web browser and if
+ 
+
+57
+00:00:54,719 --> 00:00:56,150
+anything with a good web browser and if
+you wanted to be more desktop focused
+
+58
+00:00:56,150 --> 00:00:56,160
+you wanted to be more desktop focused
+ 
+
+59
+00:00:56,160 --> 00:00:58,709
+you wanted to be more desktop focused
+with that kind of ease of web
+
+60
+00:00:58,709 --> 00:00:58,719
+with that kind of ease of web
+ 
+
+61
+00:00:58,719 --> 00:01:00,630
+with that kind of ease of web
+development situation
+
+62
+00:01:00,630 --> 00:01:00,640
+development situation
+ 
+
+63
+00:01:00,640 --> 00:01:01,750
+development situation
+then why don't you just use something
+
+64
+00:01:01,750 --> 00:01:01,760
+then why don't you just use something
+ 
+
+65
+00:01:01,760 --> 00:01:03,790
+then why don't you just use something
+like JavaScript and electron I hear it's
+
+66
+00:01:03,790 --> 00:01:03,800
+like JavaScript and electron I hear it's
+ 
+
+67
+00:01:03,800 --> 00:01:05,630
+like JavaScript and electron I hear it's
+great for the more serious applications
+
+68
+00:01:05,630 --> 00:01:05,640
+great for the more serious applications
+ 
+
+69
+00:01:05,640 --> 00:01:08,270
+great for the more serious applications
+you could use something like C and WPF I
+
+70
+00:01:08,270 --> 00:01:08,280
+you could use something like C and WPF I
+ 
+
+71
+00:01:08,280 --> 00:01:09,830
+you could use something like C and WPF I
+mean yes you'll be restricted to Windows
+
+72
+00:01:09,830 --> 00:01:09,840
+mean yes you'll be restricted to Windows
+ 
+
+73
+00:01:09,840 --> 00:01:12,149
+mean yes you'll be restricted to Windows
+only but maybe that's okay I could go on
+
+74
+00:01:12,149 --> 00:01:12,159
+only but maybe that's okay I could go on
+ 
+
+75
+00:01:12,159 --> 00:01:13,230
+only but maybe that's okay I could go on
+the point is there are many different
+
+76
+00:01:13,230 --> 00:01:13,240
+the point is there are many different
+ 
+
+77
+00:01:13,240 --> 00:01:14,749
+the point is there are many different
+ways to build applications you don't
+
+78
+00:01:14,749 --> 00:01:14,759
+ways to build applications you don't
+ 
+
+79
+00:01:14,759 --> 00:01:16,550
+ways to build applications you don't
+have to use C++ and in fact I would say
+
+80
+00:01:16,550 --> 00:01:16,560
+have to use C++ and in fact I would say
+ 
+
+81
+00:01:16,560 --> 00:01:19,910
+have to use C++ and in fact I would say
+C++ is kind of an unusual Choice unless
+
+82
+00:01:19,910 --> 00:01:19,920
+C++ is kind of an unusual Choice unless
+ 
+
+83
+00:01:19,920 --> 00:01:21,830
+C++ is kind of an unusual Choice unless
+you're like me if you're building a
+
+84
+00:01:21,830 --> 00:01:21,840
+you're like me if you're building a
+ 
+
+85
+00:01:21,840 --> 00:01:23,469
+you're like me if you're building a
+performance intensive application or
+
+86
+00:01:23,469 --> 00:01:23,479
+performance intensive application or
+ 
+
+87
+00:01:23,479 --> 00:01:25,149
+performance intensive application or
+something that's low level or something
+
+88
+00:01:25,149 --> 00:01:25,159
+something that's low level or something
+ 
+
+89
+00:01:25,159 --> 00:01:27,390
+something that's low level or something
+that really highly revolves around a
+
+90
+00:01:27,390 --> 00:01:27,400
+that really highly revolves around a
+ 
+
+91
+00:01:27,400 --> 00:01:30,030
+that really highly revolves around a
+library maybe that's written in C++ and
+
+92
+00:01:30,030 --> 00:01:30,040
+library maybe that's written in C++ and
+ 
+
+93
+00:01:30,040 --> 00:01:32,389
+library maybe that's written in C++ and
+using wrappers or whatever is just a a
+
+94
+00:01:32,389 --> 00:01:32,399
+using wrappers or whatever is just a a
+ 
+
+95
+00:01:32,399 --> 00:01:33,830
+using wrappers or whatever is just a a
+pain and you want to just write an
+
+96
+00:01:33,830 --> 00:01:33,840
+pain and you want to just write an
+ 
+
+97
+00:01:33,840 --> 00:01:35,749
+pain and you want to just write an
+application in C++ instead you know for
+
+98
+00:01:35,749 --> 00:01:35,759
+application in C++ instead you know for
+ 
+
+99
+00:01:35,759 --> 00:01:37,710
+application in C++ instead you know for
+those use cases it really does make a
+
+100
+00:01:37,710 --> 00:01:37,720
+those use cases it really does make a
+ 
+
+101
+00:01:37,720 --> 00:01:39,830
+those use cases it really does make a
+lot of sense to just write your actual
+
+102
+00:01:39,830 --> 00:01:39,840
+lot of sense to just write your actual
+ 
+
+103
+00:01:39,840 --> 00:01:41,870
+lot of sense to just write your actual
+kind of application GUI part of
+
+104
+00:01:41,870 --> 00:01:41,880
+kind of application GUI part of
+ 
+
+105
+00:01:41,880 --> 00:01:44,630
+kind of application GUI part of
+everything in C++ so as an example for
+
+106
+00:01:44,630 --> 00:01:44,640
+everything in C++ so as an example for
+ 
+
+107
+00:01:44,640 --> 00:01:45,630
+everything in C++ so as an example for
+those of you watching this channel you
+
+108
+00:01:45,630 --> 00:01:45,640
+those of you watching this channel you
+ 
+
+109
+00:01:45,640 --> 00:01:47,389
+those of you watching this channel you
+know that I build game engines a game
+
+110
+00:01:47,389 --> 00:01:47,399
+know that I build game engines a game
+ 
+
+111
+00:01:47,399 --> 00:01:48,830
+know that I build game engines a game
+engine what is a game engine a game
+
+112
+00:01:48,830 --> 00:01:48,840
+engine what is a game engine a game
+ 
+
+113
+00:01:48,840 --> 00:01:51,950
+engine what is a game engine a game
+engine is basically like this C++ core
+
+114
+00:01:51,950 --> 00:01:51,960
+engine is basically like this C++ core
+ 
+
+115
+00:01:51,960 --> 00:01:54,230
+engine is basically like this C++ core
+or at least it is in most cases that
+
+116
+00:01:54,230 --> 00:01:54,240
+or at least it is in most cases that
+ 
+
+117
+00:01:54,240 --> 00:01:56,550
+or at least it is in most cases that
+then has stuff built around it to
+
+118
+00:01:56,550 --> 00:01:56,560
+then has stuff built around it to
+ 
+
+119
+00:01:56,560 --> 00:01:58,670
+then has stuff built around it to
+facilitate the production of games as an
+
+120
+00:01:58,670 --> 00:01:58,680
+facilitate the production of games as an
+ 
+
+121
+00:01:58,680 --> 00:02:01,270
+facilitate the production of games as an
+example so since the core is in C++ and
+
+122
+00:02:01,270 --> 00:02:01,280
+example so since the core is in C++ and
+ 
+
+123
+00:02:01,280 --> 00:02:03,590
+example so since the core is in C++ and
+usually that core will adapt to whatever
+
+124
+00:02:03,590 --> 00:02:03,600
+usually that core will adapt to whatever
+ 
+
+125
+00:02:03,600 --> 00:02:05,310
+usually that core will adapt to whatever
+platform you want it to adapt to so
+
+126
+00:02:05,310 --> 00:02:05,320
+platform you want it to adapt to so
+ 
+
+127
+00:02:05,320 --> 00:02:07,429
+platform you want it to adapt to so
+whether that be Windows Mac Linux maybe
+
+128
+00:02:07,429 --> 00:02:07,439
+whether that be Windows Mac Linux maybe
+ 
+
+129
+00:02:07,439 --> 00:02:10,669
+whether that be Windows Mac Linux maybe
+mobile devices maybe consoles that core
+
+130
+00:02:10,669 --> 00:02:10,679
+mobile devices maybe consoles that core
+ 
+
+131
+00:02:10,679 --> 00:02:13,110
+mobile devices maybe consoles that core
+is very intrinsic to the application
+
+132
+00:02:13,110 --> 00:02:13,120
+is very intrinsic to the application
+ 
+
+133
+00:02:13,120 --> 00:02:14,990
+is very intrinsic to the application
+therefore it makes a lot of sense to
+
+134
+00:02:14,990 --> 00:02:15,000
+therefore it makes a lot of sense to
+ 
+
+135
+00:02:15,000 --> 00:02:17,150
+therefore it makes a lot of sense to
+write any tools that might go along with
+
+136
+00:02:17,150 --> 00:02:17,160
+write any tools that might go along with
+ 
+
+137
+00:02:17,160 --> 00:02:19,350
+write any tools that might go along with
+the core that really rely on the core
+
+138
+00:02:19,350 --> 00:02:19,360
+the core that really rely on the core
+ 
+
+139
+00:02:19,360 --> 00:02:21,309
+the core that really rely on the core
+such as an editor which needs to
+
+140
+00:02:21,309 --> 00:02:21,319
+such as an editor which needs to
+ 
+
+141
+00:02:21,319 --> 00:02:23,229
+such as an editor which needs to
+actually have like a viewport that is
+
+142
+00:02:23,229 --> 00:02:23,239
+actually have like a viewport that is
+ 
+
+143
+00:02:23,239 --> 00:02:25,630
+actually have like a viewport that is
+the core running inside it as well as
+
+144
+00:02:25,630 --> 00:02:25,640
+the core running inside it as well as
+ 
+
+145
+00:02:25,640 --> 00:02:27,589
+the core running inside it as well as
+adjacent tools it makes a lot of sense
+
+146
+00:02:27,589 --> 00:02:27,599
+adjacent tools it makes a lot of sense
+ 
+
+147
+00:02:27,599 --> 00:02:29,949
+adjacent tools it makes a lot of sense
+to write that Big Tool I'm talking about
+
+148
+00:02:29,949 --> 00:02:29,959
+to write that Big Tool I'm talking about
+ 
+
+149
+00:02:29,959 --> 00:02:33,150
+to write that Big Tool I'm talking about
+the editor in C++ now you don't have to
+
+150
+00:02:33,150 --> 00:02:33,160
+the editor in C++ now you don't have to
+ 
+
+151
+00:02:33,160 --> 00:02:35,270
+the editor in C++ now you don't have to
+I worked at EA for almost 5 years they
+
+152
+00:02:35,270 --> 00:02:35,280
+I worked at EA for almost 5 years they
+ 
+
+153
+00:02:35,280 --> 00:02:37,229
+I worked at EA for almost 5 years they
+have frostbite Frost Ed the frostbite
+
+154
+00:02:37,229 --> 00:02:37,239
+have frostbite Frost Ed the frostbite
+ 
+
+155
+00:02:37,239 --> 00:02:39,869
+have frostbite Frost Ed the frostbite
+editor is written in C WPF it of course
+
+156
+00:02:39,869 --> 00:02:39,879
+editor is written in C WPF it of course
+ 
+
+157
+00:02:39,879 --> 00:02:42,990
+editor is written in C WPF it of course
+uses the frostbite C++ core but the
+
+158
+00:02:42,990 --> 00:02:43,000
+uses the frostbite C++ core but the
+ 
+
+159
+00:02:43,000 --> 00:02:45,309
+uses the frostbite C++ core but the
+actual tools are written in C so even if
+
+160
+00:02:45,309 --> 00:02:45,319
+actual tools are written in C so even if
+ 
+
+161
+00:02:45,319 --> 00:02:46,869
+actual tools are written in C so even if
+you are writing a game engine of course
+
+162
+00:02:46,869 --> 00:02:46,879
+you are writing a game engine of course
+ 
+
+163
+00:02:46,879 --> 00:02:48,149
+you are writing a game engine of course
+you don't have to write your tools in
+
+164
+00:02:48,149 --> 00:02:48,159
+you don't have to write your tools in
+ 
+
+165
+00:02:48,159 --> 00:02:50,470
+you don't have to write your tools in
+C++ however as I mentioned the downside
+
+166
+00:02:50,470 --> 00:02:50,480
+C++ however as I mentioned the downside
+ 
+
+167
+00:02:50,480 --> 00:02:53,430
+C++ however as I mentioned the downside
+with C WPF is that it's Windows only
+
+168
+00:02:53,430 --> 00:02:53,440
+with C WPF is that it's Windows only
+ 
+
+169
+00:02:53,440 --> 00:02:54,910
+with C WPF is that it's Windows only
+which is okay for a company with
+
+170
+00:02:54,910 --> 00:02:54,920
+which is okay for a company with
+ 
+
+171
+00:02:54,920 --> 00:02:56,910
+which is okay for a company with
+proprietary technology such as EA
+
+172
+00:02:56,910 --> 00:02:56,920
+proprietary technology such as EA
+ 
+
+173
+00:02:56,920 --> 00:02:58,149
+proprietary technology such as EA
+because their development teams can just
+
+174
+00:02:58,149 --> 00:02:58,159
+because their development teams can just
+ 
+
+175
+00:02:58,159 --> 00:02:59,550
+because their development teams can just
+use Windows and in fact in the games
+
+176
+00:02:59,550 --> 00:02:59,560
+use Windows and in fact in the games
+ 
+
+177
+00:02:59,560 --> 00:03:01,670
+use Windows and in fact in the games
+industry most people do use Windows I'm
+
+178
+00:03:01,670 --> 00:03:01,680
+industry most people do use Windows I'm
+ 
+
+179
+00:03:01,680 --> 00:03:02,949
+industry most people do use Windows I'm
+not talking about the Indie developers
+
+180
+00:03:02,949 --> 00:03:02,959
+not talking about the Indie developers
+ 
+
+181
+00:03:02,959 --> 00:03:04,350
+not talking about the Indie developers
+with their cool MacBooks I'm talking
+
+182
+00:03:04,350 --> 00:03:04,360
+with their cool MacBooks I'm talking
+ 
+
+183
+00:03:04,360 --> 00:03:06,670
+with their cool MacBooks I'm talking
+about like AAA developers usually run on
+
+184
+00:03:06,670 --> 00:03:06,680
+about like AAA developers usually run on
+ 
+
+185
+00:03:06,680 --> 00:03:09,430
+about like AAA developers usually run on
+Windows now unity and unreal are two
+
+186
+00:03:09,430 --> 00:03:09,440
+Windows now unity and unreal are two
+ 
+
+187
+00:03:09,440 --> 00:03:11,830
+Windows now unity and unreal are two
+very big engines very popular engines
+
+188
+00:03:11,830 --> 00:03:11,840
+very big engines very popular engines
+ 
+
+189
+00:03:11,840 --> 00:03:13,430
+very big engines very popular engines
+that have the core written in C++ but
+
+190
+00:03:13,430 --> 00:03:13,440
+that have the core written in C++ but
+ 
+
+191
+00:03:13,440 --> 00:03:14,830
+that have the core written in C++ but
+then also the tools or specifically the
+
+192
+00:03:14,830 --> 00:03:14,840
+then also the tools or specifically the
+ 
+
+193
+00:03:14,840 --> 00:03:17,350
+then also the tools or specifically the
+editor is also written in C++ Unity has
+
+194
+00:03:17,350 --> 00:03:17,360
+editor is also written in C++ Unity has
+ 
+
+195
+00:03:17,360 --> 00:03:18,910
+editor is also written in C++ Unity has
+a bit of a c thing going on with a lot
+
+196
+00:03:18,910 --> 00:03:18,920
+a bit of a c thing going on with a lot
+ 
+
+197
+00:03:18,920 --> 00:03:21,070
+a bit of a c thing going on with a lot
+of plugins and all of that but the core
+
+198
+00:03:21,070 --> 00:03:21,080
+of plugins and all of that but the core
+ 
+
+199
+00:03:21,080 --> 00:03:22,710
+of plugins and all of that but the core
+kind of rendering framework is still
+
+200
+00:03:22,710 --> 00:03:22,720
+kind of rendering framework is still
+ 
+
+201
+00:03:22,720 --> 00:03:25,030
+kind of rendering framework is still
+there in C++ and if you want to be
+
+202
+00:03:25,030 --> 00:03:25,040
+there in C++ and if you want to be
+ 
+
+203
+00:03:25,040 --> 00:03:27,149
+there in C++ and if you want to be
+crossplatform and if you are a game
+
+204
+00:03:27,149 --> 00:03:27,159
+crossplatform and if you are a game
+ 
+
+205
+00:03:27,159 --> 00:03:29,750
+crossplatform and if you are a game
+engine that already has a lot of r
+
+206
+00:03:29,750 --> 00:03:29,760
+engine that already has a lot of r
+ 
+
+207
+00:03:29,760 --> 00:03:32,309
+engine that already has a lot of r
+rendering going on in my opinion it
+
+208
+00:03:32,309 --> 00:03:32,319
+rendering going on in my opinion it
+ 
+
+209
+00:03:32,319 --> 00:03:34,030
+rendering going on in my opinion it
+makes a lot of sense to write your
+
+210
+00:03:34,030 --> 00:03:34,040
+makes a lot of sense to write your
+ 
+
+211
+00:03:34,040 --> 00:03:37,429
+makes a lot of sense to write your
+editor in C++ and to also be using a GUI
+
+212
+00:03:37,429 --> 00:03:37,439
+editor in C++ and to also be using a GUI
+ 
+
+213
+00:03:37,439 --> 00:03:39,470
+editor in C++ and to also be using a GUI
+framework that uses like immediate mode
+
+214
+00:03:39,470 --> 00:03:39,480
+framework that uses like immediate mode
+ 
+
+215
+00:03:39,480 --> 00:03:41,670
+framework that uses like immediate mode
+rendering using your graphics API the
+
+216
+00:03:41,670 --> 00:03:41,680
+rendering using your graphics API the
+ 
+
+217
+00:03:41,680 --> 00:03:43,789
+rendering using your graphics API the
+reason being that you are a game engine
+
+218
+00:03:43,789 --> 00:03:43,799
+reason being that you are a game engine
+ 
+
+219
+00:03:43,799 --> 00:03:45,270
+reason being that you are a game engine
+like you are rendering things in real
+
+220
+00:03:45,270 --> 00:03:45,280
+like you are rendering things in real
+ 
+
+221
+00:03:45,280 --> 00:03:46,949
+like you are rendering things in real
+time you're doing Graphics intensive
+
+222
+00:03:46,949 --> 00:03:46,959
+time you're doing Graphics intensive
+ 
+
+223
+00:03:46,959 --> 00:03:48,630
+time you're doing Graphics intensive
+work it's totally okay for you to use
+
+224
+00:03:48,630 --> 00:03:48,640
+work it's totally okay for you to use
+ 
+
+225
+00:03:48,640 --> 00:03:50,910
+work it's totally okay for you to use
+that same tech for your application UI
+
+226
+00:03:50,910 --> 00:03:50,920
+that same tech for your application UI
+ 
+
+227
+00:03:50,920 --> 00:03:52,990
+that same tech for your application UI
+anyway game engines aside what if I just
+
+228
+00:03:52,990 --> 00:03:53,000
+anyway game engines aside what if I just
+ 
+
+229
+00:03:53,000 --> 00:03:55,030
+anyway game engines aside what if I just
+want to build an application C++ why is
+
+230
+00:03:55,030 --> 00:03:55,040
+want to build an application C++ why is
+ 
+
+231
+00:03:55,040 --> 00:03:56,509
+want to build an application C++ why is
+this so difficult what is the easiest
+
+232
+00:03:56,509 --> 00:03:56,519
+this so difficult what is the easiest
+ 
+
+233
+00:03:56,519 --> 00:03:58,190
+this so difficult what is the easiest
+way for me to get up and running that is
+
+234
+00:03:58,190 --> 00:03:58,200
+way for me to get up and running that is
+ 
+
+235
+00:03:58,200 --> 00:04:00,270
+way for me to get up and running that is
+what I'm here for today I just want to
+
+236
+00:04:00,270 --> 00:04:00,280
+what I'm here for today I just want to
+ 
+
+237
+00:04:00,280 --> 00:04:01,990
+what I'm here for today I just want to
+show you guys what I do when I want to
+
+238
+00:04:01,990 --> 00:04:02,000
+show you guys what I do when I want to
+ 
+
+239
+00:04:02,000 --> 00:04:05,069
+show you guys what I do when I want to
+build an application in C++ how it's
+
+240
+00:04:05,069 --> 00:04:05,079
+build an application in C++ how it's
+ 
+
+241
+00:04:05,079 --> 00:04:07,309
+build an application in C++ how it's
+incredibly simple and way easier than
+
+242
+00:04:07,309 --> 00:04:07,319
+incredibly simple and way easier than
+ 
+
+243
+00:04:07,319 --> 00:04:09,190
+incredibly simple and way easier than
+anything else I've tried and out of the
+
+244
+00:04:09,190 --> 00:04:09,200
+anything else I've tried and out of the
+ 
+
+245
+00:04:09,200 --> 00:04:10,990
+anything else I've tried and out of the
+box it's not only crossplatform
+
+246
+00:04:10,990 --> 00:04:11,000
+box it's not only crossplatform
+ 
+
+247
+00:04:11,000 --> 00:04:12,750
+box it's not only crossplatform
+including like mobile devices and
+
+248
+00:04:12,750 --> 00:04:12,760
+including like mobile devices and
+ 
+
+249
+00:04:12,760 --> 00:04:14,789
+including like mobile devices and
+consoles but it can also adapt to any
+
+250
+00:04:14,789 --> 00:04:14,799
+consoles but it can also adapt to any
+ 
+
+251
+00:04:14,799 --> 00:04:17,509
+consoles but it can also adapt to any
+rendering API you might be using DirectX
+
+252
+00:04:17,509 --> 00:04:17,519
+rendering API you might be using DirectX
+ 
+
+253
+00:04:17,519 --> 00:04:21,189
+rendering API you might be using DirectX
+9 10 11 12 OPG vcon metal and you only
+
+254
+00:04:21,189 --> 00:04:21,199
+9 10 11 12 OPG vcon metal and you only
+ 
+
+255
+00:04:21,199 --> 00:04:22,790
+9 10 11 12 OPG vcon metal and you only
+have to write your code once and it's
+
+256
+00:04:22,790 --> 00:04:22,800
+have to write your code once and it's
+ 
+
+257
+00:04:22,800 --> 00:04:25,230
+have to write your code once and it's
+completely free in open source doesn't
+
+258
+00:04:25,230 --> 00:04:25,240
+completely free in open source doesn't
+ 
+
+259
+00:04:25,240 --> 00:04:26,830
+completely free in open source doesn't
+this sound too good to be true I am of
+
+260
+00:04:26,830 --> 00:04:26,840
+this sound too good to be true I am of
+ 
+
+261
+00:04:26,840 --> 00:04:28,710
+this sound too good to be true I am of
+course talking about IM am goey or dear
+
+262
+00:04:28,710 --> 00:04:28,720
+course talking about IM am goey or dear
+ 
+
+263
+00:04:28,720 --> 00:04:30,189
+course talking about IM am goey or dear
+IM am gooey which is an absolutely
+
+264
+00:04:30,189 --> 00:04:30,199
+IM am gooey which is an absolutely
+ 
+
+265
+00:04:30,199 --> 00:04:32,950
+IM am gooey which is an absolutely
+wonderful immediate mode GUI library but
+
+266
+00:04:32,950 --> 00:04:32,960
+wonderful immediate mode GUI library but
+ 
+
+267
+00:04:32,960 --> 00:04:34,909
+wonderful immediate mode GUI library but
+wait isn't IM am guey some kind of like
+
+268
+00:04:34,909 --> 00:04:34,919
+wait isn't IM am guey some kind of like
+ 
+
+269
+00:04:34,919 --> 00:04:38,189
+wait isn't IM am guey some kind of like
+toy you know debug UI thing for like
+
+270
+00:04:38,189 --> 00:04:38,199
+toy you know debug UI thing for like
+ 
+
+271
+00:04:38,199 --> 00:04:40,270
+toy you know debug UI thing for like
+testing out applications just something
+
+272
+00:04:40,270 --> 00:04:40,280
+testing out applications just something
+ 
+
+273
+00:04:40,280 --> 00:04:42,230
+testing out applications just something
+like really simple that can't be used to
+
+274
+00:04:42,230 --> 00:04:42,240
+like really simple that can't be used to
+ 
+
+275
+00:04:42,240 --> 00:04:45,469
+like really simple that can't be used to
+build big applications no it's not it's
+
+276
+00:04:45,469 --> 00:04:45,479
+build big applications no it's not it's
+ 
+
+277
+00:04:45,479 --> 00:04:47,230
+build big applications no it's not it's
+amazing and it can do pretty much
+
+278
+00:04:47,230 --> 00:04:47,240
+amazing and it can do pretty much
+ 
+
+279
+00:04:47,240 --> 00:04:48,469
+amazing and it can do pretty much
+anything now I will put a little
+
+280
+00:04:48,469 --> 00:04:48,479
+anything now I will put a little
+ 
+
+281
+00:04:48,479 --> 00:04:51,150
+anything now I will put a little
+disclaimer here just because and that is
+
+282
+00:04:51,150 --> 00:04:51,160
+disclaimer here just because and that is
+ 
+
+283
+00:04:51,160 --> 00:04:52,510
+disclaimer here just because and that is
+like I don't want this to turn into like
+
+284
+00:04:52,510 --> 00:04:52,520
+like I don't want this to turn into like
+ 
+
+285
+00:04:52,520 --> 00:04:54,230
+like I don't want this to turn into like
+a retain mode versus immediate mode
+
+286
+00:04:54,230 --> 00:04:54,240
+a retain mode versus immediate mode
+ 
+
+287
+00:04:54,240 --> 00:04:56,790
+a retain mode versus immediate mode
+versus hybrid kind of uis and like what
+
+288
+00:04:56,790 --> 00:04:56,800
+versus hybrid kind of uis and like what
+ 
+
+289
+00:04:56,800 --> 00:04:58,430
+versus hybrid kind of uis and like what
+what the best thing to to use is I
+
+290
+00:04:58,430 --> 00:04:58,440
+what the best thing to to use is I
+ 
+
+291
+00:04:58,440 --> 00:05:00,469
+what the best thing to to use is I
+firmly believe immediate mode uis are
+
+292
+00:05:00,469 --> 00:05:00,479
+firmly believe immediate mode uis are
+ 
+
+293
+00:05:00,479 --> 00:05:02,350
+firmly believe immediate mode uis are
+just superior but I also acknowledge
+
+294
+00:05:02,350 --> 00:05:02,360
+just superior but I also acknowledge
+ 
+
+295
+00:05:02,360 --> 00:05:04,390
+just superior but I also acknowledge
+that it does depend on what you're doing
+
+296
+00:05:04,390 --> 00:05:04,400
+that it does depend on what you're doing
+ 
+
+297
+00:05:04,400 --> 00:05:06,110
+that it does depend on what you're doing
+my specialty is in game engines game
+
+298
+00:05:06,110 --> 00:05:06,120
+my specialty is in game engines game
+ 
+
+299
+00:05:06,120 --> 00:05:08,350
+my specialty is in game engines game
+engines as I mentioned are very much
+
+300
+00:05:08,350 --> 00:05:08,360
+engines as I mentioned are very much
+ 
+
+301
+00:05:08,360 --> 00:05:11,310
+engines as I mentioned are very much
+real-time rendering Dynamic machines so
+
+302
+00:05:11,310 --> 00:05:11,320
+real-time rendering Dynamic machines so
+ 
+
+303
+00:05:11,320 --> 00:05:14,110
+real-time rendering Dynamic machines so
+for what I do I think it's totally okay
+
+304
+00:05:14,110 --> 00:05:14,120
+for what I do I think it's totally okay
+ 
+
+305
+00:05:14,120 --> 00:05:17,029
+for what I do I think it's totally okay
+if you are trying to be extremely
+
+306
+00:05:17,029 --> 00:05:17,039
+if you are trying to be extremely
+ 
+
+307
+00:05:17,039 --> 00:05:20,110
+if you are trying to be extremely
+efficient on some kind of low speec
+
+308
+00:05:20,110 --> 00:05:20,120
+efficient on some kind of low speec
+ 
+
+309
+00:05:20,120 --> 00:05:23,309
+efficient on some kind of low speec
+embedded device or something like yes
+
+310
+00:05:23,309 --> 00:05:23,319
+embedded device or something like yes
+ 
+
+311
+00:05:23,319 --> 00:05:26,350
+embedded device or something like yes
+maybe you don't need to render the UI
+
+312
+00:05:26,350 --> 00:05:26,360
+maybe you don't need to render the UI
+ 
+
+313
+00:05:26,360 --> 00:05:28,270
+maybe you don't need to render the UI
+every frame and be all responsive and
+
+314
+00:05:28,270 --> 00:05:28,280
+every frame and be all responsive and
+ 
+
+315
+00:05:28,280 --> 00:05:30,309
+every frame and be all responsive and
+stuff but I would argue that right now
+
+316
+00:05:30,309 --> 00:05:30,319
+stuff but I would argue that right now
+ 
+
+317
+00:05:30,319 --> 00:05:32,749
+stuff but I would argue that right now
+in 2022 for most cases immediate mode
+
+318
+00:05:32,749 --> 00:05:32,759
+in 2022 for most cases immediate mode
+ 
+
+319
+00:05:32,759 --> 00:05:35,469
+in 2022 for most cases immediate mode
+uis are just better but isn't IM goey
+
+320
+00:05:35,469 --> 00:05:35,479
+uis are just better but isn't IM goey
+ 
+
+321
+00:05:35,479 --> 00:05:37,350
+uis are just better but isn't IM goey
+like really limited and you can't style
+
+322
+00:05:37,350 --> 00:05:37,360
+like really limited and you can't style
+ 
+
+323
+00:05:37,360 --> 00:05:39,430
+like really limited and you can't style
+it very well and it just doesn't look
+
+324
+00:05:39,430 --> 00:05:39,440
+it very well and it just doesn't look
+ 
+
+325
+00:05:39,440 --> 00:05:42,150
+it very well and it just doesn't look
+good no where do you no because you're
+
+326
+00:05:42,150 --> 00:05:42,160
+good no where do you no because you're
+ 
+
+327
+00:05:42,160 --> 00:05:44,189
+good no where do you no because you're
+literally rendering everything as if it
+
+328
+00:05:44,189 --> 00:05:44,199
+literally rendering everything as if it
+ 
+
+329
+00:05:44,199 --> 00:05:46,070
+literally rendering everything as if it
+was a video game like you can do
+
+330
+00:05:46,070 --> 00:05:46,080
+was a video game like you can do
+ 
+
+331
+00:05:46,080 --> 00:05:48,830
+was a video game like you can do
+literally anything this is what Hazel's
+
+332
+00:05:48,830 --> 00:05:48,840
+literally anything this is what Hazel's
+ 
+
+333
+00:05:48,840 --> 00:05:51,510
+literally anything this is what Hazel's
+editor looks like this UI is completely
+
+334
+00:05:51,510 --> 00:05:51,520
+editor looks like this UI is completely
+ 
+
+335
+00:05:51,520 --> 00:05:53,909
+editor looks like this UI is completely
+written in I'm goey yes we did have to
+
+336
+00:05:53,909 --> 00:05:53,919
+written in I'm goey yes we did have to
+ 
+
+337
+00:05:53,919 --> 00:05:56,189
+written in I'm goey yes we did have to
+modify some parts of IM am guy to
+
+338
+00:05:56,189 --> 00:05:56,199
+modify some parts of IM am guy to
+ 
+
+339
+00:05:56,199 --> 00:05:58,550
+modify some parts of IM am guy to
+actually make this happen but we are
+
+340
+00:05:58,550 --> 00:05:58,560
+actually make this happen but we are
+ 
+
+341
+00:05:58,560 --> 00:06:01,270
+actually make this happen but we are
+still using IM am guy and it is still
+
+342
+00:06:01,270 --> 00:06:01,280
+still using IM am guy and it is still
+ 
+
+343
+00:06:01,280 --> 00:06:03,510
+still using IM am guy and it is still
+great to be honest the only area where I
+
+344
+00:06:03,510 --> 00:06:03,520
+great to be honest the only area where I
+ 
+
+345
+00:06:03,520 --> 00:06:05,790
+great to be honest the only area where I
+start to see problems with IM are
+
+346
+00:06:05,790 --> 00:06:05,800
+start to see problems with IM are
+ 
+
+347
+00:06:05,800 --> 00:06:08,710
+start to see problems with IM are
+like if you have absolutely huge data
+
+348
+00:06:08,710 --> 00:06:08,720
+like if you have absolutely huge data
+ 
+
+349
+00:06:08,720 --> 00:06:10,390
+like if you have absolutely huge data
+sets if they're all being kind of
+
+350
+00:06:10,390 --> 00:06:10,400
+sets if they're all being kind of
+ 
+
+351
+00:06:10,400 --> 00:06:13,350
+sets if they're all being kind of
+rendered refreshed every frame you might
+
+352
+00:06:13,350 --> 00:06:13,360
+rendered refreshed every frame you might
+ 
+
+353
+00:06:13,360 --> 00:06:15,189
+rendered refreshed every frame you might
+run into some problems but there are
+
+354
+00:06:15,189 --> 00:06:15,199
+run into some problems but there are
+ 
+
+355
+00:06:15,199 --> 00:06:16,990
+run into some problems but there are
+always strategies to mitigate that you
+
+356
+00:06:16,990 --> 00:06:17,000
+always strategies to mitigate that you
+ 
+
+357
+00:06:17,000 --> 00:06:19,790
+always strategies to mitigate that you
+can just use caching in some form
+
+358
+00:06:19,790 --> 00:06:19,800
+can just use caching in some form
+ 
+
+359
+00:06:19,800 --> 00:06:21,670
+can just use caching in some form
+however in our experience in Hazel like
+
+360
+00:06:21,670 --> 00:06:21,680
+however in our experience in Hazel like
+ 
+
+361
+00:06:21,680 --> 00:06:23,790
+however in our experience in Hazel like
+for example if we have like hundreds of
+
+362
+00:06:23,790 --> 00:06:23,800
+for example if we have like hundreds of
+ 
+
+363
+00:06:23,800 --> 00:06:25,270
+for example if we have like hundreds of
+thousands of objects in the scene or
+
+364
+00:06:25,270 --> 00:06:25,280
+thousands of objects in the scene or
+ 
+
+365
+00:06:25,280 --> 00:06:27,029
+thousands of objects in the scene or
+something the bottleneck has always been
+
+366
+00:06:27,029 --> 00:06:27,039
+something the bottleneck has always been
+ 
+
+367
+00:06:27,039 --> 00:06:29,230
+something the bottleneck has always been
+our Cod so for example like we need to
+
+368
+00:06:29,230 --> 00:06:29,240
+our Cod so for example like we need to
+ 
+
+369
+00:06:29,240 --> 00:06:30,110
+our Cod so for example like we need to
+show
+
+370
+00:06:30,110 --> 00:06:30,120
+show
+ 
+
+371
+00:06:30,120 --> 00:06:32,230
+show
+details in a tree View and to get those
+
+372
+00:06:32,230 --> 00:06:32,240
+details in a tree View and to get those
+ 
+
+373
+00:06:32,240 --> 00:06:33,670
+details in a tree View and to get those
+details we have to hit like the asset
+
+374
+00:06:33,670 --> 00:06:33,680
+details we have to hit like the asset
+ 
+
+375
+00:06:33,680 --> 00:06:35,029
+details we have to hit like the asset
+manager and other Engine Systems to
+
+376
+00:06:35,029 --> 00:06:35,039
+manager and other Engine Systems to
+ 
+
+377
+00:06:35,039 --> 00:06:36,589
+manager and other Engine Systems to
+retrieve those details those have
+
+378
+00:06:36,589 --> 00:06:36,599
+retrieve those details those have
+ 
+
+379
+00:06:36,599 --> 00:06:38,670
+retrieve those details those have
+usually been the bottleneck not the I am
+
+380
+00:06:38,670 --> 00:06:38,680
+usually been the bottleneck not the I am
+ 
+
+381
+00:06:38,680 --> 00:06:40,469
+usually been the bottleneck not the I am
+gooey rendering code my point is it's
+
+382
+00:06:40,469 --> 00:06:40,479
+gooey rendering code my point is it's
+ 
+
+383
+00:06:40,479 --> 00:06:42,070
+gooey rendering code my point is it's
+very fast anyway enough talking this has
+
+384
+00:06:42,070 --> 00:06:42,080
+very fast anyway enough talking this has
+ 
+
+385
+00:06:42,080 --> 00:06:43,469
+very fast anyway enough talking this has
+been quite the lecture but I just wanted
+
+386
+00:06:43,469 --> 00:06:43,479
+been quite the lecture but I just wanted
+ 
+
+387
+00:06:43,479 --> 00:06:45,430
+been quite the lecture but I just wanted
+to explain to you guys what is going on
+
+388
+00:06:45,430 --> 00:06:45,440
+to explain to you guys what is going on
+ 
+
+389
+00:06:45,440 --> 00:06:46,629
+to explain to you guys what is going on
+in a minute we're going to dive in and
+
+390
+00:06:46,629 --> 00:06:46,639
+in a minute we're going to dive in and
+ 
+
+391
+00:06:46,639 --> 00:06:48,550
+in a minute we're going to dive in and
+take a look at how to actually write an
+
+392
+00:06:48,550 --> 00:06:48,560
+take a look at how to actually write an
+ 
+
+393
+00:06:48,560 --> 00:06:50,270
+take a look at how to actually write an
+application in I'm goi but first I want
+
+394
+00:06:50,270 --> 00:06:50,280
+application in I'm goi but first I want
+ 
+
+395
+00:06:50,280 --> 00:06:52,070
+application in I'm goi but first I want
+to mention that this video is sponsored
+
+396
+00:06:52,070 --> 00:06:52,080
+to mention that this video is sponsored
+ 
+
+397
+00:06:52,080 --> 00:06:53,950
+to mention that this video is sponsored
+by hostinger hosting is pretty much the
+
+398
+00:06:53,950 --> 00:06:53,960
+by hostinger hosting is pretty much the
+ 
+
+399
+00:06:53,960 --> 00:06:55,430
+by hostinger hosting is pretty much the
+best web hosting platform on the
+
+400
+00:06:55,430 --> 00:06:55,440
+best web hosting platform on the
+ 
+
+401
+00:06:55,440 --> 00:06:57,350
+best web hosting platform on the
+internet if you need to host a website
+
+402
+00:06:57,350 --> 00:06:57,360
+internet if you need to host a website
+ 
+
+403
+00:06:57,360 --> 00:06:58,990
+internet if you need to host a website
+or if you need a server for something to
+
+404
+00:06:58,990 --> 00:06:59,000
+or if you need a server for something to
+ 
+
+405
+00:06:59,000 --> 00:07:00,990
+or if you need a server for something to
+do on the inter internet hosting it is
+
+406
+00:07:00,990 --> 00:07:01,000
+do on the inter internet hosting it is
+ 
+
+407
+00:07:01,000 --> 00:07:02,790
+do on the inter internet hosting it is
+your go-to maybe you don't need to use
+
+408
+00:07:02,790 --> 00:07:02,800
+your go-to maybe you don't need to use
+ 
+
+409
+00:07:02,800 --> 00:07:04,790
+your go-to maybe you don't need to use
+C++ to write your application maybe you
+
+410
+00:07:04,790 --> 00:07:04,800
+C++ to write your application maybe you
+ 
+
+411
+00:07:04,800 --> 00:07:06,830
+C++ to write your application maybe you
+can write it as a web app how are you
+
+412
+00:07:06,830 --> 00:07:06,840
+can write it as a web app how are you
+ 
+
+413
+00:07:06,840 --> 00:07:08,589
+can write it as a web app how are you
+going to host that web app using
+
+414
+00:07:08,589 --> 00:07:08,599
+going to host that web app using
+ 
+
+415
+00:07:08,599 --> 00:07:10,950
+going to host that web app using
+hostinger we use hostinger to hos Hazel
+
+416
+00:07:10,950 --> 00:07:10,960
+hostinger we use hostinger to hos Hazel
+ 
+
+417
+00:07:10,960 --> 00:07:12,589
+hostinger we use hostinger to hos Hazel
+engine.com which by the way you can go
+
+418
+00:07:12,589 --> 00:07:12,599
+engine.com which by the way you can go
+ 
+
+419
+00:07:12,599 --> 00:07:14,189
+engine.com which by the way you can go
+to to find out more information about
+
+420
+00:07:14,189 --> 00:07:14,199
+to to find out more information about
+ 
+
+421
+00:07:14,199 --> 00:07:15,629
+to to find out more information about
+hazel the game engine that we're
+
+422
+00:07:15,629 --> 00:07:15,639
+hazel the game engine that we're
+ 
+
+423
+00:07:15,639 --> 00:07:17,749
+hazel the game engine that we're
+building setting up Hazel engine.com was
+
+424
+00:07:17,749 --> 00:07:17,759
+building setting up Hazel engine.com was
+ 
+
+425
+00:07:17,759 --> 00:07:19,869
+building setting up Hazel engine.com was
+an incredibly simple process like you
+
+426
+00:07:19,869 --> 00:07:19,879
+an incredibly simple process like you
+ 
+
+427
+00:07:19,879 --> 00:07:21,670
+an incredibly simple process like you
+just press a few buttons fill in some
+
+428
+00:07:21,670 --> 00:07:21,680
+just press a few buttons fill in some
+ 
+
+429
+00:07:21,680 --> 00:07:23,390
+just press a few buttons fill in some
+details such as like you know the name
+
+430
+00:07:23,390 --> 00:07:23,400
+details such as like you know the name
+ 
+
+431
+00:07:23,400 --> 00:07:25,110
+details such as like you know the name
+of your website pick your operating
+
+432
+00:07:25,110 --> 00:07:25,120
+of your website pick your operating
+ 
+
+433
+00:07:25,120 --> 00:07:27,469
+of your website pick your operating
+system and it's pretty much ready to go
+
+434
+00:07:27,469 --> 00:07:27,479
+system and it's pretty much ready to go
+ 
+
+435
+00:07:27,479 --> 00:07:29,550
+system and it's pretty much ready to go
+and that Simplicity applies to if you
+
+436
+00:07:29,550 --> 00:07:29,560
+and that Simplicity applies to if you
+ 
+
+437
+00:07:29,560 --> 00:07:31,230
+and that Simplicity applies to if you
+just want like a shared hosting website
+
+438
+00:07:31,230 --> 00:07:31,240
+just want like a shared hosting website
+ 
+
+439
+00:07:31,240 --> 00:07:33,589
+just want like a shared hosting website
+deal or if you're using a VPS like we
+
+440
+00:07:33,589 --> 00:07:33,599
+deal or if you're using a VPS like we
+ 
+
+441
+00:07:33,599 --> 00:07:36,189
+deal or if you're using a VPS like we
+are and not only is the actual like UI
+
+442
+00:07:36,189 --> 00:07:36,199
+are and not only is the actual like UI
+ 
+
+443
+00:07:36,199 --> 00:07:37,909
+are and not only is the actual like UI
+and dashboard and all of that beautiful
+
+444
+00:07:37,909 --> 00:07:37,919
+and dashboard and all of that beautiful
+ 
+
+445
+00:07:37,919 --> 00:07:40,589
+and dashboard and all of that beautiful
+and simple they also have a ton of
+
+446
+00:07:40,589 --> 00:07:40,599
+and simple they also have a ton of
+ 
+
+447
+00:07:40,599 --> 00:07:43,070
+and simple they also have a ton of
+useful documentation that will help you
+
+448
+00:07:43,070 --> 00:07:43,080
+useful documentation that will help you
+ 
+
+449
+00:07:43,080 --> 00:07:45,270
+useful documentation that will help you
+get going or do something really
+
+450
+00:07:45,270 --> 00:07:45,280
+get going or do something really
+ 
+
+451
+00:07:45,280 --> 00:07:47,029
+get going or do something really
+specific it's not only useful if this is
+
+452
+00:07:47,029 --> 00:07:47,039
+specific it's not only useful if this is
+ 
+
+453
+00:07:47,039 --> 00:07:48,629
+specific it's not only useful if this is
+your first website I mean I've set up a
+
+454
+00:07:48,629 --> 00:07:48,639
+your first website I mean I've set up a
+ 
+
+455
+00:07:48,639 --> 00:07:50,309
+your first website I mean I've set up a
+lot of websites in my day but just
+
+456
+00:07:50,309 --> 00:07:50,319
+lot of websites in my day but just
+ 
+
+457
+00:07:50,319 --> 00:07:52,029
+lot of websites in my day but just
+coming in and finding out the specifics
+
+458
+00:07:52,029 --> 00:07:52,039
+coming in and finding out the specifics
+ 
+
+459
+00:07:52,039 --> 00:07:54,230
+coming in and finding out the specifics
+of this web host in like just a few
+
+460
+00:07:54,230 --> 00:07:54,240
+of this web host in like just a few
+ 
+
+461
+00:07:54,240 --> 00:07:56,469
+of this web host in like just a few
+words on their documentation is so
+
+462
+00:07:56,469 --> 00:07:56,479
+words on their documentation is so
+ 
+
+463
+00:07:56,479 --> 00:07:58,230
+words on their documentation is so
+refreshing but I guess having such a
+
+464
+00:07:58,230 --> 00:07:58,240
+refreshing but I guess having such a
+ 
+
+465
+00:07:58,240 --> 00:08:00,390
+refreshing but I guess having such a
+nice clean user interface and Brilliant
+
+466
+00:08:00,390 --> 00:08:00,400
+nice clean user interface and Brilliant
+ 
+
+467
+00:08:00,400 --> 00:08:01,749
+nice clean user interface and Brilliant
+documentation you probably have to pay a
+
+468
+00:08:01,749 --> 00:08:01,759
+documentation you probably have to pay a
+ 
+
+469
+00:08:01,759 --> 00:08:04,670
+documentation you probably have to pay a
+lot for that right no hosting his prices
+
+470
+00:08:04,670 --> 00:08:04,680
+lot for that right no hosting his prices
+ 
+
+471
+00:08:04,680 --> 00:08:06,909
+lot for that right no hosting his prices
+are honestly insane they're honestly the
+
+472
+00:08:06,909 --> 00:08:06,919
+are honestly insane they're honestly the
+ 
+
+473
+00:08:06,919 --> 00:08:09,070
+are honestly insane they're honestly the
+best value web host I have ever seen
+
+474
+00:08:09,070 --> 00:08:09,080
+best value web host I have ever seen
+ 
+
+475
+00:08:09,080 --> 00:08:10,749
+best value web host I have ever seen
+click the link in the description below
+
+476
+00:08:10,749 --> 00:08:10,759
+click the link in the description below
+ 
+
+477
+00:08:10,759 --> 00:08:12,830
+click the link in the description below
+to sign up if you use the coupon code
+
+478
+00:08:12,830 --> 00:08:12,840
+to sign up if you use the coupon code
+ 
+
+479
+00:08:12,840 --> 00:08:15,309
+to sign up if you use the coupon code
+chero you'll get an even bigger discount
+
+480
+00:08:15,309 --> 00:08:15,319
+chero you'll get an even bigger discount
+ 
+
+481
+00:08:15,319 --> 00:08:17,070
+chero you'll get an even bigger discount
+and I promise you you will not be
+
+482
+00:08:17,070 --> 00:08:17,080
+and I promise you you will not be
+ 
+
+483
+00:08:17,080 --> 00:08:19,309
+and I promise you you will not be
+disappointed huge thank you as always to
+
+484
+00:08:19,309 --> 00:08:19,319
+disappointed huge thank you as always to
+ 
+
+485
+00:08:19,319 --> 00:08:21,749
+disappointed huge thank you as always to
+hosting out for sponsoring this video so
+
+486
+00:08:21,749 --> 00:08:21,759
+hosting out for sponsoring this video so
+ 
+
+487
+00:08:21,759 --> 00:08:23,270
+hosting out for sponsoring this video so
+as I mentioned let's dive in take a look
+
+488
+00:08:23,270 --> 00:08:23,280
+as I mentioned let's dive in take a look
+ 
+
+489
+00:08:23,280 --> 00:08:25,790
+as I mentioned let's dive in take a look
+at how we can make a C++ application
+
+490
+00:08:25,790 --> 00:08:25,800
+at how we can make a C++ application
+ 
+
+491
+00:08:25,800 --> 00:08:28,629
+at how we can make a C++ application
+using IM this is the IM guey GitHub
+
+492
+00:08:28,629 --> 00:08:28,639
+using IM this is the IM guey GitHub
+ 
+
+493
+00:08:28,639 --> 00:08:30,430
+using IM this is the IM guey GitHub
+repository this is where all begins now
+
+494
+00:08:30,430 --> 00:08:30,440
+repository this is where all begins now
+ 
+
+495
+00:08:30,440 --> 00:08:31,909
+repository this is where all begins now
+the only thing I want to point out here
+
+496
+00:08:31,909 --> 00:08:31,919
+the only thing I want to point out here
+ 
+
+497
+00:08:31,919 --> 00:08:33,110
+the only thing I want to point out here
+apart from the fact that if this is your
+
+498
+00:08:33,110 --> 00:08:33,120
+apart from the fact that if this is your
+ 
+
+499
+00:08:33,120 --> 00:08:34,110
+apart from the fact that if this is your
+first time you know you should read the
+
+500
+00:08:34,110 --> 00:08:34,120
+first time you know you should read the
+ 
+
+501
+00:08:34,120 --> 00:08:35,829
+first time you know you should read the
+read me all that stuff maybe get to know
+
+502
+00:08:35,829 --> 00:08:35,839
+read me all that stuff maybe get to know
+ 
+
+503
+00:08:35,839 --> 00:08:39,029
+read me all that stuff maybe get to know
+the library there are two main branches
+
+504
+00:08:39,029 --> 00:08:39,039
+the library there are two main branches
+ 
+
+505
+00:08:39,039 --> 00:08:40,469
+the library there are two main branches
+there's a branch called Master there's a
+
+506
+00:08:40,469 --> 00:08:40,479
+there's a branch called Master there's a
+ 
+
+507
+00:08:40,479 --> 00:08:42,469
+there's a branch called Master there's a
+branch called docking the rest are just
+
+508
+00:08:42,469 --> 00:08:42,479
+branch called docking the rest are just
+ 
+
+509
+00:08:42,479 --> 00:08:44,550
+branch called docking the rest are just
+like feature branches but these two as
+
+510
+00:08:44,550 --> 00:08:44,560
+like feature branches but these two as
+ 
+
+511
+00:08:44,560 --> 00:08:47,070
+like feature branches but these two as
+you can see are kind of like the main
+
+512
+00:08:47,070 --> 00:08:47,080
+you can see are kind of like the main
+ 
+
+513
+00:08:47,080 --> 00:08:50,630
+you can see are kind of like the main
+the main events now docking even though
+
+514
+00:08:50,630 --> 00:08:50,640
+the main events now docking even though
+ 
+
+515
+00:08:50,640 --> 00:08:52,550
+the main events now docking even though
+it's not the master branch is a very
+
+516
+00:08:52,550 --> 00:08:52,560
+it's not the master branch is a very
+ 
+
+517
+00:08:52,560 --> 00:08:54,070
+it's not the master branch is a very
+mature usable branch that has been
+
+518
+00:08:54,070 --> 00:08:54,080
+mature usable branch that has been
+ 
+
+519
+00:08:54,080 --> 00:08:56,550
+mature usable branch that has been
+around for like years eventually it will
+
+520
+00:08:56,550 --> 00:08:56,560
+around for like years eventually it will
+ 
+
+521
+00:08:56,560 --> 00:08:58,310
+around for like years eventually it will
+be merged into Master it's not merged
+
+522
+00:08:58,310 --> 00:08:58,320
+be merged into Master it's not merged
+ 
+
+523
+00:08:58,320 --> 00:09:00,350
+be merged into Master it's not merged
+into Master at the moment though and it
+
+524
+00:09:00,350 --> 00:09:00,360
+into Master at the moment though and it
+ 
+
+525
+00:09:00,360 --> 00:09:03,470
+into Master at the moment though and it
+has a lot of really really useful
+
+526
+00:09:03,470 --> 00:09:03,480
+has a lot of really really useful
+ 
+
+527
+00:09:03,480 --> 00:09:05,829
+has a lot of really really useful
+functionality such as a dock space so
+
+528
+00:09:05,829 --> 00:09:05,839
+functionality such as a dock space so
+ 
+
+529
+00:09:05,839 --> 00:09:07,150
+functionality such as a dock space so
+that you can dock Windows like you would
+
+530
+00:09:07,150 --> 00:09:07,160
+that you can dock Windows like you would
+ 
+
+531
+00:09:07,160 --> 00:09:09,630
+that you can dock Windows like you would
+in many applications these days as well
+
+532
+00:09:09,630 --> 00:09:09,640
+in many applications these days as well
+ 
+
+533
+00:09:09,640 --> 00:09:11,790
+in many applications these days as well
+as being able to drag Windows outside of
+
+534
+00:09:11,790 --> 00:09:11,800
+as being able to drag Windows outside of
+ 
+
+535
+00:09:11,800 --> 00:09:13,870
+as being able to drag Windows outside of
+the viewport as you'll see when I show
+
+536
+00:09:13,870 --> 00:09:13,880
+the viewport as you'll see when I show
+ 
+
+537
+00:09:13,880 --> 00:09:16,350
+the viewport as you'll see when I show
+this later in this video so my advice is
+
+538
+00:09:16,350 --> 00:09:16,360
+this later in this video so my advice is
+ 
+
+539
+00:09:16,360 --> 00:09:17,790
+this later in this video so my advice is
+to use a docking Branch now in my
+
+540
+00:09:17,790 --> 00:09:17,800
+to use a docking Branch now in my
+ 
+
+541
+00:09:17,800 --> 00:09:19,150
+to use a docking Branch now in my
+opinion this docking branch is really
+
+542
+00:09:19,150 --> 00:09:19,160
+opinion this docking branch is really
+ 
+
+543
+00:09:19,160 --> 00:09:21,150
+opinion this docking branch is really
+what makes imuy actually useful in the
+
+544
+00:09:21,150 --> 00:09:21,160
+what makes imuy actually useful in the
+ 
+
+545
+00:09:21,160 --> 00:09:23,430
+what makes imuy actually useful in the
+real world for real applications if if
+
+546
+00:09:23,430 --> 00:09:23,440
+real world for real applications if if
+ 
+
+547
+00:09:23,440 --> 00:09:25,030
+real world for real applications if if
+it wasn't for that kind of being able to
+
+548
+00:09:25,030 --> 00:09:25,040
+it wasn't for that kind of being able to
+ 
+
+549
+00:09:25,040 --> 00:09:27,470
+it wasn't for that kind of being able to
+drag Windows outside of the main window
+
+550
+00:09:27,470 --> 00:09:27,480
+drag Windows outside of the main window
+ 
+
+551
+00:09:27,480 --> 00:09:29,910
+drag Windows outside of the main window
+and also you know doc doc space all that
+
+552
+00:09:29,910 --> 00:09:29,920
+and also you know doc doc space all that
+ 
+
+553
+00:09:29,920 --> 00:09:32,230
+and also you know doc doc space all that
+stuff uh I probably wouldn't be making
+
+554
+00:09:32,230 --> 00:09:32,240
+stuff uh I probably wouldn't be making
+ 
+
+555
+00:09:32,240 --> 00:09:33,470
+stuff uh I probably wouldn't be making
+this video today recommending that you
+
+556
+00:09:33,470 --> 00:09:33,480
+this video today recommending that you
+ 
+
+557
+00:09:33,480 --> 00:09:35,509
+this video today recommending that you
+use IM GOI for applications because
+
+558
+00:09:35,509 --> 00:09:35,519
+use IM GOI for applications because
+ 
+
+559
+00:09:35,519 --> 00:09:37,069
+use IM GOI for applications because
+without this it would be a little bit
+
+560
+00:09:37,069 --> 00:09:37,079
+without this it would be a little bit
+ 
+
+561
+00:09:37,079 --> 00:09:39,110
+without this it would be a little bit
+weird so let's obtain this I have
+
+562
+00:09:39,110 --> 00:09:39,120
+weird so let's obtain this I have
+ 
+
+563
+00:09:39,120 --> 00:09:42,430
+weird so let's obtain this I have
+prepared a folder here it is called I am
+
+564
+00:09:42,430 --> 00:09:42,440
+prepared a folder here it is called I am
+ 
+
+565
+00:09:42,440 --> 00:09:44,790
+prepared a folder here it is called I am
+guey apps uh if you just click on the
+
+566
+00:09:44,790 --> 00:09:44,800
+guey apps uh if you just click on the
+ 
+
+567
+00:09:44,800 --> 00:09:46,550
+guey apps uh if you just click on the
+little address bar type in CMD to get to
+
+568
+00:09:46,550 --> 00:09:46,560
+little address bar type in CMD to get to
+ 
+
+569
+00:09:46,560 --> 00:09:47,750
+little address bar type in CMD to get to
+a command prompt let's go ahead and
+
+570
+00:09:47,750 --> 00:09:47,760
+a command prompt let's go ahead and
+ 
+
+571
+00:09:47,760 --> 00:09:49,750
+a command prompt let's go ahead and
+clone I'm goey and we will start from
+
+572
+00:09:49,750 --> 00:09:49,760
+clone I'm goey and we will start from
+ 
+
+573
+00:09:49,760 --> 00:09:51,310
+clone I'm goey and we will start from
+there so let's go ahead and grab that
+
+574
+00:09:51,310 --> 00:09:51,320
+there so let's go ahead and grab that
+ 
+
+575
+00:09:51,320 --> 00:09:53,710
+there so let's go ahead and grab that
+URL we'll go over here get clone I
+
+576
+00:09:53,710 --> 00:09:53,720
+URL we'll go over here get clone I
+ 
+
+577
+00:09:53,720 --> 00:09:55,470
+URL we'll go over here get clone I
+always do a recursive clone just in case
+
+578
+00:09:55,470 --> 00:09:55,480
+always do a recursive clone just in case
+ 
+
+579
+00:09:55,480 --> 00:09:56,710
+always do a recursive clone just in case
+there are sub modules that we need to
+
+580
+00:09:56,710 --> 00:09:56,720
+there are sub modules that we need to
+ 
+
+581
+00:09:56,720 --> 00:09:58,630
+there are sub modules that we need to
+obtain I actually don't think imuy has
+
+582
+00:09:58,630 --> 00:09:58,640
+obtain I actually don't think imuy has
+ 
+
+583
+00:09:58,640 --> 00:10:00,790
+obtain I actually don't think imuy has
+any but request clone anyway we'll paste
+
+584
+00:10:00,790 --> 00:10:00,800
+any but request clone anyway we'll paste
+ 
+
+585
+00:10:00,800 --> 00:10:02,230
+any but request clone anyway we'll paste
+in the repository URL you don't really
+
+586
+00:10:02,230 --> 00:10:02,240
+in the repository URL you don't really
+ 
+
+587
+00:10:02,240 --> 00:10:04,069
+in the repository URL you don't really
+need the dog it'll add it if it's not
+
+588
+00:10:04,069 --> 00:10:04,079
+need the dog it'll add it if it's not
+ 
+
+589
+00:10:04,079 --> 00:10:06,470
+need the dog it'll add it if it's not
+there uh and then I'm going to check out
+
+590
+00:10:06,470 --> 00:10:06,480
+there uh and then I'm going to check out
+ 
+
+591
+00:10:06,480 --> 00:10:08,030
+there uh and then I'm going to check out
+specifically that docking BR straight
+
+592
+00:10:08,030 --> 00:10:08,040
+specifically that docking BR straight
+ 
+
+593
+00:10:08,040 --> 00:10:10,110
+specifically that docking BR straight
+away so if you do a-b we won't bother
+
+594
+00:10:10,110 --> 00:10:10,120
+away so if you do a-b we won't bother
+ 
+
+595
+00:10:10,120 --> 00:10:11,389
+away so if you do a-b we won't bother
+checking out master and then we'll have
+
+596
+00:10:11,389 --> 00:10:11,399
+checking out master and then we'll have
+ 
+
+597
+00:10:11,399 --> 00:10:12,590
+checking out master and then we'll have
+to switch to docking we can just check
+
+598
+00:10:12,590 --> 00:10:12,600
+to switch to docking we can just check
+ 
+
+599
+00:10:12,600 --> 00:10:14,230
+to switch to docking we can just check
+out docking and then if you like you can
+
+600
+00:10:14,230 --> 00:10:14,240
+out docking and then if you like you can
+ 
+
+601
+00:10:14,240 --> 00:10:15,630
+out docking and then if you like you can
+give it like a folder so I'm going to
+
+602
+00:10:15,630 --> 00:10:15,640
+give it like a folder so I'm going to
+ 
+
+603
+00:10:15,640 --> 00:10:16,990
+give it like a folder so I'm going to
+call this my application it's going to
+
+604
+00:10:16,990 --> 00:10:17,000
+call this my application it's going to
+ 
+
+605
+00:10:17,000 --> 00:10:18,829
+call this my application it's going to
+check out all of this code into a folder
+
+606
+00:10:18,829 --> 00:10:18,839
+check out all of this code into a folder
+ 
+
+607
+00:10:18,839 --> 00:10:20,990
+check out all of this code into a folder
+called my application enter and now it's
+
+608
+00:10:20,990 --> 00:10:21,000
+called my application enter and now it's
+ 
+
+609
+00:10:21,000 --> 00:10:22,870
+called my application enter and now it's
+going to clone I'm guey okay done that
+
+610
+00:10:22,870 --> 00:10:22,880
+going to clone I'm guey okay done that
+ 
+
+611
+00:10:22,880 --> 00:10:24,470
+going to clone I'm guey okay done that
+didn't take much time let's go ahead and
+
+612
+00:10:24,470 --> 00:10:24,480
+didn't take much time let's go ahead and
+ 
+
+613
+00:10:24,480 --> 00:10:26,430
+didn't take much time let's go ahead and
+go to that folder here we are here's my
+
+614
+00:10:26,430 --> 00:10:26,440
+go to that folder here we are here's my
+ 
+
+615
+00:10:26,440 --> 00:10:28,310
+go to that folder here we are here's my
+application and we have all of our code
+
+616
+00:10:28,310 --> 00:10:28,320
+application and we have all of our code
+ 
+
+617
+00:10:28,320 --> 00:10:31,750
+application and we have all of our code
+here now IM am guey works pretty much
+
+618
+00:10:31,750 --> 00:10:31,760
+here now IM am guey works pretty much
+ 
+
+619
+00:10:31,760 --> 00:10:34,069
+here now IM am guey works pretty much
+anywhere because it has a lot of really
+
+620
+00:10:34,069 --> 00:10:34,079
+anywhere because it has a lot of really
+ 
+
+621
+00:10:34,079 --> 00:10:36,509
+anywhere because it has a lot of really
+good examples and you can see over here
+
+622
+00:10:36,509 --> 00:10:36,519
+good examples and you can see over here
+ 
+
+623
+00:10:36,519 --> 00:10:38,550
+good examples and you can see over here
+just how many examples it has if you're
+
+624
+00:10:38,550 --> 00:10:38,560
+just how many examples it has if you're
+ 
+
+625
+00:10:38,560 --> 00:10:40,230
+just how many examples it has if you're
+just doing a speedrun and you just want
+
+626
+00:10:40,230 --> 00:10:40,240
+just doing a speedrun and you just want
+ 
+
+627
+00:10:40,240 --> 00:10:42,710
+just doing a speedrun and you just want
+to get up and running with IM then
+
+628
+00:10:42,710 --> 00:10:42,720
+to get up and running with IM then
+ 
+
+629
+00:10:42,720 --> 00:10:45,269
+to get up and running with IM then
+just open the IMU example solution pick
+
+630
+00:10:45,269 --> 00:10:45,279
+just open the IMU example solution pick
+ 
+
+631
+00:10:45,279 --> 00:10:47,110
+just open the IMU example solution pick
+literally almost whatever you like so
+
+632
+00:10:47,110 --> 00:10:47,120
+literally almost whatever you like so
+ 
+
+633
+00:10:47,120 --> 00:10:48,910
+literally almost whatever you like so
+for Windows I recommend either falcon or
+
+634
+00:10:48,910 --> 00:10:48,920
+for Windows I recommend either falcon or
+ 
+
+635
+00:10:48,920 --> 00:10:50,870
+for Windows I recommend either falcon or
+like direct x 11 or 12 but this isn't
+
+636
+00:10:50,870 --> 00:10:50,880
+like direct x 11 or 12 but this isn't
+ 
+
+637
+00:10:50,880 --> 00:10:52,230
+like direct x 11 or 12 but this isn't
+exactly a speedrun so let's talk about
+
+638
+00:10:52,230 --> 00:10:52,240
+exactly a speedrun so let's talk about
+ 
+
+639
+00:10:52,240 --> 00:10:53,870
+exactly a speedrun so let's talk about
+this a little bit these example
+
+640
+00:10:53,870 --> 00:10:53,880
+this a little bit these example
+ 
+
+641
+00:10:53,880 --> 00:10:57,470
+this a little bit these example
+directories have essentially like the
+
+642
+00:10:57,470 --> 00:10:57,480
+directories have essentially like the
+ 
+
+643
+00:10:57,480 --> 00:10:59,790
+directories have essentially like the
+boilerplate examples for each platform
+
+644
+00:10:59,790 --> 00:10:59,800
+boilerplate examples for each platform
+ 
+
+645
+00:10:59,800 --> 00:11:02,430
+boilerplate examples for each platform
+and library right so we have win32 like
+
+646
+00:11:02,430 --> 00:11:02,440
+and library right so we have win32 like
+ 
+
+647
+00:11:02,440 --> 00:11:04,710
+and library right so we have win32 like
+directx10 for example this is using the
+
+648
+00:11:04,710 --> 00:11:04,720
+directx10 for example this is using the
+ 
+
+649
+00:11:04,720 --> 00:11:07,350
+directx10 for example this is using the
+win32 API to actually like create the
+
+650
+00:11:07,350 --> 00:11:07,360
+win32 API to actually like create the
+ 
+
+651
+00:11:07,360 --> 00:11:09,030
+win32 API to actually like create the
+window and handle all the events and
+
+652
+00:11:09,030 --> 00:11:09,040
+window and handle all the events and
+ 
+
+653
+00:11:09,040 --> 00:11:11,110
+window and handle all the events and
+then it uses directx10 as the rendering
+
+654
+00:11:11,110 --> 00:11:11,120
+then it uses directx10 as the rendering
+ 
+
+655
+00:11:11,120 --> 00:11:13,910
+then it uses directx10 as the rendering
+API as the graphics API so glfw openg
+
+656
+00:11:13,910 --> 00:11:13,920
+API as the graphics API so glfw openg
+ 
+
+657
+00:11:13,920 --> 00:11:16,470
+API as the graphics API so glfw openg
+GL2 for example we'll use gfw as the
+
+658
+00:11:16,470 --> 00:11:16,480
+GL2 for example we'll use gfw as the
+ 
+
+659
+00:11:16,480 --> 00:11:18,509
+GL2 for example we'll use gfw as the
+window and event library and all that
+
+660
+00:11:18,509 --> 00:11:18,519
+window and event library and all that
+ 
+
+661
+00:11:18,519 --> 00:11:20,269
+window and event library and all that
+and then it'll use openg like version
+
+662
+00:11:20,269 --> 00:11:20,279
+and then it'll use openg like version
+ 
+
+663
+00:11:20,279 --> 00:11:22,430
+and then it'll use openg like version
+two compliant code to actually do all of
+
+664
+00:11:22,430 --> 00:11:22,440
+two compliant code to actually do all of
+ 
+
+665
+00:11:22,440 --> 00:11:24,470
+two compliant code to actually do all of
+the rendering there's even M script and
+
+666
+00:11:24,470 --> 00:11:24,480
+the rendering there's even M script and
+ 
+
+667
+00:11:24,480 --> 00:11:26,470
+the rendering there's even M script and
+stuff here so you can run it on you know
+
+668
+00:11:26,470 --> 00:11:26,480
+stuff here so you can run it on you know
+ 
+
+669
+00:11:26,480 --> 00:11:28,829
+stuff here so you can run it on you know
+the web uh there's metal so you can run
+
+670
+00:11:28,829 --> 00:11:28,839
+the web uh there's metal so you can run
+ 
+
+671
+00:11:28,839 --> 00:11:30,750
+the web uh there's metal so you can run
+it this will probably just be a Mac OS
+
+672
+00:11:30,750 --> 00:11:30,760
+it this will probably just be a Mac OS
+ 
+
+673
+00:11:30,760 --> 00:11:32,509
+it this will probably just be a Mac OS
+version but they do have like IOS and
+
+674
+00:11:32,509 --> 00:11:32,519
+version but they do have like IOS and
+ 
+
+675
+00:11:32,519 --> 00:11:33,990
+version but they do have like IOS and
+Android example somewhere else here's an
+
+676
+00:11:33,990 --> 00:11:34,000
+Android example somewhere else here's an
+ 
+
+677
+00:11:34,000 --> 00:11:37,030
+Android example somewhere else here's an
+Android example for example the point is
+
+678
+00:11:37,030 --> 00:11:37,040
+Android example for example the point is
+ 
+
+679
+00:11:37,040 --> 00:11:38,910
+Android example for example the point is
+there's a ton of stuff here and then not
+
+680
+00:11:38,910 --> 00:11:38,920
+there's a ton of stuff here and then not
+ 
+
+681
+00:11:38,920 --> 00:11:40,710
+there's a ton of stuff here and then not
+only is there this but they now have a
+
+682
+00:11:40,710 --> 00:11:40,720
+only is there this but they now have a
+ 
+
+683
+00:11:40,720 --> 00:11:42,310
+only is there this but they now have a
+backends folder this used to be part of
+
+684
+00:11:42,310 --> 00:11:42,320
+backends folder this used to be part of
+ 
+
+685
+00:11:42,320 --> 00:11:44,150
+backends folder this used to be part of
+examples that contains the actual
+
+686
+00:11:44,150 --> 00:11:44,160
+examples that contains the actual
+ 
+
+687
+00:11:44,160 --> 00:11:46,230
+examples that contains the actual
+backend files for all of these my point
+
+688
+00:11:46,230 --> 00:11:46,240
+backend files for all of these my point
+ 
+
+689
+00:11:46,240 --> 00:11:48,710
+backend files for all of these my point
+being that it's really easy to integrate
+
+690
+00:11:48,710 --> 00:11:48,720
+being that it's really easy to integrate
+ 
+
+691
+00:11:48,720 --> 00:11:51,269
+being that it's really easy to integrate
+this with literally anything and that's
+
+692
+00:11:51,269 --> 00:11:51,279
+this with literally anything and that's
+ 
+
+693
+00:11:51,279 --> 00:11:52,629
+this with literally anything and that's
+the beauty of this that's what makes
+
+694
+00:11:52,629 --> 00:11:52,639
+the beauty of this that's what makes
+ 
+
+695
+00:11:52,639 --> 00:11:55,230
+the beauty of this that's what makes
+this so amazingly crossplatform the fact
+
+696
+00:11:55,230 --> 00:11:55,240
+this so amazingly crossplatform the fact
+ 
+
+697
+00:11:55,240 --> 00:11:56,430
+this so amazingly crossplatform the fact
+that they just have example
+
+698
+00:11:56,430 --> 00:11:56,440
+that they just have example
+ 
+
+699
+00:11:56,440 --> 00:11:57,910
+that they just have example
+implementations of everything and you
+
+700
+00:11:57,910 --> 00:11:57,920
+implementations of everything and you
+ 
+
+701
+00:11:57,920 --> 00:11:59,870
+implementations of everything and you
+don't have to do anything yourself right
+
+702
+00:11:59,870 --> 00:11:59,880
+don't have to do anything yourself right
+ 
+
+703
+00:11:59,880 --> 00:12:01,870
+don't have to do anything yourself right
+all you really have to do is open up
+
+704
+00:12:01,870 --> 00:12:01,880
+all you really have to do is open up
+ 
+
+705
+00:12:01,880 --> 00:12:04,350
+all you really have to do is open up
+this IM Go examples. Solution now I'm
+
+706
+00:12:04,350 --> 00:12:04,360
+this IM Go examples. Solution now I'm
+ 
+
+707
+00:12:04,360 --> 00:12:06,230
+this IM Go examples. Solution now I'm
+going to upgrade all of mine to like the
+
+708
+00:12:06,230 --> 00:12:06,240
+going to upgrade all of mine to like the
+ 
+
+709
+00:12:06,240 --> 00:12:08,150
+going to upgrade all of mine to like the
+latest because I'm using visual studio
+
+710
+00:12:08,150 --> 00:12:08,160
+latest because I'm using visual studio
+ 
+
+711
+00:12:08,160 --> 00:12:10,509
+latest because I'm using visual studio
+2022 and I think this is still 2019
+
+712
+00:12:10,509 --> 00:12:10,519
+2022 and I think this is still 2019
+ 
+
+713
+00:12:10,519 --> 00:12:12,710
+2022 and I think this is still 2019
+let's go ahead and drag that into here
+
+714
+00:12:12,710 --> 00:12:12,720
+let's go ahead and drag that into here
+ 
+
+715
+00:12:12,720 --> 00:12:14,350
+let's go ahead and drag that into here
+it's upgraded all the projects cool that
+
+716
+00:12:14,350 --> 00:12:14,360
+it's upgraded all the projects cool that
+ 
+
+717
+00:12:14,360 --> 00:12:16,069
+it's upgraded all the projects cool that
+should be pretty straightforward and
+
+718
+00:12:16,069 --> 00:12:16,079
+should be pretty straightforward and
+ 
+
+719
+00:12:16,079 --> 00:12:17,750
+should be pretty straightforward and
+then as I mentioned we pick something so
+
+720
+00:12:17,750 --> 00:12:17,760
+then as I mentioned we pick something so
+ 
+
+721
+00:12:17,760 --> 00:12:19,949
+then as I mentioned we pick something so
+as an example I'm just going to pick gfw
+
+722
+00:12:19,949 --> 00:12:19,959
+as an example I'm just going to pick gfw
+ 
+
+723
+00:12:19,959 --> 00:12:21,629
+as an example I'm just going to pick gfw
+Vulcan let's set that as a startup
+
+724
+00:12:21,629 --> 00:12:21,639
+Vulcan let's set that as a startup
+ 
+
+725
+00:12:21,639 --> 00:12:23,790
+Vulcan let's set that as a startup
+project if we wanted to to keep things
+
+726
+00:12:23,790 --> 00:12:23,800
+project if we wanted to to keep things
+ 
+
+727
+00:12:23,800 --> 00:12:25,710
+project if we wanted to to keep things
+clean we could unload like literally all
+
+728
+00:12:25,710 --> 00:12:25,720
+clean we could unload like literally all
+ 
+
+729
+00:12:25,720 --> 00:12:27,310
+clean we could unload like literally all
+the other projects and I mean this is
+
+730
+00:12:27,310 --> 00:12:27,320
+the other projects and I mean this is
+ 
+
+731
+00:12:27,320 --> 00:12:29,189
+the other projects and I mean this is
+where like if you were actually r
+
+732
+00:12:29,189 --> 00:12:29,199
+where like if you were actually r
+ 
+
+733
+00:12:29,199 --> 00:12:30,790
+where like if you were actually r
+writing an application like you were
+
+734
+00:12:30,790 --> 00:12:30,800
+writing an application like you were
+ 
+
+735
+00:12:30,800 --> 00:12:32,269
+writing an application like you were
+writing your own application using IM
+
+736
+00:12:32,269 --> 00:12:32,279
+writing your own application using IM
+ 
+
+737
+00:12:32,279 --> 00:12:34,790
+writing your own application using IM
+guey maybe you wouldn't start with just
+
+738
+00:12:34,790 --> 00:12:34,800
+guey maybe you wouldn't start with just
+ 
+
+739
+00:12:34,800 --> 00:12:37,110
+guey maybe you wouldn't start with just
+you know modifying this example solution
+
+740
+00:12:37,110 --> 00:12:37,120
+you know modifying this example solution
+ 
+
+741
+00:12:37,120 --> 00:12:38,189
+you know modifying this example solution
+if you want to see a video on how to
+
+742
+00:12:38,189 --> 00:12:38,199
+if you want to see a video on how to
+ 
+
+743
+00:12:38,199 --> 00:12:39,509
+if you want to see a video on how to
+actually create a project from scratch
+
+744
+00:12:39,509 --> 00:12:39,519
+actually create a project from scratch
+ 
+
+745
+00:12:39,519 --> 00:12:41,430
+actually create a project from scratch
+using IM let me know I'll probably
+
+746
+00:12:41,430 --> 00:12:41,440
+using IM let me know I'll probably
+ 
+
+747
+00:12:41,440 --> 00:12:42,710
+using IM let me know I'll probably
+do that but otherwise this is just going
+
+748
+00:12:42,710 --> 00:12:42,720
+do that but otherwise this is just going
+ 
+
+749
+00:12:42,720 --> 00:12:45,150
+do that but otherwise this is just going
+to be faster so you'll see basically
+
+750
+00:12:45,150 --> 00:12:45,160
+to be faster so you'll see basically
+ 
+
+751
+00:12:45,160 --> 00:12:48,069
+to be faster so you'll see basically
+five main files in this kind of example
+
+752
+00:12:48,069 --> 00:12:48,079
+five main files in this kind of example
+ 
+
+753
+00:12:48,079 --> 00:12:51,509
+five main files in this kind of example
+gfw vcon main is the entry point as it
+
+754
+00:12:51,509 --> 00:12:51,519
+gfw vcon main is the entry point as it
+ 
+
+755
+00:12:51,519 --> 00:12:53,470
+gfw vcon main is the entry point as it
+implies this is what has the actual like
+
+756
+00:12:53,470 --> 00:12:53,480
+implies this is what has the actual like
+ 
+
+757
+00:12:53,480 --> 00:12:56,110
+implies this is what has the actual like
+main function if I can find it over here
+
+758
+00:12:56,110 --> 00:12:56,120
+main function if I can find it over here
+ 
+
+759
+00:12:56,120 --> 00:12:58,030
+main function if I can find it over here
+right there's our int main it's got a
+
+760
+00:12:58,030 --> 00:12:58,040
+right there's our int main it's got a
+ 
+
+761
+00:12:58,040 --> 00:13:00,230
+right there's our int main it's got a
+bunch of gel of w play code and see this
+
+762
+00:13:00,230 --> 00:13:00,240
+bunch of gel of w play code and see this
+ 
+
+763
+00:13:00,240 --> 00:13:01,990
+bunch of gel of w play code and see this
+is where it's so amazing this is why I
+
+764
+00:13:01,990 --> 00:13:02,000
+is where it's so amazing this is why I
+ 
+
+765
+00:13:02,000 --> 00:13:03,670
+is where it's so amazing this is why I
+love IMI so much as well because not
+
+766
+00:13:03,670 --> 00:13:03,680
+love IMI so much as well because not
+ 
+
+767
+00:13:03,680 --> 00:13:06,470
+love IMI so much as well because not
+only is it an amazing GUI like Library
+
+768
+00:13:06,470 --> 00:13:06,480
+only is it an amazing GUI like Library
+ 
+
+769
+00:13:06,480 --> 00:13:10,069
+only is it an amazing GUI like Library
+framework whatever it's also a fantastic
+
+770
+00:13:10,069 --> 00:13:10,079
+framework whatever it's also a fantastic
+ 
+
+771
+00:13:10,079 --> 00:13:12,389
+framework whatever it's also a fantastic
+kind of example of how to get up and
+
+772
+00:13:12,389 --> 00:13:12,399
+kind of example of how to get up and
+ 
+
+773
+00:13:12,399 --> 00:13:15,509
+kind of example of how to get up and
+running with all of these like apis like
+
+774
+00:13:15,509 --> 00:13:15,519
+running with all of these like apis like
+ 
+
+775
+00:13:15,519 --> 00:13:17,350
+running with all of these like apis like
+whether you're using glfw for window or
+
+776
+00:13:17,350 --> 00:13:17,360
+whether you're using glfw for window or
+ 
+
+777
+00:13:17,360 --> 00:13:20,629
+whether you're using glfw for window or
+sdl or win32 here's a beautiful example
+
+778
+00:13:20,629 --> 00:13:20,639
+sdl or win32 here's a beautiful example
+ 
+
+779
+00:13:20,639 --> 00:13:23,389
+sdl or win32 here's a beautiful example
+of how to set up glfw create a window
+
+780
+00:13:23,389 --> 00:13:23,399
+of how to set up glfw create a window
+ 
+
+781
+00:13:23,399 --> 00:13:26,389
+of how to set up glfw create a window
+set up Vulcan for it and then render UI
+
+782
+00:13:26,389 --> 00:13:26,399
+set up Vulcan for it and then render UI
+ 
+
+783
+00:13:26,399 --> 00:13:29,150
+set up Vulcan for it and then render UI
+to it right so if we just hit F5 this is
+
+784
+00:13:29,150 --> 00:13:29,160
+to it right so if we just hit F5 this is
+ 
+
+785
+00:13:29,160 --> 00:13:30,470
+to it right so if we just hit F5 this is
+going to be a debug build but it doesn't
+
+786
+00:13:30,470 --> 00:13:30,480
+going to be a debug build but it doesn't
+ 
+
+787
+00:13:30,480 --> 00:13:33,949
+going to be a debug build but it doesn't
+really matter for us this is what we get
+
+788
+00:13:33,949 --> 00:13:33,959
+really matter for us this is what we get
+ 
+
+789
+00:13:33,959 --> 00:13:36,670
+really matter for us this is what we get
+right this is basically ready to go
+
+790
+00:13:36,670 --> 00:13:36,680
+right this is basically ready to go
+ 
+
+791
+00:13:36,680 --> 00:13:38,350
+right this is basically ready to go
+right we have a beautiful application
+
+792
+00:13:38,350 --> 00:13:38,360
+right we have a beautiful application
+ 
+
+793
+00:13:38,360 --> 00:13:39,470
+right we have a beautiful application
+and as I mentioned because this is the
+
+794
+00:13:39,470 --> 00:13:39,480
+and as I mentioned because this is the
+ 
+
+795
+00:13:39,480 --> 00:13:41,189
+and as I mentioned because this is the
+docking Branch we can literally take
+
+796
+00:13:41,189 --> 00:13:41,199
+docking Branch we can literally take
+ 
+
+797
+00:13:41,199 --> 00:13:43,750
+docking Branch we can literally take
+this and just drag it out of the window
+
+798
+00:13:43,750 --> 00:13:43,760
+this and just drag it out of the window
+ 
+
+799
+00:13:43,760 --> 00:13:45,629
+this and just drag it out of the window
+and you can see it's now its own window
+
+800
+00:13:45,629 --> 00:13:45,639
+and you can see it's now its own window
+ 
+
+801
+00:13:45,639 --> 00:13:46,990
+and you can see it's now its own window
+this isn't possible in the main branch
+
+802
+00:13:46,990 --> 00:13:47,000
+this isn't possible in the main branch
+ 
+
+803
+00:13:47,000 --> 00:13:49,310
+this isn't possible in the main branch
+or in the master Branch this is why
+
+804
+00:13:49,310 --> 00:13:49,320
+or in the master Branch this is why
+ 
+
+805
+00:13:49,320 --> 00:13:50,629
+or in the master Branch this is why
+again as I mentioned like this kind of
+
+806
+00:13:50,629 --> 00:13:50,639
+again as I mentioned like this kind of
+ 
+
+807
+00:13:50,639 --> 00:13:51,870
+again as I mentioned like this kind of
+functionality is great I can drag it to
+
+808
+00:13:51,870 --> 00:13:51,880
+functionality is great I can drag it to
+ 
+
+809
+00:13:51,880 --> 00:13:53,509
+functionality is great I can drag it to
+my other monitor I can treade it like it
+
+810
+00:13:53,509 --> 00:13:53,519
+my other monitor I can treade it like it
+ 
+
+811
+00:13:53,519 --> 00:13:55,030
+my other monitor I can treade it like it
+was a normal application which is
+
+812
+00:13:55,030 --> 00:13:55,040
+was a normal application which is
+ 
+
+813
+00:13:55,040 --> 00:13:56,990
+was a normal application which is
+amazing and then under examples we've
+
+814
+00:13:56,990 --> 00:13:57,000
+amazing and then under examples we've
+ 
+
+815
+00:13:57,000 --> 00:13:58,870
+amazing and then under examples we've
+also got that dock space right now it's
+
+816
+00:13:58,870 --> 00:13:58,880
+also got that dock space right now it's
+ 
+
+817
+00:13:58,880 --> 00:14:00,829
+also got that dock space right now it's
+a doc space now I can dock this in here
+
+818
+00:14:00,829 --> 00:14:00,839
+a doc space now I can dock this in here
+ 
+
+819
+00:14:00,839 --> 00:14:03,230
+a doc space now I can dock this in here
+and you can see suddenly we have a very
+
+820
+00:14:03,230 --> 00:14:03,240
+and you can see suddenly we have a very
+ 
+
+821
+00:14:03,240 --> 00:14:05,430
+and you can see suddenly we have a very
+like real looking application but it's
+
+822
+00:14:05,430 --> 00:14:05,440
+like real looking application but it's
+ 
+
+823
+00:14:05,440 --> 00:14:07,509
+like real looking application but it's
+all running in IM GUI it's all rendering
+
+824
+00:14:07,509 --> 00:14:07,519
+all running in IM GUI it's all rendering
+ 
+
+825
+00:14:07,519 --> 00:14:09,230
+all running in IM GUI it's all rendering
+like you know well in this case at vsync
+
+826
+00:14:09,230 --> 00:14:09,240
+like you know well in this case at vsync
+ 
+
+827
+00:14:09,240 --> 00:14:12,310
+like you know well in this case at vsync
+I'm on a 144 HZ monitor like it's all
+
+828
+00:14:12,310 --> 00:14:12,320
+I'm on a 144 HZ monitor like it's all
+ 
+
+829
+00:14:12,320 --> 00:14:14,350
+I'm on a 144 HZ monitor like it's all
+rendering like real time frame to frame
+
+830
+00:14:14,350 --> 00:14:14,360
+rendering like real time frame to frame
+ 
+
+831
+00:14:14,360 --> 00:14:16,590
+rendering like real time frame to frame
+every frame is is rendered from scratch
+
+832
+00:14:16,590 --> 00:14:16,600
+every frame is is rendered from scratch
+ 
+
+833
+00:14:16,600 --> 00:14:18,030
+every frame is is rendered from scratch
+you know we have a good immediate mode
+
+834
+00:14:18,030 --> 00:14:18,040
+you know we have a good immediate mode
+ 
+
+835
+00:14:18,040 --> 00:14:20,030
+you know we have a good immediate mode
+UI ready to go so how do we kind of
+
+836
+00:14:20,030 --> 00:14:20,040
+UI ready to go so how do we kind of
+ 
+
+837
+00:14:20,040 --> 00:14:23,030
+UI ready to go so how do we kind of
+convert this into our own application
+
+838
+00:14:23,030 --> 00:14:23,040
+convert this into our own application
+ 
+
+839
+00:14:23,040 --> 00:14:26,069
+convert this into our own application
+well from here you could literally set
+
+840
+00:14:26,069 --> 00:14:26,079
+well from here you could literally set
+ 
+
+841
+00:14:26,079 --> 00:14:27,710
+well from here you could literally set
+up anything you wanted to right and
+
+842
+00:14:27,710 --> 00:14:27,720
+up anything you wanted to right and
+ 
+
+843
+00:14:27,720 --> 00:14:29,430
+up anything you wanted to right and
+there's even some useful commands being
+
+844
+00:14:29,430 --> 00:14:29,440
+there's even some useful commands being
+ 
+
+845
+00:14:29,440 --> 00:14:30,870
+there's even some useful commands being
+like you know you if you want your own
+
+846
+00:14:30,870 --> 00:14:30,880
+like you know you if you want your own
+ 
+
+847
+00:14:30,880 --> 00:14:32,509
+like you know you if you want your own
+font because that's a common request I'm
+
+848
+00:14:32,509 --> 00:14:32,519
+font because that's a common request I'm
+ 
+
+849
+00:14:32,519 --> 00:14:35,509
+font because that's a common request I'm
+gu's default font is a bit you know
+
+850
+00:14:35,509 --> 00:14:35,519
+gu's default font is a bit you know
+ 
+
+851
+00:14:35,519 --> 00:14:39,550
+gu's default font is a bit you know
+debug looks like a debug UI thing um you
+
+852
+00:14:39,550 --> 00:14:39,560
+debug looks like a debug UI thing um you
+ 
+
+853
+00:14:39,560 --> 00:14:41,150
+debug looks like a debug UI thing um you
+can change that easily obviously and
+
+854
+00:14:41,150 --> 00:14:41,160
+can change that easily obviously and
+ 
+
+855
+00:14:41,160 --> 00:14:43,350
+can change that easily obviously and
+then we have like again very well
+
+856
+00:14:43,350 --> 00:14:43,360
+then we have like again very well
+ 
+
+857
+00:14:43,360 --> 00:14:45,790
+then we have like again very well
+annotated the main Loop here so inside
+
+858
+00:14:45,790 --> 00:14:45,800
+annotated the main Loop here so inside
+ 
+
+859
+00:14:45,800 --> 00:14:47,590
+annotated the main Loop here so inside
+the main Loop we have some important IM
+
+860
+00:14:47,590 --> 00:14:47,600
+the main Loop we have some important IM
+ 
+
+861
+00:14:47,600 --> 00:14:48,910
+the main Loop we have some important IM
+gooey commands that have to happen at
+
+862
+00:14:48,910 --> 00:14:48,920
+gooey commands that have to happen at
+ 
+
+863
+00:14:48,920 --> 00:14:51,670
+gooey commands that have to happen at
+the start of each frame so IM impul
+
+864
+00:14:51,670 --> 00:14:51,680
+the start of each frame so IM impul
+ 
+
+865
+00:14:51,680 --> 00:14:53,910
+the start of each frame so IM impul
+Von new frame JF W new frame and then
+
+866
+00:14:53,910 --> 00:14:53,920
+Von new frame JF W new frame and then
+ 
+
+867
+00:14:53,920 --> 00:14:56,470
+Von new frame JF W new frame and then
+finally I'm Guy's new frame once you
+
+868
+00:14:56,470 --> 00:14:56,480
+finally I'm Guy's new frame once you
+ 
+
+869
+00:14:56,480 --> 00:14:58,269
+finally I'm Guy's new frame once you
+finish these three lines of code within
+
+870
+00:14:58,269 --> 00:14:58,279
+finish these three lines of code within
+ 
+
+871
+00:14:58,279 --> 00:14:59,629
+finish these three lines of code within
+that main Loop
+
+872
+00:14:59,629 --> 00:14:59,639
+that main Loop
+ 
+
+873
+00:14:59,639 --> 00:15:01,470
+that main Loop
+this stuff is basically rendering all of
+
+874
+00:15:01,470 --> 00:15:01,480
+this stuff is basically rendering all of
+ 
+
+875
+00:15:01,480 --> 00:15:03,670
+this stuff is basically rendering all of
+the UI that we just saw so let's just
+
+876
+00:15:03,670 --> 00:15:03,680
+the UI that we just saw so let's just
+ 
+
+877
+00:15:03,680 --> 00:15:05,069
+the UI that we just saw so let's just
+say we're not interested in this right
+
+878
+00:15:05,069 --> 00:15:05,079
+say we're not interested in this right
+ 
+
+879
+00:15:05,079 --> 00:15:06,829
+say we're not interested in this right
+and then it goes all the way down to the
+
+880
+00:15:06,829 --> 00:15:06,839
+and then it goes all the way down to the
+ 
+
+881
+00:15:06,839 --> 00:15:08,430
+and then it goes all the way down to the
+actual rendering code so that we also
+
+882
+00:15:08,430 --> 00:15:08,440
+actual rendering code so that we also
+ 
+
+883
+00:15:08,440 --> 00:15:12,350
+actual rendering code so that we also
+need to keep so over here now is where
+
+884
+00:15:12,350 --> 00:15:12,360
+need to keep so over here now is where
+ 
+
+885
+00:15:12,360 --> 00:15:14,870
+need to keep so over here now is where
+my code goes
+
+886
+00:15:14,870 --> 00:15:14,880
+my code goes
+ 
+
+887
+00:15:14,880 --> 00:15:18,470
+my code goes
+here right so within this now we could
+
+888
+00:15:18,470 --> 00:15:18,480
+here right so within this now we could
+ 
+
+889
+00:15:18,480 --> 00:15:20,590
+here right so within this now we could
+set up our own UI so to demonstrate this
+
+890
+00:15:20,590 --> 00:15:20,600
+set up our own UI so to demonstrate this
+ 
+
+891
+00:15:20,600 --> 00:15:22,509
+set up our own UI so to demonstrate this
+in a little bit more of a kind of robust
+
+892
+00:15:22,509 --> 00:15:22,519
+in a little bit more of a kind of robust
+ 
+
+893
+00:15:22,519 --> 00:15:24,069
+in a little bit more of a kind of robust
+way I'm going to create a new file and
+
+894
+00:15:24,069 --> 00:15:24,079
+way I'm going to create a new file and
+ 
+
+895
+00:15:24,079 --> 00:15:25,829
+way I'm going to create a new file and
+I'm not sure where this will go exactly
+
+896
+00:15:25,829 --> 00:15:25,839
+I'm not sure where this will go exactly
+ 
+
+897
+00:15:25,839 --> 00:15:27,069
+I'm not sure where this will go exactly
+because I don't know where the directory
+
+898
+00:15:27,069 --> 00:15:27,079
+because I don't know where the directory
+ 
+
+899
+00:15:27,079 --> 00:15:29,069
+because I don't know where the directory
+is it's okay we'll just put it in here
+
+900
+00:15:29,069 --> 00:15:29,079
+is it's okay we'll just put it in here
+ 
+
+901
+00:15:29,079 --> 00:15:30,550
+is it's okay we'll just put it in here
+um I'm going to go ahead and create a
+
+902
+00:15:30,550 --> 00:15:30,560
+um I'm going to go ahead and create a
+ 
+
+903
+00:15:30,560 --> 00:15:32,590
+um I'm going to go ahead and create a
+new item and this is going to basically
+
+904
+00:15:32,590 --> 00:15:32,600
+new item and this is going to basically
+ 
+
+905
+00:15:32,600 --> 00:15:35,590
+new item and this is going to basically
+be like our application like UI stuff so
+
+906
+00:15:35,590 --> 00:15:35,600
+be like our application like UI stuff so
+ 
+
+907
+00:15:35,600 --> 00:15:37,430
+be like our application like UI stuff so
+I'm going to create a new file just to
+
+908
+00:15:37,430 --> 00:15:37,440
+I'm going to create a new file just to
+ 
+
+909
+00:15:37,440 --> 00:15:38,949
+I'm going to create a new file just to
+keep it clean and simple so you guys
+
+910
+00:15:38,949 --> 00:15:38,959
+keep it clean and simple so you guys
+ 
+
+911
+00:15:38,959 --> 00:15:41,069
+keep it clean and simple so you guys
+know what I'm talking about new file new
+
+912
+00:15:41,069 --> 00:15:41,079
+know what I'm talking about new file new
+ 
+
+913
+00:15:41,079 --> 00:15:44,110
+know what I'm talking about new file new
+new header file there and a new CPP file
+
+914
+00:15:44,110 --> 00:15:44,120
+new header file there and a new CPP file
+ 
+
+915
+00:15:44,120 --> 00:15:46,470
+new header file there and a new CPP file
+you know uh if I wanted to well let's
+
+916
+00:15:46,470 --> 00:15:46,480
+you know uh if I wanted to well let's
+ 
+
+917
+00:15:46,480 --> 00:15:47,949
+you know uh if I wanted to well let's
+just keep this simple right I'm don't
+
+918
+00:15:47,949 --> 00:15:47,959
+just keep this simple right I'm don't
+ 
+
+919
+00:15:47,959 --> 00:15:50,309
+just keep this simple right I'm don't
+want to be all Overkill here let's just
+
+920
+00:15:50,309 --> 00:15:50,319
+want to be all Overkill here let's just
+ 
+
+921
+00:15:50,319 --> 00:15:53,430
+want to be all Overkill here let's just
+create like a namespace called my
+
+922
+00:15:53,430 --> 00:15:53,440
+create like a namespace called my
+ 
+
+923
+00:15:53,440 --> 00:15:56,710
+create like a namespace called my
+app um and then we'll create a function
+
+924
+00:15:56,710 --> 00:15:56,720
+app um and then we'll create a function
+ 
+
+925
+00:15:56,720 --> 00:15:59,309
+app um and then we'll create a function
+called like you know render U or
+
+926
+00:15:59,309 --> 00:15:59,319
+called like you know render U or
+ 
+
+927
+00:15:59,319 --> 00:16:01,870
+called like you know render U or
+something like that nice and simple
+
+928
+00:16:01,870 --> 00:16:01,880
+something like that nice and simple
+ 
+
+929
+00:16:01,880 --> 00:16:04,470
+something like that nice and simple
+let's go back to that C++ file there's
+
+930
+00:16:04,470 --> 00:16:04,480
+let's go back to that C++ file there's
+ 
+
+931
+00:16:04,480 --> 00:16:06,710
+let's go back to that C++ file there's
+our render UI and then over here you
+
+932
+00:16:06,710 --> 00:16:06,720
+our render UI and then over here you
+ 
+
+933
+00:16:06,720 --> 00:16:09,990
+our render UI and then over here you
+know as long as we include IM am guy and
+
+934
+00:16:09,990 --> 00:16:10,000
+know as long as we include IM am guy and
+ 
+
+935
+00:16:10,000 --> 00:16:11,910
+know as long as we include IM am guy and
+I don't even know how this was including
+
+936
+00:16:11,910 --> 00:16:11,920
+I don't even know how this was including
+ 
+
+937
+00:16:11,920 --> 00:16:13,629
+I don't even know how this was including
+in that Im goey so let's go take a look
+
+938
+00:16:13,629 --> 00:16:13,639
+in that Im goey so let's go take a look
+ 
+
+939
+00:16:13,639 --> 00:16:16,189
+in that Im goey so let's go take a look
+okay so like this basically all we need
+
+940
+00:16:16,189 --> 00:16:16,199
+okay so like this basically all we need
+ 
+
+941
+00:16:16,199 --> 00:16:18,189
+okay so like this basically all we need
+right over here now I can like create a
+
+942
+00:16:18,189 --> 00:16:18,199
+right over here now I can like create a
+ 
+
+943
+00:16:18,199 --> 00:16:21,430
+right over here now I can like create a
+window so I'm going begin and you know
+
+944
+00:16:21,430 --> 00:16:21,440
+window so I'm going begin and you know
+ 
+
+945
+00:16:21,440 --> 00:16:22,949
+window so I'm going begin and you know
+let's just say this is going to be my
+
+946
+00:16:22,949 --> 00:16:22,959
+let's just say this is going to be my
+ 
+
+947
+00:16:22,959 --> 00:16:24,670
+let's just say this is going to be my
+like settings panel or
+
+948
+00:16:24,670 --> 00:16:24,680
+like settings panel or
+ 
+
+949
+00:16:24,680 --> 00:16:27,829
+like settings panel or
+something I create that window I'm going
+
+950
+00:16:27,829 --> 00:16:27,839
+something I create that window I'm going
+ 
+
+951
+00:16:27,839 --> 00:16:29,670
+something I create that window I'm going
+end to end the the window and then we
+
+952
+00:16:29,670 --> 00:16:29,680
+end to end the the window and then we
+ 
+
+953
+00:16:29,680 --> 00:16:33,670
+end to end the the window and then we
+can like add a button hello let's add
+
+954
+00:16:33,670 --> 00:16:33,680
+can like add a button hello let's add
+ 
+
+955
+00:16:33,680 --> 00:16:37,189
+can like add a button hello let's add
+like a drag float so we can have like a
+
+956
+00:16:37,189 --> 00:16:37,199
+like a drag float so we can have like a
+ 
+
+957
+00:16:37,199 --> 00:16:38,949
+like a drag float so we can have like a
+static float
+
+958
+00:16:38,949 --> 00:16:38,959
+static float
+ 
+
+959
+00:16:38,959 --> 00:16:41,230
+static float
+value we can have like some kind of
+
+960
+00:16:41,230 --> 00:16:41,240
+value we can have like some kind of
+ 
+
+961
+00:16:41,240 --> 00:16:43,550
+value we can have like some kind of
+thing that we drag around this is just
+
+962
+00:16:43,550 --> 00:16:43,560
+thing that we drag around this is just
+ 
+
+963
+00:16:43,560 --> 00:16:46,189
+thing that we drag around this is just
+an example obviously um that's our
+
+964
+00:16:46,189 --> 00:16:46,199
+an example obviously um that's our
+ 
+
+965
+00:16:46,199 --> 00:16:48,069
+an example obviously um that's our
+settings panel done render UI so if we
+
+966
+00:16:48,069 --> 00:16:48,079
+settings panel done render UI so if we
+ 
+
+967
+00:16:48,079 --> 00:16:50,629
+settings panel done render UI so if we
+go back to main let's just include that
+
+968
+00:16:50,629 --> 00:16:50,639
+go back to main let's just include that
+ 
+
+969
+00:16:50,639 --> 00:16:52,230
+go back to main let's just include that
+application window or sorry that
+
+970
+00:16:52,230 --> 00:16:52,240
+application window or sorry that
+ 
+
+971
+00:16:52,240 --> 00:16:54,150
+application window or sorry that
+application file that we just made
+
+972
+00:16:54,150 --> 00:16:54,160
+application file that we just made
+ 
+
+973
+00:16:54,160 --> 00:16:56,670
+application file that we just made
+application. and then we just do my app
+
+974
+00:16:56,670 --> 00:16:56,680
+application. and then we just do my app
+ 
+
+975
+00:16:56,680 --> 00:16:59,949
+application. and then we just do my app
+render UI F5
+
+976
+00:16:59,949 --> 00:16:59,959
+render UI F5
+ 
+
+977
+00:16:59,959 --> 00:17:02,309
+render UI F5
+and we now have that settings panel I
+
+978
+00:17:02,309 --> 00:17:02,319
+and we now have that settings panel I
+ 
+
+979
+00:17:02,319 --> 00:17:04,710
+and we now have that settings panel I
+talked about right but what about the
+
+980
+00:17:04,710 --> 00:17:04,720
+talked about right but what about the
+ 
+
+981
+00:17:04,720 --> 00:17:07,029
+talked about right but what about the
+doc space so you can see there is no doc
+
+982
+00:17:07,029 --> 00:17:07,039
+doc space so you can see there is no doc
+ 
+
+983
+00:17:07,039 --> 00:17:08,829
+doc space so you can see there is no doc
+space this is actually Vulcan rendering
+
+984
+00:17:08,829 --> 00:17:08,839
+space this is actually Vulcan rendering
+ 
+
+985
+00:17:08,839 --> 00:17:10,710
+space this is actually Vulcan rendering
+a clear color in the background here
+
+986
+00:17:10,710 --> 00:17:10,720
+a clear color in the background here
+ 
+
+987
+00:17:10,720 --> 00:17:12,110
+a clear color in the background here
+which again is is another perfect
+
+988
+00:17:12,110 --> 00:17:12,120
+which again is is another perfect
+ 
+
+989
+00:17:12,120 --> 00:17:14,590
+which again is is another perfect
+example you know if you are in fact
+
+990
+00:17:14,590 --> 00:17:14,600
+example you know if you are in fact
+ 
+
+991
+00:17:14,600 --> 00:17:16,150
+example you know if you are in fact
+writing an application that revolves
+
+992
+00:17:16,150 --> 00:17:16,160
+writing an application that revolves
+ 
+
+993
+00:17:16,160 --> 00:17:18,429
+writing an application that revolves
+around Graphics rendering this is where
+
+994
+00:17:18,429 --> 00:17:18,439
+around Graphics rendering this is where
+ 
+
+995
+00:17:18,439 --> 00:17:20,669
+around Graphics rendering this is where
+it's great to use IM GUI as well because
+
+996
+00:17:20,669 --> 00:17:20,679
+it's great to use IM GUI as well because
+ 
+
+997
+00:17:20,679 --> 00:17:22,870
+it's great to use IM GUI as well because
+you you basically have all the Vulcan
+
+998
+00:17:22,870 --> 00:17:22,880
+you you basically have all the Vulcan
+ 
+
+999
+00:17:22,880 --> 00:17:24,510
+you you basically have all the Vulcan
+boiler plate stuff done you can start
+
+1000
+00:17:24,510 --> 00:17:24,520
+boiler plate stuff done you can start
+ 
+
+1001
+00:17:24,520 --> 00:17:26,549
+boiler plate stuff done you can start
+rendering whatever Graphics you like as
+
+1002
+00:17:26,549 --> 00:17:26,559
+rendering whatever Graphics you like as
+ 
+
+1003
+00:17:26,559 --> 00:17:28,470
+rendering whatever Graphics you like as
+well as have UI stuff easily on top of
+
+1004
+00:17:28,470 --> 00:17:28,480
+well as have UI stuff easily on top of
+ 
+
+1005
+00:17:28,480 --> 00:17:30,110
+well as have UI stuff easily on top of
+that um and that works really well
+
+1006
+00:17:30,110 --> 00:17:30,120
+that um and that works really well
+ 
+
+1007
+00:17:30,120 --> 00:17:32,190
+that um and that works really well
+obviously so how how do we set up that
+
+1008
+00:17:32,190 --> 00:17:32,200
+obviously so how how do we set up that
+ 
+
+1009
+00:17:32,200 --> 00:17:34,070
+obviously so how how do we set up that
+doc space in fact how do we do anything
+
+1010
+00:17:34,070 --> 00:17:34,080
+doc space in fact how do we do anything
+ 
+
+1011
+00:17:34,080 --> 00:17:37,590
+doc space in fact how do we do anything
+in IM am GUI well Im am GUI has a
+
+1012
+00:17:37,590 --> 00:17:37,600
+in IM am GUI well Im am GUI has a
+ 
+
+1013
+00:17:37,600 --> 00:17:41,630
+in IM am GUI well Im am GUI has a
+fantastic file called imuy demo.cpp
+
+1014
+00:17:41,630 --> 00:17:41,640
+fantastic file called imuy demo.cpp
+ 
+
+1015
+00:17:41,640 --> 00:17:44,630
+fantastic file called imuy demo.cpp
+which is huge it's like 8,000 lines and
+
+1016
+00:17:44,630 --> 00:17:44,640
+which is huge it's like 8,000 lines and
+ 
+
+1017
+00:17:44,640 --> 00:17:46,870
+which is huge it's like 8,000 lines and
+it has examples for everything that you
+
+1018
+00:17:46,870 --> 00:17:46,880
+it has examples for everything that you
+ 
+
+1019
+00:17:46,880 --> 00:17:50,110
+it has examples for everything that you
+might want to do so let's let's go ahead
+
+1020
+00:17:50,110 --> 00:17:50,120
+might want to do so let's let's go ahead
+ 
+
+1021
+00:17:50,120 --> 00:17:51,909
+might want to do so let's let's go ahead
+and simulate a scenario in which I don't
+
+1022
+00:17:51,909 --> 00:17:51,919
+and simulate a scenario in which I don't
+ 
+
+1023
+00:17:51,919 --> 00:17:53,990
+and simulate a scenario in which I don't
+know what to do how do I create
+
+1024
+00:17:53,990 --> 00:17:54,000
+know what to do how do I create
+ 
+
+1025
+00:17:54,000 --> 00:17:55,710
+know what to do how do I create
+something well the first thing is let's
+
+1026
+00:17:55,710 --> 00:17:55,720
+something well the first thing is let's
+ 
+
+1027
+00:17:55,720 --> 00:17:57,909
+something well the first thing is let's
+go back to our app right I'm going to go
+
+1028
+00:17:57,909 --> 00:17:57,919
+go back to our app right I'm going to go
+ 
+
+1029
+00:17:57,919 --> 00:18:00,750
+go back to our app right I'm going to go
+ahead and just type in am goey show demo
+
+1030
+00:18:00,750 --> 00:18:00,760
+ahead and just type in am goey show demo
+ 
+
+1031
+00:18:00,760 --> 00:18:03,669
+ahead and just type in am goey show demo
+show demo window F5 right so now we're
+
+1032
+00:18:03,669 --> 00:18:03,679
+show demo window F5 right so now we're
+ 
+
+1033
+00:18:03,679 --> 00:18:04,830
+show demo window F5 right so now we're
+not only going to get our settings
+
+1034
+00:18:04,830 --> 00:18:04,840
+not only going to get our settings
+ 
+
+1035
+00:18:04,840 --> 00:18:07,110
+not only going to get our settings
+window we also get that demo window now
+
+1036
+00:18:07,110 --> 00:18:07,120
+window we also get that demo window now
+ 
+
+1037
+00:18:07,120 --> 00:18:09,029
+window we also get that demo window now
+within this demo window you can just
+
+1038
+00:18:09,029 --> 00:18:09,039
+within this demo window you can just
+ 
+
+1039
+00:18:09,039 --> 00:18:12,149
+within this demo window you can just
+have a browse so like Basics you know
+
+1040
+00:18:12,149 --> 00:18:12,159
+have a browse so like Basics you know
+ 
+
+1041
+00:18:12,159 --> 00:18:13,630
+have a browse so like Basics you know
+here's like some stuff I might want oh I
+
+1042
+00:18:13,630 --> 00:18:13,640
+here's like some stuff I might want oh I
+ 
+
+1043
+00:18:13,640 --> 00:18:14,950
+here's like some stuff I might want oh I
+want to make a tree how do I make this
+
+1044
+00:18:14,950 --> 00:18:14,960
+want to make a tree how do I make this
+ 
+
+1045
+00:18:14,960 --> 00:18:17,149
+want to make a tree how do I make this
+whole tree thing right and because these
+
+1046
+00:18:17,149 --> 00:18:17,159
+whole tree thing right and because these
+ 
+
+1047
+00:18:17,159 --> 00:18:18,510
+whole tree thing right and because these
+all have strings obviously that are
+
+1048
+00:18:18,510 --> 00:18:18,520
+all have strings obviously that are
+ 
+
+1049
+00:18:18,520 --> 00:18:19,750
+all have strings obviously that are
+rendering you can just search for these
+
+1050
+00:18:19,750 --> 00:18:19,760
+rendering you can just search for these
+ 
+
+1051
+00:18:19,760 --> 00:18:21,549
+rendering you can just search for these
+strings within the file so for example
+
+1052
+00:18:21,549 --> 00:18:21,559
+strings within the file so for example
+ 
+
+1053
+00:18:21,559 --> 00:18:23,950
+strings within the file so for example
+basic trees let's go to that IM demo
+
+1054
+00:18:23,950 --> 00:18:23,960
+basic trees let's go to that IM demo
+ 
+
+1055
+00:18:23,960 --> 00:18:26,990
+basic trees let's go to that IM demo
+file and search for basic trees here it
+
+1056
+00:18:26,990 --> 00:18:27,000
+file and search for basic trees here it
+ 
+
+1057
+00:18:27,000 --> 00:18:30,029
+file and search for basic trees here it
+is right and we have a again the actual
+
+1058
+00:18:30,029 --> 00:18:30,039
+is right and we have a again the actual
+ 
+
+1059
+00:18:30,039 --> 00:18:32,350
+is right and we have a again the actual
+code that was used to render this
+
+1060
+00:18:32,350 --> 00:18:32,360
+code that was used to render this
+ 
+
+1061
+00:18:32,360 --> 00:18:35,630
+code that was used to render this
+specific like tree so again as an
+
+1062
+00:18:35,630 --> 00:18:35,640
+specific like tree so again as an
+ 
+
+1063
+00:18:35,640 --> 00:18:37,789
+specific like tree so again as an
+example we know that we have a doc space
+
+1064
+00:18:37,789 --> 00:18:37,799
+example we know that we have a doc space
+ 
+
+1065
+00:18:37,799 --> 00:18:39,549
+example we know that we have a doc space
+somewhere here and it's G gone ahead and
+
+1066
+00:18:39,549 --> 00:18:39,559
+somewhere here and it's G gone ahead and
+ 
+
+1067
+00:18:39,559 --> 00:18:41,549
+somewhere here and it's G gone ahead and
+made it on the main window here so let's
+
+1068
+00:18:41,549 --> 00:18:41,559
+made it on the main window here so let's
+ 
+
+1069
+00:18:41,559 --> 00:18:44,870
+made it on the main window here so let's
+just search for Doc space this is an
+
+1070
+00:18:44,870 --> 00:18:44,880
+just search for Doc space this is an
+ 
+
+1071
+00:18:44,880 --> 00:18:47,270
+just search for Doc space this is an
+example for docking and docs space right
+
+1072
+00:18:47,270 --> 00:18:47,280
+example for docking and docs space right
+ 
+
+1073
+00:18:47,280 --> 00:18:49,990
+example for docking and docs space right
+so show example app docs space so again
+
+1074
+00:18:49,990 --> 00:18:50,000
+so show example app docs space so again
+ 
+
+1075
+00:18:50,000 --> 00:18:51,630
+so show example app docs space so again
+I'm going to just literally copy like
+
+1076
+00:18:51,630 --> 00:18:51,640
+I'm going to just literally copy like
+ 
+
+1077
+00:18:51,640 --> 00:18:53,230
+I'm going to just literally copy like
+all of this now there's a menu bar here
+
+1078
+00:18:53,230 --> 00:18:53,240
+all of this now there's a menu bar here
+ 
+
+1079
+00:18:53,240 --> 00:18:54,630
+all of this now there's a menu bar here
+and there's some stuff that we probably
+
+1080
+00:18:54,630 --> 00:18:54,640
+and there's some stuff that we probably
+ 
+
+1081
+00:18:54,640 --> 00:18:56,549
+and there's some stuff that we probably
+don't care about but let's just copy the
+
+1082
+00:18:56,549 --> 00:18:56,559
+don't care about but let's just copy the
+ 
+
+1083
+00:18:56,559 --> 00:18:58,270
+don't care about but let's just copy the
+whole thing anyway we'll go back to
+
+1084
+00:18:58,270 --> 00:18:58,280
+whole thing anyway we'll go back to
+ 
+
+1085
+00:18:58,280 --> 00:18:59,789
+whole thing anyway we'll go back to
+application
+
+1086
+00:18:59,789 --> 00:18:59,799
+application
+ 
+
+1087
+00:18:59,799 --> 00:19:02,390
+application
+I'll put it at the at the beginning here
+
+1088
+00:19:02,390 --> 00:19:02,400
+I'll put it at the at the beginning here
+ 
+
+1089
+00:19:02,400 --> 00:19:04,470
+I'll put it at the at the beginning here
+so then we'll just strip it so what
+
+1090
+00:19:04,470 --> 00:19:04,480
+so then we'll just strip it so what
+ 
+
+1091
+00:19:04,480 --> 00:19:07,870
+so then we'll just strip it so what
+don't I want so like again P open is not
+
+1092
+00:19:07,870 --> 00:19:07,880
+don't I want so like again P open is not
+ 
+
+1093
+00:19:07,880 --> 00:19:09,350
+don't I want so like again P open is not
+really a required parameter here we can
+
+1094
+00:19:09,350 --> 00:19:09,360
+really a required parameter here we can
+ 
+
+1095
+00:19:09,360 --> 00:19:10,590
+really a required parameter here we can
+replace it with an Ono because we don't
+
+1096
+00:19:10,590 --> 00:19:10,600
+replace it with an Ono because we don't
+ 
+
+1097
+00:19:10,600 --> 00:19:12,390
+replace it with an Ono because we don't
+want to to close the thing show docking
+
+1098
+00:19:12,390 --> 00:19:12,400
+want to to close the thing show docking
+ 
+
+1099
+00:19:12,400 --> 00:19:14,310
+want to to close the thing show docking
+disabled message like we don't need that
+
+1100
+00:19:14,310 --> 00:19:14,320
+disabled message like we don't need that
+ 
+
+1101
+00:19:14,320 --> 00:19:17,390
+disabled message like we don't need that
+stuff sure we'll keep the menu bar um
+
+1102
+00:19:17,390 --> 00:19:17,400
+stuff sure we'll keep the menu bar um
+ 
+
+1103
+00:19:17,400 --> 00:19:19,070
+stuff sure we'll keep the menu bar um
+what's this a menu item again we can
+
+1104
+00:19:19,070 --> 00:19:19,080
+what's this a menu item again we can
+ 
+
+1105
+00:19:19,080 --> 00:19:20,870
+what's this a menu item again we can
+probably just strip some of this stuff
+
+1106
+00:19:20,870 --> 00:19:20,880
+probably just strip some of this stuff
+ 
+
+1107
+00:19:20,880 --> 00:19:23,470
+probably just strip some of this stuff
+we don't care about like help marker um
+
+1108
+00:19:23,470 --> 00:19:23,480
+we don't care about like help marker um
+ 
+
+1109
+00:19:23,480 --> 00:19:25,230
+we don't care about like help marker um
+well this is the close option I'm not
+
+1110
+00:19:25,230 --> 00:19:25,240
+well this is the close option I'm not
+ 
+
+1111
+00:19:25,240 --> 00:19:27,310
+well this is the close option I'm not
+going to have a close option done right
+
+1112
+00:19:27,310 --> 00:19:27,320
+going to have a close option done right
+ 
+
+1113
+00:19:27,320 --> 00:19:28,789
+going to have a close option done right
+and then I'll take my settings panel and
+
+1114
+00:19:28,789 --> 00:19:28,799
+and then I'll take my settings panel and
+ 
+
+1115
+00:19:28,799 --> 00:19:30,950
+and then I'll take my settings panel and
+put it within the doc space like that we
+
+1116
+00:19:30,950 --> 00:19:30,960
+put it within the doc space like that we
+ 
+
+1117
+00:19:30,960 --> 00:19:32,710
+put it within the doc space like that we
+can get rid of the show demo window and
+
+1118
+00:19:32,710 --> 00:19:32,720
+can get rid of the show demo window and
+ 
+
+1119
+00:19:32,720 --> 00:19:35,270
+can get rid of the show demo window and
+then suddenly just like that we have a
+
+1120
+00:19:35,270 --> 00:19:35,280
+then suddenly just like that we have a
+ 
+
+1121
+00:19:35,280 --> 00:19:37,310
+then suddenly just like that we have a
+doc space we have this and guess what
+
+1122
+00:19:37,310 --> 00:19:37,320
+doc space we have this and guess what
+ 
+
+1123
+00:19:37,320 --> 00:19:39,070
+doc space we have this and guess what
+it's now dockable so we can just dock it
+
+1124
+00:19:39,070 --> 00:19:39,080
+it's now dockable so we can just dock it
+ 
+
+1125
+00:19:39,080 --> 00:19:42,149
+it's now dockable so we can just dock it
+over here again to uh extend the example
+
+1126
+00:19:42,149 --> 00:19:42,159
+over here again to uh extend the example
+ 
+
+1127
+00:19:42,159 --> 00:19:43,909
+over here again to uh extend the example
+of a game engine let's just say I have a
+
+1128
+00:19:43,909 --> 00:19:43,919
+of a game engine let's just say I have a
+ 
+
+1129
+00:19:43,919 --> 00:19:46,350
+of a game engine let's just say I have a
+viewport panel as well right so I'm
+
+1130
+00:19:46,350 --> 00:19:46,360
+viewport panel as well right so I'm
+ 
+
+1131
+00:19:46,360 --> 00:19:48,270
+viewport panel as well right so I'm
+going to make another viewport window
+
+1132
+00:19:48,270 --> 00:19:48,280
+going to make another viewport window
+ 
+
+1133
+00:19:48,280 --> 00:19:50,990
+going to make another viewport window
+going to go ahead and dock this uh into
+
+1134
+00:19:50,990 --> 00:19:51,000
+going to go ahead and dock this uh into
+ 
+
+1135
+00:19:51,000 --> 00:19:52,830
+going to go ahead and dock this uh into
+here there's my viewport dock it into
+
+1136
+00:19:52,830 --> 00:19:52,840
+here there's my viewport dock it into
+ 
+
+1137
+00:19:52,840 --> 00:19:55,070
+here there's my viewport dock it into
+the center and guess what I basically
+
+1138
+00:19:55,070 --> 00:19:55,080
+the center and guess what I basically
+ 
+
+1139
+00:19:55,080 --> 00:19:57,430
+the center and guess what I basically
+already have like my game engine up and
+
+1140
+00:19:57,430 --> 00:19:57,440
+already have like my game engine up and
+ 
+
+1141
+00:19:57,440 --> 00:19:59,470
+already have like my game engine up and
+running I just need to render my stuff
+
+1142
+00:19:59,470 --> 00:19:59,480
+running I just need to render my stuff
+ 
+
+1143
+00:19:59,480 --> 00:20:00,950
+running I just need to render my stuff
+in Vulcan or direct X or whatever I'm
+
+1144
+00:20:00,950 --> 00:20:00,960
+in Vulcan or direct X or whatever I'm
+ 
+
+1145
+00:20:00,960 --> 00:20:02,830
+in Vulcan or direct X or whatever I'm
+using to a texture to a frame buffer and
+
+1146
+00:20:02,830 --> 00:20:02,840
+using to a texture to a frame buffer and
+ 
+
+1147
+00:20:02,840 --> 00:20:04,990
+using to a texture to a frame buffer and
+then just display that image inside this
+
+1148
+00:20:04,990 --> 00:20:05,000
+then just display that image inside this
+ 
+
+1149
+00:20:05,000 --> 00:20:07,070
+then just display that image inside this
+IM goey viewport as just an I'm
+
+1150
+00:20:07,070 --> 00:20:07,080
+IM goey viewport as just an I'm
+ 
+
+1151
+00:20:07,080 --> 00:20:09,789
+IM goey viewport as just an I'm
+image right that is literally done uh
+
+1152
+00:20:09,789 --> 00:20:09,799
+image right that is literally done uh
+ 
+
+1153
+00:20:09,799 --> 00:20:11,230
+image right that is literally done uh
+and then of course if you close this and
+
+1154
+00:20:11,230 --> 00:20:11,240
+and then of course if you close this and
+ 
+
+1155
+00:20:11,240 --> 00:20:13,430
+and then of course if you close this and
+then reopen it it's going to save old
+
+1156
+00:20:13,430 --> 00:20:13,440
+then reopen it it's going to save old
+ 
+
+1157
+00:20:13,440 --> 00:20:15,070
+then reopen it it's going to save old
+layout and that gets saved inside an
+
+1158
+00:20:15,070 --> 00:20:15,080
+layout and that gets saved inside an
+ 
+
+1159
+00:20:15,080 --> 00:20:18,470
+layout and that gets saved inside an
+imoy file so it's basically like ready
+
+1160
+00:20:18,470 --> 00:20:18,480
+imoy file so it's basically like ready
+ 
+
+1161
+00:20:18,480 --> 00:20:23,390
+imoy file so it's basically like ready
+to go it's such a simple thing and and
+
+1162
+00:20:23,390 --> 00:20:23,400
+to go it's such a simple thing and and
+ 
+
+1163
+00:20:23,400 --> 00:20:24,669
+to go it's such a simple thing and and
+because we've kind of segregated
+
+1164
+00:20:24,669 --> 00:20:24,679
+because we've kind of segregated
+ 
+
+1165
+00:20:24,679 --> 00:20:27,549
+because we've kind of segregated
+everything into this application uh you
+
+1166
+00:20:27,549 --> 00:20:27,559
+everything into this application uh you
+ 
+
+1167
+00:20:27,559 --> 00:20:30,310
+everything into this application uh you
+know into these two application files
+
+1168
+00:20:30,310 --> 00:20:30,320
+know into these two application files
+ 
+
+1169
+00:20:30,320 --> 00:20:31,549
+know into these two application files
+let's say that I don't want to use
+
+1170
+00:20:31,549 --> 00:20:31,559
+let's say that I don't want to use
+ 
+
+1171
+00:20:31,559 --> 00:20:34,029
+let's say that I don't want to use
+Vulcan anymore I want to use DirectX 12
+
+1172
+00:20:34,029 --> 00:20:34,039
+Vulcan anymore I want to use DirectX 12
+ 
+
+1173
+00:20:34,039 --> 00:20:35,310
+Vulcan anymore I want to use DirectX 12
+right because that's I don't know for
+
+1174
+00:20:35,310 --> 00:20:35,320
+right because that's I don't know for
+ 
+
+1175
+00:20:35,320 --> 00:20:37,149
+right because that's I don't know for
+whatever reason maybe I need to or I
+
+1176
+00:20:37,149 --> 00:20:37,159
+whatever reason maybe I need to or I
+ 
+
+1177
+00:20:37,159 --> 00:20:39,549
+whatever reason maybe I need to or I
+want to or whatever I can go ahead and
+
+1178
+00:20:39,549 --> 00:20:39,559
+want to or whatever I can go ahead and
+ 
+
+1179
+00:20:39,559 --> 00:20:41,350
+want to or whatever I can go ahead and
+just like grab these two applications
+
+1180
+00:20:41,350 --> 00:20:41,360
+just like grab these two applications
+ 
+
+1181
+00:20:41,360 --> 00:20:42,990
+just like grab these two applications
+now of course this is not like the best
+
+1182
+00:20:42,990 --> 00:20:43,000
+now of course this is not like the best
+ 
+
+1183
+00:20:43,000 --> 00:20:44,310
+now of course this is not like the best
+architecture like you probably want like
+
+1184
+00:20:44,310 --> 00:20:44,320
+architecture like you probably want like
+ 
+
+1185
+00:20:44,320 --> 00:20:46,190
+architecture like you probably want like
+a static library or something with these
+
+1186
+00:20:46,190 --> 00:20:46,200
+a static library or something with these
+ 
+
+1187
+00:20:46,200 --> 00:20:47,390
+a static library or something with these
+things but for now I'm just going to
+
+1188
+00:20:47,390 --> 00:20:47,400
+things but for now I'm just going to
+ 
+
+1189
+00:20:47,400 --> 00:20:50,870
+things but for now I'm just going to
+copy application. agent. CPP into here
+
+1190
+00:20:50,870 --> 00:20:50,880
+copy application. agent. CPP into here
+ 
+
+1191
+00:20:50,880 --> 00:20:52,470
+copy application. agent. CPP into here
+right I'm going to set that as my
+
+1192
+00:20:52,470 --> 00:20:52,480
+right I'm going to set that as my
+ 
+
+1193
+00:20:52,480 --> 00:20:54,590
+right I'm going to set that as my
+startup project we can like unload that
+
+1194
+00:20:54,590 --> 00:20:54,600
+startup project we can like unload that
+ 
+
+1195
+00:20:54,600 --> 00:20:56,430
+startup project we can like unload that
+Vulcan project entirely so it doesn't
+
+1196
+00:20:56,430 --> 00:20:56,440
+Vulcan project entirely so it doesn't
+ 
+
+1197
+00:20:56,440 --> 00:20:58,110
+Vulcan project entirely so it doesn't
+get in the way and then again I'm going
+
+1198
+00:20:58,110 --> 00:20:58,120
+get in the way and then again I'm going
+ 
+
+1199
+00:20:58,120 --> 00:21:01,630
+get in the way and then again I'm going
+to go into to main I'm going to
+
+1200
+00:21:01,630 --> 00:21:01,640
+to go into to main I'm going to
+ 
+
+1201
+00:21:01,640 --> 00:21:04,669
+to go into to main I'm going to
+include application. H and then I'm
+
+1202
+00:21:04,669 --> 00:21:04,679
+include application. H and then I'm
+ 
+
+1203
+00:21:04,679 --> 00:21:07,549
+include application. H and then I'm
+going to go into like the main function
+
+1204
+00:21:07,549 --> 00:21:07,559
+going to go into like the main function
+ 
+
+1205
+00:21:07,559 --> 00:21:08,990
+going to go into like the main function
+you know I'm going to find my well I'm
+
+1206
+00:21:08,990 --> 00:21:09,000
+you know I'm going to find my well I'm
+ 
+
+1207
+00:21:09,000 --> 00:21:10,990
+you know I'm going to find my well I'm
+go like render is kind of what I'm
+
+1208
+00:21:10,990 --> 00:21:11,000
+go like render is kind of what I'm
+ 
+
+1209
+00:21:11,000 --> 00:21:12,390
+go like render is kind of what I'm
+looking for there's my rendering code
+
+1210
+00:21:12,390 --> 00:21:12,400
+looking for there's my rendering code
+ 
+
+1211
+00:21:12,400 --> 00:21:14,269
+looking for there's my rendering code
+there's that example UI code and then we
+
+1212
+00:21:14,269 --> 00:21:14,279
+there's that example UI code and then we
+ 
+
+1213
+00:21:14,279 --> 00:21:16,710
+there's that example UI code and then we
+have this same pattern you know DX dx12
+
+1214
+00:21:16,710 --> 00:21:16,720
+have this same pattern you know DX dx12
+ 
+
+1215
+00:21:16,720 --> 00:21:18,710
+have this same pattern you know DX dx12
+new frame w32 new frame I'm going new
+
+1216
+00:21:18,710 --> 00:21:18,720
+new frame w32 new frame I'm going new
+ 
+
+1217
+00:21:18,720 --> 00:21:21,590
+new frame w32 new frame I'm going new
+frame so in between these two let's do
+
+1218
+00:21:21,590 --> 00:21:21,600
+frame so in between these two let's do
+ 
+
+1219
+00:21:21,600 --> 00:21:24,710
+frame so in between these two let's do
+my you know the my app render UI F5 now
+
+1220
+00:21:24,710 --> 00:21:24,720
+my you know the my app render UI F5 now
+ 
+
+1221
+00:21:24,720 --> 00:21:26,590
+my you know the my app render UI F5 now
+it's building the direct X2 example
+
+1222
+00:21:26,590 --> 00:21:26,600
+it's building the direct X2 example
+ 
+
+1223
+00:21:26,600 --> 00:21:29,269
+it's building the direct X2 example
+using the win32 API of course my ini
+
+1224
+00:21:29,269 --> 00:21:29,279
+using the win32 API of course my ini
+ 
+
+1225
+00:21:29,279 --> 00:21:31,149
+using the win32 API of course my ini
+file like didn't get carried across so
+
+1226
+00:21:31,149 --> 00:21:31,159
+file like didn't get carried across so
+ 
+
+1227
+00:21:31,159 --> 00:21:33,430
+file like didn't get carried across so
+I'll have to reset up the layout but you
+
+1228
+00:21:33,430 --> 00:21:33,440
+I'll have to reset up the layout but you
+ 
+
+1229
+00:21:33,440 --> 00:21:36,110
+I'll have to reset up the layout but you
+can see that's that's it like that's up
+
+1230
+00:21:36,110 --> 00:21:36,120
+can see that's that's it like that's up
+ 
+
+1231
+00:21:36,120 --> 00:21:38,269
+can see that's that's it like that's up
+and running but that's my direct Tex 12
+
+1232
+00:21:38,269 --> 00:21:38,279
+and running but that's my direct Tex 12
+ 
+
+1233
+00:21:38,279 --> 00:21:40,669
+and running but that's my direct Tex 12
+example and of course if we wanted to uh
+
+1234
+00:21:40,669 --> 00:21:40,679
+example and of course if we wanted to uh
+ 
+
+1235
+00:21:40,679 --> 00:21:42,789
+example and of course if we wanted to uh
+customize that text a little bit we
+
+1236
+00:21:42,789 --> 00:21:42,799
+customize that text a little bit we
+ 
+
+1237
+00:21:42,799 --> 00:21:44,549
+customize that text a little bit we
+could just change the title to like my
+
+1238
+00:21:44,549 --> 00:21:44,559
+could just change the title to like my
+ 
+
+1239
+00:21:44,559 --> 00:21:47,230
+could just change the title to like my
+app or something and then now we have my
+
+1240
+00:21:47,230 --> 00:21:47,240
+app or something and then now we have my
+ 
+
+1241
+00:21:47,240 --> 00:21:51,230
+app or something and then now we have my
+app up and running with everything so
+
+1242
+00:21:51,230 --> 00:21:51,240
+app up and running with everything so
+ 
+
+1243
+00:21:51,240 --> 00:21:53,190
+app up and running with everything so
+really simple this was practically a
+
+1244
+00:21:53,190 --> 00:21:53,200
+really simple this was practically a
+ 
+
+1245
+00:21:53,200 --> 00:21:55,669
+really simple this was practically a
+speedrun I apologize if I went very fast
+
+1246
+00:21:55,669 --> 00:21:55,679
+speedrun I apologize if I went very fast
+ 
+
+1247
+00:21:55,679 --> 00:21:57,269
+speedrun I apologize if I went very fast
+and as I mentioned this is not like you
+
+1248
+00:21:57,269 --> 00:21:57,279
+and as I mentioned this is not like you
+ 
+
+1249
+00:21:57,279 --> 00:21:59,110
+and as I mentioned this is not like you
+know the best architecture but this is
+
+1250
+00:21:59,110 --> 00:21:59,120
+know the best architecture but this is
+ 
+
+1251
+00:21:59,120 --> 00:22:01,110
+know the best architecture but this is
+just how you get up and running with IM
+
+1252
+00:22:01,110 --> 00:22:01,120
+just how you get up and running with IM
+ 
+
+1253
+00:22:01,120 --> 00:22:03,750
+just how you get up and running with IM
+GUI really easy and from here of course
+
+1254
+00:22:03,750 --> 00:22:03,760
+GUI really easy and from here of course
+ 
+
+1255
+00:22:03,760 --> 00:22:05,390
+GUI really easy and from here of course
+you can build literally any application
+
+1256
+00:22:05,390 --> 00:22:05,400
+you can build literally any application
+ 
+
+1257
+00:22:05,400 --> 00:22:07,190
+you can build literally any application
+you want it doesn't have to have any
+
+1258
+00:22:07,190 --> 00:22:07,200
+you want it doesn't have to have any
+ 
+
+1259
+00:22:07,200 --> 00:22:09,110
+you want it doesn't have to have any
+rendering right I don't want to I don't
+
+1260
+00:22:09,110 --> 00:22:09,120
+rendering right I don't want to I don't
+ 
+
+1261
+00:22:09,120 --> 00:22:10,350
+rendering right I don't want to I don't
+want you to get the wrong idea like you
+
+1262
+00:22:10,350 --> 00:22:10,360
+want you to get the wrong idea like you
+ 
+
+1263
+00:22:10,360 --> 00:22:11,870
+want you to get the wrong idea like you
+don't have to render 3D Graphics in this
+
+1264
+00:22:11,870 --> 00:22:11,880
+don't have to render 3D Graphics in this
+ 
+
+1265
+00:22:11,880 --> 00:22:14,230
+don't have to render 3D Graphics in this
+viewport you can but you don't have to
+
+1266
+00:22:14,230 --> 00:22:14,240
+viewport you can but you don't have to
+ 
+
+1267
+00:22:14,240 --> 00:22:16,470
+viewport you can but you don't have to
+you could this could be a calculator app
+
+1268
+00:22:16,470 --> 00:22:16,480
+you could this could be a calculator app
+ 
+
+1269
+00:22:16,480 --> 00:22:18,909
+you could this could be a calculator app
+right it doesn't matter but the point is
+
+1270
+00:22:18,909 --> 00:22:18,919
+right it doesn't matter but the point is
+ 
+
+1271
+00:22:18,919 --> 00:22:20,310
+right it doesn't matter but the point is
+uh it's just really easy to get up and
+
+1272
+00:22:20,310 --> 00:22:20,320
+uh it's just really easy to get up and
+ 
+
+1273
+00:22:20,320 --> 00:22:22,350
+uh it's just really easy to get up and
+running works on every platform any like
+
+1274
+00:22:22,350 --> 00:22:22,360
+running works on every platform any like
+ 
+
+1275
+00:22:22,360 --> 00:22:25,110
+running works on every platform any like
+device really um
+
+1276
+00:22:25,110 --> 00:22:25,120
+device really um
+ 
+
+1277
+00:22:25,120 --> 00:22:27,310
+device really um
+and yeah I don't think I need to say
+
+1278
+00:22:27,310 --> 00:22:27,320
+and yeah I don't think I need to say
+ 
+
+1279
+00:22:27,320 --> 00:22:29,070
+and yeah I don't think I need to say
+anything else but you know me I will say
+
+1280
+00:22:29,070 --> 00:22:29,080
+anything else but you know me I will say
+ 
+
+1281
+00:22:29,080 --> 00:22:30,590
+anything else but you know me I will say
+something else uh if you want to
+
+1282
+00:22:30,590 --> 00:22:30,600
+something else uh if you want to
+ 
+
+1283
+00:22:30,600 --> 00:22:32,149
+something else uh if you want to
+actually see where the app was like
+
+1284
+00:22:32,149 --> 00:22:32,159
+actually see where the app was like
+ 
+
+1285
+00:22:32,159 --> 00:22:33,470
+actually see where the app was like
+created to and you want to distribute
+
+1286
+00:22:33,470 --> 00:22:33,480
+created to and you want to distribute
+ 
+
+1287
+00:22:33,480 --> 00:22:34,750
+created to and you want to distribute
+this for whatever reason let's go back
+
+1288
+00:22:34,750 --> 00:22:34,760
+this for whatever reason let's go back
+ 
+
+1289
+00:22:34,760 --> 00:22:36,830
+this for whatever reason let's go back
+to like debug or I'm just going to one
+
+1290
+00:22:36,830 --> 00:22:36,840
+to like debug or I'm just going to one
+ 
+
+1291
+00:22:36,840 --> 00:22:38,630
+to like debug or I'm just going to one
+of these things to see where the exe
+
+1292
+00:22:38,630 --> 00:22:38,640
+of these things to see where the exe
+ 
+
+1293
+00:22:38,640 --> 00:22:41,310
+of these things to see where the exe
+file was output to let me just make that
+
+1294
+00:22:41,310 --> 00:22:41,320
+file was output to let me just make that
+ 
+
+1295
+00:22:41,320 --> 00:22:42,990
+file was output to let me just make that
+a little bit wider so you can see I like
+
+1296
+00:22:42,990 --> 00:22:43,000
+a little bit wider so you can see I like
+ 
+
+1297
+00:22:43,000 --> 00:22:45,149
+a little bit wider so you can see I like
+to use this output console sometimes to
+
+1298
+00:22:45,149 --> 00:22:45,159
+to use this output console sometimes to
+ 
+
+1299
+00:22:45,159 --> 00:22:47,269
+to use this output console sometimes to
+just quickly grab the path so this is my
+
+1300
+00:22:47,269 --> 00:22:47,279
+just quickly grab the path so this is my
+ 
+
+1301
+00:22:47,279 --> 00:22:49,510
+just quickly grab the path so this is my
+exe file that we were debugging there
+
+1302
+00:22:49,510 --> 00:22:49,520
+exe file that we were debugging there
+ 
+
+1303
+00:22:49,520 --> 00:22:50,590
+exe file that we were debugging there
+this is a debug build you'll probably
+
+1304
+00:22:50,590 --> 00:22:50,600
+this is a debug build you'll probably
+ 
+
+1305
+00:22:50,600 --> 00:22:52,350
+this is a debug build you'll probably
+want to use a release build but anyway
+
+1306
+00:22:52,350 --> 00:22:52,360
+want to use a release build but anyway
+ 
+
+1307
+00:22:52,360 --> 00:22:55,390
+want to use a release build but anyway
+here is my like direct x 12 example uh
+
+1308
+00:22:55,390 --> 00:22:55,400
+here is my like direct x 12 example uh
+ 
+
+1309
+00:22:55,400 --> 00:22:57,190
+here is my like direct x 12 example uh
+let's actually do something cool though
+
+1310
+00:22:57,190 --> 00:22:57,200
+let's actually do something cool though
+ 
+
+1311
+00:22:57,200 --> 00:22:58,830
+let's actually do something cool though
+I like that layout let's go ahead and
+
+1312
+00:22:58,830 --> 00:22:58,840
+I like that layout let's go ahead and
+ 
+
+1313
+00:22:58,840 --> 00:23:02,230
+I like that layout let's go ahead and
+grab that IM inii file and we'll pop
+
+1314
+00:23:02,230 --> 00:23:02,240
+grab that IM inii file and we'll pop
+ 
+
+1315
+00:23:02,240 --> 00:23:04,390
+grab that IM inii file and we'll pop
+it into this debug thing and overwrite
+
+1316
+00:23:04,390 --> 00:23:04,400
+it into this debug thing and overwrite
+ 
+
+1317
+00:23:04,400 --> 00:23:05,669
+it into this debug thing and overwrite
+this one just so that we retain our
+
+1318
+00:23:05,669 --> 00:23:05,679
+this one just so that we retain our
+ 
+
+1319
+00:23:05,679 --> 00:23:08,430
+this one just so that we retain our
+layout and that's it right we now have
+
+1320
+00:23:08,430 --> 00:23:08,440
+layout and that's it right we now have
+ 
+
+1321
+00:23:08,440 --> 00:23:09,870
+layout and that's it right we now have
+our application there's a lot of like
+
+1322
+00:23:09,870 --> 00:23:09,880
+our application there's a lot of like
+ 
+
+1323
+00:23:09,880 --> 00:23:11,830
+our application there's a lot of like
+debug symbols and stuff that we really
+
+1324
+00:23:11,830 --> 00:23:11,840
+debug symbols and stuff that we really
+ 
+
+1325
+00:23:11,840 --> 00:23:13,750
+debug symbols and stuff that we really
+don't need um it all builds into a
+
+1326
+00:23:13,750 --> 00:23:13,760
+don't need um it all builds into a
+ 
+
+1327
+00:23:13,760 --> 00:23:16,070
+don't need um it all builds into a
+static library right so this little my
+
+1328
+00:23:16,070 --> 00:23:16,080
+static library right so this little my
+ 
+
+1329
+00:23:16,080 --> 00:23:19,590
+static library right so this little my
+app situation my app is now literally
+
+1330
+00:23:19,590 --> 00:23:19,600
+app situation my app is now literally
+ 
+
+1331
+00:23:19,600 --> 00:23:22,470
+app situation my app is now literally
+just this exe file and this ini file
+
+1332
+00:23:22,470 --> 00:23:22,480
+just this exe file and this ini file
+ 
+
+1333
+00:23:22,480 --> 00:23:24,110
+just this exe file and this ini file
+right if we grab that put into an
+
+1334
+00:23:24,110 --> 00:23:24,120
+right if we grab that put into an
+ 
+
+1335
+00:23:24,120 --> 00:23:26,029
+right if we grab that put into an
+isolated directory so it's clear what
+
+1336
+00:23:26,029 --> 00:23:26,039
+isolated directory so it's clear what
+ 
+
+1337
+00:23:26,039 --> 00:23:28,110
+isolated directory so it's clear what
+actually goes into this rename this to
+
+1338
+00:23:28,110 --> 00:23:28,120
+actually goes into this rename this to
+ 
+
+1339
+00:23:28,120 --> 00:23:31,470
+actually goes into this rename this to
+like my app we've made an application
+
+1340
+00:23:31,470 --> 00:23:31,480
+like my app we've made an application
+ 
+
+1341
+00:23:31,480 --> 00:23:33,789
+like my app we've made an application
+we've made a C++ application that is
+
+1342
+00:23:33,789 --> 00:23:33,799
+we've made a C++ application that is
+ 
+
+1343
+00:23:33,799 --> 00:23:35,630
+we've made a C++ application that is
+like 2 megabytes again this is a debug
+
+1344
+00:23:35,630 --> 00:23:35,640
+like 2 megabytes again this is a debug
+ 
+
+1345
+00:23:35,640 --> 00:23:37,590
+like 2 megabytes again this is a debug
+build so I regret everything it would be
+
+1346
+00:23:37,590 --> 00:23:37,600
+build so I regret everything it would be
+ 
+
+1347
+00:23:37,600 --> 00:23:39,470
+build so I regret everything it would be
+much smaller and much let's actually do
+
+1348
+00:23:39,470 --> 00:23:39,480
+much smaller and much let's actually do
+ 
+
+1349
+00:23:39,480 --> 00:23:41,990
+much smaller and much let's actually do
+that let's just build a let's make a
+
+1350
+00:23:41,990 --> 00:23:42,000
+that let's just build a let's make a
+ 
+
+1351
+00:23:42,000 --> 00:23:43,710
+that let's just build a let's make a
+release build I just did a build all
+
+1352
+00:23:43,710 --> 00:23:43,720
+release build I just did a build all
+ 
+
+1353
+00:23:43,720 --> 00:23:45,070
+release build I just did a build all
+which is not what I wanted to do let's
+
+1354
+00:23:45,070 --> 00:23:45,080
+which is not what I wanted to do let's
+ 
+
+1355
+00:23:45,080 --> 00:23:47,990
+which is not what I wanted to do let's
+just build this specifically and again
+
+1356
+00:23:47,990 --> 00:23:48,000
+just build this specifically and again
+ 
+
+1357
+00:23:48,000 --> 00:23:50,669
+just build this specifically and again
+it's just going to put it into um the
+
+1358
+00:23:50,669 --> 00:23:50,679
+it's just going to put it into um the
+ 
+
+1359
+00:23:50,679 --> 00:23:53,950
+it's just going to put it into um the
+release directory here it is 473 Koby
+
+1360
+00:23:53,950 --> 00:23:53,960
+release directory here it is 473 Koby
+ 
+
+1361
+00:23:53,960 --> 00:23:57,789
+release directory here it is 473 Koby
+let's go back to our my app and uh we'll
+
+1362
+00:23:57,789 --> 00:23:57,799
+let's go back to our my app and uh we'll
+ 
+
+1363
+00:23:57,799 --> 00:24:00,390
+let's go back to our my app and uh we'll
+just delete that replace that enter
+
+1364
+00:24:00,390 --> 00:24:00,400
+just delete that replace that enter
+ 
+
+1365
+00:24:00,400 --> 00:24:03,190
+just delete that replace that enter
+there's our release build up and
+
+1366
+00:24:03,190 --> 00:24:03,200
+there's our release build up and
+ 
+
+1367
+00:24:03,200 --> 00:24:06,990
+there's our release build up and
+running done ship it it's literally
+
+1368
+00:24:06,990 --> 00:24:07,000
+running done ship it it's literally
+ 
+
+1369
+00:24:07,000 --> 00:24:08,789
+running done ship it it's literally
+ready well actually we do get that
+
+1370
+00:24:08,789 --> 00:24:08,799
+ready well actually we do get that
+ 
+
+1371
+00:24:08,799 --> 00:24:10,630
+ready well actually we do get that
+console window though so maybe I'll take
+
+1372
+00:24:10,630 --> 00:24:10,640
+console window though so maybe I'll take
+ 
+
+1373
+00:24:10,640 --> 00:24:11,990
+console window though so maybe I'll take
+back my ready to ship thing let's go
+
+1374
+00:24:11,990 --> 00:24:12,000
+back my ready to ship thing let's go
+ 
+
+1375
+00:24:12,000 --> 00:24:14,230
+back my ready to ship thing let's go
+back into the release uh configuration
+
+1376
+00:24:14,230 --> 00:24:14,240
+back into the release uh configuration
+ 
+
+1377
+00:24:14,240 --> 00:24:16,669
+back into the release uh configuration
+here into link a system and we will just
+
+1378
+00:24:16,669 --> 00:24:16,679
+here into link a system and we will just
+ 
+
+1379
+00:24:16,679 --> 00:24:19,190
+here into link a system and we will just
+set this to be Windows instead uh let's
+
+1380
+00:24:19,190 --> 00:24:19,200
+set this to be Windows instead uh let's
+ 
+
+1381
+00:24:19,200 --> 00:24:20,950
+set this to be Windows instead uh let's
+go ahead and rebuild that now we will
+
+1382
+00:24:20,950 --> 00:24:20,960
+go ahead and rebuild that now we will
+ 
+
+1383
+00:24:20,960 --> 00:24:22,590
+go ahead and rebuild that now we will
+get a linking error over here because of
+
+1384
+00:24:22,590 --> 00:24:22,600
+get a linking error over here because of
+ 
+
+1385
+00:24:22,600 --> 00:24:24,750
+get a linking error over here because of
+win main I honestly the I'm I feel like
+
+1386
+00:24:24,750 --> 00:24:24,760
+win main I honestly the I'm I feel like
+ 
+
+1387
+00:24:24,760 --> 00:24:26,549
+win main I honestly the I'm I feel like
+the win32 example should definitely
+
+1388
+00:24:26,549 --> 00:24:26,559
+the win32 example should definitely
+ 
+
+1389
+00:24:26,559 --> 00:24:29,190
+the win32 example should definitely
+include that instead but you B have to I
+
+1390
+00:24:29,190 --> 00:24:29,200
+include that instead but you B have to I
+ 
+
+1391
+00:24:29,200 --> 00:24:31,389
+include that instead but you B have to I
+don't remember the win main like
+
+1392
+00:24:31,389 --> 00:24:31,399
+don't remember the win main like
+ 
+
+1393
+00:24:31,399 --> 00:24:33,149
+don't remember the win main like
+function but for Windows application you
+
+1394
+00:24:33,149 --> 00:24:33,159
+function but for Windows application you
+ 
+
+1395
+00:24:33,159 --> 00:24:35,510
+function but for Windows application you
+have to use uh the win main entry point
+
+1396
+00:24:35,510 --> 00:24:35,520
+have to use uh the win main entry point
+ 
+
+1397
+00:24:35,520 --> 00:24:38,310
+have to use uh the win main entry point
+so let's go ahead and quickly we don't
+
+1398
+00:24:38,310 --> 00:24:38,320
+so let's go ahead and quickly we don't
+ 
+
+1399
+00:24:38,320 --> 00:24:39,909
+so let's go ahead and quickly we don't
+really need all of this fancy stuff do
+
+1400
+00:24:39,909 --> 00:24:39,919
+really need all of this fancy stuff do
+ 
+
+1401
+00:24:39,919 --> 00:24:42,430
+really need all of this fancy stuff do
+we F5 to just double
+
+1402
+00:24:42,430 --> 00:24:42,440
+we F5 to just double
+ 
+
+1403
+00:24:42,440 --> 00:24:46,350
+we F5 to just double
+check okay now we get um no console
+
+1404
+00:24:46,350 --> 00:24:46,360
+check okay now we get um no console
+ 
+
+1405
+00:24:46,360 --> 00:24:47,990
+check okay now we get um no console
+being allocated there which is good so
+
+1406
+00:24:47,990 --> 00:24:48,000
+being allocated there which is good so
+ 
+
+1407
+00:24:48,000 --> 00:24:50,950
+being allocated there which is good so
+if we go back to my app and uh go ahead
+
+1408
+00:24:50,950 --> 00:24:50,960
+if we go back to my app and uh go ahead
+ 
+
+1409
+00:24:50,960 --> 00:24:54,389
+if we go back to my app and uh go ahead
+and go into release copy that you know
+
+1410
+00:24:54,389 --> 00:24:54,399
+and go into release copy that you know
+ 
+
+1411
+00:24:54,399 --> 00:24:55,029
+and go into release copy that you know
+the
+
+1412
+00:24:55,029 --> 00:24:55,039
+the
+ 
+
+1413
+00:24:55,039 --> 00:24:59,710
+the
+drill paste it in my app enter no
+
+1414
+00:24:59,710 --> 00:24:59,720
+drill paste it in my app enter no
+ 
+
+1415
+00:24:59,720 --> 00:25:02,029
+drill paste it in my app enter no
+console ready to ship I Can't Believe
+
+1416
+00:25:02,029 --> 00:25:02,039
+console ready to ship I Can't Believe
+ 
+
+1417
+00:25:02,039 --> 00:25:04,070
+console ready to ship I Can't Believe
+It's Not Butter I mean I can't believe
+
+1418
+00:25:04,070 --> 00:25:04,080
+It's Not Butter I mean I can't believe
+ 
+
+1419
+00:25:04,080 --> 00:25:05,470
+It's Not Butter I mean I can't believe
+that was that easy if you want to see
+
+1420
+00:25:05,470 --> 00:25:05,480
+that was that easy if you want to see
+ 
+
+1421
+00:25:05,480 --> 00:25:07,269
+that was that easy if you want to see
+some more content around I'm
+
+1422
+00:25:07,269 --> 00:25:07,279
+some more content around I'm
+ 
+
+1423
+00:25:07,279 --> 00:25:09,149
+some more content around I'm
+definitely let me know as I mentioned I
+
+1424
+00:25:09,149 --> 00:25:09,159
+definitely let me know as I mentioned I
+ 
+
+1425
+00:25:09,159 --> 00:25:10,710
+definitely let me know as I mentioned I
+can go a little bit deeper into how to
+
+1426
+00:25:10,710 --> 00:25:10,720
+can go a little bit deeper into how to
+ 
+
+1427
+00:25:10,720 --> 00:25:12,070
+can go a little bit deeper into how to
+actually set this up from scratch not
+
+1428
+00:25:12,070 --> 00:25:12,080
+actually set this up from scratch not
+ 
+
+1429
+00:25:12,080 --> 00:25:13,630
+actually set this up from scratch not
+using their examples but you know how
+
+1430
+00:25:13,630 --> 00:25:13,640
+using their examples but you know how
+ 
+
+1431
+00:25:13,640 --> 00:25:15,510
+using their examples but you know how
+you would set it up if you had like an
+
+1432
+00:25:15,510 --> 00:25:15,520
+you would set it up if you had like an
+ 
+
+1433
+00:25:15,520 --> 00:25:17,430
+you would set it up if you had like an
+existing library or game engine or
+
+1434
+00:25:17,430 --> 00:25:17,440
+existing library or game engine or
+ 
+
+1435
+00:25:17,440 --> 00:25:18,830
+existing library or game engine or
+something like that or if you want to
+
+1436
+00:25:18,830 --> 00:25:18,840
+something like that or if you want to
+ 
+
+1437
+00:25:18,840 --> 00:25:20,870
+something like that or if you want to
+see some more like styling stuff so how
+
+1438
+00:25:20,870 --> 00:25:20,880
+see some more like styling stuff so how
+ 
+
+1439
+00:25:20,880 --> 00:25:23,110
+see some more like styling stuff so how
+to get it actually looking nice and how
+
+1440
+00:25:23,110 --> 00:25:23,120
+to get it actually looking nice and how
+ 
+
+1441
+00:25:23,120 --> 00:25:24,830
+to get it actually looking nice and how
+to get it to look more like hazel all
+
+1442
+00:25:24,830 --> 00:25:24,840
+to get it to look more like hazel all
+ 
+
+1443
+00:25:24,840 --> 00:25:26,510
+to get it to look more like hazel all
+that stuff let me know as well hope you
+
+1444
+00:25:26,510 --> 00:25:26,520
+that stuff let me know as well hope you
+ 
+
+1445
+00:25:26,520 --> 00:25:27,870
+that stuff let me know as well hope you
+guys enjoyed the video hope it was
+
+1446
+00:25:27,870 --> 00:25:27,880
+guys enjoyed the video hope it was
+ 
+
+1447
+00:25:27,880 --> 00:25:29,990
+guys enjoyed the video hope it was
+helpful to you hope this will help you
+
+1448
+00:25:29,990 --> 00:25:30,000
+helpful to you hope this will help you
+ 
+
+1449
+00:25:30,000 --> 00:25:31,710
+helpful to you hope this will help you
+out with your C++ application
+
+1450
+00:25:31,710 --> 00:25:31,720
+out with your C++ application
+ 
+
+1451
+00:25:31,720 --> 00:25:33,430
+out with your C++ application
+development if you need a website or a
+
+1452
+00:25:33,430 --> 00:25:33,440
+development if you need a website or a
+ 
+
+1453
+00:25:33,440 --> 00:25:34,950
+development if you need a website or a
+web server definitely check out
+
+1454
+00:25:34,950 --> 00:25:34,960
+web server definitely check out
+ 
+
+1455
+00:25:34,960 --> 00:25:37,269
+web server definitely check out
+hosting.com Cho the link will be in the
+
+1456
+00:25:37,269 --> 00:25:37,279
+hosting.com Cho the link will be in the
+ 
+
+1457
+00:25:37,279 --> 00:25:38,950
+hosting.com Cho the link will be in the
+description below I will see you guys
+
+1458
+00:25:38,950 --> 00:25:38,960
+description below I will see you guys
+ 
+
+1459
+00:25:38,960 --> 00:25:41,890
+description below I will see you guys
+next time goodbye
+
+1460
+00:25:41,890 --> 00:25:41,900
+next time goodbye
+ 
+
+1461
+00:25:41,900 --> 00:26:01,039
+next time goodbye
+[Music]
+

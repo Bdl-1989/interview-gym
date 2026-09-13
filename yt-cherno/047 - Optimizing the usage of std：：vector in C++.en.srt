@@ -1,0 +1,2925 @@
+1
+00:00:00,000 --> 00:00:01,459
+
+hey what's up guys my name is the
+
+2
+00:00:01,459 --> 00:00:01,469
+hey what's up guys my name is the
+ 
+
+3
+00:00:01,469 --> 00:00:03,560
+hey what's up guys my name is the
+channel of them back to my C++ series
+
+4
+00:00:03,560 --> 00:00:03,570
+channel of them back to my C++ series
+ 
+
+5
+00:00:03,570 --> 00:00:05,120
+channel of them back to my C++ series
+last time we talked about dynamic arrays
+
+6
+00:00:05,120 --> 00:00:05,130
+last time we talked about dynamic arrays
+ 
+
+7
+00:00:05,130 --> 00:00:06,680
+last time we talked about dynamic arrays
+in C++ and specifically bit back to
+
+8
+00:00:06,680 --> 00:00:06,690
+in C++ and specifically bit back to
+ 
+
+9
+00:00:06,690 --> 00:00:08,179
+in C++ and specifically bit back to
+class if you guys haven't seen that
+
+10
+00:00:08,179 --> 00:00:08,189
+class if you guys haven't seen that
+ 
+
+11
+00:00:08,189 --> 00:00:09,950
+class if you guys haven't seen that
+video definitely check that out first
+
+12
+00:00:09,950 --> 00:00:09,960
+video definitely check that out first
+ 
+
+13
+00:00:09,960 --> 00:00:11,959
+video definitely check that out first
+that's going to cover the basics of what
+
+14
+00:00:11,959 --> 00:00:11,969
+that's going to cover the basics of what
+ 
+
+15
+00:00:11,969 --> 00:00:13,610
+that's going to cover the basics of what
+a dynamic array actually is and how to
+
+16
+00:00:13,610 --> 00:00:13,620
+a dynamic array actually is and how to
+ 
+
+17
+00:00:13,620 --> 00:00:15,799
+a dynamic array actually is and how to
+use the vector class in C++ and this
+
+18
+00:00:15,799 --> 00:00:15,809
+use the vector class in C++ and this
+ 
+
+19
+00:00:15,809 --> 00:00:17,810
+use the vector class in C++ and this
+video here is going to show you how you
+
+20
+00:00:17,810 --> 00:00:17,820
+video here is going to show you how you
+ 
+
+21
+00:00:17,820 --> 00:00:19,460
+video here is going to show you how you
+might use that vector class in a more
+
+22
+00:00:19,460 --> 00:00:19,470
+might use that vector class in a more
+ 
+
+23
+00:00:19,470 --> 00:00:21,650
+might use that vector class in a more
+optimal way a little bit about how it
+
+24
+00:00:21,650 --> 00:00:21,660
+optimal way a little bit about how it
+ 
+
+25
+00:00:21,660 --> 00:00:23,300
+optimal way a little bit about how it
+works and just in general how we can
+
+26
+00:00:23,300 --> 00:00:23,310
+works and just in general how we can
+ 
+
+27
+00:00:23,310 --> 00:00:25,040
+works and just in general how we can
+write our code so that it's just one
+
+28
+00:00:25,040 --> 00:00:25,050
+write our code so that it's just one
+ 
+
+29
+00:00:25,050 --> 00:00:26,750
+write our code so that it's just one
+faster this is kind of exciting because
+
+30
+00:00:26,750 --> 00:00:26,760
+faster this is kind of exciting because
+ 
+
+31
+00:00:26,760 --> 00:00:28,310
+faster this is kind of exciting because
+this is like our first kind of
+
+32
+00:00:28,310 --> 00:00:28,320
+this is like our first kind of
+ 
+
+33
+00:00:28,320 --> 00:00:31,130
+this is like our first kind of
+optimization video and over the course
+
+34
+00:00:31,130 --> 00:00:31,140
+optimization video and over the course
+ 
+
+35
+00:00:31,140 --> 00:00:32,720
+optimization video and over the course
+of this series we are going to be
+
+36
+00:00:32,720 --> 00:00:32,730
+of this series we are going to be
+ 
+
+37
+00:00:32,730 --> 00:00:34,340
+of this series we are going to be
+talking a lot more about optimization
+
+38
+00:00:34,340 --> 00:00:34,350
+talking a lot more about optimization
+ 
+
+39
+00:00:34,350 --> 00:00:35,780
+talking a lot more about optimization
+because they bus bus is specifically a
+
+40
+00:00:35,780 --> 00:00:35,790
+because they bus bus is specifically a
+ 
+
+41
+00:00:35,790 --> 00:00:37,910
+because they bus bus is specifically a
+language which plays nicely with
+
+42
+00:00:37,910 --> 00:00:37,920
+language which plays nicely with
+ 
+
+43
+00:00:37,920 --> 00:00:39,440
+language which plays nicely with
+optimization is a language that many
+
+44
+00:00:39,440 --> 00:00:39,450
+optimization is a language that many
+ 
+
+45
+00:00:39,450 --> 00:00:40,850
+optimization is a language that many
+people pick due to the fact that they
+
+46
+00:00:40,850 --> 00:00:40,860
+people pick due to the fact that they
+ 
+
+47
+00:00:40,860 --> 00:00:42,920
+people pick due to the fact that they
+might need some lower-level optimization
+
+48
+00:00:42,920 --> 00:00:42,930
+might need some lower-level optimization
+ 
+
+49
+00:00:42,930 --> 00:00:45,110
+might need some lower-level optimization
+and one of the most important rules of
+
+50
+00:00:45,110 --> 00:00:45,120
+and one of the most important rules of
+ 
+
+51
+00:00:45,120 --> 00:00:46,700
+and one of the most important rules of
+optimization is basically knowing your
+
+52
+00:00:46,700 --> 00:00:46,710
+optimization is basically knowing your
+ 
+
+53
+00:00:46,710 --> 00:00:48,290
+optimization is basically knowing your
+environment and what I mean by knowing
+
+54
+00:00:48,290 --> 00:00:48,300
+environment and what I mean by knowing
+ 
+
+55
+00:00:48,300 --> 00:00:50,060
+environment and what I mean by knowing
+your environment is how do things work
+
+56
+00:00:50,060 --> 00:00:50,070
+your environment is how do things work
+ 
+
+57
+00:00:50,070 --> 00:00:52,990
+your environment is how do things work
+and what do I need to do exactly and
+
+58
+00:00:52,990 --> 00:00:53,000
+and what do I need to do exactly and
+ 
+
+59
+00:00:53,000 --> 00:00:55,910
+and what do I need to do exactly and
+what should happen right and that's
+
+60
+00:00:55,910 --> 00:00:55,920
+what should happen right and that's
+ 
+
+61
+00:00:55,920 --> 00:00:57,770
+what should happen right and that's
+that's such a complex topic in itself
+
+62
+00:00:57,770 --> 00:00:57,780
+that's such a complex topic in itself
+ 
+
+63
+00:00:57,780 --> 00:01:00,080
+that's such a complex topic in itself
+that we are going to dive deeper into it
+
+64
+00:01:00,080 --> 00:01:00,090
+that we are going to dive deeper into it
+ 
+
+65
+00:01:00,090 --> 00:01:01,639
+that we are going to dive deeper into it
+as the series goes on but for today
+
+66
+00:01:01,639 --> 00:01:01,649
+as the series goes on but for today
+ 
+
+67
+00:01:01,649 --> 00:01:03,830
+as the series goes on but for today
+we're just gonna scratch the surface and
+
+68
+00:01:03,830 --> 00:01:03,840
+we're just gonna scratch the surface and
+ 
+
+69
+00:01:03,840 --> 00:01:04,939
+we're just gonna scratch the surface and
+take a look at what we can do
+
+70
+00:01:04,939 --> 00:01:04,949
+take a look at what we can do
+ 
+
+71
+00:01:04,949 --> 00:01:07,250
+take a look at what we can do
+specifically with the example of vector
+
+72
+00:01:07,250 --> 00:01:07,260
+specifically with the example of vector
+ 
+
+73
+00:01:07,260 --> 00:01:09,380
+specifically with the example of vector
+so to optimize your vector usage you
+
+74
+00:01:09,380 --> 00:01:09,390
+so to optimize your vector usage you
+ 
+
+75
+00:01:09,390 --> 00:01:11,660
+so to optimize your vector usage you
+really should know how vector works and
+
+76
+00:01:11,660 --> 00:01:11,670
+really should know how vector works and
+ 
+
+77
+00:01:11,670 --> 00:01:13,940
+really should know how vector works and
+how you can maybe change it to work a
+
+78
+00:01:13,940 --> 00:01:13,950
+how you can maybe change it to work a
+ 
+
+79
+00:01:13,950 --> 00:01:15,499
+how you can maybe change it to work a
+little bit better so basically the way
+
+80
+00:01:15,499 --> 00:01:15,509
+little bit better so basically the way
+ 
+
+81
+00:01:15,509 --> 00:01:16,940
+little bit better so basically the way
+that the standard vector plus actually
+
+82
+00:01:16,940 --> 00:01:16,950
+that the standard vector plus actually
+ 
+
+83
+00:01:16,950 --> 00:01:19,580
+that the standard vector plus actually
+works is you create a vector and then
+
+84
+00:01:19,580 --> 00:01:19,590
+works is you create a vector and then
+ 
+
+85
+00:01:19,590 --> 00:01:21,620
+works is you create a vector and then
+you start pushing back elements and when
+
+86
+00:01:21,620 --> 00:01:21,630
+you start pushing back elements and when
+ 
+
+87
+00:01:21,630 --> 00:01:23,810
+you start pushing back elements and when
+you add elements into that array to that
+
+88
+00:01:23,810 --> 00:01:23,820
+you add elements into that array to that
+ 
+
+89
+00:01:23,820 --> 00:01:26,690
+you add elements into that array to that
+vector if the size of the vector if the
+
+90
+00:01:26,690 --> 00:01:26,700
+vector if the size of the vector if the
+ 
+
+91
+00:01:26,700 --> 00:01:28,760
+vector if the size of the vector if the
+capacity of the vector is not large
+
+92
+00:01:28,760 --> 00:01:28,770
+capacity of the vector is not large
+ 
+
+93
+00:01:28,770 --> 00:01:30,560
+capacity of the vector is not large
+enough to contain this new element that
+
+94
+00:01:30,560 --> 00:01:30,570
+enough to contain this new element that
+ 
+
+95
+00:01:30,570 --> 00:01:31,880
+enough to contain this new element that
+you're trying to add basically what
+
+96
+00:01:31,880 --> 00:01:31,890
+you're trying to add basically what
+ 
+
+97
+00:01:31,890 --> 00:01:33,590
+you're trying to add basically what
+needs to happen is the vector needs to
+
+98
+00:01:33,590 --> 00:01:33,600
+needs to happen is the vector needs to
+ 
+
+99
+00:01:33,600 --> 00:01:35,990
+needs to happen is the vector needs to
+allocate new memory that is at least
+
+100
+00:01:35,990 --> 00:01:36,000
+allocate new memory that is at least
+ 
+
+101
+00:01:36,000 --> 00:01:38,179
+allocate new memory that is at least
+large enough to hold this new element
+
+102
+00:01:38,179 --> 00:01:38,189
+large enough to hold this new element
+ 
+
+103
+00:01:38,189 --> 00:01:39,859
+large enough to hold this new element
+you're trying to add as well as the
+
+104
+00:01:39,859 --> 00:01:39,869
+you're trying to add as well as the
+ 
+
+105
+00:01:39,869 --> 00:01:42,170
+you're trying to add as well as the
+current contents of the vector and copy
+
+106
+00:01:42,170 --> 00:01:42,180
+current contents of the vector and copy
+ 
+
+107
+00:01:42,180 --> 00:01:44,179
+current contents of the vector and copy
+everything across from that old location
+
+108
+00:01:44,179 --> 00:01:44,189
+everything across from that old location
+ 
+
+109
+00:01:44,189 --> 00:01:46,130
+everything across from that old location
+in memory into the new location in
+
+110
+00:01:46,130 --> 00:01:46,140
+in memory into the new location in
+ 
+
+111
+00:01:46,140 --> 00:01:47,960
+in memory into the new location in
+memory and then delete that old location
+
+112
+00:01:47,960 --> 00:01:47,970
+memory and then delete that old location
+ 
+
+113
+00:01:47,970 --> 00:01:49,730
+memory and then delete that old location
+and that's what happens and so when we
+
+114
+00:01:49,730 --> 00:01:49,740
+and that's what happens and so when we
+ 
+
+115
+00:01:49,740 --> 00:01:51,980
+and that's what happens and so when we
+try and push back an element if the
+
+116
+00:01:51,980 --> 00:01:51,990
+try and push back an element if the
+ 
+
+117
+00:01:51,990 --> 00:01:53,870
+try and push back an element if the
+capacity runs out it performs that
+
+118
+00:01:53,870 --> 00:01:53,880
+capacity runs out it performs that
+ 
+
+119
+00:01:53,880 --> 00:01:56,120
+capacity runs out it performs that
+resizing that reallocation and that
+
+120
+00:01:56,120 --> 00:01:56,130
+resizing that reallocation and that
+ 
+
+121
+00:01:56,130 --> 00:01:59,630
+resizing that reallocation and that
+specifically is one cause of kind of
+
+122
+00:01:59,630 --> 00:01:59,640
+specifically is one cause of kind of
+ 
+
+123
+00:01:59,640 --> 00:02:01,130
+specifically is one cause of kind of
+slow code it's the fact that if we
+
+124
+00:02:01,130 --> 00:02:01,140
+slow code it's the fact that if we
+ 
+
+125
+00:02:01,140 --> 00:02:03,050
+slow code it's the fact that if we
+continually need to reallocate that's a
+
+126
+00:02:03,050 --> 00:02:03,060
+continually need to reallocate that's a
+ 
+
+127
+00:02:03,060 --> 00:02:04,670
+continually need to reallocate that's a
+slow operation we need to reallocate
+
+128
+00:02:04,670 --> 00:02:04,680
+slow operation we need to reallocate
+ 
+
+129
+00:02:04,680 --> 00:02:06,530
+slow operation we need to reallocate
+when we need to copy all of our existing
+
+130
+00:02:06,530 --> 00:02:06,540
+when we need to copy all of our existing
+ 
+
+131
+00:02:06,540 --> 00:02:08,240
+when we need to copy all of our existing
+elements that's something we want to
+
+132
+00:02:08,240 --> 00:02:08,250
+elements that's something we want to
+ 
+
+133
+00:02:08,250 --> 00:02:10,040
+elements that's something we want to
+avoid and in fact that's going to
+
+134
+00:02:10,040 --> 00:02:10,050
+avoid and in fact that's going to
+ 
+
+135
+00:02:10,050 --> 00:02:12,170
+avoid and in fact that's going to
+largely be our optimization strategy
+
+136
+00:02:12,170 --> 00:02:12,180
+largely be our optimization strategy
+ 
+
+137
+00:02:12,180 --> 00:02:13,800
+largely be our optimization strategy
+today copying
+
+138
+00:02:13,800 --> 00:02:13,810
+today copying
+ 
+
+139
+00:02:13,810 --> 00:02:16,979
+today copying
+how can we avoid copying our objects if
+
+140
+00:02:16,979 --> 00:02:16,989
+how can we avoid copying our objects if
+ 
+
+141
+00:02:16,989 --> 00:02:18,300
+how can we avoid copying our objects if
+we're dealing with vectors and
+
+142
+00:02:18,300 --> 00:02:18,310
+we're dealing with vectors and
+ 
+
+143
+00:02:18,310 --> 00:02:19,949
+we're dealing with vectors and
+specifically dealing with object based
+
+144
+00:02:19,949 --> 00:02:19,959
+specifically dealing with object based
+ 
+
+145
+00:02:19,959 --> 00:02:21,360
+specifically dealing with object based
+vectors so we're not storing a better of
+
+146
+00:02:21,360 --> 00:02:21,370
+vectors so we're not storing a better of
+ 
+
+147
+00:02:21,370 --> 00:02:22,949
+vectors so we're not storing a better of
+pointers were actually storing a vector
+
+148
+00:02:22,949 --> 00:02:22,959
+pointers were actually storing a vector
+ 
+
+149
+00:02:22,959 --> 00:02:24,750
+pointers were actually storing a vector
+of objects now I've said that knowing
+
+150
+00:02:24,750 --> 00:02:24,760
+of objects now I've said that knowing
+ 
+
+151
+00:02:24,760 --> 00:02:25,920
+of objects now I've said that knowing
+your environment is one of the most
+
+152
+00:02:25,920 --> 00:02:25,930
+your environment is one of the most
+ 
+
+153
+00:02:25,930 --> 00:02:27,900
+your environment is one of the most
+important things with optimization and
+
+154
+00:02:27,900 --> 00:02:27,910
+important things with optimization and
+ 
+
+155
+00:02:27,910 --> 00:02:29,910
+important things with optimization and
+right now we're trying to optimize for
+
+156
+00:02:29,910 --> 00:02:29,920
+right now we're trying to optimize for
+ 
+
+157
+00:02:29,920 --> 00:02:32,430
+right now we're trying to optimize for
+copying so we need to know when copies
+
+158
+00:02:32,430 --> 00:02:32,440
+copying so we need to know when copies
+ 
+
+159
+00:02:32,440 --> 00:02:34,229
+copying so we need to know when copies
+actually happen and why they happen
+
+160
+00:02:34,229 --> 00:02:34,239
+actually happen and why they happen
+ 
+
+161
+00:02:34,239 --> 00:02:35,910
+actually happen and why they happen
+let's take a look at some card and
+
+162
+00:02:35,910 --> 00:02:35,920
+let's take a look at some card and
+ 
+
+163
+00:02:35,920 --> 00:02:37,559
+let's take a look at some card and
+figure that out so from the last video I
+
+164
+00:02:37,559 --> 00:02:37,569
+figure that out so from the last video I
+ 
+
+165
+00:02:37,569 --> 00:02:39,180
+figure that out so from the last video I
+had this vertex class I just added a
+
+166
+00:02:39,180 --> 00:02:39,190
+had this vertex class I just added a
+ 
+
+167
+00:02:39,190 --> 00:02:41,040
+had this vertex class I just added a
+constructor to it but we basically have
+
+168
+00:02:41,040 --> 00:02:41,050
+constructor to it but we basically have
+ 
+
+169
+00:02:41,050 --> 00:02:42,479
+constructor to it but we basically have
+this kind of default part it's pretty
+
+170
+00:02:42,479 --> 00:02:42,489
+this kind of default part it's pretty
+ 
+
+171
+00:02:42,489 --> 00:02:44,580
+this kind of default part it's pretty
+simple we have our two vertices that
+
+172
+00:02:44,580 --> 00:02:44,590
+simple we have our two vertices that
+ 
+
+173
+00:02:44,590 --> 00:02:46,890
+simple we have our two vertices that
+we're pushing back nothing too fancy now
+
+174
+00:02:46,890 --> 00:02:46,900
+we're pushing back nothing too fancy now
+ 
+
+175
+00:02:46,900 --> 00:02:47,670
+we're pushing back nothing too fancy now
+let's take a look at what actually
+
+176
+00:02:47,670 --> 00:02:47,680
+let's take a look at what actually
+ 
+
+177
+00:02:47,680 --> 00:02:49,470
+let's take a look at what actually
+happens behind the scenes and identify
+
+178
+00:02:49,470 --> 00:02:49,480
+happens behind the scenes and identify
+ 
+
+179
+00:02:49,480 --> 00:02:51,360
+happens behind the scenes and identify
+how many if any copies are actually
+
+180
+00:02:51,360 --> 00:02:51,370
+how many if any copies are actually
+ 
+
+181
+00:02:51,370 --> 00:02:53,370
+how many if any copies are actually
+happening with this current code so a
+
+182
+00:02:53,370 --> 00:02:53,380
+happening with this current code so a
+ 
+
+183
+00:02:53,380 --> 00:02:55,020
+happening with this current code so a
+good way to do that is to add a copy
+
+184
+00:02:55,020 --> 00:02:55,030
+good way to do that is to add a copy
+ 
+
+185
+00:02:55,030 --> 00:02:57,240
+good way to do that is to add a copy
+constructor to vertex and maybe either
+
+186
+00:02:57,240 --> 00:02:57,250
+constructor to vertex and maybe either
+ 
+
+187
+00:02:57,250 --> 00:02:59,130
+constructor to vertex and maybe either
+put a breakpoint in there or just print
+
+188
+00:02:59,130 --> 00:02:59,140
+put a breakpoint in there or just print
+ 
+
+189
+00:02:59,140 --> 00:03:00,990
+put a breakpoint in there or just print
+something to the console to see when
+
+190
+00:03:00,990 --> 00:03:01,000
+something to the console to see when
+ 
+
+191
+00:03:01,000 --> 00:03:02,430
+something to the console to see when
+that copy constructor actually gets
+
+192
+00:03:02,430 --> 00:03:02,440
+that copy constructor actually gets
+ 
+
+193
+00:03:02,440 --> 00:03:04,350
+that copy constructor actually gets
+called so what I'm going to do is just
+
+194
+00:03:04,350 --> 00:03:04,360
+called so what I'm going to do is just
+ 
+
+195
+00:03:04,360 --> 00:03:05,970
+called so what I'm going to do is just
+write a copy constructor if you're not
+
+196
+00:03:05,970 --> 00:03:05,980
+write a copy constructor if you're not
+ 
+
+197
+00:03:05,980 --> 00:03:07,740
+write a copy constructor if you're not
+sure what a copy constructor ears or how
+
+198
+00:03:07,740 --> 00:03:07,750
+sure what a copy constructor ears or how
+ 
+
+199
+00:03:07,750 --> 00:03:09,570
+sure what a copy constructor ears or how
+copying actually works in C++ then
+
+200
+00:03:09,570 --> 00:03:09,580
+copying actually works in C++ then
+ 
+
+201
+00:03:09,580 --> 00:03:10,710
+copying actually works in C++ then
+definitely check out the video that's
+
+202
+00:03:10,710 --> 00:03:10,720
+definitely check out the video that's
+ 
+
+203
+00:03:10,720 --> 00:03:12,630
+definitely check out the video that's
+linked in the top right corner but I'm
+
+204
+00:03:12,630 --> 00:03:12,640
+linked in the top right corner but I'm
+ 
+
+205
+00:03:12,640 --> 00:03:14,309
+linked in the top right corner but I'm
+just going to write a very very simple
+
+206
+00:03:14,309 --> 00:03:14,319
+just going to write a very very simple
+ 
+
+207
+00:03:14,319 --> 00:03:16,110
+just going to write a very very simple
+copy constructor for this vertex class
+
+208
+00:03:16,110 --> 00:03:16,120
+copy constructor for this vertex class
+ 
+
+209
+00:03:16,120 --> 00:03:18,060
+copy constructor for this vertex class
+now for the purposes of this video don't
+
+210
+00:03:18,060 --> 00:03:18,070
+now for the purposes of this video don't
+ 
+
+211
+00:03:18,070 --> 00:03:19,170
+now for the purposes of this video don't
+really need to fill it out properly but
+
+212
+00:03:19,170 --> 00:03:19,180
+really need to fill it out properly but
+ 
+
+213
+00:03:19,180 --> 00:03:20,550
+really need to fill it out properly but
+I don't so anyway what I'm going to do
+
+214
+00:03:20,550 --> 00:03:20,560
+I don't so anyway what I'm going to do
+ 
+
+215
+00:03:20,560 --> 00:03:23,370
+I don't so anyway what I'm going to do
+is print copied over here to our console
+
+216
+00:03:23,370 --> 00:03:23,380
+is print copied over here to our console
+ 
+
+217
+00:03:23,380 --> 00:03:24,509
+is print copied over here to our console
+so that we can take a look at that and
+
+218
+00:03:24,509 --> 00:03:24,519
+so that we can take a look at that and
+ 
+
+219
+00:03:24,519 --> 00:03:27,270
+so that we can take a look at that and
+let's run this code okay so we get three
+
+220
+00:03:27,270 --> 00:03:27,280
+let's run this code okay so we get three
+ 
+
+221
+00:03:27,280 --> 00:03:29,670
+let's run this code okay so we get three
+copies interesting I'm actually going to
+
+222
+00:03:29,670 --> 00:03:29,680
+copies interesting I'm actually going to
+ 
+
+223
+00:03:29,680 --> 00:03:31,860
+copies interesting I'm actually going to
+add another element here and this time
+
+224
+00:03:31,860 --> 00:03:31,870
+add another element here and this time
+ 
+
+225
+00:03:31,870 --> 00:03:33,300
+add another element here and this time
+since I can I'm just gonna use the
+
+226
+00:03:33,300 --> 00:03:33,310
+since I can I'm just gonna use the
+ 
+
+227
+00:03:33,310 --> 00:03:34,620
+since I can I'm just gonna use the
+actual constructor just so that this
+
+228
+00:03:34,620 --> 00:03:34,630
+actual constructor just so that this
+ 
+
+229
+00:03:34,630 --> 00:03:36,930
+actual constructor just so that this
+code looks a bit easier to read so I'll
+
+230
+00:03:36,930 --> 00:03:36,940
+code looks a bit easier to read so I'll
+ 
+
+231
+00:03:36,940 --> 00:03:40,170
+code looks a bit easier to read so I'll
+make this seven a nine and in fact I'm
+
+232
+00:03:40,170 --> 00:03:40,180
+make this seven a nine and in fact I'm
+ 
+
+233
+00:03:40,180 --> 00:03:42,690
+make this seven a nine and in fact I'm
+going to squish over my existing ones as
+
+234
+00:03:42,690 --> 00:03:42,700
+going to squish over my existing ones as
+ 
+
+235
+00:03:42,700 --> 00:03:44,550
+going to squish over my existing ones as
+well to use this kind of new constructor
+
+236
+00:03:44,550 --> 00:03:44,560
+well to use this kind of new constructor
+ 
+
+237
+00:03:44,560 --> 00:03:46,020
+well to use this kind of new constructor
+that I've made this is just the original
+
+238
+00:03:46,020 --> 00:03:46,030
+that I've made this is just the original
+ 
+
+239
+00:03:46,030 --> 00:03:47,610
+that I've made this is just the original
+default constructor it does exactly the
+
+240
+00:03:47,610 --> 00:03:47,620
+default constructor it does exactly the
+ 
+
+241
+00:03:47,620 --> 00:03:49,500
+default constructor it does exactly the
+same thing as the code before but I
+
+242
+00:03:49,500 --> 00:03:49,510
+same thing as the code before but I
+ 
+
+243
+00:03:49,510 --> 00:03:50,640
+same thing as the code before but I
+think it might just be a little bit
+
+244
+00:03:50,640 --> 00:03:50,650
+think it might just be a little bit
+ 
+
+245
+00:03:50,650 --> 00:03:52,020
+think it might just be a little bit
+easier to read because you know exactly
+
+246
+00:03:52,020 --> 00:03:52,030
+easier to read because you know exactly
+ 
+
+247
+00:03:52,030 --> 00:03:53,520
+easier to read because you know exactly
+what's happening okay so if I run this
+
+248
+00:03:53,520 --> 00:03:53,530
+what's happening okay so if I run this
+ 
+
+249
+00:03:53,530 --> 00:03:56,460
+what's happening okay so if I run this
+code how many copies do expect six we
+
+250
+00:03:56,460 --> 00:03:56,470
+code how many copies do expect six we
+ 
+
+251
+00:03:56,470 --> 00:03:59,039
+code how many copies do expect six we
+have six copies now you might be asking
+
+252
+00:03:59,039 --> 00:03:59,049
+have six copies now you might be asking
+ 
+
+253
+00:03:59,049 --> 00:04:02,220
+have six copies now you might be asking
+yourself why why is that happening why
+
+254
+00:04:02,220 --> 00:04:02,230
+yourself why why is that happening why
+ 
+
+255
+00:04:02,230 --> 00:04:05,759
+yourself why why is that happening why
+is C++ copying my vertex six times in
+
+256
+00:04:05,759 --> 00:04:05,769
+is C++ copying my vertex six times in
+ 
+
+257
+00:04:05,769 --> 00:04:07,800
+is C++ copying my vertex six times in
+total what's going on to debug this a
+
+258
+00:04:07,800 --> 00:04:07,810
+total what's going on to debug this a
+ 
+
+259
+00:04:07,810 --> 00:04:09,210
+total what's going on to debug this a
+little bit further I'm gonna place a
+
+260
+00:04:09,210 --> 00:04:09,220
+little bit further I'm gonna place a
+ 
+
+261
+00:04:09,220 --> 00:04:11,099
+little bit further I'm gonna place a
+breakpoint on this line and run this
+
+262
+00:04:11,099 --> 00:04:11,109
+breakpoint on this line and run this
+ 
+
+263
+00:04:11,109 --> 00:04:12,900
+breakpoint on this line and run this
+code again so we have zero copies at the
+
+264
+00:04:12,900 --> 00:04:12,910
+code again so we have zero copies at the
+ 
+
+265
+00:04:12,910 --> 00:04:13,979
+code again so we have zero copies at the
+moment of course because we've met we
+
+266
+00:04:13,979 --> 00:04:13,989
+moment of course because we've met we
+ 
+
+267
+00:04:13,989 --> 00:04:15,240
+moment of course because we've met we
+haven't even pushed anything back let's
+
+268
+00:04:15,240 --> 00:04:15,250
+haven't even pushed anything back let's
+ 
+
+269
+00:04:15,250 --> 00:04:18,000
+haven't even pushed anything back let's
+let's hit f10 so now we've pushed one
+
+270
+00:04:18,000 --> 00:04:18,010
+let's hit f10 so now we've pushed one
+ 
+
+271
+00:04:18,010 --> 00:04:20,430
+let's hit f10 so now we've pushed one
+element back one vertex and we have a
+
+272
+00:04:20,430 --> 00:04:20,440
+element back one vertex and we have a
+ 
+
+273
+00:04:20,440 --> 00:04:23,190
+element back one vertex and we have a
+copy right why is that happening the
+
+274
+00:04:23,190 --> 00:04:23,200
+copy right why is that happening the
+ 
+
+275
+00:04:23,200 --> 00:04:24,450
+copy right why is that happening the
+reason that's happening is
+
+276
+00:04:24,450 --> 00:04:24,460
+reason that's happening is
+ 
+
+277
+00:04:24,460 --> 00:04:26,460
+reason that's happening is
+because when we construct our vertex
+
+278
+00:04:26,460 --> 00:04:26,470
+because when we construct our vertex
+ 
+
+279
+00:04:26,470 --> 00:04:28,469
+because when we construct our vertex
+we're actually constructing it in the
+
+280
+00:04:28,469 --> 00:04:28,479
+we're actually constructing it in the
+ 
+
+281
+00:04:28,479 --> 00:04:30,870
+we're actually constructing it in the
+current stack frame of the main function
+
+282
+00:04:30,870 --> 00:04:30,880
+current stack frame of the main function
+ 
+
+283
+00:04:30,880 --> 00:04:32,309
+current stack frame of the main function
+so we're constructing it on the stack in
+
+284
+00:04:32,309 --> 00:04:32,319
+so we're constructing it on the stack in
+ 
+
+285
+00:04:32,319 --> 00:04:35,490
+so we're constructing it on the stack in
+main and then what needs to happen is we
+
+286
+00:04:35,490 --> 00:04:35,500
+main and then what needs to happen is we
+ 
+
+287
+00:04:35,500 --> 00:04:37,170
+main and then what needs to happen is we
+need to put it into that into that
+
+288
+00:04:37,170 --> 00:04:37,180
+need to put it into that into that
+ 
+
+289
+00:04:37,180 --> 00:04:39,659
+need to put it into that into that
+vector right so we need to somehow get
+
+290
+00:04:39,659 --> 00:04:39,669
+vector right so we need to somehow get
+ 
+
+291
+00:04:39,669 --> 00:04:41,939
+vector right so we need to somehow get
+it from that main class from the main
+
+292
+00:04:41,939 --> 00:04:41,949
+it from that main class from the main
+ 
+
+293
+00:04:41,949 --> 00:04:44,100
+it from that main class from the main
+function rather not class function from
+
+294
+00:04:44,100 --> 00:04:44,110
+function rather not class function from
+ 
+
+295
+00:04:44,110 --> 00:04:46,650
+function rather not class function from
+the main function into the actual vector
+
+296
+00:04:46,650 --> 00:04:46,660
+the main function into the actual vector
+ 
+
+297
+00:04:46,660 --> 00:04:48,540
+the main function into the actual vector
+into the memory the vector has allocated
+
+298
+00:04:48,540 --> 00:04:48,550
+into the memory the vector has allocated
+ 
+
+299
+00:04:48,550 --> 00:04:50,249
+into the memory the vector has allocated
+and of course the way that we do that is
+
+300
+00:04:50,249 --> 00:04:50,259
+and of course the way that we do that is
+ 
+
+301
+00:04:50,259 --> 00:04:52,439
+and of course the way that we do that is
+we copy it from the main function into
+
+302
+00:04:52,439 --> 00:04:52,449
+we copy it from the main function into
+ 
+
+303
+00:04:52,449 --> 00:04:54,300
+we copy it from the main function into
+the vector class that's our first kind
+
+304
+00:04:54,300 --> 00:04:54,310
+the vector class that's our first kind
+ 
+
+305
+00:04:54,310 --> 00:04:55,650
+the vector class that's our first kind
+of mistake that's the first thing we can
+
+306
+00:04:55,650 --> 00:04:55,660
+of mistake that's the first thing we can
+ 
+
+307
+00:04:55,660 --> 00:04:57,870
+of mistake that's the first thing we can
+optimize what if we could just construct
+
+308
+00:04:57,870 --> 00:04:57,880
+optimize what if we could just construct
+ 
+
+309
+00:04:57,880 --> 00:05:00,330
+optimize what if we could just construct
+that vertex in place in the actual
+
+310
+00:05:00,330 --> 00:05:00,340
+that vertex in place in the actual
+ 
+
+311
+00:05:00,340 --> 00:05:03,180
+that vertex in place in the actual
+memory that the vector has actually
+
+312
+00:05:03,180 --> 00:05:03,190
+memory that the vector has actually
+ 
+
+313
+00:05:03,190 --> 00:05:04,170
+memory that the vector has actually
+allocated for us
+
+314
+00:05:04,170 --> 00:05:04,180
+allocated for us
+ 
+
+315
+00:05:04,180 --> 00:05:05,760
+allocated for us
+that's optimization strategy number one
+
+316
+00:05:05,760 --> 00:05:05,770
+that's optimization strategy number one
+ 
+
+317
+00:05:05,770 --> 00:05:07,050
+that's optimization strategy number one
+which we'll implement in a second but
+
+318
+00:05:07,050 --> 00:05:07,060
+which we'll implement in a second but
+ 
+
+319
+00:05:07,060 --> 00:05:07,740
+which we'll implement in a second but
+let's keep going
+
+320
+00:05:07,740 --> 00:05:07,750
+let's keep going
+ 
+
+321
+00:05:07,750 --> 00:05:10,140
+let's keep going
+now if I get F 10 over here we get two
+
+322
+00:05:10,140 --> 00:05:10,150
+now if I get F 10 over here we get two
+ 
+
+323
+00:05:10,150 --> 00:05:12,420
+now if I get F 10 over here we get two
+more copies so if not went out three
+
+324
+00:05:12,420 --> 00:05:12,430
+more copies so if not went out three
+ 
+
+325
+00:05:12,430 --> 00:05:14,670
+more copies so if not went out three
+copies right so we already know what's
+
+326
+00:05:14,670 --> 00:05:14,680
+copies right so we already know what's
+ 
+
+327
+00:05:14,680 --> 00:05:16,620
+copies right so we already know what's
+happened we already know where one of
+
+328
+00:05:16,620 --> 00:05:16,630
+happened we already know where one of
+ 
+
+329
+00:05:16,630 --> 00:05:18,540
+happened we already know where one of
+the copies has gone us because we were
+
+330
+00:05:18,540 --> 00:05:18,550
+the copies has gone us because we were
+ 
+
+331
+00:05:18,550 --> 00:05:20,640
+the copies has gone us because we were
+constructing this vertex object on
+
+332
+00:05:20,640 --> 00:05:20,650
+constructing this vertex object on
+ 
+
+333
+00:05:20,650 --> 00:05:22,559
+constructing this vertex object on
+inside the main function then pushing it
+
+334
+00:05:22,559 --> 00:05:22,569
+inside the main function then pushing it
+ 
+
+335
+00:05:22,569 --> 00:05:24,719
+inside the main function then pushing it
+into the vertices vector which causes a
+
+336
+00:05:24,719 --> 00:05:24,729
+into the vertices vector which causes a
+ 
+
+337
+00:05:24,729 --> 00:05:26,550
+into the vertices vector which causes a
+copy but then why are we getting an
+
+338
+00:05:26,550 --> 00:05:26,560
+copy but then why are we getting an
+ 
+
+339
+00:05:26,560 --> 00:05:28,379
+copy but then why are we getting an
+additional copy what's going on well if
+
+340
+00:05:28,379 --> 00:05:28,389
+additional copy what's going on well if
+ 
+
+341
+00:05:28,389 --> 00:05:30,270
+additional copy what's going on well if
+we hover our mouse over this and we take
+
+342
+00:05:30,270 --> 00:05:30,280
+we hover our mouse over this and we take
+ 
+
+343
+00:05:30,280 --> 00:05:32,550
+we hover our mouse over this and we take
+a look at the actual vertices vector we
+
+344
+00:05:32,550 --> 00:05:32,560
+a look at the actual vertices vector we
+ 
+
+345
+00:05:32,560 --> 00:05:35,430
+a look at the actual vertices vector we
+can see the capacity is two what that
+
+346
+00:05:35,430 --> 00:05:35,440
+can see the capacity is two what that
+ 
+
+347
+00:05:35,440 --> 00:05:37,640
+can see the capacity is two what that
+means is that this this vector
+
+348
+00:05:37,640 --> 00:05:37,650
+means is that this this vector
+ 
+
+349
+00:05:37,650 --> 00:05:40,560
+means is that this this vector
+physically has enough memory to store
+
+350
+00:05:40,560 --> 00:05:40,570
+physically has enough memory to store
+ 
+
+351
+00:05:40,570 --> 00:05:42,990
+physically has enough memory to store
+two vertices or two vertex
+
+352
+00:05:42,990 --> 00:05:43,000
+two vertices or two vertex
+ 
+
+353
+00:05:43,000 --> 00:05:45,300
+two vertices or two vertex
+objects so what happens of course is
+
+354
+00:05:45,300 --> 00:05:45,310
+objects so what happens of course is
+ 
+
+355
+00:05:45,310 --> 00:05:47,550
+objects so what happens of course is
+when we try and push another one on like
+
+356
+00:05:47,550 --> 00:05:47,560
+when we try and push another one on like
+ 
+
+357
+00:05:47,560 --> 00:05:50,459
+when we try and push another one on like
+this third one and I hit f10 it needs to
+
+358
+00:05:50,459 --> 00:05:50,469
+this third one and I hit f10 it needs to
+ 
+
+359
+00:05:50,469 --> 00:05:52,680
+this third one and I hit f10 it needs to
+resize the capacity to three or two
+
+360
+00:05:52,680 --> 00:05:52,690
+resize the capacity to three or two
+ 
+
+361
+00:05:52,690 --> 00:05:54,300
+resize the capacity to three or two
+anything higher than two basically so
+
+362
+00:05:54,300 --> 00:05:54,310
+anything higher than two basically so
+ 
+
+363
+00:05:54,310 --> 00:05:55,680
+anything higher than two basically so
+that we can actually have enough memory
+
+364
+00:05:55,680 --> 00:05:55,690
+that we can actually have enough memory
+ 
+
+365
+00:05:55,690 --> 00:05:58,260
+that we can actually have enough memory
+to push in a third vertex so that's
+
+366
+00:05:58,260 --> 00:05:58,270
+to push in a third vertex so that's
+ 
+
+367
+00:05:58,270 --> 00:05:59,999
+to push in a third vertex so that's
+another potential optimization strategy
+
+368
+00:05:59,999 --> 00:06:00,009
+another potential optimization strategy
+ 
+
+369
+00:06:00,009 --> 00:06:01,980
+another potential optimization strategy
+our vector is being resized twice here
+
+370
+00:06:01,980 --> 00:06:01,990
+our vector is being resized twice here
+ 
+
+371
+00:06:01,990 --> 00:06:05,100
+our vector is being resized twice here
+it just it's it's at one by default it
+
+372
+00:06:05,100 --> 00:06:05,110
+it just it's it's at one by default it
+ 
+
+373
+00:06:05,110 --> 00:06:06,839
+it just it's it's at one by default it
+then moves to two when we have the
+
+374
+00:06:06,839 --> 00:06:06,849
+then moves to two when we have the
+ 
+
+375
+00:06:06,849 --> 00:06:08,430
+then moves to two when we have the
+second element and then moves to three
+
+376
+00:06:08,430 --> 00:06:08,440
+second element and then moves to three
+ 
+
+377
+00:06:08,440 --> 00:06:10,770
+second element and then moves to three
+when we add the third element if we know
+
+378
+00:06:10,770 --> 00:06:10,780
+when we add the third element if we know
+ 
+
+379
+00:06:10,780 --> 00:06:13,980
+when we add the third element if we know
+our environment if we know that we are
+
+380
+00:06:13,980 --> 00:06:13,990
+our environment if we know that we are
+ 
+
+381
+00:06:13,990 --> 00:06:17,209
+our environment if we know that we are
+planning to push in three vertex objects
+
+382
+00:06:17,209 --> 00:06:17,219
+planning to push in three vertex objects
+ 
+
+383
+00:06:17,219 --> 00:06:20,330
+planning to push in three vertex objects
+why don't we just tell the vector hey
+
+384
+00:06:20,330 --> 00:06:20,340
+why don't we just tell the vector hey
+ 
+
+385
+00:06:20,340 --> 00:06:23,339
+why don't we just tell the vector hey
+make it off memory for three so that you
+
+386
+00:06:23,339 --> 00:06:23,349
+make it off memory for three so that you
+ 
+
+387
+00:06:23,349 --> 00:06:25,499
+make it off memory for three so that you
+don't have to resize yourself twice just
+
+388
+00:06:25,499 --> 00:06:25,509
+don't have to resize yourself twice just
+ 
+
+389
+00:06:25,509 --> 00:06:26,820
+don't have to resize yourself twice just
+make enough memory from three from the
+
+390
+00:06:26,820 --> 00:06:26,830
+make enough memory from three from the
+ 
+
+391
+00:06:26,830 --> 00:06:28,200
+make enough memory from three from the
+beginning because I plan to actually
+
+392
+00:06:28,200 --> 00:06:28,210
+beginning because I plan to actually
+ 
+
+393
+00:06:28,210 --> 00:06:29,459
+beginning because I plan to actually
+push in three elements
+
+394
+00:06:29,459 --> 00:06:29,469
+push in three elements
+ 
+
+395
+00:06:29,469 --> 00:06:31,320
+push in three elements
+that's optimization strategy number two
+
+396
+00:06:31,320 --> 00:06:31,330
+that's optimization strategy number two
+ 
+
+397
+00:06:31,330 --> 00:06:32,730
+that's optimization strategy number two
+which we'll implement in a minute as
+
+398
+00:06:32,730 --> 00:06:32,740
+which we'll implement in a minute as
+ 
+
+399
+00:06:32,740 --> 00:06:35,550
+which we'll implement in a minute as
+well so that is the idea of where these
+
+400
+00:06:35,550 --> 00:06:35,560
+well so that is the idea of where these
+ 
+
+401
+00:06:35,560 --> 00:06:36,920
+well so that is the idea of where these
+six copies are coming from
+
+402
+00:06:36,920 --> 00:06:36,930
+six copies are coming from
+ 
+
+403
+00:06:36,930 --> 00:06:38,629
+six copies are coming from
+so let's do the quick and easy
+
+404
+00:06:38,629 --> 00:06:38,639
+so let's do the quick and easy
+ 
+
+405
+00:06:38,639 --> 00:06:41,150
+so let's do the quick and easy
+optimization strategy I guess let's just
+
+406
+00:06:41,150 --> 00:06:41,160
+optimization strategy I guess let's just
+ 
+
+407
+00:06:41,160 --> 00:06:44,150
+optimization strategy I guess let's just
+tell the vector hey I want you to please
+
+408
+00:06:44,150 --> 00:06:44,160
+tell the vector hey I want you to please
+ 
+
+409
+00:06:44,160 --> 00:06:45,980
+tell the vector hey I want you to please
+have the capacity of three and the way
+
+410
+00:06:45,980 --> 00:06:45,990
+have the capacity of three and the way
+ 
+
+411
+00:06:45,990 --> 00:06:47,990
+have the capacity of three and the way
+that we can tell the vector I want to
+
+412
+00:06:47,990 --> 00:06:48,000
+that we can tell the vector I want to
+ 
+
+413
+00:06:48,000 --> 00:06:50,270
+that we can tell the vector I want to
+have the capacity of three is by simply
+
+414
+00:06:50,270 --> 00:06:50,280
+have the capacity of three is by simply
+ 
+
+415
+00:06:50,280 --> 00:06:52,490
+have the capacity of three is by simply
+after we created setting vertices dot
+
+416
+00:06:52,490 --> 00:06:52,500
+after we created setting vertices dot
+ 
+
+417
+00:06:52,500 --> 00:06:55,520
+after we created setting vertices dot
+Reserve three and you can see that that
+
+418
+00:06:55,520 --> 00:06:55,530
+Reserve three and you can see that that
+ 
+
+419
+00:06:55,530 --> 00:06:57,320
+Reserve three and you can see that that
+takes in a capacity now this is
+
+420
+00:06:57,320 --> 00:06:57,330
+takes in a capacity now this is
+ 
+
+421
+00:06:57,330 --> 00:06:59,810
+takes in a capacity now this is
+different to resize or if we were to
+
+422
+00:06:59,810 --> 00:06:59,820
+different to resize or if we were to
+ 
+
+423
+00:06:59,820 --> 00:07:01,700
+different to resize or if we were to
+pass them three in the constructor if we
+
+424
+00:07:01,700 --> 00:07:01,710
+pass them three in the constructor if we
+ 
+
+425
+00:07:01,710 --> 00:07:02,990
+pass them three in the constructor if we
+actually try and pass them three in the
+
+426
+00:07:02,990 --> 00:07:03,000
+actually try and pass them three in the
+ 
+
+427
+00:07:03,000 --> 00:07:04,790
+actually try and pass them three in the
+constructor this code won't even compile
+
+428
+00:07:04,790 --> 00:07:04,800
+constructor this code won't even compile
+ 
+
+429
+00:07:04,800 --> 00:07:06,860
+constructor this code won't even compile
+and you can see if I just move this up
+
+430
+00:07:06,860 --> 00:07:06,870
+and you can see if I just move this up
+ 
+
+431
+00:07:06,870 --> 00:07:08,930
+and you can see if I just move this up
+there that we're getting as vertex no
+
+432
+00:07:08,930 --> 00:07:08,940
+there that we're getting as vertex no
+ 
+
+433
+00:07:08,940 --> 00:07:10,100
+there that we're getting as vertex no
+appropriate default constructor
+
+434
+00:07:10,100 --> 00:07:10,110
+appropriate default constructor
+ 
+
+435
+00:07:10,110 --> 00:07:11,090
+appropriate default constructor
+available because what this will
+
+436
+00:07:11,090 --> 00:07:11,100
+available because what this will
+ 
+
+437
+00:07:11,100 --> 00:07:13,550
+available because what this will
+actually do is not just allocate enough
+
+438
+00:07:13,550 --> 00:07:13,560
+actually do is not just allocate enough
+ 
+
+439
+00:07:13,560 --> 00:07:15,740
+actually do is not just allocate enough
+memory to stall three vertices or three
+
+440
+00:07:15,740 --> 00:07:15,750
+memory to stall three vertices or three
+ 
+
+441
+00:07:15,750 --> 00:07:17,420
+memory to stall three vertices or three
+vertex objects it's actually going to
+
+442
+00:07:17,420 --> 00:07:17,430
+vertex objects it's actually going to
+ 
+
+443
+00:07:17,430 --> 00:07:19,370
+vertex objects it's actually going to
+construct three vertex objects we don't
+
+444
+00:07:19,370 --> 00:07:19,380
+construct three vertex objects we don't
+ 
+
+445
+00:07:19,380 --> 00:07:20,930
+construct three vertex objects we don't
+want to construct any objects yet we
+
+446
+00:07:20,930 --> 00:07:20,940
+want to construct any objects yet we
+ 
+
+447
+00:07:20,940 --> 00:07:22,730
+want to construct any objects yet we
+just want to have enough memory to hold
+
+448
+00:07:22,730 --> 00:07:22,740
+just want to have enough memory to hold
+ 
+
+449
+00:07:22,740 --> 00:07:24,920
+just want to have enough memory to hold
+them that's what Reserve does Reserve
+
+450
+00:07:24,920 --> 00:07:24,930
+them that's what Reserve does Reserve
+ 
+
+451
+00:07:24,930 --> 00:07:26,120
+them that's what Reserve does Reserve
+makes sure that we actually have enough
+
+452
+00:07:26,120 --> 00:07:26,130
+makes sure that we actually have enough
+ 
+
+453
+00:07:26,130 --> 00:07:28,370
+makes sure that we actually have enough
+memory so the first step is we create
+
+454
+00:07:28,370 --> 00:07:28,380
+memory so the first step is we create
+ 
+
+455
+00:07:28,380 --> 00:07:30,740
+memory so the first step is we create
+this vertices vector and then we reserve
+
+456
+00:07:30,740 --> 00:07:30,750
+this vertices vector and then we reserve
+ 
+
+457
+00:07:30,750 --> 00:07:32,870
+this vertices vector and then we reserve
+three and then we push back our elements
+
+458
+00:07:32,870 --> 00:07:32,880
+three and then we push back our elements
+ 
+
+459
+00:07:32,880 --> 00:07:34,640
+three and then we push back our elements
+let's take a look at how many copies we
+
+460
+00:07:34,640 --> 00:07:34,650
+let's take a look at how many copies we
+ 
+
+461
+00:07:34,650 --> 00:07:36,110
+let's take a look at how many copies we
+now get with this with the addition of
+
+462
+00:07:36,110 --> 00:07:36,120
+now get with this with the addition of
+ 
+
+463
+00:07:36,120 --> 00:07:37,939
+now get with this with the addition of
+this one line of code look at that three
+
+464
+00:07:37,939 --> 00:07:37,949
+this one line of code look at that three
+ 
+
+465
+00:07:37,949 --> 00:07:39,890
+this one line of code look at that three
+copies instead of six that's half as
+
+466
+00:07:39,890 --> 00:07:39,900
+copies instead of six that's half as
+ 
+
+467
+00:07:39,900 --> 00:07:41,360
+copies instead of six that's half as
+many copies and of course this kind of
+
+468
+00:07:41,360 --> 00:07:41,370
+many copies and of course this kind of
+ 
+
+469
+00:07:41,370 --> 00:07:43,520
+many copies and of course this kind of
+goes up exponentially if we add ten
+
+470
+00:07:43,520 --> 00:07:43,530
+goes up exponentially if we add ten
+ 
+
+471
+00:07:43,530 --> 00:07:45,589
+goes up exponentially if we add ten
+that's gonna be a lot more copy so we've
+
+472
+00:07:45,589 --> 00:07:45,599
+that's gonna be a lot more copy so we've
+ 
+
+473
+00:07:45,599 --> 00:07:46,100
+that's gonna be a lot more copy so we've
+saved it
+
+474
+00:07:46,100 --> 00:07:46,110
+saved it
+ 
+
+475
+00:07:46,110 --> 00:07:47,360
+saved it
+we've saved a great deal of copies
+
+476
+00:07:47,360 --> 00:07:47,370
+we've saved a great deal of copies
+ 
+
+477
+00:07:47,370 --> 00:07:49,430
+we've saved a great deal of copies
+already so this is great but we can do
+
+478
+00:07:49,430 --> 00:07:49,440
+already so this is great but we can do
+ 
+
+479
+00:07:49,440 --> 00:07:49,820
+already so this is great but we can do
+better
+
+480
+00:07:49,820 --> 00:07:49,830
+better
+ 
+
+481
+00:07:49,830 --> 00:07:51,770
+better
+we're still getting a copy because this
+
+482
+00:07:51,770 --> 00:07:51,780
+we're still getting a copy because this
+ 
+
+483
+00:07:51,780 --> 00:07:53,629
+we're still getting a copy because this
+vertex is actually being constructed
+
+484
+00:07:53,629 --> 00:07:53,639
+vertex is actually being constructed
+ 
+
+485
+00:07:53,639 --> 00:07:55,700
+vertex is actually being constructed
+over here inside the main function and
+
+486
+00:07:55,700 --> 00:07:55,710
+over here inside the main function and
+ 
+
+487
+00:07:55,710 --> 00:07:58,430
+over here inside the main function and
+then copied into the actual vector I
+
+488
+00:07:58,430 --> 00:07:58,440
+then copied into the actual vector I
+ 
+
+489
+00:07:58,440 --> 00:08:01,040
+then copied into the actual vector I
+would like to just construct it in the
+
+490
+00:08:01,040 --> 00:08:01,050
+would like to just construct it in the
+ 
+
+491
+00:08:01,050 --> 00:08:03,110
+would like to just construct it in the
+actual vector and the way that we can do
+
+492
+00:08:03,110 --> 00:08:03,120
+actual vector and the way that we can do
+ 
+
+493
+00:08:03,120 --> 00:08:05,750
+actual vector and the way that we can do
+that is by using in-place back instead
+
+494
+00:08:05,750 --> 00:08:05,760
+that is by using in-place back instead
+ 
+
+495
+00:08:05,760 --> 00:08:07,399
+that is by using in-place back instead
+of push back and so in this case instead
+
+496
+00:08:07,399 --> 00:08:07,409
+of push back and so in this case instead
+ 
+
+497
+00:08:07,409 --> 00:08:09,529
+of push back and so in this case instead
+of actually passing a vertex object that
+
+498
+00:08:09,529 --> 00:08:09,539
+of actually passing a vertex object that
+ 
+
+499
+00:08:09,539 --> 00:08:12,020
+of actually passing a vertex object that
+we've constructed we instead just passed
+
+500
+00:08:12,020 --> 00:08:12,030
+we've constructed we instead just passed
+ 
+
+501
+00:08:12,030 --> 00:08:14,210
+we've constructed we instead just passed
+the parameter list for the constructor
+
+502
+00:08:14,210 --> 00:08:14,220
+the parameter list for the constructor
+ 
+
+503
+00:08:14,220 --> 00:08:16,580
+the parameter list for the constructor
+which basically tells the vector hey
+
+504
+00:08:16,580 --> 00:08:16,590
+which basically tells the vector hey
+ 
+
+505
+00:08:16,590 --> 00:08:19,100
+which basically tells the vector hey
+constructive vertex objects with the
+
+506
+00:08:19,100 --> 00:08:19,110
+constructive vertex objects with the
+ 
+
+507
+00:08:19,110 --> 00:08:21,230
+constructive vertex objects with the
+following parameters in place in our
+
+508
+00:08:21,230 --> 00:08:21,240
+following parameters in place in our
+ 
+
+509
+00:08:21,240 --> 00:08:24,080
+following parameters in place in our
+actual vector memory so I'll do that for
+
+510
+00:08:24,080 --> 00:08:24,090
+actual vector memory so I'll do that for
+ 
+
+511
+00:08:24,090 --> 00:08:26,360
+actual vector memory so I'll do that for
+all of these and we'll replace a push
+
+512
+00:08:26,360 --> 00:08:26,370
+all of these and we'll replace a push
+ 
+
+513
+00:08:26,370 --> 00:08:27,770
+all of these and we'll replace a push
+back with em place back
+
+514
+00:08:27,770 --> 00:08:27,780
+back with em place back
+ 
+
+515
+00:08:27,780 --> 00:08:30,500
+back with em place back
+let's hit f5 look at that clean clean as
+
+516
+00:08:30,500 --> 00:08:30,510
+let's hit f5 look at that clean clean as
+ 
+
+517
+00:08:30,510 --> 00:08:32,540
+let's hit f5 look at that clean clean as
+a whistle that is a nice looking console
+
+518
+00:08:32,540 --> 00:08:32,550
+a whistle that is a nice looking console
+ 
+
+519
+00:08:32,550 --> 00:08:34,519
+a whistle that is a nice looking console
+out but not a single copy in this code
+
+520
+00:08:34,519 --> 00:08:34,529
+out but not a single copy in this code
+ 
+
+521
+00:08:34,529 --> 00:08:35,870
+out but not a single copy in this code
+anymore do you see how we've just
+
+522
+00:08:35,870 --> 00:08:35,880
+anymore do you see how we've just
+ 
+
+523
+00:08:35,880 --> 00:08:38,000
+anymore do you see how we've just
+optimized this really easily by just
+
+524
+00:08:38,000 --> 00:08:38,010
+optimized this really easily by just
+ 
+
+525
+00:08:38,010 --> 00:08:40,490
+optimized this really easily by just
+knowing how it works and being aware of
+
+526
+00:08:40,490 --> 00:08:40,500
+knowing how it works and being aware of
+ 
+
+527
+00:08:40,500 --> 00:08:42,829
+knowing how it works and being aware of
+the fact that our vertex object was
+
+528
+00:08:42,829 --> 00:08:42,839
+the fact that our vertex object was
+ 
+
+529
+00:08:42,839 --> 00:08:45,130
+the fact that our vertex object was
+actually getting copied like six times
+
+530
+00:08:45,130 --> 00:08:45,140
+actually getting copied like six times
+ 
+
+531
+00:08:45,140 --> 00:08:47,300
+actually getting copied like six times
+it's not even hard to write code but
+
+532
+00:08:47,300 --> 00:08:47,310
+it's not even hard to write code but
+ 
+
+533
+00:08:47,310 --> 00:08:47,890
+it's not even hard to write code but
+this
+
+534
+00:08:47,890 --> 00:08:47,900
+this
+ 
+
+535
+00:08:47,900 --> 00:08:50,920
+this
+specifically is gonna run a lot a lot
+
+536
+00:08:50,920 --> 00:08:50,930
+specifically is gonna run a lot a lot
+ 
+
+537
+00:08:50,930 --> 00:08:52,900
+specifically is gonna run a lot a lot
+faster than the code that we originally
+
+538
+00:08:52,900 --> 00:08:52,910
+faster than the code that we originally
+ 
+
+539
+00:08:52,910 --> 00:08:54,520
+faster than the code that we originally
+had and it didn't even take long to
+
+540
+00:08:54,520 --> 00:08:54,530
+had and it didn't even take long to
+ 
+
+541
+00:08:54,530 --> 00:08:56,710
+had and it didn't even take long to
+optimize it's just about knowing what's
+
+542
+00:08:56,710 --> 00:08:56,720
+optimize it's just about knowing what's
+ 
+
+543
+00:08:56,720 --> 00:08:57,790
+optimize it's just about knowing what's
+actually going on knowing our
+
+544
+00:08:57,790 --> 00:08:57,800
+actually going on knowing our
+ 
+
+545
+00:08:57,800 --> 00:08:59,770
+actually going on knowing our
+environment and knowing how we can
+
+546
+00:08:59,770 --> 00:08:59,780
+environment and knowing how we can
+ 
+
+547
+00:08:59,780 --> 00:09:01,420
+environment and knowing how we can
+actually optimize using the tools that
+
+548
+00:09:01,420 --> 00:09:01,430
+actually optimize using the tools that
+ 
+
+549
+00:09:01,430 --> 00:09:02,770
+actually optimize using the tools that
+we have available anyway I hope you guys
+
+550
+00:09:02,770 --> 00:09:02,780
+we have available anyway I hope you guys
+ 
+
+551
+00:09:02,780 --> 00:09:04,120
+we have available anyway I hope you guys
+enjoyed this video that's like a first
+
+552
+00:09:04,120 --> 00:09:04,130
+enjoyed this video that's like a first
+ 
+
+553
+00:09:04,130 --> 00:09:05,530
+enjoyed this video that's like a first
+kind of introduction to optimization I
+
+554
+00:09:05,530 --> 00:09:05,540
+kind of introduction to optimization I
+ 
+
+555
+00:09:05,540 --> 00:09:07,120
+kind of introduction to optimization I
+love talking about this stuff so we are
+
+556
+00:09:07,120 --> 00:09:07,130
+love talking about this stuff so we are
+ 
+
+557
+00:09:07,130 --> 00:09:08,440
+love talking about this stuff so we are
+going to be talking a lot more about
+
+558
+00:09:08,440 --> 00:09:08,450
+going to be talking a lot more about
+ 
+
+559
+00:09:08,450 --> 00:09:09,910
+going to be talking a lot more about
+this kind of stuff in this a fuzz ball
+
+560
+00:09:09,910 --> 00:09:09,920
+this kind of stuff in this a fuzz ball
+ 
+
+561
+00:09:09,920 --> 00:09:11,290
+this kind of stuff in this a fuzz ball
+series if you enjoyed this episode
+
+562
+00:09:11,290 --> 00:09:11,300
+series if you enjoyed this episode
+ 
+
+563
+00:09:11,300 --> 00:09:12,970
+series if you enjoyed this episode
+please hit the like button if you want
+
+564
+00:09:12,970 --> 00:09:12,980
+please hit the like button if you want
+ 
+
+565
+00:09:12,980 --> 00:09:13,990
+please hit the like button if you want
+to see more videos and you want to help
+
+566
+00:09:13,990 --> 00:09:14,000
+to see more videos and you want to help
+ 
+
+567
+00:09:14,000 --> 00:09:15,370
+to see more videos and you want to help
+support the series then head on over to
+
+568
+00:09:15,370 --> 00:09:15,380
+support the series then head on over to
+ 
+
+569
+00:09:15,380 --> 00:09:17,440
+support the series then head on over to
+patreon Macomb 4/2 Cherno you'll get
+
+570
+00:09:17,440 --> 00:09:17,450
+patreon Macomb 4/2 Cherno you'll get
+ 
+
+571
+00:09:17,450 --> 00:09:18,640
+patreon Macomb 4/2 Cherno you'll get
+some cool rewards for supporting the
+
+572
+00:09:18,640 --> 00:09:18,650
+some cool rewards for supporting the
+ 
+
+573
+00:09:18,650 --> 00:09:20,110
+some cool rewards for supporting the
+series such as being able to see videos
+
+574
+00:09:20,110 --> 00:09:20,120
+series such as being able to see videos
+ 
+
+575
+00:09:20,120 --> 00:09:21,640
+series such as being able to see videos
+early contribute to the planning of the
+
+576
+00:09:21,640 --> 00:09:21,650
+early contribute to the planning of the
+ 
+
+577
+00:09:21,650 --> 00:09:23,320
+early contribute to the planning of the
+videos and a few more perks which you
+
+578
+00:09:23,320 --> 00:09:23,330
+videos and a few more perks which you
+ 
+
+579
+00:09:23,330 --> 00:09:25,240
+videos and a few more perks which you
+can check out on that site I will see
+
+580
+00:09:25,240 --> 00:09:25,250
+can check out on that site I will see
+ 
+
+581
+00:09:25,250 --> 00:09:25,930
+can check out on that site I will see
+you guys next time
+
+582
+00:09:25,930 --> 00:09:25,940
+you guys next time
+ 
+
+583
+00:09:25,940 --> 00:09:27,380
+you guys next time
+good bye
+
+584
+00:09:27,380 --> 00:09:27,390
+good bye
+ 
+
+585
+00:09:27,390 --> 00:09:43,000
+good bye
+[Music]
+

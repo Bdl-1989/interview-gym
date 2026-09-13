@@ -1,0 +1,5495 @@
+1
+00:00:02,360 --> 00:00:04,749
+
+absolutely love these pillows hey what's
+
+2
+00:00:04,749 --> 00:00:04,759
+absolutely love these pillows hey what's
+ 
+
+3
+00:00:04,759 --> 00:00:07,789
+absolutely love these pillows hey what's
+up guys my name is the Cho and welcome
+
+4
+00:00:07,789 --> 00:00:07,799
+up guys my name is the Cho and welcome
+ 
+
+5
+00:00:07,799 --> 00:00:10,350
+up guys my name is the Cho and welcome
+back to my C++ series So today we're
+
+6
+00:00:10,350 --> 00:00:10,360
+back to my C++ series So today we're
+ 
+
+7
+00:00:10,360 --> 00:00:12,310
+back to my C++ series So today we're
+back on the couch you guys seem to dig
+
+8
+00:00:12,310 --> 00:00:12,320
+back on the couch you guys seem to dig
+ 
+
+9
+00:00:12,320 --> 00:00:13,589
+back on the couch you guys seem to dig
+that didn't have much time to go
+
+10
+00:00:13,589 --> 00:00:13,599
+that didn't have much time to go
+ 
+
+11
+00:00:13,599 --> 00:00:16,029
+that didn't have much time to go
+anywhere exciting for this video however
+
+12
+00:00:16,029 --> 00:00:16,039
+anywhere exciting for this video however
+ 
+
+13
+00:00:16,039 --> 00:00:18,029
+anywhere exciting for this video however
+the content is going to make up for that
+
+14
+00:00:18,029 --> 00:00:18,039
+the content is going to make up for that
+ 
+
+15
+00:00:18,039 --> 00:00:19,269
+the content is going to make up for that
+because today we're going to be learning
+
+16
+00:00:19,269 --> 00:00:19,279
+because today we're going to be learning
+ 
+
+17
+00:00:19,279 --> 00:00:21,670
+because today we're going to be learning
+all about how to use Visual Studio to
+
+18
+00:00:21,670 --> 00:00:21,680
+all about how to use Visual Studio to
+ 
+
+19
+00:00:21,680 --> 00:00:23,990
+all about how to use Visual Studio to
+debug our code now in planning this
+
+20
+00:00:23,990 --> 00:00:24,000
+debug our code now in planning this
+ 
+
+21
+00:00:24,000 --> 00:00:25,750
+debug our code now in planning this
+series unfortunately I have the
+
+22
+00:00:25,750 --> 00:00:25,760
+series unfortunately I have the
+ 
+
+23
+00:00:25,760 --> 00:00:28,830
+series unfortunately I have the
+difficult decision of trying to decide
+
+24
+00:00:28,830 --> 00:00:28,840
+difficult decision of trying to decide
+ 
+
+25
+00:00:28,840 --> 00:00:31,749
+difficult decision of trying to decide
+which video goes where in what order and
+
+26
+00:00:31,749 --> 00:00:31,759
+which video goes where in what order and
+ 
+
+27
+00:00:31,759 --> 00:00:33,510
+which video goes where in what order and
+all that stuff a lot of these videos
+
+28
+00:00:33,510 --> 00:00:33,520
+all that stuff a lot of these videos
+ 
+
+29
+00:00:33,520 --> 00:00:35,910
+all that stuff a lot of these videos
+kind of depend on each other so if you
+
+30
+00:00:35,910 --> 00:00:35,920
+kind of depend on each other so if you
+ 
+
+31
+00:00:35,920 --> 00:00:38,430
+kind of depend on each other so if you
+see me mention things in certain videos
+
+32
+00:00:38,430 --> 00:00:38,440
+see me mention things in certain videos
+ 
+
+33
+00:00:38,440 --> 00:00:39,990
+see me mention things in certain videos
+that I haven't mentioned in previous
+
+34
+00:00:39,990 --> 00:00:40,000
+that I haven't mentioned in previous
+ 
+
+35
+00:00:40,000 --> 00:00:41,750
+that I haven't mentioned in previous
+videos it doesn't mean that I've kind of
+
+36
+00:00:41,750 --> 00:00:41,760
+videos it doesn't mean that I've kind of
+ 
+
+37
+00:00:41,760 --> 00:00:44,790
+videos it doesn't mean that I've kind of
+glossed over the topic it just means
+
+38
+00:00:44,790 --> 00:00:44,800
+glossed over the topic it just means
+ 
+
+39
+00:00:44,800 --> 00:00:47,069
+glossed over the topic it just means
+that this probably going to come later
+
+40
+00:00:47,069 --> 00:00:47,079
+that this probably going to come later
+ 
+
+41
+00:00:47,079 --> 00:00:48,990
+that this probably going to come later
+that being said though debugging is just
+
+42
+00:00:48,990 --> 00:00:49,000
+that being said though debugging is just
+ 
+
+43
+00:00:49,000 --> 00:00:51,670
+that being said though debugging is just
+such an important part of programming
+
+44
+00:00:51,670 --> 00:00:51,680
+such an important part of programming
+ 
+
+45
+00:00:51,680 --> 00:00:53,869
+such an important part of programming
+and not just programming but of learning
+
+46
+00:00:53,869 --> 00:00:53,879
+and not just programming but of learning
+ 
+
+47
+00:00:53,879 --> 00:00:55,470
+and not just programming but of learning
+because if you know how to debug your
+
+48
+00:00:55,470 --> 00:00:55,480
+because if you know how to debug your
+ 
+
+49
+00:00:55,480 --> 00:00:57,310
+because if you know how to debug your
+code you're actually going to understand
+
+50
+00:00:57,310 --> 00:00:57,320
+code you're actually going to understand
+ 
+
+51
+00:00:57,320 --> 00:00:59,509
+code you're actually going to understand
+how the program works and how the
+
+52
+00:00:59,509 --> 00:00:59,519
+how the program works and how the
+ 
+
+53
+00:00:59,519 --> 00:01:02,110
+how the program works and how the
+computer actually runs your code so I
+
+54
+00:01:02,110 --> 00:01:02,120
+computer actually runs your code so I
+ 
+
+55
+00:01:02,120 --> 00:01:03,950
+computer actually runs your code so I
+thought I'd covered debugging pretty
+
+56
+00:01:03,950 --> 00:01:03,960
+thought I'd covered debugging pretty
+ 
+
+57
+00:01:03,960 --> 00:01:06,070
+thought I'd covered debugging pretty
+early on in this series because I'm
+
+58
+00:01:06,070 --> 00:01:06,080
+early on in this series because I'm
+ 
+
+59
+00:01:06,080 --> 00:01:07,590
+early on in this series because I'm
+actually going to use a lot of what we
+
+60
+00:01:07,590 --> 00:01:07,600
+actually going to use a lot of what we
+ 
+
+61
+00:01:07,600 --> 00:01:09,749
+actually going to use a lot of what we
+cover today to explain how the rest of
+
+62
+00:01:09,749 --> 00:01:09,759
+cover today to explain how the rest of
+ 
+
+63
+00:01:09,759 --> 00:01:11,910
+cover today to explain how the rest of
+the language and how computer programs
+
+64
+00:01:11,910 --> 00:01:11,920
+the language and how computer programs
+ 
+
+65
+00:01:11,920 --> 00:01:13,550
+the language and how computer programs
+work in general in this video
+
+66
+00:01:13,550 --> 00:01:13,560
+work in general in this video
+ 
+
+67
+00:01:13,560 --> 00:01:15,670
+work in general in this video
+specifically like all of my C++ videos
+
+68
+00:01:15,670 --> 00:01:15,680
+specifically like all of my C++ videos
+ 
+
+69
+00:01:15,680 --> 00:01:17,550
+specifically like all of my C++ videos
+I'm going to be using visual studio
+
+70
+00:01:17,550 --> 00:01:17,560
+I'm going to be using visual studio
+ 
+
+71
+00:01:17,560 --> 00:01:19,789
+I'm going to be using visual studio
+however these Concepts apply to pretty
+
+72
+00:01:19,789 --> 00:01:19,799
+however these Concepts apply to pretty
+ 
+
+73
+00:01:19,799 --> 00:01:22,789
+however these Concepts apply to pretty
+much any IDE out there most idees will
+
+74
+00:01:22,789 --> 00:01:22,799
+much any IDE out there most idees will
+ 
+
+75
+00:01:22,799 --> 00:01:24,590
+much any IDE out there most idees will
+support exactly what I'm going to show
+
+76
+00:01:24,590 --> 00:01:24,600
+support exactly what I'm going to show
+ 
+
+77
+00:01:24,600 --> 00:01:26,350
+support exactly what I'm going to show
+here today just might be in a different
+
+78
+00:01:26,350 --> 00:01:26,360
+here today just might be in a different
+ 
+
+79
+00:01:26,360 --> 00:01:28,190
+here today just might be in a different
+place but basically we're going to be
+
+80
+00:01:28,190 --> 00:01:28,200
+place but basically we're going to be
+ 
+
+81
+00:01:28,200 --> 00:01:31,109
+place but basically we're going to be
+covering two important features or three
+
+82
+00:01:31,109 --> 00:01:31,119
+covering two important features or three
+ 
+
+83
+00:01:31,119 --> 00:01:32,590
+covering two important features or three
+is it three I don't even know how many
+
+84
+00:01:32,590 --> 00:01:32,600
+is it three I don't even know how many
+ 
+
+85
+00:01:32,600 --> 00:01:35,190
+is it three I don't even know how many
+we can probably break this thing into
+
+86
+00:01:35,190 --> 00:01:35,200
+we can probably break this thing into
+ 
+
+87
+00:01:35,200 --> 00:01:37,389
+we can probably break this thing into
+two parts break points see that joke
+
+88
+00:01:37,389 --> 00:01:37,399
+two parts break points see that joke
+ 
+
+89
+00:01:37,399 --> 00:01:39,270
+two parts break points see that joke
+earlier was funny cuz break points is is
+
+90
+00:01:39,270 --> 00:01:39,280
+earlier was funny cuz break points is is
+ 
+
+91
+00:01:39,280 --> 00:01:41,710
+earlier was funny cuz break points is is
+a big part of debugging and looking at
+
+92
+00:01:41,710 --> 00:01:41,720
+a big part of debugging and looking at
+ 
+
+93
+00:01:41,720 --> 00:01:43,950
+a big part of debugging and looking at
+memory so break points and reading
+
+94
+00:01:43,950 --> 00:01:43,960
+memory so break points and reading
+ 
+
+95
+00:01:43,960 --> 00:01:45,749
+memory so break points and reading
+memory those are kind of the two big
+
+96
+00:01:45,749 --> 00:01:45,759
+memory those are kind of the two big
+ 
+
+97
+00:01:45,759 --> 00:01:47,469
+memory those are kind of the two big
+parts of debugging and of course you
+
+98
+00:01:47,469 --> 00:01:47,479
+parts of debugging and of course you
+ 
+
+99
+00:01:47,479 --> 00:01:49,870
+parts of debugging and of course you
+will be using them together so in other
+
+100
+00:01:49,870 --> 00:01:49,880
+will be using them together so in other
+ 
+
+101
+00:01:49,880 --> 00:01:51,469
+will be using them together so in other
+words you'll set break points in order
+
+102
+00:01:51,469 --> 00:01:51,479
+words you'll set break points in order
+ 
+
+103
+00:01:51,479 --> 00:01:53,149
+words you'll set break points in order
+to read memory so what's the point of
+
+104
+00:01:53,149 --> 00:01:53,159
+to read memory so what's the point of
+ 
+
+105
+00:01:53,159 --> 00:01:55,190
+to read memory so what's the point of
+debugging what do I mean when I say
+
+106
+00:01:55,190 --> 00:01:55,200
+debugging what do I mean when I say
+ 
+
+107
+00:01:55,200 --> 00:01:57,389
+debugging what do I mean when I say
+let's debug our code the word debug
+
+108
+00:01:57,389 --> 00:01:57,399
+let's debug our code the word debug
+ 
+
+109
+00:01:57,399 --> 00:02:00,910
+let's debug our code the word debug
+means to debug right so to remove bugs
+
+110
+00:02:00,910 --> 00:02:00,920
+means to debug right so to remove bugs
+ 
+
+111
+00:02:00,920 --> 00:02:02,870
+means to debug right so to remove bugs
+from our code in order to remove a bug
+
+112
+00:02:02,870 --> 00:02:02,880
+from our code in order to remove a bug
+ 
+
+113
+00:02:02,880 --> 00:02:04,870
+from our code in order to remove a bug
+from our code we have to diagnose what's
+
+114
+00:02:04,870 --> 00:02:04,880
+from our code we have to diagnose what's
+ 
+
+115
+00:02:04,880 --> 00:02:06,990
+from our code we have to diagnose what's
+wrong with our program and that part can
+
+116
+00:02:06,990 --> 00:02:07,000
+wrong with our program and that part can
+ 
+
+117
+00:02:07,000 --> 00:02:08,990
+wrong with our program and that part can
+actually be pretty tricky even if you're
+
+118
+00:02:08,990 --> 00:02:09,000
+actually be pretty tricky even if you're
+ 
+
+119
+00:02:09,000 --> 00:02:10,910
+actually be pretty tricky even if you're
+well experienced in the language at the
+
+120
+00:02:10,910 --> 00:02:10,920
+well experienced in the language at the
+ 
+
+121
+00:02:10,920 --> 00:02:12,470
+well experienced in the language at the
+end of the day you have to remember that
+
+122
+00:02:12,470 --> 00:02:12,480
+end of the day you have to remember that
+ 
+
+123
+00:02:12,480 --> 00:02:14,270
+end of the day you have to remember that
+the computer is always right and by
+
+124
+00:02:14,270 --> 00:02:14,280
+the computer is always right and by
+ 
+
+125
+00:02:14,280 --> 00:02:16,670
+the computer is always right and by
+always I mean like 99% of the time it's
+
+126
+00:02:16,670 --> 00:02:16,680
+always I mean like 99% of the time it's
+ 
+
+127
+00:02:16,680 --> 00:02:18,710
+always I mean like 99% of the time it's
+very unlikely that you did something
+
+128
+00:02:18,710 --> 00:02:18,720
+very unlikely that you did something
+ 
+
+129
+00:02:18,720 --> 00:02:20,070
+very unlikely that you did something
+correctly and then the computer just
+
+130
+00:02:20,070 --> 00:02:20,080
+correctly and then the computer just
+ 
+
+131
+00:02:20,080 --> 00:02:22,390
+correctly and then the computer just
+didn't work as expected it's usually
+
+132
+00:02:22,390 --> 00:02:22,400
+didn't work as expected it's usually
+ 
+
+133
+00:02:22,400 --> 00:02:24,390
+didn't work as expected it's usually
+it's usually you who made the mistake
+
+134
+00:02:24,390 --> 00:02:24,400
+it's usually you who made the mistake
+ 
+
+135
+00:02:24,400 --> 00:02:26,070
+it's usually you who made the mistake
+and coming to realize that is something
+
+136
+00:02:26,070 --> 00:02:26,080
+and coming to realize that is something
+ 
+
+137
+00:02:26,080 --> 00:02:27,869
+and coming to realize that is something
+that is very important for programmers
+
+138
+00:02:27,869 --> 00:02:27,879
+that is very important for programmers
+ 
+
+139
+00:02:27,879 --> 00:02:30,309
+that is very important for programmers
+you will soon learn that the computer is
+
+140
+00:02:30,309 --> 00:02:30,319
+you will soon learn that the computer is
+ 
+
+141
+00:02:30,319 --> 00:02:31,750
+you will soon learn that the computer is
+pretty much always right so really this
+
+142
+00:02:31,750 --> 00:02:31,760
+pretty much always right so really this
+ 
+
+143
+00:02:31,760 --> 00:02:33,309
+pretty much always right so really this
+is all about figuring out your mistake
+
+144
+00:02:33,309 --> 00:02:33,319
+is all about figuring out your mistake
+ 
+
+145
+00:02:33,319 --> 00:02:35,630
+is all about figuring out your mistake
+what did I do wrong what did I do to
+
+146
+00:02:35,630 --> 00:02:35,640
+what did I do wrong what did I do to
+ 
+
+147
+00:02:35,640 --> 00:02:37,550
+what did I do wrong what did I do to
+deserve this so break points reading
+
+148
+00:02:37,550 --> 00:02:37,560
+deserve this so break points reading
+ 
+
+149
+00:02:37,560 --> 00:02:39,390
+deserve this so break points reading
+memory let's take a look so here I have
+
+150
+00:02:39,390 --> 00:02:39,400
+memory let's take a look so here I have
+ 
+
+151
+00:02:39,400 --> 00:02:41,470
+memory let's take a look so here I have
+a pretty simple Visual Studio project
+
+152
+00:02:41,470 --> 00:02:41,480
+a pretty simple Visual Studio project
+ 
+
+153
+00:02:41,480 --> 00:02:42,990
+a pretty simple Visual Studio project
+I've just got my main file here which
+
+154
+00:02:42,990 --> 00:02:43,000
+I've just got my main file here which
+ 
+
+155
+00:02:43,000 --> 00:02:45,910
+I've just got my main file here which
+calls log this is the log. CPP and log.
+
+156
+00:02:45,910 --> 00:02:45,920
+calls log this is the log. CPP and log.
+ 
+
+157
+00:02:45,920 --> 00:02:47,390
+calls log this is the log. CPP and log.
+that we made in the previous video in
+
+158
+00:02:47,390 --> 00:02:47,400
+that we made in the previous video in
+ 
+
+159
+00:02:47,400 --> 00:02:49,470
+that we made in the previous video in
+the video about C++ header files what
+
+160
+00:02:49,470 --> 00:02:49,480
+the video about C++ header files what
+ 
+
+161
+00:02:49,480 --> 00:02:50,830
+the video about C++ header files what
+we're going to do first of all is we're
+
+162
+00:02:50,830 --> 00:02:50,840
+we're going to do first of all is we're
+ 
+
+163
+00:02:50,840 --> 00:02:52,270
+we're going to do first of all is we're
+going to set a breakpoint and then we're
+
+164
+00:02:52,270 --> 00:02:52,280
+going to set a breakpoint and then we're
+ 
+
+165
+00:02:52,280 --> 00:02:53,589
+going to set a breakpoint and then we're
+going to step through the execution of
+
+166
+00:02:53,589 --> 00:02:53,599
+going to step through the execution of
+ 
+
+167
+00:02:53,599 --> 00:02:56,350
+going to step through the execution of
+our program so what are break points so
+
+168
+00:02:56,350 --> 00:02:56,360
+our program so what are break points so
+ 
+
+169
+00:02:56,360 --> 00:02:59,830
+our program so what are break points so
+a breako is a point in our program at
+
+170
+00:02:59,830 --> 00:02:59,840
+a breako is a point in our program at
+ 
+
+171
+00:02:59,840 --> 00:03:01,949
+a breako is a point in our program at
+which the debugger will break and the
+
+172
+00:03:01,949 --> 00:03:01,959
+which the debugger will break and the
+ 
+
+173
+00:03:01,959 --> 00:03:04,630
+which the debugger will break and the
+word break here just means pause so what
+
+174
+00:03:04,630 --> 00:03:04,640
+word break here just means pause so what
+ 
+
+175
+00:03:04,640 --> 00:03:06,949
+word break here just means pause so what
+will happen is we can basically set a
+
+176
+00:03:06,949 --> 00:03:06,959
+will happen is we can basically set a
+ 
+
+177
+00:03:06,959 --> 00:03:09,309
+will happen is we can basically set a
+break point on any line of code in our
+
+178
+00:03:09,309 --> 00:03:09,319
+break point on any line of code in our
+ 
+
+179
+00:03:09,319 --> 00:03:12,470
+break point on any line of code in our
+program and when when the execution hits
+
+180
+00:03:12,470 --> 00:03:12,480
+program and when when the execution hits
+ 
+
+181
+00:03:12,480 --> 00:03:15,509
+program and when when the execution hits
+that line it will pause it will suspend
+
+182
+00:03:15,509 --> 00:03:15,519
+that line it will pause it will suspend
+ 
+
+183
+00:03:15,519 --> 00:03:17,589
+that line it will pause it will suspend
+that execution thread or in our case the
+
+184
+00:03:17,589 --> 00:03:17,599
+that execution thread or in our case the
+ 
+
+185
+00:03:17,599 --> 00:03:20,229
+that execution thread or in our case the
+entire program and let us take a look at
+
+186
+00:03:20,229 --> 00:03:20,239
+entire program and let us take a look at
+ 
+
+187
+00:03:20,239 --> 00:03:22,589
+entire program and let us take a look at
+the state of this program and by state
+
+188
+00:03:22,589 --> 00:03:22,599
+the state of this program and by state
+ 
+
+189
+00:03:22,599 --> 00:03:25,030
+the state of this program and by state
+I'm really referring to memory we can
+
+190
+00:03:25,030 --> 00:03:25,040
+I'm really referring to memory we can
+ 
+
+191
+00:03:25,040 --> 00:03:27,270
+I'm really referring to memory we can
+pause our program and just take a look
+
+192
+00:03:27,270 --> 00:03:27,280
+pause our program and just take a look
+ 
+
+193
+00:03:27,280 --> 00:03:30,110
+pause our program and just take a look
+at what is going on in its memory
+
+194
+00:03:30,110 --> 00:03:30,120
+at what is going on in its memory
+ 
+
+195
+00:03:30,120 --> 00:03:31,910
+at what is going on in its memory
+remember the memory of a running program
+
+196
+00:03:31,910 --> 00:03:31,920
+remember the memory of a running program
+ 
+
+197
+00:03:31,920 --> 00:03:34,070
+remember the memory of a running program
+is pretty much all it's got It's what
+
+198
+00:03:34,070 --> 00:03:34,080
+is pretty much all it's got It's what
+ 
+
+199
+00:03:34,080 --> 00:03:36,509
+is pretty much all it's got It's what
+every variable is set to it's what
+
+200
+00:03:36,509 --> 00:03:36,519
+every variable is set to it's what
+ 
+
+201
+00:03:36,519 --> 00:03:38,429
+every variable is set to it's what
+function will be called Next everything
+
+202
+00:03:38,429 --> 00:03:38,439
+function will be called Next everything
+ 
+
+203
+00:03:38,439 --> 00:03:40,910
+function will be called Next everything
+when you when you break it down memory
+
+204
+00:03:40,910 --> 00:03:40,920
+when you when you break it down memory
+ 
+
+205
+00:03:40,920 --> 00:03:44,070
+when you when you break it down memory
+is all all that there is really so being
+
+206
+00:03:44,070 --> 00:03:44,080
+is all all that there is really so being
+ 
+
+207
+00:03:44,080 --> 00:03:47,149
+is all all that there is really so being
+able to view Memory is incredibly useful
+
+208
+00:03:47,149 --> 00:03:47,159
+able to view Memory is incredibly useful
+ 
+
+209
+00:03:47,159 --> 00:03:49,550
+able to view Memory is incredibly useful
+in diagnosing what the issue is with
+
+210
+00:03:49,550 --> 00:03:49,560
+in diagnosing what the issue is with
+ 
+
+211
+00:03:49,560 --> 00:03:51,630
+in diagnosing what the issue is with
+your program because by viewing the
+
+212
+00:03:51,630 --> 00:03:51,640
+your program because by viewing the
+ 
+
+213
+00:03:51,640 --> 00:03:53,309
+your program because by viewing the
+memory you can see what every variable
+
+214
+00:03:53,309 --> 00:03:53,319
+memory you can see what every variable
+ 
+
+215
+00:03:53,319 --> 00:03:55,949
+memory you can see what every variable
+is set to and be like hey this variable
+
+216
+00:03:55,949 --> 00:03:55,959
+is set to and be like hey this variable
+ 
+
+217
+00:03:55,959 --> 00:03:57,429
+is set to and be like hey this variable
+shouldn't be set to this value
+
+218
+00:03:57,429 --> 00:03:57,439
+shouldn't be set to this value
+ 
+
+219
+00:03:57,439 --> 00:03:59,309
+shouldn't be set to this value
+something's obviously wrong you can also
+
+220
+00:03:59,309 --> 00:03:59,319
+something's obviously wrong you can also
+ 
+
+221
+00:03:59,319 --> 00:04:01,030
+something's obviously wrong you can also
+step through the execution of your
+
+222
+00:04:01,030 --> 00:04:01,040
+step through the execution of your
+ 
+
+223
+00:04:01,040 --> 00:04:03,190
+step through the execution of your
+program line by line so I can put a
+
+224
+00:04:03,190 --> 00:04:03,200
+program line by line so I can put a
+ 
+
+225
+00:04:03,200 --> 00:04:05,229
+program line by line so I can put a
+breakpoint on line five and then just
+
+226
+00:04:05,229 --> 00:04:05,239
+breakpoint on line five and then just
+ 
+
+227
+00:04:05,239 --> 00:04:07,270
+breakpoint on line five and then just
+just hit a button and the program will
+
+228
+00:04:07,270 --> 00:04:07,280
+just hit a button and the program will
+ 
+
+229
+00:04:07,280 --> 00:04:09,789
+just hit a button and the program will
+advance just one line of code further
+
+230
+00:04:09,789 --> 00:04:09,799
+advance just one line of code further
+ 
+
+231
+00:04:09,799 --> 00:04:11,949
+advance just one line of code further
+into line six you can also step into
+
+232
+00:04:11,949 --> 00:04:11,959
+into line six you can also step into
+ 
+
+233
+00:04:11,959 --> 00:04:13,990
+into line six you can also step into
+functions to see where they'll take you
+
+234
+00:04:13,990 --> 00:04:14,000
+functions to see where they'll take you
+ 
+
+235
+00:04:14,000 --> 00:04:15,670
+functions to see where they'll take you
+there's just there's so much you can do
+
+236
+00:04:15,670 --> 00:04:15,680
+there's just there's so much you can do
+ 
+
+237
+00:04:15,680 --> 00:04:17,390
+there's just there's so much you can do
+with break points it's amazing and it's
+
+238
+00:04:17,390 --> 00:04:17,400
+with break points it's amazing and it's
+ 
+
+239
+00:04:17,400 --> 00:04:19,030
+with break points it's amazing and it's
+incredibly useful and if you're
+
+240
+00:04:19,030 --> 00:04:19,040
+incredibly useful and if you're
+ 
+
+241
+00:04:19,040 --> 00:04:20,390
+incredibly useful and if you're
+programming without this then I don't
+
+242
+00:04:20,390 --> 00:04:20,400
+programming without this then I don't
+ 
+
+243
+00:04:20,400 --> 00:04:22,110
+programming without this then I don't
+even know what you're doing so back to
+
+244
+00:04:22,110 --> 00:04:22,120
+even know what you're doing so back to
+ 
+
+245
+00:04:22,120 --> 00:04:23,710
+even know what you're doing so back to
+visual studio in order to set a
+
+246
+00:04:23,710 --> 00:04:23,720
+visual studio in order to set a
+ 
+
+247
+00:04:23,720 --> 00:04:25,110
+visual studio in order to set a
+breakpoint in Visual Studio you can
+
+248
+00:04:25,110 --> 00:04:25,120
+breakpoint in Visual Studio you can
+ 
+
+249
+00:04:25,120 --> 00:04:27,350
+breakpoint in Visual Studio you can
+either just hit F9 and it will set a
+
+250
+00:04:27,350 --> 00:04:27,360
+either just hit F9 and it will set a
+ 
+
+251
+00:04:27,360 --> 00:04:29,189
+either just hit F9 and it will set a
+breakpoint on that current lineup code
+
+252
+00:04:29,189 --> 00:04:29,199
+breakpoint on that current lineup code
+ 
+
+253
+00:04:29,199 --> 00:04:30,790
+breakpoint on that current lineup code
+or you can can click on this sidebar
+
+254
+00:04:30,790 --> 00:04:30,800
+or you can can click on this sidebar
+ 
+
+255
+00:04:30,800 --> 00:04:32,830
+or you can can click on this sidebar
+anywhere on the sidebar here just click
+
+256
+00:04:32,830 --> 00:04:32,840
+anywhere on the sidebar here just click
+ 
+
+257
+00:04:32,840 --> 00:04:34,310
+anywhere on the sidebar here just click
+once and you'll set a breakpoint
+
+258
+00:04:34,310 --> 00:04:34,320
+once and you'll set a breakpoint
+ 
+
+259
+00:04:34,320 --> 00:04:35,790
+once and you'll set a breakpoint
+obviously if you do something like set a
+
+260
+00:04:35,790 --> 00:04:35,800
+obviously if you do something like set a
+ 
+
+261
+00:04:35,800 --> 00:04:37,029
+obviously if you do something like set a
+breakpoint on line three that's not
+
+262
+00:04:37,029 --> 00:04:37,039
+breakpoint on line three that's not
+ 
+
+263
+00:04:37,039 --> 00:04:38,550
+breakpoint on line three that's not
+really going to work because there's
+
+264
+00:04:38,550 --> 00:04:38,560
+really going to work because there's
+ 
+
+265
+00:04:38,560 --> 00:04:40,270
+really going to work because there's
+nothing on line 3 that's ever going to
+
+266
+00:04:40,270 --> 00:04:40,280
+nothing on line 3 that's ever going to
+ 
+
+267
+00:04:40,280 --> 00:04:42,270
+nothing on line 3 that's ever going to
+get executed so make sure you set a
+
+268
+00:04:42,270 --> 00:04:42,280
+get executed so make sure you set a
+ 
+
+269
+00:04:42,280 --> 00:04:44,550
+get executed so make sure you set a
+breako on code that actually will be
+
+270
+00:04:44,550 --> 00:04:44,560
+breako on code that actually will be
+ 
+
+271
+00:04:44,560 --> 00:04:46,310
+breako on code that actually will be
+executed on lines that will actually be
+
+272
+00:04:46,310 --> 00:04:46,320
+executed on lines that will actually be
+ 
+
+273
+00:04:46,320 --> 00:04:48,350
+executed on lines that will actually be
+hit so line six of course will be hit
+
+274
+00:04:48,350 --> 00:04:48,360
+hit so line six of course will be hit
+ 
+
+275
+00:04:48,360 --> 00:04:49,830
+hit so line six of course will be hit
+because that's the first line of code in
+
+276
+00:04:49,830 --> 00:04:49,840
+because that's the first line of code in
+ 
+
+277
+00:04:49,840 --> 00:04:51,629
+because that's the first line of code in
+our program and then all you have to do
+
+278
+00:04:51,629 --> 00:04:51,639
+our program and then all you have to do
+ 
+
+279
+00:04:51,639 --> 00:04:53,710
+our program and then all you have to do
+is run your code through the debugger
+
+280
+00:04:53,710 --> 00:04:53,720
+is run your code through the debugger
+ 
+
+281
+00:04:53,720 --> 00:04:55,550
+is run your code through the debugger
+one tip is to make sure that you're in
+
+282
+00:04:55,550 --> 00:04:55,560
+one tip is to make sure that you're in
+ 
+
+283
+00:04:55,560 --> 00:04:57,510
+one tip is to make sure that you're in
+debug mode because if you're in release
+
+284
+00:04:57,510 --> 00:04:57,520
+debug mode because if you're in release
+ 
+
+285
+00:04:57,520 --> 00:04:59,430
+debug mode because if you're in release
+mode the compiler will actually change
+
+286
+00:04:59,430 --> 00:04:59,440
+mode the compiler will actually change
+ 
+
+287
+00:04:59,440 --> 00:05:01,550
+mode the compiler will actually change
+the the way that your code looks and
+
+288
+00:05:01,550 --> 00:05:01,560
+the the way that your code looks and
+ 
+
+289
+00:05:01,560 --> 00:05:03,510
+the the way that your code looks and
+your break points might not ever get hit
+
+290
+00:05:03,510 --> 00:05:03,520
+your break points might not ever get hit
+ 
+
+291
+00:05:03,520 --> 00:05:05,270
+your break points might not ever get hit
+because your program has been rearranged
+
+292
+00:05:05,270 --> 00:05:05,280
+because your program has been rearranged
+ 
+
+293
+00:05:05,280 --> 00:05:06,909
+because your program has been rearranged
+we'll talk more in depth about what
+
+294
+00:05:06,909 --> 00:05:06,919
+we'll talk more in depth about what
+ 
+
+295
+00:05:06,919 --> 00:05:08,710
+we'll talk more in depth about what
+release mode actually does and all that
+
+296
+00:05:08,710 --> 00:05:08,720
+release mode actually does and all that
+ 
+
+297
+00:05:08,720 --> 00:05:10,270
+release mode actually does and all that
+stuff later but the gist is if you're
+
+298
+00:05:10,270 --> 00:05:10,280
+stuff later but the gist is if you're
+ 
+
+299
+00:05:10,280 --> 00:05:12,189
+stuff later but the gist is if you're
+debugging just make sure you're in debug
+
+300
+00:05:12,189 --> 00:05:12,199
+debugging just make sure you're in debug
+ 
+
+301
+00:05:12,199 --> 00:05:13,870
+debugging just make sure you're in debug
+mode if we then hit the local Windows
+
+302
+00:05:13,870 --> 00:05:13,880
+mode if we then hit the local Windows
+ 
+
+303
+00:05:13,880 --> 00:05:15,230
+mode if we then hit the local Windows
+debugger which ensures that we're
+
+304
+00:05:15,230 --> 00:05:15,240
+debugger which ensures that we're
+ 
+
+305
+00:05:15,240 --> 00:05:16,590
+debugger which ensures that we're
+actually running with the debugger
+
+306
+00:05:16,590 --> 00:05:16,600
+actually running with the debugger
+ 
+
+307
+00:05:16,600 --> 00:05:18,629
+actually running with the debugger
+attached our program will run and you
+
+308
+00:05:18,629 --> 00:05:18,639
+attached our program will run and you
+ 
+
+309
+00:05:18,639 --> 00:05:21,150
+attached our program will run and you
+can see that the focus from our program
+
+310
+00:05:21,150 --> 00:05:21,160
+can see that the focus from our program
+ 
+
+311
+00:05:21,160 --> 00:05:23,870
+can see that the focus from our program
+is actually stolen back to visual studio
+
+312
+00:05:23,870 --> 00:05:23,880
+is actually stolen back to visual studio
+ 
+
+313
+00:05:23,880 --> 00:05:26,110
+is actually stolen back to visual studio
+and we change into this kind of
+
+314
+00:05:26,110 --> 00:05:26,120
+and we change into this kind of
+ 
+
+315
+00:05:26,120 --> 00:05:28,230
+and we change into this kind of
+different alternate layout along with a
+
+316
+00:05:28,230 --> 00:05:28,240
+different alternate layout along with a
+ 
+
+317
+00:05:28,240 --> 00:05:30,469
+different alternate layout along with a
+big yellow arrow on on that breakpoint
+
+318
+00:05:30,469 --> 00:05:30,479
+big yellow arrow on on that breakpoint
+ 
+
+319
+00:05:30,479 --> 00:05:32,309
+big yellow arrow on on that breakpoint
+indicating that that is currently where
+
+320
+00:05:32,309 --> 00:05:32,319
+indicating that that is currently where
+ 
+
+321
+00:05:32,319 --> 00:05:34,390
+indicating that that is currently where
+the instruction pointer is at in our
+
+322
+00:05:34,390 --> 00:05:34,400
+the instruction pointer is at in our
+ 
+
+323
+00:05:34,400 --> 00:05:36,510
+the instruction pointer is at in our
+program the main areas to look at here
+
+324
+00:05:36,510 --> 00:05:36,520
+program the main areas to look at here
+ 
+
+325
+00:05:36,520 --> 00:05:38,309
+program the main areas to look at here
+are basically this continue button which
+
+326
+00:05:38,309 --> 00:05:38,319
+are basically this continue button which
+ 
+
+327
+00:05:38,319 --> 00:05:40,830
+are basically this continue button which
+will continue executing our program like
+
+328
+00:05:40,830 --> 00:05:40,840
+will continue executing our program like
+ 
+
+329
+00:05:40,840 --> 00:05:42,309
+will continue executing our program like
+normal and then we have a bunch of
+
+330
+00:05:42,309 --> 00:05:42,319
+normal and then we have a bunch of
+ 
+
+331
+00:05:42,319 --> 00:05:44,510
+normal and then we have a bunch of
+buttons over here that let us step into
+
+332
+00:05:44,510 --> 00:05:44,520
+buttons over here that let us step into
+ 
+
+333
+00:05:44,520 --> 00:05:47,270
+buttons over here that let us step into
+step over or step out now these three
+
+334
+00:05:47,270 --> 00:05:47,280
+step over or step out now these three
+ 
+
+335
+00:05:47,280 --> 00:05:49,070
+step over or step out now these three
+buttons are going to control exactly
+
+336
+00:05:49,070 --> 00:05:49,080
+buttons are going to control exactly
+ 
+
+337
+00:05:49,080 --> 00:05:51,350
+buttons are going to control exactly
+what happens next in our program so step
+
+338
+00:05:51,350 --> 00:05:51,360
+what happens next in our program so step
+ 
+
+339
+00:05:51,360 --> 00:05:53,990
+what happens next in our program so step
+into is going to step into the current
+
+340
+00:05:53,990 --> 00:05:54,000
+into is going to step into the current
+ 
+
+341
+00:05:54,000 --> 00:05:55,990
+into is going to step into the current
+function that is on this line of code if
+
+342
+00:05:55,990 --> 00:05:56,000
+function that is on this line of code if
+ 
+
+343
+00:05:56,000 --> 00:05:58,309
+function that is on this line of code if
+there is a function so in this case if I
+
+344
+00:05:58,309 --> 00:05:58,319
+there is a function so in this case if I
+ 
+
+345
+00:05:58,319 --> 00:06:00,749
+there is a function so in this case if I
+hit step into onto log we would actually
+
+346
+00:06:00,749 --> 00:06:00,759
+hit step into onto log we would actually
+ 
+
+347
+00:06:00,759 --> 00:06:02,550
+hit step into onto log we would actually
+step into the log function so that we
+
+348
+00:06:02,550 --> 00:06:02,560
+step into the log function so that we
+ 
+
+349
+00:06:02,560 --> 00:06:05,029
+step into the log function so that we
+could see what it does step over is
+
+350
+00:06:05,029 --> 00:06:05,039
+could see what it does step over is
+ 
+
+351
+00:06:05,039 --> 00:06:07,070
+could see what it does step over is
+going to step over to the next line of
+
+352
+00:06:07,070 --> 00:06:07,080
+going to step over to the next line of
+ 
+
+353
+00:06:07,080 --> 00:06:09,430
+going to step over to the next line of
+code in this current function and step
+
+354
+00:06:09,430 --> 00:06:09,440
+code in this current function and step
+ 
+
+355
+00:06:09,440 --> 00:06:11,309
+code in this current function and step
+out is actually going to step out of
+
+356
+00:06:11,309 --> 00:06:11,319
+out is actually going to step out of
+ 
+
+357
+00:06:11,319 --> 00:06:12,870
+out is actually going to step out of
+this current function and take us back
+
+358
+00:06:12,870 --> 00:06:12,880
+this current function and take us back
+ 
+
+359
+00:06:12,880 --> 00:06:14,909
+this current function and take us back
+to whatever called this function which
+
+360
+00:06:14,909 --> 00:06:14,919
+to whatever called this function which
+ 
+
+361
+00:06:14,919 --> 00:06:16,749
+to whatever called this function which
+in this case since this is the main
+
+362
+00:06:16,749 --> 00:06:16,759
+in this case since this is the main
+ 
+
+363
+00:06:16,759 --> 00:06:18,830
+in this case since this is the main
+function will be the C standard Library
+
+364
+00:06:18,830 --> 00:06:18,840
+function will be the C standard Library
+ 
+
+365
+00:06:18,840 --> 00:06:21,510
+function will be the C standard Library
+you can also use f11 to step into F10 to
+
+366
+00:06:21,510 --> 00:06:21,520
+you can also use f11 to step into F10 to
+ 
+
+367
+00:06:21,520 --> 00:06:24,550
+you can also use f11 to step into F10 to
+step over or shift f11 to step out so
+
+368
+00:06:24,550 --> 00:06:24,560
+step over or shift f11 to step out so
+ 
+
+369
+00:06:24,560 --> 00:06:25,950
+step over or shift f11 to step out so
+let's step into this log function and
+
+370
+00:06:25,950 --> 00:06:25,960
+let's step into this log function and
+ 
+
+371
+00:06:25,960 --> 00:06:28,469
+let's step into this log function and
+see what happens I'm going to hit f11
+
+372
+00:06:28,469 --> 00:06:28,479
+see what happens I'm going to hit f11
+ 
+
+373
+00:06:28,479 --> 00:06:30,790
+see what happens I'm going to hit f11
+okay check this out so we step into this
+
+374
+00:06:30,790 --> 00:06:30,800
+okay check this out so we step into this
+ 
+
+375
+00:06:30,800 --> 00:06:32,230
+okay check this out so we step into this
+function where at the very beginning of
+
+376
+00:06:32,230 --> 00:06:32,240
+function where at the very beginning of
+ 
+
+377
+00:06:32,240 --> 00:06:33,710
+function where at the very beginning of
+the stack frame we haven't actually
+
+378
+00:06:33,710 --> 00:06:33,720
+the stack frame we haven't actually
+ 
+
+379
+00:06:33,720 --> 00:06:35,790
+the stack frame we haven't actually
+begun executing any code here we're just
+
+380
+00:06:35,790 --> 00:06:35,800
+begun executing any code here we're just
+ 
+
+381
+00:06:35,800 --> 00:06:37,749
+begun executing any code here we're just
+setting up the function stack frame we
+
+382
+00:06:37,749 --> 00:06:37,759
+setting up the function stack frame we
+ 
+
+383
+00:06:37,759 --> 00:06:39,670
+setting up the function stack frame we
+can hover our Mouse over this message
+
+384
+00:06:39,670 --> 00:06:39,680
+can hover our Mouse over this message
+ 
+
+385
+00:06:39,680 --> 00:06:41,670
+can hover our Mouse over this message
+variable and check this out it tells us
+
+386
+00:06:41,670 --> 00:06:41,680
+variable and check this out it tells us
+ 
+
+387
+00:06:41,680 --> 00:06:43,710
+variable and check this out it tells us
+that it's set to hello world so that's
+
+388
+00:06:43,710 --> 00:06:43,720
+that it's set to hello world so that's
+ 
+
+389
+00:06:43,720 --> 00:06:45,629
+that it's set to hello world so that's
+the second part of debugging right we're
+
+390
+00:06:45,629 --> 00:06:45,639
+the second part of debugging right we're
+ 
+
+391
+00:06:45,639 --> 00:06:48,270
+the second part of debugging right we're
+reading memory now how cool is this if I
+
+392
+00:06:48,270 --> 00:06:48,280
+reading memory now how cool is this if I
+ 
+
+393
+00:06:48,280 --> 00:06:50,430
+reading memory now how cool is this if I
+hit F10 it's going to bring us up to
+
+394
+00:06:50,430 --> 00:06:50,440
+hit F10 it's going to bring us up to
+ 
+
+395
+00:06:50,440 --> 00:06:52,029
+hit F10 it's going to bring us up to
+this line of code now the fact that the
+
+396
+00:06:52,029 --> 00:06:52,039
+this line of code now the fact that the
+ 
+
+397
+00:06:52,039 --> 00:06:54,830
+this line of code now the fact that the
+yellow arrow is on this line of code
+
+398
+00:06:54,830 --> 00:06:54,840
+yellow arrow is on this line of code
+ 
+
+399
+00:06:54,840 --> 00:06:56,749
+yellow arrow is on this line of code
+means that it actually hasn't executed
+
+400
+00:06:56,749 --> 00:06:56,759
+means that it actually hasn't executed
+ 
+
+401
+00:06:56,759 --> 00:06:58,510
+means that it actually hasn't executed
+this line of code yet it's just it's on
+
+402
+00:06:58,510 --> 00:06:58,520
+this line of code yet it's just it's on
+ 
+
+403
+00:06:58,520 --> 00:07:00,909
+this line of code yet it's just it's on
+there it's about to as soon as we hit a
+
+404
+00:07:00,909 --> 00:07:00,919
+there it's about to as soon as we hit a
+ 
+
+405
+00:07:00,919 --> 00:07:04,110
+there it's about to as soon as we hit a
+button like F10 or shift f11 to get out
+
+406
+00:07:04,110 --> 00:07:04,120
+button like F10 or shift f11 to get out
+ 
+
+407
+00:07:04,120 --> 00:07:06,309
+button like F10 or shift f11 to get out
+of the function or F5 which will
+
+408
+00:07:06,309 --> 00:07:06,319
+of the function or F5 which will
+ 
+
+409
+00:07:06,319 --> 00:07:08,230
+of the function or F5 which will
+continue our program as soon as we hit
+
+410
+00:07:08,230 --> 00:07:08,240
+continue our program as soon as we hit
+ 
+
+411
+00:07:08,240 --> 00:07:09,990
+continue our program as soon as we hit
+one of those it's going to execute that
+
+412
+00:07:09,990 --> 00:07:10,000
+one of those it's going to execute that
+ 
+
+413
+00:07:10,000 --> 00:07:11,909
+one of those it's going to execute that
+line of code and possibly more but the
+
+414
+00:07:11,909 --> 00:07:11,919
+line of code and possibly more but the
+ 
+
+415
+00:07:11,919 --> 00:07:13,950
+line of code and possibly more but the
+yellow arrow means that it is on that
+
+416
+00:07:13,950 --> 00:07:13,960
+yellow arrow means that it is on that
+ 
+
+417
+00:07:13,960 --> 00:07:15,830
+yellow arrow means that it is on that
+line of code it hasn't actually executed
+
+418
+00:07:15,830 --> 00:07:15,840
+line of code it hasn't actually executed
+ 
+
+419
+00:07:15,840 --> 00:07:17,550
+line of code it hasn't actually executed
+that line of code yet so if I bring up
+
+420
+00:07:17,550 --> 00:07:17,560
+that line of code yet so if I bring up
+ 
+
+421
+00:07:17,560 --> 00:07:19,790
+that line of code yet so if I bring up
+my program right now you can see that
+
+422
+00:07:19,790 --> 00:07:19,800
+my program right now you can see that
+ 
+
+423
+00:07:19,800 --> 00:07:21,350
+my program right now you can see that
+that hello world message has not been
+
+424
+00:07:21,350 --> 00:07:21,360
+that hello world message has not been
+ 
+
+425
+00:07:21,360 --> 00:07:24,869
+that hello world message has not been
+printed but check this out if I hit F10
+
+426
+00:07:24,869 --> 00:07:24,879
+printed but check this out if I hit F10
+ 
+
+427
+00:07:24,879 --> 00:07:26,869
+printed but check this out if I hit F10
+and then check back look at that we've
+
+428
+00:07:26,869 --> 00:07:26,879
+and then check back look at that we've
+ 
+
+429
+00:07:26,879 --> 00:07:28,869
+and then check back look at that we've
+printed hello world because we've called
+
+430
+00:07:28,869 --> 00:07:28,879
+printed hello world because we've called
+ 
+
+431
+00:07:28,879 --> 00:07:31,230
+printed hello world because we've called
+that s CDC out function and it actually
+
+432
+00:07:31,230 --> 00:07:31,240
+that s CDC out function and it actually
+ 
+
+433
+00:07:31,240 --> 00:07:33,230
+that s CDC out function and it actually
+has printed that text to the console
+
+434
+00:07:33,230 --> 00:07:33,240
+has printed that text to the console
+ 
+
+435
+00:07:33,240 --> 00:07:35,110
+has printed that text to the console
+we've executed that function so by
+
+436
+00:07:35,110 --> 00:07:35,120
+we've executed that function so by
+ 
+
+437
+00:07:35,120 --> 00:07:37,430
+we've executed that function so by
+setting break points and by stepping
+
+438
+00:07:37,430 --> 00:07:37,440
+setting break points and by stepping
+ 
+
+439
+00:07:37,440 --> 00:07:39,469
+setting break points and by stepping
+through our program we can literally run
+
+440
+00:07:39,469 --> 00:07:39,479
+through our program we can literally run
+ 
+
+441
+00:07:39,479 --> 00:07:42,510
+through our program we can literally run
+our entire program line by line which of
+
+442
+00:07:42,510 --> 00:07:42,520
+our entire program line by line which of
+ 
+
+443
+00:07:42,520 --> 00:07:44,390
+our entire program line by line which of
+course is really cool and really useful
+
+444
+00:07:44,390 --> 00:07:44,400
+course is really cool and really useful
+ 
+
+445
+00:07:44,400 --> 00:07:45,710
+course is really cool and really useful
+when you're trying to figure out what
+
+446
+00:07:45,710 --> 00:07:45,720
+when you're trying to figure out what
+ 
+
+447
+00:07:45,720 --> 00:07:47,830
+when you're trying to figure out what
+you've done wrong anyway back here if we
+
+448
+00:07:47,830 --> 00:07:47,840
+you've done wrong anyway back here if we
+ 
+
+449
+00:07:47,840 --> 00:07:49,830
+you've done wrong anyway back here if we
+keep hitting F10 you'll see that we'll
+
+450
+00:07:49,830 --> 00:07:49,840
+keep hitting F10 you'll see that we'll
+ 
+
+451
+00:07:49,840 --> 00:07:51,430
+keep hitting F10 you'll see that we'll
+eventually get back to our main function
+
+452
+00:07:51,430 --> 00:07:51,440
+eventually get back to our main function
+ 
+
+453
+00:07:51,440 --> 00:07:53,149
+eventually get back to our main function
+F10 again will bring us to the next line
+
+454
+00:07:53,149 --> 00:07:53,159
+F10 again will bring us to the next line
+ 
+
+455
+00:07:53,159 --> 00:07:55,189
+F10 again will bring us to the next line
+of code in our main function and this
+
+456
+00:07:55,189 --> 00:07:55,199
+of code in our main function and this
+ 
+
+457
+00:07:55,199 --> 00:07:57,350
+of code in our main function and this
+will kind of keep going if I hit F5 it's
+
+458
+00:07:57,350 --> 00:07:57,360
+will kind of keep going if I hit F5 it's
+ 
+
+459
+00:07:57,360 --> 00:07:58,909
+will kind of keep going if I hit F5 it's
+going to continue running our program as
+
+460
+00:07:58,909 --> 00:07:58,919
+going to continue running our program as
+ 
+
+461
+00:07:58,919 --> 00:08:01,830
+going to continue running our program as
+usual and I can just hit enter to close
+
+462
+00:08:01,830 --> 00:08:01,840
+usual and I can just hit enter to close
+ 
+
+463
+00:08:01,840 --> 00:08:03,390
+usual and I can just hit enter to close
+my program as if it was just running
+
+464
+00:08:03,390 --> 00:08:03,400
+my program as if it was just running
+ 
+
+465
+00:08:03,400 --> 00:08:05,309
+my program as if it was just running
+normally all right so pretty cool stuff
+
+466
+00:08:05,309 --> 00:08:05,319
+normally all right so pretty cool stuff
+ 
+
+467
+00:08:05,319 --> 00:08:06,869
+normally all right so pretty cool stuff
+and even though this might look really
+
+468
+00:08:06,869 --> 00:08:06,879
+and even though this might look really
+ 
+
+469
+00:08:06,879 --> 00:08:09,550
+and even though this might look really
+simple this is actually really all there
+
+470
+00:08:09,550 --> 00:08:09,560
+simple this is actually really all there
+ 
+
+471
+00:08:09,560 --> 00:08:11,070
+simple this is actually really all there
+is to it I mean I've shown you guys
+
+472
+00:08:11,070 --> 00:08:11,080
+is to it I mean I've shown you guys
+ 
+
+473
+00:08:11,080 --> 00:08:12,070
+is to it I mean I've shown you guys
+pretty much everything I'll show you
+
+474
+00:08:12,070 --> 00:08:12,080
+pretty much everything I'll show you
+ 
+
+475
+00:08:12,080 --> 00:08:13,390
+pretty much everything I'll show you
+some more examples so that you really
+
+476
+00:08:13,390 --> 00:08:13,400
+some more examples so that you really
+ 
+
+477
+00:08:13,400 --> 00:08:16,270
+some more examples so that you really
+get it but that's kind of the gist of it
+
+478
+00:08:16,270 --> 00:08:16,280
+get it but that's kind of the gist of it
+ 
+
+479
+00:08:16,280 --> 00:08:17,589
+get it but that's kind of the gist of it
+so let's go ahead and make some more
+
+480
+00:08:17,589 --> 00:08:17,599
+so let's go ahead and make some more
+ 
+
+481
+00:08:17,599 --> 00:08:19,390
+so let's go ahead and make some more
+variables to make things interesting I'm
+
+482
+00:08:19,390 --> 00:08:19,400
+variables to make things interesting I'm
+ 
+
+483
+00:08:19,400 --> 00:08:21,350
+variables to make things interesting I'm
+going to make an integer called a set it
+
+484
+00:08:21,350 --> 00:08:21,360
+going to make an integer called a set it
+ 
+
+485
+00:08:21,360 --> 00:08:24,149
+going to make an integer called a set it
+equal to 8 I'm going to do A++ which
+
+486
+00:08:24,149 --> 00:08:24,159
+equal to 8 I'm going to do A++ which
+ 
+
+487
+00:08:24,159 --> 00:08:26,110
+equal to 8 I'm going to do A++ which
+will increment a by one so in other
+
+488
+00:08:26,110 --> 00:08:26,120
+will increment a by one so in other
+ 
+
+489
+00:08:26,120 --> 00:08:28,110
+will increment a by one so in other
+words it will set a to be 9 I'm going to
+
+490
+00:08:28,110 --> 00:08:28,120
+words it will set a to be 9 I'm going to
+ 
+
+491
+00:08:28,120 --> 00:08:30,270
+words it will set a to be 9 I'm going to
+create a C string here by just typing in
+
+492
+00:08:30,270 --> 00:08:30,280
+create a C string here by just typing in
+ 
+
+493
+00:08:30,280 --> 00:08:32,589
+create a C string here by just typing in
+Conch string
+
+494
+00:08:32,589 --> 00:08:32,599
+Conch string
+ 
+
+495
+00:08:32,599 --> 00:08:35,149
+Conch string
+equals hello I'm going to write a very
+
+496
+00:08:35,149 --> 00:08:35,159
+equals hello I'm going to write a very
+ 
+
+497
+00:08:35,159 --> 00:08:36,589
+equals hello I'm going to write a very
+basic for Loop here that's going to
+
+498
+00:08:36,589 --> 00:08:36,599
+basic for Loop here that's going to
+ 
+
+499
+00:08:36,599 --> 00:08:38,230
+basic for Loop here that's going to
+iterate through this string and print
+
+500
+00:08:38,230 --> 00:08:38,240
+iterate through this string and print
+ 
+
+501
+00:08:38,240 --> 00:08:40,949
+iterate through this string and print
+each character out on a separate line
+
+502
+00:08:40,949 --> 00:08:40,959
+each character out on a separate line
+ 
+
+503
+00:08:40,959 --> 00:08:42,550
+each character out on a separate line
+and then I'll leave in my log Holo world
+
+504
+00:08:42,550 --> 00:08:42,560
+and then I'll leave in my log Holo world
+ 
+
+505
+00:08:42,560 --> 00:08:44,550
+and then I'll leave in my log Holo world
+for good measure so if I run my program
+
+506
+00:08:44,550 --> 00:08:44,560
+for good measure so if I run my program
+ 
+
+507
+00:08:44,560 --> 00:08:46,350
+for good measure so if I run my program
+with no break points at all just to see
+
+508
+00:08:46,350 --> 00:08:46,360
+with no break points at all just to see
+ 
+
+509
+00:08:46,360 --> 00:08:48,350
+with no break points at all just to see
+what even happens you'll see that we get
+
+510
+00:08:48,350 --> 00:08:48,360
+what even happens you'll see that we get
+ 
+
+511
+00:08:48,360 --> 00:08:50,030
+what even happens you'll see that we get
+basically something like this where we
+
+512
+00:08:50,030 --> 00:08:50,040
+basically something like this where we
+ 
+
+513
+00:08:50,040 --> 00:08:52,750
+basically something like this where we
+have hello and then hello world all
+
+514
+00:08:52,750 --> 00:08:52,760
+have hello and then hello world all
+ 
+
+515
+00:08:52,760 --> 00:08:54,389
+have hello and then hello world all
+right now let's step through this line
+
+516
+00:08:54,389 --> 00:08:54,399
+right now let's step through this line
+ 
+
+517
+00:08:54,399 --> 00:08:55,829
+right now let's step through this line
+by line so I'm going to set a breakpoint
+
+518
+00:08:55,829 --> 00:08:55,839
+by line so I'm going to set a breakpoint
+ 
+
+519
+00:08:55,839 --> 00:08:57,870
+by line so I'm going to set a breakpoint
+at the very top here on int a and just
+
+520
+00:08:57,870 --> 00:08:57,880
+at the very top here on int a and just
+ 
+
+521
+00:08:57,880 --> 00:08:59,750
+at the very top here on int a and just
+hit F5 all right all right cool let's
+
+522
+00:08:59,750 --> 00:08:59,760
+hit F5 all right all right cool let's
+ 
+
+523
+00:08:59,760 --> 00:09:03,870
+hit F5 all right all right cool let's
+take a look what a is what why is it 858
+
+524
+00:09:03,870 --> 00:09:03,880
+take a look what a is what why is it 858
+ 
+
+525
+00:09:03,880 --> 00:09:07,190
+take a look what a is what why is it 858
+million well remember that yellow arrow
+
+526
+00:09:07,190 --> 00:09:07,200
+million well remember that yellow arrow
+ 
+
+527
+00:09:07,200 --> 00:09:08,949
+million well remember that yellow arrow
+doesn't mean that we've actually run
+
+528
+00:09:08,949 --> 00:09:08,959
+doesn't mean that we've actually run
+ 
+
+529
+00:09:08,959 --> 00:09:10,829
+doesn't mean that we've actually run
+this code we're actually just about to
+
+530
+00:09:10,829 --> 00:09:10,839
+this code we're actually just about to
+ 
+
+531
+00:09:10,839 --> 00:09:12,750
+this code we're actually just about to
+run it but we haven't actually executed
+
+532
+00:09:12,750 --> 00:09:12,760
+run it but we haven't actually executed
+ 
+
+533
+00:09:12,760 --> 00:09:14,630
+run it but we haven't actually executed
+line six the line that actually creates
+
+534
+00:09:14,630 --> 00:09:14,640
+line six the line that actually creates
+ 
+
+535
+00:09:14,640 --> 00:09:16,430
+line six the line that actually creates
+and sets that a variable so what the
+
+536
+00:09:16,430 --> 00:09:16,440
+and sets that a variable so what the
+ 
+
+537
+00:09:16,440 --> 00:09:18,670
+and sets that a variable so what the
+debugger is currently showing us is what
+
+538
+00:09:18,670 --> 00:09:18,680
+debugger is currently showing us is what
+ 
+
+539
+00:09:18,680 --> 00:09:21,190
+debugger is currently showing us is what
+the memory where a would be is showing
+
+540
+00:09:21,190 --> 00:09:21,200
+the memory where a would be is showing
+ 
+
+541
+00:09:21,200 --> 00:09:22,790
+the memory where a would be is showing
+right now and since we haven't actually
+
+542
+00:09:22,790 --> 00:09:22,800
+right now and since we haven't actually
+ 
+
+543
+00:09:22,800 --> 00:09:25,190
+right now and since we haven't actually
+set that variable to anything yet it's
+
+544
+00:09:25,190 --> 00:09:25,200
+set that variable to anything yet it's
+ 
+
+545
+00:09:25,200 --> 00:09:26,949
+set that variable to anything yet it's
+just uninitialized memory which means
+
+546
+00:09:26,949 --> 00:09:26,959
+just uninitialized memory which means
+ 
+
+547
+00:09:26,959 --> 00:09:28,230
+just uninitialized memory which means
+that this value is just showing us
+
+548
+00:09:28,230 --> 00:09:28,240
+that this value is just showing us
+ 
+
+549
+00:09:28,240 --> 00:09:30,389
+that this value is just showing us
+whatever that memory actually contains
+
+550
+00:09:30,389 --> 00:09:30,399
+whatever that memory actually contains
+ 
+
+551
+00:09:30,399 --> 00:09:32,389
+whatever that memory actually contains
+this would be a fantastic time to bring
+
+552
+00:09:32,389 --> 00:09:32,399
+this would be a fantastic time to bring
+ 
+
+553
+00:09:32,399 --> 00:09:34,670
+this would be a fantastic time to bring
+up these three important windows that we
+
+554
+00:09:34,670 --> 00:09:34,680
+up these three important windows that we
+ 
+
+555
+00:09:34,680 --> 00:09:37,750
+up these three important windows that we
+have here autos locals and watch utos
+
+556
+00:09:37,750 --> 00:09:37,760
+have here autos locals and watch utos
+ 
+
+557
+00:09:37,760 --> 00:09:39,790
+have here autos locals and watch utos
+and locals will basically just try and
+
+558
+00:09:39,790 --> 00:09:39,800
+and locals will basically just try and
+ 
+
+559
+00:09:39,800 --> 00:09:41,829
+and locals will basically just try and
+show you local variables or variables
+
+560
+00:09:41,829 --> 00:09:41,839
+show you local variables or variables
+ 
+
+561
+00:09:41,839 --> 00:09:43,870
+show you local variables or variables
+that it thinks might be important to you
+
+562
+00:09:43,870 --> 00:09:43,880
+that it thinks might be important to you
+ 
+
+563
+00:09:43,880 --> 00:09:45,829
+that it thinks might be important to you
+watch on the other hand lets us actually
+
+564
+00:09:45,829 --> 00:09:45,839
+watch on the other hand lets us actually
+ 
+
+565
+00:09:45,839 --> 00:09:48,190
+watch on the other hand lets us actually
+monitor variables so what I can do is I
+
+566
+00:09:48,190 --> 00:09:48,200
+monitor variables so what I can do is I
+ 
+
+567
+00:09:48,200 --> 00:09:50,389
+monitor variables so what I can do is I
+can type in a which is the name of the
+
+568
+00:09:50,389 --> 00:09:50,399
+can type in a which is the name of the
+ 
+
+569
+00:09:50,399 --> 00:09:52,790
+can type in a which is the name of the
+variable and hit enter and you can see
+
+570
+00:09:52,790 --> 00:09:52,800
+variable and hit enter and you can see
+ 
+
+571
+00:09:52,800 --> 00:09:54,910
+variable and hit enter and you can see
+that it's showing me the value of a if I
+
+572
+00:09:54,910 --> 00:09:54,920
+that it's showing me the value of a if I
+ 
+
+573
+00:09:54,920 --> 00:09:57,269
+that it's showing me the value of a if I
+also want to viiew what string is I can
+
+574
+00:09:57,269 --> 00:09:57,279
+also want to viiew what string is I can
+ 
+
+575
+00:09:57,279 --> 00:09:59,110
+also want to viiew what string is I can
+also put that in and it's going to show
+
+576
+00:09:59,110 --> 00:09:59,120
+also put that in and it's going to show
+ 
+
+577
+00:09:59,120 --> 00:10:01,030
+also put that in and it's going to show
+show me what string is now of course we
+
+578
+00:10:01,030 --> 00:10:01,040
+show me what string is now of course we
+ 
+
+579
+00:10:01,040 --> 00:10:02,870
+show me what string is now of course we
+haven't initialized this memory yet so
+
+580
+00:10:02,870 --> 00:10:02,880
+haven't initialized this memory yet so
+ 
+
+581
+00:10:02,880 --> 00:10:04,350
+haven't initialized this memory yet so
+it's currently it's completely useless
+
+582
+00:10:04,350 --> 00:10:04,360
+it's currently it's completely useless
+ 
+
+583
+00:10:04,360 --> 00:10:06,190
+it's currently it's completely useless
+it's just garbage but as we step through
+
+584
+00:10:06,190 --> 00:10:06,200
+it's just garbage but as we step through
+ 
+
+585
+00:10:06,200 --> 00:10:08,190
+it's just garbage but as we step through
+our program these values will update to
+
+586
+00:10:08,190 --> 00:10:08,200
+our program these values will update to
+ 
+
+587
+00:10:08,200 --> 00:10:09,910
+our program these values will update to
+show what's actually in the memory
+
+588
+00:10:09,910 --> 00:10:09,920
+show what's actually in the memory
+ 
+
+589
+00:10:09,920 --> 00:10:11,350
+show what's actually in the memory
+speaking of memory there's actually a
+
+590
+00:10:11,350 --> 00:10:11,360
+speaking of memory there's actually a
+ 
+
+591
+00:10:11,360 --> 00:10:13,430
+speaking of memory there's actually a
+view that we can use to view the entire
+
+592
+00:10:13,430 --> 00:10:13,440
+view that we can use to view the entire
+ 
+
+593
+00:10:13,440 --> 00:10:15,509
+view that we can use to view the entire
+memory of our program now of course it's
+
+594
+00:10:15,509 --> 00:10:15,519
+memory of our program now of course it's
+ 
+
+595
+00:10:15,519 --> 00:10:18,030
+memory of our program now of course it's
+called the memory view so if we go debug
+
+596
+00:10:18,030 --> 00:10:18,040
+called the memory view so if we go debug
+ 
+
+597
+00:10:18,040 --> 00:10:21,069
+called the memory view so if we go debug
+Windows memory and memory one we're
+
+598
+00:10:21,069 --> 00:10:21,079
+Windows memory and memory one we're
+ 
+
+599
+00:10:21,079 --> 00:10:22,790
+Windows memory and memory one we're
+going to be graded by this weird looking
+
+600
+00:10:22,790 --> 00:10:22,800
+going to be graded by this weird looking
+ 
+
+601
+00:10:22,800 --> 00:10:24,910
+going to be graded by this weird looking
+panel here that's going to show all of
+
+602
+00:10:24,910 --> 00:10:24,920
+panel here that's going to show all of
+ 
+
+603
+00:10:24,920 --> 00:10:27,150
+panel here that's going to show all of
+the memory of our program so on the very
+
+604
+00:10:27,150 --> 00:10:27,160
+the memory of our program so on the very
+ 
+
+605
+00:10:27,160 --> 00:10:29,230
+the memory of our program so on the very
+left we see the memory addresses in the
+
+606
+00:10:29,230 --> 00:10:29,240
+left we see the memory addresses in the
+ 
+
+607
+00:10:29,240 --> 00:10:31,750
+left we see the memory addresses in the
+middle we see the actual data the actual
+
+608
+00:10:31,750 --> 00:10:31,760
+middle we see the actual data the actual
+ 
+
+609
+00:10:31,760 --> 00:10:34,470
+middle we see the actual data the actual
+values represented in heximal format and
+
+610
+00:10:34,470 --> 00:10:34,480
+values represented in heximal format and
+ 
+
+611
+00:10:34,480 --> 00:10:35,829
+values represented in heximal format and
+on the right we see the asky
+
+612
+00:10:35,829 --> 00:10:35,839
+on the right we see the asky
+ 
+
+613
+00:10:35,839 --> 00:10:38,430
+on the right we see the asky
+interpretation of those numbers if you
+
+614
+00:10:38,430 --> 00:10:38,440
+interpretation of those numbers if you
+ 
+
+615
+00:10:38,440 --> 00:10:40,470
+interpretation of those numbers if you
+want to locate where this a variable
+
+616
+00:10:40,470 --> 00:10:40,480
+want to locate where this a variable
+ 
+
+617
+00:10:40,480 --> 00:10:42,110
+want to locate where this a variable
+actually is stored in the memory of your
+
+618
+00:10:42,110 --> 00:10:42,120
+actually is stored in the memory of your
+ 
+
+619
+00:10:42,120 --> 00:10:43,949
+actually is stored in the memory of your
+program you need to know its memory
+
+620
+00:10:43,949 --> 00:10:43,959
+program you need to know its memory
+ 
+
+621
+00:10:43,959 --> 00:10:46,110
+program you need to know its memory
+address and to do that we can simply
+
+622
+00:10:46,110 --> 00:10:46,120
+address and to do that we can simply
+ 
+
+623
+00:10:46,120 --> 00:10:49,190
+address and to do that we can simply
+type in Ampersand and a so the Ampersand
+
+624
+00:10:49,190 --> 00:10:49,200
+type in Ampersand and a so the Ampersand
+ 
+
+625
+00:10:49,200 --> 00:10:50,470
+type in Ampersand and a so the Ampersand
+in front of a variable name will
+
+626
+00:10:50,470 --> 00:10:50,480
+in front of a variable name will
+ 
+
+627
+00:10:50,480 --> 00:10:51,990
+in front of a variable name will
+actually get that variable's memory
+
+628
+00:10:51,990 --> 00:10:52,000
+actually get that variable's memory
+ 
+
+629
+00:10:52,000 --> 00:10:54,269
+actually get that variable's memory
+address if we hit enter we're going to
+
+630
+00:10:54,269 --> 00:10:54,279
+address if we hit enter we're going to
+ 
+
+631
+00:10:54,279 --> 00:10:56,910
+address if we hit enter we're going to
+be taken to the memory address of that a
+
+632
+00:10:56,910 --> 00:10:56,920
+be taken to the memory address of that a
+ 
+
+633
+00:10:56,920 --> 00:10:58,350
+be taken to the memory address of that a
+variable which in this case is a whole
+
+634
+00:10:58,350 --> 00:10:58,360
+variable which in this case is a whole
+ 
+
+635
+00:10:58,360 --> 00:11:00,870
+variable which in this case is a whole
+bunch of C's so that number that CC
+
+636
+00:11:00,870 --> 00:11:00,880
+bunch of C's so that number that CC
+ 
+
+637
+00:11:00,880 --> 00:11:03,829
+bunch of C's so that number that CC
+number is actually a heximal value if
+
+638
+00:11:03,829 --> 00:11:03,839
+number is actually a heximal value if
+ 
+
+639
+00:11:03,839 --> 00:11:05,710
+number is actually a heximal value if
+you want to see what that is in decimal
+
+640
+00:11:05,710 --> 00:11:05,720
+you want to see what that is in decimal
+ 
+
+641
+00:11:05,720 --> 00:11:07,750
+you want to see what that is in decimal
+you can bring up a calculator if we
+
+642
+00:11:07,750 --> 00:11:07,760
+you can bring up a calculator if we
+ 
+
+643
+00:11:07,760 --> 00:11:09,790
+you can bring up a calculator if we
+switch to the programmer view we can
+
+644
+00:11:09,790 --> 00:11:09,800
+switch to the programmer view we can
+ 
+
+645
+00:11:09,800 --> 00:11:11,550
+switch to the programmer view we can
+type in the heximal value if I just
+
+646
+00:11:11,550 --> 00:11:11,560
+type in the heximal value if I just
+ 
+
+647
+00:11:11,560 --> 00:11:14,389
+type in the heximal value if I just
+click on hexadecimal here type in CC and
+
+648
+00:11:14,389 --> 00:11:14,399
+click on hexadecimal here type in CC and
+ 
+
+649
+00:11:14,399 --> 00:11:15,870
+click on hexadecimal here type in CC and
+you can see what that value is in
+
+650
+00:11:15,870 --> 00:11:15,880
+you can see what that value is in
+ 
+
+651
+00:11:15,880 --> 00:11:19,829
+you can see what that value is in
+decimal it's 204 so 204 CC why is it
+
+652
+00:11:19,829 --> 00:11:19,839
+decimal it's 204 so 204 CC why is it
+ 
+
+653
+00:11:19,839 --> 00:11:22,110
+decimal it's 204 so 204 CC why is it
+said to that isn't that memory just
+
+654
+00:11:22,110 --> 00:11:22,120
+said to that isn't that memory just
+ 
+
+655
+00:11:22,120 --> 00:11:23,629
+said to that isn't that memory just
+supposed to be random a whole bunch of
+
+656
+00:11:23,629 --> 00:11:23,639
+supposed to be random a whole bunch of
+ 
+
+657
+00:11:23,639 --> 00:11:26,470
+supposed to be random a whole bunch of
+CC's seems kind of specific now that's
+
+658
+00:11:26,470 --> 00:11:26,480
+CC's seems kind of specific now that's
+ 
+
+659
+00:11:26,480 --> 00:11:28,550
+CC's seems kind of specific now that's
+the cool thing about debug mode and also
+
+660
+00:11:28,550 --> 00:11:28,560
+the cool thing about debug mode and also
+ 
+
+661
+00:11:28,560 --> 00:11:30,670
+the cool thing about debug mode and also
+why debug mode slows down our program
+
+662
+00:11:30,670 --> 00:11:30,680
+why debug mode slows down our program
+ 
+
+663
+00:11:30,680 --> 00:11:32,269
+why debug mode slows down our program
+it's because the compiler will actually
+
+664
+00:11:32,269 --> 00:11:32,279
+it's because the compiler will actually
+ 
+
+665
+00:11:32,279 --> 00:11:34,550
+it's because the compiler will actually
+make our program do certain things
+
+666
+00:11:34,550 --> 00:11:34,560
+make our program do certain things
+ 
+
+667
+00:11:34,560 --> 00:11:36,710
+make our program do certain things
+certain extra things that's going to
+
+668
+00:11:36,710 --> 00:11:36,720
+certain extra things that's going to
+ 
+
+669
+00:11:36,720 --> 00:11:38,310
+certain extra things that's going to
+make our lives easier when it comes to
+
+670
+00:11:38,310 --> 00:11:38,320
+make our lives easier when it comes to
+ 
+
+671
+00:11:38,320 --> 00:11:40,590
+make our lives easier when it comes to
+debugging so for example the fact that
+
+672
+00:11:40,590 --> 00:11:40,600
+debugging so for example the fact that
+ 
+
+673
+00:11:40,600 --> 00:11:43,310
+debugging so for example the fact that
+this memory is a whole bunch of CC's
+
+674
+00:11:43,310 --> 00:11:43,320
+this memory is a whole bunch of CC's
+ 
+
+675
+00:11:43,320 --> 00:11:45,550
+this memory is a whole bunch of CC's
+means that it is uninitialized stack
+
+676
+00:11:45,550 --> 00:11:45,560
+means that it is uninitialized stack
+ 
+
+677
+00:11:45,560 --> 00:11:47,470
+means that it is uninitialized stack
+memory so what's actually happened is
+
+678
+00:11:47,470 --> 00:11:47,480
+memory so what's actually happened is
+ 
+
+679
+00:11:47,480 --> 00:11:49,069
+memory so what's actually happened is
+the compiler knows that we're making
+
+680
+00:11:49,069 --> 00:11:49,079
+the compiler knows that we're making
+ 
+
+681
+00:11:49,079 --> 00:11:50,910
+the compiler knows that we're making
+we're trying to make a variable but we
+
+682
+00:11:50,910 --> 00:11:50,920
+we're trying to make a variable but we
+ 
+
+683
+00:11:50,920 --> 00:11:52,790
+we're trying to make a variable but we
+haven't initialized it yet so what is
+
+684
+00:11:52,790 --> 00:11:52,800
+haven't initialized it yet so what is
+ 
+
+685
+00:11:52,800 --> 00:11:55,550
+haven't initialized it yet so what is
+going to do is actually fill that memory
+
+686
+00:11:55,550 --> 00:11:55,560
+going to do is actually fill that memory
+ 
+
+687
+00:11:55,560 --> 00:11:58,230
+going to do is actually fill that memory
+with CC so that if we're debugging our
+
+688
+00:11:58,230 --> 00:11:58,240
+with CC so that if we're debugging our
+ 
+
+689
+00:11:58,240 --> 00:12:00,190
+with CC so that if we're debugging our
+code and something goes wrong we can
+
+690
+00:12:00,190 --> 00:12:00,200
+code and something goes wrong we can
+ 
+
+691
+00:12:00,200 --> 00:12:01,870
+code and something goes wrong we can
+look at the memory we we can see that
+
+692
+00:12:01,870 --> 00:12:01,880
+look at the memory we we can see that
+ 
+
+693
+00:12:01,880 --> 00:12:04,509
+look at the memory we we can see that
+it's set to CC and we can be like oh of
+
+694
+00:12:04,509 --> 00:12:04,519
+it's set to CC and we can be like oh of
+ 
+
+695
+00:12:04,519 --> 00:12:06,350
+it's set to CC and we can be like oh of
+course I never initialize that variable
+
+696
+00:12:06,350 --> 00:12:06,360
+course I never initialize that variable
+ 
+
+697
+00:12:06,360 --> 00:12:07,949
+course I never initialize that variable
+that's why this is going all wrong now
+
+698
+00:12:07,949 --> 00:12:07,959
+that's why this is going all wrong now
+ 
+
+699
+00:12:07,959 --> 00:12:10,030
+that's why this is going all wrong now
+by doing extra things like that like
+
+700
+00:12:10,030 --> 00:12:10,040
+by doing extra things like that like
+ 
+
+701
+00:12:10,040 --> 00:12:11,829
+by doing extra things like that like
+setting our memory to CC before we
+
+702
+00:12:11,829 --> 00:12:11,839
+setting our memory to CC before we
+ 
+
+703
+00:12:11,839 --> 00:12:14,030
+setting our memory to CC before we
+initialize it obviously our program is
+
+704
+00:12:14,030 --> 00:12:14,040
+initialize it obviously our program is
+ 
+
+705
+00:12:14,040 --> 00:12:15,750
+initialize it obviously our program is
+doing extra things that are going to
+
+706
+00:12:15,750 --> 00:12:15,760
+doing extra things that are going to
+ 
+
+707
+00:12:15,760 --> 00:12:17,350
+doing extra things that are going to
+slow it down so we don't want to be
+
+708
+00:12:17,350 --> 00:12:17,360
+slow it down so we don't want to be
+ 
+
+709
+00:12:17,360 --> 00:12:18,590
+slow it down so we don't want to be
+doing that in release mode when we
+
+710
+00:12:18,590 --> 00:12:18,600
+doing that in release mode when we
+ 
+
+711
+00:12:18,600 --> 00:12:19,990
+doing that in release mode when we
+actually release our program when we
+
+712
+00:12:19,990 --> 00:12:20,000
+actually release our program when we
+ 
+
+713
+00:12:20,000 --> 00:12:21,350
+actually release our program when we
+ship our game we don't want to be doing
+
+714
+00:12:21,350 --> 00:12:21,360
+ship our game we don't want to be doing
+ 
+
+715
+00:12:21,360 --> 00:12:23,189
+ship our game we don't want to be doing
+all that but when it comes to debugging
+
+716
+00:12:23,189 --> 00:12:23,199
+all that but when it comes to debugging
+ 
+
+717
+00:12:23,199 --> 00:12:25,590
+all that but when it comes to debugging
+is so useful so if I come over here and
+
+718
+00:12:25,590 --> 00:12:25,600
+is so useful so if I come over here and
+ 
+
+719
+00:12:25,600 --> 00:12:27,870
+is so useful so if I come over here and
+I hit F10 a lot of things are going to
+
+720
+00:12:27,870 --> 00:12:27,880
+I hit F10 a lot of things are going to
+ 
+
+721
+00:12:27,880 --> 00:12:29,350
+I hit F10 a lot of things are going to
+happen one other thing you you can do
+
+722
+00:12:29,350 --> 00:12:29,360
+happen one other thing you you can do
+ 
+
+723
+00:12:29,360 --> 00:12:31,069
+happen one other thing you you can do
+actually in this watch window is right
+
+724
+00:12:31,069 --> 00:12:31,079
+actually in this watch window is right
+ 
+
+725
+00:12:31,079 --> 00:12:33,670
+actually in this watch window is right
+click and select hexadecimal display and
+
+726
+00:12:33,670 --> 00:12:33,680
+click and select hexadecimal display and
+ 
+
+727
+00:12:33,680 --> 00:12:35,990
+click and select hexadecimal display and
+so now you can see that the value of a
+
+728
+00:12:35,990 --> 00:12:36,000
+so now you can see that the value of a
+ 
+
+729
+00:12:36,000 --> 00:12:38,310
+so now you can see that the value of a
+actually is a whole bunch of C's which
+
+730
+00:12:38,310 --> 00:12:38,320
+actually is a whole bunch of C's which
+ 
+
+731
+00:12:38,320 --> 00:12:40,389
+actually is a whole bunch of C's which
+of course means that a is currently
+
+732
+00:12:40,389 --> 00:12:40,399
+of course means that a is currently
+ 
+
+733
+00:12:40,399 --> 00:12:42,550
+of course means that a is currently
+uninitialized stack memory let's go back
+
+734
+00:12:42,550 --> 00:12:42,560
+uninitialized stack memory let's go back
+ 
+
+735
+00:12:42,560 --> 00:12:45,150
+uninitialized stack memory let's go back
+to our non-hex aimal display and let's
+
+736
+00:12:45,150 --> 00:12:45,160
+to our non-hex aimal display and let's
+ 
+
+737
+00:12:45,160 --> 00:12:47,150
+to our non-hex aimal display and let's
+hit F10 and a number of cool things are
+
+738
+00:12:47,150 --> 00:12:47,160
+hit F10 and a number of cool things are
+ 
+
+739
+00:12:47,160 --> 00:12:49,509
+hit F10 and a number of cool things are
+going to happen so namely in this watch
+
+740
+00:12:49,509 --> 00:12:49,519
+going to happen so namely in this watch
+ 
+
+741
+00:12:49,519 --> 00:12:51,910
+going to happen so namely in this watch
+window our value has changed to eight
+
+742
+00:12:51,910 --> 00:12:51,920
+window our value has changed to eight
+ 
+
+743
+00:12:51,920 --> 00:12:53,790
+window our value has changed to eight
+it's also red which indicates that it's
+
+744
+00:12:53,790 --> 00:12:53,800
+it's also red which indicates that it's
+ 
+
+745
+00:12:53,800 --> 00:12:55,870
+it's also red which indicates that it's
+changed since the last break point our
+
+746
+00:12:55,870 --> 00:12:55,880
+changed since the last break point our
+ 
+
+747
+00:12:55,880 --> 00:12:57,430
+changed since the last break point our
+instruction Point has moved down which
+
+748
+00:12:57,430 --> 00:12:57,440
+instruction Point has moved down which
+ 
+
+749
+00:12:57,440 --> 00:12:58,829
+instruction Point has moved down which
+is showing that it's now about about
+
+750
+00:12:58,829 --> 00:12:58,839
+is showing that it's now about about
+ 
+
+751
+00:12:58,839 --> 00:13:00,189
+is showing that it's now about about
+about to execute this line of code
+
+752
+00:13:00,189 --> 00:13:00,199
+about to execute this line of code
+ 
+
+753
+00:13:00,199 --> 00:13:03,030
+about to execute this line of code
+hasn't done it yet no no no not yet but
+
+754
+00:13:03,030 --> 00:13:03,040
+hasn't done it yet no no no not yet but
+ 
+
+755
+00:13:03,040 --> 00:13:04,990
+hasn't done it yet no no no not yet but
+it's about to and then if we look in our
+
+756
+00:13:04,990 --> 00:13:05,000
+it's about to and then if we look in our
+ 
+
+757
+00:13:05,000 --> 00:13:07,550
+it's about to and then if we look in our
+memory view you can also see that these
+
+758
+00:13:07,550 --> 00:13:07,560
+memory view you can also see that these
+ 
+
+759
+00:13:07,560 --> 00:13:10,269
+memory view you can also see that these
+four bytes of memory have been set to
+
+760
+00:13:10,269 --> 00:13:10,279
+four bytes of memory have been set to
+ 
+
+761
+00:13:10,279 --> 00:13:11,470
+four bytes of memory have been set to
+eight by the way I should probably
+
+762
+00:13:11,470 --> 00:13:11,480
+eight by the way I should probably
+ 
+
+763
+00:13:11,480 --> 00:13:13,790
+eight by the way I should probably
+mention that every two digits here is
+
+764
+00:13:13,790 --> 00:13:13,800
+mention that every two digits here is
+ 
+
+765
+00:13:13,800 --> 00:13:16,110
+mention that every two digits here is
+equal to one by that's also why we're
+
+766
+00:13:16,110 --> 00:13:16,120
+equal to one by that's also why we're
+ 
+
+767
+00:13:16,120 --> 00:13:17,829
+equal to one by that's also why we're
+viewing this in hexadecimal because if
+
+768
+00:13:17,829 --> 00:13:17,839
+viewing this in hexadecimal because if
+ 
+
+769
+00:13:17,839 --> 00:13:20,590
+viewing this in hexadecimal because if
+we do that every two heximal digits are
+
+770
+00:13:20,590 --> 00:13:20,600
+we do that every two heximal digits are
+ 
+
+771
+00:13:20,600 --> 00:13:23,230
+we do that every two heximal digits are
+always going to align to be one bite of
+
+772
+00:13:23,230 --> 00:13:23,240
+always going to align to be one bite of
+ 
+
+773
+00:13:23,240 --> 00:13:25,230
+always going to align to be one bite of
+memory so we can tell just by looking at
+
+774
+00:13:25,230 --> 00:13:25,240
+memory so we can tell just by looking at
+ 
+
+775
+00:13:25,240 --> 00:13:27,550
+memory so we can tell just by looking at
+this that these eight heximal digits are
+
+776
+00:13:27,550 --> 00:13:27,560
+this that these eight heximal digits are
+ 
+
+777
+00:13:27,560 --> 00:13:29,550
+this that these eight heximal digits are
+four bytes of memory and you can see
+
+778
+00:13:29,550 --> 00:13:29,560
+four bytes of memory and you can see
+ 
+
+779
+00:13:29,560 --> 00:13:31,550
+four bytes of memory and you can see
+that it's been set to8 so that's what
+
+780
+00:13:31,550 --> 00:13:31,560
+that it's been set to8 so that's what
+ 
+
+781
+00:13:31,560 --> 00:13:32,829
+that it's been set to8 so that's what
+we're doing that's all we're doing right
+
+782
+00:13:32,829 --> 00:13:32,839
+we're doing that's all we're doing right
+ 
+
+783
+00:13:32,839 --> 00:13:34,509
+we're doing that's all we're doing right
+now we've paused our program and we're
+
+784
+00:13:34,509 --> 00:13:34,519
+now we've paused our program and we're
+ 
+
+785
+00:13:34,519 --> 00:13:36,710
+now we've paused our program and we're
+taking a look at its state we're reading
+
+786
+00:13:36,710 --> 00:13:36,720
+taking a look at its state we're reading
+ 
+
+787
+00:13:36,720 --> 00:13:39,030
+taking a look at its state we're reading
+its memory if I hit F10 again we're
+
+788
+00:13:39,030 --> 00:13:39,040
+its memory if I hit F10 again we're
+ 
+
+789
+00:13:39,040 --> 00:13:41,829
+its memory if I hit F10 again we're
+going to advance this is now set to 9
+
+790
+00:13:41,829 --> 00:13:41,839
+going to advance this is now set to 9
+ 
+
+791
+00:13:41,839 --> 00:13:44,069
+going to advance this is now set to 9
+it's set to 9 here as well pretty cool
+
+792
+00:13:44,069 --> 00:13:44,079
+it's set to 9 here as well pretty cool
+ 
+
+793
+00:13:44,079 --> 00:13:45,710
+it's set to 9 here as well pretty cool
+stuff you can see that string is still
+
+794
+00:13:45,710 --> 00:13:45,720
+stuff you can see that string is still
+ 
+
+795
+00:13:45,720 --> 00:13:47,509
+stuff you can see that string is still
+uninitialized stch memory but check this
+
+796
+00:13:47,509 --> 00:13:47,519
+uninitialized stch memory but check this
+ 
+
+797
+00:13:47,519 --> 00:13:49,389
+uninitialized stch memory but check this
+out I'm about to initialize it aren't I
+
+798
+00:13:49,389 --> 00:13:49,399
+out I'm about to initialize it aren't I
+ 
+
+799
+00:13:49,399 --> 00:13:52,629
+out I'm about to initialize it aren't I
+so if I hit F10 it's initialized because
+
+800
+00:13:52,629 --> 00:13:52,639
+so if I hit F10 it's initialized because
+ 
+
+801
+00:13:52,639 --> 00:13:54,310
+so if I hit F10 it's initialized because
+this is an actual pointer it's also
+
+802
+00:13:54,310 --> 00:13:54,320
+this is an actual pointer it's also
+ 
+
+803
+00:13:54,320 --> 00:13:56,629
+this is an actual pointer it's also
+telling us the memory address of that
+
+804
+00:13:56,629 --> 00:13:56,639
+telling us the memory address of that
+ 
+
+805
+00:13:56,639 --> 00:13:59,350
+telling us the memory address of that
+string so if I was to copy this memory
+
+806
+00:13:59,350 --> 00:13:59,360
+string so if I was to copy this memory
+ 
+
+807
+00:13:59,360 --> 00:14:01,670
+string so if I was to copy this memory
+address here from the watch window and
+
+808
+00:14:01,670 --> 00:14:01,680
+address here from the watch window and
+ 
+
+809
+00:14:01,680 --> 00:14:03,790
+address here from the watch window and
+paste it into my memory View and hit
+
+810
+00:14:03,790 --> 00:14:03,800
+paste it into my memory View and hit
+ 
+
+811
+00:14:03,800 --> 00:14:05,749
+paste it into my memory View and hit
+enter look at this I'm taking to these
+
+812
+00:14:05,749 --> 00:14:05,759
+enter look at this I'm taking to these
+ 
+
+813
+00:14:05,759 --> 00:14:09,030
+enter look at this I'm taking to these
+bytes which in this ask interpretation
+
+814
+00:14:09,030 --> 00:14:09,040
+bytes which in this ask interpretation
+ 
+
+815
+00:14:09,040 --> 00:14:11,310
+bytes which in this ask interpretation
+you can see that it says hello and
+
+816
+00:14:11,310 --> 00:14:11,320
+you can see that it says hello and
+ 
+
+817
+00:14:11,320 --> 00:14:13,310
+you can see that it says hello and
+what's really interesting is that if you
+
+818
+00:14:13,310 --> 00:14:13,320
+what's really interesting is that if you
+ 
+
+819
+00:14:13,320 --> 00:14:15,389
+what's really interesting is that if you
+actually keep reading you can see that
+
+820
+00:14:15,389 --> 00:14:15,399
+actually keep reading you can see that
+ 
+
+821
+00:14:15,399 --> 00:14:17,749
+actually keep reading you can see that
+our program literally contains memory
+
+822
+00:14:17,749 --> 00:14:17,759
+our program literally contains memory
+ 
+
+823
+00:14:17,759 --> 00:14:20,350
+our program literally contains memory
+close to this hello variable that says
+
+824
+00:14:20,350 --> 00:14:20,360
+close to this hello variable that says
+ 
+
+825
+00:14:20,360 --> 00:14:23,310
+close to this hello variable that says
+stack around the variable was corrupted
+
+826
+00:14:23,310 --> 00:14:23,320
+stack around the variable was corrupted
+ 
+
+827
+00:14:23,320 --> 00:14:26,069
+stack around the variable was corrupted
+the variable is being used without being
+
+828
+00:14:26,069 --> 00:14:26,079
+the variable is being used without being
+ 
+
+829
+00:14:26,079 --> 00:14:27,949
+the variable is being used without being
+initialized obviously our program
+
+830
+00:14:27,949 --> 00:14:27,959
+initialized obviously our program
+ 
+
+831
+00:14:27,959 --> 00:14:29,749
+initialized obviously our program
+containing string like stack around the
+
+832
+00:14:29,749 --> 00:14:29,759
+containing string like stack around the
+ 
+
+833
+00:14:29,759 --> 00:14:31,910
+containing string like stack around the
+variable was corrupted in its memory is
+
+834
+00:14:31,910 --> 00:14:31,920
+variable was corrupted in its memory is
+ 
+
+835
+00:14:31,920 --> 00:14:33,749
+variable was corrupted in its memory is
+not something that will exist in release
+
+836
+00:14:33,749 --> 00:14:33,759
+not something that will exist in release
+ 
+
+837
+00:14:33,759 --> 00:14:35,710
+not something that will exist in release
+mode but it's just another great example
+
+838
+00:14:35,710 --> 00:14:35,720
+mode but it's just another great example
+ 
+
+839
+00:14:35,720 --> 00:14:37,069
+mode but it's just another great example
+of what will actually happen in debug
+
+840
+00:14:37,069 --> 00:14:37,079
+of what will actually happen in debug
+ 
+
+841
+00:14:37,079 --> 00:14:39,269
+of what will actually happen in debug
+mode to help you debug your program Okay
+
+842
+00:14:39,269 --> 00:14:39,279
+mode to help you debug your program Okay
+ 
+
+843
+00:14:39,279 --> 00:14:40,269
+mode to help you debug your program Okay
+cool so things are getting really
+
+844
+00:14:40,269 --> 00:14:40,279
+cool so things are getting really
+ 
+
+845
+00:14:40,279 --> 00:14:41,509
+cool so things are getting really
+interesting here because we've run into
+
+846
+00:14:41,509 --> 00:14:41,519
+interesting here because we've run into
+ 
+
+847
+00:14:41,519 --> 00:14:43,710
+interesting here because we've run into
+this for Loop what's going to happen if
+
+848
+00:14:43,710 --> 00:14:43,720
+this for Loop what's going to happen if
+ 
+
+849
+00:14:43,720 --> 00:14:45,590
+this for Loop what's going to happen if
+I keep advancing through this now we
+
+850
+00:14:45,590 --> 00:14:45,600
+I keep advancing through this now we
+ 
+
+851
+00:14:45,600 --> 00:14:47,389
+I keep advancing through this now we
+haven't covered for Loops or any kind of
+
+852
+00:14:47,389 --> 00:14:47,399
+haven't covered for Loops or any kind of
+ 
+
+853
+00:14:47,399 --> 00:14:49,230
+haven't covered for Loops or any kind of
+control flow statements in this series
+
+854
+00:14:49,230 --> 00:14:49,240
+control flow statements in this series
+ 
+
+855
+00:14:49,240 --> 00:14:51,189
+control flow statements in this series
+yet the next few videos are probably
+
+856
+00:14:51,189 --> 00:14:51,199
+yet the next few videos are probably
+ 
+
+857
+00:14:51,199 --> 00:14:53,030
+yet the next few videos are probably
+going to deal with it I really wanted to
+
+858
+00:14:53,030 --> 00:14:53,040
+going to deal with it I really wanted to
+ 
+
+859
+00:14:53,040 --> 00:14:54,949
+going to deal with it I really wanted to
+cover the debugger first so that we can
+
+860
+00:14:54,949 --> 00:14:54,959
+cover the debugger first so that we can
+ 
+
+861
+00:14:54,959 --> 00:14:56,430
+cover the debugger first so that we can
+actually step through these control flow
+
+862
+00:14:56,430 --> 00:14:56,440
+actually step through these control flow
+ 
+
+863
+00:14:56,440 --> 00:14:57,829
+actually step through these control flow
+statements in the future and see how
+
+864
+00:14:57,829 --> 00:14:57,839
+statements in the future and see how
+ 
+
+865
+00:14:57,839 --> 00:14:59,470
+statements in the future and see how
+they work and you guys already know how
+
+866
+00:14:59,470 --> 00:14:59,480
+they work and you guys already know how
+ 
+
+867
+00:14:59,480 --> 00:15:02,269
+they work and you guys already know how
+to use this debug view but basically f
+
+868
+00:15:02,269 --> 00:15:02,279
+to use this debug view but basically f
+ 
+
+869
+00:15:02,279 --> 00:15:04,189
+to use this debug view but basically f
+is going to do stuff multiple times so
+
+870
+00:15:04,189 --> 00:15:04,199
+is going to do stuff multiple times so
+ 
+
+871
+00:15:04,199 --> 00:15:06,110
+is going to do stuff multiple times so
+if we step through this program you can
+
+872
+00:15:06,110 --> 00:15:06,120
+if we step through this program you can
+ 
+
+873
+00:15:06,120 --> 00:15:08,550
+if we step through this program you can
+see that I set to zero it's going to
+
+874
+00:15:08,550 --> 00:15:08,560
+see that I set to zero it's going to
+ 
+
+875
+00:15:08,560 --> 00:15:10,910
+see that I set to zero it's going to
+grab index Zero from this string which
+
+876
+00:15:10,910 --> 00:15:10,920
+grab index Zero from this string which
+ 
+
+877
+00:15:10,920 --> 00:15:13,230
+grab index Zero from this string which
+is going to be the very first character
+
+878
+00:15:13,230 --> 00:15:13,240
+is going to be the very first character
+ 
+
+879
+00:15:13,240 --> 00:15:16,389
+is going to be the very first character
+in the string which is a capital H if we
+
+880
+00:15:16,389 --> 00:15:16,399
+in the string which is a capital H if we
+ 
+
+881
+00:15:16,399 --> 00:15:18,749
+in the string which is a capital H if we
+hit F10 we can hover our Mouse over C
+
+882
+00:15:18,749 --> 00:15:18,759
+hit F10 we can hover our Mouse over C
+ 
+
+883
+00:15:18,759 --> 00:15:20,509
+hit F10 we can hover our Mouse over C
+and see that it's set to H we can also
+
+884
+00:15:20,509 --> 00:15:20,519
+and see that it's set to H we can also
+ 
+
+885
+00:15:20,519 --> 00:15:22,990
+and see that it's set to H we can also
+come over here into watch and just type
+
+886
+00:15:22,990 --> 00:15:23,000
+come over here into watch and just type
+ 
+
+887
+00:15:23,000 --> 00:15:24,710
+come over here into watch and just type
+in C and you can see we're now taking a
+
+888
+00:15:24,710 --> 00:15:24,720
+in C and you can see we're now taking a
+ 
+
+889
+00:15:24,720 --> 00:15:27,189
+in C and you can see we're now taking a
+look at what C is when I hit F10 it's
+
+890
+00:15:27,189 --> 00:15:27,199
+look at what C is when I hit F10 it's
+ 
+
+891
+00:15:27,199 --> 00:15:29,749
+look at what C is when I hit F10 it's
+going to log that letter to the console
+
+892
+00:15:29,749 --> 00:15:29,759
+going to log that letter to the console
+ 
+
+893
+00:15:29,759 --> 00:15:31,790
+going to log that letter to the console
+and then when it gets back to this curly
+
+894
+00:15:31,790 --> 00:15:31,800
+and then when it gets back to this curly
+ 
+
+895
+00:15:31,800 --> 00:15:33,389
+and then when it gets back to this curly
+bracket it's going to run this
+
+896
+00:15:33,389 --> 00:15:33,399
+bracket it's going to run this
+ 
+
+897
+00:15:33,399 --> 00:15:35,629
+bracket it's going to run this
+comparison it's going to compare is I
+
+898
+00:15:35,629 --> 00:15:35,639
+comparison it's going to compare is I
+ 
+
+899
+00:15:35,639 --> 00:15:37,990
+comparison it's going to compare is I
+less than five and then if so it's going
+
+900
+00:15:37,990 --> 00:15:38,000
+less than five and then if so it's going
+ 
+
+901
+00:15:38,000 --> 00:15:40,829
+less than five and then if so it's going
+to increment I and then jump back into
+
+902
+00:15:40,829 --> 00:15:40,839
+to increment I and then jump back into
+ 
+
+903
+00:15:40,839 --> 00:15:42,910
+to increment I and then jump back into
+here so if I hit F10 you can see we jump
+
+904
+00:15:42,910 --> 00:15:42,920
+here so if I hit F10 you can see we jump
+ 
+
+905
+00:15:42,920 --> 00:15:45,150
+here so if I hit F10 you can see we jump
+up here to do the comparison if I hit
+
+906
+00:15:45,150 --> 00:15:45,160
+up here to do the comparison if I hit
+ 
+
+907
+00:15:45,160 --> 00:15:47,949
+up here to do the comparison if I hit
+F10 again we've done the i++ I is now
+
+908
+00:15:47,949 --> 00:15:47,959
+F10 again we've done the i++ I is now
+ 
+
+909
+00:15:47,959 --> 00:15:49,990
+F10 again we've done the i++ I is now
+one we're going to do the same thing all
+
+910
+00:15:49,990 --> 00:15:50,000
+one we're going to do the same thing all
+ 
+
+911
+00:15:50,000 --> 00:15:52,949
+one we're going to do the same thing all
+over again except this time I is one so
+
+912
+00:15:52,949 --> 00:15:52,959
+over again except this time I is one so
+ 
+
+913
+00:15:52,959 --> 00:15:55,150
+over again except this time I is one so
+it's going to grab the second character
+
+914
+00:15:55,150 --> 00:15:55,160
+it's going to grab the second character
+ 
+
+915
+00:15:55,160 --> 00:15:57,710
+it's going to grab the second character
+which is the letter e and continue on in
+
+916
+00:15:57,710 --> 00:15:57,720
+which is the letter e and continue on in
+ 
+
+917
+00:15:57,720 --> 00:15:59,629
+which is the letter e and continue on in
+this case see is equal to e you can see
+
+918
+00:15:59,629 --> 00:15:59,639
+this case see is equal to e you can see
+ 
+
+919
+00:15:59,639 --> 00:16:01,590
+this case see is equal to e you can see
+that it's changed here in our watch if
+
+920
+00:16:01,590 --> 00:16:01,600
+that it's changed here in our watch if
+ 
+
+921
+00:16:01,600 --> 00:16:04,509
+that it's changed here in our watch if
+we come up here do Ampersand C and hit
+
+922
+00:16:04,509 --> 00:16:04,519
+we come up here do Ampersand C and hit
+ 
+
+923
+00:16:04,519 --> 00:16:07,749
+we come up here do Ampersand C and hit
+enter you can see we have 65 which is
+
+924
+00:16:07,749 --> 00:16:07,759
+enter you can see we have 65 which is
+ 
+
+925
+00:16:07,759 --> 00:16:10,550
+enter you can see we have 65 which is
+the letter e according to our ask view
+
+926
+00:16:10,550 --> 00:16:10,560
+the letter e according to our ask view
+ 
+
+927
+00:16:10,560 --> 00:16:11,990
+the letter e according to our ask view
+fantastic I can keep running through
+
+928
+00:16:11,990 --> 00:16:12,000
+fantastic I can keep running through
+ 
+
+929
+00:16:12,000 --> 00:16:13,550
+fantastic I can keep running through
+this and everything's going to be great
+
+930
+00:16:13,550 --> 00:16:13,560
+this and everything's going to be great
+ 
+
+931
+00:16:13,560 --> 00:16:15,230
+this and everything's going to be great
+now suppose that I wanted to exit this
+
+932
+00:16:15,230 --> 00:16:15,240
+now suppose that I wanted to exit this
+ 
+
+933
+00:16:15,240 --> 00:16:17,389
+now suppose that I wanted to exit this
+for Loop and maybe jump to this log
+
+934
+00:16:17,389 --> 00:16:17,399
+for Loop and maybe jump to this log
+ 
+
+935
+00:16:17,399 --> 00:16:18,749
+for Loop and maybe jump to this log
+function I don't really care about
+
+936
+00:16:18,749 --> 00:16:18,759
+function I don't really care about
+ 
+
+937
+00:16:18,759 --> 00:16:21,430
+function I don't really care about
+stepping through this I get how it works
+
+938
+00:16:21,430 --> 00:16:21,440
+stepping through this I get how it works
+ 
+
+939
+00:16:21,440 --> 00:16:23,910
+stepping through this I get how it works
+how do I get out of this for Loop if I
+
+940
+00:16:23,910 --> 00:16:23,920
+how do I get out of this for Loop if I
+ 
+
+941
+00:16:23,920 --> 00:16:26,470
+how do I get out of this for Loop if I
+try and step out or hit shift f11 it's
+
+942
+00:16:26,470 --> 00:16:26,480
+try and step out or hit shift f11 it's
+ 
+
+943
+00:16:26,480 --> 00:16:27,430
+try and step out or hit shift f11 it's
+actually going to exit the whole
+
+944
+00:16:27,430 --> 00:16:27,440
+actually going to exit the whole
+ 
+
+945
+00:16:27,440 --> 00:16:29,069
+actually going to exit the whole
+function I don't want to do that that I
+
+946
+00:16:29,069 --> 00:16:29,079
+function I don't want to do that that I
+ 
+
+947
+00:16:29,079 --> 00:16:30,749
+function I don't want to do that that I
+just want to kind of keep running the
+
+948
+00:16:30,749 --> 00:16:30,759
+just want to kind of keep running the
+ 
+
+949
+00:16:30,759 --> 00:16:32,790
+just want to kind of keep running the
+full loop and then stop here how do I do
+
+950
+00:16:32,790 --> 00:16:32,800
+full loop and then stop here how do I do
+ 
+
+951
+00:16:32,800 --> 00:16:34,389
+full loop and then stop here how do I do
+that well it's pretty simple all you
+
+952
+00:16:34,389 --> 00:16:34,399
+that well it's pretty simple all you
+ 
+
+953
+00:16:34,399 --> 00:16:36,389
+that well it's pretty simple all you
+have to do is put a breako on where you
+
+954
+00:16:36,389 --> 00:16:36,399
+have to do is put a breako on where you
+ 
+
+955
+00:16:36,399 --> 00:16:38,829
+have to do is put a breako on where you
+want to stop next and if I hit F5 or
+
+956
+00:16:38,829 --> 00:16:38,839
+want to stop next and if I hit F5 or
+ 
+
+957
+00:16:38,839 --> 00:16:40,949
+want to stop next and if I hit F5 or
+press the continue button up here it's
+
+958
+00:16:40,949 --> 00:16:40,959
+press the continue button up here it's
+ 
+
+959
+00:16:40,959 --> 00:16:42,749
+press the continue button up here it's
+actually going to run my program until
+
+960
+00:16:42,749 --> 00:16:42,759
+actually going to run my program until
+ 
+
+961
+00:16:42,759 --> 00:16:44,509
+actually going to run my program until
+it hits the next breakpoint which in
+
+962
+00:16:44,509 --> 00:16:44,519
+it hits the next breakpoint which in
+ 
+
+963
+00:16:44,519 --> 00:16:46,430
+it hits the next breakpoint which in
+this case is this log function so by
+
+964
+00:16:46,430 --> 00:16:46,440
+this case is this log function so by
+ 
+
+965
+00:16:46,440 --> 00:16:48,150
+this case is this log function so by
+this point you can see that the memory
+
+966
+00:16:48,150 --> 00:16:48,160
+this point you can see that the memory
+ 
+
+967
+00:16:48,160 --> 00:16:50,309
+this point you can see that the memory
+that used to make up this C variable is
+
+968
+00:16:50,309 --> 00:16:50,319
+that used to make up this C variable is
+ 
+
+969
+00:16:50,319 --> 00:16:52,309
+that used to make up this C variable is
+set to O it's actually still active that
+
+970
+00:16:52,309 --> 00:16:52,319
+set to O it's actually still active that
+ 
+
+971
+00:16:52,319 --> 00:16:53,629
+set to O it's actually still active that
+memory is still there even though we've
+
+972
+00:16:53,629 --> 00:16:53,639
+memory is still there even though we've
+ 
+
+973
+00:16:53,639 --> 00:16:55,230
+memory is still there even though we've
+gone out of scope and we'll talk about
+
+974
+00:16:55,230 --> 00:16:55,240
+gone out of scope and we'll talk about
+ 
+
+975
+00:16:55,240 --> 00:16:57,030
+gone out of scope and we'll talk about
+that in the future but the memory is set
+
+976
+00:16:57,030 --> 00:16:57,040
+that in the future but the memory is set
+ 
+
+977
+00:16:57,040 --> 00:16:58,509
+that in the future but the memory is set
+to the very last character of the word
+
+978
+00:16:58,509 --> 00:16:58,519
+to the very last character of the word
+ 
+
+979
+00:16:58,519 --> 00:17:00,150
+to the very last character of the word
+hello and if we bring back our program
+
+980
+00:17:00,150 --> 00:17:00,160
+hello and if we bring back our program
+ 
+
+981
+00:17:00,160 --> 00:17:01,870
+hello and if we bring back our program
+you can see it's printed up that entire
+
+982
+00:17:01,870 --> 00:17:01,880
+you can see it's printed up that entire
+ 
+
+983
+00:17:01,880 --> 00:17:03,670
+you can see it's printed up that entire
+hello word and then we're about to
+
+984
+00:17:03,670 --> 00:17:03,680
+hello word and then we're about to
+ 
+
+985
+00:17:03,680 --> 00:17:06,390
+hello word and then we're about to
+execute this hello world log if I hit
+
+986
+00:17:06,390 --> 00:17:06,400
+execute this hello world log if I hit
+ 
+
+987
+00:17:06,400 --> 00:17:09,029
+execute this hello world log if I hit
+F10 we're going to jump to the next line
+
+988
+00:17:09,029 --> 00:17:09,039
+F10 we're going to jump to the next line
+ 
+
+989
+00:17:09,039 --> 00:17:10,549
+F10 we're going to jump to the next line
+of code here it's going to print hello
+
+990
+00:17:10,549 --> 00:17:10,559
+of code here it's going to print hello
+ 
+
+991
+00:17:10,559 --> 00:17:12,230
+of code here it's going to print hello
+world now we've actually paused
+
+992
+00:17:12,230 --> 00:17:12,240
+world now we've actually paused
+ 
+
+993
+00:17:12,240 --> 00:17:14,630
+world now we've actually paused
+execution of this program because we had
+
+994
+00:17:14,630 --> 00:17:14,640
+execution of this program because we had
+ 
+
+995
+00:17:14,640 --> 00:17:16,630
+execution of this program because we had
+a break point here and I just hit F10 so
+
+996
+00:17:16,630 --> 00:17:16,640
+a break point here and I just hit F10 so
+ 
+
+997
+00:17:16,640 --> 00:17:18,390
+a break point here and I just hit F10 so
+if I press enter here nothing's actually
+
+998
+00:17:18,390 --> 00:17:18,400
+if I press enter here nothing's actually
+ 
+
+999
+00:17:18,400 --> 00:17:20,710
+if I press enter here nothing's actually
+going to happen I need to hit F5 and
+
+1000
+00:17:20,710 --> 00:17:20,720
+going to happen I need to hit F5 and
+ 
+
+1001
+00:17:20,720 --> 00:17:22,429
+going to happen I need to hit F5 and
+then our program will close because it
+
+1002
+00:17:22,429 --> 00:17:22,439
+then our program will close because it
+ 
+
+1003
+00:17:22,439 --> 00:17:24,230
+then our program will close because it
+is going to still detect that enter
+
+1004
+00:17:24,230 --> 00:17:24,240
+is going to still detect that enter
+ 
+
+1005
+00:17:24,240 --> 00:17:26,829
+is going to still detect that enter
+press so that's it a fantastically
+
+1006
+00:17:26,829 --> 00:17:26,839
+press so that's it a fantastically
+ 
+
+1007
+00:17:26,839 --> 00:17:29,830
+press so that's it a fantastically
+simple overview of basic debugging
+
+1008
+00:17:29,830 --> 00:17:29,840
+simple overview of basic debugging
+ 
+
+1009
+00:17:29,840 --> 00:17:31,830
+simple overview of basic debugging
+there's going to be a lot more to this
+
+1010
+00:17:31,830 --> 00:17:31,840
+there's going to be a lot more to this
+ 
+
+1011
+00:17:31,840 --> 00:17:34,110
+there's going to be a lot more to this
+but what I just showed in this video is
+
+1012
+00:17:34,110 --> 00:17:34,120
+but what I just showed in this video is
+ 
+
+1013
+00:17:34,120 --> 00:17:36,789
+but what I just showed in this video is
+going to be the basis of how we actually
+
+1014
+00:17:36,789 --> 00:17:36,799
+going to be the basis of how we actually
+ 
+
+1015
+00:17:36,799 --> 00:17:39,150
+going to be the basis of how we actually
+debug our code remember a program is
+
+1016
+00:17:39,150 --> 00:17:39,160
+debug our code remember a program is
+ 
+
+1017
+00:17:39,160 --> 00:17:41,549
+debug our code remember a program is
+really just made up of memory even the
+
+1018
+00:17:41,549 --> 00:17:41,559
+really just made up of memory even the
+ 
+
+1019
+00:17:41,559 --> 00:17:43,310
+really just made up of memory even the
+instruction pointer which is where in
+
+1020
+00:17:43,310 --> 00:17:43,320
+instruction pointer which is where in
+ 
+
+1021
+00:17:43,320 --> 00:17:45,669
+instruction pointer which is where in
+our program we actually are executing
+
+1022
+00:17:45,669 --> 00:17:45,679
+our program we actually are executing
+ 
+
+1023
+00:17:45,679 --> 00:17:47,590
+our program we actually are executing
+code and the actual code that we're
+
+1024
+00:17:47,590 --> 00:17:47,600
+code and the actual code that we're
+ 
+
+1025
+00:17:47,600 --> 00:17:49,470
+code and the actual code that we're
+executing all of that is stored in
+
+1026
+00:17:49,470 --> 00:17:49,480
+executing all of that is stored in
+ 
+
+1027
+00:17:49,480 --> 00:17:52,630
+executing all of that is stored in
+memory so being able to view our memory
+
+1028
+00:17:52,630 --> 00:17:52,640
+memory so being able to view our memory
+ 
+
+1029
+00:17:52,640 --> 00:17:54,430
+memory so being able to view our memory
+is really all we have and really all we
+
+1030
+00:17:54,430 --> 00:17:54,440
+is really all we have and really all we
+ 
+
+1031
+00:17:54,440 --> 00:17:56,470
+is really all we have and really all we
+need and by setting break points it lets
+
+1032
+00:17:56,470 --> 00:17:56,480
+need and by setting break points it lets
+ 
+
+1033
+00:17:56,480 --> 00:17:59,590
+need and by setting break points it lets
+us pause our program at a give time at a
+
+1034
+00:17:59,590 --> 00:17:59,600
+us pause our program at a give time at a
+ 
+
+1035
+00:17:59,600 --> 00:18:02,070
+us pause our program at a give time at a
+given line of code and actually inspect
+
+1036
+00:18:02,070 --> 00:18:02,080
+given line of code and actually inspect
+ 
+
+1037
+00:18:02,080 --> 00:18:04,470
+given line of code and actually inspect
+it and take a look to see what all of
+
+1038
+00:18:04,470 --> 00:18:04,480
+it and take a look to see what all of
+ 
+
+1039
+00:18:04,480 --> 00:18:06,590
+it and take a look to see what all of
+our variables are set to which of course
+
+1040
+00:18:06,590 --> 00:18:06,600
+our variables are set to which of course
+ 
+
+1041
+00:18:06,600 --> 00:18:08,149
+our variables are set to which of course
+is going to be incredibly useful when
+
+1042
+00:18:08,149 --> 00:18:08,159
+is going to be incredibly useful when
+ 
+
+1043
+00:18:08,159 --> 00:18:09,350
+is going to be incredibly useful when
+you're running code hope you guys
+
+1044
+00:18:09,350 --> 00:18:09,360
+you're running code hope you guys
+ 
+
+1045
+00:18:09,360 --> 00:18:11,230
+you're running code hope you guys
+enjoyed this video if you did please hit
+
+1046
+00:18:11,230 --> 00:18:11,240
+enjoyed this video if you did please hit
+ 
+
+1047
+00:18:11,240 --> 00:18:12,510
+enjoyed this video if you did please hit
+that like button let's see if we can
+
+1048
+00:18:12,510 --> 00:18:12,520
+that like button let's see if we can
+ 
+
+1049
+00:18:12,520 --> 00:18:14,390
+that like button let's see if we can
+beat our like record I don't know I
+
+1050
+00:18:14,390 --> 00:18:14,400
+beat our like record I don't know I
+ 
+
+1051
+00:18:14,400 --> 00:18:16,270
+beat our like record I don't know I
+think it's about 800 so let's just let's
+
+1052
+00:18:16,270 --> 00:18:16,280
+think it's about 800 so let's just let's
+ 
+
+1053
+00:18:16,280 --> 00:18:18,110
+think it's about 800 so let's just let's
+just let's just smash that you can
+
+1054
+00:18:18,110 --> 00:18:18,120
+just let's just smash that you can
+ 
+
+1055
+00:18:18,120 --> 00:18:19,950
+just let's just smash that you can
+follow me on Twitter and Instagram I've
+
+1056
+00:18:19,950 --> 00:18:19,960
+follow me on Twitter and Instagram I've
+ 
+
+1057
+00:18:19,960 --> 00:18:21,870
+follow me on Twitter and Instagram I've
+been posting some pretty cool photos on
+
+1058
+00:18:21,870 --> 00:18:21,880
+been posting some pretty cool photos on
+ 
+
+1059
+00:18:21,880 --> 00:18:23,870
+been posting some pretty cool photos on
+Instagram lately so you're just you
+
+1060
+00:18:23,870 --> 00:18:23,880
+Instagram lately so you're just you
+ 
+
+1061
+00:18:23,880 --> 00:18:25,110
+Instagram lately so you're just you
+you're just not going to want to miss
+
+1062
+00:18:25,110 --> 00:18:25,120
+you're just not going to want to miss
+ 
+
+1063
+00:18:25,120 --> 00:18:27,470
+you're just not going to want to miss
+that at all and if you really like this
+
+1064
+00:18:27,470 --> 00:18:27,480
+that at all and if you really like this
+ 
+
+1065
+00:18:27,480 --> 00:18:30,270
+that at all and if you really like this
+series you can support me on patreon.com
+
+1066
+00:18:30,270 --> 00:18:30,280
+series you can support me on patreon.com
+ 
+
+1067
+00:18:30,280 --> 00:18:33,230
+series you can support me on patreon.com
+Theo now the cool thing about this is by
+
+1068
+00:18:33,230 --> 00:18:33,240
+Theo now the cool thing about this is by
+ 
+
+1069
+00:18:33,240 --> 00:18:36,110
+Theo now the cool thing about this is by
+doing so you'll get access to early
+
+1070
+00:18:36,110 --> 00:18:36,120
+doing so you'll get access to early
+ 
+
+1071
+00:18:36,120 --> 00:18:39,190
+doing so you'll get access to early
+drafts of videos and the cool thing
+
+1072
+00:18:39,190 --> 00:18:39,200
+drafts of videos and the cool thing
+ 
+
+1073
+00:18:39,200 --> 00:18:41,310
+drafts of videos and the cool thing
+about those early drafts is not
+
+1074
+00:18:41,310 --> 00:18:41,320
+about those early drafts is not
+ 
+
+1075
+00:18:41,320 --> 00:18:43,669
+about those early drafts is not
+everything in the draft makes it to the
+
+1076
+00:18:43,669 --> 00:18:43,679
+everything in the draft makes it to the
+ 
+
+1077
+00:18:43,679 --> 00:18:46,390
+everything in the draft makes it to the
+final video to this so you get to see
+
+1078
+00:18:46,390 --> 00:18:46,400
+final video to this so you get to see
+ 
+
+1079
+00:18:46,400 --> 00:18:49,070
+final video to this so you get to see
+stuff that might be cut from the final
+
+1080
+00:18:49,070 --> 00:18:49,080
+stuff that might be cut from the final
+ 
+
+1081
+00:18:49,080 --> 00:18:51,990
+stuff that might be cut from the final
+video exclusive and as well as that of
+
+1082
+00:18:51,990 --> 00:18:52,000
+video exclusive and as well as that of
+ 
+
+1083
+00:18:52,000 --> 00:18:53,750
+video exclusive and as well as that of
+course you are supporting this series
+
+1084
+00:18:53,750 --> 00:18:53,760
+course you are supporting this series
+ 
+
+1085
+00:18:53,760 --> 00:18:55,909
+course you are supporting this series
+and you're enabling me to make more of
+
+1086
+00:18:55,909 --> 00:18:55,919
+and you're enabling me to make more of
+ 
+
+1087
+00:18:55,919 --> 00:18:58,110
+and you're enabling me to make more of
+these videos more often which is pretty
+
+1088
+00:18:58,110 --> 00:18:58,120
+these videos more often which is pretty
+ 
+
+1089
+00:18:58,120 --> 00:18:59,590
+these videos more often which is pretty
+awesome awesome hope you guys have a
+
+1090
+00:18:59,590 --> 00:18:59,600
+awesome awesome hope you guys have a
+ 
+
+1091
+00:18:59,600 --> 00:19:01,029
+awesome awesome hope you guys have a
+great day and I'll see you in the next
+
+1092
+00:19:01,029 --> 00:19:01,039
+great day and I'll see you in the next
+ 
+
+1093
+00:19:01,039 --> 00:19:04,940
+great day and I'll see you in the next
+video
+
+1094
+00:19:04,940 --> 00:19:04,950
+
+ 
+
+1095
+00:19:04,950 --> 00:19:10,680
+
+[Music]
+
+1096
+00:19:10,680 --> 00:19:10,690
+
+ 
+
+1097
+00:19:10,690 --> 00:19:18,270
+
+[Music]
+
+1098
+00:19:18,270 --> 00:19:18,280
+
+ 
+
+1099
+00:19:18,280 --> 00:19:21,280
+
+goodbye
+

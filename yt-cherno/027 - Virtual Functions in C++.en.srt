@@ -1,0 +1,1895 @@
+1
+00:00:00,000 --> 00:00:01,969
+
+hey what's up guys my name is HMO and
+
+2
+00:00:01,969 --> 00:00:01,979
+hey what's up guys my name is HMO and
+ 
+
+3
+00:00:01,979 --> 00:00:03,949
+hey what's up guys my name is HMO and
+welcome back to my syphilis gloss series
+
+4
+00:00:03,949 --> 00:00:03,959
+welcome back to my syphilis gloss series
+ 
+
+5
+00:00:03,959 --> 00:00:05,030
+welcome back to my syphilis gloss series
+today I'm going to be talking about
+
+6
+00:00:05,030 --> 00:00:05,040
+today I'm going to be talking about
+ 
+
+7
+00:00:05,040 --> 00:00:08,270
+today I'm going to be talking about
+virtual functions in c++ over the last
+
+8
+00:00:08,270 --> 00:00:08,280
+virtual functions in c++ over the last
+ 
+
+9
+00:00:08,280 --> 00:00:09,379
+virtual functions in c++ over the last
+two episodes we've been talking about
+
+10
+00:00:09,379 --> 00:00:09,389
+two episodes we've been talking about
+ 
+
+11
+00:00:09,389 --> 00:00:11,089
+two episodes we've been talking about
+classes and object-oriented programming
+
+12
+00:00:11,089 --> 00:00:11,099
+classes and object-oriented programming
+ 
+
+13
+00:00:11,099 --> 00:00:12,709
+classes and object-oriented programming
+and inheritance and all that stuff and
+
+14
+00:00:12,709 --> 00:00:12,719
+and inheritance and all that stuff and
+ 
+
+15
+00:00:12,719 --> 00:00:15,079
+and inheritance and all that stuff and
+virtual functions are really really
+
+16
+00:00:15,079 --> 00:00:15,089
+virtual functions are really really
+ 
+
+17
+00:00:15,089 --> 00:00:17,390
+virtual functions are really really
+important to that whole concept virtual
+
+18
+00:00:17,390 --> 00:00:17,400
+important to that whole concept virtual
+ 
+
+19
+00:00:17,400 --> 00:00:19,250
+important to that whole concept virtual
+functions allow up to override methods
+
+20
+00:00:19,250 --> 00:00:19,260
+functions allow up to override methods
+ 
+
+21
+00:00:19,260 --> 00:00:21,769
+functions allow up to override methods
+in subclasses so for example let's say
+
+22
+00:00:21,769 --> 00:00:21,779
+in subclasses so for example let's say
+ 
+
+23
+00:00:21,779 --> 00:00:24,109
+in subclasses so for example let's say
+we've got two classes a and B B is
+
+24
+00:00:24,109 --> 00:00:24,119
+we've got two classes a and B B is
+ 
+
+25
+00:00:24,119 --> 00:00:25,849
+we've got two classes a and B B is
+derived from K many would be the
+
+26
+00:00:25,849 --> 00:00:25,859
+derived from K many would be the
+ 
+
+27
+00:00:25,859 --> 00:00:28,790
+derived from K many would be the
+subclass of a if we create a method in
+
+28
+00:00:28,790 --> 00:00:28,800
+subclass of a if we create a method in
+ 
+
+29
+00:00:28,800 --> 00:00:30,740
+subclass of a if we create a method in
+the a class and marketers virtual we
+
+30
+00:00:30,740 --> 00:00:30,750
+the a class and marketers virtual we
+ 
+
+31
+00:00:30,750 --> 00:00:32,600
+the a class and marketers virtual we
+have the option of overriding that
+
+32
+00:00:32,600 --> 00:00:32,610
+have the option of overriding that
+ 
+
+33
+00:00:32,610 --> 00:00:34,850
+have the option of overriding that
+method in the B class to get it to do
+
+34
+00:00:34,850 --> 00:00:34,860
+method in the B class to get it to do
+ 
+
+35
+00:00:34,860 --> 00:00:36,860
+method in the B class to get it to do
+something else as always this is best
+
+36
+00:00:36,860 --> 00:00:36,870
+something else as always this is best
+ 
+
+37
+00:00:36,870 --> 00:00:38,720
+something else as always this is best
+explained by an example so let's take a
+
+38
+00:00:38,720 --> 00:00:38,730
+explained by an example so let's take a
+ 
+
+39
+00:00:38,730 --> 00:00:40,100
+explained by an example so let's take a
+look and we're to create two clauses
+
+40
+00:00:40,100 --> 00:00:40,110
+look and we're to create two clauses
+ 
+
+41
+00:00:40,110 --> 00:00:41,990
+look and we're to create two clauses
+here one's going to be called anti Z
+
+42
+00:00:41,990 --> 00:00:42,000
+here one's going to be called anti Z
+ 
+
+43
+00:00:42,000 --> 00:00:43,940
+here one's going to be called anti Z
+which is going to be our base class the
+
+44
+00:00:43,940 --> 00:00:43,950
+which is going to be our base class the
+ 
+
+45
+00:00:43,950 --> 00:00:45,440
+which is going to be our base class the
+only thing this empty class is going to
+
+46
+00:00:45,440 --> 00:00:45,450
+only thing this empty class is going to
+ 
+
+47
+00:00:45,450 --> 00:00:48,500
+only thing this empty class is going to
+have is a public method called get a
+
+48
+00:00:48,500 --> 00:00:48,510
+have is a public method called get a
+ 
+
+49
+00:00:48,510 --> 00:00:49,729
+have is a public method called get a
+name which is going to return a string
+
+50
+00:00:49,729 --> 00:00:49,739
+name which is going to return a string
+ 
+
+51
+00:00:49,739 --> 00:00:51,950
+name which is going to return a string
+because this is just an entity we're
+
+52
+00:00:51,950 --> 00:00:51,960
+because this is just an entity we're
+ 
+
+53
+00:00:51,960 --> 00:00:54,110
+because this is just an entity we're
+just going to return the word entity
+
+54
+00:00:54,110 --> 00:00:54,120
+just going to return the word entity
+ 
+
+55
+00:00:54,120 --> 00:00:55,670
+just going to return the word entity
+next we're going to create another class
+
+56
+00:00:55,670 --> 00:00:55,680
+next we're going to create another class
+ 
+
+57
+00:00:55,680 --> 00:00:57,709
+next we're going to create another class
+player which is going to be a subclass
+
+58
+00:00:57,709 --> 00:00:57,719
+player which is going to be a subclass
+ 
+
+59
+00:00:57,719 --> 00:00:59,630
+player which is going to be a subclass
+of the entity class we're going to add a
+
+60
+00:00:59,630 --> 00:00:59,640
+of the entity class we're going to add a
+ 
+
+61
+00:00:59,640 --> 00:01:01,130
+of the entity class we're going to add a
+little bit more of this class firstly
+
+62
+00:01:01,130 --> 00:01:01,140
+little bit more of this class firstly
+ 
+
+63
+00:01:01,140 --> 00:01:03,160
+little bit more of this class firstly
+we're going to actually store a name
+
+64
+00:01:03,160 --> 00:01:03,170
+we're going to actually store a name
+ 
+
+65
+00:01:03,170 --> 00:01:05,660
+we're going to actually store a name
+then I'm going to provide a constructor
+
+66
+00:01:05,660 --> 00:01:05,670
+then I'm going to provide a constructor
+ 
+
+67
+00:01:05,670 --> 00:01:10,000
+then I'm going to provide a constructor
+which allows us to specify a name and
+
+68
+00:01:10,000 --> 00:01:10,010
+which allows us to specify a name and
+ 
+
+69
+00:01:10,010 --> 00:01:12,620
+which allows us to specify a name and
+then we're going to give it a method
+
+70
+00:01:12,620 --> 00:01:12,630
+then we're going to give it a method
+ 
+
+71
+00:01:12,630 --> 00:01:14,510
+then we're going to give it a method
+called get name which in this case is
+
+72
+00:01:14,510 --> 00:01:14,520
+called get name which in this case is
+ 
+
+73
+00:01:14,520 --> 00:01:17,210
+called get name which in this case is
+going to return this name the name that
+
+74
+00:01:17,210 --> 00:01:17,220
+going to return this name the name that
+ 
+
+75
+00:01:17,220 --> 00:01:19,280
+going to return this name the name that
+is the member okay cool so let's take a
+
+76
+00:01:19,280 --> 00:01:19,290
+is the member okay cool so let's take a
+ 
+
+77
+00:01:19,290 --> 00:01:21,080
+is the member okay cool so let's take a
+look at how we might use this set up
+
+78
+00:01:21,080 --> 00:01:21,090
+look at how we might use this set up
+ 
+
+79
+00:01:21,090 --> 00:01:22,880
+look at how we might use this set up
+let's see whether we create an ASCII
+
+80
+00:01:22,880 --> 00:01:22,890
+let's see whether we create an ASCII
+ 
+
+81
+00:01:22,890 --> 00:01:25,010
+let's see whether we create an ASCII
+here and I'm going to try and print the
+
+82
+00:01:25,010 --> 00:01:25,020
+here and I'm going to try and print the
+ 
+
+83
+00:01:25,020 --> 00:01:27,980
+here and I'm going to try and print the
+get name from that FC then I'm going to
+
+84
+00:01:27,980 --> 00:01:27,990
+get name from that FC then I'm going to
+ 
+
+85
+00:01:27,990 --> 00:01:30,520
+get name from that FC then I'm going to
+create a player I'll call this player
+
+86
+00:01:30,520 --> 00:01:30,530
+create a player I'll call this player
+ 
+
+87
+00:01:30,530 --> 00:01:33,499
+create a player I'll call this player
+turn on and I'm going to print the
+
+88
+00:01:33,499 --> 00:01:33,509
+turn on and I'm going to print the
+ 
+
+89
+00:01:33,509 --> 00:01:35,630
+turn on and I'm going to print the
+player's name as well and I'm not going
+
+90
+00:01:35,630 --> 00:01:35,640
+player's name as well and I'm not going
+ 
+
+91
+00:01:35,640 --> 00:01:37,370
+player's name as well and I'm not going
+to bother deleting these objects because
+
+92
+00:01:37,370 --> 00:01:37,380
+to bother deleting these objects because
+ 
+
+93
+00:01:37,380 --> 00:01:39,410
+to bother deleting these objects because
+this program tonus anyway there's no
+
+94
+00:01:39,410 --> 00:01:39,420
+this program tonus anyway there's no
+ 
+
+95
+00:01:39,420 --> 00:01:41,780
+this program tonus anyway there's no
+just no use in doing that let's get at 5
+
+96
+00:01:41,780 --> 00:01:41,790
+just no use in doing that let's get at 5
+ 
+
+97
+00:01:41,790 --> 00:01:43,310
+just no use in doing that let's get at 5
+to write our code and if we look at the
+
+98
+00:01:43,310 --> 00:01:43,320
+to write our code and if we look at the
+ 
+
+99
+00:01:43,320 --> 00:01:44,960
+to write our code and if we look at the
+results alright cool looks pretty good
+
+100
+00:01:44,960 --> 00:01:44,970
+results alright cool looks pretty good
+ 
+
+101
+00:01:44,970 --> 00:01:46,639
+results alright cool looks pretty good
+well as you've got show no printing
+
+102
+00:01:46,639 --> 00:01:46,649
+well as you've got show no printing
+ 
+
+103
+00:01:46,649 --> 00:01:49,670
+well as you've got show no printing
+everything seems fine however everything
+
+104
+00:01:49,670 --> 00:01:49,680
+everything seems fine however everything
+ 
+
+105
+00:01:49,680 --> 00:01:51,620
+everything seems fine however everything
+that we've written here so far will
+
+106
+00:01:51,620 --> 00:01:51,630
+that we've written here so far will
+ 
+
+107
+00:01:51,630 --> 00:01:54,649
+that we've written here so far will
+crumble if we decide to use a concept of
+
+108
+00:01:54,649 --> 00:01:54,659
+crumble if we decide to use a concept of
+ 
+
+109
+00:01:54,659 --> 00:01:57,380
+crumble if we decide to use a concept of
+polymorphism if I start referring to the
+
+110
+00:01:57,380 --> 00:01:57,390
+polymorphism if I start referring to the
+ 
+
+111
+00:01:57,390 --> 00:02:00,260
+polymorphism if I start referring to the
+player as if it was an entity that's
+
+112
+00:02:00,260 --> 00:02:00,270
+player as if it was an entity that's
+ 
+
+113
+00:02:00,270 --> 00:02:02,690
+player as if it was an entity that's
+where we run into problem so for example
+
+114
+00:02:02,690 --> 00:02:02,700
+where we run into problem so for example
+ 
+
+115
+00:02:02,700 --> 00:02:05,690
+where we run into problem so for example
+if I create a variable here called
+
+116
+00:02:05,690 --> 00:02:05,700
+if I create a variable here called
+ 
+
+117
+00:02:05,700 --> 00:02:07,399
+if I create a variable here called
+empty which is actually going to be
+
+118
+00:02:07,399 --> 00:02:07,409
+empty which is actually going to be
+ 
+
+119
+00:02:07,409 --> 00:02:08,990
+empty which is actually going to be
+assigned to T which is of course a
+
+120
+00:02:08,990 --> 00:02:09,000
+assigned to T which is of course a
+ 
+
+121
+00:02:09,000 --> 00:02:11,660
+assigned to T which is of course a
+pointer to a player type right
+
+122
+00:02:11,660 --> 00:02:11,670
+pointer to a player type right
+ 
+
+123
+00:02:11,670 --> 00:02:13,640
+pointer to a player type right
+player however now I'm just referring to
+
+124
+00:02:13,640 --> 00:02:13,650
+player however now I'm just referring to
+ 
+
+125
+00:02:13,650 --> 00:02:16,940
+player however now I'm just referring to
+it as an entity if I print this so I'll
+
+126
+00:02:16,940 --> 00:02:16,950
+it as an entity if I print this so I'll
+ 
+
+127
+00:02:16,950 --> 00:02:19,820
+it as an entity if I print this so I'll
+do entity get name if I run micro here
+
+128
+00:02:19,820 --> 00:02:19,830
+do entity get name if I run micro here
+ 
+
+129
+00:02:19,830 --> 00:02:21,589
+do entity get name if I run micro here
+you can see we get entity printing
+
+130
+00:02:21,589 --> 00:02:21,599
+you can see we get entity printing
+ 
+
+131
+00:02:21,599 --> 00:02:23,510
+you can see we get entity printing
+however we would have course expect
+
+132
+00:02:23,510 --> 00:02:23,520
+however we would have course expect
+ 
+
+133
+00:02:23,520 --> 00:02:25,520
+however we would have course expect
+player because even though we're
+
+134
+00:02:25,520 --> 00:02:25,530
+player because even though we're
+ 
+
+135
+00:02:25,530 --> 00:02:27,530
+player because even though we're
+referring to this entity as an entity
+
+136
+00:02:27,530 --> 00:02:27,540
+referring to this entity as an entity
+ 
+
+137
+00:02:27,540 --> 00:02:31,040
+referring to this entity as an entity
+pointer it is actually a player it's an
+
+138
+00:02:31,040 --> 00:02:31,050
+pointer it is actually a player it's an
+ 
+
+139
+00:02:31,050 --> 00:02:32,990
+pointer it is actually a player it's an
+instance of the player class possibly a
+
+140
+00:02:32,990 --> 00:02:33,000
+instance of the player class possibly a
+ 
+
+141
+00:02:33,000 --> 00:02:35,090
+instance of the player class possibly a
+better example is if we had a prince
+
+142
+00:02:35,090 --> 00:02:35,100
+better example is if we had a prince
+ 
+
+143
+00:02:35,100 --> 00:02:38,180
+better example is if we had a prince
+named function which took in an entity
+
+144
+00:02:38,180 --> 00:02:38,190
+named function which took in an entity
+ 
+
+145
+00:02:38,190 --> 00:02:40,550
+named function which took in an entity
+and then here we just called see out and
+
+146
+00:02:40,550 --> 00:02:40,560
+and then here we just called see out and
+ 
+
+147
+00:02:40,560 --> 00:02:44,390
+and then here we just called see out and
+see get name and I'll replace these with
+
+148
+00:02:44,390 --> 00:02:44,400
+see get name and I'll replace these with
+ 
+
+149
+00:02:44,400 --> 00:02:49,040
+see get name and I'll replace these with
+print name a and print name P so now
+
+150
+00:02:49,040 --> 00:02:49,050
+print name a and print name P so now
+ 
+
+151
+00:02:49,050 --> 00:02:51,590
+print name a and print name P so now
+we've got seemingly one function which
+
+152
+00:02:51,590 --> 00:02:51,600
+we've got seemingly one function which
+ 
+
+153
+00:02:51,600 --> 00:02:54,020
+we've got seemingly one function which
+takes in any kind of entity of course so
+
+154
+00:02:54,020 --> 00:02:54,030
+takes in any kind of entity of course so
+ 
+
+155
+00:02:54,030 --> 00:02:54,979
+takes in any kind of entity of course so
+you can see that we don't get any
+
+156
+00:02:54,979 --> 00:02:54,989
+you can see that we don't get any
+ 
+
+157
+00:02:54,989 --> 00:02:57,350
+you can see that we don't get any
+compile errors when we try to pass in P
+
+158
+00:02:57,350 --> 00:02:57,360
+compile errors when we try to pass in P
+ 
+
+159
+00:02:57,360 --> 00:03:00,500
+compile errors when we try to pass in P
+because P is an entity right player is
+
+160
+00:03:00,500 --> 00:03:00,510
+because P is an entity right player is
+ 
+
+161
+00:03:00,510 --> 00:03:02,300
+because P is an entity right player is
+an entity and all we're doing here is
+
+162
+00:03:02,300 --> 00:03:02,310
+an entity and all we're doing here is
+ 
+
+163
+00:03:02,310 --> 00:03:03,979
+an entity and all we're doing here is
+calling the entities get name function
+
+164
+00:03:03,979 --> 00:03:03,989
+calling the entities get name function
+ 
+
+165
+00:03:03,989 --> 00:03:05,660
+calling the entities get name function
+which we would expect to be this get
+
+166
+00:03:05,660 --> 00:03:05,670
+which we would expect to be this get
+ 
+
+167
+00:03:05,670 --> 00:03:08,690
+which we would expect to be this get
+name for our entity and then this get
+
+168
+00:03:08,690 --> 00:03:08,700
+name for our entity and then this get
+ 
+
+169
+00:03:08,700 --> 00:03:11,270
+name for our entity and then this get
+name for our player however if we run
+
+170
+00:03:11,270 --> 00:03:11,280
+name for our player however if we run
+ 
+
+171
+00:03:11,280 --> 00:03:13,009
+name for our player however if we run
+our code you consider to get entity
+
+172
+00:03:13,009 --> 00:03:13,019
+our code you consider to get entity
+ 
+
+173
+00:03:13,019 --> 00:03:14,900
+our code you consider to get entity
+printing twice why is that that's
+
+174
+00:03:14,900 --> 00:03:14,910
+printing twice why is that that's
+ 
+
+175
+00:03:14,910 --> 00:03:16,370
+printing twice why is that that's
+there's incorrect there instances
+
+176
+00:03:16,370 --> 00:03:16,380
+there's incorrect there instances
+ 
+
+177
+00:03:16,380 --> 00:03:17,870
+there's incorrect there instances
+happening is because if we just declare
+
+178
+00:03:17,870 --> 00:03:17,880
+happening is because if we just declare
+ 
+
+179
+00:03:17,880 --> 00:03:19,220
+happening is because if we just declare
+our functions normally our methods
+
+180
+00:03:19,220 --> 00:03:19,230
+our functions normally our methods
+ 
+
+181
+00:03:19,230 --> 00:03:21,650
+our functions normally our methods
+normally inside our classes then when it
+
+182
+00:03:21,650 --> 00:03:21,660
+normally inside our classes then when it
+ 
+
+183
+00:03:21,660 --> 00:03:24,110
+normally inside our classes then when it
+comes time to call a method is going to
+
+184
+00:03:24,110 --> 00:03:24,120
+comes time to call a method is going to
+ 
+
+185
+00:03:24,120 --> 00:03:26,090
+comes time to call a method is going to
+call whatever method belongs to the type
+
+186
+00:03:26,090 --> 00:03:26,100
+call whatever method belongs to the type
+ 
+
+187
+00:03:26,100 --> 00:03:28,699
+call whatever method belongs to the type
+and of course if we look at this print
+
+188
+00:03:28,699 --> 00:03:28,709
+and of course if we look at this print
+ 
+
+189
+00:03:28,709 --> 00:03:30,560
+and of course if we look at this print
+main function it takes in an entity
+
+190
+00:03:30,560 --> 00:03:30,570
+main function it takes in an entity
+ 
+
+191
+00:03:30,570 --> 00:03:32,150
+main function it takes in an entity
+points off meaning that when we call the
+
+192
+00:03:32,150 --> 00:03:32,160
+points off meaning that when we call the
+ 
+
+193
+00:03:32,160 --> 00:03:34,400
+points off meaning that when we call the
+get name function inside entity it's
+
+194
+00:03:34,400 --> 00:03:34,410
+get name function inside entity it's
+ 
+
+195
+00:03:34,410 --> 00:03:36,319
+get name function inside entity it's
+going to look at entity and just call
+
+196
+00:03:36,319 --> 00:03:36,329
+going to look at entity and just call
+ 
+
+197
+00:03:36,329 --> 00:03:39,319
+going to look at entity and just call
+get name that's it however we want C++
+
+198
+00:03:39,319 --> 00:03:39,329
+get name that's it however we want C++
+ 
+
+199
+00:03:39,329 --> 00:03:41,210
+get name that's it however we want C++
+to somehow realize that hang on a minute
+
+200
+00:03:41,210 --> 00:03:41,220
+to somehow realize that hang on a minute
+ 
+
+201
+00:03:41,220 --> 00:03:43,430
+to somehow realize that hang on a minute
+the entity that I passed into here is
+
+202
+00:03:43,430 --> 00:03:43,440
+the entity that I passed into here is
+ 
+
+203
+00:03:43,440 --> 00:03:45,860
+the entity that I passed into here is
+actually a player so please call this
+
+204
+00:03:45,860 --> 00:03:45,870
+actually a player so please call this
+ 
+
+205
+00:03:45,870 --> 00:03:49,370
+actually a player so please call this
+get name function that is where virtual
+
+206
+00:03:49,370 --> 00:03:49,380
+get name function that is where virtual
+ 
+
+207
+00:03:49,380 --> 00:03:51,110
+get name function that is where virtual
+functions come in virtual functions that
+
+208
+00:03:51,110 --> 00:03:51,120
+functions come in virtual functions that
+ 
+
+209
+00:03:51,120 --> 00:03:52,789
+functions come in virtual functions that
+reduce something called dynamic dispatch
+
+210
+00:03:52,789 --> 00:03:52,799
+reduce something called dynamic dispatch
+ 
+
+211
+00:03:52,799 --> 00:03:54,410
+reduce something called dynamic dispatch
+which compile is typically implemented
+
+212
+00:03:54,410 --> 00:03:54,420
+which compile is typically implemented
+ 
+
+213
+00:03:54,420 --> 00:03:56,479
+which compile is typically implemented
+by our V table a V table is basically
+
+214
+00:03:56,479 --> 00:03:56,489
+by our V table a V table is basically
+ 
+
+215
+00:03:56,489 --> 00:03:58,400
+by our V table a V table is basically
+table which contains a mapping for all
+
+216
+00:03:58,400 --> 00:03:58,410
+table which contains a mapping for all
+ 
+
+217
+00:03:58,410 --> 00:04:00,289
+table which contains a mapping for all
+the virtual functions but our base class
+
+218
+00:04:00,289 --> 00:04:00,299
+the virtual functions but our base class
+ 
+
+219
+00:04:00,299 --> 00:04:02,539
+the virtual functions but our base class
+so that we can actually map them to the
+
+220
+00:04:02,539 --> 00:04:02,549
+so that we can actually map them to the
+ 
+
+221
+00:04:02,549 --> 00:04:04,280
+so that we can actually map them to the
+correct overwritten function at runtime
+
+222
+00:04:04,280 --> 00:04:04,290
+correct overwritten function at runtime
+ 
+
+223
+00:04:04,290 --> 00:04:05,900
+correct overwritten function at runtime
+in the future I'm going to do a whole in
+
+224
+00:04:05,900 --> 00:04:05,910
+in the future I'm going to do a whole in
+ 
+
+225
+00:04:05,910 --> 00:04:08,000
+in the future I'm going to do a whole in
+depth video on how we tabled work and
+
+226
+00:04:08,000 --> 00:04:08,010
+depth video on how we tabled work and
+ 
+
+227
+00:04:08,010 --> 00:04:09,349
+depth video on how we tabled work and
+all that so stick around for that if
+
+228
+00:04:09,349 --> 00:04:09,359
+all that so stick around for that if
+ 
+
+229
+00:04:09,359 --> 00:04:10,550
+all that so stick around for that if
+you're interested but to keep it simple
+
+230
+00:04:10,550 --> 00:04:10,560
+you're interested but to keep it simple
+ 
+
+231
+00:04:10,560 --> 00:04:12,259
+you're interested but to keep it simple
+all you basically need to know is that
+
+232
+00:04:12,259 --> 00:04:12,269
+all you basically need to know is that
+ 
+
+233
+00:04:12,269 --> 00:04:13,720
+all you basically need to know is that
+if you want to override
+
+234
+00:04:13,720 --> 00:04:13,730
+if you want to override
+ 
+
+235
+00:04:13,730 --> 00:04:15,369
+if you want to override
+function you have to mark the base
+
+236
+00:04:15,369 --> 00:04:15,379
+function you have to mark the base
+ 
+
+237
+00:04:15,379 --> 00:04:17,469
+function you have to mark the base
+function in the base bar as virtual
+
+238
+00:04:17,469 --> 00:04:17,479
+function in the base bar as virtual
+ 
+
+239
+00:04:17,479 --> 00:04:19,210
+function in the base bar as virtual
+let's go back to our code and I'm just
+
+240
+00:04:19,210 --> 00:04:19,220
+let's go back to our code and I'm just
+ 
+
+241
+00:04:19,220 --> 00:04:21,879
+let's go back to our code and I'm just
+simply going to add the word virtual to
+
+242
+00:04:21,879 --> 00:04:21,889
+simply going to add the word virtual to
+ 
+
+243
+00:04:21,889 --> 00:04:24,100
+simply going to add the word virtual to
+the front of this get name function that
+
+244
+00:04:24,100 --> 00:04:24,110
+the front of this get name function that
+ 
+
+245
+00:04:24,110 --> 00:04:26,500
+the front of this get name function that
+is in our base up in our entity class it
+
+246
+00:04:26,500 --> 00:04:26,510
+is in our base up in our entity class it
+ 
+
+247
+00:04:26,510 --> 00:04:28,120
+is in our base up in our entity class it
+might not seem like much but this
+
+248
+00:04:28,120 --> 00:04:28,130
+might not seem like much but this
+ 
+
+249
+00:04:28,130 --> 00:04:29,680
+might not seem like much but this
+basically tells the compiler hey
+
+250
+00:04:29,680 --> 00:04:29,690
+basically tells the compiler hey
+ 
+
+251
+00:04:29,690 --> 00:04:32,350
+basically tells the compiler hey
+generate a V table for this function so
+
+252
+00:04:32,350 --> 00:04:32,360
+generate a V table for this function so
+ 
+
+253
+00:04:32,360 --> 00:04:34,090
+generate a V table for this function so
+that if it's overwritten you can point
+
+254
+00:04:34,090 --> 00:04:34,100
+that if it's overwritten you can point
+ 
+
+255
+00:04:34,100 --> 00:04:36,040
+that if it's overwritten you can point
+to the correct function with this change
+
+256
+00:04:36,040 --> 00:04:36,050
+to the correct function with this change
+ 
+
+257
+00:04:36,050 --> 00:04:38,230
+to the correct function with this change
+let's hit f5 to run our code and look at
+
+258
+00:04:38,230 --> 00:04:38,240
+let's hit f5 to run our code and look at
+ 
+
+259
+00:04:38,240 --> 00:04:38,590
+let's hit f5 to run our code and look at
+that
+
+260
+00:04:38,590 --> 00:04:38,600
+that
+ 
+
+261
+00:04:38,600 --> 00:04:40,420
+that
+we've got NC and shown on printing
+
+262
+00:04:40,420 --> 00:04:40,430
+we've got NC and shown on printing
+ 
+
+263
+00:04:40,430 --> 00:04:42,219
+we've got NC and shown on printing
+correctly now another thing that we can
+
+264
+00:04:42,219 --> 00:04:42,229
+correctly now another thing that we can
+ 
+
+265
+00:04:42,229 --> 00:04:44,290
+correctly now another thing that we can
+do that was introduced in tables of 11
+
+266
+00:04:44,290 --> 00:04:44,300
+do that was introduced in tables of 11
+ 
+
+267
+00:04:44,300 --> 00:04:46,180
+do that was introduced in tables of 11
+is actually marked this overridden
+
+268
+00:04:46,180 --> 00:04:46,190
+is actually marked this overridden
+ 
+
+269
+00:04:46,190 --> 00:04:48,760
+is actually marked this overridden
+function with the keyword override right
+
+270
+00:04:48,760 --> 00:04:48,770
+function with the keyword override right
+ 
+
+271
+00:04:48,770 --> 00:04:51,250
+function with the keyword override right
+over here this isn't required of course
+
+272
+00:04:51,250 --> 00:04:51,260
+over here this isn't required of course
+ 
+
+273
+00:04:51,260 --> 00:04:52,719
+over here this isn't required of course
+you can see that we just ran our code
+
+274
+00:04:52,719 --> 00:04:52,729
+you can see that we just ran our code
+ 
+
+275
+00:04:52,729 --> 00:04:54,670
+you can see that we just ran our code
+without that and it worked fine however
+
+276
+00:04:54,670 --> 00:04:54,680
+without that and it worked fine however
+ 
+
+277
+00:04:54,680 --> 00:04:56,439
+without that and it worked fine however
+you should still do this it goes first
+
+278
+00:04:56,439 --> 00:04:56,449
+you should still do this it goes first
+ 
+
+279
+00:04:56,449 --> 00:04:57,730
+you should still do this it goes first
+of all it makes it a little bit more
+
+280
+00:04:57,730 --> 00:04:57,740
+of all it makes it a little bit more
+ 
+
+281
+00:04:57,740 --> 00:04:59,439
+of all it makes it a little bit more
+readable since we now know this is
+
+282
+00:04:59,439 --> 00:04:59,449
+readable since we now know this is
+ 
+
+283
+00:04:59,449 --> 00:05:01,180
+readable since we now know this is
+actually an overridden function but also
+
+284
+00:05:01,180 --> 00:05:01,190
+actually an overridden function but also
+ 
+
+285
+00:05:01,190 --> 00:05:02,350
+actually an overridden function but also
+it just helps us a little bit with
+
+286
+00:05:02,350 --> 00:05:02,360
+it just helps us a little bit with
+ 
+
+287
+00:05:02,360 --> 00:05:04,120
+it just helps us a little bit with
+preventing bugs tutors like spelling
+
+288
+00:05:04,120 --> 00:05:04,130
+preventing bugs tutors like spelling
+ 
+
+289
+00:05:04,130 --> 00:05:05,469
+preventing bugs tutors like spelling
+mistakes and all that like for example
+
+290
+00:05:05,469 --> 00:05:05,479
+mistakes and all that like for example
+ 
+
+291
+00:05:05,479 --> 00:05:07,060
+mistakes and all that like for example
+five types get a name with a lowercase
+
+292
+00:05:07,060 --> 00:05:07,070
+five types get a name with a lowercase
+ 
+
+293
+00:05:07,070 --> 00:05:08,890
+five types get a name with a lowercase
+and you can see we get an error because
+
+294
+00:05:08,890 --> 00:05:08,900
+and you can see we get an error because
+ 
+
+295
+00:05:08,900 --> 00:05:10,750
+and you can see we get an error because
+there's no such function in the base but
+
+296
+00:05:10,750 --> 00:05:10,760
+there's no such function in the base but
+ 
+
+297
+00:05:10,760 --> 00:05:12,909
+there's no such function in the base but
+for us to override or if we try an
+
+298
+00:05:12,909 --> 00:05:12,919
+for us to override or if we try an
+ 
+
+299
+00:05:12,919 --> 00:05:14,500
+for us to override or if we try an
+override function that isn't marked as
+
+300
+00:05:14,500 --> 00:05:14,510
+override function that isn't marked as
+ 
+
+301
+00:05:14,510 --> 00:05:16,480
+override function that isn't marked as
+virtual you can see it also gives us an
+
+302
+00:05:16,480 --> 00:05:16,490
+virtual you can see it also gives us an
+ 
+
+303
+00:05:16,490 --> 00:05:17,890
+virtual you can see it also gives us an
+error so it's just something that helps
+
+304
+00:05:17,890 --> 00:05:17,900
+error so it's just something that helps
+ 
+
+305
+00:05:17,900 --> 00:05:19,870
+error so it's just something that helps
+us out okay so that's basically what a
+
+306
+00:05:19,870 --> 00:05:19,880
+us out okay so that's basically what a
+ 
+
+307
+00:05:19,880 --> 00:05:21,400
+us out okay so that's basically what a
+virtual function is virtual functions
+
+308
+00:05:21,400 --> 00:05:21,410
+virtual function is virtual functions
+ 
+
+309
+00:05:21,410 --> 00:05:22,900
+virtual function is virtual functions
+aren't free though unfortunately there
+
+310
+00:05:22,900 --> 00:05:22,910
+aren't free though unfortunately there
+ 
+
+311
+00:05:22,910 --> 00:05:24,850
+aren't free though unfortunately there
+are two runtime costs associated with
+
+312
+00:05:24,850 --> 00:05:24,860
+are two runtime costs associated with
+ 
+
+313
+00:05:24,860 --> 00:05:26,950
+are two runtime costs associated with
+virtual functions firstly we have the
+
+314
+00:05:26,950 --> 00:05:26,960
+virtual functions firstly we have the
+ 
+
+315
+00:05:26,960 --> 00:05:28,600
+virtual functions firstly we have the
+additional memory that is required in
+
+316
+00:05:28,600 --> 00:05:28,610
+additional memory that is required in
+ 
+
+317
+00:05:28,610 --> 00:05:30,279
+additional memory that is required in
+order for us to store that be table so
+
+318
+00:05:30,279 --> 00:05:30,289
+order for us to store that be table so
+ 
+
+319
+00:05:30,289 --> 00:05:31,690
+order for us to store that be table so
+that we can dispatch to the correct
+
+320
+00:05:31,690 --> 00:05:31,700
+that we can dispatch to the correct
+ 
+
+321
+00:05:31,700 --> 00:05:34,150
+that we can dispatch to the correct
+function that includes a member pointer
+
+322
+00:05:34,150 --> 00:05:34,160
+function that includes a member pointer
+ 
+
+323
+00:05:34,160 --> 00:05:36,700
+function that includes a member pointer
+in the actual base path that points to
+
+324
+00:05:36,700 --> 00:05:36,710
+in the actual base path that points to
+ 
+
+325
+00:05:36,710 --> 00:05:38,710
+in the actual base path that points to
+the V table and secondly every time we
+
+326
+00:05:38,710 --> 00:05:38,720
+the V table and secondly every time we
+ 
+
+327
+00:05:38,720 --> 00:05:40,300
+the V table and secondly every time we
+call a virtual function we have to go
+
+328
+00:05:40,300 --> 00:05:40,310
+call a virtual function we have to go
+ 
+
+329
+00:05:40,310 --> 00:05:42,129
+call a virtual function we have to go
+through that table to determine which
+
+330
+00:05:42,129 --> 00:05:42,139
+through that table to determine which
+ 
+
+331
+00:05:42,139 --> 00:05:44,140
+through that table to determine which
+function to actually map to which is an
+
+332
+00:05:44,140 --> 00:05:44,150
+function to actually map to which is an
+ 
+
+333
+00:05:44,150 --> 00:05:45,670
+function to actually map to which is an
+additional performance penalty and
+
+334
+00:05:45,670 --> 00:05:45,680
+additional performance penalty and
+ 
+
+335
+00:05:45,680 --> 00:05:47,830
+additional performance penalty and
+because of these costs some people just
+
+336
+00:05:47,830 --> 00:05:47,840
+because of these costs some people just
+ 
+
+337
+00:05:47,840 --> 00:05:49,570
+because of these costs some people just
+prefer not to use virtual functions at
+
+338
+00:05:49,570 --> 00:05:49,580
+prefer not to use virtual functions at
+ 
+
+339
+00:05:49,580 --> 00:05:51,550
+prefer not to use virtual functions at
+all honestly in my experience I've never
+
+340
+00:05:51,550 --> 00:05:51,560
+all honestly in my experience I've never
+ 
+
+341
+00:05:51,560 --> 00:05:55,540
+all honestly in my experience I've never
+encountered this to be so costly that
+
+342
+00:05:55,540 --> 00:05:55,550
+encountered this to be so costly that
+ 
+
+343
+00:05:55,550 --> 00:05:57,940
+encountered this to be so costly that
+that it would make any difference if I
+
+344
+00:05:57,940 --> 00:05:57,950
+that it would make any difference if I
+ 
+
+345
+00:05:57,950 --> 00:05:59,529
+that it would make any difference if I
+stopped using virtual functions so
+
+346
+00:05:59,529 --> 00:05:59,539
+stopped using virtual functions so
+ 
+
+347
+00:05:59,539 --> 00:06:01,089
+stopped using virtual functions so
+personally I use them all the time
+
+348
+00:06:01,089 --> 00:06:01,099
+personally I use them all the time
+ 
+
+349
+00:06:01,099 --> 00:06:03,730
+personally I use them all the time
+without any issue maybe if you are on
+
+350
+00:06:03,730 --> 00:06:03,740
+without any issue maybe if you are on
+ 
+
+351
+00:06:03,740 --> 00:06:05,580
+without any issue maybe if you are on
+some embedded platform which has
+
+352
+00:06:05,580 --> 00:06:05,590
+some embedded platform which has
+ 
+
+353
+00:06:05,590 --> 00:06:07,930
+some embedded platform which has
+absolutely terrible performance and
+
+354
+00:06:07,930 --> 00:06:07,940
+absolutely terrible performance and
+ 
+
+355
+00:06:07,940 --> 00:06:10,779
+absolutely terrible performance and
+every CPU slice accounts maybe then
+
+356
+00:06:10,779 --> 00:06:10,789
+every CPU slice accounts maybe then
+ 
+
+357
+00:06:10,789 --> 00:06:13,300
+every CPU slice accounts maybe then
+avoid virtual functions but otherwise I
+
+358
+00:06:13,300 --> 00:06:13,310
+avoid virtual functions but otherwise I
+ 
+
+359
+00:06:13,310 --> 00:06:15,850
+avoid virtual functions but otherwise I
+really can't tell you not to use them
+
+360
+00:06:15,850 --> 00:06:15,860
+really can't tell you not to use them
+ 
+
+361
+00:06:15,860 --> 00:06:17,860
+really can't tell you not to use them
+because of performance because because
+
+362
+00:06:17,860 --> 00:06:17,870
+because of performance because because
+ 
+
+363
+00:06:17,870 --> 00:06:19,510
+because of performance because because
+it's just such a minimal impact that you
+
+364
+00:06:19,510 --> 00:06:19,520
+it's just such a minimal impact that you
+ 
+
+365
+00:06:19,520 --> 00:06:21,279
+it's just such a minimal impact that you
+probably won't notice it at all hope you
+
+366
+00:06:21,279 --> 00:06:21,289
+probably won't notice it at all hope you
+ 
+
+367
+00:06:21,289 --> 00:06:22,750
+probably won't notice it at all hope you
+guys enjoyed this video on virtual
+
+368
+00:06:22,750 --> 00:06:22,760
+guys enjoyed this video on virtual
+ 
+
+369
+00:06:22,760 --> 00:06:24,159
+guys enjoyed this video on virtual
+functions if you have an expression
+
+370
+00:06:24,159 --> 00:06:24,169
+functions if you have an expression
+ 
+
+371
+00:06:24,169 --> 00:06:25,899
+functions if you have an expression
+comment just leave them below and I'll
+
+372
+00:06:25,899 --> 00:06:25,909
+comment just leave them below and I'll
+ 
+
+373
+00:06:25,909 --> 00:06:28,050
+comment just leave them below and I'll
+see you guys next time goodbye
+
+374
+00:06:28,050 --> 00:06:28,060
+see you guys next time goodbye
+ 
+
+375
+00:06:28,060 --> 00:06:28,870
+see you guys next time goodbye
+[Applause]
+
+376
+00:06:28,870 --> 00:06:28,880
+[Applause]
+ 
+
+377
+00:06:28,880 --> 00:06:37,020
+[Applause]
+[Music]
+
+378
+00:06:37,020 --> 00:06:37,030
+
+ 
+
+379
+00:06:37,030 --> 00:06:44,059
+
+[Music]
+

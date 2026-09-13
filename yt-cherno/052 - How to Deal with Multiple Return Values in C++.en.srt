@@ -1,0 +1,4815 @@
+1
+00:00:00,000 --> 00:00:01,640
+
+hey what's up guys my name is a China
+
+2
+00:00:01,640 --> 00:00:01,650
+hey what's up guys my name is a China
+ 
+
+3
+00:00:01,650 --> 00:00:04,249
+hey what's up guys my name is a China
+welcome back to my C++ series so this
+
+4
+00:00:04,249 --> 00:00:04,259
+welcome back to my C++ series so this
+ 
+
+5
+00:00:04,259 --> 00:00:06,289
+welcome back to my C++ series so this
+episode we're going to talk about
+
+6
+00:00:06,289 --> 00:00:06,299
+episode we're going to talk about
+ 
+
+7
+00:00:06,299 --> 00:00:09,200
+episode we're going to talk about
+basically what a tuple is what a pair is
+
+8
+00:00:09,200 --> 00:00:09,210
+basically what a tuple is what a pair is
+ 
+
+9
+00:00:09,210 --> 00:00:11,330
+basically what a tuple is what a pair is
+how you can deal with multiple return
+
+10
+00:00:11,330 --> 00:00:11,340
+how you can deal with multiple return
+ 
+
+11
+00:00:11,340 --> 00:00:13,999
+how you can deal with multiple return
+types in C++ and how I personally like
+
+12
+00:00:13,999 --> 00:00:14,009
+types in C++ and how I personally like
+ 
+
+13
+00:00:14,009 --> 00:00:16,220
+types in C++ and how I personally like
+to deal with them as well this video is
+
+14
+00:00:16,220 --> 00:00:16,230
+to deal with them as well this video is
+ 
+
+15
+00:00:16,230 --> 00:00:18,590
+to deal with them as well this video is
+kind of stemming off a bit of a spin-off
+
+16
+00:00:18,590 --> 00:00:18,600
+kind of stemming off a bit of a spin-off
+ 
+
+17
+00:00:18,600 --> 00:00:21,019
+kind of stemming off a bit of a spin-off
+for us from the latest OpenGL video
+
+18
+00:00:21,019 --> 00:00:21,029
+for us from the latest OpenGL video
+ 
+
+19
+00:00:21,029 --> 00:00:22,550
+for us from the latest OpenGL video
+where we basically talked about shaders
+
+20
+00:00:22,550 --> 00:00:22,560
+where we basically talked about shaders
+ 
+
+21
+00:00:22,560 --> 00:00:24,529
+where we basically talked about shaders
+and how we can read shedders in a more
+
+22
+00:00:24,529 --> 00:00:24,539
+and how we can read shedders in a more
+ 
+
+23
+00:00:24,539 --> 00:00:26,420
+and how we can read shedders in a more
+convenient way check that out up there
+
+24
+00:00:26,420 --> 00:00:26,430
+convenient way check that out up there
+ 
+
+25
+00:00:26,430 --> 00:00:27,740
+convenient way check that out up there
+it's a great series as well where we
+
+26
+00:00:27,740 --> 00:00:27,750
+it's a great series as well where we
+ 
+
+27
+00:00:27,750 --> 00:00:29,210
+it's a great series as well where we
+talk all about graphics programming and
+
+28
+00:00:29,210 --> 00:00:29,220
+talk all about graphics programming and
+ 
+
+29
+00:00:29,220 --> 00:00:30,769
+talk all about graphics programming and
+how you can make your own graphics and
+
+30
+00:00:30,769 --> 00:00:30,779
+how you can make your own graphics and
+ 
+
+31
+00:00:30,779 --> 00:00:32,450
+how you can make your own graphics and
+and stuff like that from scratch so if
+
+32
+00:00:32,450 --> 00:00:32,460
+and stuff like that from scratch so if
+ 
+
+33
+00:00:32,460 --> 00:00:33,709
+and stuff like that from scratch so if
+you guys haven't if you guys are
+
+34
+00:00:33,709 --> 00:00:33,719
+you guys haven't if you guys are
+ 
+
+35
+00:00:33,719 --> 00:00:34,910
+you guys haven't if you guys are
+interested in that then you're just
+
+36
+00:00:34,910 --> 00:00:34,920
+interested in that then you're just
+ 
+
+37
+00:00:34,920 --> 00:00:36,290
+interested in that then you're just
+following this C++ series
+
+38
+00:00:36,290 --> 00:00:36,300
+following this C++ series
+ 
+
+39
+00:00:36,300 --> 00:00:38,060
+following this C++ series
+definitely definitely check out that
+
+40
+00:00:38,060 --> 00:00:38,070
+definitely definitely check out that
+ 
+
+41
+00:00:38,070 --> 00:00:40,150
+definitely definitely check out that
+opengl series I hear it's pretty awesome
+
+42
+00:00:40,150 --> 00:00:40,160
+opengl series I hear it's pretty awesome
+ 
+
+43
+00:00:40,160 --> 00:00:42,920
+opengl series I hear it's pretty awesome
+anyway let's talk about this so this is
+
+44
+00:00:42,920 --> 00:00:42,930
+anyway let's talk about this so this is
+ 
+
+45
+00:00:42,930 --> 00:00:45,260
+anyway let's talk about this so this is
+a bit of a real-world example and I like
+
+46
+00:00:45,260 --> 00:00:45,270
+a bit of a real-world example and I like
+ 
+
+47
+00:00:45,270 --> 00:00:47,990
+a bit of a real-world example and I like
+this because we're finally kind of at
+
+48
+00:00:47,990 --> 00:00:48,000
+this because we're finally kind of at
+ 
+
+49
+00:00:48,000 --> 00:00:49,729
+this because we're finally kind of at
+the point where I don't have to make up
+
+50
+00:00:49,729 --> 00:00:49,739
+the point where I don't have to make up
+ 
+
+51
+00:00:49,739 --> 00:00:53,029
+the point where I don't have to make up
+weird kind of examples on the spot and
+
+52
+00:00:53,029 --> 00:00:53,039
+weird kind of examples on the spot and
+ 
+
+53
+00:00:53,039 --> 00:00:54,650
+weird kind of examples on the spot and
+they're usually not very good I can kind
+
+54
+00:00:54,650 --> 00:00:54,660
+they're usually not very good I can kind
+ 
+
+55
+00:00:54,660 --> 00:00:56,389
+they're usually not very good I can kind
+of start showing you guys existing code
+
+56
+00:00:56,389 --> 00:00:56,399
+of start showing you guys existing code
+ 
+
+57
+00:00:56,399 --> 00:00:58,849
+of start showing you guys existing code
+real code pretty much and we can talk
+
+58
+00:00:58,849 --> 00:00:58,859
+real code pretty much and we can talk
+ 
+
+59
+00:00:58,859 --> 00:01:00,979
+real code pretty much and we can talk
+about certain decisions that we can make
+
+60
+00:01:00,979 --> 00:01:00,989
+about certain decisions that we can make
+ 
+
+61
+00:01:00,989 --> 00:01:03,619
+about certain decisions that we can make
+as as engineers as programmers as
+
+62
+00:01:03,619 --> 00:01:03,629
+as as engineers as programmers as
+ 
+
+63
+00:01:03,629 --> 00:01:05,270
+as as engineers as programmers as
+whatever as developers whatever want to
+
+64
+00:01:05,270 --> 00:01:05,280
+whatever as developers whatever want to
+ 
+
+65
+00:01:05,280 --> 00:01:06,770
+whatever as developers whatever want to
+call yourself really
+
+66
+00:01:06,770 --> 00:01:06,780
+call yourself really
+ 
+
+67
+00:01:06,780 --> 00:01:08,690
+call yourself really
+so specifically here we had an issue
+
+68
+00:01:08,690 --> 00:01:08,700
+so specifically here we had an issue
+ 
+
+69
+00:01:08,700 --> 00:01:10,670
+so specifically here we had an issue
+where we had a function and we needed to
+
+70
+00:01:10,670 --> 00:01:10,680
+where we had a function and we needed to
+ 
+
+71
+00:01:10,680 --> 00:01:12,890
+where we had a function and we needed to
+return two strings there are a lot of
+
+72
+00:01:12,890 --> 00:01:12,900
+return two strings there are a lot of
+ 
+
+73
+00:01:12,900 --> 00:01:14,870
+return two strings there are a lot of
+different ways that we can achieve kinda
+
+74
+00:01:14,870 --> 00:01:14,880
+different ways that we can achieve kinda
+ 
+
+75
+00:01:14,880 --> 00:01:17,210
+different ways that we can achieve kinda
+returning two types obviously in C++ by
+
+76
+00:01:17,210 --> 00:01:17,220
+returning two types obviously in C++ by
+ 
+
+77
+00:01:17,220 --> 00:01:19,789
+returning two types obviously in C++ by
+default you can't really return like two
+
+78
+00:01:19,789 --> 00:01:19,799
+default you can't really return like two
+ 
+
+79
+00:01:19,799 --> 00:01:21,740
+default you can't really return like two
+types in Python you can kind of
+
+80
+00:01:21,740 --> 00:01:21,750
+types in Python you can kind of
+ 
+
+81
+00:01:21,750 --> 00:01:23,780
+types in Python you can kind of
+automatically automagically I'll say
+
+82
+00:01:23,780 --> 00:01:23,790
+automatically automagically I'll say
+ 
+
+83
+00:01:23,790 --> 00:01:25,370
+automatically automagically I'll say
+return two types it does some stuff
+
+84
+00:01:25,370 --> 00:01:25,380
+return two types it does some stuff
+ 
+
+85
+00:01:25,380 --> 00:01:27,320
+return two types it does some stuff
+behind the scenes to support that but
+
+86
+00:01:27,320 --> 00:01:27,330
+behind the scenes to support that but
+ 
+
+87
+00:01:27,330 --> 00:01:29,090
+behind the scenes to support that but
+traditionally when you have a function a
+
+88
+00:01:29,090 --> 00:01:29,100
+traditionally when you have a function a
+ 
+
+89
+00:01:29,100 --> 00:01:32,359
+traditionally when you have a function a
+function can return one type right you
+
+90
+00:01:32,359 --> 00:01:32,369
+function can return one type right you
+ 
+
+91
+00:01:32,369 --> 00:01:34,850
+function can return one type right you
+can return specifically one variable so
+
+92
+00:01:34,850 --> 00:01:34,860
+can return specifically one variable so
+ 
+
+93
+00:01:34,860 --> 00:01:39,289
+can return specifically one variable so
+if we have something like a function a
+
+94
+00:01:39,289 --> 00:01:39,299
+if we have something like a function a
+ 
+
+95
+00:01:39,299 --> 00:01:41,060
+if we have something like a function a
+function that needs to return an integer
+
+96
+00:01:41,060 --> 00:01:41,070
+function that needs to return an integer
+ 
+
+97
+00:01:41,070 --> 00:01:43,580
+function that needs to return an integer
+and a string or something like that we
+
+98
+00:01:43,580 --> 00:01:43,590
+and a string or something like that we
+ 
+
+99
+00:01:43,590 --> 00:01:44,719
+and a string or something like that we
+might be in trouble
+
+100
+00:01:44,719 --> 00:01:44,729
+might be in trouble
+ 
+
+101
+00:01:44,729 --> 00:01:47,090
+might be in trouble
+because well we can maybe return an
+
+102
+00:01:47,090 --> 00:01:47,100
+because well we can maybe return an
+ 
+
+103
+00:01:47,100 --> 00:01:49,370
+because well we can maybe return an
+integer or a string but we definitely
+
+104
+00:01:49,370 --> 00:01:49,380
+integer or a string but we definitely
+ 
+
+105
+00:01:49,380 --> 00:01:52,850
+integer or a string but we definitely
+can't return both if we have to if we
+
+106
+00:01:52,850 --> 00:01:52,860
+can't return both if we have to if we
+ 
+
+107
+00:01:52,860 --> 00:01:54,440
+can't return both if we have to if we
+have a function that needs to return two
+
+108
+00:01:54,440 --> 00:01:54,450
+have a function that needs to return two
+ 
+
+109
+00:01:54,450 --> 00:01:56,330
+have a function that needs to return two
+variables two or more variables of the
+
+110
+00:01:56,330 --> 00:01:56,340
+variables two or more variables of the
+ 
+
+111
+00:01:56,340 --> 00:01:59,630
+variables two or more variables of the
+same type we can return like a vector or
+
+112
+00:01:59,630 --> 00:01:59,640
+same type we can return like a vector or
+ 
+
+113
+00:01:59,640 --> 00:02:01,789
+same type we can return like a vector or
+an array or something like that just
+
+114
+00:02:01,789 --> 00:02:01,799
+an array or something like that just
+ 
+
+115
+00:02:01,799 --> 00:02:04,130
+an array or something like that just
+containing those two elements that's
+
+116
+00:02:04,130 --> 00:02:04,140
+containing those two elements that's
+ 
+
+117
+00:02:04,140 --> 00:02:07,190
+containing those two elements that's
+also not the best thing to do though for
+
+118
+00:02:07,190 --> 00:02:07,200
+also not the best thing to do though for
+ 
+
+119
+00:02:07,200 --> 00:02:08,600
+also not the best thing to do though for
+a few reasons and we'll check that out
+
+120
+00:02:08,600 --> 00:02:08,610
+a few reasons and we'll check that out
+ 
+
+121
+00:02:08,610 --> 00:02:09,330
+a few reasons and we'll check that out
+in a minute
+
+122
+00:02:09,330 --> 00:02:09,340
+in a minute
+ 
+
+123
+00:02:09,340 --> 00:02:12,210
+in a minute
+but really we have this issue where hey
+
+124
+00:02:12,210 --> 00:02:12,220
+but really we have this issue where hey
+ 
+
+125
+00:02:12,220 --> 00:02:14,369
+but really we have this issue where hey
+you know how do we return how do we
+
+126
+00:02:14,369 --> 00:02:14,379
+you know how do we return how do we
+ 
+
+127
+00:02:14,379 --> 00:02:16,920
+you know how do we return how do we
+return to different variables maybe we
+
+128
+00:02:16,920 --> 00:02:16,930
+return to different variables maybe we
+ 
+
+129
+00:02:16,930 --> 00:02:18,300
+return to different variables maybe we
+do have an integer in a string or
+
+130
+00:02:18,300 --> 00:02:18,310
+do have an integer in a string or
+ 
+
+131
+00:02:18,310 --> 00:02:19,860
+do have an integer in a string or
+something like that how do we deal with
+
+132
+00:02:19,860 --> 00:02:19,870
+something like that how do we deal with
+ 
+
+133
+00:02:19,870 --> 00:02:21,809
+something like that how do we deal with
+that and see if I suppose gives us a few
+
+134
+00:02:21,809 --> 00:02:21,819
+that and see if I suppose gives us a few
+ 
+
+135
+00:02:21,819 --> 00:02:24,360
+that and see if I suppose gives us a few
+ways to deal with it I personally hate
+
+136
+00:02:24,360 --> 00:02:24,370
+ways to deal with it I personally hate
+ 
+
+137
+00:02:24,370 --> 00:02:26,789
+ways to deal with it I personally hate
+like all of them there and I like to
+
+138
+00:02:26,789 --> 00:02:26,799
+like all of them there and I like to
+ 
+
+139
+00:02:26,799 --> 00:02:31,259
+like all of them there and I like to
+deal with it in kind of my own way all
+
+140
+00:02:31,259 --> 00:02:31,269
+deal with it in kind of my own way all
+ 
+
+141
+00:02:31,269 --> 00:02:34,920
+deal with it in kind of my own way all
+right so wait anyway sorry um gonna be
+
+142
+00:02:34,920 --> 00:02:34,930
+right so wait anyway sorry um gonna be
+ 
+
+143
+00:02:34,930 --> 00:02:36,330
+right so wait anyway sorry um gonna be
+professional right I mean do you like do
+
+144
+00:02:36,330 --> 00:02:36,340
+professional right I mean do you like do
+ 
+
+145
+00:02:36,340 --> 00:02:38,070
+professional right I mean do you like do
+you guys like this new kind of casual
+
+146
+00:02:38,070 --> 00:02:38,080
+you guys like this new kind of casual
+ 
+
+147
+00:02:38,080 --> 00:02:39,600
+you guys like this new kind of casual
+setup or ever sit on the couch here and
+
+148
+00:02:39,600 --> 00:02:39,610
+setup or ever sit on the couch here and
+ 
+
+149
+00:02:39,610 --> 00:02:43,020
+setup or ever sit on the couch here and
+just I like it I think it's cool cuz I
+
+150
+00:02:43,020 --> 00:02:43,030
+just I like it I think it's cool cuz I
+ 
+
+151
+00:02:43,030 --> 00:02:44,400
+just I like it I think it's cool cuz I
+can just kind of have a chat to you guys
+
+152
+00:02:44,400 --> 00:02:44,410
+can just kind of have a chat to you guys
+ 
+
+153
+00:02:44,410 --> 00:02:46,350
+can just kind of have a chat to you guys
+and it's a lot more kind of like almost
+
+154
+00:02:46,350 --> 00:02:46,360
+and it's a lot more kind of like almost
+ 
+
+155
+00:02:46,360 --> 00:02:48,240
+and it's a lot more kind of like almost
+like a podcast actually to be honest
+
+156
+00:02:48,240 --> 00:02:48,250
+like a podcast actually to be honest
+ 
+
+157
+00:02:48,250 --> 00:02:50,640
+like a podcast actually to be honest
+with you anyway let's not get too casual
+
+158
+00:02:50,640 --> 00:02:50,650
+with you anyway let's not get too casual
+ 
+
+159
+00:02:50,650 --> 00:02:52,289
+with you anyway let's not get too casual
+let's continue talking about what we'll
+
+160
+00:02:52,289 --> 00:02:52,299
+let's continue talking about what we'll
+ 
+
+161
+00:02:52,299 --> 00:02:55,050
+let's continue talking about what we'll
+be talking about so I'll just show you
+
+162
+00:02:55,050 --> 00:02:55,060
+be talking about so I'll just show you
+ 
+
+163
+00:02:55,060 --> 00:02:56,580
+be talking about so I'll just show you
+guys a real-world example and stop
+
+164
+00:02:56,580 --> 00:02:56,590
+guys a real-world example and stop
+ 
+
+165
+00:02:56,590 --> 00:02:57,960
+guys a real-world example and stop
+talking so that you know what I mean
+
+166
+00:02:57,960 --> 00:02:57,970
+talking so that you know what I mean
+ 
+
+167
+00:02:57,970 --> 00:02:59,699
+talking so that you know what I mean
+so if we flip over flip on over to our
+
+168
+00:02:59,699 --> 00:02:59,709
+so if we flip over flip on over to our
+ 
+
+169
+00:02:59,709 --> 00:03:01,470
+so if we flip over flip on over to our
+code from the last episode of the OpenGL
+
+170
+00:03:01,470 --> 00:03:01,480
+code from the last episode of the OpenGL
+ 
+
+171
+00:03:01,480 --> 00:03:04,080
+code from the last episode of the OpenGL
+series we have this function here called
+
+172
+00:03:04,080 --> 00:03:04,090
+series we have this function here called
+ 
+
+173
+00:03:04,090 --> 00:03:07,229
+series we have this function here called
+past shader right this needs to return
+
+174
+00:03:07,229 --> 00:03:07,239
+past shader right this needs to return
+ 
+
+175
+00:03:07,239 --> 00:03:09,240
+past shader right this needs to return
+two strengths because we actually what
+
+176
+00:03:09,240 --> 00:03:09,250
+two strengths because we actually what
+ 
+
+177
+00:03:09,250 --> 00:03:11,369
+two strengths because we actually what
+we build up two strings here the way
+
+178
+00:03:11,369 --> 00:03:11,379
+we build up two strings here the way
+ 
+
+179
+00:03:11,379 --> 00:03:12,600
+we build up two strings here the way
+that I've chosen to solve it in the
+
+180
+00:03:12,600 --> 00:03:12,610
+that I've chosen to solve it in the
+ 
+
+181
+00:03:12,610 --> 00:03:14,340
+that I've chosen to solve it in the
+OpenGL series is my favorite way to kind
+
+182
+00:03:14,340 --> 00:03:14,350
+OpenGL series is my favorite way to kind
+ 
+
+183
+00:03:14,350 --> 00:03:15,720
+OpenGL series is my favorite way to kind
+of solve these things and that's by
+
+184
+00:03:15,720 --> 00:03:15,730
+of solve these things and that's by
+ 
+
+185
+00:03:15,730 --> 00:03:17,699
+of solve these things and that's by
+actually creating a struct called shader
+
+186
+00:03:17,699 --> 00:03:17,709
+actually creating a struct called shader
+ 
+
+187
+00:03:17,709 --> 00:03:19,229
+actually creating a struct called shader
+program sauce which just contains the
+
+188
+00:03:19,229 --> 00:03:19,239
+program sauce which just contains the
+ 
+
+189
+00:03:19,239 --> 00:03:20,879
+program sauce which just contains the
+two strings obviously if we wanted to
+
+190
+00:03:20,879 --> 00:03:20,889
+two strings obviously if we wanted to
+ 
+
+191
+00:03:20,889 --> 00:03:22,470
+two strings obviously if we wanted to
+also return an integer or something that
+
+192
+00:03:22,470 --> 00:03:22,480
+also return an integer or something that
+ 
+
+193
+00:03:22,480 --> 00:03:24,059
+also return an integer or something that
+was a different type we could just add
+
+194
+00:03:24,059 --> 00:03:24,069
+was a different type we could just add
+ 
+
+195
+00:03:24,069 --> 00:03:25,500
+was a different type we could just add
+it to destruct and return it and I'll
+
+196
+00:03:25,500 --> 00:03:25,510
+it to destruct and return it and I'll
+ 
+
+197
+00:03:25,510 --> 00:03:27,690
+it to destruct and return it and I'll
+tell you why that's my favorite way kind
+
+198
+00:03:27,690 --> 00:03:27,700
+tell you why that's my favorite way kind
+ 
+
+199
+00:03:27,700 --> 00:03:29,729
+tell you why that's my favorite way kind
+of at the end of this video really but
+
+200
+00:03:29,729 --> 00:03:29,739
+of at the end of this video really but
+ 
+
+201
+00:03:29,739 --> 00:03:31,530
+of at the end of this video really but
+if we if we talk about all the different
+
+202
+00:03:31,530 --> 00:03:31,540
+if we if we talk about all the different
+ 
+
+203
+00:03:31,540 --> 00:03:33,270
+if we if we talk about all the different
+ways that the C++ actually provides us
+
+204
+00:03:33,270 --> 00:03:33,280
+ways that the C++ actually provides us
+ 
+
+205
+00:03:33,280 --> 00:03:34,860
+ways that the C++ actually provides us
+with to deal with our let's just get rid
+
+206
+00:03:34,860 --> 00:03:34,870
+with to deal with our let's just get rid
+ 
+
+207
+00:03:34,870 --> 00:03:36,599
+with to deal with our let's just get rid
+of this unless let's kind of deal with
+
+208
+00:03:36,599 --> 00:03:36,609
+of this unless let's kind of deal with
+ 
+
+209
+00:03:36,609 --> 00:03:38,670
+of this unless let's kind of deal with
+one way that isn't specific to any kind
+
+210
+00:03:38,670 --> 00:03:38,680
+one way that isn't specific to any kind
+ 
+
+211
+00:03:38,680 --> 00:03:40,890
+one way that isn't specific to any kind
+of class that exists in C++
+
+212
+00:03:40,890 --> 00:03:40,900
+of class that exists in C++
+ 
+
+213
+00:03:40,900 --> 00:03:42,750
+of class that exists in C++
+I'm going to make the return type void
+
+214
+00:03:42,750 --> 00:03:42,760
+I'm going to make the return type void
+ 
+
+215
+00:03:42,760 --> 00:03:44,520
+I'm going to make the return type void
+and what I'm actually going to do is
+
+216
+00:03:44,520 --> 00:03:44,530
+and what I'm actually going to do is
+ 
+
+217
+00:03:44,530 --> 00:03:46,800
+and what I'm actually going to do is
+simply take in two strings as reference
+
+218
+00:03:46,800 --> 00:03:46,810
+simply take in two strings as reference
+ 
+
+219
+00:03:46,810 --> 00:03:49,379
+simply take in two strings as reference
+so string you know you know vertex
+
+220
+00:03:49,379 --> 00:03:49,389
+so string you know you know vertex
+ 
+
+221
+00:03:49,389 --> 00:03:51,830
+so string you know you know vertex
+source or whatever and then sed string
+
+222
+00:03:51,830 --> 00:03:51,840
+source or whatever and then sed string
+ 
+
+223
+00:03:51,840 --> 00:03:56,699
+source or whatever and then sed string
+fragment source now because these are
+
+224
+00:03:56,699 --> 00:03:56,709
+fragment source now because these are
+ 
+
+225
+00:03:56,709 --> 00:03:59,460
+fragment source now because these are
+kind of parameters that are passed by
+
+226
+00:03:59,460 --> 00:03:59,470
+kind of parameters that are passed by
+ 
+
+227
+00:03:59,470 --> 00:04:01,259
+kind of parameters that are passed by
+reference we're allowed to actually
+
+228
+00:04:01,259 --> 00:04:01,269
+reference we're allowed to actually
+ 
+
+229
+00:04:01,269 --> 00:04:03,000
+reference we're allowed to actually
+write into them well more specifically
+
+230
+00:04:03,000 --> 00:04:03,010
+write into them well more specifically
+ 
+
+231
+00:04:03,010 --> 00:04:04,289
+write into them well more specifically
+at the end here instead of returning
+
+232
+00:04:04,289 --> 00:04:04,299
+at the end here instead of returning
+ 
+
+233
+00:04:04,299 --> 00:04:06,839
+at the end here instead of returning
+something we can actually basically just
+
+234
+00:04:06,839 --> 00:04:06,849
+something we can actually basically just
+ 
+
+235
+00:04:06,849 --> 00:04:09,659
+something we can actually basically just
+set vertex source equal to SS zero adult
+
+236
+00:04:09,659 --> 00:04:09,669
+set vertex source equal to SS zero adult
+ 
+
+237
+00:04:09,669 --> 00:04:11,339
+set vertex source equal to SS zero adult
+string now you really need to know much
+
+238
+00:04:11,339 --> 00:04:11,349
+string now you really need to know much
+ 
+
+239
+00:04:11,349 --> 00:04:12,569
+string now you really need to know much
+about this let me just quickly write the
+
+240
+00:04:12,569 --> 00:04:12,579
+about this let me just quickly write the
+ 
+
+241
+00:04:12,579 --> 00:04:13,979
+about this let me just quickly write the
+stuff for people who haven't washed the
+
+242
+00:04:13,979 --> 00:04:13,989
+stuff for people who haven't washed the
+ 
+
+243
+00:04:13,989 --> 00:04:15,360
+stuff for people who haven't washed the
+open shell video and have no idea what's
+
+244
+00:04:15,360 --> 00:04:15,370
+open shell video and have no idea what's
+ 
+
+245
+00:04:15,370 --> 00:04:17,580
+open shell video and have no idea what's
+going on we basically have two things to
+
+246
+00:04:17,580 --> 00:04:17,590
+going on we basically have two things to
+ 
+
+247
+00:04:17,590 --> 00:04:19,560
+going on we basically have two things to
+deal with we have the vertex source code
+
+248
+00:04:19,560 --> 00:04:19,570
+deal with we have the vertex source code
+ 
+
+249
+00:04:19,570 --> 00:04:21,840
+deal with we have the vertex source code
+which is SS 0 STR
+
+250
+00:04:21,840 --> 00:04:21,850
+which is SS 0 STR
+ 
+
+251
+00:04:21,850 --> 00:04:23,710
+which is SS 0 STR
+and then we have the fragment shader
+
+252
+00:04:23,710 --> 00:04:23,720
+and then we have the fragment shader
+ 
+
+253
+00:04:23,720 --> 00:04:25,570
+and then we have the fragment shader
+source code so I'll just write that like
+
+254
+00:04:25,570 --> 00:04:25,580
+source code so I'll just write that like
+ 
+
+255
+00:04:25,580 --> 00:04:27,760
+source code so I'll just write that like
+this okay so basically just think of
+
+256
+00:04:27,760 --> 00:04:27,770
+this okay so basically just think of
+ 
+
+257
+00:04:27,770 --> 00:04:29,290
+this okay so basically just think of
+this as we need to return two strings
+
+258
+00:04:29,290 --> 00:04:29,300
+this as we need to return two strings
+ 
+
+259
+00:04:29,300 --> 00:04:31,000
+this as we need to return two strings
+these these are the two strings when you
+
+260
+00:04:31,000 --> 00:04:31,010
+these these are the two strings when you
+ 
+
+261
+00:04:31,010 --> 00:04:33,400
+these these are the two strings when you
+to return so what we could do is set
+
+262
+00:04:33,400 --> 00:04:33,410
+to return so what we could do is set
+ 
+
+263
+00:04:33,410 --> 00:04:35,470
+to return so what we could do is set
+vertex source which is our actual
+
+264
+00:04:35,470 --> 00:04:35,480
+vertex source which is our actual
+ 
+
+265
+00:04:35,480 --> 00:04:37,840
+vertex source which is our actual
+parameter right we could set that equal
+
+266
+00:04:37,840 --> 00:04:37,850
+parameter right we could set that equal
+ 
+
+267
+00:04:37,850 --> 00:04:41,890
+parameter right we could set that equal
+to vs which is our vertex shader source
+
+268
+00:04:41,890 --> 00:04:41,900
+to vs which is our vertex shader source
+ 
+
+269
+00:04:41,900 --> 00:04:44,080
+to vs which is our vertex shader source
+code and then F and then for a fragment
+
+270
+00:04:44,080 --> 00:04:44,090
+code and then F and then for a fragment
+ 
+
+271
+00:04:44,090 --> 00:04:46,590
+code and then F and then for a fragment
+source we can set this equal to
+
+272
+00:04:46,590 --> 00:04:46,600
+source we can set this equal to
+ 
+
+273
+00:04:46,600 --> 00:04:50,230
+source we can set this equal to
+now FS variable just like that and then
+
+274
+00:04:50,230 --> 00:04:50,240
+now FS variable just like that and then
+ 
+
+275
+00:04:50,240 --> 00:04:51,700
+now FS variable just like that and then
+kind of when we call the function which
+
+276
+00:04:51,700 --> 00:04:51,710
+kind of when we call the function which
+ 
+
+277
+00:04:51,710 --> 00:04:53,170
+kind of when we call the function which
+is over here and we need to actually get
+
+278
+00:04:53,170 --> 00:04:53,180
+is over here and we need to actually get
+ 
+
+279
+00:04:53,180 --> 00:04:55,120
+is over here and we need to actually get
+the strings out obviously this now
+
+280
+00:04:55,120 --> 00:04:55,130
+the strings out obviously this now
+ 
+
+281
+00:04:55,130 --> 00:04:56,770
+the strings out obviously this now
+returns void so I'll get rid of this
+
+282
+00:04:56,770 --> 00:04:56,780
+returns void so I'll get rid of this
+ 
+
+283
+00:04:56,780 --> 00:04:59,080
+returns void so I'll get rid of this
+assignment here and then for path shader
+
+284
+00:04:59,080 --> 00:04:59,090
+assignment here and then for path shader
+ 
+
+285
+00:04:59,090 --> 00:05:01,600
+assignment here and then for path shader
+I'm gonna make two strings CS and FS and
+
+286
+00:05:01,600 --> 00:05:01,610
+I'm gonna make two strings CS and FS and
+ 
+
+287
+00:05:01,610 --> 00:05:03,640
+I'm gonna make two strings CS and FS and
+then just basically pass them in like
+
+288
+00:05:03,640 --> 00:05:03,650
+then just basically pass them in like
+ 
+
+289
+00:05:03,650 --> 00:05:04,510
+then just basically pass them in like
+that
+
+290
+00:05:04,510 --> 00:05:04,520
+that
+ 
+
+291
+00:05:04,520 --> 00:05:06,400
+that
+okay and then we're done and then for
+
+292
+00:05:06,400 --> 00:05:06,410
+okay and then we're done and then for
+ 
+
+293
+00:05:06,410 --> 00:05:07,780
+okay and then we're done and then for
+this create a function we can obviously
+
+294
+00:05:07,780 --> 00:05:07,790
+this create a function we can obviously
+ 
+
+295
+00:05:07,790 --> 00:05:09,700
+this create a function we can obviously
+just provide these two strings and we're
+
+296
+00:05:09,700 --> 00:05:09,710
+just provide these two strings and we're
+ 
+
+297
+00:05:09,710 --> 00:05:11,620
+just provide these two strings and we're
+all good to go so that's one way we
+
+298
+00:05:11,620 --> 00:05:11,630
+all good to go so that's one way we
+ 
+
+299
+00:05:11,630 --> 00:05:14,040
+all good to go so that's one way we
+could go about this now it's not like
+
+300
+00:05:14,040 --> 00:05:14,050
+could go about this now it's not like
+ 
+
+301
+00:05:14,050 --> 00:05:17,800
+could go about this now it's not like
+definitely speaking this is probably one
+
+302
+00:05:17,800 --> 00:05:17,810
+definitely speaking this is probably one
+ 
+
+303
+00:05:17,810 --> 00:05:19,420
+definitely speaking this is probably one
+of the most optimal ways to do this
+
+304
+00:05:19,420 --> 00:05:19,430
+of the most optimal ways to do this
+ 
+
+305
+00:05:19,430 --> 00:05:21,700
+of the most optimal ways to do this
+because there's no like string copying
+
+306
+00:05:21,700 --> 00:05:21,710
+because there's no like string copying
+ 
+
+307
+00:05:21,710 --> 00:05:23,500
+because there's no like string copying
+we do reassign the string and there are
+
+308
+00:05:23,500 --> 00:05:23,510
+we do reassign the string and there are
+ 
+
+309
+00:05:23,510 --> 00:05:25,120
+we do reassign the string and there are
+some kind of issues with this but
+
+310
+00:05:25,120 --> 00:05:25,130
+some kind of issues with this but
+ 
+
+311
+00:05:25,130 --> 00:05:26,950
+some kind of issues with this but
+performance wise this is pretty good
+
+312
+00:05:26,950 --> 00:05:26,960
+performance wise this is pretty good
+ 
+
+313
+00:05:26,960 --> 00:05:28,570
+performance wise this is pretty good
+because if you take a look at this week
+
+314
+00:05:28,570 --> 00:05:28,580
+because if you take a look at this week
+ 
+
+315
+00:05:28,580 --> 00:05:30,850
+because if you take a look at this week
+we actually construct the string in the
+
+316
+00:05:30,850 --> 00:05:30,860
+we actually construct the string in the
+ 
+
+317
+00:05:30,860 --> 00:05:33,400
+we actually construct the string in the
+stack frame of the parent function which
+
+318
+00:05:33,400 --> 00:05:33,410
+stack frame of the parent function which
+ 
+
+319
+00:05:33,410 --> 00:05:35,500
+stack frame of the parent function which
+is the main function and then we just
+
+320
+00:05:35,500 --> 00:05:35,510
+is the main function and then we just
+ 
+
+321
+00:05:35,510 --> 00:05:37,930
+is the main function and then we just
+pass in basically a pointer to those two
+
+322
+00:05:37,930 --> 00:05:37,940
+pass in basically a pointer to those two
+ 
+
+323
+00:05:37,940 --> 00:05:39,460
+pass in basically a pointer to those two
+things and say hey when you when you
+
+324
+00:05:39,460 --> 00:05:39,470
+things and say hey when you when you
+ 
+
+325
+00:05:39,470 --> 00:05:40,870
+things and say hey when you when you
+make your string write it into this
+
+326
+00:05:40,870 --> 00:05:40,880
+make your string write it into this
+ 
+
+327
+00:05:40,880 --> 00:05:42,820
+make your string write it into this
+memory so it's kind of pre allocated
+
+328
+00:05:42,820 --> 00:05:42,830
+memory so it's kind of pre allocated
+ 
+
+329
+00:05:42,830 --> 00:05:44,890
+memory so it's kind of pre allocated
+memory pass shader doesn't do any kind
+
+330
+00:05:44,890 --> 00:05:44,900
+memory pass shader doesn't do any kind
+ 
+
+331
+00:05:44,900 --> 00:05:47,740
+memory pass shader doesn't do any kind
+of actual dynamic memory allocation of
+
+332
+00:05:47,740 --> 00:05:47,750
+of actual dynamic memory allocation of
+ 
+
+333
+00:05:47,750 --> 00:05:49,390
+of actual dynamic memory allocation of
+course when we do assign the actual
+
+334
+00:05:49,390 --> 00:05:49,400
+course when we do assign the actual
+ 
+
+335
+00:05:49,400 --> 00:05:51,640
+course when we do assign the actual
+string which happens over here it does
+
+336
+00:05:51,640 --> 00:05:51,650
+string which happens over here it does
+ 
+
+337
+00:05:51,650 --> 00:05:53,740
+string which happens over here it does
+need to kind of do some kind of dynamic
+
+338
+00:05:53,740 --> 00:05:53,750
+need to kind of do some kind of dynamic
+ 
+
+339
+00:05:53,750 --> 00:05:56,080
+need to kind of do some kind of dynamic
+dynamic memory allocation because it
+
+340
+00:05:56,080 --> 00:05:56,090
+dynamic memory allocation because it
+ 
+
+341
+00:05:56,090 --> 00:05:58,600
+dynamic memory allocation because it
+needs to actually well copy this string
+
+342
+00:05:58,600 --> 00:05:58,610
+needs to actually well copy this string
+ 
+
+343
+00:05:58,610 --> 00:06:00,100
+needs to actually well copy this string
+into this string so there is still a
+
+344
+00:06:00,100 --> 00:06:00,110
+into this string so there is still a
+ 
+
+345
+00:06:00,110 --> 00:06:01,600
+into this string so there is still a
+copy and all that I don't want to talk
+
+346
+00:06:01,600 --> 00:06:01,610
+copy and all that I don't want to talk
+ 
+
+347
+00:06:01,610 --> 00:06:03,850
+copy and all that I don't want to talk
+too much about performance in this video
+
+348
+00:06:03,850 --> 00:06:03,860
+too much about performance in this video
+ 
+
+349
+00:06:03,860 --> 00:06:05,170
+too much about performance in this video
+just here and though I love talking
+
+350
+00:06:05,170 --> 00:06:05,180
+just here and though I love talking
+ 
+
+351
+00:06:05,180 --> 00:06:06,219
+just here and though I love talking
+about it on a LOF talking about
+
+352
+00:06:06,219 --> 00:06:06,229
+about it on a LOF talking about
+ 
+
+353
+00:06:06,229 --> 00:06:08,200
+about it on a LOF talking about
+optimization just because this is more
+
+354
+00:06:08,200 --> 00:06:08,210
+optimization just because this is more
+ 
+
+355
+00:06:08,210 --> 00:06:11,080
+optimization just because this is more
+or less I guess syntactically and as an
+
+356
+00:06:11,080 --> 00:06:11,090
+or less I guess syntactically and as an
+ 
+
+357
+00:06:11,090 --> 00:06:13,870
+or less I guess syntactically and as an
+actual programming style how to deal
+
+358
+00:06:13,870 --> 00:06:13,880
+actual programming style how to deal
+ 
+
+359
+00:06:13,880 --> 00:06:16,900
+actual programming style how to deal
+with multiple or ten times so we cut the
+
+360
+00:06:16,900 --> 00:06:16,910
+with multiple or ten times so we cut the
+ 
+
+361
+00:06:16,910 --> 00:06:18,550
+with multiple or ten times so we cut the
+optimization before must talk right here
+
+362
+00:06:18,550 --> 00:06:18,560
+optimization before must talk right here
+ 
+
+363
+00:06:18,560 --> 00:06:21,670
+optimization before must talk right here
+so from kind of a code point of view
+
+364
+00:06:21,670 --> 00:06:21,680
+so from kind of a code point of view
+ 
+
+365
+00:06:21,680 --> 00:06:23,409
+so from kind of a code point of view
+it's not bad it's a little bit clunky
+
+366
+00:06:23,409 --> 00:06:23,419
+it's not bad it's a little bit clunky
+ 
+
+367
+00:06:23,419 --> 00:06:25,090
+it's not bad it's a little bit clunky
+obviously we kind of kind of fit this on
+
+368
+00:06:25,090 --> 00:06:25,100
+obviously we kind of kind of fit this on
+ 
+
+369
+00:06:25,100 --> 00:06:26,590
+obviously we kind of kind of fit this on
+one line we need to declare these two
+
+370
+00:06:26,590 --> 00:06:26,600
+one line we need to declare these two
+ 
+
+371
+00:06:26,600 --> 00:06:27,650
+one line we need to declare these two
+strings and then pass
+
+372
+00:06:27,650 --> 00:06:27,660
+strings and then pass
+ 
+
+373
+00:06:27,660 --> 00:06:28,970
+strings and then pass
+I mean like that not the best thing to
+
+374
+00:06:28,970 --> 00:06:28,980
+I mean like that not the best thing to
+ 
+
+375
+00:06:28,980 --> 00:06:31,310
+I mean like that not the best thing to
+do to make it a little bit more explicit
+
+376
+00:06:31,310 --> 00:06:31,320
+do to make it a little bit more explicit
+ 
+
+377
+00:06:31,320 --> 00:06:33,500
+do to make it a little bit more explicit
+you could also make these actual
+
+378
+00:06:33,500 --> 00:06:33,510
+you could also make these actual
+ 
+
+379
+00:06:33,510 --> 00:06:35,720
+you could also make these actual
+pointers the benefit here is that you
+
+380
+00:06:35,720 --> 00:06:35,730
+pointers the benefit here is that you
+ 
+
+381
+00:06:35,730 --> 00:06:37,520
+pointers the benefit here is that you
+can actually with a reference you need
+
+382
+00:06:37,520 --> 00:06:37,530
+can actually with a reference you need
+ 
+
+383
+00:06:37,530 --> 00:06:39,830
+can actually with a reference you need
+to pass in a valid variable right with a
+
+384
+00:06:39,830 --> 00:06:39,840
+to pass in a valid variable right with a
+ 
+
+385
+00:06:39,840 --> 00:06:41,690
+to pass in a valid variable right with a
+pointer you can just pass it annulled or
+
+386
+00:06:41,690 --> 00:06:41,700
+pointer you can just pass it annulled or
+ 
+
+387
+00:06:41,700 --> 00:06:42,620
+pointer you can just pass it annulled or
+something like that
+
+388
+00:06:42,620 --> 00:06:42,630
+something like that
+ 
+
+389
+00:06:42,630 --> 00:06:44,330
+something like that
+and then just do a check to say hey if
+
+390
+00:06:44,330 --> 00:06:44,340
+and then just do a check to say hey if
+ 
+
+391
+00:06:44,340 --> 00:06:46,550
+and then just do a check to say hey if
+vs is specified or rather if vertex
+
+392
+00:06:46,550 --> 00:06:46,560
+vs is specified or rather if vertex
+ 
+
+393
+00:06:46,560 --> 00:06:48,650
+vs is specified or rather if vertex
+sauce which is our output parameter one
+
+394
+00:06:48,650 --> 00:06:48,660
+sauce which is our output parameter one
+ 
+
+395
+00:06:48,660 --> 00:06:49,790
+sauce which is our output parameter one
+more thing I'll quickly add is that I
+
+396
+00:06:49,790 --> 00:06:49,800
+more thing I'll quickly add is that I
+ 
+
+397
+00:06:49,800 --> 00:06:52,160
+more thing I'll quickly add is that I
+like to name output parameters like out
+
+398
+00:06:52,160 --> 00:06:52,170
+like to name output parameters like out
+ 
+
+399
+00:06:52,170 --> 00:06:54,530
+like to name output parameters like out
+or something like that you know just
+
+400
+00:06:54,530 --> 00:06:54,540
+or something like that you know just
+ 
+
+401
+00:06:54,540 --> 00:06:55,760
+or something like that you know just
+make it clear that this is an output
+
+402
+00:06:55,760 --> 00:06:55,770
+make it clear that this is an output
+ 
+
+403
+00:06:55,770 --> 00:06:59,750
+make it clear that this is an output
+thing so basically if our vertex sauce
+
+404
+00:06:59,750 --> 00:06:59,760
+thing so basically if our vertex sauce
+ 
+
+405
+00:06:59,760 --> 00:07:01,250
+thing so basically if our vertex sauce
+you know then let's basically
+
+406
+00:07:01,250 --> 00:07:01,260
+you know then let's basically
+ 
+
+407
+00:07:01,260 --> 00:07:03,440
+you know then let's basically
+dereference this and assign it like that
+
+408
+00:07:03,440 --> 00:07:03,450
+dereference this and assign it like that
+ 
+
+409
+00:07:03,450 --> 00:07:05,510
+dereference this and assign it like that
+and we can kind of deal with it that way
+
+410
+00:07:05,510 --> 00:07:05,520
+and we can kind of deal with it that way
+ 
+
+411
+00:07:05,520 --> 00:07:06,890
+and we can kind of deal with it that way
+that way you can ask your allow to
+
+412
+00:07:06,890 --> 00:07:06,900
+that way you can ask your allow to
+ 
+
+413
+00:07:06,900 --> 00:07:10,040
+that way you can ask your allow to
+supply you know into here first of all
+
+414
+00:07:10,040 --> 00:07:10,050
+supply you know into here first of all
+ 
+
+415
+00:07:10,050 --> 00:07:11,630
+supply you know into here first of all
+you need to explicitly get the memory
+
+416
+00:07:11,630 --> 00:07:11,640
+you need to explicitly get the memory
+ 
+
+417
+00:07:11,640 --> 00:07:13,430
+you need to explicitly get the memory
+address of these variables right which
+
+418
+00:07:13,430 --> 00:07:13,440
+address of these variables right which
+ 
+
+419
+00:07:13,440 --> 00:07:15,620
+address of these variables right which
+is kind of almost makes you think twice
+
+420
+00:07:15,620 --> 00:07:15,630
+is kind of almost makes you think twice
+ 
+
+421
+00:07:15,630 --> 00:07:16,790
+is kind of almost makes you think twice
+you're like actually what is this oh
+
+422
+00:07:16,790 --> 00:07:16,800
+you're like actually what is this oh
+ 
+
+423
+00:07:16,800 --> 00:07:18,500
+you're like actually what is this oh
+it's apps you know that means that
+
+424
+00:07:18,500 --> 00:07:18,510
+it's apps you know that means that
+ 
+
+425
+00:07:18,510 --> 00:07:21,470
+it's apps you know that means that
+you're going to be riding into this so
+
+426
+00:07:21,470 --> 00:07:21,480
+you're going to be riding into this so
+ 
+
+427
+00:07:21,480 --> 00:07:22,730
+you're going to be riding into this so
+that's kind of a little bit more useful
+
+428
+00:07:22,730 --> 00:07:22,740
+that's kind of a little bit more useful
+ 
+
+429
+00:07:22,740 --> 00:07:26,270
+that's kind of a little bit more useful
+but also the other benefit here is that
+
+430
+00:07:26,270 --> 00:07:26,280
+but also the other benefit here is that
+ 
+
+431
+00:07:26,280 --> 00:07:28,010
+but also the other benefit here is that
+you can actually specify you know null
+
+432
+00:07:28,010 --> 00:07:28,020
+you can actually specify you know null
+ 
+
+433
+00:07:28,020 --> 00:07:29,210
+you can actually specify you know null
+for one of these like I already care
+
+434
+00:07:29,210 --> 00:07:29,220
+for one of these like I already care
+ 
+
+435
+00:07:29,220 --> 00:07:30,500
+for one of these like I already care
+about the fragment shader so don't don't
+
+436
+00:07:30,500 --> 00:07:30,510
+about the fragment shader so don't don't
+ 
+
+437
+00:07:30,510 --> 00:07:31,880
+about the fragment shader so don't don't
+give me anything for that and that will
+
+438
+00:07:31,880 --> 00:07:31,890
+give me anything for that and that will
+ 
+
+439
+00:07:31,890 --> 00:07:33,290
+give me anything for that and that will
+work just fine because you're a
+
+440
+00:07:33,290 --> 00:07:33,300
+work just fine because you're a
+ 
+
+441
+00:07:33,300 --> 00:07:35,390
+work just fine because you're a
+specified null now since you're taking
+
+442
+00:07:35,390 --> 00:07:35,400
+specified null now since you're taking
+ 
+
+443
+00:07:35,400 --> 00:07:37,400
+specified null now since you're taking
+in a pointer and this function handles
+
+444
+00:07:37,400 --> 00:07:37,410
+in a pointer and this function handles
+ 
+
+445
+00:07:37,410 --> 00:07:39,950
+in a pointer and this function handles
+that correctly so that's kind of the as
+
+446
+00:07:39,950 --> 00:07:39,960
+that correctly so that's kind of the as
+ 
+
+447
+00:07:39,960 --> 00:07:42,500
+that correctly so that's kind of the as
+input parameters kind of way of dealing
+
+448
+00:07:42,500 --> 00:07:42,510
+input parameters kind of way of dealing
+ 
+
+449
+00:07:42,510 --> 00:07:44,090
+input parameters kind of way of dealing
+with multiple return types let's talk
+
+450
+00:07:44,090 --> 00:07:44,100
+with multiple return types let's talk
+ 
+
+451
+00:07:44,100 --> 00:07:45,740
+with multiple return types let's talk
+about another kind of simple way that
+
+452
+00:07:45,740 --> 00:07:45,750
+about another kind of simple way that
+ 
+
+453
+00:07:45,750 --> 00:07:47,840
+about another kind of simple way that
+you can probably think of by yourself as
+
+454
+00:07:47,840 --> 00:07:47,850
+you can probably think of by yourself as
+ 
+
+455
+00:07:47,850 --> 00:07:49,610
+you can probably think of by yourself as
+well and that is just returning an array
+
+456
+00:07:49,610 --> 00:07:49,620
+well and that is just returning an array
+ 
+
+457
+00:07:49,620 --> 00:07:52,400
+well and that is just returning an array
+right so we could return an array in the
+
+458
+00:07:52,400 --> 00:07:52,410
+right so we could return an array in the
+ 
+
+459
+00:07:52,410 --> 00:07:54,140
+right so we could return an array in the
+form of just returning a pointer like
+
+460
+00:07:54,140 --> 00:07:54,150
+form of just returning a pointer like
+ 
+
+461
+00:07:54,150 --> 00:07:56,030
+form of just returning a pointer like
+this and then at the end here so let's
+
+462
+00:07:56,030 --> 00:07:56,040
+this and then at the end here so let's
+ 
+
+463
+00:07:56,040 --> 00:07:58,070
+this and then at the end here so let's
+get rid of these extra parameters at the
+
+464
+00:07:58,070 --> 00:07:58,080
+get rid of these extra parameters at the
+ 
+
+465
+00:07:58,080 --> 00:08:00,890
+get rid of these extra parameters at the
+end here we can basically just say
+
+466
+00:08:00,890 --> 00:08:00,900
+end here we can basically just say
+ 
+
+467
+00:08:00,900 --> 00:08:04,400
+end here we can basically just say
+return new STD string which is our new
+
+468
+00:08:04,400 --> 00:08:04,410
+return new STD string which is our new
+ 
+
+469
+00:08:04,410 --> 00:08:06,200
+return new STD string which is our new
+array which is going to be based in
+
+470
+00:08:06,200 --> 00:08:06,210
+array which is going to be based in
+ 
+
+471
+00:08:06,210 --> 00:08:07,400
+array which is going to be based in
+array of two and then we can kind of
+
+472
+00:08:07,400 --> 00:08:07,410
+array of two and then we can kind of
+ 
+
+473
+00:08:07,410 --> 00:08:09,800
+array of two and then we can kind of
+just pipe pipe in or just put in you
+
+474
+00:08:09,800 --> 00:08:09,810
+just pipe pipe in or just put in you
+ 
+
+475
+00:08:09,810 --> 00:08:10,820
+just pipe pipe in or just put in you
+know I've got a shredder and our
+
+476
+00:08:10,820 --> 00:08:10,830
+know I've got a shredder and our
+ 
+
+477
+00:08:10,830 --> 00:08:11,930
+know I've got a shredder and our
+fragment shader like this
+
+478
+00:08:11,930 --> 00:08:11,940
+fragment shader like this
+ 
+
+479
+00:08:11,940 --> 00:08:14,030
+fragment shader like this
+now the unfortunate part with this is
+
+480
+00:08:14,030 --> 00:08:14,040
+now the unfortunate part with this is
+ 
+
+481
+00:08:14,040 --> 00:08:15,830
+now the unfortunate part with this is
+that we are using the new key aware so
+
+482
+00:08:15,830 --> 00:08:15,840
+that we are using the new key aware so
+ 
+
+483
+00:08:15,840 --> 00:08:17,780
+that we are using the new key aware so
+we are causing a heap allocation to
+
+484
+00:08:17,780 --> 00:08:17,790
+we are causing a heap allocation to
+ 
+
+485
+00:08:17,790 --> 00:08:19,760
+we are causing a heap allocation to
+happen I would like to avoid doing that
+
+486
+00:08:19,760 --> 00:08:19,770
+happen I would like to avoid doing that
+ 
+
+487
+00:08:19,770 --> 00:08:21,860
+happen I would like to avoid doing that
+especially because these strings already
+
+488
+00:08:21,860 --> 00:08:21,870
+especially because these strings already
+ 
+
+489
+00:08:21,870 --> 00:08:23,690
+especially because these strings already
+are kind of heap allocating and yet
+
+490
+00:08:23,690 --> 00:08:23,700
+are kind of heap allocating and yet
+ 
+
+491
+00:08:23,700 --> 00:08:24,470
+are kind of heap allocating and yet
+don't want to talk too much about
+
+492
+00:08:24,470 --> 00:08:24,480
+don't want to talk too much about
+ 
+
+493
+00:08:24,480 --> 00:08:26,720
+don't want to talk too much about
+performance obviously in this video but
+
+494
+00:08:26,720 --> 00:08:26,730
+performance obviously in this video but
+ 
+
+495
+00:08:26,730 --> 00:08:28,670
+performance obviously in this video but
+just keep that in mind that I kind of
+
+496
+00:08:28,670 --> 00:08:28,680
+just keep that in mind that I kind of
+ 
+
+497
+00:08:28,680 --> 00:08:30,409
+just keep that in mind that I kind of
+not a bit know each fan of that but we
+
+498
+00:08:30,409 --> 00:08:30,419
+not a bit know each fan of that but we
+ 
+
+499
+00:08:30,419 --> 00:08:32,180
+not a bit know each fan of that but we
+do get an array back and we can
+
+500
+00:08:32,180 --> 00:08:32,190
+do get an array back and we can
+ 
+
+501
+00:08:32,190 --> 00:08:35,630
+do get an array back and we can
+obviously deal with it just by setting
+
+502
+00:08:35,630 --> 00:08:35,640
+obviously deal with it just by setting
+ 
+
+503
+00:08:35,640 --> 00:08:39,050
+obviously deal with it just by setting
+this equal to s city string
+
+504
+00:08:39,050 --> 00:08:39,060
+this equal to s city string
+ 
+
+505
+00:08:39,060 --> 00:08:42,200
+this equal to s city string
+shadows or sources now this type of
+
+506
+00:08:42,200 --> 00:08:42,210
+shadows or sources now this type of
+ 
+
+507
+00:08:42,210 --> 00:08:44,060
+shadows or sources now this type of
+array is a little bit annoying because
+
+508
+00:08:44,060 --> 00:08:44,070
+array is a little bit annoying because
+ 
+
+509
+00:08:44,070 --> 00:08:45,980
+array is a little bit annoying because
+we don't know how big it is right it's
+
+510
+00:08:45,980 --> 00:08:45,990
+we don't know how big it is right it's
+ 
+
+511
+00:08:45,990 --> 00:08:48,710
+we don't know how big it is right it's
+just a pointer so the more C++ way of
+
+512
+00:08:48,710 --> 00:08:48,720
+just a pointer so the more C++ way of
+ 
+
+513
+00:08:48,720 --> 00:08:50,269
+just a pointer so the more C++ way of
+doing this will probably be just to
+
+514
+00:08:50,269 --> 00:08:50,279
+doing this will probably be just to
+ 
+
+515
+00:08:50,279 --> 00:08:53,510
+doing this will probably be just to
+return an STD array the tide would be
+
+516
+00:08:53,510 --> 00:08:53,520
+return an STD array the tide would be
+ 
+
+517
+00:08:53,520 --> 00:08:55,160
+return an STD array the tide would be
+string and the size would be to okay
+
+518
+00:08:55,160 --> 00:08:55,170
+string and the size would be to okay
+ 
+
+519
+00:08:55,170 --> 00:08:57,740
+string and the size would be to okay
+that's pretty simple and then we can
+
+520
+00:08:57,740 --> 00:08:57,750
+that's pretty simple and then we can
+ 
+
+521
+00:08:57,750 --> 00:08:59,870
+that's pretty simple and then we can
+just basically return an array a city
+
+522
+00:08:59,870 --> 00:08:59,880
+just basically return an array a city
+ 
+
+523
+00:08:59,880 --> 00:09:02,240
+just basically return an array a city
+string and - and I don't actually know
+
+524
+00:09:02,240 --> 00:09:02,250
+string and - and I don't actually know
+ 
+
+525
+00:09:02,250 --> 00:09:04,430
+string and - and I don't actually know
+how to actually take parameters in or if
+
+526
+00:09:04,430 --> 00:09:04,440
+how to actually take parameters in or if
+ 
+
+527
+00:09:04,440 --> 00:09:06,980
+how to actually take parameters in or if
+it even does take parameters in no clue
+
+528
+00:09:06,980 --> 00:09:06,990
+it even does take parameters in no clue
+ 
+
+529
+00:09:06,990 --> 00:09:08,120
+it even does take parameters in no clue
+but you guys kind of get the point
+
+530
+00:09:08,120 --> 00:09:08,130
+but you guys kind of get the point
+ 
+
+531
+00:09:08,130 --> 00:09:09,650
+but you guys kind of get the point
+whatever the syntax is I don't really
+
+532
+00:09:09,650 --> 00:09:09,660
+whatever the syntax is I don't really
+ 
+
+533
+00:09:09,660 --> 00:09:11,360
+whatever the syntax is I don't really
+use standard right very often because
+
+534
+00:09:11,360 --> 00:09:11,370
+use standard right very often because
+ 
+
+535
+00:09:11,370 --> 00:09:13,400
+use standard right very often because
+you can tell you probably have to
+
+536
+00:09:13,400 --> 00:09:13,410
+you can tell you probably have to
+ 
+
+537
+00:09:13,410 --> 00:09:14,720
+you can tell you probably have to
+actually well one way you could
+
+538
+00:09:14,720 --> 00:09:14,730
+actually well one way you could
+ 
+
+539
+00:09:14,730 --> 00:09:16,970
+actually well one way you could
+definitely do it I guess I should show
+
+540
+00:09:16,970 --> 00:09:16,980
+definitely do it I guess I should show
+ 
+
+541
+00:09:16,980 --> 00:09:19,579
+definitely do it I guess I should show
+some working code right as you could
+
+542
+00:09:19,579 --> 00:09:19,589
+some working code right as you could
+ 
+
+543
+00:09:19,589 --> 00:09:20,900
+some working code right as you could
+basically just create the array like
+
+544
+00:09:20,900 --> 00:09:20,910
+basically just create the array like
+ 
+
+545
+00:09:20,910 --> 00:09:23,480
+basically just create the array like
+this call it you know results and then
+
+546
+00:09:23,480 --> 00:09:23,490
+this call it you know results and then
+ 
+
+547
+00:09:23,490 --> 00:09:28,250
+this call it you know results and then
+just result 0 equals vs and results 2 or
+
+548
+00:09:28,250 --> 00:09:28,260
+just result 0 equals vs and results 2 or
+ 
+
+549
+00:09:28,260 --> 00:09:31,060
+just result 0 equals vs and results 2 or
+1 equals FS like that and return results
+
+550
+00:09:31,060 --> 00:09:31,070
+1 equals FS like that and return results
+ 
+
+551
+00:09:31,070 --> 00:09:33,380
+1 equals FS like that and return results
+now what's wrong with this incomplete
+
+552
+00:09:33,380 --> 00:09:33,390
+now what's wrong with this incomplete
+ 
+
+553
+00:09:33,390 --> 00:09:35,360
+now what's wrong with this incomplete
+I'm not allowed I'm not sure is happy
+
+554
+00:09:35,360 --> 00:09:35,370
+I'm not allowed I'm not sure is happy
+ 
+
+555
+00:09:35,370 --> 00:09:38,440
+I'm not allowed I'm not sure is happy
+about me using array let's include array
+
+556
+00:09:38,440 --> 00:09:38,450
+about me using array let's include array
+ 
+
+557
+00:09:38,450 --> 00:09:40,190
+about me using array let's include array
+and there you go
+
+558
+00:09:40,190 --> 00:09:40,200
+and there you go
+ 
+
+559
+00:09:40,200 --> 00:09:41,870
+and there you go
+all right cool that's one way to do it
+
+560
+00:09:41,870 --> 00:09:41,880
+all right cool that's one way to do it
+ 
+
+561
+00:09:41,880 --> 00:09:44,870
+all right cool that's one way to do it
+if you want an array now this shader
+
+562
+00:09:44,870 --> 00:09:44,880
+if you want an array now this shader
+ 
+
+563
+00:09:44,880 --> 00:09:47,240
+if you want an array now this shader
+function specifically could be fairly
+
+564
+00:09:47,240 --> 00:09:47,250
+function specifically could be fairly
+ 
+
+565
+00:09:47,250 --> 00:09:49,370
+function specifically could be fairly
+variable in the fact that we might have
+
+566
+00:09:49,370 --> 00:09:49,380
+variable in the fact that we might have
+ 
+
+567
+00:09:49,380 --> 00:09:51,200
+variable in the fact that we might have
+more than two types so another way to do
+
+568
+00:09:51,200 --> 00:09:51,210
+more than two types so another way to do
+ 
+
+569
+00:09:51,210 --> 00:09:53,030
+more than two types so another way to do
+this would just be to returning to to
+
+570
+00:09:53,030 --> 00:09:53,040
+this would just be to returning to to
+ 
+
+571
+00:09:53,040 --> 00:09:55,370
+this would just be to returning to to
+return a vector the difference between
+
+572
+00:09:55,370 --> 00:09:55,380
+return a vector the difference between
+ 
+
+573
+00:09:55,380 --> 00:09:57,260
+return a vector the difference between
+this and the array method that I just
+
+574
+00:09:57,260 --> 00:09:57,270
+this and the array method that I just
+ 
+
+575
+00:09:57,270 --> 00:09:58,579
+this and the array method that I just
+showed you so let's include vector
+
+576
+00:09:58,579 --> 00:09:58,589
+showed you so let's include vector
+ 
+
+577
+00:09:58,589 --> 00:10:00,350
+showed you so let's include vector
+instead the difference between the two
+
+578
+00:10:00,350 --> 00:10:00,360
+instead the difference between the two
+ 
+
+579
+00:10:00,360 --> 00:10:04,760
+instead the difference between the two
+types is primarily the fact that arrays
+
+580
+00:10:04,760 --> 00:10:04,770
+types is primarily the fact that arrays
+ 
+
+581
+00:10:04,770 --> 00:10:06,650
+types is primarily the fact that arrays
+can be written on the stack where as
+
+582
+00:10:06,650 --> 00:10:06,660
+can be written on the stack where as
+ 
+
+583
+00:10:06,660 --> 00:10:08,090
+can be written on the stack where as
+vectors gonna store its underlying
+
+584
+00:10:08,090 --> 00:10:08,100
+vectors gonna store its underlying
+ 
+
+585
+00:10:08,100 --> 00:10:09,829
+vectors gonna store its underlying
+storage on the heap so technically
+
+586
+00:10:09,829 --> 00:10:09,839
+storage on the heap so technically
+ 
+
+587
+00:10:09,839 --> 00:10:11,930
+storage on the heap so technically
+returning in a standard ray would
+
+588
+00:10:11,930 --> 00:10:11,940
+returning in a standard ray would
+ 
+
+589
+00:10:11,940 --> 00:10:15,440
+returning in a standard ray would
+actually be faster but the vector way
+
+590
+00:10:15,440 --> 00:10:15,450
+actually be faster but the vector way
+ 
+
+591
+00:10:15,450 --> 00:10:17,150
+actually be faster but the vector way
+again would be very similar which is
+
+592
+00:10:17,150 --> 00:10:17,160
+again would be very similar which is
+ 
+
+593
+00:10:17,160 --> 00:10:19,180
+again would be very similar which is
+create a vector kind of at the end here
+
+594
+00:10:19,180 --> 00:10:19,190
+create a vector kind of at the end here
+ 
+
+595
+00:10:19,190 --> 00:10:21,260
+create a vector kind of at the end here
+with the results and then just assign
+
+596
+00:10:21,260 --> 00:10:21,270
+with the results and then just assign
+ 
+
+597
+00:10:21,270 --> 00:10:22,730
+with the results and then just assign
+results of done and return results and
+
+598
+00:10:22,730 --> 00:10:22,740
+results of done and return results and
+ 
+
+599
+00:10:22,740 --> 00:10:23,930
+results of done and return results and
+that's kind of it we're done
+
+600
+00:10:23,930 --> 00:10:23,940
+that's kind of it we're done
+ 
+
+601
+00:10:23,940 --> 00:10:26,060
+that's kind of it we're done
+ok pretty simple we could all with
+
+602
+00:10:26,060 --> 00:10:26,070
+ok pretty simple we could all with
+ 
+
+603
+00:10:26,070 --> 00:10:28,250
+ok pretty simple we could all with
+always you know reserved you know two or
+
+604
+00:10:28,250 --> 00:10:28,260
+always you know reserved you know two or
+ 
+
+605
+00:10:28,260 --> 00:10:30,470
+always you know reserved you know two or
+whatever spots if we wanted to be really
+
+606
+00:10:30,470 --> 00:10:30,480
+whatever spots if we wanted to be really
+ 
+
+607
+00:10:30,480 --> 00:10:32,300
+whatever spots if we wanted to be really
+kind of a damn thick about our memory
+
+608
+00:10:32,300 --> 00:10:32,310
+kind of a damn thick about our memory
+ 
+
+609
+00:10:32,310 --> 00:10:33,630
+kind of a damn thick about our memory
+allocated
+
+610
+00:10:33,630 --> 00:10:33,640
+allocated
+ 
+
+611
+00:10:33,640 --> 00:10:35,670
+allocated
+reallocation and recopy and all that
+
+612
+00:10:35,670 --> 00:10:35,680
+reallocation and recopy and all that
+ 
+
+613
+00:10:35,680 --> 00:10:37,740
+reallocation and recopy and all that
+stuff but it's fine for now again not
+
+614
+00:10:37,740 --> 00:10:37,750
+stuff but it's fine for now again not
+ 
+
+615
+00:10:37,750 --> 00:10:39,810
+stuff but it's fine for now again not
+really talking about performance let's
+
+616
+00:10:39,810 --> 00:10:39,820
+really talking about performance let's
+ 
+
+617
+00:10:39,820 --> 00:10:43,410
+really talking about performance let's
+let's keep going okay so there we go
+
+618
+00:10:43,410 --> 00:10:43,420
+let's keep going okay so there we go
+ 
+
+619
+00:10:43,420 --> 00:10:44,880
+let's keep going okay so there we go
+I've shown you guys some ways to return
+
+620
+00:10:44,880 --> 00:10:44,890
+I've shown you guys some ways to return
+ 
+
+621
+00:10:44,890 --> 00:10:46,260
+I've shown you guys some ways to return
+multiple return types obviously the
+
+622
+00:10:46,260 --> 00:10:46,270
+multiple return types obviously the
+ 
+
+623
+00:10:46,270 --> 00:10:48,180
+multiple return types obviously the
+veteran the array kind of ways only work
+
+624
+00:10:48,180 --> 00:10:48,190
+veteran the array kind of ways only work
+ 
+
+625
+00:10:48,190 --> 00:10:50,100
+veteran the array kind of ways only work
+if the types are the same let's talk
+
+626
+00:10:50,100 --> 00:10:50,110
+if the types are the same let's talk
+ 
+
+627
+00:10:50,110 --> 00:10:52,460
+if the types are the same let's talk
+about a universal way for us to return
+
+628
+00:10:52,460 --> 00:10:52,470
+about a universal way for us to return
+ 
+
+629
+00:10:52,470 --> 00:10:55,740
+about a universal way for us to return
+kind of two different variables that may
+
+630
+00:10:55,740 --> 00:10:55,750
+kind of two different variables that may
+ 
+
+631
+00:10:55,750 --> 00:10:58,110
+kind of two different variables that may
+or may not be of varying types and this
+
+632
+00:10:58,110 --> 00:10:58,120
+or may not be of varying types and this
+ 
+
+633
+00:10:58,120 --> 00:11:00,570
+or may not be of varying types and this
+is specifically a way that c++ actually
+
+634
+00:11:00,570 --> 00:11:00,580
+is specifically a way that c++ actually
+ 
+
+635
+00:11:00,580 --> 00:11:03,690
+is specifically a way that c++ actually
+provides for us and the two kind of ways
+
+636
+00:11:03,690 --> 00:11:03,700
+provides for us and the two kind of ways
+ 
+
+637
+00:11:03,700 --> 00:11:04,980
+provides for us and the two kind of ways
+we'll talk about is something called a
+
+638
+00:11:04,980 --> 00:11:04,990
+we'll talk about is something called a
+ 
+
+639
+00:11:04,990 --> 00:11:07,200
+we'll talk about is something called a
+tuple and something called a pair now a
+
+640
+00:11:07,200 --> 00:11:07,210
+tuple and something called a pair now a
+ 
+
+641
+00:11:07,210 --> 00:11:10,320
+tuple and something called a pair now a
+tuple is basically a class which can
+
+642
+00:11:10,320 --> 00:11:10,330
+tuple is basically a class which can
+ 
+
+643
+00:11:10,330 --> 00:11:12,630
+tuple is basically a class which can
+contain X amount of variables and it
+
+644
+00:11:12,630 --> 00:11:12,640
+contain X amount of variables and it
+ 
+
+645
+00:11:12,640 --> 00:11:15,570
+contain X amount of variables and it
+doesn't care about the types okay so to
+
+646
+00:11:15,570 --> 00:11:15,580
+doesn't care about the types okay so to
+ 
+
+647
+00:11:15,580 --> 00:11:17,310
+doesn't care about the types okay so to
+show you guys what that would look like
+
+648
+00:11:17,310 --> 00:11:17,320
+show you guys what that would look like
+ 
+
+649
+00:11:17,320 --> 00:11:19,410
+show you guys what that would look like
+it's basically what we would return is
+
+650
+00:11:19,410 --> 00:11:19,420
+it's basically what we would return is
+ 
+
+651
+00:11:19,420 --> 00:11:26,070
+it's basically what we would return is
+the standard tuple of STD string comma
+
+652
+00:11:26,070 --> 00:11:26,080
+the standard tuple of STD string comma
+ 
+
+653
+00:11:26,080 --> 00:11:28,140
+the standard tuple of STD string comma
+SC D string if we also wanted to return
+
+654
+00:11:28,140 --> 00:11:28,150
+SC D string if we also wanted to return
+ 
+
+655
+00:11:28,150 --> 00:11:30,420
+SC D string if we also wanted to return
+an integer we can just go comma int okay
+
+656
+00:11:30,420 --> 00:11:30,430
+an integer we can just go comma int okay
+ 
+
+657
+00:11:30,430 --> 00:11:33,060
+an integer we can just go comma int okay
+like that so two kind of strings of what
+
+658
+00:11:33,060 --> 00:11:33,070
+like that so two kind of strings of what
+ 
+
+659
+00:11:33,070 --> 00:11:34,770
+like that so two kind of strings of what
+we're returning now we have to include
+
+660
+00:11:34,770 --> 00:11:34,780
+we're returning now we have to include
+ 
+
+661
+00:11:34,780 --> 00:11:36,530
+we're returning now we have to include
+two things for this we have to include
+
+662
+00:11:36,530 --> 00:11:36,540
+two things for this we have to include
+ 
+
+663
+00:11:36,540 --> 00:11:39,420
+two things for this we have to include
+utility which actually contains the
+
+664
+00:11:39,420 --> 00:11:39,430
+utility which actually contains the
+ 
+
+665
+00:11:39,430 --> 00:11:42,360
+utility which actually contains the
+tuple so if we go back here will include
+
+666
+00:11:42,360 --> 00:11:42,370
+tuple so if we go back here will include
+ 
+
+667
+00:11:42,370 --> 00:11:43,740
+tuple so if we go back here will include
+utility actually I'm not even sure if
+
+668
+00:11:43,740 --> 00:11:43,750
+utility actually I'm not even sure if
+ 
+
+669
+00:11:43,750 --> 00:11:46,110
+utility actually I'm not even sure if
+utility does contain triple what was the
+
+670
+00:11:46,110 --> 00:11:46,120
+utility does contain triple what was the
+ 
+
+671
+00:11:46,120 --> 00:11:46,560
+utility does contain triple what was the
+other one
+
+672
+00:11:46,560 --> 00:11:46,570
+other one
+ 
+
+673
+00:11:46,570 --> 00:11:48,330
+other one
+there's utility and then there's also I
+
+674
+00:11:48,330 --> 00:11:48,340
+there's utility and then there's also I
+ 
+
+675
+00:11:48,340 --> 00:11:50,900
+there's utility and then there's also I
+use this so so rally you guys can tell
+
+676
+00:11:50,900 --> 00:11:50,910
+use this so so rally you guys can tell
+ 
+
+677
+00:11:50,910 --> 00:11:54,630
+use this so so rally you guys can tell
+utility and is it functional maybe isn't
+
+678
+00:11:54,630 --> 00:11:54,640
+utility and is it functional maybe isn't
+ 
+
+679
+00:11:54,640 --> 00:11:56,640
+utility and is it functional maybe isn't
+functional yesin functional so sorry
+
+680
+00:11:56,640 --> 00:11:56,650
+functional yesin functional so sorry
+ 
+
+681
+00:11:56,650 --> 00:11:59,160
+functional yesin functional so sorry
+tuple is in functional utilities what
+
+682
+00:11:59,160 --> 00:11:59,170
+tuple is in functional utilities what
+ 
+
+683
+00:11:59,170 --> 00:12:01,200
+tuple is in functional utilities what
+we're going to use to make the tuple so
+
+684
+00:12:01,200 --> 00:12:01,210
+we're going to use to make the tuple so
+ 
+
+685
+00:12:01,210 --> 00:12:04,890
+we're going to use to make the tuple so
+I'm going to return STV make pair okay
+
+686
+00:12:04,890 --> 00:12:04,900
+I'm going to return STV make pair okay
+ 
+
+687
+00:12:04,900 --> 00:12:06,750
+I'm going to return STV make pair okay
+which is in the kind of utility thing
+
+688
+00:12:06,750 --> 00:12:06,760
+which is in the kind of utility thing
+ 
+
+689
+00:12:06,760 --> 00:12:08,760
+which is in the kind of utility thing
+specifically for making two kind of
+
+690
+00:12:08,760 --> 00:12:08,770
+specifically for making two kind of
+ 
+
+691
+00:12:08,770 --> 00:12:13,530
+specifically for making two kind of
+things here STD string STD string and
+
+692
+00:12:13,530 --> 00:12:13,540
+things here STD string STD string and
+ 
+
+693
+00:12:13,540 --> 00:12:16,920
+things here STD string STD string and
+then we'll just pass in a BS in FS okay
+
+694
+00:12:16,920 --> 00:12:16,930
+then we'll just pass in a BS in FS okay
+ 
+
+695
+00:12:16,930 --> 00:12:19,200
+then we'll just pass in a BS in FS okay
+just like that now we know instance
+
+696
+00:12:19,200 --> 00:12:19,210
+just like that now we know instance
+ 
+
+697
+00:12:19,210 --> 00:12:20,580
+just like that now we know instance
+currently matches the argument list
+
+698
+00:12:20,580 --> 00:12:20,590
+currently matches the argument list
+ 
+
+699
+00:12:20,590 --> 00:12:21,990
+currently matches the argument list
+that's fantastic up probably not
+
+700
+00:12:21,990 --> 00:12:22,000
+that's fantastic up probably not
+ 
+
+701
+00:12:22,000 --> 00:12:24,540
+that's fantastic up probably not
+including something okay so basically we
+
+702
+00:12:24,540 --> 00:12:24,550
+including something okay so basically we
+ 
+
+703
+00:12:24,550 --> 00:12:26,010
+including something okay so basically we
+just don't need I mean we don't need to
+
+704
+00:12:26,010 --> 00:12:26,020
+just don't need I mean we don't need to
+ 
+
+705
+00:12:26,020 --> 00:12:27,900
+just don't need I mean we don't need to
+specify to here we've had we don't need
+
+706
+00:12:27,900 --> 00:12:27,910
+specify to here we've had we don't need
+ 
+
+707
+00:12:27,910 --> 00:12:29,310
+specify to here we've had we don't need
+a specify the template argument at all
+
+708
+00:12:29,310 --> 00:12:29,320
+a specify the template argument at all
+ 
+
+709
+00:12:29,320 --> 00:12:31,230
+a specify the template argument at all
+it'll work that out by itself so just
+
+710
+00:12:31,230 --> 00:12:31,240
+it'll work that out by itself so just
+ 
+
+711
+00:12:31,240 --> 00:12:32,940
+it'll work that out by itself so just
+return a city make pair like that and
+
+712
+00:12:32,940 --> 00:12:32,950
+return a city make pair like that and
+ 
+
+713
+00:12:32,950 --> 00:12:34,800
+return a city make pair like that and
+it's called that returns well in this
+
+714
+00:12:34,800 --> 00:12:34,810
+it's called that returns well in this
+ 
+
+715
+00:12:34,810 --> 00:12:36,690
+it's called that returns well in this
+case our tuple for us the way that we
+
+716
+00:12:36,690 --> 00:12:36,700
+case our tuple for us the way that we
+ 
+
+717
+00:12:36,700 --> 00:12:38,040
+case our tuple for us the way that we
+would use this we ask this it'll be
+
+718
+00:12:38,040 --> 00:12:38,050
+would use this we ask this it'll be
+ 
+
+719
+00:12:38,050 --> 00:12:39,750
+would use this we ask this it'll be
+returning a tuple here yes like it
+
+720
+00:12:39,750 --> 00:12:39,760
+returning a tuple here yes like it
+ 
+
+721
+00:12:39,760 --> 00:12:44,700
+returning a tuple here yes like it
+basically just call STD tuple you know
+
+722
+00:12:44,700 --> 00:12:44,710
+basically just call STD tuple you know
+ 
+
+723
+00:12:44,710 --> 00:12:47,340
+basically just call STD tuple you know
+STD string STD a string
+
+724
+00:12:47,340 --> 00:12:47,350
+STD string STD a string
+ 
+
+725
+00:12:47,350 --> 00:12:51,180
+STD string STD a string
+our sources now and to provide to
+
+726
+00:12:51,180 --> 00:12:51,190
+our sources now and to provide to
+ 
+
+727
+00:12:51,190 --> 00:12:53,970
+our sources now and to provide to
+provide the actual credit function this
+
+728
+00:12:53,970 --> 00:12:53,980
+provide the actual credit function this
+ 
+
+729
+00:12:53,980 --> 00:12:55,500
+provide the actual credit function this
+is the type but I would probably if I
+
+730
+00:12:55,500 --> 00:12:55,510
+is the type but I would probably if I
+ 
+
+731
+00:12:55,510 --> 00:12:56,820
+is the type but I would probably if I
+was using tuples I probably just use
+
+732
+00:12:56,820 --> 00:12:56,830
+was using tuples I probably just use
+ 
+
+733
+00:12:56,830 --> 00:12:59,430
+was using tuples I probably just use
+order like that by the way to actually
+
+734
+00:12:59,430 --> 00:12:59,440
+order like that by the way to actually
+ 
+
+735
+00:12:59,440 --> 00:13:01,140
+order like that by the way to actually
+get the data out of out of the tuple
+
+736
+00:13:01,140 --> 00:13:01,150
+get the data out of out of the tuple
+ 
+
+737
+00:13:01,150 --> 00:13:03,840
+get the data out of out of the tuple
+though this is the part that I hate what
+
+738
+00:13:03,840 --> 00:13:03,850
+though this is the part that I hate what
+ 
+
+739
+00:13:03,850 --> 00:13:07,050
+though this is the part that I hate what
+you actually need to do is use s City
+
+740
+00:13:07,050 --> 00:13:07,060
+you actually need to do is use s City
+ 
+
+741
+00:13:07,060 --> 00:13:10,230
+you actually need to do is use s City
+yet and then the template argument here
+
+742
+00:13:10,230 --> 00:13:10,240
+yet and then the template argument here
+ 
+
+743
+00:13:10,240 --> 00:13:14,910
+yet and then the template argument here
+is the index so zero and then the tuple
+
+744
+00:13:14,910 --> 00:13:14,920
+is the index so zero and then the tuple
+ 
+
+745
+00:13:14,920 --> 00:13:16,110
+is the index so zero and then the tuple
+you want to get it from
+
+746
+00:13:16,110 --> 00:13:16,120
+you want to get it from
+ 
+
+747
+00:13:16,120 --> 00:13:18,150
+you want to get it from
+so sources that is what actually gives
+
+748
+00:13:18,150 --> 00:13:18,160
+so sources that is what actually gives
+ 
+
+749
+00:13:18,160 --> 00:13:20,640
+so sources that is what actually gives
+you your vertex shader source code like
+
+750
+00:13:20,640 --> 00:13:20,650
+you your vertex shader source code like
+ 
+
+751
+00:13:20,650 --> 00:13:23,010
+you your vertex shader source code like
+that okay so to get that to work in the
+
+752
+00:13:23,010 --> 00:13:23,020
+that okay so to get that to work in the
+ 
+
+753
+00:13:23,020 --> 00:13:27,690
+that okay so to get that to work in the
+Creator function we pass in yesterday
+
+754
+00:13:27,690 --> 00:13:27,700
+Creator function we pass in yesterday
+ 
+
+755
+00:13:27,700 --> 00:13:31,320
+Creator function we pass in yesterday
+get 0 and s to be get 1 okay and that's
+
+756
+00:13:31,320 --> 00:13:31,330
+get 0 and s to be get 1 okay and that's
+ 
+
+757
+00:13:31,330 --> 00:13:33,300
+get 0 and s to be get 1 okay and that's
+how we actually get those two things out
+
+758
+00:13:33,300 --> 00:13:33,310
+how we actually get those two things out
+ 
+
+759
+00:13:33,310 --> 00:13:35,700
+how we actually get those two things out
+about this to me that's horrendous code
+
+760
+00:13:35,700 --> 00:13:35,710
+about this to me that's horrendous code
+ 
+
+761
+00:13:35,710 --> 00:13:38,220
+about this to me that's horrendous code
+style I mean what is going on here first
+
+762
+00:13:38,220 --> 00:13:38,230
+style I mean what is going on here first
+ 
+
+763
+00:13:38,230 --> 00:13:41,610
+style I mean what is going on here first
+of all I hate this because well 0 and 1
+
+764
+00:13:41,610 --> 00:13:41,620
+of all I hate this because well 0 and 1
+ 
+
+765
+00:13:41,620 --> 00:13:43,830
+of all I hate this because well 0 and 1
+are essentially the names of our actual
+
+766
+00:13:43,830 --> 00:13:43,840
+are essentially the names of our actual
+ 
+
+767
+00:13:43,840 --> 00:13:46,080
+are essentially the names of our actual
+variables like it's hard to tell it's
+
+768
+00:13:46,080 --> 00:13:46,090
+variables like it's hard to tell it's
+ 
+
+769
+00:13:46,090 --> 00:13:47,100
+variables like it's hard to tell it's
+like which one's the vet I show you
+
+770
+00:13:47,100 --> 00:13:47,110
+like which one's the vet I show you
+ 
+
+771
+00:13:47,110 --> 00:13:49,950
+like which one's the vet I show you
+which one's the fragment I mean it
+
+772
+00:13:49,950 --> 00:13:49,960
+which one's the fragment I mean it
+ 
+
+773
+00:13:49,960 --> 00:13:51,180
+which one's the fragment I mean it
+logically obviously it makes sense that
+
+774
+00:13:51,180 --> 00:13:51,190
+logically obviously it makes sense that
+ 
+
+775
+00:13:51,190 --> 00:13:52,680
+logically obviously it makes sense that
+the first one's gonna be the vertex and
+
+776
+00:13:52,680 --> 00:13:52,690
+the first one's gonna be the vertex and
+ 
+
+777
+00:13:52,690 --> 00:13:53,970
+the first one's gonna be the vertex and
+then the fragment but someone who
+
+778
+00:13:53,970 --> 00:13:53,980
+then the fragment but someone who
+ 
+
+779
+00:13:53,980 --> 00:13:54,960
+then the fragment but someone who
+doesn't know what they're doing like it
+
+780
+00:13:54,960 --> 00:13:54,970
+doesn't know what they're doing like it
+ 
+
+781
+00:13:54,970 --> 00:13:56,550
+doesn't know what they're doing like it
+doesn't make sense because we're not
+
+782
+00:13:56,550 --> 00:13:56,560
+doesn't make sense because we're not
+ 
+
+783
+00:13:56,560 --> 00:13:58,190
+doesn't make sense because we're not
+dealing with names but isn't was numbers
+
+784
+00:13:58,190 --> 00:13:58,200
+dealing with names but isn't was numbers
+ 
+
+785
+00:13:58,200 --> 00:14:01,230
+dealing with names but isn't was numbers
+so these aren't named kind of named
+
+786
+00:14:01,230 --> 00:14:01,240
+so these aren't named kind of named
+ 
+
+787
+00:14:01,240 --> 00:14:03,840
+so these aren't named kind of named
+variables essentially in this case
+
+788
+00:14:03,840 --> 00:14:03,850
+variables essentially in this case
+ 
+
+789
+00:14:03,850 --> 00:14:05,430
+variables essentially in this case
+because when we have to we can just
+
+790
+00:14:05,430 --> 00:14:05,440
+because when we have to we can just
+ 
+
+791
+00:14:05,440 --> 00:14:08,220
+because when we have to we can just
+return an STD pair the only difference
+
+792
+00:14:08,220 --> 00:14:08,230
+return an STD pair the only difference
+ 
+
+793
+00:14:08,230 --> 00:14:10,290
+return an STD pair the only difference
+here by the way so we have an STD pair
+
+794
+00:14:10,290 --> 00:14:10,300
+here by the way so we have an STD pair
+ 
+
+795
+00:14:10,300 --> 00:14:12,180
+here by the way so we have an STD pair
+of string a string the only difference
+
+796
+00:14:12,180 --> 00:14:12,190
+of string a string the only difference
+ 
+
+797
+00:14:12,190 --> 00:14:16,920
+of string a string the only difference
+here is that we can still use s here you
+
+798
+00:14:16,920 --> 00:14:16,930
+here is that we can still use s here you
+ 
+
+799
+00:14:16,930 --> 00:14:19,020
+here is that we can still use s here you
+get and that will work fine but what we
+
+800
+00:14:19,020 --> 00:14:19,030
+get and that will work fine but what we
+ 
+
+801
+00:14:19,030 --> 00:14:21,150
+get and that will work fine but what we
+what we can also do is simplify a little
+
+802
+00:14:21,150 --> 00:14:21,160
+what we can also do is simplify a little
+ 
+
+803
+00:14:21,160 --> 00:14:24,090
+what we can also do is simplify a little
+bit by just using sources dot first like
+
+804
+00:14:24,090 --> 00:14:24,100
+bit by just using sources dot first like
+ 
+
+805
+00:14:24,100 --> 00:14:26,160
+bit by just using sources dot first like
+this okay because there's only gonna be
+
+806
+00:14:26,160 --> 00:14:26,170
+this okay because there's only gonna be
+ 
+
+807
+00:14:26,170 --> 00:14:28,320
+this okay because there's only gonna be
+two of them sources dot second as well
+
+808
+00:14:28,320 --> 00:14:28,330
+two of them sources dot second as well
+ 
+
+809
+00:14:28,330 --> 00:14:30,420
+two of them sources dot second as well
+because it's a pair okay so that's a
+
+810
+00:14:30,420 --> 00:14:30,430
+because it's a pair okay so that's a
+ 
+
+811
+00:14:30,430 --> 00:14:32,820
+because it's a pair okay so that's a
+little bit better just kind of in terms
+
+812
+00:14:32,820 --> 00:14:32,830
+little bit better just kind of in terms
+ 
+
+813
+00:14:32,830 --> 00:14:35,070
+little bit better just kind of in terms
+of syntax I feel like that's a little
+
+814
+00:14:35,070 --> 00:14:35,080
+of syntax I feel like that's a little
+ 
+
+815
+00:14:35,080 --> 00:14:37,710
+of syntax I feel like that's a little
+bit better but it still doesn't solve
+
+816
+00:14:37,710 --> 00:14:37,720
+bit better but it still doesn't solve
+ 
+
+817
+00:14:37,720 --> 00:14:38,820
+bit better but it still doesn't solve
+that problem because we don't know what
+
+818
+00:14:38,820 --> 00:14:38,830
+that problem because we don't know what
+ 
+
+819
+00:14:38,830 --> 00:14:40,140
+that problem because we don't know what
+the variables that what's first what is
+
+820
+00:14:40,140 --> 00:14:40,150
+the variables that what's first what is
+ 
+
+821
+00:14:40,150 --> 00:14:41,580
+the variables that what's first what is
+second I have no idea
+
+822
+00:14:41,580 --> 00:14:41,590
+second I have no idea
+ 
+
+823
+00:14:41,590 --> 00:14:44,670
+second I have no idea
+right it's not very clean so that's why
+
+824
+00:14:44,670 --> 00:14:44,680
+right it's not very clean so that's why
+ 
+
+825
+00:14:44,680 --> 00:14:47,190
+right it's not very clean so that's why
+I always come back to disrupt way of
+
+826
+00:14:47,190 --> 00:14:47,200
+I always come back to disrupt way of
+ 
+
+827
+00:14:47,200 --> 00:14:49,170
+I always come back to disrupt way of
+doing things right when we need to
+
+828
+00:14:49,170 --> 00:14:49,180
+doing things right when we need to
+ 
+
+829
+00:14:49,180 --> 00:14:50,910
+doing things right when we need to
+return multiple variables like this
+
+830
+00:14:50,910 --> 00:14:50,920
+return multiple variables like this
+ 
+
+831
+00:14:50,920 --> 00:14:53,970
+return multiple variables like this
+right I like to just create a struct
+
+832
+00:14:53,970 --> 00:14:53,980
+right I like to just create a struct
+ 
+
+833
+00:14:53,980 --> 00:14:56,430
+right I like to just create a struct
+called well in this case we can call it
+
+834
+00:14:56,430 --> 00:14:56,440
+called well in this case we can call it
+ 
+
+835
+00:14:56,440 --> 00:14:57,900
+called well in this case we can call it
+shader program source or something like
+
+836
+00:14:57,900 --> 00:14:57,910
+shader program source or something like
+ 
+
+837
+00:14:57,910 --> 00:14:58,260
+shader program source or something like
+that
+
+838
+00:14:58,260 --> 00:14:58,270
+that
+ 
+
+839
+00:14:58,270 --> 00:15:00,630
+that
+right and this is just going to
+
+840
+00:15:00,630 --> 00:15:00,640
+right and this is just going to
+ 
+
+841
+00:15:00,640 --> 00:15:02,280
+right and this is just going to
+basically be like returning a pair
+
+842
+00:15:02,280 --> 00:15:02,290
+basically be like returning a pair
+ 
+
+843
+00:15:02,290 --> 00:15:04,950
+basically be like returning a pair
+except our variables are named right I
+
+844
+00:15:04,950 --> 00:15:04,960
+except our variables are named right I
+ 
+
+845
+00:15:04,960 --> 00:15:07,620
+except our variables are named right I
+can make STD string here call it vertex
+
+846
+00:15:07,620 --> 00:15:07,630
+can make STD string here call it vertex
+ 
+
+847
+00:15:07,630 --> 00:15:11,370
+can make STD string here call it vertex
+source like that and then make another
+
+848
+00:15:11,370 --> 00:15:11,380
+source like that and then make another
+ 
+
+849
+00:15:11,380 --> 00:15:14,600
+source like that and then make another
+one for the fragment source like that
+
+850
+00:15:14,600 --> 00:15:14,610
+one for the fragment source like that
+ 
+
+851
+00:15:14,610 --> 00:15:16,440
+one for the fragment source like that
+okay
+
+852
+00:15:16,440 --> 00:15:16,450
+okay
+ 
+
+853
+00:15:16,450 --> 00:15:19,650
+okay
+and then just return shade a program
+
+854
+00:15:19,650 --> 00:15:19,660
+and then just return shade a program
+ 
+
+855
+00:15:19,660 --> 00:15:22,350
+and then just return shade a program
+source this is gonna like underline the
+
+856
+00:15:22,350 --> 00:15:22,360
+source this is gonna like underline the
+ 
+
+857
+00:15:22,360 --> 00:15:24,030
+source this is gonna like underline the
+underlying way that this works is this
+
+858
+00:15:24,030 --> 00:15:24,040
+underlying way that this works is this
+ 
+
+859
+00:15:24,040 --> 00:15:25,770
+underlying way that this works is this
+is just a pair right as a struct it's
+
+860
+00:15:25,770 --> 00:15:25,780
+is just a pair right as a struct it's
+ 
+
+861
+00:15:25,780 --> 00:15:27,360
+is just a pair right as a struct it's
+literally just two strings made up of
+
+862
+00:15:27,360 --> 00:15:27,370
+literally just two strings made up of
+ 
+
+863
+00:15:27,370 --> 00:15:28,920
+literally just two strings made up of
+two strings everything's gonna be
+
+864
+00:15:28,920 --> 00:15:28,930
+two strings everything's gonna be
+ 
+
+865
+00:15:28,930 --> 00:15:30,030
+two strings everything's gonna be
+created on the stack here if I just
+
+866
+00:15:30,030 --> 00:15:30,040
+created on the stack here if I just
+ 
+
+867
+00:15:30,040 --> 00:15:31,680
+created on the stack here if I just
+return a normal share the program source
+
+868
+00:15:31,680 --> 00:15:31,690
+return a normal share the program source
+ 
+
+869
+00:15:31,690 --> 00:15:33,480
+return a normal share the program source
+like this and then we can just simply
+
+870
+00:15:33,480 --> 00:15:33,490
+like this and then we can just simply
+ 
+
+871
+00:15:33,490 --> 00:15:36,540
+like this and then we can just simply
+return the vsfs just like that very easy
+
+872
+00:15:36,540 --> 00:15:36,550
+return the vsfs just like that very easy
+ 
+
+873
+00:15:36,550 --> 00:15:39,750
+return the vsfs just like that very easy
+to write looks great and when we
+
+874
+00:15:39,750 --> 00:15:39,760
+to write looks great and when we
+ 
+
+875
+00:15:39,760 --> 00:15:40,890
+to write looks great and when we
+actually come to use this instead of
+
+876
+00:15:40,890 --> 00:15:40,900
+actually come to use this instead of
+ 
+
+877
+00:15:40,900 --> 00:15:42,690
+actually come to use this instead of
+specifying first and second we can
+
+878
+00:15:42,690 --> 00:15:42,700
+specifying first and second we can
+ 
+
+879
+00:15:42,700 --> 00:15:45,060
+specifying first and second we can
+specify sources of vertex source and
+
+880
+00:15:45,060 --> 00:15:45,070
+specify sources of vertex source and
+ 
+
+881
+00:15:45,070 --> 00:15:47,160
+specify sources of vertex source and
+sources or fragments source like that
+
+882
+00:15:47,160 --> 00:15:47,170
+sources or fragments source like that
+ 
+
+883
+00:15:47,170 --> 00:15:49,620
+sources or fragments source like that
+and everything it just makes sense to me
+
+884
+00:15:49,620 --> 00:15:49,630
+and everything it just makes sense to me
+ 
+
+885
+00:15:49,630 --> 00:15:50,970
+and everything it just makes sense to me
+you need never gonna mix these up you're
+
+886
+00:15:50,970 --> 00:15:50,980
+you need never gonna mix these up you're
+ 
+
+887
+00:15:50,980 --> 00:15:52,350
+you need never gonna mix these up you're
+never gonna mix first and second or
+
+888
+00:15:52,350 --> 00:15:52,360
+never gonna mix first and second or
+ 
+
+889
+00:15:52,360 --> 00:15:54,060
+never gonna mix first and second or
+forget what they which ones first which
+
+890
+00:15:54,060 --> 00:15:54,070
+forget what they which ones first which
+ 
+
+891
+00:15:54,070 --> 00:15:55,410
+forget what they which ones first which
+one second never gonna makes any of that
+
+892
+00:15:55,410 --> 00:15:55,420
+one second never gonna makes any of that
+ 
+
+893
+00:15:55,420 --> 00:15:57,510
+one second never gonna makes any of that
+stuff up it's really easier dead-dead
+
+894
+00:15:57,510 --> 00:15:57,520
+stuff up it's really easier dead-dead
+ 
+
+895
+00:15:57,520 --> 00:16:00,450
+stuff up it's really easier dead-dead
+kind of easier to use and makes in my
+
+896
+00:16:00,450 --> 00:16:00,460
+kind of easier to use and makes in my
+ 
+
+897
+00:16:00,460 --> 00:16:02,040
+kind of easier to use and makes in my
+opinion the code much clearer up much
+
+898
+00:16:02,040 --> 00:16:02,050
+opinion the code much clearer up much
+ 
+
+899
+00:16:02,050 --> 00:16:04,020
+opinion the code much clearer up much
+easier to read so that is how I like to
+
+900
+00:16:04,020 --> 00:16:04,030
+easier to read so that is how I like to
+ 
+
+901
+00:16:04,030 --> 00:16:06,480
+easier to read so that is how I like to
+deal with multiple return types we went
+
+902
+00:16:06,480 --> 00:16:06,490
+deal with multiple return types we went
+ 
+
+903
+00:16:06,490 --> 00:16:08,130
+deal with multiple return types we went
+on quite and quite an adventure that I
+
+904
+00:16:08,130 --> 00:16:08,140
+on quite and quite an adventure that I
+ 
+
+905
+00:16:08,140 --> 00:16:09,630
+on quite and quite an adventure that I
+actually thought of a few things kind of
+
+906
+00:16:09,630 --> 00:16:09,640
+actually thought of a few things kind of
+ 
+
+907
+00:16:09,640 --> 00:16:12,120
+actually thought of a few things kind of
+on the spot as well so that's what these
+
+908
+00:16:12,120 --> 00:16:12,130
+on the spot as well so that's what these
+ 
+
+909
+00:16:12,130 --> 00:16:14,070
+on the spot as well so that's what these
+new style videos on the couch are all
+
+910
+00:16:14,070 --> 00:16:14,080
+new style videos on the couch are all
+ 
+
+911
+00:16:14,080 --> 00:16:16,200
+new style videos on the couch are all
+about this is our first kind of just
+
+912
+00:16:16,200 --> 00:16:16,210
+about this is our first kind of just
+ 
+
+913
+00:16:16,210 --> 00:16:18,690
+about this is our first kind of just
+open discussion I think about something
+
+914
+00:16:18,690 --> 00:16:18,700
+open discussion I think about something
+ 
+
+915
+00:16:18,700 --> 00:16:20,790
+open discussion I think about something
+in C++ so let me know what your thoughts
+
+916
+00:16:20,790 --> 00:16:20,800
+in C++ so let me know what your thoughts
+ 
+
+917
+00:16:20,800 --> 00:16:23,130
+in C++ so let me know what your thoughts
+are about multiple return types which
+
+918
+00:16:23,130 --> 00:16:23,140
+are about multiple return types which
+ 
+
+919
+00:16:23,140 --> 00:16:24,720
+are about multiple return types which
+one of these methods or maybe there are
+
+920
+00:16:24,720 --> 00:16:24,730
+one of these methods or maybe there are
+ 
+
+921
+00:16:24,730 --> 00:16:26,280
+one of these methods or maybe there are
+more than I mean I'm sure there are more
+
+922
+00:16:26,280 --> 00:16:26,290
+more than I mean I'm sure there are more
+ 
+
+923
+00:16:26,290 --> 00:16:27,810
+more than I mean I'm sure there are more
+than I'm that I haven't mentioned as
+
+924
+00:16:27,810 --> 00:16:27,820
+than I'm that I haven't mentioned as
+ 
+
+925
+00:16:27,820 --> 00:16:29,790
+than I'm that I haven't mentioned as
+well what your favorite method of
+
+926
+00:16:29,790 --> 00:16:29,800
+well what your favorite method of
+ 
+
+927
+00:16:29,800 --> 00:16:32,040
+well what your favorite method of
+dealing with multiple return types is
+
+928
+00:16:32,040 --> 00:16:32,050
+dealing with multiple return types is
+ 
+
+929
+00:16:32,050 --> 00:16:34,380
+dealing with multiple return types is
+drop a comment below you can also
+
+930
+00:16:34,380 --> 00:16:34,390
+drop a comment below you can also
+ 
+
+931
+00:16:34,390 --> 00:16:36,030
+drop a comment below you can also
+discuss this further by going over to
+
+932
+00:16:36,030 --> 00:16:36,040
+discuss this further by going over to
+ 
+
+933
+00:16:36,040 --> 00:16:37,650
+discuss this further by going over to
+the channel compilation discord is a
+
+934
+00:16:37,650 --> 00:16:37,660
+the channel compilation discord is a
+ 
+
+935
+00:16:37,660 --> 00:16:39,210
+the channel compilation discord is a
+discord server where you can talk to
+
+936
+00:16:39,210 --> 00:16:39,220
+discord server where you can talk to
+ 
+
+937
+00:16:39,220 --> 00:16:40,530
+discord server where you can talk to
+other people about this kind of stuff
+
+938
+00:16:40,530 --> 00:16:40,540
+other people about this kind of stuff
+ 
+
+939
+00:16:40,540 --> 00:16:42,660
+other people about this kind of stuff
+and as always if you enjoy this video
+
+940
+00:16:42,660 --> 00:16:42,670
+and as always if you enjoy this video
+ 
+
+941
+00:16:42,670 --> 00:16:43,980
+and as always if you enjoy this video
+and you want to help support the series
+
+942
+00:16:43,980 --> 00:16:43,990
+and you want to help support the series
+ 
+
+943
+00:16:43,990 --> 00:16:46,130
+and you want to help support the series
+and see more great videos like this then
+
+944
+00:16:46,130 --> 00:16:46,140
+and see more great videos like this then
+ 
+
+945
+00:16:46,140 --> 00:16:48,390
+and see more great videos like this then
+head on over to patreon a course at the
+
+946
+00:16:48,390 --> 00:16:48,400
+head on over to patreon a course at the
+ 
+
+947
+00:16:48,400 --> 00:16:50,520
+head on over to patreon a course at the
+chanter huge thank you as always to all
+
+948
+00:16:50,520 --> 00:16:50,530
+chanter huge thank you as always to all
+ 
+
+949
+00:16:50,530 --> 00:16:52,140
+chanter huge thank you as always to all
+the people who support all the series
+
+950
+00:16:52,140 --> 00:16:52,150
+the people who support all the series
+ 
+
+951
+00:16:52,150 --> 00:16:53,700
+the people who support all the series
+that i make without those people this
+
+952
+00:16:53,700 --> 00:16:53,710
+that i make without those people this
+ 
+
+953
+00:16:53,710 --> 00:16:55,800
+that i make without those people this
+series would not be here I can say that
+
+954
+00:16:55,800 --> 00:16:55,810
+series would not be here I can say that
+ 
+
+955
+00:16:55,810 --> 00:16:58,650
+series would not be here I can say that
+as a fact so huge thank you to all of
+
+956
+00:16:58,650 --> 00:16:58,660
+as a fact so huge thank you to all of
+ 
+
+957
+00:16:58,660 --> 00:17:01,350
+as a fact so huge thank you to all of
+you guys and I'll see you guys in the
+
+958
+00:17:01,350 --> 00:17:01,360
+you guys and I'll see you guys in the
+ 
+
+959
+00:17:01,360 --> 00:17:03,770
+you guys and I'll see you guys in the
+next video goodbye
+
+960
+00:17:03,770 --> 00:17:03,780
+next video goodbye
+ 
+
+961
+00:17:03,780 --> 00:17:15,750
+next video goodbye
+[Music]
+
+962
+00:17:15,750 --> 00:17:15,760
+
+ 
+
+963
+00:17:15,760 --> 00:17:18,960
+
+[Music]
+

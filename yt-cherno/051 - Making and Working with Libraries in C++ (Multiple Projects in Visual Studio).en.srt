@@ -1,0 +1,3765 @@
+1
+00:00:00,000 --> 00:00:01,520
+
+hey what's up guys my name is Archana
+
+2
+00:00:01,520 --> 00:00:01,530
+hey what's up guys my name is Archana
+ 
+
+3
+00:00:01,530 --> 00:00:03,050
+hey what's up guys my name is Archana
+welcome back to my staples loss series
+
+4
+00:00:03,050 --> 00:00:03,060
+welcome back to my staples loss series
+ 
+
+5
+00:00:03,060 --> 00:00:04,309
+welcome back to my staples loss series
+today we're gonna be talking all about
+
+6
+00:00:04,309 --> 00:00:04,319
+today we're gonna be talking all about
+ 
+
+7
+00:00:04,319 --> 00:00:06,289
+today we're gonna be talking all about
+how you can set up multiple projects in
+
+8
+00:00:06,289 --> 00:00:06,299
+how you can set up multiple projects in
+ 
+
+9
+00:00:06,299 --> 00:00:07,909
+how you can set up multiple projects in
+Visual Studio and how you can create a
+
+10
+00:00:07,909 --> 00:00:07,919
+Visual Studio and how you can create a
+ 
+
+11
+00:00:07,919 --> 00:00:09,770
+Visual Studio and how you can create a
+library that you can use in all of your
+
+12
+00:00:09,770 --> 00:00:09,780
+library that you can use in all of your
+ 
+
+13
+00:00:09,780 --> 00:00:11,000
+library that you can use in all of your
+projects so this is something that's
+
+14
+00:00:11,000 --> 00:00:11,010
+projects so this is something that's
+ 
+
+15
+00:00:11,010 --> 00:00:12,290
+projects so this is something that's
+really important if you're working on
+
+16
+00:00:12,290 --> 00:00:12,300
+really important if you're working on
+ 
+
+17
+00:00:12,300 --> 00:00:14,600
+really important if you're working on
+anything kind of sizable not only does
+
+18
+00:00:14,600 --> 00:00:14,610
+anything kind of sizable not only does
+ 
+
+19
+00:00:14,610 --> 00:00:15,950
+anything kind of sizable not only does
+it help you to create a module or a
+
+20
+00:00:15,950 --> 00:00:15,960
+it help you to create a module or a
+ 
+
+21
+00:00:15,960 --> 00:00:17,779
+it help you to create a module or a
+library with your code and reuse that
+
+22
+00:00:17,779 --> 00:00:17,789
+library with your code and reuse that
+ 
+
+23
+00:00:17,789 --> 00:00:20,029
+library with your code and reuse that
+code multiple times but it also lets you
+
+24
+00:00:20,029 --> 00:00:20,039
+code multiple times but it also lets you
+ 
+
+25
+00:00:20,039 --> 00:00:21,710
+code multiple times but it also lets you
+mix languages and that's something that
+
+26
+00:00:21,710 --> 00:00:21,720
+mix languages and that's something that
+ 
+
+27
+00:00:21,720 --> 00:00:23,570
+mix languages and that's something that
+might be important to you if again
+
+28
+00:00:23,570 --> 00:00:23,580
+might be important to you if again
+ 
+
+29
+00:00:23,580 --> 00:00:25,310
+might be important to you if again
+you're working on something fairly large
+
+30
+00:00:25,310 --> 00:00:25,320
+you're working on something fairly large
+ 
+
+31
+00:00:25,320 --> 00:00:27,500
+you're working on something fairly large
+so today we're just gonna stick with C++
+
+32
+00:00:27,500 --> 00:00:27,510
+so today we're just gonna stick with C++
+ 
+
+33
+00:00:27,510 --> 00:00:28,880
+so today we're just gonna stick with C++
+and we're gonna talk about how you can
+
+34
+00:00:28,880 --> 00:00:28,890
+and we're gonna talk about how you can
+ 
+
+35
+00:00:28,890 --> 00:00:30,529
+and we're gonna talk about how you can
+basically create one project that is
+
+36
+00:00:30,529 --> 00:00:30,539
+basically create one project that is
+ 
+
+37
+00:00:30,539 --> 00:00:32,420
+basically create one project that is
+compiled as a library as specifically a
+
+38
+00:00:32,420 --> 00:00:32,430
+compiled as a library as specifically a
+ 
+
+39
+00:00:32,430 --> 00:00:34,790
+compiled as a library as specifically a
+static library and then link that into
+
+40
+00:00:34,790 --> 00:00:34,800
+static library and then link that into
+ 
+
+41
+00:00:34,800 --> 00:00:36,319
+static library and then link that into
+an executable and how that all kind of
+
+42
+00:00:36,319 --> 00:00:36,329
+an executable and how that all kind of
+ 
+
+43
+00:00:36,329 --> 00:00:38,240
+an executable and how that all kind of
+works in a visual studio so let's take a
+
+44
+00:00:38,240 --> 00:00:38,250
+works in a visual studio so let's take a
+ 
+
+45
+00:00:38,250 --> 00:00:39,560
+works in a visual studio so let's take a
+look so here I'm just starting with a
+
+46
+00:00:39,560 --> 00:00:39,570
+look so here I'm just starting with a
+ 
+
+47
+00:00:39,570 --> 00:00:41,150
+look so here I'm just starting with a
+completely empty folder because a folder
+
+48
+00:00:41,150 --> 00:00:41,160
+completely empty folder because a folder
+ 
+
+49
+00:00:41,160 --> 00:00:43,130
+completely empty folder because a folder
+called C++ and it's going to contain all
+
+50
+00:00:43,130 --> 00:00:43,140
+called C++ and it's going to contain all
+ 
+
+51
+00:00:43,140 --> 00:00:45,049
+called C++ and it's going to contain all
+these projects of money back in Visual
+
+52
+00:00:45,049 --> 00:00:45,059
+these projects of money back in Visual
+ 
+
+53
+00:00:45,059 --> 00:00:46,910
+these projects of money back in Visual
+Studio I'm just going to go over here
+
+54
+00:00:46,910 --> 00:00:46,920
+Studio I'm just going to go over here
+ 
+
+55
+00:00:46,920 --> 00:00:49,160
+Studio I'm just going to go over here
+and select file new project so I'm going
+
+56
+00:00:49,160 --> 00:00:49,170
+and select file new project so I'm going
+ 
+
+57
+00:00:49,170 --> 00:00:50,840
+and select file new project so I'm going
+to be setting up a brand new solution
+
+58
+00:00:50,840 --> 00:00:50,850
+to be setting up a brand new solution
+ 
+
+59
+00:00:50,850 --> 00:00:52,639
+to be setting up a brand new solution
+which will contain my multiple projects
+
+60
+00:00:52,639 --> 00:00:52,649
+which will contain my multiple projects
+ 
+
+61
+00:00:52,649 --> 00:00:54,319
+which will contain my multiple projects
+so I already here on the templates and
+
+62
+00:00:54,319 --> 00:00:54,329
+so I already here on the templates and
+ 
+
+63
+00:00:54,329 --> 00:00:55,760
+so I already here on the templates and
+visual C++ I'm just gonna just like
+
+64
+00:00:55,760 --> 00:00:55,770
+visual C++ I'm just gonna just like
+ 
+
+65
+00:00:55,770 --> 00:00:57,889
+visual C++ I'm just gonna just like
+general and an empty project and then
+
+66
+00:00:57,889 --> 00:00:57,899
+general and an empty project and then
+ 
+
+67
+00:00:57,899 --> 00:00:59,389
+general and an empty project and then
+I'm going to give this a name now I'm
+
+68
+00:00:59,389 --> 00:00:59,399
+I'm going to give this a name now I'm
+ 
+
+69
+00:00:59,399 --> 00:01:00,680
+I'm going to give this a name now I'm
+gonna call this game you'll notice
+
+70
+00:01:00,680 --> 00:01:00,690
+gonna call this game you'll notice
+ 
+
+71
+00:01:00,690 --> 00:01:02,450
+gonna call this game you'll notice
+that's also the solution name and I'm
+
+72
+00:01:02,450 --> 00:01:02,460
+that's also the solution name and I'm
+ 
+
+73
+00:01:02,460 --> 00:01:03,830
+that's also the solution name and I'm
+also going to make sure the crate
+
+74
+00:01:03,830 --> 00:01:03,840
+also going to make sure the crate
+ 
+
+75
+00:01:03,840 --> 00:01:06,109
+also going to make sure the crate
+directory for solution is checked now
+
+76
+00:01:06,109 --> 00:01:06,119
+directory for solution is checked now
+ 
+
+77
+00:01:06,119 --> 00:01:07,310
+directory for solution is checked now
+I'll call this game because it's gonna
+
+78
+00:01:07,310 --> 00:01:07,320
+I'll call this game because it's gonna
+ 
+
+79
+00:01:07,320 --> 00:01:09,080
+I'll call this game because it's gonna
+be like a game project our actual
+
+80
+00:01:09,080 --> 00:01:09,090
+be like a game project our actual
+ 
+
+81
+00:01:09,090 --> 00:01:10,609
+be like a game project our actual
+executable and then I'm going to make a
+
+82
+00:01:10,609 --> 00:01:10,619
+executable and then I'm going to make a
+ 
+
+83
+00:01:10,619 --> 00:01:12,679
+executable and then I'm going to make a
+library called engine inside there which
+
+84
+00:01:12,679 --> 00:01:12,689
+library called engine inside there which
+ 
+
+85
+00:01:12,689 --> 00:01:14,510
+library called engine inside there which
+links into game and you'll see that in a
+
+86
+00:01:14,510 --> 00:01:14,520
+links into game and you'll see that in a
+ 
+
+87
+00:01:14,520 --> 00:01:16,190
+links into game and you'll see that in a
+minute so click OK here set the visual
+
+88
+00:01:16,190 --> 00:01:16,200
+minute so click OK here set the visual
+ 
+
+89
+00:01:16,200 --> 00:01:18,140
+minute so click OK here set the visual
+studio creates our solution and project
+
+90
+00:01:18,140 --> 00:01:18,150
+studio creates our solution and project
+ 
+
+91
+00:01:18,150 --> 00:01:19,640
+studio creates our solution and project
+and you can see that we both solution
+
+92
+00:01:19,640 --> 00:01:19,650
+and you can see that we both solution
+ 
+
+93
+00:01:19,650 --> 00:01:21,499
+and you can see that we both solution
+called game and a project called game as
+
+94
+00:01:21,499 --> 00:01:21,509
+called game and a project called game as
+ 
+
+95
+00:01:21,509 --> 00:01:23,179
+called game and a project called game as
+well if I go back to Windows Explorer
+
+96
+00:01:23,179 --> 00:01:23,189
+well if I go back to Windows Explorer
+ 
+
+97
+00:01:23,189 --> 00:01:24,380
+well if I go back to Windows Explorer
+and take a look at that directory
+
+98
+00:01:24,380 --> 00:01:24,390
+and take a look at that directory
+ 
+
+99
+00:01:24,390 --> 00:01:26,359
+and take a look at that directory
+structure I've got game and then I've
+
+100
+00:01:26,359 --> 00:01:26,369
+structure I've got game and then I've
+ 
+
+101
+00:01:26,369 --> 00:01:28,490
+structure I've got game and then I've
+got a solution file here and then inside
+
+102
+00:01:28,490 --> 00:01:28,500
+got a solution file here and then inside
+ 
+
+103
+00:01:28,500 --> 00:01:29,929
+got a solution file here and then inside
+another folder called game I've got my
+
+104
+00:01:29,929 --> 00:01:29,939
+another folder called game I've got my
+ 
+
+105
+00:01:29,939 --> 00:01:32,300
+another folder called game I've got my
+actual C++ project you guys will know a
+
+106
+00:01:32,300 --> 00:01:32,310
+actual C++ project you guys will know a
+ 
+
+107
+00:01:32,310 --> 00:01:33,770
+actual C++ project you guys will know a
+little bit more about the structure of
+
+108
+00:01:33,770 --> 00:01:33,780
+little bit more about the structure of
+ 
+
+109
+00:01:33,780 --> 00:01:35,719
+little bit more about the structure of
+Visual Studio C++ projects and how to
+
+110
+00:01:35,719 --> 00:01:35,729
+Visual Studio C++ projects and how to
+ 
+
+111
+00:01:35,729 --> 00:01:37,219
+Visual Studio C++ projects and how to
+set them up better I've made a video
+
+112
+00:01:37,219 --> 00:01:37,229
+set them up better I've made a video
+ 
+
+113
+00:01:37,229 --> 00:01:40,130
+set them up better I've made a video
+directly about that called the best way
+
+114
+00:01:40,130 --> 00:01:40,140
+directly about that called the best way
+ 
+
+115
+00:01:40,140 --> 00:01:41,450
+directly about that called the best way
+to set up your sleep uh suppose projects
+
+116
+00:01:41,450 --> 00:01:41,460
+to set up your sleep uh suppose projects
+ 
+
+117
+00:01:41,460 --> 00:01:43,639
+to set up your sleep uh suppose projects
+and visual studios in the top right
+
+118
+00:01:43,639 --> 00:01:43,649
+and visual studios in the top right
+ 
+
+119
+00:01:43,649 --> 00:01:45,469
+and visual studios in the top right
+corner check it out okay so that's
+
+120
+00:01:45,469 --> 00:01:45,479
+corner check it out okay so that's
+ 
+
+121
+00:01:45,479 --> 00:01:47,210
+corner check it out okay so that's
+pretty good to me we've got our first
+
+122
+00:01:47,210 --> 00:01:47,220
+pretty good to me we've got our first
+ 
+
+123
+00:01:47,220 --> 00:01:48,710
+pretty good to me we've got our first
+project now let's go ahead and add
+
+124
+00:01:48,710 --> 00:01:48,720
+project now let's go ahead and add
+ 
+
+125
+00:01:48,720 --> 00:01:50,690
+project now let's go ahead and add
+another project I'm going to right click
+
+126
+00:01:50,690 --> 00:01:50,700
+another project I'm going to right click
+ 
+
+127
+00:01:50,700 --> 00:01:53,780
+another project I'm going to right click
+on this solution here select add and
+
+128
+00:01:53,780 --> 00:01:53,790
+on this solution here select add and
+ 
+
+129
+00:01:53,790 --> 00:01:56,990
+on this solution here select add and
+then new project now again I like to set
+
+130
+00:01:56,990 --> 00:01:57,000
+then new project now again I like to set
+ 
+
+131
+00:01:57,000 --> 00:01:59,959
+then new project now again I like to set
+up my C++ projects just as empty project
+
+132
+00:01:59,959 --> 00:01:59,969
+up my C++ projects just as empty project
+ 
+
+133
+00:01:59,969 --> 00:02:01,370
+up my C++ projects just as empty project
+so that's all I'm going to do I'm going
+
+134
+00:02:01,370 --> 00:02:01,380
+so that's all I'm going to do I'm going
+ 
+
+135
+00:02:01,380 --> 00:02:03,560
+so that's all I'm going to do I'm going
+to select empty project here I'm going
+
+136
+00:02:03,560 --> 00:02:03,570
+to select empty project here I'm going
+ 
+
+137
+00:02:03,570 --> 00:02:05,570
+to select empty project here I'm going
+to give it the name engine and
+
+138
+00:02:05,570 --> 00:02:05,580
+to give it the name engine and
+ 
+
+139
+00:02:05,580 --> 00:02:07,460
+to give it the name engine and
+I'm going to click ok so now if I
+
+140
+00:02:07,460 --> 00:02:07,470
+I'm going to click ok so now if I
+ 
+
+141
+00:02:07,470 --> 00:02:08,840
+I'm going to click ok so now if I
+collapse all of this you can see that
+
+142
+00:02:08,840 --> 00:02:08,850
+collapse all of this you can see that
+ 
+
+143
+00:02:08,850 --> 00:02:11,270
+collapse all of this you can see that
+our solution has two projects engine and
+
+144
+00:02:11,270 --> 00:02:11,280
+our solution has two projects engine and
+ 
+
+145
+00:02:11,280 --> 00:02:13,820
+our solution has two projects engine and
+game game is going to be our executable
+
+146
+00:02:13,820 --> 00:02:13,830
+game game is going to be our executable
+ 
+
+147
+00:02:13,830 --> 00:02:15,200
+game game is going to be our executable
+if we right click and hit properties
+
+148
+00:02:15,200 --> 00:02:15,210
+if we right click and hit properties
+ 
+
+149
+00:02:15,210 --> 00:02:17,390
+if we right click and hit properties
+which is going to make sure that under
+
+150
+00:02:17,390 --> 00:02:17,400
+which is going to make sure that under
+ 
+
+151
+00:02:17,400 --> 00:02:19,040
+which is going to make sure that under
+the game property pages our
+
+152
+00:02:19,040 --> 00:02:19,050
+the game property pages our
+ 
+
+153
+00:02:19,050 --> 00:02:20,960
+the game property pages our
+configuration type under the duration
+
+154
+00:02:20,960 --> 00:02:20,970
+configuration type under the duration
+ 
+
+155
+00:02:20,970 --> 00:02:22,430
+configuration type under the duration
+properties in general is set to
+
+156
+00:02:22,430 --> 00:02:22,440
+properties in general is set to
+ 
+
+157
+00:02:22,440 --> 00:02:24,920
+properties in general is set to
+application okay that's that's final
+
+158
+00:02:24,920 --> 00:02:24,930
+application okay that's that's final
+ 
+
+159
+00:02:24,930 --> 00:02:26,330
+application okay that's that's final
+I'll click OK and then let's take a look
+
+160
+00:02:26,330 --> 00:02:26,340
+I'll click OK and then let's take a look
+ 
+
+161
+00:02:26,340 --> 00:02:27,800
+I'll click OK and then let's take a look
+at engine I'll right click on engine hit
+
+162
+00:02:27,800 --> 00:02:27,810
+at engine I'll right click on engine hit
+ 
+
+163
+00:02:27,810 --> 00:02:30,020
+at engine I'll right click on engine hit
+properties and then for this since we
+
+164
+00:02:30,020 --> 00:02:30,030
+properties and then for this since we
+ 
+
+165
+00:02:30,030 --> 00:02:31,670
+properties and then for this since we
+are going to be linking statically I'm
+
+166
+00:02:31,670 --> 00:02:31,680
+are going to be linking statically I'm
+ 
+
+167
+00:02:31,680 --> 00:02:33,050
+are going to be linking statically I'm
+going to make sure that my configuration
+
+168
+00:02:33,050 --> 00:02:33,060
+going to make sure that my configuration
+ 
+
+169
+00:02:33,060 --> 00:02:36,320
+going to make sure that my configuration
+type is set to static library and that's
+
+170
+00:02:36,320 --> 00:02:36,330
+type is set to static library and that's
+ 
+
+171
+00:02:36,330 --> 00:02:38,420
+type is set to static library and that's
+all that we need to do to make this a
+
+172
+00:02:38,420 --> 00:02:38,430
+all that we need to do to make this a
+ 
+
+173
+00:02:38,430 --> 00:02:40,460
+all that we need to do to make this a
+static library for the most part again
+
+174
+00:02:40,460 --> 00:02:40,470
+static library for the most part again
+ 
+
+175
+00:02:40,470 --> 00:02:41,960
+static library for the most part again
+I'm just making sure that I'm modifying
+
+176
+00:02:41,960 --> 00:02:41,970
+I'm just making sure that I'm modifying
+ 
+
+177
+00:02:41,970 --> 00:02:44,270
+I'm just making sure that I'm modifying
+this for all configurations and even for
+
+178
+00:02:44,270 --> 00:02:44,280
+this for all configurations and even for
+ 
+
+179
+00:02:44,280 --> 00:02:45,800
+this for all configurations and even for
+all platforms as well so I'm going to
+
+180
+00:02:45,800 --> 00:02:45,810
+all platforms as well so I'm going to
+ 
+
+181
+00:02:45,810 --> 00:02:47,570
+all platforms as well so I'm going to
+just not save the changes here and make
+
+182
+00:02:47,570 --> 00:02:47,580
+just not save the changes here and make
+ 
+
+183
+00:02:47,580 --> 00:02:49,160
+just not save the changes here and make
+sure that for all configurations and all
+
+184
+00:02:49,160 --> 00:02:49,170
+sure that for all configurations and all
+ 
+
+185
+00:02:49,170 --> 00:02:50,840
+sure that for all configurations and all
+platforms I'm setting this to be a
+
+186
+00:02:50,840 --> 00:02:50,850
+platforms I'm setting this to be a
+ 
+
+187
+00:02:50,850 --> 00:02:53,540
+platforms I'm setting this to be a
+static library I'm going to hit OK and
+
+188
+00:02:53,540 --> 00:02:53,550
+static library I'm going to hit OK and
+ 
+
+189
+00:02:53,550 --> 00:02:55,100
+static library I'm going to hit OK and
+then now let's write some code to test
+
+190
+00:02:55,100 --> 00:02:55,110
+then now let's write some code to test
+ 
+
+191
+00:02:55,110 --> 00:02:57,050
+then now let's write some code to test
+this out so what I'm going to do is just
+
+192
+00:02:57,050 --> 00:02:57,060
+this out so what I'm going to do is just
+ 
+
+193
+00:02:57,060 --> 00:02:58,820
+this out so what I'm going to do is just
+show all files here for both of these
+
+194
+00:02:58,820 --> 00:02:58,830
+show all files here for both of these
+ 
+
+195
+00:02:58,830 --> 00:03:00,740
+show all files here for both of these
+projects so that I can actually make my
+
+196
+00:03:00,740 --> 00:03:00,750
+projects so that I can actually make my
+ 
+
+197
+00:03:00,750 --> 00:03:03,410
+projects so that I can actually make my
+sauce directories right click add new
+
+198
+00:03:03,410 --> 00:03:03,420
+sauce directories right click add new
+ 
+
+199
+00:03:03,420 --> 00:03:05,840
+sauce directories right click add new
+folder source contributors for both of
+
+200
+00:03:05,840 --> 00:03:05,850
+folder source contributors for both of
+ 
+
+201
+00:03:05,850 --> 00:03:08,350
+folder source contributors for both of
+the projects and game is going to get a
+
+202
+00:03:08,350 --> 00:03:08,360
+the projects and game is going to get a
+ 
+
+203
+00:03:08,360 --> 00:03:10,820
+the projects and game is going to get a
+application door CPP file which is going
+
+204
+00:03:10,820 --> 00:03:10,830
+application door CPP file which is going
+ 
+
+205
+00:03:10,830 --> 00:03:12,500
+application door CPP file which is going
+to be basically the source of our
+
+206
+00:03:12,500 --> 00:03:12,510
+to be basically the source of our
+ 
+
+207
+00:03:12,510 --> 00:03:14,479
+to be basically the source of our
+application I guess will be the main
+
+208
+00:03:14,479 --> 00:03:14,489
+application I guess will be the main
+ 
+
+209
+00:03:14,489 --> 00:03:16,790
+application I guess will be the main
+file and on the engine I'm just going to
+
+210
+00:03:16,790 --> 00:03:16,800
+file and on the engine I'm just going to
+ 
+
+211
+00:03:16,800 --> 00:03:18,320
+file and on the engine I'm just going to
+make a new item it's going to be a
+
+212
+00:03:18,320 --> 00:03:18,330
+make a new item it's going to be a
+ 
+
+213
+00:03:18,330 --> 00:03:20,380
+make a new item it's going to be a
+header file and I'm going to call this
+
+214
+00:03:20,380 --> 00:03:20,390
+header file and I'm going to call this
+ 
+
+215
+00:03:20,390 --> 00:03:22,670
+header file and I'm going to call this
+image piece over here I'm going to call
+
+216
+00:03:22,670 --> 00:03:22,680
+image piece over here I'm going to call
+ 
+
+217
+00:03:22,680 --> 00:03:25,550
+image piece over here I'm going to call
+this engine H and I'm also going to make
+
+218
+00:03:25,550 --> 00:03:25,560
+this engine H and I'm also going to make
+ 
+
+219
+00:03:25,560 --> 00:03:28,400
+this engine H and I'm also going to make
+a C++ file it's going to be called
+
+220
+00:03:28,400 --> 00:03:28,410
+a C++ file it's going to be called
+ 
+
+221
+00:03:28,410 --> 00:03:31,759
+a C++ file it's going to be called
+engine Dulce TP ok cool and for this
+
+222
+00:03:31,759 --> 00:03:31,769
+engine Dulce TP ok cool and for this
+ 
+
+223
+00:03:31,769 --> 00:03:33,620
+engine Dulce TP ok cool and for this
+incredibly basics test I'm just going to
+
+224
+00:03:33,620 --> 00:03:33,630
+incredibly basics test I'm just going to
+ 
+
+225
+00:03:33,630 --> 00:03:36,860
+incredibly basics test I'm just going to
+write name space engine and then on the
+
+226
+00:03:36,860 --> 00:03:36,870
+write name space engine and then on the
+ 
+
+227
+00:03:36,870 --> 00:03:40,670
+write name space engine and then on the
+here void print message and not going to
+
+228
+00:03:40,670 --> 00:03:40,680
+here void print message and not going to
+ 
+
+229
+00:03:40,680 --> 00:03:41,690
+here void print message and not going to
+take any parameters or anything like
+
+230
+00:03:41,690 --> 00:03:41,700
+take any parameters or anything like
+ 
+
+231
+00:03:41,700 --> 00:03:42,620
+take any parameters or anything like
+that I'm going to leave this
+
+232
+00:03:42,620 --> 00:03:42,630
+that I'm going to leave this
+ 
+
+233
+00:03:42,630 --> 00:03:44,240
+that I'm going to leave this
+unimplemented because I'm going to go to
+
+234
+00:03:44,240 --> 00:03:44,250
+unimplemented because I'm going to go to
+ 
+
+235
+00:03:44,250 --> 00:03:46,880
+unimplemented because I'm going to go to
+the C++ file include my engine dot H
+
+236
+00:03:46,880 --> 00:03:46,890
+the C++ file include my engine dot H
+ 
+
+237
+00:03:46,890 --> 00:03:50,030
+the C++ file include my engine dot H
+header file right name space engine and
+
+238
+00:03:50,030 --> 00:03:50,040
+header file right name space engine and
+ 
+
+239
+00:03:50,040 --> 00:03:52,880
+header file right name space engine and
+then implement that print message
+
+240
+00:03:52,880 --> 00:03:52,890
+then implement that print message
+ 
+
+241
+00:03:52,890 --> 00:03:56,090
+then implement that print message
+function here and I'm just gonna make it
+
+242
+00:03:56,090 --> 00:03:56,100
+function here and I'm just gonna make it
+ 
+
+243
+00:03:56,100 --> 00:03:59,960
+function here and I'm just gonna make it
+print hello world to the console I'm
+
+244
+00:03:59,960 --> 00:03:59,970
+print hello world to the console I'm
+ 
+
+245
+00:03:59,970 --> 00:04:01,310
+print hello world to the console I'm
+also going to make sure that in the C++
+
+246
+00:04:01,310 --> 00:04:01,320
+also going to make sure that in the C++
+ 
+
+247
+00:04:01,320 --> 00:04:03,590
+also going to make sure that in the C++
+file I include iostream so that we can
+
+248
+00:04:03,590 --> 00:04:03,600
+file I include iostream so that we can
+ 
+
+249
+00:04:03,600 --> 00:04:06,560
+file I include iostream so that we can
+print that ok cool so very very basic
+
+250
+00:04:06,560 --> 00:04:06,570
+print that ok cool so very very basic
+ 
+
+251
+00:04:06,570 --> 00:04:08,120
+print that ok cool so very very basic
+there's my header file there's my sleep
+
+252
+00:04:08,120 --> 00:04:08,130
+there's my header file there's my sleep
+ 
+
+253
+00:04:08,130 --> 00:04:09,380
+there's my header file there's my sleep
+locals file we're not even dealing with
+
+254
+00:04:09,380 --> 00:04:09,390
+locals file we're not even dealing with
+ 
+
+255
+00:04:09,390 --> 00:04:10,789
+locals file we're not even dealing with
+classes or anything like that to now
+
+256
+00:04:10,789 --> 00:04:10,799
+classes or anything like that to now
+ 
+
+257
+00:04:10,799 --> 00:04:12,620
+classes or anything like that to now
+just really really simple we just got
+
+258
+00:04:12,620 --> 00:04:12,630
+just really really simple we just got
+ 
+
+259
+00:04:12,630 --> 00:04:14,449
+just really really simple we just got
+one function in our engine so back an
+
+260
+00:04:14,449 --> 00:04:14,459
+one function in our engine so back an
+ 
+
+261
+00:04:14,459 --> 00:04:16,520
+one function in our engine so back an
+application built CPP my goal here as I
+
+262
+00:04:16,520 --> 00:04:16,530
+application built CPP my goal here as I
+ 
+
+263
+00:04:16,530 --> 00:04:16,920
+application built CPP my goal here as I
+write
+
+264
+00:04:16,920 --> 00:04:16,930
+write
+ 
+
+265
+00:04:16,930 --> 00:04:18,930
+write
+this little main function of mine my
+
+266
+00:04:18,930 --> 00:04:18,940
+this little main function of mine my
+ 
+
+267
+00:04:18,940 --> 00:04:20,999
+this little main function of mine my
+goal here is basically to just be able
+
+268
+00:04:20,999 --> 00:04:21,009
+goal here is basically to just be able
+ 
+
+269
+00:04:21,009 --> 00:04:23,730
+goal here is basically to just be able
+to call engine print message I want to
+
+270
+00:04:23,730 --> 00:04:23,740
+to call engine print message I want to
+ 
+
+271
+00:04:23,740 --> 00:04:25,050
+to call engine print message I want to
+be able to write this card I wanted to
+
+272
+00:04:25,050 --> 00:04:25,060
+be able to write this card I wanted to
+ 
+
+273
+00:04:25,060 --> 00:04:26,610
+be able to write this card I wanted to
+be able to execute the link successfully
+
+274
+00:04:26,610 --> 00:04:26,620
+be able to execute the link successfully
+ 
+
+275
+00:04:26,620 --> 00:04:28,290
+be able to execute the link successfully
+and all that right into my executable
+
+276
+00:04:28,290 --> 00:04:28,300
+and all that right into my executable
+ 
+
+277
+00:04:28,300 --> 00:04:30,900
+and all that right into my executable
+how do I do that so the first step is I
+
+278
+00:04:30,900 --> 00:04:30,910
+how do I do that so the first step is I
+ 
+
+279
+00:04:30,910 --> 00:04:32,760
+how do I do that so the first step is I
+need to include a header file which
+
+280
+00:04:32,760 --> 00:04:32,770
+need to include a header file which
+ 
+
+281
+00:04:32,770 --> 00:04:34,560
+need to include a header file which
+defines this I don't technically
+
+282
+00:04:34,560 --> 00:04:34,570
+defines this I don't technically
+ 
+
+283
+00:04:34,570 --> 00:04:36,779
+defines this I don't technically
+speaking need to do this like in this
+
+284
+00:04:36,779 --> 00:04:36,789
+speaking need to do this like in this
+ 
+
+285
+00:04:36,789 --> 00:04:38,640
+speaking need to do this like in this
+case because it's so simple I could
+
+286
+00:04:38,640 --> 00:04:38,650
+case because it's so simple I could
+ 
+
+287
+00:04:38,650 --> 00:04:40,320
+case because it's so simple I could
+literally write a namespace engine and
+
+288
+00:04:40,320 --> 00:04:40,330
+literally write a namespace engine and
+ 
+
+289
+00:04:40,330 --> 00:04:43,200
+literally write a namespace engine and
+then void print message and of course
+
+290
+00:04:43,200 --> 00:04:43,210
+then void print message and of course
+ 
+
+291
+00:04:43,210 --> 00:04:44,850
+then void print message and of course
+like that's it you can see that that
+
+292
+00:04:44,850 --> 00:04:44,860
+like that's it you can see that that
+ 
+
+293
+00:04:44,860 --> 00:04:46,650
+like that's it you can see that that
+error goes away if I try and compile my
+
+294
+00:04:46,650 --> 00:04:46,660
+error goes away if I try and compile my
+ 
+
+295
+00:04:46,660 --> 00:04:49,379
+error goes away if I try and compile my
+code but by pressing control f7 you can
+
+296
+00:04:49,379 --> 00:04:49,389
+code but by pressing control f7 you can
+ 
+
+297
+00:04:49,389 --> 00:04:50,760
+code but by pressing control f7 you can
+see over here that it does in fact
+
+298
+00:04:50,760 --> 00:04:50,770
+see over here that it does in fact
+ 
+
+299
+00:04:50,770 --> 00:04:52,290
+see over here that it does in fact
+compiled successfully of course it's not
+
+300
+00:04:52,290 --> 00:04:52,300
+compiled successfully of course it's not
+ 
+
+301
+00:04:52,300 --> 00:04:53,640
+compiled successfully of course it's not
+going to link because I don't actually
+
+302
+00:04:53,640 --> 00:04:53,650
+going to link because I don't actually
+ 
+
+303
+00:04:53,650 --> 00:04:55,320
+going to link because I don't actually
+have a definition to this so if I build
+
+304
+00:04:55,320 --> 00:04:55,330
+have a definition to this so if I build
+ 
+
+305
+00:04:55,330 --> 00:04:57,060
+have a definition to this so if I build
+this all the way it's not going on
+
+306
+00:04:57,060 --> 00:04:57,070
+this all the way it's not going on
+ 
+
+307
+00:04:57,070 --> 00:04:58,680
+this all the way it's not going on
+without we're gonna get a linking error
+
+308
+00:04:58,680 --> 00:04:58,690
+without we're gonna get a linking error
+ 
+
+309
+00:04:58,690 --> 00:05:00,659
+without we're gonna get a linking error
+however you kind of get the point now
+
+310
+00:05:00,659 --> 00:05:00,669
+however you kind of get the point now
+ 
+
+311
+00:05:00,669 --> 00:05:03,689
+however you kind of get the point now
+this code is exactly what is in my
+
+312
+00:05:03,689 --> 00:05:03,699
+this code is exactly what is in my
+ 
+
+313
+00:05:03,699 --> 00:05:06,060
+this code is exactly what is in my
+engine - right so of course instead of
+
+314
+00:05:06,060 --> 00:05:06,070
+engine - right so of course instead of
+ 
+
+315
+00:05:06,070 --> 00:05:08,580
+engine - right so of course instead of
+using my own kind of solution here my
+
+316
+00:05:08,580 --> 00:05:08,590
+using my own kind of solution here my
+ 
+
+317
+00:05:08,590 --> 00:05:10,230
+using my own kind of solution here my
+own version of this we want to be using
+
+318
+00:05:10,230 --> 00:05:10,240
+own version of this we want to be using
+ 
+
+319
+00:05:10,240 --> 00:05:12,270
+own version of this we want to be using
+this actual header file so how do we do
+
+320
+00:05:12,270 --> 00:05:12,280
+this actual header file so how do we do
+ 
+
+321
+00:05:12,280 --> 00:05:12,659
+this actual header file so how do we do
+that
+
+322
+00:05:12,659 --> 00:05:12,669
+that
+ 
+
+323
+00:05:12,669 --> 00:05:15,870
+that
+well all we need to do is include that
+
+324
+00:05:15,870 --> 00:05:15,880
+well all we need to do is include that
+ 
+
+325
+00:05:15,880 --> 00:05:17,670
+well all we need to do is include that
+actual header file that is inside our
+
+326
+00:05:17,670 --> 00:05:17,680
+actual header file that is inside our
+ 
+
+327
+00:05:17,680 --> 00:05:18,960
+actual header file that is inside our
+engine project there's a few ways we
+
+328
+00:05:18,960 --> 00:05:18,970
+engine project there's a few ways we
+ 
+
+329
+00:05:18,970 --> 00:05:20,939
+engine project there's a few ways we
+could do this I'll show you a couple so
+
+330
+00:05:20,939 --> 00:05:20,949
+could do this I'll show you a couple so
+ 
+
+331
+00:05:20,949 --> 00:05:23,310
+could do this I'll show you a couple so
+one way is just relative to this current
+
+332
+00:05:23,310 --> 00:05:23,320
+one way is just relative to this current
+ 
+
+333
+00:05:23,320 --> 00:05:25,409
+one way is just relative to this current
+path so application does leave it be if
+
+334
+00:05:25,409 --> 00:05:25,419
+path so application does leave it be if
+ 
+
+335
+00:05:25,419 --> 00:05:27,089
+path so application does leave it be if
+I right-click on this actual tab and
+
+336
+00:05:27,089 --> 00:05:27,099
+I right-click on this actual tab and
+ 
+
+337
+00:05:27,099 --> 00:05:29,250
+I right-click on this actual tab and
+click open containing folder because the
+
+338
+00:05:29,250 --> 00:05:29,260
+click open containing folder because the
+ 
+
+339
+00:05:29,260 --> 00:05:31,740
+click open containing folder because the
+application of CPP is inside game game
+
+340
+00:05:31,740 --> 00:05:31,750
+application of CPP is inside game game
+ 
+
+341
+00:05:31,750 --> 00:05:33,659
+application of CPP is inside game game
+and their source so if I go back one
+
+342
+00:05:33,659 --> 00:05:33,669
+and their source so if I go back one
+ 
+
+343
+00:05:33,669 --> 00:05:35,909
+and their source so if I go back one
+directory and then another directory I
+
+344
+00:05:35,909 --> 00:05:35,919
+directory and then another directory I
+ 
+
+345
+00:05:35,919 --> 00:05:38,580
+directory and then another directory I
+can theoretically go into engine source
+
+346
+00:05:38,580 --> 00:05:38,590
+can theoretically go into engine source
+ 
+
+347
+00:05:38,590 --> 00:05:41,339
+can theoretically go into engine source
+and then engine I so what I could do
+
+348
+00:05:41,339 --> 00:05:41,349
+and then engine I so what I could do
+ 
+
+349
+00:05:41,349 --> 00:05:43,800
+and then engine I so what I could do
+with an include is just go back to
+
+350
+00:05:43,800 --> 00:05:43,810
+with an include is just go back to
+ 
+
+351
+00:05:43,810 --> 00:05:46,890
+with an include is just go back to
+directories go into engine source and
+
+352
+00:05:46,890 --> 00:05:46,900
+directories go into engine source and
+ 
+
+353
+00:05:46,900 --> 00:05:49,020
+directories go into engine source and
+then engine dilash and you can see there
+
+354
+00:05:49,020 --> 00:05:49,030
+then engine dilash and you can see there
+ 
+
+355
+00:05:49,030 --> 00:05:50,999
+then engine dilash and you can see there
+we go our error goes away and we can
+
+356
+00:05:50,999 --> 00:05:51,009
+we go our error goes away and we can
+ 
+
+357
+00:05:51,009 --> 00:05:52,860
+we go our error goes away and we can
+compile our coach is fine now obviously
+
+358
+00:05:52,860 --> 00:05:52,870
+compile our coach is fine now obviously
+ 
+
+359
+00:05:52,870 --> 00:05:54,870
+compile our coach is fine now obviously
+this is just not not ideal at all I mean
+
+360
+00:05:54,870 --> 00:05:54,880
+this is just not not ideal at all I mean
+ 
+
+361
+00:05:54,880 --> 00:05:56,820
+this is just not not ideal at all I mean
+we have a relative path that is going
+
+362
+00:05:56,820 --> 00:05:56,830
+we have a relative path that is going
+ 
+
+363
+00:05:56,830 --> 00:05:58,560
+we have a relative path that is going
+back to directories and then into an
+
+364
+00:05:58,560 --> 00:05:58,570
+back to directories and then into an
+ 
+
+365
+00:05:58,570 --> 00:06:00,089
+back to directories and then into an
+entirely different project in the source
+
+366
+00:06:00,089 --> 00:06:00,099
+entirely different project in the source
+ 
+
+367
+00:06:00,099 --> 00:06:02,219
+entirely different project in the source
+it looks very messy and if we move
+
+368
+00:06:02,219 --> 00:06:02,229
+it looks very messy and if we move
+ 
+
+369
+00:06:02,229 --> 00:06:04,080
+it looks very messy and if we move
+folders or rename the name of the
+
+370
+00:06:04,080 --> 00:06:04,090
+folders or rename the name of the
+ 
+
+371
+00:06:04,090 --> 00:06:05,070
+folders or rename the name of the
+project or something like that
+
+372
+00:06:05,070 --> 00:06:05,080
+project or something like that
+ 
+
+373
+00:06:05,080 --> 00:06:06,990
+project or something like that
+everything's gonna break so what we
+
+374
+00:06:06,990 --> 00:06:07,000
+everything's gonna break so what we
+ 
+
+375
+00:06:07,000 --> 00:06:08,399
+everything's gonna break so what we
+actually want to do is use absolute
+
+376
+00:06:08,399 --> 00:06:08,409
+actually want to do is use absolute
+ 
+
+377
+00:06:08,409 --> 00:06:10,830
+actually want to do is use absolute
+paths and specifically using compiler
+
+378
+00:06:10,830 --> 00:06:10,840
+paths and specifically using compiler
+ 
+
+379
+00:06:10,840 --> 00:06:12,360
+paths and specifically using compiler
+include paths so let's take a look at
+
+380
+00:06:12,360 --> 00:06:12,370
+include paths so let's take a look at
+ 
+
+381
+00:06:12,370 --> 00:06:13,710
+include paths so let's take a look at
+what that looks like so instead of this
+
+382
+00:06:13,710 --> 00:06:13,720
+what that looks like so instead of this
+ 
+
+383
+00:06:13,720 --> 00:06:15,839
+what that looks like so instead of this
+I'm going to right-click on game go to
+
+384
+00:06:15,839 --> 00:06:15,849
+I'm going to right-click on game go to
+ 
+
+385
+00:06:15,849 --> 00:06:18,149
+I'm going to right-click on game go to
+properties and then under C C++ in
+
+386
+00:06:18,149 --> 00:06:18,159
+properties and then under C C++ in
+ 
+
+387
+00:06:18,159 --> 00:06:19,740
+properties and then under C C++ in
+general as an additional include
+
+388
+00:06:19,740 --> 00:06:19,750
+general as an additional include
+ 
+
+389
+00:06:19,750 --> 00:06:22,170
+general as an additional include
+directory I'm going to include that
+
+390
+00:06:22,170 --> 00:06:22,180
+directory I'm going to include that
+ 
+
+391
+00:06:22,180 --> 00:06:24,540
+directory I'm going to include that
+engine source directory which is over
+
+392
+00:06:24,540 --> 00:06:24,550
+engine source directory which is over
+ 
+
+393
+00:06:24,550 --> 00:06:27,149
+engine source directory which is over
+here this engine source directory and
+
+394
+00:06:27,149 --> 00:06:27,159
+here this engine source directory and
+ 
+
+395
+00:06:27,159 --> 00:06:29,040
+here this engine source directory and
+I'm going to do that by typing in dollar
+
+396
+00:06:29,040 --> 00:06:29,050
+I'm going to do that by typing in dollar
+ 
+
+397
+00:06:29,050 --> 00:06:29,850
+I'm going to do that by typing in dollar
+sign that's
+
+398
+00:06:29,850 --> 00:06:29,860
+sign that's
+ 
+
+399
+00:06:29,860 --> 00:06:32,369
+sign that's
+solution directory engine which is the
+
+400
+00:06:32,369 --> 00:06:32,379
+solution directory engine which is the
+ 
+
+401
+00:06:32,379 --> 00:06:34,050
+solution directory engine which is the
+aim of the project and then backslash
+
+402
+00:06:34,050 --> 00:06:34,060
+aim of the project and then backslash
+ 
+
+403
+00:06:34,060 --> 00:06:36,689
+aim of the project and then backslash
+source right that is my include
+
+404
+00:06:36,689 --> 00:06:36,699
+source right that is my include
+ 
+
+405
+00:06:36,699 --> 00:06:38,670
+source right that is my include
+directory if I expand this and click
+
+406
+00:06:38,670 --> 00:06:38,680
+directory if I expand this and click
+ 
+
+407
+00:06:38,680 --> 00:06:41,189
+directory if I expand this and click
+edit you can see that it evaluates to
+
+408
+00:06:41,189 --> 00:06:41,199
+edit you can see that it evaluates to
+ 
+
+409
+00:06:41,199 --> 00:06:43,619
+edit you can see that it evaluates to
+that James slash engine slash source
+
+410
+00:06:43,619 --> 00:06:43,629
+that James slash engine slash source
+ 
+
+411
+00:06:43,629 --> 00:06:45,570
+that James slash engine slash source
+directory right solution directory is
+
+412
+00:06:45,570 --> 00:06:45,580
+directory right solution directory is
+ 
+
+413
+00:06:45,580 --> 00:06:47,219
+directory right solution directory is
+just a macro which expands to be
+
+414
+00:06:47,219 --> 00:06:47,229
+just a macro which expands to be
+ 
+
+415
+00:06:47,229 --> 00:06:49,350
+just a macro which expands to be
+location or specifically the directory
+
+416
+00:06:49,350 --> 00:06:49,360
+location or specifically the directory
+ 
+
+417
+00:06:49,360 --> 00:06:51,809
+location or specifically the directory
+of that solution file so in other words
+
+418
+00:06:51,809 --> 00:06:51,819
+of that solution file so in other words
+ 
+
+419
+00:06:51,819 --> 00:06:54,450
+of that solution file so in other words
+the directory that contains this dot SLN
+
+420
+00:06:54,450 --> 00:06:54,460
+the directory that contains this dot SLN
+ 
+
+421
+00:06:54,460 --> 00:06:56,520
+the directory that contains this dot SLN
+file that's what that solution directory
+
+422
+00:06:56,520 --> 00:06:56,530
+file that's what that solution directory
+ 
+
+423
+00:06:56,530 --> 00:06:58,529
+file that's what that solution directory
+macro is and if we add on the name of
+
+424
+00:06:58,529 --> 00:06:58,539
+macro is and if we add on the name of
+ 
+
+425
+00:06:58,539 --> 00:07:00,779
+macro is and if we add on the name of
+the project and then source we get there
+
+426
+00:07:00,779 --> 00:07:00,789
+the project and then source we get there
+ 
+
+427
+00:07:00,789 --> 00:07:02,159
+the project and then source we get there
+so now what I can do inside this
+
+428
+00:07:02,159 --> 00:07:02,169
+so now what I can do inside this
+ 
+
+429
+00:07:02,169 --> 00:07:03,959
+so now what I can do inside this
+application the CPP file is instead of
+
+430
+00:07:03,959 --> 00:07:03,969
+application the CPP file is instead of
+ 
+
+431
+00:07:03,969 --> 00:07:06,029
+application the CPP file is instead of
+including that massive like relative
+
+432
+00:07:06,029 --> 00:07:06,039
+including that massive like relative
+ 
+
+433
+00:07:06,039 --> 00:07:08,219
+including that massive like relative
+path here I can just replace this with a
+
+434
+00:07:08,219 --> 00:07:08,229
+path here I can just replace this with a
+ 
+
+435
+00:07:08,229 --> 00:07:10,379
+path here I can just replace this with a
+path that is relative to my actual
+
+436
+00:07:10,379 --> 00:07:10,389
+path that is relative to my actual
+ 
+
+437
+00:07:10,389 --> 00:07:12,240
+path that is relative to my actual
+source directory inside engines so in
+
+438
+00:07:12,240 --> 00:07:12,250
+source directory inside engines so in
+ 
+
+439
+00:07:12,250 --> 00:07:13,920
+source directory inside engines so in
+this case that's going to end up just
+
+440
+00:07:13,920 --> 00:07:13,930
+this case that's going to end up just
+ 
+
+441
+00:07:13,930 --> 00:07:16,589
+this case that's going to end up just
+being engine dot H like that and that's
+
+442
+00:07:16,589 --> 00:07:16,599
+being engine dot H like that and that's
+ 
+
+443
+00:07:16,599 --> 00:07:18,450
+being engine dot H like that and that's
+all I need to do right and I can get rid
+
+444
+00:07:18,450 --> 00:07:18,460
+all I need to do right and I can get rid
+ 
+
+445
+00:07:18,460 --> 00:07:20,279
+all I need to do right and I can get rid
+of that other one and hit ctrl f7 you
+
+446
+00:07:20,279 --> 00:07:20,289
+of that other one and hit ctrl f7 you
+ 
+
+447
+00:07:20,289 --> 00:07:22,320
+of that other one and hit ctrl f7 you
+can see compositors fine now because
+
+448
+00:07:22,320 --> 00:07:22,330
+can see compositors fine now because
+ 
+
+449
+00:07:22,330 --> 00:07:24,240
+can see compositors fine now because
+we've specified it as a compiler include
+
+450
+00:07:24,240 --> 00:07:24,250
+we've specified it as a compiler include
+ 
+
+451
+00:07:24,250 --> 00:07:27,119
+we've specified it as a compiler include
+path I could also replace these quotes
+
+452
+00:07:27,119 --> 00:07:27,129
+path I could also replace these quotes
+ 
+
+453
+00:07:27,129 --> 00:07:29,820
+path I could also replace these quotes
+with angular brackets like this and some
+
+454
+00:07:29,820 --> 00:07:29,830
+with angular brackets like this and some
+ 
+
+455
+00:07:29,830 --> 00:07:31,860
+with angular brackets like this and some
+people may prefer to do this personally
+
+456
+00:07:31,860 --> 00:07:31,870
+people may prefer to do this personally
+ 
+
+457
+00:07:31,870 --> 00:07:34,320
+people may prefer to do this personally
+I don't I use angular brackets if I'm
+
+458
+00:07:34,320 --> 00:07:34,330
+I don't I use angular brackets if I'm
+ 
+
+459
+00:07:34,330 --> 00:07:35,969
+I don't I use angular brackets if I'm
+including something that is outside of
+
+460
+00:07:35,969 --> 00:07:35,979
+including something that is outside of
+ 
+
+461
+00:07:35,979 --> 00:07:38,010
+including something that is outside of
+this visual studio solution so something
+
+462
+00:07:38,010 --> 00:07:38,020
+this visual studio solution so something
+ 
+
+463
+00:07:38,020 --> 00:07:39,360
+this visual studio solution so something
+that is an external dependency in
+
+464
+00:07:39,360 --> 00:07:39,370
+that is an external dependency in
+ 
+
+465
+00:07:39,370 --> 00:07:41,339
+that is an external dependency in
+completely external to the project if
+
+466
+00:07:41,339 --> 00:07:41,349
+completely external to the project if
+ 
+
+467
+00:07:41,349 --> 00:07:43,529
+completely external to the project if
+the code for this engine dot H file is
+
+468
+00:07:43,529 --> 00:07:43,539
+the code for this engine dot H file is
+ 
+
+469
+00:07:43,539 --> 00:07:45,930
+the code for this engine dot H file is
+actually found inside this solution or
+
+470
+00:07:45,930 --> 00:07:45,940
+actually found inside this solution or
+ 
+
+471
+00:07:45,940 --> 00:07:47,459
+actually found inside this solution or
+specifically something written by me
+
+472
+00:07:47,459 --> 00:07:47,469
+specifically something written by me
+ 
+
+473
+00:07:47,469 --> 00:07:49,619
+specifically something written by me
+inside this solution not something like
+
+474
+00:07:49,619 --> 00:07:49,629
+inside this solution not something like
+ 
+
+475
+00:07:49,629 --> 00:07:51,809
+inside this solution not something like
+this a bus bus standard library then I
+
+476
+00:07:51,809 --> 00:07:51,819
+this a bus bus standard library then I
+ 
+
+477
+00:07:51,819 --> 00:07:53,490
+this a bus bus standard library then I
+will use quotes to indicate that this is
+
+478
+00:07:53,490 --> 00:07:53,500
+will use quotes to indicate that this is
+ 
+
+479
+00:07:53,500 --> 00:07:55,499
+will use quotes to indicate that this is
+kind of one of our source files so I'm
+
+480
+00:07:55,499 --> 00:07:55,509
+kind of one of our source files so I'm
+ 
+
+481
+00:07:55,509 --> 00:07:57,809
+kind of one of our source files so I'm
+going to bring back those quotes ok
+
+482
+00:07:57,809 --> 00:07:57,819
+going to bring back those quotes ok
+ 
+
+483
+00:07:57,819 --> 00:07:59,610
+going to bring back those quotes ok
+fantastic so we've got our header files
+
+484
+00:07:59,610 --> 00:07:59,620
+fantastic so we've got our header files
+ 
+
+485
+00:07:59,620 --> 00:08:01,379
+fantastic so we've got our header files
+all included now everything's working
+
+486
+00:08:01,379 --> 00:08:01,389
+all included now everything's working
+ 
+
+487
+00:08:01,389 --> 00:08:03,499
+all included now everything's working
+great but project isn't linking because
+
+488
+00:08:03,499 --> 00:08:03,509
+great but project isn't linking because
+ 
+
+489
+00:08:03,509 --> 00:08:05,760
+great but project isn't linking because
+we're not actually linking to the
+
+490
+00:08:05,760 --> 00:08:05,770
+we're not actually linking to the
+ 
+
+491
+00:08:05,770 --> 00:08:07,379
+we're not actually linking to the
+library so there's a few things there's
+
+492
+00:08:07,379 --> 00:08:07,389
+library so there's a few things there's
+ 
+
+493
+00:08:07,389 --> 00:08:08,459
+library so there's a few things there's
+a few ways that we could actually do
+
+494
+00:08:08,459 --> 00:08:08,469
+a few ways that we could actually do
+ 
+
+495
+00:08:08,469 --> 00:08:10,379
+a few ways that we could actually do
+that first of all you need to understand
+
+496
+00:08:10,379 --> 00:08:10,389
+that first of all you need to understand
+ 
+
+497
+00:08:10,389 --> 00:08:12,480
+that first of all you need to understand
+what happens to the library if I
+
+498
+00:08:12,480 --> 00:08:12,490
+what happens to the library if I
+ 
+
+499
+00:08:12,490 --> 00:08:13,950
+what happens to the library if I
+right-click on my engine and hit build
+
+500
+00:08:13,950 --> 00:08:13,960
+right-click on my engine and hit build
+ 
+
+501
+00:08:13,960 --> 00:08:15,990
+right-click on my engine and hit build
+you can see that what Visual Studio does
+
+502
+00:08:15,990 --> 00:08:16,000
+you can see that what Visual Studio does
+ 
+
+503
+00:08:16,000 --> 00:08:17,730
+you can see that what Visual Studio does
+is it generates this Lib file and if we
+
+504
+00:08:17,730 --> 00:08:17,740
+is it generates this Lib file and if we
+ 
+
+505
+00:08:17,740 --> 00:08:19,110
+is it generates this Lib file and if we
+actually go to the path that it
+
+506
+00:08:19,110 --> 00:08:19,120
+actually go to the path that it
+ 
+
+507
+00:08:19,120 --> 00:08:21,899
+actually go to the path that it
+specifies over here then you can see we
+
+508
+00:08:21,899 --> 00:08:21,909
+specifies over here then you can see we
+ 
+
+509
+00:08:21,909 --> 00:08:23,790
+specifies over here then you can see we
+have this live file this is what we want
+
+510
+00:08:23,790 --> 00:08:23,800
+have this live file this is what we want
+ 
+
+511
+00:08:23,800 --> 00:08:25,559
+have this live file this is what we want
+to actually link against now what we
+
+512
+00:08:25,559 --> 00:08:25,569
+to actually link against now what we
+ 
+
+513
+00:08:25,569 --> 00:08:27,510
+to actually link against now what we
+could do if you watch my video on static
+
+514
+00:08:27,510 --> 00:08:27,520
+could do if you watch my video on static
+ 
+
+515
+00:08:27,520 --> 00:08:29,670
+could do if you watch my video on static
+linking which is linked over there we
+
+516
+00:08:29,670 --> 00:08:29,680
+linking which is linked over there we
+ 
+
+517
+00:08:29,680 --> 00:08:31,320
+linking which is linked over there we
+could just kind of go to our linker
+
+518
+00:08:31,320 --> 00:08:31,330
+could just kind of go to our linker
+ 
+
+519
+00:08:31,330 --> 00:08:34,319
+could just kind of go to our linker
+settings and put that in as an input but
+
+520
+00:08:34,319 --> 00:08:34,329
+settings and put that in as an input but
+ 
+
+521
+00:08:34,329 --> 00:08:35,909
+settings and put that in as an input but
+we don't have to do that Visual Studio
+
+522
+00:08:35,909 --> 00:08:35,919
+we don't have to do that Visual Studio
+ 
+
+523
+00:08:35,919 --> 00:08:37,620
+we don't have to do that Visual Studio
+can actually kind of automate this for
+
+524
+00:08:37,620 --> 00:08:37,630
+can actually kind of automate this for
+ 
+
+525
+00:08:37,630 --> 00:08:39,860
+can actually kind of automate this for
+us because this project is in the App
+
+526
+00:08:39,860 --> 00:08:39,870
+us because this project is in the App
+ 
+
+527
+00:08:39,870 --> 00:08:41,630
+us because this project is in the App
+solution so what we can do is actually
+
+528
+00:08:41,630 --> 00:08:41,640
+solution so what we can do is actually
+ 
+
+529
+00:08:41,640 --> 00:08:44,029
+solution so what we can do is actually
+right-click on game here add and then
+
+530
+00:08:44,029 --> 00:08:44,039
+right-click on game here add and then
+ 
+
+531
+00:08:44,039 --> 00:08:46,730
+right-click on game here add and then
+reference and then we can select inside
+
+532
+00:08:46,730 --> 00:08:46,740
+reference and then we can select inside
+ 
+
+533
+00:08:46,740 --> 00:08:48,829
+reference and then we can select inside
+our projects and solution we can select
+
+534
+00:08:48,829 --> 00:08:48,839
+our projects and solution we can select
+ 
+
+535
+00:08:48,839 --> 00:08:51,019
+our projects and solution we can select
+this engine project and then just click
+
+536
+00:08:51,019 --> 00:08:51,029
+this engine project and then just click
+ 
+
+537
+00:08:51,029 --> 00:08:53,360
+this engine project and then just click
+OK now this is basically going to link
+
+538
+00:08:53,360 --> 00:08:53,370
+OK now this is basically going to link
+ 
+
+539
+00:08:53,370 --> 00:08:55,910
+OK now this is basically going to link
+in that live file into our executable as
+
+540
+00:08:55,910 --> 00:08:55,920
+in that live file into our executable as
+ 
+
+541
+00:08:55,920 --> 00:08:57,769
+in that live file into our executable as
+if we had added it to the linker input
+
+542
+00:08:57,769 --> 00:08:57,779
+if we had added it to the linker input
+ 
+
+543
+00:08:57,779 --> 00:09:00,290
+if we had added it to the linker input
+but this also gives us another advantage
+
+544
+00:09:00,290 --> 00:09:00,300
+but this also gives us another advantage
+ 
+
+545
+00:09:00,300 --> 00:09:02,269
+but this also gives us another advantage
+apart from not having to kind of deal
+
+546
+00:09:02,269 --> 00:09:02,279
+apart from not having to kind of deal
+ 
+
+547
+00:09:02,279 --> 00:09:03,500
+apart from not having to kind of deal
+with setting up an actual file name
+
+548
+00:09:03,500 --> 00:09:03,510
+with setting up an actual file name
+ 
+
+549
+00:09:03,510 --> 00:09:04,940
+with setting up an actual file name
+because obviously if we change the name
+
+550
+00:09:04,940 --> 00:09:04,950
+because obviously if we change the name
+ 
+
+551
+00:09:04,950 --> 00:09:07,310
+because obviously if we change the name
+of engine to call or something like that
+
+552
+00:09:07,310 --> 00:09:07,320
+of engine to call or something like that
+ 
+
+553
+00:09:07,320 --> 00:09:09,590
+of engine to call or something like that
+if it's now called core we have to go
+
+554
+00:09:09,590 --> 00:09:09,600
+if it's now called core we have to go
+ 
+
+555
+00:09:09,600 --> 00:09:10,940
+if it's now called core we have to go
+back to our linker settings for game and
+
+556
+00:09:10,940 --> 00:09:10,950
+back to our linker settings for game and
+ 
+
+557
+00:09:10,950 --> 00:09:13,610
+back to our linker settings for game and
+actually change the input to be court
+
+558
+00:09:13,610 --> 00:09:13,620
+actually change the input to be court
+ 
+
+559
+00:09:13,620 --> 00:09:15,050
+actually change the input to be court
+live instead of engine the little Lib
+
+560
+00:09:15,050 --> 00:09:15,060
+live instead of engine the little Lib
+ 
+
+561
+00:09:15,060 --> 00:09:17,150
+live instead of engine the little Lib
+and if we use a reference like this we
+
+562
+00:09:17,150 --> 00:09:17,160
+and if we use a reference like this we
+ 
+
+563
+00:09:17,160 --> 00:09:17,960
+and if we use a reference like this we
+don't have to do that that's all
+
+564
+00:09:17,960 --> 00:09:17,970
+don't have to do that that's all
+ 
+
+565
+00:09:17,970 --> 00:09:19,310
+don't have to do that that's all
+automated but apart from that I'm not
+
+566
+00:09:19,310 --> 00:09:19,320
+automated but apart from that I'm not
+ 
+
+567
+00:09:19,320 --> 00:09:21,050
+automated but apart from that I'm not
+even talking about that another benefit
+
+568
+00:09:21,050 --> 00:09:21,060
+even talking about that another benefit
+ 
+
+569
+00:09:21,060 --> 00:09:24,019
+even talking about that another benefit
+is engine is now a dependency again so
+
+570
+00:09:24,019 --> 00:09:24,029
+is engine is now a dependency again so
+ 
+
+571
+00:09:24,029 --> 00:09:25,910
+is engine is now a dependency again so
+game depends on engine meaning that if
+
+572
+00:09:25,910 --> 00:09:25,920
+game depends on engine meaning that if
+ 
+
+573
+00:09:25,920 --> 00:09:28,640
+game depends on engine meaning that if
+something inside engine changes and we
+
+574
+00:09:28,640 --> 00:09:28,650
+something inside engine changes and we
+ 
+
+575
+00:09:28,650 --> 00:09:30,650
+something inside engine changes and we
+go to compile game game is actually
+
+576
+00:09:30,650 --> 00:09:30,660
+go to compile game game is actually
+ 
+
+577
+00:09:30,660 --> 00:09:32,930
+go to compile game game is actually
+going to compile engine and game so we
+
+578
+00:09:32,930 --> 00:09:32,940
+going to compile engine and game so we
+ 
+
+579
+00:09:32,940 --> 00:09:34,400
+going to compile engine and game so we
+know that we're dealing always with the
+
+580
+00:09:34,400 --> 00:09:34,410
+know that we're dealing always with the
+ 
+
+581
+00:09:34,410 --> 00:09:35,750
+know that we're dealing always with the
+most up-to-date code there's never a
+
+582
+00:09:35,750 --> 00:09:35,760
+most up-to-date code there's never a
+ 
+
+583
+00:09:35,760 --> 00:09:37,910
+most up-to-date code there's never a
+chance that oh wait I forgot to compile
+
+584
+00:09:37,910 --> 00:09:37,920
+chance that oh wait I forgot to compile
+ 
+
+585
+00:09:37,920 --> 00:09:39,829
+chance that oh wait I forgot to compile
+engine that's why this isn't working or
+
+586
+00:09:39,829 --> 00:09:39,839
+engine that's why this isn't working or
+ 
+
+587
+00:09:39,839 --> 00:09:41,240
+engine that's why this isn't working or
+something like that it's all kind of
+
+588
+00:09:41,240 --> 00:09:41,250
+something like that it's all kind of
+ 
+
+589
+00:09:41,250 --> 00:09:42,680
+something like that it's all kind of
+handled automatically it creates like a
+
+590
+00:09:42,680 --> 00:09:42,690
+handled automatically it creates like a
+ 
+
+591
+00:09:42,690 --> 00:09:44,810
+handled automatically it creates like a
+full dependency graph for us so
+
+592
+00:09:44,810 --> 00:09:44,820
+full dependency graph for us so
+ 
+
+593
+00:09:44,820 --> 00:09:46,519
+full dependency graph for us so
+everything works really nicely so now
+
+594
+00:09:46,519 --> 00:09:46,529
+everything works really nicely so now
+ 
+
+595
+00:09:46,529 --> 00:09:48,500
+everything works really nicely so now
+back in our code I'll even prove this by
+
+596
+00:09:48,500 --> 00:09:48,510
+back in our code I'll even prove this by
+ 
+
+597
+00:09:48,510 --> 00:09:50,210
+back in our code I'll even prove this by
+just right clicking here and clicking
+
+598
+00:09:50,210 --> 00:09:50,220
+just right clicking here and clicking
+ 
+
+599
+00:09:50,220 --> 00:09:52,040
+just right clicking here and clicking
+clean solution you'll know that I'm just
+
+600
+00:09:52,040 --> 00:09:52,050
+clean solution you'll know that I'm just
+ 
+
+601
+00:09:52,050 --> 00:09:54,769
+clean solution you'll know that I'm just
+going to go to game and build game but
+
+602
+00:09:54,769 --> 00:09:54,779
+going to go to game and build game but
+ 
+
+603
+00:09:54,779 --> 00:09:56,090
+going to go to game and build game but
+you can see that what it actually does
+
+604
+00:09:56,090 --> 00:09:56,100
+you can see that what it actually does
+ 
+
+605
+00:09:56,100 --> 00:09:58,790
+you can see that what it actually does
+is build engine first and then game
+
+606
+00:09:58,790 --> 00:09:58,800
+is build engine first and then game
+ 
+
+607
+00:09:58,800 --> 00:10:01,760
+is build engine first and then game
+because engine is actually required for
+
+608
+00:10:01,760 --> 00:10:01,770
+because engine is actually required for
+ 
+
+609
+00:10:01,770 --> 00:10:03,740
+because engine is actually required for
+game to work since we've added it as a
+
+610
+00:10:03,740 --> 00:10:03,750
+game to work since we've added it as a
+ 
+
+611
+00:10:03,750 --> 00:10:05,060
+game to work since we've added it as a
+reference and since we're linking
+
+612
+00:10:05,060 --> 00:10:05,070
+reference and since we're linking
+ 
+
+613
+00:10:05,070 --> 00:10:07,010
+reference and since we're linking
+against it back here in our turn I'm
+
+614
+00:10:07,010 --> 00:10:07,020
+against it back here in our turn I'm
+ 
+
+615
+00:10:07,020 --> 00:10:09,890
+against it back here in our turn I'm
+just going to add a cm get I'll have to
+
+616
+00:10:09,890 --> 00:10:09,900
+just going to add a cm get I'll have to
+ 
+
+617
+00:10:09,900 --> 00:10:11,720
+just going to add a cm get I'll have to
+include iostream to make that happen
+
+618
+00:10:11,720 --> 00:10:11,730
+include iostream to make that happen
+ 
+
+619
+00:10:11,730 --> 00:10:13,460
+include iostream to make that happen
+this is just to pause the console so
+
+620
+00:10:13,460 --> 00:10:13,470
+this is just to pause the console so
+ 
+
+621
+00:10:13,470 --> 00:10:15,440
+this is just to pause the console so
+that we don't quit straightaway and now
+
+622
+00:10:15,440 --> 00:10:15,450
+that we don't quit straightaway and now
+ 
+
+623
+00:10:15,450 --> 00:10:17,180
+that we don't quit straightaway and now
+I'm going to run my application and you
+
+624
+00:10:17,180 --> 00:10:17,190
+I'm going to run my application and you
+ 
+
+625
+00:10:17,190 --> 00:10:18,740
+I'm going to run my application and you
+can see that HelloWorld gets printed at
+
+626
+00:10:18,740 --> 00:10:18,750
+can see that HelloWorld gets printed at
+ 
+
+627
+00:10:18,750 --> 00:10:20,210
+can see that HelloWorld gets printed at
+the console and everything seems to work
+
+628
+00:10:20,210 --> 00:10:20,220
+the console and everything seems to work
+ 
+
+629
+00:10:20,220 --> 00:10:21,890
+the console and everything seems to work
+successfully so that's it I hope you
+
+630
+00:10:21,890 --> 00:10:21,900
+successfully so that's it I hope you
+ 
+
+631
+00:10:21,900 --> 00:10:23,300
+successfully so that's it I hope you
+guys enjoyed the video this was just
+
+632
+00:10:23,300 --> 00:10:23,310
+guys enjoyed the video this was just
+ 
+
+633
+00:10:23,310 --> 00:10:25,130
+guys enjoyed the video this was just
+about static linking in the future we
+
+634
+00:10:25,130 --> 00:10:25,140
+about static linking in the future we
+ 
+
+635
+00:10:25,140 --> 00:10:26,480
+about static linking in the future we
+might I might do a video that's
+
+636
+00:10:26,480 --> 00:10:26,490
+might I might do a video that's
+ 
+
+637
+00:10:26,490 --> 00:10:28,340
+might I might do a video that's
+specifically about this but with dynamic
+
+638
+00:10:28,340 --> 00:10:28,350
+specifically about this but with dynamic
+ 
+
+639
+00:10:28,350 --> 00:10:29,720
+specifically about this but with dynamic
+linking because it is a little bit
+
+640
+00:10:29,720 --> 00:10:29,730
+linking because it is a little bit
+ 
+
+641
+00:10:29,730 --> 00:10:31,250
+linking because it is a little bit
+different and there are some things that
+
+642
+00:10:31,250 --> 00:10:31,260
+different and there are some things that
+ 
+
+643
+00:10:31,260 --> 00:10:33,140
+different and there are some things that
+you need to be aware of but generally
+
+644
+00:10:33,140 --> 00:10:33,150
+you need to be aware of but generally
+ 
+
+645
+00:10:33,150 --> 00:10:34,760
+you need to be aware of but generally
+again I will link statically in fact if
+
+646
+00:10:34,760 --> 00:10:34,770
+again I will link statically in fact if
+ 
+
+647
+00:10:34,770 --> 00:10:36,560
+again I will link statically in fact if
+we go back to our code real quick what's
+
+648
+00:10:36,560 --> 00:10:36,570
+we go back to our code real quick what's
+ 
+
+649
+00:10:36,570 --> 00:10:37,880
+we go back to our code real quick what's
+happened now is even though we've had
+
+650
+00:10:37,880 --> 00:10:37,890
+happened now is even though we've had
+ 
+
+651
+00:10:37,890 --> 00:10:40,040
+happened now is even though we've had
+those two projects if I go into my
+
+652
+00:10:40,040 --> 00:10:40,050
+those two projects if I go into my
+ 
+
+653
+00:10:40,050 --> 00:10:42,470
+those two projects if I go into my
+solution directory debug you can see
+
+654
+00:10:42,470 --> 00:10:42,480
+solution directory debug you can see
+ 
+
+655
+00:10:42,480 --> 00:10:44,120
+solution directory debug you can see
+that there's just game don't you see if
+
+656
+00:10:44,120 --> 00:10:44,130
+that there's just game don't you see if
+ 
+
+657
+00:10:44,130 --> 00:10:46,220
+that there's just game don't you see if
+I take that game don't yet see and I'll
+
+658
+00:10:46,220 --> 00:10:46,230
+I take that game don't yet see and I'll
+ 
+
+659
+00:10:46,230 --> 00:10:47,570
+I take that game don't yet see and I'll
+open two completely different folder
+
+660
+00:10:47,570 --> 00:10:47,580
+open two completely different folder
+ 
+
+661
+00:10:47,580 --> 00:10:48,440
+open two completely different folder
+here called dist
+
+662
+00:10:48,440 --> 00:10:48,450
+here called dist
+ 
+
+663
+00:10:48,450 --> 00:10:49,970
+here called dist
+which is on my desktop I'll paste it in
+
+664
+00:10:49,970 --> 00:10:49,980
+which is on my desktop I'll paste it in
+ 
+
+665
+00:10:49,980 --> 00:10:51,890
+which is on my desktop I'll paste it in
+here that's all I need to actually run
+
+666
+00:10:51,890 --> 00:10:51,900
+here that's all I need to actually run
+ 
+
+667
+00:10:51,900 --> 00:10:53,329
+here that's all I need to actually run
+this program if I double click on this
+
+668
+00:10:53,329 --> 00:10:53,339
+this program if I double click on this
+ 
+
+669
+00:10:53,339 --> 00:10:55,280
+this program if I double click on this
+ax a file you can see it's going to run
+
+670
+00:10:55,280 --> 00:10:55,290
+ax a file you can see it's going to run
+ 
+
+671
+00:10:55,290 --> 00:10:57,199
+ax a file you can see it's going to run
+my program and that's it because we're
+
+672
+00:10:57,199 --> 00:10:57,209
+my program and that's it because we're
+ 
+
+673
+00:10:57,209 --> 00:10:58,850
+my program and that's it because we're
+linking statically so everything gets
+
+674
+00:10:58,850 --> 00:10:58,860
+linking statically so everything gets
+ 
+
+675
+00:10:58,860 --> 00:11:00,650
+linking statically so everything gets
+put into that exe file there's no actual
+
+676
+00:11:00,650 --> 00:11:00,660
+put into that exe file there's no actual
+ 
+
+677
+00:11:00,660 --> 00:11:03,079
+put into that exe file there's no actual
+external file dependency gangully ACC
+
+678
+00:11:03,079 --> 00:11:03,089
+external file dependency gangully ACC
+ 
+
+679
+00:11:03,089 --> 00:11:04,819
+external file dependency gangully ACC
+has everything we want so we've managed
+
+680
+00:11:04,819 --> 00:11:04,829
+has everything we want so we've managed
+ 
+
+681
+00:11:04,829 --> 00:11:06,319
+has everything we want so we've managed
+to successfully link statically and
+
+682
+00:11:06,319 --> 00:11:06,329
+to successfully link statically and
+ 
+
+683
+00:11:06,329 --> 00:11:08,329
+to successfully link statically and
+still kind of have multiple projects in
+
+684
+00:11:08,329 --> 00:11:08,339
+still kind of have multiple projects in
+ 
+
+685
+00:11:08,339 --> 00:11:10,190
+still kind of have multiple projects in
+visual studio now this is very useful
+
+686
+00:11:10,190 --> 00:11:10,200
+visual studio now this is very useful
+ 
+
+687
+00:11:10,200 --> 00:11:11,660
+visual studio now this is very useful
+because again if we were actually
+
+688
+00:11:11,660 --> 00:11:11,670
+because again if we were actually
+ 
+
+689
+00:11:11,670 --> 00:11:13,400
+because again if we were actually
+building a game engine we might have
+
+690
+00:11:13,400 --> 00:11:13,410
+building a game engine we might have
+ 
+
+691
+00:11:13,410 --> 00:11:15,800
+building a game engine we might have
+this like this this solution might have
+
+692
+00:11:15,800 --> 00:11:15,810
+this like this this solution might have
+ 
+
+693
+00:11:15,810 --> 00:11:18,140
+this like this this solution might have
+several examples of how to use the
+
+694
+00:11:18,140 --> 00:11:18,150
+several examples of how to use the
+ 
+
+695
+00:11:18,150 --> 00:11:20,240
+several examples of how to use the
+engine or several games or something
+
+696
+00:11:20,240 --> 00:11:20,250
+engine or several games or something
+ 
+
+697
+00:11:20,250 --> 00:11:21,890
+engine or several games or something
+like that that all reference that one
+
+698
+00:11:21,890 --> 00:11:21,900
+like that that all reference that one
+ 
+
+699
+00:11:21,900 --> 00:11:24,620
+like that that all reference that one
+engine file that one engine project so
+
+700
+00:11:24,620 --> 00:11:24,630
+engine file that one engine project so
+ 
+
+701
+00:11:24,630 --> 00:11:25,880
+engine file that one engine project so
+that's why we kind of what we kind of
+
+702
+00:11:25,880 --> 00:11:25,890
+that's why we kind of what we kind of
+ 
+
+703
+00:11:25,890 --> 00:11:27,590
+that's why we kind of what we kind of
+want to modularize this so that we have
+
+704
+00:11:27,590 --> 00:11:27,600
+want to modularize this so that we have
+ 
+
+705
+00:11:27,600 --> 00:11:29,660
+want to modularize this so that we have
+all about kind of core code or
+
+706
+00:11:29,660 --> 00:11:29,670
+all about kind of core code or
+ 
+
+707
+00:11:29,670 --> 00:11:31,940
+all about kind of core code or
+centralized in one project and then we
+
+708
+00:11:31,940 --> 00:11:31,950
+centralized in one project and then we
+ 
+
+709
+00:11:31,950 --> 00:11:33,829
+centralized in one project and then we
+can just you know have all of our
+
+710
+00:11:33,829 --> 00:11:33,839
+can just you know have all of our
+ 
+
+711
+00:11:33,839 --> 00:11:35,090
+can just you know have all of our
+examples or all of our actual
+
+712
+00:11:35,090 --> 00:11:35,100
+examples or all of our actual
+ 
+
+713
+00:11:35,100 --> 00:11:37,069
+examples or all of our actual
+applications our executables linked
+
+714
+00:11:37,069 --> 00:11:37,079
+applications our executables linked
+ 
+
+715
+00:11:37,079 --> 00:11:38,750
+applications our executables linked
+against that one centralized project
+
+716
+00:11:38,750 --> 00:11:38,760
+against that one centralized project
+ 
+
+717
+00:11:38,760 --> 00:11:40,250
+against that one centralized project
+hope you guys enjoyed this video if you
+
+718
+00:11:40,250 --> 00:11:40,260
+hope you guys enjoyed this video if you
+ 
+
+719
+00:11:40,260 --> 00:11:41,960
+hope you guys enjoyed this video if you
+did you hit that like button if you have
+
+720
+00:11:41,960 --> 00:11:41,970
+did you hit that like button if you have
+ 
+
+721
+00:11:41,970 --> 00:11:43,250
+did you hit that like button if you have
+any suggestions for what you want me to
+
+722
+00:11:43,250 --> 00:11:43,260
+any suggestions for what you want me to
+ 
+
+723
+00:11:43,260 --> 00:11:45,110
+any suggestions for what you want me to
+cover and future c++ videos just leave a
+
+724
+00:11:45,110 --> 00:11:45,120
+cover and future c++ videos just leave a
+ 
+
+725
+00:11:45,120 --> 00:11:46,519
+cover and future c++ videos just leave a
+comment below you can also port the
+
+726
+00:11:46,519 --> 00:11:46,529
+comment below you can also port the
+ 
+
+727
+00:11:46,529 --> 00:11:48,260
+comment below you can also port the
+series by going over to patreon hopeful
+
+728
+00:11:48,260 --> 00:11:48,270
+series by going over to patreon hopeful
+ 
+
+729
+00:11:48,270 --> 00:11:49,730
+series by going over to patreon hopeful
+such that show know you'll get some cool
+
+730
+00:11:49,730 --> 00:11:49,740
+such that show know you'll get some cool
+ 
+
+731
+00:11:49,740 --> 00:11:51,530
+such that show know you'll get some cool
+rewards and just helps make sure that I
+
+732
+00:11:51,530 --> 00:11:51,540
+rewards and just helps make sure that I
+ 
+
+733
+00:11:51,540 --> 00:11:53,720
+rewards and just helps make sure that I
+can keep making these videos as often as
+
+734
+00:11:53,720 --> 00:11:53,730
+can keep making these videos as often as
+ 
+
+735
+00:11:53,730 --> 00:11:55,640
+can keep making these videos as often as
+possible for you guys if you want any
+
+736
+00:11:55,640 --> 00:11:55,650
+possible for you guys if you want any
+ 
+
+737
+00:11:55,650 --> 00:11:57,019
+possible for you guys if you want any
+more help with see both boss as well the
+
+738
+00:11:57,019 --> 00:11:57,029
+more help with see both boss as well the
+ 
+
+739
+00:11:57,029 --> 00:11:58,880
+more help with see both boss as well the
+best place to get it is just to join my
+
+740
+00:11:58,880 --> 00:11:58,890
+best place to get it is just to join my
+ 
+
+741
+00:11:58,890 --> 00:12:00,260
+best place to get it is just to join my
+discord at the trailer home slash
+
+742
+00:12:00,260 --> 00:12:00,270
+discord at the trailer home slash
+ 
+
+743
+00:12:00,270 --> 00:12:02,569
+discord at the trailer home slash
+discord lots of great people there that
+
+744
+00:12:02,569 --> 00:12:02,579
+discord lots of great people there that
+ 
+
+745
+00:12:02,579 --> 00:12:03,949
+discord lots of great people there that
+can help you out and we just talk about
+
+746
+00:12:03,949 --> 00:12:03,959
+can help you out and we just talk about
+ 
+
+747
+00:12:03,959 --> 00:12:05,540
+can help you out and we just talk about
+programming and stuff like that all day
+
+748
+00:12:05,540 --> 00:12:05,550
+programming and stuff like that all day
+ 
+
+749
+00:12:05,550 --> 00:12:07,670
+programming and stuff like that all day
+it's a great time I will see you guys
+
+750
+00:12:07,670 --> 00:12:07,680
+it's a great time I will see you guys
+ 
+
+751
+00:12:07,680 --> 00:12:09,690
+it's a great time I will see you guys
+next time goodbye
+
+752
+00:12:09,690 --> 00:12:09,700
+next time goodbye
+ 
+
+753
+00:12:09,700 --> 00:12:25,320
+next time goodbye
+[Music]
+

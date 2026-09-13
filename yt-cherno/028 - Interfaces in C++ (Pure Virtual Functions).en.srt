@@ -1,0 +1,1985 @@
+1
+00:00:00,000 --> 00:00:01,710
+
+Hey, what's up guys? My name is Acherno,
+
+2
+00:00:01,710 --> 00:00:01,720
+Hey, what's up guys? My name is Acherno,
+ 
+
+3
+00:00:01,720 --> 00:00:03,990
+Hey, what's up guys? My name is Acherno,
+and welcome back to my C++ series. Last
+
+4
+00:00:03,990 --> 00:00:04,000
+and welcome back to my C++ series. Last
+ 
+
+5
+00:00:04,000 --> 00:00:05,590
+and welcome back to my C++ series. Last
+time we talked about virtual functions,
+
+6
+00:00:05,590 --> 00:00:05,600
+time we talked about virtual functions,
+ 
+
+7
+00:00:05,600 --> 00:00:06,430
+time we talked about virtual functions,
+and today we're going to be talking
+
+8
+00:00:06,430 --> 00:00:06,440
+and today we're going to be talking
+ 
+
+9
+00:00:06,440 --> 00:00:08,030
+and today we're going to be talking
+about a specific type of virtual
+
+10
+00:00:08,030 --> 00:00:08,040
+about a specific type of virtual
+ 
+
+11
+00:00:08,040 --> 00:00:09,470
+about a specific type of virtual
+function, something called a pure
+
+12
+00:00:09,470 --> 00:00:09,480
+function, something called a pure
+ 
+
+13
+00:00:09,480 --> 00:00:11,110
+function, something called a pure
+virtual function. A pure virtual
+
+14
+00:00:11,110 --> 00:00:11,120
+virtual function. A pure virtual
+ 
+
+15
+00:00:11,120 --> 00:00:13,230
+virtual function. A pure virtual
+function in C++ is essentially the same
+
+16
+00:00:13,230 --> 00:00:13,240
+function in C++ is essentially the same
+ 
+
+17
+00:00:13,240 --> 00:00:15,510
+function in C++ is essentially the same
+as an abstract method or an interface in
+
+18
+00:00:15,510 --> 00:00:15,520
+as an abstract method or an interface in
+ 
+
+19
+00:00:15,520 --> 00:00:17,990
+as an abstract method or an interface in
+other languages such as Java or C#.
+
+20
+00:00:17,990 --> 00:00:18,000
+other languages such as Java or C#.
+ 
+
+21
+00:00:18,000 --> 00:00:19,470
+other languages such as Java or C#.
+Basically, a pure virtual function
+
+22
+00:00:19,470 --> 00:00:19,480
+Basically, a pure virtual function
+ 
+
+23
+00:00:19,480 --> 00:00:21,910
+Basically, a pure virtual function
+allows us to define a function in a base
+
+24
+00:00:21,910 --> 00:00:21,920
+allows us to define a function in a base
+ 
+
+25
+00:00:21,920 --> 00:00:23,510
+allows us to define a function in a base
+class that does not have an
+
+26
+00:00:23,510 --> 00:00:23,520
+class that does not have an
+ 
+
+27
+00:00:23,520 --> 00:00:25,510
+class that does not have an
+implementation, and then force
+
+28
+00:00:25,510 --> 00:00:25,520
+implementation, and then force
+ 
+
+29
+00:00:25,520 --> 00:00:27,910
+implementation, and then force
+subclasses to actually implement that
+
+30
+00:00:27,910 --> 00:00:27,920
+subclasses to actually implement that
+ 
+
+31
+00:00:27,920 --> 00:00:29,310
+subclasses to actually implement that
+function. If we take a look at our
+
+32
+00:00:29,310 --> 00:00:29,320
+function. If we take a look at our
+ 
+
+33
+00:00:29,320 --> 00:00:31,310
+function. If we take a look at our
+example from the previous video, which
+
+34
+00:00:31,310 --> 00:00:31,320
+example from the previous video, which
+ 
+
+35
+00:00:31,320 --> 00:00:33,030
+example from the previous video, which
+was about virtual functions, you can see
+
+36
+00:00:33,030 --> 00:00:33,040
+was about virtual functions, you can see
+ 
+
+37
+00:00:33,040 --> 00:00:34,710
+was about virtual functions, you can see
+that we had a virtual get name function
+
+38
+00:00:34,710 --> 00:00:34,720
+that we had a virtual get name function
+ 
+
+39
+00:00:34,720 --> 00:00:37,510
+that we had a virtual get name function
+inside the entity class, and then we had
+
+40
+00:00:37,510 --> 00:00:37,520
+inside the entity class, and then we had
+ 
+
+41
+00:00:37,520 --> 00:00:39,430
+inside the entity class, and then we had
+an override for that function inside our
+
+42
+00:00:39,430 --> 00:00:39,440
+an override for that function inside our
+ 
+
+43
+00:00:39,440 --> 00:00:41,430
+an override for that function inside our
+player class. By having this get name
+
+44
+00:00:41,430 --> 00:00:41,440
+player class. By having this get name
+ 
+
+45
+00:00:41,440 --> 00:00:43,150
+player class. By having this get name
+function inside our base class with an
+
+46
+00:00:43,150 --> 00:00:43,160
+function inside our base class with an
+ 
+
+47
+00:00:43,160 --> 00:00:45,470
+function inside our base class with an
+actual body means that overriding it in
+
+48
+00:00:45,470 --> 00:00:45,480
+actual body means that overriding it in
+ 
+
+49
+00:00:45,480 --> 00:00:47,670
+actual body means that overriding it in
+a subclass such as player is entirely
+
+50
+00:00:47,670 --> 00:00:47,680
+a subclass such as player is entirely
+ 
+
+51
+00:00:47,680 --> 00:00:49,910
+a subclass such as player is entirely
+optional. If we didn't override it, then
+
+52
+00:00:49,910 --> 00:00:49,920
+optional. If we didn't override it, then
+ 
+
+53
+00:00:49,920 --> 00:00:51,750
+optional. If we didn't override it, then
+we could still call player.getname.
+
+54
+00:00:51,750 --> 00:00:51,760
+we could still call player.getname.
+ 
+
+55
+00:00:51,760 --> 00:00:53,350
+we could still call player.getname.
+However, it would of course return the
+
+56
+00:00:53,350 --> 00:00:53,360
+However, it would of course return the
+ 
+
+57
+00:00:53,360 --> 00:00:55,550
+However, it would of course return the
+entity string. However, in some cases,
+
+58
+00:00:55,550 --> 00:00:55,560
+entity string. However, in some cases,
+ 
+
+59
+00:00:55,560 --> 00:00:57,630
+entity string. However, in some cases,
+it doesn't make sense for us to provide
+
+60
+00:00:57,630 --> 00:00:57,640
+it doesn't make sense for us to provide
+ 
+
+61
+00:00:57,640 --> 00:01:00,190
+it doesn't make sense for us to provide
+this default implementation. We actually
+
+62
+00:01:00,190 --> 00:01:00,200
+this default implementation. We actually
+ 
+
+63
+00:01:00,200 --> 00:01:02,110
+this default implementation. We actually
+might want to force the subclass to
+
+64
+00:01:02,110 --> 00:01:02,120
+might want to force the subclass to
+ 
+
+65
+00:01:02,120 --> 00:01:04,070
+might want to force the subclass to
+actually provide its own definition for
+
+66
+00:01:04,070 --> 00:01:04,080
+actually provide its own definition for
+ 
+
+67
+00:01:04,080 --> 00:01:06,230
+actually provide its own definition for
+a certain function. In object-oriented
+
+68
+00:01:06,230 --> 00:01:06,240
+a certain function. In object-oriented
+ 
+
+69
+00:01:06,240 --> 00:01:07,590
+a certain function. In object-oriented
+programming, it's actually quite common
+
+70
+00:01:07,590 --> 00:01:07,600
+programming, it's actually quite common
+ 
+
+71
+00:01:07,600 --> 00:01:09,670
+programming, it's actually quite common
+for us to create a class that consists
+
+72
+00:01:09,670 --> 00:01:09,680
+for us to create a class that consists
+ 
+
+73
+00:01:09,680 --> 00:01:11,750
+for us to create a class that consists
+only of unimplemented methods, and then
+
+74
+00:01:11,750 --> 00:01:11,760
+only of unimplemented methods, and then
+ 
+
+75
+00:01:11,760 --> 00:01:13,750
+only of unimplemented methods, and then
+force a subclass to actually implement
+
+76
+00:01:13,750 --> 00:01:13,760
+force a subclass to actually implement
+ 
+
+77
+00:01:13,760 --> 00:01:15,110
+force a subclass to actually implement
+them. This is something that's often
+
+78
+00:01:15,110 --> 00:01:15,120
+them. This is something that's often
+ 
+
+79
+00:01:15,120 --> 00:01:17,070
+them. This is something that's often
+referred to as an interface. So, an
+
+80
+00:01:17,070 --> 00:01:17,080
+referred to as an interface. So, an
+ 
+
+81
+00:01:17,080 --> 00:01:18,590
+referred to as an interface. So, an
+interface being a class that only
+
+82
+00:01:18,590 --> 00:01:18,600
+interface being a class that only
+ 
+
+83
+00:01:18,600 --> 00:01:21,150
+interface being a class that only
+consists of unimplemented methods and
+
+84
+00:01:21,150 --> 00:01:21,160
+consists of unimplemented methods and
+ 
+
+85
+00:01:21,160 --> 00:01:23,350
+consists of unimplemented methods and
+acting as a template of sorts. And since
+
+86
+00:01:23,350 --> 00:01:23,360
+acting as a template of sorts. And since
+ 
+
+87
+00:01:23,360 --> 00:01:25,470
+acting as a template of sorts. And since
+this interface class doesn't actually
+
+88
+00:01:25,470 --> 00:01:25,480
+this interface class doesn't actually
+ 
+
+89
+00:01:25,480 --> 00:01:28,190
+this interface class doesn't actually
+contain method implementations, it's not
+
+90
+00:01:28,190 --> 00:01:28,200
+contain method implementations, it's not
+ 
+
+91
+00:01:28,200 --> 00:01:30,630
+contain method implementations, it's not
+actually possible for us to instantiate
+
+92
+00:01:30,630 --> 00:01:30,640
+actually possible for us to instantiate
+ 
+
+93
+00:01:30,640 --> 00:01:32,270
+actually possible for us to instantiate
+that class. Let's see if we can make
+
+94
+00:01:32,270 --> 00:01:32,280
+that class. Let's see if we can make
+ 
+
+95
+00:01:32,280 --> 00:01:34,270
+that class. Let's see if we can make
+this get name function inside entity a
+
+96
+00:01:34,270 --> 00:01:34,280
+this get name function inside entity a
+ 
+
+97
+00:01:34,280 --> 00:01:35,950
+this get name function inside entity a
+pure virtual function. To do that, I'm
+
+98
+00:01:35,950 --> 00:01:35,960
+pure virtual function. To do that, I'm
+ 
+
+99
+00:01:35,960 --> 00:01:37,590
+pure virtual function. To do that, I'm
+just going to get rid of the body, and
+
+100
+00:01:37,590 --> 00:01:37,600
+just going to get rid of the body, and
+ 
+
+101
+00:01:37,600 --> 00:01:39,710
+just going to get rid of the body, and
+instead of the body, just write equals
+
+102
+00:01:39,710 --> 00:01:39,720
+instead of the body, just write equals
+ 
+
+103
+00:01:39,720 --> 00:01:41,870
+instead of the body, just write equals
+zero. Keep in mind that it still has to
+
+104
+00:01:41,870 --> 00:01:41,880
+zero. Keep in mind that it still has to
+ 
+
+105
+00:01:41,880 --> 00:01:44,230
+zero. Keep in mind that it still has to
+be defined as virtual, but the equal
+
+106
+00:01:44,230 --> 00:01:44,240
+be defined as virtual, but the equal
+ 
+
+107
+00:01:44,240 --> 00:01:46,430
+be defined as virtual, but the equal
+zero is essentially making it a pure
+
+108
+00:01:46,430 --> 00:01:46,440
+zero is essentially making it a pure
+ 
+
+109
+00:01:46,440 --> 00:01:48,630
+zero is essentially making it a pure
+virtual function, meaning that it has to
+
+110
+00:01:48,630 --> 00:01:48,640
+virtual function, meaning that it has to
+ 
+
+111
+00:01:48,640 --> 00:01:51,110
+virtual function, meaning that it has to
+be implemented in a subclass if you want
+
+112
+00:01:51,110 --> 00:01:51,120
+be implemented in a subclass if you want
+ 
+
+113
+00:01:51,120 --> 00:01:53,150
+be implemented in a subclass if you want
+to be able to instantiate that class.
+
+114
+00:01:53,150 --> 00:01:53,160
+to be able to instantiate that class.
+ 
+
+115
+00:01:53,160 --> 00:01:54,430
+to be able to instantiate that class.
+So, by doing this, a few things have
+
+116
+00:01:54,430 --> 00:01:54,440
+So, by doing this, a few things have
+ 
+
+117
+00:01:54,440 --> 00:01:56,030
+So, by doing this, a few things have
+actually happened. First of all, if you
+
+118
+00:01:56,030 --> 00:01:56,040
+actually happened. First of all, if you
+ 
+
+119
+00:01:56,040 --> 00:01:58,470
+actually happened. First of all, if you
+look at main, you can see that we now no
+
+120
+00:01:58,470 --> 00:01:58,480
+look at main, you can see that we now no
+ 
+
+121
+00:01:58,480 --> 00:02:00,110
+look at main, you can see that we now no
+longer have the ability to actually
+
+122
+00:02:00,110 --> 00:02:00,120
+longer have the ability to actually
+ 
+
+123
+00:02:00,120 --> 00:02:02,790
+longer have the ability to actually
+instantiate that entity class. We must
+
+124
+00:02:02,790 --> 00:02:02,800
+instantiate that entity class. We must
+ 
+
+125
+00:02:02,800 --> 00:02:04,870
+instantiate that entity class. We must
+give it some kind of subclass that
+
+126
+00:02:04,870 --> 00:02:04,880
+give it some kind of subclass that
+ 
+
+127
+00:02:04,880 --> 00:02:07,270
+give it some kind of subclass that
+actually has that function implemented.
+
+128
+00:02:07,270 --> 00:02:07,280
+actually has that function implemented.
+ 
+
+129
+00:02:07,280 --> 00:02:09,510
+actually has that function implemented.
+So, in this case, player, for example.
+
+130
+00:02:09,510 --> 00:02:09,520
+So, in this case, player, for example.
+ 
+
+131
+00:02:09,520 --> 00:02:10,630
+So, in this case, player, for example.
+And of course, we need to provide some
+
+132
+00:02:10,630 --> 00:02:10,640
+And of course, we need to provide some
+ 
+
+133
+00:02:10,640 --> 00:02:12,070
+And of course, we need to provide some
+kind of string as well. You can see the
+
+134
+00:02:12,070 --> 00:02:12,080
+kind of string as well. You can see the
+ 
+
+135
+00:02:12,080 --> 00:02:14,310
+kind of string as well. You can see the
+player works fine. However, that's only
+
+136
+00:02:14,310 --> 00:02:14,320
+player works fine. However, that's only
+ 
+
+137
+00:02:14,320 --> 00:02:16,270
+player works fine. However, that's only
+because we've actually implemented that
+
+138
+00:02:16,270 --> 00:02:16,280
+because we've actually implemented that
+ 
+
+139
+00:02:16,280 --> 00:02:18,390
+because we've actually implemented that
+get name function. If I decide to
+
+140
+00:02:18,390 --> 00:02:18,400
+get name function. If I decide to
+ 
+
+141
+00:02:18,400 --> 00:02:21,030
+get name function. If I decide to
+comment out that implementation, you can
+
+142
+00:02:21,030 --> 00:02:21,040
+comment out that implementation, you can
+ 
+
+143
+00:02:21,040 --> 00:02:23,030
+comment out that implementation, you can
+see that we can't instantiate player
+
+144
+00:02:23,030 --> 00:02:23,040
+see that we can't instantiate player
+ 
+
+145
+00:02:23,040 --> 00:02:25,110
+see that we can't instantiate player
+either. So, essentially, you can only
+
+146
+00:02:25,110 --> 00:02:25,120
+either. So, essentially, you can only
+ 
+
+147
+00:02:25,120 --> 00:02:27,790
+either. So, essentially, you can only
+instantiate the class if it actually has
+
+148
+00:02:27,790 --> 00:02:27,800
+instantiate the class if it actually has
+ 
+
+149
+00:02:27,800 --> 00:02:29,230
+instantiate the class if it actually has
+all of those pure virtual functions
+
+150
+00:02:29,230 --> 00:02:29,240
+all of those pure virtual functions
+ 
+
+151
+00:02:29,240 --> 00:02:31,190
+all of those pure virtual functions
+implemented. Or classes further up in
+
+152
+00:02:31,190 --> 00:02:31,200
+implemented. Or classes further up in
+ 
+
+153
+00:02:31,200 --> 00:02:32,830
+implemented. Or classes further up in
+the hierarchy, so for example, if player
+
+154
+00:02:32,830 --> 00:02:32,840
+the hierarchy, so for example, if player
+ 
+
+155
+00:02:32,840 --> 00:02:35,030
+the hierarchy, so for example, if player
+were to be a subclass of another class
+
+156
+00:02:35,030 --> 00:02:35,040
+were to be a subclass of another class
+ 
+
+157
+00:02:35,040 --> 00:02:36,510
+were to be a subclass of another class
+which did implement that get name
+
+158
+00:02:36,510 --> 00:02:36,520
+which did implement that get name
+ 
+
+159
+00:02:36,520 --> 00:02:38,470
+which did implement that get name
+function, that would also be fine. But
+
+160
+00:02:38,470 --> 00:02:38,480
+function, that would also be fine. But
+ 
+
+161
+00:02:38,480 --> 00:02:40,990
+function, that would also be fine. But
+the idea is that get name, that pure
+
+162
+00:02:40,990 --> 00:02:41,000
+the idea is that get name, that pure
+ 
+
+163
+00:02:41,000 --> 00:02:42,710
+the idea is that get name, that pure
+virtual function, has to actually be
+
+164
+00:02:42,710 --> 00:02:42,720
+virtual function, has to actually be
+ 
+
+165
+00:02:42,720 --> 00:02:44,630
+virtual function, has to actually be
+implemented in order for us to be able
+
+166
+00:02:44,630 --> 00:02:44,640
+implemented in order for us to be able
+ 
+
+167
+00:02:44,640 --> 00:02:46,510
+implemented in order for us to be able
+to create an instance of this class. All
+
+168
+00:02:46,510 --> 00:02:46,520
+to create an instance of this class. All
+ 
+
+169
+00:02:46,520 --> 00:02:47,510
+to create an instance of this class. All
+right, let's take a look at a better
+
+170
+00:02:47,510 --> 00:02:47,520
+right, let's take a look at a better
+ 
+
+171
+00:02:47,520 --> 00:02:49,470
+right, let's take a look at a better
+example. I'm going to undo everything
+
+172
+00:02:49,470 --> 00:02:49,480
+example. I'm going to undo everything
+ 
+
+173
+00:02:49,480 --> 00:02:51,430
+example. I'm going to undo everything
+that we had done here. All right, that
+
+174
+00:02:51,430 --> 00:02:51,440
+that we had done here. All right, that
+ 
+
+175
+00:02:51,440 --> 00:02:52,590
+that we had done here. All right, that
+looks pretty good. Suppose that we
+
+176
+00:02:52,590 --> 00:02:52,600
+looks pretty good. Suppose that we
+ 
+
+177
+00:02:52,600 --> 00:02:54,070
+looks pretty good. Suppose that we
+wanted to write a function that would
+
+178
+00:02:54,070 --> 00:02:54,080
+wanted to write a function that would
+ 
+
+179
+00:02:54,080 --> 00:02:56,510
+wanted to write a function that would
+print the class name of every class that
+
+180
+00:02:56,510 --> 00:02:56,520
+print the class name of every class that
+ 
+
+181
+00:02:56,520 --> 00:02:58,070
+print the class name of every class that
+we had here. So, what I'll do is I'll
+
+182
+00:02:58,070 --> 00:02:58,080
+we had here. So, what I'll do is I'll
+ 
+
+183
+00:02:58,080 --> 00:03:00,870
+we had here. So, what I'll do is I'll
+type void print. As my parameter, I'm
+
+184
+00:03:00,870 --> 00:03:00,880
+type void print. As my parameter, I'm
+ 
+
+185
+00:03:00,880 --> 00:03:02,670
+type void print. As my parameter, I'm
+going to want to take in some kind of
+
+186
+00:03:02,670 --> 00:03:02,680
+going to want to take in some kind of
+ 
+
+187
+00:03:02,680 --> 00:03:05,430
+going to want to take in some kind of
+class type that we'll call obj, for
+
+188
+00:03:05,430 --> 00:03:05,440
+class type that we'll call obj, for
+ 
+
+189
+00:03:05,440 --> 00:03:07,670
+class type that we'll call obj, for
+example. And then, what I'm going to
+
+190
+00:03:07,670 --> 00:03:07,680
+example. And then, what I'm going to
+ 
+
+191
+00:03:07,680 --> 00:03:10,150
+example. And then, what I'm going to
+want to do is actually print the class's
+
+192
+00:03:10,150 --> 00:03:10,160
+want to do is actually print the class's
+ 
+
+193
+00:03:10,160 --> 00:03:11,910
+want to do is actually print the class's
+name. So, maybe we have something like
+
+194
+00:03:11,910 --> 00:03:11,920
+name. So, maybe we have something like
+ 
+
+195
+00:03:11,920 --> 00:03:13,949
+name. So, maybe we have something like
+obj.getclassname.
+
+196
+00:03:13,949 --> 00:03:13,959
+obj.getclassname.
+ 
+
+197
+00:03:13,959 --> 00:03:16,949
+obj.getclassname.
+So, what I actually need here is a type
+
+198
+00:03:16,949 --> 00:03:16,959
+So, what I actually need here is a type
+ 
+
+199
+00:03:16,959 --> 00:03:19,150
+So, what I actually need here is a type
+that guarantees that we actually have a
+
+200
+00:03:19,150 --> 00:03:19,160
+that guarantees that we actually have a
+ 
+
+201
+00:03:19,160 --> 00:03:21,310
+that guarantees that we actually have a
+get class name function. We need a type
+
+202
+00:03:21,310 --> 00:03:21,320
+get class name function. We need a type
+ 
+
+203
+00:03:21,320 --> 00:03:23,350
+get class name function. We need a type
+that provides that get class name
+
+204
+00:03:23,350 --> 00:03:23,360
+that provides that get class name
+ 
+
+205
+00:03:23,360 --> 00:03:24,830
+that provides that get class name
+function. And that's exactly what an
+
+206
+00:03:24,830 --> 00:03:24,840
+function. And that's exactly what an
+ 
+
+207
+00:03:24,840 --> 00:03:26,949
+function. And that's exactly what an
+interface is. Let's go ahead and call
+
+208
+00:03:26,949 --> 00:03:26,959
+interface is. Let's go ahead and call
+ 
+
+209
+00:03:26,959 --> 00:03:29,190
+interface is. Let's go ahead and call
+this type printable, and we'll set it
+
+210
+00:03:29,190 --> 00:03:29,200
+this type printable, and we'll set it
+ 
+
+211
+00:03:29,200 --> 00:03:31,190
+this type printable, and we'll set it
+up. So, at the very top here, I'll make
+
+212
+00:03:31,190 --> 00:03:31,200
+up. So, at the very top here, I'll make
+ 
+
+213
+00:03:31,200 --> 00:03:33,590
+up. So, at the very top here, I'll make
+a new class called printable, and the
+
+214
+00:03:33,590 --> 00:03:33,600
+a new class called printable, and the
+ 
+
+215
+00:03:33,600 --> 00:03:34,949
+a new class called printable, and the
+only thing this is going to have, I'm
+
+216
+00:03:34,949 --> 00:03:34,959
+only thing this is going to have, I'm
+ 
+
+217
+00:03:34,959 --> 00:03:38,229
+only thing this is going to have, I'm
+going to make it public virtual string
+
+218
+00:03:38,229 --> 00:03:38,239
+going to make it public virtual string
+ 
+
+219
+00:03:38,239 --> 00:03:40,509
+going to make it public virtual string
+function that returns a string here,
+
+220
+00:03:40,509 --> 00:03:40,519
+function that returns a string here,
+ 
+
+221
+00:03:40,519 --> 00:03:43,030
+function that returns a string here,
+getclassname, and it's going to be pure
+
+222
+00:03:43,030 --> 00:03:43,040
+getclassname, and it's going to be pure
+ 
+
+223
+00:03:43,040 --> 00:03:44,310
+getclassname, and it's going to be pure
+virtual. So, I'm going to set it equal
+
+224
+00:03:44,310 --> 00:03:44,320
+virtual. So, I'm going to set it equal
+ 
+
+225
+00:03:44,320 --> 00:03:46,390
+virtual. So, I'm going to set it equal
+to zero. Then, I'm going to make entity
+
+226
+00:03:46,390 --> 00:03:46,400
+to zero. Then, I'm going to make entity
+ 
+
+227
+00:03:46,400 --> 00:03:48,750
+to zero. Then, I'm going to make entity
+implement that interface.
+
+228
+00:03:48,750 --> 00:03:48,760
+implement that interface.
+ 
+
+229
+00:03:48,760 --> 00:03:50,750
+implement that interface.
+Note that player is already an entity,
+
+230
+00:03:50,750 --> 00:03:50,760
+Note that player is already an entity,
+ 
+
+231
+00:03:50,760 --> 00:03:53,110
+Note that player is already an entity,
+so we don't have to implement printable.
+
+232
+00:03:53,110 --> 00:03:53,120
+so we don't have to implement printable.
+ 
+
+233
+00:03:53,120 --> 00:03:54,750
+so we don't have to implement printable.
+However, if it wasn't for whatever
+
+234
+00:03:54,750 --> 00:03:54,760
+However, if it wasn't for whatever
+ 
+
+235
+00:03:54,760 --> 00:03:56,550
+However, if it wasn't for whatever
+reason, we could just add a comma and
+
+236
+00:03:56,550 --> 00:03:56,560
+reason, we could just add a comma and
+ 
+
+237
+00:03:56,560 --> 00:03:58,990
+reason, we could just add a comma and
+then implement an interface like so.
+
+238
+00:03:58,990 --> 00:03:59,000
+then implement an interface like so.
+ 
+
+239
+00:03:59,000 --> 00:04:00,270
+then implement an interface like so.
+Keep in mind that I keep calling this an
+
+240
+00:04:00,270 --> 00:04:00,280
+Keep in mind that I keep calling this an
+ 
+
+241
+00:04:00,280 --> 00:04:02,030
+Keep in mind that I keep calling this an
+interface, but of course, it is just a
+
+242
+00:04:02,030 --> 00:04:02,040
+interface, but of course, it is just a
+ 
+
+243
+00:04:02,040 --> 00:04:03,550
+interface, but of course, it is just a
+class. The reason I've given it the name
+
+244
+00:04:03,550 --> 00:04:03,560
+class. The reason I've given it the name
+ 
+
+245
+00:04:03,560 --> 00:04:06,030
+class. The reason I've given it the name
+interface here is because all it has is
+
+246
+00:04:06,030 --> 00:04:06,040
+interface here is because all it has is
+ 
+
+247
+00:04:06,040 --> 00:04:08,030
+interface here is because all it has is
+that pure virtual function and that is
+
+248
+00:04:08,030 --> 00:04:08,040
+that pure virtual function and that is
+ 
+
+249
+00:04:08,040 --> 00:04:09,990
+that pure virtual function and that is
+it. Other languages actually do have an
+
+250
+00:04:09,990 --> 00:04:10,000
+it. Other languages actually do have an
+ 
+
+251
+00:04:10,000 --> 00:04:12,030
+it. Other languages actually do have an
+interface keyword instead of class, but
+
+252
+00:04:12,030 --> 00:04:12,040
+interface keyword instead of class, but
+ 
+
+253
+00:04:12,040 --> 00:04:14,070
+interface keyword instead of class, but
+C++ does not. Interfaces are just
+
+254
+00:04:14,070 --> 00:04:14,080
+C++ does not. Interfaces are just
+ 
+
+255
+00:04:14,080 --> 00:04:16,550
+C++ does not. Interfaces are just
+classes in C++. So now everything has to
+
+256
+00:04:16,550 --> 00:04:16,560
+classes in C++. So now everything has to
+ 
+
+257
+00:04:16,560 --> 00:04:18,310
+classes in C++. So now everything has to
+have this get class name function. If it
+
+258
+00:04:18,310 --> 00:04:18,320
+have this get class name function. If it
+ 
+
+259
+00:04:18,320 --> 00:04:20,710
+have this get class name function. If it
+does not, you can't actually instantiate
+
+260
+00:04:20,710 --> 00:04:20,720
+does not, you can't actually instantiate
+ 
+
+261
+00:04:20,720 --> 00:04:23,670
+does not, you can't actually instantiate
+it. Let's go ahead and add a get class
+
+262
+00:04:23,670 --> 00:04:23,680
+it. Let's go ahead and add a get class
+ 
+
+263
+00:04:23,680 --> 00:04:25,670
+it. Let's go ahead and add a get class
+name function for entity. Now, if we
+
+264
+00:04:25,670 --> 00:04:25,680
+name function for entity. Now, if we
+ 
+
+265
+00:04:25,680 --> 00:04:27,590
+name function for entity. Now, if we
+were to do what we did here inside
+
+266
+00:04:27,590 --> 00:04:27,600
+were to do what we did here inside
+ 
+
+267
+00:04:27,600 --> 00:04:30,430
+were to do what we did here inside
+player, I'll just write STD string get
+
+268
+00:04:30,430 --> 00:04:30,440
+player, I'll just write STD string get
+ 
+
+269
+00:04:30,440 --> 00:04:33,350
+player, I'll just write STD string get
+class name, return entity, then we
+
+270
+00:04:33,350 --> 00:04:33,360
+class name, return entity, then we
+ 
+
+271
+00:04:33,360 --> 00:04:34,710
+class name, return entity, then we
+actually have a few issues. First of
+
+272
+00:04:34,710 --> 00:04:34,720
+actually have a few issues. First of
+ 
+
+273
+00:04:34,720 --> 00:04:36,270
+actually have a few issues. First of
+all, our problem of not being able to
+
+274
+00:04:36,270 --> 00:04:36,280
+all, our problem of not being able to
+ 
+
+275
+00:04:36,280 --> 00:04:37,909
+all, our problem of not being able to
+instantiate entity is solved, of course,
+
+276
+00:04:37,909 --> 00:04:37,919
+instantiate entity is solved, of course,
+ 
+
+277
+00:04:37,919 --> 00:04:39,750
+instantiate entity is solved, of course,
+because we have provided that function.
+
+278
+00:04:39,750 --> 00:04:39,760
+because we have provided that function.
+ 
+
+279
+00:04:39,760 --> 00:04:41,470
+because we have provided that function.
+However, you'll notice that we haven't
+
+280
+00:04:41,470 --> 00:04:41,480
+However, you'll notice that we haven't
+ 
+
+281
+00:04:41,480 --> 00:04:43,590
+However, you'll notice that we haven't
+provided one for player. So if I go down
+
+282
+00:04:43,590 --> 00:04:43,600
+provided one for player. So if I go down
+ 
+
+283
+00:04:43,600 --> 00:04:45,750
+provided one for player. So if I go down
+to print, let's make this a pointer, and
+
+284
+00:04:45,750 --> 00:04:45,760
+to print, let's make this a pointer, and
+ 
+
+285
+00:04:45,760 --> 00:04:49,430
+to print, let's make this a pointer, and
+actually call print with both player and
+
+286
+00:04:49,430 --> 00:04:49,440
+actually call print with both player and
+ 
+
+287
+00:04:49,440 --> 00:04:51,750
+actually call print with both player and
+entity, we'll get rid of print names so
+
+288
+00:04:51,750 --> 00:04:51,760
+entity, we'll get rid of print names so
+ 
+
+289
+00:04:51,760 --> 00:04:54,390
+entity, we'll get rid of print names so
+we're not confused here. Here, five. Of
+
+290
+00:04:54,390 --> 00:04:54,400
+we're not confused here. Here, five. Of
+ 
+
+291
+00:04:54,400 --> 00:04:55,750
+we're not confused here. Here, five. Of
+course, you can see that we get entity
+
+292
+00:04:55,750 --> 00:04:55,760
+course, you can see that we get entity
+ 
+
+293
+00:04:55,760 --> 00:04:57,030
+course, you can see that we get entity
+printing twice because we haven't
+
+294
+00:04:57,030 --> 00:04:57,040
+printing twice because we haven't
+ 
+
+295
+00:04:57,040 --> 00:04:58,350
+printing twice because we haven't
+actually provided a definition in
+
+296
+00:04:58,350 --> 00:04:58,360
+actually provided a definition in
+ 
+
+297
+00:04:58,360 --> 00:05:00,190
+actually provided a definition in
+player. However, if we do, so if I just
+
+298
+00:05:00,190 --> 00:05:00,200
+player. However, if we do, so if I just
+ 
+
+299
+00:05:00,200 --> 00:05:02,550
+player. However, if we do, so if I just
+try and copy this get class name, which
+
+300
+00:05:02,550 --> 00:05:02,560
+try and copy this get class name, which
+ 
+
+301
+00:05:02,560 --> 00:05:04,070
+try and copy this get class name, which
+of course is an override, let's not
+
+302
+00:05:04,070 --> 00:05:04,080
+of course is an override, let's not
+ 
+
+303
+00:05:04,080 --> 00:05:06,750
+of course is an override, let's not
+forget that. If I pop that down here and
+
+304
+00:05:06,750 --> 00:05:06,760
+forget that. If I pop that down here and
+ 
+
+305
+00:05:06,760 --> 00:05:08,670
+forget that. If I pop that down here and
+rename this to player, I can hit F5 here
+
+306
+00:05:08,670 --> 00:05:08,680
+rename this to player, I can hit F5 here
+ 
+
+307
+00:05:08,680 --> 00:05:10,510
+rename this to player, I can hit F5 here
+to run my code, and you can see that I
+
+308
+00:05:10,510 --> 00:05:10,520
+to run my code, and you can see that I
+ 
+
+309
+00:05:10,520 --> 00:05:12,310
+to run my code, and you can see that I
+now get the appropriate class name
+
+310
+00:05:12,310 --> 00:05:12,320
+now get the appropriate class name
+ 
+
+311
+00:05:12,320 --> 00:05:14,110
+now get the appropriate class name
+printing. And all of that's coming from
+
+312
+00:05:14,110 --> 00:05:14,120
+printing. And all of that's coming from
+ 
+
+313
+00:05:14,120 --> 00:05:15,990
+printing. And all of that's coming from
+that one print function that takes in a
+
+314
+00:05:15,990 --> 00:05:16,000
+that one print function that takes in a
+ 
+
+315
+00:05:16,000 --> 00:05:18,350
+that one print function that takes in a
+printable object. It doesn't really care
+
+316
+00:05:18,350 --> 00:05:18,360
+printable object. It doesn't really care
+ 
+
+317
+00:05:18,360 --> 00:05:19,710
+printable object. It doesn't really care
+what class it is. We could create a
+
+318
+00:05:19,710 --> 00:05:19,720
+what class it is. We could create a
+ 
+
+319
+00:05:19,720 --> 00:05:22,590
+what class it is. We could create a
+completely different class here, such as
+
+320
+00:05:22,590 --> 00:05:22,600
+completely different class here, such as
+ 
+
+321
+00:05:22,600 --> 00:05:26,190
+completely different class here, such as
+A, that is a printable class, meaning
+
+322
+00:05:26,190 --> 00:05:26,200
+A, that is a printable class, meaning
+ 
+
+323
+00:05:26,200 --> 00:05:28,190
+A, that is a printable class, meaning
+that it has to have that function. If it
+
+324
+00:05:28,190 --> 00:05:28,200
+that it has to have that function. If it
+ 
+
+325
+00:05:28,200 --> 00:05:30,270
+that it has to have that function. If it
+does not have that get class name
+
+326
+00:05:30,270 --> 00:05:30,280
+does not have that get class name
+ 
+
+327
+00:05:30,280 --> 00:05:32,150
+does not have that get class name
+function, then you won't be able to
+
+328
+00:05:32,150 --> 00:05:32,160
+function, then you won't be able to
+ 
+
+329
+00:05:32,160 --> 00:05:33,670
+function, then you won't be able to
+instantiate
+
+330
+00:05:33,670 --> 00:05:33,680
+instantiate
+ 
+
+331
+00:05:33,680 --> 00:05:35,150
+instantiate
+an instance of this class. If we do
+
+332
+00:05:35,150 --> 00:05:35,160
+an instance of this class. If we do
+ 
+
+333
+00:05:35,160 --> 00:05:36,710
+an instance of this class. If we do
+something like this, I've created a
+
+334
+00:05:36,710 --> 00:05:36,720
+something like this, I've created a
+ 
+
+335
+00:05:36,720 --> 00:05:38,110
+something like this, I've created a
+brand new class, I've made it printable,
+
+336
+00:05:38,110 --> 00:05:38,120
+brand new class, I've made it printable,
+ 
+
+337
+00:05:38,120 --> 00:05:39,470
+brand new class, I've made it printable,
+meaning that I have implemented this
+
+338
+00:05:39,470 --> 00:05:39,480
+meaning that I have implemented this
+ 
+
+339
+00:05:39,480 --> 00:05:42,350
+meaning that I have implemented this
+function. I can now call print like
+
+340
+00:05:42,350 --> 00:05:42,360
+function. I can now call print like
+ 
+
+341
+00:05:42,360 --> 00:05:44,030
+function. I can now call print like
+this. Of course, don't write this code
+
+342
+00:05:44,030 --> 00:05:44,040
+this. Of course, don't write this code
+ 
+
+343
+00:05:44,040 --> 00:05:45,750
+this. Of course, don't write this code
+exactly cuz it's a memory leak, but for
+
+344
+00:05:45,750 --> 00:05:45,760
+exactly cuz it's a memory leak, but for
+ 
+
+345
+00:05:45,760 --> 00:05:47,470
+exactly cuz it's a memory leak, but for
+testing, it's fine. If I do something
+
+346
+00:05:47,470 --> 00:05:47,480
+testing, it's fine. If I do something
+ 
+
+347
+00:05:47,480 --> 00:05:49,510
+testing, it's fine. If I do something
+like this, you can see that we now get
+
+348
+00:05:49,510 --> 00:05:49,520
+like this, you can see that we now get
+ 
+
+349
+00:05:49,520 --> 00:05:52,110
+like this, you can see that we now get
+that A class printing here. And because
+
+350
+00:05:52,110 --> 00:05:52,120
+that A class printing here. And because
+ 
+
+351
+00:05:52,120 --> 00:05:54,590
+that A class printing here. And because
+it is a printable, it is guaranteed to
+
+352
+00:05:54,590 --> 00:05:54,600
+it is a printable, it is guaranteed to
+ 
+
+353
+00:05:54,600 --> 00:05:56,030
+it is a printable, it is guaranteed to
+have that get class name function.
+
+354
+00:05:56,030 --> 00:05:56,040
+have that get class name function.
+ 
+
+355
+00:05:56,040 --> 00:05:57,230
+have that get class name function.
+That's how this whole thing works,
+
+356
+00:05:57,230 --> 00:05:57,240
+That's how this whole thing works,
+ 
+
+357
+00:05:57,240 --> 00:05:58,830
+That's how this whole thing works,
+because it knows that anything that is
+
+358
+00:05:58,830 --> 00:05:58,840
+because it knows that anything that is
+ 
+
+359
+00:05:58,840 --> 00:06:01,430
+because it knows that anything that is
+printable has a get class name function
+
+360
+00:06:01,430 --> 00:06:01,440
+printable has a get class name function
+ 
+
+361
+00:06:01,440 --> 00:06:03,710
+printable has a get class name function
+for this to actually call. If you do not
+
+362
+00:06:03,710 --> 00:06:03,720
+for this to actually call. If you do not
+ 
+
+363
+00:06:03,720 --> 00:06:05,830
+for this to actually call. If you do not
+implement that function, then you will
+
+364
+00:06:05,830 --> 00:06:05,840
+implement that function, then you will
+ 
+
+365
+00:06:05,840 --> 00:06:07,910
+implement that function, then you will
+not be able to instantiate the class.
+
+366
+00:06:07,910 --> 00:06:07,920
+not be able to instantiate the class.
+ 
+
+367
+00:06:07,920 --> 00:06:09,590
+not be able to instantiate the class.
+So, that's it. That is what an interface
+
+368
+00:06:09,590 --> 00:06:09,600
+So, that's it. That is what an interface
+ 
+
+369
+00:06:09,600 --> 00:06:11,230
+So, that's it. That is what an interface
+is in C++. That's what a pure virtual
+
+370
+00:06:11,230 --> 00:06:11,240
+is in C++. That's what a pure virtual
+ 
+
+371
+00:06:11,240 --> 00:06:13,950
+is in C++. That's what a pure virtual
+function is in C++. Very, very useful
+
+372
+00:06:13,950 --> 00:06:13,960
+function is in C++. Very, very useful
+ 
+
+373
+00:06:13,960 --> 00:06:15,950
+function is in C++. Very, very useful
+stuff. The number one reason it's really
+
+374
+00:06:15,950 --> 00:06:15,960
+stuff. The number one reason it's really
+ 
+
+375
+00:06:15,960 --> 00:06:18,190
+stuff. The number one reason it's really
+used is for situations like this, where
+
+376
+00:06:18,190 --> 00:06:18,200
+used is for situations like this, where
+ 
+
+377
+00:06:18,200 --> 00:06:20,510
+used is for situations like this, where
+you want to be able to guarantee that a
+
+378
+00:06:20,510 --> 00:06:20,520
+you want to be able to guarantee that a
+ 
+
+379
+00:06:20,520 --> 00:06:22,390
+you want to be able to guarantee that a
+class has a certain function, so that
+
+380
+00:06:22,390 --> 00:06:22,400
+class has a certain function, so that
+ 
+
+381
+00:06:22,400 --> 00:06:23,830
+class has a certain function, so that
+you can pass it to a fairly generic
+
+382
+00:06:23,830 --> 00:06:23,840
+you can pass it to a fairly generic
+ 
+
+383
+00:06:23,840 --> 00:06:26,190
+you can pass it to a fairly generic
+method that will just call that function
+
+384
+00:06:26,190 --> 00:06:26,200
+method that will just call that function
+ 
+
+385
+00:06:26,200 --> 00:06:28,190
+method that will just call that function
+or do whatever it needs to do. Hope you
+
+386
+00:06:28,190 --> 00:06:28,200
+or do whatever it needs to do. Hope you
+ 
+
+387
+00:06:28,200 --> 00:06:29,470
+or do whatever it needs to do. Hope you
+guys enjoyed this video. As always, you
+
+388
+00:06:29,470 --> 00:06:29,480
+guys enjoyed this video. As always, you
+ 
+
+389
+00:06:29,480 --> 00:06:31,030
+guys enjoyed this video. As always, you
+can leave any questions or comments you
+
+390
+00:06:31,030 --> 00:06:31,040
+can leave any questions or comments you
+ 
+
+391
+00:06:31,040 --> 00:06:32,510
+can leave any questions or comments you
+have in the comment section below. I try
+
+392
+00:06:32,510 --> 00:06:32,520
+have in the comment section below. I try
+ 
+
+393
+00:06:32,520 --> 00:06:34,350
+have in the comment section below. I try
+to reply to as many comments as I can,
+
+394
+00:06:34,350 --> 00:06:34,360
+to reply to as many comments as I can,
+ 
+
+395
+00:06:34,360 --> 00:06:36,230
+to reply to as many comments as I can,
+and I will see you guys next time.
+
+396
+00:06:36,230 --> 00:06:36,240
+and I will see you guys next time.
+ 
+
+397
+00:06:36,240 --> 00:06:38,840
+and I will see you guys next time.
+Goodbye.
+

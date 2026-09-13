@@ -1,0 +1,8025 @@
+1
+00:00:00,000 --> 00:00:01,750
+
+hey what's up guys my name is the churno
+
+2
+00:00:01,750 --> 00:00:01,760
+hey what's up guys my name is the churno
+ 
+
+3
+00:00:01,760 --> 00:00:03,990
+hey what's up guys my name is the churno
+welcome back to my c plus plus series so
+
+4
+00:00:03,990 --> 00:00:04,000
+welcome back to my c plus plus series so
+ 
+
+5
+00:00:04,000 --> 00:00:05,030
+welcome back to my c plus plus series so
+far in this sequel
+
+6
+00:00:05,030 --> 00:00:05,040
+far in this sequel
+ 
+
+7
+00:00:05,040 --> 00:00:07,030
+far in this sequel
+series we've been mostly learning about
+
+8
+00:00:07,030 --> 00:00:07,040
+series we've been mostly learning about
+ 
+
+9
+00:00:07,040 --> 00:00:09,430
+series we've been mostly learning about
+various individual language constructs
+
+10
+00:00:09,430 --> 00:00:09,440
+various individual language constructs
+ 
+
+11
+00:00:09,440 --> 00:00:10,790
+various individual language constructs
+and just things that we can do in the
+
+12
+00:00:10,790 --> 00:00:10,800
+and just things that we can do in the
+ 
+
+13
+00:00:10,800 --> 00:00:11,430
+and just things that we can do in the
+language
+
+14
+00:00:11,430 --> 00:00:11,440
+language
+ 
+
+15
+00:00:11,440 --> 00:00:13,589
+language
+and how the language itself works but
+
+16
+00:00:13,589 --> 00:00:13,599
+and how the language itself works but
+ 
+
+17
+00:00:13,599 --> 00:00:15,190
+and how the language itself works but
+now it's time to take that and actually
+
+18
+00:00:15,190 --> 00:00:15,200
+now it's time to take that and actually
+ 
+
+19
+00:00:15,200 --> 00:00:16,710
+now it's time to take that and actually
+put it into practice and the way that
+
+20
+00:00:16,710 --> 00:00:16,720
+put it into practice and the way that
+ 
+
+21
+00:00:16,720 --> 00:00:17,750
+put it into practice and the way that
+we'll be doing that
+
+22
+00:00:17,750 --> 00:00:17,760
+we'll be doing that
+ 
+
+23
+00:00:17,760 --> 00:00:19,750
+we'll be doing that
+is by learning about how to write our
+
+24
+00:00:19,750 --> 00:00:19,760
+is by learning about how to write our
+ 
+
+25
+00:00:19,760 --> 00:00:20,870
+is by learning about how to write our
+own data structures
+
+26
+00:00:20,870 --> 00:00:20,880
+own data structures
+ 
+
+27
+00:00:20,880 --> 00:00:22,710
+own data structures
+now just to be clear by data structures
+
+28
+00:00:22,710 --> 00:00:22,720
+now just to be clear by data structures
+ 
+
+29
+00:00:22,720 --> 00:00:24,550
+now just to be clear by data structures
+i'm talking about things like arrays
+
+30
+00:00:24,550 --> 00:00:24,560
+i'm talking about things like arrays
+ 
+
+31
+00:00:24,560 --> 00:00:27,910
+i'm talking about things like arrays
+lists sets maps trees that kind of stuff
+
+32
+00:00:27,910 --> 00:00:27,920
+lists sets maps trees that kind of stuff
+ 
+
+33
+00:00:27,920 --> 00:00:29,669
+lists sets maps trees that kind of stuff
+whilst the c plus plus standard template
+
+34
+00:00:29,669 --> 00:00:29,679
+whilst the c plus plus standard template
+ 
+
+35
+00:00:29,679 --> 00:00:31,189
+whilst the c plus plus standard template
+library comes with
+
+36
+00:00:31,189 --> 00:00:31,199
+library comes with
+ 
+
+37
+00:00:31,199 --> 00:00:32,870
+library comes with
+most of these data structures already
+
+38
+00:00:32,870 --> 00:00:32,880
+most of these data structures already
+ 
+
+39
+00:00:32,880 --> 00:00:34,389
+most of these data structures already
+implemented for you
+
+40
+00:00:34,389 --> 00:00:34,399
+implemented for you
+ 
+
+41
+00:00:34,399 --> 00:00:36,310
+implemented for you
+i think it's very valuable to try and
+
+42
+00:00:36,310 --> 00:00:36,320
+i think it's very valuable to try and
+ 
+
+43
+00:00:36,320 --> 00:00:37,590
+i think it's very valuable to try and
+write your own because apart from
+
+44
+00:00:37,590 --> 00:00:37,600
+write your own because apart from
+ 
+
+45
+00:00:37,600 --> 00:00:39,110
+write your own because apart from
+learning more deeply about how these
+
+46
+00:00:39,110 --> 00:00:39,120
+learning more deeply about how these
+ 
+
+47
+00:00:39,120 --> 00:00:40,389
+learning more deeply about how these
+data structures actually
+
+48
+00:00:40,389 --> 00:00:40,399
+data structures actually
+ 
+
+49
+00:00:40,399 --> 00:00:42,630
+data structures actually
+work and why they might be more useful
+
+50
+00:00:42,630 --> 00:00:42,640
+work and why they might be more useful
+ 
+
+51
+00:00:42,640 --> 00:00:43,990
+work and why they might be more useful
+than other data structures
+
+52
+00:00:43,990 --> 00:00:44,000
+than other data structures
+ 
+
+53
+00:00:44,000 --> 00:00:45,350
+than other data structures
+you'll also learn a lot about the
+
+54
+00:00:45,350 --> 00:00:45,360
+you'll also learn a lot about the
+ 
+
+55
+00:00:45,360 --> 00:00:47,110
+you'll also learn a lot about the
+language having to write kind of
+
+56
+00:00:47,110 --> 00:00:47,120
+language having to write kind of
+ 
+
+57
+00:00:47,120 --> 00:00:48,950
+language having to write kind of
+efficient versions of these data
+
+58
+00:00:48,950 --> 00:00:48,960
+efficient versions of these data
+ 
+
+59
+00:00:48,960 --> 00:00:49,590
+efficient versions of these data
+structures
+
+60
+00:00:49,590 --> 00:00:49,600
+structures
+ 
+
+61
+00:00:49,600 --> 00:00:51,189
+structures
+along with data structures another
+
+62
+00:00:51,189 --> 00:00:51,199
+along with data structures another
+ 
+
+63
+00:00:51,199 --> 00:00:52,709
+along with data structures another
+really important part of
+
+64
+00:00:52,709 --> 00:00:52,719
+really important part of
+ 
+
+65
+00:00:52,719 --> 00:00:55,029
+really important part of
+programming is of course the patterns or
+
+66
+00:00:55,029 --> 00:00:55,039
+programming is of course the patterns or
+ 
+
+67
+00:00:55,039 --> 00:00:56,150
+programming is of course the patterns or
+the algorithms
+
+68
+00:00:56,150 --> 00:00:56,160
+the algorithms
+ 
+
+69
+00:00:56,160 --> 00:00:58,630
+the algorithms
+that will operate upon the data inside
+
+70
+00:00:58,630 --> 00:00:58,640
+that will operate upon the data inside
+ 
+
+71
+00:00:58,640 --> 00:00:59,990
+that will operate upon the data inside
+these data structures and that's stuff
+
+72
+00:00:59,990 --> 00:01:00,000
+these data structures and that's stuff
+ 
+
+73
+00:01:00,000 --> 00:01:01,510
+these data structures and that's stuff
+that we'll be covering as part of this
+
+74
+00:01:01,510 --> 00:01:01,520
+that we'll be covering as part of this
+ 
+
+75
+00:01:01,520 --> 00:01:02,150
+that we'll be covering as part of this
+series
+
+76
+00:01:02,150 --> 00:01:02,160
+series
+ 
+
+77
+00:01:02,160 --> 00:01:03,750
+series
+a little bit later on so today we're
+
+78
+00:01:03,750 --> 00:01:03,760
+a little bit later on so today we're
+ 
+
+79
+00:01:03,760 --> 00:01:04,950
+a little bit later on so today we're
+going to be starting with talking about
+
+80
+00:01:04,950 --> 00:01:04,960
+going to be starting with talking about
+ 
+
+81
+00:01:04,960 --> 00:01:05,670
+going to be starting with talking about
+arrays
+
+82
+00:01:05,670 --> 00:01:05,680
+arrays
+ 
+
+83
+00:01:05,680 --> 00:01:07,109
+arrays
+and we're going to be creating a very
+
+84
+00:01:07,109 --> 00:01:07,119
+and we're going to be creating a very
+ 
+
+85
+00:01:07,119 --> 00:01:09,270
+and we're going to be creating a very
+very simple array just a
+
+86
+00:01:09,270 --> 00:01:09,280
+very simple array just a
+ 
+
+87
+00:01:09,280 --> 00:01:11,910
+very simple array just a
+static kind of stack allocated fixed
+
+88
+00:01:11,910 --> 00:01:11,920
+static kind of stack allocated fixed
+ 
+
+89
+00:01:11,920 --> 00:01:12,710
+static kind of stack allocated fixed
+size
+
+90
+00:01:12,710 --> 00:01:12,720
+size
+ 
+
+91
+00:01:12,720 --> 00:01:15,510
+size
+array something that can hold a certain
+
+92
+00:01:15,510 --> 00:01:15,520
+array something that can hold a certain
+ 
+
+93
+00:01:15,520 --> 00:01:18,310
+array something that can hold a certain
+amount of elements of data contiguously
+
+94
+00:01:18,310 --> 00:01:18,320
+amount of elements of data contiguously
+ 
+
+95
+00:01:18,320 --> 00:01:20,230
+amount of elements of data contiguously
+and something that will be easy for us
+
+96
+00:01:20,230 --> 00:01:20,240
+and something that will be easy for us
+ 
+
+97
+00:01:20,240 --> 00:01:21,910
+and something that will be easy for us
+to interface with and use
+
+98
+00:01:21,910 --> 00:01:21,920
+to interface with and use
+ 
+
+99
+00:01:21,920 --> 00:01:24,630
+to interface with and use
+as a programmer using that array this is
+
+100
+00:01:24,630 --> 00:01:24,640
+as a programmer using that array this is
+ 
+
+101
+00:01:24,640 --> 00:01:25,990
+as a programmer using that array this is
+basically going to be the standard
+
+102
+00:01:25,990 --> 00:01:26,000
+basically going to be the standard
+ 
+
+103
+00:01:26,000 --> 00:01:27,670
+basically going to be the standard
+array class that is provided to us by
+
+104
+00:01:27,670 --> 00:01:27,680
+array class that is provided to us by
+ 
+
+105
+00:01:27,680 --> 00:01:29,749
+array class that is provided to us by
+the stl in my experience looking through
+
+106
+00:01:29,749 --> 00:01:29,759
+the stl in my experience looking through
+ 
+
+107
+00:01:29,759 --> 00:01:31,270
+the stl in my experience looking through
+people's code particularly people who
+
+108
+00:01:31,270 --> 00:01:31,280
+people's code particularly people who
+ 
+
+109
+00:01:31,280 --> 00:01:31,670
+people's code particularly people who
+are
+
+110
+00:01:31,670 --> 00:01:31,680
+are
+ 
+
+111
+00:01:31,680 --> 00:01:32,950
+are
+quite new to language or learning the
+
+112
+00:01:32,950 --> 00:01:32,960
+quite new to language or learning the
+ 
+
+113
+00:01:32,960 --> 00:01:34,550
+quite new to language or learning the
+language even some people who have been
+
+114
+00:01:34,550 --> 00:01:34,560
+language even some people who have been
+ 
+
+115
+00:01:34,560 --> 00:01:36,469
+language even some people who have been
+using the language for a long time
+
+116
+00:01:36,469 --> 00:01:36,479
+using the language for a long time
+ 
+
+117
+00:01:36,479 --> 00:01:38,870
+using the language for a long time
+this is not something that a lot of
+
+118
+00:01:38,870 --> 00:01:38,880
+this is not something that a lot of
+ 
+
+119
+00:01:38,880 --> 00:01:40,710
+this is not something that a lot of
+people use a lot of people jump into
+
+120
+00:01:40,710 --> 00:01:40,720
+people use a lot of people jump into
+ 
+
+121
+00:01:40,720 --> 00:01:41,670
+people use a lot of people jump into
+using vectors
+
+122
+00:01:41,670 --> 00:01:41,680
+using vectors
+ 
+
+123
+00:01:41,680 --> 00:01:43,590
+using vectors
+straight away because they're dynamic
+
+124
+00:01:43,590 --> 00:01:43,600
+straight away because they're dynamic
+ 
+
+125
+00:01:43,600 --> 00:01:45,270
+straight away because they're dynamic
+they're resizable they're great aren't
+
+126
+00:01:45,270 --> 00:01:45,280
+they're resizable they're great aren't
+ 
+
+127
+00:01:45,280 --> 00:01:45,910
+they're resizable they're great aren't
+they
+
+128
+00:01:45,910 --> 00:01:45,920
+they
+ 
+
+129
+00:01:45,920 --> 00:01:48,469
+they
+well they are but they're also allocated
+
+130
+00:01:48,469 --> 00:01:48,479
+well they are but they're also allocated
+ 
+
+131
+00:01:48,479 --> 00:01:49,990
+well they are but they're also allocated
+on the heap and that can tremendously
+
+132
+00:01:49,990 --> 00:01:50,000
+on the heap and that can tremendously
+ 
+
+133
+00:01:50,000 --> 00:01:52,069
+on the heap and that can tremendously
+slow down your program for no reason
+
+134
+00:01:52,069 --> 00:01:52,079
+slow down your program for no reason
+ 
+
+135
+00:01:52,079 --> 00:01:53,510
+slow down your program for no reason
+because in a lot of cases
+
+136
+00:01:53,510 --> 00:01:53,520
+because in a lot of cases
+ 
+
+137
+00:01:53,520 --> 00:01:55,109
+because in a lot of cases
+you could have gotten away with using a
+
+138
+00:01:55,109 --> 00:01:55,119
+you could have gotten away with using a
+ 
+
+139
+00:01:55,119 --> 00:01:56,709
+you could have gotten away with using a
+fixed size static array
+
+140
+00:01:56,709 --> 00:01:56,719
+fixed size static array
+ 
+
+141
+00:01:56,719 --> 00:01:59,109
+fixed size static array
+no problem and by doing so in the right
+
+142
+00:01:59,109 --> 00:01:59,119
+no problem and by doing so in the right
+ 
+
+143
+00:01:59,119 --> 00:02:01,270
+no problem and by doing so in the right
+places you can greatly speed up the
+
+144
+00:02:01,270 --> 00:02:01,280
+places you can greatly speed up the
+ 
+
+145
+00:02:01,280 --> 00:02:02,230
+places you can greatly speed up the
+efficiency
+
+146
+00:02:02,230 --> 00:02:02,240
+efficiency
+ 
+
+147
+00:02:02,240 --> 00:02:03,830
+efficiency
+of your program so i think this is
+
+148
+00:02:03,830 --> 00:02:03,840
+of your program so i think this is
+ 
+
+149
+00:02:03,840 --> 00:02:05,350
+of your program so i think this is
+definitely something that you should not
+
+150
+00:02:05,350 --> 00:02:05,360
+definitely something that you should not
+ 
+
+151
+00:02:05,360 --> 00:02:07,670
+definitely something that you should not
+underestimate and later when we get into
+
+152
+00:02:07,670 --> 00:02:07,680
+underestimate and later when we get into
+ 
+
+153
+00:02:07,680 --> 00:02:08,869
+underestimate and later when we get into
+algorithms and
+
+154
+00:02:08,869 --> 00:02:08,879
+algorithms and
+ 
+
+155
+00:02:08,879 --> 00:02:11,029
+algorithms and
+stuff like search algorithms we can
+
+156
+00:02:11,029 --> 00:02:11,039
+stuff like search algorithms we can
+ 
+
+157
+00:02:11,039 --> 00:02:12,550
+stuff like search algorithms we can
+greatly improve the performance of our
+
+158
+00:02:12,550 --> 00:02:12,560
+greatly improve the performance of our
+ 
+
+159
+00:02:12,560 --> 00:02:13,270
+greatly improve the performance of our
+program
+
+160
+00:02:13,270 --> 00:02:13,280
+program
+ 
+
+161
+00:02:13,280 --> 00:02:15,750
+program
+by keeping our memory local on the stack
+
+162
+00:02:15,750 --> 00:02:15,760
+by keeping our memory local on the stack
+ 
+
+163
+00:02:15,760 --> 00:02:17,750
+by keeping our memory local on the stack
+instead of continually going to the heap
+
+164
+00:02:17,750 --> 00:02:17,760
+instead of continually going to the heap
+ 
+
+165
+00:02:17,760 --> 00:02:19,350
+instead of continually going to the heap
+as you'll see in the future but first
+
+166
+00:02:19,350 --> 00:02:19,360
+as you'll see in the future but first
+ 
+
+167
+00:02:19,360 --> 00:02:20,949
+as you'll see in the future but first
+before we jump into actually writing
+
+168
+00:02:20,949 --> 00:02:20,959
+before we jump into actually writing
+ 
+
+169
+00:02:20,959 --> 00:02:21,430
+before we jump into actually writing
+this
+
+170
+00:02:21,430 --> 00:02:21,440
+this
+ 
+
+171
+00:02:21,440 --> 00:02:23,110
+this
+i want to thank skillshare for
+
+172
+00:02:23,110 --> 00:02:23,120
+i want to thank skillshare for
+ 
+
+173
+00:02:23,120 --> 00:02:24,710
+i want to thank skillshare for
+sponsoring this video
+
+174
+00:02:24,710 --> 00:02:24,720
+sponsoring this video
+ 
+
+175
+00:02:24,720 --> 00:02:26,150
+sponsoring this video
+i've been working with skillshare for
+
+176
+00:02:26,150 --> 00:02:26,160
+i've been working with skillshare for
+ 
+
+177
+00:02:26,160 --> 00:02:27,350
+i've been working with skillshare for
+quite a while in this channel as you've
+
+178
+00:02:27,350 --> 00:02:27,360
+quite a while in this channel as you've
+ 
+
+179
+00:02:27,360 --> 00:02:29,030
+quite a while in this channel as you've
+probably noticed because i think it's a
+
+180
+00:02:29,030 --> 00:02:29,040
+probably noticed because i think it's a
+ 
+
+181
+00:02:29,040 --> 00:02:30,790
+probably noticed because i think it's a
+really great platform it's a platform
+
+182
+00:02:30,790 --> 00:02:30,800
+really great platform it's a platform
+ 
+
+183
+00:02:30,800 --> 00:02:33,670
+really great platform it's a platform
+where you can go to to learn a new skill
+
+184
+00:02:33,670 --> 00:02:33,680
+where you can go to to learn a new skill
+ 
+
+185
+00:02:33,680 --> 00:02:35,350
+where you can go to to learn a new skill
+and it's especially useful when you
+
+186
+00:02:35,350 --> 00:02:35,360
+and it's especially useful when you
+ 
+
+187
+00:02:35,360 --> 00:02:37,430
+and it's especially useful when you
+don't have a lot of time the thing is
+
+188
+00:02:37,430 --> 00:02:37,440
+don't have a lot of time the thing is
+ 
+
+189
+00:02:37,440 --> 00:02:39,430
+don't have a lot of time the thing is
+skillshare has a lot of courses they
+
+190
+00:02:39,430 --> 00:02:39,440
+skillshare has a lot of courses they
+ 
+
+191
+00:02:39,440 --> 00:02:40,150
+skillshare has a lot of courses they
+have
+
+192
+00:02:40,150 --> 00:02:40,160
+have
+ 
+
+193
+00:02:40,160 --> 00:02:42,070
+have
+they have courses on pretty much
+
+194
+00:02:42,070 --> 00:02:42,080
+they have courses on pretty much
+ 
+
+195
+00:02:42,080 --> 00:02:43,830
+they have courses on pretty much
+anything you can think of and they're
+
+196
+00:02:43,830 --> 00:02:43,840
+anything you can think of and they're
+ 
+
+197
+00:02:43,840 --> 00:02:46,390
+anything you can think of and they're
+all really concise and well put together
+
+198
+00:02:46,390 --> 00:02:46,400
+all really concise and well put together
+ 
+
+199
+00:02:46,400 --> 00:02:47,830
+all really concise and well put together
+and they don't contain a lot of flop
+
+200
+00:02:47,830 --> 00:02:47,840
+and they don't contain a lot of flop
+ 
+
+201
+00:02:47,840 --> 00:02:49,430
+and they don't contain a lot of flop
+they don't waste your time they just
+
+202
+00:02:49,430 --> 00:02:49,440
+they don't waste your time they just
+ 
+
+203
+00:02:49,440 --> 00:02:51,350
+they don't waste your time they just
+teach you what you need to know
+
+204
+00:02:51,350 --> 00:02:51,360
+teach you what you need to know
+ 
+
+205
+00:02:51,360 --> 00:02:53,750
+teach you what you need to know
+and usually they're extremely high
+
+206
+00:02:53,750 --> 00:02:53,760
+and usually they're extremely high
+ 
+
+207
+00:02:53,760 --> 00:02:55,750
+and usually they're extremely high
+quality i love the fact that skillshare
+
+208
+00:02:55,750 --> 00:02:55,760
+quality i love the fact that skillshare
+ 
+
+209
+00:02:55,760 --> 00:02:58,309
+quality i love the fact that skillshare
+has a lot of videos about things like
+
+210
+00:02:58,309 --> 00:02:58,319
+has a lot of videos about things like
+ 
+
+211
+00:02:58,319 --> 00:02:59,990
+has a lot of videos about things like
+productivity things like
+
+212
+00:02:59,990 --> 00:03:00,000
+productivity things like
+ 
+
+213
+00:03:00,000 --> 00:03:01,910
+productivity things like
+marketing i love their art related
+
+214
+00:03:01,910 --> 00:03:01,920
+marketing i love their art related
+ 
+
+215
+00:03:01,920 --> 00:03:03,350
+marketing i love their art related
+courses and especially
+
+216
+00:03:03,350 --> 00:03:03,360
+courses and especially
+ 
+
+217
+00:03:03,360 --> 00:03:06,070
+courses and especially
+this one about how you can relax and
+
+218
+00:03:06,070 --> 00:03:06,080
+this one about how you can relax and
+ 
+
+219
+00:03:06,080 --> 00:03:07,509
+this one about how you can relax and
+just take a break
+
+220
+00:03:07,509 --> 00:03:07,519
+just take a break
+ 
+
+221
+00:03:07,519 --> 00:03:09,830
+just take a break
+with art sometimes the programming gets
+
+222
+00:03:09,830 --> 00:03:09,840
+with art sometimes the programming gets
+ 
+
+223
+00:03:09,840 --> 00:03:11,430
+with art sometimes the programming gets
+overwhelming sometimes you don't
+
+224
+00:03:11,430 --> 00:03:11,440
+overwhelming sometimes you don't
+ 
+
+225
+00:03:11,440 --> 00:03:13,350
+overwhelming sometimes you don't
+understand something and being able to
+
+226
+00:03:13,350 --> 00:03:13,360
+understand something and being able to
+ 
+
+227
+00:03:13,360 --> 00:03:15,589
+understand something and being able to
+find a different creative medium in
+
+228
+00:03:15,589 --> 00:03:15,599
+find a different creative medium in
+ 
+
+229
+00:03:15,599 --> 00:03:17,910
+find a different creative medium in
+which to express yourself and also relax
+
+230
+00:03:17,910 --> 00:03:17,920
+which to express yourself and also relax
+ 
+
+231
+00:03:17,920 --> 00:03:18,470
+which to express yourself and also relax
+i think
+
+232
+00:03:18,470 --> 00:03:18,480
+i think
+ 
+
+233
+00:03:18,480 --> 00:03:20,949
+i think
+is really really cool skillshare comes
+
+234
+00:03:20,949 --> 00:03:20,959
+is really really cool skillshare comes
+ 
+
+235
+00:03:20,959 --> 00:03:22,790
+is really really cool skillshare comes
+in at less than ten dollars per month
+
+236
+00:03:22,790 --> 00:03:22,800
+in at less than ten dollars per month
+ 
+
+237
+00:03:22,800 --> 00:03:24,309
+in at less than ten dollars per month
+for an annual subscription
+
+238
+00:03:24,309 --> 00:03:24,319
+for an annual subscription
+ 
+
+239
+00:03:24,319 --> 00:03:26,550
+for an annual subscription
+and the first 1000 people who sign up
+
+240
+00:03:26,550 --> 00:03:26,560
+and the first 1000 people who sign up
+ 
+
+241
+00:03:26,560 --> 00:03:28,470
+and the first 1000 people who sign up
+using my link in the description below
+
+242
+00:03:28,470 --> 00:03:28,480
+using my link in the description below
+ 
+
+243
+00:03:28,480 --> 00:03:29,509
+using my link in the description below
+of this video
+
+244
+00:03:29,509 --> 00:03:29,519
+of this video
+ 
+
+245
+00:03:29,519 --> 00:03:32,550
+of this video
+will get two months of free skillshare
+
+246
+00:03:32,550 --> 00:03:32,560
+will get two months of free skillshare
+ 
+
+247
+00:03:32,560 --> 00:03:35,270
+will get two months of free skillshare
+premium that's two months to learn
+
+248
+00:03:35,270 --> 00:03:35,280
+premium that's two months to learn
+ 
+
+249
+00:03:35,280 --> 00:03:36,149
+premium that's two months to learn
+something
+
+250
+00:03:36,149 --> 00:03:36,159
+something
+ 
+
+251
+00:03:36,159 --> 00:03:37,270
+something
+you should be able to learn a lot of
+
+252
+00:03:37,270 --> 00:03:37,280
+you should be able to learn a lot of
+ 
+
+253
+00:03:37,280 --> 00:03:38,789
+you should be able to learn a lot of
+things in those two months and i expect
+
+254
+00:03:38,789 --> 00:03:38,799
+things in those two months and i expect
+ 
+
+255
+00:03:38,799 --> 00:03:40,470
+things in those two months and i expect
+you to so thank you skillshare once
+
+256
+00:03:40,470 --> 00:03:40,480
+you to so thank you skillshare once
+ 
+
+257
+00:03:40,480 --> 00:03:42,149
+you to so thank you skillshare once
+again for sponsoring this video and
+
+258
+00:03:42,149 --> 00:03:42,159
+again for sponsoring this video and
+ 
+
+259
+00:03:42,159 --> 00:03:43,589
+again for sponsoring this video and
+hooking you guys up
+
+260
+00:03:43,589 --> 00:03:43,599
+hooking you guys up
+ 
+
+261
+00:03:43,599 --> 00:03:45,670
+hooking you guys up
+with some free learning if you need to
+
+262
+00:03:45,670 --> 00:03:45,680
+with some free learning if you need to
+ 
+
+263
+00:03:45,680 --> 00:03:47,430
+with some free learning if you need to
+learn something other than c
+
+264
+00:03:47,430 --> 00:03:47,440
+learn something other than c
+ 
+
+265
+00:03:47,440 --> 00:03:49,509
+learn something other than c
+plus or programming definitely check out
+
+266
+00:03:49,509 --> 00:03:49,519
+plus or programming definitely check out
+ 
+
+267
+00:03:49,519 --> 00:03:50,869
+plus or programming definitely check out
+skillshare in the description
+
+268
+00:03:50,869 --> 00:03:50,879
+skillshare in the description
+ 
+
+269
+00:03:50,879 --> 00:03:52,630
+skillshare in the description
+below and speaking of learning let's
+
+270
+00:03:52,630 --> 00:03:52,640
+below and speaking of learning let's
+ 
+
+271
+00:03:52,640 --> 00:03:53,990
+below and speaking of learning let's
+learn how to write a
+
+272
+00:03:53,990 --> 00:03:54,000
+learn how to write a
+ 
+
+273
+00:03:54,000 --> 00:03:56,869
+learn how to write a
+fixed size stack allocated array data
+
+274
+00:03:56,869 --> 00:03:56,879
+fixed size stack allocated array data
+ 
+
+275
+00:03:56,879 --> 00:03:57,429
+fixed size stack allocated array data
+structure
+
+276
+00:03:57,429 --> 00:03:57,439
+structure
+ 
+
+277
+00:03:57,439 --> 00:03:59,910
+structure
+in c plus so just to be clear here what
+
+278
+00:03:59,910 --> 00:03:59,920
+in c plus so just to be clear here what
+ 
+
+279
+00:03:59,920 --> 00:04:00,949
+in c plus so just to be clear here what
+we're trying to create
+
+280
+00:04:00,949 --> 00:04:00,959
+we're trying to create
+ 
+
+281
+00:04:00,959 --> 00:04:03,030
+we're trying to create
+is a stack allocated array that means an
+
+282
+00:04:03,030 --> 00:04:03,040
+is a stack allocated array that means an
+ 
+
+283
+00:04:03,040 --> 00:04:05,190
+is a stack allocated array that means an
+array that exists on the stack not the
+
+284
+00:04:05,190 --> 00:04:05,200
+array that exists on the stack not the
+ 
+
+285
+00:04:05,200 --> 00:04:05,830
+array that exists on the stack not the
+heap
+
+286
+00:04:05,830 --> 00:04:05,840
+heap
+ 
+
+287
+00:04:05,840 --> 00:04:07,589
+heap
+let's start off with the most basic
+
+288
+00:04:07,589 --> 00:04:07,599
+let's start off with the most basic
+ 
+
+289
+00:04:07,599 --> 00:04:09,429
+let's start off with the most basic
+example of this where we don't have a
+
+290
+00:04:09,429 --> 00:04:09,439
+example of this where we don't have a
+ 
+
+291
+00:04:09,439 --> 00:04:10,949
+example of this where we don't have a
+class or any kind of helper functions
+
+292
+00:04:10,949 --> 00:04:10,959
+class or any kind of helper functions
+ 
+
+293
+00:04:10,959 --> 00:04:11,830
+class or any kind of helper functions
+whatsoever
+
+294
+00:04:11,830 --> 00:04:11,840
+whatsoever
+ 
+
+295
+00:04:11,840 --> 00:04:13,270
+whatsoever
+i'll create an integer array here i'll
+
+296
+00:04:13,270 --> 00:04:13,280
+i'll create an integer array here i'll
+ 
+
+297
+00:04:13,280 --> 00:04:14,710
+i'll create an integer array here i'll
+call it array and i'll give it the size
+
+298
+00:04:14,710 --> 00:04:14,720
+call it array and i'll give it the size
+ 
+
+299
+00:04:14,720 --> 00:04:15,589
+call it array and i'll give it the size
+of five
+
+300
+00:04:15,589 --> 00:04:15,599
+of five
+ 
+
+301
+00:04:15,599 --> 00:04:17,110
+of five
+we now have a very simple stack
+
+302
+00:04:17,110 --> 00:04:17,120
+we now have a very simple stack
+ 
+
+303
+00:04:17,120 --> 00:04:19,590
+we now have a very simple stack
+allocated array this is what forms the
+
+304
+00:04:19,590 --> 00:04:19,600
+allocated array this is what forms the
+ 
+
+305
+00:04:19,600 --> 00:04:22,230
+allocated array this is what forms the
+basis of this entire data structure
+
+306
+00:04:22,230 --> 00:04:22,240
+basis of this entire data structure
+ 
+
+307
+00:04:22,240 --> 00:04:23,909
+basis of this entire data structure
+a heap allocated array would look
+
+308
+00:04:23,909 --> 00:04:23,919
+a heap allocated array would look
+ 
+
+309
+00:04:23,919 --> 00:04:25,590
+a heap allocated array would look
+something like this i'll call it heavy
+
+310
+00:04:25,590 --> 00:04:25,600
+something like this i'll call it heavy
+ 
+
+311
+00:04:25,600 --> 00:04:27,270
+something like this i'll call it heavy
+a the key difference here is that we're
+
+312
+00:04:27,270 --> 00:04:27,280
+a the key difference here is that we're
+ 
+
+313
+00:04:27,280 --> 00:04:28,710
+a the key difference here is that we're
+actually using the new keyword this
+
+314
+00:04:28,710 --> 00:04:28,720
+actually using the new keyword this
+ 
+
+315
+00:04:28,720 --> 00:04:30,150
+actually using the new keyword this
+means that this memory allocation
+
+316
+00:04:30,150 --> 00:04:30,160
+means that this memory allocation
+ 
+
+317
+00:04:30,160 --> 00:04:32,390
+means that this memory allocation
+occurs on the heap and we're explicitly
+
+318
+00:04:32,390 --> 00:04:32,400
+occurs on the heap and we're explicitly
+ 
+
+319
+00:04:32,400 --> 00:04:35,030
+occurs on the heap and we're explicitly
+using a pointer to address it that part
+
+320
+00:04:35,030 --> 00:04:35,040
+using a pointer to address it that part
+ 
+
+321
+00:04:35,040 --> 00:04:36,710
+using a pointer to address it that part
+isn't as much different because we can
+
+322
+00:04:36,710 --> 00:04:36,720
+isn't as much different because we can
+ 
+
+323
+00:04:36,720 --> 00:04:37,909
+isn't as much different because we can
+also use a pointer
+
+324
+00:04:37,909 --> 00:04:37,919
+also use a pointer
+ 
+
+325
+00:04:37,919 --> 00:04:39,510
+also use a pointer
+to address this array but the main
+
+326
+00:04:39,510 --> 00:04:39,520
+to address this array but the main
+ 
+
+327
+00:04:39,520 --> 00:04:40,710
+to address this array but the main
+difference here is that this is
+
+328
+00:04:40,710 --> 00:04:40,720
+difference here is that this is
+ 
+
+329
+00:04:40,720 --> 00:04:42,150
+difference here is that this is
+allocated on the heap
+
+330
+00:04:42,150 --> 00:04:42,160
+allocated on the heap
+ 
+
+331
+00:04:42,160 --> 00:04:44,070
+allocated on the heap
+as such it's actually possible to
+
+332
+00:04:44,070 --> 00:04:44,080
+as such it's actually possible to
+ 
+
+333
+00:04:44,080 --> 00:04:45,909
+as such it's actually possible to
+dynamically allocate this meaning that
+
+334
+00:04:45,909 --> 00:04:45,919
+dynamically allocate this meaning that
+ 
+
+335
+00:04:45,919 --> 00:04:48,310
+dynamically allocate this meaning that
+the size does not have to be specified
+
+336
+00:04:48,310 --> 00:04:48,320
+the size does not have to be specified
+ 
+
+337
+00:04:48,320 --> 00:04:50,390
+the size does not have to be specified
+at compile time this is not the case
+
+338
+00:04:50,390 --> 00:04:50,400
+at compile time this is not the case
+ 
+
+339
+00:04:50,400 --> 00:04:52,230
+at compile time this is not the case
+with a stack allocated array where we
+
+340
+00:04:52,230 --> 00:04:52,240
+with a stack allocated array where we
+ 
+
+341
+00:04:52,240 --> 00:04:54,550
+with a stack allocated array where we
+need to specify the size at compile time
+
+342
+00:04:54,550 --> 00:04:54,560
+need to specify the size at compile time
+ 
+
+343
+00:04:54,560 --> 00:04:55,030
+need to specify the size at compile time
+so
+
+344
+00:04:55,030 --> 00:04:55,040
+so
+ 
+
+345
+00:04:55,040 --> 00:04:56,469
+so
+in other words i could have a size
+
+346
+00:04:56,469 --> 00:04:56,479
+in other words i could have a size
+ 
+
+347
+00:04:56,479 --> 00:04:58,230
+in other words i could have a size
+variable here that could be taken in
+
+348
+00:04:58,230 --> 00:04:58,240
+variable here that could be taken in
+ 
+
+349
+00:04:58,240 --> 00:04:59,350
+variable here that could be taken in
+from anywhere
+
+350
+00:04:59,350 --> 00:04:59,360
+from anywhere
+ 
+
+351
+00:04:59,360 --> 00:05:00,950
+from anywhere
+and then i can simply use that size
+
+352
+00:05:00,950 --> 00:05:00,960
+and then i can simply use that size
+ 
+
+353
+00:05:00,960 --> 00:05:02,870
+and then i can simply use that size
+variable in this allocation
+
+354
+00:05:02,870 --> 00:05:02,880
+variable in this allocation
+ 
+
+355
+00:05:02,880 --> 00:05:05,909
+variable in this allocation
+i cannot do this with my stack allocated
+
+356
+00:05:05,909 --> 00:05:05,919
+i cannot do this with my stack allocated
+ 
+
+357
+00:05:05,919 --> 00:05:07,749
+i cannot do this with my stack allocated
+array you can see that gives us an error
+
+358
+00:05:07,749 --> 00:05:07,759
+array you can see that gives us an error
+ 
+
+359
+00:05:07,759 --> 00:05:09,909
+array you can see that gives us an error
+this has to be a constant that is known
+
+360
+00:05:09,909 --> 00:05:09,919
+this has to be a constant that is known
+ 
+
+361
+00:05:09,919 --> 00:05:12,150
+this has to be a constant that is known
+at compile time because the size of this
+
+362
+00:05:12,150 --> 00:05:12,160
+at compile time because the size of this
+ 
+
+363
+00:05:12,160 --> 00:05:13,189
+at compile time because the size of this
+memory allocation
+
+364
+00:05:13,189 --> 00:05:13,199
+memory allocation
+ 
+
+365
+00:05:13,199 --> 00:05:15,350
+memory allocation
+on the stack has to be known by the
+
+366
+00:05:15,350 --> 00:05:15,360
+on the stack has to be known by the
+ 
+
+367
+00:05:15,360 --> 00:05:17,029
+on the stack has to be known by the
+compiler the other big difference of
+
+368
+00:05:17,029 --> 00:05:17,039
+compiler the other big difference of
+ 
+
+369
+00:05:17,039 --> 00:05:18,550
+compiler the other big difference of
+course is that with a heap allocated
+
+370
+00:05:18,550 --> 00:05:18,560
+course is that with a heap allocated
+ 
+
+371
+00:05:18,560 --> 00:05:19,510
+course is that with a heap allocated
+array like this
+
+372
+00:05:19,510 --> 00:05:19,520
+array like this
+ 
+
+373
+00:05:19,520 --> 00:05:21,110
+array like this
+we need to make sure that we properly
+
+374
+00:05:21,110 --> 00:05:21,120
+we need to make sure that we properly
+ 
+
+375
+00:05:21,120 --> 00:05:22,629
+we need to make sure that we properly
+delete it this is not the case for a
+
+376
+00:05:22,629 --> 00:05:22,639
+delete it this is not the case for a
+ 
+
+377
+00:05:22,639 --> 00:05:24,070
+delete it this is not the case for a
+stack allocated array
+
+378
+00:05:24,070 --> 00:05:24,080
+stack allocated array
+ 
+
+379
+00:05:24,080 --> 00:05:26,070
+stack allocated array
+as it will simply get removed when the
+
+380
+00:05:26,070 --> 00:05:26,080
+as it will simply get removed when the
+ 
+
+381
+00:05:26,080 --> 00:05:27,110
+as it will simply get removed when the
+stack frame is
+
+382
+00:05:27,110 --> 00:05:27,120
+stack frame is
+ 
+
+383
+00:05:27,120 --> 00:05:28,629
+stack frame is
+popped which in this case will happen at
+
+384
+00:05:28,629 --> 00:05:28,639
+popped which in this case will happen at
+ 
+
+385
+00:05:28,639 --> 00:05:30,469
+popped which in this case will happen at
+the end of this function here i'm not
+
+386
+00:05:30,469 --> 00:05:30,479
+the end of this function here i'm not
+ 
+
+387
+00:05:30,479 --> 00:05:31,990
+the end of this function here i'm not
+really going to talk about the benefits
+
+388
+00:05:31,990 --> 00:05:32,000
+really going to talk about the benefits
+ 
+
+389
+00:05:32,000 --> 00:05:33,430
+really going to talk about the benefits
+of a stack allocated array like this
+
+390
+00:05:33,430 --> 00:05:33,440
+of a stack allocated array like this
+ 
+
+391
+00:05:33,440 --> 00:05:35,029
+of a stack allocated array like this
+versus a heap allocated array as well as
+
+392
+00:05:35,029 --> 00:05:35,039
+versus a heap allocated array as well as
+ 
+
+393
+00:05:35,039 --> 00:05:36,230
+versus a heap allocated array as well as
+all of the drawbacks
+
+394
+00:05:36,230 --> 00:05:36,240
+all of the drawbacks
+ 
+
+395
+00:05:36,240 --> 00:05:38,070
+all of the drawbacks
+the point is that in a lot of cases if
+
+396
+00:05:38,070 --> 00:05:38,080
+the point is that in a lot of cases if
+ 
+
+397
+00:05:38,080 --> 00:05:39,510
+the point is that in a lot of cases if
+you're just allocating memory for a
+
+398
+00:05:39,510 --> 00:05:39,520
+you're just allocating memory for a
+ 
+
+399
+00:05:39,520 --> 00:05:40,469
+you're just allocating memory for a
+single scope
+
+400
+00:05:40,469 --> 00:05:40,479
+single scope
+ 
+
+401
+00:05:40,479 --> 00:05:42,070
+single scope
+it's a lot better to use a stack
+
+402
+00:05:42,070 --> 00:05:42,080
+it's a lot better to use a stack
+ 
+
+403
+00:05:42,080 --> 00:05:43,990
+it's a lot better to use a stack
+allocated array just simply because that
+
+404
+00:05:43,990 --> 00:05:44,000
+allocated array just simply because that
+ 
+
+405
+00:05:44,000 --> 00:05:46,070
+allocated array just simply because that
+memory will be right there on the stack
+
+406
+00:05:46,070 --> 00:05:46,080
+memory will be right there on the stack
+ 
+
+407
+00:05:46,080 --> 00:05:47,749
+memory will be right there on the stack
+there's no need for any heap allocations
+
+408
+00:05:47,749 --> 00:05:47,759
+there's no need for any heap allocations
+ 
+
+409
+00:05:47,759 --> 00:05:49,430
+there's no need for any heap allocations
+any kind of indirection everything is
+
+410
+00:05:49,430 --> 00:05:49,440
+any kind of indirection everything is
+ 
+
+411
+00:05:49,440 --> 00:05:51,110
+any kind of indirection everything is
+right there available for you and in a
+
+412
+00:05:51,110 --> 00:05:51,120
+right there available for you and in a
+ 
+
+413
+00:05:51,120 --> 00:05:52,390
+right there available for you and in a
+lot of cases this can
+
+414
+00:05:52,390 --> 00:05:52,400
+lot of cases this can
+ 
+
+415
+00:05:52,400 --> 00:05:54,469
+lot of cases this can
+greatly improve the performance of your
+
+416
+00:05:54,469 --> 00:05:54,479
+greatly improve the performance of your
+ 
+
+417
+00:05:54,479 --> 00:05:56,150
+greatly improve the performance of your
+program so before we create a data
+
+418
+00:05:56,150 --> 00:05:56,160
+program so before we create a data
+ 
+
+419
+00:05:56,160 --> 00:05:57,350
+program so before we create a data
+structure that essentially
+
+420
+00:05:57,350 --> 00:05:57,360
+structure that essentially
+ 
+
+421
+00:05:57,360 --> 00:05:58,870
+structure that essentially
+wraps this and makes it a lot more
+
+422
+00:05:58,870 --> 00:05:58,880
+wraps this and makes it a lot more
+ 
+
+423
+00:05:58,880 --> 00:06:00,629
+wraps this and makes it a lot more
+usable for us let's take a look at what
+
+424
+00:06:00,629 --> 00:06:00,639
+usable for us let's take a look at what
+ 
+
+425
+00:06:00,639 --> 00:06:01,350
+usable for us let's take a look at what
+the c
+
+426
+00:06:01,350 --> 00:06:01,360
+the c
+ 
+
+427
+00:06:01,360 --> 00:06:03,029
+the c
+standard library provides for us which
+
+428
+00:06:03,029 --> 00:06:03,039
+standard library provides for us which
+ 
+
+429
+00:06:03,039 --> 00:06:04,790
+standard library provides for us which
+is this standard array which is
+
+430
+00:06:04,790 --> 00:06:04,800
+is this standard array which is
+ 
+
+431
+00:06:04,800 --> 00:06:06,070
+is this standard array which is
+available since c
+
+432
+00:06:06,070 --> 00:06:06,080
+available since c
+ 
+
+433
+00:06:06,080 --> 00:06:08,230
+available since c
+plus 11. i'll create this standard array
+
+434
+00:06:08,230 --> 00:06:08,240
+plus 11. i'll create this standard array
+ 
+
+435
+00:06:08,240 --> 00:06:10,230
+plus 11. i'll create this standard array
+here with the name collection and i will
+
+436
+00:06:10,230 --> 00:06:10,240
+here with the name collection and i will
+ 
+
+437
+00:06:10,240 --> 00:06:11,990
+here with the name collection and i will
+also add in the required include here
+
+438
+00:06:11,990 --> 00:06:12,000
+also add in the required include here
+ 
+
+439
+00:06:12,000 --> 00:06:13,670
+also add in the required include here
+which is array that's where this
+
+440
+00:06:13,670 --> 00:06:13,680
+which is array that's where this
+ 
+
+441
+00:06:13,680 --> 00:06:15,510
+which is array that's where this
+class is actually contained the way that
+
+442
+00:06:15,510 --> 00:06:15,520
+class is actually contained the way that
+ 
+
+443
+00:06:15,520 --> 00:06:17,590
+class is actually contained the way that
+we use this is primarily using template
+
+444
+00:06:17,590 --> 00:06:17,600
+we use this is primarily using template
+ 
+
+445
+00:06:17,600 --> 00:06:19,350
+we use this is primarily using template
+arguments so using templates we're able
+
+446
+00:06:19,350 --> 00:06:19,360
+arguments so using templates we're able
+ 
+
+447
+00:06:19,360 --> 00:06:20,070
+arguments so using templates we're able
+to specify
+
+448
+00:06:20,070 --> 00:06:20,080
+to specify
+ 
+
+449
+00:06:20,080 --> 00:06:22,870
+to specify
+the type here as well as the size so
+
+450
+00:06:22,870 --> 00:06:22,880
+the type here as well as the size so
+ 
+
+451
+00:06:22,880 --> 00:06:24,150
+the type here as well as the size so
+it's interesting to note here that the
+
+452
+00:06:24,150 --> 00:06:24,160
+it's interesting to note here that the
+ 
+
+453
+00:06:24,160 --> 00:06:25,909
+it's interesting to note here that the
+size is something that we specify as a
+
+454
+00:06:25,909 --> 00:06:25,919
+size is something that we specify as a
+ 
+
+455
+00:06:25,919 --> 00:06:27,110
+size is something that we specify as a
+template argument
+
+456
+00:06:27,110 --> 00:06:27,120
+template argument
+ 
+
+457
+00:06:27,120 --> 00:06:29,670
+template argument
+now if we actually open this array file
+
+458
+00:06:29,670 --> 00:06:29,680
+now if we actually open this array file
+ 
+
+459
+00:06:29,680 --> 00:06:31,350
+now if we actually open this array file
+here by just going to the document
+
+460
+00:06:31,350 --> 00:06:31,360
+here by just going to the document
+ 
+
+461
+00:06:31,360 --> 00:06:33,189
+here by just going to the document
+you can see the entire implementation
+
+462
+00:06:33,189 --> 00:06:33,199
+you can see the entire implementation
+ 
+
+463
+00:06:33,199 --> 00:06:34,950
+you can see the entire implementation
+because this is completely a templated
+
+464
+00:06:34,950 --> 00:06:34,960
+because this is completely a templated
+ 
+
+465
+00:06:34,960 --> 00:06:35,909
+because this is completely a templated
+class the entire
+
+466
+00:06:35,909 --> 00:06:35,919
+class the entire
+ 
+
+467
+00:06:35,919 --> 00:06:37,749
+class the entire
+implementation has to be inside this
+
+468
+00:06:37,749 --> 00:06:37,759
+implementation has to be inside this
+ 
+
+469
+00:06:37,759 --> 00:06:39,749
+implementation has to be inside this
+header file it can't be compiled into
+
+470
+00:06:39,749 --> 00:06:39,759
+header file it can't be compiled into
+ 
+
+471
+00:06:39,759 --> 00:06:41,510
+header file it can't be compiled into
+some kind of library in fact the entire
+
+472
+00:06:41,510 --> 00:06:41,520
+some kind of library in fact the entire
+ 
+
+473
+00:06:41,520 --> 00:06:43,590
+some kind of library in fact the entire
+cpus plus standard template library is
+
+474
+00:06:43,590 --> 00:06:43,600
+cpus plus standard template library is
+ 
+
+475
+00:06:43,600 --> 00:06:45,189
+cpus plus standard template library is
+actually in header files because it's
+
+476
+00:06:45,189 --> 00:06:45,199
+actually in header files because it's
+ 
+
+477
+00:06:45,199 --> 00:06:46,469
+actually in header files because it's
+made out of templates
+
+478
+00:06:46,469 --> 00:06:46,479
+made out of templates
+ 
+
+479
+00:06:46,479 --> 00:06:48,390
+made out of templates
+so we'll be referring to this quite a
+
+480
+00:06:48,390 --> 00:06:48,400
+so we'll be referring to this quite a
+ 
+
+481
+00:06:48,400 --> 00:06:50,309
+so we'll be referring to this quite a
+bit just to see how they do things
+
+482
+00:06:50,309 --> 00:06:50,319
+bit just to see how they do things
+ 
+
+483
+00:06:50,319 --> 00:06:52,070
+bit just to see how they do things
+whilst also writing our own that is
+
+484
+00:06:52,070 --> 00:06:52,080
+whilst also writing our own that is
+ 
+
+485
+00:06:52,080 --> 00:06:53,990
+whilst also writing our own that is
+going to look a lot more simple
+
+486
+00:06:53,990 --> 00:06:54,000
+going to look a lot more simple
+ 
+
+487
+00:06:54,000 --> 00:06:56,629
+going to look a lot more simple
+than what we have here because the c
+
+488
+00:06:56,629 --> 00:06:56,639
+than what we have here because the c
+ 
+
+489
+00:06:56,639 --> 00:06:58,309
+than what we have here because the c
+plus libraries are usually written
+
+490
+00:06:58,309 --> 00:06:58,319
+plus libraries are usually written
+ 
+
+491
+00:06:58,319 --> 00:07:00,870
+plus libraries are usually written
+in a not very readable way once we've
+
+492
+00:07:00,870 --> 00:07:00,880
+in a not very readable way once we've
+ 
+
+493
+00:07:00,880 --> 00:07:02,550
+in a not very readable way once we've
+got that the primary benefit here is
+
+494
+00:07:02,550 --> 00:07:02,560
+got that the primary benefit here is
+ 
+
+495
+00:07:02,560 --> 00:07:03,510
+got that the primary benefit here is
+that we can in fact
+
+496
+00:07:03,510 --> 00:07:03,520
+that we can in fact
+ 
+
+497
+00:07:03,520 --> 00:07:05,189
+that we can in fact
+easily check what the size is of the
+
+498
+00:07:05,189 --> 00:07:05,199
+easily check what the size is of the
+ 
+
+499
+00:07:05,199 --> 00:07:06,870
+easily check what the size is of the
+array we can easily obtain an
+
+500
+00:07:06,870 --> 00:07:06,880
+array we can easily obtain an
+ 
+
+501
+00:07:06,880 --> 00:07:08,629
+array we can easily obtain an
+iterator to the array so in other words
+
+502
+00:07:08,629 --> 00:07:08,639
+iterator to the array so in other words
+ 
+
+503
+00:07:08,639 --> 00:07:10,230
+iterator to the array so in other words
+if i wanted to iterate through
+
+504
+00:07:10,230 --> 00:07:10,240
+if i wanted to iterate through
+ 
+
+505
+00:07:10,240 --> 00:07:11,909
+if i wanted to iterate through
+every single integer inside this
+
+506
+00:07:11,909 --> 00:07:11,919
+every single integer inside this
+ 
+
+507
+00:07:11,919 --> 00:07:13,749
+every single integer inside this
+collection i have a very easy way to do
+
+508
+00:07:13,749 --> 00:07:13,759
+collection i have a very easy way to do
+ 
+
+509
+00:07:13,759 --> 00:07:14,230
+collection i have a very easy way to do
+this
+
+510
+00:07:14,230 --> 00:07:14,240
+this
+ 
+
+511
+00:07:14,240 --> 00:07:16,710
+this
+i can also use a traditional for loop
+
+512
+00:07:16,710 --> 00:07:16,720
+i can also use a traditional for loop
+ 
+
+513
+00:07:16,720 --> 00:07:18,150
+i can also use a traditional for loop
+here like so and then
+
+514
+00:07:18,150 --> 00:07:18,160
+here like so and then
+ 
+
+515
+00:07:18,160 --> 00:07:20,230
+here like so and then
+simply use it as if it was any other
+
+516
+00:07:20,230 --> 00:07:20,240
+simply use it as if it was any other
+ 
+
+517
+00:07:20,240 --> 00:07:22,070
+simply use it as if it was any other
+array by like printing the value or
+
+518
+00:07:22,070 --> 00:07:22,080
+array by like printing the value or
+ 
+
+519
+00:07:22,080 --> 00:07:23,350
+array by like printing the value or
+doing something like this
+
+520
+00:07:23,350 --> 00:07:23,360
+doing something like this
+ 
+
+521
+00:07:23,360 --> 00:07:25,029
+doing something like this
+doesn't really matter this is basically
+
+522
+00:07:25,029 --> 00:07:25,039
+doesn't really matter this is basically
+ 
+
+523
+00:07:25,039 --> 00:07:26,870
+doesn't really matter this is basically
+what the api for this standard array
+
+524
+00:07:26,870 --> 00:07:26,880
+what the api for this standard array
+ 
+
+525
+00:07:26,880 --> 00:07:28,070
+what the api for this standard array
+class looks like and that's what we'll
+
+526
+00:07:28,070 --> 00:07:28,080
+class looks like and that's what we'll
+ 
+
+527
+00:07:28,080 --> 00:07:29,029
+class looks like and that's what we'll
+be creating today
+
+528
+00:07:29,029 --> 00:07:29,039
+be creating today
+ 
+
+529
+00:07:29,039 --> 00:07:30,390
+be creating today
+okay so now that we've done a little bit
+
+530
+00:07:30,390 --> 00:07:30,400
+okay so now that we've done a little bit
+ 
+
+531
+00:07:30,400 --> 00:07:32,309
+okay so now that we've done a little bit
+of research let's dive in and take a
+
+532
+00:07:32,309 --> 00:07:32,319
+of research let's dive in and take a
+ 
+
+533
+00:07:32,319 --> 00:07:34,150
+of research let's dive in and take a
+look at how we can make this ourselves
+
+534
+00:07:34,150 --> 00:07:34,160
+look at how we can make this ourselves
+ 
+
+535
+00:07:34,160 --> 00:07:35,589
+look at how we can make this ourselves
+what i want to do is start with the
+
+536
+00:07:35,589 --> 00:07:35,599
+what i want to do is start with the
+ 
+
+537
+00:07:35,599 --> 00:07:37,270
+what i want to do is start with the
+first iteration of this how do we do
+
+538
+00:07:37,270 --> 00:07:37,280
+first iteration of this how do we do
+ 
+
+539
+00:07:37,280 --> 00:07:37,589
+first iteration of this how do we do
+this
+
+540
+00:07:37,589 --> 00:07:37,599
+this
+ 
+
+541
+00:07:37,599 --> 00:07:39,670
+this
+just templates aside the simple kind of
+
+542
+00:07:39,670 --> 00:07:39,680
+just templates aside the simple kind of
+ 
+
+543
+00:07:39,680 --> 00:07:40,870
+just templates aside the simple kind of
+beginner's version
+
+544
+00:07:40,870 --> 00:07:40,880
+beginner's version
+ 
+
+545
+00:07:40,880 --> 00:07:43,110
+beginner's version
+of having a stack allocated array that
+
+546
+00:07:43,110 --> 00:07:43,120
+of having a stack allocated array that
+ 
+
+547
+00:07:43,120 --> 00:07:45,589
+of having a stack allocated array that
+is wrapped inside a class well i'll make
+
+548
+00:07:45,589 --> 00:07:45,599
+is wrapped inside a class well i'll make
+ 
+
+549
+00:07:45,599 --> 00:07:47,270
+is wrapped inside a class well i'll make
+a class called array and then i'm going
+
+550
+00:07:47,270 --> 00:07:47,280
+a class called array and then i'm going
+ 
+
+551
+00:07:47,280 --> 00:07:49,350
+a class called array and then i'm going
+to decide what kind of type of data this
+
+552
+00:07:49,350 --> 00:07:49,360
+to decide what kind of type of data this
+ 
+
+553
+00:07:49,360 --> 00:07:50,869
+to decide what kind of type of data this
+array is going to hold so we'll go with
+
+554
+00:07:50,869 --> 00:07:50,879
+array is going to hold so we'll go with
+ 
+
+555
+00:07:50,879 --> 00:07:51,990
+array is going to hold so we'll go with
+an integer
+
+556
+00:07:51,990 --> 00:07:52,000
+an integer
+ 
+
+557
+00:07:52,000 --> 00:07:54,710
+an integer
+i'll now make an actual stack allocated
+
+558
+00:07:54,710 --> 00:07:54,720
+i'll now make an actual stack allocated
+ 
+
+559
+00:07:54,720 --> 00:07:56,869
+i'll now make an actual stack allocated
+array here with a particular size
+
+560
+00:07:56,869 --> 00:07:56,879
+array here with a particular size
+ 
+
+561
+00:07:56,879 --> 00:07:58,550
+array here with a particular size
+now this is where our problem comes in
+
+562
+00:07:58,550 --> 00:07:58,560
+now this is where our problem comes in
+ 
+
+563
+00:07:58,560 --> 00:08:00,309
+now this is where our problem comes in
+we can't really simply make a
+
+564
+00:08:00,309 --> 00:08:00,319
+we can't really simply make a
+ 
+
+565
+00:08:00,319 --> 00:08:01,430
+we can't really simply make a
+constructor here
+
+566
+00:08:01,430 --> 00:08:01,440
+constructor here
+ 
+
+567
+00:08:01,440 --> 00:08:03,749
+constructor here
+that takes in a size like this because
+
+568
+00:08:03,749 --> 00:08:03,759
+that takes in a size like this because
+ 
+
+569
+00:08:03,759 --> 00:08:05,589
+that takes in a size like this because
+if we did that we would have to somehow
+
+570
+00:08:05,589 --> 00:08:05,599
+if we did that we would have to somehow
+ 
+
+571
+00:08:05,599 --> 00:08:07,350
+if we did that we would have to somehow
+allocate this memory it's not going to
+
+572
+00:08:07,350 --> 00:08:07,360
+allocate this memory it's not going to
+ 
+
+573
+00:08:07,360 --> 00:08:08,710
+allocate this memory it's not going to
+be possible to do this for the same
+
+574
+00:08:08,710 --> 00:08:08,720
+be possible to do this for the same
+ 
+
+575
+00:08:08,720 --> 00:08:10,629
+be possible to do this for the same
+reason why i can't have an array over
+
+576
+00:08:10,629 --> 00:08:10,639
+reason why i can't have an array over
+ 
+
+577
+00:08:10,639 --> 00:08:11,189
+reason why i can't have an array over
+here
+
+578
+00:08:11,189 --> 00:08:11,199
+here
+ 
+
+579
+00:08:11,199 --> 00:08:13,029
+here
+that is initialized by a particular
+
+580
+00:08:13,029 --> 00:08:13,039
+that is initialized by a particular
+ 
+
+581
+00:08:13,039 --> 00:08:14,710
+that is initialized by a particular
+variable like this
+
+582
+00:08:14,710 --> 00:08:14,720
+variable like this
+ 
+
+583
+00:08:14,720 --> 00:08:16,550
+variable like this
+you just can't do that because this is
+
+584
+00:08:16,550 --> 00:08:16,560
+you just can't do that because this is
+ 
+
+585
+00:08:16,560 --> 00:08:18,230
+you just can't do that because this is
+not a constant expression it's not
+
+586
+00:08:18,230 --> 00:08:18,240
+not a constant expression it's not
+ 
+
+587
+00:08:18,240 --> 00:08:20,150
+not a constant expression it's not
+something that is known at compile time
+
+588
+00:08:20,150 --> 00:08:20,160
+something that is known at compile time
+ 
+
+589
+00:08:20,160 --> 00:08:22,309
+something that is known at compile time
+so we can't have an array whose size is
+
+590
+00:08:22,309 --> 00:08:22,319
+so we can't have an array whose size is
+ 
+
+591
+00:08:22,319 --> 00:08:23,270
+so we can't have an array whose size is
+specified at
+
+592
+00:08:23,270 --> 00:08:23,280
+specified at
+ 
+
+593
+00:08:23,280 --> 00:08:25,029
+specified at
+runtime so in other words we need to
+
+594
+00:08:25,029 --> 00:08:25,039
+runtime so in other words we need to
+ 
+
+595
+00:08:25,039 --> 00:08:26,629
+runtime so in other words we need to
+actually insert a
+
+596
+00:08:26,629 --> 00:08:26,639
+actually insert a
+ 
+
+597
+00:08:26,639 --> 00:08:28,390
+actually insert a
+number into here and this is
+
+598
+00:08:28,390 --> 00:08:28,400
+number into here and this is
+ 
+
+599
+00:08:28,400 --> 00:08:30,390
+number into here and this is
+specifically where it gets difficult
+
+600
+00:08:30,390 --> 00:08:30,400
+specifically where it gets difficult
+ 
+
+601
+00:08:30,400 --> 00:08:31,990
+specifically where it gets difficult
+because if we're trying to do something
+
+602
+00:08:31,990 --> 00:08:32,000
+because if we're trying to do something
+ 
+
+603
+00:08:32,000 --> 00:08:33,190
+because if we're trying to do something
+like this
+
+604
+00:08:33,190 --> 00:08:33,200
+like this
+ 
+
+605
+00:08:33,200 --> 00:08:35,589
+like this
+how do we control this how can i at the
+
+606
+00:08:35,589 --> 00:08:35,599
+how do we control this how can i at the
+ 
+
+607
+00:08:35,599 --> 00:08:37,350
+how do we control this how can i at the
+time of instantiating this class and
+
+608
+00:08:37,350 --> 00:08:37,360
+time of instantiating this class and
+ 
+
+609
+00:08:37,360 --> 00:08:38,149
+time of instantiating this class and
+using it
+
+610
+00:08:38,149 --> 00:08:38,159
+using it
+ 
+
+611
+00:08:38,159 --> 00:08:39,909
+using it
+how can i tell it how big i want my
+
+612
+00:08:39,909 --> 00:08:39,919
+how can i tell it how big i want my
+ 
+
+613
+00:08:39,919 --> 00:08:41,750
+how can i tell it how big i want my
+static array to be that's why
+
+614
+00:08:41,750 --> 00:08:41,760
+static array to be that's why
+ 
+
+615
+00:08:41,760 --> 00:08:43,829
+static array to be that's why
+the standard array class uses a template
+
+616
+00:08:43,829 --> 00:08:43,839
+the standard array class uses a template
+ 
+
+617
+00:08:43,839 --> 00:08:45,350
+the standard array class uses a template
+now as a side note i just want to
+
+618
+00:08:45,350 --> 00:08:45,360
+now as a side note i just want to
+ 
+
+619
+00:08:45,360 --> 00:08:46,949
+now as a side note i just want to
+mention that yes i did say that
+
+620
+00:08:46,949 --> 00:08:46,959
+mention that yes i did say that
+ 
+
+621
+00:08:46,959 --> 00:08:48,470
+mention that yes i did say that
+technically you cannot have a stack
+
+622
+00:08:48,470 --> 00:08:48,480
+technically you cannot have a stack
+ 
+
+623
+00:08:48,480 --> 00:08:50,470
+technically you cannot have a stack
+allocated array with a dynamic size
+
+624
+00:08:50,470 --> 00:08:50,480
+allocated array with a dynamic size
+ 
+
+625
+00:08:50,480 --> 00:08:52,230
+allocated array with a dynamic size
+that's not strictly true because it is
+
+626
+00:08:52,230 --> 00:08:52,240
+that's not strictly true because it is
+ 
+
+627
+00:08:52,240 --> 00:08:54,310
+that's not strictly true because it is
+possible to allocate memory on the stack
+
+628
+00:08:54,310 --> 00:08:54,320
+possible to allocate memory on the stack
+ 
+
+629
+00:08:54,320 --> 00:08:55,269
+possible to allocate memory on the stack
+dynamically
+
+630
+00:08:55,269 --> 00:08:55,279
+dynamically
+ 
+
+631
+00:08:55,279 --> 00:08:57,190
+dynamically
+we can do that by turning this into a
+
+632
+00:08:57,190 --> 00:08:57,200
+we can do that by turning this into a
+ 
+
+633
+00:08:57,200 --> 00:08:59,350
+we can do that by turning this into a
+pointer and then simply saying that m
+
+634
+00:08:59,350 --> 00:08:59,360
+pointer and then simply saying that m
+ 
+
+635
+00:08:59,360 --> 00:09:01,110
+pointer and then simply saying that m
+data is equal to
+
+636
+00:09:01,110 --> 00:09:01,120
+data is equal to
+ 
+
+637
+00:09:01,120 --> 00:09:04,710
+data is equal to
+endpointer allocate size allocate is a
+
+638
+00:09:04,710 --> 00:09:04,720
+endpointer allocate size allocate is a
+ 
+
+639
+00:09:04,720 --> 00:09:06,470
+endpointer allocate size allocate is a
+function that lets us allocate memory on
+
+640
+00:09:06,470 --> 00:09:06,480
+function that lets us allocate memory on
+ 
+
+641
+00:09:06,480 --> 00:09:07,990
+function that lets us allocate memory on
+the stack this would successfully
+
+642
+00:09:07,990 --> 00:09:08,000
+the stack this would successfully
+ 
+
+643
+00:09:08,000 --> 00:09:10,310
+the stack this would successfully
+allow us to instantiate our array here
+
+644
+00:09:10,310 --> 00:09:10,320
+allow us to instantiate our array here
+ 
+
+645
+00:09:10,320 --> 00:09:12,230
+allow us to instantiate our array here
+with an actual runtime value here so
+
+646
+00:09:12,230 --> 00:09:12,240
+with an actual runtime value here so
+ 
+
+647
+00:09:12,240 --> 00:09:13,430
+with an actual runtime value here so
+this could be of course
+
+648
+00:09:13,430 --> 00:09:13,440
+this could be of course
+ 
+
+649
+00:09:13,440 --> 00:09:15,030
+this could be of course
+a variable that was set to something and
+
+650
+00:09:15,030 --> 00:09:15,040
+a variable that was set to something and
+ 
+
+651
+00:09:15,040 --> 00:09:16,470
+a variable that was set to something and
+you can see that it works here fine
+
+652
+00:09:16,470 --> 00:09:16,480
+you can see that it works here fine
+ 
+
+653
+00:09:16,480 --> 00:09:18,310
+you can see that it works here fine
+because this just takes in an integer
+
+654
+00:09:18,310 --> 00:09:18,320
+because this just takes in an integer
+ 
+
+655
+00:09:18,320 --> 00:09:20,389
+because this just takes in an integer
+and we're allocating the right thing now
+
+656
+00:09:20,389 --> 00:09:20,399
+and we're allocating the right thing now
+ 
+
+657
+00:09:20,399 --> 00:09:21,590
+and we're allocating the right thing now
+there are certain
+
+658
+00:09:21,590 --> 00:09:21,600
+there are certain
+ 
+
+659
+00:09:21,600 --> 00:09:23,910
+there are certain
+caveats to using allokay whilst this
+
+660
+00:09:23,910 --> 00:09:23,920
+caveats to using allokay whilst this
+ 
+
+661
+00:09:23,920 --> 00:09:25,509
+caveats to using allokay whilst this
+memory is technically allocated on the
+
+662
+00:09:25,509 --> 00:09:25,519
+memory is technically allocated on the
+ 
+
+663
+00:09:25,519 --> 00:09:25,990
+memory is technically allocated on the
+stack
+
+664
+00:09:25,990 --> 00:09:26,000
+stack
+ 
+
+665
+00:09:26,000 --> 00:09:27,670
+stack
+the compiler doesn't really know how big
+
+666
+00:09:27,670 --> 00:09:27,680
+the compiler doesn't really know how big
+ 
+
+667
+00:09:27,680 --> 00:09:29,350
+the compiler doesn't really know how big
+the size will be that can lead to
+
+668
+00:09:29,350 --> 00:09:29,360
+the size will be that can lead to
+ 
+
+669
+00:09:29,360 --> 00:09:31,190
+the size will be that can lead to
+problems and also lack of compiler
+
+670
+00:09:31,190 --> 00:09:31,200
+problems and also lack of compiler
+ 
+
+671
+00:09:31,200 --> 00:09:33,590
+problems and also lack of compiler
+optimization so technically speaking you
+
+672
+00:09:33,590 --> 00:09:33,600
+optimization so technically speaking you
+ 
+
+673
+00:09:33,600 --> 00:09:35,509
+optimization so technically speaking you
+probably want to avoid lk especially in
+
+674
+00:09:35,509 --> 00:09:35,519
+probably want to avoid lk especially in
+ 
+
+675
+00:09:35,519 --> 00:09:35,829
+probably want to avoid lk especially in
+this
+
+676
+00:09:35,829 --> 00:09:35,839
+this
+ 
+
+677
+00:09:35,839 --> 00:09:37,670
+this
+instance i definitely won't tell you to
+
+678
+00:09:37,670 --> 00:09:37,680
+instance i definitely won't tell you to
+ 
+
+679
+00:09:37,680 --> 00:09:39,509
+instance i definitely won't tell you to
+avoid allocate in life in general just
+
+680
+00:09:39,509 --> 00:09:39,519
+avoid allocate in life in general just
+ 
+
+681
+00:09:39,519 --> 00:09:41,190
+avoid allocate in life in general just
+because it is extremely useful and it
+
+682
+00:09:41,190 --> 00:09:41,200
+because it is extremely useful and it
+ 
+
+683
+00:09:41,200 --> 00:09:42,790
+because it is extremely useful and it
+can definitely benefit the performance
+
+684
+00:09:42,790 --> 00:09:42,800
+can definitely benefit the performance
+ 
+
+685
+00:09:42,800 --> 00:09:44,630
+can definitely benefit the performance
+of your program but it's totally
+
+686
+00:09:44,630 --> 00:09:44,640
+of your program but it's totally
+ 
+
+687
+00:09:44,640 --> 00:09:46,070
+of your program but it's totally
+outside of the scope of this tutorial so
+
+688
+00:09:46,070 --> 00:09:46,080
+outside of the scope of this tutorial so
+ 
+
+689
+00:09:46,080 --> 00:09:47,750
+outside of the scope of this tutorial so
+we're not going to talk about it here at
+
+690
+00:09:47,750 --> 00:09:47,760
+we're not going to talk about it here at
+ 
+
+691
+00:09:47,760 --> 00:09:49,030
+we're not going to talk about it here at
+all so going back to this
+
+692
+00:09:49,030 --> 00:09:49,040
+all so going back to this
+ 
+
+693
+00:09:49,040 --> 00:09:51,509
+all so going back to this
+what are our options if we simply have a
+
+694
+00:09:51,509 --> 00:09:51,519
+what are our options if we simply have a
+ 
+
+695
+00:09:51,519 --> 00:09:52,630
+what are our options if we simply have a
+declaration like this
+
+696
+00:09:52,630 --> 00:09:52,640
+declaration like this
+ 
+
+697
+00:09:52,640 --> 00:09:54,470
+declaration like this
+and the only thing we can really do is
+
+698
+00:09:54,470 --> 00:09:54,480
+and the only thing we can really do is
+ 
+
+699
+00:09:54,480 --> 00:09:56,230
+and the only thing we can really do is
+by using a template unless we want to
+
+700
+00:09:56,230 --> 00:09:56,240
+by using a template unless we want to
+ 
+
+701
+00:09:56,240 --> 00:09:57,110
+by using a template unless we want to
+have a fixed
+
+702
+00:09:57,110 --> 00:09:57,120
+have a fixed
+ 
+
+703
+00:09:57,120 --> 00:09:59,430
+have a fixed
+size array which means that we just have
+
+704
+00:09:59,430 --> 00:09:59,440
+size array which means that we just have
+ 
+
+705
+00:09:59,440 --> 00:10:01,509
+size array which means that we just have
+a size of 10 and that is just like
+
+706
+00:10:01,509 --> 00:10:01,519
+a size of 10 and that is just like
+ 
+
+707
+00:10:01,519 --> 00:10:03,430
+a size of 10 and that is just like
+this is my array that is 10 integers
+
+708
+00:10:03,430 --> 00:10:03,440
+this is my array that is 10 integers
+ 
+
+709
+00:10:03,440 --> 00:10:05,030
+this is my array that is 10 integers
+large or something like that which is
+
+710
+00:10:05,030 --> 00:10:05,040
+large or something like that which is
+ 
+
+711
+00:10:05,040 --> 00:10:05,910
+large or something like that which is
+ridiculous
+
+712
+00:10:05,910 --> 00:10:05,920
+ridiculous
+ 
+
+713
+00:10:05,920 --> 00:10:07,910
+ridiculous
+we need to template this so it's really
+
+714
+00:10:07,910 --> 00:10:07,920
+we need to template this so it's really
+ 
+
+715
+00:10:07,920 --> 00:10:09,190
+we need to template this so it's really
+easy to write this if you're new to
+
+716
+00:10:09,190 --> 00:10:09,200
+easy to write this if you're new to
+ 
+
+717
+00:10:09,200 --> 00:10:10,710
+easy to write this if you're new to
+templates check out my video in the top
+
+718
+00:10:10,710 --> 00:10:10,720
+templates check out my video in the top
+ 
+
+719
+00:10:10,720 --> 00:10:12,550
+templates check out my video in the top
+right corner about templates but all we
+
+720
+00:10:12,550 --> 00:10:12,560
+right corner about templates but all we
+ 
+
+721
+00:10:12,560 --> 00:10:14,310
+right corner about templates but all we
+really have to write here is template
+
+722
+00:10:14,310 --> 00:10:14,320
+really have to write here is template
+ 
+
+723
+00:10:14,320 --> 00:10:15,269
+really have to write here is template
+size t
+
+724
+00:10:15,269 --> 00:10:15,279
+size t
+ 
+
+725
+00:10:15,279 --> 00:10:18,389
+size t
+and we'll call it s now this can be
+
+726
+00:10:18,389 --> 00:10:18,399
+and we'll call it s now this can be
+ 
+
+727
+00:10:18,399 --> 00:10:20,790
+and we'll call it s now this can be
+you can write this as an int usually in
+
+728
+00:10:20,790 --> 00:10:20,800
+you can write this as an int usually in
+ 
+
+729
+00:10:20,800 --> 00:10:22,550
+you can write this as an int usually in
+c plus if you're referring to sizes you
+
+730
+00:10:22,550 --> 00:10:22,560
+c plus if you're referring to sizes you
+ 
+
+731
+00:10:22,560 --> 00:10:23,590
+c plus if you're referring to sizes you
+want to use the size t
+
+732
+00:10:23,590 --> 00:10:23,600
+want to use the size t
+ 
+
+733
+00:10:23,600 --> 00:10:25,670
+want to use the size t
+that's certainly what the entire library
+
+734
+00:10:25,670 --> 00:10:25,680
+that's certainly what the entire library
+ 
+
+735
+00:10:25,680 --> 00:10:27,269
+that's certainly what the entire library
+uses for all of the like c plus plus
+
+736
+00:10:27,269 --> 00:10:27,279
+uses for all of the like c plus plus
+ 
+
+737
+00:10:27,279 --> 00:10:28,630
+uses for all of the like c plus plus
+internal stuff okay so now that we've
+
+738
+00:10:28,630 --> 00:10:28,640
+internal stuff okay so now that we've
+ 
+
+739
+00:10:28,640 --> 00:10:30,470
+internal stuff okay so now that we've
+got that we can simply replace this 10
+
+740
+00:10:30,470 --> 00:10:30,480
+got that we can simply replace this 10
+ 
+
+741
+00:10:30,480 --> 00:10:31,430
+got that we can simply replace this 10
+with the size
+
+742
+00:10:31,430 --> 00:10:31,440
+with the size
+ 
+
+743
+00:10:31,440 --> 00:10:33,910
+with the size
+and now if we work to create this array
+
+744
+00:10:33,910 --> 00:10:33,920
+and now if we work to create this array
+ 
+
+745
+00:10:33,920 --> 00:10:35,269
+and now if we work to create this array
+instead of having to write this size
+
+746
+00:10:35,269 --> 00:10:35,279
+instead of having to write this size
+ 
+
+747
+00:10:35,279 --> 00:10:37,430
+instead of having to write this size
+here what we need to do is specify a
+
+748
+00:10:37,430 --> 00:10:37,440
+here what we need to do is specify a
+ 
+
+749
+00:10:37,440 --> 00:10:38,069
+here what we need to do is specify a
+size
+
+750
+00:10:38,069 --> 00:10:38,079
+size
+ 
+
+751
+00:10:38,079 --> 00:10:40,230
+size
+like 5 as part of the type so now we
+
+752
+00:10:40,230 --> 00:10:40,240
+like 5 as part of the type so now we
+ 
+
+753
+00:10:40,240 --> 00:10:42,150
+like 5 as part of the type so now we
+have a templated class meaning a new
+
+754
+00:10:42,150 --> 00:10:42,160
+have a templated class meaning a new
+ 
+
+755
+00:10:42,160 --> 00:10:43,910
+have a templated class meaning a new
+version of this class will physically be
+
+756
+00:10:43,910 --> 00:10:43,920
+version of this class will physically be
+ 
+
+757
+00:10:43,920 --> 00:10:45,590
+version of this class will physically be
+created by the compiler with our
+
+758
+00:10:45,590 --> 00:10:45,600
+created by the compiler with our
+ 
+
+759
+00:10:45,600 --> 00:10:46,069
+created by the compiler with our
+argument
+
+760
+00:10:46,069 --> 00:10:46,079
+argument
+ 
+
+761
+00:10:46,079 --> 00:10:49,430
+argument
+every time we create a new array type
+
+762
+00:10:49,430 --> 00:10:49,440
+every time we create a new array type
+ 
+
+763
+00:10:49,440 --> 00:10:51,750
+every time we create a new array type
+okay cool so now that we've got a
+
+764
+00:10:51,750 --> 00:10:51,760
+okay cool so now that we've got a
+ 
+
+765
+00:10:51,760 --> 00:10:52,630
+okay cool so now that we've got a
+dynamic
+
+766
+00:10:52,630 --> 00:10:52,640
+dynamic
+ 
+
+767
+00:10:52,640 --> 00:10:54,630
+dynamic
+ish size going on here it's not really
+
+768
+00:10:54,630 --> 00:10:54,640
+ish size going on here it's not really
+ 
+
+769
+00:10:54,640 --> 00:10:56,230
+ish size going on here it's not really
+dynamic we still have to specify this at
+
+770
+00:10:56,230 --> 00:10:56,240
+dynamic we still have to specify this at
+ 
+
+771
+00:10:56,240 --> 00:10:57,110
+dynamic we still have to specify this at
+compile time
+
+772
+00:10:57,110 --> 00:10:57,120
+compile time
+ 
+
+773
+00:10:57,120 --> 00:10:58,550
+compile time
+there's no way for us to do something
+
+774
+00:10:58,550 --> 00:10:58,560
+there's no way for us to do something
+ 
+
+775
+00:10:58,560 --> 00:11:00,790
+there's no way for us to do something
+like this at least unless it's a
+
+776
+00:11:00,790 --> 00:11:00,800
+like this at least unless it's a
+ 
+
+777
+00:11:00,800 --> 00:11:02,470
+like this at least unless it's a
+constant expression but we're not really
+
+778
+00:11:02,470 --> 00:11:02,480
+constant expression but we're not really
+ 
+
+779
+00:11:02,480 --> 00:11:03,750
+constant expression but we're not really
+going to talk about that
+
+780
+00:11:03,750 --> 00:11:03,760
+going to talk about that
+ 
+
+781
+00:11:03,760 --> 00:11:06,230
+going to talk about that
+here right now we still have to write
+
+782
+00:11:06,230 --> 00:11:06,240
+here right now we still have to write
+ 
+
+783
+00:11:06,240 --> 00:11:07,990
+here right now we still have to write
+the size of our array up front
+
+784
+00:11:07,990 --> 00:11:08,000
+the size of our array up front
+ 
+
+785
+00:11:08,000 --> 00:11:09,829
+the size of our array up front
+during the compilation time like this
+
+786
+00:11:09,829 --> 00:11:09,839
+during the compilation time like this
+ 
+
+787
+00:11:09,839 --> 00:11:11,430
+during the compilation time like this
+which is usually fine because of course
+
+788
+00:11:11,430 --> 00:11:11,440
+which is usually fine because of course
+ 
+
+789
+00:11:11,440 --> 00:11:12,310
+which is usually fine because of course
+if we're making sac
+
+790
+00:11:12,310 --> 00:11:12,320
+if we're making sac
+ 
+
+791
+00:11:12,320 --> 00:11:14,949
+if we're making sac
+allocated arrays anyway we just simply
+
+792
+00:11:14,949 --> 00:11:14,959
+allocated arrays anyway we just simply
+ 
+
+793
+00:11:14,959 --> 00:11:15,829
+allocated arrays anyway we just simply
+write the size
+
+794
+00:11:15,829 --> 00:11:15,839
+write the size
+ 
+
+795
+00:11:15,839 --> 00:11:17,509
+write the size
+and so we're used to that that's fine
+
+796
+00:11:17,509 --> 00:11:17,519
+and so we're used to that that's fine
+ 
+
+797
+00:11:17,519 --> 00:11:19,430
+and so we're used to that that's fine
+that's what a fixed size stack allocated
+
+798
+00:11:19,430 --> 00:11:19,440
+that's what a fixed size stack allocated
+ 
+
+799
+00:11:19,440 --> 00:11:21,110
+that's what a fixed size stack allocated
+array is all about which is what this
+
+800
+00:11:21,110 --> 00:11:21,120
+array is all about which is what this
+ 
+
+801
+00:11:21,120 --> 00:11:22,790
+array is all about which is what this
+data structure is so now how do we make
+
+802
+00:11:22,790 --> 00:11:22,800
+data structure is so now how do we make
+ 
+
+803
+00:11:22,800 --> 00:11:24,710
+data structure is so now how do we make
+this not specific to integers well we
+
+804
+00:11:24,710 --> 00:11:24,720
+this not specific to integers well we
+ 
+
+805
+00:11:24,720 --> 00:11:25,990
+this not specific to integers well we
+just need to add another template
+
+806
+00:11:25,990 --> 00:11:26,000
+just need to add another template
+ 
+
+807
+00:11:26,000 --> 00:11:26,630
+just need to add another template
+argument
+
+808
+00:11:26,630 --> 00:11:26,640
+argument
+ 
+
+809
+00:11:26,640 --> 00:11:28,550
+argument
+so i'll write in type name t at the
+
+810
+00:11:28,550 --> 00:11:28,560
+so i'll write in type name t at the
+ 
+
+811
+00:11:28,560 --> 00:11:30,389
+so i'll write in type name t at the
+front of this so we have two arguments
+
+812
+00:11:30,389 --> 00:11:30,399
+front of this so we have two arguments
+ 
+
+813
+00:11:30,399 --> 00:11:30,870
+front of this so we have two arguments
+here
+
+814
+00:11:30,870 --> 00:11:30,880
+here
+ 
+
+815
+00:11:30,880 --> 00:11:33,030
+here
+type name t which is going to be the
+
+816
+00:11:33,030 --> 00:11:33,040
+type name t which is going to be the
+ 
+
+817
+00:11:33,040 --> 00:11:35,030
+type name t which is going to be the
+actual type of data that we store
+
+818
+00:11:35,030 --> 00:11:35,040
+actual type of data that we store
+ 
+
+819
+00:11:35,040 --> 00:11:37,590
+actual type of data that we store
+and then size t s which is going to be
+
+820
+00:11:37,590 --> 00:11:37,600
+and then size t s which is going to be
+ 
+
+821
+00:11:37,600 --> 00:11:38,630
+and then size t s which is going to be
+the number of
+
+822
+00:11:38,630 --> 00:11:38,640
+the number of
+ 
+
+823
+00:11:38,640 --> 00:11:40,389
+the number of
+elements that we have here or the count
+
+824
+00:11:40,389 --> 00:11:40,399
+elements that we have here or the count
+ 
+
+825
+00:11:40,399 --> 00:11:41,670
+elements that we have here or the count
+so over here instead of
+
+826
+00:11:41,670 --> 00:11:41,680
+so over here instead of
+ 
+
+827
+00:11:41,680 --> 00:11:43,670
+so over here instead of
+int i'm going to replace this with t so
+
+828
+00:11:43,670 --> 00:11:43,680
+int i'm going to replace this with t so
+ 
+
+829
+00:11:43,680 --> 00:11:45,110
+int i'm going to replace this with t so
+now what happens is when i make this
+
+830
+00:11:45,110 --> 00:11:45,120
+now what happens is when i make this
+ 
+
+831
+00:11:45,120 --> 00:11:46,470
+now what happens is when i make this
+array i need to specify
+
+832
+00:11:46,470 --> 00:11:46,480
+array i need to specify
+ 
+
+833
+00:11:46,480 --> 00:11:49,829
+array i need to specify
+the type first and then the actual size
+
+834
+00:11:49,829 --> 00:11:49,839
+the type first and then the actual size
+ 
+
+835
+00:11:49,839 --> 00:11:51,910
+the type first and then the actual size
+so what this will do is create a version
+
+836
+00:11:51,910 --> 00:11:51,920
+so what this will do is create a version
+ 
+
+837
+00:11:51,920 --> 00:11:53,110
+so what this will do is create a version
+of this class
+
+838
+00:11:53,110 --> 00:11:53,120
+of this class
+ 
+
+839
+00:11:53,120 --> 00:11:56,310
+of this class
+which has t set to an int and size set
+
+840
+00:11:56,310 --> 00:11:56,320
+which has t set to an int and size set
+ 
+
+841
+00:11:56,320 --> 00:11:57,190
+which has t set to an int and size set
+to five
+
+842
+00:11:57,190 --> 00:11:57,200
+to five
+ 
+
+843
+00:11:57,200 --> 00:11:59,350
+to five
+and this is the class that i end up with
+
+844
+00:11:59,350 --> 00:11:59,360
+and this is the class that i end up with
+ 
+
+845
+00:11:59,360 --> 00:12:01,670
+and this is the class that i end up with
+when i compile this template okay cool
+
+846
+00:12:01,670 --> 00:12:01,680
+when i compile this template okay cool
+ 
+
+847
+00:12:01,680 --> 00:12:03,350
+when i compile this template okay cool
+so now that i've got that let's take a
+
+848
+00:12:03,350 --> 00:12:03,360
+so now that i've got that let's take a
+ 
+
+849
+00:12:03,360 --> 00:12:04,870
+so now that i've got that let's take a
+look at some of the more useful features
+
+850
+00:12:04,870 --> 00:12:04,880
+look at some of the more useful features
+ 
+
+851
+00:12:04,880 --> 00:12:06,069
+look at some of the more useful features
+we can actually add to this class
+
+852
+00:12:06,069 --> 00:12:06,079
+we can actually add to this class
+ 
+
+853
+00:12:06,079 --> 00:12:07,350
+we can actually add to this class
+because at the moment it's literally
+
+854
+00:12:07,350 --> 00:12:07,360
+because at the moment it's literally
+ 
+
+855
+00:12:07,360 --> 00:12:08,710
+because at the moment it's literally
+just a wrapper over what we could have
+
+856
+00:12:08,710 --> 00:12:08,720
+just a wrapper over what we could have
+ 
+
+857
+00:12:08,720 --> 00:12:10,310
+just a wrapper over what we could have
+done without the class anyway
+
+858
+00:12:10,310 --> 00:12:10,320
+done without the class anyway
+ 
+
+859
+00:12:10,320 --> 00:12:11,590
+done without the class anyway
+now one of the most useful things that
+
+860
+00:12:11,590 --> 00:12:11,600
+now one of the most useful things that
+ 
+
+861
+00:12:11,600 --> 00:12:13,750
+now one of the most useful things that
+we can do here is actually keep track of
+
+862
+00:12:13,750 --> 00:12:13,760
+we can do here is actually keep track of
+ 
+
+863
+00:12:13,760 --> 00:12:16,389
+we can do here is actually keep track of
+this size so i can have a function here
+
+864
+00:12:16,389 --> 00:12:16,399
+this size so i can have a function here
+ 
+
+865
+00:12:16,399 --> 00:12:17,590
+this size so i can have a function here
+that returns the size
+
+866
+00:12:17,590 --> 00:12:17,600
+that returns the size
+ 
+
+867
+00:12:17,600 --> 00:12:19,670
+that returns the size
+i'll just call it size i'll label it as
+
+868
+00:12:19,670 --> 00:12:19,680
+i'll just call it size i'll label it as
+ 
+
+869
+00:12:19,680 --> 00:12:20,790
+i'll just call it size i'll label it as
+const here because it's not going to
+
+870
+00:12:20,790 --> 00:12:20,800
+const here because it's not going to
+ 
+
+871
+00:12:20,800 --> 00:12:22,710
+const here because it's not going to
+modify this class and it's just going to
+
+872
+00:12:22,710 --> 00:12:22,720
+modify this class and it's just going to
+ 
+
+873
+00:12:22,720 --> 00:12:23,430
+modify this class and it's just going to
+return
+
+874
+00:12:23,430 --> 00:12:23,440
+return
+ 
+
+875
+00:12:23,440 --> 00:12:25,990
+return
+s now this is interesting because keep
+
+876
+00:12:25,990 --> 00:12:26,000
+s now this is interesting because keep
+ 
+
+877
+00:12:26,000 --> 00:12:27,670
+s now this is interesting because keep
+in mind we're not actually storing the
+
+878
+00:12:27,670 --> 00:12:27,680
+in mind we're not actually storing the
+ 
+
+879
+00:12:27,680 --> 00:12:29,590
+in mind we're not actually storing the
+size anyway there is no additional
+
+880
+00:12:29,590 --> 00:12:29,600
+size anyway there is no additional
+ 
+
+881
+00:12:29,600 --> 00:12:30,710
+size anyway there is no additional
+variable here called
+
+882
+00:12:30,710 --> 00:12:30,720
+variable here called
+ 
+
+883
+00:12:30,720 --> 00:12:33,269
+variable here called
+size which is like set to 5 or set to a
+
+884
+00:12:33,269 --> 00:12:33,279
+size which is like set to 5 or set to a
+ 
+
+885
+00:12:33,279 --> 00:12:34,870
+size which is like set to 5 or set to a
+value that we take in in the constructor
+
+886
+00:12:34,870 --> 00:12:34,880
+value that we take in in the constructor
+ 
+
+887
+00:12:34,880 --> 00:12:35,990
+value that we take in in the constructor
+during runtime
+
+888
+00:12:35,990 --> 00:12:36,000
+during runtime
+ 
+
+889
+00:12:36,000 --> 00:12:38,870
+during runtime
+there is no storage for this whatsoever
+
+890
+00:12:38,870 --> 00:12:38,880
+there is no storage for this whatsoever
+ 
+
+891
+00:12:38,880 --> 00:12:39,350
+there is no storage for this whatsoever
+what this
+
+892
+00:12:39,350 --> 00:12:39,360
+what this
+ 
+
+893
+00:12:39,360 --> 00:12:41,670
+what this
+actually is is just this templated
+
+894
+00:12:41,670 --> 00:12:41,680
+actually is is just this templated
+ 
+
+895
+00:12:41,680 --> 00:12:43,030
+actually is is just this templated
+argument meaning that when this
+
+896
+00:12:43,030 --> 00:12:43,040
+argument meaning that when this
+ 
+
+897
+00:12:43,040 --> 00:12:44,389
+argument meaning that when this
+actually when this template actually
+
+898
+00:12:44,389 --> 00:12:44,399
+actually when this template actually
+ 
+
+899
+00:12:44,399 --> 00:12:46,710
+actually when this template actually
+gets created this s gets replaced with
+
+900
+00:12:46,710 --> 00:12:46,720
+gets created this s gets replaced with
+ 
+
+901
+00:12:46,720 --> 00:12:48,710
+gets created this s gets replaced with
+five so we literally have a function
+
+902
+00:12:48,710 --> 00:12:48,720
+five so we literally have a function
+ 
+
+903
+00:12:48,720 --> 00:12:50,790
+five so we literally have a function
+whose sole job is to return a constant
+
+904
+00:12:50,790 --> 00:12:50,800
+whose sole job is to return a constant
+ 
+
+905
+00:12:50,800 --> 00:12:53,030
+whose sole job is to return a constant
+value of 5 and that's it
+
+906
+00:12:53,030 --> 00:12:53,040
+value of 5 and that's it
+ 
+
+907
+00:12:53,040 --> 00:12:54,790
+value of 5 and that's it
+there's no additional storage and that's
+
+908
+00:12:54,790 --> 00:12:54,800
+there's no additional storage and that's
+ 
+
+909
+00:12:54,800 --> 00:12:56,310
+there's no additional storage and that's
+one of the cool things about this class
+
+910
+00:12:56,310 --> 00:12:56,320
+one of the cool things about this class
+ 
+
+911
+00:12:56,320 --> 00:12:57,990
+one of the cool things about this class
+as well and by using templates
+
+912
+00:12:57,990 --> 00:12:58,000
+as well and by using templates
+ 
+
+913
+00:12:58,000 --> 00:13:00,150
+as well and by using templates
+we're able to actually hard code this
+
+914
+00:13:00,150 --> 00:13:00,160
+we're able to actually hard code this
+ 
+
+915
+00:13:00,160 --> 00:13:01,990
+we're able to actually hard code this
+particular function these particular
+
+916
+00:13:01,990 --> 00:13:02,000
+particular function these particular
+ 
+
+917
+00:13:02,000 --> 00:13:03,350
+particular function these particular
+machine instructions to just simply
+
+918
+00:13:03,350 --> 00:13:03,360
+machine instructions to just simply
+ 
+
+919
+00:13:03,360 --> 00:13:04,150
+machine instructions to just simply
+return 5
+
+920
+00:13:04,150 --> 00:13:04,160
+return 5
+ 
+
+921
+00:13:04,160 --> 00:13:06,470
+return 5
+every time which is super nice because
+
+922
+00:13:06,470 --> 00:13:06,480
+every time which is super nice because
+ 
+
+923
+00:13:06,480 --> 00:13:08,150
+every time which is super nice because
+we're not using additional memory to
+
+924
+00:13:08,150 --> 00:13:08,160
+we're not using additional memory to
+ 
+
+925
+00:13:08,160 --> 00:13:08,710
+we're not using additional memory to
+store
+
+926
+00:13:08,710 --> 00:13:08,720
+store
+ 
+
+927
+00:13:08,720 --> 00:13:10,310
+store
+that now this is great because it lets
+
+928
+00:13:10,310 --> 00:13:10,320
+that now this is great because it lets
+ 
+
+929
+00:13:10,320 --> 00:13:12,230
+that now this is great because it lets
+us actually check the size of this array
+
+930
+00:13:12,230 --> 00:13:12,240
+us actually check the size of this array
+ 
+
+931
+00:13:12,240 --> 00:13:12,790
+us actually check the size of this array
+we can now
+
+932
+00:13:12,790 --> 00:13:12,800
+we can now
+ 
+
+933
+00:13:12,800 --> 00:13:15,590
+we can now
+call data.size and immediately this is
+
+934
+00:13:15,590 --> 00:13:15,600
+call data.size and immediately this is
+ 
+
+935
+00:13:15,600 --> 00:13:17,590
+call data.size and immediately this is
+already better than just having a stack
+
+936
+00:13:17,590 --> 00:13:17,600
+already better than just having a stack
+ 
+
+937
+00:13:17,600 --> 00:13:19,350
+already better than just having a stack
+allocated array because we now know the
+
+938
+00:13:19,350 --> 00:13:19,360
+allocated array because we now know the
+ 
+
+939
+00:13:19,360 --> 00:13:20,069
+allocated array because we now know the
+size
+
+940
+00:13:20,069 --> 00:13:20,079
+size
+ 
+
+941
+00:13:20,079 --> 00:13:21,670
+size
+of this array at any given time i could
+
+942
+00:13:21,670 --> 00:13:21,680
+of this array at any given time i could
+ 
+
+943
+00:13:21,680 --> 00:13:23,670
+of this array at any given time i could
+simply pair this with a for loop like
+
+944
+00:13:23,670 --> 00:13:23,680
+simply pair this with a for loop like
+ 
+
+945
+00:13:23,680 --> 00:13:24,389
+simply pair this with a for loop like
+this to
+
+946
+00:13:24,389 --> 00:13:24,399
+this to
+ 
+
+947
+00:13:24,399 --> 00:13:26,550
+this to
+iterate through all of the members of
+
+948
+00:13:26,550 --> 00:13:26,560
+iterate through all of the members of
+ 
+
+949
+00:13:26,560 --> 00:13:27,590
+iterate through all of the members of
+this actual array
+
+950
+00:13:27,590 --> 00:13:27,600
+this actual array
+ 
+
+951
+00:13:27,600 --> 00:13:29,430
+this actual array
+simple as that however there are some
+
+952
+00:13:29,430 --> 00:13:29,440
+simple as that however there are some
+ 
+
+953
+00:13:29,440 --> 00:13:30,870
+simple as that however there are some
+improvements we can actually make to
+
+954
+00:13:30,870 --> 00:13:30,880
+improvements we can actually make to
+ 
+
+955
+00:13:30,880 --> 00:13:32,790
+improvements we can actually make to
+this function namely the fact that
+
+956
+00:13:32,790 --> 00:13:32,800
+this function namely the fact that
+ 
+
+957
+00:13:32,800 --> 00:13:34,710
+this function namely the fact that
+this is clearly a value that we know at
+
+958
+00:13:34,710 --> 00:13:34,720
+this is clearly a value that we know at
+ 
+
+959
+00:13:34,720 --> 00:13:36,389
+this is clearly a value that we know at
+compile time so why not let
+
+960
+00:13:36,389 --> 00:13:36,399
+compile time so why not let
+ 
+
+961
+00:13:36,399 --> 00:13:38,949
+compile time so why not let
+other compile time tasks be able to take
+
+962
+00:13:38,949 --> 00:13:38,959
+other compile time tasks be able to take
+ 
+
+963
+00:13:38,959 --> 00:13:40,389
+other compile time tasks be able to take
+advantage of that value
+
+964
+00:13:40,389 --> 00:13:40,399
+advantage of that value
+ 
+
+965
+00:13:40,399 --> 00:13:42,949
+advantage of that value
+one example is a static assert maybe i
+
+966
+00:13:42,949 --> 00:13:42,959
+one example is a static assert maybe i
+ 
+
+967
+00:13:42,959 --> 00:13:43,670
+one example is a static assert maybe i
+don't want
+
+968
+00:13:43,670 --> 00:13:43,680
+don't want
+ 
+
+969
+00:13:43,680 --> 00:13:46,069
+don't want
+these arrays to be above a certain size
+
+970
+00:13:46,069 --> 00:13:46,079
+these arrays to be above a certain size
+ 
+
+971
+00:13:46,079 --> 00:13:47,030
+these arrays to be above a certain size
+for some reason
+
+972
+00:13:47,030 --> 00:13:47,040
+for some reason
+ 
+
+973
+00:13:47,040 --> 00:13:48,870
+for some reason
+so i could add a static assert that
+
+974
+00:13:48,870 --> 00:13:48,880
+so i could add a static assert that
+ 
+
+975
+00:13:48,880 --> 00:13:50,550
+so i could add a static assert that
+simply checks to make sure that the size
+
+976
+00:13:50,550 --> 00:13:50,560
+simply checks to make sure that the size
+ 
+
+977
+00:13:50,560 --> 00:13:51,269
+simply checks to make sure that the size
+of this array
+
+978
+00:13:51,269 --> 00:13:51,279
+of this array
+ 
+
+979
+00:13:51,279 --> 00:13:53,269
+of this array
+is less than 10 and i can write it like
+
+980
+00:13:53,269 --> 00:13:53,279
+is less than 10 and i can write it like
+ 
+
+981
+00:13:53,279 --> 00:13:55,030
+is less than 10 and i can write it like
+this i'll add a little message here as
+
+982
+00:13:55,030 --> 00:13:55,040
+this i'll add a little message here as
+ 
+
+983
+00:13:55,040 --> 00:13:55,430
+this i'll add a little message here as
+well
+
+984
+00:13:55,430 --> 00:13:55,440
+well
+ 
+
+985
+00:13:55,440 --> 00:13:57,269
+well
+and a static assert is an assert that
+
+986
+00:13:57,269 --> 00:13:57,279
+and a static assert is an assert that
+ 
+
+987
+00:13:57,279 --> 00:13:59,430
+and a static assert is an assert that
+actually gets evaluated at compile time
+
+988
+00:13:59,430 --> 00:13:59,440
+actually gets evaluated at compile time
+ 
+
+989
+00:13:59,440 --> 00:14:01,509
+actually gets evaluated at compile time
+this theoretically should work because i
+
+990
+00:14:01,509 --> 00:14:01,519
+this theoretically should work because i
+ 
+
+991
+00:14:01,519 --> 00:14:03,350
+this theoretically should work because i
+mean we know the size at compile time
+
+992
+00:14:03,350 --> 00:14:03,360
+mean we know the size at compile time
+ 
+
+993
+00:14:03,360 --> 00:14:04,949
+mean we know the size at compile time
+we're forced to specify the size of
+
+994
+00:14:04,949 --> 00:14:04,959
+we're forced to specify the size of
+ 
+
+995
+00:14:04,959 --> 00:14:05,990
+we're forced to specify the size of
+compile time
+
+996
+00:14:05,990 --> 00:14:06,000
+compile time
+ 
+
+997
+00:14:06,000 --> 00:14:07,269
+compile time
+however you can see here that it says
+
+998
+00:14:07,269 --> 00:14:07,279
+however you can see here that it says
+ 
+
+999
+00:14:07,279 --> 00:14:09,189
+however you can see here that it says
+that the expression must have a constant
+
+1000
+00:14:09,189 --> 00:14:09,199
+that the expression must have a constant
+ 
+
+1001
+00:14:09,199 --> 00:14:11,110
+that the expression must have a constant
+value and that's because this size
+
+1002
+00:14:11,110 --> 00:14:11,120
+value and that's because this size
+ 
+
+1003
+00:14:11,120 --> 00:14:12,310
+value and that's because this size
+function simply
+
+1004
+00:14:12,310 --> 00:14:12,320
+function simply
+ 
+
+1005
+00:14:12,320 --> 00:14:14,790
+function simply
+returns an integer what it should return
+
+1006
+00:14:14,790 --> 00:14:14,800
+returns an integer what it should return
+ 
+
+1007
+00:14:14,800 --> 00:14:15,829
+returns an integer what it should return
+is a constant
+
+1008
+00:14:15,829 --> 00:14:15,839
+is a constant
+ 
+
+1009
+00:14:15,839 --> 00:14:17,750
+is a constant
+expression by adding the const x per
+
+1010
+00:14:17,750 --> 00:14:17,760
+expression by adding the const x per
+ 
+
+1011
+00:14:17,760 --> 00:14:19,590
+expression by adding the const x per
+keyword here we're specifying that this
+
+1012
+00:14:19,590 --> 00:14:19,600
+keyword here we're specifying that this
+ 
+
+1013
+00:14:19,600 --> 00:14:20,550
+keyword here we're specifying that this
+actual function
+
+1014
+00:14:20,550 --> 00:14:20,560
+actual function
+ 
+
+1015
+00:14:20,560 --> 00:14:22,790
+actual function
+can be evaluated at compile time and
+
+1016
+00:14:22,790 --> 00:14:22,800
+can be evaluated at compile time and
+ 
+
+1017
+00:14:22,800 --> 00:14:23,750
+can be evaluated at compile time and
+since it can
+
+1018
+00:14:23,750 --> 00:14:23,760
+since it can
+ 
+
+1019
+00:14:23,760 --> 00:14:26,069
+since it can
+you can see the assert here works fine
+
+1020
+00:14:26,069 --> 00:14:26,079
+you can see the assert here works fine
+ 
+
+1021
+00:14:26,079 --> 00:14:28,389
+you can see the assert here works fine
+it also lets us create new arrays
+
+1022
+00:14:28,389 --> 00:14:28,399
+it also lets us create new arrays
+ 
+
+1023
+00:14:28,399 --> 00:14:31,269
+it also lets us create new arrays
+from the size of that first array
+
+1024
+00:14:31,269 --> 00:14:31,279
+from the size of that first array
+ 
+
+1025
+00:14:31,279 --> 00:14:31,990
+from the size of that first array
+because again
+
+1026
+00:14:31,990 --> 00:14:32,000
+because again
+ 
+
+1027
+00:14:32,000 --> 00:14:33,910
+because again
+data.size is a function that can
+
+1028
+00:14:33,910 --> 00:14:33,920
+data.size is a function that can
+ 
+
+1029
+00:14:33,920 --> 00:14:36,470
+data.size is a function that can
+actually be evaluated completely
+
+1030
+00:14:36,470 --> 00:14:36,480
+actually be evaluated completely
+ 
+
+1031
+00:14:36,480 --> 00:14:38,790
+actually be evaluated completely
+during compile time and that's also the
+
+1032
+00:14:38,790 --> 00:14:38,800
+during compile time and that's also the
+ 
+
+1033
+00:14:38,800 --> 00:14:39,990
+during compile time and that's also the
+reason why inside
+
+1034
+00:14:39,990 --> 00:14:40,000
+reason why inside
+ 
+
+1035
+00:14:40,000 --> 00:14:42,470
+reason why inside
+the c plus plus array function lots of
+
+1036
+00:14:42,470 --> 00:14:42,480
+the c plus plus array function lots of
+ 
+
+1037
+00:14:42,480 --> 00:14:43,990
+the c plus plus array function lots of
+their functions here as you can see
+
+1038
+00:14:43,990 --> 00:14:44,000
+their functions here as you can see
+ 
+
+1039
+00:14:44,000 --> 00:14:45,990
+their functions here as you can see
+actually returns a constant expression
+
+1040
+00:14:45,990 --> 00:14:46,000
+actually returns a constant expression
+ 
+
+1041
+00:14:46,000 --> 00:14:47,430
+actually returns a constant expression
+or rather most of these functions
+
+1042
+00:14:47,430 --> 00:14:47,440
+or rather most of these functions
+ 
+
+1043
+00:14:47,440 --> 00:14:49,350
+or rather most of these functions
+are constant expressions okay so now
+
+1044
+00:14:49,350 --> 00:14:49,360
+are constant expressions okay so now
+ 
+
+1045
+00:14:49,360 --> 00:14:50,710
+are constant expressions okay so now
+that we've done this
+
+1046
+00:14:50,710 --> 00:14:50,720
+that we've done this
+ 
+
+1047
+00:14:50,720 --> 00:14:52,150
+that we've done this
+how do we iterate through this array and
+
+1048
+00:14:52,150 --> 00:14:52,160
+how do we iterate through this array and
+ 
+
+1049
+00:14:52,160 --> 00:14:53,670
+how do we iterate through this array and
+actually pull out the values because at
+
+1050
+00:14:53,670 --> 00:14:53,680
+actually pull out the values because at
+ 
+
+1051
+00:14:53,680 --> 00:14:54,310
+actually pull out the values because at
+the moment
+
+1052
+00:14:54,310 --> 00:14:54,320
+the moment
+ 
+
+1053
+00:14:54,320 --> 00:14:55,670
+the moment
+even though i've got all of this stuff
+
+1054
+00:14:55,670 --> 00:14:55,680
+even though i've got all of this stuff
+ 
+
+1055
+00:14:55,680 --> 00:14:57,670
+even though i've got all of this stuff
+going on there's no way for me to
+
+1056
+00:14:57,670 --> 00:14:57,680
+going on there's no way for me to
+ 
+
+1057
+00:14:57,680 --> 00:14:58,230
+going on there's no way for me to
+actually
+
+1058
+00:14:58,230 --> 00:14:58,240
+actually
+ 
+
+1059
+00:14:58,240 --> 00:15:00,710
+actually
+index this data now i could simply
+
+1060
+00:15:00,710 --> 00:15:00,720
+index this data now i could simply
+ 
+
+1061
+00:15:00,720 --> 00:15:02,550
+index this data now i could simply
+return a pointer to this data but a
+
+1062
+00:15:02,550 --> 00:15:02,560
+return a pointer to this data but a
+ 
+
+1063
+00:15:02,560 --> 00:15:04,150
+return a pointer to this data but a
+better way to do this is to implement
+
+1064
+00:15:04,150 --> 00:15:04,160
+better way to do this is to implement
+ 
+
+1065
+00:15:04,160 --> 00:15:05,509
+better way to do this is to implement
+the index operator
+
+1066
+00:15:05,509 --> 00:15:05,519
+the index operator
+ 
+
+1067
+00:15:05,519 --> 00:15:07,030
+the index operator
+and i can write a simple version of this
+
+1068
+00:15:07,030 --> 00:15:07,040
+and i can write a simple version of this
+ 
+
+1069
+00:15:07,040 --> 00:15:09,269
+and i can write a simple version of this
+by just writing t then operator
+
+1070
+00:15:09,269 --> 00:15:09,279
+by just writing t then operator
+ 
+
+1071
+00:15:09,279 --> 00:15:11,829
+by just writing t then operator
+open and close square bracket then int
+
+1072
+00:15:11,829 --> 00:15:11,839
+open and close square bracket then int
+ 
+
+1073
+00:15:11,839 --> 00:15:13,750
+open and close square bracket then int
+index and then i'll simply return
+
+1074
+00:15:13,750 --> 00:15:13,760
+index and then i'll simply return
+ 
+
+1075
+00:15:13,760 --> 00:15:16,230
+index and then i'll simply return
+m data at that index so this is kind of
+
+1076
+00:15:16,230 --> 00:15:16,240
+m data at that index so this is kind of
+ 
+
+1077
+00:15:16,240 --> 00:15:16,790
+m data at that index so this is kind of
+like the
+
+1078
+00:15:16,790 --> 00:15:16,800
+like the
+ 
+
+1079
+00:15:16,800 --> 00:15:18,870
+like the
+most simple straightforward way it has a
+
+1080
+00:15:18,870 --> 00:15:18,880
+most simple straightforward way it has a
+ 
+
+1081
+00:15:18,880 --> 00:15:20,150
+most simple straightforward way it has a
+number of problems which we'll address
+
+1082
+00:15:20,150 --> 00:15:20,160
+number of problems which we'll address
+ 
+
+1083
+00:15:20,160 --> 00:15:20,949
+number of problems which we'll address
+in a moment
+
+1084
+00:15:20,949 --> 00:15:20,959
+in a moment
+ 
+
+1085
+00:15:20,959 --> 00:15:23,430
+in a moment
+but that's basically the idea so now
+
+1086
+00:15:23,430 --> 00:15:23,440
+but that's basically the idea so now
+ 
+
+1087
+00:15:23,440 --> 00:15:24,790
+but that's basically the idea so now
+that we've written this we can simply
+
+1088
+00:15:24,790 --> 00:15:24,800
+that we've written this we can simply
+ 
+
+1089
+00:15:24,800 --> 00:15:25,509
+that we've written this we can simply
+specify
+
+1090
+00:15:25,509 --> 00:15:25,519
+specify
+ 
+
+1091
+00:15:25,519 --> 00:15:27,110
+specify
+the index of the data that we want to
+
+1092
+00:15:27,110 --> 00:15:27,120
+the index of the data that we want to
+ 
+
+1093
+00:15:27,120 --> 00:15:28,790
+the index of the data that we want to
+read and you can see we now have the
+
+1094
+00:15:28,790 --> 00:15:28,800
+read and you can see we now have the
+ 
+
+1095
+00:15:28,800 --> 00:15:30,790
+read and you can see we now have the
+ability to read this data and in fact we
+
+1096
+00:15:30,790 --> 00:15:30,800
+ability to read this data and in fact we
+ 
+
+1097
+00:15:30,800 --> 00:15:32,629
+ability to read this data and in fact we
+can even print it to the console
+
+1098
+00:15:32,629 --> 00:15:32,639
+can even print it to the console
+ 
+
+1099
+00:15:32,639 --> 00:15:35,269
+can even print it to the console
+if we want to okay great so what are the
+
+1100
+00:15:35,269 --> 00:15:35,279
+if we want to okay great so what are the
+ 
+
+1101
+00:15:35,279 --> 00:15:35,910
+if we want to okay great so what are the
+problems
+
+1102
+00:15:35,910 --> 00:15:35,920
+problems
+ 
+
+1103
+00:15:35,920 --> 00:15:37,990
+problems
+well first of all t is being returned by
+
+1104
+00:15:37,990 --> 00:15:38,000
+well first of all t is being returned by
+ 
+
+1105
+00:15:38,000 --> 00:15:39,670
+well first of all t is being returned by
+value this may or may not be what you
+
+1106
+00:15:39,670 --> 00:15:39,680
+value this may or may not be what you
+ 
+
+1107
+00:15:39,680 --> 00:15:39,990
+value this may or may not be what you
+want
+
+1108
+00:15:39,990 --> 00:15:40,000
+want
+ 
+
+1109
+00:15:40,000 --> 00:15:41,670
+want
+the reason it may not be what you want
+
+1110
+00:15:41,670 --> 00:15:41,680
+the reason it may not be what you want
+ 
+
+1111
+00:15:41,680 --> 00:15:42,949
+the reason it may not be what you want
+is because in this case we're just
+
+1112
+00:15:42,949 --> 00:15:42,959
+is because in this case we're just
+ 
+
+1113
+00:15:42,959 --> 00:15:44,069
+is because in this case we're just
+returning integers
+
+1114
+00:15:44,069 --> 00:15:44,079
+returning integers
+ 
+
+1115
+00:15:44,079 --> 00:15:45,910
+returning integers
+but what if we had a string would we
+
+1116
+00:15:45,910 --> 00:15:45,920
+but what if we had a string would we
+ 
+
+1117
+00:15:45,920 --> 00:15:47,509
+but what if we had a string would we
+really want to completely copy the
+
+1118
+00:15:47,509 --> 00:15:47,519
+really want to completely copy the
+ 
+
+1119
+00:15:47,519 --> 00:15:48,949
+really want to completely copy the
+string out every time we
+
+1120
+00:15:48,949 --> 00:15:48,959
+string out every time we
+ 
+
+1121
+00:15:48,959 --> 00:15:51,189
+string out every time we
+use this index operator probably not we
+
+1122
+00:15:51,189 --> 00:15:51,199
+use this index operator probably not we
+ 
+
+1123
+00:15:51,199 --> 00:15:53,269
+use this index operator probably not we
+simply want a read only reference to it
+
+1124
+00:15:53,269 --> 00:15:53,279
+simply want a read only reference to it
+ 
+
+1125
+00:15:53,279 --> 00:15:54,069
+simply want a read only reference to it
+the other problem
+
+1126
+00:15:54,069 --> 00:15:54,079
+the other problem
+ 
+
+1127
+00:15:54,079 --> 00:15:56,069
+the other problem
+here is that since this does actually
+
+1128
+00:15:56,069 --> 00:15:56,079
+here is that since this does actually
+ 
+
+1129
+00:15:56,079 --> 00:15:58,310
+here is that since this does actually
+return by value and it makes a new copy
+
+1130
+00:15:58,310 --> 00:15:58,320
+return by value and it makes a new copy
+ 
+
+1131
+00:15:58,320 --> 00:16:01,350
+return by value and it makes a new copy
+i can't do things like this because this
+
+1132
+00:16:01,350 --> 00:16:01,360
+i can't do things like this because this
+ 
+
+1133
+00:16:01,360 --> 00:16:03,670
+i can't do things like this because this
+isn't a modifiable l value we're simply
+
+1134
+00:16:03,670 --> 00:16:03,680
+isn't a modifiable l value we're simply
+ 
+
+1135
+00:16:03,680 --> 00:16:06,310
+isn't a modifiable l value we're simply
+returning a brand new copy of an integer
+
+1136
+00:16:06,310 --> 00:16:06,320
+returning a brand new copy of an integer
+ 
+
+1137
+00:16:06,320 --> 00:16:07,910
+returning a brand new copy of an integer
+here there's nothing to assign to
+
+1138
+00:16:07,910 --> 00:16:07,920
+here there's nothing to assign to
+ 
+
+1139
+00:16:07,920 --> 00:16:10,069
+here there's nothing to assign to
+there's no storage so because of that
+
+1140
+00:16:10,069 --> 00:16:10,079
+there's no storage so because of that
+ 
+
+1141
+00:16:10,079 --> 00:16:13,030
+there's no storage so because of that
+we want to return a reference to this
+
+1142
+00:16:13,030 --> 00:16:13,040
+we want to return a reference to this
+ 
+
+1143
+00:16:13,040 --> 00:16:13,990
+we want to return a reference to this
+actual type
+
+1144
+00:16:13,990 --> 00:16:14,000
+actual type
+ 
+
+1145
+00:16:14,000 --> 00:16:15,430
+actual type
+even if it is something like an end
+
+1146
+00:16:15,430 --> 00:16:15,440
+even if it is something like an end
+ 
+
+1147
+00:16:15,440 --> 00:16:17,430
+even if it is something like an end
+because even though we we're not really
+
+1148
+00:16:17,430 --> 00:16:17,440
+because even though we we're not really
+ 
+
+1149
+00:16:17,440 --> 00:16:18,870
+because even though we we're not really
+interested in preventing copies for
+
+1150
+00:16:18,870 --> 00:16:18,880
+interested in preventing copies for
+ 
+
+1151
+00:16:18,880 --> 00:16:20,870
+interested in preventing copies for
+integers we might be for the potential
+
+1152
+00:16:20,870 --> 00:16:20,880
+integers we might be for the potential
+ 
+
+1153
+00:16:20,880 --> 00:16:21,990
+integers we might be for the potential
+other data types
+
+1154
+00:16:21,990 --> 00:16:22,000
+other data types
+ 
+
+1155
+00:16:22,000 --> 00:16:23,990
+other data types
+but also by returning a reference it
+
+1156
+00:16:23,990 --> 00:16:24,000
+but also by returning a reference it
+ 
+
+1157
+00:16:24,000 --> 00:16:25,509
+but also by returning a reference it
+lets us actually assign
+
+1158
+00:16:25,509 --> 00:16:25,519
+lets us actually assign
+ 
+
+1159
+00:16:25,519 --> 00:16:27,110
+lets us actually assign
+into that index which is something that
+
+1160
+00:16:27,110 --> 00:16:27,120
+into that index which is something that
+ 
+
+1161
+00:16:27,120 --> 00:16:28,629
+into that index which is something that
+we typically want to do
+
+1162
+00:16:28,629 --> 00:16:28,639
+we typically want to do
+ 
+
+1163
+00:16:28,639 --> 00:16:30,790
+we typically want to do
+with an array such as this this poses
+
+1164
+00:16:30,790 --> 00:16:30,800
+with an array such as this this poses
+ 
+
+1165
+00:16:30,800 --> 00:16:32,389
+with an array such as this this poses
+another problem though if this array
+
+1166
+00:16:32,389 --> 00:16:32,399
+another problem though if this array
+ 
+
+1167
+00:16:32,399 --> 00:16:34,629
+another problem though if this array
+happens to be const for whatever reason
+
+1168
+00:16:34,629 --> 00:16:34,639
+happens to be const for whatever reason
+ 
+
+1169
+00:16:34,639 --> 00:16:35,430
+happens to be const for whatever reason
+maybe we're
+
+1170
+00:16:35,430 --> 00:16:35,440
+maybe we're
+ 
+
+1171
+00:16:35,440 --> 00:16:37,350
+maybe we're
+assigning it to like a const reference
+
+1172
+00:16:37,350 --> 00:16:37,360
+assigning it to like a const reference
+ 
+
+1173
+00:16:37,360 --> 00:16:38,949
+assigning it to like a const reference
+or something like that we have our
+
+1174
+00:16:38,949 --> 00:16:38,959
+or something like that we have our
+ 
+
+1175
+00:16:38,959 --> 00:16:40,870
+or something like that we have our
+array reference maybe we're passing it
+
+1176
+00:16:40,870 --> 00:16:40,880
+array reference maybe we're passing it
+ 
+
+1177
+00:16:40,880 --> 00:16:41,990
+array reference maybe we're passing it
+into a function
+
+1178
+00:16:41,990 --> 00:16:42,000
+into a function
+ 
+
+1179
+00:16:42,000 --> 00:16:43,590
+into a function
+and if we have this kind of const
+
+1180
+00:16:43,590 --> 00:16:43,600
+and if we have this kind of const
+ 
+
+1181
+00:16:43,600 --> 00:16:45,269
+and if we have this kind of const
+reference here for the array
+
+1182
+00:16:45,269 --> 00:16:45,279
+reference here for the array
+ 
+
+1183
+00:16:45,279 --> 00:16:47,189
+reference here for the array
+we obviously can't do this and we
+
+1184
+00:16:47,189 --> 00:16:47,199
+we obviously can't do this and we
+ 
+
+1185
+00:16:47,199 --> 00:16:48,470
+we obviously can't do this and we
+wouldn't expect to be able to do this
+
+1186
+00:16:48,470 --> 00:16:48,480
+wouldn't expect to be able to do this
+ 
+
+1187
+00:16:48,480 --> 00:16:50,230
+wouldn't expect to be able to do this
+because this is modifying the array and
+
+1188
+00:16:50,230 --> 00:16:50,240
+because this is modifying the array and
+ 
+
+1189
+00:16:50,240 --> 00:16:51,670
+because this is modifying the array and
+it's constant so we shouldn't be doing
+
+1190
+00:16:51,670 --> 00:16:51,680
+it's constant so we shouldn't be doing
+ 
+
+1191
+00:16:51,680 --> 00:16:52,150
+it's constant so we shouldn't be doing
+that
+
+1192
+00:16:52,150 --> 00:16:52,160
+that
+ 
+
+1193
+00:16:52,160 --> 00:16:53,509
+that
+however you can see that we also can't
+
+1194
+00:16:53,509 --> 00:16:53,519
+however you can see that we also can't
+ 
+
+1195
+00:16:53,519 --> 00:16:55,350
+however you can see that we also can't
+access it which is kind of a problem
+
+1196
+00:16:55,350 --> 00:16:55,360
+access it which is kind of a problem
+ 
+
+1197
+00:16:55,360 --> 00:16:56,310
+access it which is kind of a problem
+because
+
+1198
+00:16:56,310 --> 00:16:56,320
+because
+ 
+
+1199
+00:16:56,320 --> 00:16:58,310
+because
+const implies that it's read only we
+
+1200
+00:16:58,310 --> 00:16:58,320
+const implies that it's read only we
+ 
+
+1201
+00:16:58,320 --> 00:17:00,069
+const implies that it's read only we
+should still be able to read the data
+
+1202
+00:17:00,069 --> 00:17:00,079
+should still be able to read the data
+ 
+
+1203
+00:17:00,079 --> 00:17:02,470
+should still be able to read the data
+but not necessarily write the data this
+
+1204
+00:17:02,470 --> 00:17:02,480
+but not necessarily write the data this
+ 
+
+1205
+00:17:02,480 --> 00:17:04,949
+but not necessarily write the data this
+we can easily fix by just adding another
+
+1206
+00:17:04,949 --> 00:17:04,959
+we can easily fix by just adding another
+ 
+
+1207
+00:17:04,959 --> 00:17:07,350
+we can easily fix by just adding another
+version of this function which returns a
+
+1208
+00:17:07,350 --> 00:17:07,360
+version of this function which returns a
+ 
+
+1209
+00:17:07,360 --> 00:17:08,150
+version of this function which returns a
+const
+
+1210
+00:17:08,150 --> 00:17:08,160
+const
+ 
+
+1211
+00:17:08,160 --> 00:17:11,429
+const
+t reference and is also marked as const
+
+1212
+00:17:11,429 --> 00:17:11,439
+t reference and is also marked as const
+ 
+
+1213
+00:17:11,439 --> 00:17:13,270
+t reference and is also marked as const
+this const over here means that we can
+
+1214
+00:17:13,270 --> 00:17:13,280
+this const over here means that we can
+ 
+
+1215
+00:17:13,280 --> 00:17:15,110
+this const over here means that we can
+actually call this function
+
+1216
+00:17:15,110 --> 00:17:15,120
+actually call this function
+ 
+
+1217
+00:17:15,120 --> 00:17:17,829
+actually call this function
+if the instance of array is constant
+
+1218
+00:17:17,829 --> 00:17:17,839
+if the instance of array is constant
+ 
+
+1219
+00:17:17,839 --> 00:17:19,429
+if the instance of array is constant
+like it is for array reference
+
+1220
+00:17:19,429 --> 00:17:19,439
+like it is for array reference
+ 
+
+1221
+00:17:19,439 --> 00:17:21,270
+like it is for array reference
+so this does not work which is what we
+
+1222
+00:17:21,270 --> 00:17:21,280
+so this does not work which is what we
+ 
+
+1223
+00:17:21,280 --> 00:17:22,949
+so this does not work which is what we
+would expect but this does
+
+1224
+00:17:22,949 --> 00:17:22,959
+would expect but this does
+ 
+
+1225
+00:17:22,959 --> 00:17:24,470
+would expect but this does
+and if we of course use the original
+
+1226
+00:17:24,470 --> 00:17:24,480
+and if we of course use the original
+ 
+
+1227
+00:17:24,480 --> 00:17:25,990
+and if we of course use the original
+data which is not const
+
+1228
+00:17:25,990 --> 00:17:26,000
+data which is not const
+ 
+
+1229
+00:17:26,000 --> 00:17:28,069
+data which is not const
+then everything works fine the final
+
+1230
+00:17:28,069 --> 00:17:28,079
+then everything works fine the final
+ 
+
+1231
+00:17:28,079 --> 00:17:29,510
+then everything works fine the final
+real problem here is that we're using
+
+1232
+00:17:29,510 --> 00:17:29,520
+real problem here is that we're using
+ 
+
+1233
+00:17:29,520 --> 00:17:30,710
+real problem here is that we're using
+int as the index
+
+1234
+00:17:30,710 --> 00:17:30,720
+int as the index
+ 
+
+1235
+00:17:30,720 --> 00:17:32,549
+int as the index
+this lets us use negative numbers and
+
+1236
+00:17:32,549 --> 00:17:32,559
+this lets us use negative numbers and
+ 
+
+1237
+00:17:32,559 --> 00:17:34,310
+this lets us use negative numbers and
+also might not be the same size on all
+
+1238
+00:17:34,310 --> 00:17:34,320
+also might not be the same size on all
+ 
+
+1239
+00:17:34,320 --> 00:17:36,390
+also might not be the same size on all
+platforms so typically the sql standard
+
+1240
+00:17:36,390 --> 00:17:36,400
+platforms so typically the sql standard
+ 
+
+1241
+00:17:36,400 --> 00:17:37,909
+platforms so typically the sql standard
+library likes to use size t
+
+1242
+00:17:37,909 --> 00:17:37,919
+library likes to use size t
+ 
+
+1243
+00:17:37,919 --> 00:17:39,990
+library likes to use size t
+for these things if you go into array
+
+1244
+00:17:39,990 --> 00:17:40,000
+for these things if you go into array
+ 
+
+1245
+00:17:40,000 --> 00:17:41,510
+for these things if you go into array
+and you take a look at their index
+
+1246
+00:17:41,510 --> 00:17:41,520
+and you take a look at their index
+ 
+
+1247
+00:17:41,520 --> 00:17:42,230
+and you take a look at their index
+operator
+
+1248
+00:17:42,230 --> 00:17:42,240
+operator
+ 
+
+1249
+00:17:42,240 --> 00:17:44,470
+operator
+you can see that they also use size type
+
+1250
+00:17:44,470 --> 00:17:44,480
+you can see that they also use size type
+ 
+
+1251
+00:17:44,480 --> 00:17:46,390
+you can see that they also use size type
+here and size type is equal to
+
+1252
+00:17:46,390 --> 00:17:46,400
+here and size type is equal to
+ 
+
+1253
+00:17:46,400 --> 00:17:48,710
+here and size type is equal to
+size t they have a lot of their own
+
+1254
+00:17:48,710 --> 00:17:48,720
+size t they have a lot of their own
+ 
+
+1255
+00:17:48,720 --> 00:17:50,150
+size t they have a lot of their own
+definitions for a lot of these things at
+
+1256
+00:17:50,150 --> 00:17:50,160
+definitions for a lot of these things at
+ 
+
+1257
+00:17:50,160 --> 00:17:52,230
+definitions for a lot of these things at
+least msvc's stl which is what we're
+
+1258
+00:17:52,230 --> 00:17:52,240
+least msvc's stl which is what we're
+ 
+
+1259
+00:17:52,240 --> 00:17:53,029
+least msvc's stl which is what we're
+looking at here
+
+1260
+00:17:53,029 --> 00:17:53,039
+looking at here
+ 
+
+1261
+00:17:53,039 --> 00:17:54,630
+looking at here
+has all of these various definitions
+
+1262
+00:17:54,630 --> 00:17:54,640
+has all of these various definitions
+ 
+
+1263
+00:17:54,640 --> 00:17:56,230
+has all of these various definitions
+which just add a little bit of noise in
+
+1264
+00:17:56,230 --> 00:17:56,240
+which just add a little bit of noise in
+ 
+
+1265
+00:17:56,240 --> 00:17:57,990
+which just add a little bit of noise in
+my opinion as to what is actually going
+
+1266
+00:17:57,990 --> 00:17:58,000
+my opinion as to what is actually going
+ 
+
+1267
+00:17:58,000 --> 00:17:59,430
+my opinion as to what is actually going
+on here since you always have to look at
+
+1268
+00:17:59,430 --> 00:17:59,440
+on here since you always have to look at
+ 
+
+1269
+00:17:59,440 --> 00:18:00,150
+on here since you always have to look at
+what these
+
+1270
+00:18:00,150 --> 00:18:00,160
+what these
+ 
+
+1271
+00:18:00,160 --> 00:18:02,310
+what these
+are actually set to okay so now we have
+
+1272
+00:18:02,310 --> 00:18:02,320
+are actually set to okay so now we have
+ 
+
+1273
+00:18:02,320 --> 00:18:03,990
+are actually set to okay so now we have
+a pretty good version of this
+
+1274
+00:18:03,990 --> 00:18:04,000
+a pretty good version of this
+ 
+
+1275
+00:18:04,000 --> 00:18:05,909
+a pretty good version of this
+if we take a look at the version inside
+
+1276
+00:18:05,909 --> 00:18:05,919
+if we take a look at the version inside
+ 
+
+1277
+00:18:05,919 --> 00:18:07,510
+if we take a look at the version inside
+array though you'll see that there is
+
+1278
+00:18:07,510 --> 00:18:07,520
+array though you'll see that there is
+ 
+
+1279
+00:18:07,520 --> 00:18:09,590
+array though you'll see that there is
+also one other thing i mean largely it's
+
+1280
+00:18:09,590 --> 00:18:09,600
+also one other thing i mean largely it's
+ 
+
+1281
+00:18:09,600 --> 00:18:11,350
+also one other thing i mean largely it's
+the same as our function i mean it's
+
+1282
+00:18:11,350 --> 00:18:11,360
+the same as our function i mean it's
+ 
+
+1283
+00:18:11,360 --> 00:18:13,110
+the same as our function i mean it's
+also marked with no accept and
+
+1284
+00:18:13,110 --> 00:18:13,120
+also marked with no accept and
+ 
+
+1285
+00:18:13,120 --> 00:18:14,950
+also marked with no accept and
+you know there's a few other various
+
+1286
+00:18:14,950 --> 00:18:14,960
+you know there's a few other various
+ 
+
+1287
+00:18:14,960 --> 00:18:16,630
+you know there's a few other various
+flags going on here that we don't really
+
+1288
+00:18:16,630 --> 00:18:16,640
+flags going on here that we don't really
+ 
+
+1289
+00:18:16,640 --> 00:18:17,190
+flags going on here that we don't really
+care about
+
+1290
+00:18:17,190 --> 00:18:17,200
+care about
+ 
+
+1291
+00:18:17,200 --> 00:18:19,590
+care about
+at least for our basic example and then
+
+1292
+00:18:19,590 --> 00:18:19,600
+at least for our basic example and then
+ 
+
+1293
+00:18:19,600 --> 00:18:20,710
+at least for our basic example and then
+this is this is
+
+1294
+00:18:20,710 --> 00:18:20,720
+this is this is
+ 
+
+1295
+00:18:20,720 --> 00:18:22,230
+this is this is
+identical however we have this
+
+1296
+00:18:22,230 --> 00:18:22,240
+identical however we have this
+ 
+
+1297
+00:18:22,240 --> 00:18:23,990
+identical however we have this
+preprocessor statement here the checks
+
+1298
+00:18:23,990 --> 00:18:24,000
+preprocessor statement here the checks
+ 
+
+1299
+00:18:24,000 --> 00:18:25,750
+preprocessor statement here the checks
+to see if the container debug level
+
+1300
+00:18:25,750 --> 00:18:25,760
+to see if the container debug level
+ 
+
+1301
+00:18:25,760 --> 00:18:27,110
+to see if the container debug level
+is greater than zero and if it is it
+
+1302
+00:18:27,110 --> 00:18:27,120
+is greater than zero and if it is it
+ 
+
+1303
+00:18:27,120 --> 00:18:29,430
+is greater than zero and if it is it
+runs this stl verify thing that checks
+
+1304
+00:18:29,430 --> 00:18:29,440
+runs this stl verify thing that checks
+ 
+
+1305
+00:18:29,440 --> 00:18:32,470
+runs this stl verify thing that checks
+the position versus the size so what
+
+1306
+00:18:32,470 --> 00:18:32,480
+the position versus the size so what
+ 
+
+1307
+00:18:32,480 --> 00:18:33,270
+the position versus the size so what
+this is
+
+1308
+00:18:33,270 --> 00:18:33,280
+this is
+ 
+
+1309
+00:18:33,280 --> 00:18:35,990
+this is
+is essentially an assert that checks to
+
+1310
+00:18:35,990 --> 00:18:36,000
+is essentially an assert that checks to
+ 
+
+1311
+00:18:36,000 --> 00:18:37,190
+is essentially an assert that checks to
+see that this index
+
+1312
+00:18:37,190 --> 00:18:37,200
+see that this index
+ 
+
+1313
+00:18:37,200 --> 00:18:39,350
+see that this index
+is within the accepted range so if we
+
+1314
+00:18:39,350 --> 00:18:39,360
+is within the accepted range so if we
+ 
+
+1315
+00:18:39,360 --> 00:18:40,630
+is within the accepted range so if we
+were to add something like this
+
+1316
+00:18:40,630 --> 00:18:40,640
+were to add something like this
+ 
+
+1317
+00:18:40,640 --> 00:18:42,470
+were to add something like this
+it would look like an if statement that
+
+1318
+00:18:42,470 --> 00:18:42,480
+it would look like an if statement that
+ 
+
+1319
+00:18:42,480 --> 00:18:43,990
+it would look like an if statement that
+basically checks to see
+
+1320
+00:18:43,990 --> 00:18:44,000
+basically checks to see
+ 
+
+1321
+00:18:44,000 --> 00:18:46,870
+basically checks to see
+whether or not index is less than the
+
+1322
+00:18:46,870 --> 00:18:46,880
+whether or not index is less than the
+ 
+
+1323
+00:18:46,880 --> 00:18:48,390
+whether or not index is less than the
+actual size of the array which is
+
+1324
+00:18:48,390 --> 00:18:48,400
+actual size of the array which is
+ 
+
+1325
+00:18:48,400 --> 00:18:51,350
+actual size of the array which is
+s and if this assert fails then we need
+
+1326
+00:18:51,350 --> 00:18:51,360
+s and if this assert fails then we need
+ 
+
+1327
+00:18:51,360 --> 00:18:53,029
+s and if this assert fails then we need
+to do something like break the compiler
+
+1328
+00:18:53,029 --> 00:18:53,039
+to do something like break the compiler
+ 
+
+1329
+00:18:53,039 --> 00:18:55,110
+to do something like break the compiler
+on this line this is an msvc way of
+
+1330
+00:18:55,110 --> 00:18:55,120
+on this line this is an msvc way of
+ 
+
+1331
+00:18:55,120 --> 00:18:56,870
+on this line this is an msvc way of
+doing that this protects us because if
+
+1332
+00:18:56,870 --> 00:18:56,880
+doing that this protects us because if
+ 
+
+1333
+00:18:56,880 --> 00:18:58,549
+doing that this protects us because if
+we accidentally loop over
+
+1334
+00:18:58,549 --> 00:18:58,559
+we accidentally loop over
+ 
+
+1335
+00:18:58,559 --> 00:19:00,470
+we accidentally loop over
+something like this and we run the code
+
+1336
+00:19:00,470 --> 00:19:00,480
+something like this and we run the code
+ 
+
+1337
+00:19:00,480 --> 00:19:01,830
+something like this and we run the code
+then it's actually going to break the
+
+1338
+00:19:01,830 --> 00:19:01,840
+then it's actually going to break the
+ 
+
+1339
+00:19:01,840 --> 00:19:04,070
+then it's actually going to break the
+debugger on this line and tell us that
+
+1340
+00:19:04,070 --> 00:19:04,080
+debugger on this line and tell us that
+ 
+
+1341
+00:19:04,080 --> 00:19:05,430
+debugger on this line and tell us that
+well we've done something wrong so that
+
+1342
+00:19:05,430 --> 00:19:05,440
+well we've done something wrong so that
+ 
+
+1343
+00:19:05,440 --> 00:19:07,510
+well we've done something wrong so that
+we can debug the state of our program
+
+1344
+00:19:07,510 --> 00:19:07,520
+we can debug the state of our program
+ 
+
+1345
+00:19:07,520 --> 00:19:08,870
+we can debug the state of our program
+this is not something that typically
+
+1346
+00:19:08,870 --> 00:19:08,880
+this is not something that typically
+ 
+
+1347
+00:19:08,880 --> 00:19:10,549
+this is not something that typically
+gets included in release mode because
+
+1348
+00:19:10,549 --> 00:19:10,559
+gets included in release mode because
+ 
+
+1349
+00:19:10,559 --> 00:19:11,590
+gets included in release mode because
+this extra check
+
+1350
+00:19:11,590 --> 00:19:11,600
+this extra check
+ 
+
+1351
+00:19:11,600 --> 00:19:13,110
+this extra check
+just slows down our program and is
+
+1352
+00:19:13,110 --> 00:19:13,120
+just slows down our program and is
+ 
+
+1353
+00:19:13,120 --> 00:19:14,710
+just slows down our program and is
+something that we would expect to catch
+
+1354
+00:19:14,710 --> 00:19:14,720
+something that we would expect to catch
+ 
+
+1355
+00:19:14,720 --> 00:19:17,029
+something that we would expect to catch
+in debug mode anyway so that's that's
+
+1356
+00:19:17,029 --> 00:19:17,039
+in debug mode anyway so that's that's
+ 
+
+1357
+00:19:17,039 --> 00:19:19,430
+in debug mode anyway so that's that's
+the extra check that we have in the stl
+
+1358
+00:19:19,430 --> 00:19:19,440
+the extra check that we have in the stl
+ 
+
+1359
+00:19:19,440 --> 00:19:20,390
+the extra check that we have in the stl
+version of
+
+1360
+00:19:20,390 --> 00:19:20,400
+version of
+ 
+
+1361
+00:19:20,400 --> 00:19:22,230
+version of
+the array class and something of course
+
+1362
+00:19:22,230 --> 00:19:22,240
+the array class and something of course
+ 
+
+1363
+00:19:22,240 --> 00:19:23,909
+the array class and something of course
+that you might want to use however you
+
+1364
+00:19:23,909 --> 00:19:23,919
+that you might want to use however you
+ 
+
+1365
+00:19:23,919 --> 00:19:25,430
+that you might want to use however you
+can see that this container debug level
+
+1366
+00:19:25,430 --> 00:19:25,440
+can see that this container debug level
+ 
+
+1367
+00:19:25,440 --> 00:19:27,110
+can see that this container debug level
+macro actually makes sure that this does
+
+1368
+00:19:27,110 --> 00:19:27,120
+macro actually makes sure that this does
+ 
+
+1369
+00:19:27,120 --> 00:19:27,750
+macro actually makes sure that this does
+not happen
+
+1370
+00:19:27,750 --> 00:19:27,760
+not happen
+ 
+
+1371
+00:19:27,760 --> 00:19:29,830
+not happen
+in release mode okay cool so we'll we'll
+
+1372
+00:19:29,830 --> 00:19:29,840
+in release mode okay cool so we'll we'll
+ 
+
+1373
+00:19:29,840 --> 00:19:30,950
+in release mode okay cool so we'll we'll
+just ignore that part
+
+1374
+00:19:30,950 --> 00:19:30,960
+just ignore that part
+ 
+
+1375
+00:19:30,960 --> 00:19:33,909
+just ignore that part
+now size should also return a size t and
+
+1376
+00:19:33,909 --> 00:19:33,919
+now size should also return a size t and
+ 
+
+1377
+00:19:33,919 --> 00:19:35,590
+now size should also return a size t and
+because it returns a size t
+
+1378
+00:19:35,590 --> 00:19:35,600
+because it returns a size t
+ 
+
+1379
+00:19:35,600 --> 00:19:37,350
+because it returns a size t
+we should also make sure that our for
+
+1380
+00:19:37,350 --> 00:19:37,360
+we should also make sure that our for
+ 
+
+1381
+00:19:37,360 --> 00:19:39,029
+we should also make sure that our for
+loop actually set to a size t
+
+1382
+00:19:39,029 --> 00:19:39,039
+loop actually set to a size t
+ 
+
+1383
+00:19:39,039 --> 00:19:40,950
+loop actually set to a size t
+just to avoid some compiler warnings
+
+1384
+00:19:40,950 --> 00:19:40,960
+just to avoid some compiler warnings
+ 
+
+1385
+00:19:40,960 --> 00:19:42,549
+just to avoid some compiler warnings
+i'll get rid of this and i'll clean up
+
+1386
+00:19:42,549 --> 00:19:42,559
+i'll get rid of this and i'll clean up
+ 
+
+1387
+00:19:42,559 --> 00:19:44,150
+i'll get rid of this and i'll clean up
+our code a little bit more one other
+
+1388
+00:19:44,150 --> 00:19:44,160
+our code a little bit more one other
+ 
+
+1389
+00:19:44,160 --> 00:19:45,669
+our code a little bit more one other
+thing that this class really needs is a
+
+1390
+00:19:45,669 --> 00:19:45,679
+thing that this class really needs is a
+ 
+
+1391
+00:19:45,679 --> 00:19:47,830
+thing that this class really needs is a
+way to actually access the data within
+
+1392
+00:19:47,830 --> 00:19:47,840
+way to actually access the data within
+ 
+
+1393
+00:19:47,840 --> 00:19:49,110
+way to actually access the data within
+it so in other words this will just
+
+1394
+00:19:49,110 --> 00:19:49,120
+it so in other words this will just
+ 
+
+1395
+00:19:49,120 --> 00:19:49,830
+it so in other words this will just
+return
+
+1396
+00:19:49,830 --> 00:19:49,840
+return
+ 
+
+1397
+00:19:49,840 --> 00:19:51,590
+return
+mdata and it will just return a pointer
+
+1398
+00:19:51,590 --> 00:19:51,600
+mdata and it will just return a pointer
+ 
+
+1399
+00:19:51,600 --> 00:19:53,669
+mdata and it will just return a pointer
+to it you could also add a const version
+
+1400
+00:19:53,669 --> 00:19:53,679
+to it you could also add a const version
+ 
+
+1401
+00:19:53,679 --> 00:19:55,270
+to it you could also add a const version
+of this that returns the data if you
+
+1402
+00:19:55,270 --> 00:19:55,280
+of this that returns the data if you
+ 
+
+1403
+00:19:55,280 --> 00:19:56,710
+of this that returns the data if you
+wanted to and it would look something
+
+1404
+00:19:56,710 --> 00:19:56,720
+wanted to and it would look something
+ 
+
+1405
+00:19:56,720 --> 00:19:59,110
+wanted to and it would look something
+like that what this enables you to do is
+
+1406
+00:19:59,110 --> 00:19:59,120
+like that what this enables you to do is
+ 
+
+1407
+00:19:59,120 --> 00:20:01,190
+like that what this enables you to do is
+quickly for example set the memory to be
+
+1408
+00:20:01,190 --> 00:20:01,200
+quickly for example set the memory to be
+ 
+
+1409
+00:20:01,200 --> 00:20:04,070
+quickly for example set the memory to be
+0 by just calling data.data writing 0 as
+
+1410
+00:20:04,070 --> 00:20:04,080
+0 by just calling data.data writing 0 as
+ 
+
+1411
+00:20:04,080 --> 00:20:05,270
+0 by just calling data.data writing 0 as
+your value and then
+
+1412
+00:20:05,270 --> 00:20:05,280
+your value and then
+ 
+
+1413
+00:20:05,280 --> 00:20:06,870
+your value and then
+the size of the array which is going to
+
+1414
+00:20:06,870 --> 00:20:06,880
+the size of the array which is going to
+ 
+
+1415
+00:20:06,880 --> 00:20:08,789
+the size of the array which is going to
+be data.size times
+
+1416
+00:20:08,789 --> 00:20:08,799
+be data.size times
+ 
+
+1417
+00:20:08,799 --> 00:20:11,190
+be data.size times
+size of int because that's the data type
+
+1418
+00:20:11,190 --> 00:20:11,200
+size of int because that's the data type
+ 
+
+1419
+00:20:11,200 --> 00:20:12,710
+size of int because that's the data type
+that we've selected here this will set
+
+1420
+00:20:12,710 --> 00:20:12,720
+that we've selected here this will set
+ 
+
+1421
+00:20:12,720 --> 00:20:14,710
+that we've selected here this will set
+all of the integers inside our array to
+
+1422
+00:20:14,710 --> 00:20:14,720
+all of the integers inside our array to
+ 
+
+1423
+00:20:14,720 --> 00:20:16,390
+all of the integers inside our array to
+be zero by just simply setting
+
+1424
+00:20:16,390 --> 00:20:16,400
+be zero by just simply setting
+ 
+
+1425
+00:20:16,400 --> 00:20:18,950
+be zero by just simply setting
+all of their memory to zero this isn't
+
+1426
+00:20:18,950 --> 00:20:18,960
+all of their memory to zero this isn't
+ 
+
+1427
+00:20:18,960 --> 00:20:20,789
+all of their memory to zero this isn't
+really 100 required because you could
+
+1428
+00:20:20,789 --> 00:20:20,799
+really 100 required because you could
+ 
+
+1429
+00:20:20,799 --> 00:20:21,590
+really 100 required because you could
+always
+
+1430
+00:20:21,590 --> 00:20:21,600
+always
+ 
+
+1431
+00:20:21,600 --> 00:20:23,590
+always
+just simply take the first index of the
+
+1432
+00:20:23,590 --> 00:20:23,600
+just simply take the first index of the
+ 
+
+1433
+00:20:23,600 --> 00:20:25,430
+just simply take the first index of the
+array and then grab the address of
+
+1434
+00:20:25,430 --> 00:20:25,440
+array and then grab the address of
+ 
+
+1435
+00:20:25,440 --> 00:20:27,510
+array and then grab the address of
+that since this stack allocated array of
+
+1436
+00:20:27,510 --> 00:20:27,520
+that since this stack allocated array of
+ 
+
+1437
+00:20:27,520 --> 00:20:28,950
+that since this stack allocated array of
+course is guaranteed to be
+
+1438
+00:20:28,950 --> 00:20:28,960
+course is guaranteed to be
+ 
+
+1439
+00:20:28,960 --> 00:20:31,590
+course is guaranteed to be
+contiguous in memory so finally let's
+
+1440
+00:20:31,590 --> 00:20:31,600
+contiguous in memory so finally let's
+ 
+
+1441
+00:20:31,600 --> 00:20:33,190
+contiguous in memory so finally let's
+see this in action what i'll do
+
+1442
+00:20:33,190 --> 00:20:33,200
+see this in action what i'll do
+ 
+
+1443
+00:20:33,200 --> 00:20:36,470
+see this in action what i'll do
+is print every single index of our array
+
+1444
+00:20:36,470 --> 00:20:36,480
+is print every single index of our array
+ 
+
+1445
+00:20:36,480 --> 00:20:39,110
+is print every single index of our array
+like so let's try it without the mem set
+
+1446
+00:20:39,110 --> 00:20:39,120
+like so let's try it without the mem set
+ 
+
+1447
+00:20:39,120 --> 00:20:40,870
+like so let's try it without the mem set
+first to see the effect of that
+
+1448
+00:20:40,870 --> 00:20:40,880
+first to see the effect of that
+ 
+
+1449
+00:20:40,880 --> 00:20:43,029
+first to see the effect of that
+all right cn.yet so that we pause our
+
+1450
+00:20:43,029 --> 00:20:43,039
+all right cn.yet so that we pause our
+ 
+
+1451
+00:20:43,039 --> 00:20:44,789
+all right cn.yet so that we pause our
+console you can see we have just a bunch
+
+1452
+00:20:44,789 --> 00:20:44,799
+console you can see we have just a bunch
+ 
+
+1453
+00:20:44,799 --> 00:20:46,630
+console you can see we have just a bunch
+of uninitialized memory here pretty
+
+1454
+00:20:46,630 --> 00:20:46,640
+of uninitialized memory here pretty
+ 
+
+1455
+00:20:46,640 --> 00:20:48,390
+of uninitialized memory here pretty
+boring let's bring in the mem
+
+1456
+00:20:48,390 --> 00:20:48,400
+boring let's bring in the mem
+ 
+
+1457
+00:20:48,400 --> 00:20:50,630
+boring let's bring in the mem
+set now all of the values inside our
+
+1458
+00:20:50,630 --> 00:20:50,640
+set now all of the values inside our
+ 
+
+1459
+00:20:50,640 --> 00:20:52,630
+set now all of the values inside our
+array are set to zero
+
+1460
+00:20:52,630 --> 00:20:52,640
+array are set to zero
+ 
+
+1461
+00:20:52,640 --> 00:20:56,549
+array are set to zero
+finally i'll maybe set index 1 to b5 and
+
+1462
+00:20:56,549 --> 00:20:56,559
+finally i'll maybe set index 1 to b5 and
+ 
+
+1463
+00:20:56,559 --> 00:20:57,350
+finally i'll maybe set index 1 to b5 and
+index
+
+1464
+00:20:57,350 --> 00:20:57,360
+index
+ 
+
+1465
+00:20:57,360 --> 00:21:00,549
+index
+4 to b8 so if we run this again
+
+1466
+00:21:00,549 --> 00:21:00,559
+4 to b8 so if we run this again
+ 
+
+1467
+00:21:00,559 --> 00:21:02,549
+4 to b8 so if we run this again
+you can see we have zero five zero zero
+
+1468
+00:21:02,549 --> 00:21:02,559
+you can see we have zero five zero zero
+ 
+
+1469
+00:21:02,559 --> 00:21:04,390
+you can see we have zero five zero zero
+eight so this seems to work and of
+
+1470
+00:21:04,390 --> 00:21:04,400
+eight so this seems to work and of
+ 
+
+1471
+00:21:04,400 --> 00:21:05,590
+eight so this seems to work and of
+course if we wanted to
+
+1472
+00:21:05,590 --> 00:21:05,600
+course if we wanted to
+ 
+
+1473
+00:21:05,600 --> 00:21:07,510
+course if we wanted to
+we could create an entirely different
+
+1474
+00:21:07,510 --> 00:21:07,520
+we could create an entirely different
+ 
+
+1475
+00:21:07,520 --> 00:21:09,029
+we could create an entirely different
+array that maybe had
+
+1476
+00:21:09,029 --> 00:21:09,039
+array that maybe had
+ 
+
+1477
+00:21:09,039 --> 00:21:11,430
+array that maybe had
+two strings string one we could set
+
+1478
+00:21:11,430 --> 00:21:11,440
+two strings string one we could set
+ 
+
+1479
+00:21:11,440 --> 00:21:12,630
+two strings string one we could set
+equal to
+
+1480
+00:21:12,630 --> 00:21:12,640
+equal to
+ 
+
+1481
+00:21:12,640 --> 00:21:15,350
+equal to
+journal like so and then string two we
+
+1482
+00:21:15,350 --> 00:21:15,360
+journal like so and then string two we
+ 
+
+1483
+00:21:15,360 --> 00:21:15,990
+journal like so and then string two we
+could set
+
+1484
+00:21:15,990 --> 00:21:16,000
+could set
+ 
+
+1485
+00:21:16,000 --> 00:21:19,110
+could set
+equal to c plus plus and then if we
+
+1486
+00:21:19,110 --> 00:21:19,120
+equal to c plus plus and then if we
+ 
+
+1487
+00:21:19,120 --> 00:21:20,870
+equal to c plus plus and then if we
+basically have this exact same for loop
+
+1488
+00:21:20,870 --> 00:21:20,880
+basically have this exact same for loop
+ 
+
+1489
+00:21:20,880 --> 00:21:22,789
+basically have this exact same for loop
+that we had before you can see that this
+
+1490
+00:21:22,789 --> 00:21:22,799
+that we had before you can see that this
+ 
+
+1491
+00:21:22,799 --> 00:21:24,149
+that we had before you can see that this
+array also works
+
+1492
+00:21:24,149 --> 00:21:24,159
+array also works
+ 
+
+1493
+00:21:24,159 --> 00:21:27,110
+array also works
+with strings so that is our basic array
+
+1494
+00:21:27,110 --> 00:21:27,120
+with strings so that is our basic array
+ 
+
+1495
+00:21:27,120 --> 00:21:27,669
+with strings so that is our basic array
+class
+
+1496
+00:21:27,669 --> 00:21:27,679
+class
+ 
+
+1497
+00:21:27,679 --> 00:21:29,669
+class
+you can see it's really tiny there are
+
+1498
+00:21:29,669 --> 00:21:29,679
+you can see it's really tiny there are
+ 
+
+1499
+00:21:29,679 --> 00:21:31,510
+you can see it's really tiny there are
+still a lot of features that we would
+
+1500
+00:21:31,510 --> 00:21:31,520
+still a lot of features that we would
+ 
+
+1501
+00:21:31,520 --> 00:21:32,789
+still a lot of features that we would
+want to add to this
+
+1502
+00:21:32,789 --> 00:21:32,799
+want to add to this
+ 
+
+1503
+00:21:32,799 --> 00:21:34,630
+want to add to this
+namely the the biggest feature i think
+
+1504
+00:21:34,630 --> 00:21:34,640
+namely the the biggest feature i think
+ 
+
+1505
+00:21:34,640 --> 00:21:35,990
+namely the the biggest feature i think
+is iterators
+
+1506
+00:21:35,990 --> 00:21:36,000
+is iterators
+ 
+
+1507
+00:21:36,000 --> 00:21:37,669
+is iterators
+so at the moment we're having to write a
+
+1508
+00:21:37,669 --> 00:21:37,679
+so at the moment we're having to write a
+ 
+
+1509
+00:21:37,679 --> 00:21:39,029
+so at the moment we're having to write a
+for loop like this but it would be
+
+1510
+00:21:39,029 --> 00:21:39,039
+for loop like this but it would be
+ 
+
+1511
+00:21:39,039 --> 00:21:40,789
+for loop like this but it would be
+really nice if we could simply
+
+1512
+00:21:40,789 --> 00:21:40,799
+really nice if we could simply
+ 
+
+1513
+00:21:40,799 --> 00:21:42,630
+really nice if we could simply
+have a for loop that looks something
+
+1514
+00:21:42,630 --> 00:21:42,640
+have a for loop that looks something
+ 
+
+1515
+00:21:42,640 --> 00:21:44,070
+have a for loop that looks something
+like this where we could
+
+1516
+00:21:44,070 --> 00:21:44,080
+like this where we could
+ 
+
+1517
+00:21:44,080 --> 00:21:46,549
+like this where we could
+get through our entire array just by
+
+1518
+00:21:46,549 --> 00:21:46,559
+get through our entire array just by
+ 
+
+1519
+00:21:46,559 --> 00:21:48,390
+get through our entire array just by
+using a range based for loop like this
+
+1520
+00:21:48,390 --> 00:21:48,400
+using a range based for loop like this
+ 
+
+1521
+00:21:48,400 --> 00:21:49,750
+using a range based for loop like this
+and to make that happen we actually need
+
+1522
+00:21:49,750 --> 00:21:49,760
+and to make that happen we actually need
+ 
+
+1523
+00:21:49,760 --> 00:21:51,590
+and to make that happen we actually need
+to write an iterator which is a topic
+
+1524
+00:21:51,590 --> 00:21:51,600
+to write an iterator which is a topic
+ 
+
+1525
+00:21:51,600 --> 00:21:53,510
+to write an iterator which is a topic
+for another video there are also some
+
+1526
+00:21:53,510 --> 00:21:53,520
+for another video there are also some
+ 
+
+1527
+00:21:53,520 --> 00:21:55,350
+for another video there are also some
+other utility functions such as fill
+
+1528
+00:21:55,350 --> 00:21:55,360
+other utility functions such as fill
+ 
+
+1529
+00:21:55,360 --> 00:21:56,870
+other utility functions such as fill
+and swab which we would probably want to
+
+1530
+00:21:56,870 --> 00:21:56,880
+and swab which we would probably want to
+ 
+
+1531
+00:21:56,880 --> 00:21:58,710
+and swab which we would probably want to
+implement just to make dealing with our
+
+1532
+00:21:58,710 --> 00:21:58,720
+implement just to make dealing with our
+ 
+
+1533
+00:21:58,720 --> 00:21:59,430
+implement just to make dealing with our
+array
+
+1534
+00:21:59,430 --> 00:21:59,440
+array
+ 
+
+1535
+00:21:59,440 --> 00:22:01,190
+array
+slightly easier but that's going to be
+
+1536
+00:22:01,190 --> 00:22:01,200
+slightly easier but that's going to be
+ 
+
+1537
+00:22:01,200 --> 00:22:02,470
+slightly easier but that's going to be
+it for today's
+
+1538
+00:22:02,470 --> 00:22:02,480
+it for today's
+ 
+
+1539
+00:22:02,480 --> 00:22:05,190
+it for today's
+video okay so i hope you guys enjoyed
+
+1540
+00:22:05,190 --> 00:22:05,200
+video okay so i hope you guys enjoyed
+ 
+
+1541
+00:22:05,200 --> 00:22:06,390
+video okay so i hope you guys enjoyed
+this video if you did please don't
+
+1542
+00:22:06,390 --> 00:22:06,400
+this video if you did please don't
+ 
+
+1543
+00:22:06,400 --> 00:22:07,590
+this video if you did please don't
+forget to hit the like button
+
+1544
+00:22:07,590 --> 00:22:07,600
+forget to hit the like button
+ 
+
+1545
+00:22:07,600 --> 00:22:09,990
+forget to hit the like button
+below obviously there's a lot of other
+
+1546
+00:22:09,990 --> 00:22:10,000
+below obviously there's a lot of other
+ 
+
+1547
+00:22:10,000 --> 00:22:11,909
+below obviously there's a lot of other
+things we could add to this array class
+
+1548
+00:22:11,909 --> 00:22:11,919
+things we could add to this array class
+ 
+
+1549
+00:22:11,919 --> 00:22:13,669
+things we could add to this array class
+and we will probably end up extending it
+
+1550
+00:22:13,669 --> 00:22:13,679
+and we will probably end up extending it
+ 
+
+1551
+00:22:13,679 --> 00:22:15,830
+and we will probably end up extending it
+in some future videos like the iterators
+
+1552
+00:22:15,830 --> 00:22:15,840
+in some future videos like the iterators
+ 
+
+1553
+00:22:15,840 --> 00:22:17,270
+in some future videos like the iterators
+and stuff like that
+
+1554
+00:22:17,270 --> 00:22:17,280
+and stuff like that
+ 
+
+1555
+00:22:17,280 --> 00:22:19,750
+and stuff like that
+the core mechanics of a stack allocated
+
+1556
+00:22:19,750 --> 00:22:19,760
+the core mechanics of a stack allocated
+ 
+
+1557
+00:22:19,760 --> 00:22:21,430
+the core mechanics of a stack allocated
+array are quite simple as you can
+
+1558
+00:22:21,430 --> 00:22:21,440
+array are quite simple as you can
+ 
+
+1559
+00:22:21,440 --> 00:22:22,549
+array are quite simple as you can
+probably see and
+
+1560
+00:22:22,549 --> 00:22:22,559
+probably see and
+ 
+
+1561
+00:22:22,559 --> 00:22:24,390
+probably see and
+this in and of itself is quite a
+
+1562
+00:22:24,390 --> 00:22:24,400
+this in and of itself is quite a
+ 
+
+1563
+00:22:24,400 --> 00:22:25,750
+this in and of itself is quite a
+powerful data structure
+
+1564
+00:22:25,750 --> 00:22:25,760
+powerful data structure
+ 
+
+1565
+00:22:25,760 --> 00:22:28,070
+powerful data structure
+that you can and should use frequently
+
+1566
+00:22:28,070 --> 00:22:28,080
+that you can and should use frequently
+ 
+
+1567
+00:22:28,080 --> 00:22:29,909
+that you can and should use frequently
+throughout your code if you have any
+
+1568
+00:22:29,909 --> 00:22:29,919
+throughout your code if you have any
+ 
+
+1569
+00:22:29,919 --> 00:22:31,270
+throughout your code if you have any
+other suggestions for data structures
+
+1570
+00:22:31,270 --> 00:22:31,280
+other suggestions for data structures
+ 
+
+1571
+00:22:31,280 --> 00:22:32,870
+other suggestions for data structures
+for me to cover obviously i have a long
+
+1572
+00:22:32,870 --> 00:22:32,880
+for me to cover obviously i have a long
+ 
+
+1573
+00:22:32,880 --> 00:22:34,549
+for me to cover obviously i have a long
+list of all of the popular ones but if
+
+1574
+00:22:34,549 --> 00:22:34,559
+list of all of the popular ones but if
+ 
+
+1575
+00:22:34,559 --> 00:22:35,990
+list of all of the popular ones but if
+there's something specific that you want
+
+1576
+00:22:35,990 --> 00:22:36,000
+there's something specific that you want
+ 
+
+1577
+00:22:36,000 --> 00:22:37,430
+there's something specific that you want
+me to cover or a different data
+
+1578
+00:22:37,430 --> 00:22:37,440
+me to cover or a different data
+ 
+
+1579
+00:22:37,440 --> 00:22:38,070
+me to cover or a different data
+structure
+
+1580
+00:22:38,070 --> 00:22:38,080
+structure
+ 
+
+1581
+00:22:38,080 --> 00:22:39,350
+structure
+that you want me to cover next please
+
+1582
+00:22:39,350 --> 00:22:39,360
+that you want me to cover next please
+ 
+
+1583
+00:22:39,360 --> 00:22:40,950
+that you want me to cover next please
+let me know in the comment section below
+
+1584
+00:22:40,950 --> 00:22:40,960
+let me know in the comment section below
+ 
+
+1585
+00:22:40,960 --> 00:22:42,310
+let me know in the comment section below
+i'll take a list probably
+
+1586
+00:22:42,310 --> 00:22:42,320
+i'll take a list probably
+ 
+
+1587
+00:22:42,320 --> 00:22:44,390
+i'll take a list probably
+of all of your suggestions and we'll get
+
+1588
+00:22:44,390 --> 00:22:44,400
+of all of your suggestions and we'll get
+ 
+
+1589
+00:22:44,400 --> 00:22:46,070
+of all of your suggestions and we'll get
+around to doing them as soon as possible
+
+1590
+00:22:46,070 --> 00:22:46,080
+around to doing them as soon as possible
+ 
+
+1591
+00:22:46,080 --> 00:22:47,830
+around to doing them as soon as possible
+thank you guys once again for watching
+
+1592
+00:22:47,830 --> 00:22:47,840
+thank you guys once again for watching
+ 
+
+1593
+00:22:47,840 --> 00:22:49,750
+thank you guys once again for watching
+do not forget to check out skillshare's
+
+1594
+00:22:49,750 --> 00:22:49,760
+do not forget to check out skillshare's
+ 
+
+1595
+00:22:49,760 --> 00:22:50,549
+do not forget to check out skillshare's
+two months
+
+1596
+00:22:50,549 --> 00:22:50,559
+two months
+ 
+
+1597
+00:22:50,559 --> 00:22:52,390
+two months
+of free premium using my link in the
+
+1598
+00:22:52,390 --> 00:22:52,400
+of free premium using my link in the
+ 
+
+1599
+00:22:52,400 --> 00:22:53,990
+of free premium using my link in the
+description below and i will see
+
+1600
+00:22:53,990 --> 00:22:54,000
+description below and i will see
+ 
+
+1601
+00:22:54,000 --> 00:23:13,750
+description below and i will see
+you next time goodbye
+
+1602
+00:23:13,750 --> 00:23:13,760
+
+ 
+
+1603
+00:23:13,760 --> 00:23:17,990
+
+[Music]
+
+1604
+00:23:17,990 --> 00:23:18,000
+[Music]
+ 
+
+1605
+00:23:18,000 --> 00:23:20,080
+[Music]
+you
+

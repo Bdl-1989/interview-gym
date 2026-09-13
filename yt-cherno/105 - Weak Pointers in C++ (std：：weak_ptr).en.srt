@@ -1,0 +1,5165 @@
+1
+00:00:00,120 --> 00:00:02,070
+
+weak pointers the pointers for those of
+
+2
+00:00:02,070 --> 00:00:02,080
+weak pointers the pointers for those of
+ 
+
+3
+00:00:02,080 --> 00:00:03,629
+weak pointers the pointers for those of
+you who are just not quite strong enough
+
+4
+00:00:03,629 --> 00:00:03,639
+you who are just not quite strong enough
+ 
+
+5
+00:00:03,639 --> 00:00:04,950
+you who are just not quite strong enough
+to use proper
+
+6
+00:00:04,950 --> 00:00:04,960
+to use proper
+ 
+
+7
+00:00:04,960 --> 00:00:07,070
+to use proper
+pointers recently I made a video as part
+
+8
+00:00:07,070 --> 00:00:07,080
+pointers recently I made a video as part
+ 
+
+9
+00:00:07,080 --> 00:00:08,470
+pointers recently I made a video as part
+of my code review series talking about
+
+10
+00:00:08,470 --> 00:00:08,480
+of my code review series talking about
+ 
+
+11
+00:00:08,480 --> 00:00:11,470
+of my code review series talking about
+why this code failed this like test or
+
+12
+00:00:11,470 --> 00:00:11,480
+why this code failed this like test or
+ 
+
+13
+00:00:11,480 --> 00:00:13,190
+why this code failed this like test or
+application that the person submitted it
+
+14
+00:00:13,190 --> 00:00:13,200
+application that the person submitted it
+ 
+
+15
+00:00:13,200 --> 00:00:15,350
+application that the person submitted it
+for and I specifically mentioned that a
+
+16
+00:00:15,350 --> 00:00:15,360
+for and I specifically mentioned that a
+ 
+
+17
+00:00:15,360 --> 00:00:17,230
+for and I specifically mentioned that a
+potential Improvement in one area would
+
+18
+00:00:17,230 --> 00:00:17,240
+potential Improvement in one area would
+ 
+
+19
+00:00:17,240 --> 00:00:19,470
+potential Improvement in one area would
+have been to use weak pointers instead
+
+20
+00:00:19,470 --> 00:00:19,480
+have been to use weak pointers instead
+ 
+
+21
+00:00:19,480 --> 00:00:21,710
+have been to use weak pointers instead
+of just raw pointers okay so yeah the
+
+22
+00:00:21,710 --> 00:00:21,720
+of just raw pointers okay so yeah the
+ 
+
+23
+00:00:21,720 --> 00:00:22,950
+of just raw pointers okay so yeah the
+the way that these observers get
+
+24
+00:00:22,950 --> 00:00:22,960
+the way that these observers get
+ 
+
+25
+00:00:22,960 --> 00:00:25,189
+the way that these observers get
+registered here is they get the raw
+
+26
+00:00:25,189 --> 00:00:25,199
+registered here is they get the raw
+ 
+
+27
+00:00:25,199 --> 00:00:27,830
+registered here is they get the raw
+pointer from an actual shed pointer so
+
+28
+00:00:27,830 --> 00:00:27,840
+pointer from an actual shed pointer so
+ 
+
+29
+00:00:27,840 --> 00:00:29,710
+pointer from an actual shed pointer so
+yes I'm right in the sense that they are
+
+30
+00:00:29,710 --> 00:00:29,720
+yes I'm right in the sense that they are
+ 
+
+31
+00:00:29,720 --> 00:00:31,830
+yes I'm right in the sense that they are
+kind of trying to use this if I can find
+
+32
+00:00:31,830 --> 00:00:31,840
+kind of trying to use this if I can find
+ 
+
+33
+00:00:31,840 --> 00:00:34,069
+kind of trying to use this if I can find
+it they are trying to use this like a
+
+34
+00:00:34,069 --> 00:00:34,079
+it they are trying to use this like a
+ 
+
+35
+00:00:34,079 --> 00:00:36,030
+it they are trying to use this like a
+weak pointer but the problem is it's not
+
+36
+00:00:36,030 --> 00:00:36,040
+weak pointer but the problem is it's not
+ 
+
+37
+00:00:36,040 --> 00:00:37,630
+weak pointer but the problem is it's not
+that safe because you just have a
+
+38
+00:00:37,630 --> 00:00:37,640
+that safe because you just have a
+ 
+
+39
+00:00:37,640 --> 00:00:38,990
+that safe because you just have a
+pointer you've got a memory address to
+
+40
+00:00:38,990 --> 00:00:39,000
+pointer you've got a memory address to
+ 
+
+41
+00:00:39,000 --> 00:00:40,790
+pointer you've got a memory address to
+something that is like you're not owning
+
+42
+00:00:40,790 --> 00:00:40,800
+something that is like you're not owning
+ 
+
+43
+00:00:40,800 --> 00:00:42,830
+something that is like you're not owning
+it which means it could get deleted and
+
+44
+00:00:42,830 --> 00:00:42,840
+it which means it could get deleted and
+ 
+
+45
+00:00:42,840 --> 00:00:44,709
+it which means it could get deleted and
+you might still have it and if you try
+
+46
+00:00:44,709 --> 00:00:44,719
+you might still have it and if you try
+ 
+
+47
+00:00:44,719 --> 00:00:46,389
+you might still have it and if you try
+and access it like you're accessing
+
+48
+00:00:46,389 --> 00:00:46,399
+and access it like you're accessing
+ 
+
+49
+00:00:46,399 --> 00:00:48,310
+and access it like you're accessing
+freed memory and that would cause a
+
+50
+00:00:48,310 --> 00:00:48,320
+freed memory and that would cause a
+ 
+
+51
+00:00:48,320 --> 00:00:51,069
+freed memory and that would cause a
+crash so the way to go here is to look
+
+52
+00:00:51,069 --> 00:00:51,079
+crash so the way to go here is to look
+ 
+
+53
+00:00:51,079 --> 00:00:53,189
+crash so the way to go here is to look
+up something called a weak pointer STD
+
+54
+00:00:53,189 --> 00:00:53,199
+up something called a weak pointer STD
+ 
+
+55
+00:00:53,199 --> 00:00:54,590
+up something called a weak pointer STD
+weak pointer so I thought today we would
+
+56
+00:00:54,590 --> 00:00:54,600
+weak pointer so I thought today we would
+ 
+
+57
+00:00:54,600 --> 00:00:55,950
+weak pointer so I thought today we would
+just kind of sit down have a bit of a
+
+58
+00:00:55,950 --> 00:00:55,960
+just kind of sit down have a bit of a
+ 
+
+59
+00:00:55,960 --> 00:00:58,270
+just kind of sit down have a bit of a
+discussion as to what weak pointers are
+
+60
+00:00:58,270 --> 00:00:58,280
+discussion as to what weak pointers are
+ 
+
+61
+00:00:58,280 --> 00:01:00,029
+discussion as to what weak pointers are
+when it might be a good idea to use them
+
+62
+00:01:00,029 --> 00:01:00,039
+when it might be a good idea to use them
+ 
+
+63
+00:01:00,039 --> 00:01:02,189
+when it might be a good idea to use them
+and why so first of all what is a weak
+
+64
+00:01:02,189 --> 00:01:02,199
+and why so first of all what is a weak
+ 
+
+65
+00:01:02,199 --> 00:01:03,470
+and why so first of all what is a weak
+pointer when I say weak pointer I'm
+
+66
+00:01:03,470 --> 00:01:03,480
+pointer when I say weak pointer I'm
+ 
+
+67
+00:01:03,480 --> 00:01:05,189
+pointer when I say weak pointer I'm
+specifically talking about SD weak
+
+68
+00:01:05,189 --> 00:01:05,199
+specifically talking about SD weak
+ 
+
+69
+00:01:05,199 --> 00:01:07,710
+specifically talking about SD weak
+pointer it's a class included in the C++
+
+70
+00:01:07,710 --> 00:01:07,720
+pointer it's a class included in the C++
+ 
+
+71
+00:01:07,720 --> 00:01:09,390
+pointer it's a class included in the C++
+standard library and it's specifically
+
+72
+00:01:09,390 --> 00:01:09,400
+standard library and it's specifically
+ 
+
+73
+00:01:09,400 --> 00:01:11,630
+standard library and it's specifically
+designed to be used with shared pointers
+
+74
+00:01:11,630 --> 00:01:11,640
+designed to be used with shared pointers
+ 
+
+75
+00:01:11,640 --> 00:01:13,510
+designed to be used with shared pointers
+let me show you how it works and what it
+
+76
+00:01:13,510 --> 00:01:13,520
+let me show you how it works and what it
+ 
+
+77
+00:01:13,520 --> 00:01:16,230
+let me show you how it works and what it
+does a shared pointer is a wrapper
+
+78
+00:01:16,230 --> 00:01:16,240
+does a shared pointer is a wrapper
+ 
+
+79
+00:01:16,240 --> 00:01:18,749
+does a shared pointer is a wrapper
+around a raw pointer in this case of a
+
+80
+00:01:18,749 --> 00:01:18,759
+around a raw pointer in this case of a
+ 
+
+81
+00:01:18,759 --> 00:01:20,749
+around a raw pointer in this case of a
+heap allocated object that is called
+
+82
+00:01:20,749 --> 00:01:20,759
+heap allocated object that is called
+ 
+
+83
+00:01:20,759 --> 00:01:22,429
+heap allocated object that is called
+object that's the type we're dealing
+
+84
+00:01:22,429 --> 00:01:22,439
+object that's the type we're dealing
+ 
+
+85
+00:01:22,439 --> 00:01:24,749
+object that's the type we're dealing
+with here it's a wrapper around that raw
+
+86
+00:01:24,749 --> 00:01:24,759
+with here it's a wrapper around that raw
+ 
+
+87
+00:01:24,759 --> 00:01:26,749
+with here it's a wrapper around that raw
+pointer that would otherwise be written
+
+88
+00:01:26,749 --> 00:01:26,759
+pointer that would otherwise be written
+ 
+
+89
+00:01:26,759 --> 00:01:28,870
+pointer that would otherwise be written
+like this and the purpose of it is to
+
+90
+00:01:28,870 --> 00:01:28,880
+like this and the purpose of it is to
+ 
+
+91
+00:01:28,880 --> 00:01:30,270
+like this and the purpose of it is to
+kind of automate the life lifetime
+
+92
+00:01:30,270 --> 00:01:30,280
+kind of automate the life lifetime
+ 
+
+93
+00:01:30,280 --> 00:01:32,149
+kind of automate the life lifetime
+management of it so in the simplest
+
+94
+00:01:32,149 --> 00:01:32,159
+management of it so in the simplest
+ 
+
+95
+00:01:32,159 --> 00:01:33,950
+management of it so in the simplest
+scenario if we just look at this exact
+
+96
+00:01:33,950 --> 00:01:33,960
+scenario if we just look at this exact
+ 
+
+97
+00:01:33,960 --> 00:01:36,590
+scenario if we just look at this exact
+code that we have here very very simple
+
+98
+00:01:36,590 --> 00:01:36,600
+code that we have here very very simple
+ 
+
+99
+00:01:36,600 --> 00:01:38,389
+code that we have here very very simple
+the difference between these two and why
+
+100
+00:01:38,389 --> 00:01:38,399
+the difference between these two and why
+ 
+
+101
+00:01:38,399 --> 00:01:40,590
+the difference between these two and why
+we kind of like Shar pointer is that
+
+102
+00:01:40,590 --> 00:01:40,600
+we kind of like Shar pointer is that
+ 
+
+103
+00:01:40,600 --> 00:01:42,830
+we kind of like Shar pointer is that
+this code will result in this object
+
+104
+00:01:42,830 --> 00:01:42,840
+this code will result in this object
+ 
+
+105
+00:01:42,840 --> 00:01:44,670
+this code will result in this object
+instance being deleted automatically at
+
+106
+00:01:44,670 --> 00:01:44,680
+instance being deleted automatically at
+ 
+
+107
+00:01:44,680 --> 00:01:46,230
+instance being deleted automatically at
+the end of this scope whereas with
+
+108
+00:01:46,230 --> 00:01:46,240
+the end of this scope whereas with
+ 
+
+109
+00:01:46,240 --> 00:01:48,389
+the end of this scope whereas with
+object two we would manually have to
+
+110
+00:01:48,389 --> 00:01:48,399
+object two we would manually have to
+ 
+
+111
+00:01:48,399 --> 00:01:50,950
+object two we would manually have to
+call delete now technically unique
+
+112
+00:01:50,950 --> 00:01:50,960
+call delete now technically unique
+ 
+
+113
+00:01:50,960 --> 00:01:52,310
+call delete now technically unique
+pointer would obviously do the same
+
+114
+00:01:52,310 --> 00:01:52,320
+pointer would obviously do the same
+ 
+
+115
+00:01:52,320 --> 00:01:54,310
+pointer would obviously do the same
+thing if we did SCD make unique here
+
+116
+00:01:54,310 --> 00:01:54,320
+thing if we did SCD make unique here
+ 
+
+117
+00:01:54,320 --> 00:01:55,469
+thing if we did SCD make unique here
+instead of make shared and this was a
+
+118
+00:01:55,469 --> 00:01:55,479
+instead of make shared and this was a
+ 
+
+119
+00:01:55,479 --> 00:01:57,350
+instead of make shared and this was a
+unique pointer it would also be deleted
+
+120
+00:01:57,350 --> 00:01:57,360
+unique pointer it would also be deleted
+ 
+
+121
+00:01:57,360 --> 00:01:58,789
+unique pointer it would also be deleted
+at the end of the scope but the real
+
+122
+00:01:58,789 --> 00:01:58,799
+at the end of the scope but the real
+ 
+
+123
+00:01:58,799 --> 00:02:00,709
+at the end of the scope but the real
+magic of shared points is that we can
+
+124
+00:02:00,709 --> 00:02:00,719
+magic of shared points is that we can
+ 
+
+125
+00:02:00,719 --> 00:02:02,830
+magic of shared points is that we can
+share it we can have multiple places
+
+126
+00:02:02,830 --> 00:02:02,840
+share it we can have multiple places
+ 
+
+127
+00:02:02,840 --> 00:02:05,029
+share it we can have multiple places
+inside our program that contain these
+
+128
+00:02:05,029 --> 00:02:05,039
+inside our program that contain these
+ 
+
+129
+00:02:05,039 --> 00:02:07,630
+inside our program that contain these
+references to that object and when all
+
+130
+00:02:07,630 --> 00:02:07,640
+references to that object and when all
+ 
+
+131
+00:02:07,640 --> 00:02:09,630
+references to that object and when all
+of them are gone when all of them are
+
+132
+00:02:09,630 --> 00:02:09,640
+of them are gone when all of them are
+ 
+
+133
+00:02:09,640 --> 00:02:11,869
+of them are gone when all of them are
+out of scope and the actual shared
+
+134
+00:02:11,869 --> 00:02:11,879
+out of scope and the actual shared
+ 
+
+135
+00:02:11,879 --> 00:02:14,190
+out of scope and the actual shared
+pointer itself gets destroyed as long as
+
+136
+00:02:14,190 --> 00:02:14,200
+pointer itself gets destroyed as long as
+ 
+
+137
+00:02:14,200 --> 00:02:16,150
+pointer itself gets destroyed as long as
+they're all gone there's none left at
+
+138
+00:02:16,150 --> 00:02:16,160
+they're all gone there's none left at
+ 
+
+139
+00:02:16,160 --> 00:02:17,990
+they're all gone there's none left at
+that point our underlying object
+
+140
+00:02:17,990 --> 00:02:18,000
+that point our underlying object
+ 
+
+141
+00:02:18,000 --> 00:02:20,229
+that point our underlying object
+instance gets deleted you can't do that
+
+142
+00:02:20,229 --> 00:02:20,239
+instance gets deleted you can't do that
+ 
+
+143
+00:02:20,239 --> 00:02:21,830
+instance gets deleted you can't do that
+with a unique pointer obviously because
+
+144
+00:02:21,830 --> 00:02:21,840
+with a unique pointer obviously because
+ 
+
+145
+00:02:21,840 --> 00:02:23,630
+with a unique pointer obviously because
+there can only really be one copy of
+
+146
+00:02:23,630 --> 00:02:23,640
+there can only really be one copy of
+ 
+
+147
+00:02:23,640 --> 00:02:25,750
+there can only really be one copy of
+that and that's it it's fantastic for
+
+148
+00:02:25,750 --> 00:02:25,760
+that and that's it it's fantastic for
+ 
+
+149
+00:02:25,760 --> 00:02:27,949
+that and that's it it's fantastic for
+like Scopes but if you have an object
+
+150
+00:02:27,949 --> 00:02:27,959
+like Scopes but if you have an object
+ 
+
+151
+00:02:27,959 --> 00:02:29,509
+like Scopes but if you have an object
+that you want to share around using
+
+152
+00:02:29,509 --> 00:02:29,519
+that you want to share around using
+ 
+
+153
+00:02:29,519 --> 00:02:31,910
+that you want to share around using
+colle use outside of like one given
+
+154
+00:02:31,910 --> 00:02:31,920
+colle use outside of like one given
+ 
+
+155
+00:02:31,920 --> 00:02:34,309
+colle use outside of like one given
+function or class instance then this
+
+156
+00:02:34,309 --> 00:02:34,319
+function or class instance then this
+ 
+
+157
+00:02:34,319 --> 00:02:36,270
+function or class instance then this
+reference counting system which simply
+
+158
+00:02:36,270 --> 00:02:36,280
+reference counting system which simply
+ 
+
+159
+00:02:36,280 --> 00:02:38,949
+reference counting system which simply
+just maintains a count of how many
+
+160
+00:02:38,949 --> 00:02:38,959
+just maintains a count of how many
+ 
+
+161
+00:02:38,959 --> 00:02:40,869
+just maintains a count of how many
+shared pointer references there are to a
+
+162
+00:02:40,869 --> 00:02:40,879
+shared pointer references there are to a
+ 
+
+163
+00:02:40,879 --> 00:02:43,149
+shared pointer references there are to a
+given object instance works really well
+
+164
+00:02:43,149 --> 00:02:43,159
+given object instance works really well
+ 
+
+165
+00:02:43,159 --> 00:02:44,949
+given object instance works really well
+and so for example if I introduce this
+
+166
+00:02:44,949 --> 00:02:44,959
+and so for example if I introduce this
+ 
+
+167
+00:02:44,959 --> 00:02:46,830
+and so for example if I introduce this
+manager structure over here which as you
+
+168
+00:02:46,830 --> 00:02:46,840
+manager structure over here which as you
+ 
+
+169
+00:02:46,840 --> 00:02:49,190
+manager structure over here which as you
+can see holds an object as a Shar
+
+170
+00:02:49,190 --> 00:02:49,200
+can see holds an object as a Shar
+ 
+
+171
+00:02:49,200 --> 00:02:51,350
+can see holds an object as a Shar
+pointer I can share this object that I
+
+172
+00:02:51,350 --> 00:02:51,360
+pointer I can share this object that I
+ 
+
+173
+00:02:51,360 --> 00:02:54,309
+pointer I can share this object that I
+made here in this scope with this other
+
+174
+00:02:54,309 --> 00:02:54,319
+made here in this scope with this other
+ 
+
+175
+00:02:54,319 --> 00:02:56,550
+made here in this scope with this other
+system that is in its own scope might
+
+176
+00:02:56,550 --> 00:02:56,560
+system that is in its own scope might
+ 
+
+177
+00:02:56,560 --> 00:02:58,110
+system that is in its own scope might
+have its own lifetime might do whatever
+
+178
+00:02:58,110 --> 00:02:58,120
+have its own lifetime might do whatever
+ 
+
+179
+00:02:58,120 --> 00:03:00,190
+have its own lifetime might do whatever
+with it and I know that unless unless
+
+180
+00:03:00,190 --> 00:03:00,200
+with it and I know that unless unless
+ 
+
+181
+00:03:00,200 --> 00:03:03,229
+with it and I know that unless unless
+both of these independently die I'm not
+
+182
+00:03:03,229 --> 00:03:03,239
+both of these independently die I'm not
+ 
+
+183
+00:03:03,239 --> 00:03:05,309
+both of these independently die I'm not
+going to lose that underlying object
+
+184
+00:03:05,309 --> 00:03:05,319
+going to lose that underlying object
+ 
+
+185
+00:03:05,319 --> 00:03:06,750
+going to lose that underlying object
+instance so this is just a little bit of
+
+186
+00:03:06,750 --> 00:03:06,760
+instance so this is just a little bit of
+ 
+
+187
+00:03:06,760 --> 00:03:08,190
+instance so this is just a little bit of
+a recap and the reason why I'm going
+
+188
+00:03:08,190 --> 00:03:08,200
+a recap and the reason why I'm going
+ 
+
+189
+00:03:08,200 --> 00:03:10,390
+a recap and the reason why I'm going
+through this is because these we kind of
+
+190
+00:03:10,390 --> 00:03:10,400
+through this is because these we kind of
+ 
+
+191
+00:03:10,400 --> 00:03:11,949
+through this is because these we kind of
+just call these references because this
+
+192
+00:03:11,949 --> 00:03:11,959
+just call these references because this
+ 
+
+193
+00:03:11,959 --> 00:03:13,710
+just call these references because this
+is a reference counting system these
+
+194
+00:03:13,710 --> 00:03:13,720
+is a reference counting system these
+ 
+
+195
+00:03:13,720 --> 00:03:15,949
+is a reference counting system these
+shared pointers but a more specific term
+
+196
+00:03:15,949 --> 00:03:15,959
+shared pointers but a more specific term
+ 
+
+197
+00:03:15,959 --> 00:03:17,509
+shared pointers but a more specific term
+for these kinds of references is
+
+198
+00:03:17,509 --> 00:03:17,519
+for these kinds of references is
+ 
+
+199
+00:03:17,519 --> 00:03:19,710
+for these kinds of references is
+something called a strong reference and
+
+200
+00:03:19,710 --> 00:03:19,720
+something called a strong reference and
+ 
+
+201
+00:03:19,720 --> 00:03:21,309
+something called a strong reference and
+the reason why this is called a strong
+
+202
+00:03:21,309 --> 00:03:21,319
+the reason why this is called a strong
+ 
+
+203
+00:03:21,319 --> 00:03:23,190
+the reason why this is called a strong
+reference is because it's basically it's
+
+204
+00:03:23,190 --> 00:03:23,200
+reference is because it's basically it's
+ 
+
+205
+00:03:23,200 --> 00:03:25,229
+reference is because it's basically it's
+not just an reference to this object
+
+206
+00:03:25,229 --> 00:03:25,239
+not just an reference to this object
+ 
+
+207
+00:03:25,239 --> 00:03:27,030
+not just an reference to this object
+that allows us to use it it's a
+
+208
+00:03:27,030 --> 00:03:27,040
+that allows us to use it it's a
+ 
+
+209
+00:03:27,040 --> 00:03:29,149
+that allows us to use it it's a
+reference that is strong enough to
+
+210
+00:03:29,149 --> 00:03:29,159
+reference that is strong enough to
+ 
+
+211
+00:03:29,159 --> 00:03:31,229
+reference that is strong enough to
+actually keep keep the object alive
+
+212
+00:03:31,229 --> 00:03:31,239
+actually keep keep the object alive
+ 
+
+213
+00:03:31,239 --> 00:03:32,990
+actually keep keep the object alive
+meaning that as long as I keep that
+
+214
+00:03:32,990 --> 00:03:33,000
+meaning that as long as I keep that
+ 
+
+215
+00:03:33,000 --> 00:03:35,229
+meaning that as long as I keep that
+reference alive I'm actually preventing
+
+216
+00:03:35,229 --> 00:03:35,239
+reference alive I'm actually preventing
+ 
+
+217
+00:03:35,239 --> 00:03:37,070
+reference alive I'm actually preventing
+that underlying object instance from
+
+218
+00:03:37,070 --> 00:03:37,080
+that underlying object instance from
+ 
+
+219
+00:03:37,080 --> 00:03:39,869
+that underlying object instance from
+dying picture that the power to prevent
+
+220
+00:03:39,869 --> 00:03:39,879
+dying picture that the power to prevent
+ 
+
+221
+00:03:39,879 --> 00:03:42,309
+dying picture that the power to prevent
+something from dying G where can I learn
+
+222
+00:03:42,309 --> 00:03:42,319
+something from dying G where can I learn
+ 
+
+223
+00:03:42,319 --> 00:03:44,429
+something from dying G where can I learn
+this power not from a Jedi I'll tell you
+
+224
+00:03:44,429 --> 00:03:44,439
+this power not from a Jedi I'll tell you
+ 
+
+225
+00:03:44,439 --> 00:03:45,830
+this power not from a Jedi I'll tell you
+where you can learn that power you can
+
+226
+00:03:45,830 --> 00:03:45,840
+where you can learn that power you can
+ 
+
+227
+00:03:45,840 --> 00:03:47,910
+where you can learn that power you can
+learn that power with brilliant.org
+
+228
+00:03:47,910 --> 00:03:47,920
+learn that power with brilliant.org
+ 
+
+229
+00:03:47,920 --> 00:03:49,830
+learn that power with brilliant.org
+30-day free trial for those of you who
+
+230
+00:03:49,830 --> 00:03:49,840
+30-day free trial for those of you who
+ 
+
+231
+00:03:49,840 --> 00:03:51,070
+30-day free trial for those of you who
+don't know brilliant.org is an amazing
+
+232
+00:03:51,070 --> 00:03:51,080
+don't know brilliant.org is an amazing
+ 
+
+233
+00:03:51,080 --> 00:03:52,429
+don't know brilliant.org is an amazing
+website filled with lots and lots of
+
+234
+00:03:52,429 --> 00:03:52,439
+website filled with lots and lots of
+ 
+
+235
+00:03:52,439 --> 00:03:54,309
+website filled with lots and lots of
+really high quality courses on various
+
+236
+00:03:54,309 --> 00:03:54,319
+really high quality courses on various
+ 
+
+237
+00:03:54,319 --> 00:03:56,429
+really high quality courses on various
+stem topics and thanks to their 30-day
+
+238
+00:03:56,429 --> 00:03:56,439
+stem topics and thanks to their 30-day
+ 
+
+239
+00:03:56,439 --> 00:03:58,670
+stem topics and thanks to their 30-day
+free trial you can explore all of these
+
+240
+00:03:58,670 --> 00:03:58,680
+free trial you can explore all of these
+ 
+
+241
+00:03:58,680 --> 00:04:00,470
+free trial you can explore all of these
+courses for free and see if you like
+
+242
+00:04:00,470 --> 00:04:00,480
+courses for free and see if you like
+ 
+
+243
+00:04:00,480 --> 00:04:01,830
+courses for free and see if you like
+them if you're just getting into
+
+244
+00:04:01,830 --> 00:04:01,840
+them if you're just getting into
+ 
+
+245
+00:04:01,840 --> 00:04:03,390
+them if you're just getting into
+programming then I highly recommend you
+
+246
+00:04:03,390 --> 00:04:03,400
+programming then I highly recommend you
+ 
+
+247
+00:04:03,400 --> 00:04:05,149
+programming then I highly recommend you
+take a look at brilliant's excellent
+
+248
+00:04:05,149 --> 00:04:05,159
+take a look at brilliant's excellent
+ 
+
+249
+00:04:05,159 --> 00:04:06,869
+take a look at brilliant's excellent
+beginner computer science courses
+
+250
+00:04:06,869 --> 00:04:06,879
+beginner computer science courses
+ 
+
+251
+00:04:06,879 --> 00:04:07,789
+beginner computer science courses
+they're really going to make sure that
+
+252
+00:04:07,789 --> 00:04:07,799
+they're really going to make sure that
+ 
+
+253
+00:04:07,799 --> 00:04:09,550
+they're really going to make sure that
+you have the right frame of mind and
+
+254
+00:04:09,550 --> 00:04:09,560
+you have the right frame of mind and
+ 
+
+255
+00:04:09,560 --> 00:04:11,550
+you have the right frame of mind and
+teach you how to think like a programmer
+
+256
+00:04:11,550 --> 00:04:11,560
+teach you how to think like a programmer
+ 
+
+257
+00:04:11,560 --> 00:04:13,069
+teach you how to think like a programmer
+and honestly it's really easy to just
+
+258
+00:04:13,069 --> 00:04:13,079
+and honestly it's really easy to just
+ 
+
+259
+00:04:13,079 --> 00:04:14,789
+and honestly it's really easy to just
+pick it up and get learning because all
+
+260
+00:04:14,789 --> 00:04:14,799
+pick it up and get learning because all
+ 
+
+261
+00:04:14,799 --> 00:04:16,550
+pick it up and get learning because all
+of Brilliance courses are extremely
+
+262
+00:04:16,550 --> 00:04:16,560
+of Brilliance courses are extremely
+ 
+
+263
+00:04:16,560 --> 00:04:18,949
+of Brilliance courses are extremely
+visual engaging and interactive instead
+
+264
+00:04:18,949 --> 00:04:18,959
+visual engaging and interactive instead
+ 
+
+265
+00:04:18,959 --> 00:04:20,509
+visual engaging and interactive instead
+of just sitting back and watching videos
+
+266
+00:04:20,509 --> 00:04:20,519
+of just sitting back and watching videos
+ 
+
+267
+00:04:20,519 --> 00:04:22,270
+of just sitting back and watching videos
+and zoning out you'll actually have to
+
+268
+00:04:22,270 --> 00:04:22,280
+and zoning out you'll actually have to
+ 
+
+269
+00:04:22,280 --> 00:04:23,670
+and zoning out you'll actually have to
+interact with the teaching material
+
+270
+00:04:23,670 --> 00:04:23,680
+interact with the teaching material
+ 
+
+271
+00:04:23,680 --> 00:04:24,990
+interact with the teaching material
+they'll get you to actually drag things
+
+272
+00:04:24,990 --> 00:04:25,000
+they'll get you to actually drag things
+ 
+
+273
+00:04:25,000 --> 00:04:26,990
+they'll get you to actually drag things
+around build these kind of flow graphs
+
+274
+00:04:26,990 --> 00:04:27,000
+around build these kind of flow graphs
+ 
+
+275
+00:04:27,000 --> 00:04:29,189
+around build these kind of flow graphs
+see visually how everything kind of fits
+
+276
+00:04:29,189 --> 00:04:29,199
+see visually how everything kind of fits
+ 
+
+277
+00:04:29,199 --> 00:04:30,590
+see visually how everything kind of fits
+together and and works which is
+
+278
+00:04:30,590 --> 00:04:30,600
+together and and works which is
+ 
+
+279
+00:04:30,600 --> 00:04:32,230
+together and and works which is
+fantastic and then of course everybody's
+
+280
+00:04:32,230 --> 00:04:32,240
+fantastic and then of course everybody's
+ 
+
+281
+00:04:32,240 --> 00:04:34,350
+fantastic and then of course everybody's
+favorite subject math brilliant has some
+
+282
+00:04:34,350 --> 00:04:34,360
+favorite subject math brilliant has some
+ 
+
+283
+00:04:34,360 --> 00:04:36,550
+favorite subject math brilliant has some
+of the best math courses I've honestly
+
+284
+00:04:36,550 --> 00:04:36,560
+of the best math courses I've honestly
+ 
+
+285
+00:04:36,560 --> 00:04:38,629
+of the best math courses I've honestly
+ever seen and the reason why is because
+
+286
+00:04:38,629 --> 00:04:38,639
+ever seen and the reason why is because
+ 
+
+287
+00:04:38,639 --> 00:04:40,790
+ever seen and the reason why is because
+I just think math is such a beautiful
+
+288
+00:04:40,790 --> 00:04:40,800
+I just think math is such a beautiful
+ 
+
+289
+00:04:40,800 --> 00:04:42,510
+I just think math is such a beautiful
+topic to teach visually it really
+
+290
+00:04:42,510 --> 00:04:42,520
+topic to teach visually it really
+ 
+
+291
+00:04:42,520 --> 00:04:43,990
+topic to teach visually it really
+benefits from like these widgets that
+
+292
+00:04:43,990 --> 00:04:44,000
+benefits from like these widgets that
+ 
+
+293
+00:04:44,000 --> 00:04:45,430
+benefits from like these widgets that
+you can drag around especially for the
+
+294
+00:04:45,430 --> 00:04:45,440
+you can drag around especially for the
+ 
+
+295
+00:04:45,440 --> 00:04:47,430
+you can drag around especially for the
+more advanced topics like calculus and
+
+296
+00:04:47,430 --> 00:04:47,440
+more advanced topics like calculus and
+ 
+
+297
+00:04:47,440 --> 00:04:49,150
+more advanced topics like calculus and
+getting quizzed every step of the way to
+
+298
+00:04:49,150 --> 00:04:49,160
+getting quizzed every step of the way to
+ 
+
+299
+00:04:49,160 --> 00:04:50,189
+getting quizzed every step of the way to
+make sure that you're actually learning
+
+300
+00:04:50,189 --> 00:04:50,199
+make sure that you're actually learning
+ 
+
+301
+00:04:50,199 --> 00:04:51,670
+make sure that you're actually learning
+and retaining this information really
+
+302
+00:04:51,670 --> 00:04:51,680
+and retaining this information really
+ 
+
+303
+00:04:51,680 --> 00:04:53,830
+and retaining this information really
+makes for a very powerful learning
+
+304
+00:04:53,830 --> 00:04:53,840
+makes for a very powerful learning
+ 
+
+305
+00:04:53,840 --> 00:04:55,870
+makes for a very powerful learning
+experience and as I mentioned 30-day
+
+306
+00:04:55,870 --> 00:04:55,880
+experience and as I mentioned 30-day
+ 
+
+307
+00:04:55,880 --> 00:04:57,870
+experience and as I mentioned 30-day
+free trial just go to br/ theurn link
+
+308
+00:04:57,870 --> 00:04:57,880
+free trial just go to br/ theurn link
+ 
+
+309
+00:04:57,880 --> 00:04:59,749
+free trial just go to br/ theurn link
+will be in description below try it out
+
+310
+00:04:59,749 --> 00:04:59,759
+will be in description below try it out
+ 
+
+311
+00:04:59,759 --> 00:05:01,430
+will be in description below try it out
+for yourselves see if you like it and if
+
+312
+00:05:01,430 --> 00:05:01,440
+for yourselves see if you like it and if
+ 
+
+313
+00:05:01,440 --> 00:05:03,230
+for yourselves see if you like it and if
+you do go on to like it Brant have been
+
+314
+00:05:03,230 --> 00:05:03,240
+you do go on to like it Brant have been
+ 
+
+315
+00:05:03,240 --> 00:05:05,310
+you do go on to like it Brant have been
+nice enough to offer 20% off an annual
+
+316
+00:05:05,310 --> 00:05:05,320
+nice enough to offer 20% off an annual
+ 
+
+317
+00:05:05,320 --> 00:05:06,909
+nice enough to offer 20% off an annual
+premium subscription using that link in
+
+318
+00:05:06,909 --> 00:05:06,919
+premium subscription using that link in
+ 
+
+319
+00:05:06,919 --> 00:05:08,230
+premium subscription using that link in
+the description below huge thank you to
+
+320
+00:05:08,230 --> 00:05:08,240
+the description below huge thank you to
+ 
+
+321
+00:05:08,240 --> 00:05:09,990
+the description below huge thank you to
+brilliant as always for sponsoring this
+
+322
+00:05:09,990 --> 00:05:10,000
+brilliant as always for sponsoring this
+ 
+
+323
+00:05:10,000 --> 00:05:12,070
+brilliant as always for sponsoring this
+video so back to preventing things from
+
+324
+00:05:12,070 --> 00:05:12,080
+video so back to preventing things from
+ 
+
+325
+00:05:12,080 --> 00:05:14,909
+video so back to preventing things from
+dying shared pointers strong references
+
+326
+00:05:14,909 --> 00:05:14,919
+dying shared pointers strong references
+ 
+
+327
+00:05:14,919 --> 00:05:17,390
+dying shared pointers strong references
+they will keep things alive they're also
+
+328
+00:05:17,390 --> 00:05:17,400
+they will keep things alive they're also
+ 
+
+329
+00:05:17,400 --> 00:05:18,870
+they will keep things alive they're also
+called an owning reference that
+
+330
+00:05:18,870 --> 00:05:18,880
+called an owning reference that
+ 
+
+331
+00:05:18,880 --> 00:05:20,629
+called an owning reference that
+basically just means that they I guess
+
+332
+00:05:20,629 --> 00:05:20,639
+basically just means that they I guess
+ 
+
+333
+00:05:20,639 --> 00:05:22,990
+basically just means that they I guess
+take ownership of an object ownership
+
+334
+00:05:22,990 --> 00:05:23,000
+take ownership of an object ownership
+ 
+
+335
+00:05:23,000 --> 00:05:24,510
+take ownership of an object ownership
+they they still share ownership it's not
+
+336
+00:05:24,510 --> 00:05:24,520
+they they still share ownership it's not
+ 
+
+337
+00:05:24,520 --> 00:05:26,909
+they they still share ownership it's not
+like they are the sole owner but in this
+
+338
+00:05:26,909 --> 00:05:26,919
+like they are the sole owner but in this
+ 
+
+339
+00:05:26,919 --> 00:05:29,830
+like they are the sole owner but in this
+case by sharing this object with the
+
+340
+00:05:29,830 --> 00:05:29,840
+case by sharing this object with the
+ 
+
+341
+00:05:29,840 --> 00:05:31,749
+case by sharing this object with the
+manager I'm now saying that this
+
+342
+00:05:31,749 --> 00:05:31,759
+manager I'm now saying that this
+ 
+
+343
+00:05:31,759 --> 00:05:34,029
+manager I'm now saying that this
+underlying instance won't die until
+
+344
+00:05:34,029 --> 00:05:34,039
+underlying instance won't die until
+ 
+
+345
+00:05:34,039 --> 00:05:37,110
+underlying instance won't die until
+manager also is okay with it Dying by I
+
+346
+00:05:37,110 --> 00:05:37,120
+manager also is okay with it Dying by I
+ 
+
+347
+00:05:37,120 --> 00:05:38,990
+manager also is okay with it Dying by I
+guess it dying itself lots of dying
+
+348
+00:05:38,990 --> 00:05:39,000
+guess it dying itself lots of dying
+ 
+
+349
+00:05:39,000 --> 00:05:41,350
+guess it dying itself lots of dying
+going on welcome to C++ so then what do
+
+350
+00:05:41,350 --> 00:05:41,360
+going on welcome to C++ so then what do
+ 
+
+351
+00:05:41,360 --> 00:05:43,189
+going on welcome to C++ so then what do
+people usually do if they don't want
+
+352
+00:05:43,189 --> 00:05:43,199
+people usually do if they don't want
+ 
+
+353
+00:05:43,199 --> 00:05:46,270
+people usually do if they don't want
+this ownership kind of owning strong
+
+354
+00:05:46,270 --> 00:05:46,280
+this ownership kind of owning strong
+ 
+
+355
+00:05:46,280 --> 00:05:48,029
+this ownership kind of owning strong
+reference what if I just want to give
+
+356
+00:05:48,029 --> 00:05:48,039
+reference what if I just want to give
+ 
+
+357
+00:05:48,039 --> 00:05:50,510
+reference what if I just want to give
+manager access to this object but I'm
+
+358
+00:05:50,510 --> 00:05:50,520
+manager access to this object but I'm
+ 
+
+359
+00:05:50,520 --> 00:05:52,790
+manager access to this object but I'm
+cool if it dies like it's fine for it to
+
+360
+00:05:52,790 --> 00:05:52,800
+cool if it dies like it's fine for it to
+ 
+
+361
+00:05:52,800 --> 00:05:54,790
+cool if it dies like it's fine for it to
+die I don't want to be the one stopping
+
+362
+00:05:54,790 --> 00:05:54,800
+die I don't want to be the one stopping
+ 
+
+363
+00:05:54,800 --> 00:05:56,790
+die I don't want to be the one stopping
+it from dying it's a little too close of
+
+364
+00:05:56,790 --> 00:05:56,800
+it from dying it's a little too close of
+ 
+
+365
+00:05:56,800 --> 00:05:58,590
+it from dying it's a little too close of
+a relationship with this object here I
+
+366
+00:05:58,590 --> 00:05:58,600
+a relationship with this object here I
+ 
+
+367
+00:05:58,600 --> 00:05:59,870
+a relationship with this object here I
+just want to be chill I just want to be
+
+368
+00:05:59,870 --> 00:05:59,880
+just want to be chill I just want to be
+ 
+
+369
+00:05:59,880 --> 00:06:02,230
+just want to be chill I just want to be
+like you die it's cool man but if you're
+
+370
+00:06:02,230 --> 00:06:02,240
+like you die it's cool man but if you're
+ 
+
+371
+00:06:02,240 --> 00:06:05,230
+like you die it's cool man but if you're
+alive I might use you so one way to do
+
+372
+00:06:05,230 --> 00:06:05,240
+alive I might use you so one way to do
+ 
+
+373
+00:06:05,240 --> 00:06:07,430
+alive I might use you so one way to do
+this is to Simply drop this shared
+
+374
+00:06:07,430 --> 00:06:07,440
+this is to Simply drop this shared
+ 
+
+375
+00:06:07,440 --> 00:06:09,390
+this is to Simply drop this shared
+pointer aspect we could just go back to
+
+376
+00:06:09,390 --> 00:06:09,400
+pointer aspect we could just go back to
+ 
+
+377
+00:06:09,400 --> 00:06:11,870
+pointer aspect we could just go back to
+this being a raw pointer in that case
+
+378
+00:06:11,870 --> 00:06:11,880
+this being a raw pointer in that case
+ 
+
+379
+00:06:11,880 --> 00:06:13,350
+this being a raw pointer in that case
+we'd have to change this API to
+
+380
+00:06:13,350 --> 00:06:13,360
+we'd have to change this API to
+ 
+
+381
+00:06:13,360 --> 00:06:16,270
+we'd have to change this API to
+basically be do get like that so on the
+
+382
+00:06:16,270 --> 00:06:16,280
+basically be do get like that so on the
+ 
+
+383
+00:06:16,280 --> 00:06:17,629
+basically be do get like that so on the
+actual shed pointer itself not the
+
+384
+00:06:17,629 --> 00:06:17,639
+actual shed pointer itself not the
+ 
+
+385
+00:06:17,639 --> 00:06:19,510
+actual shed pointer itself not the
+object obviously the shed pointer we're
+
+386
+00:06:19,510 --> 00:06:19,520
+object obviously the shed pointer we're
+ 
+
+387
+00:06:19,520 --> 00:06:21,589
+object obviously the shed pointer we're
+calling the get function which just
+
+388
+00:06:21,589 --> 00:06:21,599
+calling the get function which just
+ 
+
+389
+00:06:21,599 --> 00:06:23,589
+calling the get function which just
+Returns the raw pointer you can see it
+
+390
+00:06:23,589 --> 00:06:23,599
+Returns the raw pointer you can see it
+ 
+
+391
+00:06:23,599 --> 00:06:26,029
+Returns the raw pointer you can see it
+over here right this now means that if
+
+392
+00:06:26,029 --> 00:06:26,039
+over here right this now means that if
+ 
+
+393
+00:06:26,039 --> 00:06:27,950
+over here right this now means that if
+this object does in fact die what does
+
+394
+00:06:27,950 --> 00:06:27,960
+this object does in fact die what does
+ 
+
+395
+00:06:27,960 --> 00:06:30,469
+this object does in fact die what does
+manager have just a point Po and what is
+
+396
+00:06:30,469 --> 00:06:30,479
+manager have just a point Po and what is
+ 
+
+397
+00:06:30,479 --> 00:06:32,309
+manager have just a point Po and what is
+that just an integer just a memory
+
+398
+00:06:32,309 --> 00:06:32,319
+that just an integer just a memory
+ 
+
+399
+00:06:32,319 --> 00:06:34,230
+that just an integer just a memory
+address so obviously this can't do
+
+400
+00:06:34,230 --> 00:06:34,240
+address so obviously this can't do
+ 
+
+401
+00:06:34,240 --> 00:06:36,790
+address so obviously this can't do
+anything to keep that object from dying
+
+402
+00:06:36,790 --> 00:06:36,800
+anything to keep that object from dying
+ 
+
+403
+00:06:36,800 --> 00:06:38,390
+anything to keep that object from dying
+it's going to die or it's not going to
+
+404
+00:06:38,390 --> 00:06:38,400
+it's going to die or it's not going to
+ 
+
+405
+00:06:38,400 --> 00:06:40,990
+it's going to die or it's not going to
+die all we are holding is basically like
+
+406
+00:06:40,990 --> 00:06:41,000
+die all we are holding is basically like
+ 
+
+407
+00:06:41,000 --> 00:06:43,670
+die all we are holding is basically like
+some kind of number which just says
+
+408
+00:06:43,670 --> 00:06:43,680
+some kind of number which just says
+ 
+
+409
+00:06:43,680 --> 00:06:46,150
+some kind of number which just says
+where is it in memory now hopefully for
+
+410
+00:06:46,150 --> 00:06:46,160
+where is it in memory now hopefully for
+ 
+
+411
+00:06:46,160 --> 00:06:48,710
+where is it in memory now hopefully for
+a lot of you this already seems like a
+
+412
+00:06:48,710 --> 00:06:48,720
+a lot of you this already seems like a
+ 
+
+413
+00:06:48,720 --> 00:06:50,469
+a lot of you this already seems like a
+little bit of a problem because if we
+
+414
+00:06:50,469 --> 00:06:50,479
+little bit of a problem because if we
+ 
+
+415
+00:06:50,479 --> 00:06:52,870
+little bit of a problem because if we
+are simply holding this number in memory
+
+416
+00:06:52,870 --> 00:06:52,880
+are simply holding this number in memory
+ 
+
+417
+00:06:52,880 --> 00:06:54,990
+are simply holding this number in memory
+how do we know if it's safe to use it or
+
+418
+00:06:54,990 --> 00:06:55,000
+how do we know if it's safe to use it or
+ 
+
+419
+00:06:55,000 --> 00:06:57,390
+how do we know if it's safe to use it or
+not because what happens if it has in
+
+420
+00:06:57,390 --> 00:06:57,400
+not because what happens if it has in
+ 
+
+421
+00:06:57,400 --> 00:06:59,189
+not because what happens if it has in
+fact been deleted we've lost it he's
+
+422
+00:06:59,189 --> 00:06:59,199
+fact been deleted we've lost it he's
+ 
+
+423
+00:06:59,199 --> 00:07:01,350
+fact been deleted we've lost it he's
+dead gym what happens if we try and use
+
+424
+00:07:01,350 --> 00:07:01,360
+dead gym what happens if we try and use
+ 
+
+425
+00:07:01,360 --> 00:07:03,990
+dead gym what happens if we try and use
+it in that case an explosion will happen
+
+426
+00:07:03,990 --> 00:07:04,000
+it in that case an explosion will happen
+ 
+
+427
+00:07:04,000 --> 00:07:05,629
+it in that case an explosion will happen
+and the thing is the worst part about
+
+428
+00:07:05,629 --> 00:07:05,639
+and the thing is the worst part about
+ 
+
+429
+00:07:05,639 --> 00:07:08,270
+and the thing is the worst part about
+this is you really can't do anything to
+
+430
+00:07:08,270 --> 00:07:08,280
+this is you really can't do anything to
+ 
+
+431
+00:07:08,280 --> 00:07:10,430
+this is you really can't do anything to
+actually check that can you because if
+
+432
+00:07:10,430 --> 00:07:10,440
+actually check that can you because if
+ 
+
+433
+00:07:10,440 --> 00:07:11,990
+actually check that can you because if
+you could do something like that well
+
+434
+00:07:11,990 --> 00:07:12,000
+you could do something like that well
+ 
+
+435
+00:07:12,000 --> 00:07:13,749
+you could do something like that well
+that would be cool but that only works
+
+436
+00:07:13,749 --> 00:07:13,759
+that would be cool but that only works
+ 
+
+437
+00:07:13,759 --> 00:07:16,589
+that would be cool but that only works
+if something sets this to null right if
+
+438
+00:07:16,589 --> 00:07:16,599
+if something sets this to null right if
+ 
+
+439
+00:07:16,599 --> 00:07:18,670
+if something sets this to null right if
+I set this to something like this and
+
+440
+00:07:18,670 --> 00:07:18,680
+I set this to something like this and
+ 
+
+441
+00:07:18,680 --> 00:07:19,830
+I set this to something like this and
+actually let's make this a little bit
+
+442
+00:07:19,830 --> 00:07:19,840
+actually let's make this a little bit
+ 
+
+443
+00:07:19,840 --> 00:07:22,150
+actually let's make this a little bit
+more complicated let's maybe put manager
+
+444
+00:07:22,150 --> 00:07:22,160
+more complicated let's maybe put manager
+ 
+
+445
+00:07:22,160 --> 00:07:24,029
+more complicated let's maybe put manager
+up here so it doesn't die and then what
+
+446
+00:07:24,029 --> 00:07:24,039
+up here so it doesn't die and then what
+ 
+
+447
+00:07:24,039 --> 00:07:26,629
+up here so it doesn't die and then what
+I'm going to do is put this into a scope
+
+448
+00:07:26,629 --> 00:07:26,639
+I'm going to do is put this into a scope
+ 
+
+449
+00:07:26,639 --> 00:07:28,469
+I'm going to do is put this into a scope
+let's get rid of this as well so if I
+
+450
+00:07:28,469 --> 00:07:28,479
+let's get rid of this as well so if I
+ 
+
+451
+00:07:28,479 --> 00:07:30,309
+let's get rid of this as well so if I
+take a look at this now and just to make
+
+452
+00:07:30,309 --> 00:07:30,319
+take a look at this now and just to make
+ 
+
+453
+00:07:30,319 --> 00:07:31,990
+take a look at this now and just to make
+this even more explicit let's add a
+
+454
+00:07:31,990 --> 00:07:32,000
+this even more explicit let's add a
+ 
+
+455
+00:07:32,000 --> 00:07:34,869
+this even more explicit let's add a
+Destructor where we'll print deleted
+
+456
+00:07:34,869 --> 00:07:34,879
+Destructor where we'll print deleted
+ 
+
+457
+00:07:34,879 --> 00:07:36,950
+Destructor where we'll print deleted
+object if I run this program then you
+
+458
+00:07:36,950 --> 00:07:36,960
+object if I run this program then you
+ 
+
+459
+00:07:36,960 --> 00:07:38,749
+object if I run this program then you
+can see the problem I've deleted the
+
+460
+00:07:38,749 --> 00:07:38,759
+can see the problem I've deleted the
+ 
+
+461
+00:07:38,759 --> 00:07:40,830
+can see the problem I've deleted the
+object first and then what am I doing
+
+462
+00:07:40,830 --> 00:07:40,840
+object first and then what am I doing
+ 
+
+463
+00:07:40,840 --> 00:07:42,710
+object first and then what am I doing
+I'm able to access that pointer and
+
+464
+00:07:42,710 --> 00:07:42,720
+I'm able to access that pointer and
+ 
+
+465
+00:07:42,720 --> 00:07:44,350
+I'm able to access that pointer and
+obviously all we're doing here is we're
+
+466
+00:07:44,350 --> 00:07:44,360
+obviously all we're doing here is we're
+ 
+
+467
+00:07:44,360 --> 00:07:45,830
+obviously all we're doing here is we're
+actually printing the value of the
+
+468
+00:07:45,830 --> 00:07:45,840
+actually printing the value of the
+ 
+
+469
+00:07:45,840 --> 00:07:47,469
+actually printing the value of the
+pointer we're not accessing the memory
+
+470
+00:07:47,469 --> 00:07:47,479
+pointer we're not accessing the memory
+ 
+
+471
+00:07:47,479 --> 00:07:49,749
+pointer we're not accessing the memory
+at that memory address we're just simply
+
+472
+00:07:49,749 --> 00:07:49,759
+at that memory address we're just simply
+ 
+
+473
+00:07:49,759 --> 00:07:51,469
+at that memory address we're just simply
+printing the memory address which is
+
+474
+00:07:51,469 --> 00:07:51,479
+printing the memory address which is
+ 
+
+475
+00:07:51,479 --> 00:07:54,110
+printing the memory address which is
+obviously fine to do in any case but you
+
+476
+00:07:54,110 --> 00:07:54,120
+obviously fine to do in any case but you
+ 
+
+477
+00:07:54,120 --> 00:07:56,149
+obviously fine to do in any case but you
+can see that it still looks like a valid
+
+478
+00:07:56,149 --> 00:07:56,159
+can see that it still looks like a valid
+ 
+
+479
+00:07:56,159 --> 00:07:57,909
+can see that it still looks like a valid
+memory address which means that this
+
+480
+00:07:57,909 --> 00:07:57,919
+memory address which means that this
+ 
+
+481
+00:07:57,919 --> 00:08:00,589
+memory address which means that this
+code will run fine the only way in this
+
+482
+00:08:00,589 --> 00:08:00,599
+code will run fine the only way in this
+ 
+
+483
+00:08:00,599 --> 00:08:02,390
+code will run fine the only way in this
+case to get around that would be if we
+
+484
+00:08:02,390 --> 00:08:02,400
+case to get around that would be if we
+ 
+
+485
+00:08:02,400 --> 00:08:04,990
+case to get around that would be if we
+explicitly after deleting it actually
+
+486
+00:08:04,990 --> 00:08:05,000
+explicitly after deleting it actually
+ 
+
+487
+00:08:05,000 --> 00:08:06,950
+explicitly after deleting it actually
+set that to null but like we don't even
+
+488
+00:08:06,950 --> 00:08:06,960
+set that to null but like we don't even
+ 
+
+489
+00:08:06,960 --> 00:08:08,510
+set that to null but like we don't even
+know if we're going to delete it here do
+
+490
+00:08:08,510 --> 00:08:08,520
+know if we're going to delete it here do
+ 
+
+491
+00:08:08,520 --> 00:08:10,629
+know if we're going to delete it here do
+we we have no idea because something
+
+492
+00:08:10,629 --> 00:08:10,639
+we we have no idea because something
+ 
+
+493
+00:08:10,639 --> 00:08:13,869
+we we have no idea because something
+else might also have a Shar pointer of
+
+494
+00:08:13,869 --> 00:08:13,879
+else might also have a Shar pointer of
+ 
+
+495
+00:08:13,879 --> 00:08:15,589
+else might also have a Shar pointer of
+that object because we can share it
+
+496
+00:08:15,589 --> 00:08:15,599
+that object because we can share it
+ 
+
+497
+00:08:15,599 --> 00:08:17,670
+that object because we can share it
+around so we've kind of created this
+
+498
+00:08:17,670 --> 00:08:17,680
+around so we've kind of created this
+ 
+
+499
+00:08:17,680 --> 00:08:20,309
+around so we've kind of created this
+like impossible situation here where we
+
+500
+00:08:20,309 --> 00:08:20,319
+like impossible situation here where we
+ 
+
+501
+00:08:20,319 --> 00:08:22,869
+like impossible situation here where we
+have no way of ever knowing when that
+
+502
+00:08:22,869 --> 00:08:22,879
+have no way of ever knowing when that
+ 
+
+503
+00:08:22,879 --> 00:08:25,270
+have no way of ever knowing when that
+shed pointer is completely gone deleted
+
+504
+00:08:25,270 --> 00:08:25,280
+shed pointer is completely gone deleted
+ 
+
+505
+00:08:25,280 --> 00:08:27,550
+shed pointer is completely gone deleted
+just disappeared and instead we're left
+
+506
+00:08:27,550 --> 00:08:27,560
+just disappeared and instead we're left
+ 
+
+507
+00:08:27,560 --> 00:08:30,629
+just disappeared and instead we're left
+with a situation where we have a raw
+
+508
+00:08:30,629 --> 00:08:30,639
+with a situation where we have a raw
+ 
+
+509
+00:08:30,639 --> 00:08:32,670
+with a situation where we have a raw
+pointer that is always going to have a
+
+510
+00:08:32,670 --> 00:08:32,680
+pointer that is always going to have a
+ 
+
+511
+00:08:32,680 --> 00:08:34,670
+pointer that is always going to have a
+seemingly valid memory address that is
+
+512
+00:08:34,670 --> 00:08:34,680
+seemingly valid memory address that is
+ 
+
+513
+00:08:34,680 --> 00:08:37,589
+seemingly valid memory address that is
+just really a time bomb waiting to just
+
+514
+00:08:37,589 --> 00:08:37,599
+just really a time bomb waiting to just
+ 
+
+515
+00:08:37,599 --> 00:08:39,350
+just really a time bomb waiting to just
+crash and destroy our program so what
+
+516
+00:08:39,350 --> 00:08:39,360
+crash and destroy our program so what
+ 
+
+517
+00:08:39,360 --> 00:08:42,230
+crash and destroy our program so what
+can we do instead of using a raw pointer
+
+518
+00:08:42,230 --> 00:08:42,240
+can we do instead of using a raw pointer
+ 
+
+519
+00:08:42,240 --> 00:08:44,029
+can we do instead of using a raw pointer
+here since clearly that's not going to
+
+520
+00:08:44,029 --> 00:08:44,039
+here since clearly that's not going to
+ 
+
+521
+00:08:44,039 --> 00:08:46,190
+here since clearly that's not going to
+work out too well that is where weak
+
+522
+00:08:46,190 --> 00:08:46,200
+work out too well that is where weak
+ 
+
+523
+00:08:46,200 --> 00:08:49,030
+work out too well that is where weak
+pointers come in they are you can think
+
+524
+00:08:49,030 --> 00:08:49,040
+pointers come in they are you can think
+ 
+
+525
+00:08:49,040 --> 00:08:50,949
+pointers come in they are you can think
+of them as shared pointers cuz I want to
+
+526
+00:08:50,949 --> 00:08:50,959
+of them as shared pointers cuz I want to
+ 
+
+527
+00:08:50,959 --> 00:08:53,110
+of them as shared pointers cuz I want to
+share stuff with you but I don't want
+
+528
+00:08:53,110 --> 00:08:53,120
+share stuff with you but I don't want
+ 
+
+529
+00:08:53,120 --> 00:08:55,230
+share stuff with you but I don't want
+you to own it so I'm not creating a
+
+530
+00:08:55,230 --> 00:08:55,240
+you to own it so I'm not creating a
+ 
+
+531
+00:08:55,240 --> 00:08:56,949
+you to own it so I'm not creating a
+strong reference here to an object I'm
+
+532
+00:08:56,949 --> 00:08:56,959
+strong reference here to an object I'm
+ 
+
+533
+00:08:56,959 --> 00:08:59,110
+strong reference here to an object I'm
+creating a weak reference they're really
+
+534
+00:08:59,110 --> 00:08:59,120
+creating a weak reference they're really
+ 
+
+535
+00:08:59,120 --> 00:09:01,150
+creating a weak reference they're really
+quite powerful like from a kind of
+
+536
+00:09:01,150 --> 00:09:01,160
+quite powerful like from a kind of
+ 
+
+537
+00:09:01,160 --> 00:09:02,870
+quite powerful like from a kind of
+semantics point of view and they're
+
+538
+00:09:02,870 --> 00:09:02,880
+semantics point of view and they're
+ 
+
+539
+00:09:02,880 --> 00:09:05,430
+semantics point of view and they're
+super easy to use so if we transform
+
+540
+00:09:05,430 --> 00:09:05,440
+super easy to use so if we transform
+ 
+
+541
+00:09:05,440 --> 00:09:07,310
+super easy to use so if we transform
+this into using wak pointers instead of
+
+542
+00:09:07,310 --> 00:09:07,320
+this into using wak pointers instead of
+ 
+
+543
+00:09:07,320 --> 00:09:09,470
+this into using wak pointers instead of
+a raw pointer here we would simply have
+
+544
+00:09:09,470 --> 00:09:09,480
+a raw pointer here we would simply have
+ 
+
+545
+00:09:09,480 --> 00:09:11,990
+a raw pointer here we would simply have
+SD weak pointer the type obviously and
+
+546
+00:09:11,990 --> 00:09:12,000
+SD weak pointer the type obviously and
+ 
+
+547
+00:09:12,000 --> 00:09:14,190
+SD weak pointer the type obviously and
+can get rid of this over here instead of
+
+548
+00:09:14,190 --> 00:09:14,200
+can get rid of this over here instead of
+ 
+
+549
+00:09:14,200 --> 00:09:17,389
+can get rid of this over here instead of
+ob. getet we simply assign this to the
+
+550
+00:09:17,389 --> 00:09:17,399
+ob. getet we simply assign this to the
+ 
+
+551
+00:09:17,399 --> 00:09:19,069
+ob. getet we simply assign this to the
+shared pointer itself because weak
+
+552
+00:09:19,069 --> 00:09:19,079
+shared pointer itself because weak
+ 
+
+553
+00:09:19,079 --> 00:09:20,389
+shared pointer itself because weak
+pointer has a Constructor that takes in
+
+554
+00:09:20,389 --> 00:09:20,399
+pointer has a Constructor that takes in
+ 
+
+555
+00:09:20,399 --> 00:09:22,430
+pointer has a Constructor that takes in
+a shared pointer and then the last piece
+
+556
+00:09:22,430 --> 00:09:22,440
+a shared pointer and then the last piece
+ 
+
+557
+00:09:22,440 --> 00:09:24,269
+a shared pointer and then the last piece
+of the puzzle here is how do I do my
+
+558
+00:09:24,269 --> 00:09:24,279
+of the puzzle here is how do I do my
+ 
+
+559
+00:09:24,279 --> 00:09:25,670
+of the puzzle here is how do I do my
+little safety check well there's a
+
+560
+00:09:25,670 --> 00:09:25,680
+little safety check well there's a
+ 
+
+561
+00:09:25,680 --> 00:09:27,509
+little safety check well there's a
+couple ways the best way to probably
+
+562
+00:09:27,509 --> 00:09:27,519
+couple ways the best way to probably
+ 
+
+563
+00:09:27,519 --> 00:09:30,030
+couple ways the best way to probably
+rewrite this specific code is to write
+
+564
+00:09:30,030 --> 00:09:30,040
+rewrite this specific code is to write
+ 
+
+565
+00:09:30,040 --> 00:09:33,069
+rewrite this specific code is to write
+something like Auto obge equals ob.
+
+566
+00:09:33,069 --> 00:09:33,079
+something like Auto obge equals ob.
+ 
+
+567
+00:09:33,079 --> 00:09:34,990
+something like Auto obge equals ob.
+loock and then over here you can just
+
+568
+00:09:34,990 --> 00:09:35,000
+loock and then over here you can just
+ 
+
+569
+00:09:35,000 --> 00:09:37,910
+loock and then over here you can just
+you know use your object as normal if
+
+570
+00:09:37,910 --> 00:09:37,920
+you know use your object as normal if
+ 
+
+571
+00:09:37,920 --> 00:09:40,509
+you know use your object as normal if
+that succeeds otherwise you cannot so
+
+572
+00:09:40,509 --> 00:09:40,519
+that succeeds otherwise you cannot so
+ 
+
+573
+00:09:40,519 --> 00:09:42,269
+that succeeds otherwise you cannot so
+what actually happens over here because
+
+574
+00:09:42,269 --> 00:09:42,279
+what actually happens over here because
+ 
+
+575
+00:09:42,279 --> 00:09:43,910
+what actually happens over here because
+I've written Auto here which can be a
+
+576
+00:09:43,910 --> 00:09:43,920
+I've written Auto here which can be a
+ 
+
+577
+00:09:43,920 --> 00:09:45,750
+I've written Auto here which can be a
+little bit hiding what's actually going
+
+578
+00:09:45,750 --> 00:09:45,760
+little bit hiding what's actually going
+ 
+
+579
+00:09:45,760 --> 00:09:48,030
+little bit hiding what's actually going
+on what happens when we call this lock
+
+580
+00:09:48,030 --> 00:09:48,040
+on what happens when we call this lock
+ 
+
+581
+00:09:48,040 --> 00:09:49,389
+on what happens when we call this lock
+function is you can see it actually
+
+582
+00:09:49,389 --> 00:09:49,399
+function is you can see it actually
+ 
+
+583
+00:09:49,399 --> 00:09:52,230
+function is you can see it actually
+returns a shed pointer of that object so
+
+584
+00:09:52,230 --> 00:09:52,240
+returns a shed pointer of that object so
+ 
+
+585
+00:09:52,240 --> 00:09:54,150
+returns a shed pointer of that object so
+we're kind of converting this weak
+
+586
+00:09:54,150 --> 00:09:54,160
+we're kind of converting this weak
+ 
+
+587
+00:09:54,160 --> 00:09:56,870
+we're kind of converting this weak
+pointer back into a shared pointer why
+
+588
+00:09:56,870 --> 00:09:56,880
+pointer back into a shared pointer why
+ 
+
+589
+00:09:56,880 --> 00:09:58,710
+pointer back into a shared pointer why
+because if we need to use the object
+
+590
+00:09:58,710 --> 00:09:58,720
+because if we need to use the object
+ 
+
+591
+00:09:58,720 --> 00:10:00,550
+because if we need to use the object
+suddenly we do want a strong reference
+
+592
+00:10:00,550 --> 00:10:00,560
+suddenly we do want a strong reference
+ 
+
+593
+00:10:00,560 --> 00:10:03,310
+suddenly we do want a strong reference
+don't we because if we don't maintain a
+
+594
+00:10:03,310 --> 00:10:03,320
+don't we because if we don't maintain a
+ 
+
+595
+00:10:03,320 --> 00:10:05,150
+don't we because if we don't maintain a
+strong reference then a lot can actually
+
+596
+00:10:05,150 --> 00:10:05,160
+strong reference then a lot can actually
+ 
+
+597
+00:10:05,160 --> 00:10:07,190
+strong reference then a lot can actually
+change between this line of code and
+
+598
+00:10:07,190 --> 00:10:07,200
+change between this line of code and
+ 
+
+599
+00:10:07,200 --> 00:10:09,550
+change between this line of code and
+this line of code right if we just had
+
+600
+00:10:09,550 --> 00:10:09,560
+this line of code right if we just had
+ 
+
+601
+00:10:09,560 --> 00:10:11,550
+this line of code right if we just had
+for example a I don't know like an
+
+602
+00:10:11,550 --> 00:10:11,560
+for example a I don't know like an
+ 
+
+603
+00:10:11,560 --> 00:10:14,269
+for example a I don't know like an
+object pointer like this then something
+
+604
+00:10:14,269 --> 00:10:14,279
+object pointer like this then something
+ 
+
+605
+00:10:14,279 --> 00:10:16,030
+object pointer like this then something
+in between these two lines could
+
+606
+00:10:16,030 --> 00:10:16,040
+in between these two lines could
+ 
+
+607
+00:10:16,040 --> 00:10:17,750
+in between these two lines could
+actually delete the underlying object
+
+608
+00:10:17,750 --> 00:10:17,760
+actually delete the underlying object
+ 
+
+609
+00:10:17,760 --> 00:10:20,750
+actually delete the underlying object
+why well because multi-threading exists
+
+610
+00:10:20,750 --> 00:10:20,760
+why well because multi-threading exists
+ 
+
+611
+00:10:20,760 --> 00:10:22,910
+why well because multi-threading exists
+right some other thread might be the
+
+612
+00:10:22,910 --> 00:10:22,920
+right some other thread might be the
+ 
+
+613
+00:10:22,920 --> 00:10:24,910
+right some other thread might be the
+last thing actually holding on to a shed
+
+614
+00:10:24,910 --> 00:10:24,920
+last thing actually holding on to a shed
+ 
+
+615
+00:10:24,920 --> 00:10:26,910
+last thing actually holding on to a shed
+pointer to that strong reference it
+
+616
+00:10:26,910 --> 00:10:26,920
+pointer to that strong reference it
+ 
+
+617
+00:10:26,920 --> 00:10:28,829
+pointer to that strong reference it
+might release it everything looked good
+
+618
+00:10:28,829 --> 00:10:28,839
+might release it everything looked good
+ 
+
+619
+00:10:28,839 --> 00:10:31,430
+might release it everything looked good
+at line 15 line 17 when we try and use
+
+620
+00:10:31,430 --> 00:10:31,440
+at line 15 line 17 when we try and use
+ 
+
+621
+00:10:31,440 --> 00:10:33,350
+at line 15 line 17 when we try and use
+it suddenly oh actually sorry it's not
+
+622
+00:10:33,350 --> 00:10:33,360
+it suddenly oh actually sorry it's not
+ 
+
+623
+00:10:33,360 --> 00:10:36,110
+it suddenly oh actually sorry it's not
+valid anymore so what this does instead
+
+624
+00:10:36,110 --> 00:10:36,120
+valid anymore so what this does instead
+ 
+
+625
+00:10:36,120 --> 00:10:38,829
+valid anymore so what this does instead
+is it has a shared pointer it gives us a
+
+626
+00:10:38,829 --> 00:10:38,839
+is it has a shared pointer it gives us a
+ 
+
+627
+00:10:38,839 --> 00:10:41,590
+is it has a shared pointer it gives us a
+Shar pointer of that weak pointer object
+
+628
+00:10:41,590 --> 00:10:41,600
+Shar pointer of that weak pointer object
+ 
+
+629
+00:10:41,600 --> 00:10:43,910
+Shar pointer of that weak pointer object
+and now for this entire scope because
+
+630
+00:10:43,910 --> 00:10:43,920
+and now for this entire scope because
+ 
+
+631
+00:10:43,920 --> 00:10:45,670
+and now for this entire scope because
+we've got a Shar pointer now it will
+
+632
+00:10:45,670 --> 00:10:45,680
+we've got a Shar pointer now it will
+ 
+
+633
+00:10:45,680 --> 00:10:47,910
+we've got a Shar pointer now it will
+keep this object alive even if nothing
+
+634
+00:10:47,910 --> 00:10:47,920
+keep this object alive even if nothing
+ 
+
+635
+00:10:47,920 --> 00:10:50,590
+keep this object alive even if nothing
+else does so that of course is really
+
+636
+00:10:50,590 --> 00:10:50,600
+else does so that of course is really
+ 
+
+637
+00:10:50,600 --> 00:10:52,389
+else does so that of course is really
+really important and of course since
+
+638
+00:10:52,389 --> 00:10:52,399
+really important and of course since
+ 
+
+639
+00:10:52,399 --> 00:10:55,150
+really important and of course since
+lock gives us a shared pointer that is
+
+640
+00:10:55,150 --> 00:10:55,160
+lock gives us a shared pointer that is
+ 
+
+641
+00:10:55,160 --> 00:10:56,829
+lock gives us a shared pointer that is
+obviously capable of dying and thus
+
+642
+00:10:56,829 --> 00:10:56,839
+obviously capable of dying and thus
+ 
+
+643
+00:10:56,839 --> 00:10:58,910
+obviously capable of dying and thus
+unlocking the object we don't have to
+
+644
+00:10:58,910 --> 00:10:58,920
+unlocking the object we don't have to
+ 
+
+645
+00:10:58,920 --> 00:11:00,710
+unlocking the object we don't have to
+like manually call unlock or anything
+
+646
+00:11:00,710 --> 00:11:00,720
+like manually call unlock or anything
+ 
+
+647
+00:11:00,720 --> 00:11:02,550
+like manually call unlock or anything
+like that all it does is it gives us a
+
+648
+00:11:02,550 --> 00:11:02,560
+like that all it does is it gives us a
+ 
+
+649
+00:11:02,560 --> 00:11:04,430
+like that all it does is it gives us a
+strong reference that we can do whatever
+
+650
+00:11:04,430 --> 00:11:04,440
+strong reference that we can do whatever
+ 
+
+651
+00:11:04,440 --> 00:11:06,470
+strong reference that we can do whatever
+with for whatever kind of duration we
+
+652
+00:11:06,470 --> 00:11:06,480
+with for whatever kind of duration we
+ 
+
+653
+00:11:06,480 --> 00:11:08,470
+with for whatever kind of duration we
+need to now if you just want to check
+
+654
+00:11:08,470 --> 00:11:08,480
+need to now if you just want to check
+ 
+
+655
+00:11:08,480 --> 00:11:10,670
+need to now if you just want to check
+though whether or not it's valid you can
+
+656
+00:11:10,670 --> 00:11:10,680
+though whether or not it's valid you can
+ 
+
+657
+00:11:10,680 --> 00:11:13,230
+though whether or not it's valid you can
+instead call the expired function and
+
+658
+00:11:13,230 --> 00:11:13,240
+instead call the expired function and
+ 
+
+659
+00:11:13,240 --> 00:11:14,670
+instead call the expired function and
+that will just basically tell you
+
+660
+00:11:14,670 --> 00:11:14,680
+that will just basically tell you
+ 
+
+661
+00:11:14,680 --> 00:11:16,110
+that will just basically tell you
+whether or not that object has been
+
+662
+00:11:16,110 --> 00:11:16,120
+whether or not that object has been
+ 
+
+663
+00:11:16,120 --> 00:11:17,949
+whether or not that object has been
+deleted so if you don't necessarily need
+
+664
+00:11:17,949 --> 00:11:17,959
+deleted so if you don't necessarily need
+ 
+
+665
+00:11:17,959 --> 00:11:19,430
+deleted so if you don't necessarily need
+to use it but you just want to check to
+
+666
+00:11:19,430 --> 00:11:19,440
+to use it but you just want to check to
+ 
+
+667
+00:11:19,440 --> 00:11:21,710
+to use it but you just want to check to
+see if it's still alive you can and then
+
+668
+00:11:21,710 --> 00:11:21,720
+see if it's still alive you can and then
+ 
+
+669
+00:11:21,720 --> 00:11:24,110
+see if it's still alive you can and then
+finally this other thing that I like is
+
+670
+00:11:24,110 --> 00:11:24,120
+finally this other thing that I like is
+ 
+
+671
+00:11:24,120 --> 00:11:26,230
+finally this other thing that I like is
+there's a function here called use count
+
+672
+00:11:26,230 --> 00:11:26,240
+there's a function here called use count
+ 
+
+673
+00:11:26,240 --> 00:11:27,590
+there's a function here called use count
+and that's kind of cool because what
+
+674
+00:11:27,590 --> 00:11:27,600
+and that's kind of cool because what
+ 
+
+675
+00:11:27,600 --> 00:11:29,310
+and that's kind of cool because what
+that does is it actually gives you the
+
+676
+00:11:29,310 --> 00:11:29,320
+that does is it actually gives you the
+ 
+
+677
+00:11:29,320 --> 00:11:31,269
+that does is it actually gives you the
+reference count so you can see in how
+
+678
+00:11:31,269 --> 00:11:31,279
+reference count so you can see in how
+ 
+
+679
+00:11:31,279 --> 00:11:33,110
+reference count so you can see in how
+many places in your program are you
+
+680
+00:11:33,110 --> 00:11:33,120
+many places in your program are you
+ 
+
+681
+00:11:33,120 --> 00:11:35,030
+many places in your program are you
+actually holding a strong reference to
+
+682
+00:11:35,030 --> 00:11:35,040
+actually holding a strong reference to
+ 
+
+683
+00:11:35,040 --> 00:11:36,870
+actually holding a strong reference to
+this object so in this case because
+
+684
+00:11:36,870 --> 00:11:36,880
+this object so in this case because
+ 
+
+685
+00:11:36,880 --> 00:11:38,629
+this object so in this case because
+we're only have one shared pointer over
+
+686
+00:11:38,629 --> 00:11:38,639
+we're only have one shared pointer over
+ 
+
+687
+00:11:38,639 --> 00:11:40,670
+we're only have one shared pointer over
+here if we call this function before
+
+688
+00:11:40,670 --> 00:11:40,680
+here if we call this function before
+ 
+
+689
+00:11:40,680 --> 00:11:42,389
+here if we call this function before
+that shared pointer actually dies I'd
+
+690
+00:11:42,389 --> 00:11:42,399
+that shared pointer actually dies I'd
+ 
+
+691
+00:11:42,399 --> 00:11:44,829
+that shared pointer actually dies I'd
+expect it to say one in fact we can try
+
+692
+00:11:44,829 --> 00:11:44,839
+expect it to say one in fact we can try
+ 
+
+693
+00:11:44,839 --> 00:11:46,949
+expect it to say one in fact we can try
+that by calling this function multiple
+
+694
+00:11:46,949 --> 00:11:46,959
+that by calling this function multiple
+ 
+
+695
+00:11:46,959 --> 00:11:48,509
+that by calling this function multiple
+times and then you can see we have one
+
+696
+00:11:48,509 --> 00:11:48,519
+times and then you can see we have one
+ 
+
+697
+00:11:48,519 --> 00:11:51,150
+times and then you can see we have one
+first then deleted object and then zero
+
+698
+00:11:51,150 --> 00:11:51,160
+first then deleted object and then zero
+ 
+
+699
+00:11:51,160 --> 00:11:52,710
+first then deleted object and then zero
+so I guess technically if you wanted to
+
+700
+00:11:52,710 --> 00:11:52,720
+so I guess technically if you wanted to
+ 
+
+701
+00:11:52,720 --> 00:11:54,949
+so I guess technically if you wanted to
+you could also write something like that
+
+702
+00:11:54,949 --> 00:11:54,959
+you could also write something like that
+ 
+
+703
+00:11:54,959 --> 00:11:57,069
+you could also write something like that
+as well so hopefully that sheds a little
+
+704
+00:11:57,069 --> 00:11:57,079
+as well so hopefully that sheds a little
+ 
+
+705
+00:11:57,079 --> 00:11:59,629
+as well so hopefully that sheds a little
+bit of light as to what weak pointers
+
+706
+00:11:59,629 --> 00:11:59,639
+bit of light as to what weak pointers
+ 
+
+707
+00:11:59,639 --> 00:12:01,910
+bit of light as to what weak pointers
+are and where it's just a really good
+
+708
+00:12:01,910 --> 00:12:01,920
+are and where it's just a really good
+ 
+
+709
+00:12:01,920 --> 00:12:04,190
+are and where it's just a really good
+convenient idea to use them obviously
+
+710
+00:12:04,190 --> 00:12:04,200
+convenient idea to use them obviously
+ 
+
+711
+00:12:04,200 --> 00:12:06,670
+convenient idea to use them obviously
+there is some overhead added to this
+
+712
+00:12:06,670 --> 00:12:06,680
+there is some overhead added to this
+ 
+
+713
+00:12:06,680 --> 00:12:09,670
+there is some overhead added to this
+system versus just using raw pointers so
+
+714
+00:12:09,670 --> 00:12:09,680
+system versus just using raw pointers so
+ 
+
+715
+00:12:09,680 --> 00:12:11,790
+system versus just using raw pointers so
+it's not necessarily a situation where
+
+716
+00:12:11,790 --> 00:12:11,800
+it's not necessarily a situation where
+ 
+
+717
+00:12:11,800 --> 00:12:13,509
+it's not necessarily a situation where
+you should go through and replace every
+
+718
+00:12:13,509 --> 00:12:13,519
+you should go through and replace every
+ 
+
+719
+00:12:13,519 --> 00:12:15,670
+you should go through and replace every
+single raw pointer you have that's made
+
+720
+00:12:15,670 --> 00:12:15,680
+single raw pointer you have that's made
+ 
+
+721
+00:12:15,680 --> 00:12:17,110
+single raw pointer you have that's made
+from like a shed pointer or something
+
+722
+00:12:17,110 --> 00:12:17,120
+from like a shed pointer or something
+ 
+
+723
+00:12:17,120 --> 00:12:19,310
+from like a shed pointer or something
+and just replace it with a weak pointer
+
+724
+00:12:19,310 --> 00:12:19,320
+and just replace it with a weak pointer
+ 
+
+725
+00:12:19,320 --> 00:12:21,310
+and just replace it with a weak pointer
+but the thing is it's one of those like
+
+726
+00:12:21,310 --> 00:12:21,320
+but the thing is it's one of those like
+ 
+
+727
+00:12:21,320 --> 00:12:23,389
+but the thing is it's one of those like
+overheads that's like well what about
+
+728
+00:12:23,389 --> 00:12:23,399
+overheads that's like well what about
+ 
+
+729
+00:12:23,399 --> 00:12:25,310
+overheads that's like well what about
+using smart pointers in the first place
+
+730
+00:12:25,310 --> 00:12:25,320
+using smart pointers in the first place
+ 
+
+731
+00:12:25,320 --> 00:12:27,189
+using smart pointers in the first place
+like unique pointer does that have a bit
+
+732
+00:12:27,189 --> 00:12:27,199
+like unique pointer does that have a bit
+ 
+
+733
+00:12:27,199 --> 00:12:28,670
+like unique pointer does that have a bit
+of overhead I mean unique pointer really
+
+734
+00:12:28,670 --> 00:12:28,680
+of overhead I mean unique pointer really
+ 
+
+735
+00:12:28,680 --> 00:12:30,550
+of overhead I mean unique pointer really
+doesn't but like Shar pointer has a bit
+
+736
+00:12:30,550 --> 00:12:30,560
+doesn't but like Shar pointer has a bit
+ 
+
+737
+00:12:30,560 --> 00:12:33,150
+doesn't but like Shar pointer has a bit
+of overhead so should I not use shared
+
+738
+00:12:33,150 --> 00:12:33,160
+of overhead so should I not use shared
+ 
+
+739
+00:12:33,160 --> 00:12:34,629
+of overhead so should I not use shared
+pointers should I not use reference
+
+740
+00:12:34,629 --> 00:12:34,639
+pointers should I not use reference
+ 
+
+741
+00:12:34,639 --> 00:12:35,870
+pointers should I not use reference
+counting well it's just one of those
+
+742
+00:12:35,870 --> 00:12:35,880
+counting well it's just one of those
+ 
+
+743
+00:12:35,880 --> 00:12:38,470
+counting well it's just one of those
+situations where there's no other choice
+
+744
+00:12:38,470 --> 00:12:38,480
+situations where there's no other choice
+ 
+
+745
+00:12:38,480 --> 00:12:41,069
+situations where there's no other choice
+in some cases than to use say reference
+
+746
+00:12:41,069 --> 00:12:41,079
+in some cases than to use say reference
+ 
+
+747
+00:12:41,079 --> 00:12:43,509
+in some cases than to use say reference
+counting or weak pointers and in my
+
+748
+00:12:43,509 --> 00:12:43,519
+counting or weak pointers and in my
+ 
+
+749
+00:12:43,519 --> 00:12:46,189
+counting or weak pointers and in my
+opinion in most cases the overhead is so
+
+750
+00:12:46,189 --> 00:12:46,199
+opinion in most cases the overhead is so
+ 
+
+751
+00:12:46,199 --> 00:12:48,350
+opinion in most cases the overhead is so
+negligible that I would probably just
+
+752
+00:12:48,350 --> 00:12:48,360
+negligible that I would probably just
+ 
+
+753
+00:12:48,360 --> 00:12:50,310
+negligible that I would probably just
+use weak pointers one use case that I
+
+754
+00:12:50,310 --> 00:12:50,320
+use weak pointers one use case that I
+ 
+
+755
+00:12:50,320 --> 00:12:52,389
+use weak pointers one use case that I
+can think of where like literally it's
+
+756
+00:12:52,389 --> 00:12:52,399
+can think of where like literally it's
+ 
+
+757
+00:12:52,399 --> 00:12:54,350
+can think of where like literally it's
+mandatory to use them otherwise it won't
+
+758
+00:12:54,350 --> 00:12:54,360
+mandatory to use them otherwise it won't
+ 
+
+759
+00:12:54,360 --> 00:12:56,430
+mandatory to use them otherwise it won't
+work is when you have like a cyclical
+
+760
+00:12:56,430 --> 00:12:56,440
+work is when you have like a cyclical
+ 
+
+761
+00:12:56,440 --> 00:12:59,189
+work is when you have like a cyclical
+dependency so if you have object a
+
+762
+00:12:59,189 --> 00:12:59,199
+dependency so if you have object a
+ 
+
+763
+00:12:59,199 --> 00:13:01,069
+dependency so if you have object a
+having a sharpoint at object B and
+
+764
+00:13:01,069 --> 00:13:01,079
+having a sharpoint at object B and
+ 
+
+765
+00:13:01,079 --> 00:13:03,389
+having a sharpoint at object B and
+object B having a sharpoint at object a
+
+766
+00:13:03,389 --> 00:13:03,399
+object B having a sharpoint at object a
+ 
+
+767
+00:13:03,399 --> 00:13:05,030
+object B having a sharpoint at object a
+they will never die because there's
+
+768
+00:13:05,030 --> 00:13:05,040
+they will never die because there's
+ 
+
+769
+00:13:05,040 --> 00:13:06,550
+they will never die because there's
+always going to be something holding
+
+770
+00:13:06,550 --> 00:13:06,560
+always going to be something holding
+ 
+
+771
+00:13:06,560 --> 00:13:08,310
+always going to be something holding
+that object so like for example take a
+
+772
+00:13:08,310 --> 00:13:08,320
+that object so like for example take a
+ 
+
+773
+00:13:08,320 --> 00:13:09,949
+that object so like for example take a
+look at this program we have a struct
+
+774
+00:13:09,949 --> 00:13:09,959
+look at this program we have a struct
+ 
+
+775
+00:13:09,959 --> 00:13:11,949
+look at this program we have a struct
+called A and A structor called B they
+
+776
+00:13:11,949 --> 00:13:11,959
+called A and A structor called B they
+ 
+
+777
+00:13:11,959 --> 00:13:14,150
+called A and A structor called B they
+have shared pointers pointing to each
+
+778
+00:13:14,150 --> 00:13:14,160
+have shared pointers pointing to each
+ 
+
+779
+00:13:14,160 --> 00:13:15,790
+have shared pointers pointing to each
+other here we have a andb you can see
+
+780
+00:13:15,790 --> 00:13:15,800
+other here we have a andb you can see
+ 
+
+781
+00:13:15,800 --> 00:13:17,910
+other here we have a andb you can see
+they're kind of wired up like this if I
+
+782
+00:13:17,910 --> 00:13:17,920
+they're kind of wired up like this if I
+ 
+
+783
+00:13:17,920 --> 00:13:20,790
+they're kind of wired up like this if I
+run this program check this out there's
+
+784
+00:13:20,790 --> 00:13:20,800
+run this program check this out there's
+ 
+
+785
+00:13:20,800 --> 00:13:23,590
+run this program check this out there's
+nothing being destroyed we create these
+
+786
+00:13:23,590 --> 00:13:23,600
+nothing being destroyed we create these
+ 
+
+787
+00:13:23,600 --> 00:13:25,110
+nothing being destroyed we create these
+objects but where at the end of the
+
+788
+00:13:25,110 --> 00:13:25,120
+objects but where at the end of the
+ 
+
+789
+00:13:25,120 --> 00:13:27,550
+objects but where at the end of the
+scope they don't get destroyed but if we
+
+790
+00:13:27,550 --> 00:13:27,560
+scope they don't get destroyed but if we
+ 
+
+791
+00:13:27,560 --> 00:13:29,110
+scope they don't get destroyed but if we
+go over here to this one for example
+
+792
+00:13:29,110 --> 00:13:29,120
+go over here to this one for example
+ 
+
+793
+00:13:29,120 --> 00:13:31,069
+go over here to this one for example
+example and we make B have a weak
+
+794
+00:13:31,069 --> 00:13:31,079
+example and we make B have a weak
+ 
+
+795
+00:13:31,079 --> 00:13:33,829
+example and we make B have a weak
+pointer of a instead of a strong pointer
+
+796
+00:13:33,829 --> 00:13:33,839
+pointer of a instead of a strong pointer
+ 
+
+797
+00:13:33,839 --> 00:13:35,790
+pointer of a instead of a strong pointer
+then suddenly they're both destroyed at
+
+798
+00:13:35,790 --> 00:13:35,800
+then suddenly they're both destroyed at
+ 
+
+799
+00:13:35,800 --> 00:13:37,949
+then suddenly they're both destroyed at
+the end of the scope so this is an
+
+800
+00:13:37,949 --> 00:13:37,959
+the end of the scope so this is an
+ 
+
+801
+00:13:37,959 --> 00:13:39,790
+the end of the scope so this is an
+example in which maybe we want both
+
+802
+00:13:39,790 --> 00:13:39,800
+example in which maybe we want both
+ 
+
+803
+00:13:39,800 --> 00:13:42,069
+example in which maybe we want both
+objects to have like a reference to each
+
+804
+00:13:42,069 --> 00:13:42,079
+objects to have like a reference to each
+ 
+
+805
+00:13:42,079 --> 00:13:43,710
+objects to have like a reference to each
+other which again is perfectly valid we
+
+806
+00:13:43,710 --> 00:13:43,720
+other which again is perfectly valid we
+ 
+
+807
+00:13:43,720 --> 00:13:45,509
+other which again is perfectly valid we
+might need to do work you know they
+
+808
+00:13:45,509 --> 00:13:45,519
+might need to do work you know they
+ 
+
+809
+00:13:45,519 --> 00:13:47,550
+might need to do work you know they
+might need to do work together but you
+
+810
+00:13:47,550 --> 00:13:47,560
+might need to do work together but you
+ 
+
+811
+00:13:47,560 --> 00:13:49,430
+might need to do work together but you
+have to be careful with strong
+
+812
+00:13:49,430 --> 00:13:49,440
+have to be careful with strong
+ 
+
+813
+00:13:49,440 --> 00:13:51,470
+have to be careful with strong
+references in this case and now finally
+
+814
+00:13:51,470 --> 00:13:51,480
+references in this case and now finally
+ 
+
+815
+00:13:51,480 --> 00:13:53,350
+references in this case and now finally
+let's take a look at that kind of real
+
+816
+00:13:53,350 --> 00:13:53,360
+let's take a look at that kind of real
+ 
+
+817
+00:13:53,360 --> 00:13:54,949
+let's take a look at that kind of real
+world example that we had from the code
+
+818
+00:13:54,949 --> 00:13:54,959
+world example that we had from the code
+ 
+
+819
+00:13:54,959 --> 00:13:56,749
+world example that we had from the code
+review that I did in the last video that
+
+820
+00:13:56,749 --> 00:13:56,759
+review that I did in the last video that
+ 
+
+821
+00:13:56,759 --> 00:13:58,590
+review that I did in the last video that
+I talked about where specifically you
+
+822
+00:13:58,590 --> 00:13:58,600
+I talked about where specifically you
+ 
+
+823
+00:13:58,600 --> 00:14:01,030
+I talked about where specifically you
+can see we had like this input Handler
+
+824
+00:14:01,030 --> 00:14:01,040
+can see we had like this input Handler
+ 
+
+825
+00:14:01,040 --> 00:14:03,069
+can see we had like this input Handler
+which allowed us to register an observer
+
+826
+00:14:03,069 --> 00:14:03,079
+which allowed us to register an observer
+ 
+
+827
+00:14:03,079 --> 00:14:05,230
+which allowed us to register an observer
+and you can see takes in a raw pointer
+
+828
+00:14:05,230 --> 00:14:05,240
+and you can see takes in a raw pointer
+ 
+
+829
+00:14:05,240 --> 00:14:07,790
+and you can see takes in a raw pointer
+and where does that come from that comes
+
+830
+00:14:07,790 --> 00:14:07,800
+and where does that come from that comes
+ 
+
+831
+00:14:07,800 --> 00:14:10,110
+and where does that come from that comes
+from you know game switch state for
+
+832
+00:14:10,110 --> 00:14:10,120
+from you know game switch state for
+ 
+
+833
+00:14:10,120 --> 00:14:12,230
+from you know game switch state for
+example where it actually takes current
+
+834
+00:14:12,230 --> 00:14:12,240
+example where it actually takes current
+ 
+
+835
+00:14:12,240 --> 00:14:14,590
+example where it actually takes current
+state which is a shared pointer and
+
+836
+00:14:14,590 --> 00:14:14,600
+state which is a shared pointer and
+ 
+
+837
+00:14:14,600 --> 00:14:16,629
+state which is a shared pointer and
+calls do get on it to get the r pointer
+
+838
+00:14:16,629 --> 00:14:16,639
+calls do get on it to get the r pointer
+ 
+
+839
+00:14:16,639 --> 00:14:18,069
+calls do get on it to get the r pointer
+and then that gets put into like
+
+840
+00:14:18,069 --> 00:14:18,079
+and then that gets put into like
+ 
+
+841
+00:14:18,079 --> 00:14:20,230
+and then that gets put into like
+register Observer for example so how can
+
+842
+00:14:20,230 --> 00:14:20,240
+register Observer for example so how can
+ 
+
+843
+00:14:20,240 --> 00:14:22,350
+register Observer for example so how can
+we rewrite the systems use weak pointers
+
+844
+00:14:22,350 --> 00:14:22,360
+we rewrite the systems use weak pointers
+ 
+
+845
+00:14:22,360 --> 00:14:25,110
+we rewrite the systems use weak pointers
+instead and thus not just blindly you
+
+846
+00:14:25,110 --> 00:14:25,120
+instead and thus not just blindly you
+ 
+
+847
+00:14:25,120 --> 00:14:26,509
+instead and thus not just blindly you
+know like iterate through all these
+
+848
+00:14:26,509 --> 00:14:26,519
+know like iterate through all these
+ 
+
+849
+00:14:26,519 --> 00:14:28,590
+know like iterate through all these
+observers as role pointers not knowing
+
+850
+00:14:28,590 --> 00:14:28,600
+observers as role pointers not knowing
+ 
+
+851
+00:14:28,600 --> 00:14:30,949
+observers as role pointers not knowing
+if they're still there or not well over
+
+852
+00:14:30,949 --> 00:14:30,959
+if they're still there or not well over
+ 
+
+853
+00:14:30,959 --> 00:14:32,550
+if they're still there or not well over
+here inside the input Handler we have a
+
+854
+00:14:32,550 --> 00:14:32,560
+here inside the input Handler we have a
+ 
+
+855
+00:14:32,560 --> 00:14:34,189
+here inside the input Handler we have a
+vector and you can see the vector has
+
+856
+00:14:34,189 --> 00:14:34,199
+vector and you can see the vector has
+ 
+
+857
+00:14:34,199 --> 00:14:36,430
+vector and you can see the vector has
+raw pointers so instead we can just
+
+858
+00:14:36,430 --> 00:14:36,440
+raw pointers so instead we can just
+ 
+
+859
+00:14:36,440 --> 00:14:38,430
+raw pointers so instead we can just
+change that to be a weak pointer like
+
+860
+00:14:38,430 --> 00:14:38,440
+change that to be a weak pointer like
+ 
+
+861
+00:14:38,440 --> 00:14:40,990
+change that to be a weak pointer like
+this and then all of these same exact
+
+862
+00:14:40,990 --> 00:14:41,000
+this and then all of these same exact
+ 
+
+863
+00:14:41,000 --> 00:14:42,910
+this and then all of these same exact
+scenario you can just pass these in by
+
+864
+00:14:42,910 --> 00:14:42,920
+scenario you can just pass these in by
+ 
+
+865
+00:14:42,920 --> 00:14:44,670
+scenario you can just pass these in by
+value like that it's totally okay to
+
+866
+00:14:44,670 --> 00:14:44,680
+value like that it's totally okay to
+ 
+
+867
+00:14:44,680 --> 00:14:46,590
+value like that it's totally okay to
+just copy weak pointer instances like
+
+868
+00:14:46,590 --> 00:14:46,600
+just copy weak pointer instances like
+ 
+
+869
+00:14:46,600 --> 00:14:48,670
+just copy weak pointer instances like
+this let me just go to these definitions
+
+870
+00:14:48,670 --> 00:14:48,680
+this let me just go to these definitions
+ 
+
+871
+00:14:48,680 --> 00:14:51,030
+this let me just go to these definitions
+and make sure that I've also got them
+
+872
+00:14:51,030 --> 00:14:51,040
+and make sure that I've also got them
+ 
+
+873
+00:14:51,040 --> 00:14:53,110
+and make sure that I've also got them
+set up like this and then when iterating
+
+874
+00:14:53,110 --> 00:14:53,120
+set up like this and then when iterating
+ 
+
+875
+00:14:53,120 --> 00:14:54,910
+set up like this and then when iterating
+through this this is where we have the
+
+876
+00:14:54,910 --> 00:14:54,920
+through this this is where we have the
+ 
+
+877
+00:14:54,920 --> 00:14:56,749
+through this this is where we have the
+option to actually do that safety
+
+878
+00:14:56,749 --> 00:14:56,759
+option to actually do that safety
+ 
+
+879
+00:14:56,759 --> 00:14:58,829
+option to actually do that safety
+checking that I was talking about so to
+
+880
+00:14:58,829 --> 00:14:58,839
+checking that I was talking about so to
+ 
+
+881
+00:14:58,839 --> 00:15:00,389
+checking that I was talking about so to
+simp simplify this we could just call
+
+882
+00:15:00,389 --> 00:15:00,399
+simp simplify this we could just call
+ 
+
+883
+00:15:00,399 --> 00:15:02,430
+simp simplify this we could just call
+this Auto Observer like that and then
+
+884
+00:15:02,430 --> 00:15:02,440
+this Auto Observer like that and then
+ 
+
+885
+00:15:02,440 --> 00:15:04,749
+this Auto Observer like that and then
+before using it we could lock it right
+
+886
+00:15:04,749 --> 00:15:04,759
+before using it we could lock it right
+ 
+
+887
+00:15:04,759 --> 00:15:07,189
+before using it we could lock it right
+so maybe I'll do something like OBS like
+
+888
+00:15:07,189 --> 00:15:07,199
+so maybe I'll do something like OBS like
+ 
+
+889
+00:15:07,199 --> 00:15:09,870
+so maybe I'll do something like OBS like
+that equals observer. loock and then if
+
+890
+00:15:09,870 --> 00:15:09,880
+that equals observer. loock and then if
+ 
+
+891
+00:15:09,880 --> 00:15:11,590
+that equals observer. loock and then if
+that succeeds I could go ahead and
+
+892
+00:15:11,590 --> 00:15:11,600
+that succeeds I could go ahead and
+ 
+
+893
+00:15:11,600 --> 00:15:13,550
+that succeeds I could go ahead and
+actually call on Mouse left click on
+
+894
+00:15:13,550 --> 00:15:13,560
+actually call on Mouse left click on
+ 
+
+895
+00:15:13,560 --> 00:15:15,430
+actually call on Mouse left click on
+that Observer otherwise if it isn't
+
+896
+00:15:15,430 --> 00:15:15,440
+that Observer otherwise if it isn't
+ 
+
+897
+00:15:15,440 --> 00:15:16,990
+that Observer otherwise if it isn't
+valid anymore it might make sense to
+
+898
+00:15:16,990 --> 00:15:17,000
+valid anymore it might make sense to
+ 
+
+899
+00:15:17,000 --> 00:15:19,030
+valid anymore it might make sense to
+just remove it as an observer so that I
+
+900
+00:15:19,030 --> 00:15:19,040
+just remove it as an observer so that I
+ 
+
+901
+00:15:19,040 --> 00:15:20,430
+just remove it as an observer so that I
+don't have to keep iterating through it
+
+902
+00:15:20,430 --> 00:15:20,440
+don't have to keep iterating through it
+ 
+
+903
+00:15:20,440 --> 00:15:22,069
+don't have to keep iterating through it
+obviously because it's been deleted so
+
+904
+00:15:22,069 --> 00:15:22,079
+obviously because it's been deleted so
+ 
+
+905
+00:15:22,079 --> 00:15:23,550
+obviously because it's been deleted so
+in that case I might just want to call
+
+906
+00:15:23,550 --> 00:15:23,560
+in that case I might just want to call
+ 
+
+907
+00:15:23,560 --> 00:15:25,910
+in that case I might just want to call
+remove Observer with that specific
+
+908
+00:15:25,910 --> 00:15:25,920
+remove Observer with that specific
+ 
+
+909
+00:15:25,920 --> 00:15:27,550
+remove Observer with that specific
+Observer now if you really wanted to
+
+910
+00:15:27,550 --> 00:15:27,560
+Observer now if you really wanted to
+ 
+
+911
+00:15:27,560 --> 00:15:29,030
+Observer now if you really wanted to
+make sure this code was a bit more solid
+
+912
+00:15:29,030 --> 00:15:29,040
+make sure this code was a bit more solid
+ 
+
+913
+00:15:29,040 --> 00:15:30,590
+make sure this code was a bit more solid
+as well obviously it's possible to
+
+914
+00:15:30,590 --> 00:15:30,600
+as well obviously it's possible to
+ 
+
+915
+00:15:30,600 --> 00:15:32,670
+as well obviously it's possible to
+register an observer that is an invalid
+
+916
+00:15:32,670 --> 00:15:32,680
+register an observer that is an invalid
+ 
+
+917
+00:15:32,680 --> 00:15:34,150
+register an observer that is an invalid
+week pointer in the first place it might
+
+918
+00:15:34,150 --> 00:15:34,160
+week pointer in the first place it might
+ 
+
+919
+00:15:34,160 --> 00:15:35,949
+week pointer in the first place it might
+just be null in that case you you'll
+
+920
+00:15:35,949 --> 00:15:35,959
+just be null in that case you you'll
+ 
+
+921
+00:15:35,959 --> 00:15:37,470
+just be null in that case you you'll
+just end up removing it I guess
+
+922
+00:15:37,470 --> 00:15:37,480
+just end up removing it I guess
+ 
+
+923
+00:15:37,480 --> 00:15:39,470
+just end up removing it I guess
+instantly it should probably be okay but
+
+924
+00:15:39,470 --> 00:15:39,480
+instantly it should probably be okay but
+ 
+
+925
+00:15:39,480 --> 00:15:41,550
+instantly it should probably be okay but
+that might be worth checking if you care
+
+926
+00:15:41,550 --> 00:15:41,560
+that might be worth checking if you care
+ 
+
+927
+00:15:41,560 --> 00:15:43,150
+that might be worth checking if you care
+and then over here we have the same kind
+
+928
+00:15:43,150 --> 00:15:43,160
+and then over here we have the same kind
+ 
+
+929
+00:15:43,160 --> 00:15:45,430
+and then over here we have the same kind
+of situation but for a quit event again
+
+930
+00:15:45,430 --> 00:15:45,440
+of situation but for a quit event again
+ 
+
+931
+00:15:45,440 --> 00:15:47,230
+of situation but for a quit event again
+I would probably just make this Auto
+
+932
+00:15:47,230 --> 00:15:47,240
+I would probably just make this Auto
+ 
+
+933
+00:15:47,240 --> 00:15:49,350
+I would probably just make this Auto
+Observer and then if the Locking
+
+934
+00:15:49,350 --> 00:15:49,360
+Observer and then if the Locking
+ 
+
+935
+00:15:49,360 --> 00:15:51,030
+Observer and then if the Locking
+succeeds I can call that function and
+
+936
+00:15:51,030 --> 00:15:51,040
+succeeds I can call that function and
+ 
+
+937
+00:15:51,040 --> 00:15:52,949
+succeeds I can call that function and
+that's it so that would be like the
+
+938
+00:15:52,949 --> 00:15:52,959
+that's it so that would be like the
+ 
+
+939
+00:15:52,959 --> 00:15:55,189
+that's it so that would be like the
+safer way I guess to deal with these
+
+940
+00:15:55,189 --> 00:15:55,199
+safer way I guess to deal with these
+ 
+
+941
+00:15:55,199 --> 00:15:57,030
+safer way I guess to deal with these
+observers if you didn't want to
+
+942
+00:15:57,030 --> 00:15:57,040
+observers if you didn't want to
+ 
+
+943
+00:15:57,040 --> 00:15:59,629
+observers if you didn't want to
+necessarily risk I guess then dying
+
+944
+00:15:59,629 --> 00:15:59,639
+necessarily risk I guess then dying
+ 
+
+945
+00:15:59,639 --> 00:16:01,509
+necessarily risk I guess then dying
+outside of this since we don't actually
+
+946
+00:16:01,509 --> 00:16:01,519
+outside of this since we don't actually
+ 
+
+947
+00:16:01,519 --> 00:16:03,749
+outside of this since we don't actually
+hold strong references to them inside
+
+948
+00:16:03,749 --> 00:16:03,759
+hold strong references to them inside
+ 
+
+949
+00:16:03,759 --> 00:16:06,030
+hold strong references to them inside
+this class to those of you watching
+
+950
+00:16:06,030 --> 00:16:06,040
+this class to those of you watching
+ 
+
+951
+00:16:06,040 --> 00:16:07,990
+this class to those of you watching
+would you change the code to what I
+
+952
+00:16:07,990 --> 00:16:08,000
+would you change the code to what I
+ 
+
+953
+00:16:08,000 --> 00:16:10,670
+would you change the code to what I
+changed it to or would you keep it as is
+
+954
+00:16:10,670 --> 00:16:10,680
+changed it to or would you keep it as is
+ 
+
+955
+00:16:10,680 --> 00:16:12,790
+changed it to or would you keep it as is
+with the raw pointers let me know why in
+
+956
+00:16:12,790 --> 00:16:12,800
+with the raw pointers let me know why in
+ 
+
+957
+00:16:12,800 --> 00:16:14,269
+with the raw pointers let me know why in
+the comments section below but otherwise
+
+958
+00:16:14,269 --> 00:16:14,279
+the comments section below but otherwise
+ 
+
+959
+00:16:14,279 --> 00:16:15,949
+the comments section below but otherwise
+I hope you guys enjoy this video on weak
+
+960
+00:16:15,949 --> 00:16:15,959
+I hope you guys enjoy this video on weak
+ 
+
+961
+00:16:15,959 --> 00:16:17,150
+I hope you guys enjoy this video on weak
+pointers let me know what your thoughts
+
+962
+00:16:17,150 --> 00:16:17,160
+pointers let me know what your thoughts
+ 
+
+963
+00:16:17,160 --> 00:16:18,910
+pointers let me know what your thoughts
+are in general as well with using them
+
+964
+00:16:18,910 --> 00:16:18,920
+are in general as well with using them
+ 
+
+965
+00:16:18,920 --> 00:16:20,389
+are in general as well with using them
+like how often do you actually use weak
+
+966
+00:16:20,389 --> 00:16:20,399
+like how often do you actually use weak
+ 
+
+967
+00:16:20,399 --> 00:16:21,990
+like how often do you actually use weak
+pointers how often do you see other
+
+968
+00:16:21,990 --> 00:16:22,000
+pointers how often do you see other
+ 
+
+969
+00:16:22,000 --> 00:16:24,509
+pointers how often do you see other
+people use weak pointers and are you for
+
+970
+00:16:24,509 --> 00:16:24,519
+people use weak pointers and are you for
+ 
+
+971
+00:16:24,519 --> 00:16:25,590
+people use weak pointers and are you for
+them are you against them do you think
+
+972
+00:16:25,590 --> 00:16:25,600
+them are you against them do you think
+ 
+
+973
+00:16:25,600 --> 00:16:26,910
+them are you against them do you think
+they over complicate things I don't
+
+974
+00:16:26,910 --> 00:16:26,920
+they over complicate things I don't
+ 
+
+975
+00:16:26,920 --> 00:16:28,150
+they over complicate things I don't
+personally think it's necessarily a
+
+976
+00:16:28,150 --> 00:16:28,160
+personally think it's necessarily a
+ 
+
+977
+00:16:28,160 --> 00:16:29,509
+personally think it's necessarily a
+debate of whether or not AR they useful
+
+978
+00:16:29,509 --> 00:16:29,519
+debate of whether or not AR they useful
+ 
+
+979
+00:16:29,519 --> 00:16:31,030
+debate of whether or not AR they useful
+of course they're useful it's more about
+
+980
+00:16:31,030 --> 00:16:31,040
+of course they're useful it's more about
+ 
+
+981
+00:16:31,040 --> 00:16:33,150
+of course they're useful it's more about
+like how much do you actually use them
+
+982
+00:16:33,150 --> 00:16:33,160
+like how much do you actually use them
+ 
+
+983
+00:16:33,160 --> 00:16:35,150
+like how much do you actually use them
+because I mean inside Hazel for example
+
+984
+00:16:35,150 --> 00:16:35,160
+because I mean inside Hazel for example
+ 
+
+985
+00:16:35,160 --> 00:16:36,710
+because I mean inside Hazel for example
+we don't actually use share pointers we
+
+986
+00:16:36,710 --> 00:16:36,720
+we don't actually use share pointers we
+ 
+
+987
+00:16:36,720 --> 00:16:38,309
+we don't actually use share pointers we
+have our own reference counting system
+
+988
+00:16:38,309 --> 00:16:38,319
+have our own reference counting system
+ 
+
+989
+00:16:38,319 --> 00:16:39,990
+have our own reference counting system
+that's probably a topic for another
+
+990
+00:16:39,990 --> 00:16:40,000
+that's probably a topic for another
+ 
+
+991
+00:16:40,000 --> 00:16:41,790
+that's probably a topic for another
+video and with that custom reference
+
+992
+00:16:41,790 --> 00:16:41,800
+video and with that custom reference
+ 
+
+993
+00:16:41,800 --> 00:16:43,829
+video and with that custom reference
+counting system in Hazel weak pointers
+
+994
+00:16:43,829 --> 00:16:43,839
+counting system in Hazel weak pointers
+ 
+
+995
+00:16:43,839 --> 00:16:45,710
+counting system in Hazel weak pointers
+do exist and to be honest they're super
+
+996
+00:16:45,710 --> 00:16:45,720
+do exist and to be honest they're super
+ 
+
+997
+00:16:45,720 --> 00:16:47,509
+do exist and to be honest they're super
+useful for things like debugging a lot
+
+998
+00:16:47,509 --> 00:16:47,519
+useful for things like debugging a lot
+ 
+
+999
+00:16:47,519 --> 00:16:49,790
+useful for things like debugging a lot
+of the times you might want to kind of
+
+1000
+00:16:49,790 --> 00:16:49,800
+of the times you might want to kind of
+ 
+
+1001
+00:16:49,800 --> 00:16:52,590
+of the times you might want to kind of
+almost have a view into something
+
+1002
+00:16:52,590 --> 00:16:52,600
+almost have a view into something
+ 
+
+1003
+00:16:52,600 --> 00:16:54,189
+almost have a view into something
+because you just want to keep track of
+
+1004
+00:16:54,189 --> 00:16:54,199
+because you just want to keep track of
+ 
+
+1005
+00:16:54,199 --> 00:16:56,030
+because you just want to keep track of
+it so that you can like display it in
+
+1006
+00:16:56,030 --> 00:16:56,040
+it so that you can like display it in
+ 
+
+1007
+00:16:56,040 --> 00:16:59,069
+it so that you can like display it in
+the UI as like some list of like a
+
+1008
+00:16:59,069 --> 00:16:59,079
+the UI as like some list of like a
+ 
+
+1009
+00:16:59,079 --> 00:17:01,230
+the UI as like some list of like a
+references you have of like all images
+
+1010
+00:17:01,230 --> 00:17:01,240
+references you have of like all images
+ 
+
+1011
+00:17:01,240 --> 00:17:03,949
+references you have of like all images
+for example inside Vulcan but then
+
+1012
+00:17:03,949 --> 00:17:03,959
+for example inside Vulcan but then
+ 
+
+1013
+00:17:03,959 --> 00:17:06,270
+for example inside Vulcan but then
+because you're kind of just an observer
+
+1014
+00:17:06,270 --> 00:17:06,280
+because you're kind of just an observer
+ 
+
+1015
+00:17:06,280 --> 00:17:08,309
+because you're kind of just an observer
+of that debug information that you care
+
+1016
+00:17:08,309 --> 00:17:08,319
+of that debug information that you care
+ 
+
+1017
+00:17:08,319 --> 00:17:09,669
+of that debug information that you care
+about you obviously don't want to keep
+
+1018
+00:17:09,669 --> 00:17:09,679
+about you obviously don't want to keep
+ 
+
+1019
+00:17:09,679 --> 00:17:12,230
+about you obviously don't want to keep
+it alive you just want to have it around
+
+1020
+00:17:12,230 --> 00:17:12,240
+it alive you just want to have it around
+ 
+
+1021
+00:17:12,240 --> 00:17:14,270
+it alive you just want to have it around
+if it's valid if it's not it's cool but
+
+1022
+00:17:14,270 --> 00:17:14,280
+if it's valid if it's not it's cool but
+ 
+
+1023
+00:17:14,280 --> 00:17:15,909
+if it's valid if it's not it's cool but
+if it's valid let me keep that around so
+
+1024
+00:17:15,909 --> 00:17:15,919
+if it's valid let me keep that around so
+ 
+
+1025
+00:17:15,919 --> 00:17:17,909
+if it's valid let me keep that around so
+that I can then pull stuff from it if I
+
+1026
+00:17:17,909 --> 00:17:17,919
+that I can then pull stuff from it if I
+ 
+
+1027
+00:17:17,919 --> 00:17:19,870
+that I can then pull stuff from it if I
+need to so for situations like that I
+
+1028
+00:17:19,870 --> 00:17:19,880
+need to so for situations like that I
+ 
+
+1029
+00:17:19,880 --> 00:17:21,750
+need to so for situations like that I
+find that it's super useful anyway thank
+
+1030
+00:17:21,750 --> 00:17:21,760
+find that it's super useful anyway thank
+ 
+
+1031
+00:17:21,760 --> 00:17:23,150
+find that it's super useful anyway thank
+you guys for watching I will see you
+
+1032
+00:17:23,150 --> 00:17:23,160
+you guys for watching I will see you
+ 
+
+1033
+00:17:23,160 --> 00:17:26,640
+you guys for watching I will see you
+next time goodbye
+

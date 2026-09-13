@@ -1,0 +1,2225 @@
+1
+00:00:00,000 --> 00:00:01,850
+
+hey what's up guys my name is the
+
+2
+00:00:01,850 --> 00:00:01,860
+hey what's up guys my name is the
+ 
+
+3
+00:00:01,860 --> 00:00:03,800
+hey what's up guys my name is the
+cheddar waving my arms around welcome
+
+4
+00:00:03,800 --> 00:00:03,810
+cheddar waving my arms around welcome
+ 
+
+5
+00:00:03,810 --> 00:00:05,990
+cheddar waving my arms around welcome
+back to my say plus plus series today
+
+6
+00:00:05,990 --> 00:00:06,000
+back to my say plus plus series today
+ 
+
+7
+00:00:06,000 --> 00:00:08,089
+back to my say plus plus series today
+we're going to talk all about implicit
+
+8
+00:00:08,089 --> 00:00:08,099
+we're going to talk all about implicit
+ 
+
+9
+00:00:08,099 --> 00:00:10,640
+we're going to talk all about implicit
+construction C++ implicit conversions as
+
+10
+00:00:10,640 --> 00:00:10,650
+construction C++ implicit conversions as
+ 
+
+11
+00:00:10,650 --> 00:00:12,560
+construction C++ implicit conversions as
+well as what the explicit keyword
+
+12
+00:00:12,560 --> 00:00:12,570
+well as what the explicit keyword
+ 
+
+13
+00:00:12,570 --> 00:00:15,499
+well as what the explicit keyword
+actually means so implicit conversion
+
+14
+00:00:15,499 --> 00:00:15,509
+actually means so implicit conversion
+ 
+
+15
+00:00:15,509 --> 00:00:16,550
+actually means so implicit conversion
+plus it concern what am I talking about
+
+16
+00:00:16,550 --> 00:00:16,560
+plus it concern what am I talking about
+ 
+
+17
+00:00:16,560 --> 00:00:18,830
+plus it concern what am I talking about
+implicit means kind of without you
+
+18
+00:00:18,830 --> 00:00:18,840
+implicit means kind of without you
+ 
+
+19
+00:00:18,840 --> 00:00:20,810
+implicit means kind of without you
+explicitly telling it what to do so it
+
+20
+00:00:20,810 --> 00:00:20,820
+explicitly telling it what to do so it
+ 
+
+21
+00:00:20,820 --> 00:00:22,939
+explicitly telling it what to do so it
+kind of automatic that's what that work
+
+22
+00:00:22,939 --> 00:00:22,949
+kind of automatic that's what that work
+ 
+
+23
+00:00:22,949 --> 00:00:24,800
+kind of automatic that's what that work
+kind of means in this context and what's
+
+24
+00:00:24,800 --> 00:00:24,810
+kind of means in this context and what's
+ 
+
+25
+00:00:24,810 --> 00:00:26,029
+kind of means in this context and what's
+the bus bus is actually allowed to do
+
+26
+00:00:26,029 --> 00:00:26,039
+the bus bus is actually allowed to do
+ 
+
+27
+00:00:26,039 --> 00:00:27,470
+the bus bus is actually allowed to do
+what the compiler is allowed to do is
+
+28
+00:00:27,470 --> 00:00:27,480
+what the compiler is allowed to do is
+ 
+
+29
+00:00:27,480 --> 00:00:30,200
+what the compiler is allowed to do is
+perform one implicit conversion on your
+
+30
+00:00:30,200 --> 00:00:30,210
+perform one implicit conversion on your
+ 
+
+31
+00:00:30,210 --> 00:00:32,060
+perform one implicit conversion on your
+code because if I kind of start using
+
+32
+00:00:32,060 --> 00:00:32,070
+code because if I kind of start using
+ 
+
+33
+00:00:32,070 --> 00:00:34,430
+code because if I kind of start using
+one data type as another and a
+
+34
+00:00:34,430 --> 00:00:34,440
+one data type as another and a
+ 
+
+35
+00:00:34,440 --> 00:00:36,590
+one data type as another and a
+conversion between the two exists C++
+
+36
+00:00:36,590 --> 00:00:36,600
+conversion between the two exists C++
+ 
+
+37
+00:00:36,600 --> 00:00:38,000
+conversion between the two exists C++
+will actually implicitly perform that
+
+38
+00:00:38,000 --> 00:00:38,010
+will actually implicitly perform that
+ 
+
+39
+00:00:38,010 --> 00:00:40,280
+will actually implicitly perform that
+conversion without you having to cast it
+
+40
+00:00:40,280 --> 00:00:40,290
+conversion without you having to cast it
+ 
+
+41
+00:00:40,290 --> 00:00:41,000
+conversion without you having to cast it
+or anything like that
+
+42
+00:00:41,000 --> 00:00:41,010
+or anything like that
+ 
+
+43
+00:00:41,010 --> 00:00:42,830
+or anything like that
+whoever video and casting very soon
+
+44
+00:00:42,830 --> 00:00:42,840
+whoever video and casting very soon
+ 
+
+45
+00:00:42,840 --> 00:00:44,450
+whoever video and casting very soon
+casting is what we do to kind of convert
+
+46
+00:00:44,450 --> 00:00:44,460
+casting is what we do to kind of convert
+ 
+
+47
+00:00:44,460 --> 00:00:46,700
+casting is what we do to kind of convert
+from one data type to another so this is
+
+48
+00:00:46,700 --> 00:00:46,710
+from one data type to another so this is
+ 
+
+49
+00:00:46,710 --> 00:00:48,619
+from one data type to another so this is
+best shown with an example so let's take
+
+50
+00:00:48,619 --> 00:00:48,629
+best shown with an example so let's take
+ 
+
+51
+00:00:48,629 --> 00:00:50,360
+best shown with an example so let's take
+a look I'm going to write a class here
+
+52
+00:00:50,360 --> 00:00:50,370
+a look I'm going to write a class here
+ 
+
+53
+00:00:50,370 --> 00:00:52,700
+a look I'm going to write a class here
+it's going to be called entity it's
+
+54
+00:00:52,700 --> 00:00:52,710
+it's going to be called entity it's
+ 
+
+55
+00:00:52,710 --> 00:00:56,720
+it's going to be called entity it's
+going to have a private string name you
+
+56
+00:00:56,720 --> 00:00:56,730
+going to have a private string name you
+ 
+
+57
+00:00:56,730 --> 00:00:57,830
+going to have a private string name you
+guys know the drill I've done this
+
+58
+00:00:57,830 --> 00:00:57,840
+guys know the drill I've done this
+ 
+
+59
+00:00:57,840 --> 00:01:00,410
+guys know the drill I've done this
+before I'm also going to add an age to
+
+60
+00:01:00,410 --> 00:01:00,420
+before I'm also going to add an age to
+ 
+
+61
+00:01:00,420 --> 00:01:02,930
+before I'm also going to add an age to
+this will create an NC constructor which
+
+62
+00:01:02,930 --> 00:01:02,940
+this will create an NC constructor which
+ 
+
+63
+00:01:02,940 --> 00:01:05,960
+this will create an NC constructor which
+takes in a name I write Const St string
+
+64
+00:01:05,960 --> 00:01:05,970
+takes in a name I write Const St string
+ 
+
+65
+00:01:05,970 --> 00:01:09,770
+takes in a name I write Const St string
+reference name Palestine name to name
+
+66
+00:01:09,770 --> 00:01:09,780
+reference name Palestine name to name
+ 
+
+67
+00:01:09,780 --> 00:01:11,539
+reference name Palestine name to name
+here also create another constructor
+
+68
+00:01:11,539 --> 00:01:11,549
+here also create another constructor
+ 
+
+69
+00:01:11,549 --> 00:01:15,679
+here also create another constructor
+which takes in an age I'll sign name
+
+70
+00:01:15,679 --> 00:01:15,689
+which takes in an age I'll sign name
+ 
+
+71
+00:01:15,689 --> 00:01:20,960
+which takes in an age I'll sign name
+here to be unknown an age to be age I
+
+72
+00:01:20,960 --> 00:01:20,970
+here to be unknown an age to be age I
+ 
+
+73
+00:01:20,970 --> 00:01:23,510
+here to be unknown an age to be age I
+should definitely also assign age over
+
+74
+00:01:23,510 --> 00:01:23,520
+should definitely also assign age over
+ 
+
+75
+00:01:23,520 --> 00:01:26,179
+should definitely also assign age over
+here we'll set age to be negative one
+
+76
+00:01:26,179 --> 00:01:26,189
+here we'll set age to be negative one
+ 
+
+77
+00:01:26,189 --> 00:01:28,730
+here we'll set age to be negative one
+meaning that it's invalid basically no
+
+78
+00:01:28,730 --> 00:01:28,740
+meaning that it's invalid basically no
+ 
+
+79
+00:01:28,740 --> 00:01:30,980
+meaning that it's invalid basically no
+age was supplied okay nice so we have
+
+80
+00:01:30,980 --> 00:01:30,990
+age was supplied okay nice so we have
+ 
+
+81
+00:01:30,990 --> 00:01:32,960
+age was supplied okay nice so we have
+two constructors here which are pretty
+
+82
+00:01:32,960 --> 00:01:32,970
+two constructors here which are pretty
+ 
+
+83
+00:01:32,970 --> 00:01:33,590
+two constructors here which are pretty
+simple
+
+84
+00:01:33,590 --> 00:01:33,600
+simple
+ 
+
+85
+00:01:33,600 --> 00:01:34,940
+simple
+so the normal way that you would
+
+86
+00:01:34,940 --> 00:01:34,950
+so the normal way that you would
+ 
+
+87
+00:01:34,950 --> 00:01:36,289
+so the normal way that you would
+probably create these objects is by
+
+88
+00:01:36,289 --> 00:01:36,299
+probably create these objects is by
+ 
+
+89
+00:01:36,299 --> 00:01:39,080
+probably create these objects is by
+writing something like entity a can
+
+90
+00:01:39,080 --> 00:01:39,090
+writing something like entity a can
+ 
+
+91
+00:01:39,090 --> 00:01:41,600
+writing something like entity a can
+maybe give you a name like sugar and GB
+
+92
+00:01:41,600 --> 00:01:41,610
+maybe give you a name like sugar and GB
+ 
+
+93
+00:01:41,610 --> 00:01:43,850
+maybe give you a name like sugar and GB
+maybe giving this one in agents 222
+
+94
+00:01:43,850 --> 00:01:43,860
+maybe giving this one in agents 222
+ 
+
+95
+00:01:43,860 --> 00:01:45,139
+maybe giving this one in agents 222
+that's actually how old I am for those
+
+96
+00:01:45,139 --> 00:01:45,149
+that's actually how old I am for those
+ 
+
+97
+00:01:45,149 --> 00:01:46,190
+that's actually how old I am for those
+of you wondering because I get that
+
+98
+00:01:46,190 --> 00:01:46,200
+of you wondering because I get that
+ 
+
+99
+00:01:46,200 --> 00:01:47,780
+of you wondering because I get that
+question a lot for some reason and you
+
+100
+00:01:47,780 --> 00:01:47,790
+question a lot for some reason and you
+ 
+
+101
+00:01:47,790 --> 00:01:49,429
+question a lot for some reason and you
+would kind of go about your day and not
+
+102
+00:01:49,429 --> 00:01:49,439
+would kind of go about your day and not
+ 
+
+103
+00:01:49,439 --> 00:01:51,230
+would kind of go about your day and not
+think twice and this looks pretty simple
+
+104
+00:01:51,230 --> 00:01:51,240
+think twice and this looks pretty simple
+ 
+
+105
+00:01:51,240 --> 00:01:53,030
+think twice and this looks pretty simple
+maybe if you want to use equals you
+
+106
+00:01:53,030 --> 00:01:53,040
+maybe if you want to use equals you
+ 
+
+107
+00:01:53,040 --> 00:01:56,330
+maybe if you want to use equals you
+would write your code like this and it
+
+108
+00:01:56,330 --> 00:01:56,340
+would write your code like this and it
+ 
+
+109
+00:01:56,340 --> 00:01:57,830
+would write your code like this and it
+kind of looks normal this is how most
+
+110
+00:01:57,830 --> 00:01:57,840
+kind of looks normal this is how most
+ 
+
+111
+00:01:57,840 --> 00:01:59,990
+kind of looks normal this is how most
+people use objects and how much people
+
+112
+00:01:59,990 --> 00:02:00,000
+people use objects and how much people
+ 
+
+113
+00:02:00,000 --> 00:02:02,840
+people use objects and how much people
+instantiate objects but what you can do
+
+114
+00:02:02,840 --> 00:02:02,850
+instantiate objects but what you can do
+ 
+
+115
+00:02:02,850 --> 00:02:05,120
+instantiate objects but what you can do
+which a lot of people don't know is just
+
+116
+00:02:05,120 --> 00:02:05,130
+which a lot of people don't know is just
+ 
+
+117
+00:02:05,130 --> 00:02:07,940
+which a lot of people don't know is just
+basically say that n CA is equal to
+
+118
+00:02:07,940 --> 00:02:07,950
+basically say that n CA is equal to
+ 
+
+119
+00:02:07,950 --> 00:02:10,940
+basically say that n CA is equal to
+Turner or NTP is
+
+120
+00:02:10,940 --> 00:02:10,950
+Turner or NTP is
+ 
+
+121
+00:02:10,950 --> 00:02:14,150
+Turner or NTP is
+equal to 22 now this is a little bit
+
+122
+00:02:14,150 --> 00:02:14,160
+equal to 22 now this is a little bit
+ 
+
+123
+00:02:14,160 --> 00:02:15,949
+equal to 22 now this is a little bit
+weird because well first of all you
+
+124
+00:02:15,949 --> 00:02:15,959
+weird because well first of all you
+ 
+
+125
+00:02:15,959 --> 00:02:17,270
+weird because well first of all you
+can't do this in other languages like
+
+126
+00:02:17,270 --> 00:02:17,280
+can't do this in other languages like
+ 
+
+127
+00:02:17,280 --> 00:02:20,300
+can't do this in other languages like
+Java or C sharp but second of all entity
+
+128
+00:02:20,300 --> 00:02:20,310
+Java or C sharp but second of all entity
+ 
+
+129
+00:02:20,310 --> 00:02:21,710
+Java or C sharp but second of all entity
+B equals 22
+
+130
+00:02:21,710 --> 00:02:21,720
+B equals 22
+ 
+
+131
+00:02:21,720 --> 00:02:24,020
+B equals 22
+what is interesting integer I mean North
+
+132
+00:02:24,020 --> 00:02:24,030
+what is interesting integer I mean North
+ 
+
+133
+00:02:24,030 --> 00:02:26,690
+what is interesting integer I mean North
+is got string and it's got a name but I
+
+134
+00:02:26,690 --> 00:02:26,700
+is got string and it's got a name but I
+ 
+
+135
+00:02:26,700 --> 00:02:29,449
+is got string and it's got a name but I
+can assign 22 what's going on here this
+
+136
+00:02:29,449 --> 00:02:29,459
+can assign 22 what's going on here this
+ 
+
+137
+00:02:29,459 --> 00:02:31,220
+can assign 22 what's going on here this
+is called implicit conversion or illicit
+
+138
+00:02:31,220 --> 00:02:31,230
+is called implicit conversion or illicit
+ 
+
+139
+00:02:31,230 --> 00:02:33,170
+is called implicit conversion or illicit
+construction it's implicitly converting
+
+140
+00:02:33,170 --> 00:02:33,180
+construction it's implicitly converting
+ 
+
+141
+00:02:33,180 --> 00:02:35,360
+construction it's implicitly converting
+that 22 into an axiom constructing an
+
+142
+00:02:35,360 --> 00:02:35,370
+that 22 into an axiom constructing an
+ 
+
+143
+00:02:35,370 --> 00:02:37,130
+that 22 into an axiom constructing an
+entity out of it because there's a
+
+144
+00:02:37,130 --> 00:02:37,140
+entity out of it because there's a
+ 
+
+145
+00:02:37,140 --> 00:02:39,289
+entity out of it because there's a
+constructor fantasy which takes in an
+
+146
+00:02:39,289 --> 00:02:39,299
+constructor fantasy which takes in an
+ 
+
+147
+00:02:39,299 --> 00:02:41,270
+constructor fantasy which takes in an
+integer age right and there's a
+
+148
+00:02:41,270 --> 00:02:41,280
+integer age right and there's a
+ 
+
+149
+00:02:41,280 --> 00:02:43,130
+integer age right and there's a
+constructor fantasy which takes in a
+
+150
+00:02:43,130 --> 00:02:43,140
+constructor fantasy which takes in a
+ 
+
+151
+00:02:43,140 --> 00:02:45,410
+constructor fantasy which takes in a
+name check another example where you
+
+152
+00:02:45,410 --> 00:02:45,420
+name check another example where you
+ 
+
+153
+00:02:45,420 --> 00:02:47,240
+name check another example where you
+might say this is maybe you have a print
+
+154
+00:02:47,240 --> 00:02:47,250
+might say this is maybe you have a print
+ 
+
+155
+00:02:47,250 --> 00:02:49,880
+might say this is maybe you have a print
+st function which takes in an entity and
+
+156
+00:02:49,880 --> 00:02:49,890
+st function which takes in an entity and
+ 
+
+157
+00:02:49,890 --> 00:02:52,009
+st function which takes in an entity and
+then maybe does some cool printing stuff
+
+158
+00:02:52,009 --> 00:02:52,019
+then maybe does some cool printing stuff
+ 
+
+159
+00:02:52,019 --> 00:02:54,920
+then maybe does some cool printing stuff
+what you can actually do here is call
+
+160
+00:02:54,920 --> 00:02:54,930
+what you can actually do here is call
+ 
+
+161
+00:02:54,930 --> 00:02:58,640
+what you can actually do here is call
+that function with 22 right and that
+
+162
+00:02:58,640 --> 00:02:58,650
+that function with 22 right and that
+ 
+
+163
+00:02:58,650 --> 00:03:00,259
+that function with 22 right and that
+looks weird because we'll hang on a
+
+164
+00:03:00,259 --> 00:03:00,269
+looks weird because we'll hang on a
+ 
+
+165
+00:03:00,269 --> 00:03:00,680
+looks weird because we'll hang on a
+minute
+
+166
+00:03:00,680 --> 00:03:00,690
+minute
+ 
+
+167
+00:03:00,690 --> 00:03:02,479
+minute
+we don't have an overload for print and
+
+168
+00:03:02,479 --> 00:03:02,489
+we don't have an overload for print and
+ 
+
+169
+00:03:02,489 --> 00:03:05,420
+we don't have an overload for print and
+T which takes in an integer or something
+
+170
+00:03:05,420 --> 00:03:05,430
+T which takes in an integer or something
+ 
+
+171
+00:03:05,430 --> 00:03:07,100
+T which takes in an integer or something
+like that we've just got one that takes
+
+172
+00:03:07,100 --> 00:03:07,110
+like that we've just got one that takes
+ 
+
+173
+00:03:07,110 --> 00:03:09,650
+like that we've just got one that takes
+in an entity but remember as far as c++
+
+174
+00:03:09,650 --> 00:03:09,660
+in an entity but remember as far as c++
+ 
+
+175
+00:03:09,660 --> 00:03:12,319
+in an entity but remember as far as c++
+is concerned 22 can be converted into an
+
+176
+00:03:12,319 --> 00:03:12,329
+is concerned 22 can be converted into an
+ 
+
+177
+00:03:12,329 --> 00:03:14,270
+is concerned 22 can be converted into an
+entity because you can call this
+
+178
+00:03:14,270 --> 00:03:14,280
+entity because you can call this
+ 
+
+179
+00:03:14,280 --> 00:03:17,030
+entity because you can call this
+constructor and suddenly from 22 which
+
+180
+00:03:17,030 --> 00:03:17,040
+constructor and suddenly from 22 which
+ 
+
+181
+00:03:17,040 --> 00:03:18,620
+constructor and suddenly from 22 which
+is the only parameter you've made an
+
+182
+00:03:18,620 --> 00:03:18,630
+is the only parameter you've made an
+ 
+
+183
+00:03:18,630 --> 00:03:20,720
+is the only parameter you've made an
+entity now watch what happens when I try
+
+184
+00:03:20,720 --> 00:03:20,730
+entity now watch what happens when I try
+ 
+
+185
+00:03:20,730 --> 00:03:23,000
+entity now watch what happens when I try
+and call this print entity function with
+
+186
+00:03:23,000 --> 00:03:23,010
+and call this print entity function with
+ 
+
+187
+00:03:23,010 --> 00:03:24,289
+and call this print entity function with
+Cherno you would kind of assume it to
+
+188
+00:03:24,289 --> 00:03:24,299
+Cherno you would kind of assume it to
+ 
+
+189
+00:03:24,299 --> 00:03:26,330
+Cherno you would kind of assume it to
+work right because this did no it
+
+190
+00:03:26,330 --> 00:03:26,340
+work right because this did no it
+ 
+
+191
+00:03:26,340 --> 00:03:27,979
+work right because this did no it
+doesn't work and the reason it didn't
+
+192
+00:03:27,979 --> 00:03:27,989
+doesn't work and the reason it didn't
+ 
+
+193
+00:03:27,989 --> 00:03:29,720
+doesn't work and the reason it didn't
+work is because this churner string
+
+194
+00:03:29,720 --> 00:03:29,730
+work is because this churner string
+ 
+
+195
+00:03:29,730 --> 00:03:32,750
+work is because this churner string
+isn't actually an STD string it is a
+
+196
+00:03:32,750 --> 00:03:32,760
+isn't actually an STD string it is a
+ 
+
+197
+00:03:32,760 --> 00:03:35,569
+isn't actually an STD string it is a
+char array it's a Const our array of
+
+198
+00:03:35,569 --> 00:03:35,579
+char array it's a Const our array of
+ 
+
+199
+00:03:35,579 --> 00:03:37,520
+char array it's a Const our array of
+seven characters we've got shown on and
+
+200
+00:03:37,520 --> 00:03:37,530
+seven characters we've got shown on and
+ 
+
+201
+00:03:37,530 --> 00:03:39,319
+seven characters we've got shown on and
+then an old termination character if you
+
+202
+00:03:39,319 --> 00:03:39,329
+then an old termination character if you
+ 
+
+203
+00:03:39,329 --> 00:03:41,360
+then an old termination character if you
+guys don't know how strings work link up
+
+204
+00:03:41,360 --> 00:03:41,370
+guys don't know how strings work link up
+ 
+
+205
+00:03:41,370 --> 00:03:43,009
+guys don't know how strings work link up
+their link in the description below
+
+206
+00:03:43,009 --> 00:03:43,019
+their link in the description below
+ 
+
+207
+00:03:43,019 --> 00:03:44,870
+their link in the description below
+thanks everywhere go check that video
+
+208
+00:03:44,870 --> 00:03:44,880
+thanks everywhere go check that video
+ 
+
+209
+00:03:44,880 --> 00:03:47,059
+thanks everywhere go check that video
+out a very very useful stuff so in order
+
+210
+00:03:47,059 --> 00:03:47,069
+out a very very useful stuff so in order
+ 
+
+211
+00:03:47,069 --> 00:03:49,039
+out a very very useful stuff so in order
+for this to work C++ would actually have
+
+212
+00:03:49,039 --> 00:03:49,049
+for this to work C++ would actually have
+ 
+
+213
+00:03:49,049 --> 00:03:52,069
+for this to work C++ would actually have
+to do two conversions one from a Const
+
+214
+00:03:52,069 --> 00:03:52,079
+to do two conversions one from a Const
+ 
+
+215
+00:03:52,079 --> 00:03:54,800
+to do two conversions one from a Const
+RA into a string and then one from a
+
+216
+00:03:54,800 --> 00:03:54,810
+RA into a string and then one from a
+ 
+
+217
+00:03:54,810 --> 00:03:56,449
+RA into a string and then one from a
+string to an entity and it's only
+
+218
+00:03:56,449 --> 00:03:56,459
+string to an entity and it's only
+ 
+
+219
+00:03:56,459 --> 00:03:59,420
+string to an entity and it's only
+allowed to do one implicit conversion so
+
+220
+00:03:59,420 --> 00:03:59,430
+allowed to do one implicit conversion so
+ 
+
+221
+00:03:59,430 --> 00:04:00,860
+allowed to do one implicit conversion so
+for this to work we would have to either
+
+222
+00:04:00,860 --> 00:04:00,870
+for this to work we would have to either
+ 
+
+223
+00:04:00,870 --> 00:04:04,250
+for this to work we would have to either
+wrap this inside a constructor like this
+
+224
+00:04:04,250 --> 00:04:04,260
+wrap this inside a constructor like this
+ 
+
+225
+00:04:04,260 --> 00:04:06,500
+wrap this inside a constructor like this
+the string and suddenly this works fine
+
+226
+00:04:06,500 --> 00:04:06,510
+the string and suddenly this works fine
+ 
+
+227
+00:04:06,510 --> 00:04:09,349
+the string and suddenly this works fine
+or we could even wrap it just in an
+
+228
+00:04:09,349 --> 00:04:09,359
+or we could even wrap it just in an
+ 
+
+229
+00:04:09,359 --> 00:04:10,520
+or we could even wrap it just in an
+entity and that would work as well
+
+230
+00:04:10,520 --> 00:04:10,530
+entity and that would work as well
+ 
+
+231
+00:04:10,530 --> 00:04:11,990
+entity and that would work as well
+because in this case it would be
+
+232
+00:04:11,990 --> 00:04:12,000
+because in this case it would be
+ 
+
+233
+00:04:12,000 --> 00:04:14,030
+because in this case it would be
+implicitly converting this string into a
+
+234
+00:04:14,030 --> 00:04:14,040
+implicitly converting this string into a
+ 
+
+235
+00:04:14,040 --> 00:04:15,890
+implicitly converting this string into a
+string into an STD string into a
+
+236
+00:04:15,890 --> 00:04:15,900
+string into an STD string into a
+ 
+
+237
+00:04:15,900 --> 00:04:18,020
+string into an STD string into a
+standard string and then that will be
+
+238
+00:04:18,020 --> 00:04:18,030
+standard string and then that will be
+ 
+
+239
+00:04:18,030 --> 00:04:19,949
+standard string and then that will be
+pushed into the HD constructor and
+
+240
+00:04:19,949 --> 00:04:19,959
+pushed into the HD constructor and
+ 
+
+241
+00:04:19,959 --> 00:04:21,809
+pushed into the HD constructor and
+constructor available okay cool that's
+
+242
+00:04:21,809 --> 00:04:21,819
+constructor available okay cool that's
+ 
+
+243
+00:04:21,819 --> 00:04:22,980
+constructor available okay cool that's
+impressive construction pretty cool
+
+244
+00:04:22,980 --> 00:04:22,990
+impressive construction pretty cool
+ 
+
+245
+00:04:22,990 --> 00:04:24,990
+impressive construction pretty cool
+stuff can help simplify your code a lot
+
+246
+00:04:24,990 --> 00:04:25,000
+stuff can help simplify your code a lot
+ 
+
+247
+00:04:25,000 --> 00:04:26,909
+stuff can help simplify your code a lot
+personally I try to avoid it as much as
+
+248
+00:04:26,909 --> 00:04:26,919
+personally I try to avoid it as much as
+ 
+
+249
+00:04:26,919 --> 00:04:30,059
+personally I try to avoid it as much as
+possible except for some some cases when
+
+250
+00:04:30,059 --> 00:04:30,069
+possible except for some some cases when
+ 
+
+251
+00:04:30,069 --> 00:04:32,189
+possible except for some some cases when
+you're kind of assigning it can get it
+
+252
+00:04:32,189 --> 00:04:32,199
+you're kind of assigning it can get it
+ 
+
+253
+00:04:32,199 --> 00:04:34,350
+you're kind of assigning it can get it
+can kind of just simply oh so you're not
+
+254
+00:04:34,350 --> 00:04:34,360
+can kind of just simply oh so you're not
+ 
+
+255
+00:04:34,360 --> 00:04:36,360
+can kind of just simply oh so you're not
+wrapping it with constructors all the
+
+256
+00:04:36,360 --> 00:04:36,370
+wrapping it with constructors all the
+ 
+
+257
+00:04:36,370 --> 00:04:39,029
+wrapping it with constructors all the
+time but in general I wouldn't be
+
+258
+00:04:39,029 --> 00:04:39,039
+time but in general I wouldn't be
+ 
+
+259
+00:04:39,039 --> 00:04:42,080
+time but in general I wouldn't be
+assigning this entity b22 like this I
+
+260
+00:04:42,080 --> 00:04:42,090
+assigning this entity b22 like this I
+ 
+
+261
+00:04:42,090 --> 00:04:44,189
+assigning this entity b22 like this I
+personally would write code like this
+
+262
+00:04:44,189 --> 00:04:44,199
+personally would write code like this
+ 
+
+263
+00:04:44,199 --> 00:04:46,260
+personally would write code like this
+instead because in my opinion it just
+
+264
+00:04:46,260 --> 00:04:46,270
+instead because in my opinion it just
+ 
+
+265
+00:04:46,270 --> 00:04:47,850
+instead because in my opinion it just
+looks a bit more clear now let's talk
+
+266
+00:04:47,850 --> 00:04:47,860
+looks a bit more clear now let's talk
+ 
+
+267
+00:04:47,860 --> 00:04:49,379
+looks a bit more clear now let's talk
+about what the explicit keyword is
+
+268
+00:04:49,379 --> 00:04:49,389
+about what the explicit keyword is
+ 
+
+269
+00:04:49,389 --> 00:04:51,450
+about what the explicit keyword is
+because it's very very relevant to this
+
+270
+00:04:51,450 --> 00:04:51,460
+because it's very very relevant to this
+ 
+
+271
+00:04:51,460 --> 00:04:54,150
+because it's very very relevant to this
+explicit disables the simplistic analogy
+
+272
+00:04:54,150 --> 00:04:54,160
+explicit disables the simplistic analogy
+ 
+
+273
+00:04:54,160 --> 00:04:55,589
+explicit disables the simplistic analogy
+the explicit keyword is something that
+
+274
+00:04:55,589 --> 00:04:55,599
+the explicit keyword is something that
+ 
+
+275
+00:04:55,599 --> 00:04:57,390
+the explicit keyword is something that
+you put in front of a constructor and if
+
+276
+00:04:57,390 --> 00:04:57,400
+you put in front of a constructor and if
+ 
+
+277
+00:04:57,400 --> 00:04:59,760
+you put in front of a constructor and if
+you write an explicit constructor it
+
+278
+00:04:59,760 --> 00:04:59,770
+you write an explicit constructor it
+ 
+
+279
+00:04:59,770 --> 00:05:02,400
+you write an explicit constructor it
+means that no no no no no implicit
+
+280
+00:05:02,400 --> 00:05:02,410
+means that no no no no no implicit
+ 
+
+281
+00:05:02,410 --> 00:05:04,680
+means that no no no no no implicit
+conversions this constructor must
+
+282
+00:05:04,680 --> 00:05:04,690
+conversions this constructor must
+ 
+
+283
+00:05:04,690 --> 00:05:06,659
+conversions this constructor must
+explicitly be called if you want to
+
+284
+00:05:06,659 --> 00:05:06,669
+explicitly be called if you want to
+ 
+
+285
+00:05:06,669 --> 00:05:08,550
+explicitly be called if you want to
+construct this entity object with an
+
+286
+00:05:08,550 --> 00:05:08,560
+construct this entity object with an
+ 
+
+287
+00:05:08,560 --> 00:05:11,879
+construct this entity object with an
+integer for example so let's go back to
+
+288
+00:05:11,879 --> 00:05:11,889
+integer for example so let's go back to
+ 
+
+289
+00:05:11,889 --> 00:05:13,860
+integer for example so let's go back to
+having this implicit conversion here if
+
+290
+00:05:13,860 --> 00:05:13,870
+having this implicit conversion here if
+ 
+
+291
+00:05:13,870 --> 00:05:16,920
+having this implicit conversion here if
+I go up here and I change this int age
+
+292
+00:05:16,920 --> 00:05:16,930
+I go up here and I change this int age
+ 
+
+293
+00:05:16,930 --> 00:05:18,899
+I go up here and I change this int age
+constructor to be explicit by sticking
+
+294
+00:05:18,899 --> 00:05:18,909
+constructor to be explicit by sticking
+ 
+
+295
+00:05:18,909 --> 00:05:20,879
+constructor to be explicit by sticking
+explicit out the front you'll see that
+
+296
+00:05:20,879 --> 00:05:20,889
+explicit out the front you'll see that
+ 
+
+297
+00:05:20,889 --> 00:05:23,730
+explicit out the front you'll see that
+these birds suddenly fail I cannot do
+
+298
+00:05:23,730 --> 00:05:23,740
+these birds suddenly fail I cannot do
+ 
+
+299
+00:05:23,740 --> 00:05:26,010
+these birds suddenly fail I cannot do
+that anymore if I want to do this I need
+
+300
+00:05:26,010 --> 00:05:26,020
+that anymore if I want to do this I need
+ 
+
+301
+00:05:26,020 --> 00:05:28,320
+that anymore if I want to do this I need
+to either write code like that
+
+302
+00:05:28,320 --> 00:05:28,330
+to either write code like that
+ 
+
+303
+00:05:28,330 --> 00:05:30,450
+to either write code like that
+or explicitly cast it to an entity by
+
+304
+00:05:30,450 --> 00:05:30,460
+or explicitly cast it to an entity by
+ 
+
+305
+00:05:30,460 --> 00:05:32,279
+or explicitly cast it to an entity by
+doing this we'll talk about passing in
+
+306
+00:05:32,279 --> 00:05:32,289
+doing this we'll talk about passing in
+ 
+
+307
+00:05:32,289 --> 00:05:33,540
+doing this we'll talk about passing in
+another video it'll be a link up there
+
+308
+00:05:33,540 --> 00:05:33,550
+another video it'll be a link up there
+ 
+
+309
+00:05:33,550 --> 00:05:35,249
+another video it'll be a link up there
+and in description below as well all we
+
+310
+00:05:35,249 --> 00:05:35,259
+and in description below as well all we
+ 
+
+311
+00:05:35,259 --> 00:05:36,779
+and in description below as well all we
+can of course just call that entity
+
+312
+00:05:36,779 --> 00:05:36,789
+can of course just call that entity
+ 
+
+313
+00:05:36,789 --> 00:05:38,820
+can of course just call that entity
+constructor like this as well okay so
+
+314
+00:05:38,820 --> 00:05:38,830
+constructor like this as well okay so
+ 
+
+315
+00:05:38,830 --> 00:05:41,219
+constructor like this as well okay so
+those are kind of our options but we can
+
+316
+00:05:41,219 --> 00:05:41,229
+those are kind of our options but we can
+ 
+
+317
+00:05:41,229 --> 00:05:43,770
+those are kind of our options but we can
+no longer just implicitly call code like
+
+318
+00:05:43,770 --> 00:05:43,780
+no longer just implicitly call code like
+ 
+
+319
+00:05:43,780 --> 00:05:44,939
+no longer just implicitly call code like
+this and expect it to work it's not
+
+320
+00:05:44,939 --> 00:05:44,949
+this and expect it to work it's not
+ 
+
+321
+00:05:44,949 --> 00:05:46,379
+this and expect it to work it's not
+going to happen and of course if we
+
+322
+00:05:46,379 --> 00:05:46,389
+going to happen and of course if we
+ 
+
+323
+00:05:46,389 --> 00:05:49,290
+going to happen and of course if we
+write explicit for this constructor
+
+324
+00:05:49,290 --> 00:05:49,300
+write explicit for this constructor
+ 
+
+325
+00:05:49,300 --> 00:05:50,730
+write explicit for this constructor
+which takes in string then of course
+
+326
+00:05:50,730 --> 00:05:50,740
+which takes in string then of course
+ 
+
+327
+00:05:50,740 --> 00:05:52,740
+which takes in string then of course
+this is going to fail as well not this
+
+328
+00:05:52,740 --> 00:05:52,750
+this is going to fail as well not this
+ 
+
+329
+00:05:52,750 --> 00:05:54,779
+this is going to fail as well not this
+one just yet because we are still of
+
+330
+00:05:54,779 --> 00:05:54,789
+one just yet because we are still of
+ 
+
+331
+00:05:54,789 --> 00:05:56,459
+one just yet because we are still of
+course actually calling the entity
+
+332
+00:05:56,459 --> 00:05:56,469
+course actually calling the entity
+ 
+
+333
+00:05:56,469 --> 00:05:58,469
+course actually calling the entity
+constructor but everything else that is
+
+334
+00:05:58,469 --> 00:05:58,479
+constructor but everything else that is
+ 
+
+335
+00:05:58,479 --> 00:06:00,629
+constructor but everything else that is
+implicit like this one fails and that is
+
+336
+00:06:00,629 --> 00:06:00,639
+implicit like this one fails and that is
+ 
+
+337
+00:06:00,639 --> 00:06:02,040
+implicit like this one fails and that is
+really the only function of that
+
+338
+00:06:02,040 --> 00:06:02,050
+really the only function of that
+ 
+
+339
+00:06:02,050 --> 00:06:03,870
+really the only function of that
+explicit keyword it's for when you want
+
+340
+00:06:03,870 --> 00:06:03,880
+explicit keyword it's for when you want
+ 
+
+341
+00:06:03,880 --> 00:06:05,640
+explicit keyword it's for when you want
+your constructors to be explicitly
+
+342
+00:06:05,640 --> 00:06:05,650
+your constructors to be explicitly
+ 
+
+343
+00:06:05,650 --> 00:06:07,469
+your constructors to be explicitly
+called instead of allowing the sibyl's
+
+344
+00:06:07,469 --> 00:06:07,479
+called instead of allowing the sibyl's
+ 
+
+345
+00:06:07,479 --> 00:06:09,839
+called instead of allowing the sibyl's
+compiler to implicitly convert any
+
+346
+00:06:09,839 --> 00:06:09,849
+compiler to implicitly convert any
+ 
+
+347
+00:06:09,849 --> 00:06:12,089
+compiler to implicitly convert any
+integer into entity by just basically
+
+348
+00:06:12,089 --> 00:06:12,099
+integer into entity by just basically
+ 
+
+349
+00:06:12,099 --> 00:06:14,189
+integer into entity by just basically
+calling this constructor every time you
+
+350
+00:06:14,189 --> 00:06:14,199
+calling this constructor every time you
+ 
+
+351
+00:06:14,199 --> 00:06:15,839
+calling this constructor every time you
+try and do that okay so that's what
+
+352
+00:06:15,839 --> 00:06:15,849
+try and do that okay so that's what
+ 
+
+353
+00:06:15,849 --> 00:06:17,520
+try and do that okay so that's what
+implicit is that's what explicit is
+
+354
+00:06:17,520 --> 00:06:17,530
+implicit is that's what explicit is
+ 
+
+355
+00:06:17,530 --> 00:06:19,320
+implicit is that's what explicit is
+hopefully this plays some stuff up as
+
+356
+00:06:19,320 --> 00:06:19,330
+hopefully this plays some stuff up as
+ 
+
+357
+00:06:19,330 --> 00:06:21,089
+hopefully this plays some stuff up as
+for when you want to use this I use
+
+358
+00:06:21,089 --> 00:06:21,099
+for when you want to use this I use
+ 
+
+359
+00:06:21,099 --> 00:06:23,610
+for when you want to use this I use
+explicit sometimes for things like math
+
+360
+00:06:23,610 --> 00:06:23,620
+explicit sometimes for things like math
+ 
+
+361
+00:06:23,620 --> 00:06:25,890
+explicit sometimes for things like math
+libraries if I really don't want to be
+
+362
+00:06:25,890 --> 00:06:25,900
+libraries if I really don't want to be
+ 
+
+363
+00:06:25,900 --> 00:06:27,990
+libraries if I really don't want to be
+comparing numbers to vectors
+
+364
+00:06:27,990 --> 00:06:28,000
+comparing numbers to vectors
+ 
+
+365
+00:06:28,000 --> 00:06:29,850
+comparing numbers to vectors
+time and I want to just ensure that my
+
+366
+00:06:29,850 --> 00:06:29,860
+time and I want to just ensure that my
+ 
+
+367
+00:06:29,860 --> 00:06:31,380
+time and I want to just ensure that my
+code is as safe as possible
+
+368
+00:06:31,380 --> 00:06:31,390
+code is as safe as possible
+ 
+
+369
+00:06:31,390 --> 00:06:32,970
+code is as safe as possible
+honestly I don't find myself using it
+
+370
+00:06:32,970 --> 00:06:32,980
+honestly I don't find myself using it
+ 
+
+371
+00:06:32,980 --> 00:06:34,950
+honestly I don't find myself using it
+too often when you're writing low-level
+
+372
+00:06:34,950 --> 00:06:34,960
+too often when you're writing low-level
+ 
+
+373
+00:06:34,960 --> 00:06:37,380
+too often when you're writing low-level
+rappers or things like that it can come
+
+374
+00:06:37,380 --> 00:06:37,390
+rappers or things like that it can come
+ 
+
+375
+00:06:37,390 --> 00:06:38,850
+rappers or things like that it can come
+in handy and can prevent you from
+
+376
+00:06:38,850 --> 00:06:38,860
+in handy and can prevent you from
+ 
+
+377
+00:06:38,860 --> 00:06:40,830
+in handy and can prevent you from
+accidentally casting things and causing
+
+378
+00:06:40,830 --> 00:06:40,840
+accidentally casting things and causing
+ 
+
+379
+00:06:40,840 --> 00:06:43,050
+accidentally casting things and causing
+you the performance issues or buzz will
+
+380
+00:06:43,050 --> 00:06:43,060
+you the performance issues or buzz will
+ 
+
+381
+00:06:43,060 --> 00:06:45,030
+you the performance issues or buzz will
+kind of maybe talk about specific
+
+382
+00:06:45,030 --> 00:06:45,040
+kind of maybe talk about specific
+ 
+
+383
+00:06:45,040 --> 00:06:46,650
+kind of maybe talk about specific
+examples in the future if we run into
+
+384
+00:06:46,650 --> 00:06:46,660
+examples in the future if we run into
+ 
+
+385
+00:06:46,660 --> 00:06:48,240
+examples in the future if we run into
+them but it's one of those things that
+
+386
+00:06:48,240 --> 00:06:48,250
+them but it's one of those things that
+ 
+
+387
+00:06:48,250 --> 00:06:49,110
+them but it's one of those things that
+you probably don't need to worry about
+
+388
+00:06:49,110 --> 00:06:49,120
+you probably don't need to worry about
+ 
+
+389
+00:06:49,120 --> 00:06:51,150
+you probably don't need to worry about
+too much just be aware of this keyword
+
+390
+00:06:51,150 --> 00:06:51,160
+too much just be aware of this keyword
+ 
+
+391
+00:06:51,160 --> 00:06:52,980
+too much just be aware of this keyword
+and what it can do for you and the big
+
+392
+00:06:52,980 --> 00:06:52,990
+and what it can do for you and the big
+ 
+
+393
+00:06:52,990 --> 00:06:54,720
+and what it can do for you and the big
+the big take away I think from this
+
+394
+00:06:54,720 --> 00:06:54,730
+the big take away I think from this
+ 
+
+395
+00:06:54,730 --> 00:06:57,000
+the big take away I think from this
+video is just be aware that implicit
+
+396
+00:06:57,000 --> 00:06:57,010
+video is just be aware that implicit
+ 
+
+397
+00:06:57,010 --> 00:06:59,040
+video is just be aware that implicit
+construction exists hope you guys enjoy
+
+398
+00:06:59,040 --> 00:06:59,050
+construction exists hope you guys enjoy
+ 
+
+399
+00:06:59,050 --> 00:07:00,630
+construction exists hope you guys enjoy
+this video if you did you hit that like
+
+400
+00:07:00,630 --> 00:07:00,640
+this video if you did you hit that like
+ 
+
+401
+00:07:00,640 --> 00:07:02,220
+this video if you did you hit that like
+button you can also help support this
+
+402
+00:07:02,220 --> 00:07:02,230
+button you can also help support this
+ 
+
+403
+00:07:02,230 --> 00:07:04,050
+button you can also help support this
+series and make it even better by going
+
+404
+00:07:04,050 --> 00:07:04,060
+series and make it even better by going
+ 
+
+405
+00:07:04,060 --> 00:07:06,180
+series and make it even better by going
+to patreon home for such the channel but
+
+406
+00:07:06,180 --> 00:07:06,190
+to patreon home for such the channel but
+ 
+
+407
+00:07:06,190 --> 00:07:07,530
+to patreon home for such the channel but
+they don't reduce support the series you
+
+408
+00:07:07,530 --> 00:07:07,540
+they don't reduce support the series you
+ 
+
+409
+00:07:07,540 --> 00:07:09,090
+they don't reduce support the series you
+do get some pretty cool rewards such as
+
+410
+00:07:09,090 --> 00:07:09,100
+do get some pretty cool rewards such as
+ 
+
+411
+00:07:09,100 --> 00:07:10,560
+do get some pretty cool rewards such as
+being able to see these exits early
+
+412
+00:07:10,560 --> 00:07:10,570
+being able to see these exits early
+ 
+
+413
+00:07:10,570 --> 00:07:12,090
+being able to see these exits early
+basically as soon as I'm done editing
+
+414
+00:07:12,090 --> 00:07:12,100
+basically as soon as I'm done editing
+ 
+
+415
+00:07:12,100 --> 00:07:14,040
+basically as soon as I'm done editing
+them as well as contribute to the
+
+416
+00:07:14,040 --> 00:07:14,050
+them as well as contribute to the
+ 
+
+417
+00:07:14,050 --> 00:07:15,600
+them as well as contribute to the
+discussion of what goes into these
+
+418
+00:07:15,600 --> 00:07:15,610
+discussion of what goes into these
+ 
+
+419
+00:07:15,610 --> 00:07:17,250
+discussion of what goes into these
+videos in the future if there's
+
+420
+00:07:17,250 --> 00:07:17,260
+videos in the future if there's
+ 
+
+421
+00:07:17,260 --> 00:07:18,300
+videos in the future if there's
+something in this video that you didn't
+
+422
+00:07:18,300 --> 00:07:18,310
+something in this video that you didn't
+ 
+
+423
+00:07:18,310 --> 00:07:19,590
+something in this video that you didn't
+understand you can leave a comment below
+
+424
+00:07:19,590 --> 00:07:19,600
+understand you can leave a comment below
+ 
+
+425
+00:07:19,600 --> 00:07:21,060
+understand you can leave a comment below
+and I'll try and reply to as many as I
+
+426
+00:07:21,060 --> 00:07:21,070
+and I'll try and reply to as many as I
+ 
+
+427
+00:07:21,070 --> 00:07:23,010
+and I'll try and reply to as many as I
+can but I also have a discourse above
+
+428
+00:07:23,010 --> 00:07:23,020
+can but I also have a discourse above
+ 
+
+429
+00:07:23,020 --> 00:07:25,020
+can but I also have a discourse above
+link in the description below in which
+
+430
+00:07:25,020 --> 00:07:25,030
+link in the description below in which
+ 
+
+431
+00:07:25,030 --> 00:07:26,550
+link in the description below in which
+you could talk about this kind of stuff
+
+432
+00:07:26,550 --> 00:07:26,560
+you could talk about this kind of stuff
+ 
+
+433
+00:07:26,560 --> 00:07:28,620
+you could talk about this kind of stuff
+with with a handful of people I think
+
+434
+00:07:28,620 --> 00:07:28,630
+with with a handful of people I think
+ 
+
+435
+00:07:28,630 --> 00:07:30,390
+with with a handful of people I think
+there's like 200 people in the 700 race
+
+436
+00:07:30,390 --> 00:07:30,400
+there's like 200 people in the 700 race
+ 
+
+437
+00:07:30,400 --> 00:07:31,890
+there's like 200 people in the 700 race
+that's pretty cool definitely join up
+
+438
+00:07:31,890 --> 00:07:31,900
+that's pretty cool definitely join up
+ 
+
+439
+00:07:31,900 --> 00:07:34,110
+that's pretty cool definitely join up
+their link in description below and I'll
+
+440
+00:07:34,110 --> 00:07:34,120
+their link in description below and I'll
+ 
+
+441
+00:07:34,120 --> 00:07:37,710
+their link in description below and I'll
+see you guys in the next video goodbye
+
+442
+00:07:37,710 --> 00:07:37,720
+
+ 
+
+443
+00:07:37,720 --> 00:07:45,210
+
+[Music]
+
+444
+00:07:45,210 --> 00:07:45,220
+
+ 
+
+445
+00:07:45,220 --> 00:07:52,259
+
+[Music]
+

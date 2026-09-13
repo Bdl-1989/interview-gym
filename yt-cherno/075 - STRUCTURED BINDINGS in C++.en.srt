@@ -1,0 +1,2865 @@
+1
+00:00:00,030 --> 00:00:02,480
+
+hello guys my name is the chana welcome
+
+2
+00:00:02,480 --> 00:00:02,490
+hello guys my name is the chana welcome
+ 
+
+3
+00:00:02,490 --> 00:00:05,059
+hello guys my name is the chana welcome
+back to my C++ series so today we're
+
+4
+00:00:05,059 --> 00:00:05,069
+back to my C++ series so today we're
+ 
+
+5
+00:00:05,069 --> 00:00:06,380
+back to my C++ series so today we're
+gonna be talking all about structured
+
+6
+00:00:06,380 --> 00:00:06,390
+gonna be talking all about structured
+ 
+
+7
+00:00:06,390 --> 00:00:09,730
+gonna be talking all about structured
+bindings in C++ this is specific to C++
+
+8
+00:00:09,730 --> 00:00:09,740
+bindings in C++ this is specific to C++
+ 
+
+9
+00:00:09,740 --> 00:00:12,740
+bindings in C++ this is specific to C++
+17 structured bindings are a new feature
+
+10
+00:00:12,740 --> 00:00:12,750
+17 structured bindings are a new feature
+ 
+
+11
+00:00:12,750 --> 00:00:14,749
+17 structured bindings are a new feature
+that let us deal with multiple return
+
+12
+00:00:14,749 --> 00:00:14,759
+that let us deal with multiple return
+ 
+
+13
+00:00:14,759 --> 00:00:16,820
+that let us deal with multiple return
+values a little bit better now I did
+
+14
+00:00:16,820 --> 00:00:16,830
+values a little bit better now I did
+ 
+
+15
+00:00:16,830 --> 00:00:18,380
+values a little bit better now I did
+make a video about how to deal with
+
+16
+00:00:18,380 --> 00:00:18,390
+make a video about how to deal with
+ 
+
+17
+00:00:18,390 --> 00:00:21,200
+make a video about how to deal with
+multiple return values in C++ check out
+
+18
+00:00:21,200 --> 00:00:21,210
+multiple return values in C++ check out
+ 
+
+19
+00:00:21,210 --> 00:00:22,460
+multiple return values in C++ check out
+that video if you haven't already I'll
+
+20
+00:00:22,460 --> 00:00:22,470
+that video if you haven't already I'll
+ 
+
+21
+00:00:22,470 --> 00:00:24,769
+that video if you haven't already I'll
+have it linked up there and this is kind
+
+22
+00:00:24,769 --> 00:00:24,779
+have it linked up there and this is kind
+ 
+
+23
+00:00:24,779 --> 00:00:26,540
+have it linked up there and this is kind
+of extending upon that with kind of a
+
+24
+00:00:26,540 --> 00:00:26,550
+of extending upon that with kind of a
+ 
+
+25
+00:00:26,550 --> 00:00:29,060
+of extending upon that with kind of a
+new way of how we can deal with this
+
+26
+00:00:29,060 --> 00:00:29,070
+new way of how we can deal with this
+ 
+
+27
+00:00:29,070 --> 00:00:31,099
+new way of how we can deal with this
+specifically how we can deal with tuples
+
+28
+00:00:31,099 --> 00:00:31,109
+specifically how we can deal with tuples
+ 
+
+29
+00:00:31,109 --> 00:00:33,260
+specifically how we can deal with tuples
+and pairs and returning things like that
+
+30
+00:00:33,260 --> 00:00:33,270
+and pairs and returning things like that
+ 
+
+31
+00:00:33,270 --> 00:00:35,150
+and pairs and returning things like that
+because structured bindings just let us
+
+32
+00:00:35,150 --> 00:00:35,160
+because structured bindings just let us
+ 
+
+33
+00:00:35,160 --> 00:00:36,860
+because structured bindings just let us
+kind of simplify our code make it a lot
+
+34
+00:00:36,860 --> 00:00:36,870
+kind of simplify our code make it a lot
+ 
+
+35
+00:00:36,870 --> 00:00:39,350
+kind of simplify our code make it a lot
+cleaner than what it was in the past in
+
+36
+00:00:39,350 --> 00:00:39,360
+cleaner than what it was in the past in
+ 
+
+37
+00:00:39,360 --> 00:00:40,610
+cleaner than what it was in the past in
+that video about how to deal with
+
+38
+00:00:40,610 --> 00:00:40,620
+that video about how to deal with
+ 
+
+39
+00:00:40,620 --> 00:00:42,709
+that video about how to deal with
+multiple values in C++ I did
+
+40
+00:00:42,709 --> 00:00:42,719
+multiple values in C++ I did
+ 
+
+41
+00:00:42,719 --> 00:00:44,930
+multiple values in C++ I did
+specifically mention that I like structs
+
+42
+00:00:44,930 --> 00:00:44,940
+specifically mention that I like structs
+ 
+
+43
+00:00:44,940 --> 00:00:47,900
+specifically mention that I like structs
+and I like to return basically instances
+
+44
+00:00:47,900 --> 00:00:47,910
+and I like to return basically instances
+ 
+
+45
+00:00:47,910 --> 00:00:50,180
+and I like to return basically instances
+of structs which contain the members of
+
+46
+00:00:50,180 --> 00:00:50,190
+of structs which contain the members of
+ 
+
+47
+00:00:50,190 --> 00:00:51,979
+of structs which contain the members of
+data that I actually want that's how I
+
+48
+00:00:51,979 --> 00:00:51,989
+data that I actually want that's how I
+ 
+
+49
+00:00:51,989 --> 00:00:53,900
+data that I actually want that's how I
+personally like dealing with multiple
+
+50
+00:00:53,900 --> 00:00:53,910
+personally like dealing with multiple
+ 
+
+51
+00:00:53,910 --> 00:00:56,689
+personally like dealing with multiple
+return guys that could have potentially
+
+52
+00:00:56,689 --> 00:00:56,699
+return guys that could have potentially
+ 
+
+53
+00:00:56,699 --> 00:00:58,849
+return guys that could have potentially
+changed with this introduction of
+
+54
+00:00:58,849 --> 00:00:58,859
+changed with this introduction of
+ 
+
+55
+00:00:58,859 --> 00:01:00,560
+changed with this introduction of
+structured bindings and in fact it has
+
+56
+00:01:00,560 --> 00:01:00,570
+structured bindings and in fact it has
+ 
+
+57
+00:01:00,570 --> 00:01:02,510
+structured bindings and in fact it has
+changed because over the past like year
+
+58
+00:01:02,510 --> 00:01:02,520
+changed because over the past like year
+ 
+
+59
+00:01:02,520 --> 00:01:04,759
+changed because over the past like year
+or two really in my own code I've kind
+
+60
+00:01:04,759 --> 00:01:04,769
+or two really in my own code I've kind
+ 
+
+61
+00:01:04,769 --> 00:01:06,950
+or two really in my own code I've kind
+of noticed that I've been using tuples
+
+62
+00:01:06,950 --> 00:01:06,960
+of noticed that I've been using tuples
+ 
+
+63
+00:01:06,960 --> 00:01:09,500
+of noticed that I've been using tuples
+and like pairs and tires and I've been
+
+64
+00:01:09,500 --> 00:01:09,510
+and like pairs and tires and I've been
+ 
+
+65
+00:01:09,510 --> 00:01:11,570
+and like pairs and tires and I've been
+using that kind of stuff basically
+
+66
+00:01:11,570 --> 00:01:11,580
+using that kind of stuff basically
+ 
+
+67
+00:01:11,580 --> 00:01:13,460
+using that kind of stuff basically
+having multiple return value soaked into
+
+68
+00:01:13,460 --> 00:01:13,470
+having multiple return value soaked into
+ 
+
+69
+00:01:13,470 --> 00:01:15,200
+having multiple return value soaked into
+like a tuple I've been using that a lot
+
+70
+00:01:15,200 --> 00:01:15,210
+like a tuple I've been using that a lot
+ 
+
+71
+00:01:15,210 --> 00:01:16,880
+like a tuple I've been using that a lot
+more often because structured bindings
+
+72
+00:01:16,880 --> 00:01:16,890
+more often because structured bindings
+ 
+
+73
+00:01:16,890 --> 00:01:19,219
+more often because structured bindings
+help me actually make my code still
+
+74
+00:01:19,219 --> 00:01:19,229
+help me actually make my code still
+ 
+
+75
+00:01:19,229 --> 00:01:20,870
+help me actually make my code still
+manageable because I used to absolutely
+
+76
+00:01:20,870 --> 00:01:20,880
+manageable because I used to absolutely
+ 
+
+77
+00:01:20,880 --> 00:01:22,880
+manageable because I used to absolutely
+hate what it was like before in fact
+
+78
+00:01:22,880 --> 00:01:22,890
+hate what it was like before in fact
+ 
+
+79
+00:01:22,890 --> 00:01:24,440
+hate what it was like before in fact
+let's take a look at what it was like
+
+80
+00:01:24,440 --> 00:01:24,450
+let's take a look at what it was like
+ 
+
+81
+00:01:24,450 --> 00:01:26,630
+let's take a look at what it was like
+before so I'm gonna write a very simple
+
+82
+00:01:26,630 --> 00:01:26,640
+before so I'm gonna write a very simple
+ 
+
+83
+00:01:26,640 --> 00:01:27,980
+before so I'm gonna write a very simple
+example just running it from scratch
+
+84
+00:01:27,980 --> 00:01:27,990
+example just running it from scratch
+ 
+
+85
+00:01:27,990 --> 00:01:29,450
+example just running it from scratch
+here to make it really really obvious
+
+86
+00:01:29,450 --> 00:01:29,460
+here to make it really really obvious
+ 
+
+87
+00:01:29,460 --> 00:01:30,950
+here to make it really really obvious
+and what I'll do here is just write a
+
+88
+00:01:30,950 --> 00:01:30,960
+and what I'll do here is just write a
+ 
+
+89
+00:01:30,960 --> 00:01:33,200
+and what I'll do here is just write a
+function that creates a person now a
+
+90
+00:01:33,200 --> 00:01:33,210
+function that creates a person now a
+ 
+
+91
+00:01:33,210 --> 00:01:34,969
+function that creates a person now a
+person is a nice example because you
+
+92
+00:01:34,969 --> 00:01:34,979
+person is a nice example because you
+ 
+
+93
+00:01:34,979 --> 00:01:36,679
+person is a nice example because you
+might want to store more details about a
+
+94
+00:01:36,679 --> 00:01:36,689
+might want to store more details about a
+ 
+
+95
+00:01:36,689 --> 00:01:38,480
+might want to store more details about a
+person than just for example their name
+
+96
+00:01:38,480 --> 00:01:38,490
+person than just for example their name
+ 
+
+97
+00:01:38,490 --> 00:01:40,520
+person than just for example their name
+in this case we'll deal with their name
+
+98
+00:01:40,520 --> 00:01:40,530
+in this case we'll deal with their name
+ 
+
+99
+00:01:40,530 --> 00:01:42,260
+in this case we'll deal with their name
+and their age so we'll write a function
+
+100
+00:01:42,260 --> 00:01:42,270
+and their age so we'll write a function
+ 
+
+101
+00:01:42,270 --> 00:01:45,289
+and their age so we'll write a function
+called create person we'll need to set a
+
+102
+00:01:45,289 --> 00:01:45,299
+called create person we'll need to set a
+ 
+
+103
+00:01:45,299 --> 00:01:47,420
+called create person we'll need to set a
+return type which we will set to SCD
+
+104
+00:01:47,420 --> 00:01:47,430
+return type which we will set to SCD
+ 
+
+105
+00:01:47,430 --> 00:01:49,850
+return type which we will set to SCD
+tuple and this is gonna contain the
+
+106
+00:01:49,850 --> 00:01:49,860
+tuple and this is gonna contain the
+ 
+
+107
+00:01:49,860 --> 00:01:51,560
+tuple and this is gonna contain the
+actual kind of multiple return values
+
+108
+00:01:51,560 --> 00:01:51,570
+actual kind of multiple return values
+ 
+
+109
+00:01:51,570 --> 00:01:53,420
+actual kind of multiple return values
+that we want to deal with in this case
+
+110
+00:01:53,420 --> 00:01:53,430
+that we want to deal with in this case
+ 
+
+111
+00:01:53,430 --> 00:01:55,999
+that we want to deal with in this case
+we'll deal with a string for the name of
+
+112
+00:01:55,999 --> 00:01:56,009
+we'll deal with a string for the name of
+ 
+
+113
+00:01:56,009 --> 00:01:58,459
+we'll deal with a string for the name of
+the person and then an integer for their
+
+114
+00:01:58,459 --> 00:01:58,469
+the person and then an integer for their
+ 
+
+115
+00:01:58,469 --> 00:02:00,590
+the person and then an integer for their
+age and we'll include string up here as
+
+116
+00:02:00,590 --> 00:02:00,600
+age and we'll include string up here as
+ 
+
+117
+00:02:00,600 --> 00:02:03,200
+age and we'll include string up here as
+well and of course we don't need to
+
+118
+00:02:03,200 --> 00:02:03,210
+well and of course we don't need to
+ 
+
+119
+00:02:03,210 --> 00:02:05,330
+well and of course we don't need to
+actually write age just the type so we
+
+120
+00:02:05,330 --> 00:02:05,340
+actually write age just the type so we
+ 
+
+121
+00:02:05,340 --> 00:02:07,700
+actually write age just the type so we
+have a string and int over here we'll
+
+122
+00:02:07,700 --> 00:02:07,710
+have a string and int over here we'll
+ 
+
+123
+00:02:07,710 --> 00:02:09,770
+have a string and int over here we'll
+simply return in this case will be nice
+
+124
+00:02:09,770 --> 00:02:09,780
+simply return in this case will be nice
+ 
+
+125
+00:02:09,780 --> 00:02:11,790
+simply return in this case will be nice
+and simple we'll just simply return
+
+126
+00:02:11,790 --> 00:02:11,800
+and simple we'll just simply return
+ 
+
+127
+00:02:11,800 --> 00:02:14,850
+and simple we'll just simply return
+as the name and then an age watch for my
+
+128
+00:02:14,850 --> 00:02:14,860
+as the name and then an age watch for my
+ 
+
+129
+00:02:14,860 --> 00:02:16,950
+as the name and then an age watch for my
+age which is the 24 so now we have
+
+130
+00:02:16,950 --> 00:02:16,960
+age which is the 24 so now we have
+ 
+
+131
+00:02:16,960 --> 00:02:19,890
+age which is the 24 so now we have
+basically a mechanism to return two
+
+132
+00:02:19,890 --> 00:02:19,900
+basically a mechanism to return two
+ 
+
+133
+00:02:19,900 --> 00:02:21,900
+basically a mechanism to return two
+different types of data a string and an
+
+134
+00:02:21,900 --> 00:02:21,910
+different types of data a string and an
+ 
+
+135
+00:02:21,910 --> 00:02:23,640
+different types of data a string and an
+INT without having to like create a
+
+136
+00:02:23,640 --> 00:02:23,650
+INT without having to like create a
+ 
+
+137
+00:02:23,650 --> 00:02:25,080
+INT without having to like create a
+struct or anything like that or just
+
+138
+00:02:25,080 --> 00:02:25,090
+struct or anything like that or just
+ 
+
+139
+00:02:25,090 --> 00:02:27,030
+struct or anything like that or just
+like pass parameters by reference or
+
+140
+00:02:27,030 --> 00:02:27,040
+like pass parameters by reference or
+ 
+
+141
+00:02:27,040 --> 00:02:29,310
+like pass parameters by reference or
+like as a pointer nice and simple and
+
+142
+00:02:29,310 --> 00:02:29,320
+like as a pointer nice and simple and
+ 
+
+143
+00:02:29,320 --> 00:02:30,780
+like as a pointer nice and simple and
+clean of course in this case you could
+
+144
+00:02:30,780 --> 00:02:30,790
+clean of course in this case you could
+ 
+
+145
+00:02:30,790 --> 00:02:32,310
+clean of course in this case you could
+just use a pair because there are two
+
+146
+00:02:32,310 --> 00:02:32,320
+just use a pair because there are two
+ 
+
+147
+00:02:32,320 --> 00:02:33,840
+just use a pair because there are two
+variables that this actual data
+
+148
+00:02:33,840 --> 00:02:33,850
+variables that this actual data
+ 
+
+149
+00:02:33,850 --> 00:02:35,520
+variables that this actual data
+structure is holding however with the
+
+150
+00:02:35,520 --> 00:02:35,530
+structure is holding however with the
+ 
+
+151
+00:02:35,530 --> 00:02:37,290
+structure is holding however with the
+tuple you can of course expand this to
+
+152
+00:02:37,290 --> 00:02:37,300
+tuple you can of course expand this to
+ 
+
+153
+00:02:37,300 --> 00:02:39,210
+tuple you can of course expand this to
+containers basically as many values as
+
+154
+00:02:39,210 --> 00:02:39,220
+containers basically as many values as
+ 
+
+155
+00:02:39,220 --> 00:02:42,180
+containers basically as many values as
+you want so the in previous versions of
+
+156
+00:02:42,180 --> 00:02:42,190
+you want so the in previous versions of
+ 
+
+157
+00:02:42,190 --> 00:02:44,310
+you want so the in previous versions of
+C++ you had a few options for how you
+
+158
+00:02:44,310 --> 00:02:44,320
+C++ you had a few options for how you
+ 
+
+159
+00:02:44,320 --> 00:02:45,780
+C++ you had a few options for how you
+would deal with this well write some
+
+160
+00:02:45,780 --> 00:02:45,790
+would deal with this well write some
+ 
+
+161
+00:02:45,790 --> 00:02:47,340
+would deal with this well write some
+code to kind of show that so I'll write
+
+162
+00:02:47,340 --> 00:02:47,350
+code to kind of show that so I'll write
+ 
+
+163
+00:02:47,350 --> 00:02:50,340
+code to kind of show that so I'll write
+STD tuple string and and you can see
+
+164
+00:02:50,340 --> 00:02:50,350
+STD tuple string and and you can see
+ 
+
+165
+00:02:50,350 --> 00:02:51,840
+STD tuple string and and you can see
+already the type is a little bit messy
+
+166
+00:02:51,840 --> 00:02:51,850
+already the type is a little bit messy
+ 
+
+167
+00:02:51,850 --> 00:02:53,670
+already the type is a little bit messy
+but we'll have our person here then
+
+168
+00:02:53,670 --> 00:02:53,680
+but we'll have our person here then
+ 
+
+169
+00:02:53,680 --> 00:02:55,260
+but we'll have our person here then
+we'll set that equal to create person
+
+170
+00:02:55,260 --> 00:02:55,270
+we'll set that equal to create person
+ 
+
+171
+00:02:55,270 --> 00:02:57,060
+we'll set that equal to create person
+now to simplify this a little bit more
+
+172
+00:02:57,060 --> 00:02:57,070
+now to simplify this a little bit more
+ 
+
+173
+00:02:57,070 --> 00:02:58,920
+now to simplify this a little bit more
+you can just use order here in fact
+
+174
+00:02:58,920 --> 00:02:58,930
+you can just use order here in fact
+ 
+
+175
+00:02:58,930 --> 00:03:00,450
+you can just use order here in fact
+that's what I probably would do in this
+
+176
+00:03:00,450 --> 00:03:00,460
+that's what I probably would do in this
+ 
+
+177
+00:03:00,460 --> 00:03:02,460
+that's what I probably would do in this
+case but now we have the task of
+
+178
+00:03:02,460 --> 00:03:02,470
+case but now we have the task of
+ 
+
+179
+00:03:02,470 --> 00:03:04,500
+case but now we have the task of
+accessing the data and this is where it
+
+180
+00:03:04,500 --> 00:03:04,510
+accessing the data and this is where it
+ 
+
+181
+00:03:04,510 --> 00:03:07,230
+accessing the data and this is where it
+gets really really annoying so basically
+
+182
+00:03:07,230 --> 00:03:07,240
+gets really really annoying so basically
+ 
+
+183
+00:03:07,240 --> 00:03:08,880
+gets really really annoying so basically
+the way that you can't just do person
+
+184
+00:03:08,880 --> 00:03:08,890
+the way that you can't just do person
+ 
+
+185
+00:03:08,890 --> 00:03:11,670
+the way that you can't just do person
+dot you know name as if it was a struct
+
+186
+00:03:11,670 --> 00:03:11,680
+dot you know name as if it was a struct
+ 
+
+187
+00:03:11,680 --> 00:03:14,820
+dot you know name as if it was a struct
+you have to use STD get and then as a
+
+188
+00:03:14,820 --> 00:03:14,830
+you have to use STD get and then as a
+ 
+
+189
+00:03:14,830 --> 00:03:17,130
+you have to use STD get and then as a
+template argument the index of the data
+
+190
+00:03:17,130 --> 00:03:17,140
+template argument the index of the data
+ 
+
+191
+00:03:17,140 --> 00:03:18,449
+template argument the index of the data
+you want to get so zero for example
+
+192
+00:03:18,449 --> 00:03:18,459
+you want to get so zero for example
+ 
+
+193
+00:03:18,459 --> 00:03:21,449
+you want to get so zero for example
+would return the name the first variable
+
+194
+00:03:21,449 --> 00:03:21,459
+would return the name the first variable
+ 
+
+195
+00:03:21,459 --> 00:03:24,000
+would return the name the first variable
+which is a string and then if I used one
+
+196
+00:03:24,000 --> 00:03:24,010
+which is a string and then if I used one
+ 
+
+197
+00:03:24,010 --> 00:03:25,380
+which is a string and then if I used one
+here that would return the age so
+
+198
+00:03:25,380 --> 00:03:25,390
+here that would return the age so
+ 
+
+199
+00:03:25,390 --> 00:03:26,790
+here that would return the age so
+basically to get this and you put the
+
+200
+00:03:26,790 --> 00:03:26,800
+basically to get this and you put the
+ 
+
+201
+00:03:26,800 --> 00:03:29,730
+basically to get this and you put the
+actual variable as a parameter here so
+
+202
+00:03:29,730 --> 00:03:29,740
+actual variable as a parameter here so
+ 
+
+203
+00:03:29,740 --> 00:03:31,860
+actual variable as a parameter here so
+to get the actual string which is the
+
+204
+00:03:31,860 --> 00:03:31,870
+to get the actual string which is the
+ 
+
+205
+00:03:31,870 --> 00:03:33,990
+to get the actual string which is the
+name I'd have to write code like this or
+
+206
+00:03:33,990 --> 00:03:34,000
+name I'd have to write code like this or
+ 
+
+207
+00:03:34,000 --> 00:03:35,400
+name I'd have to write code like this or
+you can use auto of course and then the
+
+208
+00:03:35,400 --> 00:03:35,410
+you can use auto of course and then the
+ 
+
+209
+00:03:35,410 --> 00:03:37,350
+you can use auto of course and then the
+age as well would look a little bit
+
+210
+00:03:37,350 --> 00:03:37,360
+age as well would look a little bit
+ 
+
+211
+00:03:37,360 --> 00:03:39,300
+age as well would look a little bit
+cryptic and it would basically be the
+
+212
+00:03:39,300 --> 00:03:39,310
+cryptic and it would basically be the
+ 
+
+213
+00:03:39,310 --> 00:03:41,310
+cryptic and it would basically be the
+same with sed get one and this is a
+
+214
+00:03:41,310 --> 00:03:41,320
+same with sed get one and this is a
+ 
+
+215
+00:03:41,320 --> 00:03:43,620
+same with sed get one and this is a
+little bit well it's it's just not nice
+
+216
+00:03:43,620 --> 00:03:43,630
+little bit well it's it's just not nice
+ 
+
+217
+00:03:43,630 --> 00:03:45,600
+little bit well it's it's just not nice
+I probably would never use a triple for
+
+218
+00:03:45,600 --> 00:03:45,610
+I probably would never use a triple for
+ 
+
+219
+00:03:45,610 --> 00:03:46,980
+I probably would never use a triple for
+this case now there is something called
+
+220
+00:03:46,980 --> 00:03:46,990
+this case now there is something called
+ 
+
+221
+00:03:46,990 --> 00:03:49,740
+this case now there is something called
+STD tie which is a little bit nicer than
+
+222
+00:03:49,740 --> 00:03:49,750
+STD tie which is a little bit nicer than
+ 
+
+223
+00:03:49,750 --> 00:03:51,810
+STD tie which is a little bit nicer than
+this you still have to actually create
+
+224
+00:03:51,810 --> 00:03:51,820
+this you still have to actually create
+ 
+
+225
+00:03:51,820 --> 00:03:55,320
+this you still have to actually create
+true variables so name and age over here
+
+226
+00:03:55,320 --> 00:03:55,330
+true variables so name and age over here
+ 
+
+227
+00:03:55,330 --> 00:03:57,480
+true variables so name and age over here
+but what you can actually do is just
+
+228
+00:03:57,480 --> 00:03:57,490
+but what you can actually do is just
+ 
+
+229
+00:03:57,490 --> 00:03:59,880
+but what you can actually do is just
+pass them in here they get passed in by
+
+230
+00:03:59,880 --> 00:03:59,890
+pass them in here they get passed in by
+ 
+
+231
+00:03:59,890 --> 00:04:01,949
+pass them in here they get passed in by
+a reference name an age and then just
+
+232
+00:04:01,949 --> 00:04:01,959
+a reference name an age and then just
+ 
+
+233
+00:04:01,959 --> 00:04:04,470
+a reference name an age and then just
+set this equal to create person and this
+
+234
+00:04:04,470 --> 00:04:04,480
+set this equal to create person and this
+ 
+
+235
+00:04:04,480 --> 00:04:06,360
+set this equal to create person and this
+is a little bit nicer than all of this
+
+236
+00:04:06,360 --> 00:04:06,370
+is a little bit nicer than all of this
+ 
+
+237
+00:04:06,370 --> 00:04:07,590
+is a little bit nicer than all of this
+of course we don't have our actual
+
+238
+00:04:07,590 --> 00:04:07,600
+of course we don't have our actual
+ 
+
+239
+00:04:07,600 --> 00:04:09,390
+of course we don't have our actual
+person variable because we don't there
+
+240
+00:04:09,390 --> 00:04:09,400
+person variable because we don't there
+ 
+
+241
+00:04:09,400 --> 00:04:10,949
+person variable because we don't there
+is no person right it's not like it's a
+
+242
+00:04:10,949 --> 00:04:10,959
+is no person right it's not like it's a
+ 
+
+243
+00:04:10,959 --> 00:04:13,020
+is no person right it's not like it's a
+struct it's not like it's its own type
+
+244
+00:04:13,020 --> 00:04:13,030
+struct it's not like it's its own type
+ 
+
+245
+00:04:13,030 --> 00:04:15,479
+struct it's not like it's its own type
+it is just a container a tuple in this
+
+246
+00:04:15,479 --> 00:04:15,489
+it is just a container a tuple in this
+ 
+
+247
+00:04:15,489 --> 00:04:17,820
+it is just a container a tuple in this
+case that holds what we want which is a
+
+248
+00:04:17,820 --> 00:04:17,830
+case that holds what we want which is a
+ 
+
+249
+00:04:17,830 --> 00:04:20,729
+case that holds what we want which is a
+string and an int so this does look a
+
+250
+00:04:20,729 --> 00:04:20,739
+string and an int so this does look a
+ 
+
+251
+00:04:20,739 --> 00:04:23,460
+string and an int so this does look a
+bit nicer and I would probably be a
+
+252
+00:04:23,460 --> 00:04:23,470
+bit nicer and I would probably be a
+ 
+
+253
+00:04:23,470 --> 00:04:24,780
+bit nicer and I would probably be a
+little bit more inclined to do it this
+
+254
+00:04:24,780 --> 00:04:24,790
+little bit more inclined to do it this
+ 
+
+255
+00:04:24,790 --> 00:04:25,530
+little bit more inclined to do it this
+way how
+
+256
+00:04:25,530 --> 00:04:25,540
+way how
+ 
+
+257
+00:04:25,540 --> 00:04:27,420
+way how
+whether it still takes up like three
+
+258
+00:04:27,420 --> 00:04:27,430
+whether it still takes up like three
+ 
+
+259
+00:04:27,430 --> 00:04:28,950
+whether it still takes up like three
+lines of code it still does not look
+
+260
+00:04:28,950 --> 00:04:28,960
+lines of code it still does not look
+ 
+
+261
+00:04:28,960 --> 00:04:31,440
+lines of code it still does not look
+nice and I still probably would use a
+
+262
+00:04:31,440 --> 00:04:31,450
+nice and I still probably would use a
+ 
+
+263
+00:04:31,450 --> 00:04:33,980
+nice and I still probably would use a
+struct and just basically create a
+
+264
+00:04:33,980 --> 00:04:33,990
+struct and just basically create a
+ 
+
+265
+00:04:33,990 --> 00:04:36,930
+struct and just basically create a
+person so that then I could return that
+
+266
+00:04:36,930 --> 00:04:36,940
+person so that then I could return that
+ 
+
+267
+00:04:36,940 --> 00:04:38,700
+person so that then I could return that
+and then obviously just access it by
+
+268
+00:04:38,700 --> 00:04:38,710
+and then obviously just access it by
+ 
+
+269
+00:04:38,710 --> 00:04:41,010
+and then obviously just access it by
+person name and person till age as I
+
+270
+00:04:41,010 --> 00:04:41,020
+person name and person till age as I
+ 
+
+271
+00:04:41,020 --> 00:04:43,410
+person name and person till age as I
+showed in that C++ video about multiple
+
+272
+00:04:43,410 --> 00:04:43,420
+showed in that C++ video about multiple
+ 
+
+273
+00:04:43,420 --> 00:04:45,180
+showed in that C++ video about multiple
+return types now this is the part that
+
+274
+00:04:45,180 --> 00:04:45,190
+return types now this is the part that
+ 
+
+275
+00:04:45,190 --> 00:04:46,530
+return types now this is the part that
+you've been waiting for this is where
+
+276
+00:04:46,530 --> 00:04:46,540
+you've been waiting for this is where
+ 
+
+277
+00:04:46,540 --> 00:04:48,450
+you've been waiting for this is where
+C++ 17 brings us a new feature called
+
+278
+00:04:48,450 --> 00:04:48,460
+C++ 17 brings us a new feature called
+ 
+
+279
+00:04:48,460 --> 00:04:50,400
+C++ 17 brings us a new feature called
+structured bindings that solves all
+
+280
+00:04:50,400 --> 00:04:50,410
+structured bindings that solves all
+ 
+
+281
+00:04:50,410 --> 00:04:52,080
+structured bindings that solves all
+these problems and makes our code look
+
+282
+00:04:52,080 --> 00:04:52,090
+these problems and makes our code look
+ 
+
+283
+00:04:52,090 --> 00:04:54,180
+these problems and makes our code look
+really nice instead of doing all of this
+
+284
+00:04:54,180 --> 00:04:54,190
+really nice instead of doing all of this
+ 
+
+285
+00:04:54,190 --> 00:04:57,480
+really nice instead of doing all of this
+I will raise my person up here instead
+
+286
+00:04:57,480 --> 00:04:57,490
+I will raise my person up here instead
+ 
+
+287
+00:04:57,490 --> 00:04:59,190
+I will raise my person up here instead
+of doing all this we still keep this as
+
+288
+00:04:59,190 --> 00:04:59,200
+of doing all this we still keep this as
+ 
+
+289
+00:04:59,200 --> 00:05:01,170
+of doing all this we still keep this as
+a tuple we don't need STD tie or
+
+290
+00:05:01,170 --> 00:05:01,180
+a tuple we don't need STD tie or
+ 
+
+291
+00:05:01,180 --> 00:05:03,450
+a tuple we don't need STD tie or
+anything like that all we need to do we
+
+292
+00:05:03,450 --> 00:05:03,460
+anything like that all we need to do we
+ 
+
+293
+00:05:03,460 --> 00:05:04,620
+anything like that all we need to do we
+can get rid of these two lines of code
+
+294
+00:05:04,620 --> 00:05:04,630
+can get rid of these two lines of code
+ 
+
+295
+00:05:04,630 --> 00:05:07,140
+can get rid of these two lines of code
+all we need to do is use the word author
+
+296
+00:05:07,140 --> 00:05:07,150
+all we need to do is use the word author
+ 
+
+297
+00:05:07,150 --> 00:05:10,290
+all we need to do is use the word author
+followed by the two names that we give
+
+298
+00:05:10,290 --> 00:05:10,300
+followed by the two names that we give
+ 
+
+299
+00:05:10,300 --> 00:05:12,480
+followed by the two names that we give
+to our variable so we can give these any
+
+300
+00:05:12,480 --> 00:05:12,490
+to our variable so we can give these any
+ 
+
+301
+00:05:12,490 --> 00:05:15,300
+to our variable so we can give these any
+names we want whatsoever so name and age
+
+302
+00:05:15,300 --> 00:05:15,310
+names we want whatsoever so name and age
+ 
+
+303
+00:05:15,310 --> 00:05:17,160
+names we want whatsoever so name and age
+would be good in this case and then we
+
+304
+00:05:17,160 --> 00:05:17,170
+would be good in this case and then we
+ 
+
+305
+00:05:17,170 --> 00:05:18,840
+would be good in this case and then we
+just set it equal to create person and
+
+306
+00:05:18,840 --> 00:05:18,850
+just set it equal to create person and
+ 
+
+307
+00:05:18,850 --> 00:05:21,480
+just set it equal to create person and
+that is it this is a string this is an
+
+308
+00:05:21,480 --> 00:05:21,490
+that is it this is a string this is an
+ 
+
+309
+00:05:21,490 --> 00:05:23,730
+that is it this is a string this is an
+int it does everything for us perfectly
+
+310
+00:05:23,730 --> 00:05:23,740
+int it does everything for us perfectly
+ 
+
+311
+00:05:23,740 --> 00:05:25,410
+int it does everything for us perfectly
+and if we wanted to like we could print
+
+312
+00:05:25,410 --> 00:05:25,420
+and if we wanted to like we could print
+ 
+
+313
+00:05:25,420 --> 00:05:27,060
+and if we wanted to like we could print
+this we could do anything we want with
+
+314
+00:05:27,060 --> 00:05:27,070
+this we could do anything we want with
+ 
+
+315
+00:05:27,070 --> 00:05:28,950
+this we could do anything we want with
+these variables because now they're
+
+316
+00:05:28,950 --> 00:05:28,960
+these variables because now they're
+ 
+
+317
+00:05:28,960 --> 00:05:30,990
+these variables because now they're
+totally just in this scope and totally
+
+318
+00:05:30,990 --> 00:05:31,000
+totally just in this scope and totally
+ 
+
+319
+00:05:31,000 --> 00:05:33,090
+totally just in this scope and totally
+accessible to us now keep in mind this
+
+320
+00:05:33,090 --> 00:05:33,100
+accessible to us now keep in mind this
+ 
+
+321
+00:05:33,100 --> 00:05:35,820
+accessible to us now keep in mind this
+feature is only in C++ 17 and newer
+
+322
+00:05:35,820 --> 00:05:35,830
+feature is only in C++ 17 and newer
+ 
+
+323
+00:05:35,830 --> 00:05:37,560
+feature is only in C++ 17 and newer
+versions of say plus plus so if this
+
+324
+00:05:37,560 --> 00:05:37,570
+versions of say plus plus so if this
+ 
+
+325
+00:05:37,570 --> 00:05:39,390
+versions of say plus plus so if this
+does not compile for you make sure
+
+326
+00:05:39,390 --> 00:05:39,400
+does not compile for you make sure
+ 
+
+327
+00:05:39,400 --> 00:05:41,160
+does not compile for you make sure
+you're not compiling once a plus 14 or
+
+328
+00:05:41,160 --> 00:05:41,170
+you're not compiling once a plus 14 or
+ 
+
+329
+00:05:41,170 --> 00:05:43,050
+you're not compiling once a plus 14 or
+11 or anything like that make sure you
+
+330
+00:05:43,050 --> 00:05:43,060
+11 or anything like that make sure you
+ 
+
+331
+00:05:43,060 --> 00:05:45,000
+11 or anything like that make sure you
+switch your sales plus version to say
+
+332
+00:05:45,000 --> 00:05:45,010
+switch your sales plus version to say
+ 
+
+333
+00:05:45,010 --> 00:05:46,470
+switch your sales plus version to say
+plus plus seventeen specifically in
+
+334
+00:05:46,470 --> 00:05:46,480
+plus plus seventeen specifically in
+ 
+
+335
+00:05:46,480 --> 00:05:48,510
+plus plus seventeen specifically in
+Visual Studio we can go over here into
+
+336
+00:05:48,510 --> 00:05:48,520
+Visual Studio we can go over here into
+ 
+
+337
+00:05:48,520 --> 00:05:51,120
+Visual Studio we can go over here into
+properties and then go into say C++
+
+338
+00:05:51,120 --> 00:05:51,130
+properties and then go into say C++
+ 
+
+339
+00:05:51,130 --> 00:05:53,280
+properties and then go into say C++
+language and then make sure that our
+
+340
+00:05:53,280 --> 00:05:53,290
+language and then make sure that our
+ 
+
+341
+00:05:53,290 --> 00:05:54,990
+language and then make sure that our
+language standard is actually set to
+
+342
+00:05:54,990 --> 00:05:55,000
+language standard is actually set to
+ 
+
+343
+00:05:55,000 --> 00:05:57,450
+language standard is actually set to
+Sables plus 17 standard if it's set on
+
+344
+00:05:57,450 --> 00:05:57,460
+Sables plus 17 standard if it's set on
+ 
+
+345
+00:05:57,460 --> 00:05:59,670
+Sables plus 17 standard if it's set on
+default it may not work so for example
+
+346
+00:05:59,670 --> 00:05:59,680
+default it may not work so for example
+ 
+
+347
+00:05:59,680 --> 00:06:01,590
+default it may not work so for example
+if I do switch it to default and I try
+
+348
+00:06:01,590 --> 00:06:01,600
+if I do switch it to default and I try
+ 
+
+349
+00:06:01,600 --> 00:06:03,210
+if I do switch it to default and I try
+and compile this code you can see that
+
+350
+00:06:03,210 --> 00:06:03,220
+and compile this code you can see that
+ 
+
+351
+00:06:03,220 --> 00:06:05,250
+and compile this code you can see that
+it will not compile we will get an error
+
+352
+00:06:05,250 --> 00:06:05,260
+it will not compile we will get an error
+ 
+
+353
+00:06:05,260 --> 00:06:06,420
+it will not compile we will get an error
+saying that name is uncontacted
+
+354
+00:06:06,420 --> 00:06:06,430
+saying that name is uncontacted
+ 
+
+355
+00:06:06,430 --> 00:06:08,310
+saying that name is uncontacted
+identifier and in fact we will get an
+
+356
+00:06:08,310 --> 00:06:08,320
+identifier and in fact we will get an
+ 
+
+357
+00:06:08,320 --> 00:06:09,720
+identifier and in fact we will get an
+error that tells us what we need to do
+
+358
+00:06:09,720 --> 00:06:09,730
+error that tells us what we need to do
+ 
+
+359
+00:06:09,730 --> 00:06:11,310
+error that tells us what we need to do
+it says the language features structured
+
+360
+00:06:11,310 --> 00:06:11,320
+it says the language features structured
+ 
+
+361
+00:06:11,320 --> 00:06:14,490
+it says the language features structured
+bindings requires compiler flag c++ 17
+
+362
+00:06:14,490 --> 00:06:14,500
+bindings requires compiler flag c++ 17
+ 
+
+363
+00:06:14,500 --> 00:06:16,260
+bindings requires compiler flag c++ 17
+so to switch it to that just make sure
+
+364
+00:06:16,260 --> 00:06:16,270
+so to switch it to that just make sure
+ 
+
+365
+00:06:16,270 --> 00:06:18,270
+so to switch it to that just make sure
+you go into your properties and set your
+
+366
+00:06:18,270 --> 00:06:18,280
+you go into your properties and set your
+ 
+
+367
+00:06:18,280 --> 00:06:21,240
+you go into your properties and set your
+sample stuff language standard to be c++
+
+368
+00:06:21,240 --> 00:06:21,250
+sample stuff language standard to be c++
+ 
+
+369
+00:06:21,250 --> 00:06:23,220
+sample stuff language standard to be c++
+17 now of course if you're using a
+
+370
+00:06:23,220 --> 00:06:23,230
+17 now of course if you're using a
+ 
+
+371
+00:06:23,230 --> 00:06:24,750
+17 now of course if you're using a
+different IDE or a different build
+
+372
+00:06:24,750 --> 00:06:24,760
+different IDE or a different build
+ 
+
+373
+00:06:24,760 --> 00:06:26,460
+different IDE or a different build
+system than Visual Studio like I am in
+
+374
+00:06:26,460 --> 00:06:26,470
+system than Visual Studio like I am in
+ 
+
+375
+00:06:26,470 --> 00:06:28,260
+system than Visual Studio like I am in
+this case then you'll have to do the
+
+376
+00:06:28,260 --> 00:06:28,270
+this case then you'll have to do the
+ 
+
+377
+00:06:28,270 --> 00:06:30,240
+this case then you'll have to do the
+equivalent for that but save us plus 17
+
+378
+00:06:30,240 --> 00:06:30,250
+equivalent for that but save us plus 17
+ 
+
+379
+00:06:30,250 --> 00:06:32,280
+equivalent for that but save us plus 17
+is what you need to have structured
+
+380
+00:06:32,280 --> 00:06:32,290
+is what you need to have structured
+ 
+
+381
+00:06:32,290 --> 00:06:34,200
+is what you need to have structured
+bindings to use structured bindings like
+
+382
+00:06:34,200 --> 00:06:34,210
+bindings to use structured bindings like
+ 
+
+383
+00:06:34,210 --> 00:06:35,670
+bindings to use structured bindings like
+this I want to show you guys one more
+
+384
+00:06:35,670 --> 00:06:35,680
+this I want to show you guys one more
+ 
+
+385
+00:06:35,680 --> 00:06:37,380
+this I want to show you guys one more
+example so what I've got here is some
+
+386
+00:06:37,380 --> 00:06:37,390
+example so what I've got here is some
+ 
+
+387
+00:06:37,390 --> 00:06:38,100
+example so what I've got here is some
+code from the
+
+388
+00:06:38,100 --> 00:06:38,110
+code from the
+ 
+
+389
+00:06:38,110 --> 00:06:40,200
+code from the
+OpenGL series specifically the shader
+
+390
+00:06:40,200 --> 00:06:40,210
+OpenGL series specifically the shader
+ 
+
+391
+00:06:40,210 --> 00:06:42,600
+OpenGL series specifically the shader
+compilation' code I did talk about the
+
+392
+00:06:42,600 --> 00:06:42,610
+compilation' code I did talk about the
+ 
+
+393
+00:06:42,610 --> 00:06:44,400
+compilation' code I did talk about the
+possibility of using tuples in that
+
+394
+00:06:44,400 --> 00:06:44,410
+possibility of using tuples in that
+ 
+
+395
+00:06:44,410 --> 00:06:46,590
+possibility of using tuples in that
+video as well which I might link in the
+
+396
+00:06:46,590 --> 00:06:46,600
+video as well which I might link in the
+ 
+
+397
+00:06:46,600 --> 00:06:48,780
+video as well which I might link in the
+top right corner but basically what we
+
+398
+00:06:48,780 --> 00:06:48,790
+top right corner but basically what we
+ 
+
+399
+00:06:48,790 --> 00:06:50,460
+top right corner but basically what we
+ended up doing was we need to pass a
+
+400
+00:06:50,460 --> 00:06:50,470
+ended up doing was we need to pass a
+ 
+
+401
+00:06:50,470 --> 00:06:52,380
+ended up doing was we need to pass a
+shader which we took in a file path
+
+402
+00:06:52,380 --> 00:06:52,390
+shader which we took in a file path
+ 
+
+403
+00:06:52,390 --> 00:06:53,820
+shader which we took in a file path
+floor and then we just read that file
+
+404
+00:06:53,820 --> 00:06:53,830
+floor and then we just read that file
+ 
+
+405
+00:06:53,830 --> 00:06:55,290
+floor and then we just read that file
+and the result of this function was
+
+406
+00:06:55,290 --> 00:06:55,300
+and the result of this function was
+ 
+
+407
+00:06:55,300 --> 00:06:56,760
+and the result of this function was
+splitting up that shader file into two
+
+408
+00:06:56,760 --> 00:06:56,770
+splitting up that shader file into two
+ 
+
+409
+00:06:56,770 --> 00:06:58,710
+splitting up that shader file into two
+different strings based on the shader
+
+410
+00:06:58,710 --> 00:06:58,720
+different strings based on the shader
+ 
+
+411
+00:06:58,720 --> 00:07:01,350
+different strings based on the shader
+type and so what we did to support that
+
+412
+00:07:01,350 --> 00:07:01,360
+type and so what we did to support that
+ 
+
+413
+00:07:01,360 --> 00:07:03,060
+type and so what we did to support that
+is we returned a struct as you can see
+
+414
+00:07:03,060 --> 00:07:03,070
+is we returned a struct as you can see
+ 
+
+415
+00:07:03,070 --> 00:07:04,770
+is we returned a struct as you can see
+if we look at what that struct is we
+
+416
+00:07:04,770 --> 00:07:04,780
+if we look at what that struct is we
+ 
+
+417
+00:07:04,780 --> 00:07:06,570
+if we look at what that struct is we
+have a vertex sauce and a fragment sauce
+
+418
+00:07:06,570 --> 00:07:06,580
+have a vertex sauce and a fragment sauce
+ 
+
+419
+00:07:06,580 --> 00:07:08,340
+have a vertex sauce and a fragment sauce
+so what I'm going to do is change this
+
+420
+00:07:08,340 --> 00:07:08,350
+so what I'm going to do is change this
+ 
+
+421
+00:07:08,350 --> 00:07:10,350
+so what I'm going to do is change this
+to use structured bindings so that we
+
+422
+00:07:10,350 --> 00:07:10,360
+to use structured bindings so that we
+ 
+
+423
+00:07:10,360 --> 00:07:11,730
+to use structured bindings so that we
+don't need this struct at all so alt
+
+424
+00:07:11,730 --> 00:07:11,740
+don't need this struct at all so alt
+ 
+
+425
+00:07:11,740 --> 00:07:13,740
+don't need this struct at all so alt
+delete the struct will come over here
+
+426
+00:07:13,740 --> 00:07:13,750
+delete the struct will come over here
+ 
+
+427
+00:07:13,750 --> 00:07:16,200
+delete the struct will come over here
+into our path shader we're not going to
+
+428
+00:07:16,200 --> 00:07:16,210
+into our path shader we're not going to
+ 
+
+429
+00:07:16,210 --> 00:07:18,000
+into our path shader we're not going to
+use a pair here we'll use a tuple the
+
+430
+00:07:18,000 --> 00:07:18,010
+use a pair here we'll use a tuple the
+ 
+
+431
+00:07:18,010 --> 00:07:20,190
+use a pair here we'll use a tuple the
+reason is that this theoretically could
+
+432
+00:07:20,190 --> 00:07:20,200
+reason is that this theoretically could
+ 
+
+433
+00:07:20,200 --> 00:07:22,650
+reason is that this theoretically could
+support more types than just fragment
+
+434
+00:07:22,650 --> 00:07:22,660
+support more types than just fragment
+ 
+
+435
+00:07:22,660 --> 00:07:24,120
+support more types than just fragment
+and vertex shaders which is what we've
+
+436
+00:07:24,120 --> 00:07:24,130
+and vertex shaders which is what we've
+ 
+
+437
+00:07:24,130 --> 00:07:25,890
+and vertex shaders which is what we've
+got there right now so what I'll do is
+
+438
+00:07:25,890 --> 00:07:25,900
+got there right now so what I'll do is
+ 
+
+439
+00:07:25,900 --> 00:07:27,510
+got there right now so what I'll do is
+just use the triple again you could use
+
+440
+00:07:27,510 --> 00:07:27,520
+just use the triple again you could use
+ 
+
+441
+00:07:27,520 --> 00:07:29,070
+just use the triple again you could use
+a pair then later change it into tuple
+
+442
+00:07:29,070 --> 00:07:29,080
+a pair then later change it into tuple
+ 
+
+443
+00:07:29,080 --> 00:07:31,020
+a pair then later change it into tuple
+it shouldn't break any code but just
+
+444
+00:07:31,020 --> 00:07:31,030
+it shouldn't break any code but just
+ 
+
+445
+00:07:31,030 --> 00:07:32,400
+it shouldn't break any code but just
+giving a reason behind why I'm using to
+
+446
+00:07:32,400 --> 00:07:32,410
+giving a reason behind why I'm using to
+ 
+
+447
+00:07:32,410 --> 00:07:33,450
+giving a reason behind why I'm using to
+build parent table in this case
+
+448
+00:07:33,450 --> 00:07:33,460
+build parent table in this case
+ 
+
+449
+00:07:33,460 --> 00:07:35,790
+build parent table in this case
+identical results okay so we'll come
+
+450
+00:07:35,790 --> 00:07:35,800
+identical results okay so we'll come
+ 
+
+451
+00:07:35,800 --> 00:07:37,620
+identical results okay so we'll come
+over here and we'll also include that
+
+452
+00:07:37,620 --> 00:07:37,630
+over here and we'll also include that
+ 
+
+453
+00:07:37,630 --> 00:07:41,520
+over here and we'll also include that
+tuple and now I will hop over into my a
+
+454
+00:07:41,520 --> 00:07:41,530
+tuple and now I will hop over into my a
+ 
+
+455
+00:07:41,530 --> 00:07:43,770
+tuple and now I will hop over into my a
+bus bus code I will change this to be
+
+456
+00:07:43,770 --> 00:07:43,780
+bus bus code I will change this to be
+ 
+
+457
+00:07:43,780 --> 00:07:45,630
+bus bus code I will change this to be
+the same thing the cool thing is that
+
+458
+00:07:45,630 --> 00:07:45,640
+the same thing the cool thing is that
+ 
+
+459
+00:07:45,640 --> 00:07:47,520
+the same thing the cool thing is that
+this return statement does not change at
+
+460
+00:07:47,520 --> 00:07:47,530
+this return statement does not change at
+ 
+
+461
+00:07:47,530 --> 00:07:49,500
+this return statement does not change at
+all because we still construct the tuple
+
+462
+00:07:49,500 --> 00:07:49,510
+all because we still construct the tuple
+ 
+
+463
+00:07:49,510 --> 00:07:51,750
+all because we still construct the tuple
+in exactly the same way but if we come
+
+464
+00:07:51,750 --> 00:07:51,760
+in exactly the same way but if we come
+ 
+
+465
+00:07:51,760 --> 00:07:53,730
+in exactly the same way but if we come
+over here into where we actually use
+
+466
+00:07:53,730 --> 00:07:53,740
+over here into where we actually use
+ 
+
+467
+00:07:53,740 --> 00:07:56,010
+over here into where we actually use
+this code which is up here instead of
+
+468
+00:07:56,010 --> 00:07:56,020
+this code which is up here instead of
+ 
+
+469
+00:07:56,020 --> 00:07:57,870
+this code which is up here instead of
+using this shader program source type
+
+470
+00:07:57,870 --> 00:07:57,880
+using this shader program source type
+ 
+
+471
+00:07:57,880 --> 00:07:59,520
+using this shader program source type
+and then doing source type vertex or
+
+472
+00:07:59,520 --> 00:07:59,530
+and then doing source type vertex or
+ 
+
+473
+00:07:59,530 --> 00:08:01,320
+and then doing source type vertex or
+source table fragments source instead of
+
+474
+00:08:01,320 --> 00:08:01,330
+source table fragments source instead of
+ 
+
+475
+00:08:01,330 --> 00:08:03,720
+source table fragments source instead of
+that we can now just use order followed
+
+476
+00:08:03,720 --> 00:08:03,730
+that we can now just use order followed
+ 
+
+477
+00:08:03,730 --> 00:08:07,200
+that we can now just use order followed
+by vertex source and fragment sauce and
+
+478
+00:08:07,200 --> 00:08:07,210
+by vertex source and fragment sauce and
+ 
+
+479
+00:08:07,210 --> 00:08:10,170
+by vertex source and fragment sauce and
+then just set that equal to pass header
+
+480
+00:08:10,170 --> 00:08:10,180
+then just set that equal to pass header
+ 
+
+481
+00:08:10,180 --> 00:08:12,270
+then just set that equal to pass header
+and then into the create a function this
+
+482
+00:08:12,270 --> 00:08:12,280
+and then into the create a function this
+ 
+
+483
+00:08:12,280 --> 00:08:14,190
+and then into the create a function this
+also disappears and just simply becomes
+
+484
+00:08:14,190 --> 00:08:14,200
+also disappears and just simply becomes
+ 
+
+485
+00:08:14,200 --> 00:08:16,890
+also disappears and just simply becomes
+a vertex sauce and fragments sauce now
+
+486
+00:08:16,890 --> 00:08:16,900
+a vertex sauce and fragments sauce now
+ 
+
+487
+00:08:16,900 --> 00:08:18,600
+a vertex sauce and fragments sauce now
+in this case you can see that this does
+
+488
+00:08:18,600 --> 00:08:18,610
+in this case you can see that this does
+ 
+
+489
+00:08:18,610 --> 00:08:20,460
+in this case you can see that this does
+not compile because we need to switch
+
+490
+00:08:20,460 --> 00:08:20,470
+not compile because we need to switch
+ 
+
+491
+00:08:20,470 --> 00:08:23,280
+not compile because we need to switch
+this to be C++ 17 which it currently is
+
+492
+00:08:23,280 --> 00:08:23,290
+this to be C++ 17 which it currently is
+ 
+
+493
+00:08:23,290 --> 00:08:25,200
+this to be C++ 17 which it currently is
+not so let's just do that here it is
+
+494
+00:08:25,200 --> 00:08:25,210
+not so let's just do that here it is
+ 
+
+495
+00:08:25,210 --> 00:08:27,090
+not so let's just do that here it is
+language standard and we'll set that to
+
+496
+00:08:27,090 --> 00:08:27,100
+language standard and we'll set that to
+ 
+
+497
+00:08:27,100 --> 00:08:29,790
+language standard and we'll set that to
+C++ 17 now you can see the error goes
+
+498
+00:08:29,790 --> 00:08:29,800
+C++ 17 now you can see the error goes
+ 
+
+499
+00:08:29,800 --> 00:08:32,070
+C++ 17 now you can see the error goes
+away and this is what we're left with so
+
+500
+00:08:32,070 --> 00:08:32,080
+away and this is what we're left with so
+ 
+
+501
+00:08:32,080 --> 00:08:34,620
+away and this is what we're left with so
+really simple really clean code if we go
+
+502
+00:08:34,620 --> 00:08:34,630
+really simple really clean code if we go
+ 
+
+503
+00:08:34,630 --> 00:08:36,030
+really simple really clean code if we go
+back to our header file you can see we
+
+504
+00:08:36,030 --> 00:08:36,040
+back to our header file you can see we
+ 
+
+505
+00:08:36,040 --> 00:08:37,560
+back to our header file you can see we
+got rid of that shader sauce struct
+
+506
+00:08:37,560 --> 00:08:37,570
+got rid of that shader sauce struct
+ 
+
+507
+00:08:37,570 --> 00:08:39,480
+got rid of that shader sauce struct
+altogether we know how one less type
+
+508
+00:08:39,480 --> 00:08:39,490
+altogether we know how one less type
+ 
+
+509
+00:08:39,490 --> 00:08:41,130
+altogether we know how one less type
+floating around which is a lot cleaner a
+
+510
+00:08:41,130 --> 00:08:41,140
+floating around which is a lot cleaner a
+ 
+
+511
+00:08:41,140 --> 00:08:43,110
+floating around which is a lot cleaner a
+lot easier because this is really the
+
+512
+00:08:43,110 --> 00:08:43,120
+lot easier because this is really the
+ 
+
+513
+00:08:43,120 --> 00:08:45,570
+lot easier because this is really the
+only case in our code where we actually
+
+514
+00:08:45,570 --> 00:08:45,580
+only case in our code where we actually
+ 
+
+515
+00:08:45,580 --> 00:08:48,720
+only case in our code where we actually
+want to use that shader saw struct this
+
+516
+00:08:48,720 --> 00:08:48,730
+want to use that shader saw struct this
+ 
+
+517
+00:08:48,730 --> 00:08:50,530
+want to use that shader saw struct this
+was used all around our code base
+
+518
+00:08:50,530 --> 00:08:50,540
+was used all around our code base
+ 
+
+519
+00:08:50,540 --> 00:08:51,759
+was used all around our code base
+you wouldn't want to wear this into a
+
+520
+00:08:51,759 --> 00:08:51,769
+you wouldn't want to wear this into a
+ 
+
+521
+00:08:51,769 --> 00:08:53,319
+you wouldn't want to wear this into a
+tuple and use structured bindings like
+
+522
+00:08:53,319 --> 00:08:53,329
+tuple and use structured bindings like
+ 
+
+523
+00:08:53,329 --> 00:08:55,120
+tuple and use structured bindings like
+this but in this case it just makes so
+
+524
+00:08:55,120 --> 00:08:55,130
+this but in this case it just makes so
+ 
+
+525
+00:08:55,130 --> 00:08:58,060
+this but in this case it just makes so
+much sense why have a type that you only
+
+526
+00:08:58,060 --> 00:08:58,070
+much sense why have a type that you only
+ 
+
+527
+00:08:58,070 --> 00:09:00,610
+much sense why have a type that you only
+use once that I don't really like the
+
+528
+00:09:00,610 --> 00:09:00,620
+use once that I don't really like the
+ 
+
+529
+00:09:00,620 --> 00:09:02,199
+use once that I don't really like the
+idea of that because it just clutters up
+
+530
+00:09:02,199 --> 00:09:02,209
+idea of that because it just clutters up
+ 
+
+531
+00:09:02,209 --> 00:09:03,610
+idea of that because it just clutters up
+your code base you have an extra type
+
+532
+00:09:03,610 --> 00:09:03,620
+your code base you have an extra type
+ 
+
+533
+00:09:03,620 --> 00:09:05,920
+your code base you have an extra type
+floating around not necessary you can
+
+534
+00:09:05,920 --> 00:09:05,930
+floating around not necessary you can
+ 
+
+535
+00:09:05,930 --> 00:09:07,180
+floating around not necessary you can
+just use it structured bindings and
+
+536
+00:09:07,180 --> 00:09:07,190
+just use it structured bindings and
+ 
+
+537
+00:09:07,190 --> 00:09:09,579
+just use it structured bindings and
+tuples or pairs in this case and I hope
+
+538
+00:09:09,579 --> 00:09:09,589
+tuples or pairs in this case and I hope
+ 
+
+539
+00:09:09,589 --> 00:09:11,019
+tuples or pairs in this case and I hope
+you guys enjoyed this video and that you
+
+540
+00:09:11,019 --> 00:09:11,029
+you guys enjoyed this video and that you
+ 
+
+541
+00:09:11,029 --> 00:09:12,249
+you guys enjoyed this video and that you
+kind of benefited from seeing a
+
+542
+00:09:12,249 --> 00:09:12,259
+kind of benefited from seeing a
+ 
+
+543
+00:09:12,259 --> 00:09:14,050
+kind of benefited from seeing a
+real-world example if you did you can
+
+544
+00:09:14,050 --> 00:09:14,060
+real-world example if you did you can
+ 
+
+545
+00:09:14,060 --> 00:09:15,699
+real-world example if you did you can
+drop a like below you can also help
+
+546
+00:09:15,699 --> 00:09:15,709
+drop a like below you can also help
+ 
+
+547
+00:09:15,709 --> 00:09:17,680
+drop a like below you can also help
+support this channel by going to patron
+
+548
+00:09:17,680 --> 00:09:17,690
+support this channel by going to patron
+ 
+
+549
+00:09:17,690 --> 00:09:19,870
+support this channel by going to patron
+home for slash that show huge thank you
+
+550
+00:09:19,870 --> 00:09:19,880
+home for slash that show huge thank you
+ 
+
+551
+00:09:19,880 --> 00:09:21,610
+home for slash that show huge thank you
+as always to all the patrons that made
+
+552
+00:09:21,610 --> 00:09:21,620
+as always to all the patrons that made
+ 
+
+553
+00:09:21,620 --> 00:09:22,930
+as always to all the patrons that made
+this video possible
+
+554
+00:09:22,930 --> 00:09:22,940
+this video possible
+ 
+
+555
+00:09:22,940 --> 00:09:24,579
+this video possible
+drop a comment below on what you would
+
+556
+00:09:24,579 --> 00:09:24,589
+drop a comment below on what you would
+ 
+
+557
+00:09:24,589 --> 00:09:26,470
+drop a comment below on what you would
+like to see covered in C++ next I do
+
+558
+00:09:26,470 --> 00:09:26,480
+like to see covered in C++ next I do
+ 
+
+559
+00:09:26,480 --> 00:09:28,660
+like to see covered in C++ next I do
+have a very long list I think there's
+
+560
+00:09:28,660 --> 00:09:28,670
+have a very long list I think there's
+ 
+
+561
+00:09:28,670 --> 00:09:30,280
+have a very long list I think there's
+like 20 items are sort of what I'm gonna
+
+562
+00:09:30,280 --> 00:09:30,290
+like 20 items are sort of what I'm gonna
+ 
+
+563
+00:09:30,290 --> 00:09:32,259
+like 20 items are sort of what I'm gonna
+get through I'm gonna try and put out a
+
+564
+00:09:32,259 --> 00:09:32,269
+get through I'm gonna try and put out a
+ 
+
+565
+00:09:32,269 --> 00:09:34,540
+get through I'm gonna try and put out a
+video for you as often as possible so
+
+566
+00:09:34,540 --> 00:09:34,550
+video for you as often as possible so
+ 
+
+567
+00:09:34,550 --> 00:09:35,740
+video for you as often as possible so
+make sure that you subscribe if you
+
+568
+00:09:35,740 --> 00:09:35,750
+make sure that you subscribe if you
+ 
+
+569
+00:09:35,750 --> 00:09:37,480
+make sure that you subscribe if you
+haven't already and I will see you next
+
+570
+00:09:37,480 --> 00:09:37,490
+haven't already and I will see you next
+ 
+
+571
+00:09:37,490 --> 00:09:39,690
+haven't already and I will see you next
+time goodbye
+
+572
+00:09:39,690 --> 00:09:39,700
+time goodbye
+ 
+
+573
+00:09:39,700 --> 00:10:03,710
+time goodbye
+[Music]
+

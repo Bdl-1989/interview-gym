@@ -1,0 +1,3155 @@
+1
+00:00:00,000 --> 00:00:01,459
+
+hey so guys my name is Jonah welcome
+
+2
+00:00:01,459 --> 00:00:01,469
+hey so guys my name is Jonah welcome
+ 
+
+3
+00:00:01,469 --> 00:00:03,530
+hey so guys my name is Jonah welcome
+back to my sea loss loss series so today
+
+4
+00:00:03,530 --> 00:00:03,540
+back to my sea loss loss series so today
+ 
+
+5
+00:00:03,540 --> 00:00:05,120
+back to my sea loss loss series so today
+I wanted to talk about something a
+
+6
+00:00:05,120 --> 00:00:05,130
+I wanted to talk about something a
+ 
+
+7
+00:00:05,130 --> 00:00:06,769
+I wanted to talk about something a
+little bit different in fact I want to
+
+8
+00:00:06,769 --> 00:00:06,779
+little bit different in fact I want to
+ 
+
+9
+00:00:06,779 --> 00:00:08,660
+little bit different in fact I want to
+start kind of like a mini series within
+
+10
+00:00:08,660 --> 00:00:08,670
+start kind of like a mini series within
+ 
+
+11
+00:00:08,670 --> 00:00:11,270
+start kind of like a mini series within
+this C++ series just talking about
+
+12
+00:00:11,270 --> 00:00:11,280
+this C++ series just talking about
+ 
+
+13
+00:00:11,280 --> 00:00:14,330
+this C++ series just talking about
+random C++ things like tips and tricks
+
+14
+00:00:14,330 --> 00:00:14,340
+random C++ things like tips and tricks
+ 
+
+15
+00:00:14,340 --> 00:00:15,680
+random C++ things like tips and tricks
+that kind of stuff that will hopefully
+
+16
+00:00:15,680 --> 00:00:15,690
+that kind of stuff that will hopefully
+ 
+
+17
+00:00:15,690 --> 00:00:17,810
+that kind of stuff that will hopefully
+help you guys with some of the more
+
+18
+00:00:17,810 --> 00:00:17,820
+help you guys with some of the more
+ 
+
+19
+00:00:17,820 --> 00:00:20,630
+help you guys with some of the more
+intricate maybe less known features of
+
+20
+00:00:20,630 --> 00:00:20,640
+intricate maybe less known features of
+ 
+
+21
+00:00:20,640 --> 00:00:23,450
+intricate maybe less known features of
+C++ or just traps along the way because
+
+22
+00:00:23,450 --> 00:00:23,460
+C++ or just traps along the way because
+ 
+
+23
+00:00:23,460 --> 00:00:25,340
+C++ or just traps along the way because
+Sabo's was is full traps this basically
+
+24
+00:00:25,340 --> 00:00:25,350
+Sabo's was is full traps this basically
+ 
+
+25
+00:00:25,350 --> 00:00:27,200
+Sabo's was is full traps this basically
+just started off with me having a long
+
+26
+00:00:27,200 --> 00:00:27,210
+just started off with me having a long
+ 
+
+27
+00:00:27,210 --> 00:00:31,339
+just started off with me having a long
+list of things that are just weird and
+
+28
+00:00:31,339 --> 00:00:31,349
+list of things that are just weird and
+ 
+
+29
+00:00:31,349 --> 00:00:33,260
+list of things that are just weird and
+things that I thought that I should
+
+30
+00:00:33,260 --> 00:00:33,270
+things that I thought that I should
+ 
+
+31
+00:00:33,270 --> 00:00:35,450
+things that I thought that I should
+probably mention at some point in this
+
+32
+00:00:35,450 --> 00:00:35,460
+probably mention at some point in this
+ 
+
+33
+00:00:35,460 --> 00:00:38,389
+probably mention at some point in this
+series but didn't really have either the
+
+34
+00:00:38,389 --> 00:00:38,399
+series but didn't really have either the
+ 
+
+35
+00:00:38,399 --> 00:00:40,310
+series but didn't really have either the
+time or the necessity or July just
+
+36
+00:00:40,310 --> 00:00:40,320
+time or the necessity or July just
+ 
+
+37
+00:00:40,320 --> 00:00:41,840
+time or the necessity or July just
+didn't know where to fit them in because
+
+38
+00:00:41,840 --> 00:00:41,850
+didn't know where to fit them in because
+ 
+
+39
+00:00:41,850 --> 00:00:43,970
+didn't know where to fit them in because
+that they're just kind of you know
+
+40
+00:00:43,970 --> 00:00:43,980
+that they're just kind of you know
+ 
+
+41
+00:00:43,980 --> 00:00:46,130
+that they're just kind of you know
+little small things and this by the way
+
+42
+00:00:46,130 --> 00:00:46,140
+little small things and this by the way
+ 
+
+43
+00:00:46,140 --> 00:00:47,959
+little small things and this by the way
+this is just a prop the list is on
+
+44
+00:00:47,959 --> 00:00:47,969
+this is just a prop the list is on
+ 
+
+45
+00:00:47,969 --> 00:00:48,440
+this is just a prop the list is on
+Charlie
+
+46
+00:00:48,440 --> 00:00:48,450
+Charlie
+ 
+
+47
+00:00:48,450 --> 00:00:50,209
+Charlie
+but the point is there is much to
+
+48
+00:00:50,209 --> 00:00:50,219
+but the point is there is much to
+ 
+
+49
+00:00:50,219 --> 00:00:52,729
+but the point is there is much to
+discuss about C++ and so this is where
+
+50
+00:00:52,729 --> 00:00:52,739
+discuss about C++ and so this is where
+ 
+
+51
+00:00:52,739 --> 00:00:54,319
+discuss about C++ and so this is where
+this series comes in so I hope you guys
+
+52
+00:00:54,319 --> 00:00:54,329
+this series comes in so I hope you guys
+ 
+
+53
+00:00:54,329 --> 00:00:56,060
+this series comes in so I hope you guys
+enjoy it today I wanted to talk about
+
+54
+00:00:56,060 --> 00:00:56,070
+enjoy it today I wanted to talk about
+ 
+
+55
+00:00:56,070 --> 00:00:58,090
+enjoy it today I wanted to talk about
+something called argument evaluation
+
+56
+00:00:58,090 --> 00:00:58,100
+something called argument evaluation
+ 
+
+57
+00:00:58,100 --> 00:01:01,069
+something called argument evaluation
+order so in other words if I write a
+
+58
+00:01:01,069 --> 00:01:01,079
+order so in other words if I write a
+ 
+
+59
+00:01:01,079 --> 00:01:02,750
+order so in other words if I write a
+function that has a bunch of arguments
+
+60
+00:01:02,750 --> 00:01:02,760
+function that has a bunch of arguments
+ 
+
+61
+00:01:02,760 --> 00:01:04,579
+function that has a bunch of arguments
+and I pass a bunch of arguments into
+
+62
+00:01:04,579 --> 00:01:04,589
+and I pass a bunch of arguments into
+ 
+
+63
+00:01:04,589 --> 00:01:07,100
+and I pass a bunch of arguments into
+that function what order do the
+
+64
+00:01:07,100 --> 00:01:07,110
+that function what order do the
+ 
+
+65
+00:01:07,110 --> 00:01:08,990
+that function what order do the
+arguments get evaluated in because
+
+66
+00:01:08,990 --> 00:01:09,000
+arguments get evaluated in because
+ 
+
+67
+00:01:09,000 --> 00:01:10,820
+arguments get evaluated in because
+amongst the arguments I can actually
+
+68
+00:01:10,820 --> 00:01:10,830
+amongst the arguments I can actually
+ 
+
+69
+00:01:10,830 --> 00:01:12,890
+amongst the arguments I can actually
+write expressions which evaluate those
+
+70
+00:01:12,890 --> 00:01:12,900
+write expressions which evaluate those
+ 
+
+71
+00:01:12,900 --> 00:01:14,840
+write expressions which evaluate those
+arguments I don't have to pass in the
+
+72
+00:01:14,840 --> 00:01:14,850
+arguments I don't have to pass in the
+ 
+
+73
+00:01:14,850 --> 00:01:16,609
+arguments I don't have to pass in the
+number five into a function that takes
+
+74
+00:01:16,609 --> 00:01:16,619
+number five into a function that takes
+ 
+
+75
+00:01:16,619 --> 00:01:21,499
+number five into a function that takes
+in an int I can pass X plus y or five
+
+76
+00:01:21,499 --> 00:01:21,509
+in an int I can pass X plus y or five
+ 
+
+77
+00:01:21,509 --> 00:01:24,200
+in an int I can pass X plus y or five
+plus eight so if I do that and if I have
+
+78
+00:01:24,200 --> 00:01:24,210
+plus eight so if I do that and if I have
+ 
+
+79
+00:01:24,210 --> 00:01:26,510
+plus eight so if I do that and if I have
+a lot of arguments does the first
+
+80
+00:01:26,510 --> 00:01:26,520
+a lot of arguments does the first
+ 
+
+81
+00:01:26,520 --> 00:01:28,070
+a lot of arguments does the first
+argument get done first and then the
+
+82
+00:01:28,070 --> 00:01:28,080
+argument get done first and then the
+ 
+
+83
+00:01:28,080 --> 00:01:29,749
+argument get done first and then the
+second argument gets evaluated and the
+
+84
+00:01:29,749 --> 00:01:29,759
+second argument gets evaluated and the
+ 
+
+85
+00:01:29,759 --> 00:01:31,630
+second argument gets evaluated and the
+third one does it go in reverse order
+
+86
+00:01:31,630 --> 00:01:31,640
+third one does it go in reverse order
+ 
+
+87
+00:01:31,640 --> 00:01:34,280
+third one does it go in reverse order
+what happens how does this work and the
+
+88
+00:01:34,280 --> 00:01:34,290
+what happens how does this work and the
+ 
+
+89
+00:01:34,290 --> 00:01:35,660
+what happens how does this work and the
+interesting thing is that most people
+
+90
+00:01:35,660 --> 00:01:35,670
+interesting thing is that most people
+ 
+
+91
+00:01:35,670 --> 00:01:39,590
+interesting thing is that most people
+don't know most people don't know what
+
+92
+00:01:39,590 --> 00:01:39,600
+don't know most people don't know what
+ 
+
+93
+00:01:39,600 --> 00:01:42,319
+don't know most people don't know what
+this order of evaluation actually is
+
+94
+00:01:42,319 --> 00:01:42,329
+this order of evaluation actually is
+ 
+
+95
+00:01:42,329 --> 00:01:44,389
+this order of evaluation actually is
+what do you think it is pause this video
+
+96
+00:01:44,389 --> 00:01:44,399
+what do you think it is pause this video
+ 
+
+97
+00:01:44,399 --> 00:01:45,830
+what do you think it is pause this video
+right now and drop a comment below with
+
+98
+00:01:45,830 --> 00:01:45,840
+right now and drop a comment below with
+ 
+
+99
+00:01:45,840 --> 00:01:47,270
+right now and drop a comment below with
+your answer it'll be really interesting
+
+100
+00:01:47,270 --> 00:01:47,280
+your answer it'll be really interesting
+ 
+
+101
+00:01:47,280 --> 00:01:49,280
+your answer it'll be really interesting
+to see what the general community thinks
+
+102
+00:01:49,280 --> 00:01:49,290
+to see what the general community thinks
+ 
+
+103
+00:01:49,290 --> 00:01:51,260
+to see what the general community thinks
+and don't look it up anyway pretend this
+
+104
+00:01:51,260 --> 00:01:51,270
+and don't look it up anyway pretend this
+ 
+
+105
+00:01:51,270 --> 00:01:52,550
+and don't look it up anyway pretend this
+is like a job interview or something
+
+106
+00:01:52,550 --> 00:01:52,560
+is like a job interview or something
+ 
+
+107
+00:01:52,560 --> 00:01:54,080
+is like a job interview or something
+like that and the thing is if you're
+
+108
+00:01:54,080 --> 00:01:54,090
+like that and the thing is if you're
+ 
+
+109
+00:01:54,090 --> 00:01:56,149
+like that and the thing is if you're
+wrong or if you don't know the answer I
+
+110
+00:01:56,149 --> 00:01:56,159
+wrong or if you don't know the answer I
+ 
+
+111
+00:01:56,159 --> 00:01:57,980
+wrong or if you don't know the answer I
+don't blame you because this is not
+
+112
+00:01:57,980 --> 00:01:57,990
+don't blame you because this is not
+ 
+
+113
+00:01:57,990 --> 00:01:59,240
+don't blame you because this is not
+something that really comes up in
+
+114
+00:01:59,240 --> 00:01:59,250
+something that really comes up in
+ 
+
+115
+00:01:59,250 --> 00:02:00,440
+something that really comes up in
+programming it almost sounds like
+
+116
+00:02:00,440 --> 00:02:00,450
+programming it almost sounds like
+ 
+
+117
+00:02:00,450 --> 00:02:03,499
+programming it almost sounds like
+something that should actually come up
+
+118
+00:02:03,499 --> 00:02:03,509
+something that should actually come up
+ 
+
+119
+00:02:03,509 --> 00:02:05,899
+something that should actually come up
+more often than it does but when you're
+
+120
+00:02:05,899 --> 00:02:05,909
+more often than it does but when you're
+ 
+
+121
+00:02:05,909 --> 00:02:07,940
+more often than it does but when you're
+actually writing C++ code you don't
+
+122
+00:02:07,940 --> 00:02:07,950
+actually writing C++ code you don't
+ 
+
+123
+00:02:07,950 --> 00:02:10,160
+actually writing C++ code you don't
+really think about this and I think it's
+
+124
+00:02:10,160 --> 00:02:10,170
+really think about this and I think it's
+ 
+
+125
+00:02:10,170 --> 00:02:11,780
+really think about this and I think it's
+perfectly reasonable to not know the
+
+126
+00:02:11,780 --> 00:02:11,790
+perfectly reasonable to not know the
+ 
+
+127
+00:02:11,790 --> 00:02:13,580
+perfectly reasonable to not know the
+answer to this because it is
+
+128
+00:02:13,580 --> 00:02:13,590
+answer to this because it is
+ 
+
+129
+00:02:13,590 --> 00:02:15,680
+answer to this because it is
+kind of it does involve knowing a little
+
+130
+00:02:15,680 --> 00:02:15,690
+kind of it does involve knowing a little
+ 
+
+131
+00:02:15,690 --> 00:02:17,330
+kind of it does involve knowing a little
+bit more about how the compiler to
+
+132
+00:02:17,330 --> 00:02:17,340
+bit more about how the compiler to
+ 
+
+133
+00:02:17,340 --> 00:02:19,309
+bit more about how the compiler to
+compile occurred what the C++ standard
+
+134
+00:02:19,309 --> 00:02:19,319
+compile occurred what the C++ standard
+ 
+
+135
+00:02:19,319 --> 00:02:22,220
+compile occurred what the C++ standard
+actually specifies for C++ compilers and
+
+136
+00:02:22,220 --> 00:02:22,230
+actually specifies for C++ compilers and
+ 
+
+137
+00:02:22,230 --> 00:02:25,430
+actually specifies for C++ compilers and
+also just a lot of experience I think
+
+138
+00:02:25,430 --> 00:02:25,440
+also just a lot of experience I think
+ 
+
+139
+00:02:25,440 --> 00:02:27,410
+also just a lot of experience I think
+will probably lead you to I guess
+
+140
+00:02:27,410 --> 00:02:27,420
+will probably lead you to I guess
+ 
+
+141
+00:02:27,420 --> 00:02:30,380
+will probably lead you to I guess
+naturally knowing the answer to this and
+
+142
+00:02:30,380 --> 00:02:30,390
+naturally knowing the answer to this and
+ 
+
+143
+00:02:30,390 --> 00:02:31,820
+naturally knowing the answer to this and
+we're gonna dive in here and take a look
+
+144
+00:02:31,820 --> 00:02:31,830
+we're gonna dive in here and take a look
+ 
+
+145
+00:02:31,830 --> 00:02:33,470
+we're gonna dive in here and take a look
+at some examples and just explore this
+
+146
+00:02:33,470 --> 00:02:33,480
+at some examples and just explore this
+ 
+
+147
+00:02:33,480 --> 00:02:35,270
+at some examples and just explore this
+general problem but first I want to give
+
+148
+00:02:35,270 --> 00:02:35,280
+general problem but first I want to give
+ 
+
+149
+00:02:35,280 --> 00:02:37,400
+general problem but first I want to give
+a huge thank you to Skillshare for
+
+150
+00:02:37,400 --> 00:02:37,410
+a huge thank you to Skillshare for
+ 
+
+151
+00:02:37,410 --> 00:02:38,750
+a huge thank you to Skillshare for
+sponsoring this video
+
+152
+00:02:38,750 --> 00:02:38,760
+sponsoring this video
+ 
+
+153
+00:02:38,760 --> 00:02:39,619
+sponsoring this video
+for those of you who don't know
+
+154
+00:02:39,619 --> 00:02:39,629
+for those of you who don't know
+ 
+
+155
+00:02:39,629 --> 00:02:41,660
+for those of you who don't know
+Skillshare is an amazing online learning
+
+156
+00:02:41,660 --> 00:02:41,670
+Skillshare is an amazing online learning
+ 
+
+157
+00:02:41,670 --> 00:02:43,220
+Skillshare is an amazing online learning
+community where millions come together
+
+158
+00:02:43,220 --> 00:02:43,230
+community where millions come together
+ 
+
+159
+00:02:43,230 --> 00:02:45,680
+community where millions come together
+to take the next step in their creative
+
+160
+00:02:45,680 --> 00:02:45,690
+to take the next step in their creative
+ 
+
+161
+00:02:45,690 --> 00:02:46,370
+to take the next step in their creative
+journey
+
+162
+00:02:46,370 --> 00:02:46,380
+journey
+ 
+
+163
+00:02:46,380 --> 00:02:48,350
+journey
+it's a massive platform filled with
+
+164
+00:02:48,350 --> 00:02:48,360
+it's a massive platform filled with
+ 
+
+165
+00:02:48,360 --> 00:02:50,960
+it's a massive platform filled with
+thousands of inspiring classes for
+
+166
+00:02:50,960 --> 00:02:50,970
+thousands of inspiring classes for
+ 
+
+167
+00:02:50,970 --> 00:02:52,880
+thousands of inspiring classes for
+people who want to learn a new skill
+
+168
+00:02:52,880 --> 00:02:52,890
+people who want to learn a new skill
+ 
+
+169
+00:02:52,890 --> 00:02:55,160
+people who want to learn a new skill
+they've got so many amazing classes on
+
+170
+00:02:55,160 --> 00:02:55,170
+they've got so many amazing classes on
+ 
+
+171
+00:02:55,170 --> 00:02:56,630
+they've got so many amazing classes on
+there I particularly like a lot of their
+
+172
+00:02:56,630 --> 00:02:56,640
+there I particularly like a lot of their
+ 
+
+173
+00:02:56,640 --> 00:02:58,400
+there I particularly like a lot of their
+illustration classes for example this
+
+174
+00:02:58,400 --> 00:02:58,410
+illustration classes for example this
+ 
+
+175
+00:02:58,410 --> 00:03:00,350
+illustration classes for example this
+one is pretty cool they've even got
+
+176
+00:03:00,350 --> 00:03:00,360
+one is pretty cool they've even got
+ 
+
+177
+00:03:00,360 --> 00:03:02,990
+one is pretty cool they've even got
+stuff about productivity in general so
+
+178
+00:03:02,990 --> 00:03:03,000
+stuff about productivity in general so
+ 
+
+179
+00:03:03,000 --> 00:03:05,180
+stuff about productivity in general so
+how to improve your productivity because
+
+180
+00:03:05,180 --> 00:03:05,190
+how to improve your productivity because
+ 
+
+181
+00:03:05,190 --> 00:03:07,130
+how to improve your productivity because
+who does not like being productive and
+
+182
+00:03:07,130 --> 00:03:07,140
+who does not like being productive and
+ 
+
+183
+00:03:07,140 --> 00:03:08,720
+who does not like being productive and
+who does not struggle with that and a
+
+184
+00:03:08,720 --> 00:03:08,730
+who does not struggle with that and a
+ 
+
+185
+00:03:08,730 --> 00:03:10,250
+who does not struggle with that and a
+$10 per month for an annual subscription
+
+186
+00:03:10,250 --> 00:03:10,260
+$10 per month for an annual subscription
+ 
+
+187
+00:03:10,260 --> 00:03:12,380
+$10 per month for an annual subscription
+it has great value and a great way to
+
+188
+00:03:12,380 --> 00:03:12,390
+it has great value and a great way to
+ 
+
+189
+00:03:12,390 --> 00:03:14,479
+it has great value and a great way to
+spend your time learning new skills
+
+190
+00:03:14,479 --> 00:03:14,489
+spend your time learning new skills
+ 
+
+191
+00:03:14,489 --> 00:03:16,819
+spend your time learning new skills
+Skillshare is offering two months of
+
+192
+00:03:16,819 --> 00:03:16,829
+Skillshare is offering two months of
+ 
+
+193
+00:03:16,829 --> 00:03:19,099
+Skillshare is offering two months of
+free Skillshare premium membership to
+
+194
+00:03:19,099 --> 00:03:19,109
+free Skillshare premium membership to
+ 
+
+195
+00:03:19,109 --> 00:03:20,990
+free Skillshare premium membership to
+the first thousand people who sign up
+
+196
+00:03:20,990 --> 00:03:21,000
+the first thousand people who sign up
+ 
+
+197
+00:03:21,000 --> 00:03:22,670
+the first thousand people who sign up
+using the link in the description below
+
+198
+00:03:22,670 --> 00:03:22,680
+using the link in the description below
+ 
+
+199
+00:03:22,680 --> 00:03:24,620
+using the link in the description below
+so make sure you guys check that out for
+
+200
+00:03:24,620 --> 00:03:24,630
+so make sure you guys check that out for
+ 
+
+201
+00:03:24,630 --> 00:03:27,050
+so make sure you guys check that out for
+free and learn something new today
+
+202
+00:03:27,050 --> 00:03:27,060
+free and learn something new today
+ 
+
+203
+00:03:27,060 --> 00:03:29,569
+free and learn something new today
+speaking of learning something new let's
+
+204
+00:03:29,569 --> 00:03:29,579
+speaking of learning something new let's
+ 
+
+205
+00:03:29,579 --> 00:03:31,430
+speaking of learning something new let's
+take a look at this argument evaluation
+
+206
+00:03:31,430 --> 00:03:31,440
+take a look at this argument evaluation
+ 
+
+207
+00:03:31,440 --> 00:03:33,229
+take a look at this argument evaluation
+order shall we okay so here I have a
+
+208
+00:03:33,229 --> 00:03:33,239
+order shall we okay so here I have a
+ 
+
+209
+00:03:33,239 --> 00:03:35,240
+order shall we okay so here I have a
+super simple function called print sum
+
+210
+00:03:35,240 --> 00:03:35,250
+super simple function called print sum
+ 
+
+211
+00:03:35,250 --> 00:03:36,920
+super simple function called print sum
+that just takes in two integers and adds
+
+212
+00:03:36,920 --> 00:03:36,930
+that just takes in two integers and adds
+ 
+
+213
+00:03:36,930 --> 00:03:38,839
+that just takes in two integers and adds
+them together prints the result as well
+
+214
+00:03:38,839 --> 00:03:38,849
+them together prints the result as well
+ 
+
+215
+00:03:38,849 --> 00:03:40,460
+them together prints the result as well
+as the two integers that we're feeding
+
+216
+00:03:40,460 --> 00:03:40,470
+as the two integers that we're feeding
+ 
+
+217
+00:03:40,470 --> 00:03:42,440
+as the two integers that we're feeding
+into it is just a really simple example
+
+218
+00:03:42,440 --> 00:03:42,450
+into it is just a really simple example
+ 
+
+219
+00:03:42,450 --> 00:03:44,539
+into it is just a really simple example
+which will help illustrate this in
+
+220
+00:03:44,539 --> 00:03:44,549
+which will help illustrate this in
+ 
+
+221
+00:03:44,549 --> 00:03:46,250
+which will help illustrate this in
+action so let's go ahead and create a
+
+222
+00:03:46,250 --> 00:03:46,260
+action so let's go ahead and create a
+ 
+
+223
+00:03:46,260 --> 00:03:49,190
+action so let's go ahead and create a
+value here let's set it to zero and then
+
+224
+00:03:49,190 --> 00:03:49,200
+value here let's set it to zero and then
+ 
+
+225
+00:03:49,200 --> 00:03:51,319
+value here let's set it to zero and then
+I'm going to call print sum now what I'm
+
+226
+00:03:51,319 --> 00:03:51,329
+I'm going to call print sum now what I'm
+ 
+
+227
+00:03:51,329 --> 00:03:53,089
+I'm going to call print sum now what I'm
+going to do is write an expression here
+
+228
+00:03:53,089 --> 00:03:53,099
+going to do is write an expression here
+ 
+
+229
+00:03:53,099 --> 00:03:55,280
+going to do is write an expression here
+that needs to get evaluated at some
+
+230
+00:03:55,280 --> 00:03:55,290
+that needs to get evaluated at some
+ 
+
+231
+00:03:55,290 --> 00:03:57,110
+that needs to get evaluated at some
+point so I'm not just going to pass in
+
+232
+00:03:57,110 --> 00:03:57,120
+point so I'm not just going to pass in
+ 
+
+233
+00:03:57,120 --> 00:03:58,940
+point so I'm not just going to pass in
+value I'm gonna pass in value plus plus
+
+234
+00:03:58,940 --> 00:03:58,950
+value I'm gonna pass in value plus plus
+ 
+
+235
+00:03:58,950 --> 00:04:02,300
+value I'm gonna pass in value plus plus
+and I will do this twice so this is a
+
+236
+00:04:02,300 --> 00:04:02,310
+and I will do this twice so this is a
+ 
+
+237
+00:04:02,310 --> 00:04:04,069
+and I will do this twice so this is a
+really simple example to illustrate
+
+238
+00:04:04,069 --> 00:04:04,079
+really simple example to illustrate
+ 
+
+239
+00:04:04,079 --> 00:04:05,509
+really simple example to illustrate
+exactly what I'm talking about
+
+240
+00:04:05,509 --> 00:04:05,519
+exactly what I'm talking about
+ 
+
+241
+00:04:05,519 --> 00:04:08,150
+exactly what I'm talking about
+what will be printed and if you still
+
+242
+00:04:08,150 --> 00:04:08,160
+what will be printed and if you still
+ 
+
+243
+00:04:08,160 --> 00:04:10,039
+what will be printed and if you still
+haven't left a comment please leave one
+
+244
+00:04:10,039 --> 00:04:10,049
+haven't left a comment please leave one
+ 
+
+245
+00:04:10,049 --> 00:04:11,210
+haven't left a comment please leave one
+right now I'm really interested to see
+
+246
+00:04:11,210 --> 00:04:11,220
+right now I'm really interested to see
+ 
+
+247
+00:04:11,220 --> 00:04:13,640
+right now I'm really interested to see
+what you guys think and I'll be honest
+
+248
+00:04:13,640 --> 00:04:13,650
+what you guys think and I'll be honest
+ 
+
+249
+00:04:13,650 --> 00:04:15,740
+what you guys think and I'll be honest
+going through this code I would probably
+
+250
+00:04:15,740 --> 00:04:15,750
+going through this code I would probably
+ 
+
+251
+00:04:15,750 --> 00:04:19,430
+going through this code I would probably
+expect it to be something like maybe 0-4
+
+252
+00:04:19,430 --> 00:04:19,440
+expect it to be something like maybe 0-4
+ 
+
+253
+00:04:19,440 --> 00:04:21,529
+expect it to be something like maybe 0-4
+like this one and then one for this one
+
+254
+00:04:21,529 --> 00:04:21,539
+like this one and then one for this one
+ 
+
+255
+00:04:21,539 --> 00:04:23,420
+like this one and then one for this one
+if it's evaluating them in reverse order
+
+256
+00:04:23,420 --> 00:04:23,430
+if it's evaluating them in reverse order
+ 
+
+257
+00:04:23,430 --> 00:04:25,720
+if it's evaluating them in reverse order
+maybe will in fact be zero and
+
+258
+00:04:25,720 --> 00:04:25,730
+maybe will in fact be zero and
+ 
+
+259
+00:04:25,730 --> 00:04:28,150
+maybe will in fact be zero and
+one obviously this is a post increment
+
+260
+00:04:28,150 --> 00:04:28,160
+one obviously this is a post increment
+ 
+
+261
+00:04:28,160 --> 00:04:29,980
+one obviously this is a post increment
+operator meaning that the original value
+
+262
+00:04:29,980 --> 00:04:29,990
+operator meaning that the original value
+ 
+
+263
+00:04:29,990 --> 00:04:31,240
+operator meaning that the original value
+should get passed in first then
+
+264
+00:04:31,240 --> 00:04:31,250
+should get passed in first then
+ 
+
+265
+00:04:31,250 --> 00:04:32,950
+should get passed in first then
+incremented but then again that's just
+
+266
+00:04:32,950 --> 00:04:32,960
+incremented but then again that's just
+ 
+
+267
+00:04:32,960 --> 00:04:35,860
+incremented but then again that's just
+my guess so I expect a to be either 1 or
+
+268
+00:04:35,860 --> 00:04:35,870
+my guess so I expect a to be either 1 or
+ 
+
+269
+00:04:35,870 --> 00:04:39,430
+my guess so I expect a to be either 1 or
+0 and then B to be either well 0 or 1
+
+270
+00:04:39,430 --> 00:04:39,440
+0 and then B to be either well 0 or 1
+ 
+
+271
+00:04:39,440 --> 00:04:41,410
+0 and then B to be either well 0 or 1
+depending on what a was this is probably
+
+272
+00:04:41,410 --> 00:04:41,420
+depending on what a was this is probably
+ 
+
+273
+00:04:41,420 --> 00:04:43,030
+depending on what a was this is probably
+what I would guess but then again I
+
+274
+00:04:43,030 --> 00:04:43,040
+what I would guess but then again I
+ 
+
+275
+00:04:43,040 --> 00:04:44,860
+what I would guess but then again I
+would be wrong because the answer to
+
+276
+00:04:44,860 --> 00:04:44,870
+would be wrong because the answer to
+ 
+
+277
+00:04:44,870 --> 00:04:48,040
+would be wrong because the answer to
+this is it's undefined behavior the C++
+
+278
+00:04:48,040 --> 00:04:48,050
+this is it's undefined behavior the C++
+ 
+
+279
+00:04:48,050 --> 00:04:50,260
+this is it's undefined behavior the C++
+standard does not actually define what
+
+280
+00:04:50,260 --> 00:04:50,270
+standard does not actually define what
+ 
+
+281
+00:04:50,270 --> 00:04:52,390
+standard does not actually define what
+should happen in the situation which
+
+282
+00:04:52,390 --> 00:04:52,400
+should happen in the situation which
+ 
+
+283
+00:04:52,400 --> 00:04:54,970
+should happen in the situation which
+means it's undefined behavior means that
+
+284
+00:04:54,970 --> 00:04:54,980
+means it's undefined behavior means that
+ 
+
+285
+00:04:54,980 --> 00:04:56,650
+means it's undefined behavior means that
+it's going to vary compiler to compiler
+
+286
+00:04:56,650 --> 00:04:56,660
+it's going to vary compiler to compiler
+ 
+
+287
+00:04:56,660 --> 00:04:58,030
+it's going to vary compiler to compiler
+is completely dependent on the actual
+
+288
+00:04:58,030 --> 00:04:58,040
+is completely dependent on the actual
+ 
+
+289
+00:04:58,040 --> 00:04:59,980
+is completely dependent on the actual
+implementation of the sample source
+
+290
+00:04:59,980 --> 00:04:59,990
+implementation of the sample source
+ 
+
+291
+00:04:59,990 --> 00:05:01,540
+implementation of the sample source
+compiler that has to then translate this
+
+292
+00:05:01,540 --> 00:05:01,550
+compiler that has to then translate this
+ 
+
+293
+00:05:01,550 --> 00:05:04,330
+compiler that has to then translate this
+code into machine code basically that
+
+294
+00:05:04,330 --> 00:05:04,340
+code into machine code basically that
+ 
+
+295
+00:05:04,340 --> 00:05:07,300
+code into machine code basically that
+means this is unreliable and it will be
+
+296
+00:05:07,300 --> 00:05:07,310
+means this is unreliable and it will be
+ 
+
+297
+00:05:07,310 --> 00:05:08,590
+means this is unreliable and it will be
+different so why don't we do some
+
+298
+00:05:08,590 --> 00:05:08,600
+different so why don't we do some
+ 
+
+299
+00:05:08,600 --> 00:05:10,120
+different so why don't we do some
+testing let's go ahead and run this code
+
+300
+00:05:10,120 --> 00:05:10,130
+testing let's go ahead and run this code
+ 
+
+301
+00:05:10,130 --> 00:05:11,230
+testing let's go ahead and run this code
+right now and see what we get
+
+302
+00:05:11,230 --> 00:05:11,240
+right now and see what we get
+ 
+
+303
+00:05:11,240 --> 00:05:13,540
+right now and see what we get
+ok so this is my output 1 plus 0 equals
+
+304
+00:05:13,540 --> 00:05:13,550
+ok so this is my output 1 plus 0 equals
+ 
+
+305
+00:05:13,550 --> 00:05:15,280
+ok so this is my output 1 plus 0 equals
+1 ok interesting so it looks like it
+
+306
+00:05:15,280 --> 00:05:15,290
+1 ok interesting so it looks like it
+ 
+
+307
+00:05:15,290 --> 00:05:18,070
+1 ok interesting so it looks like it
+passed in 0 for this first value and
+
+308
+00:05:18,070 --> 00:05:18,080
+passed in 0 for this first value and
+ 
+
+309
+00:05:18,080 --> 00:05:20,440
+passed in 0 for this first value and
+then 1 so I guess I was right when I
+
+310
+00:05:20,440 --> 00:05:20,450
+then 1 so I guess I was right when I
+ 
+
+311
+00:05:20,450 --> 00:05:22,420
+then 1 so I guess I was right when I
+said 1 plus 0 equals 1 I'm using the
+
+312
+00:05:22,420 --> 00:05:22,430
+said 1 plus 0 equals 1 I'm using the
+ 
+
+313
+00:05:22,430 --> 00:05:23,770
+said 1 plus 0 equals 1 I'm using the
+microsoft visual studio compiler here
+
+314
+00:05:23,770 --> 00:05:23,780
+microsoft visual studio compiler here
+ 
+
+315
+00:05:23,780 --> 00:05:25,690
+microsoft visual studio compiler here
+MSB C and I'm running in debug mode
+
+316
+00:05:25,690 --> 00:05:25,700
+MSB C and I'm running in debug mode
+ 
+
+317
+00:05:25,700 --> 00:05:27,520
+MSB C and I'm running in debug mode
+let's try release mode and see what we
+
+318
+00:05:27,520 --> 00:05:27,530
+let's try release mode and see what we
+ 
+
+319
+00:05:27,530 --> 00:05:27,850
+let's try release mode and see what we
+get
+
+320
+00:05:27,850 --> 00:05:27,860
+get
+ 
+
+321
+00:05:27,860 --> 00:05:30,070
+get
+hang on a minute and see your plus 0
+
+322
+00:05:30,070 --> 00:05:30,080
+hang on a minute and see your plus 0
+ 
+
+323
+00:05:30,080 --> 00:05:33,010
+hang on a minute and see your plus 0
+equals 0 what so this doesn't work at
+
+324
+00:05:33,010 --> 00:05:33,020
+equals 0 what so this doesn't work at
+ 
+
+325
+00:05:33,020 --> 00:05:35,020
+equals 0 what so this doesn't work at
+all in release mode why does this differ
+
+326
+00:05:35,020 --> 00:05:35,030
+all in release mode why does this differ
+ 
+
+327
+00:05:35,030 --> 00:05:37,060
+all in release mode why does this differ
+release mode to debug mode what if I
+
+328
+00:05:37,060 --> 00:05:37,070
+release mode to debug mode what if I
+ 
+
+329
+00:05:37,070 --> 00:05:39,670
+release mode to debug mode what if I
+change this post increment to be a kind
+
+330
+00:05:39,670 --> 00:05:39,680
+change this post increment to be a kind
+ 
+
+331
+00:05:39,680 --> 00:05:41,320
+change this post increment to be a kind
+of pre increments on other words it
+
+332
+00:05:41,320 --> 00:05:41,330
+of pre increments on other words it
+ 
+
+333
+00:05:41,330 --> 00:05:42,580
+of pre increments on other words it
+should increment the value variable
+
+334
+00:05:42,580 --> 00:05:42,590
+should increment the value variable
+ 
+
+335
+00:05:42,590 --> 00:05:44,140
+should increment the value variable
+first and then pass it into the function
+
+336
+00:05:44,140 --> 00:05:44,150
+first and then pass it into the function
+ 
+
+337
+00:05:44,150 --> 00:05:45,910
+first and then pass it into the function
+let's switch both of these to be like
+
+338
+00:05:45,910 --> 00:05:45,920
+let's switch both of these to be like
+ 
+
+339
+00:05:45,920 --> 00:05:48,130
+let's switch both of these to be like
+this so in other words now if it follows
+
+340
+00:05:48,130 --> 00:05:48,140
+this so in other words now if it follows
+ 
+
+341
+00:05:48,140 --> 00:05:49,480
+this so in other words now if it follows
+that kind of this parameter is evaluated
+
+342
+00:05:49,480 --> 00:05:49,490
+that kind of this parameter is evaluated
+ 
+
+343
+00:05:49,490 --> 00:05:51,610
+that kind of this parameter is evaluated
+first in this parameter order we should
+
+344
+00:05:51,610 --> 00:05:51,620
+first in this parameter order we should
+ 
+
+345
+00:05:51,620 --> 00:05:54,370
+first in this parameter order we should
+get 1 and 2 I guess let's run this code
+
+346
+00:05:54,370 --> 00:05:54,380
+get 1 and 2 I guess let's run this code
+ 
+
+347
+00:05:54,380 --> 00:05:56,740
+get 1 and 2 I guess let's run this code
+I'm in release mode now and I get 2 plus
+
+348
+00:05:56,740 --> 00:05:56,750
+I'm in release mode now and I get 2 plus
+ 
+
+349
+00:05:56,750 --> 00:06:01,060
+I'm in release mode now and I get 2 plus
+3 equals 4 so the value is just true for
+
+350
+00:06:01,060 --> 00:06:01,070
+3 equals 4 so the value is just true for
+ 
+
+351
+00:06:01,070 --> 00:06:03,250
+3 equals 4 so the value is just true for
+both of these what about running it in
+
+352
+00:06:03,250 --> 00:06:03,260
+both of these what about running it in
+ 
+
+353
+00:06:03,260 --> 00:06:05,260
+both of these what about running it in
+debug mode I also get to boss two equals
+
+354
+00:06:05,260 --> 00:06:05,270
+debug mode I also get to boss two equals
+ 
+
+355
+00:06:05,270 --> 00:06:07,000
+debug mode I also get to boss two equals
+4 so this seems kind of I guess at least
+
+356
+00:06:07,000 --> 00:06:07,010
+4 so this seems kind of I guess at least
+ 
+
+357
+00:06:07,010 --> 00:06:08,770
+4 so this seems kind of I guess at least
+deterministic between debug and release
+
+358
+00:06:08,770 --> 00:06:08,780
+deterministic between debug and release
+ 
+
+359
+00:06:08,780 --> 00:06:11,080
+deterministic between debug and release
+mode but overall the point of this
+
+360
+00:06:11,080 --> 00:06:11,090
+mode but overall the point of this
+ 
+
+361
+00:06:11,090 --> 00:06:13,030
+mode but overall the point of this
+exercise is so that you can see that
+
+362
+00:06:13,030 --> 00:06:13,040
+exercise is so that you can see that
+ 
+
+363
+00:06:13,040 --> 00:06:14,770
+exercise is so that you can see that
+this is a complete mess because it's
+
+364
+00:06:14,770 --> 00:06:14,780
+this is a complete mess because it's
+ 
+
+365
+00:06:14,780 --> 00:06:16,840
+this is a complete mess because it's
+undefined behavior you can't predict
+
+366
+00:06:16,840 --> 00:06:16,850
+undefined behavior you can't predict
+ 
+
+367
+00:06:16,850 --> 00:06:18,880
+undefined behavior you can't predict
+this behavior it you're not supposed to
+
+368
+00:06:18,880 --> 00:06:18,890
+this behavior it you're not supposed to
+ 
+
+369
+00:06:18,890 --> 00:06:20,350
+this behavior it you're not supposed to
+do this now the case that is
+
+370
+00:06:20,350 --> 00:06:20,360
+do this now the case that is
+ 
+
+371
+00:06:20,360 --> 00:06:22,990
+do this now the case that is
+particularly interesting to me is this
+
+372
+00:06:22,990 --> 00:06:23,000
+particularly interesting to me is this
+ 
+
+373
+00:06:23,000 --> 00:06:26,380
+particularly interesting to me is this
+kind of release mode case of the post
+
+374
+00:06:26,380 --> 00:06:26,390
+kind of release mode case of the post
+ 
+
+375
+00:06:26,390 --> 00:06:29,530
+kind of release mode case of the post
+increment operator so in other words 0
+
+376
+00:06:29,530 --> 00:06:29,540
+increment operator so in other words 0
+ 
+
+377
+00:06:29,540 --> 00:06:32,620
+increment operator so in other words 0
+plus 0 equals 0 what is even happening
+
+378
+00:06:32,620 --> 00:06:32,630
+plus 0 equals 0 what is even happening
+ 
+
+379
+00:06:32,630 --> 00:06:35,879
+plus 0 equals 0 what is even happening
+here the reason this is happening is the
+
+380
+00:06:35,879 --> 00:06:35,889
+here the reason this is happening is the
+ 
+
+381
+00:06:35,889 --> 00:06:38,969
+here the reason this is happening is the
+the compiler is actually allowed to work
+
+382
+00:06:38,969 --> 00:06:38,979
+the compiler is actually allowed to work
+ 
+
+383
+00:06:38,979 --> 00:06:41,969
+the compiler is actually allowed to work
+out what these are in parallel it does
+
+384
+00:06:41,969 --> 00:06:41,979
+out what these are in parallel it does
+ 
+
+385
+00:06:41,979 --> 00:06:43,589
+out what these are in parallel it does
+not have to first evaluate these
+
+386
+00:06:43,589 --> 00:06:43,599
+not have to first evaluate these
+ 
+
+387
+00:06:43,599 --> 00:06:45,719
+not have to first evaluate these
+arguments in a specified order to see
+
+388
+00:06:45,719 --> 00:06:45,729
+arguments in a specified order to see
+ 
+
+389
+00:06:45,729 --> 00:06:47,879
+arguments in a specified order to see
+what they are know when trying to kind
+
+390
+00:06:47,879 --> 00:06:47,889
+what they are know when trying to kind
+ 
+
+391
+00:06:47,889 --> 00:06:49,499
+what they are know when trying to kind
+of figure out what this isn't using like
+
+392
+00:06:49,499 --> 00:06:49,509
+of figure out what this isn't using like
+ 
+
+393
+00:06:49,509 --> 00:06:51,209
+of figure out what this isn't using like
+constant folding in release mode and
+
+394
+00:06:51,209 --> 00:06:51,219
+constant folding in release mode and
+ 
+
+395
+00:06:51,219 --> 00:06:53,040
+constant folding in release mode and
+various other optimizations that
+
+396
+00:06:53,040 --> 00:06:53,050
+various other optimizations that
+ 
+
+397
+00:06:53,050 --> 00:06:54,510
+various other optimizations that
+basically allow you to work out the
+
+398
+00:06:54,510 --> 00:06:54,520
+basically allow you to work out the
+ 
+
+399
+00:06:54,520 --> 00:06:56,730
+basically allow you to work out the
+value of variables in compiled time so
+
+400
+00:06:56,730 --> 00:06:56,740
+value of variables in compiled time so
+ 
+
+401
+00:06:56,740 --> 00:06:58,469
+value of variables in compiled time so
+in other words if I wrote two plus five
+
+402
+00:06:58,469 --> 00:06:58,479
+in other words if I wrote two plus five
+ 
+
+403
+00:06:58,479 --> 00:07:00,600
+in other words if I wrote two plus five
+instead of actually doing two plus five
+
+404
+00:07:00,600 --> 00:07:00,610
+instead of actually doing two plus five
+ 
+
+405
+00:07:00,610 --> 00:07:02,879
+instead of actually doing two plus five
+on the CPU at runtime it would just set
+
+406
+00:07:02,879 --> 00:07:02,889
+on the CPU at runtime it would just set
+ 
+
+407
+00:07:02,889 --> 00:07:04,980
+on the CPU at runtime it would just set
+value to seven because that would be a
+
+408
+00:07:04,980 --> 00:07:04,990
+value to seven because that would be a
+ 
+
+409
+00:07:04,990 --> 00:07:06,119
+value to seven because that would be a
+lot simpler and it's definitely
+
+410
+00:07:06,119 --> 00:07:06,129
+lot simpler and it's definitely
+ 
+
+411
+00:07:06,129 --> 00:07:07,589
+lot simpler and it's definitely
+something that can be calculated your in
+
+412
+00:07:07,589 --> 00:07:07,599
+something that can be calculated your in
+ 
+
+413
+00:07:07,599 --> 00:07:09,600
+something that can be calculated your in
+compile time the point being that it
+
+414
+00:07:09,600 --> 00:07:09,610
+compile time the point being that it
+ 
+
+415
+00:07:09,610 --> 00:07:12,029
+compile time the point being that it
+does not have to first do this in some
+
+416
+00:07:12,029 --> 00:07:12,039
+does not have to first do this in some
+ 
+
+417
+00:07:12,039 --> 00:07:13,559
+does not have to first do this in some
+kind of order where we have value plus
+
+418
+00:07:13,559 --> 00:07:13,569
+kind of order where we have value plus
+ 
+
+419
+00:07:13,569 --> 00:07:16,050
+kind of order where we have value plus
+plus and then that's one and therefore
+
+420
+00:07:16,050 --> 00:07:16,060
+plus and then that's one and therefore
+ 
+
+421
+00:07:16,060 --> 00:07:17,670
+plus and then that's one and therefore
+since has been changed to one it now
+
+422
+00:07:17,670 --> 00:07:17,680
+since has been changed to one it now
+ 
+
+423
+00:07:17,680 --> 00:07:19,679
+since has been changed to one it now
+uses that one to increment here which
+
+424
+00:07:19,679 --> 00:07:19,689
+uses that one to increment here which
+ 
+
+425
+00:07:19,689 --> 00:07:21,779
+uses that one to increment here which
+means that one gets passed into here and
+
+426
+00:07:21,779 --> 00:07:21,789
+means that one gets passed into here and
+ 
+
+427
+00:07:21,789 --> 00:07:24,300
+means that one gets passed into here and
+then increment it to two it doesn't need
+
+428
+00:07:24,300 --> 00:07:24,310
+then increment it to two it doesn't need
+ 
+
+429
+00:07:24,310 --> 00:07:26,159
+then increment it to two it doesn't need
+to do that it's actually able to kind of
+
+430
+00:07:26,159 --> 00:07:26,169
+to do that it's actually able to kind of
+ 
+
+431
+00:07:26,169 --> 00:07:28,499
+to do that it's actually able to kind of
+just be like okay well value zero value
+
+432
+00:07:28,499 --> 00:07:28,509
+just be like okay well value zero value
+ 
+
+433
+00:07:28,509 --> 00:07:30,329
+just be like okay well value zero value
+plus ply okay so zero pass and zero here
+
+434
+00:07:30,329 --> 00:07:30,339
+plus ply okay so zero pass and zero here
+ 
+
+435
+00:07:30,339 --> 00:07:31,829
+plus ply okay so zero pass and zero here
+busting zero here then do a little plus
+
+436
+00:07:31,829 --> 00:07:31,839
+busting zero here then do a little plus
+ 
+
+437
+00:07:31,839 --> 00:07:33,929
+busting zero here then do a little plus
+plus at the end it doesn't really matter
+
+438
+00:07:33,929 --> 00:07:33,939
+plus at the end it doesn't really matter
+ 
+
+439
+00:07:33,939 --> 00:07:35,309
+plus at the end it doesn't really matter
+it's allowed to do that
+
+440
+00:07:35,309 --> 00:07:35,319
+it's allowed to do that
+ 
+
+441
+00:07:35,319 --> 00:07:39,179
+it's allowed to do that
+up until C++ 17 so the interesting thing
+
+442
+00:07:39,179 --> 00:07:39,189
+up until C++ 17 so the interesting thing
+ 
+
+443
+00:07:39,189 --> 00:07:43,140
+up until C++ 17 so the interesting thing
+is if we change this to actually use the
+
+444
+00:07:43,140 --> 00:07:43,150
+is if we change this to actually use the
+ 
+
+445
+00:07:43,150 --> 00:07:46,140
+is if we change this to actually use the
+C++ 17 standard instead of like 14 or
+
+446
+00:07:46,140 --> 00:07:46,150
+C++ 17 standard instead of like 14 or
+ 
+
+447
+00:07:46,150 --> 00:07:48,779
+C++ 17 standard instead of like 14 or
+lower then if I run this we're actually
+
+448
+00:07:48,779 --> 00:07:48,789
+lower then if I run this we're actually
+ 
+
+449
+00:07:48,789 --> 00:07:50,670
+lower then if I run this we're actually
+going to get a different result and in
+
+450
+00:07:50,670 --> 00:07:50,680
+going to get a different result and in
+ 
+
+451
+00:07:50,680 --> 00:07:52,920
+going to get a different result and in
+fact we're going to get 1 plus 0 equals
+
+452
+00:07:52,920 --> 00:07:52,930
+fact we're going to get 1 plus 0 equals
+ 
+
+453
+00:07:52,930 --> 00:07:55,800
+fact we're going to get 1 plus 0 equals
+1 because the C++ standard added a new
+
+454
+00:07:55,800 --> 00:07:55,810
+1 because the C++ standard added a new
+ 
+
+455
+00:07:55,810 --> 00:07:58,860
+1 because the C++ standard added a new
+rule starting with C++ 17 that postfix
+
+456
+00:07:58,860 --> 00:07:58,870
+rule starting with C++ 17 that postfix
+ 
+
+457
+00:07:58,870 --> 00:08:02,279
+rule starting with C++ 17 that postfix
+expressions have to be evaluated before
+
+458
+00:08:02,279 --> 00:08:02,289
+expressions have to be evaluated before
+ 
+
+459
+00:08:02,289 --> 00:08:04,499
+expressions have to be evaluated before
+each other expression and with respect
+
+460
+00:08:04,499 --> 00:08:04,509
+each other expression and with respect
+ 
+
+461
+00:08:04,509 --> 00:08:06,480
+each other expression and with respect
+to that of any other parameter meaning
+
+462
+00:08:06,480 --> 00:08:06,490
+to that of any other parameter meaning
+ 
+
+463
+00:08:06,490 --> 00:08:07,980
+to that of any other parameter meaning
+they have to be done one after the other
+
+464
+00:08:07,980 --> 00:08:07,990
+they have to be done one after the other
+ 
+
+465
+00:08:07,990 --> 00:08:10,019
+they have to be done one after the other
+it still doesn't really it's still it's
+
+466
+00:08:10,019 --> 00:08:10,029
+it still doesn't really it's still it's
+ 
+
+467
+00:08:10,029 --> 00:08:11,850
+it still doesn't really it's still it's
+still not deterministic which order it
+
+468
+00:08:11,850 --> 00:08:11,860
+still not deterministic which order it
+ 
+
+469
+00:08:11,860 --> 00:08:14,010
+still not deterministic which order it
+will actually be evaluated in meaning
+
+470
+00:08:14,010 --> 00:08:14,020
+will actually be evaluated in meaning
+ 
+
+471
+00:08:14,020 --> 00:08:16,200
+will actually be evaluated in meaning
+will this be 1 and this be 0 or is it
+
+472
+00:08:16,200 --> 00:08:16,210
+will this be 1 and this be 0 or is it
+ 
+
+473
+00:08:16,210 --> 00:08:19,170
+will this be 1 and this be 0 or is it
+gonna do 0 and then one for the a and B
+
+474
+00:08:19,170 --> 00:08:19,180
+gonna do 0 and then one for the a and B
+ 
+
+475
+00:08:19,180 --> 00:08:20,879
+gonna do 0 and then one for the a and B
+variable respectively this water is
+
+476
+00:08:20,879 --> 00:08:20,889
+variable respectively this water is
+ 
+
+477
+00:08:20,889 --> 00:08:22,980
+variable respectively this water is
+still undefined however they're now not
+
+478
+00:08:22,980 --> 00:08:22,990
+still undefined however they're now not
+ 
+
+479
+00:08:22,990 --> 00:08:24,689
+still undefined however they're now not
+going to be the same because it has to
+
+480
+00:08:24,689 --> 00:08:24,699
+going to be the same because it has to
+ 
+
+481
+00:08:24,699 --> 00:08:26,459
+going to be the same because it has to
+do one after the other let's explore
+
+482
+00:08:26,459 --> 00:08:26,469
+do one after the other let's explore
+ 
+
+483
+00:08:26,469 --> 00:08:28,469
+do one after the other let's explore
+this in different compilers so to
+
+484
+00:08:28,469 --> 00:08:28,479
+this in different compilers so to
+ 
+
+485
+00:08:28,479 --> 00:08:31,559
+this in different compilers so to
+summarize it looks like in C++ 17 which
+
+486
+00:08:31,559 --> 00:08:31,569
+summarize it looks like in C++ 17 which
+ 
+
+487
+00:08:31,569 --> 00:08:33,420
+summarize it looks like in C++ 17 which
+is probably what you're using anyway at
+
+488
+00:08:33,420 --> 00:08:33,430
+is probably what you're using anyway at
+ 
+
+489
+00:08:33,430 --> 00:08:35,310
+is probably what you're using anyway at
+least C++ 17 maybe you're even one of
+
+490
+00:08:35,310 --> 00:08:35,320
+least C++ 17 maybe you're even one of
+ 
+
+491
+00:08:35,320 --> 00:08:37,949
+least C++ 17 maybe you're even one of
+the cool kids using the C++ 20 draft one
+
+492
+00:08:37,949 --> 00:08:37,959
+the cool kids using the C++ 20 draft one
+ 
+
+493
+00:08:37,959 --> 00:08:40,019
+the cool kids using the C++ 20 draft one
+plus zero equals one is what we get
+
+494
+00:08:40,019 --> 00:08:40,029
+plus zero equals one is what we get
+ 
+
+495
+00:08:40,029 --> 00:08:42,240
+plus zero equals one is what we get
+using visual Studios compiler now I like
+
+496
+00:08:42,240 --> 00:08:42,250
+using visual Studios compiler now I like
+ 
+
+497
+00:08:42,250 --> 00:08:44,159
+using visual Studios compiler now I like
+using a little website here called one
+
+498
+00:08:44,159 --> 00:08:44,169
+using a little website here called one
+ 
+
+499
+00:08:44,169 --> 00:08:45,780
+using a little website here called one
+box.org it's basically just a little
+
+500
+00:08:45,780 --> 00:08:45,790
+box.org it's basically just a little
+ 
+
+501
+00:08:45,790 --> 00:08:47,670
+box.org it's basically just a little
+online compiler which has a whole bunch
+
+502
+00:08:47,670 --> 00:08:47,680
+online compiler which has a whole bunch
+ 
+
+503
+00:08:47,680 --> 00:08:49,519
+online compiler which has a whole bunch
+of difference here both lost
+
+504
+00:08:49,519 --> 00:08:49,529
+of difference here both lost
+ 
+
+505
+00:08:49,529 --> 00:08:51,800
+of difference here both lost
+as well as different compilers as you
+
+506
+00:08:51,800 --> 00:08:51,810
+as well as different compilers as you
+ 
+
+507
+00:08:51,810 --> 00:08:54,050
+as well as different compilers as you
+can see if I paste our code into there
+
+508
+00:08:54,050 --> 00:08:54,060
+can see if I paste our code into there
+ 
+
+509
+00:08:54,060 --> 00:08:57,199
+can see if I paste our code into there
+and run it using GCC and the C++ 20
+
+510
+00:08:57,199 --> 00:08:57,209
+and run it using GCC and the C++ 20
+ 
+
+511
+00:08:57,209 --> 00:08:58,670
+and run it using GCC and the C++ 20
+draft and first of all you'll notice
+
+512
+00:08:58,670 --> 00:08:58,680
+draft and first of all you'll notice
+ 
+
+513
+00:08:58,680 --> 00:09:00,259
+draft and first of all you'll notice
+this is a little bit more helpful than
+
+514
+00:09:00,259 --> 00:09:00,269
+this is a little bit more helpful than
+ 
+
+515
+00:09:00,269 --> 00:09:02,329
+this is a little bit more helpful than
+the MSB C compiler which gave us no
+
+516
+00:09:02,329 --> 00:09:02,339
+the MSB C compiler which gave us no
+ 
+
+517
+00:09:02,339 --> 00:09:03,920
+the MSB C compiler which gave us no
+warnings this at least tells us that
+
+518
+00:09:03,920 --> 00:09:03,930
+warnings this at least tells us that
+ 
+
+519
+00:09:03,930 --> 00:09:06,079
+warnings this at least tells us that
+this operational value may be undefined
+
+520
+00:09:06,079 --> 00:09:06,089
+this operational value may be undefined
+ 
+
+521
+00:09:06,089 --> 00:09:08,150
+this operational value may be undefined
+which you know is correct but you can
+
+522
+00:09:08,150 --> 00:09:08,160
+which you know is correct but you can
+ 
+
+523
+00:09:08,160 --> 00:09:10,340
+which you know is correct but you can
+see we also get one plus zero equals one
+
+524
+00:09:10,340 --> 00:09:10,350
+see we also get one plus zero equals one
+ 
+
+525
+00:09:10,350 --> 00:09:12,920
+see we also get one plus zero equals one
+now going back to your like CL plus 14
+
+526
+00:09:12,920 --> 00:09:12,930
+now going back to your like CL plus 14
+ 
+
+527
+00:09:12,930 --> 00:09:15,170
+now going back to your like CL plus 14
+let's see what that gets us still 1 plus
+
+528
+00:09:15,170 --> 00:09:15,180
+let's see what that gets us still 1 plus
+ 
+
+529
+00:09:15,180 --> 00:09:17,389
+let's see what that gets us still 1 plus
+0 equals 1 interesting and then finally
+
+530
+00:09:17,389 --> 00:09:17,399
+0 equals 1 interesting and then finally
+ 
+
+531
+00:09:17,399 --> 00:09:19,489
+0 equals 1 interesting and then finally
+let's switch over to clang and take a
+
+532
+00:09:19,489 --> 00:09:19,499
+let's switch over to clang and take a
+ 
+
+533
+00:09:19,499 --> 00:09:21,470
+let's switch over to clang and take a
+look at what clang gives us and I'll run
+
+534
+00:09:21,470 --> 00:09:21,480
+look at what clang gives us and I'll run
+ 
+
+535
+00:09:21,480 --> 00:09:24,499
+look at what clang gives us and I'll run
+this in civil floss 20 here 0 plus 1
+
+536
+00:09:24,499 --> 00:09:24,509
+this in civil floss 20 here 0 plus 1
+ 
+
+537
+00:09:24,509 --> 00:09:26,480
+this in civil floss 20 here 0 plus 1
+equals 1 interesting so it looks like
+
+538
+00:09:26,480 --> 00:09:26,490
+equals 1 interesting so it looks like
+ 
+
+539
+00:09:26,490 --> 00:09:28,369
+equals 1 interesting so it looks like
+clang does it the other way around and
+
+540
+00:09:28,369 --> 00:09:28,379
+clang does it the other way around and
+ 
+
+541
+00:09:28,379 --> 00:09:29,960
+clang does it the other way around and
+then finally if I drop back to sea
+
+542
+00:09:29,960 --> 00:09:29,970
+then finally if I drop back to sea
+ 
+
+543
+00:09:29,970 --> 00:09:32,660
+then finally if I drop back to sea
+levels 14 just just to see I also get 0
+
+544
+00:09:32,660 --> 00:09:32,670
+levels 14 just just to see I also get 0
+ 
+
+545
+00:09:32,670 --> 00:09:34,369
+levels 14 just just to see I also get 0
+plus 1 equals 1 but you can see the
+
+546
+00:09:34,369 --> 00:09:34,379
+plus 1 equals 1 but you can see the
+ 
+
+547
+00:09:34,379 --> 00:09:36,290
+plus 1 equals 1 but you can see the
+clang also does in fact warn us so it's
+
+548
+00:09:36,290 --> 00:09:36,300
+clang also does in fact warn us so it's
+ 
+
+549
+00:09:36,300 --> 00:09:39,019
+clang also does in fact warn us so it's
+just m/s VC who seems to just I'm not
+
+550
+00:09:39,019 --> 00:09:39,029
+just m/s VC who seems to just I'm not
+ 
+
+551
+00:09:39,029 --> 00:09:41,269
+just m/s VC who seems to just I'm not
+even sure why they don't at least print
+
+552
+00:09:41,269 --> 00:09:41,279
+even sure why they don't at least print
+ 
+
+553
+00:09:41,279 --> 00:09:42,889
+even sure why they don't at least print
+a warning for something like this but
+
+554
+00:09:42,889 --> 00:09:42,899
+a warning for something like this but
+ 
+
+555
+00:09:42,899 --> 00:09:44,749
+a warning for something like this but
+you can see if I rebuild this in either
+
+556
+00:09:44,749 --> 00:09:44,759
+you can see if I rebuild this in either
+ 
+
+557
+00:09:44,759 --> 00:09:46,069
+you can see if I rebuild this in either
+debug mode or release mode
+
+558
+00:09:46,069 --> 00:09:46,079
+debug mode or release mode
+ 
+
+559
+00:09:46,079 --> 00:09:47,929
+debug mode or release mode
+it's not gonna warn me at all about
+
+560
+00:09:47,929 --> 00:09:47,939
+it's not gonna warn me at all about
+ 
+
+561
+00:09:47,939 --> 00:09:50,989
+it's not gonna warn me at all about
+anything wrong with my code so thanks
+
+562
+00:09:50,989 --> 00:09:50,999
+anything wrong with my code so thanks
+ 
+
+563
+00:09:50,999 --> 00:09:52,999
+anything wrong with my code so thanks
+I'm Susie so to summarize if you get
+
+564
+00:09:52,999 --> 00:09:53,009
+I'm Susie so to summarize if you get
+ 
+
+565
+00:09:53,009 --> 00:09:54,949
+I'm Susie so to summarize if you get
+this question in a job interview or
+
+566
+00:09:54,949 --> 00:09:54,959
+this question in a job interview or
+ 
+
+567
+00:09:54,959 --> 00:09:57,710
+this question in a job interview or
+programming test or whatever the correct
+
+568
+00:09:57,710 --> 00:09:57,720
+programming test or whatever the correct
+ 
+
+569
+00:09:57,720 --> 00:10:00,829
+programming test or whatever the correct
+answer is it's undefined because C++
+
+570
+00:10:00,829 --> 00:10:00,839
+answer is it's undefined because C++
+ 
+
+571
+00:10:00,839 --> 00:10:02,629
+answer is it's undefined because C++
+does not actually provide the superevil
+
+572
+00:10:02,629 --> 00:10:02,639
+does not actually provide the superevil
+ 
+
+573
+00:10:02,639 --> 00:10:04,519
+does not actually provide the superevil
+specification does not actually provide
+
+574
+00:10:04,519 --> 00:10:04,529
+specification does not actually provide
+ 
+
+575
+00:10:04,529 --> 00:10:06,920
+specification does not actually provide
+a definition for what should happen in
+
+576
+00:10:06,920 --> 00:10:06,930
+a definition for what should happen in
+ 
+
+577
+00:10:06,930 --> 00:10:09,740
+a definition for what should happen in
+the situation of what order parameters
+
+578
+00:10:09,740 --> 00:10:09,750
+the situation of what order parameters
+ 
+
+579
+00:10:09,750 --> 00:10:12,110
+the situation of what order parameters
+or arguments should get evaluated in but
+
+580
+00:10:12,110 --> 00:10:12,120
+or arguments should get evaluated in but
+ 
+
+581
+00:10:12,120 --> 00:10:13,699
+or arguments should get evaluated in but
+bonus points if you mentioned that
+
+582
+00:10:13,699 --> 00:10:13,709
+bonus points if you mentioned that
+ 
+
+583
+00:10:13,709 --> 00:10:15,920
+bonus points if you mentioned that
+Sables law 17 does say that these things
+
+584
+00:10:15,920 --> 00:10:15,930
+Sables law 17 does say that these things
+ 
+
+585
+00:10:15,930 --> 00:10:17,900
+Sables law 17 does say that these things
+cannot be done at the same time that is
+
+586
+00:10:17,900 --> 00:10:17,910
+cannot be done at the same time that is
+ 
+
+587
+00:10:17,910 --> 00:10:19,790
+cannot be done at the same time that is
+to say that they have to be done one
+
+588
+00:10:19,790 --> 00:10:19,800
+to say that they have to be done one
+ 
+
+589
+00:10:19,800 --> 00:10:22,519
+to say that they have to be done one
+after the other but again the order is
+
+590
+00:10:22,519 --> 00:10:22,529
+after the other but again the order is
+ 
+
+591
+00:10:22,529 --> 00:10:24,410
+after the other but again the order is
+not actually defined in the
+
+592
+00:10:24,410 --> 00:10:24,420
+not actually defined in the
+ 
+
+593
+00:10:24,420 --> 00:10:26,509
+not actually defined in the
+specification which means that you
+
+594
+00:10:26,509 --> 00:10:26,519
+specification which means that you
+ 
+
+595
+00:10:26,519 --> 00:10:28,790
+specification which means that you
+technically have no way of knowing what
+
+596
+00:10:28,790 --> 00:10:28,800
+technically have no way of knowing what
+ 
+
+597
+00:10:28,800 --> 00:10:30,139
+technically have no way of knowing what
+this is leave your thoughts in the
+
+598
+00:10:30,139 --> 00:10:30,149
+this is leave your thoughts in the
+ 
+
+599
+00:10:30,149 --> 00:10:31,610
+this is leave your thoughts in the
+comment section below in case I missed
+
+600
+00:10:31,610 --> 00:10:31,620
+comment section below in case I missed
+ 
+
+601
+00:10:31,620 --> 00:10:33,439
+comment section below in case I missed
+something or I didn't test it in some
+
+602
+00:10:33,439 --> 00:10:33,449
+something or I didn't test it in some
+ 
+
+603
+00:10:33,449 --> 00:10:35,509
+something or I didn't test it in some
+kind of mode that you that you have
+
+604
+00:10:35,509 --> 00:10:35,519
+kind of mode that you that you have
+ 
+
+605
+00:10:35,519 --> 00:10:37,280
+kind of mode that you that you have
+tested it in then drop a comment below
+
+606
+00:10:37,280 --> 00:10:37,290
+tested it in then drop a comment below
+ 
+
+607
+00:10:37,290 --> 00:10:38,960
+tested it in then drop a comment below
+let's share some knowledge in this
+
+608
+00:10:38,960 --> 00:10:38,970
+let's share some knowledge in this
+ 
+
+609
+00:10:38,970 --> 00:10:40,220
+let's share some knowledge in this
+community because we're all in this
+
+610
+00:10:40,220 --> 00:10:40,230
+community because we're all in this
+ 
+
+611
+00:10:40,230 --> 00:10:41,240
+community because we're all in this
+together
+
+612
+00:10:41,240 --> 00:10:41,250
+together
+ 
+
+613
+00:10:41,250 --> 00:10:43,160
+together
+I hope you guys enjoyed this new kind of
+
+614
+00:10:43,160 --> 00:10:43,170
+I hope you guys enjoyed this new kind of
+ 
+
+615
+00:10:43,170 --> 00:10:46,129
+I hope you guys enjoyed this new kind of
+mini suppose loss series style video let
+
+616
+00:10:46,129 --> 00:10:46,139
+mini suppose loss series style video let
+ 
+
+617
+00:10:46,139 --> 00:10:47,929
+mini suppose loss series style video let
+me know other topics that you want me to
+
+618
+00:10:47,929 --> 00:10:47,939
+me know other topics that you want me to
+ 
+
+619
+00:10:47,939 --> 00:10:50,150
+me know other topics that you want me to
+cover in the future and finally don't
+
+620
+00:10:50,150 --> 00:10:50,160
+cover in the future and finally don't
+ 
+
+621
+00:10:50,160 --> 00:10:51,710
+cover in the future and finally don't
+forget the Skillshare is offering the
+
+622
+00:10:51,710 --> 00:10:51,720
+forget the Skillshare is offering the
+ 
+
+623
+00:10:51,720 --> 00:10:54,110
+forget the Skillshare is offering the
+first 1,000 people who click the link in
+
+624
+00:10:54,110 --> 00:10:54,120
+first 1,000 people who click the link in
+ 
+
+625
+00:10:54,120 --> 00:10:56,119
+first 1,000 people who click the link in
+the description below to three months of
+
+626
+00:10:56,119 --> 00:10:56,129
+the description below to three months of
+ 
+
+627
+00:10:56,129 --> 00:10:58,069
+the description below to three months of
+Skillshare premium I will see you guys
+
+628
+00:10:58,069 --> 00:10:58,079
+Skillshare premium I will see you guys
+ 
+
+629
+00:10:58,079 --> 00:11:00,850
+Skillshare premium I will see you guys
+next time goodbye
+
+630
+00:11:00,850 --> 00:11:00,860
+next time goodbye
+ 
+
+631
+00:11:00,860 --> 00:11:21,659
+next time goodbye
+[Music]
+

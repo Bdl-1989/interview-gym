@@ -1,0 +1,4935 @@
+1
+00:00:00,000 --> 00:00:01,490
+
+have you ever thought about what null
+
+2
+00:00:01,490 --> 00:00:01,500
+have you ever thought about what null
+ 
+
+3
+00:00:01,500 --> 00:00:04,190
+have you ever thought about what null
+actually means in managed languages such
+
+4
+00:00:04,190 --> 00:00:04,200
+actually means in managed languages such
+ 
+
+5
+00:00:04,200 --> 00:00:06,349
+actually means in managed languages such
+as C sharp or Java if you try and use an
+
+6
+00:00:06,349 --> 00:00:06,359
+as C sharp or Java if you try and use an
+ 
+
+7
+00:00:06,359 --> 00:00:08,089
+as C sharp or Java if you try and use an
+object that's null you'll get a null
+
+8
+00:00:08,089 --> 00:00:08,099
+object that's null you'll get a null
+ 
+
+9
+00:00:08,099 --> 00:00:09,710
+object that's null you'll get a null
+reference or a null pointer exception
+
+10
+00:00:09,710 --> 00:00:09,720
+reference or a null pointer exception
+ 
+
+11
+00:00:09,720 --> 00:00:10,790
+reference or a null pointer exception
+that's because there's languages
+
+12
+00:00:10,790 --> 00:00:10,800
+that's because there's languages
+ 
+
+13
+00:00:10,800 --> 00:00:12,770
+that's because there's languages
+specifically Hold Your Hand
+
+14
+00:00:12,770 --> 00:00:12,780
+specifically Hold Your Hand
+ 
+
+15
+00:00:12,780 --> 00:00:14,629
+specifically Hold Your Hand
+but what about C plus plus that's what
+
+16
+00:00:14,629 --> 00:00:14,639
+but what about C plus plus that's what
+ 
+
+17
+00:00:14,639 --> 00:00:16,070
+but what about C plus plus that's what
+we're going to look into here today but
+
+18
+00:00:16,070 --> 00:00:16,080
+we're going to look into here today but
+ 
+
+19
+00:00:16,080 --> 00:00:19,070
+we're going to look into here today but
+first what is the value of null well
+
+20
+00:00:19,070 --> 00:00:19,080
+first what is the value of null well
+ 
+
+21
+00:00:19,080 --> 00:00:21,290
+first what is the value of null well
+over here I have some C plus code let's
+
+22
+00:00:21,290 --> 00:00:21,300
+over here I have some C plus code let's
+ 
+
+23
+00:00:21,300 --> 00:00:23,450
+over here I have some C plus code let's
+go ahead and type in void point of value
+
+24
+00:00:23,450 --> 00:00:23,460
+go ahead and type in void point of value
+ 
+
+25
+00:00:23,460 --> 00:00:26,269
+go ahead and type in void point of value
+and we'll set it equal to null pointer
+
+26
+00:00:26,269 --> 00:00:26,279
+and we'll set it equal to null pointer
+ 
+
+27
+00:00:26,279 --> 00:00:28,070
+and we'll set it equal to null pointer
+now there's no null keyword in C plus
+
+28
+00:00:28,070 --> 00:00:28,080
+now there's no null keyword in C plus
+ 
+
+29
+00:00:28,080 --> 00:00:29,810
+now there's no null keyword in C plus
+plus instead we use something called
+
+30
+00:00:29,810 --> 00:00:29,820
+plus instead we use something called
+ 
+
+31
+00:00:29,820 --> 00:00:31,849
+plus instead we use something called
+null pointer if we set a breakpoint on
+
+32
+00:00:31,849 --> 00:00:31,859
+null pointer if we set a breakpoint on
+ 
+
+33
+00:00:31,859 --> 00:00:33,530
+null pointer if we set a breakpoint on
+this line over here I'll make sure my
+
+34
+00:00:33,530 --> 00:00:33,540
+this line over here I'll make sure my
+ 
+
+35
+00:00:33,540 --> 00:00:35,990
+this line over here I'll make sure my
+configuration is debug and I'll hit F5
+
+36
+00:00:35,990 --> 00:00:36,000
+configuration is debug and I'll hit F5
+ 
+
+37
+00:00:36,000 --> 00:00:37,670
+configuration is debug and I'll hit F5
+we'll hit this breakpoint and if we
+
+38
+00:00:37,670 --> 00:00:37,680
+we'll hit this breakpoint and if we
+ 
+
+39
+00:00:37,680 --> 00:00:40,729
+we'll hit this breakpoint and if we
+hover over a value we'll see 0x and then
+
+40
+00:00:40,729 --> 00:00:40,739
+hover over a value we'll see 0x and then
+ 
+
+41
+00:00:40,739 --> 00:00:42,709
+hover over a value we'll see 0x and then
+a whole bunch of zeros let's look at
+
+42
+00:00:42,709 --> 00:00:42,719
+a whole bunch of zeros let's look at
+ 
+
+43
+00:00:42,719 --> 00:00:44,630
+a whole bunch of zeros let's look at
+this value specifically in memory though
+
+44
+00:00:44,630 --> 00:00:44,640
+this value specifically in memory though
+ 
+
+45
+00:00:44,640 --> 00:00:47,209
+this value specifically in memory though
+I'm going to go to debug Windows memory
+
+46
+00:00:47,209 --> 00:00:47,219
+I'm going to go to debug Windows memory
+ 
+
+47
+00:00:47,219 --> 00:00:49,130
+I'm going to go to debug Windows memory
+and then memory one and then what I'll
+
+48
+00:00:49,130 --> 00:00:49,140
+and then memory one and then what I'll
+ 
+
+49
+00:00:49,140 --> 00:00:51,529
+and then memory one and then what I'll
+do is I'll just type in Ampersand value
+
+50
+00:00:51,529 --> 00:00:51,539
+do is I'll just type in Ampersand value
+ 
+
+51
+00:00:51,539 --> 00:00:53,990
+do is I'll just type in Ampersand value
+and hit enter this will take me to the
+
+52
+00:00:53,990 --> 00:00:54,000
+and hit enter this will take me to the
+ 
+
+53
+00:00:54,000 --> 00:00:56,450
+and hit enter this will take me to the
+memory address of this actual variable
+
+54
+00:00:56,450 --> 00:00:56,460
+memory address of this actual variable
+ 
+
+55
+00:00:56,460 --> 00:00:58,430
+memory address of this actual variable
+so we have a void pointer variable
+
+56
+00:00:58,430 --> 00:00:58,440
+so we have a void pointer variable
+ 
+
+57
+00:00:58,440 --> 00:01:01,549
+so we have a void pointer variable
+stored on the stack and this is its
+
+58
+00:01:01,549 --> 00:01:01,559
+stored on the stack and this is its
+ 
+
+59
+00:01:01,559 --> 00:01:04,009
+stored on the stack and this is its
+address and if we look at the value at
+
+60
+00:01:04,009 --> 00:01:04,019
+address and if we look at the value at
+ 
+
+61
+00:01:04,019 --> 00:01:05,929
+address and if we look at the value at
+that address we see eight of these
+
+62
+00:01:05,929 --> 00:01:05,939
+that address we see eight of these
+ 
+
+63
+00:01:05,939 --> 00:01:08,210
+that address we see eight of these
+groups of zeros that's eight bytes and
+
+64
+00:01:08,210 --> 00:01:08,220
+groups of zeros that's eight bytes and
+ 
+
+65
+00:01:08,220 --> 00:01:10,310
+groups of zeros that's eight bytes and
+they're all set to zero why eight bytes
+
+66
+00:01:10,310 --> 00:01:10,320
+they're all set to zero why eight bytes
+ 
+
+67
+00:01:10,320 --> 00:01:11,870
+they're all set to zero why eight bytes
+because I've built in a 64-bit
+
+68
+00:01:11,870 --> 00:01:11,880
+because I've built in a 64-bit
+ 
+
+69
+00:01:11,880 --> 00:01:14,390
+because I've built in a 64-bit
+architecture and avoid points or any
+
+70
+00:01:14,390 --> 00:01:14,400
+architecture and avoid points or any
+ 
+
+71
+00:01:14,400 --> 00:01:16,730
+architecture and avoid points or any
+pointer any memory address is going to
+
+72
+00:01:16,730 --> 00:01:16,740
+pointer any memory address is going to
+ 
+
+73
+00:01:16,740 --> 00:01:18,770
+pointer any memory address is going to
+be 8 bytes okay so that's your answer
+
+74
+00:01:18,770 --> 00:01:18,780
+be 8 bytes okay so that's your answer
+ 
+
+75
+00:01:18,780 --> 00:01:21,590
+be 8 bytes okay so that's your answer
+null pointer is equal to zero it's
+
+76
+00:01:21,590 --> 00:01:21,600
+null pointer is equal to zero it's
+ 
+
+77
+00:01:21,600 --> 00:01:24,350
+null pointer is equal to zero it's
+stored as zero in memory now there is
+
+78
+00:01:24,350 --> 00:01:24,360
+stored as zero in memory now there is
+ 
+
+79
+00:01:24,360 --> 00:01:26,330
+stored as zero in memory now there is
+one other keyword you may have seen in C
+
+80
+00:01:26,330 --> 00:01:26,340
+one other keyword you may have seen in C
+ 
+
+81
+00:01:26,340 --> 00:01:28,070
+one other keyword you may have seen in C
+plus for null it's actually not a
+
+82
+00:01:28,070 --> 00:01:28,080
+plus for null it's actually not a
+ 
+
+83
+00:01:28,080 --> 00:01:30,530
+plus for null it's actually not a
+keyword but rather a macro and it's null
+
+84
+00:01:30,530 --> 00:01:30,540
+keyword but rather a macro and it's null
+ 
+
+85
+00:01:30,540 --> 00:01:32,630
+keyword but rather a macro and it's null
+with capital letters now this is mostly
+
+86
+00:01:32,630 --> 00:01:32,640
+with capital letters now this is mostly
+ 
+
+87
+00:01:32,640 --> 00:01:34,789
+with capital letters now this is mostly
+used in C however it's totally
+
+88
+00:01:34,789 --> 00:01:34,799
+used in C however it's totally
+ 
+
+89
+00:01:34,799 --> 00:01:36,649
+used in C however it's totally
+acceptable to use it in C plus as well
+
+90
+00:01:36,649 --> 00:01:36,659
+acceptable to use it in C plus as well
+ 
+
+91
+00:01:36,659 --> 00:01:38,749
+acceptable to use it in C plus as well
+just might not be stylistically
+
+92
+00:01:38,749 --> 00:01:38,759
+just might not be stylistically
+ 
+
+93
+00:01:38,759 --> 00:01:40,730
+just might not be stylistically
+appropriate if we actually go to the
+
+94
+00:01:40,730 --> 00:01:40,740
+appropriate if we actually go to the
+ 
+
+95
+00:01:40,740 --> 00:01:42,950
+appropriate if we actually go to the
+definition of this macro you'll see
+
+96
+00:01:42,950 --> 00:01:42,960
+definition of this macro you'll see
+ 
+
+97
+00:01:42,960 --> 00:01:44,690
+definition of this macro you'll see
+there's kind of two definitions here if
+
+98
+00:01:44,690 --> 00:01:44,700
+there's kind of two definitions here if
+ 
+
+99
+00:01:44,700 --> 00:01:47,270
+there's kind of two definitions here if
+C plus plus is defined it's just zero
+
+100
+00:01:47,270 --> 00:01:47,280
+C plus plus is defined it's just zero
+ 
+
+101
+00:01:47,280 --> 00:01:50,630
+C plus plus is defined it's just zero
+otherwise in C's case it would be zero
+
+102
+00:01:50,630 --> 00:01:50,640
+otherwise in C's case it would be zero
+ 
+
+103
+00:01:50,640 --> 00:01:53,569
+otherwise in C's case it would be zero
+but explicitly cast to a void pointer no
+
+104
+00:01:53,569 --> 00:01:53,579
+but explicitly cast to a void pointer no
+ 
+
+105
+00:01:53,579 --> 00:01:55,429
+but explicitly cast to a void pointer no
+real difference here the point is null
+
+106
+00:01:55,429 --> 00:01:55,439
+real difference here the point is null
+ 
+
+107
+00:01:55,439 --> 00:01:59,149
+real difference here the point is null
+is defined as zero so we can just
+
+108
+00:01:59,149 --> 00:01:59,159
+is defined as zero so we can just
+ 
+
+109
+00:01:59,159 --> 00:02:01,370
+is defined as zero so we can just
+substitute this with zero if we want
+
+110
+00:02:01,370 --> 00:02:01,380
+substitute this with zero if we want
+ 
+
+111
+00:02:01,380 --> 00:02:03,830
+substitute this with zero if we want
+it's the same effect it just makes your
+
+112
+00:02:03,830 --> 00:02:03,840
+it's the same effect it just makes your
+ 
+
+113
+00:02:03,840 --> 00:02:05,450
+it's the same effect it just makes your
+code look a little bit different and
+
+114
+00:02:05,450 --> 00:02:05,460
+code look a little bit different and
+ 
+
+115
+00:02:05,460 --> 00:02:06,889
+code look a little bit different and
+strictly speaking probably isn't
+
+116
+00:02:06,889 --> 00:02:06,899
+strictly speaking probably isn't
+ 
+
+117
+00:02:06,899 --> 00:02:09,050
+strictly speaking probably isn't
+recommended because it adds a little bit
+
+118
+00:02:09,050 --> 00:02:09,060
+recommended because it adds a little bit
+ 
+
+119
+00:02:09,060 --> 00:02:11,930
+recommended because it adds a little bit
+extra complexity I guess I mean we like
+
+120
+00:02:11,930 --> 00:02:11,940
+extra complexity I guess I mean we like
+ 
+
+121
+00:02:11,940 --> 00:02:14,150
+extra complexity I guess I mean we like
+writing our code in English don't we so
+
+122
+00:02:14,150 --> 00:02:14,160
+writing our code in English don't we so
+ 
+
+123
+00:02:14,160 --> 00:02:15,949
+writing our code in English don't we so
+null probably makes more sense than
+
+124
+00:02:15,949 --> 00:02:15,959
+null probably makes more sense than
+ 
+
+125
+00:02:15,959 --> 00:02:18,050
+null probably makes more sense than
+having a pointer set to zero and it's
+
+126
+00:02:18,050 --> 00:02:18,060
+having a pointer set to zero and it's
+ 
+
+127
+00:02:18,060 --> 00:02:21,290
+having a pointer set to zero and it's
+also perfectly valid to set any integer
+
+128
+00:02:21,290 --> 00:02:21,300
+also perfectly valid to set any integer
+ 
+
+129
+00:02:21,300 --> 00:02:23,570
+also perfectly valid to set any integer
+really to null because remember null is
+
+130
+00:02:23,570 --> 00:02:23,580
+really to null because remember null is
+ 
+
+131
+00:02:23,580 --> 00:02:25,910
+really to null because remember null is
+just zero and this works so why wouldn't
+
+132
+00:02:25,910 --> 00:02:25,920
+just zero and this works so why wouldn't
+ 
+
+133
+00:02:25,920 --> 00:02:28,130
+just zero and this works so why wouldn't
+that work especially if it is actually
+
+134
+00:02:28,130 --> 00:02:28,140
+that work especially if it is actually
+ 
+
+135
+00:02:28,140 --> 00:02:31,070
+that work especially if it is actually
+defined to this zero and not to avoid
+
+136
+00:02:31,070 --> 00:02:31,080
+defined to this zero and not to avoid
+ 
+
+137
+00:02:31,080 --> 00:02:32,809
+defined to this zero and not to avoid
+point of zero because that will cause
+
+138
+00:02:32,809 --> 00:02:32,819
+point of zero because that will cause
+ 
+
+139
+00:02:32,819 --> 00:02:34,850
+point of zero because that will cause
+problems so is null really all that
+
+140
+00:02:34,850 --> 00:02:34,860
+problems so is null really all that
+ 
+
+141
+00:02:34,860 --> 00:02:36,530
+problems so is null really all that
+scary I mean it's just an it's just an
+
+142
+00:02:36,530 --> 00:02:36,540
+scary I mean it's just an it's just an
+ 
+
+143
+00:02:36,540 --> 00:02:38,150
+scary I mean it's just an it's just an
+integer defined to zero like a number
+
+144
+00:02:38,150 --> 00:02:38,160
+integer defined to zero like a number
+ 
+
+145
+00:02:38,160 --> 00:02:40,850
+integer defined to zero like a number
+defined to zero Y is zero so scary and
+
+146
+00:02:40,850 --> 00:02:40,860
+defined to zero Y is zero so scary and
+ 
+
+147
+00:02:40,860 --> 00:02:43,009
+defined to zero Y is zero so scary and
+why connect crash my program the problem
+
+148
+00:02:43,009 --> 00:02:43,019
+why connect crash my program the problem
+ 
+
+149
+00:02:43,019 --> 00:02:45,770
+why connect crash my program the problem
+here comes down to pointers pointers are
+
+150
+00:02:45,770 --> 00:02:45,780
+here comes down to pointers pointers are
+ 
+
+151
+00:02:45,780 --> 00:02:49,309
+here comes down to pointers pointers are
+just memory addresses and xero is not a
+
+152
+00:02:49,309 --> 00:02:49,319
+just memory addresses and xero is not a
+ 
+
+153
+00:02:49,319 --> 00:02:51,589
+just memory addresses and xero is not a
+valid memory address so what happens is
+
+154
+00:02:51,589 --> 00:02:51,599
+valid memory address so what happens is
+ 
+
+155
+00:02:51,599 --> 00:02:53,509
+valid memory address so what happens is
+you will get something called an access
+
+156
+00:02:53,509 --> 00:02:53,519
+you will get something called an access
+ 
+
+157
+00:02:53,519 --> 00:02:56,690
+you will get something called an access
+violation if you try and read memory
+
+158
+00:02:56,690 --> 00:02:56,700
+violation if you try and read memory
+ 
+
+159
+00:02:56,700 --> 00:02:59,030
+violation if you try and read memory
+that is not valid and it's not really
+
+160
+00:02:59,030 --> 00:02:59,040
+that is not valid and it's not really
+ 
+
+161
+00:02:59,040 --> 00:03:00,949
+that is not valid and it's not really
+the memory specifically that's not valid
+
+162
+00:03:00,949 --> 00:03:00,959
+the memory specifically that's not valid
+ 
+
+163
+00:03:00,959 --> 00:03:03,170
+the memory specifically that's not valid
+it's just what memory address the
+
+164
+00:03:03,170 --> 00:03:03,180
+it's just what memory address the
+ 
+
+165
+00:03:03,180 --> 00:03:05,390
+it's just what memory address the
+operating system determines is not valid
+
+166
+00:03:05,390 --> 00:03:05,400
+operating system determines is not valid
+ 
+
+167
+00:03:05,400 --> 00:03:07,850
+operating system determines is not valid
+so if you're trying to specifically read
+
+168
+00:03:07,850 --> 00:03:07,860
+so if you're trying to specifically read
+ 
+
+169
+00:03:07,860 --> 00:03:10,490
+so if you're trying to specifically read
+a memory address that does not exist or
+
+170
+00:03:10,490 --> 00:03:10,500
+a memory address that does not exist or
+ 
+
+171
+00:03:10,500 --> 00:03:12,110
+a memory address that does not exist or
+does not contain memory that you're
+
+172
+00:03:12,110 --> 00:03:12,120
+does not contain memory that you're
+ 
+
+173
+00:03:12,120 --> 00:03:14,570
+does not contain memory that you're
+allowed to access a good kind of real
+
+174
+00:03:14,570 --> 00:03:14,580
+allowed to access a good kind of real
+ 
+
+175
+00:03:14,580 --> 00:03:16,610
+allowed to access a good kind of real
+world analogy to this is if you type in
+
+176
+00:03:16,610 --> 00:03:16,620
+world analogy to this is if you type in
+ 
+
+177
+00:03:16,620 --> 00:03:18,710
+world analogy to this is if you type in
+an address into Google Maps that just
+
+178
+00:03:18,710 --> 00:03:18,720
+an address into Google Maps that just
+ 
+
+179
+00:03:18,720 --> 00:03:20,270
+an address into Google Maps that just
+physically does not exist like you're
+
+180
+00:03:20,270 --> 00:03:20,280
+physically does not exist like you're
+ 
+
+181
+00:03:20,280 --> 00:03:22,490
+physically does not exist like you're
+just not you can't go there so how does
+
+182
+00:03:22,490 --> 00:03:22,500
+just not you can't go there so how does
+ 
+
+183
+00:03:22,500 --> 00:03:24,949
+just not you can't go there so how does
+all of this work with objects well let's
+
+184
+00:03:24,949 --> 00:03:24,959
+all of this work with objects well let's
+ 
+
+185
+00:03:24,959 --> 00:03:27,949
+all of this work with objects well let's
+create a class here called entity
+
+186
+00:03:27,949 --> 00:03:27,959
+create a class here called entity
+ 
+
+187
+00:03:27,959 --> 00:03:29,630
+create a class here called entity
+I'm just going to give it a default
+
+188
+00:03:29,630 --> 00:03:29,640
+I'm just going to give it a default
+ 
+
+189
+00:03:29,640 --> 00:03:31,009
+I'm just going to give it a default
+Constructor
+
+190
+00:03:31,009 --> 00:03:31,019
+Constructor
+ 
+
+191
+00:03:31,019 --> 00:03:34,190
+Constructor
+and two private variables maybe a parent
+
+192
+00:03:34,190 --> 00:03:34,200
+and two private variables maybe a parent
+ 
+
+193
+00:03:34,200 --> 00:03:35,869
+and two private variables maybe a parent
+entity
+
+194
+00:03:35,869 --> 00:03:35,879
+entity
+ 
+
+195
+00:03:35,879 --> 00:03:39,110
+entity
+and a name
+
+196
+00:03:39,110 --> 00:03:39,120
+
+ 
+
+197
+00:03:39,120 --> 00:03:40,970
+
+now because I want to access the name
+
+198
+00:03:40,970 --> 00:03:40,980
+now because I want to access the name
+ 
+
+199
+00:03:40,980 --> 00:03:43,369
+now because I want to access the name
+I'm also going to go ahead and add a
+
+200
+00:03:43,369 --> 00:03:43,379
+I'm also going to go ahead and add a
+ 
+
+201
+00:03:43,379 --> 00:03:44,570
+I'm also going to go ahead and add a
+getter for that
+
+202
+00:03:44,570 --> 00:03:44,580
+getter for that
+ 
+
+203
+00:03:44,580 --> 00:03:47,270
+getter for that
+so const a city string reference get
+
+204
+00:03:47,270 --> 00:03:47,280
+so const a city string reference get
+ 
+
+205
+00:03:47,280 --> 00:03:50,509
+so const a city string reference get
+name const return
+
+206
+00:03:50,509 --> 00:03:50,519
+name const return
+ 
+
+207
+00:03:50,519 --> 00:03:52,970
+name const return
+M name and I'm also going to write one
+
+208
+00:03:52,970 --> 00:03:52,980
+M name and I'm also going to write one
+ 
+
+209
+00:03:52,980 --> 00:03:55,430
+M name and I'm also going to write one
+more function here called print type
+
+210
+00:03:55,430 --> 00:03:55,440
+more function here called print type
+ 
+
+211
+00:03:55,440 --> 00:03:56,930
+more function here called print type
+which is just going to print the type of
+
+212
+00:03:56,930 --> 00:03:56,940
+which is just going to print the type of
+ 
+
+213
+00:03:56,940 --> 00:03:59,149
+which is just going to print the type of
+the class which is just entity so I'm
+
+214
+00:03:59,149 --> 00:03:59,159
+the class which is just entity so I'm
+ 
+
+215
+00:03:59,159 --> 00:04:01,910
+the class which is just entity so I'm
+going to go ahead and type in acid C out
+
+216
+00:04:01,910 --> 00:04:01,920
+going to go ahead and type in acid C out
+ 
+
+217
+00:04:01,920 --> 00:04:05,089
+going to go ahead and type in acid C out
+entity okay so I have an NC class with a
+
+218
+00:04:05,089 --> 00:04:05,099
+entity okay so I have an NC class with a
+ 
+
+219
+00:04:05,099 --> 00:04:06,710
+entity okay so I have an NC class with a
+couple member variables and a couple of
+
+220
+00:04:06,710 --> 00:04:06,720
+couple member variables and a couple of
+ 
+
+221
+00:04:06,720 --> 00:04:08,330
+couple member variables and a couple of
+functions cool so how would I create
+
+222
+00:04:08,330 --> 00:04:08,340
+functions cool so how would I create
+ 
+
+223
+00:04:08,340 --> 00:04:10,550
+functions cool so how would I create
+this class in C plus plus well if we
+
+224
+00:04:10,550 --> 00:04:10,560
+this class in C plus plus well if we
+ 
+
+225
+00:04:10,560 --> 00:04:12,530
+this class in C plus plus well if we
+want to strictly kind of compare this to
+
+226
+00:04:12,530 --> 00:04:12,540
+want to strictly kind of compare this to
+ 
+
+227
+00:04:12,540 --> 00:04:14,449
+want to strictly kind of compare this to
+manage languages like C sharp and Java
+
+228
+00:04:14,449 --> 00:04:14,459
+manage languages like C sharp and Java
+ 
+
+229
+00:04:14,459 --> 00:04:16,069
+manage languages like C sharp and Java
+you'd have to create it on the Heap so
+
+230
+00:04:16,069 --> 00:04:16,079
+you'd have to create it on the Heap so
+ 
+
+231
+00:04:16,079 --> 00:04:18,170
+you'd have to create it on the Heap so
+we can type in NC and C equals new
+
+232
+00:04:18,170 --> 00:04:18,180
+we can type in NC and C equals new
+ 
+
+233
+00:04:18,180 --> 00:04:21,409
+we can type in NC and C equals new
+entity this is equivalent to the kind of
+
+234
+00:04:21,409 --> 00:04:21,419
+entity this is equivalent to the kind of
+ 
+
+235
+00:04:21,419 --> 00:04:23,090
+entity this is equivalent to the kind of
+C sharp or Java way of creating this
+
+236
+00:04:23,090 --> 00:04:23,100
+C sharp or Java way of creating this
+ 
+
+237
+00:04:23,100 --> 00:04:25,430
+C sharp or Java way of creating this
+which would be like that of course this
+
+238
+00:04:25,430 --> 00:04:25,440
+which would be like that of course this
+ 
+
+239
+00:04:25,440 --> 00:04:27,170
+which would be like that of course this
+is C plus plus so it would actually be
+
+240
+00:04:27,170 --> 00:04:27,180
+is C plus plus so it would actually be
+ 
+
+241
+00:04:27,180 --> 00:04:28,909
+is C plus plus so it would actually be
+preferable to try and create it on the
+
+242
+00:04:28,909 --> 00:04:28,919
+preferable to try and create it on the
+ 
+
+243
+00:04:28,919 --> 00:04:30,409
+preferable to try and create it on the
+stack unless you specifically needed to
+
+244
+00:04:30,409 --> 00:04:30,419
+stack unless you specifically needed to
+ 
+
+245
+00:04:30,419 --> 00:04:32,270
+stack unless you specifically needed to
+be on the Heap however we'll just ignore
+
+246
+00:04:32,270 --> 00:04:32,280
+be on the Heap however we'll just ignore
+ 
+
+247
+00:04:32,280 --> 00:04:33,290
+be on the Heap however we'll just ignore
+that for now especially because we're
+
+248
+00:04:33,290 --> 00:04:33,300
+that for now especially because we're
+ 
+
+249
+00:04:33,300 --> 00:04:35,689
+that for now especially because we're
+talking about null so what happens if we
+
+250
+00:04:35,689 --> 00:04:35,699
+talking about null so what happens if we
+ 
+
+251
+00:04:35,699 --> 00:04:38,450
+talking about null so what happens if we
+just don't set a value for it so if I
+
+252
+00:04:38,450 --> 00:04:38,460
+just don't set a value for it so if I
+ 
+
+253
+00:04:38,460 --> 00:04:40,790
+just don't set a value for it so if I
+just type in entity pointer entity like
+
+254
+00:04:40,790 --> 00:04:40,800
+just type in entity pointer entity like
+ 
+
+255
+00:04:40,800 --> 00:04:43,010
+just type in entity pointer entity like
+this what's going to happen well if I
+
+256
+00:04:43,010 --> 00:04:43,020
+this what's going to happen well if I
+ 
+
+257
+00:04:43,020 --> 00:04:45,350
+this what's going to happen well if I
+try and use something like get name and
+
+258
+00:04:45,350 --> 00:04:45,360
+try and use something like get name and
+ 
+
+259
+00:04:45,360 --> 00:04:47,450
+try and use something like get name and
+I want to print that out
+
+260
+00:04:47,450 --> 00:04:47,460
+I want to print that out
+ 
+
+261
+00:04:47,460 --> 00:04:49,550
+I want to print that out
+if I run this program I'm actually not
+
+262
+00:04:49,550 --> 00:04:49,560
+if I run this program I'm actually not
+ 
+
+263
+00:04:49,560 --> 00:04:50,810
+if I run this program I'm actually not
+even going to be able to run this
+
+264
+00:04:50,810 --> 00:04:50,820
+even going to be able to run this
+ 
+
+265
+00:04:50,820 --> 00:04:52,550
+even going to be able to run this
+program I'm going to get a build error
+
+266
+00:04:52,550 --> 00:04:52,560
+program I'm going to get a build error
+ 
+
+267
+00:04:52,560 --> 00:04:53,990
+program I'm going to get a build error
+and it's going to tell me that I'm
+
+268
+00:04:53,990 --> 00:04:54,000
+and it's going to tell me that I'm
+ 
+
+269
+00:04:54,000 --> 00:04:55,730
+and it's going to tell me that I'm
+trying to use an uninitialized local
+
+270
+00:04:55,730 --> 00:04:55,740
+trying to use an uninitialized local
+ 
+
+271
+00:04:55,740 --> 00:04:58,249
+trying to use an uninitialized local
+variable entity and so what I need to do
+
+272
+00:04:58,249 --> 00:04:58,259
+variable entity and so what I need to do
+ 
+
+273
+00:04:58,259 --> 00:05:00,830
+variable entity and so what I need to do
+is explicitly set a value to it so let's
+
+274
+00:05:00,830 --> 00:05:00,840
+is explicitly set a value to it so let's
+ 
+
+275
+00:05:00,840 --> 00:05:02,749
+is explicitly set a value to it so let's
+go ahead and just set it to something
+
+276
+00:05:02,749 --> 00:05:02,759
+go ahead and just set it to something
+ 
+
+277
+00:05:02,759 --> 00:05:05,090
+go ahead and just set it to something
+like null pointer hit F5 and we'll see
+
+278
+00:05:05,090 --> 00:05:05,100
+like null pointer hit F5 and we'll see
+ 
+
+279
+00:05:05,100 --> 00:05:07,550
+like null pointer hit F5 and we'll see
+what happens okay we get a read access
+
+280
+00:05:07,550 --> 00:05:07,560
+what happens okay we get a read access
+ 
+
+281
+00:05:07,560 --> 00:05:11,510
+what happens okay we get a read access
+violation this was eight
+
+282
+00:05:11,510 --> 00:05:11,520
+violation this was eight
+ 
+
+283
+00:05:11,520 --> 00:05:14,030
+violation this was eight
+now why does it say this
+
+284
+00:05:14,030 --> 00:05:14,040
+now why does it say this
+ 
+
+285
+00:05:14,040 --> 00:05:16,610
+now why does it say this
+was Ace we'll get back to that if we
+
+286
+00:05:16,610 --> 00:05:16,620
+was Ace we'll get back to that if we
+ 
+
+287
+00:05:16,620 --> 00:05:18,590
+was Ace we'll get back to that if we
+look at our call stack and we go back to
+
+288
+00:05:18,590 --> 00:05:18,600
+look at our call stack and we go back to
+ 
+
+289
+00:05:18,600 --> 00:05:20,270
+look at our call stack and we go back to
+the main function I'll close this memory
+
+290
+00:05:20,270 --> 00:05:20,280
+the main function I'll close this memory
+ 
+
+291
+00:05:20,280 --> 00:05:21,770
+the main function I'll close this memory
+view if we scroll down a little bit we
+
+292
+00:05:21,770 --> 00:05:21,780
+view if we scroll down a little bit we
+ 
+
+293
+00:05:21,780 --> 00:05:23,870
+view if we scroll down a little bit we
+can see that this line of code that
+
+294
+00:05:23,870 --> 00:05:23,880
+can see that this line of code that
+ 
+
+295
+00:05:23,880 --> 00:05:26,270
+can see that this line of code that
+crashed entity is null so even though
+
+296
+00:05:26,270 --> 00:05:26,280
+crashed entity is null so even though
+ 
+
+297
+00:05:26,280 --> 00:05:27,950
+crashed entity is null so even though
+the actual kind of Crash we got is
+
+298
+00:05:27,950 --> 00:05:27,960
+the actual kind of Crash we got is
+ 
+
+299
+00:05:27,960 --> 00:05:30,590
+the actual kind of Crash we got is
+somewhere inside like STD string if we
+
+300
+00:05:30,590 --> 00:05:30,600
+somewhere inside like STD string if we
+ 
+
+301
+00:05:30,600 --> 00:05:33,050
+somewhere inside like STD string if we
+go back to our code you can see that the
+
+302
+00:05:33,050 --> 00:05:33,060
+go back to our code you can see that the
+ 
+
+303
+00:05:33,060 --> 00:05:34,430
+go back to our code you can see that the
+reason this crashed in the first place
+
+304
+00:05:34,430 --> 00:05:34,440
+reason this crashed in the first place
+ 
+
+305
+00:05:34,440 --> 00:05:37,310
+reason this crashed in the first place
+was because this was null that's a
+
+306
+00:05:37,310 --> 00:05:37,320
+was because this was null that's a
+ 
+
+307
+00:05:37,320 --> 00:05:38,390
+was because this was null that's a
+really important thing to remember when
+
+308
+00:05:38,390 --> 00:05:38,400
+really important thing to remember when
+ 
+
+309
+00:05:38,400 --> 00:05:40,370
+really important thing to remember when
+you're debugging this if you have access
+
+310
+00:05:40,370 --> 00:05:40,380
+you're debugging this if you have access
+ 
+
+311
+00:05:40,380 --> 00:05:43,249
+you're debugging this if you have access
+violations go back to your code and see
+
+312
+00:05:43,249 --> 00:05:43,259
+violations go back to your code and see
+ 
+
+313
+00:05:43,259 --> 00:05:45,409
+violations go back to your code and see
+what it is you're trying to access and
+
+314
+00:05:45,409 --> 00:05:45,419
+what it is you're trying to access and
+ 
+
+315
+00:05:45,419 --> 00:05:48,529
+what it is you're trying to access and
+what the value actually is if we try and
+
+316
+00:05:48,529 --> 00:05:48,539
+what the value actually is if we try and
+ 
+
+317
+00:05:48,539 --> 00:05:50,330
+what the value actually is if we try and
+run this in the release configuration
+
+318
+00:05:50,330 --> 00:05:50,340
+run this in the release configuration
+ 
+
+319
+00:05:50,340 --> 00:05:52,010
+run this in the release configuration
+we'll get something slightly different
+
+320
+00:05:52,010 --> 00:05:52,020
+we'll get something slightly different
+ 
+
+321
+00:05:52,020 --> 00:05:54,469
+we'll get something slightly different
+it's going to tell us that we have an
+
+322
+00:05:54,469 --> 00:05:54,479
+it's going to tell us that we have an
+ 
+
+323
+00:05:54,479 --> 00:05:56,570
+it's going to tell us that we have an
+access violation reading location 20
+
+324
+00:05:56,570 --> 00:05:56,580
+access violation reading location 20
+ 
+
+325
+00:05:56,580 --> 00:05:59,090
+access violation reading location 20
+over here and you can see in this case
+
+326
+00:05:59,090 --> 00:05:59,100
+over here and you can see in this case
+ 
+
+327
+00:05:59,100 --> 00:06:00,950
+over here and you can see in this case
+the debugger actually breaks right on
+
+328
+00:06:00,950 --> 00:06:00,960
+the debugger actually breaks right on
+ 
+
+329
+00:06:00,960 --> 00:06:02,749
+the debugger actually breaks right on
+this line that's because it's optimized
+
+330
+00:06:02,749 --> 00:06:02,759
+this line that's because it's optimized
+ 
+
+331
+00:06:02,759 --> 00:06:04,430
+this line that's because it's optimized
+a few things and get name probably
+
+332
+00:06:04,430 --> 00:06:04,440
+a few things and get name probably
+ 
+
+333
+00:06:04,440 --> 00:06:06,110
+a few things and get name probably
+doesn't even exist anymore but the point
+
+334
+00:06:06,110 --> 00:06:06,120
+doesn't even exist anymore but the point
+ 
+
+335
+00:06:06,120 --> 00:06:07,790
+doesn't even exist anymore but the point
+is we're going to get crashes they're
+
+336
+00:06:07,790 --> 00:06:07,800
+is we're going to get crashes they're
+ 
+
+337
+00:06:07,800 --> 00:06:09,469
+is we're going to get crashes they're
+going to be either access violation or
+
+338
+00:06:09,469 --> 00:06:09,479
+going to be either access violation or
+ 
+
+339
+00:06:09,479 --> 00:06:11,629
+going to be either access violation or
+read access violation debug gives us a
+
+340
+00:06:11,629 --> 00:06:11,639
+read access violation debug gives us a
+ 
+
+341
+00:06:11,639 --> 00:06:12,770
+read access violation debug gives us a
+little bit more information tells us
+
+342
+00:06:12,770 --> 00:06:12,780
+little bit more information tells us
+ 
+
+343
+00:06:12,780 --> 00:06:14,390
+little bit more information tells us
+what the value of this is but but
+
+344
+00:06:14,390 --> 00:06:14,400
+what the value of this is but but
+ 
+
+345
+00:06:14,400 --> 00:06:16,249
+what the value of this is but but
+overall we know that it's not working in
+
+346
+00:06:16,249 --> 00:06:16,259
+overall we know that it's not working in
+ 
+
+347
+00:06:16,259 --> 00:06:18,170
+overall we know that it's not working in
+managed languages this would be much
+
+348
+00:06:18,170 --> 00:06:18,180
+managed languages this would be much
+ 
+
+349
+00:06:18,180 --> 00:06:19,909
+managed languages this would be much
+easier to debug because it would just
+
+350
+00:06:19,909 --> 00:06:19,919
+easier to debug because it would just
+ 
+
+351
+00:06:19,919 --> 00:06:22,610
+easier to debug because it would just
+tell us that entity is null whereas in C
+
+352
+00:06:22,610 --> 00:06:22,620
+tell us that entity is null whereas in C
+ 
+
+353
+00:06:22,620 --> 00:06:24,230
+tell us that entity is null whereas in C
+plus plus depending on your compiler
+
+354
+00:06:24,230 --> 00:06:24,240
+plus plus depending on your compiler
+ 
+
+355
+00:06:24,240 --> 00:06:26,390
+plus plus depending on your compiler
+depending on a few other things it's a
+
+356
+00:06:26,390 --> 00:06:26,400
+depending on a few other things it's a
+ 
+
+357
+00:06:26,400 --> 00:06:28,070
+depending on a few other things it's a
+little bit more cryptic usually Okay so
+
+358
+00:06:28,070 --> 00:06:28,080
+little bit more cryptic usually Okay so
+ 
+
+359
+00:06:28,080 --> 00:06:29,930
+little bit more cryptic usually Okay so
+we've determined that get name on NST
+
+360
+00:06:29,930 --> 00:06:29,940
+we've determined that get name on NST
+ 
+
+361
+00:06:29,940 --> 00:06:31,670
+we've determined that get name on NST
+which is a null pointer clearly doesn't
+
+362
+00:06:31,670 --> 00:06:31,680
+which is a null pointer clearly doesn't
+ 
+
+363
+00:06:31,680 --> 00:06:34,070
+which is a null pointer clearly doesn't
+work because you can't call a function
+
+364
+00:06:34,070 --> 00:06:34,080
+work because you can't call a function
+ 
+
+365
+00:06:34,080 --> 00:06:36,230
+work because you can't call a function
+on a null pointer that doesn't really
+
+366
+00:06:36,230 --> 00:06:36,240
+on a null pointer that doesn't really
+ 
+
+367
+00:06:36,240 --> 00:06:38,090
+on a null pointer that doesn't really
+make sense does it now we do have one
+
+368
+00:06:38,090 --> 00:06:38,100
+make sense does it now we do have one
+ 
+
+369
+00:06:38,100 --> 00:06:40,309
+make sense does it now we do have one
+other function print type so what do you
+
+370
+00:06:40,309 --> 00:06:40,319
+other function print type so what do you
+ 
+
+371
+00:06:40,319 --> 00:06:42,350
+other function print type so what do you
+think happens if we call that if I just
+
+372
+00:06:42,350 --> 00:06:42,360
+think happens if we call that if I just
+ 
+
+373
+00:06:42,360 --> 00:06:44,510
+think happens if we call that if I just
+call entity print type and entity is
+
+374
+00:06:44,510 --> 00:06:44,520
+call entity print type and entity is
+ 
+
+375
+00:06:44,520 --> 00:06:46,490
+call entity print type and entity is
+null what's going to happen now while
+
+376
+00:06:46,490 --> 00:06:46,500
+null what's going to happen now while
+ 
+
+377
+00:06:46,500 --> 00:06:47,629
+null what's going to happen now while
+you think about it let me tell you about
+
+378
+00:06:47,629 --> 00:06:47,639
+you think about it let me tell you about
+ 
+
+379
+00:06:47,639 --> 00:06:49,730
+you think about it let me tell you about
+brilliant the sponsor of this video if
+
+380
+00:06:49,730 --> 00:06:49,740
+brilliant the sponsor of this video if
+ 
+
+381
+00:06:49,740 --> 00:06:50,749
+brilliant the sponsor of this video if
+you haven't heard of brilliant before
+
+382
+00:06:50,749 --> 00:06:50,759
+you haven't heard of brilliant before
+ 
+
+383
+00:06:50,759 --> 00:06:52,550
+you haven't heard of brilliant before
+you're seriously missing out brilliant
+
+384
+00:06:52,550 --> 00:06:52,560
+you're seriously missing out brilliant
+ 
+
+385
+00:06:52,560 --> 00:06:54,710
+you're seriously missing out brilliant
+is an amazing website filled with many
+
+386
+00:06:54,710 --> 00:06:54,720
+is an amazing website filled with many
+ 
+
+387
+00:06:54,720 --> 00:06:57,950
+is an amazing website filled with many
+many courses on various stem topics math
+
+388
+00:06:57,950 --> 00:06:57,960
+many courses on various stem topics math
+ 
+
+389
+00:06:57,960 --> 00:07:00,590
+many courses on various stem topics math
+and computer science go together really
+
+390
+00:07:00,590 --> 00:07:00,600
+and computer science go together really
+ 
+
+391
+00:07:00,600 --> 00:07:02,689
+and computer science go together really
+really well and Brilliant have a lot of
+
+392
+00:07:02,689 --> 00:07:02,699
+really well and Brilliant have a lot of
+ 
+
+393
+00:07:02,699 --> 00:07:05,150
+really well and Brilliant have a lot of
+really high quality courses on both of
+
+394
+00:07:05,150 --> 00:07:05,160
+really high quality courses on both of
+ 
+
+395
+00:07:05,160 --> 00:07:06,770
+really high quality courses on both of
+those topics whether you're just
+
+396
+00:07:06,770 --> 00:07:06,780
+those topics whether you're just
+ 
+
+397
+00:07:06,780 --> 00:07:08,330
+those topics whether you're just
+starting to realize the importance of
+
+398
+00:07:08,330 --> 00:07:08,340
+starting to realize the importance of
+ 
+
+399
+00:07:08,340 --> 00:07:09,830
+starting to realize the importance of
+math and want to get started with
+
+400
+00:07:09,830 --> 00:07:09,840
+math and want to get started with
+ 
+
+401
+00:07:09,840 --> 00:07:11,510
+math and want to get started with
+something easy or you're trying to learn
+
+402
+00:07:11,510 --> 00:07:11,520
+something easy or you're trying to learn
+ 
+
+403
+00:07:11,520 --> 00:07:13,610
+something easy or you're trying to learn
+some more advanced math perhaps for 3D
+
+404
+00:07:13,610 --> 00:07:13,620
+some more advanced math perhaps for 3D
+ 
+
+405
+00:07:13,620 --> 00:07:15,650
+some more advanced math perhaps for 3D
+graphics brilliant have got you covered
+
+406
+00:07:15,650 --> 00:07:15,660
+graphics brilliant have got you covered
+ 
+
+407
+00:07:15,660 --> 00:07:17,029
+graphics brilliant have got you covered
+and if it's specifically computer
+
+408
+00:07:17,029 --> 00:07:17,039
+and if it's specifically computer
+ 
+
+409
+00:07:17,039 --> 00:07:18,650
+and if it's specifically computer
+science you're interested in maybe you
+
+410
+00:07:18,650 --> 00:07:18,660
+science you're interested in maybe you
+ 
+
+411
+00:07:18,660 --> 00:07:20,089
+science you're interested in maybe you
+want to learn more about neural networks
+
+412
+00:07:20,089 --> 00:07:20,099
+want to learn more about neural networks
+ 
+
+413
+00:07:20,099 --> 00:07:21,589
+want to learn more about neural networks
+they are one of the best places to check
+
+414
+00:07:21,589 --> 00:07:21,599
+they are one of the best places to check
+ 
+
+415
+00:07:21,599 --> 00:07:22,850
+they are one of the best places to check
+out for that because all of their
+
+416
+00:07:22,850 --> 00:07:22,860
+out for that because all of their
+ 
+
+417
+00:07:22,860 --> 00:07:24,830
+out for that because all of their
+courses are extremely interactive and
+
+418
+00:07:24,830 --> 00:07:24,840
+courses are extremely interactive and
+ 
+
+419
+00:07:24,840 --> 00:07:26,330
+courses are extremely interactive and
+engaging they have these beautiful
+
+420
+00:07:26,330 --> 00:07:26,340
+engaging they have these beautiful
+ 
+
+421
+00:07:26,340 --> 00:07:28,010
+engaging they have these beautiful
+widgets that you can play with to make
+
+422
+00:07:28,010 --> 00:07:28,020
+widgets that you can play with to make
+ 
+
+423
+00:07:28,020 --> 00:07:29,570
+widgets that you can play with to make
+sure that you visually understand what's
+
+424
+00:07:29,570 --> 00:07:29,580
+sure that you visually understand what's
+ 
+
+425
+00:07:29,580 --> 00:07:31,670
+sure that you visually understand what's
+going on and they'll also continually
+
+426
+00:07:31,670 --> 00:07:31,680
+going on and they'll also continually
+ 
+
+427
+00:07:31,680 --> 00:07:33,469
+going on and they'll also continually
+quiz you to make sure that you're
+
+428
+00:07:33,469 --> 00:07:33,479
+quiz you to make sure that you're
+ 
+
+429
+00:07:33,479 --> 00:07:35,150
+quiz you to make sure that you're
+actually learning and retaining the
+
+430
+00:07:35,150 --> 00:07:35,160
+actually learning and retaining the
+ 
+
+431
+00:07:35,160 --> 00:07:36,890
+actually learning and retaining the
+information and guess what you can get
+
+432
+00:07:36,890 --> 00:07:36,900
+information and guess what you can get
+ 
+
+433
+00:07:36,900 --> 00:07:38,450
+information and guess what you can get
+started for free just go to
+
+434
+00:07:38,450 --> 00:07:38,460
+started for free just go to
+ 
+
+435
+00:07:38,460 --> 00:07:40,490
+started for free just go to
+brilliant.org the channel check it out
+
+436
+00:07:40,490 --> 00:07:40,500
+brilliant.org the channel check it out
+ 
+
+437
+00:07:40,500 --> 00:07:41,870
+brilliant.org the channel check it out
+for yourself just scroll through their
+
+438
+00:07:41,870 --> 00:07:41,880
+for yourself just scroll through their
+ 
+
+439
+00:07:41,880 --> 00:07:43,790
+for yourself just scroll through their
+courses see if you find something to eat
+
+440
+00:07:43,790 --> 00:07:43,800
+courses see if you find something to eat
+ 
+
+441
+00:07:43,800 --> 00:07:45,950
+courses see if you find something to eat
+like it's free there's no reason not to
+
+442
+00:07:45,950 --> 00:07:45,960
+like it's free there's no reason not to
+ 
+
+443
+00:07:45,960 --> 00:07:47,870
+like it's free there's no reason not to
+do it and if you do find a bunch of
+
+444
+00:07:47,870 --> 00:07:47,880
+do it and if you do find a bunch of
+ 
+
+445
+00:07:47,880 --> 00:07:49,189
+do it and if you do find a bunch of
+courses that you like and want to spend
+
+446
+00:07:49,189 --> 00:07:49,199
+courses that you like and want to spend
+ 
+
+447
+00:07:49,199 --> 00:07:51,110
+courses that you like and want to spend
+more time on the platform brilliant have
+
+448
+00:07:51,110 --> 00:07:51,120
+more time on the platform brilliant have
+ 
+
+449
+00:07:51,120 --> 00:07:52,969
+more time on the platform brilliant have
+been nice enough to offer the first 200
+
+450
+00:07:52,969 --> 00:07:52,979
+been nice enough to offer the first 200
+ 
+
+451
+00:07:52,979 --> 00:07:55,790
+been nice enough to offer the first 200
+of my subscribers 20 off an annual
+
+452
+00:07:55,790 --> 00:07:55,800
+of my subscribers 20 off an annual
+ 
+
+453
+00:07:55,800 --> 00:07:57,770
+of my subscribers 20 off an annual
+membership huge thank you as always to
+
+454
+00:07:57,770 --> 00:07:57,780
+membership huge thank you as always to
+ 
+
+455
+00:07:57,780 --> 00:07:59,749
+membership huge thank you as always to
+brilliant for sponsoring this video okay
+
+456
+00:07:59,749 --> 00:07:59,759
+brilliant for sponsoring this video okay
+ 
+
+457
+00:07:59,759 --> 00:08:02,330
+brilliant for sponsoring this video okay
+well entity print type it's null let's
+
+458
+00:08:02,330 --> 00:08:02,340
+well entity print type it's null let's
+ 
+
+459
+00:08:02,340 --> 00:08:04,010
+well entity print type it's null let's
+go ahead and run this code I want to
+
+460
+00:08:04,010 --> 00:08:04,020
+go ahead and run this code I want to
+ 
+
+461
+00:08:04,020 --> 00:08:06,230
+go ahead and run this code I want to
+stop it right here though I'll hit F5
+
+462
+00:08:06,230 --> 00:08:06,240
+stop it right here though I'll hit F5
+ 
+
+463
+00:08:06,240 --> 00:08:09,589
+stop it right here though I'll hit F5
+and whoop well I don't see any access
+
+464
+00:08:09,589 --> 00:08:09,599
+and whoop well I don't see any access
+ 
+
+465
+00:08:09,599 --> 00:08:11,150
+and whoop well I don't see any access
+violation let's take a look at our
+
+466
+00:08:11,150 --> 00:08:11,160
+violation let's take a look at our
+ 
+
+467
+00:08:11,160 --> 00:08:12,589
+violation let's take a look at our
+console and
+
+468
+00:08:12,589 --> 00:08:12,599
+console and
+ 
+
+469
+00:08:12,599 --> 00:08:16,249
+console and
+check this out it printed entity so it
+
+470
+00:08:16,249 --> 00:08:16,259
+check this out it printed entity so it
+ 
+
+471
+00:08:16,259 --> 00:08:17,930
+check this out it printed entity so it
+did exactly what the function said and
+
+472
+00:08:17,930 --> 00:08:17,940
+did exactly what the function said and
+ 
+
+473
+00:08:17,940 --> 00:08:20,330
+did exactly what the function said and
+if I just hit F10 okay now I get an
+
+474
+00:08:20,330 --> 00:08:20,340
+if I just hit F10 okay now I get an
+ 
+
+475
+00:08:20,340 --> 00:08:22,369
+if I just hit F10 okay now I get an
+access violation so what seems to be
+
+476
+00:08:22,369 --> 00:08:22,379
+access violation so what seems to be
+ 
+
+477
+00:08:22,379 --> 00:08:24,469
+access violation so what seems to be
+happening is if I just comment out this
+
+478
+00:08:24,469 --> 00:08:24,479
+happening is if I just comment out this
+ 
+
+479
+00:08:24,479 --> 00:08:26,150
+happening is if I just comment out this
+line for a minute I'll remove all my
+
+480
+00:08:26,150 --> 00:08:26,160
+line for a minute I'll remove all my
+ 
+
+481
+00:08:26,160 --> 00:08:30,710
+line for a minute I'll remove all my
+breakpoints I'll hit F5 my program runs
+
+482
+00:08:30,710 --> 00:08:30,720
+breakpoints I'll hit F5 my program runs
+ 
+
+483
+00:08:30,720 --> 00:08:33,769
+breakpoints I'll hit F5 my program runs
+successfully unlike in managed languages
+
+484
+00:08:33,769 --> 00:08:33,779
+successfully unlike in managed languages
+ 
+
+485
+00:08:33,779 --> 00:08:36,230
+successfully unlike in managed languages
+where you would get a null pointer or a
+
+486
+00:08:36,230 --> 00:08:36,240
+where you would get a null pointer or a
+ 
+
+487
+00:08:36,240 --> 00:08:38,269
+where you would get a null pointer or a
+null reference exception so how come
+
+488
+00:08:38,269 --> 00:08:38,279
+null reference exception so how come
+ 
+
+489
+00:08:38,279 --> 00:08:42,589
+null reference exception so how come
+this works but this doesn't work and
+
+490
+00:08:42,589 --> 00:08:42,599
+this works but this doesn't work and
+ 
+
+491
+00:08:42,599 --> 00:08:44,149
+this works but this doesn't work and
+does this even make sense that this
+
+492
+00:08:44,149 --> 00:08:44,159
+does this even make sense that this
+ 
+
+493
+00:08:44,159 --> 00:08:46,070
+does this even make sense that this
+works I mean this is this object is null
+
+494
+00:08:46,070 --> 00:08:46,080
+works I mean this is this object is null
+ 
+
+495
+00:08:46,080 --> 00:08:48,050
+works I mean this is this object is null
+so what is it calling print type on that
+
+496
+00:08:48,050 --> 00:08:48,060
+so what is it calling print type on that
+ 
+
+497
+00:08:48,060 --> 00:08:50,090
+so what is it calling print type on that
+doesn't make any sense well let's scroll
+
+498
+00:08:50,090 --> 00:08:50,100
+doesn't make any sense well let's scroll
+ 
+
+499
+00:08:50,100 --> 00:08:52,310
+doesn't make any sense well let's scroll
+up a little bit and talk about how
+
+500
+00:08:52,310 --> 00:08:52,320
+up a little bit and talk about how
+ 
+
+501
+00:08:52,320 --> 00:08:54,829
+up a little bit and talk about how
+methods actually work these are
+
+502
+00:08:54,829 --> 00:08:54,839
+methods actually work these are
+ 
+
+503
+00:08:54,839 --> 00:08:56,690
+methods actually work these are
+functions within a class they're not
+
+504
+00:08:56,690 --> 00:08:56,700
+functions within a class they're not
+ 
+
+505
+00:08:56,700 --> 00:08:57,949
+functions within a class they're not
+static functions or anything like that
+
+506
+00:08:57,949 --> 00:08:57,959
+static functions or anything like that
+ 
+
+507
+00:08:57,959 --> 00:08:59,870
+static functions or anything like that
+they're member functions we usually call
+
+508
+00:08:59,870 --> 00:08:59,880
+they're member functions we usually call
+ 
+
+509
+00:08:59,880 --> 00:09:01,790
+they're member functions we usually call
+them methods in object oriented
+
+510
+00:09:01,790 --> 00:09:01,800
+them methods in object oriented
+ 
+
+511
+00:09:01,800 --> 00:09:03,170
+them methods in object oriented
+programming I usually just call them
+
+512
+00:09:03,170 --> 00:09:03,180
+programming I usually just call them
+ 
+
+513
+00:09:03,180 --> 00:09:04,790
+programming I usually just call them
+functions or member functions though
+
+514
+00:09:04,790 --> 00:09:04,800
+functions or member functions though
+ 
+
+515
+00:09:04,800 --> 00:09:06,530
+functions or member functions though
+between you and me so when the compiler
+
+516
+00:09:06,530 --> 00:09:06,540
+between you and me so when the compiler
+ 
+
+517
+00:09:06,540 --> 00:09:08,210
+between you and me so when the compiler
+is compiling this program and it's
+
+518
+00:09:08,210 --> 00:09:08,220
+is compiling this program and it's
+ 
+
+519
+00:09:08,220 --> 00:09:10,190
+is compiling this program and it's
+looking at this class what actually
+
+520
+00:09:10,190 --> 00:09:10,200
+looking at this class what actually
+ 
+
+521
+00:09:10,200 --> 00:09:11,630
+looking at this class what actually
+happens to this class how do these
+
+522
+00:09:11,630 --> 00:09:11,640
+happens to this class how do these
+ 
+
+523
+00:09:11,640 --> 00:09:14,090
+happens to this class how do these
+classes work well if you actually think
+
+524
+00:09:14,090 --> 00:09:14,100
+classes work well if you actually think
+ 
+
+525
+00:09:14,100 --> 00:09:17,570
+classes work well if you actually think
+back to C then there's no such thing as
+
+526
+00:09:17,570 --> 00:09:17,580
+back to C then there's no such thing as
+ 
+
+527
+00:09:17,580 --> 00:09:19,610
+back to C then there's no such thing as
+a class there is a struct which is kind
+
+528
+00:09:19,610 --> 00:09:19,620
+a class there is a struct which is kind
+ 
+
+529
+00:09:19,620 --> 00:09:21,949
+a class there is a struct which is kind
+of the same thing however structs cannot
+
+530
+00:09:21,949 --> 00:09:21,959
+of the same thing however structs cannot
+ 
+
+531
+00:09:21,959 --> 00:09:23,990
+of the same thing however structs cannot
+have functions inside them so let's talk
+
+532
+00:09:23,990 --> 00:09:24,000
+have functions inside them so let's talk
+ 
+
+533
+00:09:24,000 --> 00:09:25,910
+have functions inside them so let's talk
+about how we would go about rewriting
+
+534
+00:09:25,910 --> 00:09:25,920
+about how we would go about rewriting
+ 
+
+535
+00:09:25,920 --> 00:09:28,850
+about how we would go about rewriting
+this class in C well we'd go down here
+
+536
+00:09:28,850 --> 00:09:28,860
+this class in C well we'd go down here
+ 
+
+537
+00:09:28,860 --> 00:09:30,350
+this class in C well we'd go down here
+we'd create a struct called NC I want to
+
+538
+00:09:30,350 --> 00:09:30,360
+we'd create a struct called NC I want to
+ 
+
+539
+00:09:30,360 --> 00:09:31,910
+we'd create a struct called NC I want to
+call it data just so that it's a
+
+540
+00:09:31,910 --> 00:09:31,920
+call it data just so that it's a
+ 
+
+541
+00:09:31,920 --> 00:09:34,190
+call it data just so that it's a
+different name I'm going to copy these
+
+542
+00:09:34,190 --> 00:09:34,200
+different name I'm going to copy these
+ 
+
+543
+00:09:34,200 --> 00:09:36,829
+different name I'm going to copy these
+two members so we can have a structure
+
+544
+00:09:36,829 --> 00:09:36,839
+two members so we can have a structure
+ 
+
+545
+00:09:36,839 --> 00:09:38,750
+two members so we can have a structure
+of different variables that's fine I'll
+
+546
+00:09:38,750 --> 00:09:38,760
+of different variables that's fine I'll
+ 
+
+547
+00:09:38,760 --> 00:09:40,490
+of different variables that's fine I'll
+just change this to be entity data so
+
+548
+00:09:40,490 --> 00:09:40,500
+just change this to be entity data so
+ 
+
+549
+00:09:40,500 --> 00:09:42,530
+just change this to be entity data so
+we're pointing to our same type here and
+
+550
+00:09:42,530 --> 00:09:42,540
+we're pointing to our same type here and
+ 
+
+551
+00:09:42,540 --> 00:09:44,630
+we're pointing to our same type here and
+then how would we get these functions to
+
+552
+00:09:44,630 --> 00:09:44,640
+then how would we get these functions to
+ 
+
+553
+00:09:44,640 --> 00:09:47,090
+then how would we get these functions to
+work well we just write them outside of
+
+554
+00:09:47,090 --> 00:09:47,100
+work well we just write them outside of
+ 
+
+555
+00:09:47,100 --> 00:09:49,790
+work well we just write them outside of
+the class right so I'll copy them over
+
+556
+00:09:49,790 --> 00:09:49,800
+the class right so I'll copy them over
+ 
+
+557
+00:09:49,800 --> 00:09:52,070
+the class right so I'll copy them over
+here I'll get rid of this const and
+
+558
+00:09:52,070 --> 00:09:52,080
+here I'll get rid of this const and
+ 
+
+559
+00:09:52,080 --> 00:09:54,530
+here I'll get rid of this const and
+maybe I'll just add a little leading
+
+560
+00:09:54,530 --> 00:09:54,540
+maybe I'll just add a little leading
+ 
+
+561
+00:09:54,540 --> 00:09:55,970
+maybe I'll just add a little leading
+entity over here just so that we know
+
+562
+00:09:55,970 --> 00:09:55,980
+entity over here just so that we know
+ 
+
+563
+00:09:55,980 --> 00:09:58,250
+entity over here just so that we know
+that it's kind of supposed to be a
+
+564
+00:09:58,250 --> 00:09:58,260
+that it's kind of supposed to be a
+ 
+
+565
+00:09:58,260 --> 00:10:01,009
+that it's kind of supposed to be a
+function of this particular class even
+
+566
+00:10:01,009 --> 00:10:01,019
+function of this particular class even
+ 
+
+567
+00:10:01,019 --> 00:10:02,030
+function of this particular class even
+though it's just a free floating
+
+568
+00:10:02,030 --> 00:10:02,040
+though it's just a free floating
+ 
+
+569
+00:10:02,040 --> 00:10:04,370
+though it's just a free floating
+function of course okay cool well the
+
+570
+00:10:04,370 --> 00:10:04,380
+function of course okay cool well the
+ 
+
+571
+00:10:04,380 --> 00:10:06,170
+function of course okay cool well the
+first problem is we have to return name
+
+572
+00:10:06,170 --> 00:10:06,180
+first problem is we have to return name
+ 
+
+573
+00:10:06,180 --> 00:10:09,110
+first problem is we have to return name
+but name is obviously relative to a
+
+574
+00:10:09,110 --> 00:10:09,120
+but name is obviously relative to a
+ 
+
+575
+00:10:09,120 --> 00:10:11,990
+but name is obviously relative to a
+particular instance of this struct so
+
+576
+00:10:11,990 --> 00:10:12,000
+particular instance of this struct so
+ 
+
+577
+00:10:12,000 --> 00:10:14,269
+particular instance of this struct so
+what do we do well we need to actually
+
+578
+00:10:14,269 --> 00:10:14,279
+what do we do well we need to actually
+ 
+
+579
+00:10:14,279 --> 00:10:16,910
+what do we do well we need to actually
+take in that struct as a parameter this
+
+580
+00:10:16,910 --> 00:10:16,920
+take in that struct as a parameter this
+ 
+
+581
+00:10:16,920 --> 00:10:18,949
+take in that struct as a parameter this
+is exactly what happens in C plus plus
+
+582
+00:10:18,949 --> 00:10:18,959
+is exactly what happens in C plus plus
+ 
+
+583
+00:10:18,959 --> 00:10:21,710
+is exactly what happens in C plus plus
+when we actually compile this class the
+
+584
+00:10:21,710 --> 00:10:21,720
+when we actually compile this class the
+ 
+
+585
+00:10:21,720 --> 00:10:23,269
+when we actually compile this class the
+methods inside the class the functions
+
+586
+00:10:23,269 --> 00:10:23,279
+methods inside the class the functions
+ 
+
+587
+00:10:23,279 --> 00:10:25,430
+methods inside the class the functions
+inside the class get converted integers
+
+588
+00:10:25,430 --> 00:10:25,440
+inside the class get converted integers
+ 
+
+589
+00:10:25,440 --> 00:10:27,829
+inside the class get converted integers
+regular free floating functions that
+
+590
+00:10:27,829 --> 00:10:27,839
+regular free floating functions that
+ 
+
+591
+00:10:27,839 --> 00:10:29,810
+regular free floating functions that
+actually take in an instance of the
+
+592
+00:10:29,810 --> 00:10:29,820
+actually take in an instance of the
+ 
+
+593
+00:10:29,820 --> 00:10:32,150
+actually take in an instance of the
+class as the their first parameter and
+
+594
+00:10:32,150 --> 00:10:32,160
+class as the their first parameter and
+ 
+
+595
+00:10:32,160 --> 00:10:34,670
+class as the their first parameter and
+guess what that instance is called this
+
+596
+00:10:34,670 --> 00:10:34,680
+guess what that instance is called this
+ 
+
+597
+00:10:34,680 --> 00:10:36,470
+guess what that instance is called this
+now in this case we can't name it this
+
+598
+00:10:36,470 --> 00:10:36,480
+now in this case we can't name it this
+ 
+
+599
+00:10:36,480 --> 00:10:37,910
+now in this case we can't name it this
+because that's the reserved keyword so
+
+600
+00:10:37,910 --> 00:10:37,920
+because that's the reserved keyword so
+ 
+
+601
+00:10:37,920 --> 00:10:39,769
+because that's the reserved keyword so
+let's just go ahead and name itself and
+
+602
+00:10:39,769 --> 00:10:39,779
+let's just go ahead and name itself and
+ 
+
+603
+00:10:39,779 --> 00:10:43,130
+let's just go ahead and name itself and
+then M name obviously comes from self so
+
+604
+00:10:43,130 --> 00:10:43,140
+then M name obviously comes from self so
+ 
+
+605
+00:10:43,140 --> 00:10:45,590
+then M name obviously comes from self so
+now this makes sense because M name is
+
+606
+00:10:45,590 --> 00:10:45,600
+now this makes sense because M name is
+ 
+
+607
+00:10:45,600 --> 00:10:47,810
+now this makes sense because M name is
+coming from this particular instance we
+
+608
+00:10:47,810 --> 00:10:47,820
+coming from this particular instance we
+ 
+
+609
+00:10:47,820 --> 00:10:49,610
+coming from this particular instance we
+actually now have a way to get that
+
+610
+00:10:49,610 --> 00:10:49,620
+actually now have a way to get that
+ 
+
+611
+00:10:49,620 --> 00:10:51,889
+actually now have a way to get that
+specific data we want to return now one
+
+612
+00:10:51,889 --> 00:10:51,899
+specific data we want to return now one
+ 
+
+613
+00:10:51,899 --> 00:10:53,090
+specific data we want to return now one
+minor addition here the original
+
+614
+00:10:53,090 --> 00:10:53,100
+minor addition here the original
+ 
+
+615
+00:10:53,100 --> 00:10:55,790
+minor addition here the original
+function was actually labeled as const
+
+616
+00:10:55,790 --> 00:10:55,800
+function was actually labeled as const
+ 
+
+617
+00:10:55,800 --> 00:10:58,370
+function was actually labeled as const
+which means that the self that gets
+
+618
+00:10:58,370 --> 00:10:58,380
+which means that the self that gets
+ 
+
+619
+00:10:58,380 --> 00:11:00,410
+which means that the self that gets
+taken in here the this pointer that gets
+
+620
+00:11:00,410 --> 00:11:00,420
+taken in here the this pointer that gets
+ 
+
+621
+00:11:00,420 --> 00:11:03,230
+taken in here the this pointer that gets
+taken in is actually a const pointer
+
+622
+00:11:03,230 --> 00:11:03,240
+taken in is actually a const pointer
+ 
+
+623
+00:11:03,240 --> 00:11:05,750
+taken in is actually a const pointer
+like this and with print type the exact
+
+624
+00:11:05,750 --> 00:11:05,760
+like this and with print type the exact
+ 
+
+625
+00:11:05,760 --> 00:11:07,610
+like this and with print type the exact
+same thing happens now print type is not
+
+626
+00:11:07,610 --> 00:11:07,620
+same thing happens now print type is not
+ 
+
+627
+00:11:07,620 --> 00:11:09,410
+same thing happens now print type is not
+marked as const so what would happen is
+
+628
+00:11:09,410 --> 00:11:09,420
+marked as const so what would happen is
+ 
+
+629
+00:11:09,420 --> 00:11:12,769
+marked as const so what would happen is
+we take in this obviously but it's not
+
+630
+00:11:12,769 --> 00:11:12,779
+we take in this obviously but it's not
+ 
+
+631
+00:11:12,779 --> 00:11:15,530
+we take in this obviously but it's not
+going to be const and just for example's
+
+632
+00:11:15,530 --> 00:11:15,540
+going to be const and just for example's
+ 
+
+633
+00:11:15,540 --> 00:11:18,230
+going to be const and just for example's
+sake if print type had been a static
+
+634
+00:11:18,230 --> 00:11:18,240
+sake if print type had been a static
+ 
+
+635
+00:11:18,240 --> 00:11:20,990
+sake if print type had been a static
+function like this then it just wouldn't
+
+636
+00:11:20,990 --> 00:11:21,000
+function like this then it just wouldn't
+ 
+
+637
+00:11:21,000 --> 00:11:23,210
+function like this then it just wouldn't
+take in the instance that's why you can
+
+638
+00:11:23,210 --> 00:11:23,220
+take in the instance that's why you can
+ 
+
+639
+00:11:23,220 --> 00:11:25,730
+take in the instance that's why you can
+never access a member such as M parent
+
+640
+00:11:25,730 --> 00:11:25,740
+never access a member such as M parent
+ 
+
+641
+00:11:25,740 --> 00:11:27,769
+never access a member such as M parent
+or something like that from within a
+
+642
+00:11:27,769 --> 00:11:27,779
+or something like that from within a
+ 
+
+643
+00:11:27,779 --> 00:11:29,210
+or something like that from within a
+static function you can't do that
+
+644
+00:11:29,210 --> 00:11:29,220
+static function you can't do that
+ 
+
+645
+00:11:29,220 --> 00:11:30,530
+static function you can't do that
+because a non-stack member reference
+
+646
+00:11:30,530 --> 00:11:30,540
+because a non-stack member reference
+ 
+
+647
+00:11:30,540 --> 00:11:32,389
+because a non-stack member reference
+must be relative to a specific object
+
+648
+00:11:32,389 --> 00:11:32,399
+must be relative to a specific object
+ 
+
+649
+00:11:32,399 --> 00:11:34,610
+must be relative to a specific object
+and if we don't take in a specific
+
+650
+00:11:34,610 --> 00:11:34,620
+and if we don't take in a specific
+ 
+
+651
+00:11:34,620 --> 00:11:36,470
+and if we don't take in a specific
+object in the first place then of course
+
+652
+00:11:36,470 --> 00:11:36,480
+object in the first place then of course
+ 
+
+653
+00:11:36,480 --> 00:11:39,290
+object in the first place then of course
+we can't possibly access the data unless
+
+654
+00:11:39,290 --> 00:11:39,300
+we can't possibly access the data unless
+ 
+
+655
+00:11:39,300 --> 00:11:41,569
+we can't possibly access the data unless
+it is also static because in that case
+
+656
+00:11:41,569 --> 00:11:41,579
+it is also static because in that case
+ 
+
+657
+00:11:41,579 --> 00:11:44,150
+it is also static because in that case
+it knows where the data lives so back to
+
+658
+00:11:44,150 --> 00:11:44,160
+it knows where the data lives so back to
+ 
+
+659
+00:11:44,160 --> 00:11:46,730
+it knows where the data lives so back to
+our normal example so what happens if we
+
+660
+00:11:46,730 --> 00:11:46,740
+our normal example so what happens if we
+ 
+
+661
+00:11:46,740 --> 00:11:50,329
+our normal example so what happens if we
+try and call get name but entity is null
+
+662
+00:11:50,329 --> 00:11:50,339
+try and call get name but entity is null
+ 
+
+663
+00:11:50,339 --> 00:11:52,550
+try and call get name but entity is null
+well it means that the self that is
+
+664
+00:11:52,550 --> 00:11:52,560
+well it means that the self that is
+ 
+
+665
+00:11:52,560 --> 00:11:55,069
+well it means that the self that is
+passed in here is
+
+666
+00:11:55,069 --> 00:11:55,079
+passed in here is
+ 
+
+667
+00:11:55,079 --> 00:11:56,329
+passed in here is
+now
+
+668
+00:11:56,329 --> 00:11:56,339
+now
+ 
+
+669
+00:11:56,339 --> 00:11:58,069
+now
+and what are we trying to do we're
+
+670
+00:11:58,069 --> 00:11:58,079
+and what are we trying to do we're
+ 
+
+671
+00:11:58,079 --> 00:12:00,710
+and what are we trying to do we're
+trying to specifically access a string
+
+672
+00:12:00,710 --> 00:12:00,720
+trying to specifically access a string
+ 
+
+673
+00:12:00,720 --> 00:12:03,350
+trying to specifically access a string
+from null right this is zero we're
+
+674
+00:12:03,350 --> 00:12:03,360
+from null right this is zero we're
+ 
+
+675
+00:12:03,360 --> 00:12:05,990
+from null right this is zero we're
+trying to access its name and return it
+
+676
+00:12:05,990 --> 00:12:06,000
+trying to access its name and return it
+ 
+
+677
+00:12:06,000 --> 00:12:07,790
+trying to access its name and return it
+as an actual string reference which
+
+678
+00:12:07,790 --> 00:12:07,800
+as an actual string reference which
+ 
+
+679
+00:12:07,800 --> 00:12:09,470
+as an actual string reference which
+means that we're going to read that
+
+680
+00:12:09,470 --> 00:12:09,480
+means that we're going to read that
+ 
+
+681
+00:12:09,480 --> 00:12:11,569
+means that we're going to read that
+memory address a memory address that is
+
+682
+00:12:11,569 --> 00:12:11,579
+memory address a memory address that is
+ 
+
+683
+00:12:11,579 --> 00:12:14,030
+memory address a memory address that is
+invalid and thus we crash now let's
+
+684
+00:12:14,030 --> 00:12:14,040
+invalid and thus we crash now let's
+ 
+
+685
+00:12:14,040 --> 00:12:15,710
+invalid and thus we crash now let's
+scroll down to this function do you see
+
+686
+00:12:15,710 --> 00:12:15,720
+scroll down to this function do you see
+ 
+
+687
+00:12:15,720 --> 00:12:17,210
+scroll down to this function do you see
+the difference here
+
+688
+00:12:17,210 --> 00:12:17,220
+the difference here
+ 
+
+689
+00:12:17,220 --> 00:12:19,970
+the difference here
+okay we also call entity print type and
+
+690
+00:12:19,970 --> 00:12:19,980
+okay we also call entity print type and
+ 
+
+691
+00:12:19,980 --> 00:12:22,850
+okay we also call entity print type and
+C is in fact null pointer so self is
+
+692
+00:12:22,850 --> 00:12:22,860
+C is in fact null pointer so self is
+ 
+
+693
+00:12:22,860 --> 00:12:26,389
+C is in fact null pointer so self is
+null but then like what do we do here we
+
+694
+00:12:26,389 --> 00:12:26,399
+null but then like what do we do here we
+ 
+
+695
+00:12:26,399 --> 00:12:28,790
+null but then like what do we do here we
+just print out the word entity followed
+
+696
+00:12:28,790 --> 00:12:28,800
+just print out the word entity followed
+ 
+
+697
+00:12:28,800 --> 00:12:31,550
+just print out the word entity followed
+by a new line do we access self at all
+
+698
+00:12:31,550 --> 00:12:31,560
+by a new line do we access self at all
+ 
+
+699
+00:12:31,560 --> 00:12:35,389
+by a new line do we access self at all
+no we don't we don't care about self at
+
+700
+00:12:35,389 --> 00:12:35,399
+no we don't we don't care about self at
+ 
+
+701
+00:12:35,399 --> 00:12:37,910
+no we don't we don't care about self at
+all this may as well be like a static
+
+702
+00:12:37,910 --> 00:12:37,920
+all this may as well be like a static
+ 
+
+703
+00:12:37,920 --> 00:12:40,670
+all this may as well be like a static
+function because we don't even use self
+
+704
+00:12:40,670 --> 00:12:40,680
+function because we don't even use self
+ 
+
+705
+00:12:40,680 --> 00:12:43,910
+function because we don't even use self
+or the this pointer so that is why this
+
+706
+00:12:43,910 --> 00:12:43,920
+or the this pointer so that is why this
+ 
+
+707
+00:12:43,920 --> 00:12:46,069
+or the this pointer so that is why this
+doesn't crash because it's not the fact
+
+708
+00:12:46,069 --> 00:12:46,079
+doesn't crash because it's not the fact
+ 
+
+709
+00:12:46,079 --> 00:12:48,410
+doesn't crash because it's not the fact
+that you're actually calling a function
+
+710
+00:12:48,410 --> 00:12:48,420
+that you're actually calling a function
+ 
+
+711
+00:12:48,420 --> 00:12:50,569
+that you're actually calling a function
+on null that's perfectly valid because
+
+712
+00:12:50,569 --> 00:12:50,579
+on null that's perfectly valid because
+ 
+
+713
+00:12:50,579 --> 00:12:52,310
+on null that's perfectly valid because
+remember it's not like this function
+
+714
+00:12:52,310 --> 00:12:52,320
+remember it's not like this function
+ 
+
+715
+00:12:52,320 --> 00:12:54,829
+remember it's not like this function
+exists within the actual entity class
+
+716
+00:12:54,829 --> 00:12:54,839
+exists within the actual entity class
+ 
+
+717
+00:12:54,839 --> 00:12:57,230
+exists within the actual entity class
+it's not physically existing inside here
+
+718
+00:12:57,230 --> 00:12:57,240
+it's not physically existing inside here
+ 
+
+719
+00:12:57,240 --> 00:12:59,990
+it's not physically existing inside here
+it gets compiled out into something like
+
+720
+00:12:59,990 --> 00:13:00,000
+it gets compiled out into something like
+ 
+
+721
+00:13:00,000 --> 00:13:02,030
+it gets compiled out into something like
+this by the compiler it's just a normal
+
+722
+00:13:02,030 --> 00:13:02,040
+this by the compiler it's just a normal
+ 
+
+723
+00:13:02,040 --> 00:13:04,430
+this by the compiler it's just a normal
+function inside our compiled binary
+
+724
+00:13:04,430 --> 00:13:04,440
+function inside our compiled binary
+ 
+
+725
+00:13:04,440 --> 00:13:06,889
+function inside our compiled binary
+there's just a bunch of CPU instructions
+
+726
+00:13:06,889 --> 00:13:06,899
+there's just a bunch of CPU instructions
+ 
+
+727
+00:13:06,899 --> 00:13:08,690
+there's just a bunch of CPU instructions
+there's just a bunch of machine code at
+
+728
+00:13:08,690 --> 00:13:08,700
+there's just a bunch of machine code at
+ 
+
+729
+00:13:08,700 --> 00:13:11,030
+there's just a bunch of machine code at
+a particular address inside that binary
+
+730
+00:13:11,030 --> 00:13:11,040
+a particular address inside that binary
+ 
+
+731
+00:13:11,040 --> 00:13:13,009
+a particular address inside that binary
+that gets loaded up into memory and the
+
+732
+00:13:13,009 --> 00:13:13,019
+that gets loaded up into memory and the
+ 
+
+733
+00:13:13,019 --> 00:13:14,810
+that gets loaded up into memory and the
+instruction pointer will simply jump to
+
+734
+00:13:14,810 --> 00:13:14,820
+instruction pointer will simply jump to
+ 
+
+735
+00:13:14,820 --> 00:13:16,310
+instruction pointer will simply jump to
+that address and start executing
+
+736
+00:13:16,310 --> 00:13:16,320
+that address and start executing
+ 
+
+737
+00:13:16,320 --> 00:13:18,530
+that address and start executing
+instructions it's not like it magically
+
+738
+00:13:18,530 --> 00:13:18,540
+instructions it's not like it magically
+ 
+
+739
+00:13:18,540 --> 00:13:20,629
+instructions it's not like it magically
+lives inside that object and if the
+
+740
+00:13:20,629 --> 00:13:20,639
+lives inside that object and if the
+ 
+
+741
+00:13:20,639 --> 00:13:22,430
+lives inside that object and if the
+object is null it's not going to work so
+
+742
+00:13:22,430 --> 00:13:22,440
+object is null it's not going to work so
+ 
+
+743
+00:13:22,440 --> 00:13:23,810
+object is null it's not going to work so
+the thing that causes the crash is the
+
+744
+00:13:23,810 --> 00:13:23,820
+the thing that causes the crash is the
+ 
+
+745
+00:13:23,820 --> 00:13:25,910
+the thing that causes the crash is the
+fact that we're actually trying to use
+
+746
+00:13:25,910 --> 00:13:25,920
+fact that we're actually trying to use
+ 
+
+747
+00:13:25,920 --> 00:13:28,370
+fact that we're actually trying to use
+these member variables and they can't be
+
+748
+00:13:28,370 --> 00:13:28,380
+these member variables and they can't be
+ 
+
+749
+00:13:28,380 --> 00:13:30,650
+these member variables and they can't be
+accessed because the object itself the
+
+750
+00:13:30,650 --> 00:13:30,660
+accessed because the object itself the
+ 
+
+751
+00:13:30,660 --> 00:13:32,509
+accessed because the object itself the
+instance is null and to further
+
+752
+00:13:32,509 --> 00:13:32,519
+instance is null and to further
+ 
+
+753
+00:13:32,519 --> 00:13:34,670
+instance is null and to further
+demonstrate this case let's talk about a
+
+754
+00:13:34,670 --> 00:13:34,680
+demonstrate this case let's talk about a
+ 
+
+755
+00:13:34,680 --> 00:13:36,410
+demonstrate this case let's talk about a
+little something let's talk about a
+
+756
+00:13:36,410 --> 00:13:36,420
+little something let's talk about a
+ 
+
+757
+00:13:36,420 --> 00:13:39,590
+little something let's talk about a
+macro called offset of now offset of is
+
+758
+00:13:39,590 --> 00:13:39,600
+macro called offset of now offset of is
+ 
+
+759
+00:13:39,600 --> 00:13:41,449
+macro called offset of now offset of is
+a pretty cool macro what it will do is
+
+760
+00:13:41,449 --> 00:13:41,459
+a pretty cool macro what it will do is
+ 
+
+761
+00:13:41,459 --> 00:13:43,790
+a pretty cool macro what it will do is
+it lets you pass in the name of a class
+
+762
+00:13:43,790 --> 00:13:43,800
+it lets you pass in the name of a class
+ 
+
+763
+00:13:43,800 --> 00:13:46,430
+it lets you pass in the name of a class
+such as entity I might just use entity
+
+764
+00:13:46,430 --> 00:13:46,440
+such as entity I might just use entity
+ 
+
+765
+00:13:46,440 --> 00:13:48,530
+such as entity I might just use entity
+data here but it's the same thing and
+
+766
+00:13:48,530 --> 00:13:48,540
+data here but it's the same thing and
+ 
+
+767
+00:13:48,540 --> 00:13:51,470
+data here but it's the same thing and
+then the name of a member variable such
+
+768
+00:13:51,470 --> 00:13:51,480
+then the name of a member variable such
+ 
+
+769
+00:13:51,480 --> 00:13:54,530
+then the name of a member variable such
+as M name and what it will do
+
+770
+00:13:54,530 --> 00:13:54,540
+as M name and what it will do
+ 
+
+771
+00:13:54,540 --> 00:13:57,470
+as M name and what it will do
+is it will actually give you the offset
+
+772
+00:13:57,470 --> 00:13:57,480
+is it will actually give you the offset
+ 
+
+773
+00:13:57,480 --> 00:14:00,350
+is it will actually give you the offset
+of that particular member in memory so
+
+774
+00:14:00,350 --> 00:14:00,360
+of that particular member in memory so
+ 
+
+775
+00:14:00,360 --> 00:14:01,910
+of that particular member in memory so
+if I bring this code down over here
+
+776
+00:14:01,910 --> 00:14:01,920
+if I bring this code down over here
+ 
+
+777
+00:14:01,920 --> 00:14:05,629
+if I bring this code down over here
+offset of M name and we print that
+
+778
+00:14:05,629 --> 00:14:05,639
+offset of M name and we print that
+ 
+
+779
+00:14:05,639 --> 00:14:08,030
+offset of M name and we print that
+offset let's hit F5 you can see the
+
+780
+00:14:08,030 --> 00:14:08,040
+offset let's hit F5 you can see the
+ 
+
+781
+00:14:08,040 --> 00:14:11,629
+offset let's hit F5 you can see the
+offset of M name is eight so we can use
+
+782
+00:14:11,629 --> 00:14:11,639
+offset of M name is eight so we can use
+ 
+
+783
+00:14:11,639 --> 00:14:13,970
+offset of M name is eight so we can use
+this macro to actually tell us what the
+
+784
+00:14:13,970 --> 00:14:13,980
+this macro to actually tell us what the
+ 
+
+785
+00:14:13,980 --> 00:14:16,790
+this macro to actually tell us what the
+offset of this is in memory why is it
+
+786
+00:14:16,790 --> 00:14:16,800
+offset of this is in memory why is it
+ 
+
+787
+00:14:16,800 --> 00:14:19,250
+offset of this is in memory why is it
+eight because this because this am
+
+788
+00:14:19,250 --> 00:14:19,260
+eight because this because this am
+ 
+
+789
+00:14:19,260 --> 00:14:20,930
+eight because this because this am
+parent variable is obviously the very
+
+790
+00:14:20,930 --> 00:14:20,940
+parent variable is obviously the very
+ 
+
+791
+00:14:20,940 --> 00:14:22,970
+parent variable is obviously the very
+first thing in the struct so it's going
+
+792
+00:14:22,970 --> 00:14:22,980
+first thing in the struct so it's going
+ 
+
+793
+00:14:22,980 --> 00:14:24,949
+first thing in the struct so it's going
+to be at an offset of zero and then what
+
+794
+00:14:24,949 --> 00:14:24,959
+to be at an offset of zero and then what
+ 
+
+795
+00:14:24,959 --> 00:14:27,230
+to be at an offset of zero and then what
+is its size well it's a pointer on a
+
+796
+00:14:27,230 --> 00:14:27,240
+is its size well it's a pointer on a
+ 
+
+797
+00:14:27,240 --> 00:14:28,790
+is its size well it's a pointer on a
+64-bit architecture so it's going to be
+
+798
+00:14:28,790 --> 00:14:28,800
+64-bit architecture so it's going to be
+ 
+
+799
+00:14:28,800 --> 00:14:31,190
+64-bit architecture so it's going to be
+eight bytes which puts M name at an
+
+800
+00:14:31,190 --> 00:14:31,200
+eight bytes which puts M name at an
+ 
+
+801
+00:14:31,200 --> 00:14:33,829
+eight bytes which puts M name at an
+offset of eight meaning the first zero
+
+802
+00:14:33,829 --> 00:14:33,839
+offset of eight meaning the first zero
+ 
+
+803
+00:14:33,839 --> 00:14:35,810
+offset of eight meaning the first zero
+through seven inclusive bytes are
+
+804
+00:14:35,810 --> 00:14:35,820
+through seven inclusive bytes are
+ 
+
+805
+00:14:35,820 --> 00:14:38,449
+through seven inclusive bytes are
+occupied by this variable and then the
+
+806
+00:14:38,449 --> 00:14:38,459
+occupied by this variable and then the
+ 
+
+807
+00:14:38,459 --> 00:14:40,490
+occupied by this variable and then the
+next however many buys her string takes
+
+808
+00:14:40,490 --> 00:14:40,500
+next however many buys her string takes
+ 
+
+809
+00:14:40,500 --> 00:14:44,090
+next however many buys her string takes
+from byte 8 onwards is occupied by this
+
+810
+00:14:44,090 --> 00:14:44,100
+from byte 8 onwards is occupied by this
+ 
+
+811
+00:14:44,100 --> 00:14:46,910
+from byte 8 onwards is occupied by this
+variable but how does offset of know
+
+812
+00:14:46,910 --> 00:14:46,920
+variable but how does offset of know
+ 
+
+813
+00:14:46,920 --> 00:14:49,670
+variable but how does offset of know
+that how exactly does it work well if we
+
+814
+00:14:49,670 --> 00:14:49,680
+that how exactly does it work well if we
+ 
+
+815
+00:14:49,680 --> 00:14:51,590
+that how exactly does it work well if we
+actually go to the definition of it
+
+816
+00:14:51,590 --> 00:14:51,600
+actually go to the definition of it
+ 
+
+817
+00:14:51,600 --> 00:14:52,970
+actually go to the definition of it
+there's a couple different definitions
+
+818
+00:14:52,970 --> 00:14:52,980
+there's a couple different definitions
+ 
+
+819
+00:14:52,980 --> 00:14:55,069
+there's a couple different definitions
+depending on again whether or not this C
+
+820
+00:14:55,069 --> 00:14:55,079
+depending on again whether or not this C
+ 
+
+821
+00:14:55,079 --> 00:14:57,290
+depending on again whether or not this C
+plus plus macro is defined but both of
+
+822
+00:14:57,290 --> 00:14:57,300
+plus plus macro is defined but both of
+ 
+
+823
+00:14:57,300 --> 00:14:58,730
+plus plus macro is defined but both of
+them will technically work in C plus
+
+824
+00:14:58,730 --> 00:14:58,740
+them will technically work in C plus
+ 
+
+825
+00:14:58,740 --> 00:14:59,990
+them will technically work in C plus
+plus we're going to look at the bottom
+
+826
+00:14:59,990 --> 00:15:00,000
+plus we're going to look at the bottom
+ 
+
+827
+00:15:00,000 --> 00:15:01,189
+plus we're going to look at the bottom
+one just because it's a little bit more
+
+828
+00:15:01,189 --> 00:15:01,199
+one just because it's a little bit more
+ 
+
+829
+00:15:01,199 --> 00:15:03,350
+one just because it's a little bit more
+concise you can see what it's doing and
+
+830
+00:15:03,350 --> 00:15:03,360
+concise you can see what it's doing and
+ 
+
+831
+00:15:03,360 --> 00:15:05,030
+concise you can see what it's doing and
+it's pretty simple we take in two
+
+832
+00:15:05,030 --> 00:15:05,040
+it's pretty simple we take in two
+ 
+
+833
+00:15:05,040 --> 00:15:07,730
+it's pretty simple we take in two
+variables here S and M now s is entity
+
+834
+00:15:07,730 --> 00:15:07,740
+variables here S and M now s is entity
+ 
+
+835
+00:15:07,740 --> 00:15:11,150
+variables here S and M now s is entity
+data and M is mname so this is entity
+
+836
+00:15:11,150 --> 00:15:11,160
+data and M is mname so this is entity
+ 
+
+837
+00:15:11,160 --> 00:15:13,069
+data and M is mname so this is entity
+data what we're doing is we're basically
+
+838
+00:15:13,069 --> 00:15:13,079
+data what we're doing is we're basically
+ 
+
+839
+00:15:13,079 --> 00:15:16,610
+data what we're doing is we're basically
+casting zero to be an entity data
+
+840
+00:15:16,610 --> 00:15:16,620
+casting zero to be an entity data
+ 
+
+841
+00:15:16,620 --> 00:15:19,910
+casting zero to be an entity data
+pointer then we're going to that member
+
+842
+00:15:19,910 --> 00:15:19,920
+pointer then we're going to that member
+ 
+
+843
+00:15:19,920 --> 00:15:22,550
+pointer then we're going to that member
+variable getting the memory address of
+
+844
+00:15:22,550 --> 00:15:22,560
+variable getting the memory address of
+ 
+
+845
+00:15:22,560 --> 00:15:25,670
+variable getting the memory address of
+it and casting that to a size T so if we
+
+846
+00:15:25,670 --> 00:15:25,680
+it and casting that to a size T so if we
+ 
+
+847
+00:15:25,680 --> 00:15:28,430
+it and casting that to a size T so if we
+were to write this ourselves then offset
+
+848
+00:15:28,430 --> 00:15:28,440
+were to write this ourselves then offset
+ 
+
+849
+00:15:28,440 --> 00:15:32,569
+were to write this ourselves then offset
+would be equal to entity data pointer 0
+
+850
+00:15:32,569 --> 00:15:32,579
+would be equal to entity data pointer 0
+ 
+
+851
+00:15:32,579 --> 00:15:34,730
+would be equal to entity data pointer 0
+right so this is step one so this is a
+
+852
+00:15:34,730 --> 00:15:34,740
+right so this is step one so this is a
+ 
+
+853
+00:15:34,740 --> 00:15:37,550
+right so this is step one so this is a
+null pointer and you can actually use
+
+854
+00:15:37,550 --> 00:15:37,560
+null pointer and you can actually use
+ 
+
+855
+00:15:37,560 --> 00:15:39,530
+null pointer and you can actually use
+null pointer if you want it's the same
+
+856
+00:15:39,530 --> 00:15:39,540
+null pointer if you want it's the same
+ 
+
+857
+00:15:39,540 --> 00:15:42,290
+null pointer if you want it's the same
+thing and relative to that null pointer
+
+858
+00:15:42,290 --> 00:15:42,300
+thing and relative to that null pointer
+ 
+
+859
+00:15:42,300 --> 00:15:44,629
+thing and relative to that null pointer
+we're actually looking up that specific
+
+860
+00:15:44,629 --> 00:15:44,639
+we're actually looking up that specific
+ 
+
+861
+00:15:44,639 --> 00:15:46,850
+we're actually looking up that specific
+member variable the specific member
+
+862
+00:15:46,850 --> 00:15:46,860
+member variable the specific member
+ 
+
+863
+00:15:46,860 --> 00:15:49,490
+member variable the specific member
+variable that caused a crash earlier but
+
+864
+00:15:49,490 --> 00:15:49,500
+variable that caused a crash earlier but
+ 
+
+865
+00:15:49,500 --> 00:15:51,230
+variable that caused a crash earlier but
+how come this is working well the
+
+866
+00:15:51,230 --> 00:15:51,240
+how come this is working well the
+ 
+
+867
+00:15:51,240 --> 00:15:53,030
+how come this is working well the
+crucial difference is that we're not
+
+868
+00:15:53,030 --> 00:15:53,040
+crucial difference is that we're not
+ 
+
+869
+00:15:53,040 --> 00:15:55,550
+crucial difference is that we're not
+actually looking at the value of it
+
+870
+00:15:55,550 --> 00:15:55,560
+actually looking at the value of it
+ 
+
+871
+00:15:55,560 --> 00:15:58,310
+actually looking at the value of it
+we're not trying to read the memory at
+
+872
+00:15:58,310 --> 00:15:58,320
+we're not trying to read the memory at
+ 
+
+873
+00:15:58,320 --> 00:15:59,810
+we're not trying to read the memory at
+this address because that would be a
+
+874
+00:15:59,810 --> 00:15:59,820
+this address because that would be a
+ 
+
+875
+00:15:59,820 --> 00:16:01,970
+this address because that would be a
+rate access violation what we're doing
+
+876
+00:16:01,970 --> 00:16:01,980
+rate access violation what we're doing
+ 
+
+877
+00:16:01,980 --> 00:16:04,009
+rate access violation what we're doing
+is we're actually getting the memory
+
+878
+00:16:04,009 --> 00:16:04,019
+is we're actually getting the memory
+ 
+
+879
+00:16:04,019 --> 00:16:07,129
+is we're actually getting the memory
+address of that variable so in other
+
+880
+00:16:07,129 --> 00:16:07,139
+address of that variable so in other
+ 
+
+881
+00:16:07,139 --> 00:16:09,290
+address of that variable so in other
+words where is this located in memory
+
+882
+00:16:09,290 --> 00:16:09,300
+words where is this located in memory
+ 
+
+883
+00:16:09,300 --> 00:16:12,590
+words where is this located in memory
+and since it's relative to zero then
+
+884
+00:16:12,590 --> 00:16:12,600
+and since it's relative to zero then
+ 
+
+885
+00:16:12,600 --> 00:16:14,389
+and since it's relative to zero then
+that gives us the offset if it was
+
+886
+00:16:14,389 --> 00:16:14,399
+that gives us the offset if it was
+ 
+
+887
+00:16:14,399 --> 00:16:16,550
+that gives us the offset if it was
+relative to an actual entity data
+
+888
+00:16:16,550 --> 00:16:16,560
+relative to an actual entity data
+ 
+
+889
+00:16:16,560 --> 00:16:18,530
+relative to an actual entity data
+allocation so if we actually created a
+
+890
+00:16:18,530 --> 00:16:18,540
+allocation so if we actually created a
+ 
+
+891
+00:16:18,540 --> 00:16:20,329
+allocation so if we actually created a
+new entity data here and then we tried
+
+892
+00:16:20,329 --> 00:16:20,339
+new entity data here and then we tried
+ 
+
+893
+00:16:20,339 --> 00:16:21,949
+new entity data here and then we tried
+to look at name of course that would be
+
+894
+00:16:21,949 --> 00:16:21,959
+to look at name of course that would be
+ 
+
+895
+00:16:21,959 --> 00:16:23,629
+to look at name of course that would be
+relative to whatever address this
+
+896
+00:16:23,629 --> 00:16:23,639
+relative to whatever address this
+ 
+
+897
+00:16:23,639 --> 00:16:25,730
+relative to whatever address this
+actually gets allocated at but since we
+
+898
+00:16:25,730 --> 00:16:25,740
+actually gets allocated at but since we
+ 
+
+899
+00:16:25,740 --> 00:16:29,150
+actually gets allocated at but since we
+are specifically looking at it from this
+
+900
+00:16:29,150 --> 00:16:29,160
+are specifically looking at it from this
+ 
+
+901
+00:16:29,160 --> 00:16:32,269
+are specifically looking at it from this
+kind of zero pointer it means that this
+
+902
+00:16:32,269 --> 00:16:32,279
+kind of zero pointer it means that this
+ 
+
+903
+00:16:32,279 --> 00:16:34,430
+kind of zero pointer it means that this
+will in fact just be the offset and then
+
+904
+00:16:34,430 --> 00:16:34,440
+will in fact just be the offset and then
+ 
+
+905
+00:16:34,440 --> 00:16:36,350
+will in fact just be the offset and then
+the final step is to cast this which is
+
+906
+00:16:36,350 --> 00:16:36,360
+the final step is to cast this which is
+ 
+
+907
+00:16:36,360 --> 00:16:38,449
+the final step is to cast this which is
+going to be a string pointer because
+
+908
+00:16:38,449 --> 00:16:38,459
+going to be a string pointer because
+ 
+
+909
+00:16:38,459 --> 00:16:40,910
+going to be a string pointer because
+Eminem is a string we can just pass that
+
+910
+00:16:40,910 --> 00:16:40,920
+Eminem is a string we can just pass that
+ 
+
+911
+00:16:40,920 --> 00:16:44,030
+Eminem is a string we can just pass that
+to something like a un64t or a size t as
+
+912
+00:16:44,030 --> 00:16:44,040
+to something like a un64t or a size t as
+ 
+
+913
+00:16:44,040 --> 00:16:46,189
+to something like a un64t or a size t as
+the macro was doing and that gives us
+
+914
+00:16:46,189 --> 00:16:46,199
+the macro was doing and that gives us
+ 
+
+915
+00:16:46,199 --> 00:16:48,230
+the macro was doing and that gives us
+our offset if we try and run this
+
+916
+00:16:48,230 --> 00:16:48,240
+our offset if we try and run this
+ 
+
+917
+00:16:48,240 --> 00:16:50,990
+our offset if we try and run this
+program we will of course get the exact
+
+918
+00:16:50,990 --> 00:16:51,000
+program we will of course get the exact
+ 
+
+919
+00:16:51,000 --> 00:16:53,090
+program we will of course get the exact
+same result and if we try and run up
+
+920
+00:16:53,090 --> 00:16:53,100
+same result and if we try and run up
+ 
+
+921
+00:16:53,100 --> 00:16:55,610
+same result and if we try and run up
+with null pointer then of course we'll
+
+922
+00:16:55,610 --> 00:16:55,620
+with null pointer then of course we'll
+ 
+
+923
+00:16:55,620 --> 00:16:58,249
+with null pointer then of course we'll
+also get the same result and if we
+
+924
+00:16:58,249 --> 00:16:58,259
+also get the same result and if we
+ 
+
+925
+00:16:58,259 --> 00:16:59,629
+also get the same result and if we
+actually take this breakpoint away so
+
+926
+00:16:59,629 --> 00:16:59,639
+actually take this breakpoint away so
+ 
+
+927
+00:16:59,639 --> 00:17:01,370
+actually take this breakpoint away so
+that it tries to run this invalid code
+
+928
+00:17:01,370 --> 00:17:01,380
+that it tries to run this invalid code
+ 
+
+929
+00:17:01,380 --> 00:17:03,710
+that it tries to run this invalid code
+as we did earlier in the video and it
+
+930
+00:17:03,710 --> 00:17:03,720
+as we did earlier in the video and it
+ 
+
+931
+00:17:03,720 --> 00:17:07,010
+as we did earlier in the video and it
+said that this was eight you can now see
+
+932
+00:17:07,010 --> 00:17:07,020
+said that this was eight you can now see
+ 
+
+933
+00:17:07,020 --> 00:17:09,230
+said that this was eight you can now see
+what the problem is that string is
+
+934
+00:17:09,230 --> 00:17:09,240
+what the problem is that string is
+ 
+
+935
+00:17:09,240 --> 00:17:12,049
+what the problem is that string is
+located at an offset of eight bytes so
+
+936
+00:17:12,049 --> 00:17:12,059
+located at an offset of eight bytes so
+ 
+
+937
+00:17:12,059 --> 00:17:14,809
+located at an offset of eight bytes so
+the value that it gets is eight and it
+
+938
+00:17:14,809 --> 00:17:14,819
+the value that it gets is eight and it
+ 
+
+939
+00:17:14,819 --> 00:17:17,390
+the value that it gets is eight and it
+tries to read from that specific value
+
+940
+00:17:17,390 --> 00:17:17,400
+tries to read from that specific value
+ 
+
+941
+00:17:17,400 --> 00:17:19,610
+tries to read from that specific value
+and that of course is wrong so again
+
+942
+00:17:19,610 --> 00:17:19,620
+and that of course is wrong so again
+ 
+
+943
+00:17:19,620 --> 00:17:21,890
+and that of course is wrong so again
+it's not the fact that this specific
+
+944
+00:17:21,890 --> 00:17:21,900
+it's not the fact that this specific
+ 
+
+945
+00:17:21,900 --> 00:17:24,409
+it's not the fact that this specific
+self is null here when it tries to
+
+946
+00:17:24,409 --> 00:17:24,419
+self is null here when it tries to
+ 
+
+947
+00:17:24,419 --> 00:17:26,270
+self is null here when it tries to
+actually return the name it's the fact
+
+948
+00:17:26,270 --> 00:17:26,280
+actually return the name it's the fact
+ 
+
+949
+00:17:26,280 --> 00:17:28,010
+actually return the name it's the fact
+that we're then trying to print it which
+
+950
+00:17:28,010 --> 00:17:28,020
+that we're then trying to print it which
+ 
+
+951
+00:17:28,020 --> 00:17:30,530
+that we're then trying to print it which
+means it has to access the string which
+
+952
+00:17:30,530 --> 00:17:30,540
+means it has to access the string which
+ 
+
+953
+00:17:30,540 --> 00:17:32,270
+means it has to access the string which
+means when it asks the string phrase
+
+954
+00:17:32,270 --> 00:17:32,280
+means when it asks the string phrase
+ 
+
+955
+00:17:32,280 --> 00:17:35,870
+means when it asks the string phrase
+address it is going to be at an offset
+
+956
+00:17:35,870 --> 00:17:35,880
+address it is going to be at an offset
+ 
+
+957
+00:17:35,880 --> 00:17:39,950
+address it is going to be at an offset
+of eight to entity and then C is null so
+
+958
+00:17:39,950 --> 00:17:39,960
+of eight to entity and then C is null so
+ 
+
+959
+00:17:39,960 --> 00:17:42,169
+of eight to entity and then C is null so
+zero plus eight gives us eight and we
+
+960
+00:17:42,169 --> 00:17:42,179
+zero plus eight gives us eight and we
+ 
+
+961
+00:17:42,179 --> 00:17:43,909
+zero plus eight gives us eight and we
+get a little message and we get a little
+
+962
+00:17:43,909 --> 00:17:43,919
+get a little message and we get a little
+ 
+
+963
+00:17:43,919 --> 00:17:46,970
+get a little message and we get a little
+message telling us that this was 8 which
+
+964
+00:17:46,970 --> 00:17:46,980
+message telling us that this was 8 which
+ 
+
+965
+00:17:46,980 --> 00:17:48,890
+message telling us that this was 8 which
+is a rate access violation we can't read
+
+966
+00:17:48,890 --> 00:17:48,900
+is a rate access violation we can't read
+ 
+
+967
+00:17:48,900 --> 00:17:50,630
+is a rate access violation we can't read
+from that memory address because that's
+
+968
+00:17:50,630 --> 00:17:50,640
+from that memory address because that's
+ 
+
+969
+00:17:50,640 --> 00:17:53,330
+from that memory address because that's
+not valid memory and that is what null
+
+970
+00:17:53,330 --> 00:17:53,340
+not valid memory and that is what null
+ 
+
+971
+00:17:53,340 --> 00:17:54,409
+not valid memory and that is what null
+is hopefully this video is helped
+
+972
+00:17:54,409 --> 00:17:54,419
+is hopefully this video is helped
+ 
+
+973
+00:17:54,419 --> 00:17:55,970
+is hopefully this video is helped
+helpful to you guys if you liked it
+
+974
+00:17:55,970 --> 00:17:55,980
+helpful to you guys if you liked it
+ 
+
+975
+00:17:55,980 --> 00:17:57,049
+helpful to you guys if you liked it
+please don't forget to hit the like
+
+976
+00:17:57,049 --> 00:17:57,059
+please don't forget to hit the like
+ 
+
+977
+00:17:57,059 --> 00:17:58,250
+please don't forget to hit the like
+button below if you have other
+
+978
+00:17:58,250 --> 00:17:58,260
+button below if you have other
+ 
+
+979
+00:17:58,260 --> 00:17:59,930
+button below if you have other
+suggestions for Sleepless videos leave
+
+980
+00:17:59,930 --> 00:17:59,940
+suggestions for Sleepless videos leave
+ 
+
+981
+00:17:59,940 --> 00:18:01,430
+suggestions for Sleepless videos leave
+them in the comments below don't forget
+
+982
+00:18:01,430 --> 00:18:01,440
+them in the comments below don't forget
+ 
+
+983
+00:18:01,440 --> 00:18:03,169
+them in the comments below don't forget
+to check out brilliant.org the channel
+
+984
+00:18:03,169 --> 00:18:03,179
+to check out brilliant.org the channel
+ 
+
+985
+00:18:03,179 --> 00:18:04,490
+to check out brilliant.org the channel
+and I will see you guys next time
+
+986
+00:18:04,490 --> 00:18:04,500
+and I will see you guys next time
+ 
+
+987
+00:18:04,500 --> 00:18:06,980
+and I will see you guys next time
+goodbye
+

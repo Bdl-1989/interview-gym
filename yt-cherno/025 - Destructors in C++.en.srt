@@ -1,0 +1,1405 @@
+1
+00:00:00,040 --> 00:00:01,750
+
+hey what's up guys my name is Aero and
+
+2
+00:00:01,750 --> 00:00:01,760
+hey what's up guys my name is Aero and
+ 
+
+3
+00:00:01,760 --> 00:00:03,909
+hey what's up guys my name is Aero and
+welcome back to my C++ series last time
+
+4
+00:00:03,909 --> 00:00:03,919
+welcome back to my C++ series last time
+ 
+
+5
+00:00:03,919 --> 00:00:05,990
+welcome back to my C++ series last time
+we talked about Constructors in C++ and
+
+6
+00:00:05,990 --> 00:00:06,000
+we talked about Constructors in C++ and
+ 
+
+7
+00:00:06,000 --> 00:00:07,269
+we talked about Constructors in C++ and
+what they are and how to use them
+
+8
+00:00:07,269 --> 00:00:07,279
+what they are and how to use them
+ 
+
+9
+00:00:07,279 --> 00:00:08,750
+what they are and how to use them
+definitely check out that video if you
+
+10
+00:00:08,750 --> 00:00:08,760
+definitely check out that video if you
+ 
+
+11
+00:00:08,760 --> 00:00:10,390
+definitely check out that video if you
+haven't already and today we're going to
+
+12
+00:00:10,390 --> 00:00:10,400
+haven't already and today we're going to
+ 
+
+13
+00:00:10,400 --> 00:00:11,709
+haven't already and today we're going to
+talk about their evil twin the
+
+14
+00:00:11,709 --> 00:00:11,719
+talk about their evil twin the
+ 
+
+15
+00:00:11,719 --> 00:00:13,430
+talk about their evil twin the
+destructor so similarly how a
+
+16
+00:00:13,430 --> 00:00:13,440
+destructor so similarly how a
+ 
+
+17
+00:00:13,440 --> 00:00:14,829
+destructor so similarly how a
+Constructor runs when you create a new
+
+18
+00:00:14,829 --> 00:00:14,839
+Constructor runs when you create a new
+ 
+
+19
+00:00:14,839 --> 00:00:17,109
+Constructor runs when you create a new
+instance of an object a Destructor runs
+
+20
+00:00:17,109 --> 00:00:17,119
+instance of an object a Destructor runs
+ 
+
+21
+00:00:17,119 --> 00:00:19,590
+instance of an object a Destructor runs
+when you destroy an object so anytime an
+
+22
+00:00:19,590 --> 00:00:19,600
+when you destroy an object so anytime an
+ 
+
+23
+00:00:19,600 --> 00:00:21,390
+when you destroy an object so anytime an
+object gets destroyed the destructor
+
+24
+00:00:21,390 --> 00:00:21,400
+object gets destroyed the destructor
+ 
+
+25
+00:00:21,400 --> 00:00:23,390
+object gets destroyed the destructor
+method will get called The Constructor
+
+26
+00:00:23,390 --> 00:00:23,400
+method will get called The Constructor
+ 
+
+27
+00:00:23,400 --> 00:00:25,189
+method will get called The Constructor
+is usually where you set variables up or
+
+28
+00:00:25,189 --> 00:00:25,199
+is usually where you set variables up or
+ 
+
+29
+00:00:25,199 --> 00:00:26,830
+is usually where you set variables up or
+do any kind of initialization that you
+
+30
+00:00:26,830 --> 00:00:26,840
+do any kind of initialization that you
+ 
+
+31
+00:00:26,840 --> 00:00:28,830
+do any kind of initialization that you
+need to do and similarly the destructor
+
+32
+00:00:28,830 --> 00:00:28,840
+need to do and similarly the destructor
+ 
+
+33
+00:00:28,840 --> 00:00:30,950
+need to do and similarly the destructor
+is where you unin ize anything that you
+
+34
+00:00:30,950 --> 00:00:30,960
+is where you unin ize anything that you
+ 
+
+35
+00:00:30,960 --> 00:00:32,630
+is where you unin ize anything that you
+might have to or clean any memory that
+
+36
+00:00:32,630 --> 00:00:32,640
+might have to or clean any memory that
+ 
+
+37
+00:00:32,640 --> 00:00:34,190
+might have to or clean any memory that
+you've used the destructure applies to
+
+38
+00:00:34,190 --> 00:00:34,200
+you've used the destructure applies to
+ 
+
+39
+00:00:34,200 --> 00:00:36,430
+you've used the destructure applies to
+both stack and Heap allocated objects so
+
+40
+00:00:36,430 --> 00:00:36,440
+both stack and Heap allocated objects so
+ 
+
+41
+00:00:36,440 --> 00:00:38,470
+both stack and Heap allocated objects so
+if you allocate an object using new when
+
+42
+00:00:38,470 --> 00:00:38,480
+if you allocate an object using new when
+ 
+
+43
+00:00:38,480 --> 00:00:40,190
+if you allocate an object using new when
+you call delete the destructor will get
+
+44
+00:00:40,190 --> 00:00:40,200
+you call delete the destructor will get
+ 
+
+45
+00:00:40,200 --> 00:00:41,869
+you call delete the destructor will get
+called if you just have a stack based
+
+46
+00:00:41,869 --> 00:00:41,879
+called if you just have a stack based
+ 
+
+47
+00:00:41,879 --> 00:00:43,430
+called if you just have a stack based
+object then when the scope ends the
+
+48
+00:00:43,430 --> 00:00:43,440
+object then when the scope ends the
+ 
+
+49
+00:00:43,440 --> 00:00:45,150
+object then when the scope ends the
+object will get deleted and thus the
+
+50
+00:00:45,150 --> 00:00:45,160
+object will get deleted and thus the
+ 
+
+51
+00:00:45,160 --> 00:00:47,189
+object will get deleted and thus the
+destructor will get called let's dive in
+
+52
+00:00:47,189 --> 00:00:47,199
+destructor will get called let's dive in
+ 
+
+53
+00:00:47,199 --> 00:00:48,709
+destructor will get called let's dive in
+and take a look at some examples so in
+
+54
+00:00:48,709 --> 00:00:48,719
+and take a look at some examples so in
+ 
+
+55
+00:00:48,719 --> 00:00:50,069
+and take a look at some examples so in
+the Constructor video we created this
+
+56
+00:00:50,069 --> 00:00:50,079
+the Constructor video we created this
+ 
+
+57
+00:00:50,079 --> 00:00:51,790
+the Constructor video we created this
+wonderful entity class which had
+
+58
+00:00:51,790 --> 00:00:51,800
+wonderful entity class which had
+ 
+
+59
+00:00:51,800 --> 00:00:53,590
+wonderful entity class which had
+multiple Constructors here let's go
+
+60
+00:00:53,590 --> 00:00:53,600
+multiple Constructors here let's go
+ 
+
+61
+00:00:53,600 --> 00:00:55,590
+multiple Constructors here let's go
+ahead and add a Destructor a Destructor
+
+62
+00:00:55,590 --> 00:00:55,600
+ahead and add a Destructor a Destructor
+ 
+
+63
+00:00:55,600 --> 00:00:57,630
+ahead and add a Destructor a Destructor
+begins with a tier and then the name of
+
+64
+00:00:57,630 --> 00:00:57,640
+begins with a tier and then the name of
+ 
+
+65
+00:00:57,640 --> 00:00:58,990
+begins with a tier and then the name of
+our class so basically the only
+
+66
+00:00:58,990 --> 00:00:59,000
+our class so basically the only
+ 
+
+67
+00:00:59,000 --> 00:01:00,389
+our class so basically the only
+difference between a construct and a
+
+68
+00:01:00,389 --> 00:01:00,399
+difference between a construct and a
+ 
+
+69
+00:01:00,399 --> 00:01:02,270
+difference between a construct and a
+Destructor in terms of Declaration and
+
+70
+00:01:02,270 --> 00:01:02,280
+Destructor in terms of Declaration and
+ 
+
+71
+00:01:02,280 --> 00:01:04,829
+Destructor in terms of Declaration and
+definition is the actual tier that you
+
+72
+00:01:04,829 --> 00:01:04,839
+definition is the actual tier that you
+ 
+
+73
+00:01:04,839 --> 00:01:07,190
+definition is the actual tier that you
+put at the front of the destructor
+
+74
+00:01:07,190 --> 00:01:07,200
+put at the front of the destructor
+ 
+
+75
+00:01:07,200 --> 00:01:08,710
+put at the front of the destructor
+that's how you know it's a Destructor in
+
+76
+00:01:08,710 --> 00:01:08,720
+that's how you know it's a Destructor in
+ 
+
+77
+00:01:08,720 --> 00:01:10,149
+that's how you know it's a Destructor in
+this case we just have a simple class
+
+78
+00:01:10,149 --> 00:01:10,159
+this case we just have a simple class
+ 
+
+79
+00:01:10,159 --> 00:01:12,270
+this case we just have a simple class
+with two members X and Y there is
+
+80
+00:01:12,270 --> 00:01:12,280
+with two members X and Y there is
+ 
+
+81
+00:01:12,280 --> 00:01:14,030
+with two members X and Y there is
+absolutely no clean up we need to do for
+
+82
+00:01:14,030 --> 00:01:14,040
+absolutely no clean up we need to do for
+ 
+
+83
+00:01:14,040 --> 00:01:15,950
+absolutely no clean up we need to do for
+memory here at all since these two
+
+84
+00:01:15,950 --> 00:01:15,960
+memory here at all since these two
+ 
+
+85
+00:01:15,960 --> 00:01:18,190
+memory here at all since these two
+floats are allocated in place with our
+
+86
+00:01:18,190 --> 00:01:18,200
+floats are allocated in place with our
+ 
+
+87
+00:01:18,200 --> 00:01:20,069
+floats are allocated in place with our
+class we're going to talk way more about
+
+88
+00:01:20,069 --> 00:01:20,079
+class we're going to talk way more about
+ 
+
+89
+00:01:20,079 --> 00:01:21,910
+class we're going to talk way more about
+memory allocation and all of that
+
+90
+00:01:21,910 --> 00:01:21,920
+memory allocation and all of that
+ 
+
+91
+00:01:21,920 --> 00:01:23,469
+memory allocation and all of that
+complicated stuff in the future so don't
+
+92
+00:01:23,469 --> 00:01:23,479
+complicated stuff in the future so don't
+ 
+
+93
+00:01:23,479 --> 00:01:25,469
+complicated stuff in the future so don't
+you worry but for an example let's go
+
+94
+00:01:25,469 --> 00:01:25,479
+you worry but for an example let's go
+ 
+
+95
+00:01:25,479 --> 00:01:27,390
+you worry but for an example let's go
+ahead and add a message which tells us
+
+96
+00:01:27,390 --> 00:01:27,400
+ahead and add a message which tells us
+ 
+
+97
+00:01:27,400 --> 00:01:28,990
+ahead and add a message which tells us
+that the object has been deleted so I
+
+98
+00:01:28,990 --> 00:01:29,000
+that the object has been deleted so I
+ 
+
+99
+00:01:29,000 --> 00:01:32,270
+that the object has been deleted so I
+might write something like destroyed
+
+100
+00:01:32,270 --> 00:01:32,280
+might write something like destroyed
+ 
+
+101
+00:01:32,280 --> 00:01:34,310
+might write something like destroyed
+entity and then for fun in our
+
+102
+00:01:34,310 --> 00:01:34,320
+entity and then for fun in our
+ 
+
+103
+00:01:34,320 --> 00:01:37,030
+entity and then for fun in our
+Constructor here I'm going to write
+
+104
+00:01:37,030 --> 00:01:37,040
+Constructor here I'm going to write
+ 
+
+105
+00:01:37,040 --> 00:01:39,310
+Constructor here I'm going to write
+constructed
+
+106
+00:01:39,310 --> 00:01:39,320
+constructed
+ 
+
+107
+00:01:39,320 --> 00:01:41,429
+constructed
+entity or I guess we should call it
+
+108
+00:01:41,429 --> 00:01:41,439
+entity or I guess we should call it
+ 
+
+109
+00:01:41,439 --> 00:01:42,950
+entity or I guess we should call it
+created since we called this destroyed
+
+110
+00:01:42,950 --> 00:01:42,960
+created since we called this destroyed
+ 
+
+111
+00:01:42,960 --> 00:01:44,389
+created since we called this destroyed
+and not destructed I'm going to get rid
+
+112
+00:01:44,389 --> 00:01:44,399
+and not destructed I'm going to get rid
+ 
+
+113
+00:01:44,399 --> 00:01:45,910
+and not destructed I'm going to get rid
+of this Constructor just so we don't get
+
+114
+00:01:45,910 --> 00:01:45,920
+of this Constructor just so we don't get
+ 
+
+115
+00:01:45,920 --> 00:01:48,510
+of this Constructor just so we don't get
+too confused I'll initialize X and Y to
+
+116
+00:01:48,510 --> 00:01:48,520
+too confused I'll initialize X and Y to
+ 
+
+117
+00:01:48,520 --> 00:01:50,789
+too confused I'll initialize X and Y to
+Z as well just so that we're not crazy
+
+118
+00:01:50,789 --> 00:01:50,799
+Z as well just so that we're not crazy
+ 
+
+119
+00:01:50,799 --> 00:01:53,469
+Z as well just so that we're not crazy
+I'll get rid of this as well now since
+
+120
+00:01:53,469 --> 00:01:53,479
+I'll get rid of this as well now since
+ 
+
+121
+00:01:53,479 --> 00:01:55,469
+I'll get rid of this as well now since
+this is stack allocated we will only see
+
+122
+00:01:55,469 --> 00:01:55,479
+this is stack allocated we will only see
+ 
+
+123
+00:01:55,479 --> 00:01:57,069
+this is stack allocated we will only see
+the destructure getting called when the
+
+124
+00:01:57,069 --> 00:01:57,079
+the destructure getting called when the
+ 
+
+125
+00:01:57,079 --> 00:01:58,950
+the destructure getting called when the
+main function exits which we're not
+
+126
+00:01:58,950 --> 00:01:58,960
+main function exits which we're not
+ 
+
+127
+00:01:58,960 --> 00:02:00,389
+main function exits which we're not
+really going to see because our program
+
+128
+00:02:00,389 --> 00:02:00,399
+really going to see because our program
+ 
+
+129
+00:02:00,399 --> 00:02:01,990
+really going to see because our program
+will close immediately after that so I'm
+
+130
+00:02:01,990 --> 00:02:02,000
+will close immediately after that so I'm
+ 
+
+131
+00:02:02,000 --> 00:02:03,709
+will close immediately after that so I'm
+going to just write a function here
+
+132
+00:02:03,709 --> 00:02:03,719
+going to just write a function here
+ 
+
+133
+00:02:03,719 --> 00:02:06,029
+going to just write a function here
+which will perform all of our entity
+
+134
+00:02:06,029 --> 00:02:06,039
+which will perform all of our entity
+ 
+
+135
+00:02:06,039 --> 00:02:08,150
+which will perform all of our entity
+operations I'll move all this code over
+
+136
+00:02:08,150 --> 00:02:08,160
+operations I'll move all this code over
+ 
+
+137
+00:02:08,160 --> 00:02:10,589
+operations I'll move all this code over
+here and I will call function now if I
+
+138
+00:02:10,589 --> 00:02:10,599
+here and I will call function now if I
+ 
+
+139
+00:02:10,599 --> 00:02:12,510
+here and I will call function now if I
+run my code just like this you should
+
+140
+00:02:12,510 --> 00:02:12,520
+run my code just like this you should
+ 
+
+141
+00:02:12,520 --> 00:02:14,949
+run my code just like this you should
+see created entity then our print
+
+142
+00:02:14,949 --> 00:02:14,959
+see created entity then our print
+ 
+
+143
+00:02:14,959 --> 00:02:16,790
+see created entity then our print
+function running which prints X and Y
+
+144
+00:02:16,790 --> 00:02:16,800
+function running which prints X and Y
+ 
+
+145
+00:02:16,800 --> 00:02:18,910
+function running which prints X and Y
+and then finally destroyed entity let's
+
+146
+00:02:18,910 --> 00:02:18,920
+and then finally destroyed entity let's
+ 
+
+147
+00:02:18,920 --> 00:02:20,630
+and then finally destroyed entity let's
+take a deeper look as to how this works
+
+148
+00:02:20,630 --> 00:02:20,640
+take a deeper look as to how this works
+ 
+
+149
+00:02:20,640 --> 00:02:22,309
+take a deeper look as to how this works
+I'm going to put a break point on line
+
+150
+00:02:22,309 --> 00:02:22,319
+I'm going to put a break point on line
+ 
+
+151
+00:02:22,319 --> 00:02:25,190
+I'm going to put a break point on line
+28 here next to our entity and hit F5
+
+152
+00:02:25,190 --> 00:02:25,200
+28 here next to our entity and hit F5
+ 
+
+153
+00:02:25,200 --> 00:02:26,470
+28 here next to our entity and hit F5
+currently I've got absolutely nothing in
+
+154
+00:02:26,470 --> 00:02:26,480
+currently I've got absolutely nothing in
+ 
+
+155
+00:02:26,480 --> 00:02:29,110
+currently I've got absolutely nothing in
+the console if I hit F10 here and look
+
+156
+00:02:29,110 --> 00:02:29,120
+the console if I hit F10 here and look
+ 
+
+157
+00:02:29,120 --> 00:02:30,990
+the console if I hit F10 here and look
+back you can see that my entity has been
+
+158
+00:02:30,990 --> 00:02:31,000
+back you can see that my entity has been
+ 
+
+159
+00:02:31,000 --> 00:02:32,830
+back you can see that my entity has been
+created I'm then going to hit F10 to
+
+160
+00:02:32,830 --> 00:02:32,840
+created I'm then going to hit F10 to
+ 
+
+161
+00:02:32,840 --> 00:02:34,949
+created I'm then going to hit F10 to
+print and you can see that my X and Y
+
+162
+00:02:34,949 --> 00:02:34,959
+print and you can see that my X and Y
+ 
+
+163
+00:02:34,959 --> 00:02:36,750
+print and you can see that my X and Y
+position gets printed and then finally
+
+164
+00:02:36,750 --> 00:02:36,760
+position gets printed and then finally
+ 
+
+165
+00:02:36,760 --> 00:02:38,470
+position gets printed and then finally
+the end of the scope is reached here
+
+166
+00:02:38,470 --> 00:02:38,480
+the end of the scope is reached here
+ 
+
+167
+00:02:38,480 --> 00:02:40,710
+the end of the scope is reached here
+we're about to jump back to line 34
+
+168
+00:02:40,710 --> 00:02:40,720
+we're about to jump back to line 34
+ 
+
+169
+00:02:40,720 --> 00:02:42,710
+we're about to jump back to line 34
+which is our return address since this
+
+170
+00:02:42,710 --> 00:02:42,720
+which is our return address since this
+ 
+
+171
+00:02:42,720 --> 00:02:44,869
+which is our return address since this
+object was created on the stack it
+
+172
+00:02:44,869 --> 00:02:44,879
+object was created on the stack it
+ 
+
+173
+00:02:44,879 --> 00:02:46,589
+object was created on the stack it
+should get automatically destroyed when
+
+174
+00:02:46,589 --> 00:02:46,599
+should get automatically destroyed when
+ 
+
+175
+00:02:46,599 --> 00:02:48,470
+should get automatically destroyed when
+it goes out of scope which is right over
+
+176
+00:02:48,470 --> 00:02:48,480
+it goes out of scope which is right over
+ 
+
+177
+00:02:48,480 --> 00:02:51,190
+it goes out of scope which is right over
+here so if I hit F10 you can see that
+
+178
+00:02:51,190 --> 00:02:51,200
+here so if I hit F10 you can see that
+ 
+
+179
+00:02:51,200 --> 00:02:52,910
+here so if I hit F10 you can see that
+destroyed entity gets printed to the
+
+180
+00:02:52,910 --> 00:02:52,920
+destroyed entity gets printed to the
+ 
+
+181
+00:02:52,920 --> 00:02:55,350
+destroyed entity gets printed to the
+console because the destructor is called
+
+182
+00:02:55,350 --> 00:02:55,360
+console because the destructor is called
+ 
+
+183
+00:02:55,360 --> 00:02:57,229
+console because the destructor is called
+we jump back to our return address and
+
+184
+00:02:57,229 --> 00:02:57,239
+we jump back to our return address and
+ 
+
+185
+00:02:57,239 --> 00:02:58,830
+we jump back to our return address and
+everything is good so that is
+
+186
+00:02:58,830 --> 00:02:58,840
+everything is good so that is
+ 
+
+187
+00:02:58,840 --> 00:03:00,229
+everything is good so that is
+essentially what a Destructor is it's
+
+188
+00:03:00,229 --> 00:03:00,239
+essentially what a Destructor is it's
+ 
+
+189
+00:03:00,239 --> 00:03:02,430
+essentially what a Destructor is it's
+just a special function a special method
+
+190
+00:03:02,430 --> 00:03:02,440
+just a special function a special method
+ 
+
+191
+00:03:02,440 --> 00:03:04,270
+just a special function a special method
+which gets called when an object gets
+
+192
+00:03:04,270 --> 00:03:04,280
+which gets called when an object gets
+ 
+
+193
+00:03:04,280 --> 00:03:05,789
+which gets called when an object gets
+destroyed as for some real world
+
+194
+00:03:05,789 --> 00:03:05,799
+destroyed as for some real world
+ 
+
+195
+00:03:05,799 --> 00:03:07,990
+destroyed as for some real world
+examples as to why you would ever write
+
+196
+00:03:07,990 --> 00:03:08,000
+examples as to why you would ever write
+ 
+
+197
+00:03:08,000 --> 00:03:09,789
+examples as to why you would ever write
+a instructor well again if there is
+
+198
+00:03:09,789 --> 00:03:09,799
+a instructor well again if there is
+ 
+
+199
+00:03:09,799 --> 00:03:11,789
+a instructor well again if there is
+certain initialization code that you've
+
+200
+00:03:11,789 --> 00:03:11,799
+certain initialization code that you've
+ 
+
+201
+00:03:11,799 --> 00:03:13,710
+certain initialization code that you've
+called in the Constructor you will
+
+202
+00:03:13,710 --> 00:03:13,720
+called in the Constructor you will
+ 
+
+203
+00:03:13,720 --> 00:03:16,190
+called in the Constructor you will
+likely want to uninitialize or destroy
+
+204
+00:03:16,190 --> 00:03:16,200
+likely want to uninitialize or destroy
+ 
+
+205
+00:03:16,200 --> 00:03:17,830
+likely want to uninitialize or destroy
+all of that stuff in the destructor
+
+206
+00:03:17,830 --> 00:03:17,840
+all of that stuff in the destructor
+ 
+
+207
+00:03:17,840 --> 00:03:19,070
+all of that stuff in the destructor
+because if you don't you can get memory
+
+208
+00:03:19,070 --> 00:03:19,080
+because if you don't you can get memory
+ 
+
+209
+00:03:19,080 --> 00:03:20,869
+because if you don't you can get memory
+licks a good example of that is Heap
+
+210
+00:03:20,869 --> 00:03:20,879
+licks a good example of that is Heap
+ 
+
+211
+00:03:20,879 --> 00:03:22,470
+licks a good example of that is Heap
+allocated objects if you've allocated
+
+212
+00:03:22,470 --> 00:03:22,480
+allocated objects if you've allocated
+ 
+
+213
+00:03:22,480 --> 00:03:24,830
+allocated objects if you've allocated
+any kind of memory on the Heap manually
+
+214
+00:03:24,830 --> 00:03:24,840
+any kind of memory on the Heap manually
+ 
+
+215
+00:03:24,840 --> 00:03:27,309
+any kind of memory on the Heap manually
+then you need to manually clean it up if
+
+216
+00:03:27,309 --> 00:03:27,319
+then you need to manually clean it up if
+ 
+
+217
+00:03:27,319 --> 00:03:29,509
+then you need to manually clean it up if
+it was allocated throughout the usage of
+
+218
+00:03:29,509 --> 00:03:29,519
+it was allocated throughout the usage of
+ 
+
+219
+00:03:29,519 --> 00:03:31,350
+it was allocated throughout the usage of
+the entity or in the entity Constructor
+
+220
+00:03:31,350 --> 00:03:31,360
+the entity or in the entity Constructor
+ 
+
+221
+00:03:31,360 --> 00:03:32,509
+the entity or in the entity Constructor
+you're likely going to want to get rid
+
+222
+00:03:32,509 --> 00:03:32,519
+you're likely going to want to get rid
+ 
+
+223
+00:03:32,519 --> 00:03:34,309
+you're likely going to want to get rid
+of it in the destructor because when the
+
+224
+00:03:34,309 --> 00:03:34,319
+of it in the destructor because when the
+ 
+
+225
+00:03:34,319 --> 00:03:37,110
+of it in the destructor because when the
+destructor gets called that entity is
+
+226
+00:03:37,110 --> 00:03:37,120
+destructor gets called that entity is
+ 
+
+227
+00:03:37,120 --> 00:03:39,270
+destructor gets called that entity is
+gone you can also call the destructor
+
+228
+00:03:39,270 --> 00:03:39,280
+gone you can also call the destructor
+ 
+
+229
+00:03:39,280 --> 00:03:41,630
+gone you can also call the destructor
+manually not something that I see a lot
+
+230
+00:03:41,630 --> 00:03:41,640
+manually not something that I see a lot
+ 
+
+231
+00:03:41,640 --> 00:03:44,869
+manually not something that I see a lot
+of people doing rightly so it's a bit
+
+232
+00:03:44,869 --> 00:03:44,879
+of people doing rightly so it's a bit
+ 
+
+233
+00:03:44,879 --> 00:03:46,550
+of people doing rightly so it's a bit
+weird if you end up doing something like
+
+234
+00:03:46,550 --> 00:03:46,560
+weird if you end up doing something like
+ 
+
+235
+00:03:46,560 --> 00:03:48,229
+weird if you end up doing something like
+that the only reason I can really think
+
+236
+00:03:48,229 --> 00:03:48,239
+that the only reason I can really think
+ 
+
+237
+00:03:48,239 --> 00:03:49,670
+that the only reason I can really think
+of doing that is maybe if you've
+
+238
+00:03:49,670 --> 00:03:49,680
+of doing that is maybe if you've
+ 
+
+239
+00:03:49,680 --> 00:03:52,110
+of doing that is maybe if you've
+allocated using new however when you
+
+240
+00:03:52,110 --> 00:03:52,120
+allocated using new however when you
+ 
+
+241
+00:03:52,120 --> 00:03:53,589
+allocated using new however when you
+delete it you decide to use something
+
+242
+00:03:53,589 --> 00:03:53,599
+delete it you decide to use something
+ 
+
+243
+00:03:53,599 --> 00:03:55,830
+delete it you decide to use something
+like the free function and then you also
+
+244
+00:03:55,830 --> 00:03:55,840
+like the free function and then you also
+ 
+
+245
+00:03:55,840 --> 00:03:57,270
+like the free function and then you also
+want to call the destructor manually in
+
+246
+00:03:57,270 --> 00:03:57,280
+want to call the destructor manually in
+ 
+
+247
+00:03:57,280 --> 00:03:59,470
+want to call the destructor manually in
+that case I don't know not really use
+
+248
+00:03:59,470 --> 00:03:59,480
+that case I don't know not really use
+ 
+
+249
+00:03:59,480 --> 00:04:01,710
+that case I don't know not really use
+that often but you can do so by just
+
+250
+00:04:01,710 --> 00:04:01,720
+that often but you can do so by just
+ 
+
+251
+00:04:01,720 --> 00:04:05,149
+that often but you can do so by just
+calling e do entity like this as if it
+
+252
+00:04:05,149 --> 00:04:05,159
+calling e do entity like this as if it
+ 
+
+253
+00:04:05,159 --> 00:04:06,990
+calling e do entity like this as if it
+was any other function and that will
+
+254
+00:04:06,990 --> 00:04:07,000
+was any other function and that will
+ 
+
+255
+00:04:07,000 --> 00:04:09,149
+was any other function and that will
+actually call it instructor if I run
+
+256
+00:04:09,149 --> 00:04:09,159
+actually call it instructor if I run
+ 
+
+257
+00:04:09,159 --> 00:04:10,030
+actually call it instructor if I run
+this
+
+258
+00:04:10,030 --> 00:04:10,040
+this
+ 
+
+259
+00:04:10,040 --> 00:04:12,270
+this
+code which is innocent enough you can
+
+260
+00:04:12,270 --> 00:04:12,280
+code which is innocent enough you can
+ 
+
+261
+00:04:12,280 --> 00:04:13,869
+code which is innocent enough you can
+see that it destroys the entity twice
+
+262
+00:04:13,869 --> 00:04:13,879
+see that it destroys the entity twice
+ 
+
+263
+00:04:13,879 --> 00:04:15,429
+see that it destroys the entity twice
+seemingly we're not actually releasing
+
+264
+00:04:15,429 --> 00:04:15,439
+seemingly we're not actually releasing
+ 
+
+265
+00:04:15,439 --> 00:04:17,390
+seemingly we're not actually releasing
+any resources here so it doesn't crash
+
+266
+00:04:17,390 --> 00:04:17,400
+any resources here so it doesn't crash
+ 
+
+267
+00:04:17,400 --> 00:04:19,830
+any resources here so it doesn't crash
+it just prints this message twice again
+
+268
+00:04:19,830 --> 00:04:19,840
+it just prints this message twice again
+ 
+
+269
+00:04:19,840 --> 00:04:21,509
+it just prints this message twice again
+not something I would recommend or not
+
+270
+00:04:21,509 --> 00:04:21,519
+not something I would recommend or not
+ 
+
+271
+00:04:21,519 --> 00:04:24,390
+not something I would recommend or not
+something I I see often at all very very
+
+272
+00:04:24,390 --> 00:04:24,400
+something I I see often at all very very
+ 
+
+273
+00:04:24,400 --> 00:04:26,189
+something I I see often at all very very
+rarely I've seen something like this so
+
+274
+00:04:26,189 --> 00:04:26,199
+rarely I've seen something like this so
+ 
+
+275
+00:04:26,199 --> 00:04:28,430
+rarely I've seen something like this so
+yeah destructors sorted I'll see you
+
+276
+00:04:28,430 --> 00:04:28,440
+yeah destructors sorted I'll see you
+ 
+
+277
+00:04:28,440 --> 00:04:32,490
+yeah destructors sorted I'll see you
+guys next time goodbye you
+
+278
+00:04:32,490 --> 00:04:32,500
+guys next time goodbye you
+ 
+
+279
+00:04:32,500 --> 00:04:38,570
+guys next time goodbye you
+[Music]
+
+280
+00:04:38,570 --> 00:04:38,580
+
+ 
+
+281
+00:04:38,580 --> 00:04:45,610
+
+[Music]
+

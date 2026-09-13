@@ -1,0 +1,3625 @@
+1
+00:00:00,030 --> 00:00:01,670
+
+hey what's up guys my name is Jonah
+
+2
+00:00:01,670 --> 00:00:01,680
+hey what's up guys my name is Jonah
+ 
+
+3
+00:00:01,680 --> 00:00:03,200
+hey what's up guys my name is Jonah
+welcome back to my state plus plus
+
+4
+00:00:03,200 --> 00:00:03,210
+welcome back to my state plus plus
+ 
+
+5
+00:00:03,210 --> 00:00:05,090
+welcome back to my state plus plus
+series so today we're gonna be talking
+
+6
+00:00:05,090 --> 00:00:05,100
+series so today we're gonna be talking
+ 
+
+7
+00:00:05,100 --> 00:00:07,820
+series so today we're gonna be talking
+all about function pointers in C++ and
+
+8
+00:00:07,820 --> 00:00:07,830
+all about function pointers in C++ and
+ 
+
+9
+00:00:07,830 --> 00:00:09,500
+all about function pointers in C++ and
+specifically we're gonna be talking
+
+10
+00:00:09,500 --> 00:00:09,510
+specifically we're gonna be talking
+ 
+
+11
+00:00:09,510 --> 00:00:11,299
+specifically we're gonna be talking
+about the kind of raw style function
+
+12
+00:00:11,299 --> 00:00:11,309
+about the kind of raw style function
+ 
+
+13
+00:00:11,309 --> 00:00:13,459
+about the kind of raw style function
+pointers that really come from C so
+
+14
+00:00:13,459 --> 00:00:13,469
+pointers that really come from C so
+ 
+
+15
+00:00:13,469 --> 00:00:14,570
+pointers that really come from C so
+don't think that I'm kind of being
+
+16
+00:00:14,570 --> 00:00:14,580
+don't think that I'm kind of being
+ 
+
+17
+00:00:14,580 --> 00:00:15,950
+don't think that I'm kind of being
+misleading or anything like that we are
+
+18
+00:00:15,950 --> 00:00:15,960
+misleading or anything like that we are
+ 
+
+19
+00:00:15,960 --> 00:00:18,470
+misleading or anything like that we are
+going to get into more this C++ way to
+
+20
+00:00:18,470 --> 00:00:18,480
+going to get into more this C++ way to
+ 
+
+21
+00:00:18,480 --> 00:00:20,179
+going to get into more this C++ way to
+do function pointers in a later video
+
+22
+00:00:20,179 --> 00:00:20,189
+do function pointers in a later video
+ 
+
+23
+00:00:20,189 --> 00:00:22,700
+do function pointers in a later video
+along with things like lambdas which are
+
+24
+00:00:22,700 --> 00:00:22,710
+along with things like lambdas which are
+ 
+
+25
+00:00:22,710 --> 00:00:24,590
+along with things like lambdas which are
+anonymous functions kind of without a
+
+26
+00:00:24,590 --> 00:00:24,600
+anonymous functions kind of without a
+ 
+
+27
+00:00:24,600 --> 00:00:26,750
+anonymous functions kind of without a
+formal function definition and all that
+
+28
+00:00:26,750 --> 00:00:26,760
+formal function definition and all that
+ 
+
+29
+00:00:26,760 --> 00:00:28,460
+formal function definition and all that
+stuff we'll get into that as we go along
+
+30
+00:00:28,460 --> 00:00:28,470
+stuff we'll get into that as we go along
+ 
+
+31
+00:00:28,470 --> 00:00:30,230
+stuff we'll get into that as we go along
+but first I want to start off with kind
+
+32
+00:00:30,230 --> 00:00:30,240
+but first I want to start off with kind
+ 
+
+33
+00:00:30,240 --> 00:00:32,089
+but first I want to start off with kind
+of the most primitive thing which is
+
+34
+00:00:32,089 --> 00:00:32,099
+of the most primitive thing which is
+ 
+
+35
+00:00:32,099 --> 00:00:33,740
+of the most primitive thing which is
+kind of what I like to call a raw
+
+36
+00:00:33,740 --> 00:00:33,750
+kind of what I like to call a raw
+ 
+
+37
+00:00:33,750 --> 00:00:35,600
+kind of what I like to call a raw
+function pointer which again comes from
+
+38
+00:00:35,600 --> 00:00:35,610
+function pointer which again comes from
+ 
+
+39
+00:00:35,610 --> 00:00:38,209
+function pointer which again comes from
+safe so what is a function pointer so
+
+40
+00:00:38,209 --> 00:00:38,219
+safe so what is a function pointer so
+ 
+
+41
+00:00:38,219 --> 00:00:39,440
+safe so what is a function pointer so
+we've learned about pointers if you guys
+
+42
+00:00:39,440 --> 00:00:39,450
+we've learned about pointers if you guys
+ 
+
+43
+00:00:39,450 --> 00:00:40,940
+we've learned about pointers if you guys
+haven't seen that video it's linked up
+
+44
+00:00:40,940 --> 00:00:40,950
+haven't seen that video it's linked up
+ 
+
+45
+00:00:40,950 --> 00:00:42,049
+haven't seen that video it's linked up
+there make sure you understand what
+
+46
+00:00:42,049 --> 00:00:42,059
+there make sure you understand what
+ 
+
+47
+00:00:42,059 --> 00:00:43,790
+there make sure you understand what
+pointers are you don't necessarily need
+
+48
+00:00:43,790 --> 00:00:43,800
+pointers are you don't necessarily need
+ 
+
+49
+00:00:43,800 --> 00:00:45,500
+pointers are you don't necessarily need
+to understand how memory works or how
+
+50
+00:00:45,500 --> 00:00:45,510
+to understand how memory works or how
+ 
+
+51
+00:00:45,510 --> 00:00:48,080
+to understand how memory works or how
+pointers working in C++ to kind of use
+
+52
+00:00:48,080 --> 00:00:48,090
+pointers working in C++ to kind of use
+ 
+
+53
+00:00:48,090 --> 00:00:50,180
+pointers working in C++ to kind of use
+function pointers but you definitely do
+
+54
+00:00:50,180 --> 00:00:50,190
+function pointers but you definitely do
+ 
+
+55
+00:00:50,190 --> 00:00:51,529
+function pointers but you definitely do
+need to watch that video so definitely
+
+56
+00:00:51,529 --> 00:00:51,539
+need to watch that video so definitely
+ 
+
+57
+00:00:51,539 --> 00:00:52,369
+need to watch that video so definitely
+check it out
+
+58
+00:00:52,369 --> 00:00:52,379
+check it out
+ 
+
+59
+00:00:52,379 --> 00:00:54,680
+check it out
+but basically function pointers are just
+
+60
+00:00:54,680 --> 00:00:54,690
+but basically function pointers are just
+ 
+
+61
+00:00:54,690 --> 00:00:57,700
+but basically function pointers are just
+a way to assign a function to a variable
+
+62
+00:00:57,700 --> 00:00:57,710
+a way to assign a function to a variable
+ 
+
+63
+00:00:57,710 --> 00:01:00,979
+a way to assign a function to a variable
+so functions usually as we've been using
+
+64
+00:01:00,979 --> 00:01:00,989
+so functions usually as we've been using
+ 
+
+65
+00:01:00,989 --> 00:01:02,029
+so functions usually as we've been using
+them now if you don't know what a
+
+66
+00:01:02,029 --> 00:01:02,039
+them now if you don't know what a
+ 
+
+67
+00:01:02,039 --> 00:01:03,260
+them now if you don't know what a
+function is by the way I did make a
+
+68
+00:01:03,260 --> 00:01:03,270
+function is by the way I did make a
+ 
+
+69
+00:01:03,270 --> 00:01:04,939
+function is by the way I did make a
+video on that a while back so definitely
+
+70
+00:01:04,939 --> 00:01:04,949
+video on that a while back so definitely
+ 
+
+71
+00:01:04,949 --> 00:01:07,039
+video on that a while back so definitely
+check that out as well but the way that
+
+72
+00:01:07,039 --> 00:01:07,049
+check that out as well but the way that
+ 
+
+73
+00:01:07,049 --> 00:01:08,600
+check that out as well but the way that
+we've kind of been using functions so
+
+74
+00:01:08,600 --> 00:01:08,610
+we've kind of been using functions so
+ 
+
+75
+00:01:08,610 --> 00:01:11,690
+we've kind of been using functions so
+far has just been like as something that
+
+76
+00:01:11,690 --> 00:01:11,700
+far has just been like as something that
+ 
+
+77
+00:01:11,700 --> 00:01:14,510
+far has just been like as something that
+we call right it's not it we can't
+
+78
+00:01:14,510 --> 00:01:14,520
+we call right it's not it we can't
+ 
+
+79
+00:01:14,520 --> 00:01:17,270
+we call right it's not it we can't
+really like do any sort of logic with
+
+80
+00:01:17,270 --> 00:01:17,280
+really like do any sort of logic with
+ 
+
+81
+00:01:17,280 --> 00:01:21,440
+really like do any sort of logic with
+functions it's just like a symbol that
+
+82
+00:01:21,440 --> 00:01:21,450
+functions it's just like a symbol that
+ 
+
+83
+00:01:21,450 --> 00:01:23,570
+functions it's just like a symbol that
+we can call when we want something to
+
+84
+00:01:23,570 --> 00:01:23,580
+we can call when we want something to
+ 
+
+85
+00:01:23,580 --> 00:01:25,280
+we can call when we want something to
+happen and we can of course give it
+
+86
+00:01:25,280 --> 00:01:25,290
+happen and we can of course give it
+ 
+
+87
+00:01:25,290 --> 00:01:28,070
+happen and we can of course give it
+parameters and in turn receive something
+
+88
+00:01:28,070 --> 00:01:28,080
+parameters and in turn receive something
+ 
+
+89
+00:01:28,080 --> 00:01:29,660
+parameters and in turn receive something
+in return if we write a function that
+
+90
+00:01:29,660 --> 00:01:29,670
+in return if we write a function that
+ 
+
+91
+00:01:29,670 --> 00:01:32,359
+in return if we write a function that
+returns something out and void so that's
+
+92
+00:01:32,359 --> 00:01:32,369
+returns something out and void so that's
+ 
+
+93
+00:01:32,369 --> 00:01:33,800
+returns something out and void so that's
+how we've been using functions so far
+
+94
+00:01:33,800 --> 00:01:33,810
+how we've been using functions so far
+ 
+
+95
+00:01:33,810 --> 00:01:36,200
+how we've been using functions so far
+however you can actually assign
+
+96
+00:01:36,200 --> 00:01:36,210
+however you can actually assign
+ 
+
+97
+00:01:36,210 --> 00:01:39,289
+however you can actually assign
+functions to variables and like to
+
+98
+00:01:39,289 --> 00:01:39,299
+functions to variables and like to
+ 
+
+99
+00:01:39,299 --> 00:01:40,910
+functions to variables and like to
+extend from that you can also pass
+
+100
+00:01:40,910 --> 00:01:40,920
+extend from that you can also pass
+ 
+
+101
+00:01:40,920 --> 00:01:43,010
+extend from that you can also pass
+functions into other functions as
+
+102
+00:01:43,010 --> 00:01:43,020
+functions into other functions as
+ 
+
+103
+00:01:43,020 --> 00:01:44,810
+functions into other functions as
+parameters and there's a whole bunch of
+
+104
+00:01:44,810 --> 00:01:44,820
+parameters and there's a whole bunch of
+ 
+
+105
+00:01:44,820 --> 00:01:45,950
+parameters and there's a whole bunch of
+things that you can actually do with
+
+106
+00:01:45,950 --> 00:01:45,960
+things that you can actually do with
+ 
+
+107
+00:01:45,960 --> 00:01:47,899
+things that you can actually do with
+functions that really creates for some
+
+108
+00:01:47,899 --> 00:01:47,909
+functions that really creates for some
+ 
+
+109
+00:01:47,909 --> 00:01:49,940
+functions that really creates for some
+interesting and complex logic that would
+
+110
+00:01:49,940 --> 00:01:49,950
+interesting and complex logic that would
+ 
+
+111
+00:01:49,950 --> 00:01:52,069
+interesting and complex logic that would
+otherwise be extremely messy to do it
+
+112
+00:01:52,069 --> 00:01:52,079
+otherwise be extremely messy to do it
+ 
+
+113
+00:01:52,079 --> 00:01:54,980
+otherwise be extremely messy to do it
+really cleans all of a stuff up so the
+
+114
+00:01:54,980 --> 00:01:54,990
+really cleans all of a stuff up so the
+ 
+
+115
+00:01:54,990 --> 00:01:57,350
+really cleans all of a stuff up so the
+best way to demonstrate what a function
+
+116
+00:01:57,350 --> 00:01:57,360
+best way to demonstrate what a function
+ 
+
+117
+00:01:57,360 --> 00:01:59,090
+best way to demonstrate what a function
+pointer is and how to use it and what it
+
+118
+00:01:59,090 --> 00:01:59,100
+pointer is and how to use it and what it
+ 
+
+119
+00:01:59,100 --> 00:02:01,429
+pointer is and how to use it and what it
+can do is obviously by an example so
+
+120
+00:02:01,429 --> 00:02:01,439
+can do is obviously by an example so
+ 
+
+121
+00:02:01,439 --> 00:02:03,319
+can do is obviously by an example so
+let's take a look so the first thing I'm
+
+122
+00:02:03,319 --> 00:02:03,329
+let's take a look so the first thing I'm
+ 
+
+123
+00:02:03,329 --> 00:02:04,700
+let's take a look so the first thing I'm
+going to do is write a function and this
+
+124
+00:02:04,700 --> 00:02:04,710
+going to do is write a function and this
+ 
+
+125
+00:02:04,710 --> 00:02:06,649
+going to do is write a function and this
+is gonna be really simple it's gonna be
+
+126
+00:02:06,649 --> 00:02:06,659
+is gonna be really simple it's gonna be
+ 
+
+127
+00:02:06,659 --> 00:02:07,850
+is gonna be really simple it's gonna be
+a void function it's going to be called
+
+128
+00:02:07,850 --> 00:02:07,860
+a void function it's going to be called
+ 
+
+129
+00:02:07,860 --> 00:02:09,589
+a void function it's going to be called
+hello world and it's just gonna print
+
+130
+00:02:09,589 --> 00:02:09,599
+hello world and it's just gonna print
+ 
+
+131
+00:02:09,599 --> 00:02:10,700
+hello world and it's just gonna print
+hello world we're gonna start
+
+132
+00:02:10,700 --> 00:02:10,710
+hello world we're gonna start
+ 
+
+133
+00:02:10,710 --> 00:02:13,190
+hello world we're gonna start
+real simple here okay so hello world
+
+134
+00:02:13,190 --> 00:02:13,200
+real simple here okay so hello world
+ 
+
+135
+00:02:13,200 --> 00:02:13,910
+real simple here okay so hello world
+there we go
+
+136
+00:02:13,910 --> 00:02:13,920
+there we go
+ 
+
+137
+00:02:13,920 --> 00:02:15,860
+there we go
+and then what I'm going to do is of
+
+138
+00:02:15,860 --> 00:02:15,870
+and then what I'm going to do is of
+ 
+
+139
+00:02:15,870 --> 00:02:17,630
+and then what I'm going to do is of
+course just call it normally right
+
+140
+00:02:17,630 --> 00:02:17,640
+course just call it normally right
+ 
+
+141
+00:02:17,640 --> 00:02:19,670
+course just call it normally right
+that's how functions work we call it
+
+142
+00:02:19,670 --> 00:02:19,680
+that's how functions work we call it
+ 
+
+143
+00:02:19,680 --> 00:02:21,260
+that's how functions work we call it
+this one doesn't have any parameters so
+
+144
+00:02:21,260 --> 00:02:21,270
+this one doesn't have any parameters so
+ 
+
+145
+00:02:21,270 --> 00:02:22,430
+this one doesn't have any parameters so
+we don't need to put any parameters in
+
+146
+00:02:22,430 --> 00:02:22,440
+we don't need to put any parameters in
+ 
+
+147
+00:02:22,440 --> 00:02:24,710
+we don't need to put any parameters in
+and if I run my program of course I'm
+
+148
+00:02:24,710 --> 00:02:24,720
+and if I run my program of course I'm
+ 
+
+149
+00:02:24,720 --> 00:02:25,870
+and if I run my program of course I'm
+going to get the text hello world
+
+150
+00:02:25,870 --> 00:02:25,880
+going to get the text hello world
+ 
+
+151
+00:02:25,880 --> 00:02:29,450
+going to get the text hello world
+printing and you can see here that I do
+
+152
+00:02:29,450 --> 00:02:29,460
+printing and you can see here that I do
+ 
+
+153
+00:02:29,460 --> 00:02:30,920
+printing and you can see here that I do
+okay great perfect
+
+154
+00:02:30,920 --> 00:02:30,930
+okay great perfect
+ 
+
+155
+00:02:30,930 --> 00:02:33,260
+okay great perfect
+now let's assign this function to some
+
+156
+00:02:33,260 --> 00:02:33,270
+now let's assign this function to some
+ 
+
+157
+00:02:33,270 --> 00:02:35,420
+now let's assign this function to some
+kind of variable now we learn about the
+
+158
+00:02:35,420 --> 00:02:35,430
+kind of variable now we learn about the
+ 
+
+159
+00:02:35,430 --> 00:02:37,370
+kind of variable now we learn about the
+auto keyword and the auto keyword is one
+
+160
+00:02:37,370 --> 00:02:37,380
+auto keyword and the auto keyword is one
+ 
+
+161
+00:02:37,380 --> 00:02:38,750
+auto keyword and the auto keyword is one
+of those things that is actually really
+
+162
+00:02:38,750 --> 00:02:38,760
+of those things that is actually really
+ 
+
+163
+00:02:38,760 --> 00:02:40,490
+of those things that is actually really
+useful with things like function
+
+164
+00:02:40,490 --> 00:02:40,500
+useful with things like function
+ 
+
+165
+00:02:40,500 --> 00:02:41,900
+useful with things like function
+pointers and we'll definitely get into
+
+166
+00:02:41,900 --> 00:02:41,910
+pointers and we'll definitely get into
+ 
+
+167
+00:02:41,910 --> 00:02:44,030
+pointers and we'll definitely get into
+that in the future as well but let's
+
+168
+00:02:44,030 --> 00:02:44,040
+that in the future as well but let's
+ 
+
+169
+00:02:44,040 --> 00:02:45,620
+that in the future as well but let's
+just give Auto a shot and see if we can
+
+170
+00:02:45,620 --> 00:02:45,630
+just give Auto a shot and see if we can
+ 
+
+171
+00:02:45,630 --> 00:02:48,500
+just give Auto a shot and see if we can
+assign hello world to order some want to
+
+172
+00:02:48,500 --> 00:02:48,510
+assign hello world to order some want to
+ 
+
+173
+00:02:48,510 --> 00:02:50,480
+assign hello world to order some want to
+create a variable called function I'm
+
+174
+00:02:50,480 --> 00:02:50,490
+create a variable called function I'm
+ 
+
+175
+00:02:50,490 --> 00:02:52,130
+create a variable called function I'm
+going to set it equal to hello world now
+
+176
+00:02:52,130 --> 00:02:52,140
+going to set it equal to hello world now
+ 
+
+177
+00:02:52,140 --> 00:02:54,050
+going to set it equal to hello world now
+it's right away you can see this isn't
+
+178
+00:02:54,050 --> 00:02:54,060
+it's right away you can see this isn't
+ 
+
+179
+00:02:54,060 --> 00:02:56,420
+it's right away you can see this isn't
+working because we can't deduce Auto
+
+180
+00:02:56,420 --> 00:02:56,430
+working because we can't deduce Auto
+ 
+
+181
+00:02:56,430 --> 00:02:58,280
+working because we can't deduce Auto
+type because really hello world returns
+
+182
+00:02:58,280 --> 00:02:58,290
+type because really hello world returns
+ 
+
+183
+00:02:58,290 --> 00:03:00,290
+type because really hello world returns
+void and what we're doing here is we're
+
+184
+00:03:00,290 --> 00:03:00,300
+void and what we're doing here is we're
+ 
+
+185
+00:03:00,300 --> 00:03:03,140
+void and what we're doing here is we're
+actually calling the function but if we
+
+186
+00:03:03,140 --> 00:03:03,150
+actually calling the function but if we
+ 
+
+187
+00:03:03,150 --> 00:03:05,540
+actually calling the function but if we
+get rid of the parentheses right
+
+188
+00:03:05,540 --> 00:03:05,550
+get rid of the parentheses right
+ 
+
+189
+00:03:05,550 --> 00:03:07,460
+get rid of the parentheses right
+suddenly we're not actually calling the
+
+190
+00:03:07,460 --> 00:03:07,470
+suddenly we're not actually calling the
+ 
+
+191
+00:03:07,470 --> 00:03:09,230
+suddenly we're not actually calling the
+function we're actually getting the
+
+192
+00:03:09,230 --> 00:03:09,240
+function we're actually getting the
+ 
+
+193
+00:03:09,240 --> 00:03:11,600
+function we're actually getting the
+function pointer and specifically this
+
+194
+00:03:11,600 --> 00:03:11,610
+function pointer and specifically this
+ 
+
+195
+00:03:11,610 --> 00:03:13,250
+function pointer and specifically this
+would look like this with an ampersand
+
+196
+00:03:13,250 --> 00:03:13,260
+would look like this with an ampersand
+ 
+
+197
+00:03:13,260 --> 00:03:14,810
+would look like this with an ampersand
+so we're kind of getting the memory
+
+198
+00:03:14,810 --> 00:03:14,820
+so we're kind of getting the memory
+ 
+
+199
+00:03:14,820 --> 00:03:17,690
+so we're kind of getting the memory
+address of that function now functions
+
+200
+00:03:17,690 --> 00:03:17,700
+address of that function now functions
+ 
+
+201
+00:03:17,700 --> 00:03:20,570
+address of that function now functions
+are of course just CPU instructions and
+
+202
+00:03:20,570 --> 00:03:20,580
+are of course just CPU instructions and
+ 
+
+203
+00:03:20,580 --> 00:03:22,190
+are of course just CPU instructions and
+they're stored some way in our binary
+
+204
+00:03:22,190 --> 00:03:22,200
+they're stored some way in our binary
+ 
+
+205
+00:03:22,200 --> 00:03:24,350
+they're stored some way in our binary
+when we actually compile our code in the
+
+206
+00:03:24,350 --> 00:03:24,360
+when we actually compile our code in the
+ 
+
+207
+00:03:24,360 --> 00:03:25,910
+when we actually compile our code in the
+future we might actually take a deep
+
+208
+00:03:25,910 --> 00:03:25,920
+future we might actually take a deep
+ 
+
+209
+00:03:25,920 --> 00:03:28,010
+future we might actually take a deep
+dive into the binary file and see our
+
+210
+00:03:28,010 --> 00:03:28,020
+dive into the binary file and see our
+ 
+
+211
+00:03:28,020 --> 00:03:29,990
+dive into the binary file and see our
+actual CPU instructions and how all that
+
+212
+00:03:29,990 --> 00:03:30,000
+actual CPU instructions and how all that
+ 
+
+213
+00:03:30,000 --> 00:03:33,110
+actual CPU instructions and how all that
+works but for now just imagine that
+
+214
+00:03:33,110 --> 00:03:33,120
+works but for now just imagine that
+ 
+
+215
+00:03:33,120 --> 00:03:34,640
+works but for now just imagine that
+literally when you compile your code
+
+216
+00:03:34,640 --> 00:03:34,650
+literally when you compile your code
+ 
+
+217
+00:03:34,650 --> 00:03:37,310
+literally when you compile your code
+every single function gets compiled into
+
+218
+00:03:37,310 --> 00:03:37,320
+every single function gets compiled into
+ 
+
+219
+00:03:37,320 --> 00:03:39,200
+every single function gets compiled into
+CPU instructions and they are somewhere
+
+220
+00:03:39,200 --> 00:03:39,210
+CPU instructions and they are somewhere
+ 
+
+221
+00:03:39,210 --> 00:03:41,360
+CPU instructions and they are somewhere
+in our binary in our executable file
+
+222
+00:03:41,360 --> 00:03:41,370
+in our binary in our executable file
+ 
+
+223
+00:03:41,370 --> 00:03:43,700
+in our binary in our executable file
+right so what we're doing over here with
+
+224
+00:03:43,700 --> 00:03:43,710
+right so what we're doing over here with
+ 
+
+225
+00:03:43,710 --> 00:03:45,500
+right so what we're doing over here with
+this ampersand is we're saying hey in
+
+226
+00:03:45,500 --> 00:03:45,510
+this ampersand is we're saying hey in
+ 
+
+227
+00:03:45,510 --> 00:03:47,990
+this ampersand is we're saying hey in
+this executable file let's find this
+
+228
+00:03:47,990 --> 00:03:48,000
+this executable file let's find this
+ 
+
+229
+00:03:48,000 --> 00:03:49,820
+this executable file let's find this
+hello world function and let's get the
+
+230
+00:03:49,820 --> 00:03:49,830
+hello world function and let's get the
+ 
+
+231
+00:03:49,830 --> 00:03:51,770
+hello world function and let's get the
+memory address of those CPU instructions
+
+232
+00:03:51,770 --> 00:03:51,780
+memory address of those CPU instructions
+ 
+
+233
+00:03:51,780 --> 00:03:53,810
+memory address of those CPU instructions
+that's basically what this is right so
+
+234
+00:03:53,810 --> 00:03:53,820
+that's basically what this is right so
+ 
+
+235
+00:03:53,820 --> 00:03:54,980
+that's basically what this is right so
+what we're doing is we're retrieving the
+
+236
+00:03:54,980 --> 00:03:54,990
+what we're doing is we're retrieving the
+ 
+
+237
+00:03:54,990 --> 00:03:56,780
+what we're doing is we're retrieving the
+location of the instructions to execute
+
+238
+00:03:56,780 --> 00:03:56,790
+location of the instructions to execute
+ 
+
+239
+00:03:56,790 --> 00:03:59,540
+location of the instructions to execute
+when this function gets called and so
+
+240
+00:03:59,540 --> 00:03:59,550
+when this function gets called and so
+ 
+
+241
+00:03:59,550 --> 00:04:01,250
+when this function gets called and so
+now we don't actually have to use this
+
+242
+00:04:01,250 --> 00:04:01,260
+now we don't actually have to use this
+ 
+
+243
+00:04:01,260 --> 00:04:02,720
+now we don't actually have to use this
+ampersand by the way because there is an
+
+244
+00:04:02,720 --> 00:04:02,730
+ampersand by the way because there is an
+ 
+
+245
+00:04:02,730 --> 00:04:04,370
+ampersand by the way because there is an
+implicit conversion which we'll see in a
+
+246
+00:04:04,370 --> 00:04:04,380
+implicit conversion which we'll see in a
+ 
+
+247
+00:04:04,380 --> 00:04:06,440
+implicit conversion which we'll see in a
+minute so you can just do this right
+
+248
+00:04:06,440 --> 00:04:06,450
+minute so you can just do this right
+ 
+
+249
+00:04:06,450 --> 00:04:08,420
+minute so you can just do this right
+hello world and that's it so now what I
+
+250
+00:04:08,420 --> 00:04:08,430
+hello world and that's it so now what I
+ 
+
+251
+00:04:08,430 --> 00:04:10,190
+hello world and that's it so now what I
+can do is I can actually call my
+
+252
+00:04:10,190 --> 00:04:10,200
+can do is I can actually call my
+ 
+
+253
+00:04:10,200 --> 00:04:11,420
+can do is I can actually call my
+function like this and let's actually
+
+254
+00:04:11,420 --> 00:04:11,430
+function like this and let's actually
+ 
+
+255
+00:04:11,430 --> 00:04:14,390
+function like this and let's actually
+call it twice I'll hit f5 and you can
+
+256
+00:04:14,390 --> 00:04:14,400
+call it twice I'll hit f5 and you can
+ 
+
+257
+00:04:14,400 --> 00:04:15,890
+call it twice I'll hit f5 and you can
+see that I get hollow it well printing
+
+258
+00:04:15,890 --> 00:04:15,900
+see that I get hollow it well printing
+ 
+
+259
+00:04:15,900 --> 00:04:17,000
+see that I get hollow it well printing
+twice so that's pretty cool we've
+
+260
+00:04:17,000 --> 00:04:17,010
+twice so that's pretty cool we've
+ 
+
+261
+00:04:17,010 --> 00:04:19,159
+twice so that's pretty cool we've
+actually managed to assign a function to
+
+262
+00:04:19,159 --> 00:04:19,169
+actually managed to assign a function to
+ 
+
+263
+00:04:19,169 --> 00:04:21,740
+actually managed to assign a function to
+a variable now this is order but what
+
+264
+00:04:21,740 --> 00:04:21,750
+a variable now this is order but what
+ 
+
+265
+00:04:21,750 --> 00:04:22,970
+a variable now this is order but what
+type is this
+
+266
+00:04:22,970 --> 00:04:22,980
+type is this
+ 
+
+267
+00:04:22,980 --> 00:04:25,850
+type is this
+actually well if we hover our mouse over
+
+268
+00:04:25,850 --> 00:04:25,860
+actually well if we hover our mouse over
+ 
+
+269
+00:04:25,860 --> 00:04:28,130
+actually well if we hover our mouse over
+this look at what we get we get void and
+
+270
+00:04:28,130 --> 00:04:28,140
+this look at what we get we get void and
+ 
+
+271
+00:04:28,140 --> 00:04:30,680
+this look at what we get we get void and
+then like an asterisk and then function
+
+272
+00:04:30,680 --> 00:04:30,690
+then like an asterisk and then function
+ 
+
+273
+00:04:30,690 --> 00:04:32,090
+then like an asterisk and then function
+and some parentheses looks a bit weird
+
+274
+00:04:32,090 --> 00:04:32,100
+and some parentheses looks a bit weird
+ 
+
+275
+00:04:32,100 --> 00:04:34,130
+and some parentheses looks a bit weird
+so let's actually write out that type so
+
+276
+00:04:34,130 --> 00:04:34,140
+so let's actually write out that type so
+ 
+
+277
+00:04:34,140 --> 00:04:36,590
+so let's actually write out that type so
+we get void then we need to give us some
+
+278
+00:04:36,590 --> 00:04:36,600
+we get void then we need to give us some
+ 
+
+279
+00:04:36,600 --> 00:04:38,450
+we get void then we need to give us some
+kind of name in our case because we are
+
+280
+00:04:38,450 --> 00:04:38,460
+kind of name in our case because we are
+ 
+
+281
+00:04:38,460 --> 00:04:40,010
+kind of name in our case because we are
+creating a variable so before we called
+
+282
+00:04:40,010 --> 00:04:40,020
+creating a variable so before we called
+ 
+
+283
+00:04:40,020 --> 00:04:41,930
+creating a variable so before we called
+it function let's call it function again
+
+284
+00:04:41,930 --> 00:04:41,940
+it function let's call it function again
+ 
+
+285
+00:04:41,940 --> 00:04:44,540
+it function let's call it function again
+so in parentheses I'm putting an
+
+286
+00:04:44,540 --> 00:04:44,550
+so in parentheses I'm putting an
+ 
+
+287
+00:04:44,550 --> 00:04:46,550
+so in parentheses I'm putting an
+asterisk followed by the name of my
+
+288
+00:04:46,550 --> 00:04:46,560
+asterisk followed by the name of my
+ 
+
+289
+00:04:46,560 --> 00:04:49,940
+asterisk followed by the name of my
+variable and then any parameters that my
+
+290
+00:04:49,940 --> 00:04:49,950
+variable and then any parameters that my
+ 
+
+291
+00:04:49,950 --> 00:04:51,230
+variable and then any parameters that my
+function might take so if it took an
+
+292
+00:04:51,230 --> 00:04:51,240
+function might take so if it took an
+ 
+
+293
+00:04:51,240 --> 00:04:53,780
+function might take so if it took an
+integer I would put in int like that if
+
+294
+00:04:53,780 --> 00:04:53,790
+integer I would put in int like that if
+ 
+
+295
+00:04:53,790 --> 00:04:55,310
+integer I would put in int like that if
+it took a string I would put in string
+
+296
+00:04:55,310 --> 00:04:55,320
+it took a string I would put in string
+ 
+
+297
+00:04:55,320 --> 00:04:57,170
+it took a string I would put in string
+now we're not taking anything as you can
+
+298
+00:04:57,170 --> 00:04:57,180
+now we're not taking anything as you can
+ 
+
+299
+00:04:57,180 --> 00:04:59,420
+now we're not taking anything as you can
+see this is just no no parameters here
+
+300
+00:04:59,420 --> 00:04:59,430
+see this is just no no parameters here
+ 
+
+301
+00:04:59,430 --> 00:05:00,950
+see this is just no no parameters here
+so I can just kind of end it like that
+
+302
+00:05:00,950 --> 00:05:00,960
+so I can just kind of end it like that
+ 
+
+303
+00:05:00,960 --> 00:05:03,980
+so I can just kind of end it like that
+this is the actual type now this does
+
+304
+00:05:03,980 --> 00:05:03,990
+this is the actual type now this does
+ 
+
+305
+00:05:03,990 --> 00:05:07,490
+this is the actual type now this does
+look weird because this well this is
+
+306
+00:05:07,490 --> 00:05:07,500
+look weird because this well this is
+ 
+
+307
+00:05:07,500 --> 00:05:09,830
+look weird because this well this is
+ultimately the type kind of right it's
+
+308
+00:05:09,830 --> 00:05:09,840
+ultimately the type kind of right it's
+ 
+
+309
+00:05:09,840 --> 00:05:11,090
+ultimately the type kind of right it's
+just that we need to give it a name like
+
+310
+00:05:11,090 --> 00:05:11,100
+just that we need to give it a name like
+ 
+
+311
+00:05:11,100 --> 00:05:12,770
+just that we need to give it a name like
+any other variable and function just
+
+312
+00:05:12,770 --> 00:05:12,780
+any other variable and function just
+ 
+
+313
+00:05:12,780 --> 00:05:14,120
+any other variable and function just
+happens to be the name this can be
+
+314
+00:05:14,120 --> 00:05:14,130
+happens to be the name this can be
+ 
+
+315
+00:05:14,130 --> 00:05:15,680
+happens to be the name this can be
+chanted this can be anything you want
+
+316
+00:05:15,680 --> 00:05:15,690
+chanted this can be anything you want
+ 
+
+317
+00:05:15,690 --> 00:05:17,960
+chanted this can be anything you want
+it's just a name and then what we can
+
+318
+00:05:17,960 --> 00:05:17,970
+it's just a name and then what we can
+ 
+
+319
+00:05:17,970 --> 00:05:20,750
+it's just a name and then what we can
+kind of do here is just a sign churner
+
+320
+00:05:20,750 --> 00:05:20,760
+kind of do here is just a sign churner
+ 
+
+321
+00:05:20,760 --> 00:05:22,760
+kind of do here is just a sign churner
+to say hello world or something like
+
+322
+00:05:22,760 --> 00:05:22,770
+to say hello world or something like
+ 
+
+323
+00:05:22,770 --> 00:05:23,780
+to say hello world or something like
+that and you can see that it works like
+
+324
+00:05:23,780 --> 00:05:23,790
+that and you can see that it works like
+ 
+
+325
+00:05:23,790 --> 00:05:25,460
+that and you can see that it works like
+any other variable and you can of course
+
+326
+00:05:25,460 --> 00:05:25,470
+any other variable and you can of course
+ 
+
+327
+00:05:25,470 --> 00:05:28,430
+any other variable and you can of course
+do that here as well if I just write
+
+328
+00:05:28,430 --> 00:05:28,440
+do that here as well if I just write
+ 
+
+329
+00:05:28,440 --> 00:05:31,250
+do that here as well if I just write
+hello world that also works like that
+
+330
+00:05:31,250 --> 00:05:31,260
+hello world that also works like that
+ 
+
+331
+00:05:31,260 --> 00:05:34,100
+hello world that also works like that
+okay it does look very confusing that's
+
+332
+00:05:34,100 --> 00:05:34,110
+okay it does look very confusing that's
+ 
+
+333
+00:05:34,110 --> 00:05:36,350
+okay it does look very confusing that's
+gonna be step one like I've called the
+
+334
+00:05:36,350 --> 00:05:36,360
+gonna be step one like I've called the
+ 
+
+335
+00:05:36,360 --> 00:05:36,920
+gonna be step one like I've called the
+channel
+
+336
+00:05:36,920 --> 00:05:36,930
+channel
+ 
+
+337
+00:05:36,930 --> 00:05:39,200
+channel
+a cold shot over here like as if it was
+
+338
+00:05:39,200 --> 00:05:39,210
+a cold shot over here like as if it was
+ 
+
+339
+00:05:39,210 --> 00:05:41,120
+a cold shot over here like as if it was
+a function if I hit up five of course it
+
+340
+00:05:41,120 --> 00:05:41,130
+a function if I hit up five of course it
+ 
+
+341
+00:05:41,130 --> 00:05:43,340
+a function if I hit up five of course it
+still works this does look confusing I
+
+342
+00:05:43,340 --> 00:05:43,350
+still works this does look confusing I
+ 
+
+343
+00:05:43,350 --> 00:05:45,620
+still works this does look confusing I
+totally agree which is why what people
+
+344
+00:05:45,620 --> 00:05:45,630
+totally agree which is why what people
+ 
+
+345
+00:05:45,630 --> 00:05:47,300
+totally agree which is why what people
+tend to do with function pointers like
+
+346
+00:05:47,300 --> 00:05:47,310
+tend to do with function pointers like
+ 
+
+347
+00:05:47,310 --> 00:05:50,750
+tend to do with function pointers like
+this is either use author or my kind of
+
+348
+00:05:50,750 --> 00:05:50,760
+this is either use author or my kind of
+ 
+
+349
+00:05:50,760 --> 00:05:52,580
+this is either use author or my kind of
+preferred way is actually to type def at
+
+350
+00:05:52,580 --> 00:05:52,590
+preferred way is actually to type def at
+ 
+
+351
+00:05:52,590 --> 00:05:54,080
+preferred way is actually to type def at
+all using it so we're basically creating
+
+352
+00:05:54,080 --> 00:05:54,090
+all using it so we're basically creating
+ 
+
+353
+00:05:54,090 --> 00:05:56,180
+all using it so we're basically creating
+an alias for it so what I mean by that
+
+354
+00:05:56,180 --> 00:05:56,190
+an alias for it so what I mean by that
+ 
+
+355
+00:05:56,190 --> 00:05:58,040
+an alias for it so what I mean by that
+is instead of this kind of weird code
+
+356
+00:05:58,040 --> 00:05:58,050
+is instead of this kind of weird code
+ 
+
+357
+00:05:58,050 --> 00:06:01,190
+is instead of this kind of weird code
+what we can actually do is say type def
+
+358
+00:06:01,190 --> 00:06:01,200
+what we can actually do is say type def
+ 
+
+359
+00:06:01,200 --> 00:06:05,510
+what we can actually do is say type def
+then this actual type here and we can
+
+360
+00:06:05,510 --> 00:06:05,520
+then this actual type here and we can
+ 
+
+361
+00:06:05,520 --> 00:06:08,300
+then this actual type here and we can
+call it like our I don't know hello
+
+362
+00:06:08,300 --> 00:06:08,310
+call it like our I don't know hello
+ 
+
+363
+00:06:08,310 --> 00:06:10,700
+call it like our I don't know hello
+world function or something like that
+
+364
+00:06:10,700 --> 00:06:10,710
+world function or something like that
+ 
+
+365
+00:06:10,710 --> 00:06:12,800
+world function or something like that
+right and of course this hello world
+
+366
+00:06:12,800 --> 00:06:12,810
+right and of course this hello world
+ 
+
+367
+00:06:12,810 --> 00:06:14,840
+right and of course this hello world
+function name goes into here because
+
+368
+00:06:14,840 --> 00:06:14,850
+function name goes into here because
+ 
+
+369
+00:06:14,850 --> 00:06:16,580
+function name goes into here because
+that's our actual name so it's basically
+
+370
+00:06:16,580 --> 00:06:16,590
+that's our actual name so it's basically
+ 
+
+371
+00:06:16,590 --> 00:06:17,900
+that's our actual name so it's basically
+the type but we put a start out at the
+
+372
+00:06:17,900 --> 00:06:17,910
+the type but we put a start out at the
+ 
+
+373
+00:06:17,910 --> 00:06:19,700
+the type but we put a start out at the
+front what that now means is that if I
+
+374
+00:06:19,700 --> 00:06:19,710
+front what that now means is that if I
+ 
+
+375
+00:06:19,710 --> 00:06:21,440
+front what that now means is that if I
+want to actually use this I can just
+
+376
+00:06:21,440 --> 00:06:21,450
+want to actually use this I can just
+ 
+
+377
+00:06:21,450 --> 00:06:23,150
+want to actually use this I can just
+type in hello world function then a
+
+378
+00:06:23,150 --> 00:06:23,160
+type in hello world function then a
+ 
+
+379
+00:06:23,160 --> 00:06:25,730
+type in hello world function then a
+variable name like function equals hello
+
+380
+00:06:25,730 --> 00:06:25,740
+variable name like function equals hello
+ 
+
+381
+00:06:25,740 --> 00:06:27,680
+variable name like function equals hello
+world and then of course I can just call
+
+382
+00:06:27,680 --> 00:06:27,690
+world and then of course I can just call
+ 
+
+383
+00:06:27,690 --> 00:06:31,790
+world and then of course I can just call
+function like that okay let's make this
+
+384
+00:06:31,790 --> 00:06:31,800
+function like that okay let's make this
+ 
+
+385
+00:06:31,800 --> 00:06:33,260
+function like that okay let's make this
+a little bit more exciting I'm gonna add
+
+386
+00:06:33,260 --> 00:06:33,270
+a little bit more exciting I'm gonna add
+ 
+
+387
+00:06:33,270 --> 00:06:34,580
+a little bit more exciting I'm gonna add
+a parameter here it's gonna be an
+
+388
+00:06:34,580 --> 00:06:34,590
+a parameter here it's gonna be an
+ 
+
+389
+00:06:34,590 --> 00:06:35,550
+a parameter here it's gonna be an
+integer is gonna be called
+
+390
+00:06:35,550 --> 00:06:35,560
+integer is gonna be called
+ 
+
+391
+00:06:35,560 --> 00:06:37,680
+integer is gonna be called
+a and then at the end of hello world I'm
+
+392
+00:06:37,680 --> 00:06:37,690
+a and then at the end of hello world I'm
+ 
+
+393
+00:06:37,690 --> 00:06:40,650
+a and then at the end of hello world I'm
+actually going to print value and then a
+
+394
+00:06:40,650 --> 00:06:40,660
+actually going to print value and then a
+ 
+
+395
+00:06:40,660 --> 00:06:43,290
+actually going to print value and then a
+just like that whoops let's put this on
+
+396
+00:06:43,290 --> 00:06:43,300
+just like that whoops let's put this on
+ 
+
+397
+00:06:43,300 --> 00:06:46,409
+just like that whoops let's put this on
+the right side all right so now this
+
+398
+00:06:46,409 --> 00:06:46,419
+the right side all right so now this
+ 
+
+399
+00:06:46,419 --> 00:06:48,270
+the right side all right so now this
+hello well function of course we get an
+
+400
+00:06:48,270 --> 00:06:48,280
+hello well function of course we get an
+ 
+
+401
+00:06:48,280 --> 00:06:49,920
+hello well function of course we get an
+error here we can't assign it because
+
+402
+00:06:49,920 --> 00:06:49,930
+error here we can't assign it because
+ 
+
+403
+00:06:49,930 --> 00:06:51,659
+error here we can't assign it because
+hello world is a function that takes in
+
+404
+00:06:51,659 --> 00:06:51,669
+hello world is a function that takes in
+ 
+
+405
+00:06:51,669 --> 00:06:53,790
+hello world is a function that takes in
+an integer so what I'm going to do is
+
+406
+00:06:53,790 --> 00:06:53,800
+an integer so what I'm going to do is
+ 
+
+407
+00:06:53,800 --> 00:06:56,370
+an integer so what I'm going to do is
+change my function definition here to
+
+408
+00:06:56,370 --> 00:06:56,380
+change my function definition here to
+ 
+
+409
+00:06:56,380 --> 00:06:57,960
+change my function definition here to
+actually include an integer as a
+
+410
+00:06:57,960 --> 00:06:57,970
+actually include an integer as a
+ 
+
+411
+00:06:57,970 --> 00:06:59,640
+actually include an integer as a
+parameter and now you can see this works
+
+412
+00:06:59,640 --> 00:06:59,650
+parameter and now you can see this works
+ 
+
+413
+00:06:59,650 --> 00:07:01,650
+parameter and now you can see this works
+and when we call this function which
+
+414
+00:07:01,650 --> 00:07:01,660
+and when we call this function which
+ 
+
+415
+00:07:01,660 --> 00:07:03,030
+and when we call this function which
+we're doing over here we now need to
+
+416
+00:07:03,030 --> 00:07:03,040
+we're doing over here we now need to
+ 
+
+417
+00:07:03,040 --> 00:07:04,920
+we're doing over here we now need to
+specify an integer so I'm going to type
+
+418
+00:07:04,920 --> 00:07:04,930
+specify an integer so I'm going to type
+ 
+
+419
+00:07:04,930 --> 00:07:07,290
+specify an integer so I'm going to type
+in 8 and then hit f5 to run my code and
+
+420
+00:07:07,290 --> 00:07:07,300
+in 8 and then hit f5 to run my code and
+ 
+
+421
+00:07:07,300 --> 00:07:09,120
+in 8 and then hit f5 to run my code and
+you can see now I get the value 8
+
+422
+00:07:09,120 --> 00:07:09,130
+you can see now I get the value 8
+ 
+
+423
+00:07:09,130 --> 00:07:10,920
+you can see now I get the value 8
+printing so what I've kind of done now
+
+424
+00:07:10,920 --> 00:07:10,930
+printing so what I've kind of done now
+ 
+
+425
+00:07:10,930 --> 00:07:13,020
+printing so what I've kind of done now
+is I have a function that I can call
+
+426
+00:07:13,020 --> 00:07:13,030
+is I have a function that I can call
+ 
+
+427
+00:07:13,030 --> 00:07:15,390
+is I have a function that I can call
+using a variable name like this and of
+
+428
+00:07:15,390 --> 00:07:15,400
+using a variable name like this and of
+ 
+
+429
+00:07:15,400 --> 00:07:17,430
+using a variable name like this and of
+course it's parameterised so I can put
+
+430
+00:07:17,430 --> 00:07:17,440
+course it's parameterised so I can put
+ 
+
+431
+00:07:17,440 --> 00:07:19,290
+course it's parameterised so I can put
+anything I wanted to here and it will
+
+432
+00:07:19,290 --> 00:07:19,300
+anything I wanted to here and it will
+ 
+
+433
+00:07:19,300 --> 00:07:21,060
+anything I wanted to here and it will
+call that function with different values
+
+434
+00:07:21,060 --> 00:07:21,070
+call that function with different values
+ 
+
+435
+00:07:21,070 --> 00:07:24,030
+call that function with different values
+which again is pretty cool so that's the
+
+436
+00:07:24,030 --> 00:07:24,040
+which again is pretty cool so that's the
+ 
+
+437
+00:07:24,040 --> 00:07:25,800
+which again is pretty cool so that's the
+that's the basics of how it works that
+
+438
+00:07:25,800 --> 00:07:25,810
+that's the basics of how it works that
+ 
+
+439
+00:07:25,810 --> 00:07:27,990
+that's the basics of how it works that
+should probably show you enough to use
+
+440
+00:07:27,990 --> 00:07:28,000
+should probably show you enough to use
+ 
+
+441
+00:07:28,000 --> 00:07:29,550
+should probably show you enough to use
+it in pretty much all of its capacity
+
+442
+00:07:29,550 --> 00:07:29,560
+it in pretty much all of its capacity
+ 
+
+443
+00:07:29,560 --> 00:07:31,830
+it in pretty much all of its capacity
+but now let's take a look at an actually
+
+444
+00:07:31,830 --> 00:07:31,840
+but now let's take a look at an actually
+ 
+
+445
+00:07:31,840 --> 00:07:33,870
+but now let's take a look at an actually
+useful example of why you might want to
+
+446
+00:07:33,870 --> 00:07:33,880
+useful example of why you might want to
+ 
+
+447
+00:07:33,880 --> 00:07:35,790
+useful example of why you might want to
+use function pointers in the first place
+
+448
+00:07:35,790 --> 00:07:35,800
+use function pointers in the first place
+ 
+
+449
+00:07:35,800 --> 00:07:38,610
+use function pointers in the first place
+so suppose that I have a vector and just
+
+450
+00:07:38,610 --> 00:07:38,620
+so suppose that I have a vector and just
+ 
+
+451
+00:07:38,620 --> 00:07:39,930
+so suppose that I have a vector and just
+include a vector over here
+
+452
+00:07:39,930 --> 00:07:39,940
+include a vector over here
+ 
+
+453
+00:07:39,940 --> 00:07:42,120
+include a vector over here
+don't delete this code as well and all
+
+454
+00:07:42,120 --> 00:07:42,130
+don't delete this code as well and all
+ 
+
+455
+00:07:42,130 --> 00:07:44,640
+don't delete this code as well and all
+of this in fact I have a vector of
+
+456
+00:07:44,640 --> 00:07:44,650
+of this in fact I have a vector of
+ 
+
+457
+00:07:44,650 --> 00:07:47,760
+of this in fact I have a vector of
+integers I'll call this values I'm just
+
+458
+00:07:47,760 --> 00:07:47,770
+integers I'll call this values I'm just
+ 
+
+459
+00:07:47,770 --> 00:07:49,110
+integers I'll call this values I'm just
+going to cyan't using this kind of
+
+460
+00:07:49,110 --> 00:07:49,120
+going to cyan't using this kind of
+ 
+
+461
+00:07:49,120 --> 00:07:52,200
+going to cyan't using this kind of
+initialize a list here like that okay
+
+462
+00:07:52,200 --> 00:07:52,210
+initialize a list here like that okay
+ 
+
+463
+00:07:52,210 --> 00:07:54,330
+initialize a list here like that okay
+and I want to create some kind of
+
+464
+00:07:54,330 --> 00:07:54,340
+and I want to create some kind of
+ 
+
+465
+00:07:54,340 --> 00:07:55,860
+and I want to create some kind of
+function which iterates through all of
+
+466
+00:07:55,860 --> 00:07:55,870
+function which iterates through all of
+ 
+
+467
+00:07:55,870 --> 00:07:57,960
+function which iterates through all of
+this and perform some kind of action so
+
+468
+00:07:57,960 --> 00:07:57,970
+this and perform some kind of action so
+ 
+
+469
+00:07:57,970 --> 00:07:59,880
+this and perform some kind of action so
+of course a for each loop is basically
+
+470
+00:07:59,880 --> 00:07:59,890
+of course a for each loop is basically
+ 
+
+471
+00:07:59,890 --> 00:08:01,230
+of course a for each loop is basically
+what I'm writing here but let's pretend
+
+472
+00:08:01,230 --> 00:08:01,240
+what I'm writing here but let's pretend
+ 
+
+473
+00:08:01,240 --> 00:08:02,880
+what I'm writing here but let's pretend
+that I wanted it to be in a function
+
+474
+00:08:02,880 --> 00:08:02,890
+that I wanted it to be in a function
+ 
+
+475
+00:08:02,890 --> 00:08:04,409
+that I wanted it to be in a function
+because maybe did some other things as
+
+476
+00:08:04,409 --> 00:08:04,419
+because maybe did some other things as
+ 
+
+477
+00:08:04,419 --> 00:08:07,050
+because maybe did some other things as
+well and that's just the example so what
+
+478
+00:08:07,050 --> 00:08:07,060
+well and that's just the example so what
+ 
+
+479
+00:08:07,060 --> 00:08:08,159
+well and that's just the example so what
+I'm going to do is I'm going to write a
+
+480
+00:08:08,159 --> 00:08:08,169
+I'm going to do is I'm going to write a
+ 
+
+481
+00:08:08,169 --> 00:08:10,560
+I'm going to do is I'm going to write a
+for each function I'll pull it for H
+
+482
+00:08:10,560 --> 00:08:10,570
+for each function I'll pull it for H
+ 
+
+483
+00:08:10,570 --> 00:08:13,110
+for each function I'll pull it for H
+it's going to take in this standard
+
+484
+00:08:13,110 --> 00:08:13,120
+it's going to take in this standard
+ 
+
+485
+00:08:13,120 --> 00:08:16,860
+it's going to take in this standard
+vector of integers called values and
+
+486
+00:08:16,860 --> 00:08:16,870
+vector of integers called values and
+ 
+
+487
+00:08:16,870 --> 00:08:18,960
+vector of integers called values and
+then it's going to do something so I'll
+
+488
+00:08:18,960 --> 00:08:18,970
+then it's going to do something so I'll
+ 
+
+489
+00:08:18,970 --> 00:08:22,260
+then it's going to do something so I'll
+just say for int value in the values and
+
+490
+00:08:22,260 --> 00:08:22,270
+just say for int value in the values and
+ 
+
+491
+00:08:22,270 --> 00:08:24,379
+just say for int value in the values and
+then we want to actually do something so
+
+492
+00:08:24,379 --> 00:08:24,389
+then we want to actually do something so
+ 
+
+493
+00:08:24,389 --> 00:08:29,100
+then we want to actually do something so
+let's go ahead and call this Oh H values
+
+494
+00:08:29,100 --> 00:08:29,110
+let's go ahead and call this Oh H values
+ 
+
+495
+00:08:29,110 --> 00:08:32,190
+let's go ahead and call this Oh H values
+now how do we tell this function what we
+
+496
+00:08:32,190 --> 00:08:32,200
+now how do we tell this function what we
+ 
+
+497
+00:08:32,200 --> 00:08:34,260
+now how do we tell this function what we
+want it to actually do for each of these
+
+498
+00:08:34,260 --> 00:08:34,270
+want it to actually do for each of these
+ 
+
+499
+00:08:34,270 --> 00:08:37,820
+want it to actually do for each of these
+values well the way we're gonna do it is
+
+500
+00:08:37,820 --> 00:08:37,830
+values well the way we're gonna do it is
+ 
+
+501
+00:08:37,830 --> 00:08:39,959
+values well the way we're gonna do it is
+just by passing in a function
+
+502
+00:08:39,959 --> 00:08:39,969
+just by passing in a function
+ 
+
+503
+00:08:39,969 --> 00:08:42,000
+just by passing in a function
+essentially so up here I'm going to
+
+504
+00:08:42,000 --> 00:08:42,010
+essentially so up here I'm going to
+ 
+
+505
+00:08:42,010 --> 00:08:43,770
+essentially so up here I'm going to
+create a function I want to call this
+
+506
+00:08:43,770 --> 00:08:43,780
+create a function I want to call this
+ 
+
+507
+00:08:43,780 --> 00:08:45,750
+create a function I want to call this
+print value it's going to take in a
+
+508
+00:08:45,750 --> 00:08:45,760
+print value it's going to take in a
+ 
+
+509
+00:08:45,760 --> 00:08:47,900
+print value it's going to take in a
+value and almost going to do is
+
+510
+00:08:47,900 --> 00:08:47,910
+value and almost going to do is
+ 
+
+511
+00:08:47,910 --> 00:08:52,600
+value and almost going to do is
+we print it so value and then the value
+
+512
+00:08:52,600 --> 00:08:52,610
+we print it so value and then the value
+ 
+
+513
+00:08:52,610 --> 00:08:55,580
+we print it so value and then the value
+very simple function right and so what
+
+514
+00:08:55,580 --> 00:08:55,590
+very simple function right and so what
+ 
+
+515
+00:08:55,590 --> 00:08:58,670
+very simple function right and so what
+I'm going to do here is inside for each
+
+516
+00:08:58,670 --> 00:08:58,680
+I'm going to do here is inside for each
+ 
+
+517
+00:08:58,680 --> 00:09:01,460
+I'm going to do here is inside for each
+I'm actually going to write one more
+
+518
+00:09:01,460 --> 00:09:01,470
+I'm actually going to write one more
+ 
+
+519
+00:09:01,470 --> 00:09:04,040
+I'm actually going to write one more
+parameter here that actually is this
+
+520
+00:09:04,040 --> 00:09:04,050
+parameter here that actually is this
+ 
+
+521
+00:09:04,050 --> 00:09:06,380
+parameter here that actually is this
+function so it's going to be void the
+
+522
+00:09:06,380 --> 00:09:06,390
+function so it's going to be void the
+ 
+
+523
+00:09:06,390 --> 00:09:09,200
+function so it's going to be void the
+name I'm going to call is func and then
+
+524
+00:09:09,200 --> 00:09:09,210
+name I'm going to call is func and then
+ 
+
+525
+00:09:09,210 --> 00:09:10,580
+name I'm going to call is func and then
+of course it takes one parameter which
+
+526
+00:09:10,580 --> 00:09:10,590
+of course it takes one parameter which
+ 
+
+527
+00:09:10,590 --> 00:09:11,930
+of course it takes one parameter which
+is an integer so I'm going to write in
+
+528
+00:09:11,930 --> 00:09:11,940
+is an integer so I'm going to write in
+ 
+
+529
+00:09:11,940 --> 00:09:14,210
+is an integer so I'm going to write in
+like that and then inside this for each
+
+530
+00:09:14,210 --> 00:09:14,220
+like that and then inside this for each
+ 
+
+531
+00:09:14,220 --> 00:09:15,770
+like that and then inside this for each
+loop I'm actually just going to write
+
+532
+00:09:15,770 --> 00:09:15,780
+loop I'm actually just going to write
+ 
+
+533
+00:09:15,780 --> 00:09:18,410
+loop I'm actually just going to write
+func and then call it with value as the
+
+534
+00:09:18,410 --> 00:09:18,420
+func and then call it with value as the
+ 
+
+535
+00:09:18,420 --> 00:09:19,880
+func and then call it with value as the
+parameter of course because that's the
+
+536
+00:09:19,880 --> 00:09:19,890
+parameter of course because that's the
+ 
+
+537
+00:09:19,890 --> 00:09:21,560
+parameter of course because that's the
+current iteration of the for loop and
+
+538
+00:09:21,560 --> 00:09:21,570
+current iteration of the for loop and
+ 
+
+539
+00:09:21,570 --> 00:09:23,480
+current iteration of the for loop and
+then inside is 4-h I'm passing in the
+
+540
+00:09:23,480 --> 00:09:23,490
+then inside is 4-h I'm passing in the
+ 
+
+541
+00:09:23,490 --> 00:09:25,040
+then inside is 4-h I'm passing in the
+values of course which is our vector and
+
+542
+00:09:25,040 --> 00:09:25,050
+values of course which is our vector and
+ 
+
+543
+00:09:25,050 --> 00:09:26,600
+values of course which is our vector and
+I'm also going to pass in this function
+
+544
+00:09:26,600 --> 00:09:26,610
+I'm also going to pass in this function
+ 
+
+545
+00:09:26,610 --> 00:09:28,520
+I'm also going to pass in this function
+which is called print value so now
+
+546
+00:09:28,520 --> 00:09:28,530
+which is called print value so now
+ 
+
+547
+00:09:28,530 --> 00:09:30,440
+which is called print value so now
+basically what we've got is a function
+
+548
+00:09:30,440 --> 00:09:30,450
+basically what we've got is a function
+ 
+
+549
+00:09:30,450 --> 00:09:32,510
+basically what we've got is a function
+into which we can pass in a vector of
+
+550
+00:09:32,510 --> 00:09:32,520
+into which we can pass in a vector of
+ 
+
+551
+00:09:32,520 --> 00:09:35,390
+into which we can pass in a vector of
+integers and for each of these integers
+
+552
+00:09:35,390 --> 00:09:35,400
+integers and for each of these integers
+ 
+
+553
+00:09:35,400 --> 00:09:37,250
+integers and for each of these integers
+inside this vector it's going to execute
+
+554
+00:09:37,250 --> 00:09:37,260
+inside this vector it's going to execute
+ 
+
+555
+00:09:37,260 --> 00:09:39,590
+inside this vector it's going to execute
+this function that's what's happening
+
+556
+00:09:39,590 --> 00:09:39,600
+this function that's what's happening
+ 
+
+557
+00:09:39,600 --> 00:09:40,850
+this function that's what's happening
+over here and you can see what that
+
+558
+00:09:40,850 --> 00:09:40,860
+over here and you can see what that
+ 
+
+559
+00:09:40,860 --> 00:09:43,550
+over here and you can see what that
+looks like so if I hit f5 you can see
+
+560
+00:09:43,550 --> 00:09:43,560
+looks like so if I hit f5 you can see
+ 
+
+561
+00:09:43,560 --> 00:09:45,770
+looks like so if I hit f5 you can see
+what I get here I get all these integers
+
+562
+00:09:45,770 --> 00:09:45,780
+what I get here I get all these integers
+ 
+
+563
+00:09:45,780 --> 00:09:47,870
+what I get here I get all these integers
+that I've got one five four two and
+
+564
+00:09:47,870 --> 00:09:47,880
+that I've got one five four two and
+ 
+
+565
+00:09:47,880 --> 00:09:50,390
+that I've got one five four two and
+three as I defined with my list here and
+
+566
+00:09:50,390 --> 00:09:50,400
+three as I defined with my list here and
+ 
+
+567
+00:09:50,400 --> 00:09:51,980
+three as I defined with my list here and
+I'm getting this print value function
+
+568
+00:09:51,980 --> 00:09:51,990
+I'm getting this print value function
+ 
+
+569
+00:09:51,990 --> 00:09:53,990
+I'm getting this print value function
+executed with each of these integers as
+
+570
+00:09:53,990 --> 00:09:54,000
+executed with each of these integers as
+ 
+
+571
+00:09:54,000 --> 00:09:55,730
+executed with each of these integers as
+a parameter so that's pretty cool it's a
+
+572
+00:09:55,730 --> 00:09:55,740
+a parameter so that's pretty cool it's a
+ 
+
+573
+00:09:55,740 --> 00:09:56,840
+a parameter so that's pretty cool it's a
+way that we can kind of tell our
+
+574
+00:09:56,840 --> 00:09:56,850
+way that we can kind of tell our
+ 
+
+575
+00:09:56,850 --> 00:09:59,870
+way that we can kind of tell our
+function hey I want you to do this at a
+
+576
+00:09:59,870 --> 00:09:59,880
+function hey I want you to do this at a
+ 
+
+577
+00:09:59,880 --> 00:10:02,930
+function hey I want you to do this at a
+particular time now this might seem a
+
+578
+00:10:02,930 --> 00:10:02,940
+particular time now this might seem a
+ 
+
+579
+00:10:02,940 --> 00:10:04,580
+particular time now this might seem a
+little bit overkill so I'll show you one
+
+580
+00:10:04,580 --> 00:10:04,590
+little bit overkill so I'll show you one
+ 
+
+581
+00:10:04,590 --> 00:10:06,140
+little bit overkill so I'll show you one
+more way to kind of do this and this
+
+582
+00:10:06,140 --> 00:10:06,150
+more way to kind of do this and this
+ 
+
+583
+00:10:06,150 --> 00:10:07,430
+more way to kind of do this and this
+will kind of late into the next video
+
+584
+00:10:07,430 --> 00:10:07,440
+will kind of late into the next video
+ 
+
+585
+00:10:07,440 --> 00:10:08,660
+will kind of late into the next video
+that we have so instead of kind of
+
+586
+00:10:08,660 --> 00:10:08,670
+that we have so instead of kind of
+ 
+
+587
+00:10:08,670 --> 00:10:10,130
+that we have so instead of kind of
+defining this function it's a little bit
+
+588
+00:10:10,130 --> 00:10:10,140
+defining this function it's a little bit
+ 
+
+589
+00:10:10,140 --> 00:10:11,540
+defining this function it's a little bit
+messy just have an extra function
+
+590
+00:10:11,540 --> 00:10:11,550
+messy just have an extra function
+ 
+
+591
+00:10:11,550 --> 00:10:12,830
+messy just have an extra function
+floating around especially if we only
+
+592
+00:10:12,830 --> 00:10:12,840
+floating around especially if we only
+ 
+
+593
+00:10:12,840 --> 00:10:14,990
+floating around especially if we only
+intend for it to be used inside this 4-h
+
+594
+00:10:14,990 --> 00:10:15,000
+intend for it to be used inside this 4-h
+ 
+
+595
+00:10:15,000 --> 00:10:16,580
+intend for it to be used inside this 4-h
+function so what we can do is use
+
+596
+00:10:16,580 --> 00:10:16,590
+function so what we can do is use
+ 
+
+597
+00:10:16,590 --> 00:10:18,980
+function so what we can do is use
+something called a lambda and lambda is
+
+598
+00:10:18,980 --> 00:10:18,990
+something called a lambda and lambda is
+ 
+
+599
+00:10:18,990 --> 00:10:21,410
+something called a lambda and lambda is
+essentially a normal function except
+
+600
+00:10:21,410 --> 00:10:21,420
+essentially a normal function except
+ 
+
+601
+00:10:21,420 --> 00:10:23,300
+essentially a normal function except
+it's not declared as a normal function
+
+602
+00:10:23,300 --> 00:10:23,310
+it's not declared as a normal function
+ 
+
+603
+00:10:23,310 --> 00:10:24,830
+it's not declared as a normal function
+like this it's kind of just declared
+
+604
+00:10:24,830 --> 00:10:24,840
+like this it's kind of just declared
+ 
+
+605
+00:10:24,840 --> 00:10:26,210
+like this it's kind of just declared
+during our code and it's kind of a
+
+606
+00:10:26,210 --> 00:10:26,220
+during our code and it's kind of a
+ 
+
+607
+00:10:26,220 --> 00:10:28,130
+during our code and it's kind of a
+throwaway function that isn't actually a
+
+608
+00:10:28,130 --> 00:10:28,140
+throwaway function that isn't actually a
+ 
+
+609
+00:10:28,140 --> 00:10:30,110
+throwaway function that isn't actually a
+real function it's an anonymous function
+
+610
+00:10:30,110 --> 00:10:30,120
+real function it's an anonymous function
+ 
+
+611
+00:10:30,120 --> 00:10:32,030
+real function it's an anonymous function
+and the way that we can kind of declare
+
+612
+00:10:32,030 --> 00:10:32,040
+and the way that we can kind of declare
+ 
+
+613
+00:10:32,040 --> 00:10:34,010
+and the way that we can kind of declare
+that is by using square brackets like
+
+614
+00:10:34,010 --> 00:10:34,020
+that is by using square brackets like
+ 
+
+615
+00:10:34,020 --> 00:10:37,130
+that is by using square brackets like
+this parenthesis like this will take you
+
+616
+00:10:37,130 --> 00:10:37,140
+this parenthesis like this will take you
+ 
+
+617
+00:10:37,140 --> 00:10:38,900
+this parenthesis like this will take you
+now actual parameter that we need to
+
+618
+00:10:38,900 --> 00:10:38,910
+now actual parameter that we need to
+ 
+
+619
+00:10:38,910 --> 00:10:40,880
+now actual parameter that we need to
+take in here which is out value and then
+
+620
+00:10:40,880 --> 00:10:40,890
+take in here which is out value and then
+ 
+
+621
+00:10:40,890 --> 00:10:42,530
+take in here which is out value and then
+with curly brackets we basically tell it
+
+622
+00:10:42,530 --> 00:10:42,540
+with curly brackets we basically tell it
+ 
+
+623
+00:10:42,540 --> 00:10:45,020
+with curly brackets we basically tell it
+what we want it to do so as if it was
+
+624
+00:10:45,020 --> 00:10:45,030
+what we want it to do so as if it was
+ 
+
+625
+00:10:45,030 --> 00:10:46,670
+what we want it to do so as if it was
+any other function so we'll save current
+
+626
+00:10:46,670 --> 00:10:46,680
+any other function so we'll save current
+ 
+
+627
+00:10:46,680 --> 00:10:50,480
+any other function so we'll save current
+value and then the actual value that we
+
+628
+00:10:50,480 --> 00:10:50,490
+value and then the actual value that we
+ 
+
+629
+00:10:50,490 --> 00:10:52,580
+value and then the actual value that we
+have which is going to be value which is
+
+630
+00:10:52,580 --> 00:10:52,590
+have which is going to be value which is
+ 
+
+631
+00:10:52,590 --> 00:10:54,530
+have which is going to be value which is
+the parameter that we passed in okay
+
+632
+00:10:54,530 --> 00:10:54,540
+the parameter that we passed in okay
+ 
+
+633
+00:10:54,540 --> 00:10:56,780
+the parameter that we passed in okay
+just like that pretty simple stuff let's
+
+634
+00:10:56,780 --> 00:10:56,790
+just like that pretty simple stuff let's
+ 
+
+635
+00:10:56,790 --> 00:10:59,030
+just like that pretty simple stuff let's
+hit f5 and you can see that I get my
+
+636
+00:10:59,030 --> 00:10:59,040
+hit f5 and you can see that I get my
+ 
+
+637
+00:10:59,040 --> 00:11:00,980
+hit f5 and you can see that I get my
+values printing like before but we don't
+
+638
+00:11:00,980 --> 00:11:00,990
+values printing like before but we don't
+ 
+
+639
+00:11:00,990 --> 00:11:01,410
+values printing like before but we don't
+have an X
+
+640
+00:11:01,410 --> 00:11:01,420
+have an X
+ 
+
+641
+00:11:01,420 --> 00:11:02,580
+have an X
+function we've literally just kind of
+
+642
+00:11:02,580 --> 00:11:02,590
+function we've literally just kind of
+ 
+
+643
+00:11:02,590 --> 00:11:04,680
+function we've literally just kind of
+written an inline these square brackets
+
+644
+00:11:04,680 --> 00:11:04,690
+written an inline these square brackets
+ 
+
+645
+00:11:04,690 --> 00:11:06,990
+written an inline these square brackets
+I was called CAPTCHA method so that's
+
+646
+00:11:06,990 --> 00:11:07,000
+I was called CAPTCHA method so that's
+ 
+
+647
+00:11:07,000 --> 00:11:08,640
+I was called CAPTCHA method so that's
+how we pass variables in from the
+
+648
+00:11:08,640 --> 00:11:08,650
+how we pass variables in from the
+ 
+
+649
+00:11:08,650 --> 00:11:11,220
+how we pass variables in from the
+outside world our parameters going here
+
+650
+00:11:11,220 --> 00:11:11,230
+outside world our parameters going here
+ 
+
+651
+00:11:11,230 --> 00:11:12,960
+outside world our parameters going here
+and inside and this is just like any
+
+652
+00:11:12,960 --> 00:11:12,970
+and inside and this is just like any
+ 
+
+653
+00:11:12,970 --> 00:11:14,640
+and inside and this is just like any
+other function body we could even run it
+
+654
+00:11:14,640 --> 00:11:14,650
+other function body we could even run it
+ 
+
+655
+00:11:14,650 --> 00:11:16,710
+other function body we could even run it
+like this if you wanted to and you can
+
+656
+00:11:16,710 --> 00:11:16,720
+like this if you wanted to and you can
+ 
+
+657
+00:11:16,720 --> 00:11:18,300
+like this if you wanted to and you can
+see that's the actual function okay
+
+658
+00:11:18,300 --> 00:11:18,310
+see that's the actual function okay
+ 
+
+659
+00:11:18,310 --> 00:11:20,070
+see that's the actual function okay
+we're gonna talk way more about lambdas
+
+660
+00:11:20,070 --> 00:11:20,080
+we're gonna talk way more about lambdas
+ 
+
+661
+00:11:20,080 --> 00:11:22,440
+we're gonna talk way more about lambdas
+in a video dedicated to lambdas we're
+
+662
+00:11:22,440 --> 00:11:22,450
+in a video dedicated to lambdas we're
+ 
+
+663
+00:11:22,450 --> 00:11:23,460
+in a video dedicated to lambdas we're
+also going to talk about something
+
+664
+00:11:23,460 --> 00:11:23,470
+also going to talk about something
+ 
+
+665
+00:11:23,470 --> 00:11:25,440
+also going to talk about something
+called STD function which is standard
+
+666
+00:11:25,440 --> 00:11:25,450
+called STD function which is standard
+ 
+
+667
+00:11:25,450 --> 00:11:27,240
+called STD function which is standard
+function and standard binds and all that
+
+668
+00:11:27,240 --> 00:11:27,250
+function and standard binds and all that
+ 
+
+669
+00:11:27,250 --> 00:11:28,860
+function and standard binds and all that
+stuff so there's a lot more to actually
+
+670
+00:11:28,860 --> 00:11:28,870
+stuff so there's a lot more to actually
+ 
+
+671
+00:11:28,870 --> 00:11:31,110
+stuff so there's a lot more to actually
+discuss to do with function pointers
+
+672
+00:11:31,110 --> 00:11:31,120
+discuss to do with function pointers
+ 
+
+673
+00:11:31,120 --> 00:11:32,610
+discuss to do with function pointers
+this is just kind of a gentle
+
+674
+00:11:32,610 --> 00:11:32,620
+this is just kind of a gentle
+ 
+
+675
+00:11:32,620 --> 00:11:33,990
+this is just kind of a gentle
+introduction so that you can see what
+
+676
+00:11:33,990 --> 00:11:34,000
+introduction so that you can see what
+ 
+
+677
+00:11:34,000 --> 00:11:36,300
+introduction so that you can see what
+they are and how we can use them and all
+
+678
+00:11:36,300 --> 00:11:36,310
+they are and how we can use them and all
+ 
+
+679
+00:11:36,310 --> 00:11:37,860
+they are and how we can use them and all
+of that and also the primitive way of
+
+680
+00:11:37,860 --> 00:11:37,870
+of that and also the primitive way of
+ 
+
+681
+00:11:37,870 --> 00:11:40,320
+of that and also the primitive way of
+how they exist in C which is just kind
+
+682
+00:11:40,320 --> 00:11:40,330
+how they exist in C which is just kind
+ 
+
+683
+00:11:40,330 --> 00:11:42,930
+how they exist in C which is just kind
+of like this void and then it's just the
+
+684
+00:11:42,930 --> 00:11:42,940
+of like this void and then it's just the
+ 
+
+685
+00:11:42,940 --> 00:11:45,030
+of like this void and then it's just the
+the signature is really really weird and
+
+686
+00:11:45,030 --> 00:11:45,040
+the signature is really really weird and
+ 
+
+687
+00:11:45,040 --> 00:11:47,400
+the signature is really really weird and
+almost no one uses this in actual C++
+
+688
+00:11:47,400 --> 00:11:47,410
+almost no one uses this in actual C++
+ 
+
+689
+00:11:47,410 --> 00:11:50,010
+almost no one uses this in actual C++
+anymore but definitely be aware of it
+
+690
+00:11:50,010 --> 00:11:50,020
+anymore but definitely be aware of it
+ 
+
+691
+00:11:50,020 --> 00:11:51,240
+anymore but definitely be aware of it
+because you will see a lot of code like
+
+692
+00:11:51,240 --> 00:11:51,250
+because you will see a lot of code like
+ 
+
+693
+00:11:51,250 --> 00:11:53,340
+because you will see a lot of code like
+that just in your programming life
+
+694
+00:11:53,340 --> 00:11:53,350
+that just in your programming life
+ 
+
+695
+00:11:53,350 --> 00:11:54,660
+that just in your programming life
+anyway I hope you guys enjoyed this
+
+696
+00:11:54,660 --> 00:11:54,670
+anyway I hope you guys enjoyed this
+ 
+
+697
+00:11:54,670 --> 00:11:56,400
+anyway I hope you guys enjoyed this
+video if you did you can hit that like
+
+698
+00:11:56,400 --> 00:11:56,410
+video if you did you can hit that like
+ 
+
+699
+00:11:56,410 --> 00:11:58,290
+video if you did you can hit that like
+button you can help support this series
+
+700
+00:11:58,290 --> 00:11:58,300
+button you can help support this series
+ 
+
+701
+00:11:58,300 --> 00:12:00,540
+button you can help support this series
+by going to patreon.com/scishow Cherno
+
+702
+00:12:00,540 --> 00:12:00,550
+by going to patreon.com/scishow Cherno
+ 
+
+703
+00:12:00,550 --> 00:12:02,070
+by going to patreon.com/scishow Cherno
+there are some really cool rewards that
+
+704
+00:12:02,070 --> 00:12:02,080
+there are some really cool rewards that
+ 
+
+705
+00:12:02,080 --> 00:12:03,690
+there are some really cool rewards that
+you'll get there for helping to support
+
+706
+00:12:03,690 --> 00:12:03,700
+you'll get there for helping to support
+ 
+
+707
+00:12:03,700 --> 00:12:05,760
+you'll get there for helping to support
+this series such as getting videos early
+
+708
+00:12:05,760 --> 00:12:05,770
+this series such as getting videos early
+ 
+
+709
+00:12:05,770 --> 00:12:08,100
+this series such as getting videos early
+and like monthly kind of hangout
+
+710
+00:12:08,100 --> 00:12:08,110
+and like monthly kind of hangout
+ 
+
+711
+00:12:08,110 --> 00:12:10,620
+and like monthly kind of hangout
+sessions which we do and access to
+
+712
+00:12:10,620 --> 00:12:10,630
+sessions which we do and access to
+ 
+
+713
+00:12:10,630 --> 00:12:12,390
+sessions which we do and access to
+source code from all my other series and
+
+714
+00:12:12,390 --> 00:12:12,400
+source code from all my other series and
+ 
+
+715
+00:12:12,400 --> 00:12:13,950
+source code from all my other series and
+all that kind of cool stuff thank you
+
+716
+00:12:13,950 --> 00:12:13,960
+all that kind of cool stuff thank you
+ 
+
+717
+00:12:13,960 --> 00:12:15,450
+all that kind of cool stuff thank you
+huge thank you as always to all the
+
+718
+00:12:15,450 --> 00:12:15,460
+huge thank you as always to all the
+ 
+
+719
+00:12:15,460 --> 00:12:17,400
+huge thank you as always to all the
+patreon supporters this series would not
+
+720
+00:12:17,400 --> 00:12:17,410
+patreon supporters this series would not
+ 
+
+721
+00:12:17,410 --> 00:12:19,950
+patreon supporters this series would not
+be here without you so thank you so much
+
+722
+00:12:19,950 --> 00:12:19,960
+be here without you so thank you so much
+ 
+
+723
+00:12:19,960 --> 00:12:23,070
+be here without you so thank you so much
+I will see you guys next time goodbye
+
+724
+00:12:23,070 --> 00:12:23,080
+I will see you guys next time goodbye
+ 
+
+725
+00:12:23,080 --> 00:12:39,600
+I will see you guys next time goodbye
+[Music]
+

@@ -1,0 +1,2465 @@
+1
+00:00:00,080 --> 00:00:02,149
+
+hey what's up guys My Name Is AO welcome
+
+2
+00:00:02,149 --> 00:00:02,159
+hey what's up guys My Name Is AO welcome
+ 
+
+3
+00:00:02,159 --> 00:00:04,630
+hey what's up guys My Name Is AO welcome
+back to my C++ series So today we're
+
+4
+00:00:04,630 --> 00:00:04,640
+back to my C++ series So today we're
+ 
+
+5
+00:00:04,640 --> 00:00:05,869
+back to my C++ series So today we're
+going to be talking about control flow
+
+6
+00:00:05,869 --> 00:00:05,879
+going to be talking about control flow
+ 
+
+7
+00:00:05,879 --> 00:00:07,110
+going to be talking about control flow
+statements and really this is going to
+
+8
+00:00:07,110 --> 00:00:07,120
+statements and really this is going to
+ 
+
+9
+00:00:07,120 --> 00:00:09,390
+statements and really this is going to
+be a continuation of last week's episode
+
+10
+00:00:09,390 --> 00:00:09,400
+be a continuation of last week's episode
+ 
+
+11
+00:00:09,400 --> 00:00:10,669
+be a continuation of last week's episode
+so if you haven't seen that episode
+
+12
+00:00:10,669 --> 00:00:10,679
+so if you haven't seen that episode
+ 
+
+13
+00:00:10,679 --> 00:00:12,950
+so if you haven't seen that episode
+about loops definitely check that out
+
+14
+00:00:12,950 --> 00:00:12,960
+about loops definitely check that out
+ 
+
+15
+00:00:12,960 --> 00:00:14,030
+about loops definitely check that out
+there'll be a link in the description
+
+16
+00:00:14,030 --> 00:00:14,040
+there'll be a link in the description
+ 
+
+17
+00:00:14,040 --> 00:00:15,950
+there'll be a link in the description
+below control flow statements work with
+
+18
+00:00:15,950 --> 00:00:15,960
+below control flow statements work with
+ 
+
+19
+00:00:15,960 --> 00:00:17,510
+below control flow statements work with
+loops so in other words they kind of
+
+20
+00:00:17,510 --> 00:00:17,520
+loops so in other words they kind of
+ 
+
+21
+00:00:17,520 --> 00:00:19,510
+loops so in other words they kind of
+give us a little bit more control as to
+
+22
+00:00:19,510 --> 00:00:19,520
+give us a little bit more control as to
+ 
+
+23
+00:00:19,520 --> 00:00:21,470
+give us a little bit more control as to
+how these Loops actually run we've kind
+
+24
+00:00:21,470 --> 00:00:21,480
+how these Loops actually run we've kind
+ 
+
+25
+00:00:21,480 --> 00:00:22,870
+how these Loops actually run we've kind
+of got three main control flow
+
+26
+00:00:22,870 --> 00:00:22,880
+of got three main control flow
+ 
+
+27
+00:00:22,880 --> 00:00:25,109
+of got three main control flow
+statements that we can use continue
+
+28
+00:00:25,109 --> 00:00:25,119
+statements that we can use continue
+ 
+
+29
+00:00:25,119 --> 00:00:27,150
+statements that we can use continue
+break and return and they do different
+
+30
+00:00:27,150 --> 00:00:27,160
+break and return and they do different
+ 
+
+31
+00:00:27,160 --> 00:00:29,269
+break and return and they do different
+things continue can only be used inside
+
+32
+00:00:29,269 --> 00:00:29,279
+things continue can only be used inside
+ 
+
+33
+00:00:29,279 --> 00:00:32,109
+things continue can only be used inside
+a loop and basically continue says go to
+
+34
+00:00:32,109 --> 00:00:32,119
+a loop and basically continue says go to
+ 
+
+35
+00:00:32,119 --> 00:00:34,310
+a loop and basically continue says go to
+the next iteration of this Loop if there
+
+36
+00:00:34,310 --> 00:00:34,320
+the next iteration of this Loop if there
+ 
+
+37
+00:00:34,320 --> 00:00:36,910
+the next iteration of this Loop if there
+is one otherwise it'll just end the loop
+
+38
+00:00:36,910 --> 00:00:36,920
+is one otherwise it'll just end the loop
+ 
+
+39
+00:00:36,920 --> 00:00:39,030
+is one otherwise it'll just end the loop
+breake is primarily used in Loops
+
+40
+00:00:39,030 --> 00:00:39,040
+breake is primarily used in Loops
+ 
+
+41
+00:00:39,040 --> 00:00:40,389
+breake is primarily used in Loops
+however it also appears in switch
+
+42
+00:00:40,389 --> 00:00:40,399
+however it also appears in switch
+ 
+
+43
+00:00:40,399 --> 00:00:43,350
+however it also appears in switch
+statements and basically break just says
+
+44
+00:00:43,350 --> 00:00:43,360
+statements and basically break just says
+ 
+
+45
+00:00:43,360 --> 00:00:46,069
+statements and basically break just says
+get out of the loop so end the loop and
+
+46
+00:00:46,069 --> 00:00:46,079
+get out of the loop so end the loop and
+ 
+
+47
+00:00:46,079 --> 00:00:47,510
+get out of the loop so end the loop and
+finally return is probably the most
+
+48
+00:00:47,510 --> 00:00:47,520
+finally return is probably the most
+ 
+
+49
+00:00:47,520 --> 00:00:49,470
+finally return is probably the most
+powerful one if you want to consider it
+
+50
+00:00:49,470 --> 00:00:49,480
+powerful one if you want to consider it
+ 
+
+51
+00:00:49,480 --> 00:00:51,510
+powerful one if you want to consider it
+that way because return will just get
+
+52
+00:00:51,510 --> 00:00:51,520
+that way because return will just get
+ 
+
+53
+00:00:51,520 --> 00:00:53,270
+that way because return will just get
+out of your function entirely so if
+
+54
+00:00:53,270 --> 00:00:53,280
+out of your function entirely so if
+ 
+
+55
+00:00:53,280 --> 00:00:55,430
+out of your function entirely so if
+you're in a function and you hit a
+
+56
+00:00:55,430 --> 00:00:55,440
+you're in a function and you hit a
+ 
+
+57
+00:00:55,440 --> 00:00:57,389
+you're in a function and you hit a
+return keyword you will exit the
+
+58
+00:00:57,389 --> 00:00:57,399
+return keyword you will exit the
+ 
+
+59
+00:00:57,399 --> 00:00:58,950
+return keyword you will exit the
+function of course for functions which
+
+60
+00:00:58,950 --> 00:00:58,960
+function of course for functions which
+ 
+
+61
+00:00:58,960 --> 00:01:00,310
+function of course for functions which
+actually need to return a value Val when
+
+62
+00:01:00,310 --> 00:01:00,320
+actually need to return a value Val when
+ 
+
+63
+00:01:00,320 --> 00:01:01,790
+actually need to return a value Val when
+you type in return you can't just have
+
+64
+00:01:01,790 --> 00:01:01,800
+you type in return you can't just have
+ 
+
+65
+00:01:01,800 --> 00:01:03,590
+you type in return you can't just have
+return by itself return by itself is
+
+66
+00:01:03,590 --> 00:01:03,600
+return by itself return by itself is
+ 
+
+67
+00:01:03,600 --> 00:01:05,149
+return by itself return by itself is
+only for void functions if your function
+
+68
+00:01:05,149 --> 00:01:05,159
+only for void functions if your function
+ 
+
+69
+00:01:05,159 --> 00:01:06,950
+only for void functions if your function
+needs to return a value when you type in
+
+70
+00:01:06,950 --> 00:01:06,960
+needs to return a value when you type in
+ 
+
+71
+00:01:06,960 --> 00:01:08,230
+needs to return a value when you type in
+return you need to supply it with a
+
+72
+00:01:08,230 --> 00:01:08,240
+return you need to supply it with a
+ 
+
+73
+00:01:08,240 --> 00:01:10,070
+return you need to supply it with a
+value all right not much else to say
+
+74
+00:01:10,070 --> 00:01:10,080
+value all right not much else to say
+ 
+
+75
+00:01:10,080 --> 00:01:11,230
+value all right not much else to say
+really let's just jump in and take a
+
+76
+00:01:11,230 --> 00:01:11,240
+really let's just jump in and take a
+ 
+
+77
+00:01:11,240 --> 00:01:12,710
+really let's just jump in and take a
+look at some examples so this is the
+
+78
+00:01:12,710 --> 00:01:12,720
+look at some examples so this is the
+ 
+
+79
+00:01:12,720 --> 00:01:15,390
+look at some examples so this is the
+program that we had in the last episode
+
+80
+00:01:15,390 --> 00:01:15,400
+program that we had in the last episode
+ 
+
+81
+00:01:15,400 --> 00:01:16,990
+program that we had in the last episode
+we just give that a run you'll see we
+
+82
+00:01:16,990 --> 00:01:17,000
+we just give that a run you'll see we
+ 
+
+83
+00:01:17,000 --> 00:01:18,469
+we just give that a run you'll see we
+have Hello World printing a bunch of
+
+84
+00:01:18,469 --> 00:01:18,479
+have Hello World printing a bunch of
+ 
+
+85
+00:01:18,479 --> 00:01:20,030
+have Hello World printing a bunch of
+times and then of course we had a bit of
+
+86
+00:01:20,030 --> 00:01:20,040
+times and then of course we had a bit of
+ 
+
+87
+00:01:20,040 --> 00:01:21,310
+times and then of course we had a bit of
+a while loop which nothing going to do
+
+88
+00:01:21,310 --> 00:01:21,320
+a while loop which nothing going to do
+ 
+
+89
+00:01:21,320 --> 00:01:22,469
+a while loop which nothing going to do
+while loop that does nothing I'll just
+
+90
+00:01:22,469 --> 00:01:22,479
+while loop that does nothing I'll just
+ 
+
+91
+00:01:22,479 --> 00:01:23,630
+while loop that does nothing I'll just
+get rid of some of these because we
+
+92
+00:01:23,630 --> 00:01:23,640
+get rid of some of these because we
+ 
+
+93
+00:01:23,640 --> 00:01:25,069
+get rid of some of these because we
+don't really need them the only one that
+
+94
+00:01:25,069 --> 00:01:25,079
+don't really need them the only one that
+ 
+
+95
+00:01:25,079 --> 00:01:26,670
+don't really need them the only one that
+I'll keep from our previous program is
+
+96
+00:01:26,670 --> 00:01:26,680
+I'll keep from our previous program is
+ 
+
+97
+00:01:26,680 --> 00:01:29,910
+I'll keep from our previous program is
+pretty much that for Loop so the first
+
+98
+00:01:29,910 --> 00:01:29,920
+pretty much that for Loop so the first
+ 
+
+99
+00:01:29,920 --> 00:01:30,910
+pretty much that for Loop so the first
+control flow statement that we'll look
+
+100
+00:01:30,910 --> 00:01:30,920
+control flow statement that we'll look
+ 
+
+101
+00:01:30,920 --> 00:01:33,429
+control flow statement that we'll look
+at is continue continue will skip to the
+
+102
+00:01:33,429 --> 00:01:33,439
+at is continue continue will skip to the
+ 
+
+103
+00:01:33,439 --> 00:01:35,910
+at is continue continue will skip to the
+next iteration of the for Loop so if I
+
+104
+00:01:35,910 --> 00:01:35,920
+next iteration of the for Loop so if I
+ 
+
+105
+00:01:35,920 --> 00:01:38,630
+next iteration of the for Loop so if I
+write continue over here just like this
+
+106
+00:01:38,630 --> 00:01:38,640
+write continue over here just like this
+ 
+
+107
+00:01:38,640 --> 00:01:40,310
+write continue over here just like this
+it will actually not impact the behavior
+
+108
+00:01:40,310 --> 00:01:40,320
+it will actually not impact the behavior
+ 
+
+109
+00:01:40,320 --> 00:01:42,429
+it will actually not impact the behavior
+of the full loop at all because that is
+
+110
+00:01:42,429 --> 00:01:42,439
+of the full loop at all because that is
+ 
+
+111
+00:01:42,439 --> 00:01:44,270
+of the full loop at all because that is
+already the end of the for Loop when it
+
+112
+00:01:44,270 --> 00:01:44,280
+already the end of the for Loop when it
+ 
+
+113
+00:01:44,280 --> 00:01:45,950
+already the end of the for Loop when it
+hits that line it's going to continue to
+
+114
+00:01:45,950 --> 00:01:45,960
+hits that line it's going to continue to
+ 
+
+115
+00:01:45,960 --> 00:01:47,510
+hits that line it's going to continue to
+the next iteration anyway so this
+
+116
+00:01:47,510 --> 00:01:47,520
+the next iteration anyway so this
+ 
+
+117
+00:01:47,520 --> 00:01:49,749
+the next iteration anyway so this
+doesn't modify the behavior at all
+
+118
+00:01:49,749 --> 00:01:49,759
+doesn't modify the behavior at all
+ 
+
+119
+00:01:49,759 --> 00:01:53,069
+doesn't modify the behavior at all
+however if I do something like if I mod
+
+120
+00:01:53,069 --> 00:01:53,079
+however if I do something like if I mod
+ 
+
+121
+00:01:53,079 --> 00:01:57,149
+however if I do something like if I mod
+2 equals zero and then have a continue
+
+122
+00:01:57,149 --> 00:01:57,159
+2 equals zero and then have a continue
+ 
+
+123
+00:01:57,159 --> 00:01:59,950
+2 equals zero and then have a continue
+there and run my program you'll see the
+
+124
+00:01:59,950 --> 00:01:59,960
+there and run my program you'll see the
+ 
+
+125
+00:01:59,960 --> 00:02:01,029
+there and run my program you'll see the
+basically what's happening is it's
+
+126
+00:02:01,029 --> 00:02:01,039
+basically what's happening is it's
+ 
+
+127
+00:02:01,039 --> 00:02:03,469
+basically what's happening is it's
+skipping every second iteration starting
+
+128
+00:02:03,469 --> 00:02:03,479
+skipping every second iteration starting
+ 
+
+129
+00:02:03,479 --> 00:02:05,590
+skipping every second iteration starting
+with the first one so a better way to
+
+130
+00:02:05,590 --> 00:02:05,600
+with the first one so a better way to
+ 
+
+131
+00:02:05,600 --> 00:02:08,229
+with the first one so a better way to
+illustrate this is probably to include
+
+132
+00:02:08,229 --> 00:02:08,239
+illustrate this is probably to include
+ 
+
+133
+00:02:08,239 --> 00:02:09,949
+illustrate this is probably to include
+some kind of value so instead of just
+
+134
+00:02:09,949 --> 00:02:09,959
+some kind of value so instead of just
+ 
+
+135
+00:02:09,959 --> 00:02:12,110
+some kind of value so instead of just
+logging hello world we can also log the
+
+136
+00:02:12,110 --> 00:02:12,120
+logging hello world we can also log the
+ 
+
+137
+00:02:12,120 --> 00:02:14,270
+logging hello world we can also log the
+actual I variable to see what index is
+
+138
+00:02:14,270 --> 00:02:14,280
+actual I variable to see what index is
+ 
+
+139
+00:02:14,280 --> 00:02:16,390
+actual I variable to see what index is
+currently at and if I write that and I
+
+140
+00:02:16,390 --> 00:02:16,400
+currently at and if I write that and I
+ 
+
+141
+00:02:16,400 --> 00:02:18,390
+currently at and if I write that and I
+hit F5 you can see that our hello world
+
+142
+00:02:18,390 --> 00:02:18,400
+hit F5 you can see that our hello world
+ 
+
+143
+00:02:18,400 --> 00:02:20,350
+hit F5 you can see that our hello world
+statement only runs at odd iterations in
+
+144
+00:02:20,350 --> 00:02:20,360
+statement only runs at odd iterations in
+ 
+
+145
+00:02:20,360 --> 00:02:22,390
+statement only runs at odd iterations in
+other words when I is zero it's not
+
+146
+00:02:22,390 --> 00:02:22,400
+other words when I is zero it's not
+ 
+
+147
+00:02:22,400 --> 00:02:24,150
+other words when I is zero it's not
+going to run because of course zero mod
+
+148
+00:02:24,150 --> 00:02:24,160
+going to run because of course zero mod
+ 
+
+149
+00:02:24,160 --> 00:02:26,830
+going to run because of course zero mod
+Z is zero so it's going to continue
+
+150
+00:02:26,830 --> 00:02:26,840
+Z is zero so it's going to continue
+ 
+
+151
+00:02:26,840 --> 00:02:28,430
+Z is zero so it's going to continue
+because this if statement is true
+
+152
+00:02:28,430 --> 00:02:28,440
+because this if statement is true
+ 
+
+153
+00:02:28,440 --> 00:02:30,070
+because this if statement is true
+otherwise when I is one we're going to
+
+154
+00:02:30,070 --> 00:02:30,080
+otherwise when I is one we're going to
+ 
+
+155
+00:02:30,080 --> 00:02:32,150
+otherwise when I is one we're going to
+get log when I is two we're not and when
+
+156
+00:02:32,150 --> 00:02:32,160
+get log when I is two we're not and when
+ 
+
+157
+00:02:32,160 --> 00:02:34,430
+get log when I is two we're not and when
+I is three we are and then when I is
+
+158
+00:02:34,430 --> 00:02:34,440
+I is three we are and then when I is
+ 
+
+159
+00:02:34,440 --> 00:02:35,630
+I is three we are and then when I is
+four we're not and then of course I
+
+160
+00:02:35,630 --> 00:02:35,640
+four we're not and then of course I
+ 
+
+161
+00:02:35,640 --> 00:02:37,150
+four we're not and then of course I
+never hits five because when it hits
+
+162
+00:02:37,150 --> 00:02:37,160
+never hits five because when it hits
+ 
+
+163
+00:02:37,160 --> 00:02:39,509
+never hits five because when it hits
+five we do not do the for Loop because
+
+164
+00:02:39,509 --> 00:02:39,519
+five we do not do the for Loop because
+ 
+
+165
+00:02:39,519 --> 00:02:41,630
+five we do not do the for Loop because
+this statement says that I must be less
+
+166
+00:02:41,630 --> 00:02:41,640
+this statement says that I must be less
+ 
+
+167
+00:02:41,640 --> 00:02:43,229
+this statement says that I must be less
+than five we could also change this to
+
+168
+00:02:43,229 --> 00:02:43,239
+than five we could also change this to
+ 
+
+169
+00:02:43,239 --> 00:02:45,750
+than five we could also change this to
+something a bit more simple such as if I
+
+170
+00:02:45,750 --> 00:02:45,760
+something a bit more simple such as if I
+ 
+
+171
+00:02:45,760 --> 00:02:47,670
+something a bit more simple such as if I
+is greater than two continue so
+
+172
+00:02:47,670 --> 00:02:47,680
+is greater than two continue so
+ 
+
+173
+00:02:47,680 --> 00:02:49,670
+is greater than two continue so
+basically what should happen here is
+
+174
+00:02:49,670 --> 00:02:49,680
+basically what should happen here is
+ 
+
+175
+00:02:49,680 --> 00:02:52,790
+basically what should happen here is
+when I is Zer and I is 1 and I is 2 it
+
+176
+00:02:52,790 --> 00:02:52,800
+when I is Zer and I is 1 and I is 2 it
+ 
+
+177
+00:02:52,800 --> 00:02:54,630
+when I is Zer and I is 1 and I is 2 it
+should print out our log as well as what
+
+178
+00:02:54,630 --> 00:02:54,640
+should print out our log as well as what
+ 
+
+179
+00:02:54,640 --> 00:02:57,830
+should print out our log as well as what
+I is however when I is three or four it
+
+180
+00:02:57,830 --> 00:02:57,840
+I is however when I is three or four it
+ 
+
+181
+00:02:57,840 --> 00:02:59,670
+I is however when I is three or four it
+shouldn't so if we run that you'll see
+
+182
+00:02:59,670 --> 00:02:59,680
+shouldn't so if we run that you'll see
+ 
+
+183
+00:02:59,680 --> 00:03:01,030
+shouldn't so if we run that you'll see
+we we get hell World printing three
+
+184
+00:03:01,030 --> 00:03:01,040
+we we get hell World printing three
+ 
+
+185
+00:03:01,040 --> 00:03:03,190
+we we get hell World printing three
+times great so that's pretty much it for
+
+186
+00:03:03,190 --> 00:03:03,200
+times great so that's pretty much it for
+ 
+
+187
+00:03:03,200 --> 00:03:05,070
+times great so that's pretty much it for
+continue I mean all it's going to do is
+
+188
+00:03:05,070 --> 00:03:05,080
+continue I mean all it's going to do is
+ 
+
+189
+00:03:05,080 --> 00:03:06,949
+continue I mean all it's going to do is
+when continue gets hit it will skip to
+
+190
+00:03:06,949 --> 00:03:06,959
+when continue gets hit it will skip to
+ 
+
+191
+00:03:06,959 --> 00:03:08,509
+when continue gets hit it will skip to
+the next iteration the full loop if we
+
+192
+00:03:08,509 --> 00:03:08,519
+the next iteration the full loop if we
+ 
+
+193
+00:03:08,519 --> 00:03:10,070
+the next iteration the full loop if we
+actually debug this by putting a break
+
+194
+00:03:10,070 --> 00:03:10,080
+actually debug this by putting a break
+ 
+
+195
+00:03:10,080 --> 00:03:11,509
+actually debug this by putting a break
+point here this will give you some more
+
+196
+00:03:11,509 --> 00:03:11,519
+point here this will give you some more
+ 
+
+197
+00:03:11,519 --> 00:03:13,390
+point here this will give you some more
+insight so you can see here I is zero
+
+198
+00:03:13,390 --> 00:03:13,400
+insight so you can see here I is zero
+ 
+
+199
+00:03:13,400 --> 00:03:14,670
+insight so you can see here I is zero
+which of course is not going to trigger
+
+200
+00:03:14,670 --> 00:03:14,680
+which of course is not going to trigger
+ 
+
+201
+00:03:14,680 --> 00:03:16,190
+which of course is not going to trigger
+this so it's going to go down to log and
+
+202
+00:03:16,190 --> 00:03:16,200
+this so it's going to go down to log and
+ 
+
+203
+00:03:16,200 --> 00:03:17,910
+this so it's going to go down to log and
+log and everything will be fine same for
+
+204
+00:03:17,910 --> 00:03:17,920
+log and everything will be fine same for
+ 
+
+205
+00:03:17,920 --> 00:03:20,509
+log and everything will be fine same for
+when I is 1 and I is 2 however as soon
+
+206
+00:03:20,509 --> 00:03:20,519
+when I is 1 and I is 2 however as soon
+ 
+
+207
+00:03:20,519 --> 00:03:23,589
+when I is 1 and I is 2 however as soon
+as I hits 3 and 3 is greater than two
+
+208
+00:03:23,589 --> 00:03:23,599
+as I hits 3 and 3 is greater than two
+ 
+
+209
+00:03:23,599 --> 00:03:24,990
+as I hits 3 and 3 is greater than two
+we're going to go to continue which
+
+210
+00:03:24,990 --> 00:03:25,000
+we're going to go to continue which
+ 
+
+211
+00:03:25,000 --> 00:03:26,789
+we're going to go to continue which
+means that if I hit F10 right now
+
+212
+00:03:26,789 --> 00:03:26,799
+means that if I hit F10 right now
+ 
+
+213
+00:03:26,799 --> 00:03:28,670
+means that if I hit F10 right now
+instead of moving down to log you can
+
+214
+00:03:28,670 --> 00:03:28,680
+instead of moving down to log you can
+ 
+
+215
+00:03:28,680 --> 00:03:29,949
+instead of moving down to log you can
+see it actually jumps back up to the
+
+216
+00:03:29,949 --> 00:03:29,959
+see it actually jumps back up to the
+ 
+
+217
+00:03:29,959 --> 00:03:31,350
+see it actually jumps back up to the
+start of the for Loop and it will it
+
+218
+00:03:31,350 --> 00:03:31,360
+start of the for Loop and it will it
+ 
+
+219
+00:03:31,360 --> 00:03:33,670
+start of the for Loop and it will it
+will do i++ and it will evaluate our
+
+220
+00:03:33,670 --> 00:03:33,680
+will do i++ and it will evaluate our
+ 
+
+221
+00:03:33,680 --> 00:03:35,670
+will do i++ and it will evaluate our
+condition and then jump back here and of
+
+222
+00:03:35,670 --> 00:03:35,680
+condition and then jump back here and of
+ 
+
+223
+00:03:35,680 --> 00:03:37,149
+condition and then jump back here and of
+course in this case it's going to be the
+
+224
+00:03:37,149 --> 00:03:37,159
+course in this case it's going to be the
+ 
+
+225
+00:03:37,159 --> 00:03:39,229
+course in this case it's going to be the
+exact same behavior all right fantastic
+
+226
+00:03:39,229 --> 00:03:39,239
+exact same behavior all right fantastic
+ 
+
+227
+00:03:39,239 --> 00:03:41,110
+exact same behavior all right fantastic
+that's continue sorted let's take a look
+
+228
+00:03:41,110 --> 00:03:41,120
+that's continue sorted let's take a look
+ 
+
+229
+00:03:41,120 --> 00:03:43,229
+that's continue sorted let's take a look
+at break so if I just replace this code
+
+230
+00:03:43,229 --> 00:03:43,239
+at break so if I just replace this code
+ 
+
+231
+00:03:43,239 --> 00:03:45,589
+at break so if I just replace this code
+with break it's going to appear to act
+
+232
+00:03:45,589 --> 00:03:45,599
+with break it's going to appear to act
+ 
+
+233
+00:03:45,599 --> 00:03:48,470
+with break it's going to appear to act
+the same way you can see that we get 0 1
+
+234
+00:03:48,470 --> 00:03:48,480
+the same way you can see that we get 0 1
+ 
+
+235
+00:03:48,480 --> 00:03:51,309
+the same way you can see that we get 0 1
+2 and we don't get anything else however
+
+236
+00:03:51,309 --> 00:03:51,319
+2 and we don't get anything else however
+ 
+
+237
+00:03:51,319 --> 00:03:53,509
+2 and we don't get anything else however
+if I go back to my first example of if
+
+238
+00:03:53,509 --> 00:03:53,519
+if I go back to my first example of if
+ 
+
+239
+00:03:53,519 --> 00:03:56,710
+if I go back to my first example of if
+I'm mod 2 = 0 and hit F5 you can see we
+
+240
+00:03:56,710 --> 00:03:56,720
+I'm mod 2 = 0 and hit F5 you can see we
+ 
+
+241
+00:03:56,720 --> 00:03:58,550
+I'm mod 2 = 0 and hit F5 you can see we
+actually get absolutely nothing printing
+
+242
+00:03:58,550 --> 00:03:58,560
+actually get absolutely nothing printing
+ 
+
+243
+00:03:58,560 --> 00:04:00,030
+actually get absolutely nothing printing
+now perhaps a little bit of a better
+
+244
+00:04:00,030 --> 00:04:00,040
+now perhaps a little bit of a better
+ 
+
+245
+00:04:00,040 --> 00:04:02,509
+now perhaps a little bit of a better
+example here is to actually print the
+
+246
+00:04:02,509 --> 00:04:02,519
+example here is to actually print the
+ 
+
+247
+00:04:02,519 --> 00:04:04,470
+example here is to actually print the
+first value so I'll just do I + 1 Mod
+
+248
+00:04:04,470 --> 00:04:04,480
+first value so I'll just do I + 1 Mod
+ 
+
+249
+00:04:04,480 --> 00:04:06,309
+first value so I'll just do I + 1 Mod
+2al 0 if we quickly replace this with
+
+250
+00:04:06,309 --> 00:04:06,319
+2al 0 if we quickly replace this with
+ 
+
+251
+00:04:06,319 --> 00:04:07,910
+2al 0 if we quickly replace this with
+continue just so you can see what's
+
+252
+00:04:07,910 --> 00:04:07,920
+continue just so you can see what's
+ 
+
+253
+00:04:07,920 --> 00:04:09,470
+continue just so you can see what's
+happening here you can see that instead
+
+254
+00:04:09,470 --> 00:04:09,480
+happening here you can see that instead
+ 
+
+255
+00:04:09,480 --> 00:04:11,390
+happening here you can see that instead
+of going odd numbers now it's going even
+
+256
+00:04:11,390 --> 00:04:11,400
+of going odd numbers now it's going even
+ 
+
+257
+00:04:11,400 --> 00:04:12,990
+of going odd numbers now it's going even
+numbers so we get 0 two and four
+
+258
+00:04:12,990 --> 00:04:13,000
+numbers so we get 0 two and four
+ 
+
+259
+00:04:13,000 --> 00:04:16,229
+numbers so we get 0 two and four
+printing so if I replace this now with
+
+260
+00:04:16,229 --> 00:04:16,239
+printing so if I replace this now with
+ 
+
+261
+00:04:16,239 --> 00:04:19,430
+printing so if I replace this now with
+break what's actually going to happen is
+
+262
+00:04:19,430 --> 00:04:19,440
+break what's actually going to happen is
+ 
+
+263
+00:04:19,440 --> 00:04:22,110
+break what's actually going to happen is
+it's just going to print that first one
+
+264
+00:04:22,110 --> 00:04:22,120
+it's just going to print that first one
+ 
+
+265
+00:04:22,120 --> 00:04:23,830
+it's just going to print that first one
+because as soon as it hits that brake
+
+266
+00:04:23,830 --> 00:04:23,840
+because as soon as it hits that brake
+ 
+
+267
+00:04:23,840 --> 00:04:26,030
+because as soon as it hits that brake
+statement that's it that Loop is over
+
+268
+00:04:26,030 --> 00:04:26,040
+statement that's it that Loop is over
+ 
+
+269
+00:04:26,040 --> 00:04:28,310
+statement that's it that Loop is over
+game over for that Loop if we place a
+
+270
+00:04:28,310 --> 00:04:28,320
+game over for that Loop if we place a
+ 
+
+271
+00:04:28,320 --> 00:04:31,909
+game over for that Loop if we place a
+break point over over here and we hit F5
+
+272
+00:04:31,909 --> 00:04:31,919
+break point over over here and we hit F5
+ 
+
+273
+00:04:31,919 --> 00:04:33,189
+break point over over here and we hit F5
+you'll see the first time of course the
+
+274
+00:04:33,189 --> 00:04:33,199
+you'll see the first time of course the
+ 
+
+275
+00:04:33,199 --> 00:04:34,749
+you'll see the first time of course the
+if statement is not going to be true so
+
+276
+00:04:34,749 --> 00:04:34,759
+if statement is not going to be true so
+ 
+
+277
+00:04:34,759 --> 00:04:36,469
+if statement is not going to be true so
+we don't break but then the second time
+
+278
+00:04:36,469 --> 00:04:36,479
+we don't break but then the second time
+ 
+
+279
+00:04:36,479 --> 00:04:38,230
+we don't break but then the second time
+we run through this full loop and this
+
+280
+00:04:38,230 --> 00:04:38,240
+we run through this full loop and this
+ 
+
+281
+00:04:38,240 --> 00:04:40,390
+we run through this full loop and this
+is true when we hit break guess what if
+
+282
+00:04:40,390 --> 00:04:40,400
+is true when we hit break guess what if
+ 
+
+283
+00:04:40,400 --> 00:04:42,710
+is true when we hit break guess what if
+I hit F10 right now we jump straight out
+
+284
+00:04:42,710 --> 00:04:42,720
+I hit F10 right now we jump straight out
+ 
+
+285
+00:04:42,720 --> 00:04:44,230
+I hit F10 right now we jump straight out
+of the for Loop into the next line of
+
+286
+00:04:44,230 --> 00:04:44,240
+of the for Loop into the next line of
+ 
+
+287
+00:04:44,240 --> 00:04:47,230
+of the for Loop into the next line of
+code so that's it break breaks our full
+
+288
+00:04:47,230 --> 00:04:47,240
+code so that's it break breaks our full
+ 
+
+289
+00:04:47,240 --> 00:04:48,790
+code so that's it break breaks our full
+loop completely and of course these kind
+
+290
+00:04:48,790 --> 00:04:48,800
+loop completely and of course these kind
+ 
+
+291
+00:04:48,800 --> 00:04:50,270
+loop completely and of course these kind
+of control flow statements inside Loops
+
+292
+00:04:50,270 --> 00:04:50,280
+of control flow statements inside Loops
+ 
+
+293
+00:04:50,280 --> 00:04:52,390
+of control flow statements inside Loops
+apply to all Loops so full Loops while
+
+294
+00:04:52,390 --> 00:04:52,400
+apply to all Loops so full Loops while
+ 
+
+295
+00:04:52,400 --> 00:04:55,070
+apply to all Loops so full Loops while
+Loops do wire Loops they work the same
+
+296
+00:04:55,070 --> 00:04:55,080
+Loops do wire Loops they work the same
+ 
+
+297
+00:04:55,080 --> 00:04:56,710
+Loops do wire Loops they work the same
+in all Loops all right then the final
+
+298
+00:04:56,710 --> 00:04:56,720
+in all Loops all right then the final
+ 
+
+299
+00:04:56,720 --> 00:04:59,710
+in all Loops all right then the final
+one we have is return now this is aun
+
+300
+00:04:59,710 --> 00:04:59,720
+one we have is return now this is aun
+ 
+
+301
+00:04:59,720 --> 00:05:01,670
+one we have is return now this is aun
+function that has to return an integer
+
+302
+00:05:01,670 --> 00:05:01,680
+function that has to return an integer
+ 
+
+303
+00:05:01,680 --> 00:05:03,749
+function that has to return an integer
+so we can't just type in return we have
+
+304
+00:05:03,749 --> 00:05:03,759
+so we can't just type in return we have
+ 
+
+305
+00:05:03,759 --> 00:05:05,350
+so we can't just type in return we have
+to return something if we try and do
+
+306
+00:05:05,350 --> 00:05:05,360
+to return something if we try and do
+ 
+
+307
+00:05:05,360 --> 00:05:08,070
+to return something if we try and do
+something like this and we hit contr F7
+
+308
+00:05:08,070 --> 00:05:08,080
+something like this and we hit contr F7
+ 
+
+309
+00:05:08,080 --> 00:05:09,870
+something like this and we hit contr F7
+it's going to fail because you can see
+
+310
+00:05:09,870 --> 00:05:09,880
+it's going to fail because you can see
+ 
+
+311
+00:05:09,880 --> 00:05:12,510
+it's going to fail because you can see
+it's telling us that main function must
+
+312
+00:05:12,510 --> 00:05:12,520
+it's telling us that main function must
+ 
+
+313
+00:05:12,520 --> 00:05:14,710
+it's telling us that main function must
+return a value because the Declaration
+
+314
+00:05:14,710 --> 00:05:14,720
+return a value because the Declaration
+ 
+
+315
+00:05:14,720 --> 00:05:16,790
+return a value because the Declaration
+States it has to return an integer so I
+
+316
+00:05:16,790 --> 00:05:16,800
+States it has to return an integer so I
+ 
+
+317
+00:05:16,800 --> 00:05:18,870
+States it has to return an integer so I
+could do something like a return zero
+
+318
+00:05:18,870 --> 00:05:18,880
+could do something like a return zero
+ 
+
+319
+00:05:18,880 --> 00:05:20,909
+could do something like a return zero
+zero of course is a valid integer and if
+
+320
+00:05:20,909 --> 00:05:20,919
+zero of course is a valid integer and if
+ 
+
+321
+00:05:20,919 --> 00:05:24,309
+zero of course is a valid integer and if
+I run this code it's actually going to
+
+322
+00:05:24,309 --> 00:05:24,319
+I run this code it's actually going to
+ 
+
+323
+00:05:24,319 --> 00:05:25,990
+I run this code it's actually going to
+immediately appear to close our program
+
+324
+00:05:25,990 --> 00:05:26,000
+immediately appear to close our program
+ 
+
+325
+00:05:26,000 --> 00:05:27,469
+immediately appear to close our program
+because of course we never get to the
+
+326
+00:05:27,469 --> 00:05:27,479
+because of course we never get to the
+ 
+
+327
+00:05:27,479 --> 00:05:30,150
+because of course we never get to the
+stdc and.get statement which is the
+
+328
+00:05:30,150 --> 00:05:30,160
+stdc and.get statement which is the
+ 
+
+329
+00:05:30,160 --> 00:05:31,870
+stdc and.get statement which is the
+statement that keeps our window open
+
+330
+00:05:31,870 --> 00:05:31,880
+statement that keeps our window open
+ 
+
+331
+00:05:31,880 --> 00:05:33,430
+statement that keeps our window open
+because it's expecting us to provide
+
+332
+00:05:33,430 --> 00:05:33,440
+because it's expecting us to provide
+ 
+
+333
+00:05:33,440 --> 00:05:35,590
+because it's expecting us to provide
+input so if I again put a breakpoint
+
+334
+00:05:35,590 --> 00:05:35,600
+input so if I again put a breakpoint
+ 
+
+335
+00:05:35,600 --> 00:05:37,230
+input so if I again put a breakpoint
+here and run my program you'll see the
+
+336
+00:05:37,230 --> 00:05:37,240
+here and run my program you'll see the
+ 
+
+337
+00:05:37,240 --> 00:05:38,790
+here and run my program you'll see the
+first time it's fine it'll log Holo
+
+338
+00:05:38,790 --> 00:05:38,800
+first time it's fine it'll log Holo
+ 
+
+339
+00:05:38,800 --> 00:05:40,629
+first time it's fine it'll log Holo
+world and we do actually get that Hol
+
+340
+00:05:40,629 --> 00:05:40,639
+world and we do actually get that Hol
+ 
+
+341
+00:05:40,639 --> 00:05:42,430
+world and we do actually get that Hol
+World logging up here then the second
+
+342
+00:05:42,430 --> 00:05:42,440
+World logging up here then the second
+ 
+
+343
+00:05:42,440 --> 00:05:44,510
+World logging up here then the second
+time when I hit return zero that's it
+
+344
+00:05:44,510 --> 00:05:44,520
+time when I hit return zero that's it
+ 
+
+345
+00:05:44,520 --> 00:05:46,189
+time when I hit return zero that's it
+look at that it jumps right to that end
+
+346
+00:05:46,189 --> 00:05:46,199
+look at that it jumps right to that end
+ 
+
+347
+00:05:46,199 --> 00:05:48,830
+look at that it jumps right to that end
+curly bracket because this function is
+
+348
+00:05:48,830 --> 00:05:48,840
+curly bracket because this function is
+ 
+
+349
+00:05:48,840 --> 00:05:50,670
+curly bracket because this function is
+over now one other thing to note with
+
+350
+00:05:50,670 --> 00:05:50,680
+over now one other thing to note with
+ 
+
+351
+00:05:50,680 --> 00:05:52,390
+over now one other thing to note with
+the return statement is that you don't
+
+352
+00:05:52,390 --> 00:05:52,400
+the return statement is that you don't
+ 
+
+353
+00:05:52,400 --> 00:05:53,909
+the return statement is that you don't
+have to use return inside a loop the
+
+354
+00:05:53,909 --> 00:05:53,919
+have to use return inside a loop the
+ 
+
+355
+00:05:53,919 --> 00:05:55,430
+have to use return inside a loop the
+same way that you have to with continue
+
+356
+00:05:55,430 --> 00:05:55,440
+same way that you have to with continue
+ 
+
+357
+00:05:55,440 --> 00:05:57,469
+same way that you have to with continue
+and break return can be written anywhere
+
+358
+00:05:57,469 --> 00:05:57,479
+and break return can be written anywhere
+ 
+
+359
+00:05:57,479 --> 00:05:59,870
+and break return can be written anywhere
+so I could do something like if five is
+
+360
+00:05:59,870 --> 00:05:59,880
+so I could do something like if five is
+ 
+
+361
+00:05:59,880 --> 00:06:03,070
+so I could do something like if five is
+greater than 8 return Z and of course I
+
+362
+00:06:03,070 --> 00:06:03,080
+greater than 8 return Z and of course I
+ 
+
+363
+00:06:03,080 --> 00:06:04,430
+greater than 8 return Z and of course I
+have to provide a value in this case
+
+364
+00:06:04,430 --> 00:06:04,440
+have to provide a value in this case
+ 
+
+365
+00:06:04,440 --> 00:06:06,710
+have to provide a value in this case
+because this function returns an integer
+
+366
+00:06:06,710 --> 00:06:06,720
+because this function returns an integer
+ 
+
+367
+00:06:06,720 --> 00:06:08,629
+because this function returns an integer
+so return not necessarily inside a loop
+
+368
+00:06:08,629 --> 00:06:08,639
+so return not necessarily inside a loop
+ 
+
+369
+00:06:08,639 --> 00:06:10,670
+so return not necessarily inside a loop
+can be absolutely anywhere in your code
+
+370
+00:06:10,670 --> 00:06:10,680
+can be absolutely anywhere in your code
+ 
+
+371
+00:06:10,680 --> 00:06:11,990
+can be absolutely anywhere in your code
+you also don't even have to have an if
+
+372
+00:06:11,990 --> 00:06:12,000
+you also don't even have to have an if
+ 
+
+373
+00:06:12,000 --> 00:06:13,589
+you also don't even have to have an if
+statement you could have something like
+
+374
+00:06:13,589 --> 00:06:13,599
+statement you could have something like
+ 
+
+375
+00:06:13,599 --> 00:06:15,950
+statement you could have something like
+this but of course in this case there is
+
+376
+00:06:15,950 --> 00:06:15,960
+this but of course in this case there is
+ 
+
+377
+00:06:15,960 --> 00:06:17,909
+this but of course in this case there is
+no circumstance under which this line
+
+378
+00:06:17,909 --> 00:06:17,919
+no circumstance under which this line
+ 
+
+379
+00:06:17,919 --> 00:06:19,110
+no circumstance under which this line
+would get triggered so this is actually
+
+380
+00:06:19,110 --> 00:06:19,120
+would get triggered so this is actually
+ 
+
+381
+00:06:19,120 --> 00:06:21,350
+would get triggered so this is actually
+known as dead code and some compilers
+
+382
+00:06:21,350 --> 00:06:21,360
+known as dead code and some compilers
+ 
+
+383
+00:06:21,360 --> 00:06:22,670
+known as dead code and some compilers
+especially in other languages will
+
+384
+00:06:22,670 --> 00:06:22,680
+especially in other languages will
+ 
+
+385
+00:06:22,680 --> 00:06:24,390
+especially in other languages will
+actually restrict you from writing code
+
+386
+00:06:24,390 --> 00:06:24,400
+actually restrict you from writing code
+ 
+
+387
+00:06:24,400 --> 00:06:25,589
+actually restrict you from writing code
+like this because I mean at this point
+
+388
+00:06:25,589 --> 00:06:25,599
+like this because I mean at this point
+ 
+
+389
+00:06:25,599 --> 00:06:26,790
+like this because I mean at this point
+you might as well just delete this line
+
+390
+00:06:26,790 --> 00:06:26,800
+you might as well just delete this line
+ 
+
+391
+00:06:26,800 --> 00:06:28,270
+you might as well just delete this line
+it's never going to get called so that's
+
+392
+00:06:28,270 --> 00:06:28,280
+it's never going to get called so that's
+ 
+
+393
+00:06:28,280 --> 00:06:29,990
+it's never going to get called so that's
+pretty much it as far as control flow
+
+394
+00:06:29,990 --> 00:06:30,000
+pretty much it as far as control flow
+ 
+
+395
+00:06:30,000 --> 00:06:31,430
+pretty much it as far as control flow
+statements go return can be used
+
+396
+00:06:31,430 --> 00:06:31,440
+statements go return can be used
+ 
+
+397
+00:06:31,440 --> 00:06:33,029
+statements go return can be used
+anywhere and it will basically just exit
+
+398
+00:06:33,029 --> 00:06:33,039
+anywhere and it will basically just exit
+ 
+
+399
+00:06:33,039 --> 00:06:34,710
+anywhere and it will basically just exit
+the function remember of course if your
+
+400
+00:06:34,710 --> 00:06:34,720
+the function remember of course if your
+ 
+
+401
+00:06:34,720 --> 00:06:37,390
+the function remember of course if your
+function has to return a value then
+
+402
+00:06:37,390 --> 00:06:37,400
+function has to return a value then
+ 
+
+403
+00:06:37,400 --> 00:06:39,589
+function has to return a value then
+return has to give it a value to return
+
+404
+00:06:39,589 --> 00:06:39,599
+return has to give it a value to return
+ 
+
+405
+00:06:39,599 --> 00:06:41,029
+return has to give it a value to return
+these control flow statements basically
+
+406
+00:06:41,029 --> 00:06:41,039
+these control flow statements basically
+ 
+
+407
+00:06:41,039 --> 00:06:43,830
+these control flow statements basically
+form the basis of how how your flow goes
+
+408
+00:06:43,830 --> 00:06:43,840
+form the basis of how how your flow goes
+ 
+
+409
+00:06:43,840 --> 00:06:46,469
+form the basis of how how your flow goes
+so paired with loops and if statements
+
+410
+00:06:46,469 --> 00:06:46,479
+so paired with loops and if statements
+ 
+
+411
+00:06:46,479 --> 00:06:47,870
+so paired with loops and if statements
+and like all of these control flow
+
+412
+00:06:47,870 --> 00:06:47,880
+and like all of these control flow
+ 
+
+413
+00:06:47,880 --> 00:06:49,710
+and like all of these control flow
+statements that is essentially the logic
+
+414
+00:06:49,710 --> 00:06:49,720
+statements that is essentially the logic
+ 
+
+415
+00:06:49,720 --> 00:06:51,830
+statements that is essentially the logic
+of programming those are the tools you
+
+416
+00:06:51,830 --> 00:06:51,840
+of programming those are the tools you
+ 
+
+417
+00:06:51,840 --> 00:06:54,189
+of programming those are the tools you
+have access to to control the flow of
+
+418
+00:06:54,189 --> 00:06:54,199
+have access to to control the flow of
+ 
+
+419
+00:06:54,199 --> 00:06:56,029
+have access to to control the flow of
+your program basically which line gets
+
+420
+00:06:56,029 --> 00:06:56,039
+your program basically which line gets
+ 
+
+421
+00:06:56,039 --> 00:06:59,629
+your program basically which line gets
+executed next right those tools if
+
+422
+00:06:59,629 --> 00:06:59,639
+executed next right those tools if
+ 
+
+423
+00:06:59,639 --> 00:07:01,830
+executed next right those tools if
+statements and conditionals like that
+
+424
+00:07:01,830 --> 00:07:01,840
+statements and conditionals like that
+ 
+
+425
+00:07:01,840 --> 00:07:04,830
+statements and conditionals like that
+loops and control flow statements that
+
+426
+00:07:04,830 --> 00:07:04,840
+loops and control flow statements that
+ 
+
+427
+00:07:04,840 --> 00:07:06,550
+loops and control flow statements that
+is it that is the only thing that can
+
+428
+00:07:06,550 --> 00:07:06,560
+is it that is the only thing that can
+ 
+
+429
+00:07:06,560 --> 00:07:08,390
+is it that is the only thing that can
+modify the behavior of your program
+
+430
+00:07:08,390 --> 00:07:08,400
+modify the behavior of your program
+ 
+
+431
+00:07:08,400 --> 00:07:10,029
+modify the behavior of your program
+short from you actually writing into the
+
+432
+00:07:10,029 --> 00:07:10,039
+short from you actually writing into the
+ 
+
+433
+00:07:10,039 --> 00:07:12,629
+short from you actually writing into the
+instruction pointer don't do that maybe
+
+434
+00:07:12,629 --> 00:07:12,639
+instruction pointer don't do that maybe
+ 
+
+435
+00:07:12,639 --> 00:07:14,270
+instruction pointer don't do that maybe
+as this series progresses and we start
+
+436
+00:07:14,270 --> 00:07:14,280
+as this series progresses and we start
+ 
+
+437
+00:07:14,280 --> 00:07:16,869
+as this series progresses and we start
+actually writing applications I'll be
+
+438
+00:07:16,869 --> 00:07:16,879
+actually writing applications I'll be
+ 
+
+439
+00:07:16,879 --> 00:07:18,309
+actually writing applications I'll be
+referencing all of these control flow
+
+440
+00:07:18,309 --> 00:07:18,319
+referencing all of these control flow
+ 
+
+441
+00:07:18,319 --> 00:07:19,550
+referencing all of these control flow
+statements all the time and showing you
+
+442
+00:07:19,550 --> 00:07:19,560
+statements all the time and showing you
+ 
+
+443
+00:07:19,560 --> 00:07:21,430
+statements all the time and showing you
+examples of where they're used and how I
+
+444
+00:07:21,430 --> 00:07:21,440
+examples of where they're used and how I
+ 
+
+445
+00:07:21,440 --> 00:07:23,309
+examples of where they're used and how I
+can use them as well as probably showing
+
+446
+00:07:23,309 --> 00:07:23,319
+can use them as well as probably showing
+ 
+
+447
+00:07:23,319 --> 00:07:24,950
+can use them as well as probably showing
+you examples about how I can write the
+
+448
+00:07:24,950 --> 00:07:24,960
+you examples about how I can write the
+ 
+
+449
+00:07:24,960 --> 00:07:27,189
+you examples about how I can write the
+same code but without using them or with
+
+450
+00:07:27,189 --> 00:07:27,199
+same code but without using them or with
+ 
+
+451
+00:07:27,199 --> 00:07:29,029
+same code but without using them or with
+using a different statement so if you
+
+452
+00:07:29,029 --> 00:07:29,039
+using a different statement so if you
+ 
+
+453
+00:07:29,039 --> 00:07:30,350
+using a different statement so if you
+want some more more concrete examples of
+
+454
+00:07:30,350 --> 00:07:30,360
+want some more more concrete examples of
+ 
+
+455
+00:07:30,360 --> 00:07:31,990
+want some more more concrete examples of
+how they actually work just stay tuned
+
+456
+00:07:31,990 --> 00:07:32,000
+how they actually work just stay tuned
+ 
+
+457
+00:07:32,000 --> 00:07:33,710
+how they actually work just stay tuned
+to this series and in future episodes
+
+458
+00:07:33,710 --> 00:07:33,720
+to this series and in future episodes
+ 
+
+459
+00:07:33,720 --> 00:07:35,350
+to this series and in future episodes
+when we actually start writing stuff
+
+460
+00:07:35,350 --> 00:07:35,360
+when we actually start writing stuff
+ 
+
+461
+00:07:35,360 --> 00:07:36,710
+when we actually start writing stuff
+we're definitely going to cover this
+
+462
+00:07:36,710 --> 00:07:36,720
+we're definitely going to cover this
+ 
+
+463
+00:07:36,720 --> 00:07:38,189
+we're definitely going to cover this
+because again this is one of the
+
+464
+00:07:38,189 --> 00:07:38,199
+because again this is one of the
+ 
+
+465
+00:07:38,199 --> 00:07:39,710
+because again this is one of the
+fundamental building blocks of writing
+
+466
+00:07:39,710 --> 00:07:39,720
+fundamental building blocks of writing
+ 
+
+467
+00:07:39,720 --> 00:07:41,550
+fundamental building blocks of writing
+an application but anyway I hope you
+
+468
+00:07:41,550 --> 00:07:41,560
+an application but anyway I hope you
+ 
+
+469
+00:07:41,560 --> 00:07:43,629
+an application but anyway I hope you
+guys enjoyed this episode if you did
+
+470
+00:07:43,629 --> 00:07:43,639
+guys enjoyed this episode if you did
+ 
+
+471
+00:07:43,639 --> 00:07:45,510
+guys enjoyed this episode if you did
+please hit that like button follow me on
+
+472
+00:07:45,510 --> 00:07:45,520
+please hit that like button follow me on
+ 
+
+473
+00:07:45,520 --> 00:07:47,189
+please hit that like button follow me on
+Twitter and Instagram Link in the
+
+474
+00:07:47,189 --> 00:07:47,199
+Twitter and Instagram Link in the
+ 
+
+475
+00:07:47,199 --> 00:07:48,749
+Twitter and Instagram Link in the
+description below if you really enjoyed
+
+476
+00:07:48,749 --> 00:07:48,759
+description below if you really enjoyed
+ 
+
+477
+00:07:48,759 --> 00:07:49,670
+description below if you really enjoyed
+this video and you want to show your
+
+478
+00:07:49,670 --> 00:07:49,680
+this video and you want to show your
+ 
+
+479
+00:07:49,680 --> 00:07:51,270
+this video and you want to show your
+support and make sure that more of these
+
+480
+00:07:51,270 --> 00:07:51,280
+support and make sure that more of these
+ 
+
+481
+00:07:51,280 --> 00:07:53,110
+support and make sure that more of these
+awesome videos get made you can support
+
+482
+00:07:53,110 --> 00:07:53,120
+awesome videos get made you can support
+ 
+
+483
+00:07:53,120 --> 00:07:55,510
+awesome videos get made you can support
+me on patreon.com Theo again link will
+
+484
+00:07:55,510 --> 00:07:55,520
+me on patreon.com Theo again link will
+ 
+
+485
+00:07:55,520 --> 00:07:58,070
+me on patreon.com Theo again link will
+be in the description below next
+
+486
+00:07:58,070 --> 00:07:58,080
+be in the description below next
+ 
+
+487
+00:07:58,080 --> 00:08:00,790
+be in the description below next
+time I've got quiet the episode for you
+
+488
+00:08:00,790 --> 00:08:00,800
+time I've got quiet the episode for you
+ 
+
+489
+00:08:00,800 --> 00:08:05,450
+time I've got quiet the episode for you
+guys next time goodbye
+
+490
+00:08:05,450 --> 00:08:05,460
+
+ 
+
+491
+00:08:05,460 --> 00:08:11,190
+
+[Music]
+
+492
+00:08:11,190 --> 00:08:11,200
+
+ 
+
+493
+00:08:11,200 --> 00:08:16,630
+
+[Music]
+

@@ -1,0 +1,3275 @@
+1
+00:00:00,000 --> 00:00:01,550
+
+hey what's up guys my name is a China
+
+2
+00:00:01,550 --> 00:00:01,560
+hey what's up guys my name is a China
+ 
+
+3
+00:00:01,560 --> 00:00:03,139
+hey what's up guys my name is a China
+welcome back to my estate bust loss
+
+4
+00:00:03,139 --> 00:00:03,149
+welcome back to my estate bust loss
+ 
+
+5
+00:00:03,149 --> 00:00:05,050
+welcome back to my estate bust loss
+series so first of all let me just say
+
+6
+00:00:05,050 --> 00:00:05,060
+series so first of all let me just say
+ 
+
+7
+00:00:05,060 --> 00:00:07,639
+series so first of all let me just say
+huge thank you to all of you for helping
+
+8
+00:00:07,639 --> 00:00:07,649
+huge thank you to all of you for helping
+ 
+
+9
+00:00:07,649 --> 00:00:10,280
+huge thank you to all of you for helping
+me reach 100,000 subscribers it's been
+
+10
+00:00:10,280 --> 00:00:10,290
+me reach 100,000 subscribers it's been
+ 
+
+11
+00:00:10,290 --> 00:00:11,959
+me reach 100,000 subscribers it's been
+quite a journey at first on YouTube in
+
+12
+00:00:11,959 --> 00:00:11,969
+quite a journey at first on YouTube in
+ 
+
+13
+00:00:11,969 --> 00:00:14,720
+quite a journey at first on YouTube in
+2011 and I guess most seriously in 2012
+
+14
+00:00:14,720 --> 00:00:14,730
+2011 and I guess most seriously in 2012
+ 
+
+15
+00:00:14,730 --> 00:00:16,550
+2011 and I guess most seriously in 2012
+I'm even more seriously probably at the
+
+16
+00:00:16,550 --> 00:00:16,560
+I'm even more seriously probably at the
+ 
+
+17
+00:00:16,560 --> 00:00:17,900
+I'm even more seriously probably at the
+start of last year when I stopped at the
+
+18
+00:00:17,900 --> 00:00:17,910
+start of last year when I stopped at the
+ 
+
+19
+00:00:17,910 --> 00:00:20,359
+start of last year when I stopped at the
+cipa Plus series and the OpenGL serie
+
+20
+00:00:20,359 --> 00:00:20,369
+cipa Plus series and the OpenGL serie
+ 
+
+21
+00:00:20,369 --> 00:00:22,640
+cipa Plus series and the OpenGL serie
+since has been quite a journey and I
+
+22
+00:00:22,640 --> 00:00:22,650
+since has been quite a journey and I
+ 
+
+23
+00:00:22,650 --> 00:00:24,560
+since has been quite a journey and I
+really do feel very thankful and very
+
+24
+00:00:24,560 --> 00:00:24,570
+really do feel very thankful and very
+ 
+
+25
+00:00:24,570 --> 00:00:25,910
+really do feel very thankful and very
+blessed to have a hundred thousand
+
+26
+00:00:25,910 --> 00:00:25,920
+blessed to have a hundred thousand
+ 
+
+27
+00:00:25,920 --> 00:00:28,820
+blessed to have a hundred thousand
+people following this channel so a huge
+
+28
+00:00:28,820 --> 00:00:28,830
+people following this channel so a huge
+ 
+
+29
+00:00:28,830 --> 00:00:30,620
+people following this channel so a huge
+thank you to all of you and today what
+
+30
+00:00:30,620 --> 00:00:30,630
+thank you to all of you and today what
+ 
+
+31
+00:00:30,630 --> 00:00:32,060
+thank you to all of you and today what
+we're going to talk about is just kind
+
+32
+00:00:32,060 --> 00:00:32,070
+we're going to talk about is just kind
+ 
+
+33
+00:00:32,070 --> 00:00:33,740
+we're going to talk about is just kind
+of a bit of a quick visual studio tip
+
+34
+00:00:33,740 --> 00:00:33,750
+of a bit of a quick visual studio tip
+ 
+
+35
+00:00:33,750 --> 00:00:35,090
+of a bit of a quick visual studio tip
+and just a tip in general for
+
+36
+00:00:35,090 --> 00:00:35,100
+and just a tip in general for
+ 
+
+37
+00:00:35,100 --> 00:00:37,010
+and just a tip in general for
+development and for debugging and that's
+
+38
+00:00:37,010 --> 00:00:37,020
+development and for debugging and that's
+ 
+
+39
+00:00:37,020 --> 00:00:38,510
+development and for debugging and that's
+going to be about breakpoints but not
+
+40
+00:00:38,510 --> 00:00:38,520
+going to be about breakpoints but not
+ 
+
+41
+00:00:38,520 --> 00:00:40,250
+going to be about breakpoints but not
+just about breakpoints if you don't know
+
+42
+00:00:40,250 --> 00:00:40,260
+just about breakpoints if you don't know
+ 
+
+43
+00:00:40,260 --> 00:00:41,330
+just about breakpoints if you don't know
+what a breakpoint is definitely watch
+
+44
+00:00:41,330 --> 00:00:41,340
+what a breakpoint is definitely watch
+ 
+
+45
+00:00:41,340 --> 00:00:43,040
+what a breakpoint is definitely watch
+that video but this isn't just about
+
+46
+00:00:43,040 --> 00:00:43,050
+that video but this isn't just about
+ 
+
+47
+00:00:43,050 --> 00:00:44,750
+that video but this isn't just about
+normal breakpoints it's going to be
+
+48
+00:00:44,750 --> 00:00:44,760
+normal breakpoints it's going to be
+ 
+
+49
+00:00:44,760 --> 00:00:47,180
+normal breakpoints it's going to be
+about conditions and actions that we can
+
+50
+00:00:47,180 --> 00:00:47,190
+about conditions and actions that we can
+ 
+
+51
+00:00:47,190 --> 00:00:49,639
+about conditions and actions that we can
+apply to breakpoints so by conditions or
+
+52
+00:00:49,639 --> 00:00:49,649
+apply to breakpoints so by conditions or
+ 
+
+53
+00:00:49,649 --> 00:00:51,380
+apply to breakpoints so by conditions or
+conditional breakpoints what I mean is
+
+54
+00:00:51,380 --> 00:00:51,390
+conditional breakpoints what I mean is
+ 
+
+55
+00:00:51,390 --> 00:00:53,630
+conditional breakpoints what I mean is
+we can actually tell them to put the
+
+56
+00:00:53,630 --> 00:00:53,640
+we can actually tell them to put the
+ 
+
+57
+00:00:53,640 --> 00:00:55,160
+we can actually tell them to put the
+debugger I want to place a breakpoint
+
+58
+00:00:55,160 --> 00:00:55,170
+debugger I want to place a breakpoint
+ 
+
+59
+00:00:55,170 --> 00:00:57,740
+debugger I want to place a breakpoint
+here but I only want the breakpoint to
+
+60
+00:00:57,740 --> 00:00:57,750
+here but I only want the breakpoint to
+ 
+
+61
+00:00:57,750 --> 00:00:59,349
+here but I only want the breakpoint to
+trigger under a certain condition
+
+62
+00:00:59,349 --> 00:00:59,359
+trigger under a certain condition
+ 
+
+63
+00:00:59,359 --> 00:01:02,029
+trigger under a certain condition
+something in memory basically that's
+
+64
+00:01:02,029 --> 00:01:02,039
+something in memory basically that's
+ 
+
+65
+00:01:02,039 --> 00:01:04,549
+something in memory basically that's
+going to meet my criteria if that's the
+
+66
+00:01:04,549 --> 00:01:04,559
+going to meet my criteria if that's the
+ 
+
+67
+00:01:04,559 --> 00:01:06,469
+going to meet my criteria if that's the
+case then please trigger this breakpoint
+
+68
+00:01:06,469 --> 00:01:06,479
+case then please trigger this breakpoint
+ 
+
+69
+00:01:06,479 --> 00:01:09,020
+case then please trigger this breakpoint
+and an actionable break points of action
+
+70
+00:01:09,020 --> 00:01:09,030
+and an actionable break points of action
+ 
+
+71
+00:01:09,030 --> 00:01:10,940
+and an actionable break points of action
+breakpoints are just something that will
+
+72
+00:01:10,940 --> 00:01:10,950
+breakpoints are just something that will
+ 
+
+73
+00:01:10,950 --> 00:01:12,320
+breakpoints are just something that will
+allow us to take some kind of action
+
+74
+00:01:12,320 --> 00:01:12,330
+allow us to take some kind of action
+ 
+
+75
+00:01:12,330 --> 00:01:14,450
+allow us to take some kind of action
+generally print something to the console
+
+76
+00:01:14,450 --> 00:01:14,460
+generally print something to the console
+ 
+
+77
+00:01:14,460 --> 00:01:17,600
+generally print something to the console
+when a breakpoint is hit so there's kind
+
+78
+00:01:17,600 --> 00:01:17,610
+when a breakpoint is hit so there's kind
+ 
+
+79
+00:01:17,610 --> 00:01:19,640
+when a breakpoint is hit so there's kind
+of two I guess types of action
+
+80
+00:01:19,640 --> 00:01:19,650
+of two I guess types of action
+ 
+
+81
+00:01:19,650 --> 00:01:21,620
+of two I guess types of action
+breakpoints there's one that let the
+
+82
+00:01:21,620 --> 00:01:21,630
+breakpoints there's one that let the
+ 
+
+83
+00:01:21,630 --> 00:01:23,390
+breakpoints there's one that let the
+lets you kind of just continue execution
+
+84
+00:01:23,390 --> 00:01:23,400
+lets you kind of just continue execution
+ 
+
+85
+00:01:23,400 --> 00:01:25,070
+lets you kind of just continue execution
+while printing what you want so for
+
+86
+00:01:25,070 --> 00:01:25,080
+while printing what you want so for
+ 
+
+87
+00:01:25,080 --> 00:01:26,899
+while printing what you want so for
+example let's just say I wanted to log
+
+88
+00:01:26,899 --> 00:01:26,909
+example let's just say I wanted to log
+ 
+
+89
+00:01:26,909 --> 00:01:29,210
+example let's just say I wanted to log
+the mouse position what I could do is
+
+90
+00:01:29,210 --> 00:01:29,220
+the mouse position what I could do is
+ 
+
+91
+00:01:29,220 --> 00:01:30,830
+the mouse position what I could do is
+every time the mouse position is
+
+92
+00:01:30,830 --> 00:01:30,840
+every time the mouse position is
+ 
+
+93
+00:01:30,840 --> 00:01:32,690
+every time the mouse position is
+recorded because like every time I mouse
+
+94
+00:01:32,690 --> 00:01:32,700
+recorded because like every time I mouse
+ 
+
+95
+00:01:32,700 --> 00:01:35,030
+recorded because like every time I mouse
+move move event happens for example I
+
+96
+00:01:35,030 --> 00:01:35,040
+move move event happens for example I
+ 
+
+97
+00:01:35,040 --> 00:01:37,730
+move move event happens for example I
+could have that breakpoint actually
+
+98
+00:01:37,730 --> 00:01:37,740
+could have that breakpoint actually
+ 
+
+99
+00:01:37,740 --> 00:01:39,740
+could have that breakpoint actually
+print something to the console but keep
+
+100
+00:01:39,740 --> 00:01:39,750
+print something to the console but keep
+ 
+
+101
+00:01:39,750 --> 00:01:41,450
+print something to the console but keep
+the driver I'm running or I could get it
+
+102
+00:01:41,450 --> 00:01:41,460
+the driver I'm running or I could get it
+ 
+
+103
+00:01:41,460 --> 00:01:42,800
+the driver I'm running or I could get it
+to like print something to the console
+
+104
+00:01:42,800 --> 00:01:42,810
+to like print something to the console
+ 
+
+105
+00:01:42,810 --> 00:01:44,210
+to like print something to the console
+but still break the program's they're
+
+106
+00:01:44,210 --> 00:01:44,220
+but still break the program's they're
+ 
+
+107
+00:01:44,220 --> 00:01:46,460
+but still break the program's they're
+still gonna pause execution of the
+
+108
+00:01:46,460 --> 00:01:46,470
+still gonna pause execution of the
+ 
+
+109
+00:01:46,470 --> 00:01:48,800
+still gonna pause execution of the
+program so that we can inspect other
+
+110
+00:01:48,800 --> 00:01:48,810
+program so that we can inspect other
+ 
+
+111
+00:01:48,810 --> 00:01:51,649
+program so that we can inspect other
+things in memory so again breakpoints in
+
+112
+00:01:51,649 --> 00:01:51,659
+things in memory so again breakpoints in
+ 
+
+113
+00:01:51,659 --> 00:01:53,359
+things in memory so again breakpoints in
+general make sure you watch that video
+
+114
+00:01:53,359 --> 00:01:53,369
+general make sure you watch that video
+ 
+
+115
+00:01:53,369 --> 00:01:55,429
+general make sure you watch that video
+because if you're in order break point
+
+116
+00:01:55,429 --> 00:01:55,439
+because if you're in order break point
+ 
+
+117
+00:01:55,439 --> 00:01:58,810
+because if you're in order break point
+is this isn't gonna really help much but
+
+118
+00:01:58,810 --> 00:01:58,820
+is this isn't gonna really help much but
+ 
+
+119
+00:01:58,820 --> 00:02:00,620
+is this isn't gonna really help much but
+action breakpoints and conditional
+
+120
+00:02:00,620 --> 00:02:00,630
+action breakpoints and conditional
+ 
+
+121
+00:02:00,630 --> 00:02:02,660
+action breakpoints and conditional
+breakpoints are really really useful as
+
+122
+00:02:02,660 --> 00:02:02,670
+breakpoints are really really useful as
+ 
+
+123
+00:02:02,670 --> 00:02:05,380
+breakpoints are really really useful as
+kind of a further debugging tool now
+
+124
+00:02:05,380 --> 00:02:05,390
+kind of a further debugging tool now
+ 
+
+125
+00:02:05,390 --> 00:02:07,130
+kind of a further debugging tool now
+everything that you can do with these
+
+126
+00:02:07,130 --> 00:02:07,140
+everything that you can do with these
+ 
+
+127
+00:02:07,140 --> 00:02:08,540
+everything that you can do with these
+breakpoints you can actually do in code
+
+128
+00:02:08,540 --> 00:02:08,550
+breakpoints you can actually do in code
+ 
+
+129
+00:02:08,550 --> 00:02:11,180
+breakpoints you can actually do in code
+okay I could just write an if statement
+
+130
+00:02:11,180 --> 00:02:11,190
+okay I could just write an if statement
+ 
+
+131
+00:02:11,190 --> 00:02:13,550
+okay I could just write an if statement
+for example but check something
+
+132
+00:02:13,550 --> 00:02:13,560
+for example but check something
+ 
+
+133
+00:02:13,560 --> 00:02:15,589
+for example but check something
+and then obviously just put a breakpoint
+
+134
+00:02:15,589 --> 00:02:15,599
+and then obviously just put a breakpoint
+ 
+
+135
+00:02:15,599 --> 00:02:17,240
+and then obviously just put a breakpoint
+inside that if statement and if they've
+
+136
+00:02:17,240 --> 00:02:17,250
+inside that if statement and if they've
+ 
+
+137
+00:02:17,250 --> 00:02:18,589
+inside that if statement and if they've
+seven is true then the break point will
+
+138
+00:02:18,589 --> 00:02:18,599
+seven is true then the break point will
+ 
+
+139
+00:02:18,599 --> 00:02:20,270
+seven is true then the break point will
+be tripped all right I don't even have
+
+140
+00:02:20,270 --> 00:02:20,280
+be tripped all right I don't even have
+ 
+
+141
+00:02:20,280 --> 00:02:22,130
+be tripped all right I don't even have
+to put a break point I could just even
+
+142
+00:02:22,130 --> 00:02:22,140
+to put a break point I could just even
+ 
+
+143
+00:02:22,140 --> 00:02:23,780
+to put a break point I could just even
+write debug break or something like that
+
+144
+00:02:23,780 --> 00:02:23,790
+write debug break or something like that
+ 
+
+145
+00:02:23,790 --> 00:02:25,580
+write debug break or something like that
+some kind of compiler intrinsic that
+
+146
+00:02:25,580 --> 00:02:25,590
+some kind of compiler intrinsic that
+ 
+
+147
+00:02:25,590 --> 00:02:27,410
+some kind of compiler intrinsic that
+actually will break the debugger if it's
+
+148
+00:02:27,410 --> 00:02:27,420
+actually will break the debugger if it's
+ 
+
+149
+00:02:27,420 --> 00:02:29,300
+actually will break the debugger if it's
+attached at that given line of code kind
+
+150
+00:02:29,300 --> 00:02:29,310
+attached at that given line of code kind
+ 
+
+151
+00:02:29,310 --> 00:02:30,860
+attached at that given line of code kind
+of like what we do with with assertion
+
+152
+00:02:30,860 --> 00:02:30,870
+of like what we do with with assertion
+ 
+
+153
+00:02:30,870 --> 00:02:34,520
+of like what we do with with assertion
+mappers that's one possibility and with
+
+154
+00:02:34,520 --> 00:02:34,530
+mappers that's one possibility and with
+ 
+
+155
+00:02:34,530 --> 00:02:35,809
+mappers that's one possibility and with
+action break points again printing
+
+156
+00:02:35,809 --> 00:02:35,819
+action break points again printing
+ 
+
+157
+00:02:35,819 --> 00:02:37,130
+action break points again printing
+something to the console obviously you
+
+158
+00:02:37,130 --> 00:02:37,140
+something to the console obviously you
+ 
+
+159
+00:02:37,140 --> 00:02:38,690
+something to the console obviously you
+can do that in code but where this
+
+160
+00:02:38,690 --> 00:02:38,700
+can do that in code but where this
+ 
+
+161
+00:02:38,700 --> 00:02:41,390
+can do that in code but where this
+really comes in handy is where we might
+
+162
+00:02:41,390 --> 00:02:41,400
+really comes in handy is where we might
+ 
+
+163
+00:02:41,400 --> 00:02:43,130
+really comes in handy is where we might
+have gotten our program into some kind
+
+164
+00:02:43,130 --> 00:02:43,140
+have gotten our program into some kind
+ 
+
+165
+00:02:43,140 --> 00:02:46,330
+have gotten our program into some kind
+of state that is a bug perhaps and we
+
+166
+00:02:46,330 --> 00:02:46,340
+of state that is a bug perhaps and we
+ 
+
+167
+00:02:46,340 --> 00:02:50,030
+of state that is a bug perhaps and we
+want to inspect certain kind of
+
+168
+00:02:50,030 --> 00:02:50,040
+want to inspect certain kind of
+ 
+
+169
+00:02:50,040 --> 00:02:51,890
+want to inspect certain kind of
+properties to figure out what what like
+
+170
+00:02:51,890 --> 00:02:51,900
+properties to figure out what what like
+ 
+
+171
+00:02:51,900 --> 00:02:53,840
+properties to figure out what what like
+what's caused this bug or like why am I
+
+172
+00:02:53,840 --> 00:02:53,850
+what's caused this bug or like why am I
+ 
+
+173
+00:02:53,850 --> 00:02:55,430
+what's caused this bug or like why am I
+in this state or what even is this
+
+174
+00:02:55,430 --> 00:02:55,440
+in this state or what even is this
+ 
+
+175
+00:02:55,440 --> 00:02:57,770
+in this state or what even is this
+daylight right like what is my stuff set
+
+176
+00:02:57,770 --> 00:02:57,780
+daylight right like what is my stuff set
+ 
+
+177
+00:02:57,780 --> 00:02:59,690
+daylight right like what is my stuff set
+to why have why is this happened and
+
+178
+00:02:59,690 --> 00:02:59,700
+to why have why is this happened and
+ 
+
+179
+00:02:59,700 --> 00:03:03,830
+to why have why is this happened and
+obviously if we were to actually if we
+
+180
+00:03:03,830 --> 00:03:03,840
+obviously if we were to actually if we
+ 
+
+181
+00:03:03,840 --> 00:03:05,539
+obviously if we were to actually if we
+were to actually kind of decide to add
+
+182
+00:03:05,539 --> 00:03:05,549
+were to actually kind of decide to add
+ 
+
+183
+00:03:05,549 --> 00:03:07,100
+were to actually kind of decide to add
+code to our code base but have to
+
+184
+00:03:07,100 --> 00:03:07,110
+code to our code base but have to
+ 
+
+185
+00:03:07,110 --> 00:03:08,720
+code to our code base but have to
+terminate the application and then
+
+186
+00:03:08,720 --> 00:03:08,730
+terminate the application and then
+ 
+
+187
+00:03:08,730 --> 00:03:10,250
+terminate the application and then
+recompile it and then that would be an
+
+188
+00:03:10,250 --> 00:03:10,260
+recompile it and then that would be an
+ 
+
+189
+00:03:10,260 --> 00:03:11,780
+recompile it and then that would be an
+issue because maybe we couldn't get it
+
+190
+00:03:11,780 --> 00:03:11,790
+issue because maybe we couldn't get it
+ 
+
+191
+00:03:11,790 --> 00:03:13,009
+issue because maybe we couldn't get it
+to the stated yeah maybe it was really
+
+192
+00:03:13,009 --> 00:03:13,019
+to the stated yeah maybe it was really
+ 
+
+193
+00:03:13,019 --> 00:03:15,500
+to the stated yeah maybe it was really
+difficult to get to state and I mean
+
+194
+00:03:15,500 --> 00:03:15,510
+difficult to get to state and I mean
+ 
+
+195
+00:03:15,510 --> 00:03:17,270
+difficult to get to state and I mean
+generally it will just slow down our
+
+196
+00:03:17,270 --> 00:03:17,280
+generally it will just slow down our
+ 
+
+197
+00:03:17,280 --> 00:03:19,009
+generally it will just slow down our
+workflow if we have to keep kind of
+
+198
+00:03:19,009 --> 00:03:19,019
+workflow if we have to keep kind of
+ 
+
+199
+00:03:19,019 --> 00:03:21,289
+workflow if we have to keep kind of
+stopping reconciling out in code like
+
+200
+00:03:21,289 --> 00:03:21,299
+stopping reconciling out in code like
+ 
+
+201
+00:03:21,299 --> 00:03:22,819
+stopping reconciling out in code like
+and then getting up to the state that
+
+202
+00:03:22,819 --> 00:03:22,829
+and then getting up to the state that
+ 
+
+203
+00:03:22,829 --> 00:03:24,440
+and then getting up to the state that
+led up to like why were like what
+
+204
+00:03:24,440 --> 00:03:24,450
+led up to like why were like what
+ 
+
+205
+00:03:24,450 --> 00:03:25,910
+led up to like why were like what
+exactly we want to debug and all of that
+
+206
+00:03:25,910 --> 00:03:25,920
+exactly we want to debug and all of that
+ 
+
+207
+00:03:25,920 --> 00:03:29,180
+exactly we want to debug and all of that
+so it's a huge issue and this really
+
+208
+00:03:29,180 --> 00:03:29,190
+so it's a huge issue and this really
+ 
+
+209
+00:03:29,190 --> 00:03:30,590
+so it's a huge issue and this really
+does help us out a lot so let's just
+
+210
+00:03:30,590 --> 00:03:30,600
+does help us out a lot so let's just
+ 
+
+211
+00:03:30,600 --> 00:03:32,300
+does help us out a lot so let's just
+dive into some code whatever here
+
+212
+00:03:32,300 --> 00:03:32,310
+dive into some code whatever here
+ 
+
+213
+00:03:32,310 --> 00:03:35,030
+dive into some code whatever here
+actually is the source code to Sparky
+
+214
+00:03:35,030 --> 00:03:35,040
+actually is the source code to Sparky
+ 
+
+215
+00:03:35,040 --> 00:03:36,470
+actually is the source code to Sparky
+which is a game engine that I made about
+
+216
+00:03:36,470 --> 00:03:36,480
+which is a game engine that I made about
+ 
+
+217
+00:03:36,480 --> 00:03:39,559
+which is a game engine that I made about
+three years ago and then what I want to
+
+218
+00:03:39,559 --> 00:03:39,569
+three years ago and then what I want to
+ 
+
+219
+00:03:39,569 --> 00:03:40,699
+three years ago and then what I want to
+do is I'll just launch and kind of show
+
+220
+00:03:40,699 --> 00:03:40,709
+do is I'll just launch and kind of show
+ 
+
+221
+00:03:40,709 --> 00:03:41,900
+do is I'll just launch and kind of show
+you guys what we're dealing with this is
+
+222
+00:03:41,900 --> 00:03:41,910
+you guys what we're dealing with this is
+ 
+
+223
+00:03:41,910 --> 00:03:43,220
+you guys what we're dealing with this is
+just an example project it could be
+
+224
+00:03:43,220 --> 00:03:43,230
+just an example project it could be
+ 
+
+225
+00:03:43,230 --> 00:03:44,780
+just an example project it could be
+anything but I thought I'd actually use
+
+226
+00:03:44,780 --> 00:03:44,790
+anything but I thought I'd actually use
+ 
+
+227
+00:03:44,790 --> 00:03:46,550
+anything but I thought I'd actually use
+kind of a real-world project instead of
+
+228
+00:03:46,550 --> 00:03:46,560
+kind of a real-world project instead of
+ 
+
+229
+00:03:46,560 --> 00:03:49,699
+kind of a real-world project instead of
+just doing something like I don't know
+
+230
+00:03:49,699 --> 00:03:49,709
+just doing something like I don't know
+ 
+
+231
+00:03:49,709 --> 00:03:52,009
+just doing something like I don't know
+our some kind of weird hello world app
+
+232
+00:03:52,009 --> 00:03:52,019
+our some kind of weird hello world app
+ 
+
+233
+00:03:52,019 --> 00:03:53,509
+our some kind of weird hello world app
+that probably wouldn't show you much so
+
+234
+00:03:53,509 --> 00:03:53,519
+that probably wouldn't show you much so
+ 
+
+235
+00:03:53,519 --> 00:03:55,190
+that probably wouldn't show you much so
+all we have here is really just is this
+
+236
+00:03:55,190 --> 00:03:55,200
+all we have here is really just is this
+ 
+
+237
+00:03:55,200 --> 00:03:58,099
+all we have here is really just is this
+scene which has some graphics in and
+
+238
+00:03:58,099 --> 00:03:58,109
+scene which has some graphics in and
+ 
+
+239
+00:03:58,109 --> 00:04:00,559
+scene which has some graphics in and
+when I finally opens and then we have
+
+240
+00:04:00,559 --> 00:04:00,569
+when I finally opens and then we have
+ 
+
+241
+00:04:00,569 --> 00:04:03,800
+when I finally opens and then we have
+like you know some metal and plastic
+
+242
+00:04:03,800 --> 00:04:03,810
+like you know some metal and plastic
+ 
+
+243
+00:04:03,810 --> 00:04:05,300
+like you know some metal and plastic
+balls of various roughnesses and all
+
+244
+00:04:05,300 --> 00:04:05,310
+balls of various roughnesses and all
+ 
+
+245
+00:04:05,310 --> 00:04:06,770
+balls of various roughnesses and all
+that and in fact I think the OpenGL
+
+246
+00:04:06,770 --> 00:04:06,780
+that and in fact I think the OpenGL
+ 
+
+247
+00:04:06,780 --> 00:04:09,199
+that and in fact I think the OpenGL
+version or Sparky is a bit not as good
+
+248
+00:04:09,199 --> 00:04:09,209
+version or Sparky is a bit not as good
+ 
+
+249
+00:04:09,209 --> 00:04:10,520
+version or Sparky is a bit not as good
+as the DirectX version so there might be
+
+250
+00:04:10,520 --> 00:04:10,530
+as the DirectX version so there might be
+ 
+
+251
+00:04:10,530 --> 00:04:11,900
+as the DirectX version so there might be
+some artifacts but anyway the point is
+
+252
+00:04:11,900 --> 00:04:11,910
+some artifacts but anyway the point is
+ 
+
+253
+00:04:11,910 --> 00:04:14,000
+some artifacts but anyway the point is
+we have kind of a 3d app here and what I
+
+254
+00:04:14,000 --> 00:04:14,010
+we have kind of a 3d app here and what I
+ 
+
+255
+00:04:14,010 --> 00:04:15,740
+we have kind of a 3d app here and what I
+want to do is while this is running
+
+256
+00:04:15,740 --> 00:04:15,750
+want to do is while this is running
+ 
+
+257
+00:04:15,750 --> 00:04:17,990
+want to do is while this is running
+without actually closing it I'm gonna
+
+258
+00:04:17,990 --> 00:04:18,000
+without actually closing it I'm gonna
+ 
+
+259
+00:04:18,000 --> 00:04:20,000
+without actually closing it I'm gonna
+I've just decided that I want to debug
+
+260
+00:04:20,000 --> 00:04:20,010
+I've just decided that I want to debug
+ 
+
+261
+00:04:20,010 --> 00:04:21,349
+I've just decided that I want to debug
+the mouse position because the position
+
+262
+00:04:21,349 --> 00:04:21,359
+the mouse position because the position
+ 
+
+263
+00:04:21,359 --> 00:04:22,550
+the mouse position because the position
+the mouse just seems to be a bit wrong
+
+264
+00:04:22,550 --> 00:04:22,560
+the mouse just seems to be a bit wrong
+ 
+
+265
+00:04:22,560 --> 00:04:24,290
+the mouse just seems to be a bit wrong
+so what I'll do is I'll go to the code
+
+266
+00:04:24,290 --> 00:04:24,300
+so what I'll do is I'll go to the code
+ 
+
+267
+00:04:24,300 --> 00:04:24,629
+so what I'll do is I'll go to the code
+that
+
+268
+00:04:24,629 --> 00:04:24,639
+that
+ 
+
+269
+00:04:24,639 --> 00:04:26,969
+that
+surely record amounts position switch in
+
+270
+00:04:26,969 --> 00:04:26,979
+surely record amounts position switch in
+ 
+
+271
+00:04:26,979 --> 00:04:29,610
+surely record amounts position switch in
+this case is with win32 input does every
+
+272
+00:04:29,610 --> 00:04:29,620
+this case is with win32 input does every
+ 
+
+273
+00:04:29,620 --> 00:04:31,619
+this case is with win32 input does every
+be I'm just closes in the right view to
+
+274
+00:04:31,619 --> 00:04:31,629
+be I'm just closes in the right view to
+ 
+
+275
+00:04:31,629 --> 00:04:34,140
+be I'm just closes in the right view to
+make some more space and then what I'm
+
+276
+00:04:34,140 --> 00:04:34,150
+make some more space and then what I'm
+ 
+
+277
+00:04:34,150 --> 00:04:36,119
+make some more space and then what I'm
+going to do is find the mouth let's just
+
+278
+00:04:36,119 --> 00:04:36,129
+going to do is find the mouth let's just
+ 
+
+279
+00:04:36,129 --> 00:04:37,469
+going to do is find the mouth let's just
+say the button callback right so every
+
+280
+00:04:37,469 --> 00:04:37,479
+say the button callback right so every
+ 
+
+281
+00:04:37,479 --> 00:04:38,700
+say the button callback right so every
+time a button is clicked this gets
+
+282
+00:04:38,700 --> 00:04:38,710
+time a button is clicked this gets
+ 
+
+283
+00:04:38,710 --> 00:04:41,369
+time a button is clicked this gets
+called and we have this kind of mouse
+
+284
+00:04:41,369 --> 00:04:41,379
+called and we have this kind of mouse
+ 
+
+285
+00:04:41,379 --> 00:04:43,589
+called and we have this kind of mouse
+position x and y that gets set here now
+
+286
+00:04:43,589 --> 00:04:43,599
+position x and y that gets set here now
+ 
+
+287
+00:04:43,599 --> 00:04:45,600
+position x and y that gets set here now
+I want to debug that so what I'll do is
+
+288
+00:04:45,600 --> 00:04:45,610
+I want to debug that so what I'll do is
+ 
+
+289
+00:04:45,610 --> 00:04:47,730
+I want to debug that so what I'll do is
+I'll jump to the end of here and
+
+290
+00:04:47,730 --> 00:04:47,740
+I'll jump to the end of here and
+ 
+
+291
+00:04:47,740 --> 00:04:49,830
+I'll jump to the end of here and
+actually of course I'm not gonna add
+
+292
+00:04:49,830 --> 00:04:49,840
+actually of course I'm not gonna add
+ 
+
+293
+00:04:49,840 --> 00:04:51,420
+actually of course I'm not gonna add
+code all I'm really gonna do is I'm just
+
+294
+00:04:51,420 --> 00:04:51,430
+code all I'm really gonna do is I'm just
+ 
+
+295
+00:04:51,430 --> 00:04:52,980
+code all I'm really gonna do is I'm just
+gonna put a breakpoint like on this line
+
+296
+00:04:52,980 --> 00:04:52,990
+gonna put a breakpoint like on this line
+ 
+
+297
+00:04:52,990 --> 00:04:55,110
+gonna put a breakpoint like on this line
+for example I'm gonna right click on
+
+298
+00:04:55,110 --> 00:04:55,120
+for example I'm gonna right click on
+ 
+
+299
+00:04:55,120 --> 00:04:56,489
+for example I'm gonna right click on
+this break point and then go to
+
+300
+00:04:56,489 --> 00:04:56,499
+this break point and then go to
+ 
+
+301
+00:04:56,499 --> 00:04:59,790
+this break point and then go to
+conditions okay or in fact well let's
+
+302
+00:04:59,790 --> 00:04:59,800
+conditions okay or in fact well let's
+ 
+
+303
+00:04:59,800 --> 00:05:00,959
+conditions okay or in fact well let's
+just log at first so we can go to
+
+304
+00:05:00,959 --> 00:05:00,969
+just log at first so we can go to
+ 
+
+305
+00:05:00,969 --> 00:05:02,999
+just log at first so we can go to
+actions okay and conditions and actions
+
+306
+00:05:02,999 --> 00:05:03,009
+actions okay and conditions and actions
+ 
+
+307
+00:05:03,009 --> 00:05:04,740
+actions okay and conditions and actions
+are both here so we can actually use a
+
+308
+00:05:04,740 --> 00:05:04,750
+are both here so we can actually use a
+ 
+
+309
+00:05:04,750 --> 00:05:06,779
+are both here so we can actually use a
+condition and an action together right
+
+310
+00:05:06,779 --> 00:05:06,789
+condition and an action together right
+ 
+
+311
+00:05:06,789 --> 00:05:08,700
+condition and an action together right
+you have to click on actions first and
+
+312
+00:05:08,700 --> 00:05:08,710
+you have to click on actions first and
+ 
+
+313
+00:05:08,710 --> 00:05:11,070
+you have to click on actions first and
+then add a condition to it otherwise it
+
+314
+00:05:11,070 --> 00:05:11,080
+then add a condition to it otherwise it
+ 
+
+315
+00:05:11,080 --> 00:05:12,149
+then add a condition to it otherwise it
+well we have to actually add something
+
+316
+00:05:12,149 --> 00:05:12,159
+well we have to actually add something
+ 
+
+317
+00:05:12,159 --> 00:05:14,760
+well we have to actually add something
+and then it will let us kind of um do
+
+318
+00:05:14,760 --> 00:05:14,770
+and then it will let us kind of um do
+ 
+
+319
+00:05:14,770 --> 00:05:16,499
+and then it will let us kind of um do
+both but anyway let's start with an
+
+320
+00:05:16,499 --> 00:05:16,509
+both but anyway let's start with an
+ 
+
+321
+00:05:16,509 --> 00:05:18,629
+both but anyway let's start with an
+action so we'll log something to the
+
+322
+00:05:18,629 --> 00:05:18,639
+action so we'll log something to the
+ 
+
+323
+00:05:18,639 --> 00:05:20,490
+action so we'll log something to the
+Apple window and we will decide to
+
+324
+00:05:20,490 --> 00:05:20,500
+Apple window and we will decide to
+ 
+
+325
+00:05:20,500 --> 00:05:22,529
+Apple window and we will decide to
+continue execution so the way that we do
+
+326
+00:05:22,529 --> 00:05:22,539
+continue execution so the way that we do
+ 
+
+327
+00:05:22,539 --> 00:05:23,909
+continue execution so the way that we do
+this if we have variables that we want
+
+328
+00:05:23,909 --> 00:05:23,919
+this if we have variables that we want
+ 
+
+329
+00:05:23,919 --> 00:05:25,589
+this if we have variables that we want
+to do and this actually shows you a bit
+
+330
+00:05:25,589 --> 00:05:25,599
+to do and this actually shows you a bit
+ 
+
+331
+00:05:25,599 --> 00:05:28,559
+to do and this actually shows you a bit
+at the syntax what we can do is just use
+
+332
+00:05:28,559 --> 00:05:28,569
+at the syntax what we can do is just use
+ 
+
+333
+00:05:28,569 --> 00:05:29,999
+at the syntax what we can do is just use
+curly brackets and inside the curly
+
+334
+00:05:29,999 --> 00:05:30,009
+curly brackets and inside the curly
+ 
+
+335
+00:05:30,009 --> 00:05:31,709
+curly brackets and inside the curly
+brackets we can put in a variable name
+
+336
+00:05:31,709 --> 00:05:31,719
+brackets we can put in a variable name
+ 
+
+337
+00:05:31,719 --> 00:05:34,769
+brackets we can put in a variable name
+such as X or input manager arrow mem
+
+338
+00:05:34,769 --> 00:05:34,779
+such as X or input manager arrow mem
+ 
+
+339
+00:05:34,779 --> 00:05:36,839
+such as X or input manager arrow mem
+underscore mouse position X or something
+
+340
+00:05:36,839 --> 00:05:36,849
+underscore mouse position X or something
+ 
+
+341
+00:05:36,849 --> 00:05:38,339
+underscore mouse position X or something
+like that X is just obviously easier to
+
+342
+00:05:38,339 --> 00:05:38,349
+like that X is just obviously easier to
+ 
+
+343
+00:05:38,349 --> 00:05:38,790
+like that X is just obviously easier to
+write
+
+344
+00:05:38,790 --> 00:05:38,800
+write
+ 
+
+345
+00:05:38,800 --> 00:05:41,129
+write
+so we'll do X and you can do things like
+
+346
+00:05:41,129 --> 00:05:41,139
+so we'll do X and you can do things like
+ 
+
+347
+00:05:41,139 --> 00:05:43,019
+so we'll do X and you can do things like
+cast so it will cost to a float if we
+
+348
+00:05:43,019 --> 00:05:43,029
+cast so it will cost to a float if we
+ 
+
+349
+00:05:43,029 --> 00:05:44,939
+cast so it will cost to a float if we
+want we don't have to do in this case
+
+350
+00:05:44,939 --> 00:05:44,949
+want we don't have to do in this case
+ 
+
+351
+00:05:44,949 --> 00:05:46,110
+want we don't have to do in this case
+it's just going to be an integer Mouse
+
+352
+00:05:46,110 --> 00:05:46,120
+it's just going to be an integer Mouse
+ 
+
+353
+00:05:46,120 --> 00:05:48,659
+it's just going to be an integer Mouse
+position so we'd say the value 8 away
+
+354
+00:05:48,659 --> 00:05:48,669
+position so we'd say the value 8 away
+ 
+
+355
+00:05:48,669 --> 00:05:50,279
+position so we'd say the value 8 away
+properly but I'll cause it to a float is
+
+356
+00:05:50,279 --> 00:05:50,289
+properly but I'll cause it to a float is
+ 
+
+357
+00:05:50,289 --> 00:05:53,040
+properly but I'll cause it to a float is
+so fun to show you that you can so x and
+
+358
+00:05:53,040 --> 00:05:53,050
+so fun to show you that you can so x and
+ 
+
+359
+00:05:53,050 --> 00:05:55,950
+so fun to show you that you can so x and
+y okay so X and then comma Y and you can
+
+360
+00:05:55,950 --> 00:05:55,960
+y okay so X and then comma Y and you can
+ 
+
+361
+00:05:55,960 --> 00:05:57,899
+y okay so X and then comma Y and you can
+see that I'm kind of encompassing these
+
+362
+00:05:57,899 --> 00:05:57,909
+see that I'm kind of encompassing these
+ 
+
+363
+00:05:57,909 --> 00:06:00,119
+see that I'm kind of encompassing these
+variable names inside curly brackets and
+
+364
+00:06:00,119 --> 00:06:00,129
+variable names inside curly brackets and
+ 
+
+365
+00:06:00,129 --> 00:06:02,100
+variable names inside curly brackets and
+I can you know add some other text like
+
+366
+00:06:02,100 --> 00:06:02,110
+I can you know add some other text like
+ 
+
+367
+00:06:02,110 --> 00:06:08,189
+I can you know add some other text like
+the mouse position is that okay and
+
+368
+00:06:08,189 --> 00:06:08,199
+the mouse position is that okay and
+ 
+
+369
+00:06:08,199 --> 00:06:10,589
+the mouse position is that okay and
+there we go we have that let's hit close
+
+370
+00:06:10,589 --> 00:06:10,599
+there we go we have that let's hit close
+ 
+
+371
+00:06:10,599 --> 00:06:11,999
+there we go we have that let's hit close
+and the application is still running
+
+372
+00:06:11,999 --> 00:06:12,009
+and the application is still running
+ 
+
+373
+00:06:12,009 --> 00:06:13,409
+and the application is still running
+obviously so what I'm gonna do is I'm
+
+374
+00:06:13,409 --> 00:06:13,419
+obviously so what I'm gonna do is I'm
+ 
+
+375
+00:06:13,419 --> 00:06:15,570
+obviously so what I'm gonna do is I'm
+just gonna click and if we go into our
+
+376
+00:06:15,570 --> 00:06:15,580
+just gonna click and if we go into our
+ 
+
+377
+00:06:15,580 --> 00:06:17,490
+just gonna click and if we go into our
+output window you'll see that it
+
+378
+00:06:17,490 --> 00:06:17,500
+output window you'll see that it
+ 
+
+379
+00:06:17,500 --> 00:06:18,809
+output window you'll see that it
+actually tells us what our mouse
+
+380
+00:06:18,809 --> 00:06:18,819
+actually tells us what our mouse
+ 
+
+381
+00:06:18,819 --> 00:06:22,200
+actually tells us what our mouse
+position is and if I drag this up a bit
+
+382
+00:06:22,200 --> 00:06:22,210
+position is and if I drag this up a bit
+ 
+
+383
+00:06:22,210 --> 00:06:24,149
+position is and if I drag this up a bit
+more so you guys can see and I go back
+
+384
+00:06:24,149 --> 00:06:24,159
+more so you guys can see and I go back
+ 
+
+385
+00:06:24,159 --> 00:06:26,279
+more so you guys can see and I go back
+to my program and I just click all over
+
+386
+00:06:26,279 --> 00:06:26,289
+to my program and I just click all over
+ 
+
+387
+00:06:26,289 --> 00:06:27,839
+to my program and I just click all over
+the place let me move this in fact I'll
+
+388
+00:06:27,839 --> 00:06:27,849
+the place let me move this in fact I'll
+ 
+
+389
+00:06:27,849 --> 00:06:30,749
+the place let me move this in fact I'll
+resize it make it smaller you can see
+
+390
+00:06:30,749 --> 00:06:30,759
+resize it make it smaller you can see
+ 
+
+391
+00:06:30,759 --> 00:06:32,490
+resize it make it smaller you can see
+I'm clicking all over the place and it's
+
+392
+00:06:32,490 --> 00:06:32,500
+I'm clicking all over the place and it's
+ 
+
+393
+00:06:32,500 --> 00:06:35,820
+I'm clicking all over the place and it's
+telling me what my mouse position is
+
+394
+00:06:35,820 --> 00:06:35,830
+telling me what my mouse position is
+ 
+
+395
+00:06:35,830 --> 00:06:37,320
+telling me what my mouse position is
+okay and looks like that whole box being
+
+396
+00:06:37,320 --> 00:06:37,330
+okay and looks like that whole box being
+ 
+
+397
+00:06:37,330 --> 00:06:38,460
+okay and looks like that whole box being
+called twice for some reason
+
+398
+00:06:38,460 --> 00:06:38,470
+called twice for some reason
+ 
+
+399
+00:06:38,470 --> 00:06:41,730
+called twice for some reason
+anyway you can say that I have the math
+
+400
+00:06:41,730 --> 00:06:41,740
+anyway you can say that I have the math
+ 
+
+401
+00:06:41,740 --> 00:06:43,050
+anyway you can say that I have the math
+position being printed in real time
+
+402
+00:06:43,050 --> 00:06:43,060
+position being printed in real time
+ 
+
+403
+00:06:43,060 --> 00:06:44,670
+position being printed in real time
+while my application is running and I
+
+404
+00:06:44,670 --> 00:06:44,680
+while my application is running and I
+ 
+
+405
+00:06:44,680 --> 00:06:45,750
+while my application is running and I
+guess the big takeaway from this is
+
+406
+00:06:45,750 --> 00:06:45,760
+guess the big takeaway from this is
+ 
+
+407
+00:06:45,760 --> 00:06:47,490
+guess the big takeaway from this is
+obviously I could just add code that
+
+408
+00:06:47,490 --> 00:06:47,500
+obviously I could just add code that
+ 
+
+409
+00:06:47,500 --> 00:06:49,050
+obviously I could just add code that
+prints that in the actual source code of
+
+410
+00:06:49,050 --> 00:06:49,060
+prints that in the actual source code of
+ 
+
+411
+00:06:49,060 --> 00:06:51,450
+prints that in the actual source code of
+the application but the cool thing is I
+
+412
+00:06:51,450 --> 00:06:51,460
+the application but the cool thing is I
+ 
+
+413
+00:06:51,460 --> 00:06:52,710
+the application but the cool thing is I
+haven't have stopped my application
+
+414
+00:06:52,710 --> 00:06:52,720
+haven't have stopped my application
+ 
+
+415
+00:06:52,720 --> 00:06:54,090
+haven't have stopped my application
+right I haven't actually had to
+
+416
+00:06:54,090 --> 00:06:54,100
+right I haven't actually had to
+ 
+
+417
+00:06:54,100 --> 00:06:55,860
+right I haven't actually had to
+recompile any code or anything this is
+
+418
+00:06:55,860 --> 00:06:55,870
+recompile any code or anything this is
+ 
+
+419
+00:06:55,870 --> 00:06:57,510
+recompile any code or anything this is
+just while my initial application was
+
+420
+00:06:57,510 --> 00:06:57,520
+just while my initial application was
+ 
+
+421
+00:06:57,520 --> 00:06:59,250
+just while my initial application was
+running I've managed to print additional
+
+422
+00:06:59,250 --> 00:06:59,260
+running I've managed to print additional
+ 
+
+423
+00:06:59,260 --> 00:07:02,130
+running I've managed to print additional
+data to the console the other way of
+
+424
+00:07:02,130 --> 00:07:02,140
+data to the console the other way of
+ 
+
+425
+00:07:02,140 --> 00:07:03,480
+data to the console the other way of
+doing this would be to just add a
+
+426
+00:07:03,480 --> 00:07:03,490
+doing this would be to just add a
+ 
+
+427
+00:07:03,490 --> 00:07:06,090
+doing this would be to just add a
+regular breakpoint click and then look
+
+428
+00:07:06,090 --> 00:07:06,100
+regular breakpoint click and then look
+ 
+
+429
+00:07:06,100 --> 00:07:08,130
+regular breakpoint click and then look
+at you know the broken program like well
+
+430
+00:07:08,130 --> 00:07:08,140
+at you know the broken program like well
+ 
+
+431
+00:07:08,140 --> 00:07:09,480
+at you know the broken program like well
+it's paused and look at the variables
+
+432
+00:07:09,480 --> 00:07:09,490
+it's paused and look at the variables
+ 
+
+433
+00:07:09,490 --> 00:07:10,830
+it's paused and look at the variables
+but that would be way too long right
+
+434
+00:07:10,830 --> 00:07:10,840
+but that would be way too long right
+ 
+
+435
+00:07:10,840 --> 00:07:12,690
+but that would be way too long right
+yeah I can just click all over the place
+
+436
+00:07:12,690 --> 00:07:12,700
+yeah I can just click all over the place
+ 
+
+437
+00:07:12,700 --> 00:07:14,550
+yeah I can just click all over the place
+literally and you can see I'll just get
+
+438
+00:07:14,550 --> 00:07:14,560
+literally and you can see I'll just get
+ 
+
+439
+00:07:14,560 --> 00:07:16,530
+literally and you can see I'll just get
+all the data I need immediately so it's
+
+440
+00:07:16,530 --> 00:07:16,540
+all the data I need immediately so it's
+ 
+
+441
+00:07:16,540 --> 00:07:20,040
+all the data I need immediately so it's
+really powerful now to test conditions
+
+442
+00:07:20,040 --> 00:07:20,050
+really powerful now to test conditions
+ 
+
+443
+00:07:20,050 --> 00:07:21,770
+really powerful now to test conditions
+let's just say that I want my mouse
+
+444
+00:07:21,770 --> 00:07:21,780
+let's just say that I want my mouse
+ 
+
+445
+00:07:21,780 --> 00:07:24,300
+let's just say that I want my mouse
+position to him to be printed under a 7
+
+446
+00:07:24,300 --> 00:07:24,310
+position to him to be printed under a 7
+ 
+
+447
+00:07:24,310 --> 00:07:26,070
+position to him to be printed under a 7
+condition so maybe if X is greater than
+
+448
+00:07:26,070 --> 00:07:26,080
+condition so maybe if X is greater than
+ 
+
+449
+00:07:26,080 --> 00:07:27,660
+condition so maybe if X is greater than
+500 or something because I know it only
+
+450
+00:07:27,660 --> 00:07:27,670
+500 or something because I know it only
+ 
+
+451
+00:07:27,670 --> 00:07:29,490
+500 or something because I know it only
+happens on the right side of the screen
+
+452
+00:07:29,490 --> 00:07:29,500
+happens on the right side of the screen
+ 
+
+453
+00:07:29,500 --> 00:07:32,580
+happens on the right side of the screen
+so I'll go to my conditions and you can
+
+454
+00:07:32,580 --> 00:07:32,590
+so I'll go to my conditions and you can
+ 
+
+455
+00:07:32,590 --> 00:07:34,170
+so I'll go to my conditions and you can
+see I've enabled both conditions and
+
+456
+00:07:34,170 --> 00:07:34,180
+see I've enabled both conditions and
+ 
+
+457
+00:07:34,180 --> 00:07:36,120
+see I've enabled both conditions and
+actions here now I'll just say X square
+
+458
+00:07:36,120 --> 00:07:36,130
+actions here now I'll just say X square
+ 
+
+459
+00:07:36,130 --> 00:07:39,630
+actions here now I'll just say X square
+than 500 okay that's 5,000 X greater
+
+460
+00:07:39,630 --> 00:07:39,640
+than 500 okay that's 5,000 X greater
+ 
+
+461
+00:07:39,640 --> 00:07:42,630
+than 500 okay that's 5,000 X greater
+than 500 okay just a conditional
+
+462
+00:07:42,630 --> 00:07:42,640
+than 500 okay just a conditional
+ 
+
+463
+00:07:42,640 --> 00:07:44,630
+than 500 okay just a conditional
+expression can be any boolean statement
+
+464
+00:07:44,630 --> 00:07:44,640
+expression can be any boolean statement
+ 
+
+465
+00:07:44,640 --> 00:07:48,510
+expression can be any boolean statement
+and then I'll just close that but
+
+466
+00:07:48,510 --> 00:07:48,520
+and then I'll just close that but
+ 
+
+467
+00:07:48,520 --> 00:07:50,970
+and then I'll just close that but
+hitting close or just by closing it
+
+468
+00:07:50,970 --> 00:07:50,980
+hitting close or just by closing it
+ 
+
+469
+00:07:50,980 --> 00:07:53,250
+hitting close or just by closing it
+there and if I go back you'll see that
+
+470
+00:07:53,250 --> 00:07:53,260
+there and if I go back you'll see that
+ 
+
+471
+00:07:53,260 --> 00:07:54,690
+there and if I go back you'll see that
+if I click on the left side screen
+
+472
+00:07:54,690 --> 00:07:54,700
+if I click on the left side screen
+ 
+
+473
+00:07:54,700 --> 00:07:56,490
+if I click on the left side screen
+nothing gets printed but it soon as I
+
+474
+00:07:56,490 --> 00:07:56,500
+nothing gets printed but it soon as I
+ 
+
+475
+00:07:56,500 --> 00:07:57,630
+nothing gets printed but it soon as I
+click on the right side of screen it
+
+476
+00:07:57,630 --> 00:07:57,640
+click on the right side of screen it
+ 
+
+477
+00:07:57,640 --> 00:08:00,270
+click on the right side of screen it
+prints my value okay so that's a way for
+
+478
+00:08:00,270 --> 00:08:00,280
+prints my value okay so that's a way for
+ 
+
+479
+00:08:00,280 --> 00:08:02,760
+prints my value okay so that's a way for
+us to only evaluate breakpoints under a
+
+480
+00:08:02,760 --> 00:08:02,770
+us to only evaluate breakpoints under a
+ 
+
+481
+00:08:02,770 --> 00:08:04,710
+us to only evaluate breakpoints under a
+certain condition and of course if I
+
+482
+00:08:04,710 --> 00:08:04,720
+certain condition and of course if I
+ 
+
+483
+00:08:04,720 --> 00:08:06,600
+certain condition and of course if I
+come back over here and go to actions
+
+484
+00:08:06,600 --> 00:08:06,610
+come back over here and go to actions
+ 
+
+485
+00:08:06,610 --> 00:08:09,390
+come back over here and go to actions
+again I can uncheck continue execution
+
+486
+00:08:09,390 --> 00:08:09,400
+again I can uncheck continue execution
+ 
+
+487
+00:08:09,400 --> 00:08:11,460
+again I can uncheck continue execution
+which means that when I actually do
+
+488
+00:08:11,460 --> 00:08:11,470
+which means that when I actually do
+ 
+
+489
+00:08:11,470 --> 00:08:13,230
+which means that when I actually do
+click on the left size frame nothing
+
+490
+00:08:13,230 --> 00:08:13,240
+click on the left size frame nothing
+ 
+
+491
+00:08:13,240 --> 00:08:14,280
+click on the left size frame nothing
+happens on the right side of screen
+
+492
+00:08:14,280 --> 00:08:14,290
+happens on the right side of screen
+ 
+
+493
+00:08:14,290 --> 00:08:17,340
+happens on the right side of screen
+it'll print my value and then also you
+
+494
+00:08:17,340 --> 00:08:17,350
+it'll print my value and then also you
+ 
+
+495
+00:08:17,350 --> 00:08:19,680
+it'll print my value and then also you
+can see my program is now paused so that
+
+496
+00:08:19,680 --> 00:08:19,690
+can see my program is now paused so that
+ 
+
+497
+00:08:19,690 --> 00:08:21,780
+can see my program is now paused so that
+I can look at all the values I need over
+
+498
+00:08:21,780 --> 00:08:21,790
+I can look at all the values I need over
+ 
+
+499
+00:08:21,790 --> 00:08:24,330
+I can look at all the values I need over
+here if I really want to okay so that's
+
+500
+00:08:24,330 --> 00:08:24,340
+here if I really want to okay so that's
+ 
+
+501
+00:08:24,340 --> 00:08:26,640
+here if I really want to okay so that's
+it that's conditions of actions I use
+
+502
+00:08:26,640 --> 00:08:26,650
+it that's conditions of actions I use
+ 
+
+503
+00:08:26,650 --> 00:08:28,080
+it that's conditions of actions I use
+these all the time when I need to
+
+504
+00:08:28,080 --> 00:08:28,090
+these all the time when I need to
+ 
+
+505
+00:08:28,090 --> 00:08:29,400
+these all the time when I need to
+because it's they're just really
+
+506
+00:08:29,400 --> 00:08:29,410
+because it's they're just really
+ 
+
+507
+00:08:29,410 --> 00:08:30,930
+because it's they're just really
+powerful and they're just really good
+
+508
+00:08:30,930 --> 00:08:30,940
+powerful and they're just really good
+ 
+
+509
+00:08:30,940 --> 00:08:32,430
+powerful and they're just really good
+for speeding up your workflow again
+
+510
+00:08:32,430 --> 00:08:32,440
+for speeding up your workflow again
+ 
+
+511
+00:08:32,440 --> 00:08:35,370
+for speeding up your workflow again
+nothing you can't do via other means but
+
+512
+00:08:35,370 --> 00:08:35,380
+nothing you can't do via other means but
+ 
+
+513
+00:08:35,380 --> 00:08:36,750
+nothing you can't do via other means but
+it's just if you're in the middle of
+
+514
+00:08:36,750 --> 00:08:36,760
+it's just if you're in the middle of
+ 
+
+515
+00:08:36,760 --> 00:08:38,250
+it's just if you're in the middle of
+something complex especially if you're
+
+516
+00:08:38,250 --> 00:08:38,260
+something complex especially if you're
+ 
+
+517
+00:08:38,260 --> 00:08:40,200
+something complex especially if you're
+working on a large application you know
+
+518
+00:08:40,200 --> 00:08:40,210
+working on a large application you know
+ 
+
+519
+00:08:40,210 --> 00:08:42,180
+working on a large application you know
+that shutting it all down recompiling
+
+520
+00:08:42,180 --> 00:08:42,190
+that shutting it all down recompiling
+ 
+
+521
+00:08:42,190 --> 00:08:43,620
+that shutting it all down recompiling
+the kuroda going back it's gonna take
+
+522
+00:08:43,620 --> 00:08:43,630
+the kuroda going back it's gonna take
+ 
+
+523
+00:08:43,630 --> 00:08:45,960
+the kuroda going back it's gonna take
+forever and it may not even get you to
+
+524
+00:08:45,960 --> 00:08:45,970
+forever and it may not even get you to
+ 
+
+525
+00:08:45,970 --> 00:08:47,880
+forever and it may not even get you to
+the point where you have that bug in
+
+526
+00:08:47,880 --> 00:08:47,890
+the point where you have that bug in
+ 
+
+527
+00:08:47,890 --> 00:08:49,250
+the point where you have that bug in
+likely you
+
+528
+00:08:49,250 --> 00:08:49,260
+likely you
+ 
+
+529
+00:08:49,260 --> 00:08:51,230
+likely you
+that program in that reproducible state
+
+530
+00:08:51,230 --> 00:08:51,240
+that program in that reproducible state
+ 
+
+531
+00:08:51,240 --> 00:08:53,390
+that program in that reproducible state
+for the bug so this is something that is
+
+532
+00:08:53,390 --> 00:08:53,400
+for the bug so this is something that is
+ 
+
+533
+00:08:53,400 --> 00:08:54,920
+for the bug so this is something that is
+incredibly useful and everyone should be
+
+534
+00:08:54,920 --> 00:08:54,930
+incredibly useful and everyone should be
+ 
+
+535
+00:08:54,930 --> 00:08:58,460
+incredibly useful and everyone should be
+using one thing I will say is the
+
+536
+00:08:58,460 --> 00:08:58,470
+using one thing I will say is the
+ 
+
+537
+00:08:58,470 --> 00:09:00,350
+using one thing I will say is the
+conditions are very very useful for
+
+538
+00:09:00,350 --> 00:09:00,360
+conditions are very very useful for
+ 
+
+539
+00:09:00,360 --> 00:09:02,780
+conditions are very very useful for
+things like loops if you have an update
+
+540
+00:09:02,780 --> 00:09:02,790
+things like loops if you have an update
+ 
+
+541
+00:09:02,790 --> 00:09:05,450
+things like loops if you have an update
+loop right like this is a game right so
+
+542
+00:09:05,450 --> 00:09:05,460
+loop right like this is a game right so
+ 
+
+543
+00:09:05,460 --> 00:09:07,280
+loop right like this is a game right so
+I have an update loop that's running 60
+
+544
+00:09:07,280 --> 00:09:07,290
+I have an update loop that's running 60
+ 
+
+545
+00:09:07,290 --> 00:09:09,050
+I have an update loop that's running 60
+times per second and I want to cache a
+
+546
+00:09:09,050 --> 00:09:09,060
+times per second and I want to cache a
+ 
+
+547
+00:09:09,060 --> 00:09:11,150
+times per second and I want to cache a
+particular condition that's almost
+
+548
+00:09:11,150 --> 00:09:11,160
+particular condition that's almost
+ 
+
+549
+00:09:11,160 --> 00:09:13,100
+particular condition that's almost
+impossible to do with breakpoints like
+
+550
+00:09:13,100 --> 00:09:13,110
+impossible to do with breakpoints like
+ 
+
+551
+00:09:13,110 --> 00:09:15,290
+impossible to do with breakpoints like
+maybe I'm just kind of traversing this
+
+552
+00:09:15,290 --> 00:09:15,300
+maybe I'm just kind of traversing this
+ 
+
+553
+00:09:15,300 --> 00:09:17,150
+maybe I'm just kind of traversing this
+whole node hierarchy of all my entities
+
+554
+00:09:17,150 --> 00:09:17,160
+whole node hierarchy of all my entities
+ 
+
+555
+00:09:17,160 --> 00:09:19,760
+whole node hierarchy of all my entities
+in my game and I have like 5000 entities
+
+556
+00:09:19,760 --> 00:09:19,770
+in my game and I have like 5000 entities
+ 
+
+557
+00:09:19,770 --> 00:09:22,010
+in my game and I have like 5000 entities
+and I just want to break on the one
+
+558
+00:09:22,010 --> 00:09:22,020
+and I just want to break on the one
+ 
+
+559
+00:09:22,020 --> 00:09:23,780
+and I just want to break on the one
+that's called player or the one that's
+
+560
+00:09:23,780 --> 00:09:23,790
+that's called player or the one that's
+ 
+
+561
+00:09:23,790 --> 00:09:27,200
+that's called player or the one that's
+called enemy 405 right because that's
+
+562
+00:09:27,200 --> 00:09:27,210
+called enemy 405 right because that's
+ 
+
+563
+00:09:27,210 --> 00:09:28,910
+called enemy 405 right because that's
+the problem one well that's going to be
+
+564
+00:09:28,910 --> 00:09:28,920
+the problem one well that's going to be
+ 
+
+565
+00:09:28,920 --> 00:09:30,680
+the problem one well that's going to be
+so difficult to do manually you'll put a
+
+566
+00:09:30,680 --> 00:09:30,690
+so difficult to do manually you'll put a
+ 
+
+567
+00:09:30,690 --> 00:09:33,710
+so difficult to do manually you'll put a
+breakpoint you'll keep hitting f5 until
+
+568
+00:09:33,710 --> 00:09:33,720
+breakpoint you'll keep hitting f5 until
+ 
+
+569
+00:09:33,720 --> 00:09:35,630
+breakpoint you'll keep hitting f5 until
+you get to the point where the name of
+
+570
+00:09:35,630 --> 00:09:35,640
+you get to the point where the name of
+ 
+
+571
+00:09:35,640 --> 00:09:38,510
+you get to the point where the name of
+the entity equals you know enemy 405
+
+572
+00:09:38,510 --> 00:09:38,520
+the entity equals you know enemy 405
+ 
+
+573
+00:09:38,520 --> 00:09:40,220
+the entity equals you know enemy 405
+right but if you put a condition down
+
+574
+00:09:40,220 --> 00:09:40,230
+right but if you put a condition down
+ 
+
+575
+00:09:40,230 --> 00:09:41,930
+right but if you put a condition down
+which says I'd only activate this
+
+576
+00:09:41,930 --> 00:09:41,940
+which says I'd only activate this
+ 
+
+577
+00:09:41,940 --> 00:09:44,600
+which says I'd only activate this
+breakpoint if name is enemy 405 well
+
+578
+00:09:44,600 --> 00:09:44,610
+breakpoint if name is enemy 405 well
+ 
+
+579
+00:09:44,610 --> 00:09:45,920
+breakpoint if name is enemy 405 well
+guess what you've just done that
+
+580
+00:09:45,920 --> 00:09:45,930
+guess what you've just done that
+ 
+
+581
+00:09:45,930 --> 00:09:48,350
+guess what you've just done that
+instantly with absolutely no work I will
+
+582
+00:09:48,350 --> 00:09:48,360
+instantly with absolutely no work I will
+ 
+
+583
+00:09:48,360 --> 00:09:50,090
+instantly with absolutely no work I will
+say that this slows down your program a
+
+584
+00:09:50,090 --> 00:09:50,100
+say that this slows down your program a
+ 
+
+585
+00:09:50,100 --> 00:09:51,980
+say that this slows down your program a
+lot so if you keep putting down
+
+586
+00:09:51,980 --> 00:09:51,990
+lot so if you keep putting down
+ 
+
+587
+00:09:51,990 --> 00:09:53,420
+lot so if you keep putting down
+conditional breakpoints and actual
+
+588
+00:09:53,420 --> 00:09:53,430
+conditional breakpoints and actual
+ 
+
+589
+00:09:53,430 --> 00:09:55,340
+conditional breakpoints and actual
+breakpoints and all this like in a
+
+590
+00:09:55,340 --> 00:09:55,350
+breakpoints and all this like in a
+ 
+
+591
+00:09:55,350 --> 00:09:56,870
+breakpoints and all this like in a
+real-time application you'll probably
+
+592
+00:09:56,870 --> 00:09:56,880
+real-time application you'll probably
+ 
+
+593
+00:09:56,880 --> 00:09:58,760
+real-time application you'll probably
+drop to like 5 fps or something like
+
+594
+00:09:58,760 --> 00:09:58,770
+drop to like 5 fps or something like
+ 
+
+595
+00:09:58,770 --> 00:10:00,410
+drop to like 5 fps or something like
+that it will lag that's just how they
+
+596
+00:10:00,410 --> 00:10:00,420
+that it will lag that's just how they
+ 
+
+597
+00:10:00,420 --> 00:10:02,600
+that it will lag that's just how they
+work there's slow but obviously there
+
+598
+00:10:02,600 --> 00:10:02,610
+work there's slow but obviously there
+ 
+
+599
+00:10:02,610 --> 00:10:04,070
+work there's slow but obviously there
+are debugging tools so usually that's
+
+600
+00:10:04,070 --> 00:10:04,080
+are debugging tools so usually that's
+ 
+
+601
+00:10:04,080 --> 00:10:05,660
+are debugging tools so usually that's
+not going to affect you too much if you
+
+602
+00:10:05,660 --> 00:10:05,670
+not going to affect you too much if you
+ 
+
+603
+00:10:05,670 --> 00:10:07,160
+not going to affect you too much if you
+are worried about performance then just
+
+604
+00:10:07,160 --> 00:10:07,170
+are worried about performance then just
+ 
+
+605
+00:10:07,170 --> 00:10:08,960
+are worried about performance then just
+stop your application recompile it with
+
+606
+00:10:08,960 --> 00:10:08,970
+stop your application recompile it with
+ 
+
+607
+00:10:08,970 --> 00:10:10,790
+stop your application recompile it with
+some code which handles us for you
+
+608
+00:10:10,790 --> 00:10:10,800
+some code which handles us for you
+ 
+
+609
+00:10:10,800 --> 00:10:12,440
+some code which handles us for you
+instead of using the debugger for that
+
+610
+00:10:12,440 --> 00:10:12,450
+instead of using the debugger for that
+ 
+
+611
+00:10:12,450 --> 00:10:13,970
+instead of using the debugger for that
+because having the debugger attached and
+
+612
+00:10:13,970 --> 00:10:13,980
+because having the debugger attached and
+ 
+
+613
+00:10:13,980 --> 00:10:16,130
+because having the debugger attached and
+doing this is quite slow anyway I hope
+
+614
+00:10:16,130 --> 00:10:16,140
+doing this is quite slow anyway I hope
+ 
+
+615
+00:10:16,140 --> 00:10:17,450
+doing this is quite slow anyway I hope
+you guys enjoyed this video if you did
+
+616
+00:10:17,450 --> 00:10:17,460
+you guys enjoyed this video if you did
+ 
+
+617
+00:10:17,460 --> 00:10:19,190
+you guys enjoyed this video if you did
+you can hit the like button you can
+
+618
+00:10:19,190 --> 00:10:19,200
+you can hit the like button you can
+ 
+
+619
+00:10:19,200 --> 00:10:20,750
+you can hit the like button you can
+follow me on Twitter and Instagram as
+
+620
+00:10:20,750 --> 00:10:20,760
+follow me on Twitter and Instagram as
+ 
+
+621
+00:10:20,760 --> 00:10:22,790
+follow me on Twitter and Instagram as
+well to get updates about all my videos
+
+622
+00:10:22,790 --> 00:10:22,800
+well to get updates about all my videos
+ 
+
+623
+00:10:22,800 --> 00:10:23,570
+well to get updates about all my videos
+and stuff like that
+
+624
+00:10:23,570 --> 00:10:23,580
+and stuff like that
+ 
+
+625
+00:10:23,580 --> 00:10:25,340
+and stuff like that
+patriarchal course after Jenner is the
+
+626
+00:10:25,340 --> 00:10:25,350
+patriarchal course after Jenner is the
+ 
+
+627
+00:10:25,350 --> 00:10:26,960
+patriarchal course after Jenner is the
+best way to support this series and this
+
+628
+00:10:26,960 --> 00:10:26,970
+best way to support this series and this
+ 
+
+629
+00:10:26,970 --> 00:10:28,670
+best way to support this series and this
+YouTube channel so thank you so much to
+
+630
+00:10:28,670 --> 00:10:28,680
+YouTube channel so thank you so much to
+ 
+
+631
+00:10:28,680 --> 00:10:30,590
+YouTube channel so thank you so much to
+all of my patrons which make this series
+
+632
+00:10:30,590 --> 00:10:30,600
+all of my patrons which make this series
+ 
+
+633
+00:10:30,600 --> 00:10:32,480
+all of my patrons which make this series
+possible in the next video we're going
+
+634
+00:10:32,480 --> 00:10:32,490
+possible in the next video we're going
+ 
+
+635
+00:10:32,490 --> 00:10:33,740
+possible in the next video we're going
+to be talking about some more visual
+
+636
+00:10:33,740 --> 00:10:33,750
+to be talking about some more visual
+ 
+
+637
+00:10:33,750 --> 00:10:35,990
+to be talking about some more visual
+studio debugging features that I want to
+
+638
+00:10:35,990 --> 00:10:36,000
+studio debugging features that I want to
+ 
+
+639
+00:10:36,000 --> 00:10:37,520
+studio debugging features that I want to
+kind of introduce because we're gonna be
+
+640
+00:10:37,520 --> 00:10:37,530
+kind of introduce because we're gonna be
+ 
+
+641
+00:10:37,530 --> 00:10:40,400
+kind of introduce because we're gonna be
+starting some other series soon it's
+
+642
+00:10:40,400 --> 00:10:40,410
+starting some other series soon it's
+ 
+
+643
+00:10:40,410 --> 00:10:41,840
+starting some other series soon it's
+gonna be pretty big and I want everyone
+
+644
+00:10:41,840 --> 00:10:41,850
+gonna be pretty big and I want everyone
+ 
+
+645
+00:10:41,850 --> 00:10:43,220
+gonna be pretty big and I want everyone
+to be kind of comfortable with Visual
+
+646
+00:10:43,220 --> 00:10:43,230
+to be kind of comfortable with Visual
+ 
+
+647
+00:10:43,230 --> 00:10:44,630
+to be kind of comfortable with Visual
+Studio and what's it all spots to the
+
+648
+00:10:44,630 --> 00:10:44,640
+Studio and what's it all spots to the
+ 
+
+649
+00:10:44,640 --> 00:10:46,490
+Studio and what's it all spots to the
+point where we can debug our code
+
+650
+00:10:46,490 --> 00:10:46,500
+point where we can debug our code
+ 
+
+651
+00:10:46,500 --> 00:10:48,410
+point where we can debug our code
+effectively thank you guys for watching
+
+652
+00:10:48,410 --> 00:10:48,420
+effectively thank you guys for watching
+ 
+
+653
+00:10:48,420 --> 00:10:50,890
+effectively thank you guys for watching
+I'll see you next time goodbye
+
+654
+00:10:50,890 --> 00:10:50,900
+I'll see you next time goodbye
+ 
+
+655
+00:10:50,900 --> 00:11:06,080
+I'll see you next time goodbye
+[Music]
+

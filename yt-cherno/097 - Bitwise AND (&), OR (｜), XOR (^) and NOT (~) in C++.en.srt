@@ -1,0 +1,6795 @@
+1
+00:00:00,000 --> 00:00:01,189
+
+hey what's up guys my name is jonah
+
+2
+00:00:01,189 --> 00:00:01,199
+hey what's up guys my name is jonah
+ 
+
+3
+00:00:01,199 --> 00:00:03,510
+hey what's up guys my name is jonah
+welcome back to my c plus plus
+
+4
+00:00:03,510 --> 00:00:03,520
+welcome back to my c plus plus
+ 
+
+5
+00:00:03,520 --> 00:00:05,670
+welcome back to my c plus plus
+series we're back at it again with those
+
+6
+00:00:05,670 --> 00:00:05,680
+series we're back at it again with those
+ 
+
+7
+00:00:05,680 --> 00:00:07,670
+series we're back at it again with those
+bitwise operators so last time we had a
+
+8
+00:00:07,670 --> 00:00:07,680
+bitwise operators so last time we had a
+ 
+
+9
+00:00:07,680 --> 00:00:09,110
+bitwise operators so last time we had a
+bit of an introduction to binary in
+
+10
+00:00:09,110 --> 00:00:09,120
+bit of an introduction to binary in
+ 
+
+11
+00:00:09,120 --> 00:00:10,709
+bit of an introduction to binary in
+general and we took a look at the bit
+
+12
+00:00:10,709 --> 00:00:10,719
+general and we took a look at the bit
+ 
+
+13
+00:00:10,719 --> 00:00:12,310
+general and we took a look at the bit
+shift left and the bit shift right
+
+14
+00:00:12,310 --> 00:00:12,320
+shift left and the bit shift right
+ 
+
+15
+00:00:12,320 --> 00:00:13,030
+shift left and the bit shift right
+operators
+
+16
+00:00:13,030 --> 00:00:13,040
+operators
+ 
+
+17
+00:00:13,040 --> 00:00:14,549
+operators
+if you haven't seen that video i highly
+
+18
+00:00:14,549 --> 00:00:14,559
+if you haven't seen that video i highly
+ 
+
+19
+00:00:14,559 --> 00:00:16,550
+if you haven't seen that video i highly
+recommend you watch it because we're
+
+20
+00:00:16,550 --> 00:00:16,560
+recommend you watch it because we're
+ 
+
+21
+00:00:16,560 --> 00:00:18,310
+recommend you watch it because we're
+basically continuing on from that video
+
+22
+00:00:18,310 --> 00:00:18,320
+basically continuing on from that video
+ 
+
+23
+00:00:18,320 --> 00:00:19,830
+basically continuing on from that video
+here today now i'm not going to spend
+
+24
+00:00:19,830 --> 00:00:19,840
+here today now i'm not going to spend
+ 
+
+25
+00:00:19,840 --> 00:00:21,670
+here today now i'm not going to spend
+any time today recapping what we did
+
+26
+00:00:21,670 --> 00:00:21,680
+any time today recapping what we did
+ 
+
+27
+00:00:21,680 --> 00:00:22,950
+any time today recapping what we did
+last time we'll talk about
+
+28
+00:00:22,950 --> 00:00:22,960
+last time we'll talk about
+ 
+
+29
+00:00:22,960 --> 00:00:25,189
+last time we'll talk about
+binary and bits in general so we can
+
+30
+00:00:25,189 --> 00:00:25,199
+binary and bits in general so we can
+ 
+
+31
+00:00:25,199 --> 00:00:26,790
+binary and bits in general so we can
+jump right into the rest of the bitwise
+
+32
+00:00:26,790 --> 00:00:26,800
+jump right into the rest of the bitwise
+ 
+
+33
+00:00:26,800 --> 00:00:28,390
+jump right into the rest of the bitwise
+operators that we need to talk about
+
+34
+00:00:28,390 --> 00:00:28,400
+operators that we need to talk about
+ 
+
+35
+00:00:28,400 --> 00:00:30,710
+operators that we need to talk about
+which are the bitwise and the bitwise or
+
+36
+00:00:30,710 --> 00:00:30,720
+which are the bitwise and the bitwise or
+ 
+
+37
+00:00:30,720 --> 00:00:31,589
+which are the bitwise and the bitwise or
+the bitwise
+
+38
+00:00:31,589 --> 00:00:31,599
+the bitwise
+ 
+
+39
+00:00:31,599 --> 00:00:34,630
+the bitwise
+exclusive or or xor
+
+40
+00:00:34,630 --> 00:00:34,640
+exclusive or or xor
+ 
+
+41
+00:00:34,640 --> 00:00:37,430
+exclusive or or xor
+zor and finally the bitwise not operator
+
+42
+00:00:37,430 --> 00:00:37,440
+zor and finally the bitwise not operator
+ 
+
+43
+00:00:37,440 --> 00:00:38,069
+zor and finally the bitwise not operator
+the
+
+44
+00:00:38,069 --> 00:00:38,079
+the
+ 
+
+45
+00:00:38,079 --> 00:00:40,630
+the
+squiggly line kind of inversion thing
+
+46
+00:00:40,630 --> 00:00:40,640
+squiggly line kind of inversion thing
+ 
+
+47
+00:00:40,640 --> 00:00:41,990
+squiggly line kind of inversion thing
+bitwise invert
+
+48
+00:00:41,990 --> 00:00:42,000
+bitwise invert
+ 
+
+49
+00:00:42,000 --> 00:00:43,670
+bitwise invert
+that's what i call it so the plan for
+
+50
+00:00:43,670 --> 00:00:43,680
+that's what i call it so the plan for
+ 
+
+51
+00:00:43,680 --> 00:00:45,110
+that's what i call it so the plan for
+today is basically to take a look at
+
+52
+00:00:45,110 --> 00:00:45,120
+today is basically to take a look at
+ 
+
+53
+00:00:45,120 --> 00:00:47,190
+today is basically to take a look at
+those operators and just like break down
+
+54
+00:00:47,190 --> 00:00:47,200
+those operators and just like break down
+ 
+
+55
+00:00:47,200 --> 00:00:48,950
+those operators and just like break down
+exactly what it is they do
+
+56
+00:00:48,950 --> 00:00:48,960
+exactly what it is they do
+ 
+
+57
+00:00:48,960 --> 00:00:50,389
+exactly what it is they do
+and then in the next video the final
+
+58
+00:00:50,389 --> 00:00:50,399
+and then in the next video the final
+ 
+
+59
+00:00:50,399 --> 00:00:51,590
+and then in the next video the final
+video of this little series we're
+
+60
+00:00:51,590 --> 00:00:51,600
+video of this little series we're
+ 
+
+61
+00:00:51,600 --> 00:00:52,549
+video of this little series we're
+actually going to
+
+62
+00:00:52,549 --> 00:00:52,559
+actually going to
+ 
+
+63
+00:00:52,559 --> 00:00:54,310
+actually going to
+take a look at some real world examples
+
+64
+00:00:54,310 --> 00:00:54,320
+take a look at some real world examples
+ 
+
+65
+00:00:54,320 --> 00:00:56,229
+take a look at some real world examples
+in which all of these operators get used
+
+66
+00:00:56,229 --> 00:00:56,239
+in which all of these operators get used
+ 
+
+67
+00:00:56,239 --> 00:00:57,110
+in which all of these operators get used
+so that you can
+
+68
+00:00:57,110 --> 00:00:57,120
+so that you can
+ 
+
+69
+00:00:57,120 --> 00:00:59,189
+so that you can
+kind of put together why they might be
+
+70
+00:00:59,189 --> 00:00:59,199
+kind of put together why they might be
+ 
+
+71
+00:00:59,199 --> 00:01:00,630
+kind of put together why they might be
+used in the first place because i
+
+72
+00:01:00,630 --> 00:01:00,640
+used in the first place because i
+ 
+
+73
+00:01:00,640 --> 00:01:01,830
+used in the first place because i
+understand that that's probably
+
+74
+00:01:01,830 --> 00:01:01,840
+understand that that's probably
+ 
+
+75
+00:01:01,840 --> 00:01:03,349
+understand that that's probably
+one of the biggest questions people have
+
+76
+00:01:03,349 --> 00:01:03,359
+one of the biggest questions people have
+ 
+
+77
+00:01:03,359 --> 00:01:04,869
+one of the biggest questions people have
+who are introduced to these operators
+
+78
+00:01:04,869 --> 00:01:04,879
+who are introduced to these operators
+ 
+
+79
+00:01:04,879 --> 00:01:05,590
+who are introduced to these operators
+and i'm like but
+
+80
+00:01:05,590 --> 00:01:05,600
+and i'm like but
+ 
+
+81
+00:01:05,600 --> 00:01:07,270
+and i'm like but
+why why do they even exist why do i need
+
+82
+00:01:07,270 --> 00:01:07,280
+why why do they even exist why do i need
+ 
+
+83
+00:01:07,280 --> 00:01:08,870
+why why do they even exist why do i need
+them so before we jump in and start
+
+84
+00:01:08,870 --> 00:01:08,880
+them so before we jump in and start
+ 
+
+85
+00:01:08,880 --> 00:01:10,550
+them so before we jump in and start
+drawing stuff on this little amazing
+
+86
+00:01:10,550 --> 00:01:10,560
+drawing stuff on this little amazing
+ 
+
+87
+00:01:10,560 --> 00:01:11,750
+drawing stuff on this little amazing
+tablet that i have here
+
+88
+00:01:11,750 --> 00:01:11,760
+tablet that i have here
+ 
+
+89
+00:01:11,760 --> 00:01:14,469
+tablet that i have here
+this video is sponsored by skillshare
+
+90
+00:01:14,469 --> 00:01:14,479
+this video is sponsored by skillshare
+ 
+
+91
+00:01:14,479 --> 00:01:15,510
+this video is sponsored by skillshare
+now for those of you who don't know
+
+92
+00:01:15,510 --> 00:01:15,520
+now for those of you who don't know
+ 
+
+93
+00:01:15,520 --> 00:01:17,190
+now for those of you who don't know
+skillshare is an amazing online learning
+
+94
+00:01:17,190 --> 00:01:17,200
+skillshare is an amazing online learning
+ 
+
+95
+00:01:17,200 --> 00:01:17,830
+skillshare is an amazing online learning
+community
+
+96
+00:01:17,830 --> 00:01:17,840
+community
+ 
+
+97
+00:01:17,840 --> 00:01:19,190
+community
+where millions of creative curious
+
+98
+00:01:19,190 --> 00:01:19,200
+where millions of creative curious
+ 
+
+99
+00:01:19,200 --> 00:01:20,469
+where millions of creative curious
+people from all around the world come
+
+100
+00:01:20,469 --> 00:01:20,479
+people from all around the world come
+ 
+
+101
+00:01:20,479 --> 00:01:21,830
+people from all around the world come
+together to learn
+
+102
+00:01:21,830 --> 00:01:21,840
+together to learn
+ 
+
+103
+00:01:21,840 --> 00:01:24,310
+together to learn
+any number of amazing new skills that
+
+104
+00:01:24,310 --> 00:01:24,320
+any number of amazing new skills that
+ 
+
+105
+00:01:24,320 --> 00:01:25,910
+any number of amazing new skills that
+are taught extremely professionally in
+
+106
+00:01:25,910 --> 00:01:25,920
+are taught extremely professionally in
+ 
+
+107
+00:01:25,920 --> 00:01:27,350
+are taught extremely professionally in
+bite-sized videos
+
+108
+00:01:27,350 --> 00:01:27,360
+bite-sized videos
+ 
+
+109
+00:01:27,360 --> 00:01:30,310
+bite-sized videos
+on just a whole wide variety of topics
+
+110
+00:01:30,310 --> 00:01:30,320
+on just a whole wide variety of topics
+ 
+
+111
+00:01:30,320 --> 00:01:31,910
+on just a whole wide variety of topics
+the great thing about skillshare that i
+
+112
+00:01:31,910 --> 00:01:31,920
+the great thing about skillshare that i
+ 
+
+113
+00:01:31,920 --> 00:01:33,670
+the great thing about skillshare that i
+think separates it from other kind of
+
+114
+00:01:33,670 --> 00:01:33,680
+think separates it from other kind of
+ 
+
+115
+00:01:33,680 --> 00:01:34,789
+think separates it from other kind of
+similar platforms
+
+116
+00:01:34,789 --> 00:01:34,799
+similar platforms
+ 
+
+117
+00:01:34,799 --> 00:01:36,630
+similar platforms
+are that the videos are so kind of
+
+118
+00:01:36,630 --> 00:01:36,640
+are that the videos are so kind of
+ 
+
+119
+00:01:36,640 --> 00:01:38,950
+are that the videos are so kind of
+concise that then they don't just go on
+
+120
+00:01:38,950 --> 00:01:38,960
+concise that then they don't just go on
+ 
+
+121
+00:01:38,960 --> 00:01:40,469
+concise that then they don't just go on
+for hours i mean other websites that
+
+122
+00:01:40,469 --> 00:01:40,479
+for hours i mean other websites that
+ 
+
+123
+00:01:40,479 --> 00:01:41,910
+for hours i mean other websites that
+have courses might have
+
+124
+00:01:41,910 --> 00:01:41,920
+have courses might have
+ 
+
+125
+00:01:41,920 --> 00:01:44,310
+have courses might have
+a course that goes for like 60 hours and
+
+126
+00:01:44,310 --> 00:01:44,320
+a course that goes for like 60 hours and
+ 
+
+127
+00:01:44,320 --> 00:01:45,910
+a course that goes for like 60 hours and
+that's all fine but sometimes you just
+
+128
+00:01:45,910 --> 00:01:45,920
+that's all fine but sometimes you just
+ 
+
+129
+00:01:45,920 --> 00:01:47,510
+that's all fine but sometimes you just
+don't have the time and you don't want
+
+130
+00:01:47,510 --> 00:01:47,520
+don't have the time and you don't want
+ 
+
+131
+00:01:47,520 --> 00:01:48,950
+don't have the time and you don't want
+something that goes into that level of
+
+132
+00:01:48,950 --> 00:01:48,960
+something that goes into that level of
+ 
+
+133
+00:01:48,960 --> 00:01:49,510
+something that goes into that level of
+depth
+
+134
+00:01:49,510 --> 00:01:49,520
+depth
+ 
+
+135
+00:01:49,520 --> 00:01:51,590
+depth
+you just want like a nice solid concise
+
+136
+00:01:51,590 --> 00:01:51,600
+you just want like a nice solid concise
+ 
+
+137
+00:01:51,600 --> 00:01:52,550
+you just want like a nice solid concise
+overview that will
+
+138
+00:01:52,550 --> 00:01:52,560
+overview that will
+ 
+
+139
+00:01:52,560 --> 00:01:54,310
+overview that will
+kind of explain as much as possible
+
+140
+00:01:54,310 --> 00:01:54,320
+kind of explain as much as possible
+ 
+
+141
+00:01:54,320 --> 00:01:55,910
+kind of explain as much as possible
+about that topic but be
+
+142
+00:01:55,910 --> 00:01:55,920
+about that topic but be
+ 
+
+143
+00:01:55,920 --> 00:01:58,950
+about that topic but be
+kind of easier to consume in in kind of
+
+144
+00:01:58,950 --> 00:01:58,960
+kind of easier to consume in in kind of
+ 
+
+145
+00:01:58,960 --> 00:02:00,709
+kind of easier to consume in in kind of
+shorter videos that you might have time
+
+146
+00:02:00,709 --> 00:02:00,719
+shorter videos that you might have time
+ 
+
+147
+00:02:00,719 --> 00:02:02,630
+shorter videos that you might have time
+to catch here and there after your
+
+148
+00:02:02,630 --> 00:02:02,640
+to catch here and there after your
+ 
+
+149
+00:02:02,640 --> 00:02:05,030
+to catch here and there after your
+busy life at work and that i think is
+
+150
+00:02:05,030 --> 00:02:05,040
+busy life at work and that i think is
+ 
+
+151
+00:02:05,040 --> 00:02:06,069
+busy life at work and that i think is
+where skillshare
+
+152
+00:02:06,069 --> 00:02:06,079
+where skillshare
+ 
+
+153
+00:02:06,079 --> 00:02:08,070
+where skillshare
+really shines and that's why i've been
+
+154
+00:02:08,070 --> 00:02:08,080
+really shines and that's why i've been
+ 
+
+155
+00:02:08,080 --> 00:02:09,270
+really shines and that's why i've been
+appreciating it lately
+
+156
+00:02:09,270 --> 00:02:09,280
+appreciating it lately
+ 
+
+157
+00:02:09,280 --> 00:02:10,710
+appreciating it lately
+so much whether you want to learn about
+
+158
+00:02:10,710 --> 00:02:10,720
+so much whether you want to learn about
+ 
+
+159
+00:02:10,720 --> 00:02:12,309
+so much whether you want to learn about
+creative topics such as photography
+
+160
+00:02:12,309 --> 00:02:12,319
+creative topics such as photography
+ 
+
+161
+00:02:12,319 --> 00:02:14,150
+creative topics such as photography
+videography illustration
+
+162
+00:02:14,150 --> 00:02:14,160
+videography illustration
+ 
+
+163
+00:02:14,160 --> 00:02:15,910
+videography illustration
+art that kind of stuff or the more
+
+164
+00:02:15,910 --> 00:02:15,920
+art that kind of stuff or the more
+ 
+
+165
+00:02:15,920 --> 00:02:17,350
+art that kind of stuff or the more
+business side of things or maybe
+
+166
+00:02:17,350 --> 00:02:17,360
+business side of things or maybe
+ 
+
+167
+00:02:17,360 --> 00:02:18,309
+business side of things or maybe
+productivity
+
+168
+00:02:18,309 --> 00:02:18,319
+productivity
+ 
+
+169
+00:02:18,319 --> 00:02:20,229
+productivity
+skillshare literally has courses on
+
+170
+00:02:20,229 --> 00:02:20,239
+skillshare literally has courses on
+ 
+
+171
+00:02:20,239 --> 00:02:21,990
+skillshare literally has courses on
+pretty much anything you can think of
+
+172
+00:02:21,990 --> 00:02:22,000
+pretty much anything you can think of
+ 
+
+173
+00:02:22,000 --> 00:02:23,910
+pretty much anything you can think of
+coming in at just under 10 a month for
+
+174
+00:02:23,910 --> 00:02:23,920
+coming in at just under 10 a month for
+ 
+
+175
+00:02:23,920 --> 00:02:25,830
+coming in at just under 10 a month for
+an annual subscription skillshare is an
+
+176
+00:02:25,830 --> 00:02:25,840
+an annual subscription skillshare is an
+ 
+
+177
+00:02:25,840 --> 00:02:27,430
+an annual subscription skillshare is an
+amazingly affordable way
+
+178
+00:02:27,430 --> 00:02:27,440
+amazingly affordable way
+ 
+
+179
+00:02:27,440 --> 00:02:29,030
+amazingly affordable way
+to add some more learning into your life
+
+180
+00:02:29,030 --> 00:02:29,040
+to add some more learning into your life
+ 
+
+181
+00:02:29,040 --> 00:02:30,630
+to add some more learning into your life
+and learn some new skills
+
+182
+00:02:30,630 --> 00:02:30,640
+and learn some new skills
+ 
+
+183
+00:02:30,640 --> 00:02:32,390
+and learn some new skills
+skillshare offering the first 1000
+
+184
+00:02:32,390 --> 00:02:32,400
+skillshare offering the first 1000
+ 
+
+185
+00:02:32,400 --> 00:02:33,910
+skillshare offering the first 1000
+people who click the link in description
+
+186
+00:02:33,910 --> 00:02:33,920
+people who click the link in description
+ 
+
+187
+00:02:33,920 --> 00:02:36,309
+people who click the link in description
+below a free trial of skillshare premium
+
+188
+00:02:36,309 --> 00:02:36,319
+below a free trial of skillshare premium
+ 
+
+189
+00:02:36,319 --> 00:02:37,670
+below a free trial of skillshare premium
+so go ahead and do that check it out for
+
+190
+00:02:37,670 --> 00:02:37,680
+so go ahead and do that check it out for
+ 
+
+191
+00:02:37,680 --> 00:02:39,190
+so go ahead and do that check it out for
+free see what amazing courses are
+
+192
+00:02:39,190 --> 00:02:39,200
+free see what amazing courses are
+ 
+
+193
+00:02:39,200 --> 00:02:40,229
+free see what amazing courses are
+available out there
+
+194
+00:02:40,229 --> 00:02:40,239
+available out there
+ 
+
+195
+00:02:40,239 --> 00:02:42,070
+available out there
+and learn some new skills huge thank you
+
+196
+00:02:42,070 --> 00:02:42,080
+and learn some new skills huge thank you
+ 
+
+197
+00:02:42,080 --> 00:02:44,070
+and learn some new skills huge thank you
+to skillshare as always for sponsoring
+
+198
+00:02:44,070 --> 00:02:44,080
+to skillshare as always for sponsoring
+ 
+
+199
+00:02:44,080 --> 00:02:45,910
+to skillshare as always for sponsoring
+this video and now let's take a look at
+
+200
+00:02:45,910 --> 00:02:45,920
+this video and now let's take a look at
+ 
+
+201
+00:02:45,920 --> 00:02:47,589
+this video and now let's take a look at
+the rest of the bitwise operators
+
+202
+00:02:47,589 --> 00:02:47,599
+the rest of the bitwise operators
+ 
+
+203
+00:02:47,599 --> 00:02:49,350
+the rest of the bitwise operators
+okay so what you're looking at over here
+
+204
+00:02:49,350 --> 00:02:49,360
+okay so what you're looking at over here
+ 
+
+205
+00:02:49,360 --> 00:02:51,670
+okay so what you're looking at over here
+are all of the bitwise operators
+
+206
+00:02:51,670 --> 00:02:51,680
+are all of the bitwise operators
+ 
+
+207
+00:02:51,680 --> 00:02:53,509
+are all of the bitwise operators
+these two we have already covered in the
+
+208
+00:02:53,509 --> 00:02:53,519
+these two we have already covered in the
+ 
+
+209
+00:02:53,519 --> 00:02:55,030
+these two we have already covered in the
+previous episodes we don't need to talk
+
+210
+00:02:55,030 --> 00:02:55,040
+previous episodes we don't need to talk
+ 
+
+211
+00:02:55,040 --> 00:02:56,070
+previous episodes we don't need to talk
+about them today
+
+212
+00:02:56,070 --> 00:02:56,080
+about them today
+ 
+
+213
+00:02:56,080 --> 00:02:57,509
+about them today
+and today is going to be about the rest
+
+214
+00:02:57,509 --> 00:02:57,519
+and today is going to be about the rest
+ 
+
+215
+00:02:57,519 --> 00:02:59,430
+and today is going to be about the rest
+of these so we have the bitwise and
+
+216
+00:02:59,430 --> 00:02:59,440
+of these so we have the bitwise and
+ 
+
+217
+00:02:59,440 --> 00:03:02,390
+of these so we have the bitwise and
+the bitwise or the bitwise xor or
+
+218
+00:03:02,390 --> 00:03:02,400
+the bitwise or the bitwise xor or
+ 
+
+219
+00:03:02,400 --> 00:03:03,589
+the bitwise or the bitwise xor or
+exclusive or
+
+220
+00:03:03,589 --> 00:03:03,599
+exclusive or
+ 
+
+221
+00:03:03,599 --> 00:03:06,390
+exclusive or
+and then the bitwise not operator now
+
+222
+00:03:06,390 --> 00:03:06,400
+and then the bitwise not operator now
+ 
+
+223
+00:03:06,400 --> 00:03:07,830
+and then the bitwise not operator now
+three of these these three
+
+224
+00:03:07,830 --> 00:03:07,840
+three of these these three
+ 
+
+225
+00:03:07,840 --> 00:03:10,470
+three of these these three
+they act on two different variables or
+
+226
+00:03:10,470 --> 00:03:10,480
+they act on two different variables or
+ 
+
+227
+00:03:10,480 --> 00:03:11,430
+they act on two different variables or
+two different
+
+228
+00:03:11,430 --> 00:03:11,440
+two different
+ 
+
+229
+00:03:11,440 --> 00:03:13,270
+two different
+bit patterns really so in other words
+
+230
+00:03:13,270 --> 00:03:13,280
+bit patterns really so in other words
+ 
+
+231
+00:03:13,280 --> 00:03:14,869
+bit patterns really so in other words
+it's always like a
+
+232
+00:03:14,869 --> 00:03:14,879
+it's always like a
+ 
+
+233
+00:03:14,879 --> 00:03:18,149
+it's always like a
+and b or a or b or
+
+234
+00:03:18,149 --> 00:03:18,159
+and b or a or b or
+ 
+
+235
+00:03:18,159 --> 00:03:21,589
+and b or a or b or
+a x or b you need two values to actually
+
+236
+00:03:21,589 --> 00:03:21,599
+a x or b you need two values to actually
+ 
+
+237
+00:03:21,599 --> 00:03:23,270
+a x or b you need two values to actually
+be able to use these operators
+
+238
+00:03:23,270 --> 00:03:23,280
+be able to use these operators
+ 
+
+239
+00:03:23,280 --> 00:03:25,750
+be able to use these operators
+however the not operator is a unary
+
+240
+00:03:25,750 --> 00:03:25,760
+however the not operator is a unary
+ 
+
+241
+00:03:25,760 --> 00:03:27,190
+however the not operator is a unary
+operator meaning that it actually acts
+
+242
+00:03:27,190 --> 00:03:27,200
+operator meaning that it actually acts
+ 
+
+243
+00:03:27,200 --> 00:03:28,949
+operator meaning that it actually acts
+on a single variable so in other words
+
+244
+00:03:28,949 --> 00:03:28,959
+on a single variable so in other words
+ 
+
+245
+00:03:28,959 --> 00:03:29,670
+on a single variable so in other words
+you wouldn't do
+
+246
+00:03:29,670 --> 00:03:29,680
+you wouldn't do
+ 
+
+247
+00:03:29,680 --> 00:03:31,990
+you wouldn't do
+a not b that doesn't make any sense
+
+248
+00:03:31,990 --> 00:03:32,000
+a not b that doesn't make any sense
+ 
+
+249
+00:03:32,000 --> 00:03:33,990
+a not b that doesn't make any sense
+instead you would use it with a single
+
+250
+00:03:33,990 --> 00:03:34,000
+instead you would use it with a single
+ 
+
+251
+00:03:34,000 --> 00:03:34,550
+instead you would use it with a single
+value
+
+252
+00:03:34,550 --> 00:03:34,560
+value
+ 
+
+253
+00:03:34,560 --> 00:03:36,630
+value
+like that all right so without further
+
+254
+00:03:36,630 --> 00:03:36,640
+like that all right so without further
+ 
+
+255
+00:03:36,640 --> 00:03:38,229
+like that all right so without further
+ado let's get started and start by
+
+256
+00:03:38,229 --> 00:03:38,239
+ado let's get started and start by
+ 
+
+257
+00:03:38,239 --> 00:03:39,190
+ado let's get started and start by
+talking about this
+
+258
+00:03:39,190 --> 00:03:39,200
+talking about this
+ 
+
+259
+00:03:39,200 --> 00:03:41,350
+talking about this
+and operator over here now the and
+
+260
+00:03:41,350 --> 00:03:41,360
+and operator over here now the and
+ 
+
+261
+00:03:41,360 --> 00:03:43,589
+and operator over here now the and
+operator is actually very similar to
+
+262
+00:03:43,589 --> 00:03:43,599
+operator is actually very similar to
+ 
+
+263
+00:03:43,599 --> 00:03:46,070
+operator is actually very similar to
+our logical and logical and is basically
+
+264
+00:03:46,070 --> 00:03:46,080
+our logical and logical and is basically
+ 
+
+265
+00:03:46,080 --> 00:03:47,830
+our logical and logical and is basically
+when we when we use a double ampersand
+
+266
+00:03:47,830 --> 00:03:47,840
+when we when we use a double ampersand
+ 
+
+267
+00:03:47,840 --> 00:03:48,630
+when we when we use a double ampersand
+like this
+
+268
+00:03:48,630 --> 00:03:48,640
+like this
+ 
+
+269
+00:03:48,640 --> 00:03:50,229
+like this
+and a bit wise and we use a single
+
+270
+00:03:50,229 --> 00:03:50,239
+and a bit wise and we use a single
+ 
+
+271
+00:03:50,239 --> 00:03:51,990
+and a bit wise and we use a single
+ampersand a lot of people are confused
+
+272
+00:03:51,990 --> 00:03:52,000
+ampersand a lot of people are confused
+ 
+
+273
+00:03:52,000 --> 00:03:52,949
+ampersand a lot of people are confused
+about the difference
+
+274
+00:03:52,949 --> 00:03:52,959
+about the difference
+ 
+
+275
+00:03:52,959 --> 00:03:55,589
+about the difference
+because in a lot of cases this seems to
+
+276
+00:03:55,589 --> 00:03:55,599
+because in a lot of cases this seems to
+ 
+
+277
+00:03:55,599 --> 00:03:57,670
+because in a lot of cases this seems to
+almost work the same way as the logical
+
+278
+00:03:57,670 --> 00:03:57,680
+almost work the same way as the logical
+ 
+
+279
+00:03:57,680 --> 00:03:58,309
+almost work the same way as the logical
+and
+
+280
+00:03:58,309 --> 00:03:58,319
+and
+ 
+
+281
+00:03:58,319 --> 00:04:00,390
+and
+however they are very different things
+
+282
+00:04:00,390 --> 00:04:00,400
+however they are very different things
+ 
+
+283
+00:04:00,400 --> 00:04:02,149
+however they are very different things
+this is of course a logical and meant to
+
+284
+00:04:02,149 --> 00:04:02,159
+this is of course a logical and meant to
+ 
+
+285
+00:04:02,159 --> 00:04:04,309
+this is of course a logical and meant to
+compare two kind of boolean values
+
+286
+00:04:04,309 --> 00:04:04,319
+compare two kind of boolean values
+ 
+
+287
+00:04:04,319 --> 00:04:06,070
+compare two kind of boolean values
+whereas this is an actual bitwise
+
+288
+00:04:06,070 --> 00:04:06,080
+whereas this is an actual bitwise
+ 
+
+289
+00:04:06,080 --> 00:04:08,070
+whereas this is an actual bitwise
+operator so what does it do and why am i
+
+290
+00:04:08,070 --> 00:04:08,080
+operator so what does it do and why am i
+ 
+
+291
+00:04:08,080 --> 00:04:09,910
+operator so what does it do and why am i
+saying that it's similar to a logical
+
+292
+00:04:09,910 --> 00:04:09,920
+saying that it's similar to a logical
+ 
+
+293
+00:04:09,920 --> 00:04:10,309
+saying that it's similar to a logical
+and
+
+294
+00:04:10,309 --> 00:04:10,319
+and
+ 
+
+295
+00:04:10,319 --> 00:04:13,270
+and
+it compares two bits such as zero and
+
+296
+00:04:13,270 --> 00:04:13,280
+it compares two bits such as zero and
+ 
+
+297
+00:04:13,280 --> 00:04:13,670
+it compares two bits such as zero and
+one
+
+298
+00:04:13,670 --> 00:04:13,680
+one
+ 
+
+299
+00:04:13,680 --> 00:04:16,310
+one
+and it will return a one if both of
+
+300
+00:04:16,310 --> 00:04:16,320
+and it will return a one if both of
+ 
+
+301
+00:04:16,320 --> 00:04:18,229
+and it will return a one if both of
+those bits are one otherwise it will
+
+302
+00:04:18,229 --> 00:04:18,239
+those bits are one otherwise it will
+ 
+
+303
+00:04:18,239 --> 00:04:19,590
+those bits are one otherwise it will
+return a zero
+
+304
+00:04:19,590 --> 00:04:19,600
+return a zero
+ 
+
+305
+00:04:19,600 --> 00:04:21,830
+return a zero
+so if you kind of flip this into a
+
+306
+00:04:21,830 --> 00:04:21,840
+so if you kind of flip this into a
+ 
+
+307
+00:04:21,840 --> 00:04:23,670
+so if you kind of flip this into a
+logical statement if we have something
+
+308
+00:04:23,670 --> 00:04:23,680
+logical statement if we have something
+ 
+
+309
+00:04:23,680 --> 00:04:23,990
+logical statement if we have something
+like
+
+310
+00:04:23,990 --> 00:04:24,000
+like
+ 
+
+311
+00:04:24,000 --> 00:04:27,270
+like
+false and true
+
+312
+00:04:27,270 --> 00:04:27,280
+false and true
+ 
+
+313
+00:04:27,280 --> 00:04:29,350
+false and true
+then we would expect to get false in
+
+314
+00:04:29,350 --> 00:04:29,360
+then we would expect to get false in
+ 
+
+315
+00:04:29,360 --> 00:04:30,950
+then we would expect to get false in
+this case and in fact i don't know why i
+
+316
+00:04:30,950 --> 00:04:30,960
+this case and in fact i don't know why i
+ 
+
+317
+00:04:30,960 --> 00:04:32,710
+this case and in fact i don't know why i
+wrote a one there it's clearly zero but
+
+318
+00:04:32,710 --> 00:04:32,720
+wrote a one there it's clearly zero but
+ 
+
+319
+00:04:32,720 --> 00:04:34,550
+wrote a one there it's clearly zero but
+my point is that if you treat the zeros
+
+320
+00:04:34,550 --> 00:04:34,560
+my point is that if you treat the zeros
+ 
+
+321
+00:04:34,560 --> 00:04:35,189
+my point is that if you treat the zeros
+as false
+
+322
+00:04:35,189 --> 00:04:35,199
+as false
+ 
+
+323
+00:04:35,199 --> 00:04:36,710
+as false
+and the ones is true which is
+
+324
+00:04:36,710 --> 00:04:36,720
+and the ones is true which is
+ 
+
+325
+00:04:36,720 --> 00:04:38,310
+and the ones is true which is
+effectively what they are then this
+
+326
+00:04:38,310 --> 00:04:38,320
+effectively what they are then this
+ 
+
+327
+00:04:38,320 --> 00:04:39,990
+effectively what they are then this
+works in exactly the same way
+
+328
+00:04:39,990 --> 00:04:40,000
+works in exactly the same way
+ 
+
+329
+00:04:40,000 --> 00:04:42,710
+works in exactly the same way
+as this kind of logical and both sides
+
+330
+00:04:42,710 --> 00:04:42,720
+as this kind of logical and both sides
+ 
+
+331
+00:04:42,720 --> 00:04:44,629
+as this kind of logical and both sides
+of this equation have to be true
+
+332
+00:04:44,629 --> 00:04:44,639
+of this equation have to be true
+ 
+
+333
+00:04:44,639 --> 00:04:46,150
+of this equation have to be true
+in order for this to be true because
+
+334
+00:04:46,150 --> 00:04:46,160
+in order for this to be true because
+ 
+
+335
+00:04:46,160 --> 00:04:48,310
+in order for this to be true because
+you're effectively saying is this true
+
+336
+00:04:48,310 --> 00:04:48,320
+you're effectively saying is this true
+ 
+
+337
+00:04:48,320 --> 00:04:51,350
+you're effectively saying is this true
+and is this true and if so then of
+
+338
+00:04:51,350 --> 00:04:51,360
+and is this true and if so then of
+ 
+
+339
+00:04:51,360 --> 00:04:53,189
+and is this true and if so then of
+course the result is true one thing i
+
+340
+00:04:53,189 --> 00:04:53,199
+course the result is true one thing i
+ 
+
+341
+00:04:53,199 --> 00:04:54,629
+course the result is true one thing i
+didn't point out by the way is in
+
+342
+00:04:54,629 --> 00:04:54,639
+didn't point out by the way is in
+ 
+
+343
+00:04:54,639 --> 00:04:55,990
+didn't point out by the way is in
+comparison to these bit shift
+
+344
+00:04:55,990 --> 00:04:56,000
+comparison to these bit shift
+ 
+
+345
+00:04:56,000 --> 00:04:58,150
+comparison to these bit shift
+left and right operators which obviously
+
+346
+00:04:58,150 --> 00:04:58,160
+left and right operators which obviously
+ 
+
+347
+00:04:58,160 --> 00:05:00,390
+left and right operators which obviously
+take some kind of variable on the left
+
+348
+00:05:00,390 --> 00:05:00,400
+take some kind of variable on the left
+ 
+
+349
+00:05:00,400 --> 00:05:02,310
+take some kind of variable on the left
+side and then you shift that by
+
+350
+00:05:02,310 --> 00:05:02,320
+side and then you shift that by
+ 
+
+351
+00:05:02,320 --> 00:05:04,310
+side and then you shift that by
+like x amount of places either left or
+
+352
+00:05:04,310 --> 00:05:04,320
+like x amount of places either left or
+ 
+
+353
+00:05:04,320 --> 00:05:05,590
+like x amount of places either left or
+right this
+
+354
+00:05:05,590 --> 00:05:05,600
+right this
+ 
+
+355
+00:05:05,600 --> 00:05:08,150
+right this
+actually acts on two bit patterns so
+
+356
+00:05:08,150 --> 00:05:08,160
+actually acts on two bit patterns so
+ 
+
+357
+00:05:08,160 --> 00:05:09,990
+actually acts on two bit patterns so
+this is simply a number in the shift
+
+358
+00:05:09,990 --> 00:05:10,000
+this is simply a number in the shift
+ 
+
+359
+00:05:10,000 --> 00:05:12,310
+this is simply a number in the shift
+operator to actually shift by whereas
+
+360
+00:05:12,310 --> 00:05:12,320
+operator to actually shift by whereas
+ 
+
+361
+00:05:12,320 --> 00:05:14,390
+operator to actually shift by whereas
+these these are specifically meant for
+
+362
+00:05:14,390 --> 00:05:14,400
+these these are specifically meant for
+ 
+
+363
+00:05:14,400 --> 00:05:15,670
+these these are specifically meant for
+being used with two
+
+364
+00:05:15,670 --> 00:05:15,680
+being used with two
+ 
+
+365
+00:05:15,680 --> 00:05:17,670
+being used with two
+variables and the bits of those
+
+366
+00:05:17,670 --> 00:05:17,680
+variables and the bits of those
+ 
+
+367
+00:05:17,680 --> 00:05:19,749
+variables and the bits of those
+variables are the things in question
+
+368
+00:05:19,749 --> 00:05:19,759
+variables are the things in question
+ 
+
+369
+00:05:19,759 --> 00:05:20,070
+variables are the things in question
+here
+
+370
+00:05:20,070 --> 00:05:20,080
+here
+ 
+
+371
+00:05:20,080 --> 00:05:21,590
+here
+okay so let's get let's get back to our
+
+372
+00:05:21,590 --> 00:05:21,600
+okay so let's get let's get back to our
+ 
+
+373
+00:05:21,600 --> 00:05:23,270
+okay so let's get let's get back to our
+little example here let's kind of expand
+
+374
+00:05:23,270 --> 00:05:23,280
+little example here let's kind of expand
+ 
+
+375
+00:05:23,280 --> 00:05:24,629
+little example here let's kind of expand
+on this so that maybe it makes more
+
+376
+00:05:24,629 --> 00:05:24,639
+on this so that maybe it makes more
+ 
+
+377
+00:05:24,639 --> 00:05:25,029
+on this so that maybe it makes more
+sense
+
+378
+00:05:25,029 --> 00:05:25,039
+sense
+ 
+
+379
+00:05:25,039 --> 00:05:26,870
+sense
+if you're still not sure about how it
+
+380
+00:05:26,870 --> 00:05:26,880
+if you're still not sure about how it
+ 
+
+381
+00:05:26,880 --> 00:05:28,870
+if you're still not sure about how it
+works so i'll write a little table here
+
+382
+00:05:28,870 --> 00:05:28,880
+works so i'll write a little table here
+ 
+
+383
+00:05:28,880 --> 00:05:29,270
+works so i'll write a little table here
+so
+
+384
+00:05:29,270 --> 00:05:29,280
+so
+ 
+
+385
+00:05:29,280 --> 00:05:32,070
+so
+0 and 0 will give us 0 because neither
+
+386
+00:05:32,070 --> 00:05:32,080
+0 and 0 will give us 0 because neither
+ 
+
+387
+00:05:32,080 --> 00:05:33,029
+0 and 0 will give us 0 because neither
+of them are true
+
+388
+00:05:33,029 --> 00:05:33,039
+of them are true
+ 
+
+389
+00:05:33,039 --> 00:05:35,670
+of them are true
+0 and 1 will give us 0 because well they
+
+390
+00:05:35,670 --> 00:05:35,680
+0 and 1 will give us 0 because well they
+ 
+
+391
+00:05:35,680 --> 00:05:36,870
+0 and 1 will give us 0 because well they
+both have to be true
+
+392
+00:05:36,870 --> 00:05:36,880
+both have to be true
+ 
+
+393
+00:05:36,880 --> 00:05:38,790
+both have to be true
+or they both have to be one in order for
+
+394
+00:05:38,790 --> 00:05:38,800
+or they both have to be one in order for
+ 
+
+395
+00:05:38,800 --> 00:05:40,070
+or they both have to be one in order for
+us to get a one
+
+396
+00:05:40,070 --> 00:05:40,080
+us to get a one
+ 
+
+397
+00:05:40,080 --> 00:05:42,629
+us to get a one
+one and zero will also give us a zero
+
+398
+00:05:42,629 --> 00:05:42,639
+one and zero will also give us a zero
+ 
+
+399
+00:05:42,639 --> 00:05:43,990
+one and zero will also give us a zero
+because again they're not both
+
+400
+00:05:43,990 --> 00:05:44,000
+because again they're not both
+ 
+
+401
+00:05:44,000 --> 00:05:46,790
+because again they're not both
+one and finally one and one of course
+
+402
+00:05:46,790 --> 00:05:46,800
+one and finally one and one of course
+ 
+
+403
+00:05:46,800 --> 00:05:48,070
+one and finally one and one of course
+will give us one
+
+404
+00:05:48,070 --> 00:05:48,080
+will give us one
+ 
+
+405
+00:05:48,080 --> 00:05:50,150
+will give us one
+because they're both one now of course
+
+406
+00:05:50,150 --> 00:05:50,160
+because they're both one now of course
+ 
+
+407
+00:05:50,160 --> 00:05:52,150
+because they're both one now of course
+in this case we were just comparing
+
+408
+00:05:52,150 --> 00:05:52,160
+in this case we were just comparing
+ 
+
+409
+00:05:52,160 --> 00:05:55,189
+in this case we were just comparing
+one bit with another single bit if we
+
+410
+00:05:55,189 --> 00:05:55,199
+one bit with another single bit if we
+ 
+
+411
+00:05:55,199 --> 00:05:57,270
+one bit with another single bit if we
+expand this out into some kind of number
+
+412
+00:05:57,270 --> 00:05:57,280
+expand this out into some kind of number
+ 
+
+413
+00:05:57,280 --> 00:05:59,510
+expand this out into some kind of number
+like this and we compare it like that
+
+414
+00:05:59,510 --> 00:05:59,520
+like this and we compare it like that
+ 
+
+415
+00:05:59,520 --> 00:06:01,430
+like this and we compare it like that
+i'm not sure what i'm writing here then
+
+416
+00:06:01,430 --> 00:06:01,440
+i'm not sure what i'm writing here then
+ 
+
+417
+00:06:01,440 --> 00:06:03,749
+i'm not sure what i'm writing here then
+we simply have to do this to each bit of
+
+418
+00:06:03,749 --> 00:06:03,759
+we simply have to do this to each bit of
+ 
+
+419
+00:06:03,759 --> 00:06:05,189
+we simply have to do this to each bit of
+course so this will give us 0
+
+420
+00:06:05,189 --> 00:06:05,199
+course so this will give us 0
+ 
+
+421
+00:06:05,199 --> 00:06:07,990
+course so this will give us 0
+one zero one because only in these two
+
+422
+00:06:07,990 --> 00:06:08,000
+one zero one because only in these two
+ 
+
+423
+00:06:08,000 --> 00:06:09,749
+one zero one because only in these two
+cases are they both one
+
+424
+00:06:09,749 --> 00:06:09,759
+cases are they both one
+ 
+
+425
+00:06:09,759 --> 00:06:11,670
+cases are they both one
+in the in this case they're both zero we
+
+426
+00:06:11,670 --> 00:06:11,680
+in the in this case they're both zero we
+ 
+
+427
+00:06:11,680 --> 00:06:13,350
+in the in this case they're both zero we
+don't care about that that is still
+
+428
+00:06:13,350 --> 00:06:13,360
+don't care about that that is still
+ 
+
+429
+00:06:13,360 --> 00:06:15,350
+don't care about that that is still
+zero and then in this case one of them
+
+430
+00:06:15,350 --> 00:06:15,360
+zero and then in this case one of them
+ 
+
+431
+00:06:15,360 --> 00:06:17,029
+zero and then in this case one of them
+is one but they both have to be one
+
+432
+00:06:17,029 --> 00:06:17,039
+is one but they both have to be one
+ 
+
+433
+00:06:17,039 --> 00:06:18,950
+is one but they both have to be one
+for us to actually get a one so this is
+
+434
+00:06:18,950 --> 00:06:18,960
+for us to actually get a one so this is
+ 
+
+435
+00:06:18,960 --> 00:06:20,710
+for us to actually get a one so this is
+the result that we are left with now
+
+436
+00:06:20,710 --> 00:06:20,720
+the result that we are left with now
+ 
+
+437
+00:06:20,720 --> 00:06:22,390
+the result that we are left with now
+what can we actually do with this
+
+438
+00:06:22,390 --> 00:06:22,400
+what can we actually do with this
+ 
+
+439
+00:06:22,400 --> 00:06:24,469
+what can we actually do with this
+information in practice well this
+
+440
+00:06:24,469 --> 00:06:24,479
+information in practice well this
+ 
+
+441
+00:06:24,479 --> 00:06:26,629
+information in practice well this
+bitwise and is actually very commonly
+
+442
+00:06:26,629 --> 00:06:26,639
+bitwise and is actually very commonly
+ 
+
+443
+00:06:26,639 --> 00:06:27,350
+bitwise and is actually very commonly
+referred to
+
+444
+00:06:27,350 --> 00:06:27,360
+referred to
+ 
+
+445
+00:06:27,360 --> 00:06:30,309
+referred to
+as a bit mask in fact you can use it to
+
+446
+00:06:30,309 --> 00:06:30,319
+as a bit mask in fact you can use it to
+ 
+
+447
+00:06:30,319 --> 00:06:31,189
+as a bit mask in fact you can use it to
+mask out
+
+448
+00:06:31,189 --> 00:06:31,199
+mask out
+ 
+
+449
+00:06:31,199 --> 00:06:33,430
+mask out
+selective bits what on earth do i mean
+
+450
+00:06:33,430 --> 00:06:33,440
+selective bits what on earth do i mean
+ 
+
+451
+00:06:33,440 --> 00:06:35,270
+selective bits what on earth do i mean
+by that well if we have some
+
+452
+00:06:35,270 --> 00:06:35,280
+by that well if we have some
+ 
+
+453
+00:06:35,280 --> 00:06:37,510
+by that well if we have some
+random number and i'll express it in
+
+454
+00:06:37,510 --> 00:06:37,520
+random number and i'll express it in
+ 
+
+455
+00:06:37,520 --> 00:06:39,189
+random number and i'll express it in
+binary here let's just say 1 0
+
+456
+00:06:39,189 --> 00:06:39,199
+binary here let's just say 1 0
+ 
+
+457
+00:06:39,199 --> 00:06:42,390
+binary here let's just say 1 0
+1 1 0 0 1 0 1 whatever
+
+458
+00:06:42,390 --> 00:06:42,400
+1 1 0 0 1 0 1 whatever
+ 
+
+459
+00:06:42,400 --> 00:06:45,110
+1 1 0 0 1 0 1 whatever
+if i am interested in checking the state
+
+460
+00:06:45,110 --> 00:06:45,120
+if i am interested in checking the state
+ 
+
+461
+00:06:45,120 --> 00:06:45,430
+if i am interested in checking the state
+of
+
+462
+00:06:45,430 --> 00:06:45,440
+of
+ 
+
+463
+00:06:45,440 --> 00:06:47,909
+of
+a single bit here i can actually do that
+
+464
+00:06:47,909 --> 00:06:47,919
+a single bit here i can actually do that
+ 
+
+465
+00:06:47,919 --> 00:06:49,830
+a single bit here i can actually do that
+using the bitwise and operator
+
+466
+00:06:49,830 --> 00:06:49,840
+using the bitwise and operator
+ 
+
+467
+00:06:49,840 --> 00:06:52,230
+using the bitwise and operator
+so for example if i'm interested in
+
+468
+00:06:52,230 --> 00:06:52,240
+so for example if i'm interested in
+ 
+
+469
+00:06:52,240 --> 00:06:53,749
+so for example if i'm interested in
+knowing the state of
+
+470
+00:06:53,749 --> 00:06:53,759
+knowing the state of
+ 
+
+471
+00:06:53,759 --> 00:06:57,029
+knowing the state of
+this bit over here so that's 0 1 2 3 4
+
+472
+00:06:57,029 --> 00:06:57,039
+this bit over here so that's 0 1 2 3 4
+ 
+
+473
+00:06:57,039 --> 00:06:59,430
+this bit over here so that's 0 1 2 3 4
+5 the fifth bit will say from this right
+
+474
+00:06:59,430 --> 00:06:59,440
+5 the fifth bit will say from this right
+ 
+
+475
+00:06:59,440 --> 00:07:00,469
+5 the fifth bit will say from this right
+side over here
+
+476
+00:07:00,469 --> 00:07:00,479
+side over here
+ 
+
+477
+00:07:00,479 --> 00:07:02,469
+side over here
+all i need to do is construct another
+
+478
+00:07:02,469 --> 00:07:02,479
+all i need to do is construct another
+ 
+
+479
+00:07:02,479 --> 00:07:04,790
+all i need to do is construct another
+value here another number that will act
+
+480
+00:07:04,790 --> 00:07:04,800
+value here another number that will act
+ 
+
+481
+00:07:04,800 --> 00:07:07,029
+value here another number that will act
+as a mask that i can use to select
+
+482
+00:07:07,029 --> 00:07:07,039
+as a mask that i can use to select
+ 
+
+483
+00:07:07,039 --> 00:07:09,430
+as a mask that i can use to select
+this bit and then see what its value is
+
+484
+00:07:09,430 --> 00:07:09,440
+this bit and then see what its value is
+ 
+
+485
+00:07:09,440 --> 00:07:11,110
+this bit and then see what its value is
+so how do we build this mask well what
+
+486
+00:07:11,110 --> 00:07:11,120
+so how do we build this mask well what
+ 
+
+487
+00:07:11,120 --> 00:07:12,150
+so how do we build this mask well what
+do we know about
+
+488
+00:07:12,150 --> 00:07:12,160
+do we know about
+ 
+
+489
+00:07:12,160 --> 00:07:14,629
+do we know about
+this and operator we know that only in
+
+490
+00:07:14,629 --> 00:07:14,639
+this and operator we know that only in
+ 
+
+491
+00:07:14,639 --> 00:07:15,270
+this and operator we know that only in
+the case
+
+492
+00:07:15,270 --> 00:07:15,280
+the case
+ 
+
+493
+00:07:15,280 --> 00:07:18,150
+the case
+of both of these values being one do we
+
+494
+00:07:18,150 --> 00:07:18,160
+of both of these values being one do we
+ 
+
+495
+00:07:18,160 --> 00:07:20,070
+of both of these values being one do we
+get a one in every other case we get
+
+496
+00:07:20,070 --> 00:07:20,080
+get a one in every other case we get
+ 
+
+497
+00:07:20,080 --> 00:07:20,710
+get a one in every other case we get
+zero
+
+498
+00:07:20,710 --> 00:07:20,720
+zero
+ 
+
+499
+00:07:20,720 --> 00:07:22,710
+zero
+so what we can do is actually fill this
+
+500
+00:07:22,710 --> 00:07:22,720
+so what we can do is actually fill this
+ 
+
+501
+00:07:22,720 --> 00:07:25,029
+so what we can do is actually fill this
+second number here the number that we'll
+
+502
+00:07:25,029 --> 00:07:25,039
+second number here the number that we'll
+ 
+
+503
+00:07:25,039 --> 00:07:26,550
+second number here the number that we'll
+be adding that first
+
+504
+00:07:26,550 --> 00:07:26,560
+be adding that first
+ 
+
+505
+00:07:26,560 --> 00:07:28,870
+be adding that first
+variable we care about with we can fill
+
+506
+00:07:28,870 --> 00:07:28,880
+variable we care about with we can fill
+ 
+
+507
+00:07:28,880 --> 00:07:30,870
+variable we care about with we can fill
+it with zeros except for the spot where
+
+508
+00:07:30,870 --> 00:07:30,880
+it with zeros except for the spot where
+ 
+
+509
+00:07:30,880 --> 00:07:32,469
+it with zeros except for the spot where
+the bit we're interested in
+
+510
+00:07:32,469 --> 00:07:32,479
+the bit we're interested in
+ 
+
+511
+00:07:32,479 --> 00:07:34,469
+the bit we're interested in
+lies so in other words over here i'll
+
+512
+00:07:34,469 --> 00:07:34,479
+lies so in other words over here i'll
+ 
+
+513
+00:07:34,479 --> 00:07:35,749
+lies so in other words over here i'll
+put a one
+
+514
+00:07:35,749 --> 00:07:35,759
+put a one
+ 
+
+515
+00:07:35,759 --> 00:07:37,670
+put a one
+everywhere else we just simply put a
+
+516
+00:07:37,670 --> 00:07:37,680
+everywhere else we just simply put a
+ 
+
+517
+00:07:37,680 --> 00:07:38,870
+everywhere else we just simply put a
+zero
+
+518
+00:07:38,870 --> 00:07:38,880
+zero
+ 
+
+519
+00:07:38,880 --> 00:07:41,110
+zero
+and when i add these two values together
+
+520
+00:07:41,110 --> 00:07:41,120
+and when i add these two values together
+ 
+
+521
+00:07:41,120 --> 00:07:42,550
+and when i add these two values together
+well you can already see what this is
+
+522
+00:07:42,550 --> 00:07:42,560
+well you can already see what this is
+ 
+
+523
+00:07:42,560 --> 00:07:43,510
+well you can already see what this is
+going to end up with
+
+524
+00:07:43,510 --> 00:07:43,520
+going to end up with
+ 
+
+525
+00:07:43,520 --> 00:07:45,830
+going to end up with
+there's zeros everywhere so we know that
+
+526
+00:07:45,830 --> 00:07:45,840
+there's zeros everywhere so we know that
+ 
+
+527
+00:07:45,840 --> 00:07:47,589
+there's zeros everywhere so we know that
+all of the places that have zeros
+
+528
+00:07:47,589 --> 00:07:47,599
+all of the places that have zeros
+ 
+
+529
+00:07:47,599 --> 00:07:49,749
+all of the places that have zeros
+no matter what the other number is we'll
+
+530
+00:07:49,749 --> 00:07:49,759
+no matter what the other number is we'll
+ 
+
+531
+00:07:49,759 --> 00:07:51,029
+no matter what the other number is we'll
+also get zero it doesn't matter what the
+
+532
+00:07:51,029 --> 00:07:51,039
+also get zero it doesn't matter what the
+ 
+
+533
+00:07:51,039 --> 00:07:52,150
+also get zero it doesn't matter what the
+other bits are
+
+534
+00:07:52,150 --> 00:07:52,160
+other bits are
+ 
+
+535
+00:07:52,160 --> 00:07:54,550
+other bits are
+we'll always get zero if this side is
+
+536
+00:07:54,550 --> 00:07:54,560
+we'll always get zero if this side is
+ 
+
+537
+00:07:54,560 --> 00:07:56,309
+we'll always get zero if this side is
+zero however in
+
+538
+00:07:56,309 --> 00:07:56,319
+zero however in
+ 
+
+539
+00:07:56,319 --> 00:07:58,950
+zero however in
+this kind of place with this bit that we
+
+540
+00:07:58,950 --> 00:07:58,960
+this kind of place with this bit that we
+ 
+
+541
+00:07:58,960 --> 00:08:00,070
+this kind of place with this bit that we
+are interested in
+
+542
+00:08:00,070 --> 00:08:00,080
+are interested in
+ 
+
+543
+00:08:00,080 --> 00:08:02,309
+are interested in
+we're going to get a one in this case
+
+544
+00:08:02,309 --> 00:08:02,319
+we're going to get a one in this case
+ 
+
+545
+00:08:02,319 --> 00:08:03,909
+we're going to get a one in this case
+because it's set to one
+
+546
+00:08:03,909 --> 00:08:03,919
+because it's set to one
+ 
+
+547
+00:08:03,919 --> 00:08:07,589
+because it's set to one
+and one and one is one or if it had been
+
+548
+00:08:07,589 --> 00:08:07,599
+and one and one is one or if it had been
+ 
+
+549
+00:08:07,599 --> 00:08:10,309
+and one and one is one or if it had been
+zero well what would we get zero so now
+
+550
+00:08:10,309 --> 00:08:10,319
+zero well what would we get zero so now
+ 
+
+551
+00:08:10,319 --> 00:08:10,790
+zero well what would we get zero so now
+we can
+
+552
+00:08:10,790 --> 00:08:10,800
+we can
+ 
+
+553
+00:08:10,800 --> 00:08:13,029
+we can
+very easily check the state of that
+
+554
+00:08:13,029 --> 00:08:13,039
+very easily check the state of that
+ 
+
+555
+00:08:13,039 --> 00:08:14,150
+very easily check the state of that
+particular bit
+
+556
+00:08:14,150 --> 00:08:14,160
+particular bit
+ 
+
+557
+00:08:14,160 --> 00:08:15,670
+particular bit
+because even though it happens to be all
+
+558
+00:08:15,670 --> 00:08:15,680
+because even though it happens to be all
+ 
+
+559
+00:08:15,680 --> 00:08:17,990
+because even though it happens to be all
+the way over here this variable here our
+
+560
+00:08:17,990 --> 00:08:18,000
+the way over here this variable here our
+ 
+
+561
+00:08:18,000 --> 00:08:19,589
+the way over here this variable here our
+resulting variable is really only going
+
+562
+00:08:19,589 --> 00:08:19,599
+resulting variable is really only going
+ 
+
+563
+00:08:19,599 --> 00:08:21,110
+resulting variable is really only going
+to be one of two states either
+
+564
+00:08:21,110 --> 00:08:21,120
+to be one of two states either
+ 
+
+565
+00:08:21,120 --> 00:08:22,790
+to be one of two states either
+completely zero
+
+566
+00:08:22,790 --> 00:08:22,800
+completely zero
+ 
+
+567
+00:08:22,800 --> 00:08:24,790
+completely zero
+because well it returns zero and the
+
+568
+00:08:24,790 --> 00:08:24,800
+because well it returns zero and the
+ 
+
+569
+00:08:24,800 --> 00:08:26,150
+because well it returns zero and the
+whole number is zero
+
+570
+00:08:26,150 --> 00:08:26,160
+whole number is zero
+ 
+
+571
+00:08:26,160 --> 00:08:28,710
+whole number is zero
+or something else so or greater than
+
+572
+00:08:28,710 --> 00:08:28,720
+or something else so or greater than
+ 
+
+573
+00:08:28,720 --> 00:08:29,350
+or something else so or greater than
+zero
+
+574
+00:08:29,350 --> 00:08:29,360
+zero
+ 
+
+575
+00:08:29,360 --> 00:08:32,389
+zero
+right in this case we have zero one two
+
+576
+00:08:32,389 --> 00:08:32,399
+right in this case we have zero one two
+ 
+
+577
+00:08:32,399 --> 00:08:32,790
+right in this case we have zero one two
+three
+
+578
+00:08:32,790 --> 00:08:32,800
+three
+ 
+
+579
+00:08:32,800 --> 00:08:35,509
+three
+four five to the power of five is 32 so
+
+580
+00:08:35,509 --> 00:08:35,519
+four five to the power of five is 32 so
+ 
+
+581
+00:08:35,519 --> 00:08:37,589
+four five to the power of five is 32 so
+this value would actually give us 32
+
+582
+00:08:37,589 --> 00:08:37,599
+this value would actually give us 32
+ 
+
+583
+00:08:37,599 --> 00:08:39,509
+this value would actually give us 32
+so i'll just kind of write that in here
+
+584
+00:08:39,509 --> 00:08:39,519
+so i'll just kind of write that in here
+ 
+
+585
+00:08:39,519 --> 00:08:41,589
+so i'll just kind of write that in here
+but of course if it had been zero then
+
+586
+00:08:41,589 --> 00:08:41,599
+but of course if it had been zero then
+ 
+
+587
+00:08:41,599 --> 00:08:43,190
+but of course if it had been zero then
+it would have given us zero
+
+588
+00:08:43,190 --> 00:08:43,200
+it would have given us zero
+ 
+
+589
+00:08:43,200 --> 00:08:45,269
+it would have given us zero
+and so what we can do with this value is
+
+590
+00:08:45,269 --> 00:08:45,279
+and so what we can do with this value is
+ 
+
+591
+00:08:45,279 --> 00:08:46,630
+and so what we can do with this value is
+we can for example
+
+592
+00:08:46,630 --> 00:08:46,640
+we can for example
+ 
+
+593
+00:08:46,640 --> 00:08:48,870
+we can for example
+pass the result this little bit wise
+
+594
+00:08:48,870 --> 00:08:48,880
+pass the result this little bit wise
+ 
+
+595
+00:08:48,880 --> 00:08:49,750
+pass the result this little bit wise
+result
+
+596
+00:08:49,750 --> 00:08:49,760
+result
+ 
+
+597
+00:08:49,760 --> 00:08:51,750
+result
+into an if statement like so and
+
+598
+00:08:51,750 --> 00:08:51,760
+into an if statement like so and
+ 
+
+599
+00:08:51,760 --> 00:08:52,870
+into an if statement like so and
+obviously if it's not
+
+600
+00:08:52,870 --> 00:08:52,880
+obviously if it's not
+ 
+
+601
+00:08:52,880 --> 00:08:55,509
+obviously if it's not
+zero so 32 for example is going to be
+
+602
+00:08:55,509 --> 00:08:55,519
+zero so 32 for example is going to be
+ 
+
+603
+00:08:55,519 --> 00:08:57,829
+zero so 32 for example is going to be
+true and we can act accordingly
+
+604
+00:08:57,829 --> 00:08:57,839
+true and we can act accordingly
+ 
+
+605
+00:08:57,839 --> 00:08:59,509
+true and we can act accordingly
+however if it is zero then it's going to
+
+606
+00:08:59,509 --> 00:08:59,519
+however if it is zero then it's going to
+ 
+
+607
+00:08:59,519 --> 00:09:00,949
+however if it is zero then it's going to
+be false and we don't go into that
+
+608
+00:09:00,949 --> 00:09:00,959
+be false and we don't go into that
+ 
+
+609
+00:09:00,959 --> 00:09:01,430
+be false and we don't go into that
+branch
+
+610
+00:09:01,430 --> 00:09:01,440
+branch
+ 
+
+611
+00:09:01,440 --> 00:09:02,949
+branch
+and that's actually a very common use
+
+612
+00:09:02,949 --> 00:09:02,959
+and that's actually a very common use
+ 
+
+613
+00:09:02,959 --> 00:09:04,790
+and that's actually a very common use
+case of this bitwise and operator
+
+614
+00:09:04,790 --> 00:09:04,800
+case of this bitwise and operator
+ 
+
+615
+00:09:04,800 --> 00:09:06,310
+case of this bitwise and operator
+because the value doesn't have to be
+
+616
+00:09:06,310 --> 00:09:06,320
+because the value doesn't have to be
+ 
+
+617
+00:09:06,320 --> 00:09:09,269
+because the value doesn't have to be
+one for this to be true any value other
+
+618
+00:09:09,269 --> 00:09:09,279
+one for this to be true any value other
+ 
+
+619
+00:09:09,279 --> 00:09:10,070
+one for this to be true any value other
+than 0
+
+620
+00:09:10,070 --> 00:09:10,080
+than 0
+ 
+
+621
+00:09:10,080 --> 00:09:12,070
+than 0
+in a boolean sense is going to be true
+
+622
+00:09:12,070 --> 00:09:12,080
+in a boolean sense is going to be true
+ 
+
+623
+00:09:12,080 --> 00:09:13,269
+in a boolean sense is going to be true
+even a negative value
+
+624
+00:09:13,269 --> 00:09:13,279
+even a negative value
+ 
+
+625
+00:09:13,279 --> 00:09:15,350
+even a negative value
+if there's any data present aside from 0
+
+626
+00:09:15,350 --> 00:09:15,360
+if there's any data present aside from 0
+ 
+
+627
+00:09:15,360 --> 00:09:16,790
+if there's any data present aside from 0
+then it's true and of course this
+
+628
+00:09:16,790 --> 00:09:16,800
+then it's true and of course this
+ 
+
+629
+00:09:16,800 --> 00:09:18,630
+then it's true and of course this
+masking situation works for
+
+630
+00:09:18,630 --> 00:09:18,640
+masking situation works for
+ 
+
+631
+00:09:18,640 --> 00:09:20,389
+masking situation works for
+other use cases not just checking the
+
+632
+00:09:20,389 --> 00:09:20,399
+other use cases not just checking the
+ 
+
+633
+00:09:20,399 --> 00:09:21,670
+other use cases not just checking the
+state of a single bit
+
+634
+00:09:21,670 --> 00:09:21,680
+state of a single bit
+ 
+
+635
+00:09:21,680 --> 00:09:23,509
+state of a single bit
+so for example what i could use it for
+
+636
+00:09:23,509 --> 00:09:23,519
+so for example what i could use it for
+ 
+
+637
+00:09:23,519 --> 00:09:25,269
+so for example what i could use it for
+is to literally select a whole group of
+
+638
+00:09:25,269 --> 00:09:25,279
+is to literally select a whole group of
+ 
+
+639
+00:09:25,279 --> 00:09:27,030
+is to literally select a whole group of
+bits or clear a group of bits
+
+640
+00:09:27,030 --> 00:09:27,040
+bits or clear a group of bits
+ 
+
+641
+00:09:27,040 --> 00:09:28,949
+bits or clear a group of bits
+so for example if i take that same
+
+642
+00:09:28,949 --> 00:09:28,959
+so for example if i take that same
+ 
+
+643
+00:09:28,959 --> 00:09:31,350
+so for example if i take that same
+number that i had over here and i pop it
+
+644
+00:09:31,350 --> 00:09:31,360
+number that i had over here and i pop it
+ 
+
+645
+00:09:31,360 --> 00:09:31,750
+number that i had over here and i pop it
+here
+
+646
+00:09:31,750 --> 00:09:31,760
+here
+ 
+
+647
+00:09:31,760 --> 00:09:33,750
+here
+if i want to just isolate this group
+
+648
+00:09:33,750 --> 00:09:33,760
+if i want to just isolate this group
+ 
+
+649
+00:09:33,760 --> 00:09:35,910
+if i want to just isolate this group
+over here or maybe i want to clear this
+
+650
+00:09:35,910 --> 00:09:35,920
+over here or maybe i want to clear this
+ 
+
+651
+00:09:35,920 --> 00:09:36,710
+over here or maybe i want to clear this
+to zero
+
+652
+00:09:36,710 --> 00:09:36,720
+to zero
+ 
+
+653
+00:09:36,720 --> 00:09:38,710
+to zero
+then all i have to do is and this with
+
+654
+00:09:38,710 --> 00:09:38,720
+then all i have to do is and this with
+ 
+
+655
+00:09:38,720 --> 00:09:40,550
+then all i have to do is and this with
+zero zero zero zero zero
+
+656
+00:09:40,550 --> 00:09:40,560
+zero zero zero zero zero
+ 
+
+657
+00:09:40,560 --> 00:09:43,350
+zero zero zero zero zero
+and then one one one one and that will
+
+658
+00:09:43,350 --> 00:09:43,360
+and then one one one one and that will
+ 
+
+659
+00:09:43,360 --> 00:09:43,990
+and then one one one one and that will
+of course
+
+660
+00:09:43,990 --> 00:09:44,000
+of course
+ 
+
+661
+00:09:44,000 --> 00:09:47,030
+of course
+give me zero zero zero zero
+
+662
+00:09:47,030 --> 00:09:47,040
+give me zero zero zero zero
+ 
+
+663
+00:09:47,040 --> 00:09:49,269
+give me zero zero zero zero
+zero and then for this side over here it
+
+664
+00:09:49,269 --> 00:09:49,279
+zero and then for this side over here it
+ 
+
+665
+00:09:49,279 --> 00:09:50,470
+zero and then for this side over here it
+will give me
+
+666
+00:09:50,470 --> 00:09:50,480
+will give me
+ 
+
+667
+00:09:50,480 --> 00:09:54,070
+will give me
+0 1 0 1 which coincidentally is exactly
+
+668
+00:09:54,070 --> 00:09:54,080
+0 1 0 1 which coincidentally is exactly
+ 
+
+669
+00:09:54,080 --> 00:09:55,509
+0 1 0 1 which coincidentally is exactly
+the value we started with so what i've
+
+670
+00:09:55,509 --> 00:09:55,519
+the value we started with so what i've
+ 
+
+671
+00:09:55,519 --> 00:09:57,190
+the value we started with so what i've
+done is i've effectively removed this
+
+672
+00:09:57,190 --> 00:09:57,200
+done is i've effectively removed this
+ 
+
+673
+00:09:57,200 --> 00:09:57,750
+done is i've effectively removed this
+whole
+
+674
+00:09:57,750 --> 00:09:57,760
+whole
+ 
+
+675
+00:09:57,760 --> 00:09:59,269
+whole
+bunch of bits they're irrelevant i'm
+
+676
+00:09:59,269 --> 00:09:59,279
+bunch of bits they're irrelevant i'm
+ 
+
+677
+00:09:59,279 --> 00:10:01,110
+bunch of bits they're irrelevant i'm
+just focusing on my little selection
+
+678
+00:10:01,110 --> 00:10:01,120
+just focusing on my little selection
+ 
+
+679
+00:10:01,120 --> 00:10:03,190
+just focusing on my little selection
+here so this bitwise and operator
+
+680
+00:10:03,190 --> 00:10:03,200
+here so this bitwise and operator
+ 
+
+681
+00:10:03,200 --> 00:10:05,509
+here so this bitwise and operator
+we can use to mask out or select
+
+682
+00:10:05,509 --> 00:10:05,519
+we can use to mask out or select
+ 
+
+683
+00:10:05,519 --> 00:10:06,230
+we can use to mask out or select
+specific
+
+684
+00:10:06,230 --> 00:10:06,240
+specific
+ 
+
+685
+00:10:06,240 --> 00:10:08,630
+specific
+bits okay so what about the or operator
+
+686
+00:10:08,630 --> 00:10:08,640
+bits okay so what about the or operator
+ 
+
+687
+00:10:08,640 --> 00:10:10,310
+bits okay so what about the or operator
+well the or operator works
+
+688
+00:10:10,310 --> 00:10:10,320
+well the or operator works
+ 
+
+689
+00:10:10,320 --> 00:10:11,670
+well the or operator works
+much the same way and again this is
+
+690
+00:10:11,670 --> 00:10:11,680
+much the same way and again this is
+ 
+
+691
+00:10:11,680 --> 00:10:13,350
+much the same way and again this is
+similar to a logical or i'll try to make
+
+692
+00:10:13,350 --> 00:10:13,360
+similar to a logical or i'll try to make
+ 
+
+693
+00:10:13,360 --> 00:10:14,470
+similar to a logical or i'll try to make
+these longer so you can tell
+
+694
+00:10:14,470 --> 00:10:14,480
+these longer so you can tell
+ 
+
+695
+00:10:14,480 --> 00:10:17,030
+these longer so you can tell
+they're not ones if either of them are
+
+696
+00:10:17,030 --> 00:10:17,040
+they're not ones if either of them are
+ 
+
+697
+00:10:17,040 --> 00:10:19,590
+they're not ones if either of them are
+true then the result is true so if
+
+698
+00:10:19,590 --> 00:10:19,600
+true then the result is true so if
+ 
+
+699
+00:10:19,600 --> 00:10:21,190
+true then the result is true so if
+either of these are one we'll get a one
+
+700
+00:10:21,190 --> 00:10:21,200
+either of these are one we'll get a one
+ 
+
+701
+00:10:21,200 --> 00:10:23,350
+either of these are one we'll get a one
+well they're both zero so we'll get zero
+
+702
+00:10:23,350 --> 00:10:23,360
+well they're both zero so we'll get zero
+ 
+
+703
+00:10:23,360 --> 00:10:26,389
+well they're both zero so we'll get zero
+otherwise for this we'll get one
+
+704
+00:10:26,389 --> 00:10:26,399
+otherwise for this we'll get one
+ 
+
+705
+00:10:26,399 --> 00:10:28,949
+otherwise for this we'll get one
+right because are either of them one yes
+
+706
+00:10:28,949 --> 00:10:28,959
+right because are either of them one yes
+ 
+
+707
+00:10:28,959 --> 00:10:30,150
+right because are either of them one yes
+then same of course
+
+708
+00:10:30,150 --> 00:10:30,160
+then same of course
+ 
+
+709
+00:10:30,160 --> 00:10:33,350
+then same of course
+for this and also for one or one so it's
+
+710
+00:10:33,350 --> 00:10:33,360
+for this and also for one or one so it's
+ 
+
+711
+00:10:33,360 --> 00:10:33,910
+for this and also for one or one so it's
+kind of like
+
+712
+00:10:33,910 --> 00:10:33,920
+kind of like
+ 
+
+713
+00:10:33,920 --> 00:10:35,910
+kind of like
+the opposite in a way i mean this is
+
+714
+00:10:35,910 --> 00:10:35,920
+the opposite in a way i mean this is
+ 
+
+715
+00:10:35,920 --> 00:10:37,750
+the opposite in a way i mean this is
+obviously still going to be zero in both
+
+716
+00:10:37,750 --> 00:10:37,760
+obviously still going to be zero in both
+ 
+
+717
+00:10:37,760 --> 00:10:39,350
+obviously still going to be zero in both
+cases and this is going to be one in
+
+718
+00:10:39,350 --> 00:10:39,360
+cases and this is going to be one in
+ 
+
+719
+00:10:39,360 --> 00:10:40,230
+cases and this is going to be one in
+both cases
+
+720
+00:10:40,230 --> 00:10:40,240
+both cases
+ 
+
+721
+00:10:40,240 --> 00:10:42,790
+both cases
+but it works very similarly to a logical
+
+722
+00:10:42,790 --> 00:10:42,800
+but it works very similarly to a logical
+ 
+
+723
+00:10:42,800 --> 00:10:43,829
+but it works very similarly to a logical
+or operator
+
+724
+00:10:43,829 --> 00:10:43,839
+or operator
+ 
+
+725
+00:10:43,839 --> 00:10:46,550
+or operator
+right if either of these values are true
+
+726
+00:10:46,550 --> 00:10:46,560
+right if either of these values are true
+ 
+
+727
+00:10:46,560 --> 00:10:47,430
+right if either of these values are true
+then we get
+
+728
+00:10:47,430 --> 00:10:47,440
+then we get
+ 
+
+729
+00:10:47,440 --> 00:10:49,430
+then we get
+true and just to give you a bit of an
+
+730
+00:10:49,430 --> 00:10:49,440
+true and just to give you a bit of an
+ 
+
+731
+00:10:49,440 --> 00:10:51,190
+true and just to give you a bit of an
+example if i had some
+
+732
+00:10:51,190 --> 00:10:51,200
+example if i had some
+ 
+
+733
+00:10:51,200 --> 00:10:54,710
+example if i had some
+random value like this then you can see
+
+734
+00:10:54,710 --> 00:10:54,720
+random value like this then you can see
+ 
+
+735
+00:10:54,720 --> 00:10:55,269
+random value like this then you can see
+that
+
+736
+00:10:55,269 --> 00:10:55,279
+that
+ 
+
+737
+00:10:55,279 --> 00:10:58,069
+that
+the result would be something like that
+
+738
+00:10:58,069 --> 00:10:58,079
+the result would be something like that
+ 
+
+739
+00:10:58,079 --> 00:10:59,430
+the result would be something like that
+in fact the result would be that i don't
+
+740
+00:10:59,430 --> 00:10:59,440
+in fact the result would be that i don't
+ 
+
+741
+00:10:59,440 --> 00:10:59,990
+in fact the result would be that i don't
+know why it's
+
+742
+00:10:59,990 --> 00:11:00,000
+know why it's
+ 
+
+743
+00:11:00,000 --> 00:11:01,509
+know why it's
+something like that one thing you can do
+
+744
+00:11:01,509 --> 00:11:01,519
+something like that one thing you can do
+ 
+
+745
+00:11:01,519 --> 00:11:02,949
+something like that one thing you can do
+with these exercises by the way is if
+
+746
+00:11:02,949 --> 00:11:02,959
+with these exercises by the way is if
+ 
+
+747
+00:11:02,959 --> 00:11:04,389
+with these exercises by the way is if
+you really are kind of new to these
+
+748
+00:11:04,389 --> 00:11:04,399
+you really are kind of new to these
+ 
+
+749
+00:11:04,399 --> 00:11:06,389
+you really are kind of new to these
+operators then feel free to actually try
+
+750
+00:11:06,389 --> 00:11:06,399
+operators then feel free to actually try
+ 
+
+751
+00:11:06,399 --> 00:11:07,269
+operators then feel free to actually try
+and do these
+
+752
+00:11:07,269 --> 00:11:07,279
+and do these
+ 
+
+753
+00:11:07,279 --> 00:11:09,829
+and do these
+on paper by yourself before i kind of
+
+754
+00:11:09,829 --> 00:11:09,839
+on paper by yourself before i kind of
+ 
+
+755
+00:11:09,839 --> 00:11:10,630
+on paper by yourself before i kind of
+give you
+
+756
+00:11:10,630 --> 00:11:10,640
+give you
+ 
+
+757
+00:11:10,640 --> 00:11:12,150
+give you
+the answers it'll force you to like
+
+758
+00:11:12,150 --> 00:11:12,160
+the answers it'll force you to like
+ 
+
+759
+00:11:12,160 --> 00:11:14,150
+the answers it'll force you to like
+think a little bit and actually remember
+
+760
+00:11:14,150 --> 00:11:14,160
+think a little bit and actually remember
+ 
+
+761
+00:11:14,160 --> 00:11:15,829
+think a little bit and actually remember
+and learn how these operators work a lot
+
+762
+00:11:15,829 --> 00:11:15,839
+and learn how these operators work a lot
+ 
+
+763
+00:11:15,839 --> 00:11:17,509
+and learn how these operators work a lot
+better and a lot quicker okay so what
+
+764
+00:11:17,509 --> 00:11:17,519
+better and a lot quicker okay so what
+ 
+
+765
+00:11:17,519 --> 00:11:19,350
+better and a lot quicker okay so what
+does this let me do in comparison to
+
+766
+00:11:19,350 --> 00:11:19,360
+does this let me do in comparison to
+ 
+
+767
+00:11:19,360 --> 00:11:21,110
+does this let me do in comparison to
+this whole bit masking thing
+
+768
+00:11:21,110 --> 00:11:21,120
+this whole bit masking thing
+ 
+
+769
+00:11:21,120 --> 00:11:22,949
+this whole bit masking thing
+well the or works kind of in the
+
+770
+00:11:22,949 --> 00:11:22,959
+well the or works kind of in the
+ 
+
+771
+00:11:22,959 --> 00:11:24,949
+well the or works kind of in the
+opposite way we can use this
+
+772
+00:11:24,949 --> 00:11:24,959
+opposite way we can use this
+ 
+
+773
+00:11:24,959 --> 00:11:27,829
+opposite way we can use this
+and like in this case to take away bits
+
+774
+00:11:27,829 --> 00:11:27,839
+and like in this case to take away bits
+ 
+
+775
+00:11:27,839 --> 00:11:29,110
+and like in this case to take away bits
+right so just to get rid of bits
+
+776
+00:11:29,110 --> 00:11:29,120
+right so just to get rid of bits
+ 
+
+777
+00:11:29,120 --> 00:11:30,790
+right so just to get rid of bits
+entirely with or
+
+778
+00:11:30,790 --> 00:11:30,800
+entirely with or
+ 
+
+779
+00:11:30,800 --> 00:11:33,910
+entirely with or
+we can actually use it to add bits so
+
+780
+00:11:33,910 --> 00:11:33,920
+we can actually use it to add bits so
+ 
+
+781
+00:11:33,920 --> 00:11:36,310
+we can actually use it to add bits so
+if we had this whole group of zeros here
+
+782
+00:11:36,310 --> 00:11:36,320
+if we had this whole group of zeros here
+ 
+
+783
+00:11:36,320 --> 00:11:36,949
+if we had this whole group of zeros here
+right that we
+
+784
+00:11:36,949 --> 00:11:36,959
+right that we
+ 
+
+785
+00:11:36,959 --> 00:11:38,710
+right that we
+we just took them all away and i
+
+786
+00:11:38,710 --> 00:11:38,720
+we just took them all away and i
+ 
+
+787
+00:11:38,720 --> 00:11:40,069
+we just took them all away and i
+actually wanted to add these
+
+788
+00:11:40,069 --> 00:11:40,079
+actually wanted to add these
+ 
+
+789
+00:11:40,079 --> 00:11:43,190
+actually wanted to add these
+bits back i could order those zeros with
+
+790
+00:11:43,190 --> 00:11:43,200
+bits back i could order those zeros with
+ 
+
+791
+00:11:43,200 --> 00:11:45,269
+bits back i could order those zeros with
+this kind of bit pattern one zero one
+
+792
+00:11:45,269 --> 00:11:45,279
+this kind of bit pattern one zero one
+ 
+
+793
+00:11:45,279 --> 00:11:46,230
+this kind of bit pattern one zero one
+one zero
+
+794
+00:11:46,230 --> 00:11:46,240
+one zero
+ 
+
+795
+00:11:46,240 --> 00:11:48,230
+one zero
+and i would get them back now in this
+
+796
+00:11:48,230 --> 00:11:48,240
+and i would get them back now in this
+ 
+
+797
+00:11:48,240 --> 00:11:50,230
+and i would get them back now in this
+particular example i would also actually
+
+798
+00:11:50,230 --> 00:11:50,240
+particular example i would also actually
+ 
+
+799
+00:11:50,240 --> 00:11:52,150
+particular example i would also actually
+need to shift them left though
+
+800
+00:11:52,150 --> 00:11:52,160
+need to shift them left though
+ 
+
+801
+00:11:52,160 --> 00:11:53,990
+need to shift them left though
+because you can see that in this case
+
+802
+00:11:53,990 --> 00:11:54,000
+because you can see that in this case
+ 
+
+803
+00:11:54,000 --> 00:11:55,990
+because you can see that in this case
+this this value doesn't start at the
+
+804
+00:11:55,990 --> 00:11:56,000
+this this value doesn't start at the
+ 
+
+805
+00:11:56,000 --> 00:11:58,150
+this this value doesn't start at the
+first kind of position this is our first
+
+806
+00:11:58,150 --> 00:11:58,160
+first kind of position this is our first
+ 
+
+807
+00:11:58,160 --> 00:11:59,750
+first kind of position this is our first
+position this is our least significant
+
+808
+00:11:59,750 --> 00:11:59,760
+position this is our least significant
+ 
+
+809
+00:11:59,760 --> 00:12:00,150
+position this is our least significant
+bit
+
+810
+00:12:00,150 --> 00:12:00,160
+bit
+ 
+
+811
+00:12:00,160 --> 00:12:01,750
+bit
+but we need to start kind of writing
+
+812
+00:12:01,750 --> 00:12:01,760
+but we need to start kind of writing
+ 
+
+813
+00:12:01,760 --> 00:12:03,350
+but we need to start kind of writing
+these values in here so let's actually
+
+814
+00:12:03,350 --> 00:12:03,360
+these values in here so let's actually
+ 
+
+815
+00:12:03,360 --> 00:12:04,949
+these values in here so let's actually
+do that this will be a good example i
+
+816
+00:12:04,949 --> 00:12:04,959
+do that this will be a good example i
+ 
+
+817
+00:12:04,959 --> 00:12:05,269
+do that this will be a good example i
+think
+
+818
+00:12:05,269 --> 00:12:05,279
+think
+ 
+
+819
+00:12:05,279 --> 00:12:07,190
+think
+so this is the original value that i had
+
+820
+00:12:07,190 --> 00:12:07,200
+so this is the original value that i had
+ 
+
+821
+00:12:07,200 --> 00:12:08,710
+so this is the original value that i had
+over here i'll stop drawing stuff on top
+
+822
+00:12:08,710 --> 00:12:08,720
+over here i'll stop drawing stuff on top
+ 
+
+823
+00:12:08,720 --> 00:12:10,230
+over here i'll stop drawing stuff on top
+of everything so that it's more clear
+
+824
+00:12:10,230 --> 00:12:10,240
+of everything so that it's more clear
+ 
+
+825
+00:12:10,240 --> 00:12:12,389
+of everything so that it's more clear
+and we added it by this so now we're
+
+826
+00:12:12,389 --> 00:12:12,399
+and we added it by this so now we're
+ 
+
+827
+00:12:12,399 --> 00:12:13,509
+and we added it by this so now we're
+left with this
+
+828
+00:12:13,509 --> 00:12:13,519
+left with this
+ 
+
+829
+00:12:13,519 --> 00:12:16,150
+left with this
+so with this specific value that we had
+
+830
+00:12:16,150 --> 00:12:16,160
+so with this specific value that we had
+ 
+
+831
+00:12:16,160 --> 00:12:17,910
+so with this specific value that we had
+i'll write it out over here
+
+832
+00:12:17,910 --> 00:12:17,920
+i'll write it out over here
+ 
+
+833
+00:12:17,920 --> 00:12:21,110
+i'll write it out over here
+how do i get back to the original value
+
+834
+00:12:21,110 --> 00:12:21,120
+how do i get back to the original value
+ 
+
+835
+00:12:21,120 --> 00:12:23,430
+how do i get back to the original value
+if i know that what i took away were
+
+836
+00:12:23,430 --> 00:12:23,440
+if i know that what i took away were
+ 
+
+837
+00:12:23,440 --> 00:12:24,949
+if i know that what i took away were
+these bits over here
+
+838
+00:12:24,949 --> 00:12:24,959
+these bits over here
+ 
+
+839
+00:12:24,959 --> 00:12:27,350
+these bits over here
+well again if i try to order them by one
+
+840
+00:12:27,350 --> 00:12:27,360
+well again if i try to order them by one
+ 
+
+841
+00:12:27,360 --> 00:12:28,790
+well again if i try to order them by one
+zero one one zero
+
+842
+00:12:28,790 --> 00:12:28,800
+zero one one zero
+ 
+
+843
+00:12:28,800 --> 00:12:31,110
+zero one one zero
+well that wouldn't really be that useful
+
+844
+00:12:31,110 --> 00:12:31,120
+well that wouldn't really be that useful
+ 
+
+845
+00:12:31,120 --> 00:12:32,870
+well that wouldn't really be that useful
+to me because obviously what that would
+
+846
+00:12:32,870 --> 00:12:32,880
+to me because obviously what that would
+ 
+
+847
+00:12:32,880 --> 00:12:34,470
+to me because obviously what that would
+do in this case is well these are all
+
+848
+00:12:34,470 --> 00:12:34,480
+do in this case is well these are all
+ 
+
+849
+00:12:34,480 --> 00:12:35,509
+do in this case is well these are all
+zeros they remain
+
+850
+00:12:35,509 --> 00:12:35,519
+zeros they remain
+ 
+
+851
+00:12:35,519 --> 00:12:37,670
+zeros they remain
+zeros but then here what would happen is
+
+852
+00:12:37,670 --> 00:12:37,680
+zeros but then here what would happen is
+ 
+
+853
+00:12:37,680 --> 00:12:40,790
+zeros but then here what would happen is
+i would change some of them to ones
+
+854
+00:12:40,790 --> 00:12:40,800
+i would change some of them to ones
+ 
+
+855
+00:12:40,800 --> 00:12:42,150
+i would change some of them to ones
+and it would just become this which is
+
+856
+00:12:42,150 --> 00:12:42,160
+and it would just become this which is
+ 
+
+857
+00:12:42,160 --> 00:12:43,750
+and it would just become this which is
+still not my original number so what i
+
+858
+00:12:43,750 --> 00:12:43,760
+still not my original number so what i
+ 
+
+859
+00:12:43,760 --> 00:12:45,829
+still not my original number so what i
+have to do is actually take this number
+
+860
+00:12:45,829 --> 00:12:45,839
+have to do is actually take this number
+ 
+
+861
+00:12:45,839 --> 00:12:46,550
+have to do is actually take this number
+over here
+
+862
+00:12:46,550 --> 00:12:46,560
+over here
+ 
+
+863
+00:12:46,560 --> 00:12:48,949
+over here
+this bit pattern which i want to end up
+
+864
+00:12:48,949 --> 00:12:48,959
+this bit pattern which i want to end up
+ 
+
+865
+00:12:48,959 --> 00:12:49,990
+this bit pattern which i want to end up
+in this place
+
+866
+00:12:49,990 --> 00:12:50,000
+in this place
+ 
+
+867
+00:12:50,000 --> 00:12:53,190
+in this place
+and first shift it left by in this case
+
+868
+00:12:53,190 --> 00:12:53,200
+and first shift it left by in this case
+ 
+
+869
+00:12:53,200 --> 00:12:54,629
+and first shift it left by in this case
+four places right
+
+870
+00:12:54,629 --> 00:12:54,639
+four places right
+ 
+
+871
+00:12:54,639 --> 00:12:57,350
+four places right
+one two three four would shift it from
+
+872
+00:12:57,350 --> 00:12:57,360
+one two three four would shift it from
+ 
+
+873
+00:12:57,360 --> 00:12:57,990
+one two three four would shift it from
+here
+
+874
+00:12:57,990 --> 00:12:58,000
+here
+ 
+
+875
+00:12:58,000 --> 00:13:00,629
+here
+to and this is kind of the usefulness of
+
+876
+00:13:00,629 --> 00:13:00,639
+to and this is kind of the usefulness of
+ 
+
+877
+00:13:00,639 --> 00:13:01,190
+to and this is kind of the usefulness of
+using
+
+878
+00:13:01,190 --> 00:13:01,200
+using
+ 
+
+879
+00:13:01,200 --> 00:13:03,110
+using
+photoshop here not drawing on paper i
+
+880
+00:13:03,110 --> 00:13:03,120
+photoshop here not drawing on paper i
+ 
+
+881
+00:13:03,120 --> 00:13:04,710
+photoshop here not drawing on paper i
+can literally move it
+
+882
+00:13:04,710 --> 00:13:04,720
+can literally move it
+ 
+
+883
+00:13:04,720 --> 00:13:07,269
+can literally move it
+over here right four places that's how
+
+884
+00:13:07,269 --> 00:13:07,279
+over here right four places that's how
+ 
+
+885
+00:13:07,279 --> 00:13:09,350
+over here right four places that's how
+much i've moved it by and so what i end
+
+886
+00:13:09,350 --> 00:13:09,360
+much i've moved it by and so what i end
+ 
+
+887
+00:13:09,360 --> 00:13:09,829
+much i've moved it by and so what i end
+up with
+
+888
+00:13:09,829 --> 00:13:09,839
+up with
+ 
+
+889
+00:13:09,839 --> 00:13:12,710
+up with
+is just zeros over here and now if i
+
+890
+00:13:12,710 --> 00:13:12,720
+is just zeros over here and now if i
+ 
+
+891
+00:13:12,720 --> 00:13:14,389
+is just zeros over here and now if i
+order these two values together
+
+892
+00:13:14,389 --> 00:13:14,399
+order these two values together
+ 
+
+893
+00:13:14,399 --> 00:13:17,590
+order these two values together
+one zero one zero zero one one
+
+894
+00:13:17,590 --> 00:13:17,600
+one zero one zero zero one one
+ 
+
+895
+00:13:17,600 --> 00:13:21,190
+one zero one zero zero one one
+zero one then guess what i'm left with
+
+896
+00:13:21,190 --> 00:13:21,200
+zero one then guess what i'm left with
+ 
+
+897
+00:13:21,200 --> 00:13:21,590
+zero one then guess what i'm left with
+my
+
+898
+00:13:21,590 --> 00:13:21,600
+my
+ 
+
+899
+00:13:21,600 --> 00:13:24,230
+my
+original value so in summary what would
+
+900
+00:13:24,230 --> 00:13:24,240
+original value so in summary what would
+ 
+
+901
+00:13:24,240 --> 00:13:25,430
+original value so in summary what would
+this look like if it was
+
+902
+00:13:25,430 --> 00:13:25,440
+this look like if it was
+ 
+
+903
+00:13:25,440 --> 00:13:27,190
+this look like if it was
+actual code and not just a drawing on a
+
+904
+00:13:27,190 --> 00:13:27,200
+actual code and not just a drawing on a
+ 
+
+905
+00:13:27,200 --> 00:13:29,430
+actual code and not just a drawing on a
+screen we would write some code such as
+
+906
+00:13:29,430 --> 00:13:29,440
+screen we would write some code such as
+ 
+
+907
+00:13:29,440 --> 00:13:30,710
+screen we would write some code such as
+this so int a
+
+908
+00:13:30,710 --> 00:13:30,720
+this so int a
+ 
+
+909
+00:13:30,720 --> 00:13:33,190
+this so int a
+i'll say is equal to this which we know
+
+910
+00:13:33,190 --> 00:13:33,200
+i'll say is equal to this which we know
+ 
+
+911
+00:13:33,200 --> 00:13:33,829
+i'll say is equal to this which we know
+is 0
+
+912
+00:13:33,829 --> 00:13:33,839
+is 0
+ 
+
+913
+00:13:33,839 --> 00:13:35,670
+is 0
+1 0 1. now i'll pretend that we're
+
+914
+00:13:35,670 --> 00:13:35,680
+1 0 1. now i'll pretend that we're
+ 
+
+915
+00:13:35,680 --> 00:13:37,110
+1 0 1. now i'll pretend that we're
+writing in binary here if you ever want
+
+916
+00:13:37,110 --> 00:13:37,120
+writing in binary here if you ever want
+ 
+
+917
+00:13:37,120 --> 00:13:37,750
+writing in binary here if you ever want
+to write in
+
+918
+00:13:37,750 --> 00:13:37,760
+to write in
+ 
+
+919
+00:13:37,760 --> 00:13:39,590
+to write in
+in binary directly in your sql source
+
+920
+00:13:39,590 --> 00:13:39,600
+in binary directly in your sql source
+ 
+
+921
+00:13:39,600 --> 00:13:41,189
+in binary directly in your sql source
+code you can actually do 0
+
+922
+00:13:41,189 --> 00:13:41,199
+code you can actually do 0
+ 
+
+923
+00:13:41,199 --> 00:13:43,509
+code you can actually do 0
+b and then the pattern that you want
+
+924
+00:13:43,509 --> 00:13:43,519
+b and then the pattern that you want
+ 
+
+925
+00:13:43,519 --> 00:13:44,949
+b and then the pattern that you want
+right so it's kind of similar to
+
+926
+00:13:44,949 --> 00:13:44,959
+right so it's kind of similar to
+ 
+
+927
+00:13:44,959 --> 00:13:46,310
+right so it's kind of similar to
+hexadecimal how you could just put a
+
+928
+00:13:46,310 --> 00:13:46,320
+hexadecimal how you could just put a
+ 
+
+929
+00:13:46,320 --> 00:13:47,910
+hexadecimal how you could just put a
+little 0x and then write them in
+
+930
+00:13:47,910 --> 00:13:47,920
+little 0x and then write them in
+ 
+
+931
+00:13:47,920 --> 00:13:49,750
+little 0x and then write them in
+hexadecimal you can do the same
+
+932
+00:13:49,750 --> 00:13:49,760
+hexadecimal you can do the same
+ 
+
+933
+00:13:49,760 --> 00:13:51,990
+hexadecimal you can do the same
+in i think it's c plus plus like i don't
+
+934
+00:13:51,990 --> 00:13:52,000
+in i think it's c plus plus like i don't
+ 
+
+935
+00:13:52,000 --> 00:13:53,750
+in i think it's c plus plus like i don't
+know what version onwards but you can
+
+936
+00:13:53,750 --> 00:13:53,760
+know what version onwards but you can
+ 
+
+937
+00:13:53,760 --> 00:13:54,069
+know what version onwards but you can
+now
+
+938
+00:13:54,069 --> 00:13:54,079
+now
+ 
+
+939
+00:13:54,079 --> 00:13:55,990
+now
+you should be able to do zero b and then
+
+940
+00:13:55,990 --> 00:13:56,000
+you should be able to do zero b and then
+ 
+
+941
+00:13:56,000 --> 00:13:57,829
+you should be able to do zero b and then
+whatever value you want so if we have
+
+942
+00:13:57,829 --> 00:13:57,839
+whatever value you want so if we have
+ 
+
+943
+00:13:57,839 --> 00:13:59,350
+whatever value you want so if we have
+this a variable and we want it to turn
+
+944
+00:13:59,350 --> 00:13:59,360
+this a variable and we want it to turn
+ 
+
+945
+00:13:59,360 --> 00:14:01,189
+this a variable and we want it to turn
+into this we'll create our little
+
+946
+00:14:01,189 --> 00:14:01,199
+into this we'll create our little
+ 
+
+947
+00:14:01,199 --> 00:14:04,389
+into this we'll create our little
+b variable here which will be this value
+
+948
+00:14:04,389 --> 00:14:04,399
+b variable here which will be this value
+ 
+
+949
+00:14:04,399 --> 00:14:05,910
+b variable here which will be this value
+that we want to add back
+
+950
+00:14:05,910 --> 00:14:05,920
+that we want to add back
+ 
+
+951
+00:14:05,920 --> 00:14:09,189
+that we want to add back
+so one zero one one zero and by the way
+
+952
+00:14:09,189 --> 00:14:09,199
+so one zero one one zero and by the way
+ 
+
+953
+00:14:09,199 --> 00:14:11,189
+so one zero one one zero and by the way
+this leading zero is of course
+
+954
+00:14:11,189 --> 00:14:11,199
+this leading zero is of course
+ 
+
+955
+00:14:11,199 --> 00:14:12,790
+this leading zero is of course
+kind of useless we can get rid of it if
+
+956
+00:14:12,790 --> 00:14:12,800
+kind of useless we can get rid of it if
+ 
+
+957
+00:14:12,800 --> 00:14:14,470
+kind of useless we can get rid of it if
+we want to and then i'm simply going to
+
+958
+00:14:14,470 --> 00:14:14,480
+we want to and then i'm simply going to
+ 
+
+959
+00:14:14,480 --> 00:14:15,189
+we want to and then i'm simply going to
+take b
+
+960
+00:14:15,189 --> 00:14:15,199
+take b
+ 
+
+961
+00:14:15,199 --> 00:14:18,310
+take b
+and shift it left by four places so i'll
+
+962
+00:14:18,310 --> 00:14:18,320
+and shift it left by four places so i'll
+ 
+
+963
+00:14:18,320 --> 00:14:19,829
+and shift it left by four places so i'll
+write some code like that
+
+964
+00:14:19,829 --> 00:14:19,839
+write some code like that
+ 
+
+965
+00:14:19,839 --> 00:14:22,230
+write some code like that
+and then finally our result right which
+
+966
+00:14:22,230 --> 00:14:22,240
+and then finally our result right which
+ 
+
+967
+00:14:22,240 --> 00:14:23,189
+and then finally our result right which
+i'll call
+
+968
+00:14:23,189 --> 00:14:23,199
+i'll call
+ 
+
+969
+00:14:23,199 --> 00:14:26,470
+i'll call
+c will be a or b and then this c
+
+970
+00:14:26,470 --> 00:14:26,480
+c will be a or b and then this c
+ 
+
+971
+00:14:26,480 --> 00:14:30,150
+c will be a or b and then this c
+variable is what this will be this is a
+
+972
+00:14:30,150 --> 00:14:30,160
+variable is what this will be this is a
+ 
+
+973
+00:14:30,160 --> 00:14:30,629
+variable is what this will be this is a
+new
+
+974
+00:14:30,629 --> 00:14:30,639
+new
+ 
+
+975
+00:14:30,639 --> 00:14:33,750
+new
+c variable and here is an actual c
+
+976
+00:14:33,750 --> 00:14:33,760
+c variable and here is an actual c
+ 
+
+977
+00:14:33,760 --> 00:14:35,430
+c variable and here is an actual c
+plus source code example if you want
+
+978
+00:14:35,430 --> 00:14:35,440
+plus source code example if you want
+ 
+
+979
+00:14:35,440 --> 00:14:36,790
+plus source code example if you want
+something that you can actually run
+
+980
+00:14:36,790 --> 00:14:36,800
+something that you can actually run
+ 
+
+981
+00:14:36,800 --> 00:14:37,430
+something that you can actually run
+yourself
+
+982
+00:14:37,430 --> 00:14:37,440
+yourself
+ 
+
+983
+00:14:37,440 --> 00:14:38,629
+yourself
+the only kind of different thing i'm
+
+984
+00:14:38,629 --> 00:14:38,639
+the only kind of different thing i'm
+ 
+
+985
+00:14:38,639 --> 00:14:40,470
+the only kind of different thing i'm
+doing here is actually putting this
+
+986
+00:14:40,470 --> 00:14:40,480
+doing here is actually putting this
+ 
+
+987
+00:14:40,480 --> 00:14:42,949
+doing here is actually putting this
+final integer into a bit set of nine
+
+988
+00:14:42,949 --> 00:14:42,959
+final integer into a bit set of nine
+ 
+
+989
+00:14:42,959 --> 00:14:43,750
+final integer into a bit set of nine
+bits
+
+990
+00:14:43,750 --> 00:14:43,760
+bits
+ 
+
+991
+00:14:43,760 --> 00:14:45,430
+bits
+just so that i can actually see it
+
+992
+00:14:45,430 --> 00:14:45,440
+just so that i can actually see it
+ 
+
+993
+00:14:45,440 --> 00:14:47,430
+just so that i can actually see it
+printed in binary when i run my program
+
+994
+00:14:47,430 --> 00:14:47,440
+printed in binary when i run my program
+ 
+
+995
+00:14:47,440 --> 00:14:49,990
+printed in binary when i run my program
+and the result of running this is this
+
+996
+00:14:49,990 --> 00:14:50,000
+and the result of running this is this
+ 
+
+997
+00:14:50,000 --> 00:14:50,710
+and the result of running this is this
+which of course
+
+998
+00:14:50,710 --> 00:14:50,720
+which of course
+ 
+
+999
+00:14:50,720 --> 00:14:52,870
+which of course
+is my original value so that is the
+
+1000
+00:14:52,870 --> 00:14:52,880
+is my original value so that is the
+ 
+
+1001
+00:14:52,880 --> 00:14:54,949
+is my original value so that is the
+bitwise and and the bitwise or now these
+
+1002
+00:14:54,949 --> 00:14:54,959
+bitwise and and the bitwise or now these
+ 
+
+1003
+00:14:54,959 --> 00:14:56,790
+bitwise and and the bitwise or now these
+two operators are used pretty often to
+
+1004
+00:14:56,790 --> 00:14:56,800
+two operators are used pretty often to
+ 
+
+1005
+00:14:56,800 --> 00:14:58,389
+two operators are used pretty often to
+be honest in terms of like bitwise
+
+1006
+00:14:58,389 --> 00:14:58,399
+be honest in terms of like bitwise
+ 
+
+1007
+00:14:58,399 --> 00:14:59,910
+be honest in terms of like bitwise
+operators and their users
+
+1008
+00:14:59,910 --> 00:14:59,920
+operators and their users
+ 
+
+1009
+00:14:59,920 --> 00:15:02,629
+operators and their users
+these are used pretty frequently now
+
+1010
+00:15:02,629 --> 00:15:02,639
+these are used pretty frequently now
+ 
+
+1011
+00:15:02,639 --> 00:15:04,389
+these are used pretty frequently now
+bitwise xor and not
+
+1012
+00:15:04,389 --> 00:15:04,399
+bitwise xor and not
+ 
+
+1013
+00:15:04,399 --> 00:15:06,790
+bitwise xor and not
+they're not used as often not is
+
+1014
+00:15:06,790 --> 00:15:06,800
+they're not used as often not is
+ 
+
+1015
+00:15:06,800 --> 00:15:07,990
+they're not used as often not is
+actually very
+
+1016
+00:15:07,990 --> 00:15:08,000
+actually very
+ 
+
+1017
+00:15:08,000 --> 00:15:10,470
+actually very
+useful with and because whilst the or
+
+1018
+00:15:10,470 --> 00:15:10,480
+useful with and because whilst the or
+ 
+
+1019
+00:15:10,480 --> 00:15:11,670
+useful with and because whilst the or
+operator can actually
+
+1020
+00:15:11,670 --> 00:15:11,680
+operator can actually
+ 
+
+1021
+00:15:11,680 --> 00:15:15,269
+operator can actually
+set zeros to be one we can't ever
+
+1022
+00:15:15,269 --> 00:15:15,279
+set zeros to be one we can't ever
+ 
+
+1023
+00:15:15,279 --> 00:15:17,430
+set zeros to be one we can't ever
+set a one to be zero using the or
+
+1024
+00:15:17,430 --> 00:15:17,440
+set a one to be zero using the or
+ 
+
+1025
+00:15:17,440 --> 00:15:19,189
+set a one to be zero using the or
+operator because if we order with zero
+
+1026
+00:15:19,189 --> 00:15:19,199
+operator because if we order with zero
+ 
+
+1027
+00:15:19,199 --> 00:15:20,150
+operator because if we order with zero
+we'll just get one
+
+1028
+00:15:20,150 --> 00:15:20,160
+we'll just get one
+ 
+
+1029
+00:15:20,160 --> 00:15:23,030
+we'll just get one
+however and obviously if we want to set
+
+1030
+00:15:23,030 --> 00:15:23,040
+however and obviously if we want to set
+ 
+
+1031
+00:15:23,040 --> 00:15:24,230
+however and obviously if we want to set
+something to zero
+
+1032
+00:15:24,230 --> 00:15:24,240
+something to zero
+ 
+
+1033
+00:15:24,240 --> 00:15:26,710
+something to zero
+we can just end that bit with zero and
+
+1034
+00:15:26,710 --> 00:15:26,720
+we can just end that bit with zero and
+ 
+
+1035
+00:15:26,720 --> 00:15:27,269
+we can just end that bit with zero and
+we'll get
+
+1036
+00:15:27,269 --> 00:15:27,279
+we'll get
+ 
+
+1037
+00:15:27,279 --> 00:15:28,949
+we'll get
+zero so what we can actually do is
+
+1038
+00:15:28,949 --> 00:15:28,959
+zero so what we can actually do is
+ 
+
+1039
+00:15:28,959 --> 00:15:31,269
+zero so what we can actually do is
+combine the not operator with the and
+
+1040
+00:15:31,269 --> 00:15:31,279
+combine the not operator with the and
+ 
+
+1041
+00:15:31,279 --> 00:15:33,430
+combine the not operator with the and
+operator to be able to toggle bits on
+
+1042
+00:15:33,430 --> 00:15:33,440
+operator to be able to toggle bits on
+ 
+
+1043
+00:15:33,440 --> 00:15:34,870
+operator to be able to toggle bits on
+and off so here's an
+
+1044
+00:15:34,870 --> 00:15:34,880
+and off so here's an
+ 
+
+1045
+00:15:34,880 --> 00:15:36,870
+and off so here's an
+example of that in this example that we
+
+1046
+00:15:36,870 --> 00:15:36,880
+example of that in this example that we
+ 
+
+1047
+00:15:36,880 --> 00:15:37,910
+example of that in this example that we
+had earlier
+
+1048
+00:15:37,910 --> 00:15:37,920
+had earlier
+ 
+
+1049
+00:15:37,920 --> 00:15:40,150
+had earlier
+i was able to set this bit to one leave
+
+1050
+00:15:40,150 --> 00:15:40,160
+i was able to set this bit to one leave
+ 
+
+1051
+00:15:40,160 --> 00:15:41,670
+i was able to set this bit to one leave
+everything else as zero
+
+1052
+00:15:41,670 --> 00:15:41,680
+everything else as zero
+ 
+
+1053
+00:15:41,680 --> 00:15:43,670
+everything else as zero
+in order to actually see the value of
+
+1054
+00:15:43,670 --> 00:15:43,680
+in order to actually see the value of
+ 
+
+1055
+00:15:43,680 --> 00:15:44,949
+in order to actually see the value of
+this specific bit
+
+1056
+00:15:44,949 --> 00:15:44,959
+this specific bit
+ 
+
+1057
+00:15:44,959 --> 00:15:48,310
+this specific bit
+but what if i want to set that to zero
+
+1058
+00:15:48,310 --> 00:15:48,320
+but what if i want to set that to zero
+ 
+
+1059
+00:15:48,320 --> 00:15:50,790
+but what if i want to set that to zero
+well if i know what bit i actually have
+
+1060
+00:15:50,790 --> 00:15:50,800
+well if i know what bit i actually have
+ 
+
+1061
+00:15:50,800 --> 00:15:52,710
+well if i know what bit i actually have
+it's number zero one two three
+
+1062
+00:15:52,710 --> 00:15:52,720
+it's number zero one two three
+ 
+
+1063
+00:15:52,720 --> 00:15:55,590
+it's number zero one two three
+four five we as humans can easily just
+
+1064
+00:15:55,590 --> 00:15:55,600
+four five we as humans can easily just
+ 
+
+1065
+00:15:55,600 --> 00:15:57,350
+four five we as humans can easily just
+build up a mask for that so i could
+
+1066
+00:15:57,350 --> 00:15:57,360
+build up a mask for that so i could
+ 
+
+1067
+00:15:57,360 --> 00:15:58,310
+build up a mask for that so i could
+write one one
+
+1068
+00:15:58,310 --> 00:15:58,320
+write one one
+ 
+
+1069
+00:15:58,320 --> 00:16:00,870
+write one one
+one zero that's the one i want to set to
+
+1070
+00:16:00,870 --> 00:16:00,880
+one zero that's the one i want to set to
+ 
+
+1071
+00:16:00,880 --> 00:16:01,670
+one zero that's the one i want to set to
+zero
+
+1072
+00:16:01,670 --> 00:16:01,680
+zero
+ 
+
+1073
+00:16:01,680 --> 00:16:04,550
+zero
+and then one one one one one right but
+
+1074
+00:16:04,550 --> 00:16:04,560
+and then one one one one one right but
+ 
+
+1075
+00:16:04,560 --> 00:16:06,389
+and then one one one one one right but
+how do we do that programmatically
+
+1076
+00:16:06,389 --> 00:16:06,399
+how do we do that programmatically
+ 
+
+1077
+00:16:06,399 --> 00:16:08,150
+how do we do that programmatically
+well what we can do is still actually
+
+1078
+00:16:08,150 --> 00:16:08,160
+well what we can do is still actually
+ 
+
+1079
+00:16:08,160 --> 00:16:09,749
+well what we can do is still actually
+have this specific bit
+
+1080
+00:16:09,749 --> 00:16:09,759
+have this specific bit
+ 
+
+1081
+00:16:09,759 --> 00:16:11,590
+have this specific bit
+set to one so if we had like an enum
+
+1082
+00:16:11,590 --> 00:16:11,600
+set to one so if we had like an enum
+ 
+
+1083
+00:16:11,600 --> 00:16:13,189
+set to one so if we had like an enum
+with like some bit flags or
+
+1084
+00:16:13,189 --> 00:16:13,199
+with like some bit flags or
+ 
+
+1085
+00:16:13,199 --> 00:16:14,550
+with like some bit flags or
+whatever then we would assume we would
+
+1086
+00:16:14,550 --> 00:16:14,560
+whatever then we would assume we would
+ 
+
+1087
+00:16:14,560 --> 00:16:15,910
+whatever then we would assume we would
+already have like a defined for that
+
+1088
+00:16:15,910 --> 00:16:15,920
+already have like a defined for that
+ 
+
+1089
+00:16:15,920 --> 00:16:17,030
+already have like a defined for that
+specific bit
+
+1090
+00:16:17,030 --> 00:16:17,040
+specific bit
+ 
+
+1091
+00:16:17,040 --> 00:16:19,350
+specific bit
+but if i take this value zero zero zero
+
+1092
+00:16:19,350 --> 00:16:19,360
+but if i take this value zero zero zero
+ 
+
+1093
+00:16:19,360 --> 00:16:20,230
+but if i take this value zero zero zero
+one zero
+
+1094
+00:16:20,230 --> 00:16:20,240
+one zero
+ 
+
+1095
+00:16:20,240 --> 00:16:23,350
+one zero
+zero zero zero zero and i bit y is not
+
+1096
+00:16:23,350 --> 00:16:23,360
+zero zero zero zero and i bit y is not
+ 
+
+1097
+00:16:23,360 --> 00:16:26,069
+zero zero zero zero and i bit y is not
+it right then the value that i get is
+
+1098
+00:16:26,069 --> 00:16:26,079
+it right then the value that i get is
+ 
+
+1099
+00:16:26,079 --> 00:16:26,389
+it right then the value that i get is
+one
+
+1100
+00:16:26,389 --> 00:16:26,399
+one
+ 
+
+1101
+00:16:26,399 --> 00:16:29,749
+one
+one one zero one one one one one and now
+
+1102
+00:16:29,749 --> 00:16:29,759
+one one zero one one one one one and now
+ 
+
+1103
+00:16:29,759 --> 00:16:31,509
+one one zero one one one one one and now
+what i can do is take this
+
+1104
+00:16:31,509 --> 00:16:31,519
+what i can do is take this
+ 
+
+1105
+00:16:31,519 --> 00:16:34,870
+what i can do is take this
+and and it with this original variable
+
+1106
+00:16:34,870 --> 00:16:34,880
+and and it with this original variable
+ 
+
+1107
+00:16:34,880 --> 00:16:35,749
+and and it with this original variable
+here
+
+1108
+00:16:35,749 --> 00:16:35,759
+here
+ 
+
+1109
+00:16:35,759 --> 00:16:38,150
+here
+and then every single bit will remain
+
+1110
+00:16:38,150 --> 00:16:38,160
+and then every single bit will remain
+ 
+
+1111
+00:16:38,160 --> 00:16:38,870
+and then every single bit will remain
+untouched
+
+1112
+00:16:38,870 --> 00:16:38,880
+untouched
+ 
+
+1113
+00:16:38,880 --> 00:16:41,110
+untouched
+except for this one which will get set
+
+1114
+00:16:41,110 --> 00:16:41,120
+except for this one which will get set
+ 
+
+1115
+00:16:41,120 --> 00:16:42,790
+except for this one which will get set
+to zero right so in other words if we
+
+1116
+00:16:42,790 --> 00:16:42,800
+to zero right so in other words if we
+ 
+
+1117
+00:16:42,800 --> 00:16:44,069
+to zero right so in other words if we
+take this original variable
+
+1118
+00:16:44,069 --> 00:16:44,079
+take this original variable
+ 
+
+1119
+00:16:44,079 --> 00:16:46,150
+take this original variable
+this will change to zero everything else
+
+1120
+00:16:46,150 --> 00:16:46,160
+this will change to zero everything else
+ 
+
+1121
+00:16:46,160 --> 00:16:47,350
+this will change to zero everything else
+will stay at one
+
+1122
+00:16:47,350 --> 00:16:47,360
+will stay at one
+ 
+
+1123
+00:16:47,360 --> 00:16:49,749
+will stay at one
+and i'm able to do that by just simply
+
+1124
+00:16:49,749 --> 00:16:49,759
+and i'm able to do that by just simply
+ 
+
+1125
+00:16:49,759 --> 00:16:50,790
+and i'm able to do that by just simply
+knowing which bit
+
+1126
+00:16:50,790 --> 00:16:50,800
+knowing which bit
+ 
+
+1127
+00:16:50,800 --> 00:16:53,990
+knowing which bit
+it is that i want to toggle off and then
+
+1128
+00:16:53,990 --> 00:16:54,000
+it is that i want to toggle off and then
+ 
+
+1129
+00:16:54,000 --> 00:16:56,310
+it is that i want to toggle off and then
+inverting it right by using the bitwise
+
+1130
+00:16:56,310 --> 00:16:56,320
+inverting it right by using the bitwise
+ 
+
+1131
+00:16:56,320 --> 00:16:58,069
+inverting it right by using the bitwise
+not operator to just create this new
+
+1132
+00:16:58,069 --> 00:16:58,079
+not operator to just create this new
+ 
+
+1133
+00:16:58,079 --> 00:16:59,910
+not operator to just create this new
+variable which has ones everywhere
+
+1134
+00:16:59,910 --> 00:16:59,920
+variable which has ones everywhere
+ 
+
+1135
+00:16:59,920 --> 00:17:01,670
+variable which has ones everywhere
+except for this place
+
+1136
+00:17:01,670 --> 00:17:01,680
+except for this place
+ 
+
+1137
+00:17:01,680 --> 00:17:04,630
+except for this place
+so that's kind of my real world example
+
+1138
+00:17:04,630 --> 00:17:04,640
+so that's kind of my real world example
+ 
+
+1139
+00:17:04,640 --> 00:17:05,189
+so that's kind of my real world example
+of not
+
+1140
+00:17:05,189 --> 00:17:05,199
+of not
+ 
+
+1141
+00:17:05,199 --> 00:17:07,510
+of not
+that's where i've used it most often and
+
+1142
+00:17:07,510 --> 00:17:07,520
+that's where i've used it most often and
+ 
+
+1143
+00:17:07,520 --> 00:17:08,390
+that's where i've used it most often and
+then exor
+
+1144
+00:17:08,390 --> 00:17:08,400
+then exor
+ 
+
+1145
+00:17:08,400 --> 00:17:10,309
+then exor
+in my experience has mostly been used
+
+1146
+00:17:10,309 --> 00:17:10,319
+in my experience has mostly been used
+ 
+
+1147
+00:17:10,319 --> 00:17:11,510
+in my experience has mostly been used
+for like hashing
+
+1148
+00:17:11,510 --> 00:17:11,520
+for like hashing
+ 
+
+1149
+00:17:11,520 --> 00:17:12,789
+for like hashing
+and we'll talk more about that in the
+
+1150
+00:17:12,789 --> 00:17:12,799
+and we'll talk more about that in the
+ 
+
+1151
+00:17:12,799 --> 00:17:14,710
+and we'll talk more about that in the
+next episode but basically this
+
+1152
+00:17:14,710 --> 00:17:14,720
+next episode but basically this
+ 
+
+1153
+00:17:14,720 --> 00:17:16,150
+next episode but basically this
+exclusive or
+
+1154
+00:17:16,150 --> 00:17:16,160
+exclusive or
+ 
+
+1155
+00:17:16,160 --> 00:17:18,949
+exclusive or
+is only going to return true if the bits
+
+1156
+00:17:18,949 --> 00:17:18,959
+is only going to return true if the bits
+ 
+
+1157
+00:17:18,959 --> 00:17:19,909
+is only going to return true if the bits
+you are comparing
+
+1158
+00:17:19,909 --> 00:17:19,919
+you are comparing
+ 
+
+1159
+00:17:19,919 --> 00:17:22,069
+you are comparing
+are different right so if you think
+
+1160
+00:17:22,069 --> 00:17:22,079
+are different right so if you think
+ 
+
+1161
+00:17:22,079 --> 00:17:24,069
+are different right so if you think
+about all the other operators we've got
+
+1162
+00:17:24,069 --> 00:17:24,079
+about all the other operators we've got
+ 
+
+1163
+00:17:24,079 --> 00:17:26,069
+about all the other operators we've got
+they work for whether or not the bits
+
+1164
+00:17:26,069 --> 00:17:26,079
+they work for whether or not the bits
+ 
+
+1165
+00:17:26,079 --> 00:17:27,429
+they work for whether or not the bits
+are the same
+
+1166
+00:17:27,429 --> 00:17:27,439
+are the same
+ 
+
+1167
+00:17:27,439 --> 00:17:29,110
+are the same
+right so in other words zero zero gives
+
+1168
+00:17:29,110 --> 00:17:29,120
+right so in other words zero zero gives
+ 
+
+1169
+00:17:29,120 --> 00:17:30,870
+right so in other words zero zero gives
+us zero zero zero gives us a zero in
+
+1170
+00:17:30,870 --> 00:17:30,880
+us zero zero zero gives us a zero in
+ 
+
+1171
+00:17:30,880 --> 00:17:31,990
+us zero zero zero gives us a zero in
+both and and or
+
+1172
+00:17:31,990 --> 00:17:32,000
+both and and or
+ 
+
+1173
+00:17:32,000 --> 00:17:34,789
+both and and or
+and then zero and one gives us zero zero
+
+1174
+00:17:34,789 --> 00:17:34,799
+and then zero and one gives us zero zero
+ 
+
+1175
+00:17:34,799 --> 00:17:36,549
+and then zero and one gives us zero zero
+or one gives us one so we have a
+
+1176
+00:17:36,549 --> 00:17:36,559
+or one gives us one so we have a
+ 
+
+1177
+00:17:36,559 --> 00:17:37,590
+or one gives us one so we have a
+different kind of
+
+1178
+00:17:37,590 --> 00:17:37,600
+different kind of
+ 
+
+1179
+00:17:37,600 --> 00:17:39,909
+different kind of
+operator for whether or not we want to
+
+1180
+00:17:39,909 --> 00:17:39,919
+operator for whether or not we want to
+ 
+
+1181
+00:17:39,919 --> 00:17:40,710
+operator for whether or not we want to
+return
+
+1182
+00:17:40,710 --> 00:17:40,720
+return
+ 
+
+1183
+00:17:40,720 --> 00:17:43,110
+return
+a zero or a one if the bits are
+
+1184
+00:17:43,110 --> 00:17:43,120
+a zero or a one if the bits are
+ 
+
+1185
+00:17:43,120 --> 00:17:43,750
+a zero or a one if the bits are
+different
+
+1186
+00:17:43,750 --> 00:17:43,760
+different
+ 
+
+1187
+00:17:43,760 --> 00:17:45,590
+different
+and will always return zero if they're
+
+1188
+00:17:45,590 --> 00:17:45,600
+and will always return zero if they're
+ 
+
+1189
+00:17:45,600 --> 00:17:47,669
+and will always return zero if they're
+different or will always return one if
+
+1190
+00:17:47,669 --> 00:17:47,679
+different or will always return one if
+ 
+
+1191
+00:17:47,679 --> 00:17:48,310
+different or will always return one if
+they're different
+
+1192
+00:17:48,310 --> 00:17:48,320
+they're different
+ 
+
+1193
+00:17:48,320 --> 00:17:49,669
+they're different
+but we don't have something that will
+
+1194
+00:17:49,669 --> 00:17:49,679
+but we don't have something that will
+ 
+
+1195
+00:17:49,679 --> 00:17:51,350
+but we don't have something that will
+specifically give us a one
+
+1196
+00:17:51,350 --> 00:17:51,360
+specifically give us a one
+ 
+
+1197
+00:17:51,360 --> 00:17:53,590
+specifically give us a one
+if they are different because obviously
+
+1198
+00:17:53,590 --> 00:17:53,600
+if they are different because obviously
+ 
+
+1199
+00:17:53,600 --> 00:17:55,029
+if they are different because obviously
+and will give us a one if they're the
+
+1200
+00:17:55,029 --> 00:17:55,039
+and will give us a one if they're the
+ 
+
+1201
+00:17:55,039 --> 00:17:55,350
+and will give us a one if they're the
+same
+
+1202
+00:17:55,350 --> 00:17:55,360
+same
+ 
+
+1203
+00:17:55,360 --> 00:17:56,710
+same
+or will give us a one if they're the
+
+1204
+00:17:56,710 --> 00:17:56,720
+or will give us a one if they're the
+ 
+
+1205
+00:17:56,720 --> 00:17:58,549
+or will give us a one if they're the
+same i want something that gives me
+
+1206
+00:17:58,549 --> 00:17:58,559
+same i want something that gives me
+ 
+
+1207
+00:17:58,559 --> 00:18:00,549
+same i want something that gives me
+zero if they're the same and 1 if
+
+1208
+00:18:00,549 --> 00:18:00,559
+zero if they're the same and 1 if
+ 
+
+1209
+00:18:00,559 --> 00:18:02,150
+zero if they're the same and 1 if
+they're different and that's what xor
+
+1210
+00:18:02,150 --> 00:18:02,160
+they're different and that's what xor
+ 
+
+1211
+00:18:02,160 --> 00:18:02,789
+they're different and that's what xor
+does
+
+1212
+00:18:02,789 --> 00:18:02,799
+does
+ 
+
+1213
+00:18:02,799 --> 00:18:05,830
+does
+so 0 x or 0 gives us
+
+1214
+00:18:05,830 --> 00:18:05,840
+so 0 x or 0 gives us
+ 
+
+1215
+00:18:05,840 --> 00:18:07,669
+so 0 x or 0 gives us
+0 because they're not exclusive they're
+
+1216
+00:18:07,669 --> 00:18:07,679
+0 because they're not exclusive they're
+ 
+
+1217
+00:18:07,679 --> 00:18:09,029
+0 because they're not exclusive they're
+the same 0
+
+1218
+00:18:09,029 --> 00:18:09,039
+the same 0
+ 
+
+1219
+00:18:09,039 --> 00:18:11,190
+the same 0
+x or 1 gives me 1 because they're
+
+1220
+00:18:11,190 --> 00:18:11,200
+x or 1 gives me 1 because they're
+ 
+
+1221
+00:18:11,200 --> 00:18:12,710
+x or 1 gives me 1 because they're
+different 1 x or
+
+1222
+00:18:12,710 --> 00:18:12,720
+different 1 x or
+ 
+
+1223
+00:18:12,720 --> 00:18:15,110
+different 1 x or
+0 gives me one because they're different
+
+1224
+00:18:15,110 --> 00:18:15,120
+0 gives me one because they're different
+ 
+
+1225
+00:18:15,120 --> 00:18:16,710
+0 gives me one because they're different
+one x or one gives me
+
+1226
+00:18:16,710 --> 00:18:16,720
+one x or one gives me
+ 
+
+1227
+00:18:16,720 --> 00:18:18,150
+one x or one gives me
+zero so you can see that we have
+
+1228
+00:18:18,150 --> 00:18:18,160
+zero so you can see that we have
+ 
+
+1229
+00:18:18,160 --> 00:18:19,990
+zero so you can see that we have
+something that is quite
+
+1230
+00:18:19,990 --> 00:18:20,000
+something that is quite
+ 
+
+1231
+00:18:20,000 --> 00:18:21,669
+something that is quite
+different from the other operators
+
+1232
+00:18:21,669 --> 00:18:21,679
+different from the other operators
+ 
+
+1233
+00:18:21,679 --> 00:18:23,430
+different from the other operators
+specifically it works kind of like
+
+1234
+00:18:23,430 --> 00:18:23,440
+specifically it works kind of like
+ 
+
+1235
+00:18:23,440 --> 00:18:26,390
+specifically it works kind of like
+an or except in this case if they're the
+
+1236
+00:18:26,390 --> 00:18:26,400
+an or except in this case if they're the
+ 
+
+1237
+00:18:26,400 --> 00:18:27,190
+an or except in this case if they're the
+same
+
+1238
+00:18:27,190 --> 00:18:27,200
+same
+ 
+
+1239
+00:18:27,200 --> 00:18:29,430
+same
+it gives me a zero so it's useful to
+
+1240
+00:18:29,430 --> 00:18:29,440
+it gives me a zero so it's useful to
+ 
+
+1241
+00:18:29,440 --> 00:18:30,549
+it gives me a zero so it's useful to
+kind of flip bits
+
+1242
+00:18:30,549 --> 00:18:30,559
+kind of flip bits
+ 
+
+1243
+00:18:30,559 --> 00:18:32,070
+kind of flip bits
+now what's kind of interesting and a
+
+1244
+00:18:32,070 --> 00:18:32,080
+now what's kind of interesting and a
+ 
+
+1245
+00:18:32,080 --> 00:18:33,909
+now what's kind of interesting and a
+little bit unique about this xor
+
+1246
+00:18:33,909 --> 00:18:33,919
+little bit unique about this xor
+ 
+
+1247
+00:18:33,919 --> 00:18:34,710
+little bit unique about this xor
+operator
+
+1248
+00:18:34,710 --> 00:18:34,720
+operator
+ 
+
+1249
+00:18:34,720 --> 00:18:36,950
+operator
+is if you have a value such as this and
+
+1250
+00:18:36,950 --> 00:18:36,960
+is if you have a value such as this and
+ 
+
+1251
+00:18:36,960 --> 00:18:38,150
+is if you have a value such as this and
+you xor it with
+
+1252
+00:18:38,150 --> 00:18:38,160
+you xor it with
+ 
+
+1253
+00:18:38,160 --> 00:18:41,350
+you xor it with
+itself so if i had like int a equals
+
+1254
+00:18:41,350 --> 00:18:41,360
+itself so if i had like int a equals
+ 
+
+1255
+00:18:41,360 --> 00:18:44,150
+itself so if i had like int a equals
+well let's just say this and then i did
+
+1256
+00:18:44,150 --> 00:18:44,160
+well let's just say this and then i did
+ 
+
+1257
+00:18:44,160 --> 00:18:44,549
+well let's just say this and then i did
+int
+
+1258
+00:18:44,549 --> 00:18:44,559
+int
+ 
+
+1259
+00:18:44,559 --> 00:18:47,590
+int
+b equals a xor a
+
+1260
+00:18:47,590 --> 00:18:47,600
+b equals a xor a
+ 
+
+1261
+00:18:47,600 --> 00:18:50,390
+b equals a xor a
+right so i'm xoring it with itself this
+
+1262
+00:18:50,390 --> 00:18:50,400
+right so i'm xoring it with itself this
+ 
+
+1263
+00:18:50,400 --> 00:18:52,070
+right so i'm xoring it with itself this
+will always give me zero
+
+1264
+00:18:52,070 --> 00:18:52,080
+will always give me zero
+ 
+
+1265
+00:18:52,080 --> 00:18:54,230
+will always give me zero
+the reason is that obviously if we take
+
+1266
+00:18:54,230 --> 00:18:54,240
+the reason is that obviously if we take
+ 
+
+1267
+00:18:54,240 --> 00:18:55,190
+the reason is that obviously if we take
+one one zero
+
+1268
+00:18:55,190 --> 00:18:55,200
+one one zero
+ 
+
+1269
+00:18:55,200 --> 00:18:57,430
+one one zero
+one and we export with one one zero one
+
+1270
+00:18:57,430 --> 00:18:57,440
+one and we export with one one zero one
+ 
+
+1271
+00:18:57,440 --> 00:18:59,190
+one and we export with one one zero one
+none of the bits are exclusive they're
+
+1272
+00:18:59,190 --> 00:18:59,200
+none of the bits are exclusive they're
+ 
+
+1273
+00:18:59,200 --> 00:19:01,029
+none of the bits are exclusive they're
+all the same because it's the same exact
+
+1274
+00:19:01,029 --> 00:19:01,039
+all the same because it's the same exact
+ 
+
+1275
+00:19:01,039 --> 00:19:01,750
+all the same because it's the same exact
+value
+
+1276
+00:19:01,750 --> 00:19:01,760
+value
+ 
+
+1277
+00:19:01,760 --> 00:19:04,789
+value
+so it will always return zero so
+
+1278
+00:19:04,789 --> 00:19:04,799
+so it will always return zero so
+ 
+
+1279
+00:19:04,799 --> 00:19:07,110
+so it will always return zero so
+if you want a really cool way to set a
+
+1280
+00:19:07,110 --> 00:19:07,120
+if you want a really cool way to set a
+ 
+
+1281
+00:19:07,120 --> 00:19:08,630
+if you want a really cool way to set a
+variable to zero
+
+1282
+00:19:08,630 --> 00:19:08,640
+variable to zero
+ 
+
+1283
+00:19:08,640 --> 00:19:10,549
+variable to zero
+you can just xor it with itself and the
+
+1284
+00:19:10,549 --> 00:19:10,559
+you can just xor it with itself and the
+ 
+
+1285
+00:19:10,559 --> 00:19:12,470
+you can just xor it with itself and the
+funny thing is sometimes
+
+1286
+00:19:12,470 --> 00:19:12,480
+funny thing is sometimes
+ 
+
+1287
+00:19:12,480 --> 00:19:14,549
+funny thing is sometimes
+this is actually faster than setting a
+
+1288
+00:19:14,549 --> 00:19:14,559
+this is actually faster than setting a
+ 
+
+1289
+00:19:14,559 --> 00:19:16,630
+this is actually faster than setting a
+variable to zero on some architectures
+
+1290
+00:19:16,630 --> 00:19:16,640
+variable to zero on some architectures
+ 
+
+1291
+00:19:16,640 --> 00:19:18,310
+variable to zero on some architectures
+but like not really so don't go ahead
+
+1292
+00:19:18,310 --> 00:19:18,320
+but like not really so don't go ahead
+ 
+
+1293
+00:19:18,320 --> 00:19:19,270
+but like not really so don't go ahead
+and actually do this
+
+1294
+00:19:19,270 --> 00:19:19,280
+and actually do this
+ 
+
+1295
+00:19:19,280 --> 00:19:20,950
+and actually do this
+please don't maybe it will be fast and
+
+1296
+00:19:20,950 --> 00:19:20,960
+please don't maybe it will be fast and
+ 
+
+1297
+00:19:20,960 --> 00:19:23,110
+please don't maybe it will be fast and
+so that is our overview of the rest of
+
+1298
+00:19:23,110 --> 00:19:23,120
+so that is our overview of the rest of
+ 
+
+1299
+00:19:23,120 --> 00:19:24,470
+so that is our overview of the rest of
+these bitwise operators
+
+1300
+00:19:24,470 --> 00:19:24,480
+these bitwise operators
+ 
+
+1301
+00:19:24,480 --> 00:19:25,590
+these bitwise operators
+okay so i hope you guys enjoyed this
+
+1302
+00:19:25,590 --> 00:19:25,600
+okay so i hope you guys enjoyed this
+ 
+
+1303
+00:19:25,600 --> 00:19:26,710
+okay so i hope you guys enjoyed this
+video if you did please don't forget to
+
+1304
+00:19:26,710 --> 00:19:26,720
+video if you did please don't forget to
+ 
+
+1305
+00:19:26,720 --> 00:19:27,750
+video if you did please don't forget to
+hit the like button
+
+1306
+00:19:27,750 --> 00:19:27,760
+hit the like button
+ 
+
+1307
+00:19:27,760 --> 00:19:30,310
+hit the like button
+in the description below i'm this
+
+1308
+00:19:30,310 --> 00:19:30,320
+in the description below i'm this
+ 
+
+1309
+00:19:30,320 --> 00:19:31,350
+in the description below i'm this
+youtube thing is hard
+
+1310
+00:19:31,350 --> 00:19:31,360
+youtube thing is hard
+ 
+
+1311
+00:19:31,360 --> 00:19:32,710
+youtube thing is hard
+now that we've covered all of the
+
+1312
+00:19:32,710 --> 00:19:32,720
+now that we've covered all of the
+ 
+
+1313
+00:19:32,720 --> 00:19:34,630
+now that we've covered all of the
+bitwise operators the next real step is
+
+1314
+00:19:34,630 --> 00:19:34,640
+bitwise operators the next real step is
+ 
+
+1315
+00:19:34,640 --> 00:19:36,390
+bitwise operators the next real step is
+learning how to use them in practice
+
+1316
+00:19:36,390 --> 00:19:36,400
+learning how to use them in practice
+ 
+
+1317
+00:19:36,400 --> 00:19:38,150
+learning how to use them in practice
+next time in the final episode of this
+
+1318
+00:19:38,150 --> 00:19:38,160
+next time in the final episode of this
+ 
+
+1319
+00:19:38,160 --> 00:19:38,549
+next time in the final episode of this
+kind of
+
+1320
+00:19:38,549 --> 00:19:38,559
+kind of
+ 
+
+1321
+00:19:38,559 --> 00:19:40,630
+kind of
+like bitwise binary mini series we're
+
+1322
+00:19:40,630 --> 00:19:40,640
+like bitwise binary mini series we're
+ 
+
+1323
+00:19:40,640 --> 00:19:42,230
+like bitwise binary mini series we're
+going to take a look at some real
+
+1324
+00:19:42,230 --> 00:19:42,240
+going to take a look at some real
+ 
+
+1325
+00:19:42,240 --> 00:19:43,990
+going to take a look at some real
+examples however if you've been using
+
+1326
+00:19:43,990 --> 00:19:44,000
+examples however if you've been using
+ 
+
+1327
+00:19:44,000 --> 00:19:45,830
+examples however if you've been using
+all of this kind of bitwise stuff lately
+
+1328
+00:19:45,830 --> 00:19:45,840
+all of this kind of bitwise stuff lately
+ 
+
+1329
+00:19:45,840 --> 00:19:47,510
+all of this kind of bitwise stuff lately
+and you have some examples of your own
+
+1330
+00:19:47,510 --> 00:19:47,520
+and you have some examples of your own
+ 
+
+1331
+00:19:47,520 --> 00:19:48,789
+and you have some examples of your own
+to give then please leave them in the
+
+1332
+00:19:48,789 --> 00:19:48,799
+to give then please leave them in the
+ 
+
+1333
+00:19:48,799 --> 00:19:49,750
+to give then please leave them in the
+comment section below
+
+1334
+00:19:49,750 --> 00:19:49,760
+comment section below
+ 
+
+1335
+00:19:49,760 --> 00:19:51,029
+comment section below
+i think that would be great for people
+
+1336
+00:19:51,029 --> 00:19:51,039
+i think that would be great for people
+ 
+
+1337
+00:19:51,039 --> 00:19:52,630
+i think that would be great for people
+who want to kind of move on from this
+
+1338
+00:19:52,630 --> 00:19:52,640
+who want to kind of move on from this
+ 
+
+1339
+00:19:52,640 --> 00:19:54,549
+who want to kind of move on from this
+video but maybe don't know where to go
+
+1340
+00:19:54,549 --> 00:19:54,559
+video but maybe don't know where to go
+ 
+
+1341
+00:19:54,559 --> 00:19:55,590
+video but maybe don't know where to go
+and don't necessarily want to wait for
+
+1342
+00:19:55,590 --> 00:19:55,600
+and don't necessarily want to wait for
+ 
+
+1343
+00:19:55,600 --> 00:19:57,029
+and don't necessarily want to wait for
+the next one but anyway thank you guys
+
+1344
+00:19:57,029 --> 00:19:57,039
+the next one but anyway thank you guys
+ 
+
+1345
+00:19:57,039 --> 00:19:58,310
+the next one but anyway thank you guys
+for watching don't forget to click the
+
+1346
+00:19:58,310 --> 00:19:58,320
+for watching don't forget to click the
+ 
+
+1347
+00:19:58,320 --> 00:19:59,909
+for watching don't forget to click the
+link in the description to get your free
+
+1348
+00:19:59,909 --> 00:19:59,919
+link in the description to get your free
+ 
+
+1349
+00:19:59,919 --> 00:20:00,549
+link in the description to get your free
+trial
+
+1350
+00:20:00,549 --> 00:20:00,559
+trial
+ 
+
+1351
+00:20:00,559 --> 00:20:02,390
+trial
+of skillshare premium and i will see you
+
+1352
+00:20:02,390 --> 00:20:02,400
+of skillshare premium and i will see you
+ 
+
+1353
+00:20:02,400 --> 00:20:09,210
+of skillshare premium and i will see you
+next time goodbye
+
+1354
+00:20:09,210 --> 00:20:09,220
+
+ 
+
+1355
+00:20:09,220 --> 00:20:19,620
+
+[Music]
+
+1356
+00:20:19,620 --> 00:20:19,630
+
+ 
+
+1357
+00:20:19,630 --> 00:20:26,149
+
+[Music]
+
+1358
+00:20:26,149 --> 00:20:26,159
+
+ 
+
+1359
+00:20:26,159 --> 00:20:28,240
+
+you
+

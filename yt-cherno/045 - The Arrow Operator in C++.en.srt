@@ -1,0 +1,2275 @@
+1
+00:00:00,000 --> 00:00:01,850
+
+hey what's up guys my name is a Chan and
+
+2
+00:00:01,850 --> 00:00:01,860
+hey what's up guys my name is a Chan and
+ 
+
+3
+00:00:01,860 --> 00:00:03,050
+hey what's up guys my name is a Chan and
+welcome back to my safe boss class
+
+4
+00:00:03,050 --> 00:00:03,060
+welcome back to my safe boss class
+ 
+
+5
+00:00:03,060 --> 00:00:04,820
+welcome back to my safe boss class
+series today we're talking all about the
+
+6
+00:00:04,820 --> 00:00:04,830
+series today we're talking all about the
+ 
+
+7
+00:00:04,830 --> 00:00:07,309
+series today we're talking all about the
+arrow operator in C++ we're going to
+
+8
+00:00:07,309 --> 00:00:07,319
+arrow operator in C++ we're going to
+ 
+
+9
+00:00:07,319 --> 00:00:08,330
+arrow operator in C++ we're going to
+talk about what the arrow operator
+
+10
+00:00:08,330 --> 00:00:08,340
+talk about what the arrow operator
+ 
+
+11
+00:00:08,340 --> 00:00:10,549
+talk about what the arrow operator
+actually does for both struct and class
+
+12
+00:00:10,549 --> 00:00:10,559
+actually does for both struct and class
+ 
+
+13
+00:00:10,559 --> 00:00:12,650
+actually does for both struct and class
+pointers as well as implement our own
+
+14
+00:00:12,650 --> 00:00:12,660
+pointers as well as implement our own
+ 
+
+15
+00:00:12,660 --> 00:00:14,900
+pointers as well as implement our own
+arrow operator to see how it works so
+
+16
+00:00:14,900 --> 00:00:14,910
+arrow operator to see how it works so
+ 
+
+17
+00:00:14,910 --> 00:00:16,250
+arrow operator to see how it works so
+over here my source code of our basic
+
+18
+00:00:16,250 --> 00:00:16,260
+over here my source code of our basic
+ 
+
+19
+00:00:16,260 --> 00:00:18,140
+over here my source code of our basic
+entity class type now if I create this
+
+20
+00:00:18,140 --> 00:00:18,150
+entity class type now if I create this
+ 
+
+21
+00:00:18,150 --> 00:00:20,150
+entity class type now if I create this
+object normally as I probably would like
+
+22
+00:00:20,150 --> 00:00:20,160
+object normally as I probably would like
+ 
+
+23
+00:00:20,160 --> 00:00:22,279
+object normally as I probably would like
+this in full print I have no issues but
+
+24
+00:00:22,279 --> 00:00:22,289
+this in full print I have no issues but
+ 
+
+25
+00:00:22,289 --> 00:00:24,349
+this in full print I have no issues but
+if this entity object was actually a
+
+26
+00:00:24,349 --> 00:00:24,359
+if this entity object was actually a
+ 
+
+27
+00:00:24,359 --> 00:00:26,990
+if this entity object was actually a
+pointer so either it's it was allocated
+
+28
+00:00:26,990 --> 00:00:27,000
+pointer so either it's it was allocated
+ 
+
+29
+00:00:27,000 --> 00:00:28,429
+pointer so either it's it was allocated
+on the heap or maybe I just had a
+
+30
+00:00:28,429 --> 00:00:28,439
+on the heap or maybe I just had a
+ 
+
+31
+00:00:28,439 --> 00:00:30,380
+on the heap or maybe I just had a
+pointer to it for some reason like this
+
+32
+00:00:30,380 --> 00:00:30,390
+pointer to it for some reason like this
+ 
+
+33
+00:00:30,390 --> 00:00:32,359
+pointer to it for some reason like this
+in order to call that print function I
+
+34
+00:00:32,359 --> 00:00:32,369
+in order to call that print function I
+ 
+
+35
+00:00:32,369 --> 00:00:34,670
+in order to call that print function I
+can't actually just use pointer dot
+
+36
+00:00:34,670 --> 00:00:34,680
+can't actually just use pointer dot
+ 
+
+37
+00:00:34,680 --> 00:00:37,190
+can't actually just use pointer dot
+print like that because this is just a
+
+38
+00:00:37,190 --> 00:00:37,200
+print like that because this is just a
+ 
+
+39
+00:00:37,200 --> 00:00:38,930
+print like that because this is just a
+pointer it's basically just a numerical
+
+40
+00:00:38,930 --> 00:00:38,940
+pointer it's basically just a numerical
+ 
+
+41
+00:00:38,940 --> 00:00:40,400
+pointer it's basically just a numerical
+value I can't just called dot print on
+
+42
+00:00:40,400 --> 00:00:40,410
+value I can't just called dot print on
+ 
+
+43
+00:00:40,410 --> 00:00:42,020
+value I can't just called dot print on
+it what I have to actually do is
+
+44
+00:00:42,020 --> 00:00:42,030
+it what I have to actually do is
+ 
+
+45
+00:00:42,030 --> 00:00:44,030
+it what I have to actually do is
+dereference that pointer and that can be
+
+46
+00:00:44,030 --> 00:00:44,040
+dereference that pointer and that can be
+ 
+
+47
+00:00:44,040 --> 00:00:46,580
+dereference that pointer and that can be
+done like so I can just say entity
+
+48
+00:00:46,580 --> 00:00:46,590
+done like so I can just say entity
+ 
+
+49
+00:00:46,590 --> 00:00:48,799
+done like so I can just say entity
+reference entity for example and then
+
+50
+00:00:48,799 --> 00:00:48,809
+reference entity for example and then
+ 
+
+51
+00:00:48,809 --> 00:00:51,139
+reference entity for example and then
+use the asterisk in front of the point
+
+52
+00:00:51,139 --> 00:00:51,149
+use the asterisk in front of the point
+ 
+
+53
+00:00:51,149 --> 00:00:53,150
+use the asterisk in front of the point
+like this to dereference it and then
+
+54
+00:00:53,150 --> 00:00:53,160
+like this to dereference it and then
+ 
+
+55
+00:00:53,160 --> 00:00:55,400
+like this to dereference it and then
+just substitute this with entity and my
+
+56
+00:00:55,400 --> 00:00:55,410
+just substitute this with entity and my
+ 
+
+57
+00:00:55,410 --> 00:00:57,529
+just substitute this with entity and my
+card works now to avoid this extra line
+
+58
+00:00:57,529 --> 00:00:57,539
+card works now to avoid this extra line
+ 
+
+59
+00:00:57,539 --> 00:00:59,689
+card works now to avoid this extra line
+what I could also do is use my pointer
+
+60
+00:00:59,689 --> 00:00:59,699
+what I could also do is use my pointer
+ 
+
+61
+00:00:59,699 --> 00:01:01,610
+what I could also do is use my pointer
+but surrounded with parentheses and
+
+62
+00:01:01,610 --> 00:01:01,620
+but surrounded with parentheses and
+ 
+
+63
+00:01:01,620 --> 00:01:04,039
+but surrounded with parentheses and
+dereference it like so now I can't just
+
+64
+00:01:04,039 --> 00:01:04,049
+dereference it like so now I can't just
+ 
+
+65
+00:01:04,049 --> 00:01:05,780
+dereference it like so now I can't just
+write code like this because of operator
+
+66
+00:01:05,780 --> 00:01:05,790
+write code like this because of operator
+ 
+
+67
+00:01:05,790 --> 00:01:07,460
+write code like this because of operator
+precedence it'll actually try and go to
+
+68
+00:01:07,460 --> 00:01:07,470
+precedence it'll actually try and go to
+ 
+
+69
+00:01:07,470 --> 00:01:09,950
+precedence it'll actually try and go to
+the object or print and then dereference
+
+70
+00:01:09,950 --> 00:01:09,960
+the object or print and then dereference
+ 
+
+71
+00:01:09,960 --> 00:01:12,350
+the object or print and then dereference
+the result of print that's obviously not
+
+72
+00:01:12,350 --> 00:01:12,360
+the result of print that's obviously not
+ 
+
+73
+00:01:12,360 --> 00:01:13,910
+the result of print that's obviously not
+going to work so you have you have to
+
+74
+00:01:13,910 --> 00:01:13,920
+going to work so you have you have to
+ 
+
+75
+00:01:13,920 --> 00:01:15,469
+going to work so you have you have to
+actually do the dereferencing first and
+
+76
+00:01:15,469 --> 00:01:15,479
+actually do the dereferencing first and
+ 
+
+77
+00:01:15,479 --> 00:01:17,990
+actually do the dereferencing first and
+then call dot print now this this is
+
+78
+00:01:17,990 --> 00:01:18,000
+then call dot print now this this is
+ 
+
+79
+00:01:18,000 --> 00:01:21,050
+then call dot print now this this is
+okay and it works fine but it looks a
+
+80
+00:01:21,050 --> 00:01:21,060
+okay and it works fine but it looks a
+ 
+
+81
+00:01:21,060 --> 00:01:23,330
+okay and it works fine but it looks a
+little bit clunky so what we can do
+
+82
+00:01:23,330 --> 00:01:23,340
+little bit clunky so what we can do
+ 
+
+83
+00:01:23,340 --> 00:01:24,740
+little bit clunky so what we can do
+instead is just use the arrow operator
+
+84
+00:01:24,740 --> 00:01:24,750
+instead is just use the arrow operator
+ 
+
+85
+00:01:24,750 --> 00:01:26,840
+instead is just use the arrow operator
+instead of dereferencing the pointer and
+
+86
+00:01:26,840 --> 00:01:26,850
+instead of dereferencing the pointer and
+ 
+
+87
+00:01:26,850 --> 00:01:29,060
+instead of dereferencing the pointer and
+then calling dot print we can substitute
+
+88
+00:01:29,060 --> 00:01:29,070
+then calling dot print we can substitute
+ 
+
+89
+00:01:29,070 --> 00:01:31,460
+then calling dot print we can substitute
+all of that with just an arrow to print
+
+90
+00:01:31,460 --> 00:01:31,470
+all of that with just an arrow to print
+ 
+
+91
+00:01:31,470 --> 00:01:32,960
+all of that with just an arrow to print
+like this and what this actually does is
+
+92
+00:01:32,960 --> 00:01:32,970
+like this and what this actually does is
+ 
+
+93
+00:01:32,970 --> 00:01:35,840
+like this and what this actually does is
+dereference that entity pointer into it
+
+94
+00:01:35,840 --> 00:01:35,850
+dereference that entity pointer into it
+ 
+
+95
+00:01:35,850 --> 00:01:37,490
+dereference that entity pointer into it
+just an all entity type and then calls
+
+96
+00:01:37,490 --> 00:01:37,500
+just an all entity type and then calls
+ 
+
+97
+00:01:37,500 --> 00:01:39,289
+just an all entity type and then calls
+print so that's pretty much all there is
+
+98
+00:01:39,289 --> 00:01:39,299
+print so that's pretty much all there is
+ 
+
+99
+00:01:39,299 --> 00:01:41,569
+print so that's pretty much all there is
+to it it's just a shortcut for having it
+
+100
+00:01:41,569 --> 00:01:41,579
+to it it's just a shortcut for having it
+ 
+
+101
+00:01:41,579 --> 00:01:43,340
+to it it's just a shortcut for having it
+for us having to manually dereference
+
+102
+00:01:43,340 --> 00:01:43,350
+for us having to manually dereference
+ 
+
+103
+00:01:43,350 --> 00:01:44,270
+for us having to manually dereference
+events around everything with
+
+104
+00:01:44,270 --> 00:01:44,280
+events around everything with
+ 
+
+105
+00:01:44,280 --> 00:01:46,490
+events around everything with
+parentheses and then call our function
+
+106
+00:01:46,490 --> 00:01:46,500
+parentheses and then call our function
+ 
+
+107
+00:01:46,500 --> 00:01:48,710
+parentheses and then call our function
+or our variable as well instead of doing
+
+108
+00:01:48,710 --> 00:01:48,720
+or our variable as well instead of doing
+ 
+
+109
+00:01:48,720 --> 00:01:50,149
+or our variable as well instead of doing
+all that we can just use an arrow worst
+
+110
+00:01:50,149 --> 00:01:50,159
+all that we can just use an arrow worst
+ 
+
+111
+00:01:50,159 --> 00:01:52,160
+all that we can just use an arrow worst
+variable as well if I had some variables
+
+112
+00:01:52,160 --> 00:01:52,170
+variable as well if I had some variables
+ 
+
+113
+00:01:52,170 --> 00:01:54,740
+variable as well if I had some variables
+over here I'll just make public int X
+
+114
+00:01:54,740 --> 00:01:54,750
+over here I'll just make public int X
+ 
+
+115
+00:01:54,750 --> 00:01:57,380
+over here I'll just make public int X
+for example I could also just you know
+
+116
+00:01:57,380 --> 00:01:57,390
+for example I could also just you know
+ 
+
+117
+00:01:57,390 --> 00:01:59,240
+for example I could also just you know
+access X through the arrow like this and
+
+118
+00:01:59,240 --> 00:01:59,250
+access X through the arrow like this and
+ 
+
+119
+00:01:59,250 --> 00:02:01,010
+access X through the arrow like this and
+then set it equal to whatever I wanted
+
+120
+00:02:01,010 --> 00:02:01,020
+then set it equal to whatever I wanted
+ 
+
+121
+00:02:01,020 --> 00:02:02,630
+then set it equal to whatever I wanted
+to like so okay cool so that's pretty
+
+122
+00:02:02,630 --> 00:02:02,640
+to like so okay cool so that's pretty
+ 
+
+123
+00:02:02,640 --> 00:02:04,130
+to like so okay cool so that's pretty
+much the default use case for the arrow
+
+124
+00:02:04,130 --> 00:02:04,140
+much the default use case for the arrow
+ 
+
+125
+00:02:04,140 --> 00:02:05,450
+much the default use case for the arrow
+operator that's probably how you're
+
+126
+00:02:05,450 --> 00:02:05,460
+operator that's probably how you're
+ 
+
+127
+00:02:05,460 --> 00:02:08,419
+operator that's probably how you're
+using it 90% of the time however as an
+
+128
+00:02:08,419 --> 00:02:08,429
+using it 90% of the time however as an
+ 
+
+129
+00:02:08,429 --> 00:02:10,460
+using it 90% of the time however as an
+operator in C++ it is actually possible
+
+130
+00:02:10,460 --> 00:02:10,470
+operator in C++ it is actually possible
+ 
+
+131
+00:02:10,470 --> 00:02:12,559
+operator in C++ it is actually possible
+to overload it and
+
+132
+00:02:12,559 --> 00:02:12,569
+to overload it and
+ 
+
+133
+00:02:12,569 --> 00:02:14,420
+to overload it and
+use it in your own custom classes and
+
+134
+00:02:14,420 --> 00:02:14,430
+use it in your own custom classes and
+ 
+
+135
+00:02:14,430 --> 00:02:15,559
+use it in your own custom classes and
+I'll show you an example of why you
+
+136
+00:02:15,559 --> 00:02:15,569
+I'll show you an example of why you
+ 
+
+137
+00:02:15,569 --> 00:02:17,390
+I'll show you an example of why you
+might want to do that and how you can do
+
+138
+00:02:17,390 --> 00:02:17,400
+might want to do that and how you can do
+ 
+
+139
+00:02:17,400 --> 00:02:19,160
+might want to do that and how you can do
+that over here so suppose that I was
+
+140
+00:02:19,160 --> 00:02:19,170
+that over here so suppose that I was
+ 
+
+141
+00:02:19,170 --> 00:02:20,780
+that over here so suppose that I was
+writing some kind of smart pointer class
+
+142
+00:02:20,780 --> 00:02:20,790
+writing some kind of smart pointer class
+ 
+
+143
+00:02:20,790 --> 00:02:23,270
+writing some kind of smart pointer class
+like subscribe to point up to keep it
+
+144
+00:02:23,270 --> 00:02:23,280
+like subscribe to point up to keep it
+ 
+
+145
+00:02:23,280 --> 00:02:25,039
+like subscribe to point up to keep it
+simple I'm just going to have it have an
+
+146
+00:02:25,039 --> 00:02:25,049
+simple I'm just going to have it have an
+ 
+
+147
+00:02:25,049 --> 00:02:27,530
+simple I'm just going to have it have an
+entity pointer when I construct this
+
+148
+00:02:27,530 --> 00:02:27,540
+entity pointer when I construct this
+ 
+
+149
+00:02:27,540 --> 00:02:28,489
+entity pointer when I construct this
+script pointer
+
+150
+00:02:28,489 --> 00:02:28,499
+script pointer
+ 
+
+151
+00:02:28,499 --> 00:02:30,619
+script pointer
+I'm going to take in an entity as a
+
+152
+00:02:30,619 --> 00:02:30,629
+I'm going to take in an entity as a
+ 
+
+153
+00:02:30,629 --> 00:02:32,990
+I'm going to take in an entity as a
+parameter here and then assign it to my
+
+154
+00:02:32,990 --> 00:02:33,000
+parameter here and then assign it to my
+ 
+
+155
+00:02:33,000 --> 00:02:35,030
+parameter here and then assign it to my
+object in the destructor I'm going to
+
+156
+00:02:35,030 --> 00:02:35,040
+object in the destructor I'm going to
+ 
+
+157
+00:02:35,040 --> 00:02:38,509
+object in the destructor I'm going to
+call delete entity or delete M ulchhhh
+
+158
+00:02:38,509 --> 00:02:38,519
+call delete entity or delete M ulchhhh
+ 
+
+159
+00:02:38,519 --> 00:02:40,159
+call delete entity or delete M ulchhhh
+and so now I've got a basically scope to
+
+160
+00:02:40,159 --> 00:02:40,169
+and so now I've got a basically scope to
+ 
+
+161
+00:02:40,169 --> 00:02:41,420
+and so now I've got a basically scope to
+point a class that will automatically
+
+162
+00:02:41,420 --> 00:02:41,430
+point a class that will automatically
+ 
+
+163
+00:02:41,430 --> 00:02:43,520
+point a class that will automatically
+delete my entity when it goes out of
+
+164
+00:02:43,520 --> 00:02:43,530
+delete my entity when it goes out of
+ 
+
+165
+00:02:43,530 --> 00:02:45,530
+delete my entity when it goes out of
+scope so I can use it like source code
+
+166
+00:02:45,530 --> 00:02:45,540
+scope so I can use it like source code
+ 
+
+167
+00:02:45,540 --> 00:02:48,110
+scope so I can use it like source code
+pointer entity equals new entity and
+
+168
+00:02:48,110 --> 00:02:48,120
+pointer entity equals new entity and
+ 
+
+169
+00:02:48,120 --> 00:02:49,879
+pointer entity equals new entity and
+that looks pretty good now I want to
+
+170
+00:02:49,879 --> 00:02:49,889
+that looks pretty good now I want to
+ 
+
+171
+00:02:49,889 --> 00:02:52,309
+that looks pretty good now I want to
+actually be able to call this print
+
+172
+00:02:52,309 --> 00:02:52,319
+actually be able to call this print
+ 
+
+173
+00:02:52,319 --> 00:02:54,439
+actually be able to call this print
+function or access this X variable so
+
+174
+00:02:54,439 --> 00:02:54,449
+function or access this X variable so
+ 
+
+175
+00:02:54,449 --> 00:02:57,020
+function or access this X variable so
+how do I do that well right now I can't
+
+176
+00:02:57,020 --> 00:02:57,030
+how do I do that well right now I can't
+ 
+
+177
+00:02:57,030 --> 00:02:59,959
+how do I do that well right now I can't
+really like I can use dots but then like
+
+178
+00:02:59,959 --> 00:02:59,969
+really like I can use dots but then like
+ 
+
+179
+00:02:59,969 --> 00:03:01,970
+really like I can use dots but then like
+I could make either this public or maybe
+
+180
+00:03:01,970 --> 00:03:01,980
+I could make either this public or maybe
+ 
+
+181
+00:03:01,980 --> 00:03:04,670
+I could make either this public or maybe
+I could just have something that returns
+
+182
+00:03:04,670 --> 00:03:04,680
+I could just have something that returns
+ 
+
+183
+00:03:04,680 --> 00:03:06,830
+I could just have something that returns
+an entity pointer like yet object like
+
+184
+00:03:06,830 --> 00:03:06,840
+an entity pointer like yet object like
+ 
+
+185
+00:03:06,840 --> 00:03:09,699
+an entity pointer like yet object like
+this maybe that will return my object
+
+186
+00:03:09,699 --> 00:03:09,709
+this maybe that will return my object
+ 
+
+187
+00:03:09,709 --> 00:03:12,890
+this maybe that will return my object
+that just looks way too messy I want to
+
+188
+00:03:12,890 --> 00:03:12,900
+that just looks way too messy I want to
+ 
+
+189
+00:03:12,900 --> 00:03:14,899
+that just looks way too messy I want to
+be able to use it like a heap-allocated
+
+190
+00:03:14,899 --> 00:03:14,909
+be able to use it like a heap-allocated
+ 
+
+191
+00:03:14,909 --> 00:03:17,420
+be able to use it like a heap-allocated
+entity right I want to be able to use it
+
+192
+00:03:17,420 --> 00:03:17,430
+entity right I want to be able to use it
+ 
+
+193
+00:03:17,430 --> 00:03:19,339
+entity right I want to be able to use it
+as if I'd written code like this which
+
+194
+00:03:19,339 --> 00:03:19,349
+as if I'd written code like this which
+ 
+
+195
+00:03:19,349 --> 00:03:21,319
+as if I'd written code like this which
+would mean that I could just write well
+
+196
+00:03:21,319 --> 00:03:21,329
+would mean that I could just write well
+ 
+
+197
+00:03:21,329 --> 00:03:23,539
+would mean that I could just write well
+that and it would work fine I want to be
+
+198
+00:03:23,539 --> 00:03:23,549
+that and it would work fine I want to be
+ 
+
+199
+00:03:23,549 --> 00:03:25,280
+that and it would work fine I want to be
+able to just substitute this and have it
+
+200
+00:03:25,280 --> 00:03:25,290
+able to just substitute this and have it
+ 
+
+201
+00:03:25,290 --> 00:03:27,800
+able to just substitute this and have it
+kind of be used the same way well that's
+
+202
+00:03:27,800 --> 00:03:27,810
+kind of be used the same way well that's
+ 
+
+203
+00:03:27,810 --> 00:03:28,789
+kind of be used the same way well that's
+where you can overload the arrow
+
+204
+00:03:28,789 --> 00:03:28,799
+where you can overload the arrow
+ 
+
+205
+00:03:28,799 --> 00:03:30,770
+where you can overload the arrow
+operator make it do that for you instead
+
+206
+00:03:30,770 --> 00:03:30,780
+operator make it do that for you instead
+ 
+
+207
+00:03:30,780 --> 00:03:32,990
+operator make it do that for you instead
+of get object I can write entity pointer
+
+208
+00:03:32,990 --> 00:03:33,000
+of get object I can write entity pointer
+ 
+
+209
+00:03:33,000 --> 00:03:35,990
+of get object I can write entity pointer
+operator hour with no parameters like
+
+210
+00:03:35,990 --> 00:03:36,000
+operator hour with no parameters like
+ 
+
+211
+00:03:36,000 --> 00:03:39,589
+operator hour with no parameters like
+this and then just return em all and you
+
+212
+00:03:39,589 --> 00:03:39,599
+this and then just return em all and you
+ 
+
+213
+00:03:39,599 --> 00:03:41,149
+this and then just return em all and you
+can see suddenly this compiles and will
+
+214
+00:03:41,149 --> 00:03:41,159
+can see suddenly this compiles and will
+ 
+
+215
+00:03:41,159 --> 00:03:42,080
+can see suddenly this compiles and will
+run just fine
+
+216
+00:03:42,080 --> 00:03:42,090
+run just fine
+ 
+
+217
+00:03:42,090 --> 00:03:43,939
+run just fine
+if I hit f5 there you go you can see
+
+218
+00:03:43,939 --> 00:03:43,949
+if I hit f5 there you go you can see
+ 
+
+219
+00:03:43,949 --> 00:03:45,289
+if I hit f5 there you go you can see
+that it's calling my function and
+
+220
+00:03:45,289 --> 00:03:45,299
+that it's calling my function and
+ 
+
+221
+00:03:45,299 --> 00:03:47,119
+that it's calling my function and
+printing hello now in the case of this
+
+222
+00:03:47,119 --> 00:03:47,129
+printing hello now in the case of this
+ 
+
+223
+00:03:47,129 --> 00:03:49,460
+printing hello now in the case of this
+being Const you could also provide a
+
+224
+00:03:49,460 --> 00:03:49,470
+being Const you could also provide a
+ 
+
+225
+00:03:49,470 --> 00:03:51,080
+being Const you could also provide a
+constellation of this operator so I'll
+
+226
+00:03:51,080 --> 00:03:51,090
+constellation of this operator so I'll
+ 
+
+227
+00:03:51,090 --> 00:03:52,849
+constellation of this operator so I'll
+copy and paste this have a return a
+
+228
+00:03:52,849 --> 00:03:52,859
+copy and paste this have a return a
+ 
+
+229
+00:03:52,859 --> 00:03:54,920
+copy and paste this have a return a
+Constanta T and Mark the operators Const
+
+230
+00:03:54,920 --> 00:03:54,930
+Constanta T and Mark the operators Const
+ 
+
+231
+00:03:54,930 --> 00:03:56,390
+Constanta T and Mark the operators Const
+like this and that will now return a
+
+232
+00:03:56,390 --> 00:03:56,400
+like this and that will now return a
+ 
+
+233
+00:03:56,400 --> 00:03:58,610
+like this and that will now return a
+Const version of this and of course I've
+
+234
+00:03:58,610 --> 00:03:58,620
+Const version of this and of course I've
+ 
+
+235
+00:03:58,620 --> 00:04:00,020
+Const version of this and of course I've
+marked this function as constic it
+
+236
+00:04:00,020 --> 00:04:00,030
+marked this function as constic it
+ 
+
+237
+00:04:00,030 --> 00:04:01,909
+marked this function as constic it
+wasn't constituency I'm not able to call
+
+238
+00:04:01,909 --> 00:04:01,919
+wasn't constituency I'm not able to call
+ 
+
+239
+00:04:01,919 --> 00:04:03,740
+wasn't constituency I'm not able to call
+that function so the function has to be
+
+240
+00:04:03,740 --> 00:04:03,750
+that function so the function has to be
+ 
+
+241
+00:04:03,750 --> 00:04:05,959
+that function so the function has to be
+marked as Const over here as well and
+
+242
+00:04:05,959 --> 00:04:05,969
+marked as Const over here as well and
+ 
+
+243
+00:04:05,969 --> 00:04:07,729
+marked as Const over here as well and
+everything basically works as if this
+
+244
+00:04:07,729 --> 00:04:07,739
+everything basically works as if this
+ 
+
+245
+00:04:07,739 --> 00:04:11,029
+everything basically works as if this
+was just a Const pointer like that no
+
+246
+00:04:11,029 --> 00:04:11,039
+was just a Const pointer like that no
+ 
+
+247
+00:04:11,039 --> 00:04:13,249
+was just a Const pointer like that no
+difference but now of course since it is
+
+248
+00:04:13,249 --> 00:04:13,259
+difference but now of course since it is
+ 
+
+249
+00:04:13,259 --> 00:04:15,529
+difference but now of course since it is
+a scoped pointer I voted the deletion of
+
+250
+00:04:15,529 --> 00:04:15,539
+a scoped pointer I voted the deletion of
+ 
+
+251
+00:04:15,539 --> 00:04:18,199
+a scoped pointer I voted the deletion of
+this actual object pretty cool stuff so
+
+252
+00:04:18,199 --> 00:04:18,209
+this actual object pretty cool stuff so
+ 
+
+253
+00:04:18,209 --> 00:04:19,580
+this actual object pretty cool stuff so
+that's how you can overload the arrow
+
+254
+00:04:19,580 --> 00:04:19,590
+that's how you can overload the arrow
+ 
+
+255
+00:04:19,590 --> 00:04:21,800
+that's how you can overload the arrow
+operator to function in your own classes
+
+256
+00:04:21,800 --> 00:04:21,810
+operator to function in your own classes
+ 
+
+257
+00:04:21,810 --> 00:04:23,209
+operator to function in your own classes
+it's very powerful it's very useful
+
+258
+00:04:23,209 --> 00:04:23,219
+it's very powerful it's very useful
+ 
+
+259
+00:04:23,219 --> 00:04:24,890
+it's very powerful it's very useful
+because you can see that you can start
+
+260
+00:04:24,890 --> 00:04:24,900
+because you can see that you can start
+ 
+
+261
+00:04:24,900 --> 00:04:25,830
+because you can see that you can start
+to kind of define your
+
+262
+00:04:25,830 --> 00:04:25,840
+to kind of define your
+ 
+
+263
+00:04:25,840 --> 00:04:27,210
+to kind of define your
+constructs and urine types in the
+
+264
+00:04:27,210 --> 00:04:27,220
+constructs and urine types in the
+ 
+
+265
+00:04:27,220 --> 00:04:29,340
+constructs and urine types in the
+language and automate things and it
+
+266
+00:04:29,340 --> 00:04:29,350
+language and automate things and it
+ 
+
+267
+00:04:29,350 --> 00:04:31,650
+language and automate things and it
+looks like normal code which is exactly
+
+268
+00:04:31,650 --> 00:04:31,660
+looks like normal code which is exactly
+ 
+
+269
+00:04:31,660 --> 00:04:33,600
+looks like normal code which is exactly
+what we want a lot of people will argue
+
+270
+00:04:33,600 --> 00:04:33,610
+what we want a lot of people will argue
+ 
+
+271
+00:04:33,610 --> 00:04:35,640
+what we want a lot of people will argue
+that that's a bit confusing because yeah
+
+272
+00:04:35,640 --> 00:04:35,650
+that that's a bit confusing because yeah
+ 
+
+273
+00:04:35,650 --> 00:04:37,050
+that that's a bit confusing because yeah
+it might look like normal code but it's
+
+274
+00:04:37,050 --> 00:04:37,060
+it might look like normal code but it's
+ 
+
+275
+00:04:37,060 --> 00:04:39,300
+it might look like normal code but it's
+not however I think that if you use it
+
+276
+00:04:39,300 --> 00:04:39,310
+not however I think that if you use it
+ 
+
+277
+00:04:39,310 --> 00:04:40,650
+not however I think that if you use it
+properly and if you're sensible about it
+
+278
+00:04:40,650 --> 00:04:40,660
+properly and if you're sensible about it
+ 
+
+279
+00:04:40,660 --> 00:04:42,570
+properly and if you're sensible about it
+then this this is actually really useful
+
+280
+00:04:42,570 --> 00:04:42,580
+then this this is actually really useful
+ 
+
+281
+00:04:42,580 --> 00:04:44,189
+then this this is actually really useful
+and can help keep your code really clean
+
+282
+00:04:44,189 --> 00:04:44,199
+and can help keep your code really clean
+ 
+
+283
+00:04:44,199 --> 00:04:45,300
+and can help keep your code really clean
+so fun I'm going to show you one more
+
+284
+00:04:45,300 --> 00:04:45,310
+so fun I'm going to show you one more
+ 
+
+285
+00:04:45,310 --> 00:04:46,770
+so fun I'm going to show you one more
+way how we can actually use the arrow
+
+286
+00:04:46,770 --> 00:04:46,780
+way how we can actually use the arrow
+ 
+
+287
+00:04:46,780 --> 00:04:49,200
+way how we can actually use the arrow
+operator to get the offset of a certain
+
+288
+00:04:49,200 --> 00:04:49,210
+operator to get the offset of a certain
+ 
+
+289
+00:04:49,210 --> 00:04:51,120
+operator to get the offset of a certain
+member variable in memory so this is
+
+290
+00:04:51,120 --> 00:04:51,130
+member variable in memory so this is
+ 
+
+291
+00:04:51,130 --> 00:04:52,710
+member variable in memory so this is
+kind of like a little bonus segment I
+
+292
+00:04:52,710 --> 00:04:52,720
+kind of like a little bonus segment I
+ 
+
+293
+00:04:52,720 --> 00:04:54,180
+kind of like a little bonus segment I
+guess of this episode but it has to do
+
+294
+00:04:54,180 --> 00:04:54,190
+guess of this episode but it has to do
+ 
+
+295
+00:04:54,190 --> 00:04:55,980
+guess of this episode but it has to do
+with the arrow operator soil I'll put it
+
+296
+00:04:55,980 --> 00:04:55,990
+with the arrow operator soil I'll put it
+ 
+
+297
+00:04:55,990 --> 00:04:58,440
+with the arrow operator soil I'll put it
+in let's just say that we have a struct
+
+298
+00:04:58,440 --> 00:04:58,450
+in let's just say that we have a struct
+ 
+
+299
+00:04:58,450 --> 00:05:02,580
+in let's just say that we have a struct
+here maybe called vector 3 and we
+
+300
+00:05:02,580 --> 00:05:02,590
+here maybe called vector 3 and we
+ 
+
+301
+00:05:02,590 --> 00:05:04,170
+here maybe called vector 3 and we
+basically just have a 3 in front of back
+
+302
+00:05:04,170 --> 00:05:04,180
+basically just have a 3 in front of back
+ 
+
+303
+00:05:04,180 --> 00:05:06,180
+basically just have a 3 in front of back
+to float X Y Z like this now suppose
+
+304
+00:05:06,180 --> 00:05:06,190
+to float X Y Z like this now suppose
+ 
+
+305
+00:05:06,190 --> 00:05:08,219
+to float X Y Z like this now suppose
+that I actually wanted to find out what
+
+306
+00:05:08,219 --> 00:05:08,229
+that I actually wanted to find out what
+ 
+
+307
+00:05:08,229 --> 00:05:10,800
+that I actually wanted to find out what
+the offset of this Y variable was in
+
+308
+00:05:10,800 --> 00:05:10,810
+the offset of this Y variable was in
+ 
+
+309
+00:05:10,810 --> 00:05:12,510
+the offset of this Y variable was in
+memory so we know that this struct is
+
+310
+00:05:12,510 --> 00:05:12,520
+memory so we know that this struct is
+ 
+
+311
+00:05:12,520 --> 00:05:14,430
+memory so we know that this struct is
+structured out of floats of course so
+
+312
+00:05:14,430 --> 00:05:14,440
+structured out of floats of course so
+ 
+
+313
+00:05:14,440 --> 00:05:16,950
+structured out of floats of course so
+it's got float X Y and said each float
+
+314
+00:05:16,950 --> 00:05:16,960
+it's got float X Y and said each float
+ 
+
+315
+00:05:16,960 --> 00:05:19,290
+it's got float X Y and said each float
+is 4 bytes so the offset of X is going
+
+316
+00:05:19,290 --> 00:05:19,300
+is 4 bytes so the offset of X is going
+ 
+
+317
+00:05:19,300 --> 00:05:20,790
+is 4 bytes so the offset of X is going
+to be 0 it's the first thing in the
+
+318
+00:05:20,790 --> 00:05:20,800
+to be 0 it's the first thing in the
+ 
+
+319
+00:05:20,800 --> 00:05:23,219
+to be 0 it's the first thing in the
+struct Y is going to be 4 because it's 4
+
+320
+00:05:23,219 --> 00:05:23,229
+struct Y is going to be 4 because it's 4
+ 
+
+321
+00:05:23,229 --> 00:05:24,960
+struct Y is going to be 4 because it's 4
+bytes into the struct and then finally
+
+322
+00:05:24,960 --> 00:05:24,970
+bytes into the struct and then finally
+ 
+
+323
+00:05:24,970 --> 00:05:27,480
+bytes into the struct and then finally
+set is going to be 8 bytes but what
+
+324
+00:05:27,480 --> 00:05:27,490
+set is going to be 8 bytes but what
+ 
+
+325
+00:05:27,490 --> 00:05:29,779
+set is going to be 8 bytes but what
+happens if I suddenly move this around
+
+326
+00:05:29,779 --> 00:05:29,789
+happens if I suddenly move this around
+ 
+
+327
+00:05:29,789 --> 00:05:33,180
+happens if I suddenly move this around
+then well the class is gonna work the
+
+328
+00:05:33,180 --> 00:05:33,190
+then well the class is gonna work the
+ 
+
+329
+00:05:33,190 --> 00:05:35,820
+then well the class is gonna work the
+same way but they're going it's going to
+
+330
+00:05:35,820 --> 00:05:35,830
+same way but they're going it's going to
+ 
+
+331
+00:05:35,830 --> 00:05:37,409
+same way but they're going it's going to
+have a different layout in memory so
+
+332
+00:05:37,409 --> 00:05:37,419
+have a different layout in memory so
+ 
+
+333
+00:05:37,419 --> 00:05:39,150
+have a different layout in memory so
+maybe I want to write something for
+
+334
+00:05:39,150 --> 00:05:39,160
+maybe I want to write something for
+ 
+
+335
+00:05:39,160 --> 00:05:41,430
+maybe I want to write something for
+myself that actually tells me the offset
+
+336
+00:05:41,430 --> 00:05:41,440
+myself that actually tells me the offset
+ 
+
+337
+00:05:41,440 --> 00:05:43,920
+myself that actually tells me the offset
+of each of these members and I can do
+
+338
+00:05:43,920 --> 00:05:43,930
+of each of these members and I can do
+ 
+
+339
+00:05:43,930 --> 00:05:45,150
+of each of these members and I can do
+something like that using the arrow
+
+340
+00:05:45,150 --> 00:05:45,160
+something like that using the arrow
+ 
+
+341
+00:05:45,160 --> 00:05:47,219
+something like that using the arrow
+operator so what I want to do is kind of
+
+342
+00:05:47,219 --> 00:05:47,229
+operator so what I want to do is kind of
+ 
+
+343
+00:05:47,229 --> 00:05:50,879
+operator so what I want to do is kind of
+access these variables but instead of
+
+344
+00:05:50,879 --> 00:05:50,889
+access these variables but instead of
+ 
+
+345
+00:05:50,889 --> 00:05:52,740
+access these variables but instead of
+from a valid memory address just from 0
+
+346
+00:05:52,740 --> 00:05:52,750
+from a valid memory address just from 0
+ 
+
+347
+00:05:52,750 --> 00:05:54,420
+from a valid memory address just from 0
+so this is kind of hard to explain but
+
+348
+00:05:54,420 --> 00:05:54,430
+so this is kind of hard to explain but
+ 
+
+349
+00:05:54,430 --> 00:05:55,920
+so this is kind of hard to explain but
+if I'll but I'll show you what I mean
+
+350
+00:05:55,920 --> 00:05:55,930
+if I'll but I'll show you what I mean
+ 
+
+351
+00:05:55,930 --> 00:05:58,080
+if I'll but I'll show you what I mean
+I'm literally going to write 0 and then
+
+352
+00:05:58,080 --> 00:05:58,090
+I'm literally going to write 0 and then
+ 
+
+353
+00:05:58,090 --> 00:06:01,620
+I'm literally going to write 0 and then
+cost this into a vector 3 pointer like
+
+354
+00:06:01,620 --> 00:06:01,630
+cost this into a vector 3 pointer like
+ 
+
+355
+00:06:01,630 --> 00:06:06,330
+cost this into a vector 3 pointer like
+so and then use the arrow to access X
+
+356
+00:06:06,330 --> 00:06:06,340
+so and then use the arrow to access X
+ 
+
+357
+00:06:06,340 --> 00:06:08,310
+so and then use the arrow to access X
+and this is going to give me this is
+
+358
+00:06:08,310 --> 00:06:08,320
+and this is going to give me this is
+ 
+
+359
+00:06:08,320 --> 00:06:09,600
+and this is going to give me this is
+going to try and give me some kind of
+
+360
+00:06:09,600 --> 00:06:09,610
+going to try and give me some kind of
+ 
+
+361
+00:06:09,610 --> 00:06:11,250
+going to try and give me some kind of
+piece of invalid memory but what I'm
+
+362
+00:06:11,250 --> 00:06:11,260
+piece of invalid memory but what I'm
+ 
+
+363
+00:06:11,260 --> 00:06:13,350
+piece of invalid memory but what I'm
+going to do is actually take the memory
+
+364
+00:06:13,350 --> 00:06:13,360
+going to do is actually take the memory
+ 
+
+365
+00:06:13,360 --> 00:06:15,600
+going to do is actually take the memory
+address of that X so now what I'm doing
+
+366
+00:06:15,600 --> 00:06:15,610
+address of that X so now what I'm doing
+ 
+
+367
+00:06:15,610 --> 00:06:18,420
+address of that X so now what I'm doing
+is basically getting the offset of that
+
+368
+00:06:18,420 --> 00:06:18,430
+is basically getting the offset of that
+ 
+
+369
+00:06:18,430 --> 00:06:19,950
+is basically getting the offset of that
+X because I'm starting at 0 this could
+
+370
+00:06:19,950 --> 00:06:19,960
+X because I'm starting at 0 this could
+ 
+
+371
+00:06:19,960 --> 00:06:21,450
+X because I'm starting at 0 this could
+also be written as null pointed by the
+
+372
+00:06:21,450 --> 00:06:21,460
+also be written as null pointed by the
+ 
+
+373
+00:06:21,460 --> 00:06:23,460
+also be written as null pointed by the
+way and if I finally take that and just
+
+374
+00:06:23,460 --> 00:06:23,470
+way and if I finally take that and just
+ 
+
+375
+00:06:23,470 --> 00:06:25,920
+way and if I finally take that and just
+cost it to a regular integer and write
+
+376
+00:06:25,920 --> 00:06:25,930
+cost it to a regular integer and write
+ 
+
+377
+00:06:25,930 --> 00:06:32,460
+cost it to a regular integer and write
+offset over here I'll print that
+
+378
+00:06:32,460 --> 00:06:32,470
+
+ 
+
+379
+00:06:32,470 --> 00:06:36,279
+
+and I'll hit up five you can see it
+
+380
+00:06:36,279 --> 00:06:36,289
+and I'll hit up five you can see it
+ 
+
+381
+00:06:36,289 --> 00:06:38,529
+and I'll hit up five you can see it
+gives me zero so what I'll do next is
+
+382
+00:06:38,529 --> 00:06:38,539
+gives me zero so what I'll do next is
+ 
+
+383
+00:06:38,539 --> 00:06:40,510
+gives me zero so what I'll do next is
+I'll change this to be Y and check out
+
+384
+00:06:40,510 --> 00:06:40,520
+I'll change this to be Y and check out
+ 
+
+385
+00:06:40,520 --> 00:06:42,399
+I'll change this to be Y and check out
+what that looks like for that seems
+
+386
+00:06:42,399 --> 00:06:42,409
+what that looks like for that seems
+ 
+
+387
+00:06:42,409 --> 00:06:44,020
+what that looks like for that seems
+right and then I'll change it to Zed and
+
+388
+00:06:44,020 --> 00:06:44,030
+right and then I'll change it to Zed and
+ 
+
+389
+00:06:44,030 --> 00:06:45,520
+right and then I'll change it to Zed and
+of course the value should be eight and
+
+390
+00:06:45,520 --> 00:06:45,530
+of course the value should be eight and
+ 
+
+391
+00:06:45,530 --> 00:06:47,439
+of course the value should be eight and
+you can see that it is so what we've
+
+392
+00:06:47,439 --> 00:06:47,449
+you can see that it is so what we've
+ 
+
+393
+00:06:47,449 --> 00:06:48,550
+you can see that it is so what we've
+done here is we've used the arrow
+
+394
+00:06:48,550 --> 00:06:48,560
+done here is we've used the arrow
+ 
+
+395
+00:06:48,560 --> 00:06:51,040
+done here is we've used the arrow
+operator to basically get the offset of
+
+396
+00:06:51,040 --> 00:06:51,050
+operator to basically get the offset of
+ 
+
+397
+00:06:51,050 --> 00:06:52,689
+operator to basically get the offset of
+a certain value in memory
+
+398
+00:06:52,689 --> 00:06:52,699
+a certain value in memory
+ 
+
+399
+00:06:52,699 --> 00:06:54,279
+a certain value in memory
+pretty cool stuff and this is actually
+
+400
+00:06:54,279 --> 00:06:54,289
+pretty cool stuff and this is actually
+ 
+
+401
+00:06:54,289 --> 00:06:55,899
+pretty cool stuff and this is actually
+very useful for when you're serializing
+
+402
+00:06:55,899 --> 00:06:55,909
+very useful for when you're serializing
+ 
+
+403
+00:06:55,909 --> 00:06:57,610
+very useful for when you're serializing
+data into like a stream of bytes and you
+
+404
+00:06:57,610 --> 00:06:57,620
+data into like a stream of bytes and you
+ 
+
+405
+00:06:57,620 --> 00:06:59,200
+data into like a stream of bytes and you
+want to figure out offsets of certain
+
+406
+00:06:59,200 --> 00:06:59,210
+want to figure out offsets of certain
+ 
+
+407
+00:06:59,210 --> 00:07:01,270
+want to figure out offsets of certain
+things and we'll kind of get into this
+
+408
+00:07:01,270 --> 00:07:01,280
+things and we'll kind of get into this
+ 
+
+409
+00:07:01,280 --> 00:07:03,249
+things and we'll kind of get into this
+kind of exciting code when we start
+
+410
+00:07:03,249 --> 00:07:03,259
+kind of exciting code when we start
+ 
+
+411
+00:07:03,259 --> 00:07:04,899
+kind of exciting code when we start
+doing the graphics programming series
+
+412
+00:07:04,899 --> 00:07:04,909
+doing the graphics programming series
+ 
+
+413
+00:07:04,909 --> 00:07:06,430
+doing the graphics programming series
+and the game engine series and all that
+
+414
+00:07:06,430 --> 00:07:06,440
+and the game engine series and all that
+ 
+
+415
+00:07:06,440 --> 00:07:07,869
+and the game engine series and all that
+because we'll be kind of dealing with
+
+416
+00:07:07,869 --> 00:07:07,879
+because we'll be kind of dealing with
+ 
+
+417
+00:07:07,879 --> 00:07:10,089
+because we'll be kind of dealing with
+streams of bytes all the time anyway I
+
+418
+00:07:10,089 --> 00:07:10,099
+streams of bytes all the time anyway I
+ 
+
+419
+00:07:10,099 --> 00:07:11,379
+streams of bytes all the time anyway I
+hope you guys enjoyed this episode if
+
+420
+00:07:11,379 --> 00:07:11,389
+hope you guys enjoyed this episode if
+ 
+
+421
+00:07:11,389 --> 00:07:13,119
+hope you guys enjoyed this episode if
+you did and you hit the like button let
+
+422
+00:07:13,119 --> 00:07:13,129
+you did and you hit the like button let
+ 
+
+423
+00:07:13,129 --> 00:07:14,709
+you did and you hit the like button let
+me know that you enjoyed it leave any
+
+424
+00:07:14,709 --> 00:07:14,719
+me know that you enjoyed it leave any
+ 
+
+425
+00:07:14,719 --> 00:07:16,240
+me know that you enjoyed it leave any
+comments or feedback you might have in
+
+426
+00:07:16,240 --> 00:07:16,250
+comments or feedback you might have in
+ 
+
+427
+00:07:16,250 --> 00:07:17,439
+comments or feedback you might have in
+the comment section below and if you
+
+428
+00:07:17,439 --> 00:07:17,449
+the comment section below and if you
+ 
+
+429
+00:07:17,449 --> 00:07:19,420
+the comment section below and if you
+really enjoyed this series in this video
+
+430
+00:07:19,420 --> 00:07:19,430
+really enjoyed this series in this video
+ 
+
+431
+00:07:19,430 --> 00:07:20,950
+really enjoyed this series in this video
+then you can support me on patreon by
+
+432
+00:07:20,950 --> 00:07:20,960
+then you can support me on patreon by
+ 
+
+433
+00:07:20,960 --> 00:07:22,240
+then you can support me on patreon by
+going to patreon icon for search the
+
+434
+00:07:22,240 --> 00:07:22,250
+going to patreon icon for search the
+ 
+
+435
+00:07:22,250 --> 00:07:24,129
+going to patreon icon for search the
+Cherno you'll get videos early you'll be
+
+436
+00:07:24,129 --> 00:07:24,139
+Cherno you'll get videos early you'll be
+ 
+
+437
+00:07:24,139 --> 00:07:26,379
+Cherno you'll get videos early you'll be
+able to be in a private discord channel
+
+438
+00:07:26,379 --> 00:07:26,389
+able to be in a private discord channel
+ 
+
+439
+00:07:26,389 --> 00:07:27,820
+able to be in a private discord channel
+where we talk about what goes into these
+
+440
+00:07:27,820 --> 00:07:27,830
+where we talk about what goes into these
+ 
+
+441
+00:07:27,830 --> 00:07:29,439
+where we talk about what goes into these
+videos and all that fun stuff and of
+
+442
+00:07:29,439 --> 00:07:29,449
+videos and all that fun stuff and of
+ 
+
+443
+00:07:29,449 --> 00:07:30,339
+videos and all that fun stuff and of
+course they're helping to support the
+
+444
+00:07:30,339 --> 00:07:30,349
+course they're helping to support the
+ 
+
+445
+00:07:30,349 --> 00:07:31,959
+course they're helping to support the
+series and making sure that we make more
+
+446
+00:07:31,959 --> 00:07:31,969
+series and making sure that we make more
+ 
+
+447
+00:07:31,969 --> 00:07:34,420
+series and making sure that we make more
+of these episodes I will see you guys in
+
+448
+00:07:34,420 --> 00:07:34,430
+of these episodes I will see you guys in
+ 
+
+449
+00:07:34,430 --> 00:07:34,930
+of these episodes I will see you guys in
+the next one
+
+450
+00:07:34,930 --> 00:07:34,940
+the next one
+ 
+
+451
+00:07:34,940 --> 00:07:36,730
+the next one
+good bye
+
+452
+00:07:36,730 --> 00:07:36,740
+good bye
+ 
+
+453
+00:07:36,740 --> 00:07:48,710
+good bye
+[Music]
+
+454
+00:07:48,710 --> 00:07:48,720
+
+ 
+
+455
+00:07:48,720 --> 00:07:51,919
+
+[Music]
+

@@ -1,0 +1,4225 @@
+1
+00:00:00,000 --> 00:00:01,579
+
+don't you just love talking about
+
+2
+00:00:01,579 --> 00:00:01,589
+don't you just love talking about
+ 
+
+3
+00:00:01,589 --> 00:00:03,740
+don't you just love talking about
+performance isn't it just so great to
+
+4
+00:00:03,740 --> 00:00:03,750
+performance isn't it just so great to
+ 
+
+5
+00:00:03,750 --> 00:00:05,390
+performance isn't it just so great to
+just take something and make it better
+
+6
+00:00:05,390 --> 00:00:05,400
+just take something and make it better
+ 
+
+7
+00:00:05,400 --> 00:00:08,089
+just take something and make it better
+make it faster hey what's up guys my
+
+8
+00:00:08,089 --> 00:00:08,099
+make it faster hey what's up guys my
+ 
+
+9
+00:00:08,099 --> 00:00:11,180
+make it faster hey what's up guys my
+name is the chana welcome back to my C++
+
+10
+00:00:11,180 --> 00:00:11,190
+name is the chana welcome back to my C++
+ 
+
+11
+00:00:11,190 --> 00:00:12,620
+name is the chana welcome back to my C++
+series we've been on a bit of a
+
+12
+00:00:12,620 --> 00:00:12,630
+series we've been on a bit of a
+ 
+
+13
+00:00:12,630 --> 00:00:15,589
+series we've been on a bit of a
+performance trend lately last time we
+
+14
+00:00:15,589 --> 00:00:15,599
+performance trend lately last time we
+ 
+
+15
+00:00:15,599 --> 00:00:17,120
+performance trend lately last time we
+talked about how we can actually use
+
+16
+00:00:17,120 --> 00:00:17,130
+talked about how we can actually use
+ 
+
+17
+00:00:17,130 --> 00:00:19,220
+talked about how we can actually use
+multi-threading sed async all of that
+
+18
+00:00:19,220 --> 00:00:19,230
+multi-threading sed async all of that
+ 
+
+19
+00:00:19,230 --> 00:00:20,779
+multi-threading sed async all of that
+stuff to make after you do multiple
+
+20
+00:00:20,779 --> 00:00:20,789
+stuff to make after you do multiple
+ 
+
+21
+00:00:20,789 --> 00:00:22,640
+stuff to make after you do multiple
+things at the same time check out that
+
+22
+00:00:22,640 --> 00:00:22,650
+things at the same time check out that
+ 
+
+23
+00:00:22,650 --> 00:00:24,019
+things at the same time check out that
+video if you haven't already because
+
+24
+00:00:24,019 --> 00:00:24,029
+video if you haven't already because
+ 
+
+25
+00:00:24,029 --> 00:00:26,390
+video if you haven't already because
+it'll greatly help you speed up your
+
+26
+00:00:26,390 --> 00:00:26,400
+it'll greatly help you speed up your
+ 
+
+27
+00:00:26,400 --> 00:00:28,099
+it'll greatly help you speed up your
+programs if you use it correctly
+
+28
+00:00:28,099 --> 00:00:28,109
+programs if you use it correctly
+ 
+
+29
+00:00:28,109 --> 00:00:29,330
+programs if you use it correctly
+and in fact I know that a bunch of
+
+30
+00:00:29,330 --> 00:00:29,340
+and in fact I know that a bunch of
+ 
+
+31
+00:00:29,340 --> 00:00:31,279
+and in fact I know that a bunch of
+questions did arise as a result of that
+
+32
+00:00:31,279 --> 00:00:31,289
+questions did arise as a result of that
+ 
+
+33
+00:00:31,289 --> 00:00:33,020
+questions did arise as a result of that
+video I know you guys are interested in
+
+34
+00:00:33,020 --> 00:00:33,030
+video I know you guys are interested in
+ 
+
+35
+00:00:33,030 --> 00:00:34,220
+video I know you guys are interested in
+that so don't worry we're gonna be
+
+36
+00:00:34,220 --> 00:00:34,230
+that so don't worry we're gonna be
+ 
+
+37
+00:00:34,230 --> 00:00:35,660
+that so don't worry we're gonna be
+talking a lot more about this kind of
+
+38
+00:00:35,660 --> 00:00:35,670
+talking a lot more about this kind of
+ 
+
+39
+00:00:35,670 --> 00:00:38,180
+talking a lot more about this kind of
+stuff in the future but today I thought
+
+40
+00:00:38,180 --> 00:00:38,190
+stuff in the future but today I thought
+ 
+
+41
+00:00:38,190 --> 00:00:39,799
+stuff in the future but today I thought
+that we would actually just look at a
+
+42
+00:00:39,799 --> 00:00:39,809
+that we would actually just look at a
+ 
+
+43
+00:00:39,809 --> 00:00:41,750
+that we would actually just look at a
+really simple example of what you can do
+
+44
+00:00:41,750 --> 00:00:41,760
+really simple example of what you can do
+ 
+
+45
+00:00:41,760 --> 00:00:43,760
+really simple example of what you can do
+to make your strings faster when people
+
+46
+00:00:43,760 --> 00:00:43,770
+to make your strings faster when people
+ 
+
+47
+00:00:43,770 --> 00:00:46,430
+to make your strings faster when people
+deal with strings I don't think they
+
+48
+00:00:46,430 --> 00:00:46,440
+deal with strings I don't think they
+ 
+
+49
+00:00:46,440 --> 00:00:49,310
+deal with strings I don't think they
+realize just the kind of impact a string
+
+50
+00:00:49,310 --> 00:00:49,320
+realize just the kind of impact a string
+ 
+
+51
+00:00:49,320 --> 00:00:51,860
+realize just the kind of impact a string
+has on the performance of your program a
+
+52
+00:00:51,860 --> 00:00:51,870
+has on the performance of your program a
+ 
+
+53
+00:00:51,870 --> 00:00:54,110
+has on the performance of your program a
+lot of string operations in your program
+
+54
+00:00:54,110 --> 00:00:54,120
+lot of string operations in your program
+ 
+
+55
+00:00:54,120 --> 00:00:56,299
+lot of string operations in your program
+formatting text you know logging stuff
+
+56
+00:00:56,299 --> 00:00:56,309
+formatting text you know logging stuff
+ 
+
+57
+00:00:56,309 --> 00:00:57,799
+formatting text you know logging stuff
+getting into the right format using
+
+58
+00:00:57,799 --> 00:00:57,809
+getting into the right format using
+ 
+
+59
+00:00:57,809 --> 00:01:01,189
+getting into the right format using
+substring that kind of stuff is easy to
+
+60
+00:01:01,189 --> 00:01:01,199
+substring that kind of stuff is easy to
+ 
+
+61
+00:01:01,199 --> 00:01:02,630
+substring that kind of stuff is easy to
+overlook because you know I'm just
+
+62
+00:01:02,630 --> 00:01:02,640
+overlook because you know I'm just
+ 
+
+63
+00:01:02,640 --> 00:01:04,009
+overlook because you know I'm just
+playing with a bunch of strings nor
+
+64
+00:01:04,009 --> 00:01:04,019
+playing with a bunch of strings nor
+ 
+
+65
+00:01:04,019 --> 00:01:05,990
+playing with a bunch of strings nor
+playing with a bunch of strings is
+
+66
+00:01:05,990 --> 00:01:06,000
+playing with a bunch of strings is
+ 
+
+67
+00:01:06,000 --> 00:01:08,480
+playing with a bunch of strings is
+actually bad and it's very slow and what
+
+68
+00:01:08,480 --> 00:01:08,490
+actually bad and it's very slow and what
+ 
+
+69
+00:01:08,490 --> 00:01:09,710
+actually bad and it's very slow and what
+he's gonna talk about one of the things
+
+70
+00:01:09,710 --> 00:01:09,720
+he's gonna talk about one of the things
+ 
+
+71
+00:01:09,720 --> 00:01:11,090
+he's gonna talk about one of the things
+that we can actually do this is very
+
+72
+00:01:11,090 --> 00:01:11,100
+that we can actually do this is very
+ 
+
+73
+00:01:11,100 --> 00:01:13,370
+that we can actually do this is very
+very simple that will make our strings
+
+74
+00:01:13,370 --> 00:01:13,380
+very simple that will make our strings
+ 
+
+75
+00:01:13,380 --> 00:01:15,859
+very simple that will make our strings
+and our string operations a lot faster
+
+76
+00:01:15,859 --> 00:01:15,869
+and our string operations a lot faster
+ 
+
+77
+00:01:15,869 --> 00:01:18,289
+and our string operations a lot faster
+doesn't just feel amazing to be learning
+
+78
+00:01:18,289 --> 00:01:18,299
+doesn't just feel amazing to be learning
+ 
+
+79
+00:01:18,299 --> 00:01:21,140
+doesn't just feel amazing to be learning
+all these new things but where do I
+
+80
+00:01:21,140 --> 00:01:21,150
+all these new things but where do I
+ 
+
+81
+00:01:21,150 --> 00:01:22,730
+all these new things but where do I
+learn things other than programming I
+
+82
+00:01:22,730 --> 00:01:22,740
+learn things other than programming I
+ 
+
+83
+00:01:22,740 --> 00:01:25,730
+learn things other than programming I
+hear you ask why Skillshare of course in
+
+84
+00:01:25,730 --> 00:01:25,740
+hear you ask why Skillshare of course in
+ 
+
+85
+00:01:25,740 --> 00:01:27,440
+hear you ask why Skillshare of course in
+fact I'm pretty sure they have classes
+
+86
+00:01:27,440 --> 00:01:27,450
+fact I'm pretty sure they have classes
+ 
+
+87
+00:01:27,450 --> 00:01:30,469
+fact I'm pretty sure they have classes
+on programming as well Skillshare is an
+
+88
+00:01:30,469 --> 00:01:30,479
+on programming as well Skillshare is an
+ 
+
+89
+00:01:30,479 --> 00:01:32,330
+on programming as well Skillshare is an
+online learning community with thousands
+
+90
+00:01:32,330 --> 00:01:32,340
+online learning community with thousands
+ 
+
+91
+00:01:32,340 --> 00:01:34,429
+online learning community with thousands
+of classes covering dozens of creative
+
+92
+00:01:34,429 --> 00:01:34,439
+of classes covering dozens of creative
+ 
+
+93
+00:01:34,439 --> 00:01:36,530
+of classes covering dozens of creative
+and entrepreneurial skills and the best
+
+94
+00:01:36,530 --> 00:01:36,540
+and entrepreneurial skills and the best
+ 
+
+95
+00:01:36,540 --> 00:01:38,480
+and entrepreneurial skills and the best
+part is that you get unlimited access to
+
+96
+00:01:38,480 --> 00:01:38,490
+part is that you get unlimited access to
+ 
+
+97
+00:01:38,490 --> 00:01:40,730
+part is that you get unlimited access to
+all of these classes if you sign up for
+
+98
+00:01:40,730 --> 00:01:40,740
+all of these classes if you sign up for
+ 
+
+99
+00:01:40,740 --> 00:01:42,410
+all of these classes if you sign up for
+a premium membership the more time I
+
+100
+00:01:42,410 --> 00:01:42,420
+a premium membership the more time I
+ 
+
+101
+00:01:42,420 --> 00:01:44,510
+a premium membership the more time I
+spend programming the more I long to be
+
+102
+00:01:44,510 --> 00:01:44,520
+spend programming the more I long to be
+ 
+
+103
+00:01:44,520 --> 00:01:46,429
+spend programming the more I long to be
+creative as someone who's not that great
+
+104
+00:01:46,429 --> 00:01:46,439
+creative as someone who's not that great
+ 
+
+105
+00:01:46,439 --> 00:01:48,440
+creative as someone who's not that great
+at drawing I love how many illustration
+
+106
+00:01:48,440 --> 00:01:48,450
+at drawing I love how many illustration
+ 
+
+107
+00:01:48,450 --> 00:01:50,179
+at drawing I love how many illustration
+classes there are on Skillshare that I
+
+108
+00:01:50,179 --> 00:01:50,189
+classes there are on Skillshare that I
+ 
+
+109
+00:01:50,189 --> 00:01:52,100
+classes there are on Skillshare that I
+can check out they also have a bunch of
+
+110
+00:01:52,100 --> 00:01:52,110
+can check out they also have a bunch of
+ 
+
+111
+00:01:52,110 --> 00:01:54,410
+can check out they also have a bunch of
+classes on things like cinematography
+
+112
+00:01:54,410 --> 00:01:54,420
+classes on things like cinematography
+ 
+
+113
+00:01:54,420 --> 00:01:56,389
+classes on things like cinematography
+and what you can do to improve the
+
+114
+00:01:56,389 --> 00:01:56,399
+and what you can do to improve the
+ 
+
+115
+00:01:56,399 --> 00:01:58,789
+and what you can do to improve the
+quality of your videos in fact I'm quite
+
+116
+00:01:58,789 --> 00:01:58,799
+quality of your videos in fact I'm quite
+ 
+
+117
+00:01:58,799 --> 00:02:00,530
+quality of your videos in fact I'm quite
+impressed with just how many classes
+
+118
+00:02:00,530 --> 00:02:00,540
+impressed with just how many classes
+ 
+
+119
+00:02:00,540 --> 00:02:02,450
+impressed with just how many classes
+they have to offer there are just so
+
+120
+00:02:02,450 --> 00:02:02,460
+they have to offer there are just so
+ 
+
+121
+00:02:02,460 --> 00:02:04,490
+they have to offer there are just so
+many creative videos on there that I can
+
+122
+00:02:04,490 --> 00:02:04,500
+many creative videos on there that I can
+ 
+
+123
+00:02:04,500 --> 00:02:06,410
+many creative videos on there that I can
+check out take a break from programming
+
+124
+00:02:06,410 --> 00:02:06,420
+check out take a break from programming
+ 
+
+125
+00:02:06,420 --> 00:02:08,330
+check out take a break from programming
+skill show is offering you guys a two
+
+126
+00:02:08,330 --> 00:02:08,340
+skill show is offering you guys a two
+ 
+
+127
+00:02:08,340 --> 00:02:10,279
+skill show is offering you guys a two
+month free trial if you sign up using
+
+128
+00:02:10,279 --> 00:02:10,289
+month free trial if you sign up using
+ 
+
+129
+00:02:10,289 --> 00:02:10,889
+month free trial if you sign up using
+the link
+
+130
+00:02:10,889 --> 00:02:10,899
+the link
+ 
+
+131
+00:02:10,899 --> 00:02:12,929
+the link
+in the description below and when you do
+
+132
+00:02:12,929 --> 00:02:12,939
+in the description below and when you do
+ 
+
+133
+00:02:12,939 --> 00:02:14,429
+in the description below and when you do
+let me know what your favorite classes
+
+134
+00:02:14,429 --> 00:02:14,439
+let me know what your favorite classes
+ 
+
+135
+00:02:14,439 --> 00:02:16,080
+let me know what your favorite classes
+are so that I can also check them out
+
+136
+00:02:16,080 --> 00:02:16,090
+are so that I can also check them out
+ 
+
+137
+00:02:16,090 --> 00:02:17,970
+are so that I can also check them out
+and of course a huge thank you to
+
+138
+00:02:17,970 --> 00:02:17,980
+and of course a huge thank you to
+ 
+
+139
+00:02:17,980 --> 00:02:20,179
+and of course a huge thank you to
+Skillshare for sponsoring this video
+
+140
+00:02:20,179 --> 00:02:20,189
+Skillshare for sponsoring this video
+ 
+
+141
+00:02:20,189 --> 00:02:22,679
+Skillshare for sponsoring this video
+let's get back to strings I don't really
+
+142
+00:02:22,679 --> 00:02:22,689
+let's get back to strings I don't really
+ 
+
+143
+00:02:22,689 --> 00:02:24,750
+let's get back to strings I don't really
+want to sit here today and just talk for
+
+144
+00:02:24,750 --> 00:02:24,760
+want to sit here today and just talk for
+ 
+
+145
+00:02:24,760 --> 00:02:27,960
+want to sit here today and just talk for
+hours about why strings can be slow and
+
+146
+00:02:27,960 --> 00:02:27,970
+hours about why strings can be slow and
+ 
+
+147
+00:02:27,970 --> 00:02:29,759
+hours about why strings can be slow and
+the technicalities behind all of that
+
+148
+00:02:29,759 --> 00:02:29,769
+the technicalities behind all of that
+ 
+
+149
+00:02:29,769 --> 00:02:31,080
+the technicalities behind all of that
+I'd much rather just show you guys a
+
+150
+00:02:31,080 --> 00:02:31,090
+I'd much rather just show you guys a
+ 
+
+151
+00:02:31,090 --> 00:02:33,240
+I'd much rather just show you guys a
+practical example of what you can do to
+
+152
+00:02:33,240 --> 00:02:33,250
+practical example of what you can do to
+ 
+
+153
+00:02:33,250 --> 00:02:35,490
+practical example of what you can do to
+make them faster but if I had to sum up
+
+154
+00:02:35,490 --> 00:02:35,500
+make them faster but if I had to sum up
+ 
+
+155
+00:02:35,500 --> 00:02:37,979
+make them faster but if I had to sum up
+one of the main issues with SCD string
+
+156
+00:02:37,979 --> 00:02:37,989
+one of the main issues with SCD string
+ 
+
+157
+00:02:37,989 --> 00:02:39,899
+one of the main issues with SCD string
+and probably string formatting string
+
+158
+00:02:39,899 --> 00:02:39,909
+and probably string formatting string
+ 
+
+159
+00:02:39,909 --> 00:02:42,179
+and probably string formatting string
+operations in general it's that they
+
+160
+00:02:42,179 --> 00:02:42,189
+operations in general it's that they
+ 
+
+161
+00:02:42,189 --> 00:02:44,039
+operations in general it's that they
+allocate memory if you guys aren't
+
+162
+00:02:44,039 --> 00:02:44,049
+allocate memory if you guys aren't
+ 
+
+163
+00:02:44,049 --> 00:02:46,530
+allocate memory if you guys aren't
+familiar with why memory allocation is
+
+164
+00:02:46,530 --> 00:02:46,540
+familiar with why memory allocation is
+ 
+
+165
+00:02:46,540 --> 00:02:48,270
+familiar with why memory allocation is
+bad that's actually a really good topic
+
+166
+00:02:48,270 --> 00:02:48,280
+bad that's actually a really good topic
+ 
+
+167
+00:02:48,280 --> 00:02:49,680
+bad that's actually a really good topic
+for a video by the way that I definitely
+
+168
+00:02:49,680 --> 00:02:49,690
+for a video by the way that I definitely
+ 
+
+169
+00:02:49,690 --> 00:02:51,720
+for a video by the way that I definitely
+want to make but I do have a video about
+
+170
+00:02:51,720 --> 00:02:51,730
+want to make but I do have a video about
+ 
+
+171
+00:02:51,730 --> 00:02:53,640
+want to make but I do have a video about
+the stack versus the heap definitely
+
+172
+00:02:53,640 --> 00:02:53,650
+the stack versus the heap definitely
+ 
+
+173
+00:02:53,650 --> 00:02:54,780
+the stack versus the heap definitely
+check that out if you want more
+
+174
+00:02:54,780 --> 00:02:54,790
+check that out if you want more
+ 
+
+175
+00:02:54,790 --> 00:02:57,089
+check that out if you want more
+information about just why allocating on
+
+176
+00:02:57,089 --> 00:02:57,099
+information about just why allocating on
+ 
+
+177
+00:02:57,099 --> 00:02:58,830
+information about just why allocating on
+the heap is not the best thing to do
+
+178
+00:02:58,830 --> 00:02:58,840
+the heap is not the best thing to do
+ 
+
+179
+00:02:58,840 --> 00:03:00,899
+the heap is not the best thing to do
+it's not that it's necessarily bad to
+
+180
+00:03:00,899 --> 00:03:00,909
+it's not that it's necessarily bad to
+ 
+
+181
+00:03:00,909 --> 00:03:02,940
+it's not that it's necessarily bad to
+allocate on the heap it's inevitable in
+
+182
+00:03:02,940 --> 00:03:02,950
+allocate on the heap it's inevitable in
+ 
+
+183
+00:03:02,950 --> 00:03:04,830
+allocate on the heap it's inevitable in
+a lot of cases in fact the way you can
+
+184
+00:03:04,830 --> 00:03:04,840
+a lot of cases in fact the way you can
+ 
+
+185
+00:03:04,840 --> 00:03:07,440
+a lot of cases in fact the way you can
+avoid it you absolutely should because
+
+186
+00:03:07,440 --> 00:03:07,450
+avoid it you absolutely should because
+ 
+
+187
+00:03:07,450 --> 00:03:09,660
+avoid it you absolutely should because
+it can slow down your program and sv
+
+188
+00:03:09,660 --> 00:03:09,670
+it can slow down your program and sv
+ 
+
+189
+00:03:09,670 --> 00:03:12,479
+it can slow down your program and sv
+string and a lot of its functions love
+
+190
+00:03:12,479 --> 00:03:12,489
+string and a lot of its functions love
+ 
+
+191
+00:03:12,489 --> 00:03:15,960
+string and a lot of its functions love
+to allocate and that's not ideal in fact
+
+192
+00:03:15,960 --> 00:03:15,970
+to allocate and that's not ideal in fact
+ 
+
+193
+00:03:15,970 --> 00:03:17,879
+to allocate and that's not ideal in fact
+let me just show you exactly what I'm
+
+194
+00:03:17,879 --> 00:03:17,889
+let me just show you exactly what I'm
+ 
+
+195
+00:03:17,889 --> 00:03:18,509
+let me just show you exactly what I'm
+talking about
+
+196
+00:03:18,509 --> 00:03:18,519
+talking about
+ 
+
+197
+00:03:18,519 --> 00:03:21,330
+talking about
+so here we have a blank C++ program what
+
+198
+00:03:21,330 --> 00:03:21,340
+so here we have a blank C++ program what
+ 
+
+199
+00:03:21,340 --> 00:03:23,069
+so here we have a blank C++ program what
+I'm gonna do is write some very simple
+
+200
+00:03:23,069 --> 00:03:23,079
+I'm gonna do is write some very simple
+ 
+
+201
+00:03:23,079 --> 00:03:25,409
+I'm gonna do is write some very simple
+code I'm just going to make a string
+
+202
+00:03:25,409 --> 00:03:25,419
+code I'm just going to make a string
+ 
+
+203
+00:03:25,419 --> 00:03:28,229
+code I'm just going to make a string
+called name I'm going to type in my full
+
+204
+00:03:28,229 --> 00:03:28,239
+called name I'm going to type in my full
+ 
+
+205
+00:03:28,239 --> 00:03:29,729
+called name I'm going to type in my full
+name here and then I'm going to write a
+
+206
+00:03:29,729 --> 00:03:29,739
+name here and then I'm going to write a
+ 
+
+207
+00:03:29,739 --> 00:03:31,830
+name here and then I'm going to write a
+function that's going to print name
+
+208
+00:03:31,830 --> 00:03:31,840
+function that's going to print name
+ 
+
+209
+00:03:31,840 --> 00:03:33,750
+function that's going to print name
+right and what I'll do is I'll well I'll
+
+210
+00:03:33,750 --> 00:03:33,760
+right and what I'll do is I'll well I'll
+ 
+
+211
+00:03:33,760 --> 00:03:36,180
+right and what I'll do is I'll well I'll
+take in a constitute a city string by
+
+212
+00:03:36,180 --> 00:03:36,190
+take in a constitute a city string by
+ 
+
+213
+00:03:36,190 --> 00:03:37,229
+take in a constitute a city string by
+reference you know what I'm gonna
+
+214
+00:03:37,229 --> 00:03:37,239
+reference you know what I'm gonna
+ 
+
+215
+00:03:37,239 --> 00:03:39,719
+reference you know what I'm gonna
+pretend to write a slow code here so
+
+216
+00:03:39,719 --> 00:03:39,729
+pretend to write a slow code here so
+ 
+
+217
+00:03:39,729 --> 00:03:42,360
+pretend to write a slow code here so
+I've got a constant string reference so
+
+218
+00:03:42,360 --> 00:03:42,370
+I've got a constant string reference so
+ 
+
+219
+00:03:42,370 --> 00:03:43,710
+I've got a constant string reference so
+there shouldn't be any copying of the
+
+220
+00:03:43,710 --> 00:03:43,720
+there shouldn't be any copying of the
+ 
+
+221
+00:03:43,720 --> 00:03:45,149
+there shouldn't be any copying of the
+string going on here and then what I'll
+
+222
+00:03:45,149 --> 00:03:45,159
+string going on here and then what I'll
+ 
+
+223
+00:03:45,159 --> 00:03:48,059
+string going on here and then what I'll
+do is I'll simply see out that name
+
+224
+00:03:48,059 --> 00:03:48,069
+do is I'll simply see out that name
+ 
+
+225
+00:03:48,069 --> 00:03:50,520
+do is I'll simply see out that name
+string okay so here we go I'm gonna try
+
+226
+00:03:50,520 --> 00:03:50,530
+string okay so here we go I'm gonna try
+ 
+
+227
+00:03:50,530 --> 00:03:52,199
+string okay so here we go I'm gonna try
+two different scenarios here first of
+
+228
+00:03:52,199 --> 00:03:52,209
+two different scenarios here first of
+ 
+
+229
+00:03:52,209 --> 00:03:54,180
+two different scenarios here first of
+all I'm just gonna print that name just
+
+230
+00:03:54,180 --> 00:03:54,190
+all I'm just gonna print that name just
+ 
+
+231
+00:03:54,190 --> 00:03:56,399
+all I'm just gonna print that name just
+by calling the function like this let's
+
+232
+00:03:56,399 --> 00:03:56,409
+by calling the function like this let's
+ 
+
+233
+00:03:56,409 --> 00:03:58,110
+by calling the function like this let's
+see how many allocations we get from
+
+234
+00:03:58,110 --> 00:03:58,120
+see how many allocations we get from
+ 
+
+235
+00:03:58,120 --> 00:03:59,909
+see how many allocations we get from
+this so how do we track these memory
+
+236
+00:03:59,909 --> 00:03:59,919
+this so how do we track these memory
+ 
+
+237
+00:03:59,919 --> 00:04:01,770
+this so how do we track these memory
+allocations well a very simple way is
+
+238
+00:04:01,770 --> 00:04:01,780
+allocations well a very simple way is
+ 
+
+239
+00:04:01,780 --> 00:04:04,500
+allocations well a very simple way is
+just to overload the new operator and
+
+240
+00:04:04,500 --> 00:04:04,510
+just to overload the new operator and
+ 
+
+241
+00:04:04,510 --> 00:04:06,569
+just to overload the new operator and
+then this will just return malloc size
+
+242
+00:04:06,569 --> 00:04:06,579
+then this will just return malloc size
+ 
+
+243
+00:04:06,579 --> 00:04:08,640
+then this will just return malloc size
+which is basically your basic memory
+
+244
+00:04:08,640 --> 00:04:08,650
+which is basically your basic memory
+ 
+
+245
+00:04:08,650 --> 00:04:10,409
+which is basically your basic memory
+allocation and then I want to add some
+
+246
+00:04:10,409 --> 00:04:10,419
+allocation and then I want to add some
+ 
+
+247
+00:04:10,419 --> 00:04:12,869
+allocation and then I want to add some
+additional things into here to make it a
+
+248
+00:04:12,869 --> 00:04:12,879
+additional things into here to make it a
+ 
+
+249
+00:04:12,879 --> 00:04:14,879
+additional things into here to make it a
+little bit more obvious so I'll make a
+
+250
+00:04:14,879 --> 00:04:14,889
+little bit more obvious so I'll make a
+ 
+
+251
+00:04:14,889 --> 00:04:19,050
+little bit more obvious so I'll make a
+you end 32t called s alec count which is
+
+252
+00:04:19,050 --> 00:04:19,060
+you end 32t called s alec count which is
+ 
+
+253
+00:04:19,060 --> 00:04:21,089
+you end 32t called s alec count which is
+gonna be the number of allocations here
+
+254
+00:04:21,089 --> 00:04:21,099
+gonna be the number of allocations here
+ 
+
+255
+00:04:21,099 --> 00:04:23,279
+gonna be the number of allocations here
+I'll just make this static for good
+
+256
+00:04:23,279 --> 00:04:23,289
+I'll just make this static for good
+ 
+
+257
+00:04:23,289 --> 00:04:24,300
+I'll just make this static for good
+practice and then what
+
+258
+00:04:24,300 --> 00:04:24,310
+practice and then what
+ 
+
+259
+00:04:24,310 --> 00:04:27,930
+practice and then what
+is s Alok count plus plus whenever we
+
+260
+00:04:27,930 --> 00:04:27,940
+is s Alok count plus plus whenever we
+ 
+
+261
+00:04:27,940 --> 00:04:30,810
+is s Alok count plus plus whenever we
+allocate and then just for curiosity
+
+262
+00:04:30,810 --> 00:04:30,820
+allocate and then just for curiosity
+ 
+
+263
+00:04:30,820 --> 00:04:32,790
+allocate and then just for curiosity
+I'll also print just how big that
+
+264
+00:04:32,790 --> 00:04:32,800
+I'll also print just how big that
+ 
+
+265
+00:04:32,800 --> 00:04:36,750
+I'll also print just how big that
+allocation was so allocating size bias
+
+266
+00:04:36,750 --> 00:04:36,760
+allocation was so allocating size bias
+ 
+
+267
+00:04:36,760 --> 00:04:39,450
+allocation was so allocating size bias
+okay cool so now all of our allocations
+
+268
+00:04:39,450 --> 00:04:39,460
+okay cool so now all of our allocations
+ 
+
+269
+00:04:39,460 --> 00:04:42,060
+okay cool so now all of our allocations
+will flow through this new operator it
+
+270
+00:04:42,060 --> 00:04:42,070
+will flow through this new operator it
+ 
+
+271
+00:04:42,070 --> 00:04:43,530
+will flow through this new operator it
+will count the amount of allocations we
+
+272
+00:04:43,530 --> 00:04:43,540
+will count the amount of allocations we
+ 
+
+273
+00:04:43,540 --> 00:04:45,810
+will count the amount of allocations we
+actually have and also it will print
+
+274
+00:04:45,810 --> 00:04:45,820
+actually have and also it will print
+ 
+
+275
+00:04:45,820 --> 00:04:48,600
+actually have and also it will print
+just how big that allocation is and what
+
+276
+00:04:48,600 --> 00:04:48,610
+just how big that allocation is and what
+ 
+
+277
+00:04:48,610 --> 00:04:50,159
+just how big that allocation is and what
+I'll do at the very bottom here is also
+
+278
+00:04:50,159 --> 00:04:50,169
+I'll do at the very bottom here is also
+ 
+
+279
+00:04:50,169 --> 00:04:52,770
+I'll do at the very bottom here is also
+just print that aleck count allocations
+
+280
+00:04:52,770 --> 00:04:52,780
+just print that aleck count allocations
+ 
+
+281
+00:04:52,780 --> 00:04:54,629
+just print that aleck count allocations
+okay cool so there we go
+
+282
+00:04:54,629 --> 00:04:54,639
+okay cool so there we go
+ 
+
+283
+00:04:54,639 --> 00:04:56,220
+okay cool so there we go
+let's run this program and see what
+
+284
+00:04:56,220 --> 00:04:56,230
+let's run this program and see what
+ 
+
+285
+00:04:56,230 --> 00:04:57,870
+let's run this program and see what
+happens and as you can see here we've
+
+286
+00:04:57,870 --> 00:04:57,880
+happens and as you can see here we've
+ 
+
+287
+00:04:57,880 --> 00:04:59,340
+happens and as you can see here we've
+allocated eight bytes of memory and
+
+288
+00:04:59,340 --> 00:04:59,350
+allocated eight bytes of memory and
+ 
+
+289
+00:04:59,350 --> 00:05:01,650
+allocated eight bytes of memory and
+there hasn't been one heap allocation
+
+290
+00:05:01,650 --> 00:05:01,660
+there hasn't been one heap allocation
+ 
+
+291
+00:05:01,660 --> 00:05:03,810
+there hasn't been one heap allocation
+now let's take a look at where that's
+
+292
+00:05:03,810 --> 00:05:03,820
+now let's take a look at where that's
+ 
+
+293
+00:05:03,820 --> 00:05:05,460
+now let's take a look at where that's
+come from I'll just take a break point
+
+294
+00:05:05,460 --> 00:05:05,470
+come from I'll just take a break point
+ 
+
+295
+00:05:05,470 --> 00:05:07,530
+come from I'll just take a break point
+over here and run the program again here
+
+296
+00:05:07,530 --> 00:05:07,540
+over here and run the program again here
+ 
+
+297
+00:05:07,540 --> 00:05:09,540
+over here and run the program again here
+we go the breakpoint gets hit and you
+
+298
+00:05:09,540 --> 00:05:09,550
+we go the breakpoint gets hit and you
+ 
+
+299
+00:05:09,550 --> 00:05:11,460
+we go the breakpoint gets hit and you
+can see that it's coming from this line
+
+300
+00:05:11,460 --> 00:05:11,470
+can see that it's coming from this line
+ 
+
+301
+00:05:11,470 --> 00:05:13,110
+can see that it's coming from this line
+here when we actually create a string
+
+302
+00:05:13,110 --> 00:05:13,120
+here when we actually create a string
+ 
+
+303
+00:05:13,120 --> 00:05:15,210
+here when we actually create a string
+and that causes a heap allocation if we
+
+304
+00:05:15,210 --> 00:05:15,220
+and that causes a heap allocation if we
+ 
+
+305
+00:05:15,220 --> 00:05:16,409
+and that causes a heap allocation if we
+take a look at where it's coming from
+
+306
+00:05:16,409 --> 00:05:16,419
+take a look at where it's coming from
+ 
+
+307
+00:05:16,419 --> 00:05:19,530
+take a look at where it's coming from
+it's coming from SV basic string of
+
+308
+00:05:19,530 --> 00:05:19,540
+it's coming from SV basic string of
+ 
+
+309
+00:05:19,540 --> 00:05:21,659
+it's coming from SV basic string of
+course if we drill down a little bit we
+
+310
+00:05:21,659 --> 00:05:21,669
+course if we drill down a little bit we
+ 
+
+311
+00:05:21,669 --> 00:05:24,180
+course if we drill down a little bit we
+can see that this in fact does allocate
+
+312
+00:05:24,180 --> 00:05:24,190
+can see that this in fact does allocate
+ 
+
+313
+00:05:24,190 --> 00:05:26,850
+can see that this in fact does allocate
+memory okay but what if we do something
+
+314
+00:05:26,850 --> 00:05:26,860
+memory okay but what if we do something
+ 
+
+315
+00:05:26,860 --> 00:05:28,680
+memory okay but what if we do something
+a little bit more simple what if we just
+
+316
+00:05:28,680 --> 00:05:28,690
+a little bit more simple what if we just
+ 
+
+317
+00:05:28,690 --> 00:05:31,500
+a little bit more simple what if we just
+get rid of this string entirely and we
+
+318
+00:05:31,500 --> 00:05:31,510
+get rid of this string entirely and we
+ 
+
+319
+00:05:31,510 --> 00:05:34,050
+get rid of this string entirely and we
+just copy and paste this kind of khonsu
+
+320
+00:05:34,050 --> 00:05:34,060
+just copy and paste this kind of khonsu
+ 
+
+321
+00:05:34,060 --> 00:05:35,969
+just copy and paste this kind of khonsu
+our data right into the print name
+
+322
+00:05:35,969 --> 00:05:35,979
+our data right into the print name
+ 
+
+323
+00:05:35,979 --> 00:05:38,760
+our data right into the print name
+function does that allocate memory yes I
+
+324
+00:05:38,760 --> 00:05:38,770
+function does that allocate memory yes I
+ 
+
+325
+00:05:38,770 --> 00:05:40,409
+function does that allocate memory yes I
+know I write a comment below now I'm
+
+326
+00:05:40,409 --> 00:05:40,419
+know I write a comment below now I'm
+ 
+
+327
+00:05:40,419 --> 00:05:42,900
+know I write a comment below now I'm
+gonna run this program and well as you
+
+328
+00:05:42,900 --> 00:05:42,910
+gonna run this program and well as you
+ 
+
+329
+00:05:42,910 --> 00:05:44,760
+gonna run this program and well as you
+can see it does in fact allocate memory
+
+330
+00:05:44,760 --> 00:05:44,770
+can see it does in fact allocate memory
+ 
+
+331
+00:05:44,770 --> 00:05:47,010
+can see it does in fact allocate memory
+so if we go back here this in fact does
+
+332
+00:05:47,010 --> 00:05:47,020
+so if we go back here this in fact does
+ 
+
+333
+00:05:47,020 --> 00:05:48,570
+so if we go back here this in fact does
+allocate memory we're still taking in a
+
+334
+00:05:48,570 --> 00:05:48,580
+allocate memory we're still taking in a
+ 
+
+335
+00:05:48,580 --> 00:05:51,180
+allocate memory we're still taking in a
+Const reference here of course but it
+
+336
+00:05:51,180 --> 00:05:51,190
+Const reference here of course but it
+ 
+
+337
+00:05:51,190 --> 00:05:52,950
+Const reference here of course but it
+still needs to construct an sed string
+
+338
+00:05:52,950 --> 00:05:52,960
+still needs to construct an sed string
+ 
+
+339
+00:05:52,960 --> 00:05:55,200
+still needs to construct an sed string
+for us and that construction allocates
+
+340
+00:05:55,200 --> 00:05:55,210
+for us and that construction allocates
+ 
+
+341
+00:05:55,210 --> 00:05:57,920
+for us and that construction allocates
+memory let's look at a slightly more
+
+342
+00:05:57,920 --> 00:05:57,930
+memory let's look at a slightly more
+ 
+
+343
+00:05:57,930 --> 00:06:00,480
+memory let's look at a slightly more
+involved example I guess this is really
+
+344
+00:06:00,480 --> 00:06:00,490
+involved example I guess this is really
+ 
+
+345
+00:06:00,490 --> 00:06:02,700
+involved example I guess this is really
+really simple I'll go back to what I had
+
+346
+00:06:02,700 --> 00:06:02,710
+really simple I'll go back to what I had
+ 
+
+347
+00:06:02,710 --> 00:06:05,159
+really simple I'll go back to what I had
+before and what I'll do here is I'll
+
+348
+00:06:05,159 --> 00:06:05,169
+before and what I'll do here is I'll
+ 
+
+349
+00:06:05,169 --> 00:06:06,629
+before and what I'll do here is I'll
+actually just play around with the
+
+350
+00:06:06,629 --> 00:06:06,639
+actually just play around with the
+ 
+
+351
+00:06:06,639 --> 00:06:08,520
+actually just play around with the
+string a little bit so maybe I want to
+
+352
+00:06:08,520 --> 00:06:08,530
+string a little bit so maybe I want to
+ 
+
+353
+00:06:08,530 --> 00:06:12,390
+string a little bit so maybe I want to
+have the first name so I'll just do name
+
+354
+00:06:12,390 --> 00:06:12,400
+have the first name so I'll just do name
+ 
+
+355
+00:06:12,400 --> 00:06:15,779
+have the first name so I'll just do name
+dot substring zero and three to get the
+
+356
+00:06:15,779 --> 00:06:15,789
+dot substring zero and three to get the
+ 
+
+357
+00:06:15,789 --> 00:06:17,700
+dot substring zero and three to get the
+first three characters out and make its
+
+358
+00:06:17,700 --> 00:06:17,710
+first three characters out and make its
+ 
+
+359
+00:06:17,710 --> 00:06:19,980
+first three characters out and make its
+own string I'll do the same for the last
+
+360
+00:06:19,980 --> 00:06:19,990
+own string I'll do the same for the last
+ 
+
+361
+00:06:19,990 --> 00:06:21,690
+own string I'll do the same for the last
+name and then of course I'll start this
+
+362
+00:06:21,690 --> 00:06:21,700
+name and then of course I'll start this
+ 
+
+363
+00:06:21,700 --> 00:06:24,570
+name and then of course I'll start this
+at index 4 with a length of 9 so now I
+
+364
+00:06:24,570 --> 00:06:24,580
+at index 4 with a length of 9 so now I
+ 
+
+365
+00:06:24,580 --> 00:06:26,070
+at index 4 with a length of 9 so now I
+have the first name and the last name
+
+366
+00:06:26,070 --> 00:06:26,080
+have the first name and the last name
+ 
+
+367
+00:06:26,080 --> 00:06:27,420
+have the first name and the last name
+maybe I just want to print the first
+
+368
+00:06:27,420 --> 00:06:27,430
+maybe I just want to print the first
+ 
+
+369
+00:06:27,430 --> 00:06:29,909
+maybe I just want to print the first
+name I'll do that let's run this program
+
+370
+00:06:29,909 --> 00:06:29,919
+name I'll do that let's run this program
+ 
+
+371
+00:06:29,919 --> 00:06:31,920
+name I'll do that let's run this program
+and see how many allocations we get and
+
+372
+00:06:31,920 --> 00:06:31,930
+and see how many allocations we get and
+ 
+
+373
+00:06:31,930 --> 00:06:33,380
+and see how many allocations we get and
+you guys can write that in the comment
+
+374
+00:06:33,380 --> 00:06:33,390
+you guys can write that in the comment
+ 
+
+375
+00:06:33,390 --> 00:06:35,120
+you guys can write that in the comment
+some counted yourselves so how many
+
+376
+00:06:35,120 --> 00:06:35,130
+some counted yourselves so how many
+ 
+
+377
+00:06:35,130 --> 00:06:37,070
+some counted yourselves so how many
+allocations do you think we have here
+
+378
+00:06:37,070 --> 00:06:37,080
+allocations do you think we have here
+ 
+
+379
+00:06:37,080 --> 00:06:39,530
+allocations do you think we have here
+the correct answer is three allocations
+
+380
+00:06:39,530 --> 00:06:39,540
+the correct answer is three allocations
+ 
+
+381
+00:06:39,540 --> 00:06:41,810
+the correct answer is three allocations
+so already just with a few operations
+
+382
+00:06:41,810 --> 00:06:41,820
+so already just with a few operations
+ 
+
+383
+00:06:41,820 --> 00:06:43,970
+so already just with a few operations
+we're already at three allocations and
+
+384
+00:06:43,970 --> 00:06:43,980
+we're already at three allocations and
+ 
+
+385
+00:06:43,980 --> 00:06:45,680
+we're already at three allocations and
+you can imagine that things like this
+
+386
+00:06:45,680 --> 00:06:45,690
+you can imagine that things like this
+ 
+
+387
+00:06:45,690 --> 00:06:47,780
+you can imagine that things like this
+might happen all the time throughout
+
+388
+00:06:47,780 --> 00:06:47,790
+might happen all the time throughout
+ 
+
+389
+00:06:47,790 --> 00:06:49,010
+might happen all the time throughout
+your program and if you've got some kind
+
+390
+00:06:49,010 --> 00:06:49,020
+your program and if you've got some kind
+ 
+
+391
+00:06:49,020 --> 00:06:50,570
+your program and if you've got some kind
+of real time running program like an app
+
+392
+00:06:50,570 --> 00:06:50,580
+of real time running program like an app
+ 
+
+393
+00:06:50,580 --> 00:06:52,250
+of real time running program like an app
+or a game or something like that and
+
+394
+00:06:52,250 --> 00:06:52,260
+or a game or something like that and
+ 
+
+395
+00:06:52,260 --> 00:06:53,630
+or a game or something like that and
+you're doing this kind of stuff every
+
+396
+00:06:53,630 --> 00:06:53,640
+you're doing this kind of stuff every
+ 
+
+397
+00:06:53,640 --> 00:06:55,910
+you're doing this kind of stuff every
+frame then it can really pile up and it
+
+398
+00:06:55,910 --> 00:06:55,920
+frame then it can really pile up and it
+ 
+
+399
+00:06:55,920 --> 00:06:57,560
+frame then it can really pile up and it
+can hurt your frame rate so is there
+
+400
+00:06:57,560 --> 00:06:57,570
+can hurt your frame rate so is there
+ 
+
+401
+00:06:57,570 --> 00:06:59,960
+can hurt your frame rate so is there
+anything we can do to actually make this
+
+402
+00:06:59,960 --> 00:06:59,970
+anything we can do to actually make this
+ 
+
+403
+00:06:59,970 --> 00:07:02,900
+anything we can do to actually make this
+better for us yes in fact there is
+
+404
+00:07:02,900 --> 00:07:02,910
+better for us yes in fact there is
+ 
+
+405
+00:07:02,910 --> 00:07:04,520
+better for us yes in fact there is
+there's a very easy way that we can just
+
+406
+00:07:04,520 --> 00:07:04,530
+there's a very easy way that we can just
+ 
+
+407
+00:07:04,530 --> 00:07:06,470
+there's a very easy way that we can just
+modify this existing code to reduce the
+
+408
+00:07:06,470 --> 00:07:06,480
+modify this existing code to reduce the
+ 
+
+409
+00:07:06,480 --> 00:07:08,840
+modify this existing code to reduce the
+allocations to just one and what we'll
+
+410
+00:07:08,840 --> 00:07:08,850
+allocations to just one and what we'll
+ 
+
+411
+00:07:08,850 --> 00:07:10,820
+allocations to just one and what we'll
+do by the end of this video is get rid
+
+412
+00:07:10,820 --> 00:07:10,830
+do by the end of this video is get rid
+ 
+
+413
+00:07:10,830 --> 00:07:13,130
+do by the end of this video is get rid
+of all of these allocations we'll have
+
+414
+00:07:13,130 --> 00:07:13,140
+of all of these allocations we'll have
+ 
+
+415
+00:07:13,140 --> 00:07:15,530
+of all of these allocations we'll have
+zero if we just look at this program
+
+416
+00:07:15,530 --> 00:07:15,540
+zero if we just look at this program
+ 
+
+417
+00:07:15,540 --> 00:07:17,870
+zero if we just look at this program
+whenever you're optimizing you just want
+
+418
+00:07:17,870 --> 00:07:17,880
+whenever you're optimizing you just want
+ 
+
+419
+00:07:17,880 --> 00:07:19,460
+whenever you're optimizing you just want
+to take a look at what it is you're
+
+420
+00:07:19,460 --> 00:07:19,470
+to take a look at what it is you're
+ 
+
+421
+00:07:19,470 --> 00:07:21,500
+to take a look at what it is you're
+trying to do because in a lot of cases
+
+422
+00:07:21,500 --> 00:07:21,510
+trying to do because in a lot of cases
+ 
+
+423
+00:07:21,510 --> 00:07:24,110
+trying to do because in a lot of cases
+just by kind of looking at the data you
+
+424
+00:07:24,110 --> 00:07:24,120
+just by kind of looking at the data you
+ 
+
+425
+00:07:24,120 --> 00:07:26,330
+just by kind of looking at the data you
+can find ways to optimize it so for
+
+426
+00:07:26,330 --> 00:07:26,340
+can find ways to optimize it so for
+ 
+
+427
+00:07:26,340 --> 00:07:28,130
+can find ways to optimize it so for
+example what am i doing with this first
+
+428
+00:07:28,130 --> 00:07:28,140
+example what am i doing with this first
+ 
+
+429
+00:07:28,140 --> 00:07:30,170
+example what am i doing with this first
+name what do I want well really I just
+
+430
+00:07:30,170 --> 00:07:30,180
+name what do I want well really I just
+ 
+
+431
+00:07:30,180 --> 00:07:32,210
+name what do I want well really I just
+want these three characters does
+
+432
+00:07:32,210 --> 00:07:32,220
+want these three characters does
+ 
+
+433
+00:07:32,220 --> 00:07:34,070
+want these three characters does
+obtaining these three characters really
+
+434
+00:07:34,070 --> 00:07:34,080
+obtaining these three characters really
+ 
+
+435
+00:07:34,080 --> 00:07:36,620
+obtaining these three characters really
+require me to make a substring I mean
+
+436
+00:07:36,620 --> 00:07:36,630
+require me to make a substring I mean
+ 
+
+437
+00:07:36,630 --> 00:07:38,270
+require me to make a substring I mean
+what what that's doing is creating a
+
+438
+00:07:38,270 --> 00:07:38,280
+what what that's doing is creating a
+ 
+
+439
+00:07:38,280 --> 00:07:40,790
+what what that's doing is creating a
+whole new string which is its own data
+
+440
+00:07:40,790 --> 00:07:40,800
+whole new string which is its own data
+ 
+
+441
+00:07:40,800 --> 00:07:42,710
+whole new string which is its own data
+right so it's copying that data into
+
+442
+00:07:42,710 --> 00:07:42,720
+right so it's copying that data into
+ 
+
+443
+00:07:42,720 --> 00:07:44,360
+right so it's copying that data into
+this first name variable right which is
+
+444
+00:07:44,360 --> 00:07:44,370
+this first name variable right which is
+ 
+
+445
+00:07:44,370 --> 00:07:46,280
+this first name variable right which is
+a string but not only that if I don't
+
+446
+00:07:46,280 --> 00:07:46,290
+a string but not only that if I don't
+ 
+
+447
+00:07:46,290 --> 00:07:47,930
+a string but not only that if I don't
+even copy the data if I just take this
+
+448
+00:07:47,930 --> 00:07:47,940
+even copy the data if I just take this
+ 
+
+449
+00:07:47,940 --> 00:07:49,490
+even copy the data if I just take this
+obviously like that that's gonna
+
+450
+00:07:49,490 --> 00:07:49,500
+obviously like that that's gonna
+ 
+
+451
+00:07:49,500 --> 00:07:51,620
+obviously like that that's gonna
+allocate in itself and you can see we
+
+452
+00:07:51,620 --> 00:07:51,630
+allocate in itself and you can see we
+ 
+
+453
+00:07:51,630 --> 00:07:53,330
+allocate in itself and you can see we
+now have four allocations because what
+
+454
+00:07:53,330 --> 00:07:53,340
+now have four allocations because what
+ 
+
+455
+00:07:53,340 --> 00:07:54,830
+now have four allocations because what
+it's doing is creating a whole new
+
+456
+00:07:54,830 --> 00:07:54,840
+it's doing is creating a whole new
+ 
+
+457
+00:07:54,840 --> 00:07:57,350
+it's doing is creating a whole new
+string which can be mutated and has its
+
+458
+00:07:57,350 --> 00:07:57,360
+string which can be mutated and has its
+ 
+
+459
+00:07:57,360 --> 00:07:59,480
+string which can be mutated and has its
+own memory but really what we want is
+
+460
+00:07:59,480 --> 00:07:59,490
+own memory but really what we want is
+ 
+
+461
+00:07:59,490 --> 00:08:03,470
+own memory but really what we want is
+kind of a view into that string a view
+
+462
+00:08:03,470 --> 00:08:03,480
+kind of a view into that string a view
+ 
+
+463
+00:08:03,480 --> 00:08:05,600
+kind of a view into that string a view
+you say that's exactly where strengths
+
+464
+00:08:05,600 --> 00:08:05,610
+you say that's exactly where strengths
+ 
+
+465
+00:08:05,610 --> 00:08:07,790
+you say that's exactly where strengths
+view comes into play so essa' D string
+
+466
+00:08:07,790 --> 00:08:07,800
+view comes into play so essa' D string
+ 
+
+467
+00:08:07,800 --> 00:08:10,850
+view comes into play so essa' D string
+view is a new class available in C++ 17
+
+468
+00:08:10,850 --> 00:08:10,860
+view is a new class available in C++ 17
+ 
+
+469
+00:08:10,860 --> 00:08:12,320
+view is a new class available in C++ 17
+but to be honest I've been using stuff
+
+470
+00:08:12,320 --> 00:08:12,330
+but to be honest I've been using stuff
+ 
+
+471
+00:08:12,330 --> 00:08:15,200
+but to be honest I've been using stuff
+like this way before C++ 17 what it is
+
+472
+00:08:15,200 --> 00:08:15,210
+like this way before C++ 17 what it is
+ 
+
+473
+00:08:15,210 --> 00:08:17,390
+like this way before C++ 17 what it is
+is essentially just a pointer to
+
+474
+00:08:17,390 --> 00:08:17,400
+is essentially just a pointer to
+ 
+
+475
+00:08:17,400 --> 00:08:19,460
+is essentially just a pointer to
+existing memory so in other words a
+
+476
+00:08:19,460 --> 00:08:19,470
+existing memory so in other words a
+ 
+
+477
+00:08:19,470 --> 00:08:22,010
+existing memory so in other words a
+Const our pointer to an existing string
+
+478
+00:08:22,010 --> 00:08:22,020
+Const our pointer to an existing string
+ 
+
+479
+00:08:22,020 --> 00:08:25,640
+Const our pointer to an existing string
+owned by someone else plus a size so
+
+480
+00:08:25,640 --> 00:08:25,650
+owned by someone else plus a size so
+ 
+
+481
+00:08:25,650 --> 00:08:27,530
+owned by someone else plus a size so
+what that enables you to do is be like
+
+482
+00:08:27,530 --> 00:08:27,540
+what that enables you to do is be like
+ 
+
+483
+00:08:27,540 --> 00:08:29,630
+what that enables you to do is be like
+okay I've got my name yawn charnok off I
+
+484
+00:08:29,630 --> 00:08:29,640
+okay I've got my name yawn charnok off I
+ 
+
+485
+00:08:29,640 --> 00:08:32,270
+okay I've got my name yawn charnok off I
+can just go to that first I can have a
+
+486
+00:08:32,270 --> 00:08:32,280
+can just go to that first I can have a
+ 
+
+487
+00:08:32,280 --> 00:08:33,980
+can just go to that first I can have a
+pointer to that first character and then
+
+488
+00:08:33,980 --> 00:08:33,990
+pointer to that first character and then
+ 
+
+489
+00:08:33,990 --> 00:08:35,540
+pointer to that first character and then
+a size of three and then that would be
+
+490
+00:08:35,540 --> 00:08:35,550
+a size of three and then that would be
+ 
+
+491
+00:08:35,550 --> 00:08:38,090
+a size of three and then that would be
+my substring or I can have a pointer to
+
+492
+00:08:38,090 --> 00:08:38,100
+my substring or I can have a pointer to
+ 
+
+493
+00:08:38,100 --> 00:08:39,980
+my substring or I can have a pointer to
+the beginning of that string plus four
+
+494
+00:08:39,980 --> 00:08:39,990
+the beginning of that string plus four
+ 
+
+495
+00:08:39,990 --> 00:08:41,750
+the beginning of that string plus four
+bytes which takes me to that beginning
+
+496
+00:08:41,750 --> 00:08:41,760
+bytes which takes me to that beginning
+ 
+
+497
+00:08:41,760 --> 00:08:43,670
+bytes which takes me to that beginning
+of that surname of that last name and
+
+498
+00:08:43,670 --> 00:08:43,680
+of that surname of that last name and
+ 
+
+499
+00:08:43,680 --> 00:08:46,220
+of that surname of that last name and
+then another nine for the size and then
+
+500
+00:08:46,220 --> 00:08:46,230
+then another nine for the size and then
+ 
+
+501
+00:08:46,230 --> 00:08:47,240
+then another nine for the size and then
+that would be myself
+
+502
+00:08:47,240 --> 00:08:47,250
+that would be myself
+ 
+
+503
+00:08:47,250 --> 00:08:48,650
+that would be myself
+so in other words what I'm doing is I'm
+
+504
+00:08:48,650 --> 00:08:48,660
+so in other words what I'm doing is I'm
+ 
+
+505
+00:08:48,660 --> 00:08:50,270
+so in other words what I'm doing is I'm
+creating like a window a little view
+
+506
+00:08:50,270 --> 00:08:50,280
+creating like a window a little view
+ 
+
+507
+00:08:50,280 --> 00:08:53,090
+creating like a window a little view
+into existing memory instead of having
+
+508
+00:08:53,090 --> 00:08:53,100
+into existing memory instead of having
+ 
+
+509
+00:08:53,100 --> 00:08:55,310
+into existing memory instead of having
+to allocate a whole new string and make
+
+510
+00:08:55,310 --> 00:08:55,320
+to allocate a whole new string and make
+ 
+
+511
+00:08:55,320 --> 00:08:56,600
+to allocate a whole new string and make
+a whole new string out of it using
+
+512
+00:08:56,600 --> 00:08:56,610
+a whole new string out of it using
+ 
+
+513
+00:08:56,610 --> 00:08:58,280
+a whole new string out of it using
+substring I don't need any of that
+
+514
+00:08:58,280 --> 00:08:58,290
+substring I don't need any of that
+ 
+
+515
+00:08:58,290 --> 00:09:00,080
+substring I don't need any of that
+because what I want is just a view a
+
+516
+00:09:00,080 --> 00:09:00,090
+because what I want is just a view a
+ 
+
+517
+00:09:00,090 --> 00:09:03,230
+because what I want is just a view a
+window into an existing string which has
+
+518
+00:09:03,230 --> 00:09:03,240
+window into an existing string which has
+ 
+
+519
+00:09:03,240 --> 00:09:05,480
+window into an existing string which has
+its own memory it's really simple to
+
+520
+00:09:05,480 --> 00:09:05,490
+its own memory it's really simple to
+ 
+
+521
+00:09:05,490 --> 00:09:07,610
+its own memory it's really simple to
+write this kind of class by yourself so
+
+522
+00:09:07,610 --> 00:09:07,620
+write this kind of class by yourself so
+ 
+
+523
+00:09:07,620 --> 00:09:09,710
+write this kind of class by yourself so
+way before say plus + 17 people were
+
+524
+00:09:09,710 --> 00:09:09,720
+way before say plus + 17 people were
+ 
+
+525
+00:09:09,720 --> 00:09:10,850
+way before say plus + 17 people were
+doing stuff like this it's actually
+
+526
+00:09:10,850 --> 00:09:10,860
+doing stuff like this it's actually
+ 
+
+527
+00:09:10,860 --> 00:09:13,220
+doing stuff like this it's actually
+quite common to do and the huge benefit
+
+528
+00:09:13,220 --> 00:09:13,230
+quite common to do and the huge benefit
+ 
+
+529
+00:09:13,230 --> 00:09:15,230
+quite common to do and the huge benefit
+here is because I'm not creating my own
+
+530
+00:09:15,230 --> 00:09:15,240
+here is because I'm not creating my own
+ 
+
+531
+00:09:15,240 --> 00:09:17,630
+here is because I'm not creating my own
+string I'm just kind of looking into an
+
+532
+00:09:17,630 --> 00:09:17,640
+string I'm just kind of looking into an
+ 
+
+533
+00:09:17,640 --> 00:09:20,450
+string I'm just kind of looking into an
+existing string there is no memory
+
+534
+00:09:20,450 --> 00:09:20,460
+existing string there is no memory
+ 
+
+535
+00:09:20,460 --> 00:09:22,190
+existing string there is no memory
+allocations it's extremely lightweight
+
+536
+00:09:22,190 --> 00:09:22,200
+allocations it's extremely lightweight
+ 
+
+537
+00:09:22,200 --> 00:09:24,620
+allocations it's extremely lightweight
+to pass a string view around just by
+
+538
+00:09:24,620 --> 00:09:24,630
+to pass a string view around just by
+ 
+
+539
+00:09:24,630 --> 00:09:26,480
+to pass a string view around just by
+value because all it is is a pointer and
+
+540
+00:09:26,480 --> 00:09:26,490
+value because all it is is a pointer and
+ 
+
+541
+00:09:26,490 --> 00:09:28,400
+value because all it is is a pointer and
+a size so with that in mind let's
+
+542
+00:09:28,400 --> 00:09:28,410
+a size so with that in mind let's
+ 
+
+543
+00:09:28,410 --> 00:09:30,710
+a size so with that in mind let's
+rewrite the current code that we have to
+
+544
+00:09:30,710 --> 00:09:30,720
+rewrite the current code that we have to
+ 
+
+545
+00:09:30,720 --> 00:09:32,870
+rewrite the current code that we have to
+just get rid of substring altogether so
+
+546
+00:09:32,870 --> 00:09:32,880
+just get rid of substring altogether so
+ 
+
+547
+00:09:32,880 --> 00:09:34,730
+just get rid of substring altogether so
+here we have these true sub strings that
+
+548
+00:09:34,730 --> 00:09:34,740
+here we have these true sub strings that
+ 
+
+549
+00:09:34,740 --> 00:09:35,780
+here we have these true sub strings that
+we wrote of course I'm just gonna
+
+550
+00:09:35,780 --> 00:09:35,790
+we wrote of course I'm just gonna
+ 
+
+551
+00:09:35,790 --> 00:09:38,120
+we wrote of course I'm just gonna
+rewrite them what I'll do is write STD
+
+552
+00:09:38,120 --> 00:09:38,130
+rewrite them what I'll do is write STD
+ 
+
+553
+00:09:38,130 --> 00:09:40,850
+rewrite them what I'll do is write STD
+string view first name and then I can
+
+554
+00:09:40,850 --> 00:09:40,860
+string view first name and then I can
+ 
+
+555
+00:09:40,860 --> 00:09:42,590
+string view first name and then I can
+use the constructor of string view to
+
+556
+00:09:42,590 --> 00:09:42,600
+use the constructor of string view to
+ 
+
+557
+00:09:42,600 --> 00:09:44,960
+use the constructor of string view to
+specify this substring so in other words
+
+558
+00:09:44,960 --> 00:09:44,970
+specify this substring so in other words
+ 
+
+559
+00:09:44,970 --> 00:09:46,610
+specify this substring so in other words
+I'm gonna go with name because that's
+
+560
+00:09:46,610 --> 00:09:46,620
+I'm gonna go with name because that's
+ 
+
+561
+00:09:46,620 --> 00:09:48,410
+I'm gonna go with name because that's
+what the daughter is named dorsey string
+
+562
+00:09:48,410 --> 00:09:48,420
+what the daughter is named dorsey string
+ 
+
+563
+00:09:48,420 --> 00:09:50,750
+what the daughter is named dorsey string
+that gives me a constant R pointer that
+
+564
+00:09:50,750 --> 00:09:50,760
+that gives me a constant R pointer that
+ 
+
+565
+00:09:50,760 --> 00:09:52,760
+that gives me a constant R pointer that
+is owned by this name string and then
+
+566
+00:09:52,760 --> 00:09:52,770
+is owned by this name string and then
+ 
+
+567
+00:09:52,770 --> 00:09:54,680
+is owned by this name string and then
+I'm going to specify a size of 3 and
+
+568
+00:09:54,680 --> 00:09:54,690
+I'm going to specify a size of 3 and
+ 
+
+569
+00:09:54,690 --> 00:09:56,329
+I'm going to specify a size of 3 and
+then that that's that that's my first
+
+570
+00:09:56,329 --> 00:09:56,339
+then that that's that that's my first
+ 
+
+571
+00:09:56,339 --> 00:09:58,400
+then that that's that that's my first
+name and then for the last name I'll do
+
+572
+00:09:58,400 --> 00:09:58,410
+name and then for the last name I'll do
+ 
+
+573
+00:09:58,410 --> 00:09:59,690
+name and then for the last name I'll do
+the same thing except the difference
+
+574
+00:09:59,690 --> 00:09:59,700
+the same thing except the difference
+ 
+
+575
+00:09:59,700 --> 00:10:00,920
+the same thing except the difference
+being I don't want to start at the
+
+576
+00:10:00,920 --> 00:10:00,930
+being I don't want to start at the
+ 
+
+577
+00:10:00,930 --> 00:10:02,540
+being I don't want to start at the
+beginning of this string I actually want
+
+578
+00:10:02,540 --> 00:10:02,550
+beginning of this string I actually want
+ 
+
+579
+00:10:02,550 --> 00:10:04,430
+beginning of this string I actually want
+to advance four bytes or four characters
+
+580
+00:10:04,430 --> 00:10:04,440
+to advance four bytes or four characters
+ 
+
+581
+00:10:04,440 --> 00:10:05,870
+to advance four bytes or four characters
+forward so that I get through this
+
+582
+00:10:05,870 --> 00:10:05,880
+forward so that I get through this
+ 
+
+583
+00:10:05,880 --> 00:10:07,970
+forward so that I get through this
+letter C here and then the length here
+
+584
+00:10:07,970 --> 00:10:07,980
+letter C here and then the length here
+ 
+
+585
+00:10:07,980 --> 00:10:10,220
+letter C here and then the length here
+which is nine I'll just wrap this stuff
+
+586
+00:10:10,220 --> 00:10:10,230
+which is nine I'll just wrap this stuff
+ 
+
+587
+00:10:10,230 --> 00:10:12,530
+which is nine I'll just wrap this stuff
+behind an ef-0 and then I'll write a
+
+588
+00:10:12,530 --> 00:10:12,540
+behind an ef-0 and then I'll write a
+ 
+
+589
+00:10:12,540 --> 00:10:14,030
+behind an ef-0 and then I'll write a
+little else here so that we can test
+
+590
+00:10:14,030 --> 00:10:14,040
+little else here so that we can test
+ 
+
+591
+00:10:14,040 --> 00:10:17,329
+little else here so that we can test
+both scenarios later and then in print
+
+592
+00:10:17,329 --> 00:10:17,339
+both scenarios later and then in print
+ 
+
+593
+00:10:17,339 --> 00:10:18,710
+both scenarios later and then in print
+name of course I'm just gonna write
+
+594
+00:10:18,710 --> 00:10:18,720
+name of course I'm just gonna write
+ 
+
+595
+00:10:18,720 --> 00:10:20,510
+name of course I'm just gonna write
+first-name now we have to modify this
+
+596
+00:10:20,510 --> 00:10:20,520
+first-name now we have to modify this
+ 
+
+597
+00:10:20,520 --> 00:10:22,250
+first-name now we have to modify this
+function a little bit instead of just
+
+598
+00:10:22,250 --> 00:10:22,260
+function a little bit instead of just
+ 
+
+599
+00:10:22,260 --> 00:10:24,740
+function a little bit instead of just
+taking in a constant a string now we'll
+
+600
+00:10:24,740 --> 00:10:24,750
+taking in a constant a string now we'll
+ 
+
+601
+00:10:24,750 --> 00:10:27,079
+taking in a constant a string now we'll
+take in a strength you know need to pass
+
+602
+00:10:27,079 --> 00:10:27,089
+take in a strength you know need to pass
+ 
+
+603
+00:10:27,089 --> 00:10:29,240
+take in a strength you know need to pass
+this by reference or anything like that
+
+604
+00:10:29,240 --> 00:10:29,250
+this by reference or anything like that
+ 
+
+605
+00:10:29,250 --> 00:10:31,579
+this by reference or anything like that
+so this becomes just STD string view
+
+606
+00:10:31,579 --> 00:10:31,589
+so this becomes just STD string view
+ 
+
+607
+00:10:31,589 --> 00:10:34,100
+so this becomes just STD string view
+name so now with this in mind let's run
+
+608
+00:10:34,100 --> 00:10:34,110
+name so now with this in mind let's run
+ 
+
+609
+00:10:34,110 --> 00:10:35,240
+name so now with this in mind let's run
+this program and see how many
+
+610
+00:10:35,240 --> 00:10:35,250
+this program and see how many
+ 
+
+611
+00:10:35,250 --> 00:10:37,220
+this program and see how many
+allocations we get and check this out we
+
+612
+00:10:37,220 --> 00:10:37,230
+allocations we get and check this out we
+ 
+
+613
+00:10:37,230 --> 00:10:39,680
+allocations we get and check this out we
+just get a single allocation coming from
+
+614
+00:10:39,680 --> 00:10:39,690
+just get a single allocation coming from
+ 
+
+615
+00:10:39,690 --> 00:10:41,630
+just get a single allocation coming from
+this original string of course
+
+616
+00:10:41,630 --> 00:10:41,640
+this original string of course
+ 
+
+617
+00:10:41,640 --> 00:10:44,060
+this original string of course
+let's also copy and paste this and print
+
+618
+00:10:44,060 --> 00:10:44,070
+let's also copy and paste this and print
+ 
+
+619
+00:10:44,070 --> 00:10:46,190
+let's also copy and paste this and print
+the last name here and then I'll just
+
+620
+00:10:46,190 --> 00:10:46,200
+the last name here and then I'll just
+ 
+
+621
+00:10:46,200 --> 00:10:48,290
+the last name here and then I'll just
+run this program there we go we print
+
+622
+00:10:48,290 --> 00:10:48,300
+run this program there we go we print
+ 
+
+623
+00:10:48,300 --> 00:10:49,970
+run this program there we go we print
+the first name and the last name and we
+
+624
+00:10:49,970 --> 00:10:49,980
+the first name and the last name and we
+ 
+
+625
+00:10:49,980 --> 00:10:52,160
+the first name and the last name and we
+only have a single allocation how good
+
+626
+00:10:52,160 --> 00:10:52,170
+only have a single allocation how good
+ 
+
+627
+00:10:52,170 --> 00:10:54,740
+only have a single allocation how good
+is that but we can do better than that
+
+628
+00:10:54,740 --> 00:10:54,750
+is that but we can do better than that
+ 
+
+629
+00:10:54,750 --> 00:10:56,270
+is that but we can do better than that
+we can get rid of all the allocations
+
+630
+00:10:56,270 --> 00:10:56,280
+we can get rid of all the allocations
+ 
+
+631
+00:10:56,280 --> 00:10:58,100
+we can get rid of all the allocations
+entirely and the way that we can do that
+
+632
+00:10:58,100 --> 00:10:58,110
+entirely and the way that we can do that
+ 
+
+633
+00:10:58,110 --> 00:11:00,740
+entirely and the way that we can do that
+is by not using s it E string at all so
+
+634
+00:11:00,740 --> 00:11:00,750
+is by not using s it E string at all so
+ 
+
+635
+00:11:00,750 --> 00:11:02,570
+is by not using s it E string at all so
+is a static string there's no real
+
+636
+00:11:02,570 --> 00:11:02,580
+is a static string there's no real
+ 
+
+637
+00:11:02,580 --> 00:11:05,000
+is a static string there's no real
+reason for it to be an STD string we
+
+638
+00:11:05,000 --> 00:11:05,010
+reason for it to be an STD string we
+ 
+
+639
+00:11:05,010 --> 00:11:07,610
+reason for it to be an STD string we
+could just make it a C string a conch a
+
+640
+00:11:07,610 --> 00:11:07,620
+could just make it a C string a conch a
+ 
+
+641
+00:11:07,620 --> 00:11:09,530
+could just make it a C string a conch a
+pointer so now instead of this name dot
+
+642
+00:11:09,530 --> 00:11:09,540
+pointer so now instead of this name dot
+ 
+
+643
+00:11:09,540 --> 00:11:11,690
+pointer so now instead of this name dot
+C string we get rid of that entirely the
+
+644
+00:11:11,690 --> 00:11:11,700
+C string we get rid of that entirely the
+ 
+
+645
+00:11:11,700 --> 00:11:13,580
+C string we get rid of that entirely the
+code becomes just that and then if I do
+
+646
+00:11:13,580 --> 00:11:13,590
+code becomes just that and then if I do
+ 
+
+647
+00:11:13,590 --> 00:11:16,160
+code becomes just that and then if I do
+run this program ah look at that isn't
+
+648
+00:11:16,160 --> 00:11:16,170
+run this program ah look at that isn't
+ 
+
+649
+00:11:16,170 --> 00:11:16,850
+run this program ah look at that isn't
+that beautiful
+
+650
+00:11:16,850 --> 00:11:16,860
+that beautiful
+ 
+
+651
+00:11:16,860 --> 00:11:19,760
+that beautiful
+zero allocations and I'll thing to note
+
+652
+00:11:19,760 --> 00:11:19,770
+zero allocations and I'll thing to note
+ 
+
+653
+00:11:19,770 --> 00:11:21,800
+zero allocations and I'll thing to note
+here is that because I did change my
+
+654
+00:11:21,800 --> 00:11:21,810
+here is that because I did change my
+ 
+
+655
+00:11:21,810 --> 00:11:23,390
+here is that because I did change my
+print name function from being a string
+
+656
+00:11:23,390 --> 00:11:23,400
+print name function from being a string
+ 
+
+657
+00:11:23,400 --> 00:11:25,610
+print name function from being a string
+to a string view that means that if I
+
+658
+00:11:25,610 --> 00:11:25,620
+to a string view that means that if I
+ 
+
+659
+00:11:25,620 --> 00:11:27,260
+to a string view that means that if I
+was to do something like I did before
+
+660
+00:11:27,260 --> 00:11:27,270
+was to do something like I did before
+ 
+
+661
+00:11:27,270 --> 00:11:29,300
+was to do something like I did before
+where I just write print name and then
+
+662
+00:11:29,300 --> 00:11:29,310
+where I just write print name and then
+ 
+
+663
+00:11:29,310 --> 00:11:31,760
+where I just write print name and then
+just an actual string here like this
+
+664
+00:11:31,760 --> 00:11:31,770
+just an actual string here like this
+ 
+
+665
+00:11:31,770 --> 00:11:34,310
+just an actual string here like this
+this itself also have no allocation so
+
+666
+00:11:34,310 --> 00:11:34,320
+this itself also have no allocation so
+ 
+
+667
+00:11:34,320 --> 00:11:36,350
+this itself also have no allocation so
+if I run this program you can see I get
+
+668
+00:11:36,350 --> 00:11:36,360
+if I run this program you can see I get
+ 
+
+669
+00:11:36,360 --> 00:11:38,990
+if I run this program you can see I get
+zero allocations but if I go over here
+
+670
+00:11:38,990 --> 00:11:39,000
+zero allocations but if I go over here
+ 
+
+671
+00:11:39,000 --> 00:11:41,210
+zero allocations but if I go over here
+and I change this to be an S City string
+
+672
+00:11:41,210 --> 00:11:41,220
+and I change this to be an S City string
+ 
+
+673
+00:11:41,220 --> 00:11:43,670
+and I change this to be an S City string
+like this even though it is a constant
+
+674
+00:11:43,670 --> 00:11:43,680
+like this even though it is a constant
+ 
+
+675
+00:11:43,680 --> 00:11:45,380
+like this even though it is a constant
+reference here I'll get rid of these two
+
+676
+00:11:45,380 --> 00:11:45,390
+reference here I'll get rid of these two
+ 
+
+677
+00:11:45,390 --> 00:11:47,150
+reference here I'll get rid of these two
+because they're string views you can see
+
+678
+00:11:47,150 --> 00:11:47,160
+because they're string views you can see
+ 
+
+679
+00:11:47,160 --> 00:11:48,410
+because they're string views you can see
+that just by printing name sure no I've
+
+680
+00:11:48,410 --> 00:11:48,420
+that just by printing name sure no I've
+ 
+
+681
+00:11:48,420 --> 00:11:50,690
+that just by printing name sure no I've
+cost yet one allocation so even if
+
+682
+00:11:50,690 --> 00:11:50,700
+cost yet one allocation so even if
+ 
+
+683
+00:11:50,700 --> 00:11:52,280
+cost yet one allocation so even if
+you're not doing any kind of substring
+
+684
+00:11:52,280 --> 00:11:52,290
+you're not doing any kind of substring
+ 
+
+685
+00:11:52,290 --> 00:11:54,920
+you're not doing any kind of substring
+stuff you know all I want to do is have
+
+686
+00:11:54,920 --> 00:11:54,930
+stuff you know all I want to do is have
+ 
+
+687
+00:11:54,930 --> 00:11:57,020
+stuff you know all I want to do is have
+this print name function then I can take
+
+688
+00:11:57,020 --> 00:11:57,030
+this print name function then I can take
+ 
+
+689
+00:11:57,030 --> 00:11:58,730
+this print name function then I can take
+in a string view instead of a string
+
+690
+00:11:58,730 --> 00:11:58,740
+in a string view instead of a string
+ 
+
+691
+00:11:58,740 --> 00:12:01,220
+in a string view instead of a string
+just by changing the signature of the
+
+692
+00:12:01,220 --> 00:12:01,230
+just by changing the signature of the
+ 
+
+693
+00:12:01,230 --> 00:12:03,710
+just by changing the signature of the
+function like this and suddenly I've
+
+694
+00:12:03,710 --> 00:12:03,720
+function like this and suddenly I've
+ 
+
+695
+00:12:03,720 --> 00:12:06,500
+function like this and suddenly I've
+gone from having one allocation to zero
+
+696
+00:12:06,500 --> 00:12:06,510
+gone from having one allocation to zero
+ 
+
+697
+00:12:06,510 --> 00:12:08,360
+gone from having one allocation to zero
+allocations so in other words to
+
+698
+00:12:08,360 --> 00:12:08,370
+allocations so in other words to
+ 
+
+699
+00:12:08,370 --> 00:12:10,610
+allocations so in other words to
+summarize so we have two cases here one
+
+700
+00:12:10,610 --> 00:12:10,620
+summarize so we have two cases here one
+ 
+
+701
+00:12:10,620 --> 00:12:12,980
+summarize so we have two cases here one
+which uses strings and one which uses
+
+702
+00:12:12,980 --> 00:12:12,990
+which uses strings and one which uses
+ 
+
+703
+00:12:12,990 --> 00:12:14,840
+which uses strings and one which uses
+string keys let's put them head-to-head
+
+704
+00:12:14,840 --> 00:12:14,850
+string keys let's put them head-to-head
+ 
+
+705
+00:12:14,850 --> 00:12:18,200
+string keys let's put them head-to-head
+and see what the total difference is so
+
+706
+00:12:18,200 --> 00:12:18,210
+and see what the total difference is so
+ 
+
+707
+00:12:18,210 --> 00:12:20,090
+and see what the total difference is so
+for this example I will revert this name
+
+708
+00:12:20,090 --> 00:12:20,100
+for this example I will revert this name
+ 
+
+709
+00:12:20,100 --> 00:12:22,430
+for this example I will revert this name
+to being a string depends what the use
+
+710
+00:12:22,430 --> 00:12:22,440
+to being a string depends what the use
+ 
+
+711
+00:12:22,440 --> 00:12:23,960
+to being a string depends what the use
+case kind of is but let's pretend that
+
+712
+00:12:23,960 --> 00:12:23,970
+case kind of is but let's pretend that
+ 
+
+713
+00:12:23,970 --> 00:12:25,700
+case kind of is but let's pretend that
+this data isn't just being statically
+
+714
+00:12:25,700 --> 00:12:25,710
+this data isn't just being statically
+ 
+
+715
+00:12:25,710 --> 00:12:27,620
+this data isn't just being statically
+typed like this in our C++ code maybe
+
+716
+00:12:27,620 --> 00:12:27,630
+typed like this in our C++ code maybe
+ 
+
+717
+00:12:27,630 --> 00:12:29,510
+typed like this in our C++ code maybe
+it's coming in from a file or being
+
+718
+00:12:29,510 --> 00:12:29,520
+it's coming in from a file or being
+ 
+
+719
+00:12:29,520 --> 00:12:31,820
+it's coming in from a file or being
+generated somehow in that case making it
+
+720
+00:12:31,820 --> 00:12:31,830
+generated somehow in that case making it
+ 
+
+721
+00:12:31,830 --> 00:12:33,200
+generated somehow in that case making it
+a string would just be a more realistic
+
+722
+00:12:33,200 --> 00:12:33,210
+a string would just be a more realistic
+ 
+
+723
+00:12:33,210 --> 00:12:35,150
+a string would just be a more realistic
+scenario that's all I'll change this
+
+724
+00:12:35,150 --> 00:12:35,160
+scenario that's all I'll change this
+ 
+
+725
+00:12:35,160 --> 00:12:37,850
+scenario that's all I'll change this
+code back so that it actually works so
+
+726
+00:12:37,850 --> 00:12:37,860
+code back so that it actually works so
+ 
+
+727
+00:12:37,860 --> 00:12:39,650
+code back so that it actually works so
+we'll add the dot C string here to get
+
+728
+00:12:39,650 --> 00:12:39,660
+we'll add the dot C string here to get
+ 
+
+729
+00:12:39,660 --> 00:12:41,810
+we'll add the dot C string here to get
+the C string and I will also write two
+
+730
+00:12:41,810 --> 00:12:41,820
+the C string and I will also write two
+ 
+
+731
+00:12:41,820 --> 00:12:43,760
+the C string and I will also write two
+versions of this function one which
+
+732
+00:12:43,760 --> 00:12:43,770
+versions of this function one which
+ 
+
+733
+00:12:43,770 --> 00:12:46,340
+versions of this function one which
+doesn't use a city string view like this
+
+734
+00:12:46,340 --> 00:12:46,350
+doesn't use a city string view like this
+ 
+
+735
+00:12:46,350 --> 00:12:48,740
+doesn't use a city string view like this
+and one which does and again what I'll
+
+736
+00:12:48,740 --> 00:12:48,750
+and one which does and again what I'll
+ 
+
+737
+00:12:48,750 --> 00:12:50,660
+and one which does and again what I'll
+do is I'll put a little preprocessor if
+
+738
+00:12:50,660 --> 00:12:50,670
+do is I'll put a little preprocessor if
+ 
+
+739
+00:12:50,670 --> 00:12:52,340
+do is I'll put a little preprocessor if
+and else here just to make that happen
+
+740
+00:12:52,340 --> 00:12:52,350
+and else here just to make that happen
+ 
+
+741
+00:12:52,350 --> 00:12:56,660
+and else here just to make that happen
+what I'll do is write if string view so
+
+742
+00:12:56,660 --> 00:12:56,670
+what I'll do is write if string view so
+ 
+
+743
+00:12:56,670 --> 00:12:58,490
+what I'll do is write if string view so
+that we use the string view way and I'll
+
+744
+00:12:58,490 --> 00:12:58,500
+that we use the string view way and I'll
+ 
+
+745
+00:12:58,500 --> 00:13:00,680
+that we use the string view way and I'll
+do the same thing for here just to flip
+
+746
+00:13:00,680 --> 00:13:00,690
+do the same thing for here just to flip
+ 
+
+747
+00:13:00,690 --> 00:13:03,260
+do the same thing for here just to flip
+these two around there we go so now we
+
+748
+00:13:03,260 --> 00:13:03,270
+these two around there we go so now we
+ 
+
+749
+00:13:03,270 --> 00:13:05,450
+these two around there we go so now we
+have our if string view and the else
+
+750
+00:13:05,450 --> 00:13:05,460
+have our if string view and the else
+ 
+
+751
+00:13:05,460 --> 00:13:07,370
+have our if string view and the else
+statement I'll come over here and I will
+
+752
+00:13:07,370 --> 00:13:07,380
+statement I'll come over here and I will
+ 
+
+753
+00:13:07,380 --> 00:13:09,079
+statement I'll come over here and I will
+return our print names and I'll have
+
+754
+00:13:09,079 --> 00:13:09,089
+return our print names and I'll have
+ 
+
+755
+00:13:09,089 --> 00:13:10,520
+return our print names and I'll have
+three different examples shown arrow
+
+756
+00:13:10,520 --> 00:13:10,530
+three different examples shown arrow
+ 
+
+757
+00:13:10,530 --> 00:13:12,770
+three different examples shown arrow
+first name and last name so let's see
+
+758
+00:13:12,770 --> 00:13:12,780
+first name and last name so let's see
+ 
+
+759
+00:13:12,780 --> 00:13:15,079
+first name and last name so let's see
+what this looks like so with string View
+
+760
+00:13:15,079 --> 00:13:15,089
+what this looks like so with string View
+ 
+
+761
+00:13:15,089 --> 00:13:16,640
+what this looks like so with string View
+turned off I'm gonna run this program
+
+762
+00:13:16,640 --> 00:13:16,650
+turned off I'm gonna run this program
+ 
+
+763
+00:13:16,650 --> 00:13:18,860
+turned off I'm gonna run this program
+and you can see we get four memory
+
+764
+00:13:18,860 --> 00:13:18,870
+and you can see we get four memory
+ 
+
+765
+00:13:18,870 --> 00:13:19,880
+and you can see we get four memory
+allocations
+
+766
+00:13:19,880 --> 00:13:19,890
+allocations
+ 
+
+767
+00:13:19,890 --> 00:13:21,890
+allocations
+whereas if I go ahead and define a
+
+768
+00:13:21,890 --> 00:13:21,900
+whereas if I go ahead and define a
+ 
+
+769
+00:13:21,900 --> 00:13:25,460
+whereas if I go ahead and define a
+string of you just like that and I run
+
+770
+00:13:25,460 --> 00:13:25,470
+string of you just like that and I run
+ 
+
+771
+00:13:25,470 --> 00:13:27,380
+string of you just like that and I run
+this we have just a single memory
+
+772
+00:13:27,380 --> 00:13:27,390
+this we have just a single memory
+ 
+
+773
+00:13:27,390 --> 00:13:28,820
+this we have just a single memory
+allocation which of course is coming
+
+774
+00:13:28,820 --> 00:13:28,830
+allocation which of course is coming
+ 
+
+775
+00:13:28,830 --> 00:13:31,910
+allocation which of course is coming
+from that original string creation so if
+
+776
+00:13:31,910 --> 00:13:31,920
+from that original string creation so if
+ 
+
+777
+00:13:31,920 --> 00:13:33,590
+from that original string creation so if
+you guys want to take this further what
+
+778
+00:13:33,590 --> 00:13:33,600
+you guys want to take this further what
+ 
+
+779
+00:13:33,600 --> 00:13:35,300
+you guys want to take this further what
+you can do is copy down the code that
+
+780
+00:13:35,300 --> 00:13:35,310
+you can do is copy down the code that
+ 
+
+781
+00:13:35,310 --> 00:13:36,680
+you can do is copy down the code that
+I've written today and actually
+
+782
+00:13:36,680 --> 00:13:36,690
+I've written today and actually
+ 
+
+783
+00:13:36,690 --> 00:13:38,420
+I've written today and actually
+benchmark and try and do it over like a
+
+784
+00:13:38,420 --> 00:13:38,430
+benchmark and try and do it over like a
+ 
+
+785
+00:13:38,430 --> 00:13:40,010
+benchmark and try and do it over like a
+thousand four loop iterations try and
+
+786
+00:13:40,010 --> 00:13:40,020
+thousand four loop iterations try and
+ 
+
+787
+00:13:40,020 --> 00:13:41,930
+thousand four loop iterations try and
+put it into your game loop or something
+
+788
+00:13:41,930 --> 00:13:41,940
+put it into your game loop or something
+ 
+
+789
+00:13:41,940 --> 00:13:44,180
+put it into your game loop or something
+like that try and look into your own
+
+790
+00:13:44,180 --> 00:13:44,190
+like that try and look into your own
+ 
+
+791
+00:13:44,190 --> 00:13:46,340
+like that try and look into your own
+existing projects and start replacing a
+
+792
+00:13:46,340 --> 00:13:46,350
+existing projects and start replacing a
+ 
+
+793
+00:13:46,350 --> 00:13:47,840
+existing projects and start replacing a
+few of these strings with string views
+
+794
+00:13:47,840 --> 00:13:47,850
+few of these strings with string views
+ 
+
+795
+00:13:47,850 --> 00:13:49,670
+few of these strings with string views
+and see what kind of performance impact
+
+796
+00:13:49,670 --> 00:13:49,680
+and see what kind of performance impact
+ 
+
+797
+00:13:49,680 --> 00:13:51,230
+and see what kind of performance impact
+you have major speaking from experience
+
+798
+00:13:51,230 --> 00:13:51,240
+you have major speaking from experience
+ 
+
+799
+00:13:51,240 --> 00:13:53,000
+you have major speaking from experience
+I know that if you look at pretty much
+
+800
+00:13:53,000 --> 00:13:53,010
+I know that if you look at pretty much
+ 
+
+801
+00:13:53,010 --> 00:13:54,980
+I know that if you look at pretty much
+any game and you profile it and you
+
+802
+00:13:54,980 --> 00:13:54,990
+any game and you profile it and you
+ 
+
+803
+00:13:54,990 --> 00:13:58,010
+any game and you profile it and you
+inspect it a sizable portion of that
+
+804
+00:13:58,010 --> 00:13:58,020
+inspect it a sizable portion of that
+ 
+
+805
+00:13:58,020 --> 00:13:59,960
+inspect it a sizable portion of that
+will be due to string operations and a
+
+806
+00:13:59,960 --> 00:13:59,970
+will be due to string operations and a
+ 
+
+807
+00:13:59,970 --> 00:14:01,250
+will be due to string operations and a
+lot of the times there's just not much
+
+808
+00:14:01,250 --> 00:14:01,260
+lot of the times there's just not much
+ 
+
+809
+00:14:01,260 --> 00:14:03,829
+lot of the times there's just not much
+you can do but of course there's always
+
+810
+00:14:03,829 --> 00:14:03,839
+you can do but of course there's always
+ 
+
+811
+00:14:03,839 --> 00:14:06,050
+you can do but of course there's always
+a little bit you can probably get away
+
+812
+00:14:06,050 --> 00:14:06,060
+a little bit you can probably get away
+ 
+
+813
+00:14:06,060 --> 00:14:07,730
+a little bit you can probably get away
+with anyway I hope you guys enjoyed this
+
+814
+00:14:07,730 --> 00:14:07,740
+with anyway I hope you guys enjoyed this
+ 
+
+815
+00:14:07,740 --> 00:14:09,440
+with anyway I hope you guys enjoyed this
+video if you did please hit the like
+
+816
+00:14:09,440 --> 00:14:09,450
+video if you did please hit the like
+ 
+
+817
+00:14:09,450 --> 00:14:10,610
+video if you did please hit the like
+button let me know what you think about
+
+818
+00:14:10,610 --> 00:14:10,620
+button let me know what you think about
+ 
+
+819
+00:14:10,620 --> 00:14:11,780
+button let me know what you think about
+all these kind of performance
+
+820
+00:14:11,780 --> 00:14:11,790
+all these kind of performance
+ 
+
+821
+00:14:11,790 --> 00:14:13,520
+all these kind of performance
+optimization videos I love this kind of
+
+822
+00:14:13,520 --> 00:14:13,530
+optimization videos I love this kind of
+ 
+
+823
+00:14:13,530 --> 00:14:15,170
+optimization videos I love this kind of
+stuff I love making this kind of stuff
+
+824
+00:14:15,170 --> 00:14:15,180
+stuff I love making this kind of stuff
+ 
+
+825
+00:14:15,180 --> 00:14:16,670
+stuff I love making this kind of stuff
+so they'll definitely be more this in
+
+826
+00:14:16,670 --> 00:14:16,680
+so they'll definitely be more this in
+ 
+
+827
+00:14:16,680 --> 00:14:19,190
+so they'll definitely be more this in
+the future as always don't forget to put
+
+828
+00:14:19,190 --> 00:14:19,200
+the future as always don't forget to put
+ 
+
+829
+00:14:19,200 --> 00:14:20,810
+the future as always don't forget to put
+down any kind of requests you have for
+
+830
+00:14:20,810 --> 00:14:20,820
+down any kind of requests you have for
+ 
+
+831
+00:14:20,820 --> 00:14:22,460
+down any kind of requests you have for
+people's videos in the comments below I
+
+832
+00:14:22,460 --> 00:14:22,470
+people's videos in the comments below I
+ 
+
+833
+00:14:22,470 --> 00:14:25,160
+people's videos in the comments below I
+know my list is huge but I'm always
+
+834
+00:14:25,160 --> 00:14:25,170
+know my list is huge but I'm always
+ 
+
+835
+00:14:25,170 --> 00:14:27,680
+know my list is huge but I'm always
+looking for new video ideas don't forget
+
+836
+00:14:27,680 --> 00:14:27,690
+looking for new video ideas don't forget
+ 
+
+837
+00:14:27,690 --> 00:14:29,660
+looking for new video ideas don't forget
+to check out that to month free trial of
+
+838
+00:14:29,660 --> 00:14:29,670
+to check out that to month free trial of
+ 
+
+839
+00:14:29,670 --> 00:14:31,430
+to check out that to month free trial of
+skill share by using the link in the
+
+840
+00:14:31,430 --> 00:14:31,440
+skill share by using the link in the
+ 
+
+841
+00:14:31,440 --> 00:14:33,410
+skill share by using the link in the
+description below and I will see you
+
+842
+00:14:33,410 --> 00:14:33,420
+description below and I will see you
+ 
+
+843
+00:14:33,420 --> 00:14:36,710
+description below and I will see you
+guys next time goodbye
+
+844
+00:14:36,710 --> 00:14:36,720
+
+ 
+
+845
+00:14:36,720 --> 00:15:00,629
+
+[Music]
+

@@ -1,0 +1,3575 @@
+1
+00:00:00,000 --> 00:00:01,390
+
+Hey, what's up guys? My name is the
+
+2
+00:00:01,390 --> 00:00:01,400
+Hey, what's up guys? My name is the
+ 
+
+3
+00:00:01,400 --> 00:00:03,390
+Hey, what's up guys? My name is the
+channel and welcome back to my C++
+
+4
+00:00:03,390 --> 00:00:03,400
+channel and welcome back to my C++
+ 
+
+5
+00:00:03,400 --> 00:00:05,790
+channel and welcome back to my C++
+series. So, today building off of what
+
+6
+00:00:05,790 --> 00:00:05,800
+series. So, today building off of what
+ 
+
+7
+00:00:05,800 --> 00:00:07,470
+series. So, today building off of what
+we talked about last time with function
+
+8
+00:00:07,470 --> 00:00:07,480
+we talked about last time with function
+ 
+
+9
+00:00:07,480 --> 00:00:08,870
+we talked about last time with function
+pointers, if you haven't seen that
+
+10
+00:00:08,870 --> 00:00:08,880
+pointers, if you haven't seen that
+ 
+
+11
+00:00:08,880 --> 00:00:10,470
+pointers, if you haven't seen that
+video, definitely click up there to
+
+12
+00:00:10,470 --> 00:00:10,480
+video, definitely click up there to
+ 
+
+13
+00:00:10,480 --> 00:00:11,830
+video, definitely click up there to
+check it out. Today we're going to be
+
+14
+00:00:11,830 --> 00:00:11,840
+check it out. Today we're going to be
+ 
+
+15
+00:00:11,840 --> 00:00:13,510
+check it out. Today we're going to be
+talking talking about lambdas, and
+
+16
+00:00:13,510 --> 00:00:13,520
+talking talking about lambdas, and
+ 
+
+17
+00:00:13,520 --> 00:00:16,710
+talking talking about lambdas, and
+lambdas are essentially a way to a way
+
+18
+00:00:16,710 --> 00:00:16,720
+lambdas are essentially a way to a way
+ 
+
+19
+00:00:16,720 --> 00:00:18,470
+lambdas are essentially a way to a way
+for us to define something that I like
+
+20
+00:00:18,470 --> 00:00:18,480
+for us to define something that I like
+ 
+
+21
+00:00:18,480 --> 00:00:20,790
+for us to define something that I like
+to call an anonymous function. So,
+
+22
+00:00:20,790 --> 00:00:20,800
+to call an anonymous function. So,
+ 
+
+23
+00:00:20,800 --> 00:00:22,470
+to call an anonymous function. So,
+basically it's a way for us to create a
+
+24
+00:00:22,470 --> 00:00:22,480
+basically it's a way for us to create a
+ 
+
+25
+00:00:22,480 --> 00:00:24,830
+basically it's a way for us to create a
+function without actually having to
+
+26
+00:00:24,830 --> 00:00:24,840
+function without actually having to
+ 
+
+27
+00:00:24,840 --> 00:00:26,550
+function without actually having to
+physically create a function. Just like
+
+28
+00:00:26,550 --> 00:00:26,560
+physically create a function. Just like
+ 
+
+29
+00:00:26,560 --> 00:00:28,550
+physically create a function. Just like
+a quick disposable function if we want
+
+30
+00:00:28,550 --> 00:00:28,560
+a quick disposable function if we want
+ 
+
+31
+00:00:28,560 --> 00:00:30,230
+a quick disposable function if we want
+if we want to demonstrate some kind of
+
+32
+00:00:30,230 --> 00:00:30,240
+if we want to demonstrate some kind of
+ 
+
+33
+00:00:30,240 --> 00:00:32,510
+if we want to demonstrate some kind of
+code that needs to be run, but we we
+
+34
+00:00:32,510 --> 00:00:32,520
+code that needs to be run, but we we
+ 
+
+35
+00:00:32,520 --> 00:00:34,510
+code that needs to be run, but we we
+want to treat it more like a variable
+
+36
+00:00:34,510 --> 00:00:34,520
+want to treat it more like a variable
+ 
+
+37
+00:00:34,520 --> 00:00:36,310
+want to treat it more like a variable
+and less than an actual formal function
+
+38
+00:00:36,310 --> 00:00:36,320
+and less than an actual formal function
+ 
+
+39
+00:00:36,320 --> 00:00:38,990
+and less than an actual formal function
+that exists as like a symbol in our
+
+40
+00:00:38,990 --> 00:00:39,000
+that exists as like a symbol in our
+ 
+
+41
+00:00:39,000 --> 00:00:40,830
+that exists as like a symbol in our
+actual compiled code, if that makes
+
+42
+00:00:40,830 --> 00:00:40,840
+actual compiled code, if that makes
+ 
+
+43
+00:00:40,840 --> 00:00:42,990
+actual compiled code, if that makes
+sense. And obviously, when we jump into
+
+44
+00:00:42,990 --> 00:00:43,000
+sense. And obviously, when we jump into
+ 
+
+45
+00:00:43,000 --> 00:00:44,510
+sense. And obviously, when we jump into
+some examples, if that didn't make
+
+46
+00:00:44,510 --> 00:00:44,520
+some examples, if that didn't make
+ 
+
+47
+00:00:44,520 --> 00:00:46,670
+some examples, if that didn't make
+sense, hopefully that'll clear it up.
+
+48
+00:00:46,670 --> 00:00:46,680
+sense, hopefully that'll clear it up.
+ 
+
+49
+00:00:46,680 --> 00:00:48,750
+sense, hopefully that'll clear it up.
+Okay, so first of all, a lambda, right?
+
+50
+00:00:48,750 --> 00:00:48,760
+Okay, so first of all, a lambda, right?
+ 
+
+51
+00:00:48,760 --> 00:00:50,510
+Okay, so first of all, a lambda, right?
+What is it used for?
+
+52
+00:00:50,510 --> 00:00:50,520
+What is it used for?
+ 
+
+53
+00:00:50,520 --> 00:00:52,390
+What is it used for?
+It's one thing to understand what it is,
+
+54
+00:00:52,390 --> 00:00:52,400
+It's one thing to understand what it is,
+ 
+
+55
+00:00:52,400 --> 00:00:53,630
+It's one thing to understand what it is,
+but it's obviously a completely
+
+56
+00:00:53,630 --> 00:00:53,640
+but it's obviously a completely
+ 
+
+57
+00:00:53,640 --> 00:00:55,030
+but it's obviously a completely
+different thing to understand how to use
+
+58
+00:00:55,030 --> 00:00:55,040
+different thing to understand how to use
+ 
+
+59
+00:00:55,040 --> 00:00:57,310
+different thing to understand how to use
+it and when to use it. And the answer to
+
+60
+00:00:57,310 --> 00:00:57,320
+it and when to use it. And the answer to
+ 
+
+61
+00:00:57,320 --> 00:00:59,550
+it and when to use it. And the answer to
+that is essentially whenever you have a
+
+62
+00:00:59,550 --> 00:00:59,560
+that is essentially whenever you have a
+ 
+
+63
+00:00:59,560 --> 00:01:02,310
+that is essentially whenever you have a
+function pointer, you can use a lambda
+
+64
+00:01:02,310 --> 00:01:02,320
+function pointer, you can use a lambda
+ 
+
+65
+00:01:02,320 --> 00:01:05,910
+function pointer, you can use a lambda
+in C++. That is how that works, right?
+
+66
+00:01:05,910 --> 00:01:05,920
+in C++. That is how that works, right?
+ 
+
+67
+00:01:05,920 --> 00:01:08,310
+in C++. That is how that works, right?
+So, a lambda is just a way for us to
+
+68
+00:01:08,310 --> 00:01:08,320
+So, a lambda is just a way for us to
+ 
+
+69
+00:01:08,320 --> 00:01:10,590
+So, a lambda is just a way for us to
+literally define a function without
+
+70
+00:01:10,590 --> 00:01:10,600
+literally define a function without
+ 
+
+71
+00:01:10,600 --> 00:01:12,270
+literally define a function without
+having to define a function. So, the
+
+72
+00:01:12,270 --> 00:01:12,280
+having to define a function. So, the
+ 
+
+73
+00:01:12,280 --> 00:01:14,790
+having to define a function. So, the
+usage of a lambda therefore is wherever
+
+74
+00:01:14,790 --> 00:01:14,800
+usage of a lambda therefore is wherever
+ 
+
+75
+00:01:14,800 --> 00:01:17,750
+usage of a lambda therefore is wherever
+we would normally set a function pointer
+
+76
+00:01:17,750 --> 00:01:17,760
+we would normally set a function pointer
+ 
+
+77
+00:01:17,760 --> 00:01:20,990
+we would normally set a function pointer
+to a function, we can set it to a lambda
+
+78
+00:01:20,990 --> 00:01:21,000
+to a function, we can set it to a lambda
+ 
+
+79
+00:01:21,000 --> 00:01:23,790
+to a function, we can set it to a lambda
+instead, right? So,
+
+80
+00:01:23,790 --> 00:01:23,800
+instead, right? So,
+ 
+
+81
+00:01:23,800 --> 00:01:25,710
+instead, right? So,
+really to talk about why lambdas are
+
+82
+00:01:25,710 --> 00:01:25,720
+really to talk about why lambdas are
+ 
+
+83
+00:01:25,720 --> 00:01:28,350
+really to talk about why lambdas are
+useful and where you can use them,
+
+84
+00:01:28,350 --> 00:01:28,360
+useful and where you can use them,
+ 
+
+85
+00:01:28,360 --> 00:01:30,270
+useful and where you can use them,
+you need to understand where you would
+
+86
+00:01:30,270 --> 00:01:30,280
+you need to understand where you would
+ 
+
+87
+00:01:30,280 --> 00:01:31,870
+you need to understand where you would
+use a function pointer. And we
+
+88
+00:01:31,870 --> 00:01:31,880
+use a function pointer. And we
+ 
+
+89
+00:01:31,880 --> 00:01:33,150
+use a function pointer. And we
+definitely did talk about that in the
+
+90
+00:01:33,150 --> 00:01:33,160
+definitely did talk about that in the
+ 
+
+91
+00:01:33,160 --> 00:01:34,590
+definitely did talk about that in the
+function pointers video, but when we
+
+92
+00:01:34,590 --> 00:01:34,600
+function pointers video, but when we
+ 
+
+93
+00:01:34,600 --> 00:01:36,230
+function pointers video, but when we
+actually start getting into concrete
+
+94
+00:01:36,230 --> 00:01:36,240
+actually start getting into concrete
+ 
+
+95
+00:01:36,240 --> 00:01:38,910
+actually start getting into concrete
+examples in C++ and in this series and
+
+96
+00:01:38,910 --> 00:01:38,920
+examples in C++ and in this series and
+ 
+
+97
+00:01:38,920 --> 00:01:40,670
+examples in C++ and in this series and
+especially the game engine series where
+
+98
+00:01:40,670 --> 00:01:40,680
+especially the game engine series where
+ 
+
+99
+00:01:40,680 --> 00:01:43,230
+especially the game engine series where
+we actually build something, that's when
+
+100
+00:01:43,230 --> 00:01:43,240
+we actually build something, that's when
+ 
+
+101
+00:01:43,240 --> 00:01:45,390
+we actually build something, that's when
+you'll really see me use everything that
+
+102
+00:01:45,390 --> 00:01:45,400
+you'll really see me use everything that
+ 
+
+103
+00:01:45,400 --> 00:01:46,710
+you'll really see me use everything that
+I described in this series. So, just
+
+104
+00:01:46,710 --> 00:01:46,720
+I described in this series. So, just
+ 
+
+105
+00:01:46,720 --> 00:01:48,110
+I described in this series. So, just
+keep that in mind. This is more to be
+
+106
+00:01:48,110 --> 00:01:48,120
+keep that in mind. This is more to be
+ 
+
+107
+00:01:48,120 --> 00:01:50,270
+keep that in mind. This is more to be
+treated as like a reference and like a
+
+108
+00:01:50,270 --> 00:01:50,280
+treated as like a reference and like a
+ 
+
+109
+00:01:50,280 --> 00:01:52,110
+treated as like a reference and like a
+oh, I don't know what this is at all or
+
+110
+00:01:52,110 --> 00:01:52,120
+oh, I don't know what this is at all or
+ 
+
+111
+00:01:52,120 --> 00:01:54,430
+oh, I don't know what this is at all or
+I don't know the syntax for this actual
+
+112
+00:01:54,430 --> 00:01:54,440
+I don't know the syntax for this actual
+ 
+
+113
+00:01:54,440 --> 00:01:56,430
+I don't know the syntax for this actual
+thing or how it works, right? So, let's
+
+114
+00:01:56,430 --> 00:01:56,440
+thing or how it works, right? So, let's
+ 
+
+115
+00:01:56,440 --> 00:01:57,950
+thing or how it works, right? So, let's
+jump in and we're going to build off of
+
+116
+00:01:57,950 --> 00:01:57,960
+jump in and we're going to build off of
+ 
+
+117
+00:01:57,960 --> 00:01:59,750
+jump in and we're going to build off of
+what we covered in the function pointers
+
+118
+00:01:59,750 --> 00:01:59,760
+what we covered in the function pointers
+ 
+
+119
+00:01:59,760 --> 00:02:02,430
+what we covered in the function pointers
+video to actually demonstrate the usage
+
+120
+00:02:02,430 --> 00:02:02,440
+video to actually demonstrate the usage
+ 
+
+121
+00:02:02,440 --> 00:02:03,750
+video to actually demonstrate the usage
+of a lambda and the different things
+
+122
+00:02:03,750 --> 00:02:03,760
+of a lambda and the different things
+ 
+
+123
+00:02:03,760 --> 00:02:05,150
+of a lambda and the different things
+that we can do with it. Okay, so this is
+
+124
+00:02:05,150 --> 00:02:05,160
+that we can do with it. Okay, so this is
+ 
+
+125
+00:02:05,160 --> 00:02:06,469
+that we can do with it. Okay, so this is
+the code that we had from the last
+
+126
+00:02:06,469 --> 00:02:06,479
+the code that we had from the last
+ 
+
+127
+00:02:06,479 --> 00:02:08,430
+the code that we had from the last
+video. We basically just built a little
+
+128
+00:02:08,430 --> 00:02:08,440
+video. We basically just built a little
+ 
+
+129
+00:02:08,440 --> 00:02:10,350
+video. We basically just built a little
+for each function, which took in a
+
+130
+00:02:10,350 --> 00:02:10,360
+for each function, which took in a
+ 
+
+131
+00:02:10,360 --> 00:02:12,150
+for each function, which took in a
+function pointer. And in fact, last
+
+132
+00:02:12,150 --> 00:02:12,160
+function pointer. And in fact, last
+ 
+
+133
+00:02:12,160 --> 00:02:14,230
+function pointer. And in fact, last
+video I even said that we did use a
+
+134
+00:02:14,230 --> 00:02:14,240
+video I even said that we did use a
+ 
+
+135
+00:02:14,240 --> 00:02:16,030
+video I even said that we did use a
+lambda. This is a lambda right over
+
+136
+00:02:16,030 --> 00:02:16,040
+lambda. This is a lambda right over
+ 
+
+137
+00:02:16,040 --> 00:02:18,750
+lambda. This is a lambda right over
+here. We did essentially define our own
+
+138
+00:02:18,750 --> 00:02:18,760
+here. We did essentially define our own
+ 
+
+139
+00:02:18,760 --> 00:02:20,670
+here. We did essentially define our own
+function in line with the rest of our
+
+140
+00:02:20,670 --> 00:02:20,680
+function in line with the rest of our
+ 
+
+141
+00:02:20,680 --> 00:02:22,790
+function in line with the rest of our
+code that just printed out whatever
+
+142
+00:02:22,790 --> 00:02:22,800
+code that just printed out whatever
+ 
+
+143
+00:02:22,800 --> 00:02:25,230
+code that just printed out whatever
+value we needed. And this function
+
+144
+00:02:25,230 --> 00:02:25,240
+value we needed. And this function
+ 
+
+145
+00:02:25,240 --> 00:02:27,990
+value we needed. And this function
+pointer essentially defined what the
+
+146
+00:02:27,990 --> 00:02:28,000
+pointer essentially defined what the
+ 
+
+147
+00:02:28,000 --> 00:02:29,710
+pointer essentially defined what the
+lambda actually needed to be. So, in
+
+148
+00:02:29,710 --> 00:02:29,720
+lambda actually needed to be. So, in
+ 
+
+149
+00:02:29,720 --> 00:02:31,150
+lambda actually needed to be. So, in
+other words, we know that it returns
+
+150
+00:02:31,150 --> 00:02:31,160
+other words, we know that it returns
+ 
+
+151
+00:02:31,160 --> 00:02:32,990
+other words, we know that it returns
+void, and we know that it takes one
+
+152
+00:02:32,990 --> 00:02:33,000
+void, and we know that it takes one
+ 
+
+153
+00:02:33,000 --> 00:02:34,430
+void, and we know that it takes one
+parameter, which is an integer. And
+
+154
+00:02:34,430 --> 00:02:34,440
+parameter, which is an integer. And
+ 
+
+155
+00:02:34,440 --> 00:02:36,070
+parameter, which is an integer. And
+that's why you see this function, as you
+
+156
+00:02:36,070 --> 00:02:36,080
+that's why you see this function, as you
+ 
+
+157
+00:02:36,080 --> 00:02:37,630
+that's why you see this function, as you
+can see, returns nothing. It just prints
+
+158
+00:02:37,630 --> 00:02:37,640
+can see, returns nothing. It just prints
+ 
+
+159
+00:02:37,640 --> 00:02:39,990
+can see, returns nothing. It just prints
+out a line of text. And then we have
+
+160
+00:02:39,990 --> 00:02:40,000
+out a line of text. And then we have
+ 
+
+161
+00:02:40,000 --> 00:02:42,030
+out a line of text. And then we have
+this integer value parameter, which is
+
+162
+00:02:42,030 --> 00:02:42,040
+this integer value parameter, which is
+ 
+
+163
+00:02:42,040 --> 00:02:43,750
+this integer value parameter, which is
+defined because we've said that we need
+
+164
+00:02:43,750 --> 00:02:43,760
+defined because we've said that we need
+ 
+
+165
+00:02:43,760 --> 00:02:45,710
+defined because we've said that we need
+to take in an integer. And in this case,
+
+166
+00:02:45,710 --> 00:02:45,720
+to take in an integer. And in this case,
+ 
+
+167
+00:02:45,720 --> 00:02:47,390
+to take in an integer. And in this case,
+the integer that we pass into this
+
+168
+00:02:47,390 --> 00:02:47,400
+the integer that we pass into this
+ 
+
+169
+00:02:47,400 --> 00:02:48,550
+the integer that we pass into this
+function
+
+170
+00:02:48,550 --> 00:02:48,560
+function
+ 
+
+171
+00:02:48,560 --> 00:02:49,990
+function
+ends up being the value that we're
+
+172
+00:02:49,990 --> 00:02:50,000
+ends up being the value that we're
+ 
+
+173
+00:02:50,000 --> 00:02:52,910
+ends up being the value that we're
+currently iterating over, right? So, you
+
+174
+00:02:52,910 --> 00:02:52,920
+currently iterating over, right? So, you
+ 
+
+175
+00:02:52,920 --> 00:02:54,990
+currently iterating over, right? So, you
+can see that literally this funk value
+
+176
+00:02:54,990 --> 00:02:55,000
+can see that literally this funk value
+ 
+
+177
+00:02:55,000 --> 00:02:57,150
+can see that literally this funk value
+is actually calling this code that we've
+
+178
+00:02:57,150 --> 00:02:57,160
+is actually calling this code that we've
+ 
+
+179
+00:02:57,160 --> 00:02:59,390
+is actually calling this code that we've
+defined here in our main function. And
+
+180
+00:02:59,390 --> 00:02:59,400
+defined here in our main function. And
+ 
+
+181
+00:02:59,400 --> 00:03:01,430
+defined here in our main function. And
+that really is the usage of a lambda. It
+
+182
+00:03:01,430 --> 00:03:01,440
+that really is the usage of a lambda. It
+ 
+
+183
+00:03:01,440 --> 00:03:03,350
+that really is the usage of a lambda. It
+lets us do cool things like this. One of
+
+184
+00:03:03,350 --> 00:03:03,360
+lets us do cool things like this. One of
+ 
+
+185
+00:03:03,360 --> 00:03:06,070
+lets us do cool things like this. One of
+the biggest examples I can ever give is
+
+186
+00:03:06,070 --> 00:03:06,080
+the biggest examples I can ever give is
+ 
+
+187
+00:03:06,080 --> 00:03:08,830
+the biggest examples I can ever give is
+we want to be able to pass in a function
+
+188
+00:03:08,830 --> 00:03:08,840
+we want to be able to pass in a function
+ 
+
+189
+00:03:08,840 --> 00:03:11,229
+we want to be able to pass in a function
+to an API, so that at some point in the
+
+190
+00:03:11,229 --> 00:03:11,239
+to an API, so that at some point in the
+ 
+
+191
+00:03:11,239 --> 00:03:14,310
+to an API, so that at some point in the
+future it can call that function for us.
+
+192
+00:03:14,310 --> 00:03:14,320
+future it can call that function for us.
+ 
+
+193
+00:03:14,320 --> 00:03:16,310
+future it can call that function for us.
+Because we don't know
+
+194
+00:03:16,310 --> 00:03:16,320
+Because we don't know
+ 
+
+195
+00:03:16,320 --> 00:03:18,630
+Because we don't know
+we we can't call the function now
+
+196
+00:03:18,630 --> 00:03:18,640
+we we can't call the function now
+ 
+
+197
+00:03:18,640 --> 00:03:20,030
+we we can't call the function now
+because either it doesn't have the data
+
+198
+00:03:20,030 --> 00:03:20,040
+because either it doesn't have the data
+ 
+
+199
+00:03:20,040 --> 00:03:21,430
+because either it doesn't have the data
+it needs or we just don't want to. We
+
+200
+00:03:21,430 --> 00:03:21,440
+it needs or we just don't want to. We
+ 
+
+201
+00:03:21,440 --> 00:03:23,470
+it needs or we just don't want to. We
+want to kind of defer the calling of a
+
+202
+00:03:23,470 --> 00:03:23,480
+want to kind of defer the calling of a
+ 
+
+203
+00:03:23,480 --> 00:03:25,509
+want to kind of defer the calling of a
+function. And if we want to do something
+
+204
+00:03:25,509 --> 00:03:25,519
+function. And if we want to do something
+ 
+
+205
+00:03:25,519 --> 00:03:26,750
+function. And if we want to do something
+like that, then of course we need to
+
+206
+00:03:26,750 --> 00:03:26,760
+like that, then of course we need to
+ 
+
+207
+00:03:26,760 --> 00:03:28,910
+like that, then of course we need to
+tell it what function to call when it
+
+208
+00:03:28,910 --> 00:03:28,920
+tell it what function to call when it
+ 
+
+209
+00:03:28,920 --> 00:03:30,470
+tell it what function to call when it
+gets up to the stage of I now want to
+
+210
+00:03:30,470 --> 00:03:30,480
+gets up to the stage of I now want to
+ 
+
+211
+00:03:30,480 --> 00:03:32,550
+gets up to the stage of I now want to
+call a function. And lambdas are just a
+
+212
+00:03:32,550 --> 00:03:32,560
+call a function. And lambdas are just a
+ 
+
+213
+00:03:32,560 --> 00:03:34,430
+call a function. And lambdas are just a
+really good way of specifying that
+
+214
+00:03:34,430 --> 00:03:34,440
+really good way of specifying that
+ 
+
+215
+00:03:34,440 --> 00:03:36,110
+really good way of specifying that
+function, specifying code that you want
+
+216
+00:03:36,110 --> 00:03:36,120
+function, specifying code that you want
+ 
+
+217
+00:03:36,120 --> 00:03:38,670
+function, specifying code that you want
+to run sometime in the future, like we
+
+218
+00:03:38,670 --> 00:03:38,680
+to run sometime in the future, like we
+ 
+
+219
+00:03:38,680 --> 00:03:40,229
+to run sometime in the future, like we
+have here with this for each, where we
+
+220
+00:03:40,229 --> 00:03:40,239
+have here with this for each, where we
+ 
+
+221
+00:03:40,239 --> 00:03:42,430
+have here with this for each, where we
+actually run that code when we're
+
+222
+00:03:42,430 --> 00:03:42,440
+actually run that code when we're
+ 
+
+223
+00:03:42,440 --> 00:03:44,030
+actually run that code when we're
+iterating over the element and when it
+
+224
+00:03:44,030 --> 00:03:44,040
+iterating over the element and when it
+ 
+
+225
+00:03:44,040 --> 00:03:46,150
+iterating over the element and when it
+becomes time for us to call it with a
+
+226
+00:03:46,150 --> 00:03:46,160
+becomes time for us to call it with a
+ 
+
+227
+00:03:46,160 --> 00:03:48,430
+becomes time for us to call it with a
+specific parameter, as we're doing here.
+
+228
+00:03:48,430 --> 00:03:48,440
+specific parameter, as we're doing here.
+ 
+
+229
+00:03:48,440 --> 00:03:50,150
+specific parameter, as we're doing here.
+So, let's dissect the syntax of this
+
+230
+00:03:50,150 --> 00:03:50,160
+So, let's dissect the syntax of this
+ 
+
+231
+00:03:50,160 --> 00:03:51,990
+So, let's dissect the syntax of this
+lambda a little bit. I'm actually going
+
+232
+00:03:51,990 --> 00:03:52,000
+lambda a little bit. I'm actually going
+ 
+
+233
+00:03:52,000 --> 00:03:53,750
+lambda a little bit. I'm actually going
+to kind of get rid of this and assign it
+
+234
+00:03:53,750 --> 00:03:53,760
+to kind of get rid of this and assign it
+ 
+
+235
+00:03:53,760 --> 00:03:56,070
+to kind of get rid of this and assign it
+to an auto variable. So, auto lambda,
+
+236
+00:03:56,070 --> 00:03:56,080
+to an auto variable. So, auto lambda,
+ 
+
+237
+00:03:56,080 --> 00:03:58,550
+to an auto variable. So, auto lambda,
+we'll say, equals our lambda, and then
+
+238
+00:03:58,550 --> 00:03:58,560
+we'll say, equals our lambda, and then
+ 
+
+239
+00:03:58,560 --> 00:04:01,630
+we'll say, equals our lambda, and then
+we'll pass in the lambda into here.
+
+240
+00:04:01,630 --> 00:04:01,640
+we'll pass in the lambda into here.
+ 
+
+241
+00:04:01,640 --> 00:04:03,510
+we'll pass in the lambda into here.
+All right, cool. So, first of all, we
+
+242
+00:04:03,510 --> 00:04:03,520
+All right, cool. So, first of all, we
+ 
+
+243
+00:04:03,520 --> 00:04:05,070
+All right, cool. So, first of all, we
+start off a lambda with these square
+
+244
+00:04:05,070 --> 00:04:05,080
+start off a lambda with these square
+ 
+
+245
+00:04:05,080 --> 00:04:06,670
+start off a lambda with these square
+brackets. Let me make some room. We
+
+246
+00:04:06,670 --> 00:04:06,680
+brackets. Let me make some room. We
+ 
+
+247
+00:04:06,680 --> 00:04:07,949
+brackets. Let me make some room. We
+start off this lambda with the square
+
+248
+00:04:07,949 --> 00:04:07,959
+start off this lambda with the square
+ 
+
+249
+00:04:07,959 --> 00:04:09,830
+start off this lambda with the square
+brackets. What is that? Now, I will
+
+250
+00:04:09,830 --> 00:04:09,840
+brackets. What is that? Now, I will
+ 
+
+251
+00:04:09,840 --> 00:04:11,870
+brackets. What is that? Now, I will
+point out, first of all, that you don't
+
+252
+00:04:11,870 --> 00:04:11,880
+point out, first of all, that you don't
+ 
+
+253
+00:04:11,880 --> 00:04:13,310
+point out, first of all, that you don't
+really have to take my word for it or
+
+254
+00:04:13,310 --> 00:04:13,320
+really have to take my word for it or
+ 
+
+255
+00:04:13,320 --> 00:04:15,110
+really have to take my word for it or
+this video for it, cuz sometimes videos
+
+256
+00:04:15,110 --> 00:04:15,120
+this video for it, cuz sometimes videos
+ 
+
+257
+00:04:15,120 --> 00:04:16,949
+this video for it, cuz sometimes videos
+are a bit annoying for things like this.
+
+258
+00:04:16,949 --> 00:04:16,959
+are a bit annoying for things like this.
+ 
+
+259
+00:04:16,959 --> 00:04:18,030
+are a bit annoying for things like this.
+You can actually go over to
+
+260
+00:04:18,030 --> 00:04:18,040
+You can actually go over to
+ 
+
+261
+00:04:18,040 --> 00:04:19,830
+You can actually go over to
+cppreference.com,
+
+262
+00:04:19,830 --> 00:04:19,840
+cppreference.com,
+ 
+
+263
+00:04:19,840 --> 00:04:21,590
+cppreference.com,
+as I've got it open over here, and there
+
+264
+00:04:21,590 --> 00:04:21,600
+as I've got it open over here, and there
+ 
+
+265
+00:04:21,600 --> 00:04:23,710
+as I've got it open over here, and there
+is an uh there's a there's a page on
+
+266
+00:04:23,710 --> 00:04:23,720
+is an uh there's a there's a page on
+ 
+
+267
+00:04:23,720 --> 00:04:25,190
+is an uh there's a there's a page on
+lambda expressions. You can see they
+
+268
+00:04:25,190 --> 00:04:25,200
+lambda expressions. You can see they
+ 
+
+269
+00:04:25,200 --> 00:04:27,590
+lambda expressions. You can see they
+exist in C++ 11, and they've actually
+
+270
+00:04:27,590 --> 00:04:27,600
+exist in C++ 11, and they've actually
+ 
+
+271
+00:04:27,600 --> 00:04:28,990
+exist in C++ 11, and they've actually
+got the syntax of all the things you can
+
+272
+00:04:28,990 --> 00:04:29,000
+got the syntax of all the things you can
+ 
+
+273
+00:04:29,000 --> 00:04:30,310
+got the syntax of all the things you can
+do. And you can see that what it calls
+
+274
+00:04:30,310 --> 00:04:30,320
+do. And you can see that what it calls
+ 
+
+275
+00:04:30,320 --> 00:04:32,550
+do. And you can see that what it calls
+the first part is the captures. And of
+
+276
+00:04:32,550 --> 00:04:32,560
+the first part is the captures. And of
+ 
+
+277
+00:04:32,560 --> 00:04:34,430
+the first part is the captures. And of
+course, it describes everything over
+
+278
+00:04:34,430 --> 00:04:34,440
+course, it describes everything over
+ 
+
+279
+00:04:34,440 --> 00:04:36,270
+course, it describes everything over
+here. If you go to the explanation, you
+
+280
+00:04:36,270 --> 00:04:36,280
+here. If you go to the explanation, you
+ 
+
+281
+00:04:36,280 --> 00:04:37,150
+here. If you go to the explanation, you
+can see the captures are a
+
+282
+00:04:37,150 --> 00:04:37,160
+can see the captures are a
+ 
+
+283
+00:04:37,160 --> 00:04:39,470
+can see the captures are a
+comma-separated list of zero or more
+
+284
+00:04:39,470 --> 00:04:39,480
+comma-separated list of zero or more
+ 
+
+285
+00:04:39,480 --> 00:04:41,990
+comma-separated list of zero or more
+captures. cppreference.com is my
+
+286
+00:04:41,990 --> 00:04:42,000
+captures. cppreference.com is my
+ 
+
+287
+00:04:42,000 --> 00:04:44,270
+captures. cppreference.com is my
+favorite C++ reference website. There
+
+288
+00:04:44,270 --> 00:04:44,280
+favorite C++ reference website. There
+ 
+
+289
+00:04:44,280 --> 00:04:46,110
+favorite C++ reference website. There
+are many others, and you can use all of
+
+290
+00:04:46,110 --> 00:04:46,120
+are many others, and you can use all of
+ 
+
+291
+00:04:46,120 --> 00:04:47,870
+are many others, and you can use all of
+them, really. They're all useful. But
+
+292
+00:04:47,870 --> 00:04:47,880
+them, really. They're all useful. But
+ 
+
+293
+00:04:47,880 --> 00:04:50,150
+them, really. They're all useful. But
+this one's actually quite clear, um
+
+294
+00:04:50,150 --> 00:04:50,160
+this one's actually quite clear, um
+ 
+
+295
+00:04:50,160 --> 00:04:52,270
+this one's actually quite clear, um
+refer to this often, right? I'll leave a
+
+296
+00:04:52,270 --> 00:04:52,280
+refer to this often, right? I'll leave a
+ 
+
+297
+00:04:52,280 --> 00:04:53,350
+refer to this often, right? I'll leave a
+link to the lambda page in the
+
+298
+00:04:53,350 --> 00:04:53,360
+link to the lambda page in the
+ 
+
+299
+00:04:53,360 --> 00:04:54,990
+link to the lambda page in the
+description below, but in general, if
+
+300
+00:04:54,990 --> 00:04:55,000
+description below, but in general, if
+ 
+
+301
+00:04:55,000 --> 00:04:56,270
+description below, but in general, if
+you're not sure about something like
+
+302
+00:04:56,270 --> 00:04:56,280
+you're not sure about something like
+ 
+
+303
+00:04:56,280 --> 00:04:58,030
+you're not sure about something like
+lambdas, oh, I wonder what goes into
+
+304
+00:04:58,030 --> 00:04:58,040
+lambdas, oh, I wonder what goes into
+ 
+
+305
+00:04:58,040 --> 00:05:00,070
+lambdas, oh, I wonder what goes into
+that capture thing or what the possible
+
+306
+00:05:00,070 --> 00:05:00,080
+that capture thing or what the possible
+ 
+
+307
+00:05:00,080 --> 00:05:02,470
+that capture thing or what the possible
+values are, right? If you if you're
+
+308
+00:05:02,470 --> 00:05:02,480
+values are, right? If you if you're
+ 
+
+309
+00:05:02,480 --> 00:05:03,909
+values are, right? If you if you're
+trying to figure out stuff like that,
+
+310
+00:05:03,909 --> 00:05:03,919
+trying to figure out stuff like that,
+ 
+
+311
+00:05:03,919 --> 00:05:05,870
+trying to figure out stuff like that,
+just look it up in the reference. Okay,
+
+312
+00:05:05,870 --> 00:05:05,880
+just look it up in the reference. Okay,
+ 
+
+313
+00:05:05,880 --> 00:05:07,750
+just look it up in the reference. Okay,
+so, inside here, you can see the
+
+314
+00:05:07,750 --> 00:05:07,760
+so, inside here, you can see the
+ 
+
+315
+00:05:07,760 --> 00:05:09,070
+so, inside here, you can see the
+captures we have a comma-separated list
+
+316
+00:05:09,070 --> 00:05:09,080
+captures we have a comma-separated list
+ 
+
+317
+00:05:09,080 --> 00:05:11,230
+captures we have a comma-separated list
+of zero or more captures. So, I'll
+
+318
+00:05:11,230 --> 00:05:11,240
+of zero or more captures. So, I'll
+ 
+
+319
+00:05:11,240 --> 00:05:12,470
+of zero or more captures. So, I'll
+explain what this is in a minute, but
+
+320
+00:05:12,470 --> 00:05:12,480
+explain what this is in a minute, but
+ 
+
+321
+00:05:12,480 --> 00:05:14,510
+explain what this is in a minute, but
+basically, you can see that we can pass
+
+322
+00:05:14,510 --> 00:05:14,520
+basically, you can see that we can pass
+ 
+
+323
+00:05:14,520 --> 00:05:15,670
+basically, you can see that we can pass
+in
+
+324
+00:05:15,670 --> 00:05:15,680
+in
+ 
+
+325
+00:05:15,680 --> 00:05:17,390
+in
+like variables, essentially. A would be
+
+326
+00:05:17,390 --> 00:05:17,400
+like variables, essentially. A would be
+ 
+
+327
+00:05:17,400 --> 00:05:20,030
+like variables, essentially. A would be
+captured by a copy or a value, and B is
+
+328
+00:05:20,030 --> 00:05:20,040
+captured by a copy or a value, and B is
+ 
+
+329
+00:05:20,040 --> 00:05:21,590
+captured by a copy or a value, and B is
+captured by reference. Here, we can pass
+
+330
+00:05:21,590 --> 00:05:21,600
+captured by reference. Here, we can pass
+ 
+
+331
+00:05:21,600 --> 00:05:23,230
+captured by reference. Here, we can pass
+in this. We can pass in just an
+
+332
+00:05:23,230 --> 00:05:23,240
+in this. We can pass in just an
+ 
+
+333
+00:05:23,240 --> 00:05:25,150
+in this. We can pass in just an
+ampersand, which captures everything by
+
+334
+00:05:25,150 --> 00:05:25,160
+ampersand, which captures everything by
+ 
+
+335
+00:05:25,160 --> 00:05:26,950
+ampersand, which captures everything by
+reference. Just an equal sign, which
+
+336
+00:05:26,950 --> 00:05:26,960
+reference. Just an equal sign, which
+ 
+
+337
+00:05:26,960 --> 00:05:29,070
+reference. Just an equal sign, which
+captures everything by value or by copy.
+
+338
+00:05:29,070 --> 00:05:29,080
+captures everything by value or by copy.
+ 
+
+339
+00:05:29,080 --> 00:05:30,630
+captures everything by value or by copy.
+And then that captures nothing. So, what
+
+340
+00:05:30,630 --> 00:05:30,640
+And then that captures nothing. So, what
+ 
+
+341
+00:05:30,640 --> 00:05:32,630
+And then that captures nothing. So, what
+is this whole capturing thing? Well,
+
+342
+00:05:32,630 --> 00:05:32,640
+is this whole capturing thing? Well,
+ 
+
+343
+00:05:32,640 --> 00:05:35,270
+is this whole capturing thing? Well,
+consider this as an example. What if we
+
+344
+00:05:35,270 --> 00:05:35,280
+consider this as an example. What if we
+ 
+
+345
+00:05:35,280 --> 00:05:38,870
+consider this as an example. What if we
+want to put outside variables into the
+
+346
+00:05:38,870 --> 00:05:38,880
+want to put outside variables into the
+ 
+
+347
+00:05:38,880 --> 00:05:40,470
+want to put outside variables into the
+instructions that are inside our lambda
+
+348
+00:05:40,470 --> 00:05:40,480
+instructions that are inside our lambda
+ 
+
+349
+00:05:40,480 --> 00:05:41,590
+instructions that are inside our lambda
+function?
+
+350
+00:05:41,590 --> 00:05:41,600
+function?
+ 
+
+351
+00:05:41,600 --> 00:05:43,190
+function?
+What happens then, right? Because
+
+352
+00:05:43,190 --> 00:05:43,200
+What happens then, right? Because
+ 
+
+353
+00:05:43,200 --> 00:05:44,390
+What happens then, right? Because
+remember, what we're doing is we're
+
+354
+00:05:44,390 --> 00:05:44,400
+remember, what we're doing is we're
+ 
+
+355
+00:05:44,400 --> 00:05:46,190
+remember, what we're doing is we're
+constructing a function that will then
+
+356
+00:05:46,190 --> 00:05:46,200
+constructing a function that will then
+ 
+
+357
+00:05:46,200 --> 00:05:47,950
+constructing a function that will then
+get called later.
+
+358
+00:05:47,950 --> 00:05:47,960
+get called later.
+ 
+
+359
+00:05:47,960 --> 00:05:50,430
+get called later.
+So, if we use variables that are outside
+
+360
+00:05:50,430 --> 00:05:50,440
+So, if we use variables that are outside
+ 
+
+361
+00:05:50,440 --> 00:05:52,510
+So, if we use variables that are outside
+of that lambda, like for example,
+
+362
+00:05:52,510 --> 00:05:52,520
+of that lambda, like for example,
+ 
+
+363
+00:05:52,520 --> 00:05:54,430
+of that lambda, like for example,
+outside of this function. So, maybe I
+
+364
+00:05:54,430 --> 00:05:54,440
+outside of this function. So, maybe I
+ 
+
+365
+00:05:54,440 --> 00:05:57,030
+outside of this function. So, maybe I
+have an int A over here that's equal to
+
+366
+00:05:57,030 --> 00:05:57,040
+have an int A over here that's equal to
+ 
+
+367
+00:05:57,040 --> 00:05:59,990
+have an int A over here that's equal to
+five. What if I use that here? What if
+
+368
+00:05:59,990 --> 00:06:00,000
+five. What if I use that here? What if
+ 
+
+369
+00:06:00,000 --> 00:06:01,750
+five. What if I use that here? What if
+the part where instead of printing value
+
+370
+00:06:01,750 --> 00:06:01,760
+the part where instead of printing value
+ 
+
+371
+00:06:01,760 --> 00:06:03,630
+the part where instead of printing value
+or something, I want to print A? Well,
+
+372
+00:06:03,630 --> 00:06:03,640
+or something, I want to print A? Well,
+ 
+
+373
+00:06:03,640 --> 00:06:04,790
+or something, I want to print A? Well,
+how's that going to work? Because this
+
+374
+00:06:04,790 --> 00:06:04,800
+how's that going to work? Because this
+ 
+
+375
+00:06:04,800 --> 00:06:06,670
+how's that going to work? Because this
+is outside. And obviously, what I'm
+
+376
+00:06:06,670 --> 00:06:06,680
+is outside. And obviously, what I'm
+ 
+
+377
+00:06:06,680 --> 00:06:08,910
+is outside. And obviously, what I'm
+doing is calling this code from over
+
+378
+00:06:08,910 --> 00:06:08,920
+doing is calling this code from over
+ 
+
+379
+00:06:08,920 --> 00:06:11,150
+doing is calling this code from over
+here inside this for each loop. So, how
+
+380
+00:06:11,150 --> 00:06:11,160
+here inside this for each loop. So, how
+ 
+
+381
+00:06:11,160 --> 00:06:13,390
+here inside this for each loop. So, how
+does it have access to A? Well, there's
+
+382
+00:06:13,390 --> 00:06:13,400
+does it have access to A? Well, there's
+ 
+
+383
+00:06:13,400 --> 00:06:15,950
+does it have access to A? Well, there's
+two ways that we can pass this A
+
+384
+00:06:15,950 --> 00:06:15,960
+two ways that we can pass this A
+ 
+
+385
+00:06:15,960 --> 00:06:17,510
+two ways that we can pass this A
+variable around. And this is the exact
+
+386
+00:06:17,510 --> 00:06:17,520
+variable around. And this is the exact
+ 
+
+387
+00:06:17,520 --> 00:06:19,630
+variable around. And this is the exact
+same as if we had made our own function.
+
+388
+00:06:19,630 --> 00:06:19,640
+same as if we had made our own function.
+ 
+
+389
+00:06:19,640 --> 00:06:22,110
+same as if we had made our own function.
+We can pass it by value, or we can pass
+
+390
+00:06:22,110 --> 00:06:22,120
+We can pass it by value, or we can pass
+ 
+
+391
+00:06:22,120 --> 00:06:24,510
+We can pass it by value, or we can pass
+it by reference. And that is what that
+
+392
+00:06:24,510 --> 00:06:24,520
+it by reference. And that is what that
+ 
+
+393
+00:06:24,520 --> 00:06:26,630
+it by reference. And that is what that
+capture group is for, right? That first
+
+394
+00:06:26,630 --> 00:06:26,640
+capture group is for, right? That first
+ 
+
+395
+00:06:26,640 --> 00:06:29,350
+capture group is for, right? That first
+that square brackets, that lets us say
+
+396
+00:06:29,350 --> 00:06:29,360
+that square brackets, that lets us say
+ 
+
+397
+00:06:29,360 --> 00:06:31,510
+that square brackets, that lets us say
+how we want to pass variables in. Now,
+
+398
+00:06:31,510 --> 00:06:31,520
+how we want to pass variables in. Now,
+ 
+
+399
+00:06:31,520 --> 00:06:32,950
+how we want to pass variables in. Now,
+in this case, we're not passing anything
+
+400
+00:06:32,950 --> 00:06:32,960
+in this case, we're not passing anything
+ 
+
+401
+00:06:32,960 --> 00:06:34,230
+in this case, we're not passing anything
+in, which is why we're getting an error
+
+402
+00:06:34,230 --> 00:06:34,240
+in, which is why we're getting an error
+ 
+
+403
+00:06:34,240 --> 00:06:35,750
+in, which is why we're getting an error
+here because well, it's an enclosing
+
+404
+00:06:35,750 --> 00:06:35,760
+here because well, it's an enclosing
+ 
+
+405
+00:06:35,760 --> 00:06:37,710
+here because well, it's an enclosing
+function, and we can't pass in A. But
+
+406
+00:06:37,710 --> 00:06:37,720
+function, and we can't pass in A. But
+ 
+
+407
+00:06:37,720 --> 00:06:39,950
+function, and we can't pass in A. But
+what we can do is we can either write
+
+408
+00:06:39,950 --> 00:06:39,960
+what we can do is we can either write
+ 
+
+409
+00:06:39,960 --> 00:06:42,870
+what we can do is we can either write
+equals, which means pass everything in
+
+410
+00:06:42,870 --> 00:06:42,880
+equals, which means pass everything in
+ 
+
+411
+00:06:42,880 --> 00:06:45,670
+equals, which means pass everything in
+by value, or we can write an ampersand
+
+412
+00:06:45,670 --> 00:06:45,680
+by value, or we can write an ampersand
+ 
+
+413
+00:06:45,680 --> 00:06:47,830
+by value, or we can write an ampersand
+like this, which means pass everything
+
+414
+00:06:47,830 --> 00:06:47,840
+like this, which means pass everything
+ 
+
+415
+00:06:47,840 --> 00:06:49,390
+like this, which means pass everything
+in by reference.
+
+416
+00:06:49,390 --> 00:06:49,400
+in by reference.
+ 
+
+417
+00:06:49,400 --> 00:06:51,630
+in by reference.
+Or we can actually write individual
+
+418
+00:06:51,630 --> 00:06:51,640
+Or we can actually write individual
+ 
+
+419
+00:06:51,640 --> 00:06:53,510
+Or we can actually write individual
+variables like this. So, I want to pass
+
+420
+00:06:53,510 --> 00:06:53,520
+variables like this. So, I want to pass
+ 
+
+421
+00:06:53,520 --> 00:06:56,630
+variables like this. So, I want to pass
+A by value, or with an ampersand, A by
+
+422
+00:06:56,630 --> 00:06:56,640
+A by value, or with an ampersand, A by
+ 
+
+423
+00:06:56,640 --> 00:06:57,990
+A by value, or with an ampersand, A by
+reference. Now, in this case, we
+
+424
+00:06:57,990 --> 00:06:58,000
+reference. Now, in this case, we
+ 
+
+425
+00:06:58,000 --> 00:06:59,230
+reference. Now, in this case, we
+actually get an error when we try and
+
+426
+00:06:59,230 --> 00:06:59,240
+actually get an error when we try and
+ 
+
+427
+00:06:59,240 --> 00:07:00,590
+actually get an error when we try and
+pass something in. Well, actually, if we
+
+428
+00:07:00,590 --> 00:07:00,600
+pass something in. Well, actually, if we
+ 
+
+429
+00:07:00,600 --> 00:07:02,510
+pass something in. Well, actually, if we
+capture anything, whether it be by value
+
+430
+00:07:02,510 --> 00:07:02,520
+capture anything, whether it be by value
+ 
+
+431
+00:07:02,520 --> 00:07:04,310
+capture anything, whether it be by value
+or by reference, we're going to get an
+
+432
+00:07:04,310 --> 00:07:04,320
+or by reference, we're going to get an
+ 
+
+433
+00:07:04,320 --> 00:07:05,790
+or by reference, we're going to get an
+error over here in for each, and this is
+
+434
+00:07:05,790 --> 00:07:05,800
+error over here in for each, and this is
+ 
+
+435
+00:07:05,800 --> 00:07:07,470
+error over here in for each, and this is
+just in this specific example, because
+
+436
+00:07:07,470 --> 00:07:07,480
+just in this specific example, because
+ 
+
+437
+00:07:07,480 --> 00:07:09,550
+just in this specific example, because
+we're just using a raw function pointer.
+
+438
+00:07:09,550 --> 00:07:09,560
+we're just using a raw function pointer.
+ 
+
+439
+00:07:09,560 --> 00:07:11,790
+we're just using a raw function pointer.
+If we convert this to an STD function
+
+440
+00:07:11,790 --> 00:07:11,800
+If we convert this to an STD function
+ 
+
+441
+00:07:11,800 --> 00:07:13,630
+If we convert this to an STD function
+like we will right now,
+
+442
+00:07:13,630 --> 00:07:13,640
+like we will right now,
+ 
+
+443
+00:07:13,640 --> 00:07:14,830
+like we will right now,
+so this is going to be, of course,
+
+444
+00:07:14,830 --> 00:07:14,840
+so this is going to be, of course,
+ 
+
+445
+00:07:14,840 --> 00:07:16,190
+so this is going to be, of course,
+returning void, taking in one int
+
+446
+00:07:16,190 --> 00:07:16,200
+returning void, taking in one int
+ 
+
+447
+00:07:16,200 --> 00:07:18,390
+returning void, taking in one int
+parameter, and we'll call it func. And
+
+448
+00:07:18,390 --> 00:07:18,400
+parameter, and we'll call it func. And
+ 
+
+449
+00:07:18,400 --> 00:07:20,070
+parameter, and we'll call it func. And
+I'll include functional so that we have
+
+450
+00:07:20,070 --> 00:07:20,080
+I'll include functional so that we have
+ 
+
+451
+00:07:20,080 --> 00:07:21,950
+I'll include functional so that we have
+access to that.
+
+452
+00:07:21,950 --> 00:07:21,960
+access to that.
+ 
+
+453
+00:07:21,960 --> 00:07:23,590
+access to that.
+Then that's going to go away. Okay, so
+
+454
+00:07:23,590 --> 00:07:23,600
+Then that's going to go away. Okay, so
+ 
+
+455
+00:07:23,600 --> 00:07:24,790
+Then that's going to go away. Okay, so
+what we're doing here is we're passing
+
+456
+00:07:24,790 --> 00:07:24,800
+what we're doing here is we're passing
+ 
+
+457
+00:07:24,800 --> 00:07:26,790
+what we're doing here is we're passing
+everything in by value, which means it's
+
+458
+00:07:26,790 --> 00:07:26,800
+everything in by value, which means it's
+ 
+
+459
+00:07:26,800 --> 00:07:28,870
+everything in by value, which means it's
+just going to copy the value and pass it
+
+460
+00:07:28,870 --> 00:07:28,880
+just going to copy the value and pass it
+ 
+
+461
+00:07:28,880 --> 00:07:30,870
+just going to copy the value and pass it
+in. But you can also use an ampersand if
+
+462
+00:07:30,870 --> 00:07:30,880
+in. But you can also use an ampersand if
+ 
+
+463
+00:07:30,880 --> 00:07:31,870
+in. But you can also use an ampersand if
+you want to capture something by
+
+464
+00:07:31,870 --> 00:07:31,880
+you want to capture something by
+ 
+
+465
+00:07:31,880 --> 00:07:33,750
+you want to capture something by
+reference. So, maybe if it's like a
+
+466
+00:07:33,750 --> 00:07:33,760
+reference. So, maybe if it's like a
+ 
+
+467
+00:07:33,760 --> 00:07:35,430
+reference. So, maybe if it's like a
+class or a struct that you don't want to
+
+468
+00:07:35,430 --> 00:07:35,440
+class or a struct that you don't want to
+ 
+
+469
+00:07:35,440 --> 00:07:37,310
+class or a struct that you don't want to
+copy, or this lambda is actually
+
+470
+00:07:37,310 --> 00:07:37,320
+copy, or this lambda is actually
+ 
+
+471
+00:07:37,320 --> 00:07:39,870
+copy, or this lambda is actually
+intended to modify the code. If you're
+
+472
+00:07:39,870 --> 00:07:39,880
+intended to modify the code. If you're
+ 
+
+473
+00:07:39,880 --> 00:07:42,110
+intended to modify the code. If you're
+not sure or to modify that object or
+
+474
+00:07:42,110 --> 00:07:42,120
+not sure or to modify that object or
+ 
+
+475
+00:07:42,120 --> 00:07:44,230
+not sure or to modify that object or
+variable, if you're not sure what I mean
+
+476
+00:07:44,230 --> 00:07:44,240
+variable, if you're not sure what I mean
+ 
+
+477
+00:07:44,240 --> 00:07:45,910
+variable, if you're not sure what I mean
+by passing by reference, check out both
+
+478
+00:07:45,910 --> 00:07:45,920
+by passing by reference, check out both
+ 
+
+479
+00:07:45,920 --> 00:07:47,390
+by passing by reference, check out both
+my video on functions. I think covers a
+
+480
+00:07:47,390 --> 00:07:47,400
+my video on functions. I think covers a
+ 
+
+481
+00:07:47,400 --> 00:07:48,950
+my video on functions. I think covers a
+little bit of that, but the references
+
+482
+00:07:48,950 --> 00:07:48,960
+little bit of that, but the references
+ 
+
+483
+00:07:48,960 --> 00:07:50,710
+little bit of that, but the references
+video and the pointers video is also
+
+484
+00:07:50,710 --> 00:07:50,720
+video and the pointers video is also
+ 
+
+485
+00:07:50,720 --> 00:07:52,550
+video and the pointers video is also
+related to that, all that stuff. If we
+
+486
+00:07:52,550 --> 00:07:52,560
+related to that, all that stuff. If we
+ 
+
+487
+00:07:52,560 --> 00:07:54,750
+related to that, all that stuff. If we
+go back to C++ reference, we you can
+
+488
+00:07:54,750 --> 00:07:54,760
+go back to C++ reference, we you can
+ 
+
+489
+00:07:54,760 --> 00:07:56,350
+go back to C++ reference, we you can
+also see that we have the next step,
+
+490
+00:07:56,350 --> 00:07:56,360
+also see that we have the next step,
+ 
+
+491
+00:07:56,360 --> 00:07:58,070
+also see that we have the next step,
+which is the parameters, right? So,
+
+492
+00:07:58,070 --> 00:07:58,080
+which is the parameters, right? So,
+ 
+
+493
+00:07:58,080 --> 00:07:58,950
+which is the parameters, right? So,
+those are the parameters that our
+
+494
+00:07:58,950 --> 00:07:58,960
+those are the parameters that our
+ 
+
+495
+00:07:58,960 --> 00:08:00,470
+those are the parameters that our
+function takes in. We have an optional
+
+496
+00:08:00,470 --> 00:08:00,480
+function takes in. We have an optional
+ 
+
+497
+00:08:00,480 --> 00:08:02,790
+function takes in. We have an optional
+specifier, such as mutable, which allows
+
+498
+00:08:02,790 --> 00:08:02,800
+specifier, such as mutable, which allows
+ 
+
+499
+00:08:02,800 --> 00:08:04,310
+specifier, such as mutable, which allows
+the body to modify parameters captured
+
+500
+00:08:04,310 --> 00:08:04,320
+the body to modify parameters captured
+ 
+
+501
+00:08:04,320 --> 00:08:06,270
+the body to modify parameters captured
+by copy. That's another thing that's
+
+502
+00:08:06,270 --> 00:08:06,280
+by copy. That's another thing that's
+ 
+
+503
+00:08:06,280 --> 00:08:08,230
+by copy. That's another thing that's
+kind of useful. You can see here that
+
+504
+00:08:08,230 --> 00:08:08,240
+kind of useful. You can see here that
+ 
+
+505
+00:08:08,240 --> 00:08:10,150
+kind of useful. You can see here that
+we're copying the A variable, but if we
+
+506
+00:08:10,150 --> 00:08:10,160
+we're copying the A variable, but if we
+ 
+
+507
+00:08:10,160 --> 00:08:12,030
+we're copying the A variable, but if we
+try to assign A to something like that,
+
+508
+00:08:12,030 --> 00:08:12,040
+try to assign A to something like that,
+ 
+
+509
+00:08:12,040 --> 00:08:13,390
+try to assign A to something like that,
+it's not going to let us, which is a bit
+
+510
+00:08:13,390 --> 00:08:13,400
+it's not going to let us, which is a bit
+ 
+
+511
+00:08:13,400 --> 00:08:15,390
+it's not going to let us, which is a bit
+weird because we're just passing it by
+
+512
+00:08:15,390 --> 00:08:15,400
+weird because we're just passing it by
+ 
+
+513
+00:08:15,400 --> 00:08:16,830
+weird because we're just passing it by
+value. And of course, if we were passing
+
+514
+00:08:16,830 --> 00:08:16,840
+value. And of course, if we were passing
+ 
+
+515
+00:08:16,840 --> 00:08:18,110
+value. And of course, if we were passing
+something into a normal function by
+
+516
+00:08:18,110 --> 00:08:18,120
+something into a normal function by
+ 
+
+517
+00:08:18,120 --> 00:08:20,670
+something into a normal function by
+value, of course we can we can reassign
+
+518
+00:08:20,670 --> 00:08:20,680
+value, of course we can we can reassign
+ 
+
+519
+00:08:20,680 --> 00:08:22,390
+value, of course we can we can reassign
+it and do whatever we want. And to fix
+
+520
+00:08:22,390 --> 00:08:22,400
+it and do whatever we want. And to fix
+ 
+
+521
+00:08:22,400 --> 00:08:23,550
+it and do whatever we want. And to fix
+that, you basically just add the word
+
+522
+00:08:23,550 --> 00:08:23,560
+that, you basically just add the word
+ 
+
+523
+00:08:23,560 --> 00:08:26,150
+that, you basically just add the word
+mutable here. It's a bit weird, but hey,
+
+524
+00:08:26,150 --> 00:08:26,160
+mutable here. It's a bit weird, but hey,
+ 
+
+525
+00:08:26,160 --> 00:08:27,470
+mutable here. It's a bit weird, but hey,
+stuff like that you probably wouldn't
+
+526
+00:08:27,470 --> 00:08:27,480
+stuff like that you probably wouldn't
+ 
+
+527
+00:08:27,480 --> 00:08:29,470
+stuff like that you probably wouldn't
+even realize exists if you don't look at
+
+528
+00:08:29,470 --> 00:08:29,480
+even realize exists if you don't look at
+ 
+
+529
+00:08:29,480 --> 00:08:31,430
+even realize exists if you don't look at
+things like the reference and see what's
+
+530
+00:08:31,430 --> 00:08:31,440
+things like the reference and see what's
+ 
+
+531
+00:08:31,440 --> 00:08:33,469
+things like the reference and see what's
+possible because you can see that over
+
+532
+00:08:33,469 --> 00:08:33,479
+possible because you can see that over
+ 
+
+533
+00:08:33,479 --> 00:08:35,909
+possible because you can see that over
+here, we have our kind of parameters and
+
+534
+00:08:35,909 --> 00:08:35,919
+here, we have our kind of parameters and
+ 
+
+535
+00:08:35,919 --> 00:08:38,230
+here, we have our kind of parameters and
+whatever, which is one of them is that
+
+536
+00:08:38,230 --> 00:08:38,240
+whatever, which is one of them is that
+ 
+
+537
+00:08:38,240 --> 00:08:40,310
+whatever, which is one of them is that
+that beautiful optional kind of sequence
+
+538
+00:08:40,310 --> 00:08:40,320
+that beautiful optional kind of sequence
+ 
+
+539
+00:08:40,320 --> 00:08:41,909
+that beautiful optional kind of sequence
+of specifiers. Const expression is
+
+540
+00:08:41,909 --> 00:08:41,919
+of specifiers. Const expression is
+ 
+
+541
+00:08:41,919 --> 00:08:44,630
+of specifiers. Const expression is
+another one as well. Anyway, that's
+
+542
+00:08:44,630 --> 00:08:44,640
+another one as well. Anyway, that's
+ 
+
+543
+00:08:44,640 --> 00:08:46,070
+another one as well. Anyway, that's
+essentially how lambdas work. It's
+
+544
+00:08:46,070 --> 00:08:46,080
+essentially how lambdas work. It's
+ 
+
+545
+00:08:46,080 --> 00:08:47,870
+essentially how lambdas work. It's
+pretty simple. I don't want to drag this
+
+546
+00:08:47,870 --> 00:08:47,880
+pretty simple. I don't want to drag this
+ 
+
+547
+00:08:47,880 --> 00:08:49,470
+pretty simple. I don't want to drag this
+video on because
+
+548
+00:08:49,470 --> 00:08:49,480
+video on because
+ 
+
+549
+00:08:49,480 --> 00:08:51,430
+video on because
+it it makes sense, I hope, to most
+
+550
+00:08:51,430 --> 00:08:51,440
+it it makes sense, I hope, to most
+ 
+
+551
+00:08:51,440 --> 00:08:53,670
+it it makes sense, I hope, to most
+people. It is fairly simple. The usages
+
+552
+00:08:53,670 --> 00:08:53,680
+people. It is fairly simple. The usages
+ 
+
+553
+00:08:53,680 --> 00:08:55,390
+people. It is fairly simple. The usages
+of it are the most important part. We're
+
+554
+00:08:55,390 --> 00:08:55,400
+of it are the most important part. We're
+ 
+
+555
+00:08:55,400 --> 00:08:57,510
+of it are the most important part. We're
+going to look at one use for why you
+
+556
+00:08:57,510 --> 00:08:57,520
+going to look at one use for why you
+ 
+
+557
+00:08:57,520 --> 00:08:59,270
+going to look at one use for why you
+might want to use a lambda in something
+
+558
+00:08:59,270 --> 00:08:59,280
+might want to use a lambda in something
+ 
+
+559
+00:08:59,280 --> 00:09:01,550
+might want to use a lambda in something
+called STD find if, which is part of the
+
+560
+00:09:01,550 --> 00:09:01,560
+called STD find if, which is part of the
+ 
+
+561
+00:09:01,560 --> 00:09:02,990
+called STD find if, which is part of the
+algorithm header file, and it's
+
+562
+00:09:02,990 --> 00:09:03,000
+algorithm header file, and it's
+ 
+
+563
+00:09:03,000 --> 00:09:04,710
+algorithm header file, and it's
+basically something that we can use to
+
+564
+00:09:04,710 --> 00:09:04,720
+basically something that we can use to
+ 
+
+565
+00:09:04,720 --> 00:09:08,110
+basically something that we can use to
+find a value inside of some kind of
+
+566
+00:09:08,110 --> 00:09:08,120
+find a value inside of some kind of
+ 
+
+567
+00:09:08,120 --> 00:09:10,270
+find a value inside of some kind of
+iterator. So, over here we do have this
+
+568
+00:09:10,270 --> 00:09:10,280
+iterator. So, over here we do have this
+ 
+
+569
+00:09:10,280 --> 00:09:12,550
+iterator. So, over here we do have this
+vector of values. I'm I've included
+
+570
+00:09:12,550 --> 00:09:12,560
+vector of values. I'm I've included
+ 
+
+571
+00:09:12,560 --> 00:09:13,990
+vector of values. I'm I've included
+algorithm over here at the top, and then
+
+572
+00:09:13,990 --> 00:09:14,000
+algorithm over here at the top, and then
+ 
+
+573
+00:09:14,000 --> 00:09:16,550
+algorithm over here at the top, and then
+I'm going to type in STD find if. So,
+
+574
+00:09:16,550 --> 00:09:16,560
+I'm going to type in STD find if. So,
+ 
+
+575
+00:09:16,560 --> 00:09:18,390
+I'm going to type in STD find if. So,
+this function's basically just going to
+
+576
+00:09:18,390 --> 00:09:18,400
+this function's basically just going to
+ 
+
+577
+00:09:18,400 --> 00:09:19,790
+this function's basically just going to
+accept some kind of iterator, so we'll
+
+578
+00:09:19,790 --> 00:09:19,800
+accept some kind of iterator, so we'll
+ 
+
+579
+00:09:19,800 --> 00:09:21,910
+accept some kind of iterator, so we'll
+give it values begin and values end. So,
+
+580
+00:09:21,910 --> 00:09:21,920
+give it values begin and values end. So,
+ 
+
+581
+00:09:21,920 --> 00:09:24,630
+give it values begin and values end. So,
+between the beginning and end of this
+
+582
+00:09:24,630 --> 00:09:24,640
+between the beginning and end of this
+ 
+
+583
+00:09:24,640 --> 00:09:27,670
+between the beginning and end of this
+vector of values that we have here, we
+
+584
+00:09:27,670 --> 00:09:27,680
+vector of values that we have here, we
+ 
+
+585
+00:09:27,680 --> 00:09:30,190
+vector of values that we have here, we
+can basically say, "Hey, return for me
+
+586
+00:09:30,190 --> 00:09:30,200
+can basically say, "Hey, return for me
+ 
+
+587
+00:09:30,200 --> 00:09:32,990
+can basically say, "Hey, return for me
+an iterator that is the first element
+
+588
+00:09:32,990 --> 00:09:33,000
+an iterator that is the first element
+ 
+
+589
+00:09:33,000 --> 00:09:35,350
+an iterator that is the first element
+that matches whatever kind of predicate
+
+590
+00:09:35,350 --> 00:09:35,360
+that matches whatever kind of predicate
+ 
+
+591
+00:09:35,360 --> 00:09:37,350
+that matches whatever kind of predicate
+I pass in." So, in other words, what we
+
+592
+00:09:37,350 --> 00:09:37,360
+I pass in." So, in other words, what we
+ 
+
+593
+00:09:37,360 --> 00:09:39,550
+I pass in." So, in other words, what we
+can do here is write a function that's
+
+594
+00:09:39,550 --> 00:09:39,560
+can do here is write a function that's
+ 
+
+595
+00:09:39,560 --> 00:09:40,830
+can do here is write a function that's
+going to take in This is a vector of
+
+596
+00:09:40,830 --> 00:09:40,840
+going to take in This is a vector of
+ 
+
+597
+00:09:40,840 --> 00:09:43,550
+going to take in This is a vector of
+integers, so we'll take an int value.
+
+598
+00:09:43,550 --> 00:09:43,560
+integers, so we'll take an int value.
+ 
+
+599
+00:09:43,560 --> 00:09:44,990
+integers, so we'll take an int value.
+And then it has to return a boolean,
+
+600
+00:09:44,990 --> 00:09:45,000
+And then it has to return a boolean,
+ 
+
+601
+00:09:45,000 --> 00:09:46,510
+And then it has to return a boolean,
+which basically says whether or not it
+
+602
+00:09:46,510 --> 00:09:46,520
+which basically says whether or not it
+ 
+
+603
+00:09:46,520 --> 00:09:47,910
+which basically says whether or not it
+fulfills our condition. So, we'll say
+
+604
+00:09:47,910 --> 00:09:47,920
+fulfills our condition. So, we'll say
+ 
+
+605
+00:09:47,920 --> 00:09:51,030
+fulfills our condition. So, we'll say
+maybe value is greater than three or
+
+606
+00:09:51,030 --> 00:09:51,040
+maybe value is greater than three or
+ 
+
+607
+00:09:51,040 --> 00:09:52,590
+maybe value is greater than three or
+something like that. Let's just return
+
+608
+00:09:52,590 --> 00:09:52,600
+something like that. Let's just return
+ 
+
+609
+00:09:52,600 --> 00:09:53,990
+something like that. Let's just return
+that. So, return value greater than
+
+610
+00:09:53,990 --> 00:09:54,000
+that. So, return value greater than
+ 
+
+611
+00:09:54,000 --> 00:09:56,310
+that. So, return value greater than
+three. So, it's going to look through
+
+612
+00:09:56,310 --> 00:09:56,320
+three. So, it's going to look through
+ 
+
+613
+00:09:56,320 --> 00:09:58,670
+three. So, it's going to look through
+this vector for numbers for integers
+
+614
+00:09:58,670 --> 00:09:58,680
+this vector for numbers for integers
+ 
+
+615
+00:09:58,680 --> 00:10:00,910
+this vector for numbers for integers
+that are larger than three and return to
+
+616
+00:10:00,910 --> 00:10:00,920
+that are larger than three and return to
+ 
+
+617
+00:10:00,920 --> 00:10:03,270
+that are larger than three and return to
+us an iterator of that, which will
+
+618
+00:10:03,270 --> 00:10:03,280
+us an iterator of that, which will
+ 
+
+619
+00:10:03,280 --> 00:10:04,990
+us an iterator of that, which will
+essentially be just the first element.
+
+620
+00:10:04,990 --> 00:10:05,000
+essentially be just the first element.
+ 
+
+621
+00:10:05,000 --> 00:10:07,110
+essentially be just the first element.
+So, what it should do, hopefully, is
+
+622
+00:10:07,110 --> 00:10:07,120
+So, what it should do, hopefully, is
+ 
+
+623
+00:10:07,120 --> 00:10:09,430
+So, what it should do, hopefully, is
+return five for us. So, if we assign
+
+624
+00:10:09,430 --> 00:10:09,440
+return five for us. So, if we assign
+ 
+
+625
+00:10:09,440 --> 00:10:12,950
+return five for us. So, if we assign
+this, auto iterator equals std::find_if,
+
+626
+00:10:12,950 --> 00:10:12,960
+this, auto iterator equals std::find_if,
+ 
+
+627
+00:10:12,960 --> 00:10:15,470
+this, auto iterator equals std::find_if,
+um and then we'll print out
+
+628
+00:10:15,470 --> 00:10:15,480
+um and then we'll print out
+ 
+
+629
+00:10:15,480 --> 00:10:16,670
+um and then we'll print out
+we'll dereference that iterator and
+
+630
+00:10:16,670 --> 00:10:16,680
+we'll dereference that iterator and
+ 
+
+631
+00:10:16,680 --> 00:10:18,190
+we'll dereference that iterator and
+print it out, we should get the value
+
+632
+00:10:18,190 --> 00:10:18,200
+print it out, we should get the value
+ 
+
+633
+00:10:18,200 --> 00:10:20,470
+print it out, we should get the value
+five printing. Why? Because we've
+
+634
+00:10:20,470 --> 00:10:20,480
+five printing. Why? Because we've
+ 
+
+635
+00:10:20,480 --> 00:10:22,150
+five printing. Why? Because we've
+specified that we want a value greater
+
+636
+00:10:22,150 --> 00:10:22,160
+specified that we want a value greater
+ 
+
+637
+00:10:22,160 --> 00:10:24,390
+specified that we want a value greater
+than three using a lambda,
+
+638
+00:10:24,390 --> 00:10:24,400
+than three using a lambda,
+ 
+
+639
+00:10:24,400 --> 00:10:26,390
+than three using a lambda,
+and five happens to be the first number
+
+640
+00:10:26,390 --> 00:10:26,400
+and five happens to be the first number
+ 
+
+641
+00:10:26,400 --> 00:10:28,350
+and five happens to be the first number
+that is greater than three inside this
+
+642
+00:10:28,350 --> 00:10:28,360
+that is greater than three inside this
+ 
+
+643
+00:10:28,360 --> 00:10:30,430
+that is greater than three inside this
+list of values that we have. So, if I
+
+644
+00:10:30,430 --> 00:10:30,440
+list of values that we have. So, if I
+ 
+
+645
+00:10:30,440 --> 00:10:32,910
+list of values that we have. So, if I
+just kind of put a breakpoint somewhere
+
+646
+00:10:32,910 --> 00:10:32,920
+just kind of put a breakpoint somewhere
+ 
+
+647
+00:10:32,920 --> 00:10:34,990
+just kind of put a breakpoint somewhere
+here and run my code, you'll see that we
+
+648
+00:10:34,990 --> 00:10:35,000
+here and run my code, you'll see that we
+ 
+
+649
+00:10:35,000 --> 00:10:36,870
+here and run my code, you'll see that we
+get the value five printing as we
+
+650
+00:10:36,870 --> 00:10:36,880
+get the value five printing as we
+ 
+
+651
+00:10:36,880 --> 00:10:38,950
+get the value five printing as we
+expected. And we've managed to do that
+
+652
+00:10:38,950 --> 00:10:38,960
+expected. And we've managed to do that
+ 
+
+653
+00:10:38,960 --> 00:10:40,950
+expected. And we've managed to do that
+fairly easily by just specifying a nice
+
+654
+00:10:40,950 --> 00:10:40,960
+fairly easily by just specifying a nice
+ 
+
+655
+00:10:40,960 --> 00:10:42,870
+fairly easily by just specifying a nice
+little quick function that we want this
+
+656
+00:10:42,870 --> 00:10:42,880
+little quick function that we want this
+ 
+
+657
+00:10:42,880 --> 00:10:45,350
+little quick function that we want this
+code this code to call. So, what this is
+
+658
+00:10:45,350 --> 00:10:45,360
+code this code to call. So, what this is
+ 
+
+659
+00:10:45,360 --> 00:10:47,150
+code this code to call. So, what this is
+going to do is loop through our list,
+
+660
+00:10:47,150 --> 00:10:47,160
+going to do is loop through our list,
+ 
+
+661
+00:10:47,160 --> 00:10:48,630
+going to do is loop through our list,
+kind of like what I've got here in for
+
+662
+00:10:48,630 --> 00:10:48,640
+kind of like what I've got here in for
+ 
+
+663
+00:10:48,640 --> 00:10:50,670
+kind of like what I've got here in for
+each, and it's as if we just added a
+
+664
+00:10:50,670 --> 00:10:50,680
+each, and it's as if we just added a
+ 
+
+665
+00:10:50,680 --> 00:10:53,910
+each, and it's as if we just added a
+little if value greater than five, then
+
+666
+00:10:53,910 --> 00:10:53,920
+little if value greater than five, then
+ 
+
+667
+00:10:53,920 --> 00:10:56,270
+little if value greater than five, then
+return kind of that value. That's
+
+668
+00:10:56,270 --> 00:10:56,280
+return kind of that value. That's
+ 
+
+669
+00:10:56,280 --> 00:10:58,230
+return kind of that value. That's
+basically what this is doing for us, but
+
+670
+00:10:58,230 --> 00:10:58,240
+basically what this is doing for us, but
+ 
+
+671
+00:10:58,240 --> 00:11:00,390
+basically what this is doing for us, but
+we've we've we're able to specify this
+
+672
+00:11:00,390 --> 00:11:00,400
+we've we've we're able to specify this
+ 
+
+673
+00:11:00,400 --> 00:11:02,990
+we've we've we're able to specify this
+if statement condition, this boolean, by
+
+674
+00:11:02,990 --> 00:11:03,000
+if statement condition, this boolean, by
+ 
+
+675
+00:11:03,000 --> 00:11:04,350
+if statement condition, this boolean, by
+just using a lambda or the quick like
+
+676
+00:11:04,350 --> 00:11:04,360
+just using a lambda or the quick like
+ 
+
+677
+00:11:04,360 --> 00:11:05,950
+just using a lambda or the quick like
+that. Anyway, I hope you guys enjoyed
+
+678
+00:11:05,950 --> 00:11:05,960
+that. Anyway, I hope you guys enjoyed
+ 
+
+679
+00:11:05,960 --> 00:11:07,510
+that. Anyway, I hope you guys enjoyed
+this video. If you did, you can hit the
+
+680
+00:11:07,510 --> 00:11:07,520
+this video. If you did, you can hit the
+ 
+
+681
+00:11:07,520 --> 00:11:08,990
+this video. If you did, you can hit the
+like button. That's pretty much all
+
+682
+00:11:08,990 --> 00:11:09,000
+like button. That's pretty much all
+ 
+
+683
+00:11:09,000 --> 00:11:11,230
+like button. That's pretty much all
+there is to lambdas. Thank you huge
+
+684
+00:11:11,230 --> 00:11:11,240
+there is to lambdas. Thank you huge
+ 
+
+685
+00:11:11,240 --> 00:11:12,750
+there is to lambdas. Thank you huge
+thank you as always to all of my Patreon
+
+686
+00:11:12,750 --> 00:11:12,760
+thank you as always to all of my Patreon
+ 
+
+687
+00:11:12,760 --> 00:11:13,990
+thank you as always to all of my Patreon
+supporters. You can head on over to
+
+688
+00:11:13,990 --> 00:11:14,000
+supporters. You can head on over to
+ 
+
+689
+00:11:14,000 --> 00:11:15,750
+supporters. You can head on over to
+patreon.com/thechannel
+
+690
+00:11:15,750 --> 00:11:15,760
+patreon.com/thechannel
+ 
+
+691
+00:11:15,760 --> 00:11:17,030
+patreon.com/thechannel
+and help support all the videos that I
+
+692
+00:11:17,030 --> 00:11:17,040
+and help support all the videos that I
+ 
+
+693
+00:11:17,040 --> 00:11:18,790
+and help support all the videos that I
+make here on my channel.
+
+694
+00:11:18,790 --> 00:11:18,800
+make here on my channel.
+ 
+
+695
+00:11:18,800 --> 00:11:20,950
+make here on my channel.
+Next time, I don't even know what we're
+
+696
+00:11:20,950 --> 00:11:20,960
+Next time, I don't even know what we're
+ 
+
+697
+00:11:20,960 --> 00:11:22,350
+Next time, I don't even know what we're
+going to what we're going to cover next
+
+698
+00:11:22,350 --> 00:11:22,360
+going to what we're going to cover next
+ 
+
+699
+00:11:22,360 --> 00:11:23,710
+going to what we're going to cover next
+time, to be honest. Probably we haven't
+
+700
+00:11:23,710 --> 00:11:23,720
+time, to be honest. Probably we haven't
+ 
+
+701
+00:11:23,720 --> 00:11:25,630
+time, to be honest. Probably we haven't
+even covered standard function yet, but
+
+702
+00:11:25,630 --> 00:11:25,640
+even covered standard function yet, but
+ 
+
+703
+00:11:25,640 --> 00:11:27,110
+even covered standard function yet, but
+I feel like these function pointers are
+
+704
+00:11:27,110 --> 00:11:27,120
+I feel like these function pointers are
+ 
+
+705
+00:11:27,120 --> 00:11:29,150
+I feel like these function pointers are
+just going to drag on for a while, and I
+
+706
+00:11:29,150 --> 00:11:29,160
+just going to drag on for a while, and I
+ 
+
+707
+00:11:29,160 --> 00:11:30,950
+just going to drag on for a while, and I
+think you guys all understand them. If
+
+708
+00:11:30,950 --> 00:11:30,960
+think you guys all understand them. If
+ 
+
+709
+00:11:30,960 --> 00:11:32,270
+think you guys all understand them. If
+you don't, definitely leave a comment
+
+710
+00:11:32,270 --> 00:11:32,280
+you don't, definitely leave a comment
+ 
+
+711
+00:11:32,280 --> 00:11:33,350
+you don't, definitely leave a comment
+below.
+
+712
+00:11:33,350 --> 00:11:33,360
+below.
+ 
+
+713
+00:11:33,360 --> 00:11:34,550
+below.
+But anyway,
+
+714
+00:11:34,550 --> 00:11:34,560
+But anyway,
+ 
+
+715
+00:11:34,560 --> 00:11:38,320
+But anyway,
+I will see you guys next time. Goodbye.
+

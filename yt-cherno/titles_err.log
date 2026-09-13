@@ -1,0 +1,4 @@
+WARNING: Your yt-dlp version (2026.02.04) is older than 90 days!
+         It is strongly recommended to always use the latest version.
+         Run "yt-dlp --update" or "yt-dlp -U" to update.
+         To suppress this warning, add --no-update to your command/config.

@@ -1,0 +1,3495 @@
+1
+00:00:00,160 --> 00:00:01,790
+
+hey what's up guys my name is aern and
+
+2
+00:00:01,790 --> 00:00:01,800
+hey what's up guys my name is aern and
+ 
+
+3
+00:00:01,800 --> 00:00:04,150
+hey what's up guys my name is aern and
+welcome back to my C++ Series so in the
+
+4
+00:00:04,150 --> 00:00:04,160
+welcome back to my C++ Series so in the
+ 
+
+5
+00:00:04,160 --> 00:00:06,190
+welcome back to my C++ Series so in the
+last video I explained why I don't like
+
+6
+00:00:06,190 --> 00:00:06,200
+last video I explained why I don't like
+ 
+
+7
+00:00:06,200 --> 00:00:08,270
+last video I explained why I don't like
+using namespace STD if you guys haven't
+
+8
+00:00:08,270 --> 00:00:08,280
+using namespace STD if you guys haven't
+ 
+
+9
+00:00:08,280 --> 00:00:11,270
+using namespace STD if you guys haven't
+checked that video out definitely do so
+
+10
+00:00:11,270 --> 00:00:11,280
+checked that video out definitely do so
+ 
+
+11
+00:00:11,280 --> 00:00:13,230
+checked that video out definitely do so
+but I haven't actually talked about what
+
+12
+00:00:13,230 --> 00:00:13,240
+but I haven't actually talked about what
+ 
+
+13
+00:00:13,240 --> 00:00:15,789
+but I haven't actually talked about what
+namespaces are in this C++ series and
+
+14
+00:00:15,789 --> 00:00:15,799
+namespaces are in this C++ series and
+ 
+
+15
+00:00:15,799 --> 00:00:17,109
+namespaces are in this C++ series and
+because in that video I specifically
+
+16
+00:00:17,109 --> 00:00:17,119
+because in that video I specifically
+ 
+
+17
+00:00:17,119 --> 00:00:18,710
+because in that video I specifically
+wanted to talk about the standard
+
+18
+00:00:18,710 --> 00:00:18,720
+wanted to talk about the standard
+ 
+
+19
+00:00:18,720 --> 00:00:21,109
+wanted to talk about the standard
+namespace and why I don't like using
+
+20
+00:00:21,109 --> 00:00:21,119
+namespace and why I don't like using
+ 
+
+21
+00:00:21,119 --> 00:00:24,470
+namespace and why I don't like using
+namespace STD but today we're going to
+
+22
+00:00:24,470 --> 00:00:24,480
+namespace STD but today we're going to
+ 
+
+23
+00:00:24,480 --> 00:00:26,470
+namespace STD but today we're going to
+be talking about what namespaces are in
+
+24
+00:00:26,470 --> 00:00:26,480
+be talking about what namespaces are in
+ 
+
+25
+00:00:26,480 --> 00:00:28,990
+be talking about what namespaces are in
+C++ why they're useful when I would when
+
+26
+00:00:28,990 --> 00:00:29,000
+C++ why they're useful when I would when
+ 
+
+27
+00:00:29,000 --> 00:00:31,150
+C++ why they're useful when I would when
+I wouldn't use them why they exist and
+
+28
+00:00:31,150 --> 00:00:31,160
+I wouldn't use them why they exist and
+ 
+
+29
+00:00:31,160 --> 00:00:32,229
+I wouldn't use them why they exist and
+all the different things that we can do
+
+30
+00:00:32,229 --> 00:00:32,239
+all the different things that we can do
+ 
+
+31
+00:00:32,239 --> 00:00:34,910
+all the different things that we can do
+with them so if we jump right into this
+
+32
+00:00:34,910 --> 00:00:34,920
+with them so if we jump right into this
+ 
+
+33
+00:00:34,920 --> 00:00:36,430
+with them so if we jump right into this
+this is the code that we had written in
+
+34
+00:00:36,430 --> 00:00:36,440
+this is the code that we had written in
+ 
+
+35
+00:00:36,440 --> 00:00:38,110
+this is the code that we had written in
+that previous video where we talked
+
+36
+00:00:38,110 --> 00:00:38,120
+that previous video where we talked
+ 
+
+37
+00:00:38,120 --> 00:00:39,950
+that previous video where we talked
+about why I don't like using namespace
+
+38
+00:00:39,950 --> 00:00:39,960
+about why I don't like using namespace
+ 
+
+39
+00:00:39,960 --> 00:00:41,830
+about why I don't like using namespace
+everywhere and all that kind of stuff
+
+40
+00:00:41,830 --> 00:00:41,840
+everywhere and all that kind of stuff
+ 
+
+41
+00:00:41,840 --> 00:00:43,190
+everywhere and all that kind of stuff
+let's talk a little bit about what we
+
+42
+00:00:43,190 --> 00:00:43,200
+let's talk a little bit about what we
+ 
+
+43
+00:00:43,200 --> 00:00:44,990
+let's talk a little bit about what we
+actually see on the screen here and how
+
+44
+00:00:44,990 --> 00:00:45,000
+actually see on the screen here and how
+ 
+
+45
+00:00:45,000 --> 00:00:46,910
+actually see on the screen here and how
+we can further extend our usage of
+
+46
+00:00:46,910 --> 00:00:46,920
+we can further extend our usage of
+ 
+
+47
+00:00:46,920 --> 00:00:49,029
+we can further extend our usage of
+namespaces and why namespaces are
+
+48
+00:00:49,029 --> 00:00:49,039
+namespaces and why namespaces are
+ 
+
+49
+00:00:49,039 --> 00:00:52,189
+namespaces and why namespaces are
+actually used and necessary so over here
+
+50
+00:00:52,189 --> 00:00:52,199
+actually used and necessary so over here
+ 
+
+51
+00:00:52,199 --> 00:00:54,110
+actually used and necessary so over here
+we essentially have this issue where we
+
+52
+00:00:54,110 --> 00:00:54,120
+we essentially have this issue where we
+ 
+
+53
+00:00:54,120 --> 00:00:56,670
+we essentially have this issue where we
+have two print functions now they do
+
+54
+00:00:56,670 --> 00:00:56,680
+have two print functions now they do
+ 
+
+55
+00:00:56,680 --> 00:00:58,110
+have two print functions now they do
+have different signatures one of these
+
+56
+00:00:58,110 --> 00:00:58,120
+have different signatures one of these
+ 
+
+57
+00:00:58,120 --> 00:00:59,670
+have different signatures one of these
+takes in a string one of these takes in
+
+58
+00:00:59,670 --> 00:00:59,680
+takes in a string one of these takes in
+ 
+
+59
+00:00:59,680 --> 00:01:02,509
+takes in a string one of these takes in
+a con Char but if we kind of revert to
+
+60
+00:01:02,509 --> 00:01:02,519
+a con Char but if we kind of revert to
+ 
+
+61
+00:01:02,519 --> 00:01:04,789
+a con Char but if we kind of revert to
+maybe both of them taking in a con Char
+
+62
+00:01:04,789 --> 00:01:04,799
+maybe both of them taking in a con Char
+ 
+
+63
+00:01:04,799 --> 00:01:06,310
+maybe both of them taking in a con Char
+so if I change this string one to
+
+64
+00:01:06,310 --> 00:01:06,320
+so if I change this string one to
+ 
+
+65
+00:01:06,320 --> 00:01:08,710
+so if I change this string one to
+actually take in a con CH pointer like
+
+66
+00:01:08,710 --> 00:01:08,720
+actually take in a con CH pointer like
+ 
+
+67
+00:01:08,720 --> 00:01:12,830
+actually take in a con CH pointer like
+so we kind of may have an issue if we
+
+68
+00:01:12,830 --> 00:01:12,840
+so we kind of may have an issue if we
+ 
+
+69
+00:01:12,840 --> 00:01:15,390
+so we kind of may have an issue if we
+weren't using namespaces because these
+
+70
+00:01:15,390 --> 00:01:15,400
+weren't using namespaces because these
+ 
+
+71
+00:01:15,400 --> 00:01:17,429
+weren't using namespaces because these
+functions are identical if I just kind
+
+72
+00:01:17,429 --> 00:01:17,439
+functions are identical if I just kind
+ 
+
+73
+00:01:17,439 --> 00:01:21,149
+functions are identical if I just kind
+of comment out this namespace apple uh
+
+74
+00:01:21,149 --> 00:01:21,159
+of comment out this namespace apple uh
+ 
+
+75
+00:01:21,159 --> 00:01:22,870
+of comment out this namespace apple uh
+line of code here and the orange one as
+
+76
+00:01:22,870 --> 00:01:22,880
+line of code here and the orange one as
+ 
+
+77
+00:01:22,880 --> 00:01:24,670
+line of code here and the orange one as
+well suddenly we have a little bit of an
+
+78
+00:01:24,670 --> 00:01:24,680
+well suddenly we have a little bit of an
+ 
+
+79
+00:01:24,680 --> 00:01:26,710
+well suddenly we have a little bit of an
+issue if I try and I'll fix up this
+
+80
+00:01:26,710 --> 00:01:26,720
+issue if I try and I'll fix up this
+ 
+
+81
+00:01:26,720 --> 00:01:28,630
+issue if I try and I'll fix up this
+error as well if I try and just compile
+
+82
+00:01:28,630 --> 00:01:28,640
+error as well if I try and just compile
+ 
+
+83
+00:01:28,640 --> 00:01:30,870
+error as well if I try and just compile
+this by hitting contrl F7
+
+84
+00:01:30,870 --> 00:01:30,880
+this by hitting contrl F7
+ 
+
+85
+00:01:30,880 --> 00:01:33,030
+this by hitting contrl F7
+you can see over here that I get an
+
+86
+00:01:33,030 --> 00:01:33,040
+you can see over here that I get an
+ 
+
+87
+00:01:33,040 --> 00:01:35,190
+you can see over here that I get an
+error because it's telling me that this
+
+88
+00:01:35,190 --> 00:01:35,200
+error because it's telling me that this
+ 
+
+89
+00:01:35,200 --> 00:01:37,109
+error because it's telling me that this
+print function that takes in a con chart
+
+90
+00:01:37,109 --> 00:01:37,119
+print function that takes in a con chart
+ 
+
+91
+00:01:37,119 --> 00:01:39,710
+print function that takes in a con chart
+pointer already has a body because I
+
+92
+00:01:39,710 --> 00:01:39,720
+pointer already has a body because I
+ 
+
+93
+00:01:39,720 --> 00:01:42,510
+pointer already has a body because I
+have two symbols with the same name and
+
+94
+00:01:42,510 --> 00:01:42,520
+have two symbols with the same name and
+ 
+
+95
+00:01:42,520 --> 00:01:44,910
+have two symbols with the same name and
+they're identical symbols now when I say
+
+96
+00:01:44,910 --> 00:01:44,920
+they're identical symbols now when I say
+ 
+
+97
+00:01:44,920 --> 00:01:47,230
+they're identical symbols now when I say
+symbols I'm talking about things like
+
+98
+00:01:47,230 --> 00:01:47,240
+symbols I'm talking about things like
+ 
+
+99
+00:01:47,240 --> 00:01:50,550
+symbols I'm talking about things like
+classes functions variables constants
+
+100
+00:01:50,550 --> 00:01:50,560
+classes functions variables constants
+ 
+
+101
+00:01:50,560 --> 00:01:53,149
+classes functions variables constants
+that kind of that kind of thing right so
+
+102
+00:01:53,149 --> 00:01:53,159
+that kind of that kind of thing right so
+ 
+
+103
+00:01:53,159 --> 00:01:55,190
+that kind of that kind of thing right so
+we have in this case two functions
+
+104
+00:01:55,190 --> 00:01:55,200
+we have in this case two functions
+ 
+
+105
+00:01:55,200 --> 00:01:57,510
+we have in this case two functions
+called print which take in construct
+
+106
+00:01:57,510 --> 00:01:57,520
+called print which take in construct
+ 
+
+107
+00:01:57,520 --> 00:01:58,870
+called print which take in construct
+pointer and return void they have the
+
+108
+00:01:58,870 --> 00:01:58,880
+pointer and return void they have the
+ 
+
+109
+00:01:58,880 --> 00:02:01,350
+pointer and return void they have the
+same signature so these two symbols are
+
+110
+00:02:01,350 --> 00:02:01,360
+same signature so these two symbols are
+ 
+
+111
+00:02:01,360 --> 00:02:03,469
+same signature so these two symbols are
+identical we can't have two identical
+
+112
+00:02:03,469 --> 00:02:03,479
+identical we can't have two identical
+ 
+
+113
+00:02:03,479 --> 00:02:05,350
+identical we can't have two identical
+symbols that's a linking error and
+
+114
+00:02:05,350 --> 00:02:05,360
+symbols that's a linking error and
+ 
+
+115
+00:02:05,360 --> 00:02:07,550
+symbols that's a linking error and
+potentially a compilation error in there
+
+116
+00:02:07,550 --> 00:02:07,560
+potentially a compilation error in there
+ 
+
+117
+00:02:07,560 --> 00:02:10,229
+potentially a compilation error in there
+if they're actually in the same file so
+
+118
+00:02:10,229 --> 00:02:10,239
+if they're actually in the same file so
+ 
+
+119
+00:02:10,239 --> 00:02:12,470
+if they're actually in the same file so
+how do we fix that what if we do want to
+
+120
+00:02:12,470 --> 00:02:12,480
+how do we fix that what if we do want to
+ 
+
+121
+00:02:12,480 --> 00:02:15,030
+how do we fix that what if we do want to
+have two print functions or what if we
+
+122
+00:02:15,030 --> 00:02:15,040
+have two print functions or what if we
+ 
+
+123
+00:02:15,040 --> 00:02:17,390
+have two print functions or what if we
+use another library that has already
+
+124
+00:02:17,390 --> 00:02:17,400
+use another library that has already
+ 
+
+125
+00:02:17,400 --> 00:02:19,990
+use another library that has already
+defined a print function but we want to
+
+126
+00:02:19,990 --> 00:02:20,000
+defined a print function but we want to
+ 
+
+127
+00:02:20,000 --> 00:02:22,350
+defined a print function but we want to
+have our own print function now back in
+
+128
+00:02:22,350 --> 00:02:22,360
+have our own print function now back in
+ 
+
+129
+00:02:22,360 --> 00:02:24,390
+have our own print function now back in
+the days of c and in fact that still is
+
+130
+00:02:24,390 --> 00:02:24,400
+the days of c and in fact that still is
+ 
+
+131
+00:02:24,400 --> 00:02:27,390
+the days of c and in fact that still is
+a thing C doesn't have name spaces which
+
+132
+00:02:27,390 --> 00:02:27,400
+a thing C doesn't have name spaces which
+ 
+
+133
+00:02:27,400 --> 00:02:29,229
+a thing C doesn't have name spaces which
+is why if you would have noticed in the
+
+134
+00:02:29,229 --> 00:02:29,239
+is why if you would have noticed in the
+ 
+
+135
+00:02:29,239 --> 00:02:30,949
+is why if you would have noticed in the
+open Gil series as an example we're
+
+136
+00:02:30,949 --> 00:02:30,959
+open Gil series as an example we're
+ 
+
+137
+00:02:30,959 --> 00:02:33,589
+open Gil series as an example we're
+using a library called glfw which is an
+
+138
+00:02:33,589 --> 00:02:33,599
+using a library called glfw which is an
+ 
+
+139
+00:02:33,599 --> 00:02:36,070
+using a library called glfw which is an
+openg kind of windowing and context
+
+140
+00:02:36,070 --> 00:02:36,080
+openg kind of windowing and context
+ 
+
+141
+00:02:36,080 --> 00:02:37,750
+openg kind of windowing and context
+library and input and all that kind of
+
+142
+00:02:37,750 --> 00:02:37,760
+library and input and all that kind of
+ 
+
+143
+00:02:37,760 --> 00:02:40,270
+library and input and all that kind of
+stuff right but the point is gfw is a c
+
+144
+00:02:40,270 --> 00:02:40,280
+stuff right but the point is gfw is a c
+ 
+
+145
+00:02:40,280 --> 00:02:42,390
+stuff right but the point is gfw is a c
+is a C library it's compatible with both
+
+146
+00:02:42,390 --> 00:02:42,400
+is a C library it's compatible with both
+ 
+
+147
+00:02:42,400 --> 00:02:45,509
+is a C library it's compatible with both
+C and C++ because it's a C library they
+
+148
+00:02:45,509 --> 00:02:45,519
+C and C++ because it's a C library they
+ 
+
+149
+00:02:45,519 --> 00:02:47,949
+C and C++ because it's a C library they
+can't use namespaces which is why if you
+
+150
+00:02:47,949 --> 00:02:47,959
+can't use namespaces which is why if you
+ 
+
+151
+00:02:47,959 --> 00:02:49,670
+can't use namespaces which is why if you
+notice in that series all of the code
+
+152
+00:02:49,670 --> 00:02:49,680
+notice in that series all of the code
+ 
+
+153
+00:02:49,680 --> 00:02:50,949
+notice in that series all of the code
+that we write that has something to do
+
+154
+00:02:50,949 --> 00:02:50,959
+that we write that has something to do
+ 
+
+155
+00:02:50,959 --> 00:02:51,630
+that we write that has something to do
+with
+
+156
+00:02:51,630 --> 00:02:51,640
+with
+ 
+
+157
+00:02:51,640 --> 00:02:54,509
+with
+glfw begins with like literally every
+
+158
+00:02:54,509 --> 00:02:54,519
+glfw begins with like literally every
+ 
+
+159
+00:02:54,519 --> 00:02:57,110
+glfw begins with like literally every
+function starts with glfw and then like
+
+160
+00:02:57,110 --> 00:02:57,120
+function starts with glfw and then like
+ 
+
+161
+00:02:57,120 --> 00:02:59,630
+function starts with glfw and then like
+the function name for example gfw in it
+
+162
+00:02:59,630 --> 00:02:59,640
+the function name for example gfw in it
+ 
+
+163
+00:02:59,640 --> 00:03:02,430
+the function name for example gfw in it
+or or gfw create window all of that
+
+164
+00:03:02,430 --> 00:03:02,440
+or or gfw create window all of that
+ 
+
+165
+00:03:02,440 --> 00:03:05,070
+or or gfw create window all of that
+stuff has glfw literally prepended to
+
+166
+00:03:05,070 --> 00:03:05,080
+stuff has glfw literally prepended to
+ 
+
+167
+00:03:05,080 --> 00:03:07,589
+stuff has glfw literally prepended to
+the front of it with open GL it's kind
+
+168
+00:03:07,589 --> 00:03:07,599
+the front of it with open GL it's kind
+ 
+
+169
+00:03:07,599 --> 00:03:09,630
+the front of it with open GL it's kind
+of the same thing as well we have GL and
+
+170
+00:03:09,630 --> 00:03:09,640
+of the same thing as well we have GL and
+ 
+
+171
+00:03:09,640 --> 00:03:12,949
+of the same thing as well we have GL and
+then the symbol name so like GL begin GL
+
+172
+00:03:12,949 --> 00:03:12,959
+then the symbol name so like GL begin GL
+ 
+
+173
+00:03:12,959 --> 00:03:15,789
+then the symbol name so like GL begin GL
+end GL gen vertex buffers that kind of
+
+174
+00:03:15,789 --> 00:03:15,799
+end GL gen vertex buffers that kind of
+ 
+
+175
+00:03:15,799 --> 00:03:18,869
+end GL gen vertex buffers that kind of
+thing right we have an act the the
+
+176
+00:03:18,869 --> 00:03:18,879
+thing right we have an act the the
+ 
+
+177
+00:03:18,879 --> 00:03:20,910
+thing right we have an act the the
+actual name of the library or some kind
+
+178
+00:03:20,910 --> 00:03:20,920
+actual name of the library or some kind
+ 
+
+179
+00:03:20,920 --> 00:03:24,030
+actual name of the library or some kind
+of ID embedded into the function name so
+
+180
+00:03:24,030 --> 00:03:24,040
+of ID embedded into the function name so
+ 
+
+181
+00:03:24,040 --> 00:03:26,110
+of ID embedded into the function name so
+in our code that would be the equivalent
+
+182
+00:03:26,110 --> 00:03:26,120
+in our code that would be the equivalent
+ 
+
+183
+00:03:26,120 --> 00:03:27,750
+in our code that would be the equivalent
+of if I had literally written something
+
+184
+00:03:27,750 --> 00:03:27,760
+of if I had literally written something
+ 
+
+185
+00:03:27,760 --> 00:03:31,070
+of if I had literally written something
+like apple print right and orange print
+
+186
+00:03:31,070 --> 00:03:31,080
+like apple print right and orange print
+ 
+
+187
+00:03:31,080 --> 00:03:32,990
+like apple print right and orange print
+and then now you can see that okay these
+
+188
+00:03:32,990 --> 00:03:33,000
+and then now you can see that okay these
+ 
+
+189
+00:03:33,000 --> 00:03:34,789
+and then now you can see that okay these
+two functions are different because this
+
+190
+00:03:34,789 --> 00:03:34,799
+two functions are different because this
+ 
+
+191
+00:03:34,799 --> 00:03:36,509
+two functions are different because this
+is like the apple print version this is
+
+192
+00:03:36,509 --> 00:03:36,519
+is like the apple print version this is
+ 
+
+193
+00:03:36,519 --> 00:03:38,390
+is like the apple print version this is
+the orange print version and that's
+
+194
+00:03:38,390 --> 00:03:38,400
+the orange print version and that's
+ 
+
+195
+00:03:38,400 --> 00:03:41,110
+the orange print version and that's
+actually what C libraries tend to do
+
+196
+00:03:41,110 --> 00:03:41,120
+actually what C libraries tend to do
+ 
+
+197
+00:03:41,120 --> 00:03:43,030
+actually what C libraries tend to do
+because they can't just you know I I
+
+198
+00:03:43,030 --> 00:03:43,040
+because they can't just you know I I
+ 
+
+199
+00:03:43,040 --> 00:03:45,509
+because they can't just you know I I
+can't make a function just called init
+
+200
+00:03:45,509 --> 00:03:45,519
+can't make a function just called init
+ 
+
+201
+00:03:45,519 --> 00:03:48,670
+can't make a function just called init
+because init is such a common name what
+
+202
+00:03:48,670 --> 00:03:48,680
+because init is such a common name what
+ 
+
+203
+00:03:48,680 --> 00:03:50,990
+because init is such a common name what
+if you know if every library was to do
+
+204
+00:03:50,990 --> 00:03:51,000
+if you know if every library was to do
+ 
+
+205
+00:03:51,000 --> 00:03:52,910
+if you know if every library was to do
+was to just name their functions init
+
+206
+00:03:52,910 --> 00:03:52,920
+was to just name their functions init
+ 
+
+207
+00:03:52,920 --> 00:03:54,789
+was to just name their functions init
+then you could never use those libraries
+
+208
+00:03:54,789 --> 00:03:54,799
+then you could never use those libraries
+ 
+
+209
+00:03:54,799 --> 00:03:56,229
+then you could never use those libraries
+together without having to modify the
+
+210
+00:03:56,229 --> 00:03:56,239
+together without having to modify the
+ 
+
+211
+00:03:56,239 --> 00:03:59,030
+together without having to modify the
+source code so what they do usually is
+
+212
+00:03:59,030 --> 00:03:59,040
+source code so what they do usually is
+ 
+
+213
+00:03:59,040 --> 00:04:01,030
+source code so what they do usually is
+just kind of the name of the library to
+
+214
+00:04:01,030 --> 00:04:01,040
+just kind of the name of the library to
+ 
+
+215
+00:04:01,040 --> 00:04:03,990
+just kind of the name of the library to
+it so JFW in it and that works because
+
+216
+00:04:03,990 --> 00:04:04,000
+it so JFW in it and that works because
+ 
+
+217
+00:04:04,000 --> 00:04:06,390
+it so JFW in it and that works because
+well it's a fairly unique name right JFW
+
+218
+00:04:06,390 --> 00:04:06,400
+well it's a fairly unique name right JFW
+ 
+
+219
+00:04:06,400 --> 00:04:09,229
+well it's a fairly unique name right JFW
+in it okay cool that's specific to that
+
+220
+00:04:09,229 --> 00:04:09,239
+in it okay cool that's specific to that
+ 
+
+221
+00:04:09,239 --> 00:04:12,470
+in it okay cool that's specific to that
+glfw library now in C++ instead of us
+
+222
+00:04:12,470 --> 00:04:12,480
+glfw library now in C++ instead of us
+ 
+
+223
+00:04:12,480 --> 00:04:14,429
+glfw library now in C++ instead of us
+having to do all this we have name
+
+224
+00:04:14,429 --> 00:04:14,439
+having to do all this we have name
+ 
+
+225
+00:04:14,439 --> 00:04:17,030
+having to do all this we have name
+spaces to solve that issue the primary
+
+226
+00:04:17,030 --> 00:04:17,040
+spaces to solve that issue the primary
+ 
+
+227
+00:04:17,040 --> 00:04:19,710
+spaces to solve that issue the primary
+purpose of Nam spaces is to avoid naming
+
+228
+00:04:19,710 --> 00:04:19,720
+purpose of Nam spaces is to avoid naming
+ 
+
+229
+00:04:19,720 --> 00:04:22,469
+purpose of Nam spaces is to avoid naming
+conflicts that's why they exist to avoid
+
+230
+00:04:22,469 --> 00:04:22,479
+conflicts that's why they exist to avoid
+ 
+
+231
+00:04:22,479 --> 00:04:26,310
+conflicts that's why they exist to avoid
+naming conflicts okay that's it sort of
+
+232
+00:04:26,310 --> 00:04:26,320
+naming conflicts okay that's it sort of
+ 
+
+233
+00:04:26,320 --> 00:04:27,950
+naming conflicts okay that's it sort of
+just if youve getting confused by why
+
+234
+00:04:27,950 --> 00:04:27,960
+just if youve getting confused by why
+ 
+
+235
+00:04:27,960 --> 00:04:29,390
+just if youve getting confused by why
+namespaces exist or why they're being
+
+236
+00:04:29,390 --> 00:04:29,400
+namespaces exist or why they're being
+ 
+
+237
+00:04:29,400 --> 00:04:30,270
+namespaces exist or why they're being
+used
+
+238
+00:04:30,270 --> 00:04:30,280
+used
+ 
+
+239
+00:04:30,280 --> 00:04:32,230
+used
+it's because of naming we want to be
+
+240
+00:04:32,230 --> 00:04:32,240
+it's because of naming we want to be
+ 
+
+241
+00:04:32,240 --> 00:04:35,510
+it's because of naming we want to be
+able to call symbols the same name in
+
+242
+00:04:35,510 --> 00:04:35,520
+able to call symbols the same name in
+ 
+
+243
+00:04:35,520 --> 00:04:37,550
+able to call symbols the same name in
+different contexts so if we go back here
+
+244
+00:04:37,550 --> 00:04:37,560
+different contexts so if we go back here
+ 
+
+245
+00:04:37,560 --> 00:04:39,590
+different contexts so if we go back here
+into apple print instead of having this
+
+246
+00:04:39,590 --> 00:04:39,600
+into apple print instead of having this
+ 
+
+247
+00:04:39,600 --> 00:04:41,990
+into apple print instead of having this
+what we can do is enclose this symbol in
+
+248
+00:04:41,990 --> 00:04:42,000
+what we can do is enclose this symbol in
+ 
+
+249
+00:04:42,000 --> 00:04:44,350
+what we can do is enclose this symbol in
+a namespace in this case what we write
+
+250
+00:04:44,350 --> 00:04:44,360
+a namespace in this case what we write
+ 
+
+251
+00:04:44,360 --> 00:04:47,029
+a namespace in this case what we write
+is namespace the name of the namespace
+
+252
+00:04:47,029 --> 00:04:47,039
+is namespace the name of the namespace
+ 
+
+253
+00:04:47,039 --> 00:04:48,909
+is namespace the name of the namespace
+and then just as if it was any kind of
+
+254
+00:04:48,909 --> 00:04:48,919
+and then just as if it was any kind of
+ 
+
+255
+00:04:48,919 --> 00:04:50,990
+and then just as if it was any kind of
+function we surround it with curly
+
+256
+00:04:50,990 --> 00:04:51,000
+function we surround it with curly
+ 
+
+257
+00:04:51,000 --> 00:04:53,150
+function we surround it with curly
+braces which everything in everything in
+
+258
+00:04:53,150 --> 00:04:53,160
+braces which everything in everything in
+ 
+
+259
+00:04:53,160 --> 00:04:55,830
+braces which everything in everything in
+between these curly brackets is included
+
+260
+00:04:55,830 --> 00:04:55,840
+between these curly brackets is included
+ 
+
+261
+00:04:55,840 --> 00:04:58,350
+between these curly brackets is included
+in that Apple namespace now personally I
+
+262
+00:04:58,350 --> 00:04:58,360
+in that Apple namespace now personally I
+ 
+
+263
+00:04:58,360 --> 00:05:00,950
+in that Apple namespace now personally I
+like to write my bracket on the same
+
+264
+00:05:00,950 --> 00:05:00,960
+like to write my bracket on the same
+ 
+
+265
+00:05:00,960 --> 00:05:03,350
+like to write my bracket on the same
+line as the actual namespace declaration
+
+266
+00:05:03,350 --> 00:05:03,360
+line as the actual namespace declaration
+ 
+
+267
+00:05:03,360 --> 00:05:05,189
+line as the actual namespace declaration
+I don't like doing this the reason that
+
+268
+00:05:05,189 --> 00:05:05,199
+I don't like doing this the reason that
+ 
+
+269
+00:05:05,199 --> 00:05:07,029
+I don't like doing this the reason that
+happens is because when we have multiple
+
+270
+00:05:07,029 --> 00:05:07,039
+happens is because when we have multiple
+ 
+
+271
+00:05:07,039 --> 00:05:09,550
+happens is because when we have multiple
+nested name spaces it gets a little bit
+
+272
+00:05:09,550 --> 00:05:09,560
+nested name spaces it gets a little bit
+ 
+
+273
+00:05:09,560 --> 00:05:11,950
+nested name spaces it gets a little bit
+messy so what I like to do is if we had
+
+274
+00:05:11,950 --> 00:05:11,960
+messy so what I like to do is if we had
+ 
+
+275
+00:05:11,960 --> 00:05:13,909
+messy so what I like to do is if we had
+apple and then maybe like functions or
+
+276
+00:05:13,909 --> 00:05:13,919
+apple and then maybe like functions or
+ 
+
+277
+00:05:13,919 --> 00:05:16,110
+apple and then maybe like functions or
+something you know I have this here and
+
+278
+00:05:16,110 --> 00:05:16,120
+something you know I have this here and
+ 
+
+279
+00:05:16,120 --> 00:05:18,189
+something you know I have this here and
+also with the end braces instead of kind
+
+280
+00:05:18,189 --> 00:05:18,199
+also with the end braces instead of kind
+ 
+
+281
+00:05:18,199 --> 00:05:19,670
+also with the end braces instead of kind
+of writing it this way which is what
+
+282
+00:05:19,670 --> 00:05:19,680
+of writing it this way which is what
+ 
+
+283
+00:05:19,680 --> 00:05:21,390
+of writing it this way which is what
+Visual Studio will try try and auto
+
+284
+00:05:21,390 --> 00:05:21,400
+Visual Studio will try try and auto
+ 
+
+285
+00:05:21,400 --> 00:05:23,430
+Visual Studio will try try and auto
+format it to I like to just have it on
+
+286
+00:05:23,430 --> 00:05:23,440
+format it to I like to just have it on
+ 
+
+287
+00:05:23,440 --> 00:05:25,550
+format it to I like to just have it on
+the same line that way my actual
+
+288
+00:05:25,550 --> 00:05:25,560
+the same line that way my actual
+ 
+
+289
+00:05:25,560 --> 00:05:28,029
+the same line that way my actual
+functions are one level indented and not
+
+290
+00:05:28,029 --> 00:05:28,039
+functions are one level indented and not
+ 
+
+291
+00:05:28,039 --> 00:05:30,070
+functions are one level indented and not
+like two or three or four or depending
+
+292
+00:05:30,070 --> 00:05:30,080
+like two or three or four or depending
+ 
+
+293
+00:05:30,080 --> 00:05:32,629
+like two or three or four or depending
+on how many Nam spaces we actually have
+
+294
+00:05:32,629 --> 00:05:32,639
+on how many Nam spaces we actually have
+ 
+
+295
+00:05:32,639 --> 00:05:34,870
+on how many Nam spaces we actually have
+nested uh so that's just my personal
+
+296
+00:05:34,870 --> 00:05:34,880
+nested uh so that's just my personal
+ 
+
+297
+00:05:34,880 --> 00:05:36,230
+nested uh so that's just my personal
+preference you don't have to follow that
+
+298
+00:05:36,230 --> 00:05:36,240
+preference you don't have to follow that
+ 
+
+299
+00:05:36,240 --> 00:05:38,070
+preference you don't have to follow that
+but that's why I kind of put all this
+
+300
+00:05:38,070 --> 00:05:38,080
+but that's why I kind of put all this
+ 
+
+301
+00:05:38,080 --> 00:05:40,029
+but that's why I kind of put all this
+stuff on the same line so that being
+
+302
+00:05:40,029 --> 00:05:40,039
+stuff on the same line so that being
+ 
+
+303
+00:05:40,039 --> 00:05:42,230
+stuff on the same line so that being
+said we now have a have an apple print
+
+304
+00:05:42,230 --> 00:05:42,240
+said we now have a have an apple print
+ 
+
+305
+00:05:42,240 --> 00:05:44,029
+said we now have a have an apple print
+function if I go over here into orange
+
+306
+00:05:44,029 --> 00:05:44,039
+function if I go over here into orange
+ 
+
+307
+00:05:44,039 --> 00:05:46,309
+function if I go over here into orange
+and get rid of these comments as well we
+
+308
+00:05:46,309 --> 00:05:46,319
+and get rid of these comments as well we
+ 
+
+309
+00:05:46,319 --> 00:05:47,990
+and get rid of these comments as well we
+have this orange print function I can
+
+310
+00:05:47,990 --> 00:05:48,000
+have this orange print function I can
+ 
+
+311
+00:05:48,000 --> 00:05:51,150
+have this orange print function I can
+rename it to uh just print so we're
+
+312
+00:05:51,150 --> 00:05:51,160
+rename it to uh just print so we're
+ 
+
+313
+00:05:51,160 --> 00:05:53,070
+rename it to uh just print so we're
+we're able to have two functions with
+
+314
+00:05:53,070 --> 00:05:53,080
+we're able to have two functions with
+ 
+
+315
+00:05:53,080 --> 00:05:55,430
+we're able to have two functions with
+exactly the same signature in this file
+
+316
+00:05:55,430 --> 00:05:55,440
+exactly the same signature in this file
+ 
+
+317
+00:05:55,440 --> 00:05:57,189
+exactly the same signature in this file
+and when it comes time to call it what
+
+318
+00:05:57,189 --> 00:05:57,199
+and when it comes time to call it what
+ 
+
+319
+00:05:57,199 --> 00:05:59,150
+and when it comes time to call it what
+we do is we need to specify which one we
+
+320
+00:05:59,150 --> 00:05:59,160
+we do is we need to specify which one we
+ 
+
+321
+00:05:59,160 --> 00:06:01,309
+we do is we need to specify which one we
+we need to call call so print is now
+
+322
+00:06:01,309 --> 00:06:01,319
+we need to call call so print is now
+ 
+
+323
+00:06:01,319 --> 00:06:03,150
+we need to call call so print is now
+inside either the apple or the orange
+
+324
+00:06:03,150 --> 00:06:03,160
+inside either the apple or the orange
+ 
+
+325
+00:06:03,160 --> 00:06:05,110
+inside either the apple or the orange
+namespace we have two of them so if we
+
+326
+00:06:05,110 --> 00:06:05,120
+namespace we have two of them so if we
+ 
+
+327
+00:06:05,120 --> 00:06:06,710
+namespace we have two of them so if we
+want to use the one from Apple we just
+
+328
+00:06:06,710 --> 00:06:06,720
+want to use the one from Apple we just
+ 
+
+329
+00:06:06,720 --> 00:06:09,270
+want to use the one from Apple we just
+type Apple colon colon and then print
+
+330
+00:06:09,270 --> 00:06:09,280
+type Apple colon colon and then print
+ 
+
+331
+00:06:09,280 --> 00:06:11,390
+type Apple colon colon and then print
+this colon colon is essentially like a
+
+332
+00:06:11,390 --> 00:06:11,400
+this colon colon is essentially like a
+ 
+
+333
+00:06:11,400 --> 00:06:13,670
+this colon colon is essentially like a
+namespace operator so what you do is
+
+334
+00:06:13,670 --> 00:06:13,680
+namespace operator so what you do is
+ 
+
+335
+00:06:13,680 --> 00:06:15,589
+namespace operator so what you do is
+every kind of namespace that you as you
+
+336
+00:06:15,589 --> 00:06:15,599
+every kind of namespace that you as you
+ 
+
+337
+00:06:15,599 --> 00:06:17,150
+every kind of namespace that you as you
+drill down into a namespace you just put
+
+338
+00:06:17,150 --> 00:06:17,160
+drill down into a namespace you just put
+ 
+
+339
+00:06:17,160 --> 00:06:20,390
+drill down into a namespace you just put
+a colon colon and that is what I guess
+
+340
+00:06:20,390 --> 00:06:20,400
+a colon colon and that is what I guess
+ 
+
+341
+00:06:20,400 --> 00:06:22,309
+a colon colon and that is what I guess
+enters into that namespace or allows you
+
+342
+00:06:22,309 --> 00:06:22,319
+enters into that namespace or allows you
+ 
+
+343
+00:06:22,319 --> 00:06:24,469
+enters into that namespace or allows you
+to call things from that namespace the
+
+344
+00:06:24,469 --> 00:06:24,479
+to call things from that namespace the
+ 
+
+345
+00:06:24,479 --> 00:06:27,430
+to call things from that namespace the
+same thing applies to static functions I
+
+346
+00:06:27,430 --> 00:06:27,440
+same thing applies to static functions I
+ 
+
+347
+00:06:27,440 --> 00:06:29,990
+same thing applies to static functions I
+guess or symbols in classes and like
+
+348
+00:06:29,990 --> 00:06:30,000
+guess or symbols in classes and like
+ 
+
+349
+00:06:30,000 --> 00:06:32,790
+guess or symbols in classes and like
+methods and classes and all that stuff a
+
+350
+00:06:32,790 --> 00:06:32,800
+methods and classes and all that stuff a
+ 
+
+351
+00:06:32,800 --> 00:06:34,589
+methods and classes and all that stuff a
+class is kind of like a namespace it is
+
+352
+00:06:34,589 --> 00:06:34,599
+class is kind of like a namespace it is
+ 
+
+353
+00:06:34,599 --> 00:06:36,990
+class is kind of like a namespace it is
+a it is a namespace of its own which is
+
+354
+00:06:36,990 --> 00:06:37,000
+a it is a namespace of its own which is
+ 
+
+355
+00:06:37,000 --> 00:06:38,870
+a it is a namespace of its own which is
+why if we're accessing like an inner
+
+356
+00:06:38,870 --> 00:06:38,880
+why if we're accessing like an inner
+ 
+
+357
+00:06:38,880 --> 00:06:41,469
+why if we're accessing like an inner
+class inside another class or like an
+
+358
+00:06:41,469 --> 00:06:41,479
+class inside another class or like an
+ 
+
+359
+00:06:41,479 --> 00:06:44,670
+class inside another class or like an
+enum or you know like I gave the example
+
+360
+00:06:44,670 --> 00:06:44,680
+enum or you know like I gave the example
+ 
+
+361
+00:06:44,680 --> 00:06:46,230
+enum or you know like I gave the example
+of like static functions or even
+
+362
+00:06:46,230 --> 00:06:46,240
+of like static functions or even
+ 
+
+363
+00:06:46,240 --> 00:06:49,589
+of like static functions or even
+non-static functions in some cases we
+
+364
+00:06:49,589 --> 00:06:49,599
+non-static functions in some cases we
+ 
+
+365
+00:06:49,599 --> 00:06:51,430
+non-static functions in some cases we
+use colon colon so that's what the colon
+
+366
+00:06:51,430 --> 00:06:51,440
+use colon colon so that's what the colon
+ 
+
+367
+00:06:51,440 --> 00:06:53,230
+use colon colon so that's what the colon
+colon kind of means so this double colon
+
+368
+00:06:53,230 --> 00:06:53,240
+colon kind of means so this double colon
+ 
+
+369
+00:06:53,240 --> 00:06:55,270
+colon kind of means so this double colon
+is used to uh get the print function
+
+370
+00:06:55,270 --> 00:06:55,280
+is used to uh get the print function
+ 
+
+371
+00:06:55,280 --> 00:06:57,510
+is used to uh get the print function
+from the Apple uh and if we were to run
+
+372
+00:06:57,510 --> 00:06:57,520
+from the Apple uh and if we were to run
+ 
+
+373
+00:06:57,520 --> 00:06:58,830
+from the Apple uh and if we were to run
+this we would just get hello printing
+
+374
+00:06:58,830 --> 00:06:58,840
+this we would just get hello printing
+ 
+
+375
+00:06:58,840 --> 00:07:00,070
+this we would just get hello printing
+normally
+
+376
+00:07:00,070 --> 00:07:00,080
+normally
+ 
+
+377
+00:07:00,080 --> 00:07:01,309
+normally
+if I want to call the orange one
+
+378
+00:07:01,309 --> 00:07:01,319
+if I want to call the orange one
+ 
+
+379
+00:07:01,319 --> 00:07:03,270
+if I want to call the orange one
+obviously I type in Orange now that
+
+380
+00:07:03,270 --> 00:07:03,280
+obviously I type in Orange now that
+ 
+
+381
+00:07:03,280 --> 00:07:04,710
+obviously I type in Orange now that
+whole using namespace thing that we
+
+382
+00:07:04,710 --> 00:07:04,720
+whole using namespace thing that we
+ 
+
+383
+00:07:04,720 --> 00:07:06,350
+whole using namespace thing that we
+talked about in the last episode was
+
+384
+00:07:06,350 --> 00:07:06,360
+talked about in the last episode was
+ 
+
+385
+00:07:06,360 --> 00:07:08,710
+talked about in the last episode was
+just a way to not have to write this
+
+386
+00:07:08,710 --> 00:07:08,720
+just a way to not have to write this
+ 
+
+387
+00:07:08,720 --> 00:07:11,710
+just a way to not have to write this
+kind of apple or orange kind of prefix
+
+388
+00:07:11,710 --> 00:07:11,720
+kind of apple or orange kind of prefix
+ 
+
+389
+00:07:11,720 --> 00:07:13,350
+kind of apple or orange kind of prefix
+so instead of having to do this what we
+
+390
+00:07:13,350 --> 00:07:13,360
+so instead of having to do this what we
+ 
+
+391
+00:07:13,360 --> 00:07:15,710
+so instead of having to do this what we
+can say is that actually we're using
+
+392
+00:07:15,710 --> 00:07:15,720
+can say is that actually we're using
+ 
+
+393
+00:07:15,720 --> 00:07:17,909
+can say is that actually we're using
+namespace Apple which means that
+
+394
+00:07:17,909 --> 00:07:17,919
+namespace Apple which means that
+ 
+
+395
+00:07:17,919 --> 00:07:19,589
+namespace Apple which means that
+basically import everything from
+
+396
+00:07:19,589 --> 00:07:19,599
+basically import everything from
+ 
+
+397
+00:07:19,599 --> 00:07:21,869
+basically import everything from
+namespace Apple as if I had never
+
+398
+00:07:21,869 --> 00:07:21,879
+namespace Apple as if I had never
+ 
+
+399
+00:07:21,879 --> 00:07:24,350
+namespace Apple as if I had never
+specified it as a namespace so in this
+
+400
+00:07:24,350 --> 00:07:24,360
+specified it as a namespace so in this
+ 
+
+401
+00:07:24,360 --> 00:07:26,550
+specified it as a namespace so in this
+case print will be used from Apple if I
+
+402
+00:07:26,550 --> 00:07:26,560
+case print will be used from Apple if I
+ 
+
+403
+00:07:26,560 --> 00:07:28,950
+case print will be used from Apple if I
+want I can change it to Orange I can
+
+404
+00:07:28,950 --> 00:07:28,960
+want I can change it to Orange I can
+ 
+
+405
+00:07:28,960 --> 00:07:31,430
+want I can change it to Orange I can
+also say say if we have multiple things
+
+406
+00:07:31,430 --> 00:07:31,440
+also say say if we have multiple things
+ 
+
+407
+00:07:31,440 --> 00:07:33,629
+also say say if we have multiple things
+in here like we have print and maybe
+
+408
+00:07:33,629 --> 00:07:33,639
+in here like we have print and maybe
+ 
+
+409
+00:07:33,639 --> 00:07:35,909
+in here like we have print and maybe
+print I don't know print again or
+
+410
+00:07:35,909 --> 00:07:35,919
+print I don't know print again or
+ 
+
+411
+00:07:35,919 --> 00:07:37,869
+print I don't know print again or
+something uh if I have multiple
+
+412
+00:07:37,869 --> 00:07:37,879
+something uh if I have multiple
+ 
+
+413
+00:07:37,879 --> 00:07:39,469
+something uh if I have multiple
+functions maybe I don't want to use
+
+414
+00:07:39,469 --> 00:07:39,479
+functions maybe I don't want to use
+ 
+
+415
+00:07:39,479 --> 00:07:43,350
+functions maybe I don't want to use
+print again from Orange I I just want to
+
+416
+00:07:43,350 --> 00:07:43,360
+print again from Orange I I just want to
+ 
+
+417
+00:07:43,360 --> 00:07:45,230
+print again from Orange I I just want to
+uh sorry that's that's an Apple so let's
+
+418
+00:07:45,230 --> 00:07:45,240
+uh sorry that's that's an Apple so let's
+ 
+
+419
+00:07:45,240 --> 00:07:47,070
+uh sorry that's that's an Apple so let's
+go to using namespace Apple maybe I
+
+420
+00:07:47,070 --> 00:07:47,080
+go to using namespace Apple maybe I
+ 
+
+421
+00:07:47,080 --> 00:07:48,830
+go to using namespace Apple maybe I
+don't want print again when when I put
+
+422
+00:07:48,830 --> 00:07:48,840
+don't want print again when when I put
+ 
+
+423
+00:07:48,840 --> 00:07:50,990
+don't want print again when when I put
+this using namespace I don't want to use
+
+424
+00:07:50,990 --> 00:07:51,000
+this using namespace I don't want to use
+ 
+
+425
+00:07:51,000 --> 00:07:52,710
+this using namespace I don't want to use
+print again I still want to specify
+
+426
+00:07:52,710 --> 00:07:52,720
+print again I still want to specify
+ 
+
+427
+00:07:52,720 --> 00:07:55,430
+print again I still want to specify
+maybe which print again I want I just
+
+428
+00:07:55,430 --> 00:07:55,440
+maybe which print again I want I just
+ 
+
+429
+00:07:55,440 --> 00:07:58,110
+maybe which print again I want I just
+want print to be imported so to do that
+
+430
+00:07:58,110 --> 00:07:58,120
+want print to be imported so to do that
+ 
+
+431
+00:07:58,120 --> 00:07:59,950
+want print to be imported so to do that
+we can just write using
+
+432
+00:07:59,950 --> 00:07:59,960
+we can just write using
+ 
+
+433
+00:07:59,960 --> 00:08:02,550
+we can just write using
+apple and then the function name print
+
+434
+00:08:02,550 --> 00:08:02,560
+apple and then the function name print
+ 
+
+435
+00:08:02,560 --> 00:08:04,390
+apple and then the function name print
+okay that means that we're going to take
+
+436
+00:08:04,390 --> 00:08:04,400
+okay that means that we're going to take
+ 
+
+437
+00:08:04,400 --> 00:08:06,070
+okay that means that we're going to take
+this from the Apple namespace
+
+438
+00:08:06,070 --> 00:08:06,080
+this from the Apple namespace
+ 
+
+439
+00:08:06,080 --> 00:08:08,189
+this from the Apple namespace
+specifically but for this we'd still
+
+440
+00:08:08,189 --> 00:08:08,199
+specifically but for this we'd still
+ 
+
+441
+00:08:08,199 --> 00:08:10,710
+specifically but for this we'd still
+have to specify that namespace like that
+
+442
+00:08:10,710 --> 00:08:10,720
+have to specify that namespace like that
+ 
+
+443
+00:08:10,720 --> 00:08:12,430
+have to specify that namespace like that
+you can also create aliases for
+
+444
+00:08:12,430 --> 00:08:12,440
+you can also create aliases for
+ 
+
+445
+00:08:12,440 --> 00:08:15,270
+you can also create aliases for
+namespaces by just typing in namespace
+
+446
+00:08:15,270 --> 00:08:15,280
+namespaces by just typing in namespace
+ 
+
+447
+00:08:15,280 --> 00:08:17,469
+namespaces by just typing in namespace
+you know a equals apple or something
+
+448
+00:08:17,469 --> 00:08:17,479
+you know a equals apple or something
+ 
+
+449
+00:08:17,479 --> 00:08:19,710
+you know a equals apple or something
+like that that means I can type in a
+
+450
+00:08:19,710 --> 00:08:19,720
+like that that means I can type in a
+ 
+
+451
+00:08:19,720 --> 00:08:21,309
+like that that means I can type in a
+print like that instead of having it to
+
+452
+00:08:21,309 --> 00:08:21,319
+print like that instead of having it to
+ 
+
+453
+00:08:21,319 --> 00:08:23,749
+print like that instead of having it to
+spell out Apple that's very useful for
+
+454
+00:08:23,749 --> 00:08:23,759
+spell out Apple that's very useful for
+ 
+
+455
+00:08:23,759 --> 00:08:26,469
+spell out Apple that's very useful for
+when you have nested namespaces so we
+
+456
+00:08:26,469 --> 00:08:26,479
+when you have nested namespaces so we
+ 
+
+457
+00:08:26,479 --> 00:08:28,830
+when you have nested namespaces so we
+can also Nest namespaces as you probably
+
+458
+00:08:28,830 --> 00:08:28,840
+can also Nest namespaces as you probably
+ 
+
+459
+00:08:28,840 --> 00:08:30,830
+can also Nest namespaces as you probably
+saw earlier so we can have apple and
+
+460
+00:08:30,830 --> 00:08:30,840
+saw earlier so we can have apple and
+ 
+
+461
+00:08:30,840 --> 00:08:33,029
+saw earlier so we can have apple and
+maybe we enclude all of our function we
+
+462
+00:08:33,029 --> 00:08:33,039
+maybe we enclude all of our function we
+ 
+
+463
+00:08:33,039 --> 00:08:34,790
+maybe we enclude all of our function we
+enclose all of our functions inside this
+
+464
+00:08:34,790 --> 00:08:34,800
+enclose all of our functions inside this
+ 
+
+465
+00:08:34,800 --> 00:08:36,589
+enclose all of our functions inside this
+function's namespace for some reason
+
+466
+00:08:36,589 --> 00:08:36,599
+function's namespace for some reason
+ 
+
+467
+00:08:36,599 --> 00:08:38,709
+function's namespace for some reason
+don't ask me why just an example so we
+
+468
+00:08:38,709 --> 00:08:38,719
+don't ask me why just an example so we
+ 
+
+469
+00:08:38,719 --> 00:08:40,310
+don't ask me why just an example so we
+have namespace apple we have namespace
+
+470
+00:08:40,310 --> 00:08:40,320
+have namespace apple we have namespace
+ 
+
+471
+00:08:40,320 --> 00:08:42,550
+have namespace apple we have namespace
+functions and then instead of us having
+
+472
+00:08:42,550 --> 00:08:42,560
+functions and then instead of us having
+ 
+
+473
+00:08:42,560 --> 00:08:45,190
+functions and then instead of us having
+to write you know Apple functions like
+
+474
+00:08:45,190 --> 00:08:45,200
+to write you know Apple functions like
+ 
+
+475
+00:08:45,200 --> 00:08:49,030
+to write you know Apple functions like
+that or you know something like using
+
+476
+00:08:49,030 --> 00:08:49,040
+that or you know something like using
+ 
+
+477
+00:08:49,040 --> 00:08:52,550
+that or you know something like using
+using namespace Apple functions like
+
+478
+00:08:52,550 --> 00:08:52,560
+using namespace Apple functions like
+ 
+
+479
+00:08:52,560 --> 00:08:55,070
+using namespace Apple functions like
+this we could also by the way for this
+
+480
+00:08:55,070 --> 00:08:55,080
+this we could also by the way for this
+ 
+
+481
+00:08:55,080 --> 00:08:57,230
+this we could also by the way for this
+example you can also split this up so
+
+482
+00:08:57,230 --> 00:08:57,240
+example you can also split this up so
+ 
+
+483
+00:08:57,240 --> 00:08:59,470
+example you can also split this up so
+you can be like using namespace Apple
+
+484
+00:08:59,470 --> 00:08:59,480
+you can be like using namespace Apple
+ 
+
+485
+00:08:59,480 --> 00:09:01,750
+you can be like using namespace Apple
+and using namespace functions which
+
+486
+00:09:01,750 --> 00:09:01,760
+and using namespace functions which
+ 
+
+487
+00:09:01,760 --> 00:09:04,710
+and using namespace functions which
+would allow us to not have to specify
+
+488
+00:09:04,710 --> 00:09:04,720
+would allow us to not have to specify
+ 
+
+489
+00:09:04,720 --> 00:09:06,670
+would allow us to not have to specify
+any namespace for print at all so
+
+490
+00:09:06,670 --> 00:09:06,680
+any namespace for print at all so
+ 
+
+491
+00:09:06,680 --> 00:09:08,670
+any namespace for print at all so
+instead of us having to do this or in
+
+492
+00:09:08,670 --> 00:09:08,680
+instead of us having to do this or in
+ 
+
+493
+00:09:08,680 --> 00:09:11,470
+instead of us having to do this or in
+the earlier example that we can also
+
+494
+00:09:11,470 --> 00:09:11,480
+the earlier example that we can also
+ 
+
+495
+00:09:11,480 --> 00:09:14,750
+the earlier example that we can also
+just say namespace a equals Apple
+
+496
+00:09:14,750 --> 00:09:14,760
+just say namespace a equals Apple
+ 
+
+497
+00:09:14,760 --> 00:09:16,750
+just say namespace a equals Apple
+functions which means that I can just
+
+498
+00:09:16,750 --> 00:09:16,760
+functions which means that I can just
+ 
+
+499
+00:09:16,760 --> 00:09:19,030
+functions which means that I can just
+type in a print as if it was in one
+
+500
+00:09:19,030 --> 00:09:19,040
+type in a print as if it was in one
+ 
+
+501
+00:09:19,040 --> 00:09:21,590
+type in a print as if it was in one
+namespace and I would get that result
+
+502
+00:09:21,590 --> 00:09:21,600
+namespace and I would get that result
+ 
+
+503
+00:09:21,600 --> 00:09:24,310
+namespace and I would get that result
+over there okay so that's a pretty basic
+
+504
+00:09:24,310 --> 00:09:24,320
+over there okay so that's a pretty basic
+ 
+
+505
+00:09:24,320 --> 00:09:28,069
+over there okay so that's a pretty basic
+example of how namespaces work um I'm
+
+506
+00:09:28,069 --> 00:09:28,079
+example of how namespaces work um I'm
+ 
+
+507
+00:09:28,079 --> 00:09:29,870
+example of how namespaces work um I'm
+not sure if there's really anything else
+
+508
+00:09:29,870 --> 00:09:29,880
+not sure if there's really anything else
+ 
+
+509
+00:09:29,880 --> 00:09:32,310
+not sure if there's really anything else
+that I need to talk about obviously
+
+510
+00:09:32,310 --> 00:09:32,320
+that I need to talk about obviously
+ 
+
+511
+00:09:32,320 --> 00:09:34,590
+that I need to talk about obviously
+things like the things like this are
+
+512
+00:09:34,590 --> 00:09:34,600
+things like the things like this are
+ 
+
+513
+00:09:34,600 --> 00:09:37,269
+things like the things like this are
+confined to the actual scope so in other
+
+514
+00:09:37,269 --> 00:09:37,279
+confined to the actual scope so in other
+ 
+
+515
+00:09:37,279 --> 00:09:40,030
+confined to the actual scope so in other
+words a this namespace a equals Apple
+
+516
+00:09:40,030 --> 00:09:40,040
+words a this namespace a equals Apple
+ 
+
+517
+00:09:40,040 --> 00:09:42,110
+words a this namespace a equals Apple
+functions only exists within this main
+
+518
+00:09:42,110 --> 00:09:42,120
+functions only exists within this main
+ 
+
+519
+00:09:42,120 --> 00:09:45,350
+functions only exists within this main
+function I can't access it outside uh my
+
+520
+00:09:45,350 --> 00:09:45,360
+function I can't access it outside uh my
+ 
+
+521
+00:09:45,360 --> 00:09:46,949
+function I can't access it outside uh my
+recommendation is when you do things
+
+522
+00:09:46,949 --> 00:09:46,959
+recommendation is when you do things
+ 
+
+523
+00:09:46,959 --> 00:09:48,910
+recommendation is when you do things
+like this like namespace a equals blah
+
+524
+00:09:48,910 --> 00:09:48,920
+like this like namespace a equals blah
+ 
+
+525
+00:09:48,920 --> 00:09:52,110
+like this like namespace a equals blah
+blah blah or using namespace whatever my
+
+526
+00:09:52,110 --> 00:09:52,120
+blah blah or using namespace whatever my
+ 
+
+527
+00:09:52,120 --> 00:09:54,030
+blah blah or using namespace whatever my
+recommendation is you try and confine it
+
+528
+00:09:54,030 --> 00:09:54,040
+recommendation is you try and confine it
+ 
+
+529
+00:09:54,040 --> 00:09:56,389
+recommendation is you try and confine it
+to as small a scope as possible if you
+
+530
+00:09:56,389 --> 00:09:56,399
+to as small a scope as possible if you
+ 
+
+531
+00:09:56,399 --> 00:09:58,350
+to as small a scope as possible if you
+just need it inside an if statement for
+
+532
+00:09:58,350 --> 00:09:58,360
+just need it inside an if statement for
+ 
+
+533
+00:09:58,360 --> 00:10:01,110
+just need it inside an if statement for
+example you know write your write your
+
+534
+00:10:01,110 --> 00:10:01,120
+example you know write your write your
+ 
+
+535
+00:10:01,120 --> 00:10:03,430
+example you know write your write your
+declaration inside that if statement if
+
+536
+00:10:03,430 --> 00:10:03,440
+declaration inside that if statement if
+ 
+
+537
+00:10:03,440 --> 00:10:05,190
+declaration inside that if statement if
+you just need it inside a function then
+
+538
+00:10:05,190 --> 00:10:05,200
+you just need it inside a function then
+ 
+
+539
+00:10:05,200 --> 00:10:06,870
+you just need it inside a function then
+write it inside the function and then as
+
+540
+00:10:06,870 --> 00:10:06,880
+write it inside the function and then as
+ 
+
+541
+00:10:06,880 --> 00:10:09,550
+write it inside the function and then as
+a last result as a last result write it
+
+542
+00:10:09,550 --> 00:10:09,560
+a last result as a last result write it
+ 
+
+543
+00:10:09,560 --> 00:10:11,190
+a last result as a last result write it
+in the like kind of in the top level
+
+544
+00:10:11,190 --> 00:10:11,200
+in the like kind of in the top level
+ 
+
+545
+00:10:11,200 --> 00:10:13,470
+in the like kind of in the top level
+file but don't try and like just you
+
+546
+00:10:13,470 --> 00:10:13,480
+file but don't try and like just you
+ 
+
+547
+00:10:13,480 --> 00:10:15,590
+file but don't try and like just you
+know declare it in at the top level at
+
+548
+00:10:15,590 --> 00:10:15,600
+know declare it in at the top level at
+ 
+
+549
+00:10:15,600 --> 00:10:18,670
+know declare it in at the top level at
+all times or in header files certainly
+
+550
+00:10:18,670 --> 00:10:18,680
+all times or in header files certainly
+ 
+
+551
+00:10:18,680 --> 00:10:20,949
+all times or in header files certainly
+never do it in header files the reason
+
+552
+00:10:20,949 --> 00:10:20,959
+never do it in header files the reason
+ 
+
+553
+00:10:20,959 --> 00:10:22,710
+never do it in header files the reason
+we don't want to do that is because when
+
+554
+00:10:22,710 --> 00:10:22,720
+we don't want to do that is because when
+ 
+
+555
+00:10:22,720 --> 00:10:25,269
+we don't want to do that is because when
+we get you know if we start using
+
+556
+00:10:25,269 --> 00:10:25,279
+we get you know if we start using
+ 
+
+557
+00:10:25,279 --> 00:10:28,190
+we get you know if we start using
+namespace everywhere then as you can
+
+558
+00:10:28,190 --> 00:10:28,200
+namespace everywhere then as you can
+ 
+
+559
+00:10:28,200 --> 00:10:31,550
+namespace everywhere then as you can
+probably imagine that kind of undo all
+
+560
+00:10:31,550 --> 00:10:31,560
+probably imagine that kind of undo all
+ 
+
+561
+00:10:31,560 --> 00:10:33,310
+probably imagine that kind of undo all
+of the helpful work that namespaces do
+
+562
+00:10:33,310 --> 00:10:33,320
+of the helpful work that namespaces do
+ 
+
+563
+00:10:33,320 --> 00:10:35,269
+of the helpful work that namespaces do
+by avoiding naming conflicts because if
+
+564
+00:10:35,269 --> 00:10:35,279
+by avoiding naming conflicts because if
+ 
+
+565
+00:10:35,279 --> 00:10:36,750
+by avoiding naming conflicts because if
+we're using it what's the point of
+
+566
+00:10:36,750 --> 00:10:36,760
+we're using it what's the point of
+ 
+
+567
+00:10:36,760 --> 00:10:39,310
+we're using it what's the point of
+having our functions in namespaces if we
+
+568
+00:10:39,310 --> 00:10:39,320
+having our functions in namespaces if we
+ 
+
+569
+00:10:39,320 --> 00:10:41,910
+having our functions in namespaces if we
+have to if if we use namespace anyway
+
+570
+00:10:41,910 --> 00:10:41,920
+have to if if we use namespace anyway
+ 
+
+571
+00:10:41,920 --> 00:10:44,069
+have to if if we use namespace anyway
+right it Imports everything which means
+
+572
+00:10:44,069 --> 00:10:44,079
+right it Imports everything which means
+ 
+
+573
+00:10:44,079 --> 00:10:45,389
+right it Imports everything which means
+that we might as well not be using
+
+574
+00:10:45,389 --> 00:10:45,399
+that we might as well not be using
+ 
+
+575
+00:10:45,399 --> 00:10:47,269
+that we might as well not be using
+namespaces and we can get back to the
+
+576
+00:10:47,269 --> 00:10:47,279
+namespaces and we can get back to the
+ 
+
+577
+00:10:47,279 --> 00:10:49,190
+namespaces and we can get back to the
+problem of having naming conflicts
+
+578
+00:10:49,190 --> 00:10:49,200
+problem of having naming conflicts
+ 
+
+579
+00:10:49,200 --> 00:10:51,389
+problem of having naming conflicts
+between libraries or between our own
+
+580
+00:10:51,389 --> 00:10:51,399
+between libraries or between our own
+ 
+
+581
+00:10:51,399 --> 00:10:53,590
+between libraries or between our own
+code so that's just a few things to
+
+582
+00:10:53,590 --> 00:10:53,600
+code so that's just a few things to
+ 
+
+583
+00:10:53,600 --> 00:10:55,990
+code so that's just a few things to
+think about um I've left a link below to
+
+584
+00:10:55,990 --> 00:10:56,000
+think about um I've left a link below to
+ 
+
+585
+00:10:56,000 --> 00:10:58,470
+think about um I've left a link below to
+the CPP reference page on namespaces
+
+586
+00:10:58,470 --> 00:10:58,480
+the CPP reference page on namespaces
+ 
+
+587
+00:10:58,480 --> 00:11:00,870
+the CPP reference page on namespaces
+this has a few examples of what you can
+
+588
+00:11:00,870 --> 00:11:00,880
+this has a few examples of what you can
+ 
+
+589
+00:11:00,880 --> 00:11:02,750
+this has a few examples of what you can
+actually do so there's also something
+
+590
+00:11:02,750 --> 00:11:02,760
+actually do so there's also something
+ 
+
+591
+00:11:02,760 --> 00:11:04,470
+actually do so there's also something
+called an inline namespace which really
+
+592
+00:11:04,470 --> 00:11:04,480
+called an inline namespace which really
+ 
+
+593
+00:11:04,480 --> 00:11:06,389
+called an inline namespace which really
+just kind of makes everything available
+
+594
+00:11:06,389 --> 00:11:06,399
+just kind of makes everything available
+ 
+
+595
+00:11:06,399 --> 00:11:08,990
+just kind of makes everything available
+to the parent namespace uh we also have
+
+596
+00:11:08,990 --> 00:11:09,000
+to the parent namespace uh we also have
+ 
+
+597
+00:11:09,000 --> 00:11:11,590
+to the parent namespace uh we also have
+since C++ 17 the ability to actually
+
+598
+00:11:11,590 --> 00:11:11,600
+since C++ 17 the ability to actually
+ 
+
+599
+00:11:11,600 --> 00:11:14,190
+since C++ 17 the ability to actually
+specify Nam spaces kind of like this so
+
+600
+00:11:14,190 --> 00:11:14,200
+specify Nam spaces kind of like this so
+ 
+
+601
+00:11:14,200 --> 00:11:15,949
+specify Nam spaces kind of like this so
+in this case when I had this functions
+
+602
+00:11:15,949 --> 00:11:15,959
+in this case when I had this functions
+ 
+
+603
+00:11:15,959 --> 00:11:17,949
+in this case when I had this functions
+instead of having to do namespace Apple
+
+604
+00:11:17,949 --> 00:11:17,959
+instead of having to do namespace Apple
+ 
+
+605
+00:11:17,959 --> 00:11:20,509
+instead of having to do namespace Apple
+then namespace functions I can actually
+
+606
+00:11:20,509 --> 00:11:20,519
+then namespace functions I can actually
+ 
+
+607
+00:11:20,519 --> 00:11:23,269
+then namespace functions I can actually
+just write namespace functions like that
+
+608
+00:11:23,269 --> 00:11:23,279
+just write namespace functions like that
+ 
+
+609
+00:11:23,279 --> 00:11:24,509
+just write namespace functions like that
+be aware that that's not supported by
+
+610
+00:11:24,509 --> 00:11:24,519
+be aware that that's not supported by
+ 
+
+611
+00:11:24,519 --> 00:11:27,750
+be aware that that's not supported by
+all compilers of course and it is a new
+
+612
+00:11:27,750 --> 00:11:27,760
+all compilers of course and it is a new
+ 
+
+613
+00:11:27,760 --> 00:11:30,470
+all compilers of course and it is a new
+kind of C++ thing um I recommend you
+
+614
+00:11:30,470 --> 00:11:30,480
+kind of C++ thing um I recommend you
+ 
+
+615
+00:11:30,480 --> 00:11:31,509
+kind of C++ thing um I recommend you
+read through this page if you want to
+
+616
+00:11:31,509 --> 00:11:31,519
+read through this page if you want to
+ 
+
+617
+00:11:31,519 --> 00:11:32,710
+read through this page if you want to
+know everything that you can do with
+
+618
+00:11:32,710 --> 00:11:32,720
+know everything that you can do with
+ 
+
+619
+00:11:32,720 --> 00:11:34,230
+know everything that you can do with
+namespaces I've pretty much covered most
+
+620
+00:11:34,230 --> 00:11:34,240
+namespaces I've pretty much covered most
+ 
+
+621
+00:11:34,240 --> 00:11:36,310
+namespaces I've pretty much covered most
+of the useful things obviously the
+
+622
+00:11:36,310 --> 00:11:36,320
+of the useful things obviously the
+ 
+
+623
+00:11:36,320 --> 00:11:39,389
+of the useful things obviously the
+reason why we use namespaces is kind of
+
+624
+00:11:39,389 --> 00:11:39,399
+reason why we use namespaces is kind of
+ 
+
+625
+00:11:39,399 --> 00:11:42,269
+reason why we use namespaces is kind of
+to if we are creating a library of code
+
+626
+00:11:42,269 --> 00:11:42,279
+to if we are creating a library of code
+ 
+
+627
+00:11:42,279 --> 00:11:44,350
+to if we are creating a library of code
+or if we just have our project we want
+
+628
+00:11:44,350 --> 00:11:44,360
+or if we just have our project we want
+ 
+
+629
+00:11:44,360 --> 00:11:46,150
+or if we just have our project we want
+to put it behind a namespace so that we
+
+630
+00:11:46,150 --> 00:11:46,160
+to put it behind a namespace so that we
+ 
+
+631
+00:11:46,160 --> 00:11:48,150
+to put it behind a namespace so that we
+don't get any naming conflicts that way
+
+632
+00:11:48,150 --> 00:11:48,160
+don't get any naming conflicts that way
+ 
+
+633
+00:11:48,160 --> 00:11:50,590
+don't get any naming conflicts that way
+I'm free to create any function that I
+
+634
+00:11:50,590 --> 00:11:50,600
+I'm free to create any function that I
+ 
+
+635
+00:11:50,600 --> 00:11:52,790
+I'm free to create any function that I
+really want everything in the C++
+
+636
+00:11:52,790 --> 00:11:52,800
+really want everything in the C++
+ 
+
+637
+00:11:52,800 --> 00:11:54,870
+really want everything in the C++
+standard library is behind the standard
+
+638
+00:11:54,870 --> 00:11:54,880
+standard library is behind the standard
+ 
+
+639
+00:11:54,880 --> 00:11:57,150
+standard library is behind the standard
+STD namespace so obviously you're not
+
+640
+00:11:57,150 --> 00:11:57,160
+STD namespace so obviously you're not
+ 
+
+641
+00:11:57,160 --> 00:11:59,430
+STD namespace so obviously you're not
+going to get naming conflicts like that
+
+642
+00:11:59,430 --> 00:11:59,440
+going to get naming conflicts like that
+ 
+
+643
+00:11:59,440 --> 00:12:02,230
+going to get naming conflicts like that
+however if you use any kind of C code no
+
+644
+00:12:02,230 --> 00:12:02,240
+however if you use any kind of C code no
+ 
+
+645
+00:12:02,240 --> 00:12:04,030
+however if you use any kind of C code no
+such thing as namespaces which means
+
+646
+00:12:04,030 --> 00:12:04,040
+such thing as namespaces which means
+ 
+
+647
+00:12:04,040 --> 00:12:06,190
+such thing as namespaces which means
+that when you do use C code you are
+
+648
+00:12:06,190 --> 00:12:06,200
+that when you do use C code you are
+ 
+
+649
+00:12:06,200 --> 00:12:08,790
+that when you do use C code you are
+potentially risking a naming conflict so
+
+650
+00:12:08,790 --> 00:12:08,800
+potentially risking a naming conflict so
+ 
+
+651
+00:12:08,800 --> 00:12:11,710
+potentially risking a naming conflict so
+even in your C++ project I would still
+
+652
+00:12:11,710 --> 00:12:11,720
+even in your C++ project I would still
+ 
+
+653
+00:12:11,720 --> 00:12:15,310
+even in your C++ project I would still
+use a namespace of course because if you
+
+654
+00:12:15,310 --> 00:12:15,320
+use a namespace of course because if you
+ 
+
+655
+00:12:15,320 --> 00:12:17,829
+use a namespace of course because if you
+use any c code then that's going to be
+
+656
+00:12:17,829 --> 00:12:17,839
+use any c code then that's going to be
+ 
+
+657
+00:12:17,839 --> 00:12:20,150
+use any c code then that's going to be
+an immediate conflict if it has the same
+
+658
+00:12:20,150 --> 00:12:20,160
+an immediate conflict if it has the same
+ 
+
+659
+00:12:20,160 --> 00:12:21,790
+an immediate conflict if it has the same
+function name as what you're actually
+
+660
+00:12:21,790 --> 00:12:21,800
+function name as what you're actually
+ 
+
+661
+00:12:21,800 --> 00:12:24,310
+function name as what you're actually
+declaring anyway that's namespaces leave
+
+662
+00:12:24,310 --> 00:12:24,320
+declaring anyway that's namespaces leave
+ 
+
+663
+00:12:24,320 --> 00:12:26,350
+declaring anyway that's namespaces leave
+your thoughts below leave your thoughts
+
+664
+00:12:26,350 --> 00:12:26,360
+your thoughts below leave your thoughts
+ 
+
+665
+00:12:26,360 --> 00:12:28,069
+your thoughts below leave your thoughts
+on why you use namespaces why you don't
+
+666
+00:12:28,069 --> 00:12:28,079
+on why you use namespaces why you don't
+ 
+
+667
+00:12:28,079 --> 00:12:29,470
+on why you use namespaces why you don't
+like using namespaces where you would
+
+668
+00:12:29,470 --> 00:12:29,480
+like using namespaces where you would
+ 
+
+669
+00:12:29,480 --> 00:12:30,670
+like using namespaces where you would
+where you would and all that kind of
+
+670
+00:12:30,670 --> 00:12:30,680
+where you would and all that kind of
+ 
+
+671
+00:12:30,680 --> 00:12:32,590
+where you would and all that kind of
+stuff I think it's pretty clear that
+
+672
+00:12:32,590 --> 00:12:32,600
+stuff I think it's pretty clear that
+ 
+
+673
+00:12:32,600 --> 00:12:34,030
+stuff I think it's pretty clear that
+when you are writing code you should be
+
+674
+00:12:34,030 --> 00:12:34,040
+when you are writing code you should be
+ 
+
+675
+00:12:34,040 --> 00:12:36,470
+when you are writing code you should be
+writing it behind a namespace if it's
+
+676
+00:12:36,470 --> 00:12:36,480
+writing it behind a namespace if it's
+ 
+
+677
+00:12:36,480 --> 00:12:37,990
+writing it behind a namespace if it's
+any kind of serious
+
+678
+00:12:37,990 --> 00:12:38,000
+any kind of serious
+ 
+
+679
+00:12:38,000 --> 00:12:40,470
+any kind of serious
+project um if you guys enjoyed this
+
+680
+00:12:40,470 --> 00:12:40,480
+project um if you guys enjoyed this
+ 
+
+681
+00:12:40,480 --> 00:12:41,870
+project um if you guys enjoyed this
+video please hit the like button you can
+
+682
+00:12:41,870 --> 00:12:41,880
+video please hit the like button you can
+ 
+
+683
+00:12:41,880 --> 00:12:43,829
+video please hit the like button you can
+help support the series by going over to
+
+684
+00:12:43,829 --> 00:12:43,839
+help support the series by going over to
+ 
+
+685
+00:12:43,839 --> 00:12:46,710
+help support the series by going over to
+patreon.com Theo you'll get access to
+
+686
+00:12:46,710 --> 00:12:46,720
+patreon.com Theo you'll get access to
+ 
+
+687
+00:12:46,720 --> 00:12:49,910
+patreon.com Theo you'll get access to
+videos early and many other awesome
+
+688
+00:12:49,910 --> 00:12:49,920
+videos early and many other awesome
+ 
+
+689
+00:12:49,920 --> 00:12:52,550
+videos early and many other awesome
+rewards thank you so much to all the
+
+690
+00:12:52,550 --> 00:12:52,560
+rewards thank you so much to all the
+ 
+
+691
+00:12:52,560 --> 00:12:54,030
+rewards thank you so much to all the
+lovely patrons that help bring this
+
+692
+00:12:54,030 --> 00:12:54,040
+lovely patrons that help bring this
+ 
+
+693
+00:12:54,040 --> 00:12:55,470
+lovely patrons that help bring this
+series to life it wouldn't be here
+
+694
+00:12:55,470 --> 00:12:55,480
+series to life it wouldn't be here
+ 
+
+695
+00:12:55,480 --> 00:12:57,750
+series to life it wouldn't be here
+without you I will see you guys next
+
+696
+00:12:57,750 --> 00:12:57,760
+without you I will see you guys next
+ 
+
+697
+00:12:57,760 --> 00:13:02,110
+without you I will see you guys next
+time goodbye true
+
+698
+00:13:02,110 --> 00:13:02,120
+time goodbye true
+ 
+
+699
+00:13:02,120 --> 00:13:15,200
+time goodbye true
+[Music]
+

@@ -1,0 +1,3765 @@
+1
+00:00:00,000 --> 00:00:01,490
+
+hey what's up guys my name is a channel
+
+2
+00:00:01,490 --> 00:00:01,500
+hey what's up guys my name is a channel
+ 
+
+3
+00:00:01,500 --> 00:00:02,690
+hey what's up guys my name is a channel
+welcome back to my state boss boss
+
+4
+00:00:02,690 --> 00:00:02,700
+welcome back to my state boss boss
+ 
+
+5
+00:00:02,700 --> 00:00:04,370
+welcome back to my state boss boss
+series today when we talking all about
+
+6
+00:00:04,370 --> 00:00:04,380
+series today when we talking all about
+ 
+
+7
+00:00:04,380 --> 00:00:06,320
+series today when we talking all about
+the Const keyword and C++ a lot of
+
+8
+00:00:06,320 --> 00:00:06,330
+the Const keyword and C++ a lot of
+ 
+
+9
+00:00:06,330 --> 00:00:07,820
+the Const keyword and C++ a lot of
+people seem really confused by this so
+
+10
+00:00:07,820 --> 00:00:07,830
+people seem really confused by this so
+ 
+
+11
+00:00:07,830 --> 00:00:09,290
+people seem really confused by this so
+hopefully this video will clear things
+
+12
+00:00:09,290 --> 00:00:09,300
+hopefully this video will clear things
+ 
+
+13
+00:00:09,300 --> 00:00:11,270
+hopefully this video will clear things
+up so consti is more or less what I like
+
+14
+00:00:11,270 --> 00:00:11,280
+up so consti is more or less what I like
+ 
+
+15
+00:00:11,280 --> 00:00:13,370
+up so consti is more or less what I like
+to call a bit of a fake keyword because
+
+16
+00:00:13,370 --> 00:00:13,380
+to call a bit of a fake keyword because
+ 
+
+17
+00:00:13,380 --> 00:00:15,499
+to call a bit of a fake keyword because
+it doesn't really do much in the scope
+
+18
+00:00:15,499 --> 00:00:15,509
+it doesn't really do much in the scope
+ 
+
+19
+00:00:15,509 --> 00:00:18,260
+it doesn't really do much in the scope
+of changes through the generated code
+
+20
+00:00:18,260 --> 00:00:18,270
+of changes through the generated code
+ 
+
+21
+00:00:18,270 --> 00:00:21,019
+of changes through the generated code
+what it is is kind of like visibility
+
+22
+00:00:21,019 --> 00:00:21,029
+what it is is kind of like visibility
+ 
+
+23
+00:00:21,029 --> 00:00:23,210
+what it is is kind of like visibility
+for classes and structs it's just a
+
+24
+00:00:23,210 --> 00:00:23,220
+for classes and structs it's just a
+ 
+
+25
+00:00:23,220 --> 00:00:25,790
+for classes and structs it's just a
+mechanism we get in order to kind of
+
+26
+00:00:25,790 --> 00:00:25,800
+mechanism we get in order to kind of
+ 
+
+27
+00:00:25,800 --> 00:00:27,200
+mechanism we get in order to kind of
+make our code look a little bit cleaner
+
+28
+00:00:27,200 --> 00:00:27,210
+make our code look a little bit cleaner
+ 
+
+29
+00:00:27,210 --> 00:00:29,689
+make our code look a little bit cleaner
+and for certain rules on developers
+
+30
+00:00:29,689 --> 00:00:29,699
+and for certain rules on developers
+ 
+
+31
+00:00:29,699 --> 00:00:30,980
+and for certain rules on developers
+working without code
+
+32
+00:00:30,980 --> 00:00:30,990
+working without code
+ 
+
+33
+00:00:30,990 --> 00:00:32,479
+working without code
+Const is basically sort of like a
+
+34
+00:00:32,479 --> 00:00:32,489
+Const is basically sort of like a
+ 
+
+35
+00:00:32,489 --> 00:00:34,520
+Const is basically sort of like a
+promise that you give in which you
+
+36
+00:00:34,520 --> 00:00:34,530
+promise that you give in which you
+ 
+
+37
+00:00:34,530 --> 00:00:36,740
+promise that you give in which you
+promised that something will be constant
+
+38
+00:00:36,740 --> 00:00:36,750
+promised that something will be constant
+ 
+
+39
+00:00:36,750 --> 00:00:38,869
+promised that something will be constant
+that is it's not going to change however
+
+40
+00:00:38,869 --> 00:00:38,879
+that is it's not going to change however
+ 
+
+41
+00:00:38,879 --> 00:00:40,910
+that is it's not going to change however
+it's just a promise and you can bypass
+
+42
+00:00:40,910 --> 00:00:40,920
+it's just a promise and you can bypass
+ 
+
+43
+00:00:40,920 --> 00:00:43,220
+it's just a promise and you can bypass
+that whole promise and you can break
+
+44
+00:00:43,220 --> 00:00:43,230
+that whole promise and you can break
+ 
+
+45
+00:00:43,230 --> 00:00:44,660
+that whole promise and you can break
+your promise just like you can in real
+
+46
+00:00:44,660 --> 00:00:44,670
+your promise just like you can in real
+ 
+
+47
+00:00:44,670 --> 00:00:46,430
+your promise just like you can in real
+life like when I promise to make like
+
+48
+00:00:46,430 --> 00:00:46,440
+life like when I promise to make like
+ 
+
+49
+00:00:46,440 --> 00:00:49,190
+life like when I promise to make like
+daily videos and they're done yeah but
+
+50
+00:00:49,190 --> 00:00:49,200
+daily videos and they're done yeah but
+ 
+
+51
+00:00:49,200 --> 00:00:52,490
+daily videos and they're done yeah but
+anyway the point is that it's just it's
+
+52
+00:00:52,490 --> 00:00:52,500
+anyway the point is that it's just it's
+ 
+
+53
+00:00:52,500 --> 00:00:54,529
+anyway the point is that it's just it's
+a promise you promised something to be
+
+54
+00:00:54,529 --> 00:00:54,539
+a promise you promised something to be
+ 
+
+55
+00:00:54,539 --> 00:00:56,180
+a promise you promised something to be
+constant and whether or not you keep
+
+56
+00:00:56,180 --> 00:00:56,190
+constant and whether or not you keep
+ 
+
+57
+00:00:56,190 --> 00:00:58,099
+constant and whether or not you keep
+that promise it's kind of up to you but
+
+58
+00:00:58,099 --> 00:00:58,109
+that promise it's kind of up to you but
+ 
+
+59
+00:00:58,109 --> 00:01:00,860
+that promise it's kind of up to you but
+again it's a promise in the sense of you
+
+60
+00:01:00,860 --> 00:01:00,870
+again it's a promise in the sense of you
+ 
+
+61
+00:01:00,870 --> 00:01:03,470
+again it's a promise in the sense of you
+should be keeping that promise and the
+
+62
+00:01:03,470 --> 00:01:03,480
+should be keeping that promise and the
+ 
+
+63
+00:01:03,480 --> 00:01:05,719
+should be keeping that promise and the
+reason that we want to keep constant Pro
+
+64
+00:01:05,719 --> 00:01:05,729
+reason that we want to keep constant Pro
+ 
+
+65
+00:01:05,729 --> 00:01:07,310
+reason that we want to keep constant Pro
+kind of promises is because it can
+
+66
+00:01:07,310 --> 00:01:07,320
+kind of promises is because it can
+ 
+
+67
+00:01:07,320 --> 00:01:08,990
+kind of promises is because it can
+actually help simplify our code a lot
+
+68
+00:01:08,990 --> 00:01:09,000
+actually help simplify our code a lot
+ 
+
+69
+00:01:09,000 --> 00:01:11,780
+actually help simplify our code a lot
+and ask a lot of other benefits which
+
+70
+00:01:11,780 --> 00:01:11,790
+and ask a lot of other benefits which
+ 
+
+71
+00:01:11,790 --> 00:01:12,950
+and ask a lot of other benefits which
+we'll talk about in a minute
+
+72
+00:01:12,950 --> 00:01:12,960
+we'll talk about in a minute
+ 
+
+73
+00:01:12,960 --> 00:01:14,719
+we'll talk about in a minute
+so let's just dive into some code so I
+
+74
+00:01:14,719 --> 00:01:14,729
+so let's just dive into some code so I
+ 
+
+75
+00:01:14,729 --> 00:01:16,429
+so let's just dive into some code so I
+can show you what I'm talking about if I
+
+76
+00:01:16,429 --> 00:01:16,439
+can show you what I'm talking about if I
+ 
+
+77
+00:01:16,439 --> 00:01:18,410
+can show you what I'm talking about if I
+declare an integer just like this I'll
+
+78
+00:01:18,410 --> 00:01:18,420
+declare an integer just like this I'll
+ 
+
+79
+00:01:18,420 --> 00:01:19,999
+declare an integer just like this I'll
+set it equal to five I'm free to change
+
+80
+00:01:19,999 --> 00:01:20,009
+set it equal to five I'm free to change
+ 
+
+81
+00:01:20,009 --> 00:01:22,010
+set it equal to five I'm free to change
+that integer to whatever I like anyway
+
+82
+00:01:22,010 --> 00:01:22,020
+that integer to whatever I like anyway
+ 
+
+83
+00:01:22,020 --> 00:01:24,140
+that integer to whatever I like anyway
+down the road however if I declare this
+
+84
+00:01:24,140 --> 00:01:24,150
+down the road however if I declare this
+ 
+
+85
+00:01:24,150 --> 00:01:26,210
+down the road however if I declare this
+is a constant I cannot change it as you
+
+86
+00:01:26,210 --> 00:01:26,220
+is a constant I cannot change it as you
+ 
+
+87
+00:01:26,220 --> 00:01:28,130
+is a constant I cannot change it as you
+can see here so if I writing Const here
+
+88
+00:01:28,130 --> 00:01:28,140
+can see here so if I writing Const here
+ 
+
+89
+00:01:28,140 --> 00:01:29,690
+can see here so if I writing Const here
+you've kind of done a few things first
+
+90
+00:01:29,690 --> 00:01:29,700
+you've kind of done a few things first
+ 
+
+91
+00:01:29,700 --> 00:01:31,789
+you've kind of done a few things first
+of all you've seen tactically kind of
+
+92
+00:01:31,789 --> 00:01:31,799
+of all you've seen tactically kind of
+ 
+
+93
+00:01:31,799 --> 00:01:34,219
+of all you've seen tactically kind of
+specified that this a integer here is
+
+94
+00:01:34,219 --> 00:01:34,229
+specified that this a integer here is
+ 
+
+95
+00:01:34,229 --> 00:01:35,179
+specified that this a integer here is
+going to be a constant
+
+96
+00:01:35,179 --> 00:01:35,189
+going to be a constant
+ 
+
+97
+00:01:35,189 --> 00:01:36,920
+going to be a constant
+I'm not going to modify it this makes a
+
+98
+00:01:36,920 --> 00:01:36,930
+I'm not going to modify it this makes a
+ 
+
+99
+00:01:36,930 --> 00:01:38,120
+I'm not going to modify it this makes a
+lot of sense if you declare something
+
+100
+00:01:38,120 --> 00:01:38,130
+lot of sense if you declare something
+ 
+
+101
+00:01:38,130 --> 00:01:40,940
+lot of sense if you declare something
+like max age and set it equal to 90 or
+
+102
+00:01:40,940 --> 00:01:40,950
+like max age and set it equal to 90 or
+ 
+
+103
+00:01:40,950 --> 00:01:42,319
+like max age and set it equal to 90 or
+something like that you don't really
+
+104
+00:01:42,319 --> 00:01:42,329
+something like that you don't really
+ 
+
+105
+00:01:42,329 --> 00:01:44,330
+something like that you don't really
+want this to be a variable because well
+
+106
+00:01:44,330 --> 00:01:44,340
+want this to be a variable because well
+ 
+
+107
+00:01:44,340 --> 00:01:46,550
+want this to be a variable because well
+it's not variable you defined a maximum
+
+108
+00:01:46,550 --> 00:01:46,560
+it's not variable you defined a maximum
+ 
+
+109
+00:01:46,560 --> 00:01:48,260
+it's not variable you defined a maximum
+age and you're never going to change
+
+110
+00:01:48,260 --> 00:01:48,270
+age and you're never going to change
+ 
+
+111
+00:01:48,270 --> 00:01:50,300
+age and you're never going to change
+that that's just kind of a number that
+
+112
+00:01:50,300 --> 00:01:50,310
+that that's just kind of a number that
+ 
+
+113
+00:01:50,310 --> 00:01:51,920
+that that's just kind of a number that
+you need to keep around in your program
+
+114
+00:01:51,920 --> 00:01:51,930
+you need to keep around in your program
+ 
+
+115
+00:01:51,930 --> 00:01:53,539
+you need to keep around in your program
+so this is probably the most simple
+
+116
+00:01:53,539 --> 00:01:53,549
+so this is probably the most simple
+ 
+
+117
+00:01:53,549 --> 00:01:55,850
+so this is probably the most simple
+example for how Const can be used it's
+
+118
+00:01:55,850 --> 00:01:55,860
+example for how Const can be used it's
+ 
+
+119
+00:01:55,860 --> 00:01:58,190
+example for how Const can be used it's
+simply a way to say that I'm declaring a
+
+120
+00:01:58,190 --> 00:01:58,200
+simply a way to say that I'm declaring a
+ 
+
+121
+00:01:58,200 --> 00:02:00,289
+simply a way to say that I'm declaring a
+variable and I'm not going to modify
+
+122
+00:02:00,289 --> 00:02:00,299
+variable and I'm not going to modify
+ 
+
+123
+00:02:00,299 --> 00:02:01,700
+variable and I'm not going to modify
+this variable I don't really want it to
+
+124
+00:02:01,700 --> 00:02:01,710
+this variable I don't really want it to
+ 
+
+125
+00:02:01,710 --> 00:02:02,720
+this variable I don't really want it to
+be a very
+
+126
+00:02:02,720 --> 00:02:02,730
+be a very
+ 
+
+127
+00:02:02,730 --> 00:02:05,060
+be a very
+variable right because the term variable
+
+128
+00:02:05,060 --> 00:02:05,070
+variable right because the term variable
+ 
+
+129
+00:02:05,070 --> 00:02:08,930
+variable right because the term variable
+implies that it can change whereas Const
+
+130
+00:02:08,930 --> 00:02:08,940
+implies that it can change whereas Const
+ 
+
+131
+00:02:08,940 --> 00:02:10,970
+implies that it can change whereas Const
+stands for constant which means that
+
+132
+00:02:10,970 --> 00:02:10,980
+stands for constant which means that
+ 
+
+133
+00:02:10,980 --> 00:02:12,740
+stands for constant which means that
+you're basically declaring a constant
+
+134
+00:02:12,740 --> 00:02:12,750
+you're basically declaring a constant
+ 
+
+135
+00:02:12,750 --> 00:02:14,450
+you're basically declaring a constant
+instead of a variable something that
+
+136
+00:02:14,450 --> 00:02:14,460
+instead of a variable something that
+ 
+
+137
+00:02:14,460 --> 00:02:15,980
+instead of a variable something that
+will not change now there are several
+
+138
+00:02:15,980 --> 00:02:15,990
+will not change now there are several
+ 
+
+139
+00:02:15,990 --> 00:02:17,810
+will not change now there are several
+other uses for consulates talk about
+
+140
+00:02:17,810 --> 00:02:17,820
+other uses for consulates talk about
+ 
+
+141
+00:02:17,820 --> 00:02:19,310
+other uses for consulates talk about
+them the first one applies with pointers
+
+142
+00:02:19,310 --> 00:02:19,320
+them the first one applies with pointers
+ 
+
+143
+00:02:19,320 --> 00:02:22,190
+them the first one applies with pointers
+when you just bear a pointer so for now
+
+144
+00:02:22,190 --> 00:02:22,200
+when you just bear a pointer so for now
+ 
+
+145
+00:02:22,200 --> 00:02:24,290
+when you just bear a pointer so for now
+all I'm going to do is create an integer
+
+146
+00:02:24,290 --> 00:02:24,300
+all I'm going to do is create an integer
+ 
+
+147
+00:02:24,300 --> 00:02:25,850
+all I'm going to do is create an integer
+however I'll Predators integer on the
+
+148
+00:02:25,850 --> 00:02:25,860
+however I'll Predators integer on the
+ 
+
+149
+00:02:25,860 --> 00:02:27,440
+however I'll Predators integer on the
+heap so that we actually get a pointer
+
+150
+00:02:27,440 --> 00:02:27,450
+heap so that we actually get a pointer
+ 
+
+151
+00:02:27,450 --> 00:02:28,700
+heap so that we actually get a pointer
+because this is declared without
+
+152
+00:02:28,700 --> 00:02:28,710
+because this is declared without
+ 
+
+153
+00:02:28,710 --> 00:02:30,920
+because this is declared without
+constant or anything I can do two things
+
+154
+00:02:30,920 --> 00:02:30,930
+constant or anything I can do two things
+ 
+
+155
+00:02:30,930 --> 00:02:32,900
+constant or anything I can do two things
+here I can dereference a and then
+
+156
+00:02:32,900 --> 00:02:32,910
+here I can dereference a and then
+ 
+
+157
+00:02:32,910 --> 00:02:34,910
+here I can dereference a and then
+instead of equal to a value such as two
+
+158
+00:02:34,910 --> 00:02:34,920
+instead of equal to a value such as two
+ 
+
+159
+00:02:34,920 --> 00:02:37,600
+instead of equal to a value such as two
+and then of course to get by print a
+
+160
+00:02:37,600 --> 00:02:37,610
+and then of course to get by print a
+ 
+
+161
+00:02:37,610 --> 00:02:40,370
+and then of course to get by print a
+I'll get two and all as well and then
+
+162
+00:02:40,370 --> 00:02:40,380
+I'll get two and all as well and then
+ 
+
+163
+00:02:40,380 --> 00:02:41,660
+I'll get two and all as well and then
+the other thing I can do is actually
+
+164
+00:02:41,660 --> 00:02:41,670
+the other thing I can do is actually
+ 
+
+165
+00:02:41,670 --> 00:02:44,570
+the other thing I can do is actually
+also reassign the actual pointer so that
+
+166
+00:02:44,570 --> 00:02:44,580
+also reassign the actual pointer so that
+ 
+
+167
+00:02:44,580 --> 00:02:46,100
+also reassign the actual pointer so that
+it points to something else like for
+
+168
+00:02:46,100 --> 00:02:46,110
+it points to something else like for
+ 
+
+169
+00:02:46,110 --> 00:02:48,260
+it points to something else like for
+example this max age that I've got here
+
+170
+00:02:48,260 --> 00:02:48,270
+example this max age that I've got here
+ 
+
+171
+00:02:48,270 --> 00:02:50,780
+example this max age that I've got here
+now to bypass this whole constant I can
+
+172
+00:02:50,780 --> 00:02:50,790
+now to bypass this whole constant I can
+ 
+
+173
+00:02:50,790 --> 00:02:53,330
+now to bypass this whole constant I can
+cast this to a normal eight pointer not
+
+174
+00:02:53,330 --> 00:02:53,340
+cast this to a normal eight pointer not
+ 
+
+175
+00:02:53,340 --> 00:02:54,980
+cast this to a normal eight pointer not
+something you should usually do remember
+
+176
+00:02:54,980 --> 00:02:54,990
+something you should usually do remember
+ 
+
+177
+00:02:54,990 --> 00:02:56,420
+something you should usually do remember
+how I said that you can kind of break
+
+178
+00:02:56,420 --> 00:02:56,430
+how I said that you can kind of break
+ 
+
+179
+00:02:56,430 --> 00:02:58,490
+how I said that you can kind of break
+the cost promise this is one of the ways
+
+180
+00:02:58,490 --> 00:02:58,500
+the cost promise this is one of the ways
+ 
+
+181
+00:02:58,500 --> 00:03:00,020
+the cost promise this is one of the ways
+however if you try and do it in this
+
+182
+00:03:00,020 --> 00:03:00,030
+however if you try and do it in this
+ 
+
+183
+00:03:00,030 --> 00:03:01,520
+however if you try and do it in this
+case you can see we've declared a max
+
+184
+00:03:01,520 --> 00:03:01,530
+case you can see we've declared a max
+ 
+
+185
+00:03:01,530 --> 00:03:03,770
+case you can see we've declared a max
+age as an actual constant chances are
+
+186
+00:03:03,770 --> 00:03:03,780
+age as an actual constant chances are
+ 
+
+187
+00:03:03,780 --> 00:03:05,000
+age as an actual constant chances are
+the compile is actually going to treat
+
+188
+00:03:05,000 --> 00:03:05,010
+the compile is actually going to treat
+ 
+
+189
+00:03:05,010 --> 00:03:06,710
+the compile is actually going to treat
+that as kind of a read-only constant and
+
+190
+00:03:06,710 --> 00:03:06,720
+that as kind of a read-only constant and
+ 
+
+191
+00:03:06,720 --> 00:03:08,000
+that as kind of a read-only constant and
+if you try and dereference this and
+
+192
+00:03:08,000 --> 00:03:08,010
+if you try and dereference this and
+ 
+
+193
+00:03:08,010 --> 00:03:09,680
+if you try and dereference this and
+actually write to it you'll probably get
+
+194
+00:03:09,680 --> 00:03:09,690
+actually write to it you'll probably get
+ 
+
+195
+00:03:09,690 --> 00:03:11,660
+actually write to it you'll probably get
+a crash however for this purpose it will
+
+196
+00:03:11,660 --> 00:03:11,670
+a crash however for this purpose it will
+ 
+
+197
+00:03:11,670 --> 00:03:13,670
+a crash however for this purpose it will
+still work if I have here five now
+
+198
+00:03:13,670 --> 00:03:13,680
+still work if I have here five now
+ 
+
+199
+00:03:13,680 --> 00:03:15,440
+still work if I have here five now
+you'll see that i now get ninety
+
+200
+00:03:15,440 --> 00:03:15,450
+you'll see that i now get ninety
+ 
+
+201
+00:03:15,450 --> 00:03:16,610
+you'll see that i now get ninety
+printing because what we've actually
+
+202
+00:03:16,610 --> 00:03:16,620
+printing because what we've actually
+ 
+
+203
+00:03:16,620 --> 00:03:18,500
+printing because what we've actually
+done here is reassigned the pointer so
+
+204
+00:03:18,500 --> 00:03:18,510
+done here is reassigned the pointer so
+ 
+
+205
+00:03:18,510 --> 00:03:20,479
+done here is reassigned the pointer so
+we can do two things we can change the
+
+206
+00:03:20,479 --> 00:03:20,489
+we can do two things we can change the
+ 
+
+207
+00:03:20,489 --> 00:03:22,550
+we can do two things we can change the
+contents of the pointer so the contents
+
+208
+00:03:22,550 --> 00:03:22,560
+contents of the pointer so the contents
+ 
+
+209
+00:03:22,560 --> 00:03:24,860
+contents of the pointer so the contents
+at bad memory address but then we can
+
+210
+00:03:24,860 --> 00:03:24,870
+at bad memory address but then we can
+ 
+
+211
+00:03:24,870 --> 00:03:26,930
+at bad memory address but then we can
+also change which memory address but
+
+212
+00:03:26,930 --> 00:03:26,940
+also change which memory address but
+ 
+
+213
+00:03:26,940 --> 00:03:28,699
+also change which memory address but
+kind of pointing towards now let's start
+
+214
+00:03:28,699 --> 00:03:28,709
+kind of pointing towards now let's start
+ 
+
+215
+00:03:28,709 --> 00:03:30,440
+kind of pointing towards now let's start
+adding cost everywhere so the first
+
+216
+00:03:30,440 --> 00:03:30,450
+adding cost everywhere so the first
+ 
+
+217
+00:03:30,450 --> 00:03:32,510
+adding cost everywhere so the first
+thing I can do is put Const just at the
+
+218
+00:03:32,510 --> 00:03:32,520
+thing I can do is put Const just at the
+ 
+
+219
+00:03:32,520 --> 00:03:33,949
+thing I can do is put Const just at the
+front here so which is a Const int
+
+220
+00:03:33,949 --> 00:03:33,959
+front here so which is a Const int
+ 
+
+221
+00:03:33,959 --> 00:03:35,630
+front here so which is a Const int
+pointer what does that mean that means
+
+222
+00:03:35,630 --> 00:03:35,640
+pointer what does that mean that means
+ 
+
+223
+00:03:35,640 --> 00:03:37,580
+pointer what does that mean that means
+that you cannot modify the contents of
+
+224
+00:03:37,580 --> 00:03:37,590
+that you cannot modify the contents of
+ 
+
+225
+00:03:37,590 --> 00:03:39,470
+that you cannot modify the contents of
+that pointer so you can see here that
+
+226
+00:03:39,470 --> 00:03:39,480
+that pointer so you can see here that
+ 
+
+227
+00:03:39,480 --> 00:03:41,210
+that pointer so you can see here that
+I've created a pointer however when I
+
+228
+00:03:41,210 --> 00:03:41,220
+I've created a pointer however when I
+ 
+
+229
+00:03:41,220 --> 00:03:42,620
+I've created a pointer however when I
+when I try and dereference that pointer
+
+230
+00:03:42,620 --> 00:03:42,630
+when I try and dereference that pointer
+ 
+
+231
+00:03:42,630 --> 00:03:45,260
+when I try and dereference that pointer
+and change the value of a you can see
+
+232
+00:03:45,260 --> 00:03:45,270
+and change the value of a you can see
+ 
+
+233
+00:03:45,270 --> 00:03:47,090
+and change the value of a you can see
+that I can't do that the value of a
+
+234
+00:03:47,090 --> 00:03:47,100
+that I can't do that the value of a
+ 
+
+235
+00:03:47,100 --> 00:03:49,430
+that I can't do that the value of a
+being the contents at that actual memory
+
+236
+00:03:49,430 --> 00:03:49,440
+being the contents at that actual memory
+ 
+
+237
+00:03:49,440 --> 00:03:51,229
+being the contents at that actual memory
+address however reading a of course is
+
+238
+00:03:51,229 --> 00:03:51,239
+address however reading a of course is
+ 
+
+239
+00:03:51,239 --> 00:03:52,160
+address however reading a of course is
+still fine you can see I'll be
+
+240
+00:03:52,160 --> 00:03:52,170
+still fine you can see I'll be
+ 
+
+241
+00:03:52,170 --> 00:03:54,199
+still fine you can see I'll be
+referencing it here printing it and I
+
+242
+00:03:54,199 --> 00:03:54,209
+referencing it here printing it and I
+ 
+
+243
+00:03:54,209 --> 00:03:56,060
+referencing it here printing it and I
+get no errors you can also notice that
+
+244
+00:03:56,060 --> 00:03:56,070
+get no errors you can also notice that
+ 
+
+245
+00:03:56,070 --> 00:03:58,520
+get no errors you can also notice that
+I'm not getting any kind of error when I
+
+246
+00:03:58,520 --> 00:03:58,530
+I'm not getting any kind of error when I
+ 
+
+247
+00:03:58,530 --> 00:04:01,130
+I'm not getting any kind of error when I
+try and actually change a so when I
+
+248
+00:04:01,130 --> 00:04:01,140
+try and actually change a so when I
+ 
+
+249
+00:04:01,140 --> 00:04:02,690
+try and actually change a so when I
+change the pointer aid to point to
+
+250
+00:04:02,690 --> 00:04:02,700
+change the pointer aid to point to
+ 
+
+251
+00:04:02,700 --> 00:04:04,490
+change the pointer aid to point to
+something else such as Max age that's
+
+252
+00:04:04,490 --> 00:04:04,500
+something else such as Max age that's
+ 
+
+253
+00:04:04,500 --> 00:04:05,330
+something else such as Max age that's
+not a problem
+
+254
+00:04:05,330 --> 00:04:05,340
+not a problem
+ 
+
+255
+00:04:05,340 --> 00:04:08,210
+not a problem
+I just can't change the contents of that
+
+256
+00:04:08,210 --> 00:04:08,220
+I just can't change the contents of that
+ 
+
+257
+00:04:08,220 --> 00:04:10,670
+I just can't change the contents of that
+pointer so the data at that
+
+258
+00:04:10,670 --> 00:04:10,680
+pointer so the data at that
+ 
+
+259
+00:04:10,680 --> 00:04:12,289
+pointer so the data at that
+we address the second way that I can use
+
+260
+00:04:12,289 --> 00:04:12,299
+we address the second way that I can use
+ 
+
+261
+00:04:12,299 --> 00:04:14,630
+we address the second way that I can use
+Const is by putting it after this point
+
+262
+00:04:14,630 --> 00:04:14,640
+Const is by putting it after this point
+ 
+
+263
+00:04:14,640 --> 00:04:16,939
+Const is by putting it after this point
+assigning like this what this does is
+
+264
+00:04:16,939 --> 00:04:16,949
+assigning like this what this does is
+ 
+
+265
+00:04:16,949 --> 00:04:19,249
+assigning like this what this does is
+kind of the opposite I can change the
+
+266
+00:04:19,249 --> 00:04:19,259
+kind of the opposite I can change the
+ 
+
+267
+00:04:19,259 --> 00:04:21,259
+kind of the opposite I can change the
+contents of the pointer but I can't
+
+268
+00:04:21,259 --> 00:04:21,269
+contents of the pointer but I can't
+ 
+
+269
+00:04:21,269 --> 00:04:23,659
+contents of the pointer but I can't
+reassign the actual pointer itself to
+
+270
+00:04:23,659 --> 00:04:23,669
+reassign the actual pointer itself to
+ 
+
+271
+00:04:23,669 --> 00:04:25,670
+reassign the actual pointer itself to
+point to something else note that if you
+
+272
+00:04:25,670 --> 00:04:25,680
+point to something else note that if you
+ 
+
+273
+00:04:25,680 --> 00:04:29,180
+point to something else note that if you
+put Const over here right so basically
+
+274
+00:04:29,180 --> 00:04:29,190
+put Const over here right so basically
+ 
+
+275
+00:04:29,190 --> 00:04:32,029
+put Const over here right so basically
+it's before the point it's after the int
+
+276
+00:04:32,029 --> 00:04:32,039
+it's before the point it's after the int
+ 
+
+277
+00:04:32,039 --> 00:04:35,270
+it's before the point it's after the int
+but it's before the pointer this has the
+
+278
+00:04:35,270 --> 00:04:35,280
+but it's before the pointer this has the
+ 
+
+279
+00:04:35,280 --> 00:04:37,879
+but it's before the pointer this has the
+exact same functionality as if I would
+
+280
+00:04:37,879 --> 00:04:37,889
+exact same functionality as if I would
+ 
+
+281
+00:04:37,889 --> 00:04:40,070
+exact same functionality as if I would
+have written it like I did before like
+
+282
+00:04:40,070 --> 00:04:40,080
+have written it like I did before like
+ 
+
+283
+00:04:40,080 --> 00:04:42,710
+have written it like I did before like
+that right Const in pointer or in cons
+
+284
+00:04:42,710 --> 00:04:42,720
+that right Const in pointer or in cons
+ 
+
+285
+00:04:42,720 --> 00:04:44,930
+that right Const in pointer or in cons
+pointer they mean the same thing you
+
+286
+00:04:44,930 --> 00:04:44,940
+pointer they mean the same thing you
+ 
+
+287
+00:04:44,940 --> 00:04:47,240
+pointer they mean the same thing you
+just be moved constant that the key here
+
+288
+00:04:47,240 --> 00:04:47,250
+just be moved constant that the key here
+ 
+
+289
+00:04:47,250 --> 00:04:50,060
+just be moved constant that the key here
+is that it's before the pointer sign
+
+290
+00:04:50,060 --> 00:04:50,070
+is that it's before the pointer sign
+ 
+
+291
+00:04:50,070 --> 00:04:51,920
+is that it's before the pointer sign
+right it's before the asterisk whereas
+
+292
+00:04:51,920 --> 00:04:51,930
+right it's before the asterisk whereas
+ 
+
+293
+00:04:51,930 --> 00:04:53,600
+right it's before the asterisk whereas
+to make the actual pointer constant so
+
+294
+00:04:53,600 --> 00:04:53,610
+to make the actual pointer constant so
+ 
+
+295
+00:04:53,610 --> 00:04:55,460
+to make the actual pointer constant so
+that we can't reassign the pointer you
+
+296
+00:04:55,460 --> 00:04:55,470
+that we can't reassign the pointer you
+ 
+
+297
+00:04:55,470 --> 00:04:57,710
+that we can't reassign the pointer you
+need to put it after the asterisk before
+
+298
+00:04:57,710 --> 00:04:57,720
+need to put it after the asterisk before
+ 
+
+299
+00:04:57,720 --> 00:04:59,510
+need to put it after the asterisk before
+the variable name to make sure you
+
+300
+00:04:59,510 --> 00:04:59,520
+the variable name to make sure you
+ 
+
+301
+00:04:59,520 --> 00:05:01,490
+the variable name to make sure you
+remember that because sometimes you will
+
+302
+00:05:01,490 --> 00:05:01,500
+remember that because sometimes you will
+ 
+
+303
+00:05:01,500 --> 00:05:03,020
+remember that because sometimes you will
+see people with different kind of
+
+304
+00:05:03,020 --> 00:05:03,030
+see people with different kind of
+ 
+
+305
+00:05:03,030 --> 00:05:05,000
+see people with different kind of
+programming styles writing into Const
+
+306
+00:05:05,000 --> 00:05:05,010
+programming styles writing into Const
+ 
+
+307
+00:05:05,010 --> 00:05:06,620
+programming styles writing into Const
+pointer but just know that it's the same
+
+308
+00:05:06,620 --> 00:05:06,630
+pointer but just know that it's the same
+ 
+
+309
+00:05:06,630 --> 00:05:08,870
+pointer but just know that it's the same
+as constant in pointer the difference is
+
+310
+00:05:08,870 --> 00:05:08,880
+as constant in pointer the difference is
+ 
+
+311
+00:05:08,880 --> 00:05:11,240
+as constant in pointer the difference is
+when you do endpoint a Const that's the
+
+312
+00:05:11,240 --> 00:05:11,250
+when you do endpoint a Const that's the
+ 
+
+313
+00:05:11,250 --> 00:05:13,640
+when you do endpoint a Const that's the
+difference so this is not possible I
+
+314
+00:05:13,640 --> 00:05:13,650
+difference so this is not possible I
+ 
+
+315
+00:05:13,650 --> 00:05:15,230
+difference so this is not possible I
+can't set it equal to anything else like
+
+316
+00:05:15,230 --> 00:05:15,240
+can't set it equal to anything else like
+ 
+
+317
+00:05:15,240 --> 00:05:17,270
+can't set it equal to anything else like
+a null pointer or anything I can't erase
+
+318
+00:05:17,270 --> 00:05:17,280
+a null pointer or anything I can't erase
+ 
+
+319
+00:05:17,280 --> 00:05:19,640
+a null pointer or anything I can't erase
+I actually actual a but I can change the
+
+320
+00:05:19,640 --> 00:05:19,650
+I actually actual a but I can change the
+ 
+
+321
+00:05:19,650 --> 00:05:21,890
+I actually actual a but I can change the
+contents of what that pointer is
+
+322
+00:05:21,890 --> 00:05:21,900
+contents of what that pointer is
+ 
+
+323
+00:05:21,900 --> 00:05:23,990
+contents of what that pointer is
+pointing to us and finally of course I
+
+324
+00:05:23,990 --> 00:05:24,000
+pointing to us and finally of course I
+ 
+
+325
+00:05:24,000 --> 00:05:26,240
+pointing to us and finally of course I
+can write Const Weiss like this which
+
+326
+00:05:26,240 --> 00:05:26,250
+can write Const Weiss like this which
+ 
+
+327
+00:05:26,250 --> 00:05:28,100
+can write Const Weiss like this which
+means that I cannot change the contents
+
+328
+00:05:28,100 --> 00:05:28,110
+means that I cannot change the contents
+ 
+
+329
+00:05:28,110 --> 00:05:29,870
+means that I cannot change the contents
+of the pointer and I can't change the
+
+330
+00:05:29,870 --> 00:05:29,880
+of the pointer and I can't change the
+ 
+
+331
+00:05:29,880 --> 00:05:31,490
+of the pointer and I can't change the
+actual pointer itself to point to
+
+332
+00:05:31,490 --> 00:05:31,500
+actual pointer itself to point to
+ 
+
+333
+00:05:31,500 --> 00:05:32,899
+actual pointer itself to point to
+something else so that's kind of a
+
+334
+00:05:32,899 --> 00:05:32,909
+something else so that's kind of a
+ 
+
+335
+00:05:32,909 --> 00:05:34,520
+something else so that's kind of a
+second usage of Const when when you're
+
+336
+00:05:34,520 --> 00:05:34,530
+second usage of Const when when you're
+ 
+
+337
+00:05:34,530 --> 00:05:36,409
+second usage of Const when when you're
+dealing with pointers you can be talking
+
+338
+00:05:36,409 --> 00:05:36,419
+dealing with pointers you can be talking
+ 
+
+339
+00:05:36,419 --> 00:05:39,260
+dealing with pointers you can be talking
+about the pointer itself or the contents
+
+340
+00:05:39,260 --> 00:05:39,270
+about the pointer itself or the contents
+ 
+
+341
+00:05:39,270 --> 00:05:40,969
+about the pointer itself or the contents
+of of where the point is pointing
+
+342
+00:05:40,969 --> 00:05:40,979
+of of where the point is pointing
+ 
+
+343
+00:05:40,979 --> 00:05:43,310
+of of where the point is pointing
+towards and where you put cost here with
+
+344
+00:05:43,310 --> 00:05:43,320
+towards and where you put cost here with
+ 
+
+345
+00:05:43,320 --> 00:05:44,839
+towards and where you put cost here with
+your declaration whether it's to the
+
+346
+00:05:44,839 --> 00:05:44,849
+your declaration whether it's to the
+ 
+
+347
+00:05:44,849 --> 00:05:47,480
+your declaration whether it's to the
+left or before the asterisk or after the
+
+348
+00:05:47,480 --> 00:05:47,490
+left or before the asterisk or after the
+ 
+
+349
+00:05:47,490 --> 00:05:48,890
+left or before the asterisk or after the
+asterisk as you can see it has a
+
+350
+00:05:48,890 --> 00:05:48,900
+asterisk as you can see it has a
+ 
+
+351
+00:05:48,900 --> 00:05:49,580
+asterisk as you can see it has a
+different meaning
+
+352
+00:05:49,580 --> 00:05:49,590
+different meaning
+ 
+
+353
+00:05:49,590 --> 00:05:50,990
+different meaning
+now the last meeting a cost that we're
+
+354
+00:05:50,990 --> 00:05:51,000
+now the last meeting a cost that we're
+ 
+
+355
+00:05:51,000 --> 00:05:52,610
+now the last meeting a cost that we're
+going to talk about today is to do with
+
+356
+00:05:52,610 --> 00:05:52,620
+going to talk about today is to do with
+ 
+
+357
+00:05:52,620 --> 00:05:54,649
+going to talk about today is to do with
+classes and methods so that let's write
+
+358
+00:05:54,649 --> 00:05:54,659
+classes and methods so that let's write
+ 
+
+359
+00:05:54,659 --> 00:05:58,430
+classes and methods so that let's write
+a quick class we will call it entity
+
+360
+00:05:58,430 --> 00:05:58,440
+a quick class we will call it entity
+ 
+
+361
+00:05:58,440 --> 00:06:01,010
+a quick class we will call it entity
+we're going to give it two variables
+
+362
+00:06:01,010 --> 00:06:01,020
+we're going to give it two variables
+ 
+
+363
+00:06:01,020 --> 00:06:03,680
+we're going to give it two variables
+will have my name X what about an image
+
+364
+00:06:03,680 --> 00:06:03,690
+will have my name X what about an image
+ 
+
+365
+00:06:03,690 --> 00:06:05,029
+will have my name X what about an image
+like these or anything is just an
+
+366
+00:06:05,029 --> 00:06:05,039
+like these or anything is just an
+ 
+
+367
+00:06:05,039 --> 00:06:06,680
+like these or anything is just an
+example and I'm going to attempt to
+
+368
+00:06:06,680 --> 00:06:06,690
+example and I'm going to attempt to
+ 
+
+369
+00:06:06,690 --> 00:06:08,629
+example and I'm going to attempt to
+write getters and setters for this now
+
+370
+00:06:08,629 --> 00:06:08,639
+write getters and setters for this now
+ 
+
+371
+00:06:08,639 --> 00:06:10,939
+write getters and setters for this now
+when I saw already might get X I'll just
+
+372
+00:06:10,939 --> 00:06:10,949
+when I saw already might get X I'll just
+ 
+
+373
+00:06:10,949 --> 00:06:12,920
+when I saw already might get X I'll just
+make it return X I'm actually going to
+
+374
+00:06:12,920 --> 00:06:12,930
+make it return X I'm actually going to
+ 
+
+375
+00:06:12,930 --> 00:06:15,350
+make it return X I'm actually going to
+put Const on the right side of the
+
+376
+00:06:15,350 --> 00:06:15,360
+put Const on the right side of the
+ 
+
+377
+00:06:15,360 --> 00:06:17,060
+put Const on the right side of the
+method name so after the after any
+
+378
+00:06:17,060 --> 00:06:17,070
+method name so after the after any
+ 
+
+379
+00:06:17,070 --> 00:06:18,620
+method name so after the after any
+parameters that we might be taking on
+
+380
+00:06:18,620 --> 00:06:18,630
+parameters that we might be taking on
+ 
+
+381
+00:06:18,630 --> 00:06:19,060
+parameters that we might be taking on
+going
+
+382
+00:06:19,060 --> 00:06:19,070
+going
+ 
+
+383
+00:06:19,070 --> 00:06:21,160
+going
+right the work Const so this is kind of
+
+384
+00:06:21,160 --> 00:06:21,170
+right the work Const so this is kind of
+ 
+
+385
+00:06:21,170 --> 00:06:23,470
+right the work Const so this is kind of
+a third usage of if it comes kind of not
+
+386
+00:06:23,470 --> 00:06:23,480
+a third usage of if it comes kind of not
+ 
+
+387
+00:06:23,480 --> 00:06:25,180
+a third usage of if it comes kind of not
+really to do with a variable but after a
+
+388
+00:06:25,180 --> 00:06:25,190
+really to do with a variable but after a
+ 
+
+389
+00:06:25,190 --> 00:06:27,340
+really to do with a variable but after a
+method name this only works in a class
+
+390
+00:06:27,340 --> 00:06:27,350
+method name this only works in a class
+ 
+
+391
+00:06:27,350 --> 00:06:29,590
+method name this only works in a class
+by the way what this means is that this
+
+392
+00:06:29,590 --> 00:06:29,600
+by the way what this means is that this
+ 
+
+393
+00:06:29,600 --> 00:06:32,260
+by the way what this means is that this
+this method is not going to modify any
+
+394
+00:06:32,260 --> 00:06:32,270
+this method is not going to modify any
+ 
+
+395
+00:06:32,270 --> 00:06:34,450
+this method is not going to modify any
+of the actual plus so you can see we
+
+396
+00:06:34,450 --> 00:06:34,460
+of the actual plus so you can see we
+ 
+
+397
+00:06:34,460 --> 00:06:37,450
+of the actual plus so you can see we
+cannot modify class member variables if
+
+398
+00:06:37,450 --> 00:06:37,460
+cannot modify class member variables if
+ 
+
+399
+00:06:37,460 --> 00:06:39,940
+cannot modify class member variables if
+I try and do something like mm x equals
+
+400
+00:06:39,940 --> 00:06:39,950
+I try and do something like mm x equals
+ 
+
+401
+00:06:39,950 --> 00:06:42,340
+I try and do something like mm x equals
+2 I'm not going to be able to do that
+
+402
+00:06:42,340 --> 00:06:42,350
+2 I'm not going to be able to do that
+ 
+
+403
+00:06:42,350 --> 00:06:45,040
+2 I'm not going to be able to do that
+right I've promised that this method is
+
+404
+00:06:45,040 --> 00:06:45,050
+right I've promised that this method is
+ 
+
+405
+00:06:45,050 --> 00:06:46,840
+right I've promised that this method is
+not going to modify the actual class
+
+406
+00:06:46,840 --> 00:06:46,850
+not going to modify the actual class
+ 
+
+407
+00:06:46,850 --> 00:06:48,550
+not going to modify the actual class
+it's just kind of a read-only method
+
+408
+00:06:48,550 --> 00:06:48,560
+it's just kind of a read-only method
+ 
+
+409
+00:06:48,560 --> 00:06:49,990
+it's just kind of a read-only method
+it's just gonna read data from the US
+
+410
+00:06:49,990 --> 00:06:50,000
+it's just gonna read data from the US
+ 
+
+411
+00:06:50,000 --> 00:06:52,480
+it's just gonna read data from the US
+potentially but no modifying is gonna be
+
+412
+00:06:52,480 --> 00:06:52,490
+potentially but no modifying is gonna be
+ 
+
+413
+00:06:52,490 --> 00:06:54,640
+potentially but no modifying is gonna be
+taking place here so it makes sense to
+
+414
+00:06:54,640 --> 00:06:54,650
+taking place here so it makes sense to
+ 
+
+415
+00:06:54,650 --> 00:06:57,550
+taking place here so it makes sense to
+write const with a getter however with a
+
+416
+00:06:57,550 --> 00:06:57,560
+write const with a getter however with a
+ 
+
+417
+00:06:57,560 --> 00:06:59,950
+write const with a getter however with a
+setter of course if I wanted to have a
+
+418
+00:06:59,950 --> 00:06:59,960
+setter of course if I wanted to have a
+ 
+
+419
+00:06:59,960 --> 00:07:02,620
+setter of course if I wanted to have a
+setter where I set my x value here I'm
+
+420
+00:07:02,620 --> 00:07:02,630
+setter where I set my x value here I'm
+ 
+
+421
+00:07:02,630 --> 00:07:04,780
+setter where I set my x value here I'm
+going to have to write 2x so I can't
+
+422
+00:07:04,780 --> 00:07:04,790
+going to have to write 2x so I can't
+ 
+
+423
+00:07:04,790 --> 00:07:06,310
+going to have to write 2x so I can't
+declare this as constant because
+
+424
+00:07:06,310 --> 00:07:06,320
+declare this as constant because
+ 
+
+425
+00:07:06,320 --> 00:07:08,320
+declare this as constant because
+obviously I need to write to the class
+
+426
+00:07:08,320 --> 00:07:08,330
+obviously I need to write to the class
+ 
+
+427
+00:07:08,330 --> 00:07:11,020
+obviously I need to write to the class
+so this is Const and typically you would
+
+428
+00:07:11,020 --> 00:07:11,030
+so this is Const and typically you would
+ 
+
+429
+00:07:11,030 --> 00:07:13,090
+so this is Const and typically you would
+declare this with a Const now of course
+
+430
+00:07:13,090 --> 00:07:13,100
+declare this with a Const now of course
+ 
+
+431
+00:07:13,100 --> 00:07:14,980
+declare this with a Const now of course
+if X was a pointer and you wanted it to
+
+432
+00:07:14,980 --> 00:07:14,990
+if X was a pointer and you wanted it to
+ 
+
+433
+00:07:14,990 --> 00:07:16,450
+if X was a pointer and you wanted it to
+be constant or round to what you could
+
+434
+00:07:16,450 --> 00:07:16,460
+be constant or round to what you could
+ 
+
+435
+00:07:16,460 --> 00:07:18,880
+be constant or round to what you could
+do if we just make s a pointer you could
+
+436
+00:07:18,880 --> 00:07:18,890
+do if we just make s a pointer you could
+ 
+
+437
+00:07:18,890 --> 00:07:21,160
+do if we just make s a pointer you could
+do something like Const and the pointer
+
+438
+00:07:21,160 --> 00:07:21,170
+do something like Const and the pointer
+ 
+
+439
+00:07:21,170 --> 00:07:23,680
+do something like Const and the pointer
+Const get X constant see we've literally
+
+440
+00:07:23,680 --> 00:07:23,690
+Const get X constant see we've literally
+ 
+
+441
+00:07:23,690 --> 00:07:25,300
+Const get X constant see we've literally
+got concert in three times on that one
+
+442
+00:07:25,300 --> 00:07:25,310
+got concert in three times on that one
+ 
+
+443
+00:07:25,310 --> 00:07:29,260
+got concert in three times on that one
+line c++ man out rolls so what this
+
+444
+00:07:29,260 --> 00:07:29,270
+line c++ man out rolls so what this
+ 
+
+445
+00:07:29,270 --> 00:07:31,510
+line c++ man out rolls so what this
+means is that we are returning a pointer
+
+446
+00:07:31,510 --> 00:07:31,520
+means is that we are returning a pointer
+ 
+
+447
+00:07:31,520 --> 00:07:34,600
+means is that we are returning a pointer
+that cannot be modified the contents of
+
+448
+00:07:34,600 --> 00:07:34,610
+that cannot be modified the contents of
+ 
+
+449
+00:07:34,610 --> 00:07:37,030
+that cannot be modified the contents of
+the pointer cannot be modified and this
+
+450
+00:07:37,030 --> 00:07:37,040
+the pointer cannot be modified and this
+ 
+
+451
+00:07:37,040 --> 00:07:39,610
+the pointer cannot be modified and this
+function this method promises not to
+
+452
+00:07:39,610 --> 00:07:39,620
+function this method promises not to
+ 
+
+453
+00:07:39,620 --> 00:07:42,250
+function this method promises not to
+modify the actual entity class so yeah
+
+454
+00:07:42,250 --> 00:07:42,260
+modify the actual entity class so yeah
+ 
+
+455
+00:07:42,260 --> 00:07:44,050
+modify the actual entity class so yeah
+that's a lot of lot of restrictions
+
+456
+00:07:44,050 --> 00:07:44,060
+that's a lot of lot of restrictions
+ 
+
+457
+00:07:44,060 --> 00:07:45,640
+that's a lot of lot of restrictions
+we've put onto this method let's revert
+
+458
+00:07:45,640 --> 00:07:45,650
+we've put onto this method let's revert
+ 
+
+459
+00:07:45,650 --> 00:07:47,440
+we've put onto this method let's revert
+this back to not being a pointer one
+
+460
+00:07:47,440 --> 00:07:47,450
+this back to not being a pointer one
+ 
+
+461
+00:07:47,450 --> 00:07:49,120
+this back to not being a pointer one
+thing I'll point out just quickly haha
+
+462
+00:07:49,120 --> 00:07:49,130
+thing I'll point out just quickly haha
+ 
+
+463
+00:07:49,130 --> 00:07:50,530
+thing I'll point out just quickly haha
+point out but anyway one thing I'll
+
+464
+00:07:50,530 --> 00:07:50,540
+point out but anyway one thing I'll
+ 
+
+465
+00:07:50,540 --> 00:07:52,480
+point out but anyway one thing I'll
+point out really quickly here is that by
+
+466
+00:07:52,480 --> 00:07:52,490
+point out really quickly here is that by
+ 
+
+467
+00:07:52,490 --> 00:07:55,900
+point out really quickly here is that by
+putting the pointer next to the type
+
+468
+00:07:55,900 --> 00:07:55,910
+putting the pointer next to the type
+ 
+
+469
+00:07:55,910 --> 00:07:58,300
+putting the pointer next to the type
+like I've done here and this actually
+
+470
+00:07:58,300 --> 00:07:58,310
+like I've done here and this actually
+ 
+
+471
+00:07:58,310 --> 00:07:59,710
+like I've done here and this actually
+become the points I've been my is just
+
+472
+00:07:59,710 --> 00:07:59,720
+become the points I've been my is just
+ 
+
+473
+00:07:59,720 --> 00:08:01,330
+become the points I've been my is just
+still an integer if you want everything
+
+474
+00:08:01,330 --> 00:08:01,340
+still an integer if you want everything
+ 
+
+475
+00:08:01,340 --> 00:08:03,430
+still an integer if you want everything
+to be a pointer on one line like this
+
+476
+00:08:03,430 --> 00:08:03,440
+to be a pointer on one line like this
+ 
+
+477
+00:08:03,440 --> 00:08:05,050
+to be a pointer on one line like this
+you actually have to stick a point next
+
+478
+00:08:05,050 --> 00:08:05,060
+you actually have to stick a point next
+ 
+
+479
+00:08:05,060 --> 00:08:06,640
+you actually have to stick a point next
+to each variable just something I
+
+480
+00:08:06,640 --> 00:08:06,650
+to each variable just something I
+ 
+
+481
+00:08:06,650 --> 00:08:07,660
+to each variable just something I
+thought I'd mention even though it's a
+
+482
+00:08:07,660 --> 00:08:07,670
+thought I'd mention even though it's a
+ 
+
+483
+00:08:07,670 --> 00:08:09,580
+thought I'd mention even though it's a
+bit off-topic because I'm sure people
+
+484
+00:08:09,580 --> 00:08:09,590
+bit off-topic because I'm sure people
+ 
+
+485
+00:08:09,590 --> 00:08:11,260
+bit off-topic because I'm sure people
+are gonna be a little bit confused by
+
+486
+00:08:11,260 --> 00:08:11,270
+are gonna be a little bit confused by
+ 
+
+487
+00:08:11,270 --> 00:08:12,790
+are gonna be a little bit confused by
+that potentially so I'm reverting back
+
+488
+00:08:12,790 --> 00:08:12,800
+that potentially so I'm reverting back
+ 
+
+489
+00:08:12,800 --> 00:08:15,010
+that potentially so I'm reverting back
+to just having a normal get up the
+
+490
+00:08:15,010 --> 00:08:15,020
+to just having a normal get up the
+ 
+
+491
+00:08:15,020 --> 00:08:17,140
+to just having a normal get up the
+question is why why would I want to
+
+492
+00:08:17,140 --> 00:08:17,150
+question is why why would I want to
+ 
+
+493
+00:08:17,150 --> 00:08:17,620
+question is why why would I want to
+declare this
+
+494
+00:08:17,620 --> 00:08:17,630
+declare this
+ 
+
+495
+00:08:17,630 --> 00:08:21,160
+declare this
+as Const like I get that I get that it
+
+496
+00:08:21,160 --> 00:08:21,170
+as Const like I get that I get that it
+ 
+
+497
+00:08:21,170 --> 00:08:23,920
+as Const like I get that I get that it
+kind of promises not to touch things in
+
+498
+00:08:23,920 --> 00:08:23,930
+kind of promises not to touch things in
+ 
+
+499
+00:08:23,930 --> 00:08:25,330
+kind of promises not to touch things in
+this function and maybe if someone else
+
+500
+00:08:25,330 --> 00:08:25,340
+this function and maybe if someone else
+ 
+
+501
+00:08:25,340 --> 00:08:26,740
+this function and maybe if someone else
+was extending that function they would
+
+502
+00:08:26,740 --> 00:08:26,750
+was extending that function they would
+ 
+
+503
+00:08:26,750 --> 00:08:29,020
+was extending that function they would
+say okay cool this is not meant to write
+
+504
+00:08:29,020 --> 00:08:29,030
+say okay cool this is not meant to write
+ 
+
+505
+00:08:29,030 --> 00:08:31,930
+say okay cool this is not meant to write
+to the class however does this actually
+
+506
+00:08:31,930 --> 00:08:31,940
+to the class however does this actually
+ 
+
+507
+00:08:31,940 --> 00:08:34,120
+to the class however does this actually
+enforce something the answer is yes it
+
+508
+00:08:34,120 --> 00:08:34,130
+enforce something the answer is yes it
+ 
+
+509
+00:08:34,130 --> 00:08:37,000
+enforce something the answer is yes it
+does if we had our entity over here in
+
+510
+00:08:37,000 --> 00:08:37,010
+does if we had our entity over here in
+ 
+
+511
+00:08:37,010 --> 00:08:38,770
+does if we had our entity over here in
+our main class let's just write an
+
+512
+00:08:38,770 --> 00:08:38,780
+our main class let's just write an
+ 
+
+513
+00:08:38,780 --> 00:08:40,690
+our main class let's just write an
+actual practical example potentially I
+
+514
+00:08:40,690 --> 00:08:40,700
+actual practical example potentially I
+ 
+
+515
+00:08:40,700 --> 00:08:42,490
+actual practical example potentially I
+created my entity and then I have a
+
+516
+00:08:42,490 --> 00:08:42,500
+created my entity and then I have a
+ 
+
+517
+00:08:42,500 --> 00:08:44,860
+created my entity and then I have a
+function which prints my entity and I
+
+518
+00:08:44,860 --> 00:08:44,870
+function which prints my entity and I
+ 
+
+519
+00:08:44,870 --> 00:08:46,630
+function which prints my entity and I
+wanted to access my get up so all
+
+520
+00:08:46,630 --> 00:08:46,640
+wanted to access my get up so all
+ 
+
+521
+00:08:46,640 --> 00:08:48,370
+wanted to access my get up so all
+there's something like C out will have
+
+522
+00:08:48,370 --> 00:08:48,380
+there's something like C out will have
+ 
+
+523
+00:08:48,380 --> 00:08:50,050
+there's something like C out will have
+will pass an entity just like this for
+
+524
+00:08:50,050 --> 00:08:50,060
+will pass an entity just like this for
+ 
+
+525
+00:08:50,060 --> 00:08:53,620
+will pass an entity just like this for
+now pay or get X and we've got a pretty
+
+526
+00:08:53,620 --> 00:08:53,630
+now pay or get X and we've got a pretty
+ 
+
+527
+00:08:53,630 --> 00:08:56,740
+now pay or get X and we've got a pretty
+reasonable function here now I want to
+
+528
+00:08:56,740 --> 00:08:56,750
+reasonable function here now I want to
+ 
+
+529
+00:08:56,750 --> 00:08:58,660
+reasonable function here now I want to
+be able to pass this by constant
+
+530
+00:08:58,660 --> 00:08:58,670
+be able to pass this by constant
+ 
+
+531
+00:08:58,670 --> 00:09:01,240
+be able to pass this by constant
+reference because I don't want to copy
+
+532
+00:09:01,240 --> 00:09:01,250
+reference because I don't want to copy
+ 
+
+533
+00:09:01,250 --> 00:09:02,950
+reference because I don't want to copy
+the entity class again we'll talk about
+
+534
+00:09:02,950 --> 00:09:02,960
+the entity class again we'll talk about
+ 
+
+535
+00:09:02,960 --> 00:09:05,500
+the entity class again we'll talk about
+copying and stuff in a future video but
+
+536
+00:09:05,500 --> 00:09:05,510
+copying and stuff in a future video but
+ 
+
+537
+00:09:05,510 --> 00:09:06,850
+copying and stuff in a future video but
+basically I don't want to copy my entity
+
+538
+00:09:06,850 --> 00:09:06,860
+basically I don't want to copy my entity
+ 
+
+539
+00:09:06,860 --> 00:09:08,470
+basically I don't want to copy my entity
+class because that would potentially be
+
+540
+00:09:08,470 --> 00:09:08,480
+class because that would potentially be
+ 
+
+541
+00:09:08,480 --> 00:09:10,510
+class because that would potentially be
+space lobbying in this case it's a base
+
+542
+00:09:10,510 --> 00:09:10,520
+space lobbying in this case it's a base
+ 
+
+543
+00:09:10,520 --> 00:09:12,370
+space lobbying in this case it's a base
+so it probably wouldn't be but in
+
+544
+00:09:12,370 --> 00:09:12,380
+so it probably wouldn't be but in
+ 
+
+545
+00:09:12,380 --> 00:09:14,080
+so it probably wouldn't be but in
+general I don't want to copy I don't
+
+546
+00:09:14,080 --> 00:09:14,090
+general I don't want to copy I don't
+ 
+
+547
+00:09:14,090 --> 00:09:15,340
+general I don't want to copy I don't
+want to be copying all my objects
+
+548
+00:09:15,340 --> 00:09:15,350
+want to be copying all my objects
+ 
+
+549
+00:09:15,350 --> 00:09:16,750
+want to be copying all my objects
+because that will be slow especially for
+
+550
+00:09:16,750 --> 00:09:16,760
+because that will be slow especially for
+ 
+
+551
+00:09:16,760 --> 00:09:18,430
+because that will be slow especially for
+something that's read-only so I want to
+
+552
+00:09:18,430 --> 00:09:18,440
+something that's read-only so I want to
+ 
+
+553
+00:09:18,440 --> 00:09:19,720
+something that's read-only so I want to
+be able to pass it by cross reference
+
+554
+00:09:19,720 --> 00:09:19,730
+be able to pass it by cross reference
+ 
+
+555
+00:09:19,730 --> 00:09:22,270
+be able to pass it by cross reference
+now here's the thing if I pass this by
+
+556
+00:09:22,270 --> 00:09:22,280
+now here's the thing if I pass this by
+ 
+
+557
+00:09:22,280 --> 00:09:24,610
+now here's the thing if I pass this by
+constraints it means that this entity is
+
+558
+00:09:24,610 --> 00:09:24,620
+constraints it means that this entity is
+ 
+
+559
+00:09:24,620 --> 00:09:27,880
+constraints it means that this entity is
+const so just like with pointers if this
+
+560
+00:09:27,880 --> 00:09:27,890
+const so just like with pointers if this
+ 
+
+561
+00:09:27,890 --> 00:09:31,090
+const so just like with pointers if this
+was a pointer i can modify kind of what
+
+562
+00:09:31,090 --> 00:09:31,100
+was a pointer i can modify kind of what
+ 
+
+563
+00:09:31,100 --> 00:09:33,250
+was a pointer i can modify kind of what
+it's pointing towards so I can set eat a
+
+564
+00:09:33,250 --> 00:09:33,260
+it's pointing towards so I can set eat a
+ 
+
+565
+00:09:33,260 --> 00:09:36,190
+it's pointing towards so I can set eat a
+null pointer and that's fine but I
+
+566
+00:09:36,190 --> 00:09:36,200
+null pointer and that's fine but I
+ 
+
+567
+00:09:36,200 --> 00:09:39,970
+null pointer and that's fine but I
+cannot actually modify the contents of a
+
+568
+00:09:39,970 --> 00:09:39,980
+cannot actually modify the contents of a
+ 
+
+569
+00:09:39,980 --> 00:09:42,490
+cannot actually modify the contents of a
+so by writing Const reference like this
+
+570
+00:09:42,490 --> 00:09:42,500
+so by writing Const reference like this
+ 
+
+571
+00:09:42,500 --> 00:09:44,890
+so by writing Const reference like this
+I have the exact same case I cannot
+
+572
+00:09:44,890 --> 00:09:44,900
+I have the exact same case I cannot
+ 
+
+573
+00:09:44,900 --> 00:09:47,320
+I have the exact same case I cannot
+modify the entity I can't reassign it
+
+574
+00:09:47,320 --> 00:09:47,330
+modify the entity I can't reassign it
+ 
+
+575
+00:09:47,330 --> 00:09:48,940
+modify the entity I can't reassign it
+something else because remember this
+
+576
+00:09:48,940 --> 00:09:48,950
+something else because remember this
+ 
+
+577
+00:09:48,950 --> 00:09:50,650
+something else because remember this
+doesn't work like it does with pointers
+
+578
+00:09:50,650 --> 00:09:50,660
+doesn't work like it does with pointers
+ 
+
+579
+00:09:50,660 --> 00:09:52,690
+doesn't work like it does with pointers
+if you reassign this reference you're
+
+580
+00:09:52,690 --> 00:09:52,700
+if you reassign this reference you're
+ 
+
+581
+00:09:52,700 --> 00:09:54,790
+if you reassign this reference you're
+actually changing this object not some
+
+582
+00:09:54,790 --> 00:09:54,800
+actually changing this object not some
+ 
+
+583
+00:09:54,800 --> 00:09:56,320
+actually changing this object not some
+other object there's no kind of
+
+584
+00:09:56,320 --> 00:09:56,330
+other object there's no kind of
+ 
+
+585
+00:09:56,330 --> 00:09:58,870
+other object there's no kind of
+separation between a pointer and the
+
+586
+00:09:58,870 --> 00:09:58,880
+separation between a pointer and the
+ 
+
+587
+00:09:58,880 --> 00:10:00,850
+separation between a pointer and the
+contents of the pointer because with the
+
+588
+00:10:00,850 --> 00:10:00,860
+contents of the pointer because with the
+ 
+
+589
+00:10:00,860 --> 00:10:03,160
+contents of the pointer because with the
+references you are the contents right
+
+590
+00:10:03,160 --> 00:10:03,170
+references you are the contents right
+ 
+
+591
+00:10:03,170 --> 00:10:04,600
+references you are the contents right
+that's all you can modify those already
+
+592
+00:10:04,600 --> 00:10:04,610
+that's all you can modify those already
+ 
+
+593
+00:10:04,610 --> 00:10:07,000
+that's all you can modify those already
+referencing you are that entity even
+
+594
+00:10:07,000 --> 00:10:07,010
+referencing you are that entity even
+ 
+
+595
+00:10:07,010 --> 00:10:08,500
+referencing you are that entity even
+though you're a reference and so the big
+
+596
+00:10:08,500 --> 00:10:08,510
+though you're a reference and so the big
+ 
+
+597
+00:10:08,510 --> 00:10:11,290
+though you're a reference and so the big
+thing is I can modify entities so if I
+
+598
+00:10:11,290 --> 00:10:11,300
+thing is I can modify entities so if I
+ 
+
+599
+00:10:11,300 --> 00:10:12,850
+thing is I can modify entities so if I
+remove this Const from this getup
+
+600
+00:10:12,850 --> 00:10:12,860
+remove this Const from this getup
+ 
+
+601
+00:10:12,860 --> 00:10:15,160
+remove this Const from this getup
+suddenly I'm not allowed to call that
+
+602
+00:10:15,160 --> 00:10:15,170
+suddenly I'm not allowed to call that
+ 
+
+603
+00:10:15,170 --> 00:10:18,190
+suddenly I'm not allowed to call that
+get X function because this get X
+
+604
+00:10:18,190 --> 00:10:18,200
+get X function because this get X
+ 
+
+605
+00:10:18,200 --> 00:10:20,800
+get X function because this get X
+function does not guarantee that it's
+
+606
+00:10:20,800 --> 00:10:20,810
+function does not guarantee that it's
+ 
+
+607
+00:10:20,810 --> 00:10:22,840
+function does not guarantee that it's
+not going to touch the entity it could
+
+608
+00:10:22,840 --> 00:10:22,850
+not going to touch the entity it could
+ 
+
+609
+00:10:22,850 --> 00:10:24,730
+not going to touch the entity it could
+be doing stuff like this so how on earth
+
+610
+00:10:24,730 --> 00:10:24,740
+be doing stuff like this so how on earth
+ 
+
+611
+00:10:24,740 --> 00:10:26,770
+be doing stuff like this so how on earth
+would that work I'm not modifying the
+
+612
+00:10:26,770 --> 00:10:26,780
+would that work I'm not modifying the
+ 
+
+613
+00:10:26,780 --> 00:10:28,140
+would that work I'm not modifying the
+entity directly however
+
+614
+00:10:28,140 --> 00:10:28,150
+entity directly however
+ 
+
+615
+00:10:28,150 --> 00:10:30,210
+entity directly however
+calling a method that does modify the
+
+616
+00:10:30,210 --> 00:10:30,220
+calling a method that does modify the
+ 
+
+617
+00:10:30,220 --> 00:10:32,490
+calling a method that does modify the
+entity that's not allowed so what I have
+
+618
+00:10:32,490 --> 00:10:32,500
+entity that's not allowed so what I have
+ 
+
+619
+00:10:32,500 --> 00:10:35,190
+entity that's not allowed so what I have
+to do is Marcus Const and then what that
+
+620
+00:10:35,190 --> 00:10:35,200
+to do is Marcus Const and then what that
+ 
+
+621
+00:10:35,200 --> 00:10:36,840
+to do is Marcus Const and then what that
+means is that when I have my const
+
+622
+00:10:36,840 --> 00:10:36,850
+means is that when I have my const
+ 
+
+623
+00:10:36,850 --> 00:10:39,540
+means is that when I have my const
+entity i can call any cost functions so
+
+624
+00:10:39,540 --> 00:10:39,550
+entity i can call any cost functions so
+ 
+
+625
+00:10:39,550 --> 00:10:40,410
+entity i can call any cost functions so
+because of that you'll actually
+
+626
+00:10:40,410 --> 00:10:40,420
+because of that you'll actually
+ 
+
+627
+00:10:40,420 --> 00:10:42,510
+because of that you'll actually
+sometimes see two versions of a function
+
+628
+00:10:42,510 --> 00:10:42,520
+sometimes see two versions of a function
+ 
+
+629
+00:10:42,520 --> 00:10:44,820
+sometimes see two versions of a function
+one which just returns X for example
+
+630
+00:10:44,820 --> 00:10:44,830
+one which just returns X for example
+ 
+
+631
+00:10:44,830 --> 00:10:47,010
+one which just returns X for example
+with Norah Const and one that returns X
+
+632
+00:10:47,010 --> 00:10:47,020
+with Norah Const and one that returns X
+ 
+
+633
+00:10:47,020 --> 00:10:48,420
+with Norah Const and one that returns X
+for the constant of course in this case
+
+634
+00:10:48,420 --> 00:10:48,430
+for the constant of course in this case
+ 
+
+635
+00:10:48,430 --> 00:10:51,060
+for the constant of course in this case
+it would be using the Const version or
+
+636
+00:10:51,060 --> 00:10:51,070
+it would be using the Const version or
+ 
+
+637
+00:10:51,070 --> 00:10:53,460
+it would be using the Const version or
+the HDX otherwise it will be the other
+
+638
+00:10:53,460 --> 00:10:53,470
+the HDX otherwise it will be the other
+ 
+
+639
+00:10:53,470 --> 00:10:55,670
+the HDX otherwise it will be the other
+one it looks a bit messy with having two
+
+640
+00:10:55,670 --> 00:10:55,680
+one it looks a bit messy with having two
+ 
+
+641
+00:10:55,680 --> 00:10:58,560
+one it looks a bit messy with having two
+identical functions basically but that's
+
+642
+00:10:58,560 --> 00:10:58,570
+identical functions basically but that's
+ 
+
+643
+00:10:58,570 --> 00:11:00,600
+identical functions basically but that's
+that's how it works so because of that
+
+644
+00:11:00,600 --> 00:11:00,610
+that's how it works so because of that
+ 
+
+645
+00:11:00,610 --> 00:11:02,820
+that's how it works so because of that
+remember to always always mark your
+
+646
+00:11:02,820 --> 00:11:02,830
+remember to always always mark your
+ 
+
+647
+00:11:02,830 --> 00:11:05,130
+remember to always always mark your
+methods as Const if they don't actually
+
+648
+00:11:05,130 --> 00:11:05,140
+methods as Const if they don't actually
+ 
+
+649
+00:11:05,140 --> 00:11:06,900
+methods as Const if they don't actually
+modify the class or if they're not
+
+650
+00:11:06,900 --> 00:11:06,910
+modify the class or if they're not
+ 
+
+651
+00:11:06,910 --> 00:11:08,910
+modify the class or if they're not
+supposed to modify the class because
+
+652
+00:11:08,910 --> 00:11:08,920
+supposed to modify the class because
+ 
+
+653
+00:11:08,920 --> 00:11:10,500
+supposed to modify the class because
+otherwise you'll literally be stopping
+
+654
+00:11:10,500 --> 00:11:10,510
+otherwise you'll literally be stopping
+ 
+
+655
+00:11:10,510 --> 00:11:12,120
+otherwise you'll literally be stopping
+people from being able to use it if they
+
+656
+00:11:12,120 --> 00:11:12,130
+people from being able to use it if they
+ 
+
+657
+00:11:12,130 --> 00:11:13,890
+people from being able to use it if they
+have a Const reference or something like
+
+658
+00:11:13,890 --> 00:11:13,900
+have a Const reference or something like
+ 
+
+659
+00:11:13,900 --> 00:11:16,680
+have a Const reference or something like
+that now in some occasions you do have
+
+660
+00:11:16,680 --> 00:11:16,690
+that now in some occasions you do have
+ 
+
+661
+00:11:16,690 --> 00:11:18,420
+that now in some occasions you do have
+something that is kind of constant you
+
+662
+00:11:18,420 --> 00:11:18,430
+something that is kind of constant you
+ 
+
+663
+00:11:18,430 --> 00:11:20,040
+something that is kind of constant you
+really want to mark the methodist Const
+
+664
+00:11:20,040 --> 00:11:20,050
+really want to mark the methodist Const
+ 
+
+665
+00:11:20,050 --> 00:11:22,470
+really want to mark the methodist Const
+but for some reason you just you just
+
+666
+00:11:22,470 --> 00:11:22,480
+but for some reason you just you just
+ 
+
+667
+00:11:22,480 --> 00:11:25,470
+but for some reason you just you just
+needed to modify some kind of variable
+
+668
+00:11:25,470 --> 00:11:25,480
+needed to modify some kind of variable
+ 
+
+669
+00:11:25,480 --> 00:11:27,480
+needed to modify some kind of variable
+so suppose that we maybe had a Tanner a
+
+670
+00:11:27,480 --> 00:11:27,490
+so suppose that we maybe had a Tanner a
+ 
+
+671
+00:11:27,490 --> 00:11:29,430
+so suppose that we maybe had a Tanner a
+variable here which we just needed to
+
+672
+00:11:29,430 --> 00:11:29,440
+variable here which we just needed to
+ 
+
+673
+00:11:29,440 --> 00:11:31,140
+variable here which we just needed to
+modify maybe it was something that's
+
+674
+00:11:31,140 --> 00:11:31,150
+modify maybe it was something that's
+ 
+
+675
+00:11:31,150 --> 00:11:33,180
+modify maybe it was something that's
+just like for debugging or like it
+
+676
+00:11:33,180 --> 00:11:33,190
+just like for debugging or like it
+ 
+
+677
+00:11:33,190 --> 00:11:34,650
+just like for debugging or like it
+doesn't really affect the program like
+
+678
+00:11:34,650 --> 00:11:34,660
+doesn't really affect the program like
+ 
+
+679
+00:11:34,660 --> 00:11:36,000
+doesn't really affect the program like
+we still want to mark the methodist
+
+680
+00:11:36,000 --> 00:11:36,010
+we still want to mark the methodist
+ 
+
+681
+00:11:36,010 --> 00:11:37,440
+we still want to mark the methodist
+cause but we just need to touch this
+
+682
+00:11:37,440 --> 00:11:37,450
+cause but we just need to touch this
+ 
+
+683
+00:11:37,450 --> 00:11:39,900
+cause but we just need to touch this
+variable well we can do that there's a
+
+684
+00:11:39,900 --> 00:11:39,910
+variable well we can do that there's a
+ 
+
+685
+00:11:39,910 --> 00:11:41,100
+variable well we can do that there's a
+keyword and see what's bus called
+
+686
+00:11:41,100 --> 00:11:41,110
+keyword and see what's bus called
+ 
+
+687
+00:11:41,110 --> 00:11:42,870
+keyword and see what's bus called
+immutable immutable of course means that
+
+688
+00:11:42,870 --> 00:11:42,880
+immutable immutable of course means that
+ 
+
+689
+00:11:42,880 --> 00:11:45,330
+immutable immutable of course means that
+it's able to be changed so if we make
+
+690
+00:11:45,330 --> 00:11:45,340
+it's able to be changed so if we make
+ 
+
+691
+00:11:45,340 --> 00:11:47,790
+it's able to be changed so if we make
+this VAR variable mutable you can see
+
+692
+00:11:47,790 --> 00:11:47,800
+this VAR variable mutable you can see
+ 
+
+693
+00:11:47,800 --> 00:11:49,410
+this VAR variable mutable you can see
+that we are modifying it even though
+
+694
+00:11:49,410 --> 00:11:49,420
+that we are modifying it even though
+ 
+
+695
+00:11:49,420 --> 00:11:51,750
+that we are modifying it even though
+we're inside a constant method right we
+
+696
+00:11:51,750 --> 00:11:51,760
+we're inside a constant method right we
+ 
+
+697
+00:11:51,760 --> 00:11:53,640
+we're inside a constant method right we
+can't modify it if it's not mutable but
+
+698
+00:11:53,640 --> 00:11:53,650
+can't modify it if it's not mutable but
+ 
+
+699
+00:11:53,650 --> 00:11:55,410
+can't modify it if it's not mutable but
+if we mark it as mutable there we go we
+
+700
+00:11:55,410 --> 00:11:55,420
+if we mark it as mutable there we go we
+ 
+
+701
+00:11:55,420 --> 00:11:56,730
+if we mark it as mutable there we go we
+can modify it so hopefully that's
+
+702
+00:11:56,730 --> 00:11:56,740
+can modify it so hopefully that's
+ 
+
+703
+00:11:56,740 --> 00:11:57,780
+can modify it so hopefully that's
+another question answered what is
+
+704
+00:11:57,780 --> 00:11:57,790
+another question answered what is
+ 
+
+705
+00:11:57,790 --> 00:11:58,290
+another question answered what is
+mutable
+
+706
+00:11:58,290 --> 00:11:58,300
+mutable
+ 
+
+707
+00:11:58,300 --> 00:11:59,970
+mutable
+that's what mutable is it allows
+
+708
+00:11:59,970 --> 00:11:59,980
+that's what mutable is it allows
+ 
+
+709
+00:11:59,980 --> 00:12:01,740
+that's what mutable is it allows
+functions which are constant methods
+
+710
+00:12:01,740 --> 00:12:01,750
+functions which are constant methods
+ 
+
+711
+00:12:01,750 --> 00:12:04,200
+functions which are constant methods
+which are cost to modify it the variable
+
+712
+00:12:04,200 --> 00:12:04,210
+which are cost to modify it the variable
+ 
+
+713
+00:12:04,210 --> 00:12:05,460
+which are cost to modify it the variable
+anyway I hope you guys enjoyed this
+
+714
+00:12:05,460 --> 00:12:05,470
+anyway I hope you guys enjoyed this
+ 
+
+715
+00:12:05,470 --> 00:12:07,110
+anyway I hope you guys enjoyed this
+video if you did you can hit that like
+
+716
+00:12:07,110 --> 00:12:07,120
+video if you did you can hit that like
+ 
+
+717
+00:12:07,120 --> 00:12:08,910
+video if you did you can hit that like
+button to let me know that you enjoyed
+
+718
+00:12:08,910 --> 00:12:08,920
+button to let me know that you enjoyed
+ 
+
+719
+00:12:08,920 --> 00:12:10,410
+button to let me know that you enjoyed
+this video if you really like this video
+
+720
+00:12:10,410 --> 00:12:10,420
+this video if you really like this video
+ 
+
+721
+00:12:10,420 --> 00:12:11,970
+this video if you really like this video
+you can help support this series on
+
+722
+00:12:11,970 --> 00:12:11,980
+you can help support this series on
+ 
+
+723
+00:12:11,980 --> 00:12:13,590
+you can help support this series on
+patreon by going to patreon account for
+
+724
+00:12:13,590 --> 00:12:13,600
+patreon by going to patreon account for
+ 
+
+725
+00:12:13,600 --> 00:12:15,150
+patreon by going to patreon account for
+special teacher no don't get some pretty
+
+726
+00:12:15,150 --> 00:12:15,160
+special teacher no don't get some pretty
+ 
+
+727
+00:12:15,160 --> 00:12:16,740
+special teacher no don't get some pretty
+cool rewards such as being able to
+
+728
+00:12:16,740 --> 00:12:16,750
+cool rewards such as being able to
+ 
+
+729
+00:12:16,750 --> 00:12:18,030
+cool rewards such as being able to
+contribute to the planning of these
+
+730
+00:12:18,030 --> 00:12:18,040
+contribute to the planning of these
+ 
+
+731
+00:12:18,040 --> 00:12:20,430
+contribute to the planning of these
+episodes and talk about stuff and get
+
+732
+00:12:20,430 --> 00:12:20,440
+episodes and talk about stuff and get
+ 
+
+733
+00:12:20,440 --> 00:12:22,500
+episodes and talk about stuff and get
+these episodes early sometimes as well
+
+734
+00:12:22,500 --> 00:12:22,510
+these episodes early sometimes as well
+ 
+
+735
+00:12:22,510 --> 00:12:23,790
+these episodes early sometimes as well
+pretty cool stuff and of course you're
+
+736
+00:12:23,790 --> 00:12:23,800
+pretty cool stuff and of course you're
+ 
+
+737
+00:12:23,800 --> 00:12:25,650
+pretty cool stuff and of course you're
+helping to support this series if you
+
+738
+00:12:25,650 --> 00:12:25,660
+helping to support this series if you
+ 
+
+739
+00:12:25,660 --> 00:12:27,720
+helping to support this series if you
+have any questions about Constance or if
+
+740
+00:12:27,720 --> 00:12:27,730
+have any questions about Constance or if
+ 
+
+741
+00:12:27,730 --> 00:12:28,930
+have any questions about Constance or if
+you feel I haven't covered
+
+742
+00:12:28,930 --> 00:12:28,940
+you feel I haven't covered
+ 
+
+743
+00:12:28,940 --> 00:12:30,400
+you feel I haven't covered
+thing and maybe I should in a future
+
+744
+00:12:30,400 --> 00:12:30,410
+thing and maybe I should in a future
+ 
+
+745
+00:12:30,410 --> 00:12:32,170
+thing and maybe I should in a future
+video just leave a comment below I'll
+
+746
+00:12:32,170 --> 00:12:32,180
+video just leave a comment below I'll
+ 
+
+747
+00:12:32,180 --> 00:12:34,570
+video just leave a comment below I'll
+try to answer to as many as I can and I
+
+748
+00:12:34,570 --> 00:12:34,580
+try to answer to as many as I can and I
+ 
+
+749
+00:12:34,580 --> 00:12:36,570
+try to answer to as many as I can and I
+will see you guys next time goodbye
+
+750
+00:12:36,570 --> 00:12:36,580
+will see you guys next time goodbye
+ 
+
+751
+00:12:36,580 --> 00:12:45,140
+will see you guys next time goodbye
+[Music]
+
+752
+00:12:45,140 --> 00:12:45,150
+
+ 
+
+753
+00:12:45,150 --> 00:12:52,190
+
+[Music]
+

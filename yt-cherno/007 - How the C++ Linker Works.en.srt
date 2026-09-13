@@ -1,0 +1,4645 @@
+1
+00:00:00,120 --> 00:00:01,870
+
+hey what's up guys my name is Aero and
+
+2
+00:00:01,870 --> 00:00:01,880
+hey what's up guys my name is Aero and
+ 
+
+3
+00:00:01,880 --> 00:00:03,510
+hey what's up guys my name is Aero and
+today we're going to talk about linking
+
+4
+00:00:03,510 --> 00:00:03,520
+today we're going to talk about linking
+ 
+
+5
+00:00:03,520 --> 00:00:05,869
+today we're going to talk about linking
+so what is linking what does the C++
+
+6
+00:00:05,869 --> 00:00:05,879
+so what is linking what does the C++
+ 
+
+7
+00:00:05,879 --> 00:00:08,350
+so what is linking what does the C++
+Linker actually do linking is a process
+
+8
+00:00:08,350 --> 00:00:08,360
+Linker actually do linking is a process
+ 
+
+9
+00:00:08,360 --> 00:00:10,110
+Linker actually do linking is a process
+that we go through when we go from our
+
+10
+00:00:10,110 --> 00:00:10,120
+that we go through when we go from our
+ 
+
+11
+00:00:10,120 --> 00:00:12,470
+that we go through when we go from our
+source C++ files to our actual
+
+12
+00:00:12,470 --> 00:00:12,480
+source C++ files to our actual
+ 
+
+13
+00:00:12,480 --> 00:00:14,589
+source C++ files to our actual
+executable binary so the first stage is
+
+14
+00:00:14,589 --> 00:00:14,599
+executable binary so the first stage is
+ 
+
+15
+00:00:14,599 --> 00:00:16,470
+executable binary so the first stage is
+actually compiling our source files and
+
+16
+00:00:16,470 --> 00:00:16,480
+actually compiling our source files and
+ 
+
+17
+00:00:16,480 --> 00:00:18,150
+actually compiling our source files and
+I actually made an entire video on that
+
+18
+00:00:18,150 --> 00:00:18,160
+I actually made an entire video on that
+ 
+
+19
+00:00:18,160 --> 00:00:19,790
+I actually made an entire video on that
+so go check that out Link in the
+
+20
+00:00:19,790 --> 00:00:19,800
+so go check that out Link in the
+ 
+
+21
+00:00:19,800 --> 00:00:21,429
+so go check that out Link in the
+description below once we've compiled
+
+22
+00:00:21,429 --> 00:00:21,439
+description below once we've compiled
+ 
+
+23
+00:00:21,439 --> 00:00:22,950
+description below once we've compiled
+our files we need to go through a
+
+24
+00:00:22,950 --> 00:00:22,960
+our files we need to go through a
+ 
+
+25
+00:00:22,960 --> 00:00:25,150
+our files we need to go through a
+process called linking now the primary
+
+26
+00:00:25,150 --> 00:00:25,160
+process called linking now the primary
+ 
+
+27
+00:00:25,160 --> 00:00:27,950
+process called linking now the primary
+focus of linking is to find where each
+
+28
+00:00:27,950 --> 00:00:27,960
+focus of linking is to find where each
+ 
+
+29
+00:00:27,960 --> 00:00:30,790
+focus of linking is to find where each
+symbol and function is and Link them
+
+30
+00:00:30,790 --> 00:00:30,800
+symbol and function is and Link them
+ 
+
+31
+00:00:30,800 --> 00:00:32,910
+symbol and function is and Link them
+together remember each file is compiled
+
+32
+00:00:32,910 --> 00:00:32,920
+together remember each file is compiled
+ 
+
+33
+00:00:32,920 --> 00:00:34,869
+together remember each file is compiled
+into a separate object file as a
+
+34
+00:00:34,869 --> 00:00:34,879
+into a separate object file as a
+ 
+
+35
+00:00:34,879 --> 00:00:36,549
+into a separate object file as a
+translation unit and they have no
+
+36
+00:00:36,549 --> 00:00:36,559
+translation unit and they have no
+ 
+
+37
+00:00:36,559 --> 00:00:38,389
+translation unit and they have no
+relation to each other those files can't
+
+38
+00:00:38,389 --> 00:00:38,399
+relation to each other those files can't
+ 
+
+39
+00:00:38,399 --> 00:00:40,389
+relation to each other those files can't
+actually interact so if we decide to
+
+40
+00:00:40,389 --> 00:00:40,399
+actually interact so if we decide to
+ 
+
+41
+00:00:40,399 --> 00:00:42,990
+actually interact so if we decide to
+split our program across multiple C++
+
+42
+00:00:42,990 --> 00:00:43,000
+split our program across multiple C++
+ 
+
+43
+00:00:43,000 --> 00:00:45,549
+split our program across multiple C++
+files which is of course very common we
+
+44
+00:00:45,549 --> 00:00:45,559
+files which is of course very common we
+ 
+
+45
+00:00:45,559 --> 00:00:48,029
+files which is of course very common we
+need a way to actually link those files
+
+46
+00:00:48,029 --> 00:00:48,039
+need a way to actually link those files
+ 
+
+47
+00:00:48,039 --> 00:00:50,270
+need a way to actually link those files
+together into one program and that is
+
+48
+00:00:50,270 --> 00:00:50,280
+together into one program and that is
+ 
+
+49
+00:00:50,280 --> 00:00:51,670
+together into one program and that is
+the primary purpose of what the Linker
+
+50
+00:00:51,670 --> 00:00:51,680
+the primary purpose of what the Linker
+ 
+
+51
+00:00:51,680 --> 00:00:53,630
+the primary purpose of what the Linker
+does even if you don't have functions in
+
+52
+00:00:53,630 --> 00:00:53,640
+does even if you don't have functions in
+ 
+
+53
+00:00:53,640 --> 00:00:55,229
+does even if you don't have functions in
+external files like for example you've
+
+54
+00:00:55,229 --> 00:00:55,239
+external files like for example you've
+ 
+
+55
+00:00:55,239 --> 00:00:57,630
+external files like for example you've
+written your entire program in one file
+
+56
+00:00:57,630 --> 00:00:57,640
+written your entire program in one file
+ 
+
+57
+00:00:57,640 --> 00:00:59,189
+written your entire program in one file
+the application still needs to know
+
+58
+00:00:59,189 --> 00:00:59,199
+the application still needs to know
+ 
+
+59
+00:00:59,199 --> 00:01:00,950
+the application still needs to know
+where the entry point is so in other
+
+60
+00:01:00,950 --> 00:01:00,960
+where the entry point is so in other
+ 
+
+61
+00:01:00,960 --> 00:01:02,910
+where the entry point is so in other
+words where the main function is so that
+
+62
+00:01:02,910 --> 00:01:02,920
+words where the main function is so that
+ 
+
+63
+00:01:02,920 --> 00:01:04,350
+words where the main function is so that
+when you actually run your application
+
+64
+00:01:04,350 --> 00:01:04,360
+when you actually run your application
+ 
+
+65
+00:01:04,360 --> 00:01:06,469
+when you actually run your application
+the C runtime Library can say hey here's
+
+66
+00:01:06,469 --> 00:01:06,479
+the C runtime Library can say hey here's
+ 
+
+67
+00:01:06,479 --> 00:01:07,789
+the C runtime Library can say hey here's
+the main function I'm going to jump
+
+68
+00:01:07,789 --> 00:01:07,799
+the main function I'm going to jump
+ 
+
+69
+00:01:07,799 --> 00:01:09,350
+the main function I'm going to jump
+there and start executing code from
+
+70
+00:01:09,350 --> 00:01:09,360
+there and start executing code from
+ 
+
+71
+00:01:09,360 --> 00:01:10,670
+there and start executing code from
+there and that is effectively what
+
+72
+00:01:10,670 --> 00:01:10,680
+there and that is effectively what
+ 
+
+73
+00:01:10,680 --> 00:01:12,230
+there and that is effectively what
+starts your application so it still
+
+74
+00:01:12,230 --> 00:01:12,240
+starts your application so it still
+ 
+
+75
+00:01:12,240 --> 00:01:13,630
+starts your application so it still
+needs to link the main function and
+
+76
+00:01:13,630 --> 00:01:13,640
+needs to link the main function and
+ 
+
+77
+00:01:13,640 --> 00:01:14,910
+needs to link the main function and
+everything like that even if you don't
+
+78
+00:01:14,910 --> 00:01:14,920
+everything like that even if you don't
+ 
+
+79
+00:01:14,920 --> 00:01:16,710
+everything like that even if you don't
+have other files the best way to explain
+
+80
+00:01:16,710 --> 00:01:16,720
+have other files the best way to explain
+ 
+
+81
+00:01:16,720 --> 00:01:18,109
+have other files the best way to explain
+this is by showing some examples so
+
+82
+00:01:18,109 --> 00:01:18,119
+this is by showing some examples so
+ 
+
+83
+00:01:18,119 --> 00:01:19,590
+this is by showing some examples so
+let's jump over and take a look so here
+
+84
+00:01:19,590 --> 00:01:19,600
+let's jump over and take a look so here
+ 
+
+85
+00:01:19,600 --> 00:01:21,190
+let's jump over and take a look so here
+in Visual Studio we've got a very simple
+
+86
+00:01:21,190 --> 00:01:21,200
+in Visual Studio we've got a very simple
+ 
+
+87
+00:01:21,200 --> 00:01:22,910
+in Visual Studio we've got a very simple
+project that just contains one source
+
+88
+00:01:22,910 --> 00:01:22,920
+project that just contains one source
+ 
+
+89
+00:01:22,920 --> 00:01:25,429
+project that just contains one source
+file math. cppp and inside there we have
+
+90
+00:01:25,429 --> 00:01:25,439
+file math. cppp and inside there we have
+ 
+
+91
+00:01:25,439 --> 00:01:27,630
+file math. cppp and inside there we have
+two functions log and multiply the
+
+92
+00:01:27,630 --> 00:01:27,640
+two functions log and multiply the
+ 
+
+93
+00:01:27,640 --> 00:01:29,469
+two functions log and multiply the
+multiply function actually calls the log
+
+94
+00:01:29,469 --> 00:01:29,479
+multiply function actually calls the log
+ 
+
+95
+00:01:29,479 --> 00:01:31,310
+multiply function actually calls the log
+function prints out the word multiply to
+
+96
+00:01:31,310 --> 00:01:31,320
+function prints out the word multiply to
+ 
+
+97
+00:01:31,320 --> 00:01:33,950
+function prints out the word multiply to
+the console and then returns a * B
+
+98
+00:01:33,950 --> 00:01:33,960
+the console and then returns a * B
+ 
+
+99
+00:01:33,960 --> 00:01:35,670
+the console and then returns a * B
+pretty simple stuff however this isn't
+
+100
+00:01:35,670 --> 00:01:35,680
+pretty simple stuff however this isn't
+ 
+
+101
+00:01:35,680 --> 00:01:37,389
+pretty simple stuff however this isn't
+an actual application since of course it
+
+102
+00:01:37,389 --> 00:01:37,399
+an actual application since of course it
+ 
+
+103
+00:01:37,399 --> 00:01:38,910
+an actual application since of course it
+doesn't contain a main function the
+
+104
+00:01:38,910 --> 00:01:38,920
+doesn't contain a main function the
+ 
+
+105
+00:01:38,920 --> 00:01:40,550
+doesn't contain a main function the
+first thing that you have to realize is
+
+106
+00:01:40,550 --> 00:01:40,560
+first thing that you have to realize is
+ 
+
+107
+00:01:40,560 --> 00:01:42,270
+first thing that you have to realize is
+that there are those two stages of
+
+108
+00:01:42,270 --> 00:01:42,280
+that there are those two stages of
+ 
+
+109
+00:01:42,280 --> 00:01:43,990
+that there are those two stages of
+compilation right there's compiling and
+
+110
+00:01:43,990 --> 00:01:44,000
+compilation right there's compiling and
+ 
+
+111
+00:01:44,000 --> 00:01:45,630
+compilation right there's compiling and
+there's linking and there's actually a
+
+112
+00:01:45,630 --> 00:01:45,640
+there's linking and there's actually a
+ 
+
+113
+00:01:45,640 --> 00:01:47,149
+there's linking and there's actually a
+way that you can differentiate between
+
+114
+00:01:47,149 --> 00:01:47,159
+way that you can differentiate between
+ 
+
+115
+00:01:47,159 --> 00:01:48,749
+way that you can differentiate between
+the two in visual studio if you press
+
+116
+00:01:48,749 --> 00:01:48,759
+the two in visual studio if you press
+ 
+
+117
+00:01:48,759 --> 00:01:50,789
+the two in visual studio if you press
+contrl F7 or if you press the compile
+
+118
+00:01:50,789 --> 00:01:50,799
+contrl F7 or if you press the compile
+ 
+
+119
+00:01:50,799 --> 00:01:53,550
+contrl F7 or if you press the compile
+button only compilation will happen no
+
+120
+00:01:53,550 --> 00:01:53,560
+button only compilation will happen no
+ 
+
+121
+00:01:53,560 --> 00:01:56,109
+button only compilation will happen no
+linking will ever happen however if you
+
+122
+00:01:56,109 --> 00:01:56,119
+linking will ever happen however if you
+ 
+
+123
+00:01:56,119 --> 00:01:58,310
+linking will ever happen however if you
+build your project or if you hit F5 to
+
+124
+00:01:58,310 --> 00:01:58,320
+build your project or if you hit F5 to
+ 
+
+125
+00:01:58,320 --> 00:02:00,709
+build your project or if you hit F5 to
+run your project it will actually
+
+126
+00:02:00,709 --> 00:02:00,719
+run your project it will actually
+ 
+
+127
+00:02:00,719 --> 00:02:03,310
+run your project it will actually
+compile and then link so if I just hit
+
+128
+00:02:03,310 --> 00:02:03,320
+compile and then link so if I just hit
+ 
+
+129
+00:02:03,320 --> 00:02:05,550
+compile and then link so if I just hit
+contrl F7 you'll see that I actually get
+
+130
+00:02:05,550 --> 00:02:05,560
+contrl F7 you'll see that I actually get
+ 
+
+131
+00:02:05,560 --> 00:02:07,670
+contrl F7 you'll see that I actually get
+no errors everything's fine because the
+
+132
+00:02:07,670 --> 00:02:07,680
+no errors everything's fine because the
+ 
+
+133
+00:02:07,680 --> 00:02:09,830
+no errors everything's fine because the
+compilation was successful it generated
+
+134
+00:02:09,830 --> 00:02:09,840
+compilation was successful it generated
+ 
+
+135
+00:02:09,840 --> 00:02:12,110
+compilation was successful it generated
+that math. obj file the object file and
+
+136
+00:02:12,110 --> 00:02:12,120
+that math. obj file the object file and
+ 
+
+137
+00:02:12,120 --> 00:02:13,869
+that math. obj file the object file and
+everything's great however if I right
+
+138
+00:02:13,869 --> 00:02:13,879
+everything's great however if I right
+ 
+
+139
+00:02:13,879 --> 00:02:16,070
+everything's great however if I right
+click on my project and hit build you'll
+
+140
+00:02:16,070 --> 00:02:16,080
+click on my project and hit build you'll
+ 
+
+141
+00:02:16,080 --> 00:02:18,350
+click on my project and hit build you'll
+see that I actually get a linking error
+
+142
+00:02:18,350 --> 00:02:18,360
+see that I actually get a linking error
+ 
+
+143
+00:02:18,360 --> 00:02:20,430
+see that I actually get a linking error
+entry point must be defined and again
+
+144
+00:02:20,430 --> 00:02:20,440
+entry point must be defined and again
+ 
+
+145
+00:02:20,440 --> 00:02:21,949
+entry point must be defined and again
+that's because I'm missing my entry
+
+146
+00:02:21,949 --> 00:02:21,959
+that's because I'm missing my entry
+ 
+
+147
+00:02:21,959 --> 00:02:23,990
+that's because I'm missing my entry
+point my main function so because our
+
+148
+00:02:23,990 --> 00:02:24,000
+point my main function so because our
+ 
+
+149
+00:02:24,000 --> 00:02:25,630
+point my main function so because our
+compilation is divided into those two
+
+150
+00:02:25,630 --> 00:02:25,640
+compilation is divided into those two
+ 
+
+151
+00:02:25,640 --> 00:02:28,270
+compilation is divided into those two
+stages compiling and linking we actually
+
+152
+00:02:28,270 --> 00:02:28,280
+stages compiling and linking we actually
+ 
+
+153
+00:02:28,280 --> 00:02:30,030
+stages compiling and linking we actually
+get different types of error messages
+
+154
+00:02:30,030 --> 00:02:30,040
+get different types of error messages
+ 
+
+155
+00:02:30,040 --> 00:02:32,390
+get different types of error messages
+associated with each stage if I make a
+
+156
+00:02:32,390 --> 00:02:32,400
+associated with each stage if I make a
+ 
+
+157
+00:02:32,400 --> 00:02:34,190
+associated with each stage if I make a
+syntax error for example which of course
+
+158
+00:02:34,190 --> 00:02:34,200
+syntax error for example which of course
+ 
+
+159
+00:02:34,200 --> 00:02:35,750
+syntax error for example which of course
+is something the compiler has to deal
+
+160
+00:02:35,750 --> 00:02:35,760
+is something the compiler has to deal
+ 
+
+161
+00:02:35,760 --> 00:02:38,030
+is something the compiler has to deal
+with if I compile my code you'll see
+
+162
+00:02:38,030 --> 00:02:38,040
+with if I compile my code you'll see
+ 
+
+163
+00:02:38,040 --> 00:02:39,589
+with if I compile my code you'll see
+that it tells me that I actually get an
+
+164
+00:02:39,589 --> 00:02:39,599
+that it tells me that I actually get an
+ 
+
+165
+00:02:39,599 --> 00:02:42,430
+that it tells me that I actually get an
+error which is called c2143 and then it
+
+166
+00:02:42,430 --> 00:02:42,440
+error which is called c2143 and then it
+ 
+
+167
+00:02:42,440 --> 00:02:44,070
+error which is called c2143 and then it
+says syntax error of course so this is
+
+168
+00:02:44,070 --> 00:02:44,080
+says syntax error of course so this is
+ 
+
+169
+00:02:44,080 --> 00:02:46,509
+says syntax error of course so this is
+the error code for this type of error
+
+170
+00:02:46,509 --> 00:02:46,519
+the error code for this type of error
+ 
+
+171
+00:02:46,519 --> 00:02:48,070
+the error code for this type of error
+and you'll note that it actually starts
+
+172
+00:02:48,070 --> 00:02:48,080
+and you'll note that it actually starts
+ 
+
+173
+00:02:48,080 --> 00:02:50,190
+and you'll note that it actually starts
+with the letter c this tells us that
+
+174
+00:02:50,190 --> 00:02:50,200
+with the letter c this tells us that
+ 
+
+175
+00:02:50,200 --> 00:02:51,390
+with the letter c this tells us that
+it's an error that occurred in the
+
+176
+00:02:51,390 --> 00:02:51,400
+it's an error that occurred in the
+ 
+
+177
+00:02:51,400 --> 00:02:54,350
+it's an error that occurred in the
+compiling stage if I fix that and then
+
+178
+00:02:54,350 --> 00:02:54,360
+compiling stage if I fix that and then
+ 
+
+179
+00:02:54,360 --> 00:02:56,949
+compiling stage if I fix that and then
+build my entire project you'll see the
+
+180
+00:02:56,949 --> 00:02:56,959
+build my entire project you'll see the
+ 
+
+181
+00:02:56,959 --> 00:02:58,910
+build my entire project you'll see the
+error code listed here begins with the
+
+182
+00:02:58,910 --> 00:02:58,920
+error code listed here begins with the
+ 
+
+183
+00:02:58,920 --> 00:03:00,990
+error code listed here begins with the
+letters l and K which of course stands
+
+184
+00:03:00,990 --> 00:03:01,000
+letters l and K which of course stands
+ 
+
+185
+00:03:01,000 --> 00:03:03,190
+letters l and K which of course stands
+for link and it even tells us over here
+
+186
+00:03:03,190 --> 00:03:03,200
+for link and it even tells us over here
+ 
+
+187
+00:03:03,200 --> 00:03:05,149
+for link and it even tells us over here
+that this happened during the link stage
+
+188
+00:03:05,149 --> 00:03:05,159
+that this happened during the link stage
+ 
+
+189
+00:03:05,159 --> 00:03:07,390
+that this happened during the link stage
+it's really important that you know what
+
+190
+00:03:07,390 --> 00:03:07,400
+it's really important that you know what
+ 
+
+191
+00:03:07,400 --> 00:03:08,990
+it's really important that you know what
+kind of error you get whether it's a
+
+192
+00:03:08,990 --> 00:03:09,000
+kind of error you get whether it's a
+ 
+
+193
+00:03:09,000 --> 00:03:11,110
+kind of error you get whether it's a
+compiling error or a linking error
+
+194
+00:03:11,110 --> 00:03:11,120
+compiling error or a linking error
+ 
+
+195
+00:03:11,120 --> 00:03:12,509
+compiling error or a linking error
+because of course you need to know that
+
+196
+00:03:12,509 --> 00:03:12,519
+because of course you need to know that
+ 
+
+197
+00:03:12,519 --> 00:03:14,070
+because of course you need to know that
+so that you can fix it properly so in
+
+198
+00:03:14,070 --> 00:03:14,080
+so that you can fix it properly so in
+ 
+
+199
+00:03:14,080 --> 00:03:16,110
+so that you can fix it properly so in
+this case we get an error which tells us
+
+200
+00:03:16,110 --> 00:03:16,120
+this case we get an error which tells us
+ 
+
+201
+00:03:16,120 --> 00:03:18,270
+this case we get an error which tells us
+the entry point must be defined again
+
+202
+00:03:18,270 --> 00:03:18,280
+the entry point must be defined again
+ 
+
+203
+00:03:18,280 --> 00:03:19,869
+the entry point must be defined again
+that is because we are compiling this as
+
+204
+00:03:19,869 --> 00:03:19,879
+that is because we are compiling this as
+ 
+
+205
+00:03:19,879 --> 00:03:21,430
+that is because we are compiling this as
+an application if we go to our
+
+206
+00:03:21,430 --> 00:03:21,440
+an application if we go to our
+ 
+
+207
+00:03:21,440 --> 00:03:23,630
+an application if we go to our
+properties and we take a look at what
+
+208
+00:03:23,630 --> 00:03:23,640
+properties and we take a look at what
+ 
+
+209
+00:03:23,640 --> 00:03:25,710
+properties and we take a look at what
+configuration type we have set here
+
+210
+00:03:25,710 --> 00:03:25,720
+configuration type we have set here
+ 
+
+211
+00:03:25,720 --> 00:03:28,309
+configuration type we have set here
+you'll see it is set to application. exe
+
+212
+00:03:28,309 --> 00:03:28,319
+you'll see it is set to application. exe
+ 
+
+213
+00:03:28,319 --> 00:03:30,589
+you'll see it is set to application. exe
+and every exe file has to have some kind
+
+214
+00:03:30,589 --> 00:03:30,599
+and every exe file has to have some kind
+ 
+
+215
+00:03:30,599 --> 00:03:32,750
+and every exe file has to have some kind
+of entry point if we go over here into
+
+216
+00:03:32,750 --> 00:03:32,760
+of entry point if we go over here into
+ 
+
+217
+00:03:32,760 --> 00:03:35,030
+of entry point if we go over here into
+the Linker settings and into advanced
+
+218
+00:03:35,030 --> 00:03:35,040
+the Linker settings and into advanced
+ 
+
+219
+00:03:35,040 --> 00:03:36,710
+the Linker settings and into advanced
+you'll actually see that we can specify
+
+220
+00:03:36,710 --> 00:03:36,720
+you'll actually see that we can specify
+ 
+
+221
+00:03:36,720 --> 00:03:38,710
+you'll actually see that we can specify
+a custom entry point the entry point
+
+222
+00:03:38,710 --> 00:03:38,720
+a custom entry point the entry point
+ 
+
+223
+00:03:38,720 --> 00:03:40,990
+a custom entry point the entry point
+doesn't have to be the main function
+
+224
+00:03:40,990 --> 00:03:41,000
+doesn't have to be the main function
+ 
+
+225
+00:03:41,000 --> 00:03:43,350
+doesn't have to be the main function
+there just has to be an entry point now
+
+226
+00:03:43,350 --> 00:03:43,360
+there just has to be an entry point now
+ 
+
+227
+00:03:43,360 --> 00:03:46,429
+there just has to be an entry point now
+normally it is the main function and for
+
+228
+00:03:46,429 --> 00:03:46,439
+normally it is the main function and for
+ 
+
+229
+00:03:46,439 --> 00:03:47,789
+normally it is the main function and for
+pretty much anything you do it probably
+
+230
+00:03:47,789 --> 00:03:47,799
+pretty much anything you do it probably
+ 
+
+231
+00:03:47,799 --> 00:03:49,589
+pretty much anything you do it probably
+will be the main function but just so
+
+232
+00:03:49,589 --> 00:03:49,599
+will be the main function but just so
+ 
+
+233
+00:03:49,599 --> 00:03:51,509
+will be the main function but just so
+you know entry point doesn't necessarily
+
+234
+00:03:51,509 --> 00:03:51,519
+you know entry point doesn't necessarily
+ 
+
+235
+00:03:51,519 --> 00:03:53,390
+you know entry point doesn't necessarily
+have to be a function called main it can
+
+236
+00:03:53,390 --> 00:03:53,400
+have to be a function called main it can
+ 
+
+237
+00:03:53,400 --> 00:03:55,830
+have to be a function called main it can
+be really anything so if we back out of
+
+238
+00:03:55,830 --> 00:03:55,840
+be really anything so if we back out of
+ 
+
+239
+00:03:55,840 --> 00:03:57,470
+be really anything so if we back out of
+here and actually write that main
+
+240
+00:03:57,470 --> 00:03:57,480
+here and actually write that main
+ 
+
+241
+00:03:57,480 --> 00:04:00,630
+here and actually write that main
+function I'll just write int Main
+
+242
+00:04:00,630 --> 00:04:00,640
+function I'll just write int Main
+ 
+
+243
+00:04:00,640 --> 00:04:03,309
+function I'll just write int Main
+and then I'll build my project again
+
+244
+00:04:03,309 --> 00:04:03,319
+and then I'll build my project again
+ 
+
+245
+00:04:03,319 --> 00:04:04,670
+and then I'll build my project again
+you'll see that we no longer get that
+
+246
+00:04:04,670 --> 00:04:04,680
+you'll see that we no longer get that
+ 
+
+247
+00:04:04,680 --> 00:04:06,429
+you'll see that we no longer get that
+linking error and that we were
+
+248
+00:04:06,429 --> 00:04:06,439
+linking error and that we were
+ 
+
+249
+00:04:06,439 --> 00:04:08,390
+linking error and that we were
+successfully able to generate that exe
+
+250
+00:04:08,390 --> 00:04:08,400
+successfully able to generate that exe
+ 
+
+251
+00:04:08,400 --> 00:04:09,630
+successfully able to generate that exe
+file all right so now that we've
+
+252
+00:04:09,630 --> 00:04:09,640
+file all right so now that we've
+ 
+
+253
+00:04:09,640 --> 00:04:11,949
+file all right so now that we've
+established that let's go ahead and
+
+254
+00:04:11,949 --> 00:04:11,959
+established that let's go ahead and
+ 
+
+255
+00:04:11,959 --> 00:04:15,270
+established that let's go ahead and
+print out the value of that multiply
+
+256
+00:04:15,270 --> 00:04:15,280
+print out the value of that multiply
+ 
+
+257
+00:04:15,280 --> 00:04:20,229
+print out the value of that multiply
+function so we'll multiply 5 and 8
+
+258
+00:04:20,229 --> 00:04:20,239
+
+ 
+
+259
+00:04:20,239 --> 00:04:22,870
+
+together so what we should see is this
+
+260
+00:04:22,870 --> 00:04:22,880
+together so what we should see is this
+ 
+
+261
+00:04:22,880 --> 00:04:24,710
+together so what we should see is this
+message being logged and then the value
+
+262
+00:04:24,710 --> 00:04:24,720
+message being logged and then the value
+ 
+
+263
+00:04:24,720 --> 00:04:27,909
+message being logged and then the value
+40 being printed let's also add a c in.
+
+264
+00:04:27,909 --> 00:04:27,919
+40 being printed let's also add a c in.
+ 
+
+265
+00:04:27,919 --> 00:04:29,670
+40 being printed let's also add a c in.
+getet so that our console doesn't close
+
+266
+00:04:29,670 --> 00:04:29,680
+getet so that our console doesn't close
+ 
+
+267
+00:04:29,680 --> 00:04:31,550
+getet so that our console doesn't close
+close immediately then I'll just click
+
+268
+00:04:31,550 --> 00:04:31,560
+close immediately then I'll just click
+ 
+
+269
+00:04:31,560 --> 00:04:33,150
+close immediately then I'll just click
+on this local Windows debugger button to
+
+270
+00:04:33,150 --> 00:04:33,160
+on this local Windows debugger button to
+ 
+
+271
+00:04:33,160 --> 00:04:35,870
+on this local Windows debugger button to
+run this as you can see we get multiply
+
+272
+00:04:35,870 --> 00:04:35,880
+run this as you can see we get multiply
+ 
+
+273
+00:04:35,880 --> 00:04:37,670
+run this as you can see we get multiply
+and 40 so our application seems to be
+
+274
+00:04:37,670 --> 00:04:37,680
+and 40 so our application seems to be
+ 
+
+275
+00:04:37,680 --> 00:04:39,909
+and 40 so our application seems to be
+running correctly great now suppose I
+
+276
+00:04:39,909 --> 00:04:39,919
+running correctly great now suppose I
+ 
+
+277
+00:04:39,919 --> 00:04:42,469
+running correctly great now suppose I
+had these in multiple files for example
+
+278
+00:04:42,469 --> 00:04:42,479
+had these in multiple files for example
+ 
+
+279
+00:04:42,479 --> 00:04:44,310
+had these in multiple files for example
+this log doesn't really need to be in
+
+280
+00:04:44,310 --> 00:04:44,320
+this log doesn't really need to be in
+ 
+
+281
+00:04:44,320 --> 00:04:46,430
+this log doesn't really need to be in
+this math file because of course this
+
+282
+00:04:46,430 --> 00:04:46,440
+this math file because of course this
+ 
+
+283
+00:04:46,440 --> 00:04:48,189
+this math file because of course this
+just logs a message so why don't I have
+
+284
+00:04:48,189 --> 00:04:48,199
+just logs a message so why don't I have
+ 
+
+285
+00:04:48,199 --> 00:04:49,870
+just logs a message so why don't I have
+a separate file that actually contains
+
+286
+00:04:49,870 --> 00:04:49,880
+a separate file that actually contains
+ 
+
+287
+00:04:49,880 --> 00:04:51,550
+a separate file that actually contains
+all of my logging related functions I'm
+
+288
+00:04:51,550 --> 00:04:51,560
+all of my logging related functions I'm
+ 
+
+289
+00:04:51,560 --> 00:04:53,110
+all of my logging related functions I'm
+going to right click on source files and
+
+290
+00:04:53,110 --> 00:04:53,120
+going to right click on source files and
+ 
+
+291
+00:04:53,120 --> 00:04:57,710
+going to right click on source files and
+add a new C++ file called log CPP and
+
+292
+00:04:57,710 --> 00:04:57,720
+add a new C++ file called log CPP and
+ 
+
+293
+00:04:57,720 --> 00:04:59,310
+add a new C++ file called log CPP and
+then I'll click add I'm going to grab
+
+294
+00:04:59,310 --> 00:04:59,320
+then I'll click add I'm going to grab
+ 
+
+295
+00:04:59,320 --> 00:05:01,430
+then I'll click add I'm going to grab
+that log function from here and move it
+
+296
+00:05:01,430 --> 00:05:01,440
+that log function from here and move it
+ 
+
+297
+00:05:01,440 --> 00:05:03,830
+that log function from here and move it
+into my log. CPP file if I go back to
+
+298
+00:05:03,830 --> 00:05:03,840
+into my log. CPP file if I go back to
+ 
+
+299
+00:05:03,840 --> 00:05:07,029
+into my log. CPP file if I go back to
+math. CPP and try and compile this code
+
+300
+00:05:07,029 --> 00:05:07,039
+math. CPP and try and compile this code
+ 
+
+301
+00:05:07,039 --> 00:05:08,469
+math. CPP and try and compile this code
+I'll get an error and you'll know that
+
+302
+00:05:08,469 --> 00:05:08,479
+I'll get an error and you'll know that
+ 
+
+303
+00:05:08,479 --> 00:05:09,830
+I'll get an error and you'll know that
+this is a compile error because the
+
+304
+00:05:09,830 --> 00:05:09,840
+this is a compile error because the
+ 
+
+305
+00:05:09,840 --> 00:05:11,510
+this is a compile error because the
+error code begins with the letter c
+
+306
+00:05:11,510 --> 00:05:11,520
+error code begins with the letter c
+ 
+
+307
+00:05:11,520 --> 00:05:13,830
+error code begins with the letter c
+telling me that log is not found because
+
+308
+00:05:13,830 --> 00:05:13,840
+telling me that log is not found because
+ 
+
+309
+00:05:13,840 --> 00:05:15,230
+telling me that log is not found because
+this file has no knowledge that a
+
+310
+00:05:15,230 --> 00:05:15,240
+this file has no knowledge that a
+ 
+
+311
+00:05:15,240 --> 00:05:17,390
+this file has no knowledge that a
+function called log exists at all so
+
+312
+00:05:17,390 --> 00:05:17,400
+function called log exists at all so
+ 
+
+313
+00:05:17,400 --> 00:05:19,550
+function called log exists at all so
+we'll go ahead and grab this first line
+
+314
+00:05:19,550 --> 00:05:19,560
+we'll go ahead and grab this first line
+ 
+
+315
+00:05:19,560 --> 00:05:20,870
+we'll go ahead and grab this first line
+of the log function which is the
+
+316
+00:05:20,870 --> 00:05:20,880
+of the log function which is the
+ 
+
+317
+00:05:20,880 --> 00:05:22,670
+of the log function which is the
+signature and we'll add this so that we
+
+318
+00:05:22,670 --> 00:05:22,680
+signature and we'll add this so that we
+ 
+
+319
+00:05:22,680 --> 00:05:24,230
+signature and we'll add this so that we
+have a declaration of the log function
+
+320
+00:05:24,230 --> 00:05:24,240
+have a declaration of the log function
+ 
+
+321
+00:05:24,240 --> 00:05:26,350
+have a declaration of the log function
+in this math. zppp file I'll hit contr
+
+322
+00:05:26,350 --> 00:05:26,360
+in this math. zppp file I'll hit contr
+ 
+
+323
+00:05:26,360 --> 00:05:28,990
+in this math. zppp file I'll hit contr
+F7 and you can see that compiling worked
+
+324
+00:05:28,990 --> 00:05:29,000
+F7 and you can see that compiling worked
+ 
+
+325
+00:05:29,000 --> 00:05:30,430
+F7 and you can see that compiling worked
+now let's go ahead and build our entire
+
+326
+00:05:30,430 --> 00:05:30,440
+now let's go ahead and build our entire
+ 
+
+327
+00:05:30,440 --> 00:05:32,550
+now let's go ahead and build our entire
+project we get several errors here
+
+328
+00:05:32,550 --> 00:05:32,560
+project we get several errors here
+ 
+
+329
+00:05:32,560 --> 00:05:34,350
+project we get several errors here
+compile errors telling us the C out is
+
+330
+00:05:34,350 --> 00:05:34,360
+compile errors telling us the C out is
+ 
+
+331
+00:05:34,360 --> 00:05:37,270
+compile errors telling us the C out is
+not found because we need to actually
+
+332
+00:05:37,270 --> 00:05:37,280
+not found because we need to actually
+ 
+
+333
+00:05:37,280 --> 00:05:39,230
+not found because we need to actually
+include IO
+
+334
+00:05:39,230 --> 00:05:39,240
+include IO
+ 
+
+335
+00:05:39,240 --> 00:05:41,670
+include IO
+stream once we've done that let's build
+
+336
+00:05:41,670 --> 00:05:41,680
+stream once we've done that let's build
+ 
+
+337
+00:05:41,680 --> 00:05:43,550
+stream once we've done that let's build
+our entire project all right great it
+
+338
+00:05:43,550 --> 00:05:43,560
+our entire project all right great it
+ 
+
+339
+00:05:43,560 --> 00:05:45,189
+our entire project all right great it
+seemed to work successfully now let's
+
+340
+00:05:45,189 --> 00:05:45,199
+seemed to work successfully now let's
+ 
+
+341
+00:05:45,199 --> 00:05:47,029
+seemed to work successfully now let's
+take a look at one type of linking error
+
+342
+00:05:47,029 --> 00:05:47,039
+take a look at one type of linking error
+ 
+
+343
+00:05:47,039 --> 00:05:48,629
+take a look at one type of linking error
+that we might get this one's called
+
+344
+00:05:48,629 --> 00:05:48,639
+that we might get this one's called
+ 
+
+345
+00:05:48,639 --> 00:05:50,950
+that we might get this one's called
+unresolved external symbol and this is
+
+346
+00:05:50,950 --> 00:05:50,960
+unresolved external symbol and this is
+ 
+
+347
+00:05:50,960 --> 00:05:53,309
+unresolved external symbol and this is
+what happens when the Linker can't find
+
+348
+00:05:53,309 --> 00:05:53,319
+what happens when the Linker can't find
+ 
+
+349
+00:05:53,319 --> 00:05:55,430
+what happens when the Linker can't find
+something that it needs so we'll go back
+
+350
+00:05:55,430 --> 00:05:55,440
+something that it needs so we'll go back
+ 
+
+351
+00:05:55,440 --> 00:05:58,150
+something that it needs so we'll go back
+over here and in the log file I'm going
+
+352
+00:05:58,150 --> 00:05:58,160
+over here and in the log file I'm going
+ 
+
+353
+00:05:58,160 --> 00:05:59,990
+over here and in the log file I'm going
+to change this to say something else for
+
+354
+00:05:59,990 --> 00:06:00,000
+to change this to say something else for
+ 
+
+355
+00:06:00,000 --> 00:06:01,670
+to change this to say something else for
+example I'm just going to add an R here
+
+356
+00:06:01,670 --> 00:06:01,680
+example I'm just going to add an R here
+ 
+
+357
+00:06:01,680 --> 00:06:03,670
+example I'm just going to add an R here
+so that we say logger if I go back to
+
+358
+00:06:03,670 --> 00:06:03,680
+so that we say logger if I go back to
+ 
+
+359
+00:06:03,680 --> 00:06:06,029
+so that we say logger if I go back to
+math. CPP I've still left my declaration
+
+360
+00:06:06,029 --> 00:06:06,039
+math. CPP I've still left my declaration
+ 
+
+361
+00:06:06,039 --> 00:06:08,189
+math. CPP I've still left my declaration
+as log so it still does expect the
+
+362
+00:06:08,189 --> 00:06:08,199
+as log so it still does expect the
+ 
+
+363
+00:06:08,199 --> 00:06:10,710
+as log so it still does expect the
+function to be called log so this file
+
+364
+00:06:10,710 --> 00:06:10,720
+function to be called log so this file
+ 
+
+365
+00:06:10,720 --> 00:06:12,830
+function to be called log so this file
+will still compile of course because
+
+366
+00:06:12,830 --> 00:06:12,840
+will still compile of course because
+ 
+
+367
+00:06:12,840 --> 00:06:15,070
+will still compile of course because
+this does no linking so all it's doing
+
+368
+00:06:15,070 --> 00:06:15,080
+this does no linking so all it's doing
+ 
+
+369
+00:06:15,080 --> 00:06:17,029
+this does no linking so all it's doing
+is checking to make sure everything here
+
+370
+00:06:17,029 --> 00:06:17,039
+is checking to make sure everything here
+ 
+
+371
+00:06:17,039 --> 00:06:19,309
+is checking to make sure everything here
+compiles correctly it believes that
+
+372
+00:06:19,309 --> 00:06:19,319
+compiles correctly it believes that
+ 
+
+373
+00:06:19,319 --> 00:06:21,110
+compiles correctly it believes that
+there is a log function somewhere but
+
+374
+00:06:21,110 --> 00:06:21,120
+there is a log function somewhere but
+ 
+
+375
+00:06:21,120 --> 00:06:22,550
+there is a log function somewhere but
+it's going to be the job of the linking
+
+376
+00:06:22,550 --> 00:06:22,560
+it's going to be the job of the linking
+ 
+
+377
+00:06:22,560 --> 00:06:25,670
+it's going to be the job of the linking
+stage to actually find that log function
+
+378
+00:06:25,670 --> 00:06:25,680
+stage to actually find that log function
+ 
+
+379
+00:06:25,680 --> 00:06:27,589
+stage to actually find that log function
+so if I build my entire project now
+
+380
+00:06:27,589 --> 00:06:27,599
+so if I build my entire project now
+ 
+
+381
+00:06:27,599 --> 00:06:29,430
+so if I build my entire project now
+you'll see we actually get an error this
+
+382
+00:06:29,430 --> 00:06:29,440
+you'll see we actually get an error this
+ 
+
+383
+00:06:29,440 --> 00:06:31,150
+you'll see we actually get an error this
+is is a linking error because you can
+
+384
+00:06:31,150 --> 00:06:31,160
+is is a linking error because you can
+ 
+
+385
+00:06:31,160 --> 00:06:33,309
+is is a linking error because you can
+see that it begins with the Ln K letters
+
+386
+00:06:33,309 --> 00:06:33,319
+see that it begins with the Ln K letters
+ 
+
+387
+00:06:33,319 --> 00:06:34,990
+see that it begins with the Ln K letters
+and the error says unresolved external
+
+388
+00:06:34,990 --> 00:06:35,000
+and the error says unresolved external
+ 
+
+389
+00:06:35,000 --> 00:06:36,830
+and the error says unresolved external
+symbol now it tells us exactly what
+
+390
+00:06:36,830 --> 00:06:36,840
+symbol now it tells us exactly what
+ 
+
+391
+00:06:36,840 --> 00:06:38,990
+symbol now it tells us exactly what
+symbol is missing it's that log function
+
+392
+00:06:38,990 --> 00:06:39,000
+symbol is missing it's that log function
+ 
+
+393
+00:06:39,000 --> 00:06:40,790
+symbol is missing it's that log function
+it even tells us where we reference it
+
+394
+00:06:40,790 --> 00:06:40,800
+it even tells us where we reference it
+ 
+
+395
+00:06:40,800 --> 00:06:42,390
+it even tells us where we reference it
+that we're referencing it in a function
+
+396
+00:06:42,390 --> 00:06:42,400
+that we're referencing it in a function
+ 
+
+397
+00:06:42,400 --> 00:06:44,189
+that we're referencing it in a function
+called multiply so here it is in
+
+398
+00:06:44,189 --> 00:06:44,199
+called multiply so here it is in
+ 
+
+399
+00:06:44,199 --> 00:06:46,469
+called multiply so here it is in
+multiply we're calling log and it cannot
+
+400
+00:06:46,469 --> 00:06:46,479
+multiply we're calling log and it cannot
+ 
+
+401
+00:06:46,479 --> 00:06:48,390
+multiply we're calling log and it cannot
+actually find which function to link it
+
+402
+00:06:48,390 --> 00:06:48,400
+actually find which function to link it
+ 
+
+403
+00:06:48,400 --> 00:06:49,990
+actually find which function to link it
+to so of course it has to give us an
+
+404
+00:06:49,990 --> 00:06:50,000
+to so of course it has to give us an
+ 
+
+405
+00:06:50,000 --> 00:06:52,309
+to so of course it has to give us an
+error because when we land on that code
+
+406
+00:06:52,309 --> 00:06:52,319
+error because when we land on that code
+ 
+
+407
+00:06:52,319 --> 00:06:54,749
+error because when we land on that code
+at runtime what is it supposed to do
+
+408
+00:06:54,749 --> 00:06:54,759
+at runtime what is it supposed to do
+ 
+
+409
+00:06:54,759 --> 00:06:56,189
+at runtime what is it supposed to do
+when it tries to call the log function
+
+410
+00:06:56,189 --> 00:06:56,199
+when it tries to call the log function
+ 
+
+411
+00:06:56,199 --> 00:06:57,510
+when it tries to call the log function
+it doesn't know where the log function
+
+412
+00:06:57,510 --> 00:06:57,520
+it doesn't know where the log function
+ 
+
+413
+00:06:57,520 --> 00:06:59,909
+it doesn't know where the log function
+is now if I go over here and I comment
+
+414
+00:06:59,909 --> 00:06:59,919
+is now if I go over here and I comment
+ 
+
+415
+00:06:59,919 --> 00:07:01,350
+is now if I go over here and I comment
+out this log function so that we
+
+416
+00:07:01,350 --> 00:07:01,360
+out this log function so that we
+ 
+
+417
+00:07:01,360 --> 00:07:03,390
+out this log function so that we
+actually never call it if I try and
+
+418
+00:07:03,390 --> 00:07:03,400
+actually never call it if I try and
+ 
+
+419
+00:07:03,400 --> 00:07:05,869
+actually never call it if I try and
+build this we get no errors the reason
+
+420
+00:07:05,869 --> 00:07:05,879
+build this we get no errors the reason
+ 
+
+421
+00:07:05,879 --> 00:07:07,629
+build this we get no errors the reason
+this happens is because I never call the
+
+422
+00:07:07,629 --> 00:07:07,639
+this happens is because I never call the
+ 
+
+423
+00:07:07,639 --> 00:07:09,270
+this happens is because I never call the
+log function so the Linker doesn't have
+
+424
+00:07:09,270 --> 00:07:09,280
+log function so the Linker doesn't have
+ 
+
+425
+00:07:09,280 --> 00:07:11,950
+log function so the Linker doesn't have
+to link this function call to actually
+
+426
+00:07:11,950 --> 00:07:11,960
+to link this function call to actually
+ 
+
+427
+00:07:11,960 --> 00:07:13,430
+to link this function call to actually
+call the log function because we never
+
+428
+00:07:13,430 --> 00:07:13,440
+call the log function because we never
+ 
+
+429
+00:07:13,440 --> 00:07:14,950
+call the log function because we never
+called The Log function another
+
+430
+00:07:14,950 --> 00:07:14,960
+called The Log function another
+ 
+
+431
+00:07:14,960 --> 00:07:16,790
+called The Log function another
+interesting note is that if I do call
+
+432
+00:07:16,790 --> 00:07:16,800
+interesting note is that if I do call
+ 
+
+433
+00:07:16,800 --> 00:07:18,550
+interesting note is that if I do call
+the log function here on multiply
+
+434
+00:07:18,550 --> 00:07:18,560
+the log function here on multiply
+ 
+
+435
+00:07:18,560 --> 00:07:20,390
+the log function here on multiply
+however I comment this line out so that
+
+436
+00:07:20,390 --> 00:07:20,400
+however I comment this line out so that
+ 
+
+437
+00:07:20,400 --> 00:07:22,990
+however I comment this line out so that
+I never call multiply which in turn
+
+438
+00:07:22,990 --> 00:07:23,000
+I never call multiply which in turn
+ 
+
+439
+00:07:23,000 --> 00:07:25,430
+I never call multiply which in turn
+never calls log if I build my project
+
+440
+00:07:25,430 --> 00:07:25,440
+never calls log if I build my project
+ 
+
+441
+00:07:25,440 --> 00:07:27,070
+never calls log if I build my project
+now you'll see that I still get a
+
+442
+00:07:27,070 --> 00:07:27,080
+now you'll see that I still get a
+ 
+
+443
+00:07:27,080 --> 00:07:29,070
+now you'll see that I still get a
+linking error and you might be like what
+
+444
+00:07:29,070 --> 00:07:29,080
+linking error and you might be like what
+ 
+
+445
+00:07:29,080 --> 00:07:30,790
+linking error and you might be like what
+but why is that happening I'm not
+
+446
+00:07:30,790 --> 00:07:30,800
+but why is that happening I'm not
+ 
+
+447
+00:07:30,800 --> 00:07:33,670
+but why is that happening I'm not
+calling multiply anywhere why is it
+
+448
+00:07:33,670 --> 00:07:33,680
+calling multiply anywhere why is it
+ 
+
+449
+00:07:33,680 --> 00:07:35,189
+calling multiply anywhere why is it
+complaining about a linking error
+
+450
+00:07:35,189 --> 00:07:35,199
+complaining about a linking error
+ 
+
+451
+00:07:35,199 --> 00:07:36,309
+complaining about a linking error
+shouldn't it have just removed the
+
+452
+00:07:36,309 --> 00:07:36,319
+shouldn't it have just removed the
+ 
+
+453
+00:07:36,319 --> 00:07:38,110
+shouldn't it have just removed the
+function entirely since it's essentially
+
+454
+00:07:38,110 --> 00:07:38,120
+function entirely since it's essentially
+ 
+
+455
+00:07:38,120 --> 00:07:40,629
+function entirely since it's essentially
+dead code that's never used wrong
+
+456
+00:07:40,629 --> 00:07:40,639
+dead code that's never used wrong
+ 
+
+457
+00:07:40,639 --> 00:07:42,309
+dead code that's never used wrong
+because whilst we're not using the
+
+458
+00:07:42,309 --> 00:07:42,319
+because whilst we're not using the
+ 
+
+459
+00:07:42,319 --> 00:07:44,430
+because whilst we're not using the
+multiply function in this file we
+
+460
+00:07:44,430 --> 00:07:44,440
+multiply function in this file we
+ 
+
+461
+00:07:44,440 --> 00:07:46,550
+multiply function in this file we
+actually could technically use it in
+
+462
+00:07:46,550 --> 00:07:46,560
+actually could technically use it in
+ 
+
+463
+00:07:46,560 --> 00:07:48,469
+actually could technically use it in
+another file and so the Linker does
+
+464
+00:07:48,469 --> 00:07:48,479
+another file and so the Linker does
+ 
+
+465
+00:07:48,479 --> 00:07:50,350
+another file and so the Linker does
+actually need to link that if we could
+
+466
+00:07:50,350 --> 00:07:50,360
+actually need to link that if we could
+ 
+
+467
+00:07:50,360 --> 00:07:52,270
+actually need to link that if we could
+somehow tell the compiler that hey this
+
+468
+00:07:52,270 --> 00:07:52,280
+somehow tell the compiler that hey this
+ 
+
+469
+00:07:52,280 --> 00:07:54,550
+somehow tell the compiler that hey this
+function multiply I'm only ever going to
+
+470
+00:07:54,550 --> 00:07:54,560
+function multiply I'm only ever going to
+ 
+
+471
+00:07:54,560 --> 00:07:57,270
+function multiply I'm only ever going to
+use it inside this file then of course
+
+472
+00:07:57,270 --> 00:07:57,280
+use it inside this file then of course
+ 
+
+473
+00:07:57,280 --> 00:07:58,990
+use it inside this file then of course
+we could remove that linking necessity
+
+474
+00:07:58,990 --> 00:07:59,000
+we could remove that linking necessity
+ 
+
+475
+00:07:59,000 --> 00:08:00,950
+we could remove that linking necessity
+since if multiply is never called it
+
+476
+00:08:00,950 --> 00:08:00,960
+since if multiply is never called it
+ 
+
+477
+00:08:00,960 --> 00:08:03,149
+since if multiply is never called it
+never needs to call log oh wait there is
+
+478
+00:08:03,149 --> 00:08:03,159
+never needs to call log oh wait there is
+ 
+
+479
+00:08:03,159 --> 00:08:04,950
+never needs to call log oh wait there is
+a way we could do that if we come over
+
+480
+00:08:04,950 --> 00:08:04,960
+a way we could do that if we come over
+ 
+
+481
+00:08:04,960 --> 00:08:06,869
+a way we could do that if we come over
+here and write the word static in front
+
+482
+00:08:06,869 --> 00:08:06,879
+here and write the word static in front
+ 
+
+483
+00:08:06,879 --> 00:08:09,110
+here and write the word static in front
+of multiply that basically means that
+
+484
+00:08:09,110 --> 00:08:09,120
+of multiply that basically means that
+ 
+
+485
+00:08:09,120 --> 00:08:11,309
+of multiply that basically means that
+this multiply function is only declared
+
+486
+00:08:11,309 --> 00:08:11,319
+this multiply function is only declared
+ 
+
+487
+00:08:11,319 --> 00:08:13,430
+this multiply function is only declared
+for this translation unit which is this
+
+488
+00:08:13,430 --> 00:08:13,440
+for this translation unit which is this
+ 
+
+489
+00:08:13,440 --> 00:08:15,749
+for this translation unit which is this
+math. CPP file in our case and since
+
+490
+00:08:15,749 --> 00:08:15,759
+math. CPP file in our case and since
+ 
+
+491
+00:08:15,759 --> 00:08:17,909
+math. CPP file in our case and since
+multiply is never called inside this
+
+492
+00:08:17,909 --> 00:08:17,919
+multiply is never called inside this
+ 
+
+493
+00:08:17,919 --> 00:08:20,990
+multiply is never called inside this
+file if I build we won't get any linking
+
+494
+00:08:20,990 --> 00:08:21,000
+file if I build we won't get any linking
+ 
+
+495
+00:08:21,000 --> 00:08:23,189
+file if I build we won't get any linking
+errors if I bring back my comment though
+
+496
+00:08:23,189 --> 00:08:23,199
+errors if I bring back my comment though
+ 
+
+497
+00:08:23,199 --> 00:08:25,149
+errors if I bring back my comment though
+and then I build of course we will get a
+
+498
+00:08:25,149 --> 00:08:25,159
+and then I build of course we will get a
+ 
+
+499
+00:08:25,159 --> 00:08:26,950
+and then I build of course we will get a
+linking error in this case we actually
+
+500
+00:08:26,950 --> 00:08:26,960
+linking error in this case we actually
+ 
+
+501
+00:08:26,960 --> 00:08:28,469
+linking error in this case we actually
+ended up modifying the name of the
+
+502
+00:08:28,469 --> 00:08:28,479
+ended up modifying the name of the
+ 
+
+503
+00:08:28,479 --> 00:08:30,550
+ended up modifying the name of the
+function however it's not just the name
+
+504
+00:08:30,550 --> 00:08:30,560
+function however it's not just the name
+ 
+
+505
+00:08:30,560 --> 00:08:32,110
+function however it's not just the name
+of the function that matters if I bring
+
+506
+00:08:32,110 --> 00:08:32,120
+of the function that matters if I bring
+ 
+
+507
+00:08:32,120 --> 00:08:33,990
+of the function that matters if I bring
+back this function I'll call it log
+
+508
+00:08:33,990 --> 00:08:34,000
+back this function I'll call it log
+ 
+
+509
+00:08:34,000 --> 00:08:36,630
+back this function I'll call it log
+again I'll build my project we won't get
+
+510
+00:08:36,630 --> 00:08:36,640
+again I'll build my project we won't get
+ 
+
+511
+00:08:36,640 --> 00:08:39,389
+again I'll build my project we won't get
+any errors but then I for example change
+
+512
+00:08:39,389 --> 00:08:39,399
+any errors but then I for example change
+ 
+
+513
+00:08:39,399 --> 00:08:42,430
+any errors but then I for example change
+the return type to be int and then I'll
+
+514
+00:08:42,430 --> 00:08:42,440
+the return type to be int and then I'll
+ 
+
+515
+00:08:42,440 --> 00:08:44,829
+the return type to be int and then I'll
+just return zero or something like that
+
+516
+00:08:44,829 --> 00:08:44,839
+just return zero or something like that
+ 
+
+517
+00:08:44,839 --> 00:08:47,150
+just return zero or something like that
+if I build my project now you'll see
+
+518
+00:08:47,150 --> 00:08:47,160
+if I build my project now you'll see
+ 
+
+519
+00:08:47,160 --> 00:08:49,910
+if I build my project now you'll see
+that we get an error because in math.
+
+520
+00:08:49,910 --> 00:08:49,920
+that we get an error because in math.
+ 
+
+521
+00:08:49,920 --> 00:08:52,190
+that we get an error because in math.
+CPP we specify that this log function
+
+522
+00:08:52,190 --> 00:08:52,200
+CPP we specify that this log function
+ 
+
+523
+00:08:52,200 --> 00:08:54,269
+CPP we specify that this log function
+was a void function and so because of
+
+524
+00:08:54,269 --> 00:08:54,279
+was a void function and so because of
+ 
+
+525
+00:08:54,279 --> 00:08:56,230
+was a void function and so because of
+that it's going to look for a function
+
+526
+00:08:56,230 --> 00:08:56,240
+that it's going to look for a function
+ 
+
+527
+00:08:56,240 --> 00:08:58,590
+that it's going to look for a function
+called log that returns void and also
+
+528
+00:08:58,590 --> 00:08:58,600
+called log that returns void and also
+ 
+
+529
+00:08:58,600 --> 00:09:00,750
+called log that returns void and also
+takes in this one parameter if I go back
+
+530
+00:09:00,750 --> 00:09:00,760
+takes in this one parameter if I go back
+ 
+
+531
+00:09:00,760 --> 00:09:02,509
+takes in this one parameter if I go back
+to log and I might change this back to
+
+532
+00:09:02,509 --> 00:09:02,519
+to log and I might change this back to
+ 
+
+533
+00:09:02,519 --> 00:09:04,470
+to log and I might change this back to
+void get rid of this return zero and
+
+534
+00:09:04,470 --> 00:09:04,480
+void get rid of this return zero and
+ 
+
+535
+00:09:04,480 --> 00:09:07,150
+void get rid of this return zero and
+build it everything works fine but then
+
+536
+00:09:07,150 --> 00:09:07,160
+build it everything works fine but then
+ 
+
+537
+00:09:07,160 --> 00:09:09,110
+build it everything works fine but then
+I might add another parameter for
+
+538
+00:09:09,110 --> 00:09:09,120
+I might add another parameter for
+ 
+
+539
+00:09:09,120 --> 00:09:11,590
+I might add another parameter for
+example the level if I now build this
+
+540
+00:09:11,590 --> 00:09:11,600
+example the level if I now build this
+ 
+
+541
+00:09:11,600 --> 00:09:13,389
+example the level if I now build this
+we'll get a linking error once again
+
+542
+00:09:13,389 --> 00:09:13,399
+we'll get a linking error once again
+ 
+
+543
+00:09:13,399 --> 00:09:15,670
+we'll get a linking error once again
+because the log function that it expects
+
+544
+00:09:15,670 --> 00:09:15,680
+because the log function that it expects
+ 
+
+545
+00:09:15,680 --> 00:09:17,910
+because the log function that it expects
+does not have another parameter you'll
+
+546
+00:09:17,910 --> 00:09:17,920
+does not have another parameter you'll
+ 
+
+547
+00:09:17,920 --> 00:09:19,750
+does not have another parameter you'll
+see if we go down here into linking
+
+548
+00:09:19,750 --> 00:09:19,760
+see if we go down here into linking
+ 
+
+549
+00:09:19,760 --> 00:09:21,990
+see if we go down here into linking
+error message it actually expects a
+
+550
+00:09:21,990 --> 00:09:22,000
+error message it actually expects a
+ 
+
+551
+00:09:22,000 --> 00:09:23,829
+error message it actually expects a
+function which returns void which has
+
+552
+00:09:23,829 --> 00:09:23,839
+function which returns void which has
+ 
+
+553
+00:09:23,839 --> 00:09:26,190
+function which returns void which has
+this calling convention it's called log
+
+554
+00:09:26,190 --> 00:09:26,200
+this calling convention it's called log
+ 
+
+555
+00:09:26,200 --> 00:09:28,310
+this calling convention it's called log
+and it has to have just one parameter
+
+556
+00:09:28,310 --> 00:09:28,320
+and it has to have just one parameter
+ 
+
+557
+00:09:28,320 --> 00:09:30,750
+and it has to have just one parameter
+which is a const Shar pointer that's it
+
+558
+00:09:30,750 --> 00:09:30,760
+which is a const Shar pointer that's it
+ 
+
+559
+00:09:30,760 --> 00:09:33,389
+which is a const Shar pointer that's it
+if it cannot find exactly that then
+
+560
+00:09:33,389 --> 00:09:33,399
+if it cannot find exactly that then
+ 
+
+561
+00:09:33,399 --> 00:09:34,829
+if it cannot find exactly that then
+you're going to get a linking error
+
+562
+00:09:34,829 --> 00:09:34,839
+you're going to get a linking error
+ 
+
+563
+00:09:34,839 --> 00:09:36,550
+you're going to get a linking error
+let's go back over here to our log file
+
+564
+00:09:36,550 --> 00:09:36,560
+let's go back over here to our log file
+ 
+
+565
+00:09:36,560 --> 00:09:38,030
+let's go back over here to our log file
+and just remove this level so that our
+
+566
+00:09:38,030 --> 00:09:38,040
+and just remove this level so that our
+ 
+
+567
+00:09:38,040 --> 00:09:40,110
+and just remove this level so that our
+program works again and if I build it of
+
+568
+00:09:40,110 --> 00:09:40,120
+program works again and if I build it of
+ 
+
+569
+00:09:40,120 --> 00:09:41,269
+program works again and if I build it of
+course we shouldn't get any linking
+
+570
+00:09:41,269 --> 00:09:41,279
+course we shouldn't get any linking
+ 
+
+571
+00:09:41,279 --> 00:09:43,630
+course we shouldn't get any linking
+errors great okay so the other type of
+
+572
+00:09:43,630 --> 00:09:43,640
+errors great okay so the other type of
+ 
+
+573
+00:09:43,640 --> 00:09:45,550
+errors great okay so the other type of
+linking error that's pretty common is
+
+574
+00:09:45,550 --> 00:09:45,560
+linking error that's pretty common is
+ 
+
+575
+00:09:45,560 --> 00:09:47,630
+linking error that's pretty common is
+when we have duplicate symbols so in
+
+576
+00:09:47,630 --> 00:09:47,640
+when we have duplicate symbols so in
+ 
+
+577
+00:09:47,640 --> 00:09:49,230
+when we have duplicate symbols so in
+other words we have functions or
+
+578
+00:09:49,230 --> 00:09:49,240
+other words we have functions or
+ 
+
+579
+00:09:49,240 --> 00:09:51,870
+other words we have functions or
+variables which have the same name and
+
+580
+00:09:51,870 --> 00:09:51,880
+variables which have the same name and
+ 
+
+581
+00:09:51,880 --> 00:09:54,389
+variables which have the same name and
+the same signature so two identically
+
+582
+00:09:54,389 --> 00:09:54,399
+the same signature so two identically
+ 
+
+583
+00:09:54,399 --> 00:09:56,150
+the same signature so two identically
+named functions which have the same
+
+584
+00:09:56,150 --> 00:09:56,160
+named functions which have the same
+ 
+
+585
+00:09:56,160 --> 00:09:58,110
+named functions which have the same
+return value and the same parameters if
+
+586
+00:09:58,110 --> 00:09:58,120
+return value and the same parameters if
+ 
+
+587
+00:09:58,120 --> 00:10:00,430
+return value and the same parameters if
+that happens we're trouble the reason
+
+588
+00:10:00,430 --> 00:10:00,440
+that happens we're trouble the reason
+ 
+
+589
+00:10:00,440 --> 00:10:01,790
+that happens we're trouble the reason
+we're in trouble is because the Linker
+
+590
+00:10:01,790 --> 00:10:01,800
+we're in trouble is because the Linker
+ 
+
+591
+00:10:01,800 --> 00:10:03,590
+we're in trouble is because the Linker
+doesn't know which one to link to it's
+
+592
+00:10:03,590 --> 00:10:03,600
+doesn't know which one to link to it's
+ 
+
+593
+00:10:03,600 --> 00:10:06,230
+doesn't know which one to link to it's
+ambiguous so back in our code if I was
+
+594
+00:10:06,230 --> 00:10:06,240
+ambiguous so back in our code if I was
+ 
+
+595
+00:10:06,240 --> 00:10:08,509
+ambiguous so back in our code if I was
+for example to write another version of
+
+596
+00:10:08,509 --> 00:10:08,519
+for example to write another version of
+ 
+
+597
+00:10:08,519 --> 00:10:10,030
+for example to write another version of
+this function so I'll just literally
+
+598
+00:10:10,030 --> 00:10:10,040
+this function so I'll just literally
+ 
+
+599
+00:10:10,040 --> 00:10:12,069
+this function so I'll just literally
+copy and paste this function and try and
+
+600
+00:10:12,069 --> 00:10:12,079
+copy and paste this function and try and
+ 
+
+601
+00:10:12,079 --> 00:10:13,710
+copy and paste this function and try and
+build my code you'll note that we
+
+602
+00:10:13,710 --> 00:10:13,720
+build my code you'll note that we
+ 
+
+603
+00:10:13,720 --> 00:10:15,389
+build my code you'll note that we
+actually get a compile error because
+
+604
+00:10:15,389 --> 00:10:15,399
+actually get a compile error because
+ 
+
+605
+00:10:15,399 --> 00:10:17,430
+actually get a compile error because
+this already has a body and the compiler
+
+606
+00:10:17,430 --> 00:10:17,440
+this already has a body and the compiler
+ 
+
+607
+00:10:17,440 --> 00:10:20,150
+this already has a body and the compiler
+can kind of tell us that yeah okay since
+
+608
+00:10:20,150 --> 00:10:20,160
+can kind of tell us that yeah okay since
+ 
+
+609
+00:10:20,160 --> 00:10:21,990
+can kind of tell us that yeah okay since
+I'm compiling this file I can obviously
+
+610
+00:10:21,990 --> 00:10:22,000
+I'm compiling this file I can obviously
+ 
+
+611
+00:10:22,000 --> 00:10:24,190
+I'm compiling this file I can obviously
+see that you've made a mistake this cist
+
+612
+00:10:24,190 --> 00:10:24,200
+see that you've made a mistake this cist
+ 
+
+613
+00:10:24,200 --> 00:10:26,470
+see that you've made a mistake this cist
+isn't valid so this is an example of
+
+614
+00:10:26,470 --> 00:10:26,480
+isn't valid so this is an example of
+ 
+
+615
+00:10:26,480 --> 00:10:27,949
+isn't valid so this is an example of
+having duplicate symbols where the
+
+616
+00:10:27,949 --> 00:10:27,959
+having duplicate symbols where the
+ 
+
+617
+00:10:27,959 --> 00:10:30,310
+having duplicate symbols where the
+compiler can actually save us because
+
+618
+00:10:30,310 --> 00:10:30,320
+compiler can actually save us because
+ 
+
+619
+00:10:30,320 --> 00:10:32,069
+compiler can actually save us because
+this all happens in one file and no
+
+620
+00:10:32,069 --> 00:10:32,079
+this all happens in one file and no
+ 
+
+621
+00:10:32,079 --> 00:10:33,949
+this all happens in one file and no
+linking actually needs to happen to see
+
+622
+00:10:33,949 --> 00:10:33,959
+linking actually needs to happen to see
+ 
+
+623
+00:10:33,959 --> 00:10:35,990
+linking actually needs to happen to see
+that we've got an error however if I was
+
+624
+00:10:35,990 --> 00:10:36,000
+that we've got an error however if I was
+ 
+
+625
+00:10:36,000 --> 00:10:38,629
+that we've got an error however if I was
+to move this into a different file for
+
+626
+00:10:38,629 --> 00:10:38,639
+to move this into a different file for
+ 
+
+627
+00:10:38,639 --> 00:10:40,750
+to move this into a different file for
+example I'll move it back into our math
+
+628
+00:10:40,750 --> 00:10:40,760
+example I'll move it back into our math
+ 
+
+629
+00:10:40,760 --> 00:10:43,110
+example I'll move it back into our math
+file right over here so we still have
+
+630
+00:10:43,110 --> 00:10:43,120
+file right over here so we still have
+ 
+
+631
+00:10:43,120 --> 00:10:44,670
+file right over here so we still have
+our declaration I can leave that there
+
+632
+00:10:44,670 --> 00:10:44,680
+our declaration I can leave that there
+ 
+
+633
+00:10:44,680 --> 00:10:46,790
+our declaration I can leave that there
+that's fine that's just a declaration we
+
+634
+00:10:46,790 --> 00:10:46,800
+that's fine that's just a declaration we
+ 
+
+635
+00:10:46,800 --> 00:10:48,550
+that's fine that's just a declaration we
+only have one definition of log in this
+
+636
+00:10:48,550 --> 00:10:48,560
+only have one definition of log in this
+ 
+
+637
+00:10:48,560 --> 00:10:49,670
+only have one definition of log in this
+file so it's not going to give us a
+
+638
+00:10:49,670 --> 00:10:49,680
+file so it's not going to give us a
+ 
+
+639
+00:10:49,680 --> 00:10:51,790
+file so it's not going to give us a
+compiling error if I hit contrl F7 just
+
+640
+00:10:51,790 --> 00:10:51,800
+compiling error if I hit contrl F7 just
+ 
+
+641
+00:10:51,800 --> 00:10:53,829
+compiling error if I hit contrl F7 just
+to compile this you can see it's totally
+
+642
+00:10:53,829 --> 00:10:53,839
+to compile this you can see it's totally
+ 
+
+643
+00:10:53,839 --> 00:10:56,470
+to compile this you can see it's totally
+fine but now if I build we get a linking
+
+644
+00:10:56,470 --> 00:10:56,480
+fine but now if I build we get a linking
+ 
+
+645
+00:10:56,480 --> 00:10:58,190
+fine but now if I build we get a linking
+error and you can see that the one we
+
+646
+00:10:58,190 --> 00:10:58,200
+error and you can see that the one we
+ 
+
+647
+00:10:58,200 --> 00:10:59,790
+error and you can see that the one we
+get it tells us that we have this log
+
+648
+00:10:59,790 --> 00:10:59,800
+get it tells us that we have this log
+ 
+
+649
+00:10:59,800 --> 00:11:02,990
+get it tells us that we have this log
+function already defined in log. obj one
+
+650
+00:11:02,990 --> 00:11:03,000
+function already defined in log. obj one
+ 
+
+651
+00:11:03,000 --> 00:11:05,110
+function already defined in log. obj one
+or more multiply defined symbols found
+
+652
+00:11:05,110 --> 00:11:05,120
+or more multiply defined symbols found
+ 
+
+653
+00:11:05,120 --> 00:11:06,509
+or more multiply defined symbols found
+so in this case the Linker doesn't know
+
+654
+00:11:06,509 --> 00:11:06,519
+so in this case the Linker doesn't know
+ 
+
+655
+00:11:06,519 --> 00:11:07,910
+so in this case the Linker doesn't know
+which log function to link to does it
+
+656
+00:11:07,910 --> 00:11:07,920
+which log function to link to does it
+ 
+
+657
+00:11:07,920 --> 00:11:10,110
+which log function to link to does it
+link to the one in math. CPP or does it
+
+658
+00:11:10,110 --> 00:11:10,120
+link to the one in math. CPP or does it
+ 
+
+659
+00:11:10,120 --> 00:11:12,629
+link to the one in math. CPP or does it
+link to the one in log. CPP it doesn't
+
+660
+00:11:12,629 --> 00:11:12,639
+link to the one in log. CPP it doesn't
+ 
+
+661
+00:11:12,639 --> 00:11:14,269
+link to the one in log. CPP it doesn't
+know now you might think that this type
+
+662
+00:11:14,269 --> 00:11:14,279
+know now you might think that this type
+ 
+
+663
+00:11:14,279 --> 00:11:15,750
+know now you might think that this type
+of error is not something that would
+
+664
+00:11:15,750 --> 00:11:15,760
+of error is not something that would
+ 
+
+665
+00:11:15,760 --> 00:11:17,470
+of error is not something that would
+happen often and that you're smarter
+
+666
+00:11:17,470 --> 00:11:17,480
+happen often and that you're smarter
+ 
+
+667
+00:11:17,480 --> 00:11:19,710
+happen often and that you're smarter
+than that however this can creep up on
+
+668
+00:11:19,710 --> 00:11:19,720
+than that however this can creep up on
+ 
+
+669
+00:11:19,720 --> 00:11:21,470
+than that however this can creep up on
+you so I'll show you a few ways as to
+
+670
+00:11:21,470 --> 00:11:21,480
+you so I'll show you a few ways as to
+ 
+
+671
+00:11:21,480 --> 00:11:23,030
+you so I'll show you a few ways as to
+how that can happen all right firstly
+
+672
+00:11:23,030 --> 00:11:23,040
+how that can happen all right firstly
+ 
+
+673
+00:11:23,040 --> 00:11:24,629
+how that can happen all right firstly
+let's just remove this extra log
+
+674
+00:11:24,629 --> 00:11:24,639
+let's just remove this extra log
+ 
+
+675
+00:11:24,639 --> 00:11:26,110
+let's just remove this extra log
+definition we have here so that our
+
+676
+00:11:26,110 --> 00:11:26,120
+definition we have here so that our
+ 
+
+677
+00:11:26,120 --> 00:11:27,870
+definition we have here so that our
+project builds successfully now let's
+
+678
+00:11:27,870 --> 00:11:27,880
+project builds successfully now let's
+ 
+
+679
+00:11:27,880 --> 00:11:29,509
+project builds successfully now let's
+create a header file I'm going right
+
+680
+00:11:29,509 --> 00:11:29,519
+create a header file I'm going right
+ 
+
+681
+00:11:29,519 --> 00:11:31,430
+create a header file I'm going right
+click on header files select add new
+
+682
+00:11:31,430 --> 00:11:31,440
+click on header files select add new
+ 
+
+683
+00:11:31,440 --> 00:11:33,470
+click on header files select add new
+item it's going to be a header file I'm
+
+684
+00:11:33,470 --> 00:11:33,480
+item it's going to be a header file I'm
+ 
+
+685
+00:11:33,480 --> 00:11:35,870
+item it's going to be a header file I'm
+going to call this file log. and click
+
+686
+00:11:35,870 --> 00:11:35,880
+going to call this file log. and click
+ 
+
+687
+00:11:35,880 --> 00:11:37,910
+going to call this file log. and click
+add now inside here I'm going to grab
+
+688
+00:11:37,910 --> 00:11:37,920
+add now inside here I'm going to grab
+ 
+
+689
+00:11:37,920 --> 00:11:40,350
+add now inside here I'm going to grab
+this log function and make sure that I'm
+
+690
+00:11:40,350 --> 00:11:40,360
+this log function and make sure that I'm
+ 
+
+691
+00:11:40,360 --> 00:11:42,629
+this log function and make sure that I'm
+declaring it inside this header file if
+
+692
+00:11:42,629 --> 00:11:42,639
+declaring it inside this header file if
+ 
+
+693
+00:11:42,639 --> 00:11:44,829
+declaring it inside this header file if
+I go back to log CPP I'll write some
+
+694
+00:11:44,829 --> 00:11:44,839
+I go back to log CPP I'll write some
+ 
+
+695
+00:11:44,839 --> 00:11:47,389
+I go back to log CPP I'll write some
+kind of other function for example init
+
+696
+00:11:47,389 --> 00:11:47,399
+kind of other function for example init
+ 
+
+697
+00:11:47,399 --> 00:11:50,110
+kind of other function for example init
+log that's just going to call the log
+
+698
+00:11:50,110 --> 00:11:50,120
+log that's just going to call the log
+ 
+
+699
+00:11:50,120 --> 00:11:52,350
+log that's just going to call the log
+function and say that it's initialized
+
+700
+00:11:52,350 --> 00:11:52,360
+function and say that it's initialized
+ 
+
+701
+00:11:52,360 --> 00:11:54,629
+function and say that it's initialized
+the log of course if we try and compile
+
+702
+00:11:54,629 --> 00:11:54,639
+the log of course if we try and compile
+ 
+
+703
+00:11:54,639 --> 00:11:56,150
+the log of course if we try and compile
+now we're going to get an error because
+
+704
+00:11:56,150 --> 00:11:56,160
+now we're going to get an error because
+ 
+
+705
+00:11:56,160 --> 00:11:58,750
+now we're going to get an error because
+we need that log function so I'll
+
+706
+00:11:58,750 --> 00:11:58,760
+we need that log function so I'll
+ 
+
+707
+00:11:58,760 --> 00:12:00,269
+we need that log function so I'll
+include
+
+708
+00:12:00,269 --> 00:12:00,279
+include
+ 
+
+709
+00:12:00,279 --> 00:12:02,990
+include
+log back over here in math. CPP instead
+
+710
+00:12:02,990 --> 00:12:03,000
+log back over here in math. CPP instead
+ 
+
+711
+00:12:03,000 --> 00:12:04,710
+log back over here in math. CPP instead
+of having this declaration here I'm also
+
+712
+00:12:04,710 --> 00:12:04,720
+of having this declaration here I'm also
+ 
+
+713
+00:12:04,720 --> 00:12:06,710
+of having this declaration here I'm also
+going to include
+
+714
+00:12:06,710 --> 00:12:06,720
+going to include
+ 
+
+715
+00:12:06,720 --> 00:12:09,030
+going to include
+log so great we're calling the log
+
+716
+00:12:09,030 --> 00:12:09,040
+log so great we're calling the log
+ 
+
+717
+00:12:09,040 --> 00:12:11,670
+log so great we're calling the log
+function from both the multiply function
+
+718
+00:12:11,670 --> 00:12:11,680
+function from both the multiply function
+ 
+
+719
+00:12:11,680 --> 00:12:13,590
+function from both the multiply function
+inside the math. zvp file as well as the
+
+720
+00:12:13,590 --> 00:12:13,600
+inside the math. zvp file as well as the
+ 
+
+721
+00:12:13,600 --> 00:12:16,150
+inside the math. zvp file as well as the
+init log inside the log. CPP file it
+
+722
+00:12:16,150 --> 00:12:16,160
+init log inside the log. CPP file it
+ 
+
+723
+00:12:16,160 --> 00:12:17,110
+init log inside the log. CPP file it
+doesn't really matter that I'm not
+
+724
+00:12:17,110 --> 00:12:17,120
+doesn't really matter that I'm not
+ 
+
+725
+00:12:17,120 --> 00:12:18,430
+doesn't really matter that I'm not
+calling this function so don't worry
+
+726
+00:12:18,430 --> 00:12:18,440
+calling this function so don't worry
+ 
+
+727
+00:12:18,440 --> 00:12:19,550
+calling this function so don't worry
+about that I'm just going to build my
+
+728
+00:12:19,550 --> 00:12:19,560
+about that I'm just going to build my
+ 
+
+729
+00:12:19,560 --> 00:12:21,790
+about that I'm just going to build my
+project okay check this out I get an
+
+730
+00:12:21,790 --> 00:12:21,800
+project okay check this out I get an
+ 
+
+731
+00:12:21,800 --> 00:12:23,509
+project okay check this out I get an
+error telling me that log is already
+
+732
+00:12:23,509 --> 00:12:23,519
+error telling me that log is already
+ 
+
+733
+00:12:23,519 --> 00:12:26,389
+error telling me that log is already
+defined in log. objs so we get a one or
+
+734
+00:12:26,389 --> 00:12:26,399
+defined in log. objs so we get a one or
+ 
+
+735
+00:12:26,399 --> 00:12:28,189
+defined in log. objs so we get a one or
+more multiply defined symbols found so
+
+736
+00:12:28,189 --> 00:12:28,199
+more multiply defined symbols found so
+ 
+
+737
+00:12:28,199 --> 00:12:29,550
+more multiply defined symbols found so
+we're getting a duplicate symbol error
+
+738
+00:12:29,550 --> 00:12:29,560
+we're getting a duplicate symbol error
+ 
+
+739
+00:12:29,560 --> 00:12:30,910
+we're getting a duplicate symbol error
+message however you can see that I've
+
+740
+00:12:30,910 --> 00:12:30,920
+message however you can see that I've
+ 
+
+741
+00:12:30,920 --> 00:12:32,829
+message however you can see that I've
+really only got one definition of log
+
+742
+00:12:32,829 --> 00:12:32,839
+really only got one definition of log
+ 
+
+743
+00:12:32,839 --> 00:12:35,470
+really only got one definition of log
+it's inside this log Doh file why is it
+
+744
+00:12:35,470 --> 00:12:35,480
+it's inside this log Doh file why is it
+ 
+
+745
+00:12:35,480 --> 00:12:37,230
+it's inside this log Doh file why is it
+complaining about multiple symbols now
+
+746
+00:12:37,230 --> 00:12:37,240
+complaining about multiple symbols now
+ 
+
+747
+00:12:37,240 --> 00:12:38,670
+complaining about multiple symbols now
+this comes back to how the include
+
+748
+00:12:38,670 --> 00:12:38,680
+this comes back to how the include
+ 
+
+749
+00:12:38,680 --> 00:12:40,710
+this comes back to how the include
+statement Works remember when we include
+
+750
+00:12:40,710 --> 00:12:40,720
+statement Works remember when we include
+ 
+
+751
+00:12:40,720 --> 00:12:42,269
+statement Works remember when we include
+a header file we're just taking the
+
+752
+00:12:42,269 --> 00:12:42,279
+a header file we're just taking the
+ 
+
+753
+00:12:42,279 --> 00:12:44,550
+a header file we're just taking the
+contents of that header file and putting
+
+754
+00:12:44,550 --> 00:12:44,560
+contents of that header file and putting
+ 
+
+755
+00:12:44,560 --> 00:12:46,790
+contents of that header file and putting
+it where our include statement is so
+
+756
+00:12:46,790 --> 00:12:46,800
+it where our include statement is so
+ 
+
+757
+00:12:46,800 --> 00:12:49,750
+it where our include statement is so
+what's actually happened is it's taken
+
+758
+00:12:49,750 --> 00:12:49,760
+what's actually happened is it's taken
+ 
+
+759
+00:12:49,760 --> 00:12:52,509
+what's actually happened is it's taken
+this log function popped it over here
+
+760
+00:12:52,509 --> 00:12:52,519
+this log function popped it over here
+ 
+
+761
+00:12:52,519 --> 00:12:56,550
+this log function popped it over here
+like so into log. CVP and then also over
+
+762
+00:12:56,550 --> 00:12:56,560
+like so into log. CVP and then also over
+ 
+
+763
+00:12:56,560 --> 00:12:58,110
+like so into log. CVP and then also over
+here and now you can see that we of
+
+764
+00:12:58,110 --> 00:12:58,120
+here and now you can see that we of
+ 
+
+765
+00:12:58,120 --> 00:13:00,470
+here and now you can see that we of
+course do have two log functions so how
+
+766
+00:13:00,470 --> 00:13:00,480
+course do have two log functions so how
+ 
+
+767
+00:13:00,480 --> 00:13:02,389
+course do have two log functions so how
+do we fix this well we've got a few
+
+768
+00:13:02,389 --> 00:13:02,399
+do we fix this well we've got a few
+ 
+
+769
+00:13:02,399 --> 00:13:04,189
+do we fix this well we've got a few
+options here if we undo all of this so
+
+770
+00:13:04,189 --> 00:13:04,199
+options here if we undo all of this so
+ 
+
+771
+00:13:04,199 --> 00:13:06,470
+options here if we undo all of this so
+that we're including log again we could
+
+772
+00:13:06,470 --> 00:13:06,480
+that we're including log again we could
+ 
+
+773
+00:13:06,480 --> 00:13:09,110
+that we're including log again we could
+mark this log function as static that
+
+774
+00:13:09,110 --> 00:13:09,120
+mark this log function as static that
+ 
+
+775
+00:13:09,120 --> 00:13:10,470
+mark this log function as static that
+means that the linking that should
+
+776
+00:13:10,470 --> 00:13:10,480
+means that the linking that should
+ 
+
+777
+00:13:10,480 --> 00:13:12,069
+means that the linking that should
+happen to this log function should only
+
+778
+00:13:12,069 --> 00:13:12,079
+happen to this log function should only
+ 
+
+779
+00:13:12,079 --> 00:13:14,110
+happen to this log function should only
+be internal which means that this log
+
+780
+00:13:14,110 --> 00:13:14,120
+be internal which means that this log
+ 
+
+781
+00:13:14,120 --> 00:13:15,949
+be internal which means that this log
+function when it gets included into log.
+
+782
+00:13:15,949 --> 00:13:15,959
+function when it gets included into log.
+ 
+
+783
+00:13:15,959 --> 00:13:18,189
+function when it gets included into log.
+CPP and math. CPP is going to be just
+
+784
+00:13:18,189 --> 00:13:18,199
+CPP and math. CPP is going to be just
+ 
+
+785
+00:13:18,199 --> 00:13:19,949
+CPP and math. CPP is going to be just
+internal to this file kind of like what
+
+786
+00:13:19,949 --> 00:13:19,959
+internal to this file kind of like what
+ 
+
+787
+00:13:19,959 --> 00:13:22,230
+internal to this file kind of like what
+we did with multiply so basically log
+
+788
+00:13:22,230 --> 00:13:22,240
+we did with multiply so basically log
+ 
+
+789
+00:13:22,240 --> 00:13:24,590
+we did with multiply so basically log
+and math will have their own versions of
+
+790
+00:13:24,590 --> 00:13:24,600
+and math will have their own versions of
+ 
+
+791
+00:13:24,600 --> 00:13:26,430
+and math will have their own versions of
+this function called log and it won't be
+
+792
+00:13:26,430 --> 00:13:26,440
+this function called log and it won't be
+ 
+
+793
+00:13:26,440 --> 00:13:28,829
+this function called log and it won't be
+visible to any other object files so if
+
+794
+00:13:28,829 --> 00:13:28,839
+visible to any other object files so if
+ 
+
+795
+00:13:28,839 --> 00:13:30,470
+visible to any other object files so if
+we just just compile this now you'll see
+
+796
+00:13:30,470 --> 00:13:30,480
+we just just compile this now you'll see
+ 
+
+797
+00:13:30,480 --> 00:13:32,150
+we just just compile this now you'll see
+that we won't get any linking errors
+
+798
+00:13:32,150 --> 00:13:32,160
+that we won't get any linking errors
+ 
+
+799
+00:13:32,160 --> 00:13:33,550
+that we won't get any linking errors
+another thing that we could do to this
+
+800
+00:13:33,550 --> 00:13:33,560
+another thing that we could do to this
+ 
+
+801
+00:13:33,560 --> 00:13:35,470
+another thing that we could do to this
+is make it inline of course inline just
+
+802
+00:13:35,470 --> 00:13:35,480
+is make it inline of course inline just
+ 
+
+803
+00:13:35,480 --> 00:13:37,670
+is make it inline of course inline just
+means that it's going to take our actual
+
+804
+00:13:37,670 --> 00:13:37,680
+means that it's going to take our actual
+ 
+
+805
+00:13:37,680 --> 00:13:39,670
+means that it's going to take our actual
+function body and replace the call with
+
+806
+00:13:39,670 --> 00:13:39,680
+function body and replace the call with
+ 
+
+807
+00:13:39,680 --> 00:13:42,189
+function body and replace the call with
+it so in this case this log initialized
+
+808
+00:13:42,189 --> 00:13:42,199
+it so in this case this log initialized
+ 
+
+809
+00:13:42,199 --> 00:13:43,829
+it so in this case this log initialized
+log would just
+
+810
+00:13:43,829 --> 00:13:43,839
+log would just
+ 
+
+811
+00:13:43,839 --> 00:13:45,470
+log would just
+become
+
+812
+00:13:45,470 --> 00:13:45,480
+become
+ 
+
+813
+00:13:45,480 --> 00:13:47,829
+become
+that so if we were to do something like
+
+814
+00:13:47,829 --> 00:13:47,839
+that so if we were to do something like
+ 
+
+815
+00:13:47,839 --> 00:13:49,790
+that so if we were to do something like
+that and build you'll see that we get no
+
+816
+00:13:49,790 --> 00:13:49,800
+that and build you'll see that we get no
+ 
+
+817
+00:13:49,800 --> 00:13:51,430
+that and build you'll see that we get no
+errors either now there's one other way
+
+818
+00:13:51,430 --> 00:13:51,440
+errors either now there's one other way
+ 
+
+819
+00:13:51,440 --> 00:13:52,629
+errors either now there's one other way
+that we could fix this and that's
+
+820
+00:13:52,629 --> 00:13:52,639
+that we could fix this and that's
+ 
+
+821
+00:13:52,639 --> 00:13:54,110
+that we could fix this and that's
+probably what I would do in this
+
+822
+00:13:54,110 --> 00:13:54,120
+probably what I would do in this
+ 
+
+823
+00:13:54,120 --> 00:13:56,030
+probably what I would do in this
+situation and that is just move the
+
+824
+00:13:56,030 --> 00:13:56,040
+situation and that is just move the
+ 
+
+825
+00:13:56,040 --> 00:13:57,949
+situation and that is just move the
+definition of this into one translation
+
+826
+00:13:57,949 --> 00:13:57,959
+definition of this into one translation
+ 
+
+827
+00:13:57,959 --> 00:13:59,590
+definition of this into one translation
+unit because right now what's happening
+
+828
+00:13:59,590 --> 00:13:59,600
+unit because right now what's happening
+ 
+
+829
+00:13:59,600 --> 00:14:01,509
+unit because right now what's happening
+is this log function is being included
+
+830
+00:14:01,509 --> 00:14:01,519
+is this log function is being included
+ 
+
+831
+00:14:01,519 --> 00:14:03,870
+is this log function is being included
+in two translation units log. CPP and
+
+832
+00:14:03,870 --> 00:14:03,880
+in two translation units log. CPP and
+ 
+
+833
+00:14:03,880 --> 00:14:05,350
+in two translation units log. CPP and
+math. zpp that's what's causing the
+
+834
+00:14:05,350 --> 00:14:05,360
+math. zpp that's what's causing the
+ 
+
+835
+00:14:05,360 --> 00:14:07,069
+math. zpp that's what's causing the
+error in the first place so we can move
+
+836
+00:14:07,069 --> 00:14:07,079
+error in the first place so we can move
+ 
+
+837
+00:14:07,079 --> 00:14:09,269
+error in the first place so we can move
+it into a third translation unit or we
+
+838
+00:14:09,269 --> 00:14:09,279
+it into a third translation unit or we
+ 
+
+839
+00:14:09,279 --> 00:14:11,230
+it into a third translation unit or we
+could put this log definition into one
+
+840
+00:14:11,230 --> 00:14:11,240
+could put this log definition into one
+ 
+
+841
+00:14:11,240 --> 00:14:13,110
+could put this log definition into one
+of these existing translation units
+
+842
+00:14:13,110 --> 00:14:13,120
+of these existing translation units
+ 
+
+843
+00:14:13,120 --> 00:14:14,350
+of these existing translation units
+since this function is called log and
+
+844
+00:14:14,350 --> 00:14:14,360
+since this function is called log and
+ 
+
+845
+00:14:14,360 --> 00:14:15,710
+since this function is called log and
+it's related to logging I'm actually
+
+846
+00:14:15,710 --> 00:14:15,720
+it's related to logging I'm actually
+ 
+
+847
+00:14:15,720 --> 00:14:17,790
+it's related to logging I'm actually
+going to put it into log. cppp so I'll
+
+848
+00:14:17,790 --> 00:14:17,800
+going to put it into log. cppp so I'll
+ 
+
+849
+00:14:17,800 --> 00:14:20,350
+going to put it into log. cppp so I'll
+grab this function I'll copy it into
+
+850
+00:14:20,350 --> 00:14:20,360
+grab this function I'll copy it into
+ 
+
+851
+00:14:20,360 --> 00:14:23,230
+grab this function I'll copy it into
+log. CPP I'll get rid of the inline and
+
+852
+00:14:23,230 --> 00:14:23,240
+log. CPP I'll get rid of the inline and
+ 
+
+853
+00:14:23,240 --> 00:14:25,269
+log. CPP I'll get rid of the inline and
+then I'll come back to my log. and just
+
+854
+00:14:25,269 --> 00:14:25,279
+then I'll come back to my log. and just
+ 
+
+855
+00:14:25,279 --> 00:14:27,430
+then I'll come back to my log. and just
+leave the Declaration here again without
+
+856
+00:14:27,430 --> 00:14:27,440
+leave the Declaration here again without
+ 
+
+857
+00:14:27,440 --> 00:14:29,350
+leave the Declaration here again without
+the inline of course so now this t a
+
+858
+00:14:29,350 --> 00:14:29,360
+the inline of course so now this t a
+ 
+
+859
+00:14:29,360 --> 00:14:31,350
+the inline of course so now this t a
+file just has the Declaration for log
+
+860
+00:14:31,350 --> 00:14:31,360
+file just has the Declaration for log
+ 
+
+861
+00:14:31,360 --> 00:14:33,749
+file just has the Declaration for log
+the actual function to link to is
+
+862
+00:14:33,749 --> 00:14:33,759
+the actual function to link to is
+ 
+
+863
+00:14:33,759 --> 00:14:36,629
+the actual function to link to is
+included inside log. CPP once in one
+
+864
+00:14:36,629 --> 00:14:36,639
+included inside log. CPP once in one
+ 
+
+865
+00:14:36,639 --> 00:14:39,110
+included inside log. CPP once in one
+translation unit in our project and then
+
+866
+00:14:39,110 --> 00:14:39,120
+translation unit in our project and then
+ 
+
+867
+00:14:39,120 --> 00:14:41,790
+translation unit in our project and then
+main will call that so if I build this
+
+868
+00:14:41,790 --> 00:14:41,800
+main will call that so if I build this
+ 
+
+869
+00:14:41,800 --> 00:14:43,749
+main will call that so if I build this
+we get no linking errors and our project
+
+870
+00:14:43,749 --> 00:14:43,759
+we get no linking errors and our project
+ 
+
+871
+00:14:43,759 --> 00:14:45,910
+we get no linking errors and our project
+was able to be linked successfully so
+
+872
+00:14:45,910 --> 00:14:45,920
+was able to be linked successfully so
+ 
+
+873
+00:14:45,920 --> 00:14:47,189
+was able to be linked successfully so
+that's it that's pretty much a quick
+
+874
+00:14:47,189 --> 00:14:47,199
+that's it that's pretty much a quick
+ 
+
+875
+00:14:47,199 --> 00:14:49,389
+that's it that's pretty much a quick
+crash course on linking and how linking
+
+876
+00:14:49,389 --> 00:14:49,399
+crash course on linking and how linking
+ 
+
+877
+00:14:49,399 --> 00:14:51,150
+crash course on linking and how linking
+Works remember at the end of the day the
+
+878
+00:14:51,150 --> 00:14:51,160
+Works remember at the end of the day the
+ 
+
+879
+00:14:51,160 --> 00:14:52,829
+Works remember at the end of the day the
+Linker needs to take all of our object
+
+880
+00:14:52,829 --> 00:14:52,839
+Linker needs to take all of our object
+ 
+
+881
+00:14:52,839 --> 00:14:54,230
+Linker needs to take all of our object
+files that were generated during
+
+882
+00:14:54,230 --> 00:14:54,240
+files that were generated during
+ 
+
+883
+00:14:54,240 --> 00:14:56,590
+files that were generated during
+compilation and Link them all together
+
+884
+00:14:56,590 --> 00:14:56,600
+compilation and Link them all together
+ 
+
+885
+00:14:56,600 --> 00:14:58,590
+compilation and Link them all together
+it will also pull in any other libraries
+
+886
+00:14:58,590 --> 00:14:58,600
+it will also pull in any other libraries
+ 
+
+887
+00:14:58,600 --> 00:15:00,430
+it will also pull in any other libraries
+that we may may be using for example the
+
+888
+00:15:00,430 --> 00:15:00,440
+that we may may be using for example the
+ 
+
+889
+00:15:00,440 --> 00:15:02,829
+that we may may be using for example the
+C runtime Library the C++ standard
+
+890
+00:15:02,829 --> 00:15:02,839
+C runtime Library the C++ standard
+ 
+
+891
+00:15:02,839 --> 00:15:06,030
+C runtime Library the C++ standard
+Library our platform apis if necessary
+
+892
+00:15:06,030 --> 00:15:06,040
+Library our platform apis if necessary
+ 
+
+893
+00:15:06,040 --> 00:15:07,829
+Library our platform apis if necessary
+and a whole lot of other stuff it's very
+
+894
+00:15:07,829 --> 00:15:07,839
+and a whole lot of other stuff it's very
+ 
+
+895
+00:15:07,839 --> 00:15:09,430
+and a whole lot of other stuff it's very
+common to be linking from many different
+
+896
+00:15:09,430 --> 00:15:09,440
+common to be linking from many different
+ 
+
+897
+00:15:09,440 --> 00:15:10,949
+common to be linking from many different
+places there's also different types of
+
+898
+00:15:10,949 --> 00:15:10,959
+places there's also different types of
+ 
+
+899
+00:15:10,959 --> 00:15:12,590
+places there's also different types of
+linking we have static linking and we
+
+900
+00:15:12,590 --> 00:15:12,600
+linking we have static linking and we
+ 
+
+901
+00:15:12,600 --> 00:15:14,470
+linking we have static linking and we
+have Dynamic linking but I'll save that
+
+902
+00:15:14,470 --> 00:15:14,480
+have Dynamic linking but I'll save that
+ 
+
+903
+00:15:14,480 --> 00:15:16,150
+have Dynamic linking but I'll save that
+for another video anyway thanks for
+
+904
+00:15:16,150 --> 00:15:16,160
+for another video anyway thanks for
+ 
+
+905
+00:15:16,160 --> 00:15:17,870
+for another video anyway thanks for
+watching I hope you enjoyed this video
+
+906
+00:15:17,870 --> 00:15:17,880
+watching I hope you enjoyed this video
+ 
+
+907
+00:15:17,880 --> 00:15:19,350
+watching I hope you enjoyed this video
+if you have any other questions just
+
+908
+00:15:19,350 --> 00:15:19,360
+if you have any other questions just
+ 
+
+909
+00:15:19,360 --> 00:15:20,829
+if you have any other questions just
+leave them in the comment section below
+
+910
+00:15:20,829 --> 00:15:20,839
+leave them in the comment section below
+ 
+
+911
+00:15:20,839 --> 00:15:22,350
+leave them in the comment section below
+and I'll try my best to answer them be
+
+912
+00:15:22,350 --> 00:15:22,360
+and I'll try my best to answer them be
+ 
+
+913
+00:15:22,360 --> 00:15:23,710
+and I'll try my best to answer them be
+sure to follow me on Twitter and
+
+914
+00:15:23,710 --> 00:15:23,720
+sure to follow me on Twitter and
+ 
+
+915
+00:15:23,720 --> 00:15:25,430
+sure to follow me on Twitter and
+Instagram and if you really like this
+
+916
+00:15:25,430 --> 00:15:25,440
+Instagram and if you really like this
+ 
+
+917
+00:15:25,440 --> 00:15:27,069
+Instagram and if you really like this
+video you can support me on patreon
+
+918
+00:15:27,069 --> 00:15:27,079
+video you can support me on patreon
+ 
+
+919
+00:15:27,079 --> 00:15:28,230
+video you can support me on patreon
+that'll help me make more of these
+
+920
+00:15:28,230 --> 00:15:28,240
+that'll help me make more of these
+ 
+
+921
+00:15:28,240 --> 00:15:29,790
+that'll help me make more of these
+videos and by by doing so you'll also
+
+922
+00:15:29,790 --> 00:15:29,800
+videos and by by doing so you'll also
+ 
+
+923
+00:15:29,800 --> 00:15:31,990
+videos and by by doing so you'll also
+get access to early drafts of videos and
+
+924
+00:15:31,990 --> 00:15:32,000
+get access to early drafts of videos and
+ 
+
+925
+00:15:32,000 --> 00:15:33,710
+get access to early drafts of videos and
+be involved in the planning process but
+
+926
+00:15:33,710 --> 00:15:33,720
+be involved in the planning process but
+ 
+
+927
+00:15:33,720 --> 00:15:35,389
+be involved in the planning process but
+as always I'll see you guys next time
+
+928
+00:15:35,389 --> 00:15:35,399
+as always I'll see you guys next time
+ 
+
+929
+00:15:35,399 --> 00:15:39,079
+as always I'll see you guys next time
+goodbye Voom
+

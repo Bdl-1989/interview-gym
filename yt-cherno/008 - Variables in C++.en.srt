@@ -1,0 +1,3805 @@
+1
+00:00:00,000 --> 00:00:01,610
+
+hey what's up guys my name is a Cherno
+
+2
+00:00:01,610 --> 00:00:01,620
+hey what's up guys my name is a Cherno
+ 
+
+3
+00:00:01,620 --> 00:00:04,400
+hey what's up guys my name is a Cherno
+welcome to another video so I'm on the
+
+4
+00:00:04,400 --> 00:00:04,410
+welcome to another video so I'm on the
+ 
+
+5
+00:00:04,410 --> 00:00:06,499
+welcome to another video so I'm on the
+couch this time after a long day of work
+
+6
+00:00:06,499 --> 00:00:06,509
+couch this time after a long day of work
+ 
+
+7
+00:00:06,509 --> 00:00:09,169
+couch this time after a long day of work
+for I've mixed it up let's talk about
+
+8
+00:00:09,169 --> 00:00:09,179
+for I've mixed it up let's talk about
+ 
+
+9
+00:00:09,179 --> 00:00:10,790
+for I've mixed it up let's talk about
+variables in step above
+
+10
+00:00:10,790 --> 00:00:10,800
+variables in step above
+ 
+
+11
+00:00:10,800 --> 00:00:14,509
+variables in step above
+so when we write a program in C++ we
+
+12
+00:00:14,509 --> 00:00:14,519
+so when we write a program in C++ we
+ 
+
+13
+00:00:14,519 --> 00:00:17,210
+so when we write a program in C++ we
+want to be able to use data most of what
+
+14
+00:00:17,210 --> 00:00:17,220
+want to be able to use data most of what
+ 
+
+15
+00:00:17,220 --> 00:00:19,429
+want to be able to use data most of what
+programming is about is actually using
+
+16
+00:00:19,429 --> 00:00:19,439
+programming is about is actually using
+ 
+
+17
+00:00:19,439 --> 00:00:23,090
+programming is about is actually using
+data we manipulate data that's what we
+
+18
+00:00:23,090 --> 00:00:23,100
+data we manipulate data that's what we
+ 
+
+19
+00:00:23,100 --> 00:00:24,950
+data we manipulate data that's what we
+do so any kind of data that we use in
+
+20
+00:00:24,950 --> 00:00:24,960
+do so any kind of data that we use in
+ 
+
+21
+00:00:24,960 --> 00:00:27,170
+do so any kind of data that we use in
+our program that we want to change that
+
+22
+00:00:27,170 --> 00:00:27,180
+our program that we want to change that
+ 
+
+23
+00:00:27,180 --> 00:00:28,790
+our program that we want to change that
+we want to modify that we want to read
+
+24
+00:00:28,790 --> 00:00:28,800
+we want to modify that we want to read
+ 
+
+25
+00:00:28,800 --> 00:00:30,890
+we want to modify that we want to read
+and write from we need to store this
+
+26
+00:00:30,890 --> 00:00:30,900
+and write from we need to store this
+ 
+
+27
+00:00:30,900 --> 00:00:33,110
+and write from we need to store this
+data in something called a variable so
+
+28
+00:00:33,110 --> 00:00:33,120
+data in something called a variable so
+ 
+
+29
+00:00:33,120 --> 00:00:35,180
+data in something called a variable so
+variables basically allow us to name a
+
+30
+00:00:35,180 --> 00:00:35,190
+variables basically allow us to name a
+ 
+
+31
+00:00:35,190 --> 00:00:38,090
+variables basically allow us to name a
+piece of data that we store in memory so
+
+32
+00:00:38,090 --> 00:00:38,100
+piece of data that we store in memory so
+ 
+
+33
+00:00:38,100 --> 00:00:39,740
+piece of data that we store in memory so
+that we can keep using it as an example
+
+34
+00:00:39,740 --> 00:00:39,750
+that we can keep using it as an example
+ 
+
+35
+00:00:39,750 --> 00:00:41,750
+that we can keep using it as an example
+pretend that you're making a game and
+
+36
+00:00:41,750 --> 00:00:41,760
+pretend that you're making a game and
+ 
+
+37
+00:00:41,760 --> 00:00:43,790
+pretend that you're making a game and
+you've got a player in your game and
+
+38
+00:00:43,790 --> 00:00:43,800
+you've got a player in your game and
+ 
+
+39
+00:00:43,800 --> 00:00:46,010
+you've got a player in your game and
+that player character has some kind of
+
+40
+00:00:46,010 --> 00:00:46,020
+that player character has some kind of
+ 
+
+41
+00:00:46,020 --> 00:00:47,750
+that player character has some kind of
+position on the map and the player
+
+42
+00:00:47,750 --> 00:00:47,760
+position on the map and the player
+ 
+
+43
+00:00:47,760 --> 00:00:49,639
+position on the map and the player
+character can move so we need to be able
+
+44
+00:00:49,639 --> 00:00:49,649
+character can move so we need to be able
+ 
+
+45
+00:00:49,649 --> 00:00:51,350
+character can move so we need to be able
+to store the player's position as some
+
+46
+00:00:51,350 --> 00:00:51,360
+to store the player's position as some
+ 
+
+47
+00:00:51,360 --> 00:00:53,330
+to store the player's position as some
+kind of variable in our memory so that
+
+48
+00:00:53,330 --> 00:00:53,340
+kind of variable in our memory so that
+ 
+
+49
+00:00:53,340 --> 00:00:55,069
+kind of variable in our memory so that
+when it comes time to draw the player on
+
+50
+00:00:55,069 --> 00:00:55,079
+when it comes time to draw the player on
+ 
+
+51
+00:00:55,079 --> 00:00:57,110
+when it comes time to draw the player on
+the screen or interact with the rest of
+
+52
+00:00:57,110 --> 00:00:57,120
+the screen or interact with the rest of
+ 
+
+53
+00:00:57,120 --> 00:00:59,299
+the screen or interact with the rest of
+the level we can actually see hey where
+
+54
+00:00:59,299 --> 00:00:59,309
+the level we can actually see hey where
+ 
+
+55
+00:00:59,309 --> 00:01:01,250
+the level we can actually see hey where
+on earth is the player so we would want
+
+56
+00:01:01,250 --> 00:01:01,260
+on earth is the player so we would want
+ 
+
+57
+00:01:01,260 --> 00:01:02,569
+on earth is the player so we would want
+to store the players position in a
+
+58
+00:01:02,569 --> 00:01:02,579
+to store the players position in a
+ 
+
+59
+00:01:02,579 --> 00:01:04,369
+to store the players position in a
+variable this is basically one of the
+
+60
+00:01:04,369 --> 00:01:04,379
+variable this is basically one of the
+ 
+
+61
+00:01:04,379 --> 00:01:06,830
+variable this is basically one of the
+fundamentals of writing a program in any
+
+62
+00:01:06,830 --> 00:01:06,840
+fundamentals of writing a program in any
+ 
+
+63
+00:01:06,840 --> 00:01:09,109
+fundamentals of writing a program in any
+language we need to be able to play with
+
+64
+00:01:09,109 --> 00:01:09,119
+language we need to be able to play with
+ 
+
+65
+00:01:09,119 --> 00:01:12,050
+language we need to be able to play with
+data and store that data somewhere when
+
+66
+00:01:12,050 --> 00:01:12,060
+data and store that data somewhere when
+ 
+
+67
+00:01:12,060 --> 00:01:13,550
+data and store that data somewhere when
+we create a variable is going to be
+
+68
+00:01:13,550 --> 00:01:13,560
+we create a variable is going to be
+ 
+
+69
+00:01:13,560 --> 00:01:15,800
+we create a variable is going to be
+stored in memory in one of two places
+
+70
+00:01:15,800 --> 00:01:15,810
+stored in memory in one of two places
+ 
+
+71
+00:01:15,810 --> 00:01:17,960
+stored in memory in one of two places
+the stack or the heap don't worry we're
+
+72
+00:01:17,960 --> 00:01:17,970
+the stack or the heap don't worry we're
+ 
+
+73
+00:01:17,970 --> 00:01:19,880
+the stack or the heap don't worry we're
+going to have a lot of videos discussing
+
+74
+00:01:19,880 --> 00:01:19,890
+going to have a lot of videos discussing
+ 
+
+75
+00:01:19,890 --> 00:01:22,340
+going to have a lot of videos discussing
+how memory actually work so if you're
+
+76
+00:01:22,340 --> 00:01:22,350
+how memory actually work so if you're
+ 
+
+77
+00:01:22,350 --> 00:01:23,870
+how memory actually work so if you're
+looking for a more more of an in-depth
+
+78
+00:01:23,870 --> 00:01:23,880
+looking for a more more of an in-depth
+ 
+
+79
+00:01:23,880 --> 00:01:25,730
+looking for a more more of an in-depth
+kind of explanation that'll definitely
+
+80
+00:01:25,730 --> 00:01:25,740
+kind of explanation that'll definitely
+ 
+
+81
+00:01:25,740 --> 00:01:27,260
+kind of explanation that'll definitely
+come but for now just know that
+
+82
+00:01:27,260 --> 00:01:27,270
+come but for now just know that
+ 
+
+83
+00:01:27,270 --> 00:01:29,719
+come but for now just know that
+variables do occupy memory that's where
+
+84
+00:01:29,719 --> 00:01:29,729
+variables do occupy memory that's where
+ 
+
+85
+00:01:29,729 --> 00:01:31,640
+variables do occupy memory that's where
+we actually store the data in our
+
+86
+00:01:31,640 --> 00:01:31,650
+we actually store the data in our
+ 
+
+87
+00:01:31,650 --> 00:01:34,219
+we actually store the data in our
+computer's memory in C++ were given a
+
+88
+00:01:34,219 --> 00:01:34,229
+computer's memory in C++ were given a
+ 
+
+89
+00:01:34,229 --> 00:01:36,170
+computer's memory in C++ were given a
+bunch of primitive data types
+
+90
+00:01:36,170 --> 00:01:36,180
+bunch of primitive data types
+ 
+
+91
+00:01:36,180 --> 00:01:38,990
+bunch of primitive data types
+these primitive data types essentially
+
+92
+00:01:38,990 --> 00:01:39,000
+these primitive data types essentially
+ 
+
+93
+00:01:39,000 --> 00:01:41,450
+these primitive data types essentially
+form the building blocks of any kind of
+
+94
+00:01:41,450 --> 00:01:41,460
+form the building blocks of any kind of
+ 
+
+95
+00:01:41,460 --> 00:01:43,639
+form the building blocks of any kind of
+data we store in our program each data
+
+96
+00:01:43,639 --> 00:01:43,649
+data we store in our program each data
+ 
+
+97
+00:01:43,649 --> 00:01:45,289
+data we store in our program each data
+type that Super Plus gives us has a
+
+98
+00:01:45,289 --> 00:01:45,299
+type that Super Plus gives us has a
+ 
+
+99
+00:01:45,299 --> 00:01:47,810
+type that Super Plus gives us has a
+specific purpose whilst it has a
+
+100
+00:01:47,810 --> 00:01:47,820
+specific purpose whilst it has a
+ 
+
+101
+00:01:47,820 --> 00:01:51,050
+specific purpose whilst it has a
+specific purpose you don't actually have
+
+102
+00:01:51,050 --> 00:01:51,060
+specific purpose you don't actually have
+ 
+
+103
+00:01:51,060 --> 00:01:52,639
+specific purpose you don't actually have
+to use it for that purpose if
+
+104
+00:01:52,639 --> 00:01:52,649
+to use it for that purpose if
+ 
+
+105
+00:01:52,649 --> 00:01:54,230
+to use it for that purpose if
+interesting because if applause is a
+
+106
+00:01:54,230 --> 00:01:54,240
+interesting because if applause is a
+ 
+
+107
+00:01:54,240 --> 00:01:56,539
+interesting because if applause is a
+very powerful language which means there
+
+108
+00:01:56,539 --> 00:01:56,549
+very powerful language which means there
+ 
+
+109
+00:01:56,549 --> 00:01:58,760
+very powerful language which means there
+are actually very few rules when you
+
+110
+00:01:58,760 --> 00:01:58,770
+are actually very few rules when you
+ 
+
+111
+00:01:58,770 --> 00:02:01,760
+are actually very few rules when you
+actually get down to it so when I
+
+112
+00:02:01,760 --> 00:02:01,770
+actually get down to it so when I
+ 
+
+113
+00:02:01,770 --> 00:02:03,530
+actually get down to it so when I
+explain variables I like to say that
+
+114
+00:02:03,530 --> 00:02:03,540
+explain variables I like to say that
+ 
+
+115
+00:02:03,540 --> 00:02:05,870
+explain variables I like to say that
+really the only distinction between the
+
+116
+00:02:05,870 --> 00:02:05,880
+really the only distinction between the
+ 
+
+117
+00:02:05,880 --> 00:02:07,280
+really the only distinction between the
+different variable types you have in
+
+118
+00:02:07,280 --> 00:02:07,290
+different variable types you have in
+ 
+
+119
+00:02:07,290 --> 00:02:10,669
+different variable types you have in
+Super Plus is the size how much memory
+
+120
+00:02:10,669 --> 00:02:10,679
+Super Plus is the size how much memory
+ 
+
+121
+00:02:10,679 --> 00:02:13,580
+Super Plus is the size how much memory
+does this variable occupy when it comes
+
+122
+00:02:13,580 --> 00:02:13,590
+does this variable occupy when it comes
+ 
+
+123
+00:02:13,590 --> 00:02:14,100
+does this variable occupy when it comes
+down to it
+
+124
+00:02:14,100 --> 00:02:14,110
+down to it
+ 
+
+125
+00:02:14,110 --> 00:02:15,870
+down to it
+really the only difference between these
+
+126
+00:02:15,870 --> 00:02:15,880
+really the only difference between these
+ 
+
+127
+00:02:15,880 --> 00:02:17,790
+really the only difference between these
+primitive data types how big are they
+
+128
+00:02:17,790 --> 00:02:17,800
+primitive data types how big are they
+ 
+
+129
+00:02:17,800 --> 00:02:19,260
+primitive data types how big are they
+let's go ahead and jump into Visual
+
+130
+00:02:19,260 --> 00:02:19,270
+let's go ahead and jump into Visual
+ 
+
+131
+00:02:19,270 --> 00:02:20,790
+let's go ahead and jump into Visual
+Studio and take a look at some examples
+
+132
+00:02:20,790 --> 00:02:20,800
+Studio and take a look at some examples
+ 
+
+133
+00:02:20,800 --> 00:02:22,890
+Studio and take a look at some examples
+so we've actually already got a variable
+
+134
+00:02:22,890 --> 00:02:22,900
+so we've actually already got a variable
+ 
+
+135
+00:02:22,900 --> 00:02:25,680
+so we've actually already got a variable
+type that we're using here int in stands
+
+136
+00:02:25,680 --> 00:02:25,690
+type that we're using here int in stands
+ 
+
+137
+00:02:25,690 --> 00:02:27,870
+type that we're using here int in stands
+for integer and it lets us store an
+
+138
+00:02:27,870 --> 00:02:27,880
+for integer and it lets us store an
+ 
+
+139
+00:02:27,880 --> 00:02:30,360
+for integer and it lets us store an
+integer in a given range if we want to
+
+140
+00:02:30,360 --> 00:02:30,370
+integer in a given range if we want to
+ 
+
+141
+00:02:30,370 --> 00:02:32,220
+integer in a given range if we want to
+declare a brand new variable we can do
+
+142
+00:02:32,220 --> 00:02:32,230
+declare a brand new variable we can do
+ 
+
+143
+00:02:32,230 --> 00:02:34,100
+declare a brand new variable we can do
+so by typing the type of the variable
+
+144
+00:02:34,100 --> 00:02:34,110
+so by typing the type of the variable
+ 
+
+145
+00:02:34,110 --> 00:02:36,990
+so by typing the type of the variable
+giving it some kind of name for example
+
+146
+00:02:36,990 --> 00:02:37,000
+giving it some kind of name for example
+ 
+
+147
+00:02:37,000 --> 00:02:39,540
+giving it some kind of name for example
+variable and then giving it a value
+
+148
+00:02:39,540 --> 00:02:39,550
+variable and then giving it a value
+ 
+
+149
+00:02:39,550 --> 00:02:41,340
+variable and then giving it a value
+now this last part is optional you don't
+
+150
+00:02:41,340 --> 00:02:41,350
+now this last part is optional you don't
+ 
+
+151
+00:02:41,350 --> 00:02:43,740
+now this last part is optional you don't
+have to give it a value immediately but
+
+152
+00:02:43,740 --> 00:02:43,750
+have to give it a value immediately but
+ 
+
+153
+00:02:43,750 --> 00:02:44,880
+have to give it a value immediately but
+for now let's just give it the value
+
+154
+00:02:44,880 --> 00:02:44,890
+for now let's just give it the value
+ 
+
+155
+00:02:44,890 --> 00:02:46,980
+for now let's just give it the value
+eight an integer is the data type that
+
+156
+00:02:46,980 --> 00:02:46,990
+eight an integer is the data type that
+ 
+
+157
+00:02:46,990 --> 00:02:48,570
+eight an integer is the data type that
+is traditionally four bytes
+
+158
+00:02:48,570 --> 00:02:48,580
+is traditionally four bytes
+ 
+
+159
+00:02:48,580 --> 00:02:50,790
+is traditionally four bytes
+large the actual size of a data type
+
+160
+00:02:50,790 --> 00:02:50,800
+large the actual size of a data type
+ 
+
+161
+00:02:50,800 --> 00:02:52,979
+large the actual size of a data type
+depends on the compiler so it may be
+
+162
+00:02:52,979 --> 00:02:52,989
+depends on the compiler so it may be
+ 
+
+163
+00:02:52,989 --> 00:02:54,540
+depends on the compiler so it may be
+different depending on what compiler
+
+164
+00:02:54,540 --> 00:02:54,550
+different depending on what compiler
+ 
+
+165
+00:02:54,550 --> 00:02:55,949
+different depending on what compiler
+you're using ultimately it's the
+
+166
+00:02:55,949 --> 00:02:55,959
+you're using ultimately it's the
+ 
+
+167
+00:02:55,959 --> 00:02:57,930
+you're using ultimately it's the
+compilers choice to tell you how big
+
+168
+00:02:57,930 --> 00:02:57,940
+compilers choice to tell you how big
+ 
+
+169
+00:02:57,940 --> 00:02:59,790
+compilers choice to tell you how big
+your data is going to be the Imps data
+
+170
+00:02:59,790 --> 00:02:59,800
+your data is going to be the Imps data
+ 
+
+171
+00:02:59,800 --> 00:03:02,190
+your data is going to be the Imps data
+type is meant for storing integers in a
+
+172
+00:03:02,190 --> 00:03:02,200
+type is meant for storing integers in a
+ 
+
+173
+00:03:02,200 --> 00:03:04,500
+type is meant for storing integers in a
+certain range because it's four bytes
+
+174
+00:03:04,500 --> 00:03:04,510
+certain range because it's four bytes
+ 
+
+175
+00:03:04,510 --> 00:03:07,650
+certain range because it's four bytes
+large we are limited as to what kind of
+
+176
+00:03:07,650 --> 00:03:07,660
+large we are limited as to what kind of
+ 
+
+177
+00:03:07,660 --> 00:03:08,870
+large we are limited as to what kind of
+numbers we can store with it
+
+178
+00:03:08,870 --> 00:03:08,880
+numbers we can store with it
+ 
+
+179
+00:03:08,880 --> 00:03:10,770
+numbers we can store with it
+specifically this is something called a
+
+180
+00:03:10,770 --> 00:03:10,780
+specifically this is something called a
+ 
+
+181
+00:03:10,780 --> 00:03:13,199
+specifically this is something called a
+signed integer that can store a value of
+
+182
+00:03:13,199 --> 00:03:13,209
+signed integer that can store a value of
+ 
+
+183
+00:03:13,209 --> 00:03:15,390
+signed integer that can store a value of
+around negative two billion to positive
+
+184
+00:03:15,390 --> 00:03:15,400
+around negative two billion to positive
+ 
+
+185
+00:03:15,400 --> 00:03:17,610
+around negative two billion to positive
+2 billion anything larger or smaller
+
+186
+00:03:17,610 --> 00:03:17,620
+2 billion anything larger or smaller
+ 
+
+187
+00:03:17,620 --> 00:03:19,920
+2 billion anything larger or smaller
+than that is going to require more data
+
+188
+00:03:19,920 --> 00:03:19,930
+than that is going to require more data
+ 
+
+189
+00:03:19,930 --> 00:03:22,530
+than that is going to require more data
+to store than this int actually support
+
+190
+00:03:22,530 --> 00:03:22,540
+to store than this int actually support
+ 
+
+191
+00:03:22,540 --> 00:03:24,990
+to store than this int actually support
+so with 4 bytes of data we can store a
+
+192
+00:03:24,990 --> 00:03:25,000
+so with 4 bytes of data we can store a
+ 
+
+193
+00:03:25,000 --> 00:03:27,509
+so with 4 bytes of data we can store a
+value between this range so let's go
+
+194
+00:03:27,509 --> 00:03:27,519
+value between this range so let's go
+ 
+
+195
+00:03:27,519 --> 00:03:29,250
+value between this range so let's go
+ahead and try and print out our variable
+
+196
+00:03:29,250 --> 00:03:29,260
+ahead and try and print out our variable
+ 
+
+197
+00:03:29,260 --> 00:03:30,509
+ahead and try and print out our variable
+to the console to see what it actually
+
+198
+00:03:30,509 --> 00:03:30,519
+to the console to see what it actually
+ 
+
+199
+00:03:30,519 --> 00:03:32,850
+to the console to see what it actually
+is I'll substitute this hello world with
+
+200
+00:03:32,850 --> 00:03:32,860
+is I'll substitute this hello world with
+ 
+
+201
+00:03:32,860 --> 00:03:35,250
+is I'll substitute this hello world with
+this actual variable this is how we can
+
+202
+00:03:35,250 --> 00:03:35,260
+this actual variable this is how we can
+ 
+
+203
+00:03:35,260 --> 00:03:37,710
+this actual variable this is how we can
+log a variable to the console at nf5 to
+
+204
+00:03:37,710 --> 00:03:37,720
+log a variable to the console at nf5 to
+ 
+
+205
+00:03:37,720 --> 00:03:39,420
+log a variable to the console at nf5 to
+run our program and you can see it
+
+206
+00:03:39,420 --> 00:03:39,430
+run our program and you can see it
+ 
+
+207
+00:03:39,430 --> 00:03:42,000
+run our program and you can see it
+prints out the number 8 awesome we can
+
+208
+00:03:42,000 --> 00:03:42,010
+prints out the number 8 awesome we can
+ 
+
+209
+00:03:42,010 --> 00:03:43,740
+prints out the number 8 awesome we can
+go ahead and modify our variable for
+
+210
+00:03:43,740 --> 00:03:43,750
+go ahead and modify our variable for
+ 
+
+211
+00:03:43,750 --> 00:03:45,300
+go ahead and modify our variable for
+example by reassigning it to something
+
+212
+00:03:45,300 --> 00:03:45,310
+example by reassigning it to something
+ 
+
+213
+00:03:45,310 --> 00:03:48,660
+example by reassigning it to something
+else like 20 let's go ahead and print it
+
+214
+00:03:48,660 --> 00:03:48,670
+else like 20 let's go ahead and print it
+ 
+
+215
+00:03:48,670 --> 00:03:50,100
+else like 20 let's go ahead and print it
+again and see what happens so we're
+
+216
+00:03:50,100 --> 00:03:50,110
+again and see what happens so we're
+ 
+
+217
+00:03:50,110 --> 00:03:51,750
+again and see what happens so we're
+printing it once here and then again
+
+218
+00:03:51,750 --> 00:03:51,760
+printing it once here and then again
+ 
+
+219
+00:03:51,760 --> 00:03:53,610
+printing it once here and then again
+here so we should get the value 8
+
+220
+00:03:53,610 --> 00:03:53,620
+here so we should get the value 8
+ 
+
+221
+00:03:53,620 --> 00:03:55,740
+here so we should get the value 8
+printing first and then the value 20 and
+
+222
+00:03:55,740 --> 00:03:55,750
+printing first and then the value 20 and
+ 
+
+223
+00:03:55,750 --> 00:03:57,120
+printing first and then the value 20 and
+you can see if we run our program that's
+
+224
+00:03:57,120 --> 00:03:57,130
+you can see if we run our program that's
+ 
+
+225
+00:03:57,130 --> 00:03:59,520
+you can see if we run our program that's
+exactly what we get cool so as I said an
+
+226
+00:03:59,520 --> 00:03:59,530
+exactly what we get cool so as I said an
+ 
+
+227
+00:03:59,530 --> 00:04:01,740
+exactly what we get cool so as I said an
+inch data type can store a value between
+
+228
+00:04:01,740 --> 00:04:01,750
+inch data type can store a value between
+ 
+
+229
+00:04:01,750 --> 00:04:03,720
+inch data type can store a value between
+negative 2 billion and positive 2
+
+230
+00:04:03,720 --> 00:04:03,730
+negative 2 billion and positive 2
+ 
+
+231
+00:04:03,730 --> 00:04:06,449
+negative 2 billion and positive 2
+billion so you might be like why is it
+
+232
+00:04:06,449 --> 00:04:06,459
+billion so you might be like why is it
+ 
+
+233
+00:04:06,459 --> 00:04:08,280
+billion so you might be like why is it
+negative 2 billion and positive 2
+
+234
+00:04:08,280 --> 00:04:08,290
+negative 2 billion and positive 2
+ 
+
+235
+00:04:08,290 --> 00:04:09,930
+negative 2 billion and positive 2
+billion it's not exactly 2 billion by
+
+236
+00:04:09,930 --> 00:04:09,940
+billion it's not exactly 2 billion by
+ 
+
+237
+00:04:09,940 --> 00:04:11,190
+billion it's not exactly 2 billion by
+the way it's like 2 point something
+
+238
+00:04:11,190 --> 00:04:11,200
+the way it's like 2 point something
+ 
+
+239
+00:04:11,200 --> 00:04:13,470
+the way it's like 2 point something
+billion where are these limits coming
+
+240
+00:04:13,470 --> 00:04:13,480
+billion where are these limits coming
+ 
+
+241
+00:04:13,480 --> 00:04:15,390
+billion where are these limits coming
+from do they make any sense and the
+
+242
+00:04:15,390 --> 00:04:15,400
+from do they make any sense and the
+ 
+
+243
+00:04:15,400 --> 00:04:17,250
+from do they make any sense and the
+answer is yes they make sense they are
+
+244
+00:04:17,250 --> 00:04:17,260
+answer is yes they make sense they are
+ 
+
+245
+00:04:17,260 --> 00:04:19,800
+answer is yes they make sense they are
+directly tied with the size of the
+
+246
+00:04:19,800 --> 00:04:19,810
+directly tied with the size of the
+ 
+
+247
+00:04:19,810 --> 00:04:21,659
+directly tied with the size of the
+variable that is how much data were
+
+248
+00:04:21,659 --> 00:04:21,669
+variable that is how much data were
+ 
+
+249
+00:04:21,669 --> 00:04:23,790
+variable that is how much data were
+allowed to store in it an integer is 4
+
+250
+00:04:23,790 --> 00:04:23,800
+allowed to store in it an integer is 4
+ 
+
+251
+00:04:23,800 --> 00:04:26,400
+allowed to store in it an integer is 4
+bytes with 4 bytes of data we can store
+
+252
+00:04:26,400 --> 00:04:26,410
+bytes with 4 bytes of data we can store
+ 
+
+253
+00:04:26,410 --> 00:04:27,580
+bytes with 4 bytes of data we can store
+values in that
+
+254
+00:04:27,580 --> 00:04:27,590
+values in that
+ 
+
+255
+00:04:27,590 --> 00:04:29,320
+values in that
+let's break this down a little bit so
+
+256
+00:04:29,320 --> 00:04:29,330
+let's break this down a little bit so
+ 
+
+257
+00:04:29,330 --> 00:04:31,960
+let's break this down a little bit so
+one byte is eight bits of data which
+
+258
+00:04:31,960 --> 00:04:31,970
+one byte is eight bits of data which
+ 
+
+259
+00:04:31,970 --> 00:04:34,510
+one byte is eight bits of data which
+means that four bytes is 32 bits of data
+
+260
+00:04:34,510 --> 00:04:34,520
+means that four bytes is 32 bits of data
+ 
+
+261
+00:04:34,520 --> 00:04:37,120
+means that four bytes is 32 bits of data
+because this variable is signed meaning
+
+262
+00:04:37,120 --> 00:04:37,130
+because this variable is signed meaning
+ 
+
+263
+00:04:37,130 --> 00:04:39,460
+because this variable is signed meaning
+it can be negative it contains a sign
+
+264
+00:04:39,460 --> 00:04:39,470
+it can be negative it contains a sign
+ 
+
+265
+00:04:39,470 --> 00:04:41,680
+it can be negative it contains a sign
+like a negative sign because this
+
+266
+00:04:41,680 --> 00:04:41,690
+like a negative sign because this
+ 
+
+267
+00:04:41,690 --> 00:04:44,170
+like a negative sign because this
+variable is find one of those bits one
+
+268
+00:04:44,170 --> 00:04:44,180
+variable is find one of those bits one
+ 
+
+269
+00:04:44,180 --> 00:04:46,870
+variable is find one of those bits one
+of those 32 bits has to be for the sign
+
+270
+00:04:46,870 --> 00:04:46,880
+of those 32 bits has to be for the sign
+ 
+
+271
+00:04:46,880 --> 00:04:48,820
+of those 32 bits has to be for the sign
+so that we know if it's positive or
+
+272
+00:04:48,820 --> 00:04:48,830
+so that we know if it's positive or
+ 
+
+273
+00:04:48,830 --> 00:04:51,250
+so that we know if it's positive or
+negative which only leaves 31 bits left
+
+274
+00:04:51,250 --> 00:04:51,260
+negative which only leaves 31 bits left
+ 
+
+275
+00:04:51,260 --> 00:04:53,110
+negative which only leaves 31 bits left
+for the actual number now a bit can
+
+276
+00:04:53,110 --> 00:04:53,120
+for the actual number now a bit can
+ 
+
+277
+00:04:53,120 --> 00:04:55,450
+for the actual number now a bit can
+either be 0 or 1 so there are 2 possible
+
+278
+00:04:55,450 --> 00:04:55,460
+either be 0 or 1 so there are 2 possible
+ 
+
+279
+00:04:55,460 --> 00:04:57,580
+either be 0 or 1 so there are 2 possible
+values for 1 bit of data so using a
+
+280
+00:04:57,580 --> 00:04:57,590
+values for 1 bit of data so using a
+ 
+
+281
+00:04:57,590 --> 00:04:59,650
+values for 1 bit of data so using a
+little bit of maths here we can say that
+
+282
+00:04:59,650 --> 00:04:59,660
+little bit of maths here we can say that
+ 
+
+283
+00:04:59,660 --> 00:05:01,300
+little bit of maths here we can say that
+we have 31 bits to play with 2 possible
+
+284
+00:05:01,300 --> 00:05:01,310
+we have 31 bits to play with 2 possible
+ 
+
+285
+00:05:01,310 --> 00:05:03,670
+we have 31 bits to play with 2 possible
+values took bit so what is 2 to the
+
+286
+00:05:03,670 --> 00:05:03,680
+values took bit so what is 2 to the
+ 
+
+287
+00:05:03,680 --> 00:05:05,650
+values took bit so what is 2 to the
+power of 31 if we crack open a
+
+288
+00:05:05,650 --> 00:05:05,660
+power of 31 if we crack open a
+ 
+
+289
+00:05:05,660 --> 00:05:07,690
+power of 31 if we crack open a
+calculator here and type in 2 to the
+
+290
+00:05:07,690 --> 00:05:07,700
+calculator here and type in 2 to the
+ 
+
+291
+00:05:07,700 --> 00:05:10,690
+calculator here and type in 2 to the
+power of 31 we will get about 2 billion
+
+292
+00:05:10,690 --> 00:05:10,700
+power of 31 we will get about 2 billion
+ 
+
+293
+00:05:10,700 --> 00:05:13,719
+power of 31 we will get about 2 billion
+that value there that 2.1 billion that
+
+294
+00:05:13,719 --> 00:05:13,729
+that value there that 2.1 billion that
+ 
+
+295
+00:05:13,729 --> 00:05:16,060
+that value there that 2.1 billion that
+is the maximum number that we can store
+
+296
+00:05:16,060 --> 00:05:16,070
+is the maximum number that we can store
+ 
+
+297
+00:05:16,070 --> 00:05:17,890
+is the maximum number that we can store
+with an integer now remember we also
+
+298
+00:05:17,890 --> 00:05:17,900
+with an integer now remember we also
+ 
+
+299
+00:05:17,900 --> 00:05:19,870
+with an integer now remember we also
+have one bit that is reserved for
+
+300
+00:05:19,870 --> 00:05:19,880
+have one bit that is reserved for
+ 
+
+301
+00:05:19,880 --> 00:05:21,100
+have one bit that is reserved for
+whether or not that number is negative
+
+302
+00:05:21,100 --> 00:05:21,110
+whether or not that number is negative
+ 
+
+303
+00:05:21,110 --> 00:05:22,930
+whether or not that number is negative
+so because of that we can store up to
+
+304
+00:05:22,930 --> 00:05:22,940
+so because of that we can store up to
+ 
+
+305
+00:05:22,940 --> 00:05:24,700
+so because of that we can store up to
+that number from 0 but also we can go
+
+306
+00:05:24,700 --> 00:05:24,710
+that number from 0 but also we can go
+ 
+
+307
+00:05:24,710 --> 00:05:26,560
+that number from 0 but also we can go
+the other way and store all the negative
+
+308
+00:05:26,560 --> 00:05:26,570
+the other way and store all the negative
+ 
+
+309
+00:05:26,570 --> 00:05:28,870
+the other way and store all the negative
+values down to negative 2 by 1 billion
+
+310
+00:05:28,870 --> 00:05:28,880
+values down to negative 2 by 1 billion
+ 
+
+311
+00:05:28,880 --> 00:05:31,360
+values down to negative 2 by 1 billion
+but I don't want negative values I hear
+
+312
+00:05:31,360 --> 00:05:31,370
+but I don't want negative values I hear
+ 
+
+313
+00:05:31,370 --> 00:05:33,279
+but I don't want negative values I hear
+you say is there a way to just get rid
+
+314
+00:05:33,279 --> 00:05:33,289
+you say is there a way to just get rid
+ 
+
+315
+00:05:33,289 --> 00:05:34,750
+you say is there a way to just get rid
+of that one bit being for the negative
+
+316
+00:05:34,750 --> 00:05:34,760
+of that one bit being for the negative
+ 
+
+317
+00:05:34,760 --> 00:05:36,760
+of that one bit being for the negative
+sign and just use it as part of my
+
+318
+00:05:36,760 --> 00:05:36,770
+sign and just use it as part of my
+ 
+
+319
+00:05:36,770 --> 00:05:40,390
+sign and just use it as part of my
+number why yes yes there is that is what
+
+320
+00:05:40,390 --> 00:05:40,400
+number why yes yes there is that is what
+ 
+
+321
+00:05:40,400 --> 00:05:42,460
+number why yes yes there is that is what
+we call an unsigned number that means
+
+322
+00:05:42,460 --> 00:05:42,470
+we call an unsigned number that means
+ 
+
+323
+00:05:42,470 --> 00:05:43,900
+we call an unsigned number that means
+it's the number that does not have a
+
+324
+00:05:43,900 --> 00:05:43,910
+it's the number that does not have a
+ 
+
+325
+00:05:43,910 --> 00:05:46,960
+it's the number that does not have a
+sign meaning is always positive in C++
+
+326
+00:05:46,960 --> 00:05:46,970
+sign meaning is always positive in C++
+ 
+
+327
+00:05:46,970 --> 00:05:49,089
+sign meaning is always positive in C++
+we can make one of those by just typing
+
+328
+00:05:49,089 --> 00:05:49,099
+we can make one of those by just typing
+ 
+
+329
+00:05:49,099 --> 00:05:51,640
+we can make one of those by just typing
+in unsigned in front of our integer so
+
+330
+00:05:51,640 --> 00:05:51,650
+in unsigned in front of our integer so
+ 
+
+331
+00:05:51,650 --> 00:05:53,710
+in unsigned in front of our integer so
+now what we've done is we have 32 bits
+
+332
+00:05:53,710 --> 00:05:53,720
+now what we've done is we have 32 bits
+ 
+
+333
+00:05:53,720 --> 00:05:56,080
+now what we've done is we have 32 bits
+to play with and 2 to the power of 32 of
+
+334
+00:05:56,080 --> 00:05:56,090
+to play with and 2 to the power of 32 of
+ 
+
+335
+00:05:56,090 --> 00:05:59,110
+to play with and 2 to the power of 32 of
+course is double what we have here for
+
+336
+00:05:59,110 --> 00:05:59,120
+course is double what we have here for
+ 
+
+337
+00:05:59,120 --> 00:06:01,210
+course is double what we have here for
+point two nine billion and that's
+
+338
+00:06:01,210 --> 00:06:01,220
+point two nine billion and that's
+ 
+
+339
+00:06:01,220 --> 00:06:03,760
+point two nine billion and that's
+basically what the unsigned keyword does
+
+340
+00:06:03,760 --> 00:06:03,770
+basically what the unsigned keyword does
+ 
+
+341
+00:06:03,770 --> 00:06:06,040
+basically what the unsigned keyword does
+in Sabre slot it lets us define an
+
+342
+00:06:06,040 --> 00:06:06,050
+in Sabre slot it lets us define an
+ 
+
+343
+00:06:06,050 --> 00:06:08,500
+in Sabre slot it lets us define an
+integer that does not have a sign bit
+
+344
+00:06:08,500 --> 00:06:08,510
+integer that does not have a sign bit
+ 
+
+345
+00:06:08,510 --> 00:06:10,450
+integer that does not have a sign bit
+okay so what other data types do we have
+
+346
+00:06:10,450 --> 00:06:10,460
+okay so what other data types do we have
+ 
+
+347
+00:06:10,460 --> 00:06:11,710
+okay so what other data types do we have
+available to us what if I don't want to
+
+348
+00:06:11,710 --> 00:06:11,720
+available to us what if I don't want to
+ 
+
+349
+00:06:11,720 --> 00:06:13,510
+available to us what if I don't want to
+for byte integer what other types are
+
+350
+00:06:13,510 --> 00:06:13,520
+for byte integer what other types are
+ 
+
+351
+00:06:13,520 --> 00:06:15,520
+for byte integer what other types are
+there so as far as integer values goes
+
+352
+00:06:15,520 --> 00:06:15,530
+there so as far as integer values goes
+ 
+
+353
+00:06:15,530 --> 00:06:17,500
+there so as far as integer values goes
+we actually have quite a few we've got
+
+354
+00:06:17,500 --> 00:06:17,510
+we actually have quite a few we've got
+ 
+
+355
+00:06:17,510 --> 00:06:19,960
+we actually have quite a few we've got
+char which is one byte of data we've got
+
+356
+00:06:19,960 --> 00:06:19,970
+char which is one byte of data we've got
+ 
+
+357
+00:06:19,970 --> 00:06:22,330
+char which is one byte of data we've got
+short which is two bytes of data we have
+
+358
+00:06:22,330 --> 00:06:22,340
+short which is two bytes of data we have
+ 
+
+359
+00:06:22,340 --> 00:06:24,730
+short which is two bytes of data we have
+int which is four bytes of data we have
+
+360
+00:06:24,730 --> 00:06:24,740
+int which is four bytes of data we have
+ 
+
+361
+00:06:24,740 --> 00:06:27,700
+int which is four bytes of data we have
+long which is also usually four bytes of
+
+362
+00:06:27,700 --> 00:06:27,710
+long which is also usually four bytes of
+ 
+
+363
+00:06:27,710 --> 00:06:29,950
+long which is also usually four bytes of
+data depending on the compiler and then
+
+364
+00:06:29,950 --> 00:06:29,960
+data depending on the compiler and then
+ 
+
+365
+00:06:29,960 --> 00:06:32,260
+data depending on the compiler and then
+we have long long which is usually eight
+
+366
+00:06:32,260 --> 00:06:32,270
+we have long long which is usually eight
+ 
+
+367
+00:06:32,270 --> 00:06:34,150
+we have long long which is usually eight
+bytes of data there's also other types
+
+368
+00:06:34,150 --> 00:06:34,160
+bytes of data there's also other types
+ 
+
+369
+00:06:34,160 --> 00:06:35,709
+bytes of data there's also other types
+like long and there are a few different
+
+370
+00:06:35,709 --> 00:06:35,719
+like long and there are a few different
+ 
+
+371
+00:06:35,719 --> 00:06:37,240
+like long and there are a few different
+modifications I'm not going to go
+
+372
+00:06:37,240 --> 00:06:37,250
+modifications I'm not going to go
+ 
+
+373
+00:06:37,250 --> 00:06:38,679
+modifications I'm not going to go
+through all of them but
+
+374
+00:06:38,679 --> 00:06:38,689
+through all of them but
+ 
+
+375
+00:06:38,689 --> 00:06:41,589
+through all of them but
+basic ones are these five you can also
+
+376
+00:06:41,589 --> 00:06:41,599
+basic ones are these five you can also
+ 
+
+377
+00:06:41,599 --> 00:06:44,049
+basic ones are these five you can also
+add on signs to any of these and it will
+
+378
+00:06:44,049 --> 00:06:44,059
+add on signs to any of these and it will
+ 
+
+379
+00:06:44,059 --> 00:06:45,850
+add on signs to any of these and it will
+remove that sign bit and let you set a
+
+380
+00:06:45,850 --> 00:06:45,860
+remove that sign bit and let you set a
+ 
+
+381
+00:06:45,860 --> 00:06:47,799
+remove that sign bit and let you set a
+larger number chart traditionally is
+
+382
+00:06:47,799 --> 00:06:47,809
+larger number chart traditionally is
+ 
+
+383
+00:06:47,809 --> 00:06:49,959
+larger number chart traditionally is
+also used for storing characters not
+
+384
+00:06:49,959 --> 00:06:49,969
+also used for storing characters not
+ 
+
+385
+00:06:49,969 --> 00:06:51,729
+also used for storing characters not
+just numbers so above I'm assigning
+
+386
+00:06:51,729 --> 00:06:51,739
+just numbers so above I'm assigning
+ 
+
+387
+00:06:51,739 --> 00:06:53,619
+just numbers so above I'm assigning
+numbers to it like 50 you can also
+
+388
+00:06:53,619 --> 00:06:53,629
+numbers to it like 50 you can also
+ 
+
+389
+00:06:53,629 --> 00:06:55,719
+numbers to it like 50 you can also
+assign characters to it like a now
+
+390
+00:06:55,719 --> 00:06:55,729
+assign characters to it like a now
+ 
+
+391
+00:06:55,729 --> 00:06:56,859
+assign characters to it like a now
+that's not to say you can't assign
+
+392
+00:06:56,859 --> 00:06:56,869
+that's not to say you can't assign
+ 
+
+393
+00:06:56,869 --> 00:06:58,449
+that's not to say you can't assign
+characters to other integers you can
+
+394
+00:06:58,449 --> 00:06:58,459
+characters to other integers you can
+ 
+
+395
+00:06:58,459 --> 00:07:00,279
+characters to other integers you can
+because at the end of the day this
+
+396
+00:07:00,279 --> 00:07:00,289
+because at the end of the day this
+ 
+
+397
+00:07:00,289 --> 00:07:01,779
+because at the end of the day this
+character that I five to this letter a
+
+398
+00:07:01,779 --> 00:07:01,789
+character that I five to this letter a
+ 
+
+399
+00:07:01,789 --> 00:07:04,659
+character that I five to this letter a
+is just a number in fact that number
+
+400
+00:07:04,659 --> 00:07:04,669
+is just a number in fact that number
+ 
+
+401
+00:07:04,669 --> 00:07:06,939
+is just a number in fact that number
+that numeric value associated with that
+
+402
+00:07:06,939 --> 00:07:06,949
+that numeric value associated with that
+ 
+
+403
+00:07:06,949 --> 00:07:10,299
+that numeric value associated with that
+character the character a is 65 now if
+
+404
+00:07:10,299 --> 00:07:10,309
+character the character a is 65 now if
+ 
+
+405
+00:07:10,309 --> 00:07:11,769
+character the character a is 65 now if
+numbers are just characters and if
+
+406
+00:07:11,769 --> 00:07:11,779
+numbers are just characters and if
+ 
+
+407
+00:07:11,779 --> 00:07:13,959
+numbers are just characters and if
+characters are just numbers then why
+
+408
+00:07:13,959 --> 00:07:13,969
+characters are just numbers then why
+ 
+
+409
+00:07:13,969 --> 00:07:16,269
+characters are just numbers then why
+exactly do we have this distinction why
+
+410
+00:07:16,269 --> 00:07:16,279
+exactly do we have this distinction why
+ 
+
+411
+00:07:16,279 --> 00:07:18,399
+exactly do we have this distinction why
+do I say that char is specifically used
+
+412
+00:07:18,399 --> 00:07:18,409
+do I say that char is specifically used
+ 
+
+413
+00:07:18,409 --> 00:07:20,409
+do I say that char is specifically used
+for characters whereas it's really not
+
+414
+00:07:20,409 --> 00:07:20,419
+for characters whereas it's really not
+ 
+
+415
+00:07:20,419 --> 00:07:22,869
+for characters whereas it's really not
+that is because we often as programmers
+
+416
+00:07:22,869 --> 00:07:22,879
+that is because we often as programmers
+ 
+
+417
+00:07:22,879 --> 00:07:24,669
+that is because we often as programmers
+make assumptions about certain data
+
+418
+00:07:24,669 --> 00:07:24,679
+make assumptions about certain data
+ 
+
+419
+00:07:24,679 --> 00:07:27,129
+make assumptions about certain data
+types if I pass in a char and call it
+
+420
+00:07:27,129 --> 00:07:27,139
+types if I pass in a char and call it
+ 
+
+421
+00:07:27,139 --> 00:07:29,319
+types if I pass in a char and call it
+something like character I usually
+
+422
+00:07:29,319 --> 00:07:29,329
+something like character I usually
+ 
+
+423
+00:07:29,329 --> 00:07:30,429
+something like character I usually
+expect you to actually assign a
+
+424
+00:07:30,429 --> 00:07:30,439
+expect you to actually assign a
+ 
+
+425
+00:07:30,439 --> 00:07:32,049
+expect you to actually assign a
+character to it so a good example of
+
+426
+00:07:32,049 --> 00:07:32,059
+character to it so a good example of
+ 
+
+427
+00:07:32,059 --> 00:07:33,939
+character to it so a good example of
+this is if you actually try and print
+
+428
+00:07:33,939 --> 00:07:33,949
+this is if you actually try and print
+ 
+
+429
+00:07:33,949 --> 00:07:36,459
+this is if you actually try and print
+out a char if I print out this variable
+
+430
+00:07:36,459 --> 00:07:36,469
+out a char if I print out this variable
+ 
+
+431
+00:07:36,469 --> 00:07:39,729
+out a char if I print out this variable
+a for example and I hit f5 I'm not going
+
+432
+00:07:39,729 --> 00:07:39,739
+a for example and I hit f5 I'm not going
+ 
+
+433
+00:07:39,739 --> 00:07:41,409
+a for example and I hit f5 I'm not going
+to get the number associated with it I'm
+
+434
+00:07:41,409 --> 00:07:41,419
+to get the number associated with it I'm
+ 
+
+435
+00:07:41,419 --> 00:07:43,239
+to get the number associated with it I'm
+going to get the character a printed out
+
+436
+00:07:43,239 --> 00:07:43,249
+going to get the character a printed out
+ 
+
+437
+00:07:43,249 --> 00:07:45,159
+going to get the character a printed out
+so if I replace this with this actual
+
+438
+00:07:45,159 --> 00:07:45,169
+so if I replace this with this actual
+ 
+
+439
+00:07:45,169 --> 00:07:47,679
+so if I replace this with this actual
+numeric value like 65 I'm also going to
+
+440
+00:07:47,679 --> 00:07:47,689
+numeric value like 65 I'm also going to
+ 
+
+441
+00:07:47,689 --> 00:07:49,629
+numeric value like 65 I'm also going to
+get the value a printed out as you can
+
+442
+00:07:49,629 --> 00:07:49,639
+get the value a printed out as you can
+ 
+
+443
+00:07:49,639 --> 00:07:52,749
+get the value a printed out as you can
+see over here because C out if I pass in
+
+444
+00:07:52,749 --> 00:07:52,759
+see over here because C out if I pass in
+ 
+
+445
+00:07:52,759 --> 00:07:55,329
+see over here because C out if I pass in
+a char into C out is going to treat it
+
+446
+00:07:55,329 --> 00:07:55,339
+a char into C out is going to treat it
+ 
+
+447
+00:07:55,339 --> 00:07:57,819
+a char into C out is going to treat it
+like a character not like a number if I
+
+448
+00:07:57,819 --> 00:07:57,829
+like a character not like a number if I
+ 
+
+449
+00:07:57,829 --> 00:07:59,350
+like a character not like a number if I
+change it to be some other type like a
+
+450
+00:07:59,350 --> 00:07:59,360
+change it to be some other type like a
+ 
+
+451
+00:07:59,360 --> 00:08:02,319
+change it to be some other type like a
+short for example and hit f5 you can see
+
+452
+00:08:02,319 --> 00:08:02,329
+short for example and hit f5 you can see
+ 
+
+453
+00:08:02,329 --> 00:08:04,209
+short for example and hit f5 you can see
+that C out no longer treats it like a
+
+454
+00:08:04,209 --> 00:08:04,219
+that C out no longer treats it like a
+ 
+
+455
+00:08:04,219 --> 00:08:05,709
+that C out no longer treats it like a
+character it's going to actually print
+
+456
+00:08:05,709 --> 00:08:05,719
+character it's going to actually print
+ 
+
+457
+00:08:05,719 --> 00:08:07,899
+character it's going to actually print
+out the numeric value and even if I
+
+458
+00:08:07,899 --> 00:08:07,909
+out the numeric value and even if I
+ 
+
+459
+00:08:07,909 --> 00:08:09,639
+out the numeric value and even if I
+assign a character here it's just really
+
+460
+00:08:09,639 --> 00:08:09,649
+assign a character here it's just really
+ 
+
+461
+00:08:09,649 --> 00:08:12,189
+assign a character here it's just really
+assigning the value 65 so if I run this
+
+462
+00:08:12,189 --> 00:08:12,199
+assigning the value 65 so if I run this
+ 
+
+463
+00:08:12,199 --> 00:08:15,189
+assigning the value 65 so if I run this
+again you can see that we get 65 so the
+
+464
+00:08:15,189 --> 00:08:15,199
+again you can see that we get 65 so the
+ 
+
+465
+00:08:15,199 --> 00:08:16,179
+again you can see that we get 65 so the
+reason I'm telling you all this is
+
+466
+00:08:16,179 --> 00:08:16,189
+reason I'm telling you all this is
+ 
+
+467
+00:08:16,189 --> 00:08:17,350
+reason I'm telling you all this is
+because I want you to understand that
+
+468
+00:08:17,350 --> 00:08:17,360
+because I want you to understand that
+ 
+
+469
+00:08:17,360 --> 00:08:20,739
+because I want you to understand that
+data types the usage of data types is
+
+470
+00:08:20,739 --> 00:08:20,749
+data types the usage of data types is
+ 
+
+471
+00:08:20,749 --> 00:08:23,919
+data types the usage of data types is
+just up to the programmer really there
+
+472
+00:08:23,919 --> 00:08:23,929
+just up to the programmer really there
+ 
+
+473
+00:08:23,929 --> 00:08:25,419
+just up to the programmer really there
+are certain conventions that we have in
+
+474
+00:08:25,419 --> 00:08:25,429
+are certain conventions that we have in
+ 
+
+475
+00:08:25,429 --> 00:08:27,759
+are certain conventions that we have in
+place but there's nothing concrete that
+
+476
+00:08:27,759 --> 00:08:27,769
+place but there's nothing concrete that
+ 
+
+477
+00:08:27,769 --> 00:08:29,949
+place but there's nothing concrete that
+you have to actually follow there are
+
+478
+00:08:29,949 --> 00:08:29,959
+you have to actually follow there are
+ 
+
+479
+00:08:29,959 --> 00:08:32,559
+you have to actually follow there are
+very little rules and c++ after all so
+
+480
+00:08:32,559 --> 00:08:32,569
+very little rules and c++ after all so
+ 
+
+481
+00:08:32,569 --> 00:08:34,299
+very little rules and c++ after all so
+because of that I do want you to realize
+
+482
+00:08:34,299 --> 00:08:34,309
+because of that I do want you to realize
+ 
+
+483
+00:08:34,309 --> 00:08:35,949
+because of that I do want you to realize
+that the only real difference between
+
+484
+00:08:35,949 --> 00:08:35,959
+that the only real difference between
+ 
+
+485
+00:08:35,959 --> 00:08:38,499
+that the only real difference between
+these data types is how much memory will
+
+486
+00:08:38,499 --> 00:08:38,509
+these data types is how much memory will
+ 
+
+487
+00:08:38,509 --> 00:08:40,959
+these data types is how much memory will
+be allocated when you create a variable
+
+488
+00:08:40,959 --> 00:08:40,969
+be allocated when you create a variable
+ 
+
+489
+00:08:40,969 --> 00:08:42,459
+be allocated when you create a variable
+with that data type
+
+490
+00:08:42,459 --> 00:08:42,469
+with that data type
+ 
+
+491
+00:08:42,469 --> 00:08:44,319
+with that data type
+so with those integer types aside what
+
+492
+00:08:44,319 --> 00:08:44,329
+so with those integer types aside what
+ 
+
+493
+00:08:44,329 --> 00:08:46,660
+so with those integer types aside what
+if I want to store a decimal value for
+
+494
+00:08:46,660 --> 00:08:46,670
+if I want to store a decimal value for
+ 
+
+495
+00:08:46,670 --> 00:08:48,639
+if I want to store a decimal value for
+example five point five how do I do that
+
+496
+00:08:48,639 --> 00:08:48,649
+example five point five how do I do that
+ 
+
+497
+00:08:48,649 --> 00:08:50,650
+example five point five how do I do that
+well for that we have two data types we
+
+498
+00:08:50,650 --> 00:08:50,660
+well for that we have two data types we
+ 
+
+499
+00:08:50,660 --> 00:08:51,820
+well for that we have two data types we
+have float and we
+
+500
+00:08:51,820 --> 00:08:51,830
+have float and we
+ 
+
+501
+00:08:51,830 --> 00:08:53,560
+have float and we
+have double there are also some modifies
+
+502
+00:08:53,560 --> 00:08:53,570
+have double there are also some modifies
+ 
+
+503
+00:08:53,570 --> 00:08:55,510
+have double there are also some modifies
+that you can do like long double we're
+
+504
+00:08:55,510 --> 00:08:55,520
+that you can do like long double we're
+ 
+
+505
+00:08:55,520 --> 00:08:57,010
+that you can do like long double we're
+not going to get into those so a float
+
+506
+00:08:57,010 --> 00:08:57,020
+not going to get into those so a float
+ 
+
+507
+00:08:57,020 --> 00:09:00,010
+not going to get into those so a float
+is basically a decimal value that we can
+
+508
+00:09:00,010 --> 00:09:00,020
+is basically a decimal value that we can
+ 
+
+509
+00:09:00,020 --> 00:09:02,200
+is basically a decimal value that we can
+store that occupies four bytes of data
+
+510
+00:09:02,200 --> 00:09:02,210
+store that occupies four bytes of data
+ 
+
+511
+00:09:02,210 --> 00:09:04,690
+store that occupies four bytes of data
+so let's define a variable here such as
+
+512
+00:09:04,690 --> 00:09:04,700
+so let's define a variable here such as
+ 
+
+513
+00:09:04,700 --> 00:09:06,310
+so let's define a variable here such as
+5.5 how do we do that
+
+514
+00:09:06,310 --> 00:09:06,320
+5.5 how do we do that
+ 
+
+515
+00:09:06,320 --> 00:09:08,230
+5.5 how do we do that
+let's also replace this variable a we're
+
+516
+00:09:08,230 --> 00:09:08,240
+let's also replace this variable a we're
+ 
+
+517
+00:09:08,240 --> 00:09:09,880
+let's also replace this variable a we're
+printing out our float variable and
+
+518
+00:09:09,880 --> 00:09:09,890
+printing out our float variable and
+ 
+
+519
+00:09:09,890 --> 00:09:10,960
+printing out our float variable and
+compile our file
+
+520
+00:09:10,960 --> 00:09:10,970
+compile our file
+ 
+
+521
+00:09:10,970 --> 00:09:12,880
+compile our file
+let's hit f5 to run our program and you
+
+522
+00:09:12,880 --> 00:09:12,890
+let's hit f5 to run our program and you
+ 
+
+523
+00:09:12,890 --> 00:09:15,370
+let's hit f5 to run our program and you
+can see we get 5.5 printed out fantastic
+
+524
+00:09:15,370 --> 00:09:15,380
+can see we get 5.5 printed out fantastic
+ 
+
+525
+00:09:15,380 --> 00:09:17,140
+can see we get 5.5 printed out fantastic
+now you may think that you've defined a
+
+526
+00:09:17,140 --> 00:09:17,150
+now you may think that you've defined a
+ 
+
+527
+00:09:17,150 --> 00:09:19,690
+now you may think that you've defined a
+float here but you actually haven't
+
+528
+00:09:19,690 --> 00:09:19,700
+float here but you actually haven't
+ 
+
+529
+00:09:19,700 --> 00:09:22,360
+float here but you actually haven't
+you've actually defined a double if we
+
+530
+00:09:22,360 --> 00:09:22,370
+you've actually defined a double if we
+ 
+
+531
+00:09:22,370 --> 00:09:23,500
+you've actually defined a double if we
+go back to visual studio and we hover
+
+532
+00:09:23,500 --> 00:09:23,510
+go back to visual studio and we hover
+ 
+
+533
+00:09:23,510 --> 00:09:25,210
+go back to visual studio and we hover
+our mouse over this value you can see
+
+534
+00:09:25,210 --> 00:09:25,220
+our mouse over this value you can see
+ 
+
+535
+00:09:25,220 --> 00:09:26,890
+our mouse over this value you can see
+that in brackets it says double as I
+
+536
+00:09:26,890 --> 00:09:26,900
+that in brackets it says double as I
+ 
+
+537
+00:09:26,900 --> 00:09:29,080
+that in brackets it says double as I
+just mentioned we have two different
+
+538
+00:09:29,080 --> 00:09:29,090
+just mentioned we have two different
+ 
+
+539
+00:09:29,090 --> 00:09:30,970
+just mentioned we have two different
+variables that we can use to store
+
+540
+00:09:30,970 --> 00:09:30,980
+variables that we can use to store
+ 
+
+541
+00:09:30,980 --> 00:09:33,760
+variables that we can use to store
+decimal numbers float and double so how
+
+542
+00:09:33,760 --> 00:09:33,770
+decimal numbers float and double so how
+ 
+
+543
+00:09:33,770 --> 00:09:35,590
+decimal numbers float and double so how
+do we discern between what a double is
+
+544
+00:09:35,590 --> 00:09:35,600
+do we discern between what a double is
+ 
+
+545
+00:09:35,600 --> 00:09:37,390
+do we discern between what a double is
+and what a float is the way we do that
+
+546
+00:09:37,390 --> 00:09:37,400
+and what a float is the way we do that
+ 
+
+547
+00:09:37,400 --> 00:09:40,090
+and what a float is the way we do that
+is by basically appending an F to our
+
+548
+00:09:40,090 --> 00:09:40,100
+is by basically appending an F to our
+ 
+
+549
+00:09:40,100 --> 00:09:42,250
+is by basically appending an F to our
+float variables it can be lowercase or
+
+550
+00:09:42,250 --> 00:09:42,260
+float variables it can be lowercase or
+ 
+
+551
+00:09:42,260 --> 00:09:44,380
+float variables it can be lowercase or
+uppercase doesn't matter but the point
+
+552
+00:09:44,380 --> 00:09:44,390
+uppercase doesn't matter but the point
+ 
+
+553
+00:09:44,390 --> 00:09:46,480
+uppercase doesn't matter but the point
+is if we have an F you can see that
+
+554
+00:09:46,480 --> 00:09:46,490
+is if we have an F you can see that
+ 
+
+555
+00:09:46,490 --> 00:09:48,460
+is if we have an F you can see that
+we've actually declared a flirt so
+
+556
+00:09:48,460 --> 00:09:48,470
+we've actually declared a flirt so
+ 
+
+557
+00:09:48,470 --> 00:09:50,530
+we've actually declared a flirt so
+floats are basically four bytes large
+
+558
+00:09:50,530 --> 00:09:50,540
+floats are basically four bytes large
+ 
+
+559
+00:09:50,540 --> 00:09:53,110
+floats are basically four bytes large
+and doubles are eight bytes large
+
+560
+00:09:53,110 --> 00:09:53,120
+and doubles are eight bytes large
+ 
+
+561
+00:09:53,120 --> 00:09:55,390
+and doubles are eight bytes large
+finally we have one more primitive
+
+562
+00:09:55,390 --> 00:09:55,400
+finally we have one more primitive
+ 
+
+563
+00:09:55,400 --> 00:09:57,700
+finally we have one more primitive
+datatype to play with and that is bull
+
+564
+00:09:57,700 --> 00:09:57,710
+datatype to play with and that is bull
+ 
+
+565
+00:09:57,710 --> 00:09:59,920
+datatype to play with and that is bull
+now bull stands for bullying and it can
+
+566
+00:09:59,920 --> 00:09:59,930
+now bull stands for bullying and it can
+ 
+
+567
+00:09:59,930 --> 00:10:03,220
+now bull stands for bullying and it can
+either be true or false if we try and
+
+568
+00:10:03,220 --> 00:10:03,230
+either be true or false if we try and
+ 
+
+569
+00:10:03,230 --> 00:10:05,860
+either be true or false if we try and
+print it to our console and hit f5 you
+
+570
+00:10:05,860 --> 00:10:05,870
+print it to our console and hit f5 you
+ 
+
+571
+00:10:05,870 --> 00:10:06,910
+print it to our console and hit f5 you
+can see that we'll actually get a
+
+572
+00:10:06,910 --> 00:10:06,920
+can see that we'll actually get a
+ 
+
+573
+00:10:06,920 --> 00:10:09,190
+can see that we'll actually get a
+numeric value one because of course
+
+574
+00:10:09,190 --> 00:10:09,200
+numeric value one because of course
+ 
+
+575
+00:10:09,200 --> 00:10:11,740
+numeric value one because of course
+there's no such thing as true or false
+
+576
+00:10:11,740 --> 00:10:11,750
+there's no such thing as true or false
+ 
+
+577
+00:10:11,750 --> 00:10:14,200
+there's no such thing as true or false
+those are English words computer deal
+
+578
+00:10:14,200 --> 00:10:14,210
+those are English words computer deal
+ 
+
+579
+00:10:14,210 --> 00:10:16,600
+those are English words computer deal
+with numbers so basically zero means
+
+580
+00:10:16,600 --> 00:10:16,610
+with numbers so basically zero means
+ 
+
+581
+00:10:16,610 --> 00:10:19,930
+with numbers so basically zero means
+false and anything except zero any other
+
+582
+00:10:19,930 --> 00:10:19,940
+false and anything except zero any other
+ 
+
+583
+00:10:19,940 --> 00:10:22,600
+false and anything except zero any other
+number means true in this case we'll
+
+584
+00:10:22,600 --> 00:10:22,610
+number means true in this case we'll
+ 
+
+585
+00:10:22,610 --> 00:10:24,280
+number means true in this case we'll
+actually get one printing to the console
+
+586
+00:10:24,280 --> 00:10:24,290
+actually get one printing to the console
+ 
+
+587
+00:10:24,290 --> 00:10:26,860
+actually get one printing to the console
+indicating that it is true if we change
+
+588
+00:10:26,860 --> 00:10:26,870
+indicating that it is true if we change
+ 
+
+589
+00:10:26,870 --> 00:10:29,260
+indicating that it is true if we change
+the default and run our program we will
+
+590
+00:10:29,260 --> 00:10:29,270
+the default and run our program we will
+ 
+
+591
+00:10:29,270 --> 00:10:31,540
+the default and run our program we will
+get 0 which means false the bull' data
+
+592
+00:10:31,540 --> 00:10:31,550
+get 0 which means false the bull' data
+ 
+
+593
+00:10:31,550 --> 00:10:34,270
+get 0 which means false the bull' data
+type occupies one byte of memory now you
+
+594
+00:10:34,270 --> 00:10:34,280
+type occupies one byte of memory now you
+ 
+
+595
+00:10:34,280 --> 00:10:37,690
+type occupies one byte of memory now you
+might be wondering one byte why the bull
+
+596
+00:10:37,690 --> 00:10:37,700
+might be wondering one byte why the bull
+ 
+
+597
+00:10:37,700 --> 00:10:39,130
+might be wondering one byte why the bull
+can either be true or false
+
+598
+00:10:39,130 --> 00:10:39,140
+can either be true or false
+ 
+
+599
+00:10:39,140 --> 00:10:40,990
+can either be true or false
+surely that only takes one bit to
+
+600
+00:10:40,990 --> 00:10:41,000
+surely that only takes one bit to
+ 
+
+601
+00:10:41,000 --> 00:10:43,510
+surely that only takes one bit to
+represent and you are correct it does
+
+602
+00:10:43,510 --> 00:10:43,520
+represent and you are correct it does
+ 
+
+603
+00:10:43,520 --> 00:10:45,730
+represent and you are correct it does
+take one bit to represent however when
+
+604
+00:10:45,730 --> 00:10:45,740
+take one bit to represent however when
+ 
+
+605
+00:10:45,740 --> 00:10:47,350
+take one bit to represent however when
+we're dealing with addressing memory
+
+606
+00:10:47,350 --> 00:10:47,360
+we're dealing with addressing memory
+ 
+
+607
+00:10:47,360 --> 00:10:49,600
+we're dealing with addressing memory
+that is we to retrieve our ball from
+
+608
+00:10:49,600 --> 00:10:49,610
+that is we to retrieve our ball from
+ 
+
+609
+00:10:49,610 --> 00:10:51,760
+that is we to retrieve our ball from
+memory or stored in memory there is no
+
+610
+00:10:51,760 --> 00:10:51,770
+memory or stored in memory there is no
+ 
+
+611
+00:10:51,770 --> 00:10:53,170
+memory or stored in memory there is no
+way for us to actually address
+
+612
+00:10:53,170 --> 00:10:53,180
+way for us to actually address
+ 
+
+613
+00:10:53,180 --> 00:10:55,690
+way for us to actually address
+individual bits we can only address
+
+614
+00:10:55,690 --> 00:10:55,700
+individual bits we can only address
+ 
+
+615
+00:10:55,700 --> 00:10:57,520
+individual bits we can only address
+bytes so because of that we can't
+
+616
+00:10:57,520 --> 00:10:57,530
+bytes so because of that we can't
+ 
+
+617
+00:10:57,530 --> 00:10:59,050
+bytes so because of that we can't
+actually create a variable type that is
+
+618
+00:10:59,050 --> 00:10:59,060
+actually create a variable type that is
+ 
+
+619
+00:10:59,060 --> 00:11:01,540
+actually create a variable type that is
+one bit because we'd need to be able to
+
+620
+00:11:01,540 --> 00:11:01,550
+one bit because we'd need to be able to
+ 
+
+621
+00:11:01,550 --> 00:11:04,090
+one bit because we'd need to be able to
+access it and we can't we can only
+
+622
+00:11:04,090 --> 00:11:04,100
+access it and we can't we can only
+ 
+
+623
+00:11:04,100 --> 00:11:06,790
+access it and we can't we can only
+access by now course one thing you could
+
+624
+00:11:06,790 --> 00:11:06,800
+access by now course one thing you could
+ 
+
+625
+00:11:06,800 --> 00:11:08,590
+access by now course one thing you could
+do on the other hand is be really smart
+
+626
+00:11:08,590 --> 00:11:08,600
+do on the other hand is be really smart
+ 
+
+627
+00:11:08,600 --> 00:11:10,960
+do on the other hand is be really smart
+about how you store data and store eight
+
+628
+00:11:10,960 --> 00:11:10,970
+about how you store data and store eight
+ 
+
+629
+00:11:10,970 --> 00:11:14,830
+about how you store data and store eight
+all in one bite that's totally okay one
+
+630
+00:11:14,830 --> 00:11:14,840
+all in one bite that's totally okay one
+ 
+
+631
+00:11:14,840 --> 00:11:16,810
+all in one bite that's totally okay one
+bit per bull but you still have that one
+
+632
+00:11:16,810 --> 00:11:16,820
+bit per bull but you still have that one
+ 
+
+633
+00:11:16,820 --> 00:11:19,090
+bit per bull but you still have that one
+byte of allocating memory we'll probably
+
+634
+00:11:19,090 --> 00:11:19,100
+byte of allocating memory we'll probably
+ 
+
+635
+00:11:19,100 --> 00:11:21,640
+byte of allocating memory we'll probably
+talk about advanced fun tricks like that
+
+636
+00:11:21,640 --> 00:11:21,650
+talk about advanced fun tricks like that
+ 
+
+637
+00:11:21,650 --> 00:11:24,640
+talk about advanced fun tricks like that
+in the future but for now a bull is one
+
+638
+00:11:24,640 --> 00:11:24,650
+in the future but for now a bull is one
+ 
+
+639
+00:11:24,650 --> 00:11:27,150
+in the future but for now a bull is one
+byte of memory so with all this talk of
+
+640
+00:11:27,150 --> 00:11:27,160
+byte of memory so with all this talk of
+ 
+
+641
+00:11:27,160 --> 00:11:30,220
+byte of memory so with all this talk of
+sizes and bytes and how much everything
+
+642
+00:11:30,220 --> 00:11:30,230
+sizes and bytes and how much everything
+ 
+
+643
+00:11:30,230 --> 00:11:33,820
+sizes and bytes and how much everything
+takes how how do we actually know how
+
+644
+00:11:33,820 --> 00:11:33,830
+takes how how do we actually know how
+ 
+
+645
+00:11:33,830 --> 00:11:35,980
+takes how how do we actually know how
+big a data type is it is dependent on
+
+646
+00:11:35,980 --> 00:11:35,990
+big a data type is it is dependent on
+ 
+
+647
+00:11:35,990 --> 00:11:37,180
+big a data type is it is dependent on
+the compiler after all is there
+
+648
+00:11:37,180 --> 00:11:37,190
+the compiler after all is there
+ 
+
+649
+00:11:37,190 --> 00:11:39,520
+the compiler after all is there
+somewhere we can check yes yes there is
+
+650
+00:11:39,520 --> 00:11:39,530
+somewhere we can check yes yes there is
+ 
+
+651
+00:11:39,530 --> 00:11:41,680
+somewhere we can check yes yes there is
+there's an operator we have available to
+
+652
+00:11:41,680 --> 00:11:41,690
+there's an operator we have available to
+ 
+
+653
+00:11:41,690 --> 00:11:43,930
+there's an operator we have available to
+us and zip applause called size of so if
+
+654
+00:11:43,930 --> 00:11:43,940
+us and zip applause called size of so if
+ 
+
+655
+00:11:43,940 --> 00:11:46,270
+us and zip applause called size of so if
+we come over here and we print size of
+
+656
+00:11:46,270 --> 00:11:46,280
+we come over here and we print size of
+ 
+
+657
+00:11:46,280 --> 00:11:48,730
+we come over here and we print size of
+wool for example we basically just type
+
+658
+00:11:48,730 --> 00:11:48,740
+wool for example we basically just type
+ 
+
+659
+00:11:48,740 --> 00:11:50,620
+wool for example we basically just type
+in the word size of and then either in
+
+660
+00:11:50,620 --> 00:11:50,630
+in the word size of and then either in
+ 
+
+661
+00:11:50,630 --> 00:11:52,870
+in the word size of and then either in
+brackets or not doesn't really matter
+
+662
+00:11:52,870 --> 00:11:52,880
+brackets or not doesn't really matter
+ 
+
+663
+00:11:52,880 --> 00:11:55,360
+brackets or not doesn't really matter
+although I do prefer to use brackets or
+
+664
+00:11:55,360 --> 00:11:55,370
+although I do prefer to use brackets or
+ 
+
+665
+00:11:55,370 --> 00:11:57,640
+although I do prefer to use brackets or
+parentheses I should say we type in our
+
+666
+00:11:57,640 --> 00:11:57,650
+parentheses I should say we type in our
+ 
+
+667
+00:11:57,650 --> 00:11:59,710
+parentheses I should say we type in our
+data type header five you can see it
+
+668
+00:11:59,710 --> 00:11:59,720
+data type header five you can see it
+ 
+
+669
+00:11:59,720 --> 00:12:01,930
+data type header five you can see it
+tells us that a bull is one byte if I
+
+670
+00:12:01,930 --> 00:12:01,940
+tells us that a bull is one byte if I
+ 
+
+671
+00:12:01,940 --> 00:12:04,660
+tells us that a bull is one byte if I
+replace this with int and hit f5 we have
+
+672
+00:12:04,660 --> 00:12:04,670
+replace this with int and hit f5 we have
+ 
+
+673
+00:12:04,670 --> 00:12:06,850
+replace this with int and hit f5 we have
+four and if I do something like double
+
+674
+00:12:06,850 --> 00:12:06,860
+four and if I do something like double
+ 
+
+675
+00:12:06,860 --> 00:12:09,760
+four and if I do something like double
+and hit f5 we have eight awesome
+
+676
+00:12:09,760 --> 00:12:09,770
+and hit f5 we have eight awesome
+ 
+
+677
+00:12:09,770 --> 00:12:12,010
+and hit f5 we have eight awesome
+critical stuff so that's basically all
+
+678
+00:12:12,010 --> 00:12:12,020
+critical stuff so that's basically all
+ 
+
+679
+00:12:12,020 --> 00:12:14,500
+critical stuff so that's basically all
+there is to variables or at least the
+
+680
+00:12:14,500 --> 00:12:14,510
+there is to variables or at least the
+ 
+
+681
+00:12:14,510 --> 00:12:16,000
+there is to variables or at least the
+primitive types that I've covered there
+
+682
+00:12:16,000 --> 00:12:16,010
+primitive types that I've covered there
+ 
+
+683
+00:12:16,010 --> 00:12:17,680
+primitive types that I've covered there
+are many different types that you can
+
+684
+00:12:17,680 --> 00:12:17,690
+are many different types that you can
+ 
+
+685
+00:12:17,690 --> 00:12:19,840
+are many different types that you can
+actually create in C++ and that have
+
+686
+00:12:19,840 --> 00:12:19,850
+actually create in C++ and that have
+ 
+
+687
+00:12:19,850 --> 00:12:21,400
+actually create in C++ and that have
+already been created for you however
+
+688
+00:12:21,400 --> 00:12:21,410
+already been created for you however
+ 
+
+689
+00:12:21,410 --> 00:12:22,990
+already been created for you however
+they're all custom types that are all
+
+690
+00:12:22,990 --> 00:12:23,000
+they're all custom types that are all
+ 
+
+691
+00:12:23,000 --> 00:12:25,540
+they're all custom types that are all
+based on these primitive types these are
+
+692
+00:12:25,540 --> 00:12:25,550
+based on these primitive types these are
+ 
+
+693
+00:12:25,550 --> 00:12:27,550
+based on these primitive types these are
+the building blocks that we use to
+
+694
+00:12:27,550 --> 00:12:27,560
+the building blocks that we use to
+ 
+
+695
+00:12:27,560 --> 00:12:30,250
+the building blocks that we use to
+define and store any kind of data we
+
+696
+00:12:30,250 --> 00:12:30,260
+define and store any kind of data we
+ 
+
+697
+00:12:30,260 --> 00:12:32,230
+define and store any kind of data we
+could possibly create now with any of
+
+698
+00:12:32,230 --> 00:12:32,240
+could possibly create now with any of
+ 
+
+699
+00:12:32,240 --> 00:12:34,180
+could possibly create now with any of
+these primitive data types we also have
+
+700
+00:12:34,180 --> 00:12:34,190
+these primitive data types we also have
+ 
+
+701
+00:12:34,190 --> 00:12:35,950
+these primitive data types we also have
+the ability to turn them into pointers
+
+702
+00:12:35,950 --> 00:12:35,960
+the ability to turn them into pointers
+ 
+
+703
+00:12:35,960 --> 00:12:38,140
+the ability to turn them into pointers
+or references pointers can be declared
+
+704
+00:12:38,140 --> 00:12:38,150
+or references pointers can be declared
+ 
+
+705
+00:12:38,150 --> 00:12:40,960
+or references pointers can be declared
+by writing an asterisk next to your type
+
+706
+00:12:40,960 --> 00:12:40,970
+by writing an asterisk next to your type
+ 
+
+707
+00:12:40,970 --> 00:12:44,170
+by writing an asterisk next to your type
+like this and references by an ampersand
+
+708
+00:12:44,170 --> 00:12:44,180
+like this and references by an ampersand
+ 
+
+709
+00:12:44,180 --> 00:12:46,240
+like this and references by an ampersand
+next year type pointers and references
+
+710
+00:12:46,240 --> 00:12:46,250
+next year type pointers and references
+ 
+
+711
+00:12:46,250 --> 00:12:49,360
+next year type pointers and references
+are such huge and complicated and vital
+
+712
+00:12:49,360 --> 00:12:49,370
+are such huge and complicated and vital
+ 
+
+713
+00:12:49,370 --> 00:12:51,490
+are such huge and complicated and vital
+topics that I really want to save them
+
+714
+00:12:51,490 --> 00:12:51,500
+topics that I really want to save them
+ 
+
+715
+00:12:51,500 --> 00:12:53,110
+topics that I really want to save them
+for separate videos so that you guys
+
+716
+00:12:53,110 --> 00:12:53,120
+for separate videos so that you guys
+ 
+
+717
+00:12:53,120 --> 00:12:54,820
+for separate videos so that you guys
+understand them properly so for now for
+
+718
+00:12:54,820 --> 00:12:54,830
+understand them properly so for now for
+ 
+
+719
+00:12:54,830 --> 00:12:56,230
+understand them properly so for now for
+this video we're just kind of stick with
+
+720
+00:12:56,230 --> 00:12:56,240
+this video we're just kind of stick with
+ 
+
+721
+00:12:56,240 --> 00:12:57,520
+this video we're just kind of stick with
+these primitive types make sure you
+
+722
+00:12:57,520 --> 00:12:57,530
+these primitive types make sure you
+ 
+
+723
+00:12:57,530 --> 00:12:59,410
+these primitive types make sure you
+understand them they're going to be the
+
+724
+00:12:59,410 --> 00:12:59,420
+understand them they're going to be the
+ 
+
+725
+00:12:59,420 --> 00:13:01,810
+understand them they're going to be the
+basis for pretty much every scene you
+
+726
+00:13:01,810 --> 00:13:01,820
+basis for pretty much every scene you
+ 
+
+727
+00:13:01,820 --> 00:13:03,550
+basis for pretty much every scene you
+ever write so they're really important
+
+728
+00:13:03,550 --> 00:13:03,560
+ever write so they're really important
+ 
+
+729
+00:13:03,560 --> 00:13:05,200
+ever write so they're really important
+but anyway I hope you guys enjoyed this
+
+730
+00:13:05,200 --> 00:13:05,210
+but anyway I hope you guys enjoyed this
+ 
+
+731
+00:13:05,210 --> 00:13:06,790
+but anyway I hope you guys enjoyed this
+video if you did please hit that like
+
+732
+00:13:06,790 --> 00:13:06,800
+video if you did please hit that like
+ 
+
+733
+00:13:06,800 --> 00:13:09,010
+video if you did please hit that like
+button you can also follow me on Twitter
+
+734
+00:13:09,010 --> 00:13:09,020
+button you can also follow me on Twitter
+ 
+
+735
+00:13:09,020 --> 00:13:11,440
+button you can also follow me on Twitter
+and Instagram and if you really like
+
+736
+00:13:11,440 --> 00:13:11,450
+and Instagram and if you really like
+ 
+
+737
+00:13:11,450 --> 00:13:13,240
+and Instagram and if you really like
+this video and you want to be a part of
+
+738
+00:13:13,240 --> 00:13:13,250
+this video and you want to be a part of
+ 
+
+739
+00:13:13,250 --> 00:13:13,980
+this video and you want to be a part of
+how to
+
+740
+00:13:13,980 --> 00:13:13,990
+how to
+ 
+
+741
+00:13:13,990 --> 00:13:15,900
+how to
+videos get made you want to contribute
+
+742
+00:13:15,900 --> 00:13:15,910
+videos get made you want to contribute
+ 
+
+743
+00:13:15,910 --> 00:13:17,730
+videos get made you want to contribute
+to the planning of these videos as well
+
+744
+00:13:17,730 --> 00:13:17,740
+to the planning of these videos as well
+ 
+
+745
+00:13:17,740 --> 00:13:20,760
+to the planning of these videos as well
+as receive early drafts of videos as I'm
+
+746
+00:13:20,760 --> 00:13:20,770
+as receive early drafts of videos as I'm
+ 
+
+747
+00:13:20,770 --> 00:13:22,560
+as receive early drafts of videos as I'm
+making them then please support me on
+
+748
+00:13:22,560 --> 00:13:22,570
+making them then please support me on
+ 
+
+749
+00:13:22,570 --> 00:13:24,420
+making them then please support me on
+patreon link will be in the description
+
+750
+00:13:24,420 --> 00:13:24,430
+patreon link will be in the description
+ 
+
+751
+00:13:24,430 --> 00:13:26,699
+patreon link will be in the description
+of this video your support there is what
+
+752
+00:13:26,699 --> 00:13:26,709
+of this video your support there is what
+ 
+
+753
+00:13:26,709 --> 00:13:28,590
+of this video your support there is what
+makes these videos possible thanks for
+
+754
+00:13:28,590 --> 00:13:28,600
+makes these videos possible thanks for
+ 
+
+755
+00:13:28,600 --> 00:13:29,910
+makes these videos possible thanks for
+watching guys I'll see you next time
+
+756
+00:13:29,910 --> 00:13:29,920
+watching guys I'll see you next time
+ 
+
+757
+00:13:29,920 --> 00:13:33,550
+watching guys I'll see you next time
+goodbye
+
+758
+00:13:33,550 --> 00:13:33,560
+
+ 
+
+759
+00:13:33,560 --> 00:13:43,190
+
+[Music]
+
+760
+00:13:43,190 --> 00:13:43,200
+
+ 
+
+761
+00:13:43,200 --> 00:13:45,260
+
+you
+

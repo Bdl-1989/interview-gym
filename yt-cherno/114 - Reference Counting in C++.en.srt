@@ -1,0 +1,3975 @@
+1
+00:00:00,000 --> 00:00:02,230
+
+Reference counting. What is it? How does
+
+2
+00:00:02,230 --> 00:00:02,240
+Reference counting. What is it? How does
+ 
+
+3
+00:00:02,240 --> 00:00:04,309
+Reference counting. What is it? How does
+it work? And why not just use SCD shared
+
+4
+00:00:04,309 --> 00:00:04,319
+it work? And why not just use SCD shared
+ 
+
+5
+00:00:04,319 --> 00:00:05,670
+it work? And why not just use SCD shared
+pointer? That is what we're talking
+
+6
+00:00:05,670 --> 00:00:05,680
+pointer? That is what we're talking
+ 
+
+7
+00:00:05,680 --> 00:00:06,869
+pointer? That is what we're talking
+about today. It's probably the number
+
+8
+00:00:06,869 --> 00:00:06,879
+about today. It's probably the number
+ 
+
+9
+00:00:06,879 --> 00:00:08,070
+about today. It's probably the number
+one question that people have when they
+
+10
+00:00:08,070 --> 00:00:08,080
+one question that people have when they
+ 
+
+11
+00:00:08,080 --> 00:00:10,230
+one question that people have when they
+see Hazel's codebase. What is this ref
+
+12
+00:00:10,230 --> 00:00:10,240
+see Hazel's codebase. What is this ref
+ 
+
+13
+00:00:10,240 --> 00:00:11,749
+see Hazel's codebase. What is this ref
+thing? Now, I want to quickly clear up a
+
+14
+00:00:11,749 --> 00:00:11,759
+thing? Now, I want to quickly clear up a
+ 
+
+15
+00:00:11,759 --> 00:00:13,830
+thing? Now, I want to quickly clear up a
+misconception. So, in Hazel, the game
+
+16
+00:00:13,830 --> 00:00:13,840
+misconception. So, in Hazel, the game
+ 
+
+17
+00:00:13,840 --> 00:00:16,070
+misconception. So, in Hazel, the game
+engine series version of Hazel, this
+
+18
+00:00:16,070 --> 00:00:16,080
+engine series version of Hazel, this
+ 
+
+19
+00:00:16,080 --> 00:00:18,710
+engine series version of Hazel, this
+which is a public GitHub repository, we
+
+20
+00:00:18,710 --> 00:00:18,720
+which is a public GitHub repository, we
+ 
+
+21
+00:00:18,720 --> 00:00:23,269
+which is a public GitHub repository, we
+do have inside base.h ref being defined
+
+22
+00:00:23,269 --> 00:00:23,279
+do have inside base.h ref being defined
+ 
+
+23
+00:00:23,279 --> 00:00:26,470
+do have inside base.h ref being defined
+as a shared pointer. So in this like
+
+24
+00:00:26,470 --> 00:00:26,480
+as a shared pointer. So in this like
+ 
+
+25
+00:00:26,480 --> 00:00:29,269
+as a shared pointer. So in this like
+free 2D game engine series version of
+
+26
+00:00:29,269 --> 00:00:29,279
+free 2D game engine series version of
+ 
+
+27
+00:00:29,279 --> 00:00:32,549
+free 2D game engine series version of
+Hazel, ref is in fact a shared pointer.
+
+28
+00:00:32,549 --> 00:00:32,559
+Hazel, ref is in fact a shared pointer.
+ 
+
+29
+00:00:32,559 --> 00:00:35,430
+Hazel, ref is in fact a shared pointer.
+However, inside real Hazel, so this is
+
+30
+00:00:35,430 --> 00:00:35,440
+However, inside real Hazel, so this is
+ 
+
+31
+00:00:35,440 --> 00:00:38,470
+However, inside real Hazel, so this is
+inside the big proper Hazel, ref is
+
+32
+00:00:38,470 --> 00:00:38,480
+inside the big proper Hazel, ref is
+ 
+
+33
+00:00:38,480 --> 00:00:40,470
+inside the big proper Hazel, ref is
+actually a class, a class that we are
+
+34
+00:00:40,470 --> 00:00:40,480
+actually a class, a class that we are
+ 
+
+35
+00:00:40,480 --> 00:00:42,630
+actually a class, a class that we are
+going to take a look at in more detail
+
+36
+00:00:42,630 --> 00:00:42,640
+going to take a look at in more detail
+ 
+
+37
+00:00:42,640 --> 00:00:44,549
+going to take a look at in more detail
+over here. In this video, I thought that
+
+38
+00:00:44,549 --> 00:00:44,559
+over here. In this video, I thought that
+ 
+
+39
+00:00:44,559 --> 00:00:46,549
+over here. In this video, I thought that
+it would make more sense to explain the
+
+40
+00:00:46,549 --> 00:00:46,559
+it would make more sense to explain the
+ 
+
+41
+00:00:46,559 --> 00:00:48,389
+it would make more sense to explain the
+concept of reference counting by taking
+
+42
+00:00:48,389 --> 00:00:48,399
+concept of reference counting by taking
+ 
+
+43
+00:00:48,399 --> 00:00:50,630
+concept of reference counting by taking
+a look at some examples. As we look at
+
+44
+00:00:50,630 --> 00:00:50,640
+a look at some examples. As we look at
+ 
+
+45
+00:00:50,640 --> 00:00:53,029
+a look at some examples. As we look at
+the examples, I'll explain more of it.
+
+46
+00:00:53,029 --> 00:00:53,039
+the examples, I'll explain more of it.
+ 
+
+47
+00:00:53,039 --> 00:00:54,709
+the examples, I'll explain more of it.
+We'll dive into the internals of how it
+
+48
+00:00:54,709 --> 00:00:54,719
+We'll dive into the internals of how it
+ 
+
+49
+00:00:54,719 --> 00:00:56,389
+We'll dive into the internals of how it
+works and hopefully that will help some
+
+50
+00:00:56,389 --> 00:00:56,399
+works and hopefully that will help some
+ 
+
+51
+00:00:56,399 --> 00:00:58,229
+works and hopefully that will help some
+of you who have never encountered this
+
+52
+00:00:58,229 --> 00:00:58,239
+of you who have never encountered this
+ 
+
+53
+00:00:58,239 --> 00:01:00,389
+of you who have never encountered this
+sort of thing before. But fundamentally,
+
+54
+00:01:00,389 --> 00:01:00,399
+sort of thing before. But fundamentally,
+ 
+
+55
+00:01:00,399 --> 00:01:02,310
+sort of thing before. But fundamentally,
+reference counting solves the problem of
+
+56
+00:01:02,310 --> 00:01:02,320
+reference counting solves the problem of
+ 
+
+57
+00:01:02,320 --> 00:01:04,310
+reference counting solves the problem of
+I have an object that I eventually want
+
+58
+00:01:04,310 --> 00:01:04,320
+I have an object that I eventually want
+ 
+
+59
+00:01:04,320 --> 00:01:06,630
+I have an object that I eventually want
+to be destroyed, but I'm not quite sure
+
+60
+00:01:06,630 --> 00:01:06,640
+to be destroyed, but I'm not quite sure
+ 
+
+61
+00:01:06,640 --> 00:01:08,789
+to be destroyed, but I'm not quite sure
+when and how. And either way, I don't
+
+62
+00:01:08,789 --> 00:01:08,799
+when and how. And either way, I don't
+ 
+
+63
+00:01:08,799 --> 00:01:10,390
+when and how. And either way, I don't
+want to handle that. It's supposed to be
+
+64
+00:01:10,390 --> 00:01:10,400
+want to handle that. It's supposed to be
+ 
+
+65
+00:01:10,400 --> 00:01:12,630
+want to handle that. It's supposed to be
+a mechanism for automatic memory
+
+66
+00:01:12,630 --> 00:01:12,640
+a mechanism for automatic memory
+ 
+
+67
+00:01:12,640 --> 00:01:14,390
+a mechanism for automatic memory
+management. But I want to stress that
+
+68
+00:01:14,390 --> 00:01:14,400
+management. But I want to stress that
+ 
+
+69
+00:01:14,400 --> 00:01:16,550
+management. But I want to stress that
+sometimes this particular way of
+
+70
+00:01:16,550 --> 00:01:16,560
+sometimes this particular way of
+ 
+
+71
+00:01:16,560 --> 00:01:18,630
+sometimes this particular way of
+automatically managing your memory is
+
+72
+00:01:18,630 --> 00:01:18,640
+automatically managing your memory is
+ 
+
+73
+00:01:18,640 --> 00:01:21,030
+automatically managing your memory is
+your only option because sometimes you
+
+74
+00:01:21,030 --> 00:01:21,040
+your only option because sometimes you
+ 
+
+75
+00:01:21,040 --> 00:01:23,670
+your only option because sometimes you
+don't really know exactly when or who
+
+76
+00:01:23,670 --> 00:01:23,680
+don't really know exactly when or who
+ 
+
+77
+00:01:23,680 --> 00:01:26,149
+don't really know exactly when or who
+will be last to use a particular memory
+
+78
+00:01:26,149 --> 00:01:26,159
+will be last to use a particular memory
+ 
+
+79
+00:01:26,159 --> 00:01:28,310
+will be last to use a particular memory
+allocation before it can be freed. So
+
+80
+00:01:28,310 --> 00:01:28,320
+allocation before it can be freed. So
+ 
+
+81
+00:01:28,320 --> 00:01:30,630
+allocation before it can be freed. So
+diving into this, what do I have here? I
+
+82
+00:01:30,630 --> 00:01:30,640
+diving into this, what do I have here? I
+ 
+
+83
+00:01:30,640 --> 00:01:32,390
+diving into this, what do I have here? I
+have a resource that I would like to be
+
+84
+00:01:32,390 --> 00:01:32,400
+have a resource that I would like to be
+ 
+
+85
+00:01:32,400 --> 00:01:35,109
+have a resource that I would like to be
+heap allocated and then used for some
+
+86
+00:01:35,109 --> 00:01:35,119
+heap allocated and then used for some
+ 
+
+87
+00:01:35,119 --> 00:01:37,510
+heap allocated and then used for some
+sort of lifetime. when everyone who is
+
+88
+00:01:37,510 --> 00:01:37,520
+sort of lifetime. when everyone who is
+ 
+
+89
+00:01:37,520 --> 00:01:40,149
+sort of lifetime. when everyone who is
+using this resource is done with it, I
+
+90
+00:01:40,149 --> 00:01:40,159
+using this resource is done with it, I
+ 
+
+91
+00:01:40,159 --> 00:01:41,830
+using this resource is done with it, I
+would like it to be deleted because no
+
+92
+00:01:41,830 --> 00:01:41,840
+would like it to be deleted because no
+ 
+
+93
+00:01:41,840 --> 00:01:44,230
+would like it to be deleted because no
+one's using it anymore. The idea is that
+
+94
+00:01:44,230 --> 00:01:44,240
+one's using it anymore. The idea is that
+ 
+
+95
+00:01:44,240 --> 00:01:45,990
+one's using it anymore. The idea is that
+this particular way of creating a
+
+96
+00:01:45,990 --> 00:01:46,000
+this particular way of creating a
+ 
+
+97
+00:01:46,000 --> 00:01:48,710
+this particular way of creating a
+resource is sort of replacing just a
+
+98
+00:01:48,710 --> 00:01:48,720
+resource is sort of replacing just a
+ 
+
+99
+00:01:48,720 --> 00:01:50,789
+resource is sort of replacing just a
+regular heap allocation. So if I did
+
+100
+00:01:50,789 --> 00:01:50,799
+regular heap allocation. So if I did
+ 
+
+101
+00:01:50,799 --> 00:01:53,270
+regular heap allocation. So if I did
+something like this or that, I would of
+
+102
+00:01:53,270 --> 00:01:53,280
+something like this or that, I would of
+ 
+
+103
+00:01:53,280 --> 00:01:55,749
+something like this or that, I would of
+course have to then at some point delete
+
+104
+00:01:55,749 --> 00:01:55,759
+course have to then at some point delete
+ 
+
+105
+00:01:55,759 --> 00:01:58,389
+course have to then at some point delete
+it. This just automates that. Why?
+
+106
+00:01:58,389 --> 00:01:58,399
+it. This just automates that. Why?
+ 
+
+107
+00:01:58,399 --> 00:02:00,709
+it. This just automates that. Why?
+because this ref class will inside the
+
+108
+00:02:00,709 --> 00:02:00,719
+because this ref class will inside the
+ 
+
+109
+00:02:00,719 --> 00:02:03,350
+because this ref class will inside the
+create function actually create my new
+
+110
+00:02:03,350 --> 00:02:03,360
+create function actually create my new
+ 
+
+111
+00:02:03,360 --> 00:02:05,990
+create function actually create my new
+object on the heap and then eventually
+
+112
+00:02:05,990 --> 00:02:06,000
+object on the heap and then eventually
+ 
+
+113
+00:02:06,000 --> 00:02:08,229
+object on the heap and then eventually
+when the reference count hits zero it
+
+114
+00:02:08,229 --> 00:02:08,239
+when the reference count hits zero it
+ 
+
+115
+00:02:08,239 --> 00:02:10,869
+when the reference count hits zero it
+will be deleted. So you can see that
+
+116
+00:02:10,869 --> 00:02:10,879
+will be deleted. So you can see that
+ 
+
+117
+00:02:10,879 --> 00:02:12,949
+will be deleted. So you can see that
+this new and delete is just being
+
+118
+00:02:12,949 --> 00:02:12,959
+this new and delete is just being
+ 
+
+119
+00:02:12,959 --> 00:02:15,110
+this new and delete is just being
+automatically done. It's abstracted away
+
+120
+00:02:15,110 --> 00:02:15,120
+automatically done. It's abstracted away
+ 
+
+121
+00:02:15,120 --> 00:02:17,430
+automatically done. It's abstracted away
+into this ref class. Now there are many
+
+122
+00:02:17,430 --> 00:02:17,440
+into this ref class. Now there are many
+ 
+
+123
+00:02:17,440 --> 00:02:19,270
+into this ref class. Now there are many
+different ways that we can sort of
+
+124
+00:02:19,270 --> 00:02:19,280
+different ways that we can sort of
+ 
+
+125
+00:02:19,280 --> 00:02:21,270
+different ways that we can sort of
+automate or abstract new and delete. Of
+
+126
+00:02:21,270 --> 00:02:21,280
+automate or abstract new and delete. Of
+ 
+
+127
+00:02:21,280 --> 00:02:22,710
+automate or abstract new and delete. Of
+course we could use a unique pointer. We
+
+128
+00:02:22,710 --> 00:02:22,720
+course we could use a unique pointer. We
+ 
+
+129
+00:02:22,720 --> 00:02:24,550
+course we could use a unique pointer. We
+could even use a shared pointer in this
+
+130
+00:02:24,550 --> 00:02:24,560
+could even use a shared pointer in this
+ 
+
+131
+00:02:24,560 --> 00:02:26,470
+could even use a shared pointer in this
+case. We'll talk about the nuances of
+
+132
+00:02:26,470 --> 00:02:26,480
+case. We'll talk about the nuances of
+ 
+
+133
+00:02:26,480 --> 00:02:29,030
+case. We'll talk about the nuances of
+those specific other techniques. We'll
+
+134
+00:02:29,030 --> 00:02:29,040
+those specific other techniques. We'll
+ 
+
+135
+00:02:29,040 --> 00:02:30,949
+those specific other techniques. We'll
+call them later in this video. But that
+
+136
+00:02:30,949 --> 00:02:30,959
+call them later in this video. But that
+ 
+
+137
+00:02:30,959 --> 00:02:32,949
+call them later in this video. But that
+is the gist of how this works. This
+
+138
+00:02:32,949 --> 00:02:32,959
+is the gist of how this works. This
+ 
+
+139
+00:02:32,959 --> 00:02:34,550
+is the gist of how this works. This
+isn't actually a compile error, by the
+
+140
+00:02:34,550 --> 00:02:34,560
+isn't actually a compile error, by the
+ 
+
+141
+00:02:34,560 --> 00:02:36,949
+isn't actually a compile error, by the
+way. This is just Visual Studio. Okay.
+
+142
+00:02:36,949 --> 00:02:36,959
+way. This is just Visual Studio. Okay.
+ 
+
+143
+00:02:36,959 --> 00:02:39,190
+way. This is just Visual Studio. Okay.
+So, to explain the actual concept of
+
+144
+00:02:39,190 --> 00:02:39,200
+So, to explain the actual concept of
+ 
+
+145
+00:02:39,200 --> 00:02:41,589
+So, to explain the actual concept of
+reference counting, it works like this.
+
+146
+00:02:41,589 --> 00:02:41,599
+reference counting, it works like this.
+ 
+
+147
+00:02:41,599 --> 00:02:43,990
+reference counting, it works like this.
+It's simply a way to track how many
+
+148
+00:02:43,990 --> 00:02:44,000
+It's simply a way to track how many
+ 
+
+149
+00:02:44,000 --> 00:02:46,710
+It's simply a way to track how many
+different things are using your resource
+
+150
+00:02:46,710 --> 00:02:46,720
+different things are using your resource
+ 
+
+151
+00:02:46,720 --> 00:02:48,790
+different things are using your resource
+with the idea being that once the
+
+152
+00:02:48,790 --> 00:02:48,800
+with the idea being that once the
+ 
+
+153
+00:02:48,800 --> 00:02:51,670
+with the idea being that once the
+reference count hits zero, nothing is
+
+154
+00:02:51,670 --> 00:02:51,680
+reference count hits zero, nothing is
+ 
+
+155
+00:02:51,680 --> 00:02:53,830
+reference count hits zero, nothing is
+using your resource and therefore it can
+
+156
+00:02:53,830 --> 00:02:53,840
+using your resource and therefore it can
+ 
+
+157
+00:02:53,840 --> 00:02:55,670
+using your resource and therefore it can
+be freed. So to demonstrate this
+
+158
+00:02:55,670 --> 00:02:55,680
+be freed. So to demonstrate this
+ 
+
+159
+00:02:55,680 --> 00:02:57,750
+be freed. So to demonstrate this
+practically in this case when we create
+
+160
+00:02:57,750 --> 00:02:57,760
+practically in this case when we create
+ 
+
+161
+00:02:57,760 --> 00:03:00,070
+practically in this case when we create
+this resource exactly one thing is using
+
+162
+00:03:00,070 --> 00:03:00,080
+this resource exactly one thing is using
+ 
+
+163
+00:03:00,080 --> 00:03:02,710
+this resource exactly one thing is using
+it this this variable resource is
+
+164
+00:03:02,710 --> 00:03:02,720
+it this this variable resource is
+ 
+
+165
+00:03:02,720 --> 00:03:05,030
+it this this variable resource is
+holding our actual resource that is our
+
+166
+00:03:05,030 --> 00:03:05,040
+holding our actual resource that is our
+ 
+
+167
+00:03:05,040 --> 00:03:07,350
+holding our actual resource that is our
+one reference to it. So therefore the
+
+168
+00:03:07,350 --> 00:03:07,360
+one reference to it. So therefore the
+ 
+
+169
+00:03:07,360 --> 00:03:09,509
+one reference to it. So therefore the
+reference count is one. When we then
+
+170
+00:03:09,509 --> 00:03:09,519
+reference count is one. When we then
+ 
+
+171
+00:03:09,519 --> 00:03:11,670
+reference count is one. When we then
+want to print it what are we doing here?
+
+172
+00:03:11,670 --> 00:03:11,680
+want to print it what are we doing here?
+ 
+
+173
+00:03:11,680 --> 00:03:13,270
+want to print it what are we doing here?
+We're grabbing this resource variable
+
+174
+00:03:13,270 --> 00:03:13,280
+We're grabbing this resource variable
+ 
+
+175
+00:03:13,280 --> 00:03:15,270
+We're grabbing this resource variable
+and we are passing it by value. We're
+
+176
+00:03:15,270 --> 00:03:15,280
+and we are passing it by value. We're
+ 
+
+177
+00:03:15,280 --> 00:03:17,990
+and we are passing it by value. We're
+copying it into this print ref count
+
+178
+00:03:17,990 --> 00:03:18,000
+copying it into this print ref count
+ 
+
+179
+00:03:18,000 --> 00:03:20,390
+copying it into this print ref count
+function. So therefore at this point
+
+180
+00:03:20,390 --> 00:03:20,400
+function. So therefore at this point
+ 
+
+181
+00:03:20,400 --> 00:03:22,949
+function. So therefore at this point
+within this scope over here the
+
+182
+00:03:22,949 --> 00:03:22,959
+within this scope over here the
+ 
+
+183
+00:03:22,959 --> 00:03:26,070
+within this scope over here the
+reference count of resource is two. Then
+
+184
+00:03:26,070 --> 00:03:26,080
+reference count of resource is two. Then
+ 
+
+185
+00:03:26,080 --> 00:03:28,149
+reference count of resource is two. Then
+we print it. So we should see two in the
+
+186
+00:03:28,149 --> 00:03:28,159
+we print it. So we should see two in the
+ 
+
+187
+00:03:28,159 --> 00:03:30,070
+we print it. So we should see two in the
+console. And then when we hit this and
+
+188
+00:03:30,070 --> 00:03:30,080
+console. And then when we hit this and
+ 
+
+189
+00:03:30,080 --> 00:03:32,390
+console. And then when we hit this and
+we return back over here this particular
+
+190
+00:03:32,390 --> 00:03:32,400
+we return back over here this particular
+ 
+
+191
+00:03:32,400 --> 00:03:34,229
+we return back over here this particular
+resource variable that was created by us
+
+192
+00:03:34,229 --> 00:03:34,239
+resource variable that was created by us
+ 
+
+193
+00:03:34,239 --> 00:03:36,470
+resource variable that was created by us
+copying our original resource variable
+
+194
+00:03:36,470 --> 00:03:36,480
+copying our original resource variable
+ 
+
+195
+00:03:36,480 --> 00:03:39,030
+copying our original resource variable
+into this function is now gone. It's
+
+196
+00:03:39,030 --> 00:03:39,040
+into this function is now gone. It's
+ 
+
+197
+00:03:39,040 --> 00:03:41,589
+into this function is now gone. It's
+it's dead. It's been destroyed. And so
+
+198
+00:03:41,589 --> 00:03:41,599
+it's dead. It's been destroyed. And so
+ 
+
+199
+00:03:41,599 --> 00:03:43,830
+it's dead. It's been destroyed. And so
+our reference count falls back down to
+
+200
+00:03:43,830 --> 00:03:43,840
+our reference count falls back down to
+ 
+
+201
+00:03:43,840 --> 00:03:47,190
+our reference count falls back down to
+one. Then we hit the end of this scope
+
+202
+00:03:47,190 --> 00:03:47,200
+one. Then we hit the end of this scope
+ 
+
+203
+00:03:47,200 --> 00:03:50,229
+one. Then we hit the end of this scope
+and this resource variable is now done.
+
+204
+00:03:50,229 --> 00:03:50,239
+and this resource variable is now done.
+ 
+
+205
+00:03:50,239 --> 00:03:52,470
+and this resource variable is now done.
+It's destroyed. And so the reference
+
+206
+00:03:52,470 --> 00:03:52,480
+It's destroyed. And so the reference
+ 
+
+207
+00:03:52,480 --> 00:03:54,630
+It's destroyed. And so the reference
+count of our actual resource that is
+
+208
+00:03:54,630 --> 00:03:54,640
+count of our actual resource that is
+ 
+
+209
+00:03:54,640 --> 00:03:57,589
+count of our actual resource that is
+held within this resource variable goes
+
+210
+00:03:57,589 --> 00:03:57,599
+held within this resource variable goes
+ 
+
+211
+00:03:57,599 --> 00:04:00,630
+held within this resource variable goes
+down to zero at which point it gets
+
+212
+00:04:00,630 --> 00:04:00,640
+down to zero at which point it gets
+ 
+
+213
+00:04:00,640 --> 00:04:02,949
+down to zero at which point it gets
+destroyed. And so by the time we hit
+
+214
+00:04:02,949 --> 00:04:02,959
+destroyed. And so by the time we hit
+ 
+
+215
+00:04:02,959 --> 00:04:05,589
+destroyed. And so by the time we hit
+this print line function over here, our
+
+216
+00:04:05,589 --> 00:04:05,599
+this print line function over here, our
+ 
+
+217
+00:04:05,599 --> 00:04:07,429
+this print line function over here, our
+reference count is zero. But also the
+
+218
+00:04:07,429 --> 00:04:07,439
+reference count is zero. But also the
+ 
+
+219
+00:04:07,439 --> 00:04:09,270
+reference count is zero. But also the
+actual object has been destroyed. Now
+
+220
+00:04:09,270 --> 00:04:09,280
+actual object has been destroyed. Now
+ 
+
+221
+00:04:09,280 --> 00:04:11,030
+actual object has been destroyed. Now
+what is resource? resource is a very
+
+222
+00:04:11,030 --> 00:04:11,040
+what is resource? resource is a very
+ 
+
+223
+00:04:11,040 --> 00:04:13,190
+what is resource? resource is a very
+very basic class that just simply says
+
+224
+00:04:13,190 --> 00:04:13,200
+very basic class that just simply says
+ 
+
+225
+00:04:13,200 --> 00:04:15,750
+very basic class that just simply says
+that it was constructed destroyed and
+
+226
+00:04:15,750 --> 00:04:15,760
+that it was constructed destroyed and
+ 
+
+227
+00:04:15,760 --> 00:04:18,229
+that it was constructed destroyed and
+for a more complicated example later in
+
+228
+00:04:18,229 --> 00:04:18,239
+for a more complicated example later in
+ 
+
+229
+00:04:18,239 --> 00:04:20,150
+for a more complicated example later in
+this video we have this as well. You may
+
+230
+00:04:20,150 --> 00:04:20,160
+this video we have this as well. You may
+ 
+
+231
+00:04:20,160 --> 00:04:21,990
+this video we have this as well. You may
+also notice that this is actually
+
+232
+00:04:21,990 --> 00:04:22,000
+also notice that this is actually
+ 
+
+233
+00:04:22,000 --> 00:04:23,990
+also notice that this is actually
+deriving from a class called ref
+
+234
+00:04:23,990 --> 00:04:24,000
+deriving from a class called ref
+ 
+
+235
+00:04:24,000 --> 00:04:26,550
+deriving from a class called ref
+counted. More on that later. So if I do
+
+236
+00:04:26,550 --> 00:04:26,560
+counted. More on that later. So if I do
+ 
+
+237
+00:04:26,560 --> 00:04:28,550
+counted. More on that later. So if I do
+actually run this program then you will
+
+238
+00:04:28,550 --> 00:04:28,560
+actually run this program then you will
+ 
+
+239
+00:04:28,560 --> 00:04:30,790
+actually run this program then you will
+see the result. So we construct the
+
+240
+00:04:30,790 --> 00:04:30,800
+see the result. So we construct the
+ 
+
+241
+00:04:30,800 --> 00:04:32,950
+see the result. So we construct the
+resource which happens over here. We
+
+242
+00:04:32,950 --> 00:04:32,960
+resource which happens over here. We
+ 
+
+243
+00:04:32,960 --> 00:04:35,270
+resource which happens over here. We
+print the resource ref count which it is
+
+244
+00:04:35,270 --> 00:04:35,280
+print the resource ref count which it is
+ 
+
+245
+00:04:35,280 --> 00:04:37,350
+print the resource ref count which it is
+two as I explained. Then after this
+
+246
+00:04:37,350 --> 00:04:37,360
+two as I explained. Then after this
+ 
+
+247
+00:04:37,360 --> 00:04:38,710
+two as I explained. Then after this
+function returns, the reference count
+
+248
+00:04:38,710 --> 00:04:38,720
+function returns, the reference count
+ 
+
+249
+00:04:38,720 --> 00:04:40,710
+function returns, the reference count
+goes back down to one. We hit the end of
+
+250
+00:04:40,710 --> 00:04:40,720
+goes back down to one. We hit the end of
+ 
+
+251
+00:04:40,720 --> 00:04:42,469
+goes back down to one. We hit the end of
+the scope. The reference count goes down
+
+252
+00:04:42,469 --> 00:04:42,479
+the scope. The reference count goes down
+ 
+
+253
+00:04:42,479 --> 00:04:45,510
+the scope. The reference count goes down
+to zero. Our resource is destroyed. And
+
+254
+00:04:45,510 --> 00:04:45,520
+to zero. Our resource is destroyed. And
+ 
+
+255
+00:04:45,520 --> 00:04:47,670
+to zero. Our resource is destroyed. And
+then finally, our program ends. If I
+
+256
+00:04:47,670 --> 00:04:47,680
+then finally, our program ends. If I
+ 
+
+257
+00:04:47,680 --> 00:04:49,590
+then finally, our program ends. If I
+just pull this out and paste it into
+
+258
+00:04:49,590 --> 00:04:49,600
+just pull this out and paste it into
+ 
+
+259
+00:04:49,600 --> 00:04:51,350
+just pull this out and paste it into
+here and here, then this becomes a
+
+260
+00:04:51,350 --> 00:04:51,360
+here and here, then this becomes a
+ 
+
+261
+00:04:51,360 --> 00:04:52,950
+here and here, then this becomes a
+little bit more clearer. We construct
+
+262
+00:04:52,950 --> 00:04:52,960
+little bit more clearer. We construct
+ 
+
+263
+00:04:52,960 --> 00:04:54,230
+little bit more clearer. We construct
+the resource. We have a reference count
+
+264
+00:04:54,230 --> 00:04:54,240
+the resource. We have a reference count
+ 
+
+265
+00:04:54,240 --> 00:04:55,990
+the resource. We have a reference count
+of one. We put it into this function. It
+
+266
+00:04:55,990 --> 00:04:56,000
+of one. We put it into this function. It
+ 
+
+267
+00:04:56,000 --> 00:04:57,830
+of one. We put it into this function. It
+goes up to two. It gets destroyed. Goes
+
+268
+00:04:57,830 --> 00:04:57,840
+goes up to two. It gets destroyed. Goes
+ 
+
+269
+00:04:57,840 --> 00:04:59,590
+goes up to two. It gets destroyed. Goes
+back down to one. And that's it. So
+
+270
+00:04:59,590 --> 00:04:59,600
+back down to one. And that's it. So
+ 
+
+271
+00:04:59,600 --> 00:05:01,909
+back down to one. And that's it. So
+ultimately, this ref object just simply
+
+272
+00:05:01,909 --> 00:05:01,919
+ultimately, this ref object just simply
+ 
+
+273
+00:05:01,919 --> 00:05:05,030
+ultimately, this ref object just simply
+holds the pointer. So we have a pointer
+
+274
+00:05:05,030 --> 00:05:05,040
+holds the pointer. So we have a pointer
+ 
+
+275
+00:05:05,040 --> 00:05:07,909
+holds the pointer. So we have a pointer
+of a particular type. This is our heap
+
+276
+00:05:07,909 --> 00:05:07,919
+of a particular type. This is our heap
+ 
+
+277
+00:05:07,919 --> 00:05:11,909
+of a particular type. This is our heap
+allocation. This is what the ref class
+
+278
+00:05:11,909 --> 00:05:11,919
+allocation. This is what the ref class
+ 
+
+279
+00:05:11,919 --> 00:05:14,070
+allocation. This is what the ref class
+holds. That's all it is. It's just
+
+280
+00:05:14,070 --> 00:05:14,080
+holds. That's all it is. It's just
+ 
+
+281
+00:05:14,080 --> 00:05:16,469
+holds. That's all it is. It's just
+holding a pointer and it's providing all
+
+282
+00:05:16,469 --> 00:05:16,479
+holding a pointer and it's providing all
+ 
+
+283
+00:05:16,479 --> 00:05:18,629
+holding a pointer and it's providing all
+of this functionality around that
+
+284
+00:05:18,629 --> 00:05:18,639
+of this functionality around that
+ 
+
+285
+00:05:18,639 --> 00:05:20,629
+of this functionality around that
+pointer. What about the actual reference
+
+286
+00:05:20,629 --> 00:05:20,639
+pointer. What about the actual reference
+ 
+
+287
+00:05:20,639 --> 00:05:23,189
+pointer. What about the actual reference
+count? Well, that is stored in the
+
+288
+00:05:23,189 --> 00:05:23,199
+count? Well, that is stored in the
+ 
+
+289
+00:05:23,199 --> 00:05:25,909
+count? Well, that is stored in the
+actual resource. So in the resource
+
+290
+00:05:25,909 --> 00:05:25,919
+actual resource. So in the resource
+ 
+
+291
+00:05:25,919 --> 00:05:28,310
+actual resource. So in the resource
+class itself, it derives from ref
+
+292
+00:05:28,310 --> 00:05:28,320
+class itself, it derives from ref
+ 
+
+293
+00:05:28,320 --> 00:05:29,990
+class itself, it derives from ref
+counted. And the reason for that is
+
+294
+00:05:29,990 --> 00:05:30,000
+counted. And the reason for that is
+ 
+
+295
+00:05:30,000 --> 00:05:32,629
+counted. And the reason for that is
+because this has the reference count.
+
+296
+00:05:32,629 --> 00:05:32,639
+because this has the reference count.
+ 
+
+297
+00:05:32,639 --> 00:05:35,189
+because this has the reference count.
+It's just a normal unsigned integer. It
+
+298
+00:05:35,189 --> 00:05:35,199
+It's just a normal unsigned integer. It
+ 
+
+299
+00:05:35,199 --> 00:05:37,510
+It's just a normal unsigned integer. It
+is atomic because multi-threading is a
+
+300
+00:05:37,510 --> 00:05:37,520
+is atomic because multi-threading is a
+ 
+
+301
+00:05:37,520 --> 00:05:39,590
+is atomic because multi-threading is a
+thing. However, ultimately it's just a
+
+302
+00:05:39,590 --> 00:05:39,600
+thing. However, ultimately it's just a
+ 
+
+303
+00:05:39,600 --> 00:05:42,710
+thing. However, ultimately it's just a
+uint 32t. You can see it starts at zero.
+
+304
+00:05:42,710 --> 00:05:42,720
+uint 32t. You can see it starts at zero.
+ 
+
+305
+00:05:42,720 --> 00:05:44,629
+uint 32t. You can see it starts at zero.
+We have increment and decrement ref
+
+306
+00:05:44,629 --> 00:05:44,639
+We have increment and decrement ref
+ 
+
+307
+00:05:44,639 --> 00:05:46,790
+We have increment and decrement ref
+count. And when the ref class is
+
+308
+00:05:46,790 --> 00:05:46,800
+count. And when the ref class is
+ 
+
+309
+00:05:46,800 --> 00:05:48,870
+count. And when the ref class is
+actually constructed with a valid
+
+310
+00:05:48,870 --> 00:05:48,880
+actually constructed with a valid
+ 
+
+311
+00:05:48,880 --> 00:05:51,670
+actually constructed with a valid
+nonnull pointer, then we will increment
+
+312
+00:05:51,670 --> 00:05:51,680
+nonnull pointer, then we will increment
+ 
+
+313
+00:05:51,680 --> 00:05:53,990
+nonnull pointer, then we will increment
+the reference count, which simply calls
+
+314
+00:05:53,990 --> 00:05:54,000
+the reference count, which simply calls
+ 
+
+315
+00:05:54,000 --> 00:05:56,469
+the reference count, which simply calls
+increment reference count on the actual
+
+316
+00:05:56,469 --> 00:05:56,479
+increment reference count on the actual
+ 
+
+317
+00:05:56,479 --> 00:05:58,390
+increment reference count on the actual
+object. Now, how can we speak about
+
+318
+00:05:58,390 --> 00:05:58,400
+object. Now, how can we speak about
+ 
+
+319
+00:05:58,400 --> 00:05:59,749
+object. Now, how can we speak about
+memory management without even
+
+320
+00:05:59,749 --> 00:05:59,759
+memory management without even
+ 
+
+321
+00:05:59,759 --> 00:06:02,209
+memory management without even
+mentioning Rust, the language that fixes
+
+322
+00:06:02,209 --> 00:06:02,219
+mentioning Rust, the language that fixes
+ 
+
+323
+00:06:02,219 --> 00:06:04,710
+mentioning Rust, the language that fixes
+[music] it all? Well, at least tries to
+
+324
+00:06:04,710 --> 00:06:04,720
+[music] it all? Well, at least tries to
+ 
+
+325
+00:06:04,720 --> 00:06:06,070
+[music] it all? Well, at least tries to
+make it better. Why don't you find out
+
+326
+00:06:06,070 --> 00:06:06,080
+make it better. Why don't you find out
+ 
+
+327
+00:06:06,080 --> 00:06:07,830
+make it better. Why don't you find out
+for yourself and just learn Rust with
+
+328
+00:06:07,830 --> 00:06:07,840
+for yourself and just learn Rust with
+ 
+
+329
+00:06:07,840 --> 00:06:09,350
+for yourself and just learn Rust with
+Let's Get Rusty, the sponsor of this
+
+330
+00:06:09,350 --> 00:06:09,360
+Let's Get Rusty, the sponsor of this
+ 
+
+331
+00:06:09,360 --> 00:06:10,790
+Let's Get Rusty, the sponsor of this
+video. Let's Get Rusty focuses
+
+332
+00:06:10,790 --> 00:06:10,800
+video. Let's Get Rusty focuses
+ 
+
+333
+00:06:10,800 --> 00:06:12,550
+video. Let's Get Rusty focuses
+specifically on Rust education and job
+
+334
+00:06:12,550 --> 00:06:12,560
+specifically on Rust education and job
+ 
+
+335
+00:06:12,560 --> 00:06:14,230
+specifically on Rust education and job
+ready training made by a fellow YouTuber
+
+336
+00:06:14,230 --> 00:06:14,240
+ready training made by a fellow YouTuber
+ 
+
+337
+00:06:14,240 --> 00:06:15,830
+ready training made by a fellow YouTuber
+with a YouTube channel all about Rust.
+
+338
+00:06:15,830 --> 00:06:15,840
+with a YouTube channel all about Rust.
+ 
+
+339
+00:06:15,840 --> 00:06:17,110
+with a YouTube channel all about Rust.
+If you're used to a low-level language
+
+340
+00:06:17,110 --> 00:06:17,120
+If you're used to a low-level language
+ 
+
+341
+00:06:17,120 --> 00:06:19,590
+If you're used to a low-level language
+like C or C++, Rust builds on that and
+
+342
+00:06:19,590 --> 00:06:19,600
+like C or C++, Rust builds on that and
+ 
+
+343
+00:06:19,600 --> 00:06:21,830
+like C or C++, Rust builds on that and
+tries to improve it with modern tooling,
+
+344
+00:06:21,830 --> 00:06:21,840
+tries to improve it with modern tooling,
+ 
+
+345
+00:06:21,840 --> 00:06:23,749
+tries to improve it with modern tooling,
+which helps greatly with safety and
+
+346
+00:06:23,749 --> 00:06:23,759
+which helps greatly with safety and
+ 
+
+347
+00:06:23,759 --> 00:06:25,110
+which helps greatly with safety and
+things [music] like threads.
+
+348
+00:06:25,110 --> 00:06:25,120
+things [music] like threads.
+ 
+
+349
+00:06:25,120 --> 00:06:26,870
+things [music] like threads.
+Multi-threading can be difficult and the
+
+350
+00:06:26,870 --> 00:06:26,880
+Multi-threading can be difficult and the
+ 
+
+351
+00:06:26,880 --> 00:06:29,110
+Multi-threading can be difficult and the
+strong safety guarantees built into Rust
+
+352
+00:06:29,110 --> 00:06:29,120
+strong safety guarantees built into Rust
+ 
+
+353
+00:06:29,120 --> 00:06:31,029
+strong safety guarantees built into Rust
+can help improve [music] safety. All of
+
+354
+00:06:31,029 --> 00:06:31,039
+can help improve [music] safety. All of
+ 
+
+355
+00:06:31,039 --> 00:06:32,550
+can help improve [music] safety. All of
+this is exactly why companies like
+
+356
+00:06:32,550 --> 00:06:32,560
+this is exactly why companies like
+ 
+
+357
+00:06:32,560 --> 00:06:33,990
+this is exactly why companies like
+Google, Microsoft, and Amazon are
+
+358
+00:06:33,990 --> 00:06:34,000
+Google, Microsoft, and Amazon are
+ 
+
+359
+00:06:34,000 --> 00:06:35,510
+Google, Microsoft, and Amazon are
+adopting Rust more and more in
+
+360
+00:06:35,510 --> 00:06:35,520
+adopting Rust more and more in
+ 
+
+361
+00:06:35,520 --> 00:06:37,270
+adopting Rust more and more in
+production and developers really enjoy
+
+362
+00:06:37,270 --> 00:06:37,280
+production and developers really enjoy
+ 
+
+363
+00:06:37,280 --> 00:06:38,710
+production and developers really enjoy
+using it. It keeps topping Stack
+
+364
+00:06:38,710 --> 00:06:38,720
+using it. It keeps topping Stack
+ 
+
+365
+00:06:38,720 --> 00:06:40,710
+using it. It keeps topping Stack
+Overflow's most admired language year
+
+366
+00:06:40,710 --> 00:06:40,720
+Overflow's most admired language year
+ 
+
+367
+00:06:40,720 --> 00:06:42,230
+Overflow's most admired language year
+after year. Let's get Rusty runs
+
+368
+00:06:42,230 --> 00:06:42,240
+after year. Let's get Rusty runs
+ 
+
+369
+00:06:42,240 --> 00:06:43,990
+after year. Let's get Rusty runs
+structured programs for individuals and
+
+370
+00:06:43,990 --> 00:06:44,000
+structured programs for individuals and
+ 
+
+371
+00:06:44,000 --> 00:06:45,350
+structured programs for individuals and
+teams. And over the years, they've
+
+372
+00:06:45,350 --> 00:06:45,360
+teams. And over the years, they've
+ 
+
+373
+00:06:45,360 --> 00:06:47,029
+teams. And over the years, they've
+helped thousands of developers actually
+
+374
+00:06:47,029 --> 00:06:47,039
+helped thousands of developers actually
+ 
+
+375
+00:06:47,039 --> 00:06:48,870
+helped thousands of developers actually
+learn Rust, become productive [music]
+
+376
+00:06:48,870 --> 00:06:48,880
+learn Rust, become productive [music]
+ 
+
+377
+00:06:48,880 --> 00:06:50,629
+learn Rust, become productive [music]
+using Rust, not just watch endless
+
+378
+00:06:50,629 --> 00:06:50,639
+using Rust, not just watch endless
+ 
+
+379
+00:06:50,639 --> 00:06:52,550
+using Rust, not just watch endless
+tutorials and forget everything a week
+
+380
+00:06:52,550 --> 00:06:52,560
+tutorials and forget everything a week
+ 
+
+381
+00:06:52,560 --> 00:06:53,909
+tutorials and forget everything a week
+later. And here's the good news. They're
+
+382
+00:06:53,909 --> 00:06:53,919
+later. And here's the good news. They're
+ 
+
+383
+00:06:53,919 --> 00:06:55,430
+later. And here's the good news. They're
+actually running a new cohort next
+
+384
+00:06:55,430 --> 00:06:55,440
+actually running a new cohort next
+ 
+
+385
+00:06:55,440 --> 00:06:57,110
+actually running a new cohort next
+month. Spots are limited. Now is a
+
+386
+00:06:57,110 --> 00:06:57,120
+month. Spots are limited. Now is a
+ 
+
+387
+00:06:57,120 --> 00:06:58,150
+month. Spots are limited. Now is a
+really great time to check [music] it
+
+388
+00:06:58,150 --> 00:06:58,160
+really great time to check [music] it
+ 
+
+389
+00:06:58,160 --> 00:06:58,790
+really great time to check [music] it
+out. Go to let's
+
+390
+00:06:58,790 --> 00:06:58,800
+out. Go to let's
+ 
+
+391
+00:06:58,800 --> 00:07:00,469
+out. Go to let's
+getrusty.com/startwithcher.
+
+392
+00:07:00,469 --> 00:07:00,479
+getrusty.com/startwithcher.
+ 
+
+393
+00:07:00,479 --> 00:07:02,070
+getrusty.com/startwithcher.
+Link will be in the description below to
+
+394
+00:07:02,070 --> 00:07:02,080
+Link will be in the description below to
+ 
+
+395
+00:07:02,080 --> 00:07:03,909
+Link will be in the description below to
+find out more about their training. Huge
+
+396
+00:07:03,909 --> 00:07:03,919
+find out more about their training. Huge
+ 
+
+397
+00:07:03,919 --> 00:07:05,110
+find out more about their training. Huge
+thank you to let's get rusty for
+
+398
+00:07:05,110 --> 00:07:05,120
+thank you to let's get rusty for
+ 
+
+399
+00:07:05,120 --> 00:07:07,510
+thank you to let's get rusty for
+sponsoring this video. Now, this ref
+
+400
+00:07:07,510 --> 00:07:07,520
+sponsoring this video. Now, this ref
+ 
+
+401
+00:07:07,520 --> 00:07:10,070
+sponsoring this video. Now, this ref
+counted thing is kind of critical
+
+402
+00:07:10,070 --> 00:07:10,080
+counted thing is kind of critical
+ 
+
+403
+00:07:10,080 --> 00:07:12,070
+counted thing is kind of critical
+because this is the biggest reason for
+
+404
+00:07:12,070 --> 00:07:12,080
+because this is the biggest reason for
+ 
+
+405
+00:07:12,080 --> 00:07:16,230
+because this is the biggest reason for
+how this differs from what C++ already
+
+406
+00:07:16,230 --> 00:07:16,240
+how this differs from what C++ already
+ 
+
+407
+00:07:16,240 --> 00:07:18,629
+how this differs from what C++ already
+provides you with. The biggest question
+
+408
+00:07:18,629 --> 00:07:18,639
+provides you with. The biggest question
+ 
+
+409
+00:07:18,639 --> 00:07:21,749
+provides you with. The biggest question
+I get surrounding this is why do I not
+
+410
+00:07:21,749 --> 00:07:21,759
+I get surrounding this is why do I not
+ 
+
+411
+00:07:21,759 --> 00:07:24,550
+I get surrounding this is why do I not
+just use a shared pointer? Because this
+
+412
+00:07:24,550 --> 00:07:24,560
+just use a shared pointer? Because this
+ 
+
+413
+00:07:24,560 --> 00:07:27,029
+just use a shared pointer? Because this
+could just be a shared pointer and then
+
+414
+00:07:27,029 --> 00:07:27,039
+could just be a shared pointer and then
+ 
+
+415
+00:07:27,039 --> 00:07:29,350
+could just be a shared pointer and then
+you would have std make shared and
+
+416
+00:07:29,350 --> 00:07:29,360
+you would have std make shared and
+ 
+
+417
+00:07:29,360 --> 00:07:32,070
+you would have std make shared and
+that's it. Isn't that the same thing?
+
+418
+00:07:32,070 --> 00:07:32,080
+that's it. Isn't that the same thing?
+ 
+
+419
+00:07:32,080 --> 00:07:35,110
+that's it. Isn't that the same thing?
+Well, kind of. It works the same way,
+
+420
+00:07:35,110 --> 00:07:35,120
+Well, kind of. It works the same way,
+ 
+
+421
+00:07:35,120 --> 00:07:38,070
+Well, kind of. It works the same way,
+but it's different in a few crucial
+
+422
+00:07:38,070 --> 00:07:38,080
+but it's different in a few crucial
+ 
+
+423
+00:07:38,080 --> 00:07:40,070
+but it's different in a few crucial
+ways. The biggest difference is that
+
+424
+00:07:40,070 --> 00:07:40,080
+ways. The biggest difference is that
+ 
+
+425
+00:07:40,080 --> 00:07:42,870
+ways. The biggest difference is that
+shared pointer is not intrusive
+
+426
+00:07:42,870 --> 00:07:42,880
+shared pointer is not intrusive
+ 
+
+427
+00:07:42,880 --> 00:07:45,029
+shared pointer is not intrusive
+reference counting. It stores the
+
+428
+00:07:45,029 --> 00:07:45,039
+reference counting. It stores the
+ 
+
+429
+00:07:45,039 --> 00:07:46,870
+reference counting. It stores the
+reference count not as part of the
+
+430
+00:07:46,870 --> 00:07:46,880
+reference count not as part of the
+ 
+
+431
+00:07:46,880 --> 00:07:49,350
+reference count not as part of the
+object but elsewhere. Make shared
+
+432
+00:07:49,350 --> 00:07:49,360
+object but elsewhere. Make shared
+ 
+
+433
+00:07:49,360 --> 00:07:51,589
+object but elsewhere. Make shared
+combines the allocation of the actual
+
+434
+00:07:51,589 --> 00:07:51,599
+combines the allocation of the actual
+ 
+
+435
+00:07:51,599 --> 00:07:53,270
+combines the allocation of the actual
+object and the reference counting block
+
+436
+00:07:53,270 --> 00:07:53,280
+object and the reference counting block
+ 
+
+437
+00:07:53,280 --> 00:07:55,749
+object and the reference counting block
+into one allocation, but it's still not
+
+438
+00:07:55,749 --> 00:07:55,759
+into one allocation, but it's still not
+ 
+
+439
+00:07:55,759 --> 00:07:58,869
+into one allocation, but it's still not
+intrusive. There's nothing in C++ that
+
+440
+00:07:58,869 --> 00:07:58,879
+intrusive. There's nothing in C++ that
+ 
+
+441
+00:07:58,879 --> 00:08:01,270
+intrusive. There's nothing in C++ that
+exists at the moment that is actually
+
+442
+00:08:01,270 --> 00:08:01,280
+exists at the moment that is actually
+ 
+
+443
+00:08:01,280 --> 00:08:02,550
+exists at the moment that is actually
+intrusive reference counting. The
+
+444
+00:08:02,550 --> 00:08:02,560
+intrusive reference counting. The
+ 
+
+445
+00:08:02,560 --> 00:08:03,909
+intrusive reference counting. The
+closest thing that's kind of widely
+
+446
+00:08:03,909 --> 00:08:03,919
+closest thing that's kind of widely
+ 
+
+447
+00:08:03,919 --> 00:08:06,070
+closest thing that's kind of widely
+available is something called boost
+
+448
+00:08:06,070 --> 00:08:06,080
+available is something called boost
+ 
+
+449
+00:08:06,080 --> 00:08:07,830
+available is something called boost
+intrusive pointer, but we don't want to
+
+450
+00:08:07,830 --> 00:08:07,840
+intrusive pointer, but we don't want to
+ 
+
+451
+00:08:07,840 --> 00:08:09,909
+intrusive pointer, but we don't want to
+use boost. Now, there is actually
+
+452
+00:08:09,909 --> 00:08:09,919
+use boost. Now, there is actually
+ 
+
+453
+00:08:09,919 --> 00:08:12,469
+use boost. Now, there is actually
+something inside the standard library
+
+454
+00:08:12,469 --> 00:08:12,479
+something inside the standard library
+ 
+
+455
+00:08:12,479 --> 00:08:15,430
+something inside the standard library
+called enable shared from this. This is
+
+456
+00:08:15,430 --> 00:08:15,440
+called enable shared from this. This is
+ 
+
+457
+00:08:15,440 --> 00:08:17,749
+called enable shared from this. This is
+the closest thing to intrusive reference
+
+458
+00:08:17,749 --> 00:08:17,759
+the closest thing to intrusive reference
+ 
+
+459
+00:08:17,759 --> 00:08:19,270
+the closest thing to intrusive reference
+counting, but the reference count is
+
+460
+00:08:19,270 --> 00:08:19,280
+counting, but the reference count is
+ 
+
+461
+00:08:19,280 --> 00:08:21,510
+counting, but the reference count is
+still not actually in here. You can see
+
+462
+00:08:21,510 --> 00:08:21,520
+still not actually in here. You can see
+ 
+
+463
+00:08:21,520 --> 00:08:23,830
+still not actually in here. You can see
+it's just holding a weak pointer. It's
+
+464
+00:08:23,830 --> 00:08:23,840
+it's just holding a weak pointer. It's
+ 
+
+465
+00:08:23,840 --> 00:08:26,950
+it's just holding a weak pointer. It's
+just that it allows you to make a shared
+
+466
+00:08:26,950 --> 00:08:26,960
+just that it allows you to make a shared
+ 
+
+467
+00:08:26,960 --> 00:08:29,830
+just that it allows you to make a shared
+pointer out of yourself. So I have an
+
+468
+00:08:29,830 --> 00:08:29,840
+pointer out of yourself. So I have an
+ 
+
+469
+00:08:29,840 --> 00:08:31,350
+pointer out of yourself. So I have an
+example here that we'll look at in a
+
+470
+00:08:31,350 --> 00:08:31,360
+example here that we'll look at in a
+ 
+
+471
+00:08:31,360 --> 00:08:32,870
+example here that we'll look at in a
+minute. But basically what I'm talking
+
+472
+00:08:32,870 --> 00:08:32,880
+minute. But basically what I'm talking
+ 
+
+473
+00:08:32,880 --> 00:08:34,469
+minute. But basically what I'm talking
+about is this over here where we can
+
+474
+00:08:34,469 --> 00:08:34,479
+about is this over here where we can
+ 
+
+475
+00:08:34,479 --> 00:08:36,709
+about is this over here where we can
+make a shared pointer of our particular
+
+476
+00:08:36,709 --> 00:08:36,719
+make a shared pointer of our particular
+ 
+
+477
+00:08:36,719 --> 00:08:39,750
+make a shared pointer of our particular
+resource from this because otherwise
+
+478
+00:08:39,750 --> 00:08:39,760
+resource from this because otherwise
+ 
+
+479
+00:08:39,760 --> 00:08:41,430
+resource from this because otherwise
+that's not really possible. So if you
+
+480
+00:08:41,430 --> 00:08:41,440
+that's not really possible. So if you
+ 
+
+481
+00:08:41,440 --> 00:08:43,589
+that's not really possible. So if you
+had your shared pointer over here but
+
+482
+00:08:43,589 --> 00:08:43,599
+had your shared pointer over here but
+ 
+
+483
+00:08:43,599 --> 00:08:46,710
+had your shared pointer over here but
+then I wanted to actually be inside the
+
+484
+00:08:46,710 --> 00:08:46,720
+then I wanted to actually be inside the
+ 
+
+485
+00:08:46,720 --> 00:08:49,910
+then I wanted to actually be inside the
+resource class and then make a shared
+
+486
+00:08:49,910 --> 00:08:49,920
+resource class and then make a shared
+ 
+
+487
+00:08:49,920 --> 00:08:52,870
+resource class and then make a shared
+pointer out of myself to then submit
+
+488
+00:08:52,870 --> 00:08:52,880
+pointer out of myself to then submit
+ 
+
+489
+00:08:52,880 --> 00:08:54,870
+pointer out of myself to then submit
+somewhere. For example, I'll show you an
+
+490
+00:08:54,870 --> 00:08:54,880
+somewhere. For example, I'll show you an
+ 
+
+491
+00:08:54,880 --> 00:08:56,150
+somewhere. For example, I'll show you an
+example from Hazel in a minute which
+
+492
+00:08:56,150 --> 00:08:56,160
+example from Hazel in a minute which
+ 
+
+493
+00:08:56,160 --> 00:08:57,910
+example from Hazel in a minute which
+will make more sense. If I had something
+
+494
+00:08:57,910 --> 00:08:57,920
+will make more sense. If I had something
+ 
+
+495
+00:08:57,920 --> 00:08:59,910
+will make more sense. If I had something
+like this where I wanted to submit
+
+496
+00:08:59,910 --> 00:08:59,920
+like this where I wanted to submit
+ 
+
+497
+00:08:59,920 --> 00:09:02,150
+like this where I wanted to submit
+myself, you know, to the renderer and
+
+498
+00:09:02,150 --> 00:09:02,160
+myself, you know, to the renderer and
+ 
+
+499
+00:09:02,160 --> 00:09:03,990
+myself, you know, to the renderer and
+then obviously the renderer will have to
+
+500
+00:09:03,990 --> 00:09:04,000
+then obviously the renderer will have to
+ 
+
+501
+00:09:04,000 --> 00:09:05,829
+then obviously the renderer will have to
+use me. So I want it to be reference
+
+502
+00:09:05,829 --> 00:09:05,839
+use me. So I want it to be reference
+ 
+
+503
+00:09:05,839 --> 00:09:07,350
+use me. So I want it to be reference
+counted because I don't know when the
+
+504
+00:09:07,350 --> 00:09:07,360
+counted because I don't know when the
+ 
+
+505
+00:09:07,360 --> 00:09:09,350
+counted because I don't know when the
+renderer will finish with me. I can do
+
+506
+00:09:09,350 --> 00:09:09,360
+renderer will finish with me. I can do
+ 
+
+507
+00:09:09,360 --> 00:09:12,550
+renderer will finish with me. I can do
+this by doing shared from this if I
+
+508
+00:09:12,550 --> 00:09:12,560
+this by doing shared from this if I
+ 
+
+509
+00:09:12,560 --> 00:09:14,389
+this by doing shared from this if I
+subclass it. So this is the closest
+
+510
+00:09:14,389 --> 00:09:14,399
+subclass it. So this is the closest
+ 
+
+511
+00:09:14,399 --> 00:09:16,150
+subclass it. So this is the closest
+thing to intrusive reference counting
+
+512
+00:09:16,150 --> 00:09:16,160
+thing to intrusive reference counting
+ 
+
+513
+00:09:16,160 --> 00:09:18,150
+thing to intrusive reference counting
+like behavior that we have but still the
+
+514
+00:09:18,150 --> 00:09:18,160
+like behavior that we have but still the
+ 
+
+515
+00:09:18,160 --> 00:09:20,150
+like behavior that we have but still the
+reference count is not really inside us.
+
+516
+00:09:20,150 --> 00:09:20,160
+reference count is not really inside us.
+ 
+
+517
+00:09:20,160 --> 00:09:21,509
+reference count is not really inside us.
+So it's a bit different and basically
+
+518
+00:09:21,509 --> 00:09:21,519
+So it's a bit different and basically
+ 
+
+519
+00:09:21,519 --> 00:09:23,430
+So it's a bit different and basically
+worse. Here's a more concrete example
+
+520
+00:09:23,430 --> 00:09:23,440
+worse. Here's a more concrete example
+ 
+
+521
+00:09:23,440 --> 00:09:25,750
+worse. Here's a more concrete example
+from Hazel. So if we are in render
+
+522
+00:09:25,750 --> 00:09:25,760
+from Hazel. So if we are in render
+ 
+
+523
+00:09:25,760 --> 00:09:27,990
+from Hazel. So if we are in render
+command buffer which is a ref countered
+
+524
+00:09:27,990 --> 00:09:28,000
+command buffer which is a ref countered
+ 
+
+525
+00:09:28,000 --> 00:09:30,710
+command buffer which is a ref countered
+class and we want to submit ourselves to
+
+526
+00:09:30,710 --> 00:09:30,720
+class and we want to submit ourselves to
+ 
+
+527
+00:09:30,720 --> 00:09:32,470
+class and we want to submit ourselves to
+the renderer because this needs to run
+
+528
+00:09:32,470 --> 00:09:32,480
+the renderer because this needs to run
+ 
+
+529
+00:09:32,480 --> 00:09:35,110
+the renderer because this needs to run
+on the render thread then I can make a
+
+530
+00:09:35,110 --> 00:09:35,120
+on the render thread then I can make a
+ 
+
+531
+00:09:35,120 --> 00:09:37,670
+on the render thread then I can make a
+reference counted object out of myself
+
+532
+00:09:37,670 --> 00:09:37,680
+reference counted object out of myself
+ 
+
+533
+00:09:37,680 --> 00:09:39,990
+reference counted object out of myself
+and since the reference count is part of
+
+534
+00:09:39,990 --> 00:09:40,000
+and since the reference count is part of
+ 
+
+535
+00:09:40,000 --> 00:09:42,310
+and since the reference count is part of
+this object it's not like oh I don't
+
+536
+00:09:42,310 --> 00:09:42,320
+this object it's not like oh I don't
+ 
+
+537
+00:09:42,320 --> 00:09:44,150
+this object it's not like oh I don't
+know what my reference count is because
+
+538
+00:09:44,150 --> 00:09:44,160
+know what my reference count is because
+ 
+
+539
+00:09:44,160 --> 00:09:46,630
+know what my reference count is because
+it's external. No, it's here. I am the
+
+540
+00:09:46,630 --> 00:09:46,640
+it's external. No, it's here. I am the
+ 
+
+541
+00:09:46,640 --> 00:09:48,949
+it's external. No, it's here. I am the
+reference count. So therefore of course
+
+542
+00:09:48,949 --> 00:09:48,959
+reference count. So therefore of course
+ 
+
+543
+00:09:48,959 --> 00:09:50,949
+reference count. So therefore of course
+you can make this ref object out of me.
+
+544
+00:09:50,949 --> 00:09:50,959
+you can make this ref object out of me.
+ 
+
+545
+00:09:50,959 --> 00:09:52,550
+you can make this ref object out of me.
+I'll just increment the reference count
+
+546
+00:09:52,550 --> 00:09:52,560
+I'll just increment the reference count
+ 
+
+547
+00:09:52,560 --> 00:09:54,949
+I'll just increment the reference count
+and then pass it off. hand it off onto a
+
+548
+00:09:54,949 --> 00:09:54,959
+and then pass it off. hand it off onto a
+ 
+
+549
+00:09:54,959 --> 00:09:56,630
+and then pass it off. hand it off onto a
+different thread. And of course, we're
+
+550
+00:09:56,630 --> 00:09:56,640
+different thread. And of course, we're
+ 
+
+551
+00:09:56,640 --> 00:09:58,310
+different thread. And of course, we're
+in a different thread now. So, we don't
+
+552
+00:09:58,310 --> 00:09:58,320
+in a different thread now. So, we don't
+ 
+
+553
+00:09:58,320 --> 00:09:59,670
+in a different thread now. So, we don't
+know. Maybe the main thread will finish
+
+554
+00:09:59,670 --> 00:09:59,680
+know. Maybe the main thread will finish
+ 
+
+555
+00:09:59,680 --> 00:10:01,190
+know. Maybe the main thread will finish
+with this first, but then the thread is
+
+556
+00:10:01,190 --> 00:10:01,200
+with this first, but then the thread is
+ 
+
+557
+00:10:01,200 --> 00:10:02,550
+with this first, but then the thread is
+still holding on to it. So, in that
+
+558
+00:10:02,550 --> 00:10:02,560
+still holding on to it. So, in that
+ 
+
+559
+00:10:02,560 --> 00:10:04,470
+still holding on to it. So, in that
+scenario, we literally don't know who's
+
+560
+00:10:04,470 --> 00:10:04,480
+scenario, we literally don't know who's
+ 
+
+561
+00:10:04,480 --> 00:10:05,829
+scenario, we literally don't know who's
+going to finish with this because it's
+
+562
+00:10:05,829 --> 00:10:05,839
+going to finish with this because it's
+ 
+
+563
+00:10:05,839 --> 00:10:07,990
+going to finish with this because it's
+all like multi-threaded race conditions,
+
+564
+00:10:07,990 --> 00:10:08,000
+all like multi-threaded race conditions,
+ 
+
+565
+00:10:08,000 --> 00:10:09,829
+all like multi-threaded race conditions,
+whatever else. Let's look at an example
+
+566
+00:10:09,829 --> 00:10:09,839
+whatever else. Let's look at an example
+ 
+
+567
+00:10:09,839 --> 00:10:11,910
+whatever else. Let's look at an example
+I prepared that is multi-threaded. So,
+
+568
+00:10:11,910 --> 00:10:11,920
+I prepared that is multi-threaded. So,
+ 
+
+569
+00:10:11,920 --> 00:10:14,069
+I prepared that is multi-threaded. So,
+we have this multi-threaded example. Let
+
+570
+00:10:14,069 --> 00:10:14,079
+we have this multi-threaded example. Let
+ 
+
+571
+00:10:14,079 --> 00:10:16,389
+we have this multi-threaded example. Let
+me shut off the other one and then we'll
+
+572
+00:10:16,389 --> 00:10:16,399
+me shut off the other one and then we'll
+ 
+
+573
+00:10:16,399 --> 00:10:18,630
+me shut off the other one and then we'll
+take a look at this one. So, same story.
+
+574
+00:10:18,630 --> 00:10:18,640
+take a look at this one. So, same story.
+ 
+
+575
+00:10:18,640 --> 00:10:20,870
+take a look at this one. So, same story.
+I have ref resource, but then what I'm
+
+576
+00:10:20,870 --> 00:10:20,880
+I have ref resource, but then what I'm
+ 
+
+577
+00:10:20,880 --> 00:10:23,110
+I have ref resource, but then what I'm
+doing is creating four workers. These
+
+578
+00:10:23,110 --> 00:10:23,120
+doing is creating four workers. These
+ 
+
+579
+00:10:23,120 --> 00:10:25,030
+doing is creating four workers. These
+are four worker threads. I'm going to
+
+580
+00:10:25,030 --> 00:10:25,040
+are four worker threads. I'm going to
+ 
+
+581
+00:10:25,040 --> 00:10:27,350
+are four worker threads. I'm going to
+create one resource and I'm going to
+
+582
+00:10:27,350 --> 00:10:27,360
+create one resource and I'm going to
+ 
+
+583
+00:10:27,360 --> 00:10:29,829
+create one resource and I'm going to
+give it to the worker threads. So each
+
+584
+00:10:29,829 --> 00:10:29,839
+give it to the worker threads. So each
+ 
+
+585
+00:10:29,839 --> 00:10:32,710
+give it to the worker threads. So each
+thread is getting its own copy of this
+
+586
+00:10:32,710 --> 00:10:32,720
+thread is getting its own copy of this
+ 
+
+587
+00:10:32,720 --> 00:10:34,790
+thread is getting its own copy of this
+ref, but it's still the same resource.
+
+588
+00:10:34,790 --> 00:10:34,800
+ref, but it's still the same resource.
+ 
+
+589
+00:10:34,800 --> 00:10:36,550
+ref, but it's still the same resource.
+There's only one resource. I've created
+
+590
+00:10:36,550 --> 00:10:36,560
+There's only one resource. I've created
+ 
+
+591
+00:10:36,560 --> 00:10:38,870
+There's only one resource. I've created
+it once. I'm just giving it to four
+
+592
+00:10:38,870 --> 00:10:38,880
+it once. I'm just giving it to four
+ 
+
+593
+00:10:38,880 --> 00:10:40,550
+it once. I'm just giving it to four
+different workers that need to do things
+
+594
+00:10:40,550 --> 00:10:40,560
+different workers that need to do things
+ 
+
+595
+00:10:40,560 --> 00:10:42,069
+different workers that need to do things
+with it. What the workers are actually
+
+596
+00:10:42,069 --> 00:10:42,079
+with it. What the workers are actually
+ 
+
+597
+00:10:42,079 --> 00:10:43,829
+with it. What the workers are actually
+doing with it is simulating some work
+
+598
+00:10:43,829 --> 00:10:43,839
+doing with it is simulating some work
+ 
+
+599
+00:10:43,839 --> 00:10:45,750
+doing with it is simulating some work
+that's happening. It's calling use on
+
+600
+00:10:45,750 --> 00:10:45,760
+that's happening. It's calling use on
+ 
+
+601
+00:10:45,760 --> 00:10:47,110
+that's happening. It's calling use on
+the actual resource, which is just
+
+602
+00:10:47,110 --> 00:10:47,120
+the actual resource, which is just
+ 
+
+603
+00:10:47,120 --> 00:10:48,949
+the actual resource, which is just
+simply printing which worker is
+
+604
+00:10:48,949 --> 00:10:48,959
+simply printing which worker is
+ 
+
+605
+00:10:48,959 --> 00:10:50,710
+simply printing which worker is
+currently using it. we have this per
+
+606
+00:10:50,710 --> 00:10:50,720
+currently using it. we have this per
+ 
+
+607
+00:10:50,720 --> 00:10:52,949
+currently using it. we have this per
+thread random number generator that will
+
+608
+00:10:52,949 --> 00:10:52,959
+thread random number generator that will
+ 
+
+609
+00:10:52,959 --> 00:10:56,150
+thread random number generator that will
+simulate some sort of work for up to 100
+
+610
+00:10:56,150 --> 00:10:56,160
+simulate some sort of work for up to 100
+ 
+
+611
+00:10:56,160 --> 00:10:58,069
+simulate some sort of work for up to 100
+milliseconds. So it'll just sleep and
+
+612
+00:10:58,069 --> 00:10:58,079
+milliseconds. So it'll just sleep and
+ 
+
+613
+00:10:58,079 --> 00:10:59,829
+milliseconds. So it'll just sleep and
+then it will finish back on the main
+
+614
+00:10:59,829 --> 00:10:59,839
+then it will finish back on the main
+ 
+
+615
+00:10:59,839 --> 00:11:01,269
+then it will finish back on the main
+thread. We will of course wait for all
+
+616
+00:11:01,269 --> 00:11:01,279
+thread. We will of course wait for all
+ 
+
+617
+00:11:01,279 --> 00:11:02,710
+thread. We will of course wait for all
+of these workers to actually complete
+
+618
+00:11:02,710 --> 00:11:02,720
+of these workers to actually complete
+ 
+
+619
+00:11:02,720 --> 00:11:04,389
+of these workers to actually complete
+before we try and end our program. And
+
+620
+00:11:04,389 --> 00:11:04,399
+before we try and end our program. And
+ 
+
+621
+00:11:04,399 --> 00:11:06,630
+before we try and end our program. And
+then this is in a scope because as soon
+
+622
+00:11:06,630 --> 00:11:06,640
+then this is in a scope because as soon
+ 
+
+623
+00:11:06,640 --> 00:11:09,509
+then this is in a scope because as soon
+as we unleash the workers, we're kind of
+
+624
+00:11:09,509 --> 00:11:09,519
+as we unleash the workers, we're kind of
+ 
+
+625
+00:11:09,519 --> 00:11:11,030
+as we unleash the workers, we're kind of
+done with this resource. We don't really
+
+626
+00:11:11,030 --> 00:11:11,040
+done with this resource. We don't really
+ 
+
+627
+00:11:11,040 --> 00:11:12,470
+done with this resource. We don't really
+need it on the main thread anymore.
+
+628
+00:11:12,470 --> 00:11:12,480
+need it on the main thread anymore.
+ 
+
+629
+00:11:12,480 --> 00:11:14,470
+need it on the main thread anymore.
+We're happy to not use it on the main
+
+630
+00:11:14,470 --> 00:11:14,480
+We're happy to not use it on the main
+ 
+
+631
+00:11:14,480 --> 00:11:16,389
+We're happy to not use it on the main
+thread, but the workers are still going
+
+632
+00:11:16,389 --> 00:11:16,399
+thread, but the workers are still going
+ 
+
+633
+00:11:16,399 --> 00:11:18,230
+thread, but the workers are still going
+to need it. And specifically, we don't
+
+634
+00:11:18,230 --> 00:11:18,240
+to need it. And specifically, we don't
+ 
+
+635
+00:11:18,240 --> 00:11:20,069
+to need it. And specifically, we don't
+really know which worker will finish
+
+636
+00:11:20,069 --> 00:11:20,079
+really know which worker will finish
+ 
+
+637
+00:11:20,079 --> 00:11:22,310
+really know which worker will finish
+last with the resource, do we? Because,
+
+638
+00:11:22,310 --> 00:11:22,320
+last with the resource, do we? Because,
+ 
+
+639
+00:11:22,320 --> 00:11:24,550
+last with the resource, do we? Because,
+well, in this case, we're simulating a
+
+640
+00:11:24,550 --> 00:11:24,560
+well, in this case, we're simulating a
+ 
+
+641
+00:11:24,560 --> 00:11:26,949
+well, in this case, we're simulating a
+random amount of work. So, which worker
+
+642
+00:11:26,949 --> 00:11:26,959
+random amount of work. So, which worker
+ 
+
+643
+00:11:26,959 --> 00:11:28,949
+random amount of work. So, which worker
+will finish last? Let's have a look at
+
+644
+00:11:28,949 --> 00:11:28,959
+will finish last? Let's have a look at
+ 
+
+645
+00:11:28,959 --> 00:11:30,870
+will finish last? Let's have a look at
+how this program runs. So, we construct
+
+646
+00:11:30,870 --> 00:11:30,880
+how this program runs. So, we construct
+ 
+
+647
+00:11:30,880 --> 00:11:34,230
+how this program runs. So, we construct
+the resource. Worker 1 2 3 and four and
+
+648
+00:11:34,230 --> 00:11:34,240
+the resource. Worker 1 2 3 and four and
+ 
+
+649
+00:11:34,240 --> 00:11:36,870
+the resource. Worker 1 2 3 and four and
+zero actually had me going there. 1 2 3
+
+650
+00:11:36,870 --> 00:11:36,880
+zero actually had me going there. 1 2 3
+ 
+
+651
+00:11:36,880 --> 00:11:38,790
+zero actually had me going there. 1 2 3
+and zero have all begun. They're all
+
+652
+00:11:38,790 --> 00:11:38,800
+and zero have all begun. They're all
+ 
+
+653
+00:11:38,800 --> 00:11:40,230
+and zero have all begun. They're all
+using the resource. So, they've called
+
+654
+00:11:40,230 --> 00:11:40,240
+using the resource. So, they've called
+ 
+
+655
+00:11:40,240 --> 00:11:41,509
+using the resource. So, they've called
+that use function. And then they're
+
+656
+00:11:41,509 --> 00:11:41,519
+that use function. And then they're
+ 
+
+657
+00:11:41,519 --> 00:11:43,269
+that use function. And then they're
+sleeping for a random amount of time.
+
+658
+00:11:43,269 --> 00:11:43,279
+sleeping for a random amount of time.
+ 
+
+659
+00:11:43,279 --> 00:11:45,350
+sleeping for a random amount of time.
+They're processing, let's just say, for
+
+660
+00:11:45,350 --> 00:11:45,360
+They're processing, let's just say, for
+ 
+
+661
+00:11:45,360 --> 00:11:47,990
+They're processing, let's just say, for
+a random amount of time. Worker two
+
+662
+00:11:47,990 --> 00:11:48,000
+a random amount of time. Worker two
+ 
+
+663
+00:11:48,000 --> 00:11:49,350
+a random amount of time. Worker two
+finishes first. Of course, it would
+
+664
+00:11:49,350 --> 00:11:49,360
+finishes first. Of course, it would
+ 
+
+665
+00:11:49,360 --> 00:11:50,949
+finishes first. Of course, it would
+because it only took 5 milliseconds.
+
+666
+00:11:50,949 --> 00:11:50,959
+because it only took 5 milliseconds.
+ 
+
+667
+00:11:50,959 --> 00:11:54,470
+because it only took 5 milliseconds.
+Then 3, 1, and zero. Then the resource
+
+668
+00:11:54,470 --> 00:11:54,480
+Then 3, 1, and zero. Then the resource
+ 
+
+669
+00:11:54,480 --> 00:11:57,110
+Then 3, 1, and zero. Then the resource
+gets destroyed. So notice how zero,
+
+670
+00:11:57,110 --> 00:11:57,120
+gets destroyed. So notice how zero,
+ 
+
+671
+00:11:57,120 --> 00:11:59,910
+gets destroyed. So notice how zero,
+worker zero finished last in this case.
+
+672
+00:11:59,910 --> 00:11:59,920
+worker zero finished last in this case.
+ 
+
+673
+00:11:59,920 --> 00:12:02,310
+worker zero finished last in this case.
+Let's run it again. This time, worker
+
+674
+00:12:02,310 --> 00:12:02,320
+Let's run it again. This time, worker
+ 
+
+675
+00:12:02,320 --> 00:12:04,310
+Let's run it again. This time, worker
+three finished last and then the
+
+676
+00:12:04,310 --> 00:12:04,320
+three finished last and then the
+ 
+
+677
+00:12:04,320 --> 00:12:06,470
+three finished last and then the
+resource was destroyed. So you're kind
+
+678
+00:12:06,470 --> 00:12:06,480
+resource was destroyed. So you're kind
+ 
+
+679
+00:12:06,480 --> 00:12:08,470
+resource was destroyed. So you're kind
+of seeing the picture here with the
+
+680
+00:12:08,470 --> 00:12:08,480
+of seeing the picture here with the
+ 
+
+681
+00:12:08,480 --> 00:12:10,790
+of seeing the picture here with the
+lifetime pretty clearly, I hope. We
+
+682
+00:12:10,790 --> 00:12:10,800
+lifetime pretty clearly, I hope. We
+ 
+
+683
+00:12:10,800 --> 00:12:12,790
+lifetime pretty clearly, I hope. We
+don't know the lifetime. We don't really
+
+684
+00:12:12,790 --> 00:12:12,800
+don't know the lifetime. We don't really
+ 
+
+685
+00:12:12,800 --> 00:12:15,829
+don't know the lifetime. We don't really
+know when exactly and who exactly should
+
+686
+00:12:15,829 --> 00:12:15,839
+know when exactly and who exactly should
+ 
+
+687
+00:12:15,839 --> 00:12:18,150
+know when exactly and who exactly should
+be responsible for this resource being
+
+688
+00:12:18,150 --> 00:12:18,160
+be responsible for this resource being
+ 
+
+689
+00:12:18,160 --> 00:12:20,310
+be responsible for this resource being
+destroyed. All we know is that when
+
+690
+00:12:20,310 --> 00:12:20,320
+destroyed. All we know is that when
+ 
+
+691
+00:12:20,320 --> 00:12:22,470
+destroyed. All we know is that when
+everyone is done with it, we want it to
+
+692
+00:12:22,470 --> 00:12:22,480
+everyone is done with it, we want it to
+ 
+
+693
+00:12:22,480 --> 00:12:23,990
+everyone is done with it, we want it to
+be destroyed. When it's no longer
+
+694
+00:12:23,990 --> 00:12:24,000
+be destroyed. When it's no longer
+ 
+
+695
+00:12:24,000 --> 00:12:25,829
+be destroyed. When it's no longer
+needed, we want it to be destroyed.
+
+696
+00:12:25,829 --> 00:12:25,839
+needed, we want it to be destroyed.
+ 
+
+697
+00:12:25,839 --> 00:12:28,310
+needed, we want it to be destroyed.
+That's that's the definition of memory
+
+698
+00:12:28,310 --> 00:12:28,320
+That's that's the definition of memory
+ 
+
+699
+00:12:28,320 --> 00:12:30,069
+That's that's the definition of memory
+management. When it's not needed,
+
+700
+00:12:30,069 --> 00:12:30,079
+management. When it's not needed,
+ 
+
+701
+00:12:30,079 --> 00:12:32,230
+management. When it's not needed,
+destroy it. And that is what reference
+
+702
+00:12:32,230 --> 00:12:32,240
+destroy it. And that is what reference
+ 
+
+703
+00:12:32,240 --> 00:12:34,310
+destroy it. And that is what reference
+counting does. That's what shared
+
+704
+00:12:34,310 --> 00:12:34,320
+counting does. That's what shared
+ 
+
+705
+00:12:34,320 --> 00:12:36,629
+counting does. That's what shared
+pointers do because shared pointers are
+
+706
+00:12:36,629 --> 00:12:36,639
+pointers do because shared pointers are
+ 
+
+707
+00:12:36,639 --> 00:12:38,870
+pointers do because shared pointers are
+an implementation of reference counting.
+
+708
+00:12:38,870 --> 00:12:38,880
+an implementation of reference counting.
+ 
+
+709
+00:12:38,880 --> 00:12:40,629
+an implementation of reference counting.
+They're just not intrusive reference
+
+710
+00:12:40,629 --> 00:12:40,639
+They're just not intrusive reference
+ 
+
+711
+00:12:40,639 --> 00:12:42,230
+They're just not intrusive reference
+counting. And again, if you want
+
+712
+00:12:42,230 --> 00:12:42,240
+counting. And again, if you want
+ 
+
+713
+00:12:42,240 --> 00:12:43,990
+counting. And again, if you want
+intrusive reference counting, you have
+
+714
+00:12:43,990 --> 00:12:44,000
+intrusive reference counting, you have
+ 
+
+715
+00:12:44,000 --> 00:12:47,509
+intrusive reference counting, you have
+to use your own or use boost. But wait,
+
+716
+00:12:47,509 --> 00:12:47,519
+to use your own or use boost. But wait,
+ 
+
+717
+00:12:47,519 --> 00:12:49,910
+to use your own or use boost. But wait,
+let's not come on. Come on. Let's not
+
+718
+00:12:49,910 --> 00:12:49,920
+let's not come on. Come on. Let's not
+ 
+
+719
+00:12:49,920 --> 00:12:51,990
+let's not come on. Come on. Let's not
+talk about that. And that is why Hazel
+
+720
+00:12:51,990 --> 00:12:52,000
+talk about that. And that is why Hazel
+ 
+
+721
+00:12:52,000 --> 00:12:54,389
+talk about that. And that is why Hazel
+has this ref class. Now, if we look at a
+
+722
+00:12:54,389 --> 00:12:54,399
+has this ref class. Now, if we look at a
+ 
+
+723
+00:12:54,399 --> 00:12:56,069
+has this ref class. Now, if we look at a
+shared pointer example of the same
+
+724
+00:12:56,069 --> 00:12:56,079
+shared pointer example of the same
+ 
+
+725
+00:12:56,079 --> 00:12:58,470
+shared pointer example of the same
+thing, it would look exactly as you
+
+726
+00:12:58,470 --> 00:12:58,480
+thing, it would look exactly as you
+ 
+
+727
+00:12:58,480 --> 00:12:59,990
+thing, it would look exactly as you
+would imagine. We would just be creating
+
+728
+00:12:59,990 --> 00:13:00,000
+would imagine. We would just be creating
+ 
+
+729
+00:13:00,000 --> 00:13:01,990
+would imagine. We would just be creating
+shared pointers instead of refs. And
+
+730
+00:13:01,990 --> 00:13:02,000
+shared pointers instead of refs. And
+ 
+
+731
+00:13:02,000 --> 00:13:05,110
+shared pointers instead of refs. And
+it's largely the same. But we can't do
+
+732
+00:13:05,110 --> 00:13:05,120
+it's largely the same. But we can't do
+ 
+
+733
+00:13:05,120 --> 00:13:07,990
+it's largely the same. But we can't do
+things like this without enabling shared
+
+734
+00:13:07,990 --> 00:13:08,000
+things like this without enabling shared
+ 
+
+735
+00:13:08,000 --> 00:13:10,310
+things like this without enabling shared
+from this. But then even so, it's still
+
+736
+00:13:10,310 --> 00:13:10,320
+from this. But then even so, it's still
+ 
+
+737
+00:13:10,320 --> 00:13:12,790
+from this. But then even so, it's still
+not intrusive reference counting. I hope
+
+738
+00:13:12,790 --> 00:13:12,800
+not intrusive reference counting. I hope
+ 
+
+739
+00:13:12,800 --> 00:13:14,150
+not intrusive reference counting. I hope
+you're getting the idea. If you guys
+
+740
+00:13:14,150 --> 00:13:14,160
+you're getting the idea. If you guys
+ 
+
+741
+00:13:14,160 --> 00:13:15,350
+you're getting the idea. If you guys
+enjoyed this video, please don't forget
+
+742
+00:13:15,350 --> 00:13:15,360
+enjoyed this video, please don't forget
+ 
+
+743
+00:13:15,360 --> 00:13:16,629
+enjoyed this video, please don't forget
+to hit the like button below. Let me
+
+744
+00:13:16,629 --> 00:13:16,639
+to hit the like button below. Let me
+ 
+
+745
+00:13:16,639 --> 00:13:17,990
+to hit the like button below. Let me
+know what you want to see next as far as
+
+746
+00:13:17,990 --> 00:13:18,000
+know what you want to see next as far as
+ 
+
+747
+00:13:18,000 --> 00:13:20,629
+know what you want to see next as far as
+C++ goes. This series is still alive and
+
+748
+00:13:20,629 --> 00:13:20,639
+C++ goes. This series is still alive and
+ 
+
+749
+00:13:20,639 --> 00:13:22,069
+C++ goes. This series is still alive and
+I'm still going to try and make videos
+
+750
+00:13:22,069 --> 00:13:22,079
+I'm still going to try and make videos
+ 
+
+751
+00:13:22,079 --> 00:13:23,509
+I'm still going to try and make videos
+when I have time. If you're interested
+
+752
+00:13:23,509 --> 00:13:23,519
+when I have time. If you're interested
+ 
+
+753
+00:13:23,519 --> 00:13:24,710
+when I have time. If you're interested
+in reference counting and you want to
+
+754
+00:13:24,710 --> 00:13:24,720
+in reference counting and you want to
+ 
+
+755
+00:13:24,720 --> 00:13:26,470
+in reference counting and you want to
+learn more about it, I highly recommend
+
+756
+00:13:26,470 --> 00:13:26,480
+learn more about it, I highly recommend
+ 
+
+757
+00:13:26,480 --> 00:13:28,310
+learn more about it, I highly recommend
+you try and implement it yourselves.
+
+758
+00:13:28,310 --> 00:13:28,320
+you try and implement it yourselves.
+ 
+
+759
+00:13:28,320 --> 00:13:29,670
+you try and implement it yourselves.
+This video should have given you enough
+
+760
+00:13:29,670 --> 00:13:29,680
+This video should have given you enough
+ 
+
+761
+00:13:29,680 --> 00:13:31,430
+This video should have given you enough
+information to try and implement it
+
+762
+00:13:31,430 --> 00:13:31,440
+information to try and implement it
+ 
+
+763
+00:13:31,440 --> 00:13:33,030
+information to try and implement it
+yourselves. I mean, the concept is
+
+764
+00:13:33,030 --> 00:13:33,040
+yourselves. I mean, the concept is
+ 
+
+765
+00:13:33,040 --> 00:13:35,030
+yourselves. I mean, the concept is
+really simple. When you create a copy of
+
+766
+00:13:35,030 --> 00:13:35,040
+really simple. When you create a copy of
+ 
+
+767
+00:13:35,040 --> 00:13:36,550
+really simple. When you create a copy of
+a ref, you increment the reference
+
+768
+00:13:36,550 --> 00:13:36,560
+a ref, you increment the reference
+ 
+
+769
+00:13:36,560 --> 00:13:38,550
+a ref, you increment the reference
+count. When a ref dies, you decrement
+
+770
+00:13:38,550 --> 00:13:38,560
+count. When a ref dies, you decrement
+ 
+
+771
+00:13:38,560 --> 00:13:40,150
+count. When a ref dies, you decrement
+the reference count. If it hits zero,
+
+772
+00:13:40,150 --> 00:13:40,160
+the reference count. If it hits zero,
+ 
+
+773
+00:13:40,160 --> 00:13:42,310
+the reference count. If it hits zero,
+delete the underlying object. That's it.
+
+774
+00:13:42,310 --> 00:13:42,320
+delete the underlying object. That's it.
+ 
+
+775
+00:13:42,320 --> 00:13:45,030
+delete the underlying object. That's it.
+Lots of nuances will creep up, but
+
+776
+00:13:45,030 --> 00:13:45,040
+Lots of nuances will creep up, but
+ 
+
+777
+00:13:45,040 --> 00:13:47,190
+Lots of nuances will creep up, but
+that's the basic idea. So, give it a
+
+778
+00:13:47,190 --> 00:13:47,200
+that's the basic idea. So, give it a
+ 
+
+779
+00:13:47,200 --> 00:13:48,870
+that's the basic idea. So, give it a
+shot. From here, there are other things
+
+780
+00:13:48,870 --> 00:13:48,880
+shot. From here, there are other things
+ 
+
+781
+00:13:48,880 --> 00:13:51,269
+shot. From here, there are other things
+that exist within Hazel, such as weak
+
+782
+00:13:51,269 --> 00:13:51,279
+that exist within Hazel, such as weak
+ 
+
+783
+00:13:51,279 --> 00:13:53,110
+that exist within Hazel, such as weak
+pointers, weak references, because you
+
+784
+00:13:53,110 --> 00:13:53,120
+pointers, weak references, because you
+ 
+
+785
+00:13:53,120 --> 00:13:55,590
+pointers, weak references, because you
+may want to use this like a weak pointer
+
+786
+00:13:55,590 --> 00:13:55,600
+may want to use this like a weak pointer
+ 
+
+787
+00:13:55,600 --> 00:13:57,030
+may want to use this like a weak pointer
+from a shared pointer. If you want to
+
+788
+00:13:57,030 --> 00:13:57,040
+from a shared pointer. If you want to
+ 
+
+789
+00:13:57,040 --> 00:13:58,470
+from a shared pointer. If you want to
+see a video about how that works, let me
+
+790
+00:13:58,470 --> 00:13:58,480
+see a video about how that works, let me
+ 
+
+791
+00:13:58,480 --> 00:13:59,750
+see a video about how that works, let me
+know in the comment section below. Thank
+
+792
+00:13:59,750 --> 00:13:59,760
+know in the comment section below. Thank
+ 
+
+793
+00:13:59,760 --> 00:14:01,189
+know in the comment section below. Thank
+you guys for watching. I will see you
+
+794
+00:14:01,189 --> 00:14:01,199
+you guys for watching. I will see you
+ 
+
+795
+00:14:01,199 --> 00:14:04,480
+you guys for watching. I will see you
+next time. Goodbye.
+

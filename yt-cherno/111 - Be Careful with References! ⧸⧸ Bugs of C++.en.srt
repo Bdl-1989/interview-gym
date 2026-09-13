@@ -1,0 +1,3615 @@
+1
+00:00:00,080 --> 00:00:03,510
+
+bugs in C++. Does that even happen?
+
+2
+00:00:03,510 --> 00:00:03,520
+bugs in C++. Does that even happen?
+ 
+
+3
+00:00:03,520 --> 00:00:05,749
+bugs in C++. Does that even happen?
+Welcome to a new series in which we have
+
+4
+00:00:05,749 --> 00:00:05,759
+Welcome to a new series in which we have
+ 
+
+5
+00:00:05,759 --> 00:00:07,269
+Welcome to a new series in which we have
+a look at various bugs that can happen
+
+6
+00:00:07,269 --> 00:00:07,279
+a look at various bugs that can happen
+ 
+
+7
+00:00:07,279 --> 00:00:09,750
+a look at various bugs that can happen
+in C++ and hopefully help you avoid
+
+8
+00:00:09,750 --> 00:00:09,760
+in C++ and hopefully help you avoid
+ 
+
+9
+00:00:09,760 --> 00:00:10,790
+in C++ and hopefully help you avoid
+them. Today we're going to be talking
+
+10
+00:00:10,790 --> 00:00:10,800
+them. Today we're going to be talking
+ 
+
+11
+00:00:10,800 --> 00:00:12,709
+them. Today we're going to be talking
+about references and how maybe you
+
+12
+00:00:12,709 --> 00:00:12,719
+about references and how maybe you
+ 
+
+13
+00:00:12,719 --> 00:00:13,990
+about references and how maybe you
+should be careful when you make
+
+14
+00:00:13,990 --> 00:00:14,000
+should be careful when you make
+ 
+
+15
+00:00:14,000 --> 00:00:15,589
+should be careful when you make
+references to various things because
+
+16
+00:00:15,589 --> 00:00:15,599
+references to various things because
+ 
+
+17
+00:00:15,599 --> 00:00:17,269
+references to various things because
+they might just not be as innocent as
+
+18
+00:00:17,269 --> 00:00:17,279
+they might just not be as innocent as
+ 
+
+19
+00:00:17,279 --> 00:00:19,269
+they might just not be as innocent as
+they seem. Jumping straight into an
+
+20
+00:00:19,269 --> 00:00:19,279
+they seem. Jumping straight into an
+ 
+
+21
+00:00:19,279 --> 00:00:21,510
+they seem. Jumping straight into an
+example. This is a very fabricated
+
+22
+00:00:21,510 --> 00:00:21,520
+example. This is a very fabricated
+ 
+
+23
+00:00:21,520 --> 00:00:23,029
+example. This is a very fabricated
+example. You probably wouldn't write
+
+24
+00:00:23,029 --> 00:00:23,039
+example. You probably wouldn't write
+ 
+
+25
+00:00:23,039 --> 00:00:25,109
+example. You probably wouldn't write
+code that looks exactly like this. But
+
+26
+00:00:25,109 --> 00:00:25,119
+code that looks exactly like this. But
+ 
+
+27
+00:00:25,119 --> 00:00:27,269
+code that looks exactly like this. But
+can you spot the issue over here? So,
+
+28
+00:00:27,269 --> 00:00:27,279
+can you spot the issue over here? So,
+ 
+
+29
+00:00:27,279 --> 00:00:28,950
+can you spot the issue over here? So,
+we're creating this brand new vector of
+
+30
+00:00:28,950 --> 00:00:28,960
+we're creating this brand new vector of
+ 
+
+31
+00:00:28,960 --> 00:00:31,189
+we're creating this brand new vector of
+strings called fruits. Then, we're using
+
+32
+00:00:31,189 --> 00:00:31,199
+strings called fruits. Then, we're using
+ 
+
+33
+00:00:31,199 --> 00:00:32,870
+strings called fruits. Then, we're using
+the push back function a bunch of times
+
+34
+00:00:32,870 --> 00:00:32,880
+the push back function a bunch of times
+ 
+
+35
+00:00:32,880 --> 00:00:34,630
+the push back function a bunch of times
+just to add some elements to it. Again,
+
+36
+00:00:34,630 --> 00:00:34,640
+just to add some elements to it. Again,
+ 
+
+37
+00:00:34,640 --> 00:00:36,150
+just to add some elements to it. Again,
+not exactly realistic. You'd probably
+
+38
+00:00:36,150 --> 00:00:36,160
+not exactly realistic. You'd probably
+ 
+
+39
+00:00:36,160 --> 00:00:38,150
+not exactly realistic. You'd probably
+just write out the list, you know, in
+
+40
+00:00:38,150 --> 00:00:38,160
+just write out the list, you know, in
+ 
+
+41
+00:00:38,160 --> 00:00:39,750
+just write out the list, you know, in
+the constructor as a static initialized
+
+42
+00:00:39,750 --> 00:00:39,760
+the constructor as a static initialized
+ 
+
+43
+00:00:39,760 --> 00:00:41,030
+the constructor as a static initialized
+list. Ignore that. That's not what this
+
+44
+00:00:41,030 --> 00:00:41,040
+list. Ignore that. That's not what this
+ 
+
+45
+00:00:41,040 --> 00:00:42,869
+list. Ignore that. That's not what this
+is about. And then, what do we have over
+
+46
+00:00:42,869 --> 00:00:42,879
+is about. And then, what do we have over
+ 
+
+47
+00:00:42,879 --> 00:00:44,549
+is about. And then, what do we have over
+here? We have a variable called first
+
+48
+00:00:44,549 --> 00:00:44,559
+here? We have a variable called first
+ 
+
+49
+00:00:44,559 --> 00:00:46,630
+here? We have a variable called first
+fruit that is a string reference. So,
+
+50
+00:00:46,630 --> 00:00:46,640
+fruit that is a string reference. So,
+ 
+
+51
+00:00:46,640 --> 00:00:49,110
+fruit that is a string reference. So,
+we're just trying to have like a nice
+
+52
+00:00:49,110 --> 00:00:49,120
+we're just trying to have like a nice
+ 
+
+53
+00:00:49,120 --> 00:00:51,670
+we're just trying to have like a nice
+name to refer to the very first fruit
+
+54
+00:00:51,670 --> 00:00:51,680
+name to refer to the very first fruit
+ 
+
+55
+00:00:51,680 --> 00:00:53,670
+name to refer to the very first fruit
+inside this data structure. Seems
+
+56
+00:00:53,670 --> 00:00:53,680
+inside this data structure. Seems
+ 
+
+57
+00:00:53,680 --> 00:00:54,950
+inside this data structure. Seems
+innocent enough. I don't want to have to
+
+58
+00:00:54,950 --> 00:00:54,960
+innocent enough. I don't want to have to
+ 
+
+59
+00:00:54,960 --> 00:00:57,189
+innocent enough. I don't want to have to
+keep referring to fruits zero. I just
+
+60
+00:00:57,189 --> 00:00:57,199
+keep referring to fruits zero. I just
+ 
+
+61
+00:00:57,199 --> 00:00:59,029
+keep referring to fruits zero. I just
+want to have this string reference that
+
+62
+00:00:59,029 --> 00:00:59,039
+want to have this string reference that
+ 
+
+63
+00:00:59,039 --> 00:01:01,189
+want to have this string reference that
+is the first fruit so I can then maybe
+
+64
+00:01:01,189 --> 00:01:01,199
+is the first fruit so I can then maybe
+ 
+
+65
+00:01:01,199 --> 00:01:03,189
+is the first fruit so I can then maybe
+print it later. But what's this? Uh I'm
+
+66
+00:01:03,189 --> 00:01:03,199
+print it later. But what's this? Uh I'm
+ 
+
+67
+00:01:03,199 --> 00:01:04,710
+print it later. But what's this? Uh I'm
+actually going to add something else to
+
+68
+00:01:04,710 --> 00:01:04,720
+actually going to add something else to
+ 
+
+69
+00:01:04,720 --> 00:01:06,950
+actually going to add something else to
+the collection first and then print the
+
+70
+00:01:06,950 --> 00:01:06,960
+the collection first and then print the
+ 
+
+71
+00:01:06,960 --> 00:01:08,550
+the collection first and then print the
+first fruit. Doesn't that seem like it
+
+72
+00:01:08,550 --> 00:01:08,560
+first fruit. Doesn't that seem like it
+ 
+
+73
+00:01:08,560 --> 00:01:10,149
+first fruit. Doesn't that seem like it
+would work? Well, let's run this code
+
+74
+00:01:10,149 --> 00:01:10,159
+would work? Well, let's run this code
+ 
+
+75
+00:01:10,159 --> 00:01:13,030
+would work? Well, let's run this code
+and see what happens.
+
+76
+00:01:13,030 --> 00:01:13,040
+and see what happens.
+ 
+
+77
+00:01:13,040 --> 00:01:15,429
+and see what happens.
+Oh, okay. So, it looks like we have some
+
+78
+00:01:15,429 --> 00:01:15,439
+Oh, okay. So, it looks like we have some
+ 
+
+79
+00:01:15,439 --> 00:01:17,590
+Oh, okay. So, it looks like we have some
+read access violation. If we have a look
+
+80
+00:01:17,590 --> 00:01:17,600
+read access violation. If we have a look
+ 
+
+81
+00:01:17,600 --> 00:01:19,510
+read access violation. If we have a look
+at the call stack, then it's all like
+
+82
+00:01:19,510 --> 00:01:19,520
+at the call stack, then it's all like
+ 
+
+83
+00:01:19,520 --> 00:01:21,510
+at the call stack, then it's all like
+inside, well, it's inside the print line
+
+84
+00:01:21,510 --> 00:01:21,520
+inside, well, it's inside the print line
+ 
+
+85
+00:01:21,520 --> 00:01:23,270
+inside, well, it's inside the print line
+function, but it seems to just not be
+
+86
+00:01:23,270 --> 00:01:23,280
+function, but it seems to just not be
+ 
+
+87
+00:01:23,280 --> 00:01:25,990
+function, but it seems to just not be
+able to format the string correctly or
+
+88
+00:01:25,990 --> 00:01:26,000
+able to format the string correctly or
+ 
+
+89
+00:01:26,000 --> 00:01:27,429
+able to format the string correctly or
+something. It seems a bit weird. And if
+
+90
+00:01:27,429 --> 00:01:27,439
+something. It seems a bit weird. And if
+ 
+
+91
+00:01:27,439 --> 00:01:28,870
+something. It seems a bit weird. And if
+we go back up here, we can see that it's
+
+92
+00:01:28,870 --> 00:01:28,880
+we go back up here, we can see that it's
+ 
+
+93
+00:01:28,880 --> 00:01:30,710
+we go back up here, we can see that it's
+happening as a result of this print line
+
+94
+00:01:30,710 --> 00:01:30,720
+happening as a result of this print line
+ 
+
+95
+00:01:30,720 --> 00:01:31,910
+happening as a result of this print line
+because what are we trying to print?
+
+96
+00:01:31,910 --> 00:01:31,920
+because what are we trying to print?
+ 
+
+97
+00:01:31,920 --> 00:01:34,230
+because what are we trying to print?
+First fruit error reading characters of
+
+98
+00:01:34,230 --> 00:01:34,240
+First fruit error reading characters of
+ 
+
+99
+00:01:34,240 --> 00:01:35,590
+First fruit error reading characters of
+string. The size of the string is
+
+100
+00:01:35,590 --> 00:01:35,600
+string. The size of the string is
+ 
+
+101
+00:01:35,600 --> 00:01:37,190
+string. The size of the string is
+apparently that big and it's just can't
+
+102
+00:01:37,190 --> 00:01:37,200
+apparently that big and it's just can't
+ 
+
+103
+00:01:37,200 --> 00:01:38,870
+apparently that big and it's just can't
+read the characters of the string. What
+
+104
+00:01:38,870 --> 00:01:38,880
+read the characters of the string. What
+ 
+
+105
+00:01:38,880 --> 00:01:41,109
+read the characters of the string. What
+has happened? Well, what we've done is
+
+106
+00:01:41,109 --> 00:01:41,119
+has happened? Well, what we've done is
+ 
+
+107
+00:01:41,119 --> 00:01:43,350
+has happened? Well, what we've done is
+we've taken a reference to an element
+
+108
+00:01:43,350 --> 00:01:43,360
+we've taken a reference to an element
+ 
+
+109
+00:01:43,360 --> 00:01:45,670
+we've taken a reference to an element
+inside this vector. How does that work?
+
+110
+00:01:45,670 --> 00:01:45,680
+inside this vector. How does that work?
+ 
+
+111
+00:01:45,680 --> 00:01:47,270
+inside this vector. How does that work?
+Let's talk a little bit more about how
+
+112
+00:01:47,270 --> 00:01:47,280
+Let's talk a little bit more about how
+ 
+
+113
+00:01:47,280 --> 00:01:48,950
+Let's talk a little bit more about how
+references work and what they kind of
+
+114
+00:01:48,950 --> 00:01:48,960
+references work and what they kind of
+ 
+
+115
+00:01:48,960 --> 00:01:50,789
+references work and what they kind of
+are. I have a video about references in
+
+116
+00:01:50,789 --> 00:01:50,799
+are. I have a video about references in
+ 
+
+117
+00:01:50,799 --> 00:01:52,389
+are. I have a video about references in
+C++, by the way. I'll have it linked up
+
+118
+00:01:52,389 --> 00:01:52,399
+C++, by the way. I'll have it linked up
+ 
+
+119
+00:01:52,399 --> 00:01:53,590
+C++, by the way. I'll have it linked up
+there. Make sure you also watch the
+
+120
+00:01:53,590 --> 00:01:53,600
+there. Make sure you also watch the
+ 
+
+121
+00:01:53,600 --> 00:01:55,109
+there. Make sure you also watch the
+pointers video because that's kind of
+
+122
+00:01:55,109 --> 00:01:55,119
+pointers video because that's kind of
+ 
+
+123
+00:01:55,119 --> 00:01:56,710
+pointers video because that's kind of
+related as you're about to find out.
+
+124
+00:01:56,710 --> 00:01:56,720
+related as you're about to find out.
+ 
+
+125
+00:01:56,720 --> 00:01:59,749
+related as you're about to find out.
+References are just pointers but with a
+
+126
+00:01:59,749 --> 00:01:59,759
+References are just pointers but with a
+ 
+
+127
+00:01:59,759 --> 00:02:01,990
+References are just pointers but with a
+little bit more syntactic sugar and
+
+128
+00:02:01,990 --> 00:02:02,000
+little bit more syntactic sugar and
+ 
+
+129
+00:02:02,000 --> 00:02:03,910
+little bit more syntactic sugar and
+slightly different semantics. References
+
+130
+00:02:03,910 --> 00:02:03,920
+slightly different semantics. References
+ 
+
+131
+00:02:03,920 --> 00:02:05,590
+slightly different semantics. References
+are not something that you need to have
+
+132
+00:02:05,590 --> 00:02:05,600
+are not something that you need to have
+ 
+
+133
+00:02:05,600 --> 00:02:07,429
+are not something that you need to have
+in the language from a functionality
+
+134
+00:02:07,429 --> 00:02:07,439
+in the language from a functionality
+ 
+
+135
+00:02:07,439 --> 00:02:08,949
+in the language from a functionality
+point of view. You can achieve
+
+136
+00:02:08,949 --> 00:02:08,959
+point of view. You can achieve
+ 
+
+137
+00:02:08,959 --> 00:02:10,309
+point of view. You can achieve
+everything you want to achieve with
+
+138
+00:02:10,309 --> 00:02:10,319
+everything you want to achieve with
+ 
+
+139
+00:02:10,319 --> 00:02:11,990
+everything you want to achieve with
+references by just simply using
+
+140
+00:02:11,990 --> 00:02:12,000
+references by just simply using
+ 
+
+141
+00:02:12,000 --> 00:02:15,030
+references by just simply using
+pointers. In fact, C, the language C,
+
+142
+00:02:15,030 --> 00:02:15,040
+pointers. In fact, C, the language C,
+ 
+
+143
+00:02:15,040 --> 00:02:17,510
+pointers. In fact, C, the language C,
+doesn't have references. It's only got
+
+144
+00:02:17,510 --> 00:02:17,520
+doesn't have references. It's only got
+ 
+
+145
+00:02:17,520 --> 00:02:19,510
+doesn't have references. It's only got
+pointers. So, let me rewrite this
+
+146
+00:02:19,510 --> 00:02:19,520
+pointers. So, let me rewrite this
+ 
+
+147
+00:02:19,520 --> 00:02:21,110
+pointers. So, let me rewrite this
+without using references. I'm just going
+
+148
+00:02:21,110 --> 00:02:21,120
+without using references. I'm just going
+ 
+
+149
+00:02:21,120 --> 00:02:23,030
+without using references. I'm just going
+to use pointers as if this was C.
+
+150
+00:02:23,030 --> 00:02:23,040
+to use pointers as if this was C.
+ 
+
+151
+00:02:23,040 --> 00:02:24,550
+to use pointers as if this was C.
+Obviously, we have a vector here, which
+
+152
+00:02:24,550 --> 00:02:24,560
+Obviously, we have a vector here, which
+ 
+
+153
+00:02:24,560 --> 00:02:26,229
+Obviously, we have a vector here, which
+is not C, but ignore that. So, I'll
+
+154
+00:02:26,229 --> 00:02:26,239
+is not C, but ignore that. So, I'll
+ 
+
+155
+00:02:26,239 --> 00:02:27,830
+is not C, but ignore that. So, I'll
+change the reference to a pointer. And
+
+156
+00:02:27,830 --> 00:02:27,840
+change the reference to a pointer. And
+ 
+
+157
+00:02:27,840 --> 00:02:29,190
+change the reference to a pointer. And
+then we're simply going to get the
+
+158
+00:02:29,190 --> 00:02:29,200
+then we're simply going to get the
+ 
+
+159
+00:02:29,200 --> 00:02:32,390
+then we're simply going to get the
+memory address of fruits 0. This might
+
+160
+00:02:32,390 --> 00:02:32,400
+memory address of fruits 0. This might
+ 
+
+161
+00:02:32,400 --> 00:02:34,630
+memory address of fruits 0. This might
+be revealing a little bit more about the
+
+162
+00:02:34,630 --> 00:02:34,640
+be revealing a little bit more about the
+ 
+
+163
+00:02:34,640 --> 00:02:38,470
+be revealing a little bit more about the
+issue. Memory address of fruits zero. So
+
+164
+00:02:38,470 --> 00:02:38,480
+issue. Memory address of fruits zero. So
+ 
+
+165
+00:02:38,480 --> 00:02:40,949
+issue. Memory address of fruits zero. So
+we are directly getting the memory
+
+166
+00:02:40,949 --> 00:02:40,959
+we are directly getting the memory
+ 
+
+167
+00:02:40,959 --> 00:02:43,430
+we are directly getting the memory
+address of the string that is inside
+
+168
+00:02:43,430 --> 00:02:43,440
+address of the string that is inside
+ 
+
+169
+00:02:43,440 --> 00:02:45,509
+address of the string that is inside
+this data structure. And then what can
+
+170
+00:02:45,509 --> 00:02:45,519
+this data structure. And then what can
+ 
+
+171
+00:02:45,519 --> 00:02:47,750
+this data structure. And then what can
+happen when we decide to push something
+
+172
+00:02:47,750 --> 00:02:47,760
+happen when we decide to push something
+ 
+
+173
+00:02:47,760 --> 00:02:50,550
+happen when we decide to push something
+else into the vector? It might have to
+
+174
+00:02:50,550 --> 00:02:50,560
+else into the vector? It might have to
+ 
+
+175
+00:02:50,560 --> 00:02:52,949
+else into the vector? It might have to
+grow. It might have to resize. It might
+
+176
+00:02:52,949 --> 00:02:52,959
+grow. It might have to resize. It might
+ 
+
+177
+00:02:52,959 --> 00:02:55,350
+grow. It might have to resize. It might
+have to reallocate memory. So if we
+
+178
+00:02:55,350 --> 00:02:55,360
+have to reallocate memory. So if we
+ 
+
+179
+00:02:55,360 --> 00:02:57,110
+have to reallocate memory. So if we
+currently have a vector somewhere in our
+
+180
+00:02:57,110 --> 00:02:57,120
+currently have a vector somewhere in our
+ 
+
+181
+00:02:57,120 --> 00:02:58,949
+currently have a vector somewhere in our
+memory with four elements in it, we have
+
+182
+00:02:58,949 --> 00:02:58,959
+memory with four elements in it, we have
+ 
+
+183
+00:02:58,959 --> 00:03:00,949
+memory with four elements in it, we have
+our apple, orange, plum, and pear.
+
+184
+00:03:00,949 --> 00:03:00,959
+our apple, orange, plum, and pear.
+ 
+
+185
+00:03:00,959 --> 00:03:03,030
+our apple, orange, plum, and pear.
+That's them over here. And then suddenly
+
+186
+00:03:03,030 --> 00:03:03,040
+That's them over here. And then suddenly
+ 
+
+187
+00:03:03,040 --> 00:03:05,430
+That's them over here. And then suddenly
+we want to add this grapefruit. There's
+
+188
+00:03:05,430 --> 00:03:05,440
+we want to add this grapefruit. There's
+ 
+
+189
+00:03:05,440 --> 00:03:07,509
+we want to add this grapefruit. There's
+no room for it. So it has to reallocate
+
+190
+00:03:07,509 --> 00:03:07,519
+no room for it. So it has to reallocate
+ 
+
+191
+00:03:07,519 --> 00:03:09,430
+no room for it. So it has to reallocate
+that memory. What does that look like?
+
+192
+00:03:09,430 --> 00:03:09,440
+that memory. What does that look like?
+ 
+
+193
+00:03:09,440 --> 00:03:11,509
+that memory. What does that look like?
+Well, it can vary, but let's just say
+
+194
+00:03:11,509 --> 00:03:11,519
+Well, it can vary, but let's just say
+ 
+
+195
+00:03:11,519 --> 00:03:13,430
+Well, it can vary, but let's just say
+that it will find an entirely new block
+
+196
+00:03:13,430 --> 00:03:13,440
+that it will find an entirely new block
+ 
+
+197
+00:03:13,440 --> 00:03:15,589
+that it will find an entirely new block
+of free memory somewhere else. It will
+
+198
+00:03:15,589 --> 00:03:15,599
+of free memory somewhere else. It will
+ 
+
+199
+00:03:15,599 --> 00:03:18,470
+of free memory somewhere else. It will
+allocate at least enough space for all
+
+200
+00:03:18,470 --> 00:03:18,480
+allocate at least enough space for all
+ 
+
+201
+00:03:18,480 --> 00:03:20,309
+allocate at least enough space for all
+of the elements that we now request to
+
+202
+00:03:20,309 --> 00:03:20,319
+of the elements that we now request to
+ 
+
+203
+00:03:20,319 --> 00:03:22,070
+of the elements that we now request to
+be in that data structure. So in this
+
+204
+00:03:22,070 --> 00:03:22,080
+be in that data structure. So in this
+ 
+
+205
+00:03:22,080 --> 00:03:24,550
+be in that data structure. So in this
+case, five. And then it will copy across
+
+206
+00:03:24,550 --> 00:03:24,560
+case, five. And then it will copy across
+ 
+
+207
+00:03:24,560 --> 00:03:27,270
+case, five. And then it will copy across
+all of the elements into these new
+
+208
+00:03:27,270 --> 00:03:27,280
+all of the elements into these new
+ 
+
+209
+00:03:27,280 --> 00:03:29,350
+all of the elements into these new
+blocks of memory. Not one at a time
+
+210
+00:03:29,350 --> 00:03:29,360
+blocks of memory. Not one at a time
+ 
+
+211
+00:03:29,360 --> 00:03:31,509
+blocks of memory. Not one at a time
+hopefully. And then our grapefruit gets
+
+212
+00:03:31,509 --> 00:03:31,519
+hopefully. And then our grapefruit gets
+ 
+
+213
+00:03:31,519 --> 00:03:34,149
+hopefully. And then our grapefruit gets
+put into here. Now our first fruit
+
+214
+00:03:34,149 --> 00:03:34,159
+put into here. Now our first fruit
+ 
+
+215
+00:03:34,159 --> 00:03:36,470
+put into here. Now our first fruit
+pointer or reference doesn't matter.
+
+216
+00:03:36,470 --> 00:03:36,480
+pointer or reference doesn't matter.
+ 
+
+217
+00:03:36,480 --> 00:03:39,270
+pointer or reference doesn't matter.
+This is pointing to here and this will
+
+218
+00:03:39,270 --> 00:03:39,280
+This is pointing to here and this will
+ 
+
+219
+00:03:39,280 --> 00:03:41,750
+This is pointing to here and this will
+stay pointing to here no matter what we
+
+220
+00:03:41,750 --> 00:03:41,760
+stay pointing to here no matter what we
+ 
+
+221
+00:03:41,760 --> 00:03:43,910
+stay pointing to here no matter what we
+do with the vector because it's pointing
+
+222
+00:03:43,910 --> 00:03:43,920
+do with the vector because it's pointing
+ 
+
+223
+00:03:43,920 --> 00:03:46,869
+do with the vector because it's pointing
+to memory a memory address. It's not
+
+224
+00:03:46,869 --> 00:03:46,879
+to memory a memory address. It's not
+ 
+
+225
+00:03:46,879 --> 00:03:49,430
+to memory a memory address. It's not
+some sort of alias for fruits zero and
+
+226
+00:03:49,430 --> 00:03:49,440
+some sort of alias for fruits zero and
+ 
+
+227
+00:03:49,440 --> 00:03:51,509
+some sort of alias for fruits zero and
+it will remain that way. No, it's that
+
+228
+00:03:51,509 --> 00:03:51,519
+it will remain that way. No, it's that
+ 
+
+229
+00:03:51,519 --> 00:03:54,390
+it will remain that way. No, it's that
+actual fixed point in memory. And then
+
+230
+00:03:54,390 --> 00:03:54,400
+actual fixed point in memory. And then
+ 
+
+231
+00:03:54,400 --> 00:03:56,309
+actual fixed point in memory. And then
+so obviously once all of this has been
+
+232
+00:03:56,309 --> 00:03:56,319
+so obviously once all of this has been
+ 
+
+233
+00:03:56,319 --> 00:03:57,910
+so obviously once all of this has been
+copied, we have our brand new block of
+
+234
+00:03:57,910 --> 00:03:57,920
+copied, we have our brand new block of
+ 
+
+235
+00:03:57,920 --> 00:04:00,309
+copied, we have our brand new block of
+memory. This is getting freed. It's
+
+236
+00:04:00,309 --> 00:04:00,319
+memory. This is getting freed. It's
+ 
+
+237
+00:04:00,319 --> 00:04:02,070
+memory. This is getting freed. It's
+getting deleted. So now we still have
+
+238
+00:04:02,070 --> 00:04:02,080
+getting deleted. So now we still have
+ 
+
+239
+00:04:02,080 --> 00:04:04,869
+getting deleted. So now we still have
+this variable pointing to deleted
+
+240
+00:04:04,869 --> 00:04:04,879
+this variable pointing to deleted
+ 
+
+241
+00:04:04,879 --> 00:04:06,789
+this variable pointing to deleted
+memory, freed memory. Whereas what you
+
+242
+00:04:06,789 --> 00:04:06,799
+memory, freed memory. Whereas what you
+ 
+
+243
+00:04:06,799 --> 00:04:08,470
+memory, freed memory. Whereas what you
+might expect if you just don't think
+
+244
+00:04:08,470 --> 00:04:08,480
+might expect if you just don't think
+ 
+
+245
+00:04:08,480 --> 00:04:10,710
+might expect if you just don't think
+about it hard enough is that oh yeah, I
+
+246
+00:04:10,710 --> 00:04:10,720
+about it hard enough is that oh yeah, I
+ 
+
+247
+00:04:10,720 --> 00:04:12,949
+about it hard enough is that oh yeah, I
+have my reference to you know fruits
+
+248
+00:04:12,949 --> 00:04:12,959
+have my reference to you know fruits
+ 
+
+249
+00:04:12,959 --> 00:04:14,710
+have my reference to you know fruits
+zero. So it doesn't matter what happens
+
+250
+00:04:14,710 --> 00:04:14,720
+zero. So it doesn't matter what happens
+ 
+
+251
+00:04:14,720 --> 00:04:15,990
+zero. So it doesn't matter what happens
+to the vector, it's always going to be
+
+252
+00:04:15,990 --> 00:04:16,000
+to the vector, it's always going to be
+ 
+
+253
+00:04:16,000 --> 00:04:18,069
+to the vector, it's always going to be
+that first element in there. No. And
+
+254
+00:04:18,069 --> 00:04:18,079
+that first element in there. No. And
+ 
+
+255
+00:04:18,079 --> 00:04:20,069
+that first element in there. No. And
+obviously this makes a lot more sense I
+
+256
+00:04:20,069 --> 00:04:20,079
+obviously this makes a lot more sense I
+ 
+
+257
+00:04:20,079 --> 00:04:21,830
+obviously this makes a lot more sense I
+think if you just write it out like this
+
+258
+00:04:21,830 --> 00:04:21,840
+think if you just write it out like this
+ 
+
+259
+00:04:21,840 --> 00:04:23,670
+think if you just write it out like this
+as a pointer because now it's like well
+
+260
+00:04:23,670 --> 00:04:23,680
+as a pointer because now it's like well
+ 
+
+261
+00:04:23,680 --> 00:04:25,430
+as a pointer because now it's like well
+yeah this is the memory address of this
+
+262
+00:04:25,430 --> 00:04:25,440
+yeah this is the memory address of this
+ 
+
+263
+00:04:25,440 --> 00:04:26,950
+yeah this is the memory address of this
+element and then if the vector
+
+264
+00:04:26,950 --> 00:04:26,960
+element and then if the vector
+ 
+
+265
+00:04:26,960 --> 00:04:28,870
+element and then if the vector
+reallocates memory and that old memory
+
+266
+00:04:28,870 --> 00:04:28,880
+reallocates memory and that old memory
+ 
+
+267
+00:04:28,880 --> 00:04:31,189
+reallocates memory and that old memory
+gets freed then this is now invalid. But
+
+268
+00:04:31,189 --> 00:04:31,199
+gets freed then this is now invalid. But
+ 
+
+269
+00:04:31,199 --> 00:04:33,270
+gets freed then this is now invalid. But
+when you write things as references it
+
+270
+00:04:33,270 --> 00:04:33,280
+when you write things as references it
+ 
+
+271
+00:04:33,280 --> 00:04:35,270
+when you write things as references it
+just might be something that you don't
+
+272
+00:04:35,270 --> 00:04:35,280
+just might be something that you don't
+ 
+
+273
+00:04:35,280 --> 00:04:36,550
+just might be something that you don't
+expect. Should this mean that you
+
+274
+00:04:36,550 --> 00:04:36,560
+expect. Should this mean that you
+ 
+
+275
+00:04:36,560 --> 00:04:38,150
+expect. Should this mean that you
+shouldn't use references in C++? Just
+
+276
+00:04:38,150 --> 00:04:38,160
+shouldn't use references in C++? Just
+ 
+
+277
+00:04:38,160 --> 00:04:40,070
+shouldn't use references in C++? Just
+use pointers everywhere. No. You just
+
+278
+00:04:40,070 --> 00:04:40,080
+use pointers everywhere. No. You just
+ 
+
+279
+00:04:40,080 --> 00:04:41,749
+use pointers everywhere. No. You just
+have to keep in mind that that's how
+
+280
+00:04:41,749 --> 00:04:41,759
+have to keep in mind that that's how
+ 
+
+281
+00:04:41,759 --> 00:04:43,670
+have to keep in mind that that's how
+references work. They're just pointers
+
+282
+00:04:43,670 --> 00:04:43,680
+references work. They're just pointers
+ 
+
+283
+00:04:43,680 --> 00:04:45,990
+references work. They're just pointers
+and you have to be aware of what exactly
+
+284
+00:04:45,990 --> 00:04:46,000
+and you have to be aware of what exactly
+ 
+
+285
+00:04:46,000 --> 00:04:47,909
+and you have to be aware of what exactly
+you're referencing because ultimately
+
+286
+00:04:47,909 --> 00:04:47,919
+you're referencing because ultimately
+ 
+
+287
+00:04:47,919 --> 00:04:50,070
+you're referencing because ultimately
+you're referencing memory. A safer way
+
+288
+00:04:50,070 --> 00:04:50,080
+you're referencing memory. A safer way
+ 
+
+289
+00:04:50,080 --> 00:04:52,150
+you're referencing memory. A safer way
+to reference a particular element inside
+
+290
+00:04:52,150 --> 00:04:52,160
+to reference a particular element inside
+ 
+
+291
+00:04:52,160 --> 00:04:54,310
+to reference a particular element inside
+this data structure would be by its
+
+292
+00:04:54,310 --> 00:04:54,320
+this data structure would be by its
+ 
+
+293
+00:04:54,320 --> 00:04:56,310
+this data structure would be by its
+index. So for example, you could have
+
+294
+00:04:56,310 --> 00:04:56,320
+index. So for example, you could have
+ 
+
+295
+00:04:56,320 --> 00:04:58,629
+index. So for example, you could have
+first fruit which is a little bit silly
+
+296
+00:04:58,629 --> 00:04:58,639
+first fruit which is a little bit silly
+ 
+
+297
+00:04:58,639 --> 00:05:00,550
+first fruit which is a little bit silly
+in this case. You can set that to zero.
+
+298
+00:05:00,550 --> 00:05:00,560
+in this case. You can set that to zero.
+ 
+
+299
+00:05:00,560 --> 00:05:02,710
+in this case. You can set that to zero.
+And so now you still have to access this
+
+300
+00:05:02,710 --> 00:05:02,720
+And so now you still have to access this
+ 
+
+301
+00:05:02,720 --> 00:05:04,790
+And so now you still have to access this
+data structure but you have that
+
+302
+00:05:04,790 --> 00:05:04,800
+data structure but you have that
+ 
+
+303
+00:05:04,800 --> 00:05:06,550
+data structure but you have that
+particular element in there that you
+
+304
+00:05:06,550 --> 00:05:06,560
+particular element in there that you
+ 
+
+305
+00:05:06,560 --> 00:05:08,070
+particular element in there that you
+want to access. Probably makes a bit
+
+306
+00:05:08,070 --> 00:05:08,080
+want to access. Probably makes a bit
+ 
+
+307
+00:05:08,080 --> 00:05:09,749
+want to access. Probably makes a bit
+more sense if we say something like
+
+308
+00:05:09,749 --> 00:05:09,759
+more sense if we say something like
+ 
+
+309
+00:05:09,759 --> 00:05:11,590
+more sense if we say something like
+plum. like we want to be referencing the
+
+310
+00:05:11,590 --> 00:05:11,600
+plum. like we want to be referencing the
+ 
+
+311
+00:05:11,600 --> 00:05:14,150
+plum. like we want to be referencing the
+plum which is at index 2. That means
+
+312
+00:05:14,150 --> 00:05:14,160
+plum which is at index 2. That means
+ 
+
+313
+00:05:14,160 --> 00:05:16,310
+plum which is at index 2. That means
+that no matter where we are before or
+
+314
+00:05:16,310 --> 00:05:16,320
+that no matter where we are before or
+ 
+
+315
+00:05:16,320 --> 00:05:18,550
+that no matter where we are before or
+after this memory reallocation, it
+
+316
+00:05:18,550 --> 00:05:18,560
+after this memory reallocation, it
+ 
+
+317
+00:05:18,560 --> 00:05:19,830
+after this memory reallocation, it
+doesn't matter. We're still going to be
+
+318
+00:05:19,830 --> 00:05:19,840
+doesn't matter. We're still going to be
+ 
+
+319
+00:05:19,840 --> 00:05:21,510
+doesn't matter. We're still going to be
+correct unless that element actually
+
+320
+00:05:21,510 --> 00:05:21,520
+correct unless that element actually
+ 
+
+321
+00:05:21,520 --> 00:05:23,270
+correct unless that element actually
+moves within the data structure, which
+
+322
+00:05:23,270 --> 00:05:23,280
+moves within the data structure, which
+ 
+
+323
+00:05:23,280 --> 00:05:24,710
+moves within the data structure, which
+could happen if we insert something
+
+324
+00:05:24,710 --> 00:05:24,720
+could happen if we insert something
+ 
+
+325
+00:05:24,720 --> 00:05:26,550
+could happen if we insert something
+between origin plum because then plum
+
+326
+00:05:26,550 --> 00:05:26,560
+between origin plum because then plum
+ 
+
+327
+00:05:26,560 --> 00:05:29,110
+between origin plum because then plum
+would be index 3. But this is the much
+
+328
+00:05:29,110 --> 00:05:29,120
+would be index 3. But this is the much
+ 
+
+329
+00:05:29,120 --> 00:05:31,029
+would be index 3. But this is the much
+safer way to do this compared to just
+
+330
+00:05:31,029 --> 00:05:31,039
+safer way to do this compared to just
+ 
+
+331
+00:05:31,039 --> 00:05:33,029
+safer way to do this compared to just
+taking a reference. You can still do
+
+332
+00:05:33,029 --> 00:05:33,039
+taking a reference. You can still do
+ 
+
+333
+00:05:33,039 --> 00:05:35,029
+taking a reference. You can still do
+this, but you just have to be mindful.
+
+334
+00:05:35,029 --> 00:05:35,039
+this, but you just have to be mindful.
+ 
+
+335
+00:05:35,039 --> 00:05:37,590
+this, but you just have to be mindful.
+You just have to be careful of, hey, I'm
+
+336
+00:05:37,590 --> 00:05:37,600
+You just have to be careful of, hey, I'm
+ 
+
+337
+00:05:37,600 --> 00:05:39,510
+You just have to be careful of, hey, I'm
+addressing memory directly and that
+
+338
+00:05:39,510 --> 00:05:39,520
+addressing memory directly and that
+ 
+
+339
+00:05:39,520 --> 00:05:41,270
+addressing memory directly and that
+memory may move. Want to have a
+
+340
+00:05:41,270 --> 00:05:41,280
+memory may move. Want to have a
+ 
+
+341
+00:05:41,280 --> 00:05:42,710
+memory may move. Want to have a
+dashboard of information at a glance
+
+342
+00:05:42,710 --> 00:05:42,720
+dashboard of information at a glance
+ 
+
+343
+00:05:42,720 --> 00:05:44,070
+dashboard of information at a glance
+without getting distracted or losing
+
+344
+00:05:44,070 --> 00:05:44,080
+without getting distracted or losing
+ 
+
+345
+00:05:44,080 --> 00:05:46,230
+without getting distracted or losing
+focus? Check out Terminal, the sponsor
+
+346
+00:05:46,230 --> 00:05:46,240
+focus? Check out Terminal, the sponsor
+ 
+
+347
+00:05:46,240 --> 00:05:48,310
+focus? Check out Terminal, the sponsor
+of this video. Terminal is an e- in
+
+348
+00:05:48,310 --> 00:05:48,320
+of this video. Terminal is an e- in
+ 
+
+349
+00:05:48,320 --> 00:05:50,230
+of this video. Terminal is an e- in
+dashboard companion that helps you stay
+
+350
+00:05:50,230 --> 00:05:50,240
+dashboard companion that helps you stay
+ 
+
+351
+00:05:50,240 --> 00:05:51,990
+dashboard companion that helps you stay
+focused. It's just this small,
+
+352
+00:05:51,990 --> 00:05:52,000
+focused. It's just this small,
+ 
+
+353
+00:05:52,000 --> 00:05:54,150
+focused. It's just this small,
+convenient open platform display with a
+
+354
+00:05:54,150 --> 00:05:54,160
+convenient open platform display with a
+ 
+
+355
+00:05:54,160 --> 00:05:55,909
+convenient open platform display with a
+battery that lasts between 2 months and
+
+356
+00:05:55,909 --> 00:05:55,919
+battery that lasts between 2 months and
+ 
+
+357
+00:05:55,919 --> 00:05:58,310
+battery that lasts between 2 months and
+1/2 years. Oh, and it's super
+
+358
+00:05:58,310 --> 00:05:58,320
+1/2 years. Oh, and it's super
+ 
+
+359
+00:05:58,320 --> 00:06:01,029
+1/2 years. Oh, and it's super
+affordable. Available from just $139.
+
+360
+00:06:01,029 --> 00:06:01,039
+affordable. Available from just $139.
+ 
+
+361
+00:06:01,039 --> 00:06:02,710
+affordable. Available from just $139.
+It's a great way to display whatever
+
+362
+00:06:02,710 --> 00:06:02,720
+It's a great way to display whatever
+ 
+
+363
+00:06:02,720 --> 00:06:04,550
+It's a great way to display whatever
+information you like anywhere in your
+
+364
+00:06:04,550 --> 00:06:04,560
+information you like anywhere in your
+ 
+
+365
+00:06:04,560 --> 00:06:06,390
+information you like anywhere in your
+house. You could show your calendar or
+
+366
+00:06:06,390 --> 00:06:06,400
+house. You could show your calendar or
+ 
+
+367
+00:06:06,400 --> 00:06:07,830
+house. You could show your calendar or
+the weather in the kitchen for the whole
+
+368
+00:06:07,830 --> 00:06:07,840
+the weather in the kitchen for the whole
+ 
+
+369
+00:06:07,840 --> 00:06:09,909
+the weather in the kitchen for the whole
+family to see, for example, or you could
+
+370
+00:06:09,909 --> 00:06:09,919
+family to see, for example, or you could
+ 
+
+371
+00:06:09,919 --> 00:06:11,350
+family to see, for example, or you could
+take it to your office and display some
+
+372
+00:06:11,350 --> 00:06:11,360
+take it to your office and display some
+ 
+
+373
+00:06:11,360 --> 00:06:13,430
+take it to your office and display some
+workrelated information. Put it wherever
+
+374
+00:06:13,430 --> 00:06:13,440
+workrelated information. Put it wherever
+ 
+
+375
+00:06:13,440 --> 00:06:15,110
+workrelated information. Put it wherever
+you like. I've had it for the last month
+
+376
+00:06:15,110 --> 00:06:15,120
+you like. I've had it for the last month
+ 
+
+377
+00:06:15,120 --> 00:06:17,029
+you like. I've had it for the last month
+or so, and I really like it. The whole
+
+378
+00:06:17,029 --> 00:06:17,039
+or so, and I really like it. The whole
+ 
+
+379
+00:06:17,039 --> 00:06:18,790
+or so, and I really like it. The whole
+family does. Terminal is powered by
+
+380
+00:06:18,790 --> 00:06:18,800
+family does. Terminal is powered by
+ 
+
+381
+00:06:18,800 --> 00:06:20,629
+family does. Terminal is powered by
+plugins which display all of this
+
+382
+00:06:20,629 --> 00:06:20,639
+plugins which display all of this
+ 
+
+383
+00:06:20,639 --> 00:06:22,070
+plugins which display all of this
+information on the screen. They
+
+384
+00:06:22,070 --> 00:06:22,080
+information on the screen. They
+ 
+
+385
+00:06:22,080 --> 00:06:24,390
+information on the screen. They
+currently have over 78 first party
+
+386
+00:06:24,390 --> 00:06:24,400
+currently have over 78 first party
+ 
+
+387
+00:06:24,400 --> 00:06:26,150
+currently have over 78 first party
+plugins and hundreds more private
+
+388
+00:06:26,150 --> 00:06:26,160
+plugins and hundreds more private
+ 
+
+389
+00:06:26,160 --> 00:06:28,230
+plugins and hundreds more private
+plugins. And of course, you can easily
+
+390
+00:06:28,230 --> 00:06:28,240
+plugins. And of course, you can easily
+ 
+
+391
+00:06:28,240 --> 00:06:30,150
+plugins. And of course, you can easily
+make your own. You can control how it
+
+392
+00:06:30,150 --> 00:06:30,160
+make your own. You can control how it
+ 
+
+393
+00:06:30,160 --> 00:06:32,550
+make your own. You can control how it
+cycles between plugins to show different
+
+394
+00:06:32,550 --> 00:06:32,560
+cycles between plugins to show different
+ 
+
+395
+00:06:32,560 --> 00:06:34,550
+cycles between plugins to show different
+information or create views that show
+
+396
+00:06:34,550 --> 00:06:34,560
+information or create views that show
+ 
+
+397
+00:06:34,560 --> 00:06:36,230
+information or create views that show
+more than one plugin on the screen at
+
+398
+00:06:36,230 --> 00:06:36,240
+more than one plugin on the screen at
+ 
+
+399
+00:06:36,240 --> 00:06:37,909
+more than one plugin on the screen at
+the same time. Terminal is available in
+
+400
+00:06:37,909 --> 00:06:37,919
+the same time. Terminal is available in
+ 
+
+401
+00:06:37,919 --> 00:06:39,510
+the same time. Terminal is available in
+a wide range of colors. I have the white
+
+402
+00:06:39,510 --> 00:06:39,520
+a wide range of colors. I have the white
+ 
+
+403
+00:06:39,520 --> 00:06:41,110
+a wide range of colors. I have the white
+one here. Click my link in description
+
+404
+00:06:41,110 --> 00:06:41,120
+one here. Click my link in description
+ 
+
+405
+00:06:41,120 --> 00:06:42,550
+one here. Click my link in description
+below and check it out. Huge thank you
+
+406
+00:06:42,550 --> 00:06:42,560
+below and check it out. Huge thank you
+ 
+
+407
+00:06:42,560 --> 00:06:44,309
+below and check it out. Huge thank you
+to Terminal for sponsoring this video.
+
+408
+00:06:44,309 --> 00:06:44,319
+to Terminal for sponsoring this video.
+ 
+
+409
+00:06:44,319 --> 00:06:45,830
+to Terminal for sponsoring this video.
+Now, if this seems like a little bit of
+
+410
+00:06:45,830 --> 00:06:45,840
+Now, if this seems like a little bit of
+ 
+
+411
+00:06:45,840 --> 00:06:47,670
+Now, if this seems like a little bit of
+a weird example and it seems like
+
+412
+00:06:47,670 --> 00:06:47,680
+a weird example and it seems like
+ 
+
+413
+00:06:47,680 --> 00:06:48,870
+a weird example and it seems like
+something that it would never happen to
+
+414
+00:06:48,870 --> 00:06:48,880
+something that it would never happen to
+ 
+
+415
+00:06:48,880 --> 00:06:50,390
+something that it would never happen to
+you because you don't take references of
+
+416
+00:06:50,390 --> 00:06:50,400
+you because you don't take references of
+ 
+
+417
+00:06:50,400 --> 00:06:52,230
+you because you don't take references of
+variables within data structures,
+
+418
+00:06:52,230 --> 00:06:52,240
+variables within data structures,
+ 
+
+419
+00:06:52,240 --> 00:06:53,510
+variables within data structures,
+another thing to consider is the fact
+
+420
+00:06:53,510 --> 00:06:53,520
+another thing to consider is the fact
+ 
+
+421
+00:06:53,520 --> 00:06:55,270
+another thing to consider is the fact
+that if you just had a function over
+
+422
+00:06:55,270 --> 00:06:55,280
+that if you just had a function over
+ 
+
+423
+00:06:55,280 --> 00:06:56,870
+that if you just had a function over
+here that maybe took in a string, how
+
+424
+00:06:56,870 --> 00:06:56,880
+here that maybe took in a string, how
+ 
+
+425
+00:06:56,880 --> 00:06:59,270
+here that maybe took in a string, how
+would you take in that string? by const
+
+426
+00:06:59,270 --> 00:06:59,280
+would you take in that string? by const
+ 
+
+427
+00:06:59,280 --> 00:07:01,430
+would you take in that string? by const
+reference most likely. So here for
+
+428
+00:07:01,430 --> 00:07:01,440
+reference most likely. So here for
+ 
+
+429
+00:07:01,440 --> 00:07:03,270
+reference most likely. So here for
+example is a particular fruit that we
+
+430
+00:07:03,270 --> 00:07:03,280
+example is a particular fruit that we
+ 
+
+431
+00:07:03,280 --> 00:07:05,670
+example is a particular fruit that we
+take in. If we simply pass in fruits
+
+432
+00:07:05,670 --> 00:07:05,680
+take in. If we simply pass in fruits
+ 
+
+433
+00:07:05,680 --> 00:07:07,909
+take in. If we simply pass in fruits
+zero over here and then perhaps this
+
+434
+00:07:07,909 --> 00:07:07,919
+zero over here and then perhaps this
+ 
+
+435
+00:07:07,919 --> 00:07:10,150
+zero over here and then perhaps this
+function modifies this fruits vector in
+
+436
+00:07:10,150 --> 00:07:10,160
+function modifies this fruits vector in
+ 
+
+437
+00:07:10,160 --> 00:07:12,309
+function modifies this fruits vector in
+some way by adding an element to it then
+
+438
+00:07:12,309 --> 00:07:12,319
+some way by adding an element to it then
+ 
+
+439
+00:07:12,319 --> 00:07:13,990
+some way by adding an element to it then
+this is still a reference that will
+
+440
+00:07:13,990 --> 00:07:14,000
+this is still a reference that will
+ 
+
+441
+00:07:14,000 --> 00:07:16,469
+this is still a reference that will
+become invalid potentially and might be
+
+442
+00:07:16,469 --> 00:07:16,479
+become invalid potentially and might be
+ 
+
+443
+00:07:16,479 --> 00:07:18,469
+become invalid potentially and might be
+a bomb just waiting to go off. Oh but
+
+444
+00:07:18,469 --> 00:07:18,479
+a bomb just waiting to go off. Oh but
+ 
+
+445
+00:07:18,479 --> 00:07:20,550
+a bomb just waiting to go off. Oh but
+taking in const string references. What
+
+446
+00:07:20,550 --> 00:07:20,560
+taking in const string references. What
+ 
+
+447
+00:07:20,560 --> 00:07:23,270
+taking in const string references. What
+is this like 2005? I would just use a
+
+448
+00:07:23,270 --> 00:07:23,280
+is this like 2005? I would just use a
+ 
+
+449
+00:07:23,280 --> 00:07:25,430
+is this like 2005? I would just use a
+string view. That's like yeah that's you
+
+450
+00:07:25,430 --> 00:07:25,440
+string view. That's like yeah that's you
+ 
+
+451
+00:07:25,440 --> 00:07:27,589
+string view. That's like yeah that's you
+know who uses const string references.
+
+452
+00:07:27,589 --> 00:07:27,599
+know who uses const string references.
+ 
+
+453
+00:07:27,599 --> 00:07:29,510
+know who uses const string references.
+Well, that's the same thing. A string
+
+454
+00:07:29,510 --> 00:07:29,520
+Well, that's the same thing. A string
+ 
+
+455
+00:07:29,520 --> 00:07:32,309
+Well, that's the same thing. A string
+view is just a pointer to the data with
+
+456
+00:07:32,309 --> 00:07:32,319
+view is just a pointer to the data with
+ 
+
+457
+00:07:32,319 --> 00:07:34,629
+view is just a pointer to the data with
+a size. So, it's kind of like a string
+
+458
+00:07:34,629 --> 00:07:34,639
+a size. So, it's kind of like a string
+ 
+
+459
+00:07:34,639 --> 00:07:36,950
+a size. So, it's kind of like a string
+pointer. It's pointing to memory inside
+
+460
+00:07:36,950 --> 00:07:36,960
+pointer. It's pointing to memory inside
+ 
+
+461
+00:07:36,960 --> 00:07:39,270
+pointer. It's pointing to memory inside
+the string. So, if you have a string
+
+462
+00:07:39,270 --> 00:07:39,280
+the string. So, if you have a string
+ 
+
+463
+00:07:39,280 --> 00:07:40,870
+the string. So, if you have a string
+that is allocated like this on the
+
+464
+00:07:40,870 --> 00:07:40,880
+that is allocated like this on the
+ 
+
+465
+00:07:40,880 --> 00:07:42,950
+that is allocated like this on the
+stack, and the actual characters of the
+
+466
+00:07:42,950 --> 00:07:42,960
+stack, and the actual characters of the
+ 
+
+467
+00:07:42,960 --> 00:07:44,950
+stack, and the actual characters of the
+string are small enough for small string
+
+468
+00:07:44,950 --> 00:07:44,960
+string are small enough for small string
+ 
+
+469
+00:07:44,960 --> 00:07:46,550
+string are small enough for small string
+optimization, meaning that the actual
+
+470
+00:07:46,550 --> 00:07:46,560
+optimization, meaning that the actual
+ 
+
+471
+00:07:46,560 --> 00:07:48,469
+optimization, meaning that the actual
+characters are just stored inside the
+
+472
+00:07:48,469 --> 00:07:48,479
+characters are just stored inside the
+ 
+
+473
+00:07:48,479 --> 00:07:50,550
+characters are just stored inside the
+string class without having a pointer to
+
+474
+00:07:50,550 --> 00:07:50,560
+string class without having a pointer to
+ 
+
+475
+00:07:50,560 --> 00:07:51,830
+string class without having a pointer to
+an external block of memory that
+
+476
+00:07:51,830 --> 00:07:51,840
+an external block of memory that
+ 
+
+477
+00:07:51,840 --> 00:07:53,670
+an external block of memory that
+contains the actual data of the string.
+
+478
+00:07:53,670 --> 00:07:53,680
+contains the actual data of the string.
+ 
+
+479
+00:07:53,680 --> 00:07:56,230
+contains the actual data of the string.
+then it's going to move and your string
+
+480
+00:07:56,230 --> 00:07:56,240
+then it's going to move and your string
+ 
+
+481
+00:07:56,240 --> 00:07:58,309
+then it's going to move and your string
+view is going to become invalid just the
+
+482
+00:07:58,309 --> 00:07:58,319
+view is going to become invalid just the
+ 
+
+483
+00:07:58,319 --> 00:08:00,309
+view is going to become invalid just the
+same way as a string reference would. So
+
+484
+00:08:00,309 --> 00:08:00,319
+same way as a string reference would. So
+ 
+
+485
+00:08:00,319 --> 00:08:02,230
+same way as a string reference would. So
+if we take this and we just use a string
+
+486
+00:08:02,230 --> 00:08:02,240
+if we take this and we just use a string
+ 
+
+487
+00:08:02,240 --> 00:08:04,550
+if we take this and we just use a string
+view here instead of a string and then I
+
+488
+00:08:04,550 --> 00:08:04,560
+view here instead of a string and then I
+ 
+
+489
+00:08:04,560 --> 00:08:06,309
+view here instead of a string and then I
+just leave in the exact same code that I
+
+490
+00:08:06,309 --> 00:08:06,319
+just leave in the exact same code that I
+ 
+
+491
+00:08:06,319 --> 00:08:07,830
+just leave in the exact same code that I
+had in the beginning, this is what's
+
+492
+00:08:07,830 --> 00:08:07,840
+had in the beginning, this is what's
+ 
+
+493
+00:08:07,840 --> 00:08:09,110
+had in the beginning, this is what's
+going to happen. It's going to print
+
+494
+00:08:09,110 --> 00:08:09,120
+going to happen. It's going to print
+ 
+
+495
+00:08:09,120 --> 00:08:11,110
+going to happen. It's going to print
+this. So it didn't actually crash but it
+
+496
+00:08:11,110 --> 00:08:11,120
+this. So it didn't actually crash but it
+ 
+
+497
+00:08:11,120 --> 00:08:12,950
+this. So it didn't actually crash but it
+printed this which is obviously invalid
+
+498
+00:08:12,950 --> 00:08:12,960
+printed this which is obviously invalid
+ 
+
+499
+00:08:12,960 --> 00:08:14,869
+printed this which is obviously invalid
+compared to if we do the printing before
+
+500
+00:08:14,869 --> 00:08:14,879
+compared to if we do the printing before
+ 
+
+501
+00:08:14,879 --> 00:08:16,309
+compared to if we do the printing before
+pushing back the grapefruit and it
+
+502
+00:08:16,309 --> 00:08:16,319
+pushing back the grapefruit and it
+ 
+
+503
+00:08:16,319 --> 00:08:18,309
+pushing back the grapefruit and it
+prints apple which is correct. So this
+
+504
+00:08:18,309 --> 00:08:18,319
+prints apple which is correct. So this
+ 
+
+505
+00:08:18,319 --> 00:08:19,670
+prints apple which is correct. So this
+is the same concept. This is the same
+
+506
+00:08:19,670 --> 00:08:19,680
+is the same concept. This is the same
+ 
+
+507
+00:08:19,680 --> 00:08:21,430
+is the same concept. This is the same
+problem. The moral of the story is that
+
+508
+00:08:21,430 --> 00:08:21,440
+problem. The moral of the story is that
+ 
+
+509
+00:08:21,440 --> 00:08:23,749
+problem. The moral of the story is that
+whenever you take references or pointers
+
+510
+00:08:23,749 --> 00:08:23,759
+whenever you take references or pointers
+ 
+
+511
+00:08:23,759 --> 00:08:25,430
+whenever you take references or pointers
+to actual blocks of memory, just be
+
+512
+00:08:25,430 --> 00:08:25,440
+to actual blocks of memory, just be
+ 
+
+513
+00:08:25,440 --> 00:08:27,029
+to actual blocks of memory, just be
+aware that if those move, you're going
+
+514
+00:08:27,029 --> 00:08:27,039
+aware that if those move, you're going
+ 
+
+515
+00:08:27,039 --> 00:08:29,029
+aware that if those move, you're going
+to be in trouble. Now, I realize that
+
+516
+00:08:29,029 --> 00:08:29,039
+to be in trouble. Now, I realize that
+ 
+
+517
+00:08:29,039 --> 00:08:31,270
+to be in trouble. Now, I realize that
+this example in and of itself might be a
+
+518
+00:08:31,270 --> 00:08:31,280
+this example in and of itself might be a
+ 
+
+519
+00:08:31,280 --> 00:08:32,469
+this example in and of itself might be a
+little bit silly because you might
+
+520
+00:08:32,469 --> 00:08:32,479
+little bit silly because you might
+ 
+
+521
+00:08:32,479 --> 00:08:34,870
+little bit silly because you might
+think, who would do this realistically,
+
+522
+00:08:34,870 --> 00:08:34,880
+think, who would do this realistically,
+ 
+
+523
+00:08:34,880 --> 00:08:36,149
+think, who would do this realistically,
+like in the real world, you probably
+
+524
+00:08:36,149 --> 00:08:36,159
+like in the real world, you probably
+ 
+
+525
+00:08:36,159 --> 00:08:37,589
+like in the real world, you probably
+wouldn't take some kind of alias to
+
+526
+00:08:37,589 --> 00:08:37,599
+wouldn't take some kind of alias to
+ 
+
+527
+00:08:37,599 --> 00:08:39,750
+wouldn't take some kind of alias to
+this, then add something to it like
+
+528
+00:08:39,750 --> 00:08:39,760
+this, then add something to it like
+ 
+
+529
+00:08:39,760 --> 00:08:42,630
+this, then add something to it like
+this, and then print it. It seems a bit
+
+530
+00:08:42,630 --> 00:08:42,640
+this, and then print it. It seems a bit
+ 
+
+531
+00:08:42,640 --> 00:08:45,110
+this, and then print it. It seems a bit
+weird, a bit fake. Well, here's another
+
+532
+00:08:45,110 --> 00:08:45,120
+weird, a bit fake. Well, here's another
+ 
+
+533
+00:08:45,120 --> 00:08:47,110
+weird, a bit fake. Well, here's another
+example that I prepared, which I think
+
+534
+00:08:47,110 --> 00:08:47,120
+example that I prepared, which I think
+ 
+
+535
+00:08:47,120 --> 00:08:48,949
+example that I prepared, which I think
+is a little bit more realistic. And I
+
+536
+00:08:48,949 --> 00:08:48,959
+is a little bit more realistic. And I
+ 
+
+537
+00:08:48,959 --> 00:08:50,949
+is a little bit more realistic. And I
+have seen this happen in the real world.
+
+538
+00:08:50,949 --> 00:08:50,959
+have seen this happen in the real world.
+ 
+
+539
+00:08:50,959 --> 00:08:52,470
+have seen this happen in the real world.
+We have a node strct here. It's just a
+
+540
+00:08:52,470 --> 00:08:52,480
+We have a node strct here. It's just a
+ 
+
+541
+00:08:52,480 --> 00:08:54,389
+We have a node strct here. It's just a
+node in a tree. It's got a name and it's
+
+542
+00:08:54,389 --> 00:08:54,399
+node in a tree. It's got a name and it's
+ 
+
+543
+00:08:54,399 --> 00:08:56,550
+node in a tree. It's got a name and it's
+got a vector of unsigned integers which
+
+544
+00:08:56,550 --> 00:08:56,560
+got a vector of unsigned integers which
+ 
+
+545
+00:08:56,560 --> 00:08:58,870
+got a vector of unsigned integers which
+is just indices to other nodes which are
+
+546
+00:08:58,870 --> 00:08:58,880
+is just indices to other nodes which are
+ 
+
+547
+00:08:58,880 --> 00:09:00,790
+is just indices to other nodes which are
+this node's children. We have a vector
+
+548
+00:09:00,790 --> 00:09:00,800
+this node's children. We have a vector
+ 
+
+549
+00:09:00,800 --> 00:09:02,389
+this node's children. We have a vector
+of nodes. This is our actual data
+
+550
+00:09:02,389 --> 00:09:02,399
+of nodes. This is our actual data
+ 
+
+551
+00:09:02,399 --> 00:09:03,509
+of nodes. This is our actual data
+structure. And then we're going to build
+
+552
+00:09:03,509 --> 00:09:03,519
+structure. And then we're going to build
+ 
+
+553
+00:09:03,519 --> 00:09:05,350
+structure. And then we're going to build
+the tree by creating a bunch of nodes.
+
+554
+00:09:05,350 --> 00:09:05,360
+the tree by creating a bunch of nodes.
+ 
+
+555
+00:09:05,360 --> 00:09:07,670
+the tree by creating a bunch of nodes.
+So let's push back this root node. And
+
+556
+00:09:07,670 --> 00:09:07,680
+So let's push back this root node. And
+ 
+
+557
+00:09:07,680 --> 00:09:09,350
+So let's push back this root node. And
+then we want to push back child one and
+
+558
+00:09:09,350 --> 00:09:09,360
+then we want to push back child one and
+ 
+
+559
+00:09:09,360 --> 00:09:11,670
+then we want to push back child one and
+child two. But we obviously need to add
+
+560
+00:09:11,670 --> 00:09:11,680
+child two. But we obviously need to add
+ 
+
+561
+00:09:11,680 --> 00:09:13,829
+child two. But we obviously need to add
+those children to the root nodes
+
+562
+00:09:13,829 --> 00:09:13,839
+those children to the root nodes
+ 
+
+563
+00:09:13,839 --> 00:09:15,509
+those children to the root nodes
+children structure. And it's obviously
+
+564
+00:09:15,509 --> 00:09:15,519
+children structure. And it's obviously
+ 
+
+565
+00:09:15,519 --> 00:09:16,790
+children structure. And it's obviously
+going to be annoying to keep referring
+
+566
+00:09:16,790 --> 00:09:16,800
+going to be annoying to keep referring
+ 
+
+567
+00:09:16,800 --> 00:09:19,030
+going to be annoying to keep referring
+to the root node by just nodes zero all
+
+568
+00:09:19,030 --> 00:09:19,040
+to the root node by just nodes zero all
+ 
+
+569
+00:09:19,040 --> 00:09:21,509
+to the root node by just nodes zero all
+the time like this. So instead, why not
+
+570
+00:09:21,509 --> 00:09:21,519
+the time like this. So instead, why not
+ 
+
+571
+00:09:21,519 --> 00:09:23,350
+the time like this. So instead, why not
+just create an alias to it? We'll just
+
+572
+00:09:23,350 --> 00:09:23,360
+just create an alias to it? We'll just
+ 
+
+573
+00:09:23,360 --> 00:09:25,030
+just create an alias to it? We'll just
+create a reference and then we'll also
+
+574
+00:09:25,030 --> 00:09:25,040
+create a reference and then we'll also
+ 
+
+575
+00:09:25,040 --> 00:09:27,030
+create a reference and then we'll also
+add the indices of these nodes that
+
+576
+00:09:27,030 --> 00:09:27,040
+add the indices of these nodes that
+ 
+
+577
+00:09:27,040 --> 00:09:29,030
+add the indices of these nodes that
+we're creating into that root nodes
+
+578
+00:09:29,030 --> 00:09:29,040
+we're creating into that root nodes
+ 
+
+579
+00:09:29,040 --> 00:09:31,269
+we're creating into that root nodes
+children. Seems great. But you can
+
+580
+00:09:31,269 --> 00:09:31,279
+children. Seems great. But you can
+ 
+
+581
+00:09:31,279 --> 00:09:32,710
+children. Seems great. But you can
+probably see the problem here. We're
+
+582
+00:09:32,710 --> 00:09:32,720
+probably see the problem here. We're
+ 
+
+583
+00:09:32,720 --> 00:09:34,870
+probably see the problem here. We're
+creating this node reference to node
+
+584
+00:09:34,870 --> 00:09:34,880
+creating this node reference to node
+ 
+
+585
+00:09:34,880 --> 00:09:37,110
+creating this node reference to node
+zero, but then we're obviously modifying
+
+586
+00:09:37,110 --> 00:09:37,120
+zero, but then we're obviously modifying
+ 
+
+587
+00:09:37,120 --> 00:09:39,910
+zero, but then we're obviously modifying
+the nodes data structure itself. So as
+
+588
+00:09:39,910 --> 00:09:39,920
+the nodes data structure itself. So as
+ 
+
+589
+00:09:39,920 --> 00:09:42,150
+the nodes data structure itself. So as
+soon as we do this, this will basically
+
+590
+00:09:42,150 --> 00:09:42,160
+soon as we do this, this will basically
+ 
+
+591
+00:09:42,160 --> 00:09:44,949
+soon as we do this, this will basically
+become invalid. The other problem with
+
+592
+00:09:44,949 --> 00:09:44,959
+become invalid. The other problem with
+ 
+
+593
+00:09:44,959 --> 00:09:46,949
+become invalid. The other problem with
+this whole situation, by the way, is
+
+594
+00:09:46,949 --> 00:09:46,959
+this whole situation, by the way, is
+ 
+
+595
+00:09:46,959 --> 00:09:49,110
+this whole situation, by the way, is
+that it's not exactly deterministic
+
+596
+00:09:49,110 --> 00:09:49,120
+that it's not exactly deterministic
+ 
+
+597
+00:09:49,120 --> 00:09:51,110
+that it's not exactly deterministic
+because we don't know how many times the
+
+598
+00:09:51,110 --> 00:09:51,120
+because we don't know how many times the
+ 
+
+599
+00:09:51,120 --> 00:09:53,269
+because we don't know how many times the
+vector will resize. We do have some
+
+600
+00:09:53,269 --> 00:09:53,279
+vector will resize. We do have some
+ 
+
+601
+00:09:53,279 --> 00:09:55,910
+vector will resize. We do have some
+control over that, but it's not like
+
+602
+00:09:55,910 --> 00:09:55,920
+control over that, but it's not like
+ 
+
+603
+00:09:55,920 --> 00:09:58,070
+control over that, but it's not like
+every time we add something to this
+
+604
+00:09:58,070 --> 00:09:58,080
+every time we add something to this
+ 
+
+605
+00:09:58,080 --> 00:09:59,670
+every time we add something to this
+node's data structure, it will
+
+606
+00:09:59,670 --> 00:09:59,680
+node's data structure, it will
+ 
+
+607
+00:09:59,680 --> 00:10:01,910
+node's data structure, it will
+reallocate memory. We could even fix the
+
+608
+00:10:01,910 --> 00:10:01,920
+reallocate memory. We could even fix the
+ 
+
+609
+00:10:01,920 --> 00:10:04,070
+reallocate memory. We could even fix the
+bug here potentially by just saying,
+
+610
+00:10:04,070 --> 00:10:04,080
+bug here potentially by just saying,
+ 
+
+611
+00:10:04,080 --> 00:10:06,230
+bug here potentially by just saying,
+let's reserve three elements worth of
+
+612
+00:10:06,230 --> 00:10:06,240
+let's reserve three elements worth of
+ 
+
+613
+00:10:06,240 --> 00:10:08,070
+let's reserve three elements worth of
+memory here. So, we have enough memory
+
+614
+00:10:08,070 --> 00:10:08,080
+memory here. So, we have enough memory
+ 
+
+615
+00:10:08,080 --> 00:10:09,509
+memory here. So, we have enough memory
+for this. So, therefore, this will
+
+616
+00:10:09,509 --> 00:10:09,519
+for this. So, therefore, this will
+ 
+
+617
+00:10:09,519 --> 00:10:10,870
+for this. So, therefore, this will
+technically be valid because the memory
+
+618
+00:10:10,870 --> 00:10:10,880
+technically be valid because the memory
+ 
+
+619
+00:10:10,880 --> 00:10:12,630
+technically be valid because the memory
+is not moving. And that's also part of
+
+620
+00:10:12,630 --> 00:10:12,640
+is not moving. And that's also part of
+ 
+
+621
+00:10:12,640 --> 00:10:14,710
+is not moving. And that's also part of
+the problem. It's inconsistent. It's
+
+622
+00:10:14,710 --> 00:10:14,720
+the problem. It's inconsistent. It's
+ 
+
+623
+00:10:14,720 --> 00:10:17,590
+the problem. It's inconsistent. It's
+hard to tell whether or not this will
+
+624
+00:10:17,590 --> 00:10:17,600
+hard to tell whether or not this will
+ 
+
+625
+00:10:17,600 --> 00:10:19,670
+hard to tell whether or not this will
+end up being a problem. So, the solution
+
+626
+00:10:19,670 --> 00:10:19,680
+end up being a problem. So, the solution
+ 
+
+627
+00:10:19,680 --> 00:10:22,790
+end up being a problem. So, the solution
+would be just to not use this root alias
+
+628
+00:10:22,790 --> 00:10:22,800
+would be just to not use this root alias
+ 
+
+629
+00:10:22,800 --> 00:10:24,470
+would be just to not use this root alias
+even though it looks nice and instead
+
+630
+00:10:24,470 --> 00:10:24,480
+even though it looks nice and instead
+ 
+
+631
+00:10:24,480 --> 00:10:26,150
+even though it looks nice and instead
+just use node zero. The other
+
+632
+00:10:26,150 --> 00:10:26,160
+just use node zero. The other
+ 
+
+633
+00:10:26,160 --> 00:10:28,230
+just use node zero. The other
+possibility is you might have a function
+
+634
+00:10:28,230 --> 00:10:28,240
+possibility is you might have a function
+ 
+
+635
+00:10:28,240 --> 00:10:30,389
+possibility is you might have a function
+that does in fact return a node
+
+636
+00:10:30,389 --> 00:10:30,399
+that does in fact return a node
+ 
+
+637
+00:10:30,399 --> 00:10:32,389
+that does in fact return a node
+reference called get root node or
+
+638
+00:10:32,389 --> 00:10:32,399
+reference called get root node or
+ 
+
+639
+00:10:32,399 --> 00:10:33,670
+reference called get root node or
+something like that and then that will
+
+640
+00:10:33,670 --> 00:10:33,680
+something like that and then that will
+ 
+
+641
+00:10:33,680 --> 00:10:35,990
+something like that and then that will
+just return nodes zero. And then the
+
+642
+00:10:35,990 --> 00:10:36,000
+just return nodes zero. And then the
+ 
+
+643
+00:10:36,000 --> 00:10:37,829
+just return nodes zero. And then the
+idea is that every single time you need
+
+644
+00:10:37,829 --> 00:10:37,839
+idea is that every single time you need
+ 
+
+645
+00:10:37,839 --> 00:10:39,990
+idea is that every single time you need
+that root node, you call the get root
+
+646
+00:10:39,990 --> 00:10:40,000
+that root node, you call the get root
+ 
+
+647
+00:10:40,000 --> 00:10:41,910
+that root node, you call the get root
+node function and then that will always
+
+648
+00:10:41,910 --> 00:10:41,920
+node function and then that will always
+ 
+
+649
+00:10:41,920 --> 00:10:43,430
+node function and then that will always
+work because yes, it's returning a
+
+650
+00:10:43,430 --> 00:10:43,440
+work because yes, it's returning a
+ 
+
+651
+00:10:43,440 --> 00:10:45,190
+work because yes, it's returning a
+reference, but every time you call it,
+
+652
+00:10:45,190 --> 00:10:45,200
+reference, but every time you call it,
+ 
+
+653
+00:10:45,200 --> 00:10:47,269
+reference, but every time you call it,
+it's going to look up node zero and give
+
+654
+00:10:47,269 --> 00:10:47,279
+it's going to look up node zero and give
+ 
+
+655
+00:10:47,279 --> 00:10:49,269
+it's going to look up node zero and give
+you a reference to that, which again is
+
+656
+00:10:49,269 --> 00:10:49,279
+you a reference to that, which again is
+ 
+
+657
+00:10:49,279 --> 00:10:51,430
+you a reference to that, which again is
+the same as just writing this. But you
+
+658
+00:10:51,430 --> 00:10:51,440
+the same as just writing this. But you
+ 
+
+659
+00:10:51,440 --> 00:10:53,110
+the same as just writing this. But you
+may prefer the look of that and there's
+
+660
+00:10:53,110 --> 00:10:53,120
+may prefer the look of that and there's
+ 
+
+661
+00:10:53,120 --> 00:10:55,190
+may prefer the look of that and there's
+no like zero index floating around. I
+
+662
+00:10:55,190 --> 00:10:55,200
+no like zero index floating around. I
+ 
+
+663
+00:10:55,200 --> 00:10:56,710
+no like zero index floating around. I
+could see why some people would prefer
+
+664
+00:10:56,710 --> 00:10:56,720
+could see why some people would prefer
+ 
+
+665
+00:10:56,720 --> 00:10:58,389
+could see why some people would prefer
+either of these two options. Another
+
+666
+00:10:58,389 --> 00:10:58,399
+either of these two options. Another
+ 
+
+667
+00:10:58,399 --> 00:11:00,630
+either of these two options. Another
+random example off the top of my head is
+
+668
+00:11:00,630 --> 00:11:00,640
+random example off the top of my head is
+ 
+
+669
+00:11:00,640 --> 00:11:03,190
+random example off the top of my head is
+with strings. If I even have a string
+
+670
+00:11:03,190 --> 00:11:03,200
+with strings. If I even have a string
+ 
+
+671
+00:11:03,200 --> 00:11:05,030
+with strings. If I even have a string
+that has like, I don't know, a bunch of
+
+672
+00:11:05,030 --> 00:11:05,040
+that has like, I don't know, a bunch of
+ 
+
+673
+00:11:05,040 --> 00:11:07,990
+that has like, I don't know, a bunch of
+text in it, I might want to access a
+
+674
+00:11:07,990 --> 00:11:08,000
+text in it, I might want to access a
+ 
+
+675
+00:11:08,000 --> 00:11:09,670
+text in it, I might want to access a
+particular character in there.
+
+676
+00:11:09,670 --> 00:11:09,680
+particular character in there.
+ 
+
+677
+00:11:09,680 --> 00:11:11,190
+particular character in there.
+Obviously, there's not 50 characters in
+
+678
+00:11:11,190 --> 00:11:11,200
+Obviously, there's not 50 characters in
+ 
+
+679
+00:11:11,200 --> 00:11:12,870
+Obviously, there's not 50 characters in
+here, but maybe I'm just accessing one
+
+680
+00:11:12,870 --> 00:11:12,880
+here, but maybe I'm just accessing one
+ 
+
+681
+00:11:12,880 --> 00:11:14,630
+here, but maybe I'm just accessing one
+of these characters. And then I'm going
+
+682
+00:11:14,630 --> 00:11:14,640
+of these characters. And then I'm going
+ 
+
+683
+00:11:14,640 --> 00:11:16,230
+of these characters. And then I'm going
+to keep adding to it. It might have to
+
+684
+00:11:16,230 --> 00:11:16,240
+to keep adding to it. It might have to
+ 
+
+685
+00:11:16,240 --> 00:11:17,990
+to keep adding to it. It might have to
+reallocate it memory. A string is really
+
+686
+00:11:17,990 --> 00:11:18,000
+reallocate it memory. A string is really
+ 
+
+687
+00:11:18,000 --> 00:11:19,509
+reallocate it memory. A string is really
+just a data structure. It's kind of like
+
+688
+00:11:19,509 --> 00:11:19,519
+just a data structure. It's kind of like
+ 
+
+689
+00:11:19,519 --> 00:11:21,829
+just a data structure. It's kind of like
+a vector. So then accessing this C
+
+690
+00:11:21,829 --> 00:11:21,839
+a vector. So then accessing this C
+ 
+
+691
+00:11:21,839 --> 00:11:23,750
+a vector. So then accessing this C
+variable, this reference to a particular
+
+692
+00:11:23,750 --> 00:11:23,760
+variable, this reference to a particular
+ 
+
+693
+00:11:23,760 --> 00:11:25,590
+variable, this reference to a particular
+point inside here is going to
+
+694
+00:11:25,590 --> 00:11:25,600
+point inside here is going to
+ 
+
+695
+00:11:25,600 --> 00:11:27,110
+point inside here is going to
+potentially be dangerous. undefined
+
+696
+00:11:27,110 --> 00:11:27,120
+potentially be dangerous. undefined
+ 
+
+697
+00:11:27,120 --> 00:11:28,550
+potentially be dangerous. undefined
+behavior might result in a crash
+
+698
+00:11:28,550 --> 00:11:28,560
+behavior might result in a crash
+ 
+
+699
+00:11:28,560 --> 00:11:30,550
+behavior might result in a crash
+depending on what it is you actually do
+
+700
+00:11:30,550 --> 00:11:30,560
+depending on what it is you actually do
+ 
+
+701
+00:11:30,560 --> 00:11:32,389
+depending on what it is you actually do
+with this string. Let me know in the
+
+702
+00:11:32,389 --> 00:11:32,399
+with this string. Let me know in the
+ 
+
+703
+00:11:32,399 --> 00:11:33,430
+with this string. Let me know in the
+comment section below if you've
+
+704
+00:11:33,430 --> 00:11:33,440
+comment section below if you've
+ 
+
+705
+00:11:33,440 --> 00:11:35,750
+comment section below if you've
+encountered this kind of bug before. If
+
+706
+00:11:35,750 --> 00:11:35,760
+encountered this kind of bug before. If
+ 
+
+707
+00:11:35,760 --> 00:11:37,430
+encountered this kind of bug before. If
+you have some other examples, feel free
+
+708
+00:11:37,430 --> 00:11:37,440
+you have some other examples, feel free
+ 
+
+709
+00:11:37,440 --> 00:11:38,949
+you have some other examples, feel free
+to share them as well. I've got a pretty
+
+710
+00:11:38,949 --> 00:11:38,959
+to share them as well. I've got a pretty
+ 
+
+711
+00:11:38,959 --> 00:11:40,630
+to share them as well. I've got a pretty
+long list of bugs for this series, but
+
+712
+00:11:40,630 --> 00:11:40,640
+long list of bugs for this series, but
+ 
+
+713
+00:11:40,640 --> 00:11:42,150
+long list of bugs for this series, but
+if you have some suggestions, leave them
+
+714
+00:11:42,150 --> 00:11:42,160
+if you have some suggestions, leave them
+ 
+
+715
+00:11:42,160 --> 00:11:43,430
+if you have some suggestions, leave them
+in the comment section below. Hope you
+
+716
+00:11:43,430 --> 00:11:43,440
+in the comment section below. Hope you
+ 
+
+717
+00:11:43,440 --> 00:11:44,870
+in the comment section below. Hope you
+guys enjoy this video and this new idea
+
+718
+00:11:44,870 --> 00:11:44,880
+guys enjoy this video and this new idea
+ 
+
+719
+00:11:44,880 --> 00:11:46,150
+guys enjoy this video and this new idea
+for a series. If you did, please don't
+
+720
+00:11:46,150 --> 00:11:46,160
+for a series. If you did, please don't
+ 
+
+721
+00:11:46,160 --> 00:11:47,829
+for a series. If you did, please don't
+forget to hit the like button and I will
+
+722
+00:11:47,829 --> 00:11:47,839
+forget to hit the like button and I will
+ 
+
+723
+00:11:47,839 --> 00:11:51,279
+forget to hit the like button and I will
+see you next time. Goodbye. you.
+

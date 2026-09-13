@@ -1,0 +1,4265 @@
+1
+00:00:00,000 --> 00:00:01,819
+
+hey what's up guys my name is the chana
+
+2
+00:00:01,819 --> 00:00:01,829
+hey what's up guys my name is the chana
+ 
+
+3
+00:00:01,829 --> 00:00:03,260
+hey what's up guys my name is the chana
+and welcome back to my state boss boss
+
+4
+00:00:03,260 --> 00:00:03,270
+and welcome back to my state boss boss
+ 
+
+5
+00:00:03,270 --> 00:00:04,640
+and welcome back to my state boss boss
+series today we're going to be talking
+
+6
+00:00:04,640 --> 00:00:04,650
+series today we're going to be talking
+ 
+
+7
+00:00:04,650 --> 00:00:06,380
+series today we're going to be talking
+all about dynamic array since a boss
+
+8
+00:00:06,380 --> 00:00:06,390
+all about dynamic array since a boss
+ 
+
+9
+00:00:06,390 --> 00:00:08,240
+all about dynamic array since a boss
+boss specifically the standard vector
+
+10
+00:00:08,240 --> 00:00:08,250
+boss specifically the standard vector
+ 
+
+11
+00:00:08,250 --> 00:00:09,680
+boss specifically the standard vector
+class so now that we're finally
+
+12
+00:00:09,680 --> 00:00:09,690
+class so now that we're finally
+ 
+
+13
+00:00:09,690 --> 00:00:11,299
+class so now that we're finally
+beginning to write some courtesy bus
+
+14
+00:00:11,299 --> 00:00:11,309
+beginning to write some courtesy bus
+ 
+
+15
+00:00:11,309 --> 00:00:12,589
+beginning to write some courtesy bus
+boss is very important that we get
+
+16
+00:00:12,589 --> 00:00:12,599
+boss is very important that we get
+ 
+
+17
+00:00:12,599 --> 00:00:15,020
+boss is very important that we get
+accustomed to C++ a standard library or
+
+18
+00:00:15,020 --> 00:00:15,030
+accustomed to C++ a standard library or
+ 
+
+19
+00:00:15,030 --> 00:00:16,730
+accustomed to C++ a standard library or
+in this case something called a standard
+
+20
+00:00:16,730 --> 00:00:16,740
+in this case something called a standard
+ 
+
+21
+00:00:16,740 --> 00:00:17,750
+in this case something called a standard
+template library
+
+22
+00:00:17,750 --> 00:00:17,760
+template library
+ 
+
+23
+00:00:17,760 --> 00:00:19,040
+template library
+now the Santas template library is
+
+24
+00:00:19,040 --> 00:00:19,050
+now the Santas template library is
+ 
+
+25
+00:00:19,050 --> 00:00:20,570
+now the Santas template library is
+essentially a library filled with
+
+26
+00:00:20,570 --> 00:00:20,580
+essentially a library filled with
+ 
+
+27
+00:00:20,580 --> 00:00:22,880
+essentially a library filled with
+containers container types right things
+
+28
+00:00:22,880 --> 00:00:22,890
+containers container types right things
+ 
+
+29
+00:00:22,890 --> 00:00:24,500
+containers container types right things
+that contain certain daughter and is
+
+30
+00:00:24,500 --> 00:00:24,510
+that contain certain daughter and is
+ 
+
+31
+00:00:24,510 --> 00:00:26,000
+that contain certain daughter and is
+called a standard template library
+
+32
+00:00:26,000 --> 00:00:26,010
+called a standard template library
+ 
+
+33
+00:00:26,010 --> 00:00:27,589
+called a standard template library
+because you can template it into
+
+34
+00:00:27,589 --> 00:00:27,599
+because you can template it into
+ 
+
+35
+00:00:27,599 --> 00:00:29,720
+because you can template it into
+anything the whole average templated
+
+36
+00:00:29,720 --> 00:00:29,730
+anything the whole average templated
+ 
+
+37
+00:00:29,730 --> 00:00:31,939
+anything the whole average templated
+meaning that the underlying data type of
+
+38
+00:00:31,939 --> 00:00:31,949
+meaning that the underlying data type of
+ 
+
+39
+00:00:31,949 --> 00:00:34,430
+meaning that the underlying data type of
+the container so in other words the data
+
+40
+00:00:34,430 --> 00:00:34,440
+the container so in other words the data
+ 
+
+41
+00:00:34,440 --> 00:00:37,160
+the container so in other words the data
+type that the container contains that is
+
+42
+00:00:37,160 --> 00:00:37,170
+type that the container contains that is
+ 
+
+43
+00:00:37,170 --> 00:00:38,630
+type that the container contains that is
+actually up to you to decide the whole
+
+44
+00:00:38,630 --> 00:00:38,640
+actually up to you to decide the whole
+ 
+
+45
+00:00:38,640 --> 00:00:39,830
+actually up to you to decide the whole
+things made out of templates which
+
+46
+00:00:39,830 --> 00:00:39,840
+things made out of templates which
+ 
+
+47
+00:00:39,840 --> 00:00:41,360
+things made out of templates which
+reminds me we need to talk about
+
+48
+00:00:41,360 --> 00:00:41,370
+reminds me we need to talk about
+ 
+
+49
+00:00:41,370 --> 00:00:42,799
+reminds me we need to talk about
+templates and we will very soon
+
+50
+00:00:42,799 --> 00:00:42,809
+templates and we will very soon
+ 
+
+51
+00:00:42,809 --> 00:00:44,779
+templates and we will very soon
+templates are a huge topic so we'll kind
+
+52
+00:00:44,779 --> 00:00:44,789
+templates are a huge topic so we'll kind
+ 
+
+53
+00:00:44,789 --> 00:00:47,270
+templates are a huge topic so we'll kind
+of divide it from beginning to advanced
+
+54
+00:00:47,270 --> 00:00:47,280
+of divide it from beginning to advanced
+ 
+
+55
+00:00:47,280 --> 00:00:49,130
+of divide it from beginning to advanced
+kind of templates as we go along but
+
+56
+00:00:49,130 --> 00:00:49,140
+kind of templates as we go along but
+ 
+
+57
+00:00:49,140 --> 00:00:50,450
+kind of templates as we go along but
+essentially all you need to know to use
+
+58
+00:00:50,450 --> 00:00:50,460
+essentially all you need to know to use
+ 
+
+59
+00:00:50,460 --> 00:00:51,319
+essentially all you need to know to use
+that you don't need to know anything
+
+60
+00:00:51,319 --> 00:00:51,329
+that you don't need to know anything
+ 
+
+61
+00:00:51,329 --> 00:00:53,000
+that you don't need to know anything
+about templates to actually use the
+
+62
+00:00:53,000 --> 00:00:53,010
+about templates to actually use the
+ 
+
+63
+00:00:53,010 --> 00:00:54,920
+about templates to actually use the
+senate template library all you need to
+
+64
+00:00:54,920 --> 00:00:54,930
+senate template library all you need to
+ 
+
+65
+00:00:54,930 --> 00:00:56,660
+senate template library all you need to
+know is that you can provide the
+
+66
+00:00:56,660 --> 00:00:56,670
+know is that you can provide the
+ 
+
+67
+00:00:56,670 --> 00:00:58,849
+know is that you can provide the
+underlying data type that this data
+
+68
+00:00:58,849 --> 00:00:58,859
+underlying data type that this data
+ 
+
+69
+00:00:58,859 --> 00:01:01,010
+underlying data type that this data
+structure actually handles and that's
+
+70
+00:01:01,010 --> 00:01:01,020
+structure actually handles and that's
+ 
+
+71
+00:01:01,020 --> 00:01:02,840
+structure actually handles and that's
+pretty cool it makes it very versatile
+
+72
+00:01:02,840 --> 00:01:02,850
+pretty cool it makes it very versatile
+ 
+
+73
+00:01:02,850 --> 00:01:04,219
+pretty cool it makes it very versatile
+and it means that you don't have to
+
+74
+00:01:04,219 --> 00:01:04,229
+and it means that you don't have to
+ 
+
+75
+00:01:04,229 --> 00:01:06,080
+and it means that you don't have to
+resort to write in your own data
+
+76
+00:01:06,080 --> 00:01:06,090
+resort to write in your own data
+ 
+
+77
+00:01:06,090 --> 00:01:07,609
+resort to write in your own data
+structures or anything like that so a
+
+78
+00:01:07,609 --> 00:01:07,619
+structures or anything like that so a
+ 
+
+79
+00:01:07,619 --> 00:01:09,590
+structures or anything like that so a
+bus Clause provides us with a class
+
+80
+00:01:09,590 --> 00:01:09,600
+bus Clause provides us with a class
+ 
+
+81
+00:01:09,600 --> 00:01:11,570
+bus Clause provides us with a class
+called a vector and that vector is in
+
+82
+00:01:11,570 --> 00:01:11,580
+called a vector and that vector is in
+ 
+
+83
+00:01:11,580 --> 00:01:12,530
+called a vector and that vector is in
+the STD namespace
+
+84
+00:01:12,530 --> 00:01:12,540
+the STD namespace
+ 
+
+85
+00:01:12,540 --> 00:01:16,010
+the STD namespace
+now it's called better that's the first
+
+86
+00:01:16,010 --> 00:01:16,020
+now it's called better that's the first
+ 
+
+87
+00:01:16,020 --> 00:01:16,640
+now it's called better that's the first
+problem
+
+88
+00:01:16,640 --> 00:01:16,650
+problem
+ 
+
+89
+00:01:16,650 --> 00:01:19,910
+problem
+why is it called a vector well there's
+
+90
+00:01:19,910 --> 00:01:19,920
+why is it called a vector well there's
+ 
+
+91
+00:01:19,920 --> 00:01:21,380
+why is it called a vector well there's
+actually a story behind that I've linked
+
+92
+00:01:21,380 --> 00:01:21,390
+actually a story behind that I've linked
+ 
+
+93
+00:01:21,390 --> 00:01:23,600
+actually a story behind that I've linked
+as like an article or Wikipedia page in
+
+94
+00:01:23,600 --> 00:01:23,610
+as like an article or Wikipedia page in
+ 
+
+95
+00:01:23,610 --> 00:01:25,130
+as like an article or Wikipedia page in
+the description that will actually talk
+
+96
+00:01:25,130 --> 00:01:25,140
+the description that will actually talk
+ 
+
+97
+00:01:25,140 --> 00:01:27,440
+the description that will actually talk
+about that but it shouldn't be called
+
+98
+00:01:27,440 --> 00:01:27,450
+about that but it shouldn't be called
+ 
+
+99
+00:01:27,450 --> 00:01:28,850
+about that but it shouldn't be called
+vector it should be called something
+
+100
+00:01:28,850 --> 00:01:28,860
+vector it should be called something
+ 
+
+101
+00:01:28,860 --> 00:01:30,890
+vector it should be called something
+like ArrayList because that makes a lot
+
+102
+00:01:30,890 --> 00:01:30,900
+like ArrayList because that makes a lot
+ 
+
+103
+00:01:30,900 --> 00:01:32,870
+like ArrayList because that makes a lot
+more sense is essentially a dynamic or
+
+104
+00:01:32,870 --> 00:01:32,880
+more sense is essentially a dynamic or
+ 
+
+105
+00:01:32,880 --> 00:01:35,359
+more sense is essentially a dynamic or
+dynamic array but not vector vectors a
+
+106
+00:01:35,359 --> 00:01:35,369
+dynamic array but not vector vectors a
+ 
+
+107
+00:01:35,369 --> 00:01:37,130
+dynamic array but not vector vectors a
+very weird name for this and a lot of
+
+108
+00:01:37,130 --> 00:01:37,140
+very weird name for this and a lot of
+ 
+
+109
+00:01:37,140 --> 00:01:38,810
+very weird name for this and a lot of
+people who first kind of get into C++
+
+110
+00:01:38,810 --> 00:01:38,820
+people who first kind of get into C++
+ 
+
+111
+00:01:38,820 --> 00:01:41,120
+people who first kind of get into C++
+really get confused about what honor
+
+112
+00:01:41,120 --> 00:01:41,130
+really get confused about what honor
+ 
+
+113
+00:01:41,130 --> 00:01:42,440
+really get confused about what honor
+this vector thing isn't is it a
+
+114
+00:01:42,440 --> 00:01:42,450
+this vector thing isn't is it a
+ 
+
+115
+00:01:42,450 --> 00:01:45,560
+this vector thing isn't is it a
+mathematical vector no no it's it's just
+
+116
+00:01:45,560 --> 00:01:45,570
+mathematical vector no no it's it's just
+ 
+
+117
+00:01:45,570 --> 00:01:47,510
+mathematical vector no no it's it's just
+it's kind of like a set it's a set that
+
+118
+00:01:47,510 --> 00:01:47,520
+it's kind of like a set it's a set that
+ 
+
+119
+00:01:47,520 --> 00:01:49,100
+it's kind of like a set it's a set that
+doesn't enforce any kind of uniqueness
+
+120
+00:01:49,100 --> 00:01:49,110
+doesn't enforce any kind of uniqueness
+ 
+
+121
+00:01:49,110 --> 00:01:51,560
+doesn't enforce any kind of uniqueness
+to its actual elements so in other words
+
+122
+00:01:51,560 --> 00:01:51,570
+to its actual elements so in other words
+ 
+
+123
+00:01:51,570 --> 00:01:54,080
+to its actual elements so in other words
+it's basically an array but unlike the
+
+124
+00:01:54,080 --> 00:01:54,090
+it's basically an array but unlike the
+ 
+
+125
+00:01:54,090 --> 00:01:56,630
+it's basically an array but unlike the
+normal array types in in C++ either just
+
+126
+00:01:56,630 --> 00:01:56,640
+normal array types in in C++ either just
+ 
+
+127
+00:01:56,640 --> 00:01:59,300
+normal array types in in C++ either just
+raw arrays or the standard array class
+
+128
+00:01:59,300 --> 00:01:59,310
+raw arrays or the standard array class
+ 
+
+129
+00:01:59,310 --> 00:02:01,219
+raw arrays or the standard array class
+which we might which we actually did
+
+130
+00:02:01,219 --> 00:02:01,229
+which we might which we actually did
+ 
+
+131
+00:02:01,229 --> 00:02:02,450
+which we might which we actually did
+mention in the arrays video if you guys
+
+132
+00:02:02,450 --> 00:02:02,460
+mention in the arrays video if you guys
+ 
+
+133
+00:02:02,460 --> 00:02:04,429
+mention in the arrays video if you guys
+haven't seen that click up there but we
+
+134
+00:02:04,429 --> 00:02:04,439
+haven't seen that click up there but we
+ 
+
+135
+00:02:04,439 --> 00:02:05,630
+haven't seen that click up there but we
+will probably have a dedicated video
+
+136
+00:02:05,630 --> 00:02:05,640
+will probably have a dedicated video
+ 
+
+137
+00:02:05,640 --> 00:02:08,749
+will probably have a dedicated video
+about that as well unlike array this can
+
+138
+00:02:08,749 --> 00:02:08,759
+about that as well unlike array this can
+ 
+
+139
+00:02:08,759 --> 00:02:10,020
+about that as well unlike array this can
+actually resize
+
+140
+00:02:10,020 --> 00:02:10,030
+actually resize
+ 
+
+141
+00:02:10,030 --> 00:02:12,090
+actually resize
+means that when you create this vector
+
+142
+00:02:12,090 --> 00:02:12,100
+means that when you create this vector
+ 
+
+143
+00:02:12,100 --> 00:02:13,380
+means that when you create this vector
+when you create this dynamic array it
+
+144
+00:02:13,380 --> 00:02:13,390
+when you create this dynamic array it
+ 
+
+145
+00:02:13,390 --> 00:02:15,449
+when you create this dynamic array it
+doesn't have a set size you can give it
+
+146
+00:02:15,449 --> 00:02:15,459
+doesn't have a set size you can give it
+ 
+
+147
+00:02:15,459 --> 00:02:18,059
+doesn't have a set size you can give it
+a set size and whatever if you want to
+
+148
+00:02:18,059 --> 00:02:18,069
+a set size and whatever if you want to
+ 
+
+149
+00:02:18,069 --> 00:02:20,280
+a set size and whatever if you want to
+initialize a with a certain size but you
+
+150
+00:02:20,280 --> 00:02:20,290
+initialize a with a certain size but you
+ 
+
+151
+00:02:20,290 --> 00:02:22,199
+initialize a with a certain size but you
+basically don't give it a size you just
+
+152
+00:02:22,199 --> 00:02:22,209
+basically don't give it a size you just
+ 
+
+153
+00:02:22,209 --> 00:02:24,690
+basically don't give it a size you just
+create this vector or this array and
+
+154
+00:02:24,690 --> 00:02:24,700
+create this vector or this array and
+ 
+
+155
+00:02:24,700 --> 00:02:26,699
+create this vector or this array and
+then you basically just put elements
+
+156
+00:02:26,699 --> 00:02:26,709
+then you basically just put elements
+ 
+
+157
+00:02:26,709 --> 00:02:28,500
+then you basically just put elements
+into it and every time you put an
+
+158
+00:02:28,500 --> 00:02:28,510
+into it and every time you put an
+ 
+
+159
+00:02:28,510 --> 00:02:31,170
+into it and every time you put an
+element into it the size grows so I can
+
+160
+00:02:31,170 --> 00:02:31,180
+element into it the size grows so I can
+ 
+
+161
+00:02:31,180 --> 00:02:33,000
+element into it the size grows so I can
+start off not knowing how many elements
+
+162
+00:02:33,000 --> 00:02:33,010
+start off not knowing how many elements
+ 
+
+163
+00:02:33,010 --> 00:02:35,130
+start off not knowing how many elements
+actually want in my array and then just
+
+164
+00:02:35,130 --> 00:02:35,140
+actually want in my array and then just
+ 
+
+165
+00:02:35,140 --> 00:02:37,290
+actually want in my array and then just
+push ten things into it and suddenly I
+
+166
+00:02:37,290 --> 00:02:37,300
+push ten things into it and suddenly I
+ 
+
+167
+00:02:37,300 --> 00:02:39,690
+push ten things into it and suddenly I
+have an array with ten items now two
+
+168
+00:02:39,690 --> 00:02:39,700
+have an array with ten items now two
+ 
+
+169
+00:02:39,700 --> 00:02:41,309
+have an array with ten items now two
+people who kind of are new to
+
+170
+00:02:41,309 --> 00:02:41,319
+people who kind of are new to
+ 
+
+171
+00:02:41,319 --> 00:02:42,680
+people who kind of are new to
+programming or new to computer science
+
+172
+00:02:42,680 --> 00:02:42,690
+programming or new to computer science
+ 
+
+173
+00:02:42,690 --> 00:02:44,759
+programming or new to computer science
+might be like well how does that work
+
+174
+00:02:44,759 --> 00:02:44,769
+might be like well how does that work
+ 
+
+175
+00:02:44,769 --> 00:02:46,320
+might be like well how does that work
+how could how is it possible to just
+
+176
+00:02:46,320 --> 00:02:46,330
+how could how is it possible to just
+ 
+
+177
+00:02:46,330 --> 00:02:48,420
+how could how is it possible to just
+have an array that resizes and we're
+
+178
+00:02:48,420 --> 00:02:48,430
+have an array that resizes and we're
+ 
+
+179
+00:02:48,430 --> 00:02:50,070
+have an array that resizes and we're
+actually going to over the course of
+
+180
+00:02:50,070 --> 00:02:50,080
+actually going to over the course of
+ 
+
+181
+00:02:50,080 --> 00:02:51,240
+actually going to over the course of
+this simple spice series we're actually
+
+182
+00:02:51,240 --> 00:02:51,250
+this simple spice series we're actually
+ 
+
+183
+00:02:51,250 --> 00:02:53,070
+this simple spice series we're actually
+going to be rewriting a lot of these
+
+184
+00:02:53,070 --> 00:02:53,080
+going to be rewriting a lot of these
+ 
+
+185
+00:02:53,080 --> 00:02:54,360
+going to be rewriting a lot of these
+data structures that because they're
+
+186
+00:02:54,360 --> 00:02:54,370
+data structures that because they're
+ 
+
+187
+00:02:54,370 --> 00:02:57,120
+data structures that because they're
+sensitive waswas ourselves and in a lot
+
+188
+00:02:57,120 --> 00:02:57,130
+sensitive waswas ourselves and in a lot
+ 
+
+189
+00:02:57,130 --> 00:02:58,380
+sensitive waswas ourselves and in a lot
+of cases we're actually gonna optimize
+
+190
+00:02:58,380 --> 00:02:58,390
+of cases we're actually gonna optimize
+ 
+
+191
+00:02:58,390 --> 00:03:00,059
+of cases we're actually gonna optimize
+them and make them a lot faster than the
+
+192
+00:03:00,059 --> 00:03:00,069
+them and make them a lot faster than the
+ 
+
+193
+00:03:00,069 --> 00:03:01,229
+them and make them a lot faster than the
+ones in the standard template library
+
+194
+00:03:01,229 --> 00:03:01,239
+ones in the standard template library
+ 
+
+195
+00:03:01,239 --> 00:03:04,080
+ones in the standard template library
+because this one's on the sentient
+
+196
+00:03:04,080 --> 00:03:04,090
+because this one's on the sentient
+ 
+
+197
+00:03:04,090 --> 00:03:05,880
+because this one's on the sentient
+template library aren't especially fast
+
+198
+00:03:05,880 --> 00:03:05,890
+template library aren't especially fast
+ 
+
+199
+00:03:05,890 --> 00:03:07,740
+template library aren't especially fast
+that's not really the priority of them
+
+200
+00:03:07,740 --> 00:03:07,750
+that's not really the priority of them
+ 
+
+201
+00:03:07,750 --> 00:03:10,770
+that's not really the priority of them
+and so in a lot of cases studios and
+
+202
+00:03:10,770 --> 00:03:10,780
+and so in a lot of cases studios and
+ 
+
+203
+00:03:10,780 --> 00:03:12,960
+and so in a lot of cases studios and
+teams end up actually creating their own
+
+204
+00:03:12,960 --> 00:03:12,970
+teams end up actually creating their own
+ 
+
+205
+00:03:12,970 --> 00:03:14,880
+teams end up actually creating their own
+container libraries in example I work at
+
+206
+00:03:14,880 --> 00:03:14,890
+container libraries in example I work at
+ 
+
+207
+00:03:14,890 --> 00:03:16,620
+container libraries in example I work at
+AAA so an example is we use something
+
+208
+00:03:16,620 --> 00:03:16,630
+AAA so an example is we use something
+ 
+
+209
+00:03:16,630 --> 00:03:18,870
+AAA so an example is we use something
+called EA STL there's a link to that in
+
+210
+00:03:18,870 --> 00:03:18,880
+called EA STL there's a link to that in
+ 
+
+211
+00:03:18,880 --> 00:03:20,490
+called EA STL there's a link to that in
+the description below it's on github you
+
+212
+00:03:20,490 --> 00:03:20,500
+the description below it's on github you
+ 
+
+213
+00:03:20,500 --> 00:03:22,949
+the description below it's on github you
+can look at the source code that's one
+
+214
+00:03:22,949 --> 00:03:22,959
+can look at the source code that's one
+ 
+
+215
+00:03:22,959 --> 00:03:25,100
+can look at the source code that's one
+example of something that is actually
+
+216
+00:03:25,100 --> 00:03:25,110
+example of something that is actually
+ 
+
+217
+00:03:25,110 --> 00:03:28,140
+example of something that is actually
+usually in most cases a lot faster than
+
+218
+00:03:28,140 --> 00:03:28,150
+usually in most cases a lot faster than
+ 
+
+219
+00:03:28,150 --> 00:03:29,430
+usually in most cases a lot faster than
+the stuff that's actually in a standard
+
+220
+00:03:29,430 --> 00:03:29,440
+the stuff that's actually in a standard
+ 
+
+221
+00:03:29,440 --> 00:03:30,630
+the stuff that's actually in a standard
+template library anyway I'm getting a
+
+222
+00:03:30,630 --> 00:03:30,640
+template library anyway I'm getting a
+ 
+
+223
+00:03:30,640 --> 00:03:32,580
+template library anyway I'm getting a
+little bit ahead of myself here um the
+
+224
+00:03:32,580 --> 00:03:32,590
+little bit ahead of myself here um the
+ 
+
+225
+00:03:32,590 --> 00:03:34,710
+little bit ahead of myself here um the
+point is that the way that Santa vectors
+
+226
+00:03:34,710 --> 00:03:34,720
+point is that the way that Santa vectors
+ 
+
+227
+00:03:34,720 --> 00:03:36,180
+point is that the way that Santa vectors
+actually work we'll talk about that more
+
+228
+00:03:36,180 --> 00:03:36,190
+actually work we'll talk about that more
+ 
+
+229
+00:03:36,190 --> 00:03:38,849
+actually work we'll talk about that more
+in more detail in a future video
+
+230
+00:03:38,849 --> 00:03:38,859
+in more detail in a future video
+ 
+
+231
+00:03:38,859 --> 00:03:42,630
+in more detail in a future video
+however the gist of it is that basically
+
+232
+00:03:42,630 --> 00:03:42,640
+however the gist of it is that basically
+ 
+
+233
+00:03:42,640 --> 00:03:44,220
+however the gist of it is that basically
+when you exceed the size that is
+
+234
+00:03:44,220 --> 00:03:44,230
+when you exceed the size that is
+ 
+
+235
+00:03:44,230 --> 00:03:46,680
+when you exceed the size that is
+allocated so when you make a vector it
+
+236
+00:03:46,680 --> 00:03:46,690
+allocated so when you make a vector it
+ 
+
+237
+00:03:46,690 --> 00:03:49,080
+allocated so when you make a vector it
+might allocate like ten elements for
+
+238
+00:03:49,080 --> 00:03:49,090
+might allocate like ten elements for
+ 
+
+239
+00:03:49,090 --> 00:03:50,430
+might allocate like ten elements for
+example or enough memory for ten
+
+240
+00:03:50,430 --> 00:03:50,440
+example or enough memory for ten
+ 
+
+241
+00:03:50,440 --> 00:03:52,710
+example or enough memory for ten
+elements when you exceed that it
+
+242
+00:03:52,710 --> 00:03:52,720
+elements when you exceed that it
+ 
+
+243
+00:03:52,720 --> 00:03:54,720
+elements when you exceed that it
+basically creates a new array in memory
+
+244
+00:03:54,720 --> 00:03:54,730
+basically creates a new array in memory
+ 
+
+245
+00:03:54,730 --> 00:03:57,630
+basically creates a new array in memory
+that's bigger than the first one copies
+
+246
+00:03:57,630 --> 00:03:57,640
+that's bigger than the first one copies
+ 
+
+247
+00:03:57,640 --> 00:03:59,670
+that's bigger than the first one copies
+everything to there and then deletes the
+
+248
+00:03:59,670 --> 00:03:59,680
+everything to there and then deletes the
+ 
+
+249
+00:03:59,680 --> 00:04:01,170
+everything to there and then deletes the
+old one and that way you suddenly just
+
+250
+00:04:01,170 --> 00:04:01,180
+old one and that way you suddenly just
+ 
+
+251
+00:04:01,180 --> 00:04:02,970
+old one and that way you suddenly just
+have basically a new array as somewhere
+
+252
+00:04:02,970 --> 00:04:02,980
+have basically a new array as somewhere
+ 
+
+253
+00:04:02,980 --> 00:04:05,280
+have basically a new array as somewhere
+else in memory that has a lot more
+
+254
+00:04:05,280 --> 00:04:05,290
+else in memory that has a lot more
+ 
+
+255
+00:04:05,290 --> 00:04:07,080
+else in memory that has a lot more
+storage and you can keep adding things
+
+256
+00:04:07,080 --> 00:04:07,090
+storage and you can keep adding things
+ 
+
+257
+00:04:07,090 --> 00:04:09,390
+storage and you can keep adding things
+to it like that in practice it actually
+
+258
+00:04:09,390 --> 00:04:09,400
+to it like that in practice it actually
+ 
+
+259
+00:04:09,400 --> 00:04:13,680
+to it like that in practice it actually
+tends to allocate quite often and isn't
+
+260
+00:04:13,680 --> 00:04:13,690
+tends to allocate quite often and isn't
+ 
+
+261
+00:04:13,690 --> 00:04:15,120
+tends to allocate quite often and isn't
+the best performance wise unless you set
+
+262
+00:04:15,120 --> 00:04:15,130
+the best performance wise unless you set
+ 
+
+263
+00:04:15,130 --> 00:04:16,440
+the best performance wise unless you set
+it up properly so this video is just
+
+264
+00:04:16,440 --> 00:04:16,450
+it up properly so this video is just
+ 
+
+265
+00:04:16,450 --> 00:04:18,390
+it up properly so this video is just
+going to be for beginners who don't know
+
+266
+00:04:18,390 --> 00:04:18,400
+going to be for beginners who don't know
+ 
+
+267
+00:04:18,400 --> 00:04:20,580
+going to be for beginners who don't know
+what what this vector thing is how you
+
+268
+00:04:20,580 --> 00:04:20,590
+what what this vector thing is how you
+ 
+
+269
+00:04:20,590 --> 00:04:22,330
+what what this vector thing is how you
+can use it and all that and then
+
+270
+00:04:22,330 --> 00:04:22,340
+can use it and all that and then
+ 
+
+271
+00:04:22,340 --> 00:04:23,730
+can use it and all that and then
+I think the next video after this one
+
+272
+00:04:23,730 --> 00:04:23,740
+I think the next video after this one
+ 
+
+273
+00:04:23,740 --> 00:04:25,360
+I think the next video after this one
+we're actually going to talk about
+
+274
+00:04:25,360 --> 00:04:25,370
+we're actually going to talk about
+ 
+
+275
+00:04:25,370 --> 00:04:27,700
+we're actually going to talk about
+specifically how we can use the standard
+
+276
+00:04:27,700 --> 00:04:27,710
+specifically how we can use the standard
+ 
+
+277
+00:04:27,710 --> 00:04:29,110
+specifically how we can use the standard
+vector in an optimal way and that will
+
+278
+00:04:29,110 --> 00:04:29,120
+vector in an optimal way and that will
+ 
+
+279
+00:04:29,120 --> 00:04:30,220
+vector in an optimal way and that will
+kind of get into some more advanced
+
+280
+00:04:30,220 --> 00:04:30,230
+kind of get into some more advanced
+ 
+
+281
+00:04:30,230 --> 00:04:32,230
+kind of get into some more advanced
+things so if you want to check that
+
+282
+00:04:32,230 --> 00:04:32,240
+things so if you want to check that
+ 
+
+283
+00:04:32,240 --> 00:04:33,640
+things so if you want to check that
+video out if you already know how back
+
+284
+00:04:33,640 --> 00:04:33,650
+video out if you already know how back
+ 
+
+285
+00:04:33,650 --> 00:04:34,780
+video out if you already know how back
+to works and you wanna waste your time
+
+286
+00:04:34,780 --> 00:04:34,790
+to works and you wanna waste your time
+ 
+
+287
+00:04:34,790 --> 00:04:36,310
+to works and you wanna waste your time
+watching this video click on the link
+
+288
+00:04:36,310 --> 00:04:36,320
+watching this video click on the link
+ 
+
+289
+00:04:36,320 --> 00:04:37,510
+watching this video click on the link
+right there and that will take you to
+
+290
+00:04:37,510 --> 00:04:37,520
+right there and that will take you to
+ 
+
+291
+00:04:37,520 --> 00:04:39,159
+right there and that will take you to
+the advanced I guess video and we'll
+
+292
+00:04:39,159 --> 00:04:39,169
+the advanced I guess video and we'll
+ 
+
+293
+00:04:39,169 --> 00:04:40,900
+the advanced I guess video and we'll
+talk about how we can optimize our usage
+
+294
+00:04:40,900 --> 00:04:40,910
+talk about how we can optimize our usage
+ 
+
+295
+00:04:40,910 --> 00:04:43,900
+talk about how we can optimize our usage
+of the vector class but for now let's
+
+296
+00:04:43,900 --> 00:04:43,910
+of the vector class but for now let's
+ 
+
+297
+00:04:43,910 --> 00:04:45,400
+of the vector class but for now let's
+create a dynamic array so what I've got
+
+298
+00:04:45,400 --> 00:04:45,410
+create a dynamic array so what I've got
+ 
+
+299
+00:04:45,410 --> 00:04:47,290
+create a dynamic array so what I've got
+over here is a basics dropped here
+
+300
+00:04:47,290 --> 00:04:47,300
+over here is a basics dropped here
+ 
+
+301
+00:04:47,300 --> 00:04:48,670
+over here is a basics dropped here
+there's the vertex this is specifically
+
+302
+00:04:48,670 --> 00:04:48,680
+there's the vertex this is specifically
+ 
+
+303
+00:04:48,680 --> 00:04:50,379
+there's the vertex this is specifically
+a vertex position I should add as you
+
+304
+00:04:50,379 --> 00:04:50,389
+a vertex position I should add as you
+ 
+
+305
+00:04:50,389 --> 00:04:52,960
+a vertex position I should add as you
+can see it's got x y&z this is just a
+
+306
+00:04:52,960 --> 00:04:52,970
+can see it's got x y&z this is just a
+ 
+
+307
+00:04:52,970 --> 00:04:54,219
+can see it's got x y&z this is just a
+dummy class it really could be anything
+
+308
+00:04:54,219 --> 00:04:54,229
+dummy class it really could be anything
+ 
+
+309
+00:04:54,229 --> 00:04:55,870
+dummy class it really could be anything
+I've also written an output operator
+
+310
+00:04:55,870 --> 00:04:55,880
+I've also written an output operator
+ 
+
+311
+00:04:55,880 --> 00:04:57,310
+I've also written an output operator
+over here just so that we can print this
+
+312
+00:04:57,310 --> 00:04:57,320
+over here just so that we can print this
+ 
+
+313
+00:04:57,320 --> 00:04:59,200
+over here just so that we can print this
+easily to the console if we want to make
+
+314
+00:04:59,200 --> 00:04:59,210
+easily to the console if we want to make
+ 
+
+315
+00:04:59,210 --> 00:05:00,879
+easily to the console if we want to make
+an actual static array of this we would
+
+316
+00:05:00,879 --> 00:05:00,889
+an actual static array of this we would
+ 
+
+317
+00:05:00,889 --> 00:05:03,280
+an actual static array of this we would
+kind of have two choices right ignoring
+
+318
+00:05:03,280 --> 00:05:03,290
+kind of have two choices right ignoring
+ 
+
+319
+00:05:03,290 --> 00:05:05,140
+kind of have two choices right ignoring
+the standard array class we could just
+
+320
+00:05:05,140 --> 00:05:05,150
+the standard array class we could just
+ 
+
+321
+00:05:05,150 --> 00:05:07,780
+the standard array class we could just
+create a static array which might have
+
+322
+00:05:07,780 --> 00:05:07,790
+create a static array which might have
+ 
+
+323
+00:05:07,790 --> 00:05:09,879
+create a static array which might have
+five elements in it but this way we're
+
+324
+00:05:09,879 --> 00:05:09,889
+five elements in it but this way we're
+ 
+
+325
+00:05:09,889 --> 00:05:10,990
+five elements in it but this way we're
+kind of getting tied to the size and
+
+326
+00:05:10,990 --> 00:05:11,000
+kind of getting tied to the size and
+ 
+
+327
+00:05:11,000 --> 00:05:12,940
+kind of getting tied to the size and
+even if we do allocated on the heap like
+
+328
+00:05:12,940 --> 00:05:12,950
+even if we do allocated on the heap like
+ 
+
+329
+00:05:12,950 --> 00:05:14,230
+even if we do allocated on the heap like
+sorry you can see that we're kind of
+
+330
+00:05:14,230 --> 00:05:14,240
+sorry you can see that we're kind of
+ 
+
+331
+00:05:14,240 --> 00:05:16,510
+sorry you can see that we're kind of
+still tied to this size and we've kind
+
+332
+00:05:16,510 --> 00:05:16,520
+still tied to this size and we've kind
+ 
+
+333
+00:05:16,520 --> 00:05:18,279
+still tied to this size and we've kind
+of allocated five vertices which means
+
+334
+00:05:18,279 --> 00:05:18,289
+of allocated five vertices which means
+ 
+
+335
+00:05:18,289 --> 00:05:20,680
+of allocated five vertices which means
+that we can access zero through four
+
+336
+00:05:20,680 --> 00:05:20,690
+that we can access zero through four
+ 
+
+337
+00:05:20,690 --> 00:05:22,480
+that we can access zero through four
+again if you're not sure how arrays work
+
+338
+00:05:22,480 --> 00:05:22,490
+again if you're not sure how arrays work
+ 
+
+339
+00:05:22,490 --> 00:05:24,100
+again if you're not sure how arrays work
+definitely check out that video first
+
+340
+00:05:24,100 --> 00:05:24,110
+definitely check out that video first
+ 
+
+341
+00:05:24,110 --> 00:05:27,190
+definitely check out that video first
+but we can access the index 0 through 4
+
+342
+00:05:27,190 --> 00:05:27,200
+but we can access the index 0 through 4
+ 
+
+343
+00:05:27,200 --> 00:05:29,650
+but we can access the index 0 through 4
+and then if we try and go higher we get
+
+344
+00:05:29,650 --> 00:05:29,660
+and then if we try and go higher we get
+ 
+
+345
+00:05:29,660 --> 00:05:31,180
+and then if we try and go higher we get
+run into a problem and sometimes that's
+
+346
+00:05:31,180 --> 00:05:31,190
+run into a problem and sometimes that's
+ 
+
+347
+00:05:31,190 --> 00:05:32,980
+run into a problem and sometimes that's
+just not good enough because we want to
+
+348
+00:05:32,980 --> 00:05:32,990
+just not good enough because we want to
+ 
+
+349
+00:05:32,990 --> 00:05:35,409
+just not good enough because we want to
+keep adding vertices for example we
+
+350
+00:05:35,409 --> 00:05:35,419
+keep adding vertices for example we
+ 
+
+351
+00:05:35,419 --> 00:05:37,000
+keep adding vertices for example we
+might have a program where we allow the
+
+352
+00:05:37,000 --> 00:05:37,010
+might have a program where we allow the
+ 
+
+353
+00:05:37,010 --> 00:05:39,580
+might have a program where we allow the
+user to enter in data we don't really
+
+354
+00:05:39,580 --> 00:05:39,590
+user to enter in data we don't really
+ 
+
+355
+00:05:39,590 --> 00:05:41,589
+user to enter in data we don't really
+want to stop the user after I don't know
+
+356
+00:05:41,589 --> 00:05:41,599
+want to stop the user after I don't know
+ 
+
+357
+00:05:41,599 --> 00:05:44,200
+want to stop the user after I don't know
+maybe ten vertices or something I say
+
+358
+00:05:44,200 --> 00:05:44,210
+maybe ten vertices or something I say
+ 
+
+359
+00:05:44,210 --> 00:05:46,210
+maybe ten vertices or something I say
+sorry you can't enter any more if we
+
+360
+00:05:46,210 --> 00:05:46,220
+sorry you can't enter any more if we
+ 
+
+361
+00:05:46,220 --> 00:05:48,040
+sorry you can't enter any more if we
+want to keep that going we need a way to
+
+362
+00:05:48,040 --> 00:05:48,050
+want to keep that going we need a way to
+ 
+
+363
+00:05:48,050 --> 00:05:49,330
+want to keep that going we need a way to
+say that when you've reached them that
+
+364
+00:05:49,330 --> 00:05:49,340
+say that when you've reached them that
+ 
+
+365
+00:05:49,340 --> 00:05:52,150
+say that when you've reached them that
+max capacity resized get bigger so that
+
+366
+00:05:52,150 --> 00:05:52,160
+max capacity resized get bigger so that
+ 
+
+367
+00:05:52,160 --> 00:05:53,770
+max capacity resized get bigger so that
+you can store more data another solution
+
+368
+00:05:53,770 --> 00:05:53,780
+you can store more data another solution
+ 
+
+369
+00:05:53,780 --> 00:05:55,600
+you can store more data another solution
+to this problem is kind of allocating an
+
+370
+00:05:55,600 --> 00:05:55,610
+to this problem is kind of allocating an
+ 
+
+371
+00:05:55,610 --> 00:05:57,550
+to this problem is kind of allocating an
+absurd amount of vertices and then
+
+372
+00:05:57,550 --> 00:05:57,560
+absurd amount of vertices and then
+ 
+
+373
+00:05:57,560 --> 00:05:58,960
+absurd amount of vertices and then
+basically just saying that's the hard
+
+374
+00:05:58,960 --> 00:05:58,970
+basically just saying that's the hard
+ 
+
+375
+00:05:58,970 --> 00:06:00,279
+basically just saying that's the hard
+limit for the program anything above
+
+376
+00:06:00,279 --> 00:06:00,289
+limit for the program anything above
+ 
+
+377
+00:06:00,289 --> 00:06:01,390
+limit for the program anything above
+that is ridiculous we're never going to
+
+378
+00:06:01,390 --> 00:06:01,400
+that is ridiculous we're never going to
+ 
+
+379
+00:06:01,400 --> 00:06:03,100
+that is ridiculous we're never going to
+hit that anyway so basically this
+
+380
+00:06:03,100 --> 00:06:03,110
+hit that anyway so basically this
+ 
+
+381
+00:06:03,110 --> 00:06:05,710
+hit that anyway so basically this
+program does support unlimited vertices
+
+382
+00:06:05,710 --> 00:06:05,720
+program does support unlimited vertices
+ 
+
+383
+00:06:05,720 --> 00:06:07,420
+program does support unlimited vertices
+in a way but of course that's also not
+
+384
+00:06:07,420 --> 00:06:07,430
+in a way but of course that's also not
+ 
+
+385
+00:06:07,430 --> 00:06:09,129
+in a way but of course that's also not
+ideal because it means that you're using
+
+386
+00:06:09,129 --> 00:06:09,139
+ideal because it means that you're using
+ 
+
+387
+00:06:09,139 --> 00:06:12,190
+ideal because it means that you're using
+all of that memory whereas if if we only
+
+388
+00:06:12,190 --> 00:06:12,200
+all of that memory whereas if if we only
+ 
+
+389
+00:06:12,200 --> 00:06:14,050
+all of that memory whereas if if we only
+have five vertices that's a huge waste
+
+390
+00:06:14,050 --> 00:06:14,060
+have five vertices that's a huge waste
+ 
+
+391
+00:06:14,060 --> 00:06:16,480
+have five vertices that's a huge waste
+so what we can do instead is use the
+
+392
+00:06:16,480 --> 00:06:16,490
+so what we can do instead is use the
+ 
+
+393
+00:06:16,490 --> 00:06:19,000
+so what we can do instead is use the
+vector class I'm going to include vector
+
+394
+00:06:19,000 --> 00:06:19,010
+vector class I'm going to include vector
+ 
+
+395
+00:06:19,010 --> 00:06:21,339
+vector class I'm going to include vector
+over here and then I'm going to go ahead
+
+396
+00:06:21,339 --> 00:06:21,349
+over here and then I'm going to go ahead
+ 
+
+397
+00:06:21,349 --> 00:06:22,870
+over here and then I'm going to go ahead
+and make one so the way that we make one
+
+398
+00:06:22,870 --> 00:06:22,880
+and make one so the way that we make one
+ 
+
+399
+00:06:22,880 --> 00:06:25,450
+and make one so the way that we make one
+is we type in STD vector then we specify
+
+400
+00:06:25,450 --> 00:06:25,460
+is we type in STD vector then we specify
+ 
+
+401
+00:06:25,460 --> 00:06:27,909
+is we type in STD vector then we specify
+the type now this type is just a C++
+
+402
+00:06:27,909 --> 00:06:27,919
+the type now this type is just a C++
+ 
+
+403
+00:06:27,919 --> 00:06:30,250
+the type now this type is just a C++
+type of what what is actually going to
+
+404
+00:06:30,250 --> 00:06:30,260
+type of what what is actually going to
+ 
+
+405
+00:06:30,260 --> 00:06:32,190
+type of what what is actually going to
+be in the array so in our case we want
+
+406
+00:06:32,190 --> 00:06:32,200
+be in the array so in our case we want
+ 
+
+407
+00:06:32,200 --> 00:06:34,230
+be in the array so in our case we want
+vertices so we'll type in a vertex now
+
+408
+00:06:34,230 --> 00:06:34,240
+vertices so we'll type in a vertex now
+ 
+
+409
+00:06:34,240 --> 00:06:36,000
+vertices so we'll type in a vertex now
+call this vertices just like that and
+
+410
+00:06:36,000 --> 00:06:36,010
+call this vertices just like that and
+ 
+
+411
+00:06:36,010 --> 00:06:37,170
+call this vertices just like that and
+that's it we're done now it's worth
+
+412
+00:06:37,170 --> 00:06:37,180
+that's it we're done now it's worth
+ 
+
+413
+00:06:37,180 --> 00:06:39,300
+that's it we're done now it's worth
+noting that unlike languages like Java
+
+414
+00:06:39,300 --> 00:06:39,310
+noting that unlike languages like Java
+ 
+
+415
+00:06:39,310 --> 00:06:41,760
+noting that unlike languages like Java
+where you cannot pass primitive types in
+
+416
+00:06:41,760 --> 00:06:41,770
+where you cannot pass primitive types in
+ 
+
+417
+00:06:41,770 --> 00:06:44,700
+where you cannot pass primitive types in
+here this is a C++ template so you can
+
+418
+00:06:44,700 --> 00:06:44,710
+here this is a C++ template so you can
+ 
+
+419
+00:06:44,710 --> 00:06:46,620
+here this is a C++ template so you can
+pass primitive types in here I can type
+
+420
+00:06:46,620 --> 00:06:46,630
+pass primitive types in here I can type
+ 
+
+421
+00:06:46,630 --> 00:06:49,650
+pass primitive types in here I can type
+int like this or float like that in Java
+
+422
+00:06:49,650 --> 00:06:49,660
+int like this or float like that in Java
+ 
+
+423
+00:06:49,660 --> 00:06:50,730
+int like this or float like that in Java
+we would actually have to use the
+
+424
+00:06:50,730 --> 00:06:50,740
+we would actually have to use the
+ 
+
+425
+00:06:50,740 --> 00:06:52,350
+we would actually have to use the
+integer class or something like that but
+
+426
+00:06:52,350 --> 00:06:52,360
+integer class or something like that but
+ 
+
+427
+00:06:52,360 --> 00:06:54,060
+integer class or something like that but
+this is very similar to C sharp as well
+
+428
+00:06:54,060 --> 00:06:54,070
+this is very similar to C sharp as well
+ 
+
+429
+00:06:54,070 --> 00:06:56,130
+this is very similar to C sharp as well
+where we don't actually have to specify
+
+430
+00:06:56,130 --> 00:06:56,140
+where we don't actually have to specify
+ 
+
+431
+00:06:56,140 --> 00:06:59,190
+where we don't actually have to specify
+the class type we can just specify the
+
+432
+00:06:59,190 --> 00:06:59,200
+the class type we can just specify the
+ 
+
+433
+00:06:59,200 --> 00:07:01,590
+the class type we can just specify the
+raw type the primitive type someone
+
+434
+00:07:01,590 --> 00:07:01,600
+raw type the primitive type someone
+ 
+
+435
+00:07:01,600 --> 00:07:03,480
+raw type the primitive type someone
+change this back to vertex now note that
+
+436
+00:07:03,480 --> 00:07:03,490
+change this back to vertex now note that
+ 
+
+437
+00:07:03,490 --> 00:07:05,790
+change this back to vertex now note that
+I'm not storing a bunch of pointers to
+
+438
+00:07:05,790 --> 00:07:05,800
+I'm not storing a bunch of pointers to
+ 
+
+439
+00:07:05,800 --> 00:07:08,130
+I'm not storing a bunch of pointers to
+the vertex to vertex structs right I'm
+
+440
+00:07:08,130 --> 00:07:08,140
+the vertex to vertex structs right I'm
+ 
+
+441
+00:07:08,140 --> 00:07:11,220
+the vertex to vertex structs right I'm
+actually to storing vertices just vertex
+
+442
+00:07:11,220 --> 00:07:11,230
+actually to storing vertices just vertex
+ 
+
+443
+00:07:11,230 --> 00:07:13,110
+actually to storing vertices just vertex
+U just in line and there's actually a
+
+444
+00:07:13,110 --> 00:07:13,120
+U just in line and there's actually a
+ 
+
+445
+00:07:13,120 --> 00:07:14,820
+U just in line and there's actually a
+big difference between that a lot of
+
+446
+00:07:14,820 --> 00:07:14,830
+big difference between that a lot of
+ 
+
+447
+00:07:14,830 --> 00:07:16,950
+big difference between that a lot of
+people tend to ask should I be storing
+
+448
+00:07:16,950 --> 00:07:16,960
+people tend to ask should I be storing
+ 
+
+449
+00:07:16,960 --> 00:07:18,840
+people tend to ask should I be storing
+pointers to heap allocated classes in my
+
+450
+00:07:18,840 --> 00:07:18,850
+pointers to heap allocated classes in my
+ 
+
+451
+00:07:18,850 --> 00:07:21,600
+pointers to heap allocated classes in my
+vector or should I be storing stack
+
+452
+00:07:21,600 --> 00:07:21,610
+vector or should I be storing stack
+ 
+
+453
+00:07:21,610 --> 00:07:23,550
+vector or should I be storing stack
+allocated basically in line allocated
+
+454
+00:07:23,550 --> 00:07:23,560
+allocated basically in line allocated
+ 
+
+455
+00:07:23,560 --> 00:07:26,040
+allocated basically in line allocated
+like vertex classes or vertex structs
+
+456
+00:07:26,040 --> 00:07:26,050
+like vertex classes or vertex structs
+ 
+
+457
+00:07:26,050 --> 00:07:29,070
+like vertex classes or vertex structs
+and the answer that is it depends it
+
+458
+00:07:29,070 --> 00:07:29,080
+and the answer that is it depends it
+ 
+
+459
+00:07:29,080 --> 00:07:30,780
+and the answer that is it depends it
+really does depend I think I'm gonna
+
+460
+00:07:30,780 --> 00:07:30,790
+really does depend I think I'm gonna
+ 
+
+461
+00:07:30,790 --> 00:07:32,160
+really does depend I think I'm gonna
+make a video in the future that will
+
+462
+00:07:32,160 --> 00:07:32,170
+make a video in the future that will
+ 
+
+463
+00:07:32,170 --> 00:07:34,620
+make a video in the future that will
+talk about this specific problem in more
+
+464
+00:07:34,620 --> 00:07:34,630
+talk about this specific problem in more
+ 
+
+465
+00:07:34,630 --> 00:07:36,540
+talk about this specific problem in more
+detail because for a lot of people it's
+
+466
+00:07:36,540 --> 00:07:36,550
+detail because for a lot of people it's
+ 
+
+467
+00:07:36,550 --> 00:07:38,910
+detail because for a lot of people it's
+it is hard to decide whether you should
+
+468
+00:07:38,910 --> 00:07:38,920
+it is hard to decide whether you should
+ 
+
+469
+00:07:38,920 --> 00:07:41,460
+it is hard to decide whether you should
+be using like vertex pointers in this
+
+470
+00:07:41,460 --> 00:07:41,470
+be using like vertex pointers in this
+ 
+
+471
+00:07:41,470 --> 00:07:43,770
+be using like vertex pointers in this
+case or just vertex objects right
+
+472
+00:07:43,770 --> 00:07:43,780
+case or just vertex objects right
+ 
+
+473
+00:07:43,780 --> 00:07:45,690
+case or just vertex objects right
+there's a big difference the primary
+
+474
+00:07:45,690 --> 00:07:45,700
+there's a big difference the primary
+ 
+
+475
+00:07:45,700 --> 00:07:48,630
+there's a big difference the primary
+consideration is that it is technically
+
+476
+00:07:48,630 --> 00:07:48,640
+consideration is that it is technically
+ 
+
+477
+00:07:48,640 --> 00:07:51,090
+consideration is that it is technically
+more optimal to store vertex objects
+
+478
+00:07:51,090 --> 00:07:51,100
+more optimal to store vertex objects
+ 
+
+479
+00:07:51,100 --> 00:07:52,890
+more optimal to store vertex objects
+instead of pointers because if you solve
+
+480
+00:07:52,890 --> 00:07:52,900
+instead of pointers because if you solve
+ 
+
+481
+00:07:52,900 --> 00:07:54,510
+instead of pointers because if you solve
+vertex objects your memory is going to
+
+482
+00:07:54,510 --> 00:07:54,520
+vertex objects your memory is going to
+ 
+
+483
+00:07:54,520 --> 00:07:58,020
+vertex objects your memory is going to
+be in line dynamic arrays are arrays in
+
+484
+00:07:58,020 --> 00:07:58,030
+be in line dynamic arrays are arrays in
+ 
+
+485
+00:07:58,030 --> 00:07:59,250
+be in line dynamic arrays are arrays in
+the sense that their memory is
+
+486
+00:07:59,250 --> 00:07:59,260
+the sense that their memory is
+ 
+
+487
+00:07:59,260 --> 00:08:01,140
+the sense that their memory is
+contiguous which means that it's not
+
+488
+00:08:01,140 --> 00:08:01,150
+contiguous which means that it's not
+ 
+
+489
+00:08:01,150 --> 00:08:03,570
+contiguous which means that it's not
+fragmented in in memory right it's all
+
+490
+00:08:03,570 --> 00:08:03,580
+fragmented in in memory right it's all
+ 
+
+491
+00:08:03,580 --> 00:08:05,670
+fragmented in in memory right it's all
+just in a row and if you store vertex
+
+492
+00:08:05,670 --> 00:08:05,680
+just in a row and if you store vertex
+ 
+
+493
+00:08:05,680 --> 00:08:07,140
+just in a row and if you store vertex
+objects in line like this you've
+
+494
+00:08:07,140 --> 00:08:07,150
+objects in line like this you've
+ 
+
+495
+00:08:07,150 --> 00:08:09,840
+objects in line like this you've
+literally got one in vertex XYZ XYZ XYZ
+
+496
+00:08:09,840 --> 00:08:09,850
+literally got one in vertex XYZ XYZ XYZ
+ 
+
+497
+00:08:09,850 --> 00:08:12,900
+literally got one in vertex XYZ XYZ XYZ
+XYZ one after the other and that's
+
+498
+00:08:12,900 --> 00:08:12,910
+XYZ one after the other and that's
+ 
+
+499
+00:08:12,910 --> 00:08:15,360
+XYZ one after the other and that's
+really really optimal if you actually
+
+500
+00:08:15,360 --> 00:08:15,370
+really really optimal if you actually
+ 
+
+501
+00:08:15,370 --> 00:08:17,460
+really really optimal if you actually
+want to iterate over them and set all
+
+502
+00:08:17,460 --> 00:08:17,470
+want to iterate over them and set all
+ 
+
+503
+00:08:17,470 --> 00:08:19,260
+want to iterate over them and set all
+the more changes that won't read all of
+
+504
+00:08:19,260 --> 00:08:19,270
+the more changes that won't read all of
+ 
+
+505
+00:08:19,270 --> 00:08:20,670
+the more changes that won't read all of
+them or whatever it is that you want to
+
+506
+00:08:20,670 --> 00:08:20,680
+them or whatever it is that you want to
+ 
+
+507
+00:08:20,680 --> 00:08:22,560
+them or whatever it is that you want to
+do with them because they're likely
+
+508
+00:08:22,560 --> 00:08:22,570
+do with them because they're likely
+ 
+
+509
+00:08:22,570 --> 00:08:23,880
+do with them because they're likely
+going to well they are all going to be
+
+510
+00:08:23,880 --> 00:08:23,890
+going to well they are all going to be
+ 
+
+511
+00:08:23,890 --> 00:08:25,410
+going to well they are all going to be
+on the same cache line in that sense I
+
+512
+00:08:25,410 --> 00:08:25,420
+on the same cache line in that sense I
+ 
+
+513
+00:08:25,420 --> 00:08:27,450
+on the same cache line in that sense I
+know I said beat you know I'm already
+
+514
+00:08:27,450 --> 00:08:27,460
+know I said beat you know I'm already
+ 
+
+515
+00:08:27,460 --> 00:08:28,590
+know I said beat you know I'm already
+talking about cache lines and stuff
+
+516
+00:08:28,590 --> 00:08:28,600
+talking about cache lines and stuff
+ 
+
+517
+00:08:28,600 --> 00:08:30,360
+talking about cache lines and stuff
+we're gonna get into this in the future
+
+518
+00:08:30,360 --> 00:08:30,370
+we're gonna get into this in the future
+ 
+
+519
+00:08:30,370 --> 00:08:34,290
+we're gonna get into this in the future
+but basically you want to try if it's at
+
+520
+00:08:34,290 --> 00:08:34,300
+but basically you want to try if it's at
+ 
+
+521
+00:08:34,300 --> 00:08:36,630
+but basically you want to try if it's at
+all possible try and allocate the main
+
+522
+00:08:36,630 --> 00:08:36,640
+all possible try and allocate the main
+ 
+
+523
+00:08:36,640 --> 00:08:37,980
+all possible try and allocate the main
+line like this the only problem with
+
+524
+00:08:37,980 --> 00:08:37,990
+line like this the only problem with
+ 
+
+525
+00:08:37,990 --> 00:08:39,270
+line like this the only problem with
+this is that if it comes time to
+
+526
+00:08:39,270 --> 00:08:39,280
+this is that if it comes time to
+ 
+
+527
+00:08:39,280 --> 00:08:41,850
+this is that if it comes time to
+actually resize the vector it needs to
+
+528
+00:08:41,850 --> 00:08:41,860
+actually resize the vector it needs to
+ 
+
+529
+00:08:41,860 --> 00:08:44,120
+actually resize the vector it needs to
+copy all that data and if you
+
+530
+00:08:44,120 --> 00:08:44,130
+copy all that data and if you
+ 
+
+531
+00:08:44,130 --> 00:08:46,370
+copy all that data and if you
+happen to have something like a vector
+
+532
+00:08:46,370 --> 00:08:46,380
+happen to have something like a vector
+ 
+
+533
+00:08:46,380 --> 00:08:48,920
+happen to have something like a vector
+of strings and you're going to be
+
+534
+00:08:48,920 --> 00:08:48,930
+of strings and you're going to be
+ 
+
+535
+00:08:48,930 --> 00:08:50,990
+of strings and you're going to be
+resizing that vector often and it does
+
+536
+00:08:50,990 --> 00:08:51,000
+resizing that vector often and it does
+ 
+
+537
+00:08:51,000 --> 00:08:52,760
+resizing that vector often and it does
+need to reallocate and recopy everything
+
+538
+00:08:52,760 --> 00:08:52,770
+need to reallocate and recopy everything
+ 
+
+539
+00:08:52,770 --> 00:08:54,620
+need to reallocate and recopy everything
+that could potentially be a very slow
+
+540
+00:08:54,620 --> 00:08:54,630
+that could potentially be a very slow
+ 
+
+541
+00:08:54,630 --> 00:08:56,540
+that could potentially be a very slow
+operation whereas with pointers the
+
+542
+00:08:56,540 --> 00:08:56,550
+operation whereas with pointers the
+ 
+
+543
+00:08:56,550 --> 00:08:58,040
+operation whereas with pointers the
+actual memory stays intact because
+
+544
+00:08:58,040 --> 00:08:58,050
+actual memory stays intact because
+ 
+
+545
+00:08:58,050 --> 00:08:59,630
+actual memory stays intact because
+you're just holding pointers to that
+
+546
+00:08:59,630 --> 00:08:59,640
+you're just holding pointers to that
+ 
+
+547
+00:08:59,640 --> 00:09:01,610
+you're just holding pointers to that
+memory right so the actual memory stays
+
+548
+00:09:01,610 --> 00:09:01,620
+memory right so the actual memory stays
+ 
+
+549
+00:09:01,620 --> 00:09:05,090
+memory right so the actual memory stays
+intact but then when it comes time to
+
+550
+00:09:05,090 --> 00:09:05,100
+intact but then when it comes time to
+ 
+
+551
+00:09:05,100 --> 00:09:06,740
+intact but then when it comes time to
+resize it just copies those integers
+
+552
+00:09:06,740 --> 00:09:06,750
+resize it just copies those integers
+ 
+
+553
+00:09:06,750 --> 00:09:07,880
+resize it just copies those integers
+which are the memory addresses to the
+
+554
+00:09:07,880 --> 00:09:07,890
+which are the memory addresses to the
+ 
+
+555
+00:09:07,890 --> 00:09:09,320
+which are the memory addresses to the
+actual data and the data is still stored
+
+556
+00:09:09,320 --> 00:09:09,330
+actual data and the data is still stored
+ 
+
+557
+00:09:09,330 --> 00:09:12,800
+actual data and the data is still stored
+just in various places in memory so it
+
+558
+00:09:12,800 --> 00:09:12,810
+just in various places in memory so it
+ 
+
+559
+00:09:12,810 --> 00:09:14,390
+just in various places in memory so it
+is it is a bit of a hard decision and I
+
+560
+00:09:14,390 --> 00:09:14,400
+is it is a bit of a hard decision and I
+ 
+
+561
+00:09:14,400 --> 00:09:15,410
+is it is a bit of a hard decision and I
+don't really want to get into it too
+
+562
+00:09:15,410 --> 00:09:15,420
+don't really want to get into it too
+ 
+
+563
+00:09:15,420 --> 00:09:17,240
+don't really want to get into it too
+much now but that should just give you
+
+564
+00:09:17,240 --> 00:09:17,250
+much now but that should just give you
+ 
+
+565
+00:09:17,250 --> 00:09:19,040
+much now but that should just give you
+kind of the gist of this try and keep
+
+566
+00:09:19,040 --> 00:09:19,050
+kind of the gist of this try and keep
+ 
+
+567
+00:09:19,050 --> 00:09:21,550
+kind of the gist of this try and keep
+the muscle objects if if possible
+
+568
+00:09:21,550 --> 00:09:21,560
+the muscle objects if if possible
+ 
+
+569
+00:09:21,560 --> 00:09:24,080
+the muscle objects if if possible
+pointers are kind of always as with
+
+570
+00:09:24,080 --> 00:09:24,090
+pointers are kind of always as with
+ 
+
+571
+00:09:24,090 --> 00:09:25,490
+pointers are kind of always as with
+stack allocation heap allocation
+
+572
+00:09:25,490 --> 00:09:25,500
+stack allocation heap allocation
+ 
+
+573
+00:09:25,500 --> 00:09:26,960
+stack allocation heap allocation
+pointers are always kind of your last
+
+574
+00:09:26,960 --> 00:09:26,970
+pointers are always kind of your last
+ 
+
+575
+00:09:26,970 --> 00:09:29,840
+pointers are always kind of your last
+resort if you really really need need to
+
+576
+00:09:29,840 --> 00:09:29,850
+resort if you really really need need to
+ 
+
+577
+00:09:29,850 --> 00:09:30,740
+resort if you really really need need to
+actually do it that way
+
+578
+00:09:30,740 --> 00:09:30,750
+actually do it that way
+ 
+
+579
+00:09:30,750 --> 00:09:33,140
+actually do it that way
+so now that I bought this how do I add
+
+580
+00:09:33,140 --> 00:09:33,150
+so now that I bought this how do I add
+ 
+
+581
+00:09:33,150 --> 00:09:35,150
+so now that I bought this how do I add
+stuff to it well it's very simple you
+
+582
+00:09:35,150 --> 00:09:35,160
+stuff to it well it's very simple you
+ 
+
+583
+00:09:35,160 --> 00:09:36,770
+stuff to it well it's very simple you
+just type in vertices don't push back
+
+584
+00:09:36,770 --> 00:09:36,780
+just type in vertices don't push back
+ 
+
+585
+00:09:36,780 --> 00:09:38,810
+just type in vertices don't push back
+and other languages is called a door and
+
+586
+00:09:38,810 --> 00:09:38,820
+and other languages is called a door and
+ 
+
+587
+00:09:38,820 --> 00:09:41,360
+and other languages is called a door and
+then C++ the same operation is called
+
+588
+00:09:41,360 --> 00:09:41,370
+then C++ the same operation is called
+ 
+
+589
+00:09:41,370 --> 00:09:43,490
+then C++ the same operation is called
+push back and then you basically push
+
+590
+00:09:43,490 --> 00:09:43,500
+push back and then you basically push
+ 
+
+591
+00:09:43,500 --> 00:09:44,810
+push back and then you basically push
+back at that text so in this case that I
+
+592
+00:09:44,810 --> 00:09:44,820
+back at that text so in this case that I
+ 
+
+593
+00:09:44,820 --> 00:09:46,130
+back at that text so in this case that I
+have a constructor but I could just use
+
+594
+00:09:46,130 --> 00:09:46,140
+have a constructor but I could just use
+ 
+
+595
+00:09:46,140 --> 00:09:47,810
+have a constructor but I could just use
+and initialize a list like this to
+
+596
+00:09:47,810 --> 00:09:47,820
+and initialize a list like this to
+ 
+
+597
+00:09:47,820 --> 00:09:50,780
+and initialize a list like this to
+specify my x y&z so I'll say 1 2 3 and
+
+598
+00:09:50,780 --> 00:09:50,790
+specify my x y&z so I'll say 1 2 3 and
+ 
+
+599
+00:09:50,790 --> 00:09:52,490
+specify my x y&z so I'll say 1 2 3 and
+then I'll push another one back and
+
+600
+00:09:52,490 --> 00:09:52,500
+then I'll push another one back and
+ 
+
+601
+00:09:52,500 --> 00:09:56,390
+then I'll push another one back and
+we'll write 4 5 6 ok pretty basic stuff
+
+602
+00:09:56,390 --> 00:09:56,400
+we'll write 4 5 6 ok pretty basic stuff
+ 
+
+603
+00:09:56,400 --> 00:09:58,040
+we'll write 4 5 6 ok pretty basic stuff
+now let's iterate through all these and
+
+604
+00:09:58,040 --> 00:09:58,050
+now let's iterate through all these and
+ 
+
+605
+00:09:58,050 --> 00:10:00,380
+now let's iterate through all these and
+print them so in an array we don't know
+
+606
+00:10:00,380 --> 00:10:00,390
+print them so in an array we don't know
+ 
+
+607
+00:10:00,390 --> 00:10:02,150
+print them so in an array we don't know
+in it oh I should say in the C style
+
+608
+00:10:02,150 --> 00:10:02,160
+in it oh I should say in the C style
+ 
+
+609
+00:10:02,160 --> 00:10:03,470
+in it oh I should say in the C style
+array we don't actually know the size of
+
+610
+00:10:03,470 --> 00:10:03,480
+array we don't actually know the size of
+ 
+
+611
+00:10:03,480 --> 00:10:04,760
+array we don't actually know the size of
+the array but in this case of course
+
+612
+00:10:04,760 --> 00:10:04,770
+the array but in this case of course
+ 
+
+613
+00:10:04,770 --> 00:10:06,080
+the array but in this case of course
+since vector as a full class and
+
+614
+00:10:06,080 --> 00:10:06,090
+since vector as a full class and
+ 
+
+615
+00:10:06,090 --> 00:10:07,820
+since vector as a full class and
+everything we actually do know the size
+
+616
+00:10:07,820 --> 00:10:07,830
+everything we actually do know the size
+ 
+
+617
+00:10:07,830 --> 00:10:08,960
+everything we actually do know the size
+and we can ask it
+
+618
+00:10:08,960 --> 00:10:08,970
+and we can ask it
+ 
+
+619
+00:10:08,970 --> 00:10:10,730
+and we can ask it
+so let's write a for loop and we'll ride
+
+620
+00:10:10,730 --> 00:10:10,740
+so let's write a for loop and we'll ride
+ 
+
+621
+00:10:10,740 --> 00:10:14,000
+so let's write a for loop and we'll ride
+eyes less than vertices dot size that's
+
+622
+00:10:14,000 --> 00:10:14,010
+eyes less than vertices dot size that's
+ 
+
+623
+00:10:14,010 --> 00:10:15,230
+eyes less than vertices dot size that's
+the function that we used to retrieving
+
+624
+00:10:15,230 --> 00:10:15,240
+the function that we used to retrieving
+ 
+
+625
+00:10:15,240 --> 00:10:17,900
+the function that we used to retrieving
+the size and then I'll just say sta C
+
+626
+00:10:17,900 --> 00:10:17,910
+the size and then I'll just say sta C
+ 
+
+627
+00:10:17,910 --> 00:10:19,820
+the size and then I'll just say sta C
+out vertices and then we can use the
+
+628
+00:10:19,820 --> 00:10:19,830
+out vertices and then we can use the
+ 
+
+629
+00:10:19,830 --> 00:10:22,010
+out vertices and then we can use the
+index operator to access in Java we have
+
+630
+00:10:22,010 --> 00:10:22,020
+index operator to access in Java we have
+ 
+
+631
+00:10:22,020 --> 00:10:24,050
+index operator to access in Java we have
+to use get because Java reports us to
+
+632
+00:10:24,050 --> 00:10:24,060
+to use get because Java reports us to
+ 
+
+633
+00:10:24,060 --> 00:10:25,640
+to use get because Java reports us to
+have operator overloading but it was
+
+634
+00:10:25,640 --> 00:10:25,650
+have operator overloading but it was
+ 
+
+635
+00:10:25,650 --> 00:10:27,920
+have operator overloading but it was
+very much like c-sharp has overloaded
+
+636
+00:10:27,920 --> 00:10:27,930
+very much like c-sharp has overloaded
+ 
+
+637
+00:10:27,930 --> 00:10:29,360
+very much like c-sharp has overloaded
+the index operator so that we can
+
+638
+00:10:29,360 --> 00:10:29,370
+the index operator so that we can
+ 
+
+639
+00:10:29,370 --> 00:10:31,010
+the index operator so that we can
+actually just type it in like that as if
+
+640
+00:10:31,010 --> 00:10:31,020
+actually just type it in like that as if
+ 
+
+641
+00:10:31,020 --> 00:10:32,690
+actually just type it in like that as if
+it was just any array which is which is
+
+642
+00:10:32,690 --> 00:10:32,700
+it was just any array which is which is
+ 
+
+643
+00:10:32,700 --> 00:10:34,490
+it was just any array which is which is
+nice so if we hit a five-round run our
+
+644
+00:10:34,490 --> 00:10:34,500
+nice so if we hit a five-round run our
+ 
+
+645
+00:10:34,500 --> 00:10:36,710
+nice so if we hit a five-round run our
+code you can see that we get 1 2 3 4 5 6
+
+646
+00:10:36,710 --> 00:10:36,720
+code you can see that we get 1 2 3 4 5 6
+ 
+
+647
+00:10:36,720 --> 00:10:38,570
+code you can see that we get 1 2 3 4 5 6
+which is perfect we can also use range
+
+648
+00:10:38,570 --> 00:10:38,580
+which is perfect we can also use range
+ 
+
+649
+00:10:38,580 --> 00:10:40,370
+which is perfect we can also use range
+based for loops with this so instead of
+
+650
+00:10:40,370 --> 00:10:40,380
+based for loops with this so instead of
+ 
+
+651
+00:10:40,380 --> 00:10:41,690
+based for loops with this so instead of
+writing all this code we could rewrite
+
+652
+00:10:41,690 --> 00:10:41,700
+writing all this code we could rewrite
+ 
+
+653
+00:10:41,700 --> 00:10:43,700
+writing all this code we could rewrite
+this for loop like this which is going
+
+654
+00:10:43,700 --> 00:10:43,710
+this for loop like this which is going
+ 
+
+655
+00:10:43,710 --> 00:10:45,680
+this for loop like this which is going
+to look much simpler we'll just say for
+
+656
+00:10:45,680 --> 00:10:45,690
+to look much simpler we'll just say for
+ 
+
+657
+00:10:45,690 --> 00:10:48,800
+to look much simpler we'll just say for
+vertex V then column them
+
+658
+00:10:48,800 --> 00:10:48,810
+vertex V then column them
+ 
+
+659
+00:10:48,810 --> 00:10:51,260
+vertex V then column them
+the vector which is vertices we can just
+
+660
+00:10:51,260 --> 00:10:51,270
+the vector which is vertices we can just
+ 
+
+661
+00:10:51,270 --> 00:10:53,960
+the vector which is vertices we can just
+print V like this and if we hit at five
+
+662
+00:10:53,960 --> 00:10:53,970
+print V like this and if we hit at five
+ 
+
+663
+00:10:53,970 --> 00:10:55,190
+print V like this and if we hit at five
+you can see that we get the exact same
+
+664
+00:10:55,190 --> 00:10:55,200
+you can see that we get the exact same
+ 
+
+665
+00:10:55,200 --> 00:10:57,170
+you can see that we get the exact same
+result pretty twice now in this specific
+
+666
+00:10:57,170 --> 00:10:57,180
+result pretty twice now in this specific
+ 
+
+667
+00:10:57,180 --> 00:10:58,730
+result pretty twice now in this specific
+example because I've written vertex like
+
+668
+00:10:58,730 --> 00:10:58,740
+example because I've written vertex like
+ 
+
+669
+00:10:58,740 --> 00:10:59,960
+example because I've written vertex like
+this this is actually going to be
+
+670
+00:10:59,960 --> 00:10:59,970
+this this is actually going to be
+ 
+
+671
+00:10:59,970 --> 00:11:01,940
+this this is actually going to be
+copying each vertex into the scope of
+
+672
+00:11:01,940 --> 00:11:01,950
+copying each vertex into the scope of
+ 
+
+673
+00:11:01,950 --> 00:11:03,590
+copying each vertex into the scope of
+this for loop we don't want to do that
+
+674
+00:11:03,590 --> 00:11:03,600
+this for loop we don't want to do that
+ 
+
+675
+00:11:03,600 --> 00:11:05,269
+this for loop we don't want to do that
+we want to avoid copying wherever
+
+676
+00:11:05,269 --> 00:11:05,279
+we want to avoid copying wherever
+ 
+
+677
+00:11:05,279 --> 00:11:07,070
+we want to avoid copying wherever
+possible so if we just stick a simple
+
+678
+00:11:07,070 --> 00:11:07,080
+possible so if we just stick a simple
+ 
+
+679
+00:11:07,080 --> 00:11:09,170
+possible so if we just stick a simple
+ampersand over here like this or maybe
+
+680
+00:11:09,170 --> 00:11:09,180
+ampersand over here like this or maybe
+ 
+
+681
+00:11:09,180 --> 00:11:10,760
+ampersand over here like this or maybe
+even marketers Const it doesn't really
+
+682
+00:11:10,760 --> 00:11:10,770
+even marketers Const it doesn't really
+ 
+
+683
+00:11:10,770 --> 00:11:11,750
+even marketers Const it doesn't really
+matter as long as you've got the
+
+684
+00:11:11,750 --> 00:11:11,760
+matter as long as you've got the
+ 
+
+685
+00:11:11,760 --> 00:11:13,400
+matter as long as you've got the
+ampersand here to make it a reference
+
+686
+00:11:13,400 --> 00:11:13,410
+ampersand here to make it a reference
+ 
+
+687
+00:11:13,410 --> 00:11:15,500
+ampersand here to make it a reference
+it's not going to copy the data if we
+
+688
+00:11:15,500 --> 00:11:15,510
+it's not going to copy the data if we
+ 
+
+689
+00:11:15,510 --> 00:11:17,210
+it's not going to copy the data if we
+run this we will get the same result
+
+690
+00:11:17,210 --> 00:11:17,220
+run this we will get the same result
+ 
+
+691
+00:11:17,220 --> 00:11:18,829
+run this we will get the same result
+however we're not just needlessly
+
+692
+00:11:18,829 --> 00:11:18,839
+however we're not just needlessly
+ 
+
+693
+00:11:18,839 --> 00:11:20,690
+however we're not just needlessly
+copying vertices finally if we want to
+
+694
+00:11:20,690 --> 00:11:20,700
+copying vertices finally if we want to
+ 
+
+695
+00:11:20,700 --> 00:11:22,550
+copying vertices finally if we want to
+clear the list of vertices we just type
+
+696
+00:11:22,550 --> 00:11:22,560
+clear the list of vertices we just type
+ 
+
+697
+00:11:22,560 --> 00:11:24,350
+clear the list of vertices we just type
+in vertices clear that will set the
+
+698
+00:11:24,350 --> 00:11:24,360
+in vertices clear that will set the
+ 
+
+699
+00:11:24,360 --> 00:11:26,660
+in vertices clear that will set the
+array size back to zero we can also
+
+700
+00:11:26,660 --> 00:11:26,670
+array size back to zero we can also
+ 
+
+701
+00:11:26,670 --> 00:11:28,490
+array size back to zero we can also
+remove vertices individually just by
+
+702
+00:11:28,490 --> 00:11:28,500
+remove vertices individually just by
+ 
+
+703
+00:11:28,500 --> 00:11:30,290
+remove vertices individually just by
+doing the vertices dot arrays and then
+
+704
+00:11:30,290 --> 00:11:30,300
+doing the vertices dot arrays and then
+ 
+
+705
+00:11:30,300 --> 00:11:32,780
+doing the vertices dot arrays and then
+with this now now I just I love C++
+
+706
+00:11:32,780 --> 00:11:32,790
+with this now now I just I love C++
+ 
+
+707
+00:11:32,790 --> 00:11:35,600
+with this now now I just I love C++
+because of this look at look at this to
+
+708
+00:11:35,600 --> 00:11:35,610
+because of this look at look at this to
+ 
+
+709
+00:11:35,610 --> 00:11:36,740
+because of this look at look at this to
+someone who's new to say boss boss
+
+710
+00:11:36,740 --> 00:11:36,750
+someone who's new to say boss boss
+ 
+
+711
+00:11:36,750 --> 00:11:39,350
+someone who's new to say boss boss
+looking at this actual function
+
+712
+00:11:39,350 --> 00:11:39,360
+looking at this actual function
+ 
+
+713
+00:11:39,360 --> 00:11:42,230
+looking at this actual function
+signature it's like what is going on and
+
+714
+00:11:42,230 --> 00:11:42,240
+signature it's like what is going on and
+ 
+
+715
+00:11:42,240 --> 00:11:44,630
+signature it's like what is going on and
+even me right now reading this after so
+
+716
+00:11:44,630 --> 00:11:44,640
+even me right now reading this after so
+ 
+
+717
+00:11:44,640 --> 00:11:47,360
+even me right now reading this after so
+many years it's like what's up I know
+
+718
+00:11:47,360 --> 00:11:47,370
+many years it's like what's up I know
+ 
+
+719
+00:11:47,370 --> 00:11:49,220
+many years it's like what's up I know
+this is why a lot of people hate it but
+
+720
+00:11:49,220 --> 00:11:49,230
+this is why a lot of people hate it but
+ 
+
+721
+00:11:49,230 --> 00:11:50,690
+this is why a lot of people hate it but
+what's not very beginner friendly but if
+
+722
+00:11:50,690 --> 00:11:50,700
+what's not very beginner friendly but if
+ 
+
+723
+00:11:50,700 --> 00:11:53,270
+what's not very beginner friendly but if
+we if we read this it does make sense
+
+724
+00:11:53,270 --> 00:11:53,280
+we if we read this it does make sense
+ 
+
+725
+00:11:53,280 --> 00:11:55,220
+we if we read this it does make sense
+arrays returns a vector iterator so we
+
+726
+00:11:55,220 --> 00:11:55,230
+arrays returns a vector iterator so we
+ 
+
+727
+00:11:55,230 --> 00:11:56,810
+arrays returns a vector iterator so we
+can kind of we're gonna kind of just
+
+728
+00:11:56,810 --> 00:11:56,820
+can kind of we're gonna kind of just
+ 
+
+729
+00:11:56,820 --> 00:11:58,460
+can kind of we're gonna kind of just
+ignore all that return type this is the
+
+730
+00:11:58,460 --> 00:11:58,470
+ignore all that return type this is the
+ 
+
+731
+00:11:58,470 --> 00:12:00,470
+ignore all that return type this is the
+erase function and over here you can see
+
+732
+00:12:00,470 --> 00:12:00,480
+erase function and over here you can see
+ 
+
+733
+00:12:00,480 --> 00:12:03,050
+erase function and over here you can see
+takes a constant iterative okay what
+
+734
+00:12:03,050 --> 00:12:03,060
+takes a constant iterative okay what
+ 
+
+735
+00:12:03,060 --> 00:12:04,579
+takes a constant iterative okay what
+that means is that we can't just right
+
+736
+00:12:04,579 --> 00:12:04,589
+that means is that we can't just right
+ 
+
+737
+00:12:04,589 --> 00:12:06,200
+that means is that we can't just right
+there raised to or something like that
+
+738
+00:12:06,200 --> 00:12:06,210
+there raised to or something like that
+ 
+
+739
+00:12:06,210 --> 00:12:08,360
+there raised to or something like that
+we actually have to take an iterator now
+
+740
+00:12:08,360 --> 00:12:08,370
+we actually have to take an iterator now
+ 
+
+741
+00:12:08,370 --> 00:12:10,070
+we actually have to take an iterator now
+if we want to specifically remove for
+
+742
+00:12:10,070 --> 00:12:10,080
+if we want to specifically remove for
+ 
+
+743
+00:12:10,080 --> 00:12:12,320
+if we want to specifically remove for
+example the second element which is an
+
+744
+00:12:12,320 --> 00:12:12,330
+example the second element which is an
+ 
+
+745
+00:12:12,330 --> 00:12:14,510
+example the second element which is an
+index one what we can actually do is
+
+746
+00:12:14,510 --> 00:12:14,520
+index one what we can actually do is
+ 
+
+747
+00:12:14,520 --> 00:12:17,120
+index one what we can actually do is
+take in the beginning of vertices by
+
+748
+00:12:17,120 --> 00:12:17,130
+take in the beginning of vertices by
+ 
+
+749
+00:12:17,130 --> 00:12:18,710
+take in the beginning of vertices by
+typing in vertices of begin and then
+
+750
+00:12:18,710 --> 00:12:18,720
+typing in vertices of begin and then
+ 
+
+751
+00:12:18,720 --> 00:12:21,290
+typing in vertices of begin and then
+just add one to it and then that will
+
+752
+00:12:21,290 --> 00:12:21,300
+just add one to it and then that will
+ 
+
+753
+00:12:21,300 --> 00:12:23,870
+just add one to it and then that will
+actually erase that second element so if
+
+754
+00:12:23,870 --> 00:12:23,880
+actually erase that second element so if
+ 
+
+755
+00:12:23,880 --> 00:12:25,820
+actually erase that second element so if
+we move this followed down here after
+
+756
+00:12:25,820 --> 00:12:25,830
+we move this followed down here after
+ 
+
+757
+00:12:25,830 --> 00:12:27,710
+we move this followed down here after
+the arrays to see what happens you can
+
+758
+00:12:27,710 --> 00:12:27,720
+the arrays to see what happens you can
+ 
+
+759
+00:12:27,720 --> 00:12:29,720
+the arrays to see what happens you can
+see in this case we do actually erase
+
+760
+00:12:29,720 --> 00:12:29,730
+see in this case we do actually erase
+ 
+
+761
+00:12:29,730 --> 00:12:30,980
+see in this case we do actually erase
+that second element and everything's
+
+762
+00:12:30,980 --> 00:12:30,990
+that second element and everything's
+ 
+
+763
+00:12:30,990 --> 00:12:32,420
+that second element and everything's
+great another thing that I'll mention is
+
+764
+00:12:32,420 --> 00:12:32,430
+great another thing that I'll mention is
+ 
+
+765
+00:12:32,430 --> 00:12:33,980
+great another thing that I'll mention is
+that when you are actually passing these
+
+766
+00:12:33,980 --> 00:12:33,990
+that when you are actually passing these
+ 
+
+767
+00:12:33,990 --> 00:12:36,140
+that when you are actually passing these
+vectors into into functions or into
+
+768
+00:12:36,140 --> 00:12:36,150
+vectors into into functions or into
+ 
+
+769
+00:12:36,150 --> 00:12:38,329
+vectors into into functions or into
+classes or whatever you really do want
+
+770
+00:12:38,329 --> 00:12:38,339
+classes or whatever you really do want
+ 
+
+771
+00:12:38,339 --> 00:12:39,980
+classes or whatever you really do want
+to make sure that you're passing them by
+
+772
+00:12:39,980 --> 00:12:39,990
+to make sure that you're passing them by
+ 
+
+773
+00:12:39,990 --> 00:12:41,780
+to make sure that you're passing them by
+reference okay if you're not going to be
+
+774
+00:12:41,780 --> 00:12:41,790
+reference okay if you're not going to be
+ 
+
+775
+00:12:41,790 --> 00:12:44,060
+reference okay if you're not going to be
+modifying it than by constants just like
+
+776
+00:12:44,060 --> 00:12:44,070
+modifying it than by constants just like
+ 
+
+777
+00:12:44,070 --> 00:12:46,160
+modifying it than by constants just like
+this because by doing that you're
+
+778
+00:12:46,160 --> 00:12:46,170
+this because by doing that you're
+ 
+
+779
+00:12:46,170 --> 00:12:47,870
+this because by doing that you're
+ensuring you're not copying that entire
+
+780
+00:12:47,870 --> 00:12:47,880
+ensuring you're not copying that entire
+ 
+
+781
+00:12:47,880 --> 00:12:50,030
+ensuring you're not copying that entire
+array into this function so make sure
+
+782
+00:12:50,030 --> 00:12:50,040
+array into this function so make sure
+ 
+
+783
+00:12:50,040 --> 00:12:52,519
+array into this function so make sure
+that when you do stuff like this you
+
+784
+00:12:52,519 --> 00:12:52,529
+that when you do stuff like this you
+ 
+
+785
+00:12:52,529 --> 00:12:55,040
+that when you do stuff like this you
+actually do pass it by reference like
+
+786
+00:12:55,040 --> 00:12:55,050
+actually do pass it by reference like
+ 
+
+787
+00:12:55,050 --> 00:12:57,740
+actually do pass it by reference like
+that okay very important stuff okay I
+
+788
+00:12:57,740 --> 00:12:57,750
+that okay very important stuff okay I
+ 
+
+789
+00:12:57,750 --> 00:12:59,210
+that okay very important stuff okay I
+think that's pretty much it for a basic
+
+790
+00:12:59,210 --> 00:12:59,220
+think that's pretty much it for a basic
+ 
+
+791
+00:12:59,220 --> 00:13:00,740
+think that's pretty much it for a basic
+overview of the vector class
+
+792
+00:13:00,740 --> 00:13:00,750
+overview of the vector class
+ 
+
+793
+00:13:00,750 --> 00:13:02,600
+overview of the vector class
+dynamic arrays in C++ and how you can
+
+794
+00:13:02,600 --> 00:13:02,610
+dynamic arrays in C++ and how you can
+ 
+
+795
+00:13:02,610 --> 00:13:04,670
+dynamic arrays in C++ and how you can
+use them in the next video we're going
+
+796
+00:13:04,670 --> 00:13:04,680
+use them in the next video we're going
+ 
+
+797
+00:13:04,680 --> 00:13:06,230
+use them in the next video we're going
+to really get in-depth and talk about
+
+798
+00:13:06,230 --> 00:13:06,240
+to really get in-depth and talk about
+ 
+
+799
+00:13:06,240 --> 00:13:08,650
+to really get in-depth and talk about
+optimization about how we can avoid
+
+800
+00:13:08,650 --> 00:13:08,660
+optimization about how we can avoid
+ 
+
+801
+00:13:08,660 --> 00:13:11,240
+optimization about how we can avoid
+reallocations how we can avoid copying
+
+802
+00:13:11,240 --> 00:13:11,250
+reallocations how we can avoid copying
+ 
+
+803
+00:13:11,250 --> 00:13:13,069
+reallocations how we can avoid copying
+and all that stuff and probably some
+
+804
+00:13:13,069 --> 00:13:13,079
+and all that stuff and probably some
+ 
+
+805
+00:13:13,079 --> 00:13:14,509
+and all that stuff and probably some
+other tips and tricks with vectors in
+
+806
+00:13:14,509 --> 00:13:14,519
+other tips and tricks with vectors in
+ 
+
+807
+00:13:14,519 --> 00:13:17,030
+other tips and tricks with vectors in
+general for people who already kind of
+
+808
+00:13:17,030 --> 00:13:17,040
+general for people who already kind of
+ 
+
+809
+00:13:17,040 --> 00:13:19,309
+general for people who already kind of
+get the general premise and want to
+
+810
+00:13:19,309 --> 00:13:19,319
+get the general premise and want to
+ 
+
+811
+00:13:19,319 --> 00:13:20,389
+get the general premise and want to
+actually know how they can optimize
+
+812
+00:13:20,389 --> 00:13:20,399
+actually know how they can optimize
+ 
+
+813
+00:13:20,399 --> 00:13:22,850
+actually know how they can optimize
+their code this way though the way that
+
+814
+00:13:22,850 --> 00:13:22,860
+their code this way though the way that
+ 
+
+815
+00:13:22,860 --> 00:13:24,559
+their code this way though the way that
+I've shown you over here with like
+
+816
+00:13:24,559 --> 00:13:24,569
+I've shown you over here with like
+ 
+
+817
+00:13:24,569 --> 00:13:26,840
+I've shown you over here with like
+pushback and just this kind of workflow
+
+818
+00:13:26,840 --> 00:13:26,850
+pushback and just this kind of workflow
+ 
+
+819
+00:13:26,850 --> 00:13:28,790
+pushback and just this kind of workflow
+that's probably what you'll see most of
+
+820
+00:13:28,790 --> 00:13:28,800
+that's probably what you'll see most of
+ 
+
+821
+00:13:28,800 --> 00:13:29,869
+that's probably what you'll see most of
+the time there's nothing really wrong
+
+822
+00:13:29,869 --> 00:13:29,879
+the time there's nothing really wrong
+ 
+
+823
+00:13:29,879 --> 00:13:31,910
+the time there's nothing really wrong
+with it vectors specifically aren't that
+
+824
+00:13:31,910 --> 00:13:31,920
+with it vectors specifically aren't that
+ 
+
+825
+00:13:31,920 --> 00:13:34,790
+with it vectors specifically aren't that
+slaughter usually but in some cases of
+
+826
+00:13:34,790 --> 00:13:34,800
+slaughter usually but in some cases of
+ 
+
+827
+00:13:34,800 --> 00:13:36,499
+slaughter usually but in some cases of
+course we do want to squeeze out just
+
+828
+00:13:36,499 --> 00:13:36,509
+course we do want to squeeze out just
+ 
+
+829
+00:13:36,509 --> 00:13:38,540
+course we do want to squeeze out just
+every bit of performance that we
+
+830
+00:13:38,540 --> 00:13:38,550
+every bit of performance that we
+ 
+
+831
+00:13:38,550 --> 00:13:40,160
+every bit of performance that we
+possibly can and that's what the next
+
+832
+00:13:40,160 --> 00:13:40,170
+possibly can and that's what the next
+ 
+
+833
+00:13:40,170 --> 00:13:41,869
+possibly can and that's what the next
+video is going to be about do you guys
+
+834
+00:13:41,869 --> 00:13:41,879
+video is going to be about do you guys
+ 
+
+835
+00:13:41,879 --> 00:13:43,040
+video is going to be about do you guys
+enjoyed the video don't forget to hit
+
+836
+00:13:43,040 --> 00:13:43,050
+enjoyed the video don't forget to hit
+ 
+
+837
+00:13:43,050 --> 00:13:44,780
+enjoyed the video don't forget to hit
+the like button you can also support me
+
+838
+00:13:44,780 --> 00:13:44,790
+the like button you can also support me
+ 
+
+839
+00:13:44,790 --> 00:13:46,189
+the like button you can also support me
+on patreon by going to patreon or conv
+
+840
+00:13:46,189 --> 00:13:46,199
+on patreon by going to patreon or conv
+ 
+
+841
+00:13:46,199 --> 00:13:47,660
+on patreon by going to patreon or conv
+watch the channel you'll be able to see
+
+842
+00:13:47,660 --> 00:13:47,670
+watch the channel you'll be able to see
+ 
+
+843
+00:13:47,670 --> 00:13:49,309
+watch the channel you'll be able to see
+videos early contribute to the planning
+
+844
+00:13:49,309 --> 00:13:49,319
+videos early contribute to the planning
+ 
+
+845
+00:13:49,319 --> 00:13:50,900
+videos early contribute to the planning
+of videos as well as another pretty cool
+
+846
+00:13:50,900 --> 00:13:50,910
+of videos as well as another pretty cool
+ 
+
+847
+00:13:50,910 --> 00:13:52,699
+of videos as well as another pretty cool
+rewards which you can check out on that
+
+848
+00:13:52,699 --> 00:13:52,709
+rewards which you can check out on that
+ 
+
+849
+00:13:52,709 --> 00:13:54,290
+rewards which you can check out on that
+side thank you guys for watching as
+
+850
+00:13:54,290 --> 00:13:54,300
+side thank you guys for watching as
+ 
+
+851
+00:13:54,300 --> 00:13:57,250
+side thank you guys for watching as
+always I'll see you next time goodbye
+
+852
+00:13:57,250 --> 00:13:57,260
+always I'll see you next time goodbye
+ 
+
+853
+00:13:57,260 --> 00:14:12,440
+always I'll see you next time goodbye
+[Music]
+

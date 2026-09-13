@@ -1,0 +1,2595 @@
+1
+00:00:00,120 --> 00:00:02,070
+
+hey what's up guys My Name Is AO and
+
+2
+00:00:02,070 --> 00:00:02,080
+hey what's up guys My Name Is AO and
+ 
+
+3
+00:00:02,080 --> 00:00:04,349
+hey what's up guys My Name Is AO and
+welcome back to my C++ Series today
+
+4
+00:00:04,349 --> 00:00:04,359
+welcome back to my C++ Series today
+ 
+
+5
+00:00:04,359 --> 00:00:05,590
+welcome back to my C++ Series today
+we're going to be talking all about
+
+6
+00:00:05,590 --> 00:00:05,600
+we're going to be talking all about
+ 
+
+7
+00:00:05,600 --> 00:00:07,789
+we're going to be talking all about
+classes in C++ so we're finally getting
+
+8
+00:00:07,789 --> 00:00:07,799
+classes in C++ so we're finally getting
+ 
+
+9
+00:00:07,799 --> 00:00:09,430
+classes in C++ so we're finally getting
+into something called objectoriented
+
+10
+00:00:09,430 --> 00:00:09,440
+into something called objectoriented
+ 
+
+11
+00:00:09,440 --> 00:00:11,470
+into something called objectoriented
+programming which is a very popular way
+
+12
+00:00:11,470 --> 00:00:11,480
+programming which is a very popular way
+ 
+
+13
+00:00:11,480 --> 00:00:12,870
+programming which is a very popular way
+of programming object-oriented
+
+14
+00:00:12,870 --> 00:00:12,880
+of programming object-oriented
+ 
+
+15
+00:00:12,880 --> 00:00:14,669
+of programming object-oriented
+programming is really just a style that
+
+16
+00:00:14,669 --> 00:00:14,679
+programming is really just a style that
+ 
+
+17
+00:00:14,679 --> 00:00:17,470
+programming is really just a style that
+you can adopt as to how you write your
+
+18
+00:00:17,470 --> 00:00:17,480
+you can adopt as to how you write your
+ 
+
+19
+00:00:17,480 --> 00:00:20,070
+you can adopt as to how you write your
+code other languages such as C and Java
+
+20
+00:00:20,070 --> 00:00:20,080
+code other languages such as C and Java
+ 
+
+21
+00:00:20,080 --> 00:00:21,950
+code other languages such as C and Java
+are primarily objectoriented languages
+
+22
+00:00:21,950 --> 00:00:21,960
+are primarily objectoriented languages
+ 
+
+23
+00:00:21,960 --> 00:00:25,109
+are primarily objectoriented languages
+in fact you can't really write any other
+
+24
+00:00:25,109 --> 00:00:25,119
+in fact you can't really write any other
+ 
+
+25
+00:00:25,119 --> 00:00:26,429
+in fact you can't really write any other
+type of code I mean you can if you
+
+26
+00:00:26,429 --> 00:00:26,439
+type of code I mean you can if you
+ 
+
+27
+00:00:26,439 --> 00:00:28,589
+type of code I mean you can if you
+really really try but ultimately those
+
+28
+00:00:28,589 --> 00:00:28,599
+really really try but ultimately those
+ 
+
+29
+00:00:28,599 --> 00:00:30,429
+really really try but ultimately those
+languages are meant to be OB on to
+
+30
+00:00:30,429 --> 00:00:30,439
+languages are meant to be OB on to
+ 
+
+31
+00:00:30,439 --> 00:00:32,109
+languages are meant to be OB on to
+languages however C++ is something a
+
+32
+00:00:32,109 --> 00:00:32,119
+languages however C++ is something a
+ 
+
+33
+00:00:32,119 --> 00:00:33,630
+languages however C++ is something a
+little bit different because it doesn't
+
+34
+00:00:33,630 --> 00:00:33,640
+little bit different because it doesn't
+ 
+
+35
+00:00:33,640 --> 00:00:35,830
+little bit different because it doesn't
+really enforce a certain style upon you
+
+36
+00:00:35,830 --> 00:00:35,840
+really enforce a certain style upon you
+ 
+
+37
+00:00:35,840 --> 00:00:37,549
+really enforce a certain style upon you
+the language C for example doesn't
+
+38
+00:00:37,549 --> 00:00:37,559
+the language C for example doesn't
+ 
+
+39
+00:00:37,559 --> 00:00:39,389
+the language C for example doesn't
+actually support object AR programming
+
+40
+00:00:39,389 --> 00:00:39,399
+actually support object AR programming
+ 
+
+41
+00:00:39,399 --> 00:00:41,470
+actually support object AR programming
+because in order to have object AR
+
+42
+00:00:41,470 --> 00:00:41,480
+because in order to have object AR
+ 
+
+43
+00:00:41,480 --> 00:00:43,350
+because in order to have object AR
+programming you need to be able to have
+
+44
+00:00:43,350 --> 00:00:43,360
+programming you need to be able to have
+ 
+
+45
+00:00:43,360 --> 00:00:45,430
+programming you need to be able to have
+Concepts such as classes and objects and
+
+46
+00:00:45,430 --> 00:00:45,440
+Concepts such as classes and objects and
+ 
+
+47
+00:00:45,440 --> 00:00:46,590
+Concepts such as classes and objects and
+that's not something that's available in
+
+48
+00:00:46,590 --> 00:00:46,600
+that's not something that's available in
+ 
+
+49
+00:00:46,600 --> 00:00:48,709
+that's not something that's available in
+C however C++ does add all of that
+
+50
+00:00:48,709 --> 00:00:48,719
+C however C++ does add all of that
+ 
+
+51
+00:00:48,719 --> 00:00:51,150
+C however C++ does add all of that
+functionality if you wish to use it and
+
+52
+00:00:51,150 --> 00:00:51,160
+functionality if you wish to use it and
+ 
+
+53
+00:00:51,160 --> 00:00:53,029
+functionality if you wish to use it and
+it is almost always a good idea to use
+
+54
+00:00:53,029 --> 00:00:53,039
+it is almost always a good idea to use
+ 
+
+55
+00:00:53,039 --> 00:00:54,270
+it is almost always a good idea to use
+it to some extent so we're going to be
+
+56
+00:00:54,270 --> 00:00:54,280
+it to some extent so we're going to be
+ 
+
+57
+00:00:54,280 --> 00:00:56,069
+it to some extent so we're going to be
+talking about what classes are in this
+
+58
+00:00:56,069 --> 00:00:56,079
+talking about what classes are in this
+ 
+
+59
+00:00:56,079 --> 00:00:57,910
+talking about what classes are in this
+video to put it simply classes are just
+
+60
+00:00:57,910 --> 00:00:57,920
+video to put it simply classes are just
+ 
+
+61
+00:00:57,920 --> 00:01:00,910
+video to put it simply classes are just
+a way to group data and or
+
+62
+00:01:00,910 --> 00:01:00,920
+a way to group data and or
+ 
+
+63
+00:01:00,920 --> 00:01:03,029
+a way to group data and or
+functionality together for example think
+
+64
+00:01:03,029 --> 00:01:03,039
+functionality together for example think
+ 
+
+65
+00:01:03,039 --> 00:01:04,950
+functionality together for example think
+of a game in a game we might want to
+
+66
+00:01:04,950 --> 00:01:04,960
+of a game in a game we might want to
+ 
+
+67
+00:01:04,960 --> 00:01:07,350
+of a game in a game we might want to
+have some kind of representation of a
+
+68
+00:01:07,350 --> 00:01:07,360
+have some kind of representation of a
+ 
+
+69
+00:01:07,360 --> 00:01:09,429
+have some kind of representation of a
+player so what kind of things do we need
+
+70
+00:01:09,429 --> 00:01:09,439
+player so what kind of things do we need
+ 
+
+71
+00:01:09,439 --> 00:01:11,550
+player so what kind of things do we need
+to actually represent a player we
+
+72
+00:01:11,550 --> 00:01:11,560
+to actually represent a player we
+ 
+
+73
+00:01:11,560 --> 00:01:12,990
+to actually represent a player we
+definitely want some kind of data for
+
+74
+00:01:12,990 --> 00:01:13,000
+definitely want some kind of data for
+ 
+
+75
+00:01:13,000 --> 00:01:15,070
+definitely want some kind of data for
+example the position of the player in
+
+76
+00:01:15,070 --> 00:01:15,080
+example the position of the player in
+ 
+
+77
+00:01:15,080 --> 00:01:17,149
+example the position of the player in
+our game World certain attributes that
+
+78
+00:01:17,149 --> 00:01:17,159
+our game World certain attributes that
+ 
+
+79
+00:01:17,159 --> 00:01:19,230
+our game World certain attributes that
+the player might possess such as the
+
+80
+00:01:19,230 --> 00:01:19,240
+the player might possess such as the
+ 
+
+81
+00:01:19,240 --> 00:01:21,109
+the player might possess such as the
+speed at which the player moves we might
+
+82
+00:01:21,109 --> 00:01:21,119
+speed at which the player moves we might
+ 
+
+83
+00:01:21,119 --> 00:01:23,190
+speed at which the player moves we might
+also want to have some kind of 3D model
+
+84
+00:01:23,190 --> 00:01:23,200
+also want to have some kind of 3D model
+ 
+
+85
+00:01:23,200 --> 00:01:25,270
+also want to have some kind of 3D model
+that represents the player on the screen
+
+86
+00:01:25,270 --> 00:01:25,280
+that represents the player on the screen
+ 
+
+87
+00:01:25,280 --> 00:01:26,749
+that represents the player on the screen
+all of this data needs to be stored
+
+88
+00:01:26,749 --> 00:01:26,759
+all of this data needs to be stored
+ 
+
+89
+00:01:26,759 --> 00:01:28,670
+all of this data needs to be stored
+somewhere we could go ahead and create
+
+90
+00:01:28,670 --> 00:01:28,680
+somewhere we could go ahead and create
+ 
+
+91
+00:01:28,680 --> 00:01:30,270
+somewhere we could go ahead and create
+variables for all this in in fact let's
+
+92
+00:01:30,270 --> 00:01:30,280
+variables for all this in in fact let's
+ 
+
+93
+00:01:30,280 --> 00:01:31,429
+variables for all this in in fact let's
+go ahead and take a look at what that
+
+94
+00:01:31,429 --> 00:01:31,439
+go ahead and take a look at what that
+ 
+
+95
+00:01:31,439 --> 00:01:32,910
+go ahead and take a look at what that
+would look like let's say that we want
+
+96
+00:01:32,910 --> 00:01:32,920
+would look like let's say that we want
+ 
+
+97
+00:01:32,920 --> 00:01:35,270
+would look like let's say that we want
+to make a player here in our code we
+
+98
+00:01:35,270 --> 00:01:35,280
+to make a player here in our code we
+ 
+
+99
+00:01:35,280 --> 00:01:37,149
+to make a player here in our code we
+might want to have a position so I'll
+
+100
+00:01:37,149 --> 00:01:37,159
+might want to have a position so I'll
+ 
+
+101
+00:01:37,159 --> 00:01:39,630
+might want to have a position so I'll
+just say X and Y and then potentially a
+
+102
+00:01:39,630 --> 00:01:39,640
+just say X and Y and then potentially a
+ 
+
+103
+00:01:39,640 --> 00:01:41,190
+just say X and Y and then potentially a
+speed let's just set the speed equal to
+
+104
+00:01:41,190 --> 00:01:41,200
+speed let's just set the speed equal to
+ 
+
+105
+00:01:41,200 --> 00:01:42,830
+speed let's just set the speed equal to
+two so these are all integers for now
+
+106
+00:01:42,830 --> 00:01:42,840
+two so these are all integers for now
+ 
+
+107
+00:01:42,840 --> 00:01:44,670
+two so these are all integers for now
+you can probably start to see that this
+
+108
+00:01:44,670 --> 00:01:44,680
+you can probably start to see that this
+ 
+
+109
+00:01:44,680 --> 00:01:46,270
+you can probably start to see that this
+is getting a little bit messy and in
+
+110
+00:01:46,270 --> 00:01:46,280
+is getting a little bit messy and in
+ 
+
+111
+00:01:46,280 --> 00:01:48,230
+is getting a little bit messy and in
+fact because these names are so generic
+
+112
+00:01:48,230 --> 00:01:48,240
+fact because these names are so generic
+ 
+
+113
+00:01:48,240 --> 00:01:50,310
+fact because these names are so generic
+you might want to do something like
+
+114
+00:01:50,310 --> 00:01:50,320
+you might want to do something like
+ 
+
+115
+00:01:50,320 --> 00:01:53,030
+you might want to do something like
+player X player Y for the X and Y
+
+116
+00:01:53,030 --> 00:01:53,040
+player X player Y for the X and Y
+ 
+
+117
+00:01:53,040 --> 00:01:54,870
+player X player Y for the X and Y
+coordinate of the player maybe player
+
+118
+00:01:54,870 --> 00:01:54,880
+coordinate of the player maybe player
+ 
+
+119
+00:01:54,880 --> 00:01:56,670
+coordinate of the player maybe player
+speed and this really does start to get
+
+120
+00:01:56,670 --> 00:01:56,680
+speed and this really does start to get
+ 
+
+121
+00:01:56,680 --> 00:01:58,550
+speed and this really does start to get
+a little bit messy especially if we
+
+122
+00:01:58,550 --> 00:01:58,560
+a little bit messy especially if we
+ 
+
+123
+00:01:58,560 --> 00:02:00,350
+a little bit messy especially if we
+decide actually we want two plays in our
+
+124
+00:02:00,350 --> 00:02:00,360
+decide actually we want two plays in our
+ 
+
+125
+00:02:00,360 --> 00:02:01,990
+decide actually we want two plays in our
+game well then suddenly you're going to
+
+126
+00:02:01,990 --> 00:02:02,000
+game well then suddenly you're going to
+ 
+
+127
+00:02:02,000 --> 00:02:03,950
+game well then suddenly you're going to
+have to duplicate this and start doing
+
+128
+00:02:03,950 --> 00:02:03,960
+have to duplicate this and start doing
+ 
+
+129
+00:02:03,960 --> 00:02:06,429
+have to duplicate this and start doing
+something like player x0 player X1
+
+130
+00:02:06,429 --> 00:02:06,439
+something like player x0 player X1
+ 
+
+131
+00:02:06,439 --> 00:02:07,550
+something like player x0 player X1
+instead of this you could of course use
+
+132
+00:02:07,550 --> 00:02:07,560
+instead of this you could of course use
+ 
+
+133
+00:02:07,560 --> 00:02:09,710
+instead of this you could of course use
+an array but the point is still the same
+
+134
+00:02:09,710 --> 00:02:09,720
+an array but the point is still the same
+ 
+
+135
+00:02:09,720 --> 00:02:13,070
+an array but the point is still the same
+it's just kind of a bunch of variables
+
+136
+00:02:13,070 --> 00:02:13,080
+it's just kind of a bunch of variables
+ 
+
+137
+00:02:13,080 --> 00:02:14,430
+it's just kind of a bunch of variables
+that aren't grouped together they're
+
+138
+00:02:14,430 --> 00:02:14,440
+that aren't grouped together they're
+ 
+
+139
+00:02:14,440 --> 00:02:15,910
+that aren't grouped together they're
+just unorganized they're just sitting in
+
+140
+00:02:15,910 --> 00:02:15,920
+just unorganized they're just sitting in
+ 
+
+141
+00:02:15,920 --> 00:02:18,670
+just unorganized they're just sitting in
+our code and it's just not a good idea
+
+142
+00:02:18,670 --> 00:02:18,680
+our code and it's just not a good idea
+ 
+
+143
+00:02:18,680 --> 00:02:20,710
+our code and it's just not a good idea
+another great example of why this is
+
+144
+00:02:20,710 --> 00:02:20,720
+another great example of why this is
+ 
+
+145
+00:02:20,720 --> 00:02:22,869
+another great example of why this is
+annoying is because if I want to write a
+
+146
+00:02:22,869 --> 00:02:22,879
+annoying is because if I want to write a
+ 
+
+147
+00:02:22,879 --> 00:02:24,670
+annoying is because if I want to write a
+function that moves the player or
+
+148
+00:02:24,670 --> 00:02:24,680
+function that moves the player or
+ 
+
+149
+00:02:24,680 --> 00:02:26,070
+function that moves the player or
+something like that I suddenly need to
+
+150
+00:02:26,070 --> 00:02:26,080
+something like that I suddenly need to
+ 
+
+151
+00:02:26,080 --> 00:02:28,630
+something like that I suddenly need to
+be specifying all three parameters as
+
+152
+00:02:28,630 --> 00:02:28,640
+be specifying all three parameters as
+ 
+
+153
+00:02:28,640 --> 00:02:30,750
+be specifying all three parameters as
+integers so for for example the x
+
+154
+00:02:30,750 --> 00:02:30,760
+integers so for for example the x
+ 
+
+155
+00:02:30,760 --> 00:02:32,910
+integers so for for example the x
+coordinate the y coordinate the speed
+
+156
+00:02:32,910 --> 00:02:32,920
+coordinate the y coordinate the speed
+ 
+
+157
+00:02:32,920 --> 00:02:35,630
+coordinate the y coordinate the speed
+all of this just becomes so much code
+
+158
+00:02:35,630 --> 00:02:35,640
+all of this just becomes so much code
+ 
+
+159
+00:02:35,640 --> 00:02:37,630
+all of this just becomes so much code
+and so difficult to maintain and follow
+
+160
+00:02:37,630 --> 00:02:37,640
+and so difficult to maintain and follow
+ 
+
+161
+00:02:37,640 --> 00:02:40,390
+and so difficult to maintain and follow
+that it's just it's really really messy
+
+162
+00:02:40,390 --> 00:02:40,400
+that it's just it's really really messy
+ 
+
+163
+00:02:40,400 --> 00:02:41,790
+that it's just it's really really messy
+so what we can do instead is simplify
+
+164
+00:02:41,790 --> 00:02:41,800
+so what we can do instead is simplify
+ 
+
+165
+00:02:41,800 --> 00:02:43,830
+so what we can do instead is simplify
+this by using a class we can create a
+
+166
+00:02:43,830 --> 00:02:43,840
+this by using a class we can create a
+ 
+
+167
+00:02:43,840 --> 00:02:45,550
+this by using a class we can create a
+class for the player we can call it
+
+168
+00:02:45,550 --> 00:02:45,560
+class for the player we can call it
+ 
+
+169
+00:02:45,560 --> 00:02:47,910
+class for the player we can call it
+player which contains all of that data
+
+170
+00:02:47,910 --> 00:02:47,920
+player which contains all of that data
+ 
+
+171
+00:02:47,920 --> 00:02:49,710
+player which contains all of that data
+that we want all those variables kind of
+
+172
+00:02:49,710 --> 00:02:49,720
+that we want all those variables kind of
+ 
+
+173
+00:02:49,720 --> 00:02:51,470
+that we want all those variables kind of
+in one type so instead of this let's
+
+174
+00:02:51,470 --> 00:02:51,480
+in one type so instead of this let's
+ 
+
+175
+00:02:51,480 --> 00:02:54,110
+in one type so instead of this let's
+create a class called
+
+176
+00:02:54,110 --> 00:02:54,120
+create a class called
+ 
+
+177
+00:02:54,120 --> 00:02:56,630
+create a class called
+player we do so by just using the word
+
+178
+00:02:56,630 --> 00:02:56,640
+player we do so by just using the word
+ 
+
+179
+00:02:56,640 --> 00:02:58,670
+player we do so by just using the word
+class and then giving it a name this has
+
+180
+00:02:58,670 --> 00:02:58,680
+class and then giving it a name this has
+ 
+
+181
+00:02:58,680 --> 00:03:00,509
+class and then giving it a name this has
+to be a unique name because cuz classes
+
+182
+00:03:00,509 --> 00:03:00,519
+to be a unique name because cuz classes
+ 
+
+183
+00:03:00,519 --> 00:03:02,630
+to be a unique name because cuz classes
+are types we're basically creating a new
+
+184
+00:03:02,630 --> 00:03:02,640
+are types we're basically creating a new
+ 
+
+185
+00:03:02,640 --> 00:03:04,430
+are types we're basically creating a new
+variable type and then we open and close
+
+186
+00:03:04,430 --> 00:03:04,440
+variable type and then we open and close
+ 
+
+187
+00:03:04,440 --> 00:03:06,270
+variable type and then we open and close
+curly brackets as if this was a function
+
+188
+00:03:06,270 --> 00:03:06,280
+curly brackets as if this was a function
+ 
+
+189
+00:03:06,280 --> 00:03:07,990
+curly brackets as if this was a function
+however note that we do actually need a
+
+190
+00:03:07,990 --> 00:03:08,000
+however note that we do actually need a
+ 
+
+191
+00:03:08,000 --> 00:03:10,470
+however note that we do actually need a
+semicolon at the end of the closing
+
+192
+00:03:10,470 --> 00:03:10,480
+semicolon at the end of the closing
+ 
+
+193
+00:03:10,480 --> 00:03:12,750
+semicolon at the end of the closing
+brace inside here we can specify all of
+
+194
+00:03:12,750 --> 00:03:12,760
+brace inside here we can specify all of
+ 
+
+195
+00:03:12,760 --> 00:03:14,789
+brace inside here we can specify all of
+those variables that we did below for
+
+196
+00:03:14,789 --> 00:03:14,799
+those variables that we did below for
+ 
+
+197
+00:03:14,799 --> 00:03:16,710
+those variables that we did below for
+example X and Y for the
+
+198
+00:03:16,710 --> 00:03:16,720
+example X and Y for the
+ 
+
+199
+00:03:16,720 --> 00:03:19,630
+example X and Y for the
+position and then a speed variable as
+
+200
+00:03:19,630 --> 00:03:19,640
+position and then a speed variable as
+ 
+
+201
+00:03:19,640 --> 00:03:21,030
+position and then a speed variable as
+well all right great so there we go
+
+202
+00:03:21,030 --> 00:03:21,040
+well all right great so there we go
+ 
+
+203
+00:03:21,040 --> 00:03:22,949
+well all right great so there we go
+we've created a brand new class called
+
+204
+00:03:22,949 --> 00:03:22,959
+we've created a brand new class called
+ 
+
+205
+00:03:22,959 --> 00:03:25,390
+we've created a brand new class called
+player which is essentially its own type
+
+206
+00:03:25,390 --> 00:03:25,400
+player which is essentially its own type
+ 
+
+207
+00:03:25,400 --> 00:03:27,430
+player which is essentially its own type
+so if we were to start using this player
+
+208
+00:03:27,430 --> 00:03:27,440
+so if we were to start using this player
+ 
+
+209
+00:03:27,440 --> 00:03:29,309
+so if we were to start using this player
+class we can create it as if it was any
+
+210
+00:03:29,309 --> 00:03:29,319
+class we can create it as if it was any
+ 
+
+211
+00:03:29,319 --> 00:03:31,509
+class we can create it as if it was any
+other variable we write the typee so
+
+212
+00:03:31,509 --> 00:03:31,519
+other variable we write the typee so
+ 
+
+213
+00:03:31,519 --> 00:03:33,789
+other variable we write the typee so
+player and then we give it any name I'm
+
+214
+00:03:33,789 --> 00:03:33,799
+player and then we give it any name I'm
+ 
+
+215
+00:03:33,799 --> 00:03:35,190
+player and then we give it any name I'm
+going to call this player and that's it
+
+216
+00:03:35,190 --> 00:03:35,200
+going to call this player and that's it
+ 
+
+217
+00:03:35,200 --> 00:03:36,470
+going to call this player and that's it
+we've created a new variable called
+
+218
+00:03:36,470 --> 00:03:36,480
+we've created a new variable called
+ 
+
+219
+00:03:36,480 --> 00:03:38,830
+we've created a new variable called
+player which has the type player and of
+
+220
+00:03:38,830 --> 00:03:38,840
+player which has the type player and of
+ 
+
+221
+00:03:38,840 --> 00:03:40,550
+player which has the type player and of
+course the definition of that type is
+
+222
+00:03:40,550 --> 00:03:40,560
+course the definition of that type is
+ 
+
+223
+00:03:40,560 --> 00:03:42,149
+course the definition of that type is
+over here variables that are made from
+
+224
+00:03:42,149 --> 00:03:42,159
+over here variables that are made from
+ 
+
+225
+00:03:42,159 --> 00:03:44,509
+over here variables that are made from
+class types are called objects and a new
+
+226
+00:03:44,509 --> 00:03:44,519
+class types are called objects and a new
+ 
+
+227
+00:03:44,519 --> 00:03:46,429
+class types are called objects and a new
+object variable is called an instance so
+
+228
+00:03:46,429 --> 00:03:46,439
+object variable is called an instance so
+ 
+
+229
+00:03:46,439 --> 00:03:47,429
+object variable is called an instance so
+what we've done here is we've
+
+230
+00:03:47,429 --> 00:03:47,439
+what we've done here is we've
+ 
+
+231
+00:03:47,439 --> 00:03:49,309
+what we've done here is we've
+instantiated a player object because
+
+232
+00:03:49,309 --> 00:03:49,319
+instantiated a player object because
+ 
+
+233
+00:03:49,319 --> 00:03:51,429
+instantiated a player object because
+we've created a new instance of that
+
+234
+00:03:51,429 --> 00:03:51,439
+we've created a new instance of that
+ 
+
+235
+00:03:51,439 --> 00:03:53,670
+we've created a new instance of that
+player type now if we want to set those
+
+236
+00:03:53,670 --> 00:03:53,680
+player type now if we want to set those
+ 
+
+237
+00:03:53,680 --> 00:03:56,190
+player type now if we want to set those
+variables we can simply write player Dot
+
+238
+00:03:56,190 --> 00:03:56,200
+variables we can simply write player Dot
+ 
+
+239
+00:03:56,200 --> 00:03:58,390
+variables we can simply write player Dot
+and then the variable name such as X and
+
+240
+00:03:58,390 --> 00:03:58,400
+and then the variable name such as X and
+ 
+
+241
+00:03:58,400 --> 00:04:00,229
+and then the variable name such as X and
+then assign it equal to something like
+
+242
+00:04:00,229 --> 00:04:00,239
+then assign it equal to something like
+ 
+
+243
+00:04:00,239 --> 00:04:01,630
+then assign it equal to something like
+five if we try and compile this code
+
+244
+00:04:01,630 --> 00:04:01,640
+five if we try and compile this code
+ 
+
+245
+00:04:01,640 --> 00:04:02,910
+five if we try and compile this code
+right now we're actually going to get an
+
+246
+00:04:02,910 --> 00:04:02,920
+right now we're actually going to get an
+ 
+
+247
+00:04:02,920 --> 00:04:04,869
+right now we're actually going to get an
+error that tells us that player cannot
+
+248
+00:04:04,869 --> 00:04:04,879
+error that tells us that player cannot
+ 
+
+249
+00:04:04,879 --> 00:04:07,069
+error that tells us that player cannot
+access private member declared in class
+
+250
+00:04:07,069 --> 00:04:07,079
+access private member declared in class
+ 
+
+251
+00:04:07,079 --> 00:04:08,429
+access private member declared in class
+player this is because of something
+
+252
+00:04:08,429 --> 00:04:08,439
+player this is because of something
+ 
+
+253
+00:04:08,439 --> 00:04:09,789
+player this is because of something
+called visibility when you create a new
+
+254
+00:04:09,789 --> 00:04:09,799
+called visibility when you create a new
+ 
+
+255
+00:04:09,799 --> 00:04:11,589
+called visibility when you create a new
+class you have the option to specify how
+
+256
+00:04:11,589 --> 00:04:11,599
+class you have the option to specify how
+ 
+
+257
+00:04:11,599 --> 00:04:14,149
+class you have the option to specify how
+visible the stuff in that class actually
+
+258
+00:04:14,149 --> 00:04:14,159
+visible the stuff in that class actually
+ 
+
+259
+00:04:14,159 --> 00:04:16,789
+visible the stuff in that class actually
+is by default a class makes everything
+
+260
+00:04:16,789 --> 00:04:16,799
+is by default a class makes everything
+ 
+
+261
+00:04:16,799 --> 00:04:18,390
+is by default a class makes everything
+private which means that only functions
+
+262
+00:04:18,390 --> 00:04:18,400
+private which means that only functions
+ 
+
+263
+00:04:18,400 --> 00:04:20,030
+private which means that only functions
+inside that class can actually access
+
+264
+00:04:20,030 --> 00:04:20,040
+inside that class can actually access
+ 
+
+265
+00:04:20,040 --> 00:04:21,830
+inside that class can actually access
+those variables however we want to be
+
+266
+00:04:21,830 --> 00:04:21,840
+those variables however we want to be
+ 
+
+267
+00:04:21,840 --> 00:04:23,950
+those variables however we want to be
+able to access these variables from the
+
+268
+00:04:23,950 --> 00:04:23,960
+able to access these variables from the
+ 
+
+269
+00:04:23,960 --> 00:04:25,350
+able to access these variables from the
+main function so what we actually need
+
+270
+00:04:25,350 --> 00:04:25,360
+main function so what we actually need
+ 
+
+271
+00:04:25,360 --> 00:04:27,990
+main function so what we actually need
+to do is come up here and make it public
+
+272
+00:04:27,990 --> 00:04:28,000
+to do is come up here and make it public
+ 
+
+273
+00:04:28,000 --> 00:04:29,390
+to do is come up here and make it public
+public means that we're allowed to
+
+274
+00:04:29,390 --> 00:04:29,400
+public means that we're allowed to
+ 
+
+275
+00:04:29,400 --> 00:04:31,790
+public means that we're allowed to
+access access these variables outside of
+
+276
+00:04:31,790 --> 00:04:31,800
+access access these variables outside of
+ 
+
+277
+00:04:31,800 --> 00:04:33,749
+access access these variables outside of
+this class anywhere in our code really
+
+278
+00:04:33,749 --> 00:04:33,759
+this class anywhere in our code really
+ 
+
+279
+00:04:33,759 --> 00:04:35,270
+this class anywhere in our code really
+we'll talk a lot more about visibility
+
+280
+00:04:35,270 --> 00:04:35,280
+we'll talk a lot more about visibility
+ 
+
+281
+00:04:35,280 --> 00:04:36,670
+we'll talk a lot more about visibility
+in a future video I don't really want to
+
+282
+00:04:36,670 --> 00:04:36,680
+in a future video I don't really want to
+ 
+
+283
+00:04:36,680 --> 00:04:38,230
+in a future video I don't really want to
+get into it right now so you can see if
+
+284
+00:04:38,230 --> 00:04:38,240
+get into it right now so you can see if
+ 
+
+285
+00:04:38,240 --> 00:04:40,230
+get into it right now so you can see if
+we compile our code here then our code
+
+286
+00:04:40,230 --> 00:04:40,240
+we compile our code here then our code
+ 
+
+287
+00:04:40,240 --> 00:04:42,029
+we compile our code here then our code
+compile successfully okay pretty sweet
+
+288
+00:04:42,029 --> 00:04:42,039
+compile successfully okay pretty sweet
+ 
+
+289
+00:04:42,039 --> 00:04:43,510
+compile successfully okay pretty sweet
+so we've achieved our first goal we've
+
+290
+00:04:43,510 --> 00:04:43,520
+so we've achieved our first goal we've
+ 
+
+291
+00:04:43,520 --> 00:04:45,749
+so we've achieved our first goal we've
+managed to drastically clean up the code
+
+292
+00:04:45,749 --> 00:04:45,759
+managed to drastically clean up the code
+ 
+
+293
+00:04:45,759 --> 00:04:47,310
+managed to drastically clean up the code
+and have all of our variables in one
+
+294
+00:04:47,310 --> 00:04:47,320
+and have all of our variables in one
+ 
+
+295
+00:04:47,320 --> 00:04:48,629
+and have all of our variables in one
+place because really this collection of
+
+296
+00:04:48,629 --> 00:04:48,639
+place because really this collection of
+ 
+
+297
+00:04:48,639 --> 00:04:50,230
+place because really this collection of
+variables represents a player so we've
+
+298
+00:04:50,230 --> 00:04:50,240
+variables represents a player so we've
+ 
+
+299
+00:04:50,240 --> 00:04:51,629
+variables represents a player so we've
+managed to group it nicely now that
+
+300
+00:04:51,629 --> 00:04:51,639
+managed to group it nicely now that
+ 
+
+301
+00:04:51,639 --> 00:04:52,990
+managed to group it nicely now that
+we've got all this data suppose that we
+
+302
+00:04:52,990 --> 00:04:53,000
+we've got all this data suppose that we
+ 
+
+303
+00:04:53,000 --> 00:04:54,510
+we've got all this data suppose that we
+actually want our player to do something
+
+304
+00:04:54,510 --> 00:04:54,520
+actually want our player to do something
+ 
+
+305
+00:04:54,520 --> 00:04:56,510
+actually want our player to do something
+for example move somewhere so we need to
+
+306
+00:04:56,510 --> 00:04:56,520
+for example move somewhere so we need to
+ 
+
+307
+00:04:56,520 --> 00:04:58,110
+for example move somewhere so we need to
+write a function which changes the
+
+308
+00:04:58,110 --> 00:04:58,120
+write a function which changes the
+ 
+
+309
+00:04:58,120 --> 00:05:00,310
+write a function which changes the
+player's X and Y variables how can we do
+
+310
+00:05:00,310 --> 00:05:00,320
+player's X and Y variables how can we do
+ 
+
+311
+00:05:00,320 --> 00:05:02,029
+player's X and Y variables how can we do
+that well we could write it as just a
+
+312
+00:05:02,029 --> 00:05:02,039
+that well we could write it as just a
+ 
+
+313
+00:05:02,039 --> 00:05:03,990
+that well we could write it as just a
+standalone function so I'll write void
+
+314
+00:05:03,990 --> 00:05:04,000
+standalone function so I'll write void
+ 
+
+315
+00:05:04,000 --> 00:05:05,710
+standalone function so I'll write void
+I'll call it move and then I would need
+
+316
+00:05:05,710 --> 00:05:05,720
+I'll call it move and then I would need
+ 
+
+317
+00:05:05,720 --> 00:05:07,350
+I'll call it move and then I would need
+to take in the player that I would like
+
+318
+00:05:07,350 --> 00:05:07,360
+to take in the player that I would like
+ 
+
+319
+00:05:07,360 --> 00:05:09,270
+to take in the player that I would like
+to move now we'll have to pass this by
+
+320
+00:05:09,270 --> 00:05:09,280
+to move now we'll have to pass this by
+ 
+
+321
+00:05:09,280 --> 00:05:10,670
+to move now we'll have to pass this by
+reference because we'll actually be
+
+322
+00:05:10,670 --> 00:05:10,680
+reference because we'll actually be
+ 
+
+323
+00:05:10,680 --> 00:05:12,710
+reference because we'll actually be
+modifying the player object and then
+
+324
+00:05:12,710 --> 00:05:12,720
+modifying the player object and then
+ 
+
+325
+00:05:12,720 --> 00:05:14,749
+modifying the player object and then
+I'll also take in XA and ya which will
+
+326
+00:05:14,749 --> 00:05:14,759
+I'll also take in XA and ya which will
+ 
+
+327
+00:05:14,759 --> 00:05:16,950
+I'll also take in XA and ya which will
+be the amount that we move the player by
+
+328
+00:05:16,950 --> 00:05:16,960
+be the amount that we move the player by
+ 
+
+329
+00:05:16,960 --> 00:05:19,230
+be the amount that we move the player by
+in both X and Y then all I need to do is
+
+330
+00:05:19,230 --> 00:05:19,240
+in both X and Y then all I need to do is
+ 
+
+331
+00:05:19,240 --> 00:05:22,870
+in both X and Y then all I need to do is
+just say playerx plus = XA and player. Y
+
+332
+00:05:22,870 --> 00:05:22,880
+just say playerx plus = XA and player. Y
+ 
+
+333
+00:05:22,880 --> 00:05:25,430
+just say playerx plus = XA and player. Y
+plus = y a we can also use that speed
+
+334
+00:05:25,430 --> 00:05:25,440
+plus = y a we can also use that speed
+ 
+
+335
+00:05:25,440 --> 00:05:27,189
+plus = y a we can also use that speed
+variable that we have there by
+
+336
+00:05:27,189 --> 00:05:27,199
+variable that we have there by
+ 
+
+337
+00:05:27,199 --> 00:05:30,189
+variable that we have there by
+multiplying our amount by the speed all
+
+338
+00:05:30,189 --> 00:05:30,199
+multiplying our amount by the speed all
+ 
+
+339
+00:05:30,199 --> 00:05:31,270
+multiplying our amount by the speed all
+right pretty cool and if we wanted to
+
+340
+00:05:31,270 --> 00:05:31,280
+right pretty cool and if we wanted to
+ 
+
+341
+00:05:31,280 --> 00:05:33,830
+right pretty cool and if we wanted to
+call that we would just write move
+
+342
+00:05:33,830 --> 00:05:33,840
+call that we would just write move
+ 
+
+343
+00:05:33,840 --> 00:05:35,469
+call that we would just write move
+player and then by how much we want to
+
+344
+00:05:35,469 --> 00:05:35,479
+player and then by how much we want to
+ 
+
+345
+00:05:35,479 --> 00:05:37,670
+player and then by how much we want to
+move the player so maybe 1 - one and
+
+346
+00:05:37,670 --> 00:05:37,680
+move the player so maybe 1 - one and
+ 
+
+347
+00:05:37,680 --> 00:05:38,790
+move the player so maybe 1 - one and
+there we go we've written a function
+
+348
+00:05:38,790 --> 00:05:38,800
+there we go we've written a function
+ 
+
+349
+00:05:38,800 --> 00:05:40,350
+there we go we've written a function
+that can move the player however we can
+
+350
+00:05:40,350 --> 00:05:40,360
+that can move the player however we can
+ 
+
+351
+00:05:40,360 --> 00:05:41,830
+that can move the player however we can
+do a little bit better than this earlier
+
+352
+00:05:41,830 --> 00:05:41,840
+do a little bit better than this earlier
+ 
+
+353
+00:05:41,840 --> 00:05:43,830
+do a little bit better than this earlier
+I said that classes can actually contain
+
+354
+00:05:43,830 --> 00:05:43,840
+I said that classes can actually contain
+ 
+
+355
+00:05:43,840 --> 00:05:45,150
+I said that classes can actually contain
+functionality so what that basically
+
+356
+00:05:45,150 --> 00:05:45,160
+functionality so what that basically
+ 
+
+357
+00:05:45,160 --> 00:05:47,070
+functionality so what that basically
+means is that we can move that move
+
+358
+00:05:47,070 --> 00:05:47,080
+means is that we can move that move
+ 
+
+359
+00:05:47,080 --> 00:05:49,990
+means is that we can move that move
+function of ours into the class and
+
+360
+00:05:49,990 --> 00:05:50,000
+function of ours into the class and
+ 
+
+361
+00:05:50,000 --> 00:05:51,749
+function of ours into the class and
+functions inside classes are called
+
+362
+00:05:51,749 --> 00:05:51,759
+functions inside classes are called
+ 
+
+363
+00:05:51,759 --> 00:05:53,510
+functions inside classes are called
+Methods so I can literally go over here
+
+364
+00:05:53,510 --> 00:05:53,520
+Methods so I can literally go over here
+ 
+
+365
+00:05:53,520 --> 00:05:55,590
+Methods so I can literally go over here
+into my code and just move this a little
+
+366
+00:05:55,590 --> 00:05:55,600
+into my code and just move this a little
+ 
+
+367
+00:05:55,600 --> 00:05:57,710
+into my code and just move this a little
+bit up so that it's inside the player
+
+368
+00:05:57,710 --> 00:05:57,720
+bit up so that it's inside the player
+ 
+
+369
+00:05:57,720 --> 00:05:59,309
+bit up so that it's inside the player
+class and there we go now obviously
+
+370
+00:05:59,309 --> 00:05:59,319
+class and there we go now obviously
+ 
+
+371
+00:05:59,319 --> 00:06:00,990
+class and there we go now obviously
+we're in inside the player class now so
+
+372
+00:06:00,990 --> 00:06:01,000
+we're in inside the player class now so
+ 
+
+373
+00:06:01,000 --> 00:06:02,189
+we're in inside the player class now so
+we actually have access to these
+
+374
+00:06:02,189 --> 00:06:02,199
+we actually have access to these
+ 
+
+375
+00:06:02,199 --> 00:06:04,230
+we actually have access to these
+variables we don't need to pass a player
+
+376
+00:06:04,230 --> 00:06:04,240
+variables we don't need to pass a player
+ 
+
+377
+00:06:04,240 --> 00:06:07,309
+variables we don't need to pass a player
+object in because we're already inside a
+
+378
+00:06:07,309 --> 00:06:07,319
+object in because we're already inside a
+ 
+
+379
+00:06:07,319 --> 00:06:09,870
+object in because we're already inside a
+player object so if I get rid of this
+
+380
+00:06:09,870 --> 00:06:09,880
+player object so if I get rid of this
+ 
+
+381
+00:06:09,880 --> 00:06:12,589
+player object so if I get rid of this
+and then all of these the X and Y and
+
+382
+00:06:12,589 --> 00:06:12,599
+and then all of these the X and Y and
+ 
+
+383
+00:06:12,599 --> 00:06:14,430
+and then all of these the X and Y and
+speed that we're referring to will be
+
+384
+00:06:14,430 --> 00:06:14,440
+speed that we're referring to will be
+ 
+
+385
+00:06:14,440 --> 00:06:16,990
+speed that we're referring to will be
+the current objects variables if I come
+
+386
+00:06:16,990 --> 00:06:17,000
+the current objects variables if I come
+ 
+
+387
+00:06:17,000 --> 00:06:19,150
+the current objects variables if I come
+down over here I can change my code now
+
+388
+00:06:19,150 --> 00:06:19,160
+down over here I can change my code now
+ 
+
+389
+00:06:19,160 --> 00:06:22,629
+down over here I can change my code now
+to just say player. move and there we go
+
+390
+00:06:22,629 --> 00:06:22,639
+to just say player. move and there we go
+ 
+
+391
+00:06:22,639 --> 00:06:24,189
+to just say player. move and there we go
+we've simplified our code quite a bit
+
+392
+00:06:24,189 --> 00:06:24,199
+we've simplified our code quite a bit
+ 
+
+393
+00:06:24,199 --> 00:06:25,550
+we've simplified our code quite a bit
+every player object is going to have its
+
+394
+00:06:25,550 --> 00:06:25,560
+every player object is going to have its
+ 
+
+395
+00:06:25,560 --> 00:06:27,670
+every player object is going to have its
+own move function and when we call move
+
+396
+00:06:27,670 --> 00:06:27,680
+own move function and when we call move
+ 
+
+397
+00:06:27,680 --> 00:06:29,749
+own move function and when we call move
+for that specific player object that is
+
+398
+00:06:29,749 --> 00:06:29,759
+for that specific player object that is
+ 
+
+399
+00:06:29,759 --> 00:06:31,909
+for that specific player object that is
+the player object that will move again
+
+400
+00:06:31,909 --> 00:06:31,919
+the player object that will move again
+ 
+
+401
+00:06:31,919 --> 00:06:33,589
+the player object that will move again
+this isn't really any different to
+
+402
+00:06:33,589 --> 00:06:33,599
+this isn't really any different to
+ 
+
+403
+00:06:33,599 --> 00:06:35,629
+this isn't really any different to
+having the move function outside of the
+
+404
+00:06:35,629 --> 00:06:35,639
+having the move function outside of the
+ 
+
+405
+00:06:35,639 --> 00:06:37,270
+having the move function outside of the
+player class all it does is it kind of
+
+406
+00:06:37,270 --> 00:06:37,280
+player class all it does is it kind of
+ 
+
+407
+00:06:37,280 --> 00:06:39,110
+player class all it does is it kind of
+cleans up our code and makes everything
+
+408
+00:06:39,110 --> 00:06:39,120
+cleans up our code and makes everything
+ 
+
+409
+00:06:39,120 --> 00:06:40,629
+cleans up our code and makes everything
+look a little bit nicer and that's a
+
+410
+00:06:40,629 --> 00:06:40,639
+look a little bit nicer and that's a
+ 
+
+411
+00:06:40,639 --> 00:06:41,870
+look a little bit nicer and that's a
+huge bonus when you're dealing with a
+
+412
+00:06:41,870 --> 00:06:41,880
+huge bonus when you're dealing with a
+ 
+
+413
+00:06:41,880 --> 00:06:43,309
+huge bonus when you're dealing with a
+lot of code because the more code you
+
+414
+00:06:43,309 --> 00:06:43,319
+lot of code because the more code you
+ 
+
+415
+00:06:43,319 --> 00:06:45,309
+lot of code because the more code you
+have the more complicated it can get and
+
+416
+00:06:45,309 --> 00:06:45,319
+have the more complicated it can get and
+ 
+
+417
+00:06:45,319 --> 00:06:47,430
+have the more complicated it can get and
+the harder it can actually become to
+
+418
+00:06:47,430 --> 00:06:47,440
+the harder it can actually become to
+ 
+
+419
+00:06:47,440 --> 00:06:49,029
+the harder it can actually become to
+maintain that code so having things like
+
+420
+00:06:49,029 --> 00:06:49,039
+maintain that code so having things like
+ 
+
+421
+00:06:49,039 --> 00:06:50,150
+maintain that code so having things like
+this to keep your code cleaner is
+
+422
+00:06:50,150 --> 00:06:50,160
+this to keep your code cleaner is
+ 
+
+423
+00:06:50,160 --> 00:06:52,469
+this to keep your code cleaner is
+actually a very very welcome thing so
+
+424
+00:06:52,469 --> 00:06:52,479
+actually a very very welcome thing so
+ 
+
+425
+00:06:52,479 --> 00:06:54,710
+actually a very very welcome thing so
+that's it that is essentially the basics
+
+426
+00:06:54,710 --> 00:06:54,720
+that's it that is essentially the basics
+ 
+
+427
+00:06:54,720 --> 00:06:57,350
+that's it that is essentially the basics
+of what classes are classes allow us to
+
+428
+00:06:57,350 --> 00:06:57,360
+of what classes are classes allow us to
+ 
+
+429
+00:06:57,360 --> 00:07:00,029
+of what classes are classes allow us to
+group variables together into a Time
+
+430
+00:07:00,029 --> 00:07:00,039
+group variables together into a Time
+ 
+
+431
+00:07:00,039 --> 00:07:01,670
+group variables together into a Time
+and also add functionality to those
+
+432
+00:07:01,670 --> 00:07:01,680
+and also add functionality to those
+ 
+
+433
+00:07:01,680 --> 00:07:03,070
+and also add functionality to those
+variables because if you take a look at
+
+434
+00:07:03,070 --> 00:07:03,080
+variables because if you take a look at
+ 
+
+435
+00:07:03,080 --> 00:07:05,270
+variables because if you take a look at
+this code one more time what we've
+
+436
+00:07:05,270 --> 00:07:05,280
+this code one more time what we've
+ 
+
+437
+00:07:05,280 --> 00:07:07,230
+this code one more time what we've
+really done is we've just defined three
+
+438
+00:07:07,230 --> 00:07:07,240
+really done is we've just defined three
+ 
+
+439
+00:07:07,240 --> 00:07:10,550
+really done is we've just defined three
+variables that kind of exist in one type
+
+440
+00:07:10,550 --> 00:07:10,560
+variables that kind of exist in one type
+ 
+
+441
+00:07:10,560 --> 00:07:12,710
+variables that kind of exist in one type
+and also a function which manipulates
+
+442
+00:07:12,710 --> 00:07:12,720
+and also a function which manipulates
+ 
+
+443
+00:07:12,720 --> 00:07:14,629
+and also a function which manipulates
+those variables that's really all we've
+
+444
+00:07:14,629 --> 00:07:14,639
+those variables that's really all we've
+ 
+
+445
+00:07:14,639 --> 00:07:15,950
+those variables that's really all we've
+done of course that function can do
+
+446
+00:07:15,950 --> 00:07:15,960
+done of course that function can do
+ 
+
+447
+00:07:15,960 --> 00:07:17,869
+done of course that function can do
+literally anything but the gist of it is
+
+448
+00:07:17,869 --> 00:07:17,879
+literally anything but the gist of it is
+ 
+
+449
+00:07:17,879 --> 00:07:19,790
+literally anything but the gist of it is
+we've got data and functions to
+
+450
+00:07:19,790 --> 00:07:19,800
+we've got data and functions to
+ 
+
+451
+00:07:19,800 --> 00:07:21,510
+we've got data and functions to
+manipulate that data and that's really
+
+452
+00:07:21,510 --> 00:07:21,520
+manipulate that data and that's really
+ 
+
+453
+00:07:21,520 --> 00:07:23,309
+manipulate that data and that's really
+all the class is now there are so many
+
+454
+00:07:23,309 --> 00:07:23,319
+all the class is now there are so many
+ 
+
+455
+00:07:23,319 --> 00:07:25,589
+all the class is now there are so many
+uses for classes and we'll kind of start
+
+456
+00:07:25,589 --> 00:07:25,599
+uses for classes and we'll kind of start
+ 
+
+457
+00:07:25,599 --> 00:07:27,710
+uses for classes and we'll kind of start
+getting into them in the future this is
+
+458
+00:07:27,710 --> 00:07:27,720
+getting into them in the future this is
+ 
+
+459
+00:07:27,720 --> 00:07:30,589
+getting into them in the future this is
+also literally just a basics of what a
+
+460
+00:07:30,589 --> 00:07:30,599
+also literally just a basics of what a
+ 
+
+461
+00:07:30,599 --> 00:07:32,309
+also literally just a basics of what a
+class is there is so many more things we
+
+462
+00:07:32,309 --> 00:07:32,319
+class is there is so many more things we
+ 
+
+463
+00:07:32,319 --> 00:07:33,950
+class is there is so many more things we
+can do with classes which is why the
+
+464
+00:07:33,950 --> 00:07:33,960
+can do with classes which is why the
+ 
+
+465
+00:07:33,960 --> 00:07:35,869
+can do with classes which is why the
+next few videos are going to be taking a
+
+466
+00:07:35,869 --> 00:07:35,879
+next few videos are going to be taking a
+ 
+
+467
+00:07:35,879 --> 00:07:37,790
+next few videos are going to be taking a
+look at those things in more detail also
+
+468
+00:07:37,790 --> 00:07:37,800
+look at those things in more detail also
+ 
+
+469
+00:07:37,800 --> 00:07:39,749
+look at those things in more detail also
+I want you to keep in mind that whilst
+
+470
+00:07:39,749 --> 00:07:39,759
+I want you to keep in mind that whilst
+ 
+
+471
+00:07:39,759 --> 00:07:41,510
+I want you to keep in mind that whilst
+classes are extremely useful and can
+
+472
+00:07:41,510 --> 00:07:41,520
+classes are extremely useful and can
+ 
+
+473
+00:07:41,520 --> 00:07:44,589
+classes are extremely useful and can
+keep your code a lot cleaner they can't
+
+474
+00:07:44,589 --> 00:07:44,599
+keep your code a lot cleaner they can't
+ 
+
+475
+00:07:44,599 --> 00:07:47,149
+keep your code a lot cleaner they can't
+do anything that you can't do without
+
+476
+00:07:47,149 --> 00:07:47,159
+do anything that you can't do without
+ 
+
+477
+00:07:47,159 --> 00:07:49,149
+do anything that you can't do without
+classes classes don't give you any kind
+
+478
+00:07:49,149 --> 00:07:49,159
+classes classes don't give you any kind
+ 
+
+479
+00:07:49,159 --> 00:07:51,350
+classes classes don't give you any kind
+of new functionality that you could not
+
+480
+00:07:51,350 --> 00:07:51,360
+of new functionality that you could not
+ 
+
+481
+00:07:51,360 --> 00:07:53,830
+of new functionality that you could not
+have done otherwise anything you can do
+
+482
+00:07:53,830 --> 00:07:53,840
+have done otherwise anything you can do
+ 
+
+483
+00:07:53,840 --> 00:07:55,430
+have done otherwise anything you can do
+with classes you can actually do without
+
+484
+00:07:55,430 --> 00:07:55,440
+with classes you can actually do without
+ 
+
+485
+00:07:55,440 --> 00:07:58,029
+with classes you can actually do without
+classes which is why languages such as C
+
+486
+00:07:58,029 --> 00:07:58,039
+classes which is why languages such as C
+ 
+
+487
+00:07:58,039 --> 00:08:00,550
+classes which is why languages such as C
+exist and are perfectly usable languages
+
+488
+00:08:00,550 --> 00:08:00,560
+exist and are perfectly usable languages
+ 
+
+489
+00:08:00,560 --> 00:08:02,629
+exist and are perfectly usable languages
+they don't have classes and yet we can
+
+490
+00:08:02,629 --> 00:08:02,639
+they don't have classes and yet we can
+ 
+
+491
+00:08:02,639 --> 00:08:04,309
+they don't have classes and yet we can
+still write code classes are just there
+
+492
+00:08:04,309 --> 00:08:04,319
+still write code classes are just there
+ 
+
+493
+00:08:04,319 --> 00:08:06,830
+still write code classes are just there
+to make our lives easier as programmers
+
+494
+00:08:06,830 --> 00:08:06,840
+to make our lives easier as programmers
+ 
+
+495
+00:08:06,840 --> 00:08:09,830
+to make our lives easier as programmers
+they're essentially just syntactic sugar
+
+496
+00:08:09,830 --> 00:08:09,840
+they're essentially just syntactic sugar
+ 
+
+497
+00:08:09,840 --> 00:08:11,909
+they're essentially just syntactic sugar
+that we can use to organize our code and
+
+498
+00:08:11,909 --> 00:08:11,919
+that we can use to organize our code and
+ 
+
+499
+00:08:11,919 --> 00:08:13,550
+that we can use to organize our code and
+make it easier to maintain that's all
+
+500
+00:08:13,550 --> 00:08:13,560
+make it easier to maintain that's all
+ 
+
+501
+00:08:13,560 --> 00:08:14,830
+make it easier to maintain that's all
+that they are anyway I hope you guys
+
+502
+00:08:14,830 --> 00:08:14,840
+that they are anyway I hope you guys
+ 
+
+503
+00:08:14,840 --> 00:08:16,510
+that they are anyway I hope you guys
+enjoyed this video if you did please hit
+
+504
+00:08:16,510 --> 00:08:16,520
+enjoyed this video if you did please hit
+ 
+
+505
+00:08:16,520 --> 00:08:17,670
+enjoyed this video if you did please hit
+that like button you can also follow me
+
+506
+00:08:17,670 --> 00:08:17,680
+that like button you can also follow me
+ 
+
+507
+00:08:17,680 --> 00:08:19,390
+that like button you can also follow me
+on Twitter and Instagram and of course
+
+508
+00:08:19,390 --> 00:08:19,400
+on Twitter and Instagram and of course
+ 
+
+509
+00:08:19,400 --> 00:08:20,790
+on Twitter and Instagram and of course
+next time we'll be taking a look at this
+
+510
+00:08:20,790 --> 00:08:20,800
+next time we'll be taking a look at this
+ 
+
+511
+00:08:20,800 --> 00:08:22,710
+next time we'll be taking a look at this
+stuff in more detail and seeing just
+
+512
+00:08:22,710 --> 00:08:22,720
+stuff in more detail and seeing just
+ 
+
+513
+00:08:22,720 --> 00:08:25,530
+stuff in more detail and seeing just
+what we can do with it
+
+514
+00:08:25,530 --> 00:08:25,540
+what we can do with it
+ 
+
+515
+00:08:25,540 --> 00:08:28,430
+what we can do with it
+[Music]
+
+516
+00:08:28,430 --> 00:08:28,440
+[Music]
+ 
+
+517
+00:08:28,440 --> 00:08:35,080
+[Music]
+goodbye
+
+518
+00:08:35,080 --> 00:08:35,090
+
+ 
+
+519
+00:08:35,090 --> 00:08:40,659
+
+[Music]
+

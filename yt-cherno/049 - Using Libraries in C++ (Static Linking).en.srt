@@ -1,0 +1,5675 @@
+1
+00:00:00,000 --> 00:00:01,790
+
+hey what's up guys my name is a chana
+
+2
+00:00:01,790 --> 00:00:01,800
+hey what's up guys my name is a chana
+ 
+
+3
+00:00:01,800 --> 00:00:03,619
+hey what's up guys my name is a chana
+welcome back to my say plus plus series
+
+4
+00:00:03,619 --> 00:00:03,629
+welcome back to my say plus plus series
+ 
+
+5
+00:00:03,629 --> 00:00:05,269
+welcome back to my say plus plus series
+festival haircut
+
+6
+00:00:05,269 --> 00:00:05,279
+festival haircut
+ 
+
+7
+00:00:05,279 --> 00:00:06,829
+festival haircut
+second of all today I'm gonna be talking
+
+8
+00:00:06,829 --> 00:00:06,839
+second of all today I'm gonna be talking
+ 
+
+9
+00:00:06,839 --> 00:00:08,900
+second of all today I'm gonna be talking
+all about libraries in C++ and
+
+10
+00:00:08,900 --> 00:00:08,910
+all about libraries in C++ and
+ 
+
+11
+00:00:08,910 --> 00:00:10,730
+all about libraries in C++ and
+specifically how we can use external
+
+12
+00:00:10,730 --> 00:00:10,740
+specifically how we can use external
+ 
+
+13
+00:00:10,740 --> 00:00:13,070
+specifically how we can use external
+libraries in our project so if you used
+
+14
+00:00:13,070 --> 00:00:13,080
+libraries in our project so if you used
+ 
+
+15
+00:00:13,080 --> 00:00:14,930
+libraries in our project so if you used
+to other languages such as Java or C
+
+16
+00:00:14,930 --> 00:00:14,940
+to other languages such as Java or C
+ 
+
+17
+00:00:14,940 --> 00:00:16,730
+to other languages such as Java or C
+sharp or Python or something like that
+
+18
+00:00:16,730 --> 00:00:16,740
+sharp or Python or something like that
+ 
+
+19
+00:00:16,740 --> 00:00:18,680
+sharp or Python or something like that
+adding libraries is a pretty trivial
+
+20
+00:00:18,680 --> 00:00:18,690
+adding libraries is a pretty trivial
+ 
+
+21
+00:00:18,690 --> 00:00:20,090
+adding libraries is a pretty trivial
+task you might be using a package
+
+22
+00:00:20,090 --> 00:00:20,100
+task you might be using a package
+ 
+
+23
+00:00:20,100 --> 00:00:22,130
+task you might be using a package
+manager you might not be but either way
+
+24
+00:00:22,130 --> 00:00:22,140
+manager you might not be but either way
+ 
+
+25
+00:00:22,140 --> 00:00:24,290
+manager you might not be but either way
+it's usually pretty straightforward when
+
+26
+00:00:24,290 --> 00:00:24,300
+it's usually pretty straightforward when
+ 
+
+27
+00:00:24,300 --> 00:00:26,689
+it's usually pretty straightforward when
+it comes to C++ everyone seems to have
+
+28
+00:00:26,689 --> 00:00:26,699
+it comes to C++ everyone seems to have
+ 
+
+29
+00:00:26,699 --> 00:00:28,759
+it comes to C++ everyone seems to have
+problems and back in the day I had
+
+30
+00:00:28,759 --> 00:00:28,769
+problems and back in the day I had
+ 
+
+31
+00:00:28,769 --> 00:00:31,009
+problems and back in the day I had
+issues with this as well and I don't
+
+32
+00:00:31,009 --> 00:00:31,019
+issues with this as well and I don't
+ 
+
+33
+00:00:31,019 --> 00:00:32,659
+issues with this as well and I don't
+even know why it's there actually really
+
+34
+00:00:32,659 --> 00:00:32,669
+even know why it's there actually really
+ 
+
+35
+00:00:32,669 --> 00:00:34,340
+even know why it's there actually really
+simple and hopefully this video will
+
+36
+00:00:34,340 --> 00:00:34,350
+simple and hopefully this video will
+ 
+
+37
+00:00:34,350 --> 00:00:35,959
+simple and hopefully this video will
+kind of help clear it up for you but
+
+38
+00:00:35,959 --> 00:00:35,969
+kind of help clear it up for you but
+ 
+
+39
+00:00:35,969 --> 00:00:37,100
+kind of help clear it up for you but
+basically there are a few strategies
+
+40
+00:00:37,100 --> 00:00:37,110
+basically there are a few strategies
+ 
+
+41
+00:00:37,110 --> 00:00:39,470
+basically there are a few strategies
+that we can actually take when we're
+
+42
+00:00:39,470 --> 00:00:39,480
+that we can actually take when we're
+ 
+
+43
+00:00:39,480 --> 00:00:41,030
+that we can actually take when we're
+dealing with libraries in C++ and I'm
+
+44
+00:00:41,030 --> 00:00:41,040
+dealing with libraries in C++ and I'm
+ 
+
+45
+00:00:41,040 --> 00:00:43,670
+dealing with libraries in C++ and I'm
+gonna kind of show you my way as well as
+
+46
+00:00:43,670 --> 00:00:43,680
+gonna kind of show you my way as well as
+ 
+
+47
+00:00:43,680 --> 00:00:45,110
+gonna kind of show you my way as well as
+maybe discuss some of the other ones but
+
+48
+00:00:45,110 --> 00:00:45,120
+maybe discuss some of the other ones but
+ 
+
+49
+00:00:45,120 --> 00:00:47,990
+maybe discuss some of the other ones but
+first of all I hate the idea of package
+
+50
+00:00:47,990 --> 00:00:48,000
+first of all I hate the idea of package
+ 
+
+51
+00:00:48,000 --> 00:00:50,600
+first of all I hate the idea of package
+managers and I hate the idea of linking
+
+52
+00:00:50,600 --> 00:00:50,610
+managers and I hate the idea of linking
+ 
+
+53
+00:00:50,610 --> 00:00:53,299
+managers and I hate the idea of linking
+to kind of other repositories or all
+
+54
+00:00:53,299 --> 00:00:53,309
+to kind of other repositories or all
+ 
+
+55
+00:00:53,309 --> 00:00:56,389
+to kind of other repositories or all
+that stuff my my ideal project setup is
+
+56
+00:00:56,389 --> 00:00:56,399
+that stuff my my ideal project setup is
+ 
+
+57
+00:00:56,399 --> 00:00:59,240
+that stuff my my ideal project setup is
+that if you check out my repository my
+
+58
+00:00:59,240 --> 00:00:59,250
+that if you check out my repository my
+ 
+
+59
+00:00:59,250 --> 00:01:00,979
+that if you check out my repository my
+code repository from github or whatever
+
+60
+00:01:00,979 --> 00:01:00,989
+code repository from github or whatever
+ 
+
+61
+00:01:00,989 --> 00:01:03,319
+code repository from github or whatever
+you should have everything you need in
+
+62
+00:01:03,319 --> 00:01:03,329
+you should have everything you need in
+ 
+
+63
+00:01:03,329 --> 00:01:05,509
+you should have everything you need in
+that repository just straight away fee
+
+64
+00:01:05,509 --> 00:01:05,519
+that repository just straight away fee
+ 
+
+65
+00:01:05,519 --> 00:01:06,920
+that repository just straight away fee
+for you to actually be able to compile
+
+66
+00:01:06,920 --> 00:01:06,930
+for you to actually be able to compile
+ 
+
+67
+00:01:06,930 --> 00:01:09,200
+for you to actually be able to compile
+and run the application or the project
+
+68
+00:01:09,200 --> 00:01:09,210
+and run the application or the project
+ 
+
+69
+00:01:09,210 --> 00:01:11,630
+and run the application or the project
+or whatever right there should be no
+
+70
+00:01:11,630 --> 00:01:11,640
+or whatever right there should be no
+ 
+
+71
+00:01:11,640 --> 00:01:13,520
+or whatever right there should be no
+kind of syncing up with package managers
+
+72
+00:01:13,520 --> 00:01:13,530
+kind of syncing up with package managers
+ 
+
+73
+00:01:13,530 --> 00:01:15,170
+kind of syncing up with package managers
+downloading other libraries all that
+
+74
+00:01:15,170 --> 00:01:15,180
+downloading other libraries all that
+ 
+
+75
+00:01:15,180 --> 00:01:17,359
+downloading other libraries all that
+stuff I hate all of that I just want
+
+76
+00:01:17,359 --> 00:01:17,369
+stuff I hate all of that I just want
+ 
+
+77
+00:01:17,369 --> 00:01:20,060
+stuff I hate all of that I just want
+especially with C++ there are some
+
+78
+00:01:20,060 --> 00:01:20,070
+especially with C++ there are some
+ 
+
+79
+00:01:20,070 --> 00:01:21,289
+especially with C++ there are some
+package managers for other kind of
+
+80
+00:01:21,289 --> 00:01:21,299
+package managers for other kind of
+ 
+
+81
+00:01:21,299 --> 00:01:22,910
+package managers for other kind of
+languages which makes sense I'm
+
+82
+00:01:22,910 --> 00:01:22,920
+languages which makes sense I'm
+ 
+
+83
+00:01:22,920 --> 00:01:24,440
+languages which makes sense I'm
+specifically obviously talking about C++
+
+84
+00:01:24,440 --> 00:01:24,450
+specifically obviously talking about C++
+ 
+
+85
+00:01:24,450 --> 00:01:27,469
+specifically obviously talking about C++
+this is the C++ series but for C++
+
+86
+00:01:27,469 --> 00:01:27,479
+this is the C++ series but for C++
+ 
+
+87
+00:01:27,479 --> 00:01:30,499
+this is the C++ series but for C++
+I just want stuff to work I just want to
+
+88
+00:01:30,499 --> 00:01:30,509
+I just want stuff to work I just want to
+ 
+
+89
+00:01:30,509 --> 00:01:32,390
+I just want stuff to work I just want to
+be able to clone the repository and I
+
+90
+00:01:32,390 --> 00:01:32,400
+be able to clone the repository and I
+ 
+
+91
+00:01:32,400 --> 00:01:34,880
+be able to clone the repository and I
+want it to compile and run so for that
+
+92
+00:01:34,880 --> 00:01:34,890
+want it to compile and run so for that
+ 
+
+93
+00:01:34,890 --> 00:01:37,999
+want it to compile and run so for that
+reason I tend to actually keep versions
+
+94
+00:01:37,999 --> 00:01:38,009
+reason I tend to actually keep versions
+ 
+
+95
+00:01:38,009 --> 00:01:40,280
+reason I tend to actually keep versions
+of my dependencies all the libraries
+
+96
+00:01:40,280 --> 00:01:40,290
+of my dependencies all the libraries
+ 
+
+97
+00:01:40,290 --> 00:01:42,980
+of my dependencies all the libraries
+that I'm using in the actual solution in
+
+98
+00:01:42,980 --> 00:01:42,990
+that I'm using in the actual solution in
+ 
+
+99
+00:01:42,990 --> 00:01:45,620
+that I'm using in the actual solution in
+the actual project folder so I've
+
+100
+00:01:45,620 --> 00:01:45,630
+the actual project folder so I've
+ 
+
+101
+00:01:45,630 --> 00:01:47,539
+the actual project folder so I've
+actually got copies of those that visit
+
+102
+00:01:47,539 --> 00:01:47,549
+actually got copies of those that visit
+ 
+
+103
+00:01:47,549 --> 00:01:49,100
+actually got copies of those that visit
+those physical binaries or code
+
+104
+00:01:49,100 --> 00:01:49,110
+those physical binaries or code
+ 
+
+105
+00:01:49,110 --> 00:01:50,630
+those physical binaries or code
+depending on which way I go without as
+
+106
+00:01:50,630 --> 00:01:50,640
+depending on which way I go without as
+ 
+
+107
+00:01:50,640 --> 00:01:53,149
+depending on which way I go without as
+well in my actual kind of working
+
+108
+00:01:53,149 --> 00:01:53,159
+well in my actual kind of working
+ 
+
+109
+00:01:53,159 --> 00:01:55,219
+well in my actual kind of working
+directory of my solution that kinda
+
+110
+00:01:55,219 --> 00:01:55,229
+directory of my solution that kinda
+ 
+
+111
+00:01:55,229 --> 00:01:56,120
+directory of my solution that kinda
+brings me to another point
+
+112
+00:01:56,120 --> 00:01:56,130
+brings me to another point
+ 
+
+113
+00:01:56,130 --> 00:01:58,700
+brings me to another point
+should I be compiling these myself or
+
+114
+00:01:58,700 --> 00:01:58,710
+should I be compiling these myself or
+ 
+
+115
+00:01:58,710 --> 00:02:00,050
+should I be compiling these myself or
+should I just be linking against
+
+116
+00:02:00,050 --> 00:02:00,060
+should I just be linking against
+ 
+
+117
+00:02:00,060 --> 00:02:03,050
+should I just be linking against
+pre-built binaries now for most serious
+
+118
+00:02:03,050 --> 00:02:03,060
+pre-built binaries now for most serious
+ 
+
+119
+00:02:03,060 --> 00:02:05,209
+pre-built binaries now for most serious
+projects I would absolutely recommend
+
+120
+00:02:05,209 --> 00:02:05,219
+projects I would absolutely recommend
+ 
+
+121
+00:02:05,219 --> 00:02:07,160
+projects I would absolutely recommend
+actually building the source code if
+
+122
+00:02:07,160 --> 00:02:07,170
+actually building the source code if
+ 
+
+123
+00:02:07,170 --> 00:02:08,719
+actually building the source code if
+you're using Visual Studio you can just
+
+124
+00:02:08,719 --> 00:02:08,729
+you're using Visual Studio you can just
+ 
+
+125
+00:02:08,729 --> 00:02:11,330
+you're using Visual Studio you can just
+add another project which contains your
+
+126
+00:02:11,330 --> 00:02:11,340
+add another project which contains your
+ 
+
+127
+00:02:11,340 --> 00:02:12,630
+add another project which contains your
+kind of source code of your
+
+128
+00:02:12,630 --> 00:02:12,640
+kind of source code of your
+ 
+
+129
+00:02:12,640 --> 00:02:14,340
+kind of source code of your
+dependency of your library and then
+
+130
+00:02:14,340 --> 00:02:14,350
+dependency of your library and then
+ 
+
+131
+00:02:14,350 --> 00:02:15,870
+dependency of your library and then
+compiled that into either a static or
+
+132
+00:02:15,870 --> 00:02:15,880
+compiled that into either a static or
+ 
+
+133
+00:02:15,880 --> 00:02:18,510
+compiled that into either a static or
+dynamic library however if you don't
+
+134
+00:02:18,510 --> 00:02:18,520
+dynamic library however if you don't
+ 
+
+135
+00:02:18,520 --> 00:02:20,370
+dynamic library however if you don't
+have access to the source code or if
+
+136
+00:02:20,370 --> 00:02:20,380
+have access to the source code or if
+ 
+
+137
+00:02:20,380 --> 00:02:21,449
+have access to the source code or if
+you're planning just this is a quick
+
+138
+00:02:21,449 --> 00:02:21,459
+you're planning just this is a quick
+ 
+
+139
+00:02:21,459 --> 00:02:22,620
+you're planning just this is a quick
+project I don't want to spend time
+
+140
+00:02:22,620 --> 00:02:22,630
+project I don't want to spend time
+ 
+
+141
+00:02:22,630 --> 00:02:24,030
+project I don't want to spend time
+setting this up because it's kind of a
+
+142
+00:02:24,030 --> 00:02:24,040
+setting this up because it's kind of a
+ 
+
+143
+00:02:24,040 --> 00:02:25,980
+setting this up because it's kind of a
+throwaway thing or it's just a it's
+
+144
+00:02:25,980 --> 00:02:25,990
+throwaway thing or it's just a it's
+ 
+
+145
+00:02:25,990 --> 00:02:28,350
+throwaway thing or it's just a it's
+nothing serious then I would probably
+
+146
+00:02:28,350 --> 00:02:28,360
+nothing serious then I would probably
+ 
+
+147
+00:02:28,360 --> 00:02:29,730
+nothing serious then I would probably
+lean against the binaries because it's
+
+148
+00:02:29,730 --> 00:02:29,740
+lean against the binaries because it's
+ 
+
+149
+00:02:29,740 --> 00:02:31,320
+lean against the binaries because it's
+just gonna be quicker and easier so
+
+150
+00:02:31,320 --> 00:02:31,330
+just gonna be quicker and easier so
+ 
+
+151
+00:02:31,330 --> 00:02:32,520
+just gonna be quicker and easier so
+today specifically we're going to be
+
+152
+00:02:32,520 --> 00:02:32,530
+today specifically we're going to be
+ 
+
+153
+00:02:32,530 --> 00:02:34,170
+today specifically we're going to be
+linking against binaries we're not going
+
+154
+00:02:34,170 --> 00:02:34,180
+linking against binaries we're not going
+ 
+
+155
+00:02:34,180 --> 00:02:35,850
+linking against binaries we're not going
+to be grabbing the source code of an
+
+156
+00:02:35,850 --> 00:02:35,860
+to be grabbing the source code of an
+ 
+
+157
+00:02:35,860 --> 00:02:37,230
+to be grabbing the source code of an
+actual kind of dependency of an actual
+
+158
+00:02:37,230 --> 00:02:37,240
+actual kind of dependency of an actual
+ 
+
+159
+00:02:37,240 --> 00:02:39,030
+actual kind of dependency of an actual
+library and compiling it ourselves I
+
+160
+00:02:39,030 --> 00:02:39,040
+library and compiling it ourselves I
+ 
+
+161
+00:02:39,040 --> 00:02:40,260
+library and compiling it ourselves I
+might save that for another video if
+
+162
+00:02:40,260 --> 00:02:40,270
+might save that for another video if
+ 
+
+163
+00:02:40,270 --> 00:02:41,670
+might save that for another video if
+you're interested in that let me know
+
+164
+00:02:41,670 --> 00:02:41,680
+you're interested in that let me know
+ 
+
+165
+00:02:41,680 --> 00:02:43,620
+you're interested in that let me know
+leave a comment below but today we're
+
+166
+00:02:43,620 --> 00:02:43,630
+leave a comment below but today we're
+ 
+
+167
+00:02:43,630 --> 00:02:44,970
+leave a comment below but today we're
+just gonna be dealing with binaries and
+
+168
+00:02:44,970 --> 00:02:44,980
+just gonna be dealing with binaries and
+ 
+
+169
+00:02:44,980 --> 00:02:46,290
+just gonna be dealing with binaries and
+specifically what we're going to be
+
+170
+00:02:46,290 --> 00:02:46,300
+specifically what we're going to be
+ 
+
+171
+00:02:46,300 --> 00:02:48,540
+specifically what we're going to be
+dealing with is a library called GL FW
+
+172
+00:02:48,540 --> 00:02:48,550
+dealing with is a library called GL FW
+ 
+
+173
+00:02:48,550 --> 00:02:50,670
+dealing with is a library called GL FW
+now my open GL series which is all about
+
+174
+00:02:50,670 --> 00:02:50,680
+now my open GL series which is all about
+ 
+
+175
+00:02:50,680 --> 00:02:52,320
+now my open GL series which is all about
+OpenGL and graphics program you saw like
+
+176
+00:02:52,320 --> 00:02:52,330
+OpenGL and graphics program you saw like
+ 
+
+177
+00:02:52,330 --> 00:02:54,060
+OpenGL and graphics program you saw like
+that in episode 2 which I've linked up
+
+178
+00:02:54,060 --> 00:02:54,070
+that in episode 2 which I've linked up
+ 
+
+179
+00:02:54,070 --> 00:02:55,770
+that in episode 2 which I've linked up
+there as well we actually did download
+
+180
+00:02:55,770 --> 00:02:55,780
+there as well we actually did download
+ 
+
+181
+00:02:55,780 --> 00:02:57,360
+there as well we actually did download
+gel of W and Lincoln so you can take a
+
+182
+00:02:57,360 --> 00:02:57,370
+gel of W and Lincoln so you can take a
+ 
+
+183
+00:02:57,370 --> 00:02:59,070
+gel of W and Lincoln so you can take a
+look at that if you'd like maybe I show
+
+184
+00:02:59,070 --> 00:02:59,080
+look at that if you'd like maybe I show
+ 
+
+185
+00:02:59,080 --> 00:03:01,080
+look at that if you'd like maybe I show
+some extras some extra things there but
+
+186
+00:03:01,080 --> 00:03:01,090
+some extras some extra things there but
+ 
+
+187
+00:03:01,090 --> 00:03:02,850
+some extras some extra things there but
+today we're actually going to go through
+
+188
+00:03:02,850 --> 00:03:02,860
+today we're actually going to go through
+ 
+
+189
+00:03:02,860 --> 00:03:04,890
+today we're actually going to go through
+it slowly and take a look at everything
+
+190
+00:03:04,890 --> 00:03:04,900
+it slowly and take a look at everything
+ 
+
+191
+00:03:04,900 --> 00:03:06,540
+it slowly and take a look at everything
+but if you kind of want to see it in a
+
+192
+00:03:06,540 --> 00:03:06,550
+but if you kind of want to see it in a
+ 
+
+193
+00:03:06,550 --> 00:03:09,030
+but if you kind of want to see it in a
+context of a real application then check
+
+194
+00:03:09,030 --> 00:03:09,040
+context of a real application then check
+ 
+
+195
+00:03:09,040 --> 00:03:10,800
+context of a real application then check
+that series out another thing to note is
+
+196
+00:03:10,800 --> 00:03:10,810
+that series out another thing to note is
+ 
+
+197
+00:03:10,810 --> 00:03:12,449
+that series out another thing to note is
+the binaries might not be available for
+
+198
+00:03:12,449 --> 00:03:12,459
+the binaries might not be available for
+ 
+
+199
+00:03:12,459 --> 00:03:14,340
+the binaries might not be available for
+your actual project right for your
+
+200
+00:03:14,340 --> 00:03:14,350
+your actual project right for your
+ 
+
+201
+00:03:14,350 --> 00:03:15,990
+your actual project right for your
+actual library that you want to link so
+
+202
+00:03:15,990 --> 00:03:16,000
+actual library that you want to link so
+ 
+
+203
+00:03:16,000 --> 00:03:18,000
+actual library that you want to link so
+you may actually be forced to build it
+
+204
+00:03:18,000 --> 00:03:18,010
+you may actually be forced to build it
+ 
+
+205
+00:03:18,010 --> 00:03:20,190
+you may actually be forced to build it
+yourself this is especially true with
+
+206
+00:03:20,190 --> 00:03:20,200
+yourself this is especially true with
+ 
+
+207
+00:03:20,200 --> 00:03:21,930
+yourself this is especially true with
+like Mac and Linux because for UNIX
+
+208
+00:03:21,930 --> 00:03:21,940
+like Mac and Linux because for UNIX
+ 
+
+209
+00:03:21,940 --> 00:03:23,430
+like Mac and Linux because for UNIX
+systems people usually just love
+
+210
+00:03:23,430 --> 00:03:23,440
+systems people usually just love
+ 
+
+211
+00:03:23,440 --> 00:03:26,039
+systems people usually just love
+building code for Windows a lot of
+
+212
+00:03:26,039 --> 00:03:26,049
+building code for Windows a lot of
+ 
+
+213
+00:03:26,049 --> 00:03:27,810
+building code for Windows a lot of
+people who use windows just want stuff
+
+214
+00:03:27,810 --> 00:03:27,820
+people who use windows just want stuff
+ 
+
+215
+00:03:27,820 --> 00:03:29,880
+people who use windows just want stuff
+to work like like me I just want things
+
+216
+00:03:29,880 --> 00:03:29,890
+to work like like me I just want things
+ 
+
+217
+00:03:29,890 --> 00:03:31,920
+to work like like me I just want things
+to work so that's why preview binaries
+
+218
+00:03:31,920 --> 00:03:31,930
+to work so that's why preview binaries
+ 
+
+219
+00:03:31,930 --> 00:03:33,569
+to work so that's why preview binaries
+exist and again I'm just saying that in
+
+220
+00:03:33,569 --> 00:03:33,579
+exist and again I'm just saying that in
+ 
+
+221
+00:03:33,579 --> 00:03:34,979
+exist and again I'm just saying that in
+a more kind of professional a lot of
+
+222
+00:03:34,979 --> 00:03:34,989
+a more kind of professional a lot of
+ 
+
+223
+00:03:34,989 --> 00:03:37,140
+a more kind of professional a lot of
+project in in a space where I actually
+
+224
+00:03:37,140 --> 00:03:37,150
+project in in a space where I actually
+ 
+
+225
+00:03:37,150 --> 00:03:39,539
+project in in a space where I actually
+had time I would for sure compile it
+
+226
+00:03:39,539 --> 00:03:39,549
+had time I would for sure compile it
+ 
+
+227
+00:03:39,549 --> 00:03:41,009
+had time I would for sure compile it
+myself because it helps with debugging
+
+228
+00:03:41,009 --> 00:03:41,019
+myself because it helps with debugging
+ 
+
+229
+00:03:41,019 --> 00:03:42,960
+myself because it helps with debugging
+it helps with if you want to modify the
+
+230
+00:03:42,960 --> 00:03:42,970
+it helps with if you want to modify the
+ 
+
+231
+00:03:42,970 --> 00:03:44,759
+it helps with if you want to modify the
+library and change it a little bit I do
+
+232
+00:03:44,759 --> 00:03:44,769
+library and change it a little bit I do
+ 
+
+233
+00:03:44,769 --> 00:03:46,590
+library and change it a little bit I do
+that quite frequently I just love having
+
+234
+00:03:46,590 --> 00:03:46,600
+that quite frequently I just love having
+ 
+
+235
+00:03:46,600 --> 00:03:48,390
+that quite frequently I just love having
+it having the source code right there in
+
+236
+00:03:48,390 --> 00:03:48,400
+it having the source code right there in
+ 
+
+237
+00:03:48,400 --> 00:03:50,640
+it having the source code right there in
+the visual studio solution but today
+
+238
+00:03:50,640 --> 00:03:50,650
+the visual studio solution but today
+ 
+
+239
+00:03:50,650 --> 00:03:52,560
+the visual studio solution but today
+let's talk about binaries so ever here
+
+240
+00:03:52,560 --> 00:03:52,570
+let's talk about binaries so ever here
+ 
+
+241
+00:03:52,570 --> 00:03:54,900
+let's talk about binaries so ever here
+we have Chillicothe org which contains
+
+242
+00:03:54,900 --> 00:03:54,910
+we have Chillicothe org which contains
+ 
+
+243
+00:03:54,910 --> 00:03:57,180
+we have Chillicothe org which contains
+the which is the gfw website there are a
+
+244
+00:03:57,180 --> 00:03:57,190
+the which is the gfw website there are a
+ 
+
+245
+00:03:57,190 --> 00:03:58,350
+the which is the gfw website there are a
+few downloads here if you click this
+
+246
+00:03:58,350 --> 00:03:58,360
+few downloads here if you click this
+ 
+
+247
+00:03:58,360 --> 00:03:59,490
+few downloads here if you click this
+download button and we'll download the
+
+248
+00:03:59,490 --> 00:03:59,500
+download button and we'll download the
+ 
+
+249
+00:03:59,500 --> 00:04:01,620
+download button and we'll download the
+source code for gfw but instead we're
+
+250
+00:04:01,620 --> 00:04:01,630
+source code for gfw but instead we're
+ 
+
+251
+00:04:01,630 --> 00:04:03,060
+source code for gfw but instead we're
+going to go to download and you can see
+
+252
+00:04:03,060 --> 00:04:03,070
+going to go to download and you can see
+ 
+
+253
+00:04:03,070 --> 00:04:04,680
+going to go to download and you can see
+that we have precompiled binaries for
+
+254
+00:04:04,680 --> 00:04:04,690
+that we have precompiled binaries for
+ 
+
+255
+00:04:04,690 --> 00:04:06,660
+that we have precompiled binaries for
+Windows another great example here you
+
+256
+00:04:06,660 --> 00:04:06,670
+Windows another great example here you
+ 
+
+257
+00:04:06,670 --> 00:04:08,550
+Windows another great example here you
+can see for Linux and Mac OS you have to
+
+258
+00:04:08,550 --> 00:04:08,560
+can see for Linux and Mac OS you have to
+ 
+
+259
+00:04:08,560 --> 00:04:10,199
+can see for Linux and Mac OS you have to
+compile it yourself but for Windows we
+
+260
+00:04:10,199 --> 00:04:10,209
+compile it yourself but for Windows we
+ 
+
+261
+00:04:10,209 --> 00:04:12,000
+compile it yourself but for Windows we
+have these binaries now this brings us
+
+262
+00:04:12,000 --> 00:04:12,010
+have these binaries now this brings us
+ 
+
+263
+00:04:12,010 --> 00:04:12,840
+have these binaries now this brings us
+to our first question
+
+264
+00:04:12,840 --> 00:04:12,850
+to our first question
+ 
+
+265
+00:04:12,850 --> 00:04:15,270
+to our first question
+do I want 32-bit binaries or 64-bit
+
+266
+00:04:15,270 --> 00:04:15,280
+do I want 32-bit binaries or 64-bit
+ 
+
+267
+00:04:15,280 --> 00:04:17,190
+do I want 32-bit binaries or 64-bit
+binaries this has nothing to do with
+
+268
+00:04:17,190 --> 00:04:17,200
+binaries this has nothing to do with
+ 
+
+269
+00:04:17,200 --> 00:04:19,110
+binaries this has nothing to do with
+your actual operating system if you're
+
+270
+00:04:19,110 --> 00:04:19,120
+your actual operating system if you're
+ 
+
+271
+00:04:19,120 --> 00:04:21,599
+your actual operating system if you're
+running Windows 10 64 bit like I am that
+
+272
+00:04:21,599 --> 00:04:21,609
+running Windows 10 64 bit like I am that
+ 
+
+273
+00:04:21,609 --> 00:04:22,800
+running Windows 10 64 bit like I am that
+doesn't mean that you should be grabbing
+
+274
+00:04:22,800 --> 00:04:22,810
+doesn't mean that you should be grabbing
+ 
+
+275
+00:04:22,810 --> 00:04:25,290
+doesn't mean that you should be grabbing
+the 64-bit binaries what that means or
+
+276
+00:04:25,290 --> 00:04:25,300
+the 64-bit binaries what that means or
+ 
+
+277
+00:04:25,300 --> 00:04:26,520
+the 64-bit binaries what that means or
+like the way that you choose the ones
+
+278
+00:04:26,520 --> 00:04:26,530
+like the way that you choose the ones
+ 
+
+279
+00:04:26,530 --> 00:04:28,559
+like the way that you choose the ones
+you want is for your target for like for
+
+280
+00:04:28,559 --> 00:04:28,569
+you want is for your target for like for
+ 
+
+281
+00:04:28,569 --> 00:04:30,540
+you want is for your target for like for
+your application target so if I'm
+
+282
+00:04:30,540 --> 00:04:30,550
+your application target so if I'm
+ 
+
+283
+00:04:30,550 --> 00:04:32,909
+your application target so if I'm
+compiling my application as an x86
+
+284
+00:04:32,909 --> 00:04:32,919
+compiling my application as an x86
+ 
+
+285
+00:04:32,919 --> 00:04:35,850
+compiling my application as an x86
+application as a win32 application then
+
+286
+00:04:35,850 --> 00:04:35,860
+application as a win32 application then
+ 
+
+287
+00:04:35,860 --> 00:04:37,890
+application as a win32 application then
+I would want the 32-bit binaries if I'm
+
+288
+00:04:37,890 --> 00:04:37,900
+I would want the 32-bit binaries if I'm
+ 
+
+289
+00:04:37,900 --> 00:04:39,779
+I would want the 32-bit binaries if I'm
+compiling a 64-bit application I was
+
+290
+00:04:39,779 --> 00:04:39,789
+compiling a 64-bit application I was
+ 
+
+291
+00:04:39,789 --> 00:04:41,520
+compiling a 64-bit application I was
+64-bit binaries make sure you match them
+
+292
+00:04:41,520 --> 00:04:41,530
+64-bit binaries make sure you match them
+ 
+
+293
+00:04:41,530 --> 00:04:43,379
+64-bit binaries make sure you match them
+together because if you don't they won't
+
+294
+00:04:43,379 --> 00:04:43,389
+together because if you don't they won't
+ 
+
+295
+00:04:43,389 --> 00:04:45,390
+together because if you don't they won't
+link so in this case I'm going to just
+
+296
+00:04:45,390 --> 00:04:45,400
+link so in this case I'm going to just
+ 
+
+297
+00:04:45,400 --> 00:04:47,070
+link so in this case I'm going to just
+be making a 32-bit application so I'm
+
+298
+00:04:47,070 --> 00:04:47,080
+be making a 32-bit application so I'm
+ 
+
+299
+00:04:47,080 --> 00:04:48,420
+be making a 32-bit application so I'm
+going to grab the 32-bit Windows
+
+300
+00:04:48,420 --> 00:04:48,430
+going to grab the 32-bit Windows
+ 
+
+301
+00:04:48,430 --> 00:04:50,100
+going to grab the 32-bit Windows
+binaries and download them once I've
+
+302
+00:04:50,100 --> 00:04:50,110
+binaries and download them once I've
+ 
+
+303
+00:04:50,110 --> 00:04:51,719
+binaries and download them once I've
+downloaded and extracted them we'll have
+
+304
+00:04:51,719 --> 00:04:51,729
+downloaded and extracted them we'll have
+ 
+
+305
+00:04:51,729 --> 00:04:53,369
+downloaded and extracted them we'll have
+this folder over here inside there we
+
+306
+00:04:53,369 --> 00:04:53,379
+this folder over here inside there we
+ 
+
+307
+00:04:53,379 --> 00:04:55,260
+this folder over here inside there we
+have a bunch of folders and some other
+
+308
+00:04:55,260 --> 00:04:55,270
+have a bunch of folders and some other
+ 
+
+309
+00:04:55,270 --> 00:04:56,939
+have a bunch of folders and some other
+text files and this is kind of the
+
+310
+00:04:56,939 --> 00:04:56,949
+text files and this is kind of the
+ 
+
+311
+00:04:56,949 --> 00:04:58,950
+text files and this is kind of the
+typical layout like yes all the typical
+
+312
+00:04:58,950 --> 00:04:58,960
+typical layout like yes all the typical
+ 
+
+313
+00:04:58,960 --> 00:05:00,689
+typical layout like yes all the typical
+organizational structure that we have
+
+314
+00:05:00,689 --> 00:05:00,699
+organizational structure that we have
+ 
+
+315
+00:05:00,699 --> 00:05:02,909
+organizational structure that we have
+with libraries in C++ there are two
+
+316
+00:05:02,909 --> 00:05:02,919
+with libraries in C++ there are two
+ 
+
+317
+00:05:02,919 --> 00:05:06,260
+with libraries in C++ there are two
+parts to a library usually includes and
+
+318
+00:05:06,260 --> 00:05:06,270
+parts to a library usually includes and
+ 
+
+319
+00:05:06,270 --> 00:05:08,640
+parts to a library usually includes and
+libraries right so an include kind of
+
+320
+00:05:08,640 --> 00:05:08,650
+libraries right so an include kind of
+ 
+
+321
+00:05:08,650 --> 00:05:10,200
+libraries right so an include kind of
+directory and a library directory or a
+
+322
+00:05:10,200 --> 00:05:10,210
+directory and a library directory or a
+ 
+
+323
+00:05:10,210 --> 00:05:12,570
+directory and a library directory or a
+Lib directory so what the include
+
+324
+00:05:12,570 --> 00:05:12,580
+Lib directory so what the include
+ 
+
+325
+00:05:12,580 --> 00:05:14,520
+Lib directory so what the include
+directory is is a bunch of header files
+
+326
+00:05:14,520 --> 00:05:14,530
+directory is is a bunch of header files
+ 
+
+327
+00:05:14,530 --> 00:05:16,379
+directory is is a bunch of header files
+if you don't know how linking works in C
+
+328
+00:05:16,379 --> 00:05:16,389
+if you don't know how linking works in C
+ 
+
+329
+00:05:16,389 --> 00:05:17,999
+if you don't know how linking works in C
+bottles or what I even mean by link you
+
+330
+00:05:17,999 --> 00:05:18,009
+bottles or what I even mean by link you
+ 
+
+331
+00:05:18,009 --> 00:05:19,469
+bottles or what I even mean by link you
+check out the house if it was linking
+
+332
+00:05:19,469 --> 00:05:19,479
+check out the house if it was linking
+ 
+
+333
+00:05:19,479 --> 00:05:21,390
+check out the house if it was linking
+works video that I've made in the top
+
+334
+00:05:21,390 --> 00:05:21,400
+works video that I've made in the top
+ 
+
+335
+00:05:21,400 --> 00:05:23,430
+works video that I've made in the top
+right corner there it covers this stuff
+
+336
+00:05:23,430 --> 00:05:23,440
+right corner there it covers this stuff
+ 
+
+337
+00:05:23,440 --> 00:05:25,140
+right corner there it covers this stuff
+in depth but basically the include
+
+338
+00:05:25,140 --> 00:05:25,150
+in depth but basically the include
+ 
+
+339
+00:05:25,150 --> 00:05:26,550
+in depth but basically the include
+directory has a bunch of header files
+
+340
+00:05:26,550 --> 00:05:26,560
+directory has a bunch of header files
+ 
+
+341
+00:05:26,560 --> 00:05:28,020
+directory has a bunch of header files
+that we need to use so that we can
+
+342
+00:05:28,020 --> 00:05:28,030
+that we need to use so that we can
+ 
+
+343
+00:05:28,030 --> 00:05:30,360
+that we need to use so that we can
+actually use functions that are in the
+
+344
+00:05:30,360 --> 00:05:30,370
+actually use functions that are in the
+ 
+
+345
+00:05:30,370 --> 00:05:31,980
+actually use functions that are in the
+pre-built binaries and then the lint
+
+346
+00:05:31,980 --> 00:05:31,990
+pre-built binaries and then the lint
+ 
+
+347
+00:05:31,990 --> 00:05:33,600
+pre-built binaries and then the lint
+directory has those pre-built binaries
+
+348
+00:05:33,600 --> 00:05:33,610
+directory has those pre-built binaries
+ 
+
+349
+00:05:33,610 --> 00:05:35,790
+directory has those pre-built binaries
+and there are usually two phases to this
+
+350
+00:05:35,790 --> 00:05:35,800
+and there are usually two phases to this
+ 
+
+351
+00:05:35,800 --> 00:05:38,159
+and there are usually two phases to this
+right there's usually dynamic libraries
+
+352
+00:05:38,159 --> 00:05:38,169
+right there's usually dynamic libraries
+ 
+
+353
+00:05:38,169 --> 00:05:39,870
+right there's usually dynamic libraries
+and Static libraries not all libraries
+
+354
+00:05:39,870 --> 00:05:39,880
+and Static libraries not all libraries
+ 
+
+355
+00:05:39,880 --> 00:05:41,939
+and Static libraries not all libraries
+it's actually surprised not all
+
+356
+00:05:41,939 --> 00:05:41,949
+it's actually surprised not all
+ 
+
+357
+00:05:41,949 --> 00:05:43,379
+it's actually surprised not all
+libraries apply both of them for you
+
+358
+00:05:43,379 --> 00:05:43,389
+libraries apply both of them for you
+ 
+
+359
+00:05:43,389 --> 00:05:45,360
+libraries apply both of them for you
+jello W does though and you can choose
+
+360
+00:05:45,360 --> 00:05:45,370
+jello W does though and you can choose
+ 
+
+361
+00:05:45,370 --> 00:05:46,800
+jello W does though and you can choose
+if you want to link statically or
+
+362
+00:05:46,800 --> 00:05:46,810
+if you want to link statically or
+ 
+
+363
+00:05:46,810 --> 00:05:49,019
+if you want to link statically or
+dynamically we're going to talk a lot
+
+364
+00:05:49,019 --> 00:05:49,029
+dynamically we're going to talk a lot
+ 
+
+365
+00:05:49,029 --> 00:05:51,120
+dynamically we're going to talk a lot
+about the differences between static and
+
+366
+00:05:51,120 --> 00:05:51,130
+about the differences between static and
+ 
+
+367
+00:05:51,130 --> 00:05:52,529
+about the differences between static and
+dynamic linking in another video
+
+368
+00:05:52,529 --> 00:05:52,539
+dynamic linking in another video
+ 
+
+369
+00:05:52,539 --> 00:05:55,230
+dynamic linking in another video
+specifically about that but I'll cover
+
+370
+00:05:55,230 --> 00:05:55,240
+specifically about that but I'll cover
+ 
+
+371
+00:05:55,240 --> 00:05:58,529
+specifically about that but I'll cover
+the differences for you kind of simply
+
+372
+00:05:58,529 --> 00:05:58,539
+the differences for you kind of simply
+ 
+
+373
+00:05:58,539 --> 00:06:01,019
+the differences for you kind of simply
+here static linking means that the
+
+374
+00:06:01,019 --> 00:06:01,029
+here static linking means that the
+ 
+
+375
+00:06:01,029 --> 00:06:03,089
+here static linking means that the
+library actually gets basically put into
+
+376
+00:06:03,089 --> 00:06:03,099
+library actually gets basically put into
+ 
+
+377
+00:06:03,099 --> 00:06:05,399
+library actually gets basically put into
+your executable so just it's inside your
+
+378
+00:06:05,399 --> 00:06:05,409
+your executable so just it's inside your
+ 
+
+379
+00:06:05,409 --> 00:06:07,589
+your executable so just it's inside your
+DX a file or whatever your executable is
+
+380
+00:06:07,589 --> 00:06:07,599
+DX a file or whatever your executable is
+ 
+
+381
+00:06:07,599 --> 00:06:09,420
+DX a file or whatever your executable is
+for your operating system whereas a
+
+382
+00:06:09,420 --> 00:06:09,430
+for your operating system whereas a
+ 
+
+383
+00:06:09,430 --> 00:06:11,370
+for your operating system whereas a
+dynamic library gets actually linked at
+
+384
+00:06:11,370 --> 00:06:11,380
+dynamic library gets actually linked at
+ 
+
+385
+00:06:11,380 --> 00:06:13,920
+dynamic library gets actually linked at
+runtime so you still do have some kind
+
+386
+00:06:13,920 --> 00:06:13,930
+runtime so you still do have some kind
+ 
+
+387
+00:06:13,930 --> 00:06:15,659
+runtime so you still do have some kind
+of linkage you can choose to alert a
+
+388
+00:06:15,659 --> 00:06:15,669
+of linkage you can choose to alert a
+ 
+
+389
+00:06:15,669 --> 00:06:18,330
+of linkage you can choose to alert a
+dynamic library kind of just on the fly
+
+390
+00:06:18,330 --> 00:06:18,340
+dynamic library kind of just on the fly
+ 
+
+391
+00:06:18,340 --> 00:06:19,800
+dynamic library kind of just on the fly
+literally there's a function called load
+
+392
+00:06:19,800 --> 00:06:19,810
+literally there's a function called load
+ 
+
+393
+00:06:19,810 --> 00:06:21,240
+literally there's a function called load
+library which you can use in the Windows
+
+394
+00:06:21,240 --> 00:06:21,250
+library which you can use in the Windows
+ 
+
+395
+00:06:21,250 --> 00:06:23,580
+library which you can use in the Windows
+API as an example and that will load you
+
+396
+00:06:23,580 --> 00:06:23,590
+API as an example and that will load you
+ 
+
+397
+00:06:23,590 --> 00:06:25,589
+API as an example and that will load you
+like your dynamic library and you can
+
+398
+00:06:25,589 --> 00:06:25,599
+like your dynamic library and you can
+ 
+
+399
+00:06:25,599 --> 00:06:27,480
+like your dynamic library and you can
+pull function pointers out of data stalk
+
+400
+00:06:27,480 --> 00:06:27,490
+pull function pointers out of data stalk
+ 
+
+401
+00:06:27,490 --> 00:06:28,629
+pull function pointers out of data stalk
+calling functions
+
+402
+00:06:28,629 --> 00:06:28,639
+calling functions
+ 
+
+403
+00:06:28,639 --> 00:06:30,760
+calling functions
+away but you can also have a kind of at
+
+404
+00:06:30,760 --> 00:06:30,770
+away but you can also have a kind of at
+ 
+
+405
+00:06:30,770 --> 00:06:33,760
+away but you can also have a kind of at
+the application launch it loads your DLL
+
+406
+00:06:33,760 --> 00:06:33,770
+the application launch it loads your DLL
+ 
+
+407
+00:06:33,770 --> 00:06:35,890
+the application launch it loads your DLL
+file which is your dynamic link library
+
+408
+00:06:35,890 --> 00:06:35,900
+file which is your dynamic link library
+ 
+
+409
+00:06:35,900 --> 00:06:37,029
+file which is your dynamic link library
+and what I'm going to talk too much in
+
+410
+00:06:37,029 --> 00:06:37,039
+and what I'm going to talk too much in
+ 
+
+411
+00:06:37,039 --> 00:06:38,739
+and what I'm going to talk too much in
+depth about this but there's just that
+
+412
+00:06:38,739 --> 00:06:38,749
+depth about this but there's just that
+ 
+
+413
+00:06:38,749 --> 00:06:40,510
+depth about this but there's just that
+that difference of whether or not your
+
+414
+00:06:40,510 --> 00:06:40,520
+that difference of whether or not your
+ 
+
+415
+00:06:40,520 --> 00:06:42,309
+that difference of whether or not your
+library actually gets compiled into your
+
+416
+00:06:42,309 --> 00:06:42,319
+library actually gets compiled into your
+ 
+
+417
+00:06:42,319 --> 00:06:45,580
+library actually gets compiled into your
+exe file or links into your sa file and
+
+418
+00:06:45,580 --> 00:06:45,590
+exe file or links into your sa file and
+ 
+
+419
+00:06:45,590 --> 00:06:47,350
+exe file or links into your sa file and
+actually having a separate file for your
+
+420
+00:06:47,350 --> 00:06:47,360
+actually having a separate file for your
+ 
+
+421
+00:06:47,360 --> 00:06:49,029
+actually having a separate file for your
+library at runtime which you need to
+
+422
+00:06:49,029 --> 00:06:49,039
+library at runtime which you need to
+ 
+
+423
+00:06:49,039 --> 00:06:51,429
+library at runtime which you need to
+have alongside your Exe file or just
+
+424
+00:06:51,429 --> 00:06:51,439
+have alongside your Exe file or just
+ 
+
+425
+00:06:51,439 --> 00:06:53,649
+have alongside your Exe file or just
+somewhere so the UAA file can actually
+
+426
+00:06:53,649 --> 00:06:53,659
+somewhere so the UAA file can actually
+ 
+
+427
+00:06:53,659 --> 00:06:55,390
+somewhere so the UAA file can actually
+load that different stuff because of
+
+428
+00:06:55,390 --> 00:06:55,400
+load that different stuff because of
+ 
+
+429
+00:06:55,400 --> 00:06:57,429
+load that different stuff because of
+that kind of dependency of you now need
+
+430
+00:06:57,429 --> 00:06:57,439
+that kind of dependency of you now need
+ 
+
+431
+00:06:57,439 --> 00:07:00,219
+that kind of dependency of you now need
+to have a DLL file as well as your exa
+
+432
+00:07:00,219 --> 00:07:00,229
+to have a DLL file as well as your exa
+ 
+
+433
+00:07:00,229 --> 00:07:02,649
+to have a DLL file as well as your exa
+file usually I like to do static linking
+
+434
+00:07:02,649 --> 00:07:02,659
+file usually I like to do static linking
+ 
+
+435
+00:07:02,659 --> 00:07:05,200
+file usually I like to do static linking
+whenever possible static linking is also
+
+436
+00:07:05,200 --> 00:07:05,210
+whenever possible static linking is also
+ 
+
+437
+00:07:05,210 --> 00:07:07,089
+whenever possible static linking is also
+technically faster because the compiler
+
+438
+00:07:07,089 --> 00:07:07,099
+technically faster because the compiler
+ 
+
+439
+00:07:07,099 --> 00:07:08,800
+technically faster because the compiler
+or the link can actually perform kind of
+
+440
+00:07:08,800 --> 00:07:08,810
+or the link can actually perform kind of
+ 
+
+441
+00:07:08,810 --> 00:07:10,450
+or the link can actually perform kind of
+link time optimisation and all that
+
+442
+00:07:10,450 --> 00:07:10,460
+link time optimisation and all that
+ 
+
+443
+00:07:10,460 --> 00:07:12,550
+link time optimisation and all that
+stuff linking statically can technically
+
+444
+00:07:12,550 --> 00:07:12,560
+stuff linking statically can technically
+ 
+
+445
+00:07:12,560 --> 00:07:14,980
+stuff linking statically can technically
+result in a faster application because
+
+446
+00:07:14,980 --> 00:07:14,990
+result in a faster application because
+ 
+
+447
+00:07:14,990 --> 00:07:17,140
+result in a faster application because
+there are several optimizations that can
+
+448
+00:07:17,140 --> 00:07:17,150
+there are several optimizations that can
+ 
+
+449
+00:07:17,150 --> 00:07:19,689
+there are several optimizations that can
+be applied since we actually know the
+
+450
+00:07:19,689 --> 00:07:19,699
+be applied since we actually know the
+ 
+
+451
+00:07:19,699 --> 00:07:21,219
+be applied since we actually know the
+function that we're linking kind of add
+
+452
+00:07:21,219 --> 00:07:21,229
+function that we're linking kind of add
+ 
+
+453
+00:07:21,229 --> 00:07:23,950
+function that we're linking kind of add
+add actual about link time whereas with
+
+454
+00:07:23,950 --> 00:07:23,960
+add actual about link time whereas with
+ 
+
+455
+00:07:23,960 --> 00:07:25,540
+add actual about link time whereas with
+dynamic libraries we all know what's
+
+456
+00:07:25,540 --> 00:07:25,550
+dynamic libraries we all know what's
+ 
+
+457
+00:07:25,550 --> 00:07:26,950
+dynamic libraries we all know what's
+gonna happen we have to leave it intact
+
+458
+00:07:26,950 --> 00:07:26,960
+gonna happen we have to leave it intact
+ 
+
+459
+00:07:26,960 --> 00:07:28,629
+gonna happen we have to leave it intact
+and when the library actually gets
+
+460
+00:07:28,629 --> 00:07:28,639
+and when the library actually gets
+ 
+
+461
+00:07:28,639 --> 00:07:29,920
+and when the library actually gets
+bloated by our application of runtime
+
+462
+00:07:29,920 --> 00:07:29,930
+bloated by our application of runtime
+ 
+
+463
+00:07:29,930 --> 00:07:31,600
+bloated by our application of runtime
+that's one that parts kind of get
+
+464
+00:07:31,600 --> 00:07:31,610
+that's one that parts kind of get
+ 
+
+465
+00:07:31,610 --> 00:07:35,110
+that's one that parts kind of get
+patched up so usually static linking is
+
+466
+00:07:35,110 --> 00:07:35,120
+patched up so usually static linking is
+ 
+
+467
+00:07:35,120 --> 00:07:36,519
+patched up so usually static linking is
+the way to go but for this video I'm
+
+468
+00:07:36,519 --> 00:07:36,529
+the way to go but for this video I'm
+ 
+
+469
+00:07:36,529 --> 00:07:37,929
+the way to go but for this video I'm
+going to demonstrate both of those
+
+470
+00:07:37,929 --> 00:07:37,939
+going to demonstrate both of those
+ 
+
+471
+00:07:37,939 --> 00:07:39,969
+going to demonstrate both of those
+strategies so again we have the include
+
+472
+00:07:39,969 --> 00:07:39,979
+strategies so again we have the include
+ 
+
+473
+00:07:39,979 --> 00:07:41,679
+strategies so again we have the include
+files and then we have the library files
+
+474
+00:07:41,679 --> 00:07:41,689
+files and then we have the library files
+ 
+
+475
+00:07:41,689 --> 00:07:43,269
+files and then we have the library files
+to kind of components that we need is
+
+476
+00:07:43,269 --> 00:07:43,279
+to kind of components that we need is
+ 
+
+477
+00:07:43,279 --> 00:07:45,369
+to kind of components that we need is
+set up so for our compiler in our visual
+
+478
+00:07:45,369 --> 00:07:45,379
+set up so for our compiler in our visual
+ 
+
+479
+00:07:45,379 --> 00:07:47,350
+set up so for our compiler in our visual
+studio project we have to point it to
+
+480
+00:07:47,350 --> 00:07:47,360
+studio project we have to point it to
+ 
+
+481
+00:07:47,360 --> 00:07:49,329
+studio project we have to point it to
+the header files to the include file so
+
+482
+00:07:49,329 --> 00:07:49,339
+the header files to the include file so
+ 
+
+483
+00:07:49,339 --> 00:07:50,889
+the header files to the include file so
+that we actually know which functions we
+
+484
+00:07:50,889 --> 00:07:50,899
+that we actually know which functions we
+ 
+
+485
+00:07:50,899 --> 00:07:52,809
+that we actually know which functions we
+have available to us and so that we have
+
+486
+00:07:52,809 --> 00:07:52,819
+have available to us and so that we have
+ 
+
+487
+00:07:52,819 --> 00:07:54,700
+have available to us and so that we have
+those function declarations that really
+
+488
+00:07:54,700 --> 00:07:54,710
+those function declarations that really
+ 
+
+489
+00:07:54,710 --> 00:07:56,139
+those function declarations that really
+there's symbol declarations because they
+
+490
+00:07:56,139 --> 00:07:56,149
+there's symbol declarations because they
+ 
+
+491
+00:07:56,149 --> 00:07:57,850
+there's symbol declarations because they
+could also be variables I'm just using
+
+492
+00:07:57,850 --> 00:07:57,860
+could also be variables I'm just using
+ 
+
+493
+00:07:57,860 --> 00:08:00,399
+could also be variables I'm just using
+functions as an example and then we also
+
+494
+00:08:00,399 --> 00:08:00,409
+functions as an example and then we also
+ 
+
+495
+00:08:00,409 --> 00:08:02,619
+functions as an example and then we also
+have to point our linker to the library
+
+496
+00:08:02,619 --> 00:08:02,629
+have to point our linker to the library
+ 
+
+497
+00:08:02,629 --> 00:08:03,760
+have to point our linker to the library
+files and I'm waving my hands around
+
+498
+00:08:03,760 --> 00:08:03,770
+files and I'm waving my hands around
+ 
+
+499
+00:08:03,770 --> 00:08:05,110
+files and I'm waving my hands around
+love that that's just how I talks to
+
+500
+00:08:05,110 --> 00:08:05,120
+love that that's just how I talks to
+ 
+
+501
+00:08:05,120 --> 00:08:06,700
+love that that's just how I talks to
+deal with it and then we also need to
+
+502
+00:08:06,700 --> 00:08:06,710
+deal with it and then we also need to
+ 
+
+503
+00:08:06,710 --> 00:08:09,219
+deal with it and then we also need to
+tell our linker this is my library file
+
+504
+00:08:09,219 --> 00:08:09,229
+tell our linker this is my library file
+ 
+
+505
+00:08:09,229 --> 00:08:10,990
+tell our linker this is my library file
+I want you to link this so that we
+
+506
+00:08:10,990 --> 00:08:11,000
+I want you to link this so that we
+ 
+
+507
+00:08:11,000 --> 00:08:12,700
+I want you to link this so that we
+actually get the function definitions
+
+508
+00:08:12,700 --> 00:08:12,710
+actually get the function definitions
+ 
+
+509
+00:08:12,710 --> 00:08:14,920
+actually get the function definitions
+linked correctly let's go ahead and do
+
+510
+00:08:14,920 --> 00:08:14,930
+linked correctly let's go ahead and do
+ 
+
+511
+00:08:14,930 --> 00:08:15,969
+linked correctly let's go ahead and do
+that for both static and dynamic
+
+512
+00:08:15,969 --> 00:08:15,979
+that for both static and dynamic
+ 
+
+513
+00:08:15,979 --> 00:08:18,189
+that for both static and dynamic
+libraries so I bought this hollow world
+
+514
+00:08:18,189 --> 00:08:18,199
+libraries so I bought this hollow world
+ 
+
+515
+00:08:18,199 --> 00:08:19,659
+libraries so I bought this hollow world
+project here in Visual Studio it's very
+
+516
+00:08:19,659 --> 00:08:19,669
+project here in Visual Studio it's very
+ 
+
+517
+00:08:19,669 --> 00:08:21,279
+project here in Visual Studio it's very
+basic stuff but what I'm actually going
+
+518
+00:08:21,279 --> 00:08:21,289
+basic stuff but what I'm actually going
+ 
+
+519
+00:08:21,289 --> 00:08:23,679
+basic stuff but what I'm actually going
+to do is inside the solution directory
+
+520
+00:08:23,679 --> 00:08:23,689
+to do is inside the solution directory
+ 
+
+521
+00:08:23,689 --> 00:08:25,869
+to do is inside the solution directory
+make a folder called dependencies this
+
+522
+00:08:25,869 --> 00:08:25,879
+make a folder called dependencies this
+ 
+
+523
+00:08:25,879 --> 00:08:28,149
+make a folder called dependencies this
+is how I actually manage my dependencies
+
+524
+00:08:28,149 --> 00:08:28,159
+is how I actually manage my dependencies
+ 
+
+525
+00:08:28,159 --> 00:08:30,369
+is how I actually manage my dependencies
+in my libraries inside dependencies I'll
+
+526
+00:08:30,369 --> 00:08:30,379
+in my libraries inside dependencies I'll
+ 
+
+527
+00:08:30,379 --> 00:08:32,290
+in my libraries inside dependencies I'll
+make another folder called GFW and
+
+528
+00:08:32,290 --> 00:08:32,300
+make another folder called GFW and
+ 
+
+529
+00:08:32,300 --> 00:08:34,899
+make another folder called GFW and
+inside there I'm going to put the files
+
+530
+00:08:34,899 --> 00:08:34,909
+inside there I'm going to put the files
+ 
+
+531
+00:08:34,909 --> 00:08:36,639
+inside there I'm going to put the files
+that I actually downloaded which are the
+
+532
+00:08:36,639 --> 00:08:36,649
+that I actually downloaded which are the
+ 
+
+533
+00:08:36,649 --> 00:08:40,110
+that I actually downloaded which are the
+GLW library so include and live CC 2015
+
+534
+00:08:40,110 --> 00:08:40,120
+GLW library so include and live CC 2015
+ 
+
+535
+00:08:40,120 --> 00:08:41,219
+GLW library so include and live CC 2015
+you can see here that they've actually
+
+536
+00:08:41,219 --> 00:08:41,229
+you can see here that they've actually
+ 
+
+537
+00:08:41,229 --> 00:08:43,529
+you can see here that they've actually
+appended kind of which compiled they
+
+538
+00:08:43,529 --> 00:08:43,539
+appended kind of which compiled they
+ 
+
+539
+00:08:43,539 --> 00:08:45,210
+appended kind of which compiled they
+used to actually compile this this
+
+540
+00:08:45,210 --> 00:08:45,220
+used to actually compile this this
+ 
+
+541
+00:08:45,220 --> 00:08:48,660
+used to actually compile this this
+library files form in gwgw 64 and then
+
+542
+00:08:48,660 --> 00:08:48,670
+library files form in gwgw 64 and then
+ 
+
+543
+00:08:48,670 --> 00:08:50,640
+library files form in gwgw 64 and then
+basically all these versions of Visual
+
+544
+00:08:50,640 --> 00:08:50,650
+basically all these versions of Visual
+ 
+
+545
+00:08:50,650 --> 00:08:52,560
+basically all these versions of Visual
+Studio will just pick the latest one it
+
+546
+00:08:52,560 --> 00:08:52,570
+Studio will just pick the latest one it
+ 
+
+547
+00:08:52,570 --> 00:08:54,360
+Studio will just pick the latest one it
+doesn't really matter in me at the end
+
+548
+00:08:54,360 --> 00:08:54,370
+doesn't really matter in me at the end
+ 
+
+549
+00:08:54,370 --> 00:08:55,950
+doesn't really matter in me at the end
+of the day they are just kind of
+
+550
+00:08:55,950 --> 00:08:55,960
+of the day they are just kind of
+ 
+
+551
+00:08:55,960 --> 00:08:57,780
+of the day they are just kind of
+compiled binaries and they will work
+
+552
+00:08:57,780 --> 00:08:57,790
+compiled binaries and they will work
+ 
+
+553
+00:08:57,790 --> 00:08:59,610
+compiled binaries and they will work
+with kind of either one but we want to
+
+554
+00:08:59,610 --> 00:08:59,620
+with kind of either one but we want to
+ 
+
+555
+00:08:59,620 --> 00:09:01,440
+with kind of either one but we want to
+use the one that's most compatible with
+
+556
+00:09:01,440 --> 00:09:01,450
+use the one that's most compatible with
+ 
+
+557
+00:09:01,450 --> 00:09:04,110
+use the one that's most compatible with
+our current tool chain which is BC 2015
+
+558
+00:09:04,110 --> 00:09:04,120
+our current tool chain which is BC 2015
+ 
+
+559
+00:09:04,120 --> 00:09:06,540
+our current tool chain which is BC 2015
+because we're using video studio 2017 so
+
+560
+00:09:06,540 --> 00:09:06,550
+because we're using video studio 2017 so
+ 
+
+561
+00:09:06,550 --> 00:09:08,760
+because we're using video studio 2017 so
+I'll copy that and the include into this
+
+562
+00:09:08,760 --> 00:09:08,770
+I'll copy that and the include into this
+ 
+
+563
+00:09:08,770 --> 00:09:11,460
+I'll copy that and the include into this
+folder here include you can see has a
+
+564
+00:09:11,460 --> 00:09:11,470
+folder here include you can see has a
+ 
+
+565
+00:09:11,470 --> 00:09:12,990
+folder here include you can see has a
+gel FLV folder and then a bunch of
+
+566
+00:09:12,990 --> 00:09:13,000
+gel FLV folder and then a bunch of
+ 
+
+567
+00:09:13,000 --> 00:09:15,900
+gel FLV folder and then a bunch of
+paedophiles perfect and Lib has three
+
+568
+00:09:15,900 --> 00:09:15,910
+paedophiles perfect and Lib has three
+ 
+
+569
+00:09:15,910 --> 00:09:18,960
+paedophiles perfect and Lib has three
+files for us gow3 dll is the one time
+
+570
+00:09:18,960 --> 00:09:18,970
+files for us gow3 dll is the one time
+ 
+
+571
+00:09:18,970 --> 00:09:20,910
+files for us gow3 dll is the one time
+kind of dynamic link library that we
+
+572
+00:09:20,910 --> 00:09:20,920
+kind of dynamic link library that we
+ 
+
+573
+00:09:20,920 --> 00:09:22,410
+kind of dynamic link library that we
+actually use if we're linking
+
+574
+00:09:22,410 --> 00:09:22,420
+actually use if we're linking
+ 
+
+575
+00:09:22,420 --> 00:09:25,710
+actually use if we're linking
+dynamically at runtime and gow3 DLL dot
+
+576
+00:09:25,710 --> 00:09:25,720
+dynamically at runtime and gow3 DLL dot
+ 
+
+577
+00:09:25,720 --> 00:09:27,690
+dynamically at runtime and gow3 DLL dot
+Lib is actually kind of the static
+
+578
+00:09:27,690 --> 00:09:27,700
+Lib is actually kind of the static
+ 
+
+579
+00:09:27,700 --> 00:09:30,269
+Lib is actually kind of the static
+library that we use with the DLL so that
+
+580
+00:09:30,269 --> 00:09:30,279
+library that we use with the DLL so that
+ 
+
+581
+00:09:30,279 --> 00:09:31,980
+library that we use with the DLL so that
+we don't have to actually ask the DLL
+
+582
+00:09:31,980 --> 00:09:31,990
+we don't have to actually ask the DLL
+ 
+
+583
+00:09:31,990 --> 00:09:34,320
+we don't have to actually ask the DLL
+hey can I please have a bunch of
+
+584
+00:09:34,320 --> 00:09:34,330
+hey can I please have a bunch of
+ 
+
+585
+00:09:34,330 --> 00:09:35,490
+hey can I please have a bunch of
+function pointers to all of these
+
+586
+00:09:35,490 --> 00:09:35,500
+function pointers to all of these
+ 
+
+587
+00:09:35,500 --> 00:09:37,620
+function pointers to all of these
+functions the idea is that this Lib file
+
+588
+00:09:37,620 --> 00:09:37,630
+functions the idea is that this Lib file
+ 
+
+589
+00:09:37,630 --> 00:09:40,140
+functions the idea is that this Lib file
+actually contains all of the locations
+
+590
+00:09:40,140 --> 00:09:40,150
+actually contains all of the locations
+ 
+
+591
+00:09:40,150 --> 00:09:41,850
+actually contains all of the locations
+of the functions and symbols inside jela
+
+592
+00:09:41,850 --> 00:09:41,860
+of the functions and symbols inside jela
+ 
+
+593
+00:09:41,860 --> 00:09:44,610
+of the functions and symbols inside jela
+w3 DLL so that we can actually link
+
+594
+00:09:44,610 --> 00:09:44,620
+w3 DLL so that we can actually link
+ 
+
+595
+00:09:44,620 --> 00:09:46,530
+w3 DLL so that we can actually link
+against them at compile time so in
+
+596
+00:09:46,530 --> 00:09:46,540
+against them at compile time so in
+ 
+
+597
+00:09:46,540 --> 00:09:47,910
+against them at compile time so in
+comparison if we didn't have this Lib
+
+598
+00:09:47,910 --> 00:09:47,920
+comparison if we didn't have this Lib
+ 
+
+599
+00:09:47,920 --> 00:09:49,800
+comparison if we didn't have this Lib
+file we could still use this stuff how
+
+600
+00:09:49,800 --> 00:09:49,810
+file we could still use this stuff how
+ 
+
+601
+00:09:49,810 --> 00:09:52,079
+file we could still use this stuff how
+we have to ask the DLL file for each
+
+602
+00:09:52,079 --> 00:09:52,089
+we have to ask the DLL file for each
+ 
+
+603
+00:09:52,089 --> 00:09:54,269
+we have to ask the DLL file for each
+function by name and actually be like
+
+604
+00:09:54,269 --> 00:09:54,279
+function by name and actually be like
+ 
+
+605
+00:09:54,279 --> 00:09:56,760
+function by name and actually be like
+hey I want jillyfell B in it or whatever
+
+606
+00:09:56,760 --> 00:09:56,770
+hey I want jillyfell B in it or whatever
+ 
+
+607
+00:09:56,770 --> 00:09:58,199
+hey I want jillyfell B in it or whatever
+but this live file already kind of
+
+608
+00:09:58,199 --> 00:09:58,209
+but this live file already kind of
+ 
+
+609
+00:09:58,209 --> 00:09:59,790
+but this live file already kind of
+contains all of those locations for us
+
+610
+00:09:59,790 --> 00:09:59,800
+contains all of those locations for us
+ 
+
+611
+00:09:59,800 --> 00:10:01,110
+contains all of those locations for us
+so the linker can just link to them
+
+612
+00:10:01,110 --> 00:10:01,120
+so the linker can just link to them
+ 
+
+613
+00:10:01,120 --> 00:10:03,120
+so the linker can just link to them
+immediately gelatin b3 to live which you
+
+614
+00:10:03,120 --> 00:10:03,130
+immediately gelatin b3 to live which you
+ 
+
+615
+00:10:03,130 --> 00:10:04,470
+immediately gelatin b3 to live which you
+can see is significantly bigger than the
+
+616
+00:10:04,470 --> 00:10:04,480
+can see is significantly bigger than the
+ 
+
+617
+00:10:04,480 --> 00:10:06,690
+can see is significantly bigger than the
+other ones is the static library so this
+
+618
+00:10:06,690 --> 00:10:06,700
+other ones is the static library so this
+ 
+
+619
+00:10:06,700 --> 00:10:08,040
+other ones is the static library so this
+is what we linked if we don't want
+
+620
+00:10:08,040 --> 00:10:08,050
+is what we linked if we don't want
+ 
+
+621
+00:10:08,050 --> 00:10:10,170
+is what we linked if we don't want
+compile time linking and if we do that
+
+622
+00:10:10,170 --> 00:10:10,180
+compile time linking and if we do that
+ 
+
+623
+00:10:10,180 --> 00:10:12,030
+compile time linking and if we do that
+we don't need this DLL file to be
+
+624
+00:10:12,030 --> 00:10:12,040
+we don't need this DLL file to be
+ 
+
+625
+00:10:12,040 --> 00:10:15,000
+we don't need this DLL file to be
+without Exe file at runtime okay cool so
+
+626
+00:10:15,000 --> 00:10:15,010
+without Exe file at runtime okay cool so
+ 
+
+627
+00:10:15,010 --> 00:10:16,350
+without Exe file at runtime okay cool so
+let's actually link this stuff I'm going
+
+628
+00:10:16,350 --> 00:10:16,360
+let's actually link this stuff I'm going
+ 
+
+629
+00:10:16,360 --> 00:10:17,820
+let's actually link this stuff I'm going
+to right click on my hello world project
+
+630
+00:10:17,820 --> 00:10:17,830
+to right click on my hello world project
+ 
+
+631
+00:10:17,830 --> 00:10:19,890
+to right click on my hello world project
+hit properties and the first thing I'll
+
+632
+00:10:19,890 --> 00:10:19,900
+hit properties and the first thing I'll
+ 
+
+633
+00:10:19,900 --> 00:10:22,500
+hit properties and the first thing I'll
+actually do go to C C++ general and then
+
+634
+00:10:22,500 --> 00:10:22,510
+actually do go to C C++ general and then
+ 
+
+635
+00:10:22,510 --> 00:10:24,329
+actually do go to C C++ general and then
+in additional include directories I'm
+
+636
+00:10:24,329 --> 00:10:24,339
+in additional include directories I'm
+ 
+
+637
+00:10:24,339 --> 00:10:26,160
+in additional include directories I'm
+going to specify my additional include
+
+638
+00:10:26,160 --> 00:10:26,170
+going to specify my additional include
+ 
+
+639
+00:10:26,170 --> 00:10:28,530
+going to specify my additional include
+directory now note your configuration
+
+640
+00:10:28,530 --> 00:10:28,540
+directory now note your configuration
+ 
+
+641
+00:10:28,540 --> 00:10:30,060
+directory now note your configuration
+and platform make sure you're editing
+
+642
+00:10:30,060 --> 00:10:30,070
+and platform make sure you're editing
+ 
+
+643
+00:10:30,070 --> 00:10:31,920
+and platform make sure you're editing
+the right ones I obviously want this to
+
+644
+00:10:31,920 --> 00:10:31,930
+the right ones I obviously want this to
+ 
+
+645
+00:10:31,930 --> 00:10:33,480
+the right ones I obviously want this to
+apply for all configurations so I'll
+
+646
+00:10:33,480 --> 00:10:33,490
+apply for all configurations so I'll
+ 
+
+647
+00:10:33,490 --> 00:10:35,010
+apply for all configurations so I'll
+just hit all configurations now the
+
+648
+00:10:35,010 --> 00:10:35,020
+just hit all configurations now the
+ 
+
+649
+00:10:35,020 --> 00:10:36,660
+just hit all configurations now the
+include directory is the actual
+
+650
+00:10:36,660 --> 00:10:36,670
+include directory is the actual
+ 
+
+651
+00:10:36,670 --> 00:10:38,460
+include directory is the actual
+directory that goes each of this include
+
+652
+00:10:38,460 --> 00:10:38,470
+directory that goes each of this include
+ 
+
+653
+00:10:38,470 --> 00:10:40,740
+directory that goes each of this include
+folder so that's it I could just copy
+
+654
+00:10:40,740 --> 00:10:40,750
+folder so that's it I could just copy
+ 
+
+655
+00:10:40,750 --> 00:10:42,750
+folder so that's it I could just copy
+this directory but obviously you can see
+
+656
+00:10:42,750 --> 00:10:42,760
+this directory but obviously you can see
+ 
+
+657
+00:10:42,760 --> 00:10:44,820
+this directory but obviously you can see
+that it's in C uses yarn documents very
+
+658
+00:10:44,820 --> 00:10:44,830
+that it's in C uses yarn documents very
+ 
+
+659
+00:10:44,830 --> 00:10:47,130
+that it's in C uses yarn documents very
+specific to my computer if someone ends
+
+660
+00:10:47,130 --> 00:10:47,140
+specific to my computer if someone ends
+ 
+
+661
+00:10:47,140 --> 00:10:48,690
+specific to my computer if someone ends
+up cloning this from github or something
+
+662
+00:10:48,690 --> 00:10:48,700
+up cloning this from github or something
+ 
+
+663
+00:10:48,700 --> 00:10:50,250
+up cloning this from github or something
+like that they're not gonna have this
+
+664
+00:10:50,250 --> 00:10:50,260
+like that they're not gonna have this
+ 
+
+665
+00:10:50,260 --> 00:10:51,750
+like that they're not gonna have this
+path and that code isn't going to
+
+666
+00:10:51,750 --> 00:10:51,760
+path and that code isn't going to
+ 
+
+667
+00:10:51,760 --> 00:10:54,060
+path and that code isn't going to
+compile what I actually want to do is
+
+668
+00:10:54,060 --> 00:10:54,070
+compile what I actually want to do is
+ 
+
+669
+00:10:54,070 --> 00:10:56,640
+compile what I actually want to do is
+have a path that is relative to this
+
+670
+00:10:56,640 --> 00:10:56,650
+have a path that is relative to this
+ 
+
+671
+00:10:56,650 --> 00:10:59,370
+have a path that is relative to this
+actual directory so hollow world is the
+
+672
+00:10:59,370 --> 00:10:59,380
+actual directory so hollow world is the
+ 
+
+673
+00:10:59,380 --> 00:11:00,750
+actual directory so hollow world is the
+directory with my solution right
+
+674
+00:11:00,750 --> 00:11:00,760
+directory with my solution right
+ 
+
+675
+00:11:00,760 --> 00:11:02,460
+directory with my solution right
+everyone's going to have that if they
+
+676
+00:11:02,460 --> 00:11:02,470
+everyone's going to have that if they
+ 
+
+677
+00:11:02,470 --> 00:11:04,079
+everyone's going to have that if they
+check out my repository because this is
+
+678
+00:11:04,079 --> 00:11:04,089
+check out my repository because this is
+ 
+
+679
+00:11:04,089 --> 00:11:07,020
+check out my repository because this is
+my repository so inside it so starting
+
+680
+00:11:07,020 --> 00:11:07,030
+my repository so inside it so starting
+ 
+
+681
+00:11:07,030 --> 00:11:09,420
+my repository so inside it so starting
+from this solution file which I can do
+
+682
+00:11:09,420 --> 00:11:09,430
+from this solution file which I can do
+ 
+
+683
+00:11:09,430 --> 00:11:12,300
+from this solution file which I can do
+by typing in solution this is a macro
+
+684
+00:11:12,300 --> 00:11:12,310
+by typing in solution this is a macro
+ 
+
+685
+00:11:12,310 --> 00:11:14,340
+by typing in solution this is a macro
+that you can use in Visual Studio if I
+
+686
+00:11:14,340 --> 00:11:14,350
+that you can use in Visual Studio if I
+ 
+
+687
+00:11:14,350 --> 00:11:16,800
+that you can use in Visual Studio if I
+go under here into edit you can see that
+
+688
+00:11:16,800 --> 00:11:16,810
+go under here into edit you can see that
+ 
+
+689
+00:11:16,810 --> 00:11:19,199
+go under here into edit you can see that
+it actually evaluates to this value
+
+690
+00:11:19,199 --> 00:11:19,209
+it actually evaluates to this value
+ 
+
+691
+00:11:19,209 --> 00:11:21,480
+it actually evaluates to this value
+which is the solution directory if I hit
+
+692
+00:11:21,480 --> 00:11:21,490
+which is the solution directory if I hit
+ 
+
+693
+00:11:21,490 --> 00:11:23,490
+which is the solution directory if I hit
+macros over here I can see all of my
+
+694
+00:11:23,490 --> 00:11:23,500
+macros over here I can see all of my
+ 
+
+695
+00:11:23,500 --> 00:11:25,920
+macros over here I can see all of my
+macros and I can type in like solution
+
+696
+00:11:25,920 --> 00:11:25,930
+macros and I can type in like solution
+ 
+
+697
+00:11:25,930 --> 00:11:27,720
+macros and I can type in like solution
+de as an example and you can see what it
+
+698
+00:11:27,720 --> 00:11:27,730
+de as an example and you can see what it
+ 
+
+699
+00:11:27,730 --> 00:11:29,400
+de as an example and you can see what it
+is there's also things like project
+
+700
+00:11:29,400 --> 00:11:29,410
+is there's also things like project
+ 
+
+701
+00:11:29,410 --> 00:11:31,110
+is there's also things like project
+directory which is the directory of the
+
+702
+00:11:31,110 --> 00:11:31,120
+directory which is the directory of the
+ 
+
+703
+00:11:31,120 --> 00:11:32,610
+directory which is the directory of the
+project you can see that it's inside
+
+704
+00:11:32,610 --> 00:11:32,620
+project you can see that it's inside
+ 
+
+705
+00:11:32,620 --> 00:11:34,920
+project you can see that it's inside
+another hello world folder but the one
+
+706
+00:11:34,920 --> 00:11:34,930
+another hello world folder but the one
+ 
+
+707
+00:11:34,930 --> 00:11:36,270
+another hello world folder but the one
+that we care about it's virgin directory
+
+708
+00:11:36,270 --> 00:11:36,280
+that we care about it's virgin directory
+ 
+
+709
+00:11:36,280 --> 00:11:38,310
+that we care about it's virgin directory
+so we'll start off there and then we'll
+
+710
+00:11:38,310 --> 00:11:38,320
+so we'll start off there and then we'll
+ 
+
+711
+00:11:38,320 --> 00:11:40,590
+so we'll start off there and then we'll
+basically get that relative path which
+
+712
+00:11:40,590 --> 00:11:40,600
+basically get that relative path which
+ 
+
+713
+00:11:40,600 --> 00:11:44,130
+basically get that relative path which
+in this case is dependencies GL FW and
+
+714
+00:11:44,130 --> 00:11:44,140
+in this case is dependencies GL FW and
+ 
+
+715
+00:11:44,140 --> 00:11:46,350
+in this case is dependencies GL FW and
+include so I can just grab that and
+
+716
+00:11:46,350 --> 00:11:46,360
+include so I can just grab that and
+ 
+
+717
+00:11:46,360 --> 00:11:48,090
+include so I can just grab that and
+really just copy the end of that path
+
+718
+00:11:48,090 --> 00:11:48,100
+really just copy the end of that path
+ 
+
+719
+00:11:48,100 --> 00:11:50,100
+really just copy the end of that path
+starting in my solution directory folder
+
+720
+00:11:50,100 --> 00:11:50,110
+starting in my solution directory folder
+ 
+
+721
+00:11:50,110 --> 00:11:51,810
+starting in my solution directory folder
+I'll paste it into here
+
+722
+00:11:51,810 --> 00:11:51,820
+I'll paste it into here
+ 
+
+723
+00:11:51,820 --> 00:11:54,000
+I'll paste it into here
+hit enter and that's it I'm done what I
+
+724
+00:11:54,000 --> 00:11:54,010
+hit enter and that's it I'm done what I
+ 
+
+725
+00:11:54,010 --> 00:11:56,610
+hit enter and that's it I'm done what I
+can now do is basically just include
+
+726
+00:11:56,610 --> 00:11:56,620
+can now do is basically just include
+ 
+
+727
+00:11:56,620 --> 00:11:58,769
+can now do is basically just include
+files relative to this directory so this
+
+728
+00:11:58,769 --> 00:11:58,779
+files relative to this directory so this
+ 
+
+729
+00:11:58,779 --> 00:12:00,510
+files relative to this directory so this
+directory contains the GL FW folder
+
+730
+00:12:00,510 --> 00:12:00,520
+directory contains the GL FW folder
+ 
+
+731
+00:12:00,520 --> 00:12:02,130
+directory contains the GL FW folder
+which has a file called JAL it'll be
+
+732
+00:12:02,130 --> 00:12:02,140
+which has a file called JAL it'll be
+ 
+
+733
+00:12:02,140 --> 00:12:03,930
+which has a file called JAL it'll be
+three dot H so guess what I can do I can
+
+734
+00:12:03,930 --> 00:12:03,940
+three dot H so guess what I can do I can
+ 
+
+735
+00:12:03,940 --> 00:12:06,390
+three dot H so guess what I can do I can
+just come in here and type it include GL
+
+736
+00:12:06,390 --> 00:12:06,400
+just come in here and type it include GL
+ 
+
+737
+00:12:06,400 --> 00:12:10,410
+just come in here and type it include GL
+f w /j love w3 dot h just like that and
+
+738
+00:12:10,410 --> 00:12:10,420
+f w /j love w3 dot h just like that and
+ 
+
+739
+00:12:10,420 --> 00:12:11,970
+f w /j love w3 dot h just like that and
+that will actually work if I hit ctrl f7
+
+740
+00:12:11,970 --> 00:12:11,980
+that will actually work if I hit ctrl f7
+ 
+
+741
+00:12:11,980 --> 00:12:14,190
+that will actually work if I hit ctrl f7
+to compile my code you can see that I
+
+742
+00:12:14,190 --> 00:12:14,200
+to compile my code you can see that I
+ 
+
+743
+00:12:14,200 --> 00:12:15,960
+to compile my code you can see that I
+get no errors now because this is a
+
+744
+00:12:15,960 --> 00:12:15,970
+get no errors now because this is a
+ 
+
+745
+00:12:15,970 --> 00:12:18,030
+get no errors now because this is a
+compiler specified in fluid path I can
+
+746
+00:12:18,030 --> 00:12:18,040
+compiler specified in fluid path I can
+ 
+
+747
+00:12:18,040 --> 00:12:20,370
+compiler specified in fluid path I can
+also use angular brackets and this kind
+
+748
+00:12:20,370 --> 00:12:20,380
+also use angular brackets and this kind
+ 
+
+749
+00:12:20,380 --> 00:12:22,380
+also use angular brackets and this kind
+of comes to the debate of do I use
+
+750
+00:12:22,380 --> 00:12:22,390
+of comes to the debate of do I use
+ 
+
+751
+00:12:22,390 --> 00:12:24,630
+of comes to the debate of do I use
+angular brackets or do I just use quotes
+
+752
+00:12:24,630 --> 00:12:24,640
+angular brackets or do I just use quotes
+ 
+
+753
+00:12:24,640 --> 00:12:26,970
+angular brackets or do I just use quotes
+Mike there's no difference because
+
+754
+00:12:26,970 --> 00:12:26,980
+Mike there's no difference because
+ 
+
+755
+00:12:26,980 --> 00:12:28,590
+Mike there's no difference because
+quotes will actually check the relative
+
+756
+00:12:28,590 --> 00:12:28,600
+quotes will actually check the relative
+ 
+
+757
+00:12:28,600 --> 00:12:30,000
+quotes will actually check the relative
+paths first and if it doesn't find
+
+758
+00:12:30,000 --> 00:12:30,010
+paths first and if it doesn't find
+ 
+
+759
+00:12:30,010 --> 00:12:31,560
+paths first and if it doesn't find
+anything relative to this file so
+
+760
+00:12:31,560 --> 00:12:31,570
+anything relative to this file so
+ 
+
+761
+00:12:31,570 --> 00:12:34,170
+anything relative to this file so
+relative to the main dot CPP file it
+
+762
+00:12:34,170 --> 00:12:34,180
+relative to the main dot CPP file it
+ 
+
+763
+00:12:34,180 --> 00:12:35,819
+relative to the main dot CPP file it
+will actually look for the compile it'll
+
+764
+00:12:35,819 --> 00:12:35,829
+will actually look for the compile it'll
+ 
+
+765
+00:12:35,829 --> 00:12:37,319
+will actually look for the compile it'll
+look through the compiler include parts
+
+766
+00:12:37,319 --> 00:12:37,329
+look through the compiler include parts
+ 
+
+767
+00:12:37,329 --> 00:12:40,680
+look through the compiler include parts
+now the way that I use this is basically
+
+768
+00:12:40,680 --> 00:12:40,690
+now the way that I use this is basically
+ 
+
+769
+00:12:40,690 --> 00:12:43,350
+now the way that I use this is basically
+if this source file is in Visual Studio
+
+770
+00:12:43,350 --> 00:12:43,360
+if this source file is in Visual Studio
+ 
+
+771
+00:12:43,360 --> 00:12:47,430
+if this source file is in Visual Studio
+so if gow3 or H is actually in in inside
+
+772
+00:12:47,430 --> 00:12:47,440
+so if gow3 or H is actually in in inside
+ 
+
+773
+00:12:47,440 --> 00:12:49,230
+so if gow3 or H is actually in in inside
+my solution somewhere maybe it's in a
+
+774
+00:12:49,230 --> 00:12:49,240
+my solution somewhere maybe it's in a
+ 
+
+775
+00:12:49,240 --> 00:12:50,579
+my solution somewhere maybe it's in a
+different project I don't care but it's
+
+776
+00:12:50,579 --> 00:12:50,589
+different project I don't care but it's
+ 
+
+777
+00:12:50,589 --> 00:12:52,590
+different project I don't care but it's
+inside this solution it's included in
+
+778
+00:12:52,590 --> 00:12:52,600
+inside this solution it's included in
+ 
+
+779
+00:12:52,600 --> 00:12:54,660
+inside this solution it's included in
+the solution then I will use quotes if
+
+780
+00:12:54,660 --> 00:12:54,670
+the solution then I will use quotes if
+ 
+
+781
+00:12:54,670 --> 00:12:55,980
+the solution then I will use quotes if
+it's an it's
+
+782
+00:12:55,980 --> 00:12:55,990
+it's an it's
+ 
+
+783
+00:12:55,990 --> 00:12:57,600
+it's an it's
+absolutely kind of external dependency
+
+784
+00:12:57,600 --> 00:12:57,610
+absolutely kind of external dependency
+ 
+
+785
+00:12:57,610 --> 00:12:59,400
+absolutely kind of external dependency
+or external library that isn't in I'm
+
+786
+00:12:59,400 --> 00:12:59,410
+or external library that isn't in I'm
+ 
+
+787
+00:12:59,410 --> 00:13:01,829
+or external library that isn't in I'm
+not compiling it with Visual Studio with
+
+788
+00:13:01,829 --> 00:13:01,839
+not compiling it with Visual Studio with
+ 
+
+789
+00:13:01,839 --> 00:13:03,840
+not compiling it with Visual Studio with
+this actual solution then I'll use
+
+790
+00:13:03,840 --> 00:13:03,850
+this actual solution then I'll use
+ 
+
+791
+00:13:03,850 --> 00:13:05,190
+this actual solution then I'll use
+angular brackets to kind of indicate
+
+792
+00:13:05,190 --> 00:13:05,200
+angular brackets to kind of indicate
+ 
+
+793
+00:13:05,200 --> 00:13:06,990
+angular brackets to kind of indicate
+that it's actually external so for this
+
+794
+00:13:06,990 --> 00:13:07,000
+that it's actually external so for this
+ 
+
+795
+00:13:07,000 --> 00:13:09,060
+that it's actually external so for this
+case I will write my code like this now
+
+796
+00:13:09,060 --> 00:13:09,070
+case I will write my code like this now
+ 
+
+797
+00:13:09,070 --> 00:13:10,740
+case I will write my code like this now
+I haven't actually linked against the
+
+798
+00:13:10,740 --> 00:13:10,750
+I haven't actually linked against the
+ 
+
+799
+00:13:10,750 --> 00:13:12,000
+I haven't actually linked against the
+libraries at all so I've told the
+
+800
+00:13:12,000 --> 00:13:12,010
+libraries at all so I've told the
+ 
+
+801
+00:13:12,010 --> 00:13:13,920
+libraries at all so I've told the
+compiler that hey there's a bunch of
+
+802
+00:13:13,920 --> 00:13:13,930
+compiler that hey there's a bunch of
+ 
+
+803
+00:13:13,930 --> 00:13:16,470
+compiler that hey there's a bunch of
+functions if I go to jail w3h you'll
+
+804
+00:13:16,470 --> 00:13:16,480
+functions if I go to jail w3h you'll
+ 
+
+805
+00:13:16,480 --> 00:13:17,730
+functions if I go to jail w3h you'll
+actually see that there's a bunch of
+
+806
+00:13:17,730 --> 00:13:17,740
+actually see that there's a bunch of
+ 
+
+807
+00:13:17,740 --> 00:13:19,380
+actually see that there's a bunch of
+stuff here I have a function for example
+
+808
+00:13:19,380 --> 00:13:19,390
+stuff here I have a function for example
+ 
+
+809
+00:13:19,390 --> 00:13:21,300
+stuff here I have a function for example
+called Jill up top you in it so let's
+
+810
+00:13:21,300 --> 00:13:21,310
+called Jill up top you in it so let's
+ 
+
+811
+00:13:21,310 --> 00:13:23,430
+called Jill up top you in it so let's
+try calling this over here my code I'll
+
+812
+00:13:23,430 --> 00:13:23,440
+try calling this over here my code I'll
+ 
+
+813
+00:13:23,440 --> 00:13:25,560
+try calling this over here my code I'll
+type in into a or something equals jail
+
+814
+00:13:25,560 --> 00:13:25,570
+type in into a or something equals jail
+ 
+
+815
+00:13:25,570 --> 00:13:27,360
+type in into a or something equals jail
+toluene is I don't know why my curly
+
+816
+00:13:27,360 --> 00:13:27,370
+toluene is I don't know why my curly
+ 
+
+817
+00:13:27,370 --> 00:13:29,070
+toluene is I don't know why my curly
+brackets a a black that is the worst
+
+818
+00:13:29,070 --> 00:13:29,080
+brackets a a black that is the worst
+ 
+
+819
+00:13:29,080 --> 00:13:29,850
+brackets a a black that is the worst
+idea ever
+
+820
+00:13:29,850 --> 00:13:29,860
+idea ever
+ 
+
+821
+00:13:29,860 --> 00:13:31,320
+idea ever
+I'm gonna fix that after this video
+
+822
+00:13:31,320 --> 00:13:31,330
+I'm gonna fix that after this video
+ 
+
+823
+00:13:31,330 --> 00:13:34,290
+I'm gonna fix that after this video
+anyway you can see that if I do gel 12
+
+824
+00:13:34,290 --> 00:13:34,300
+anyway you can see that if I do gel 12
+ 
+
+825
+00:13:34,300 --> 00:13:35,250
+anyway you can see that if I do gel 12
+unit like this it looks like
+
+826
+00:13:35,250 --> 00:13:35,260
+unit like this it looks like
+ 
+
+827
+00:13:35,260 --> 00:13:36,210
+unit like this it looks like
+everything's fine
+
+828
+00:13:36,210 --> 00:13:36,220
+everything's fine
+ 
+
+829
+00:13:36,220 --> 00:13:38,400
+everything's fine
+I can hit ctrl f7 to compile my code you
+
+830
+00:13:38,400 --> 00:13:38,410
+I can hit ctrl f7 to compile my code you
+ 
+
+831
+00:13:38,410 --> 00:13:39,630
+I can hit ctrl f7 to compile my code you
+can see I don't get any compiler errors
+
+832
+00:13:39,630 --> 00:13:39,640
+can see I don't get any compiler errors
+ 
+
+833
+00:13:39,640 --> 00:13:41,220
+can see I don't get any compiler errors
+but of course if I try and actually
+
+834
+00:13:41,220 --> 00:13:41,230
+but of course if I try and actually
+ 
+
+835
+00:13:41,230 --> 00:13:42,930
+but of course if I try and actually
+build my project and run it all just hit
+
+836
+00:13:42,930 --> 00:13:42,940
+build my project and run it all just hit
+ 
+
+837
+00:13:42,940 --> 00:13:44,850
+build my project and run it all just hit
+build it's not gonna link correctly and
+
+838
+00:13:44,850 --> 00:13:44,860
+build it's not gonna link correctly and
+ 
+
+839
+00:13:44,860 --> 00:13:46,740
+build it's not gonna link correctly and
+you'll get an error that says unresolved
+
+840
+00:13:46,740 --> 00:13:46,750
+you'll get an error that says unresolved
+ 
+
+841
+00:13:46,750 --> 00:13:48,690
+you'll get an error that says unresolved
+external simple Jill it'll be eaten it
+
+842
+00:13:48,690 --> 00:13:48,700
+external simple Jill it'll be eaten it
+ 
+
+843
+00:13:48,700 --> 00:13:50,340
+external simple Jill it'll be eaten it
+this is the cause of so many problems
+
+844
+00:13:50,340 --> 00:13:50,350
+this is the cause of so many problems
+ 
+
+845
+00:13:50,350 --> 00:13:53,100
+this is the cause of so many problems
+for people what this means is that you
+
+846
+00:13:53,100 --> 00:13:53,110
+for people what this means is that you
+ 
+
+847
+00:13:53,110 --> 00:13:55,920
+for people what this means is that you
+haven't linked your actual library the
+
+848
+00:13:55,920 --> 00:13:55,930
+haven't linked your actual library the
+ 
+
+849
+00:13:55,930 --> 00:13:57,990
+haven't linked your actual library the
+linker can't find this jello double unit
+
+850
+00:13:57,990 --> 00:13:58,000
+linker can't find this jello double unit
+ 
+
+851
+00:13:58,000 --> 00:14:00,060
+linker can't find this jello double unit
+function if we actually go to the header
+
+852
+00:14:00,060 --> 00:14:00,070
+function if we actually go to the header
+ 
+
+853
+00:14:00,070 --> 00:14:01,500
+function if we actually go to the header
+file again and we take a look it's just
+
+854
+00:14:01,500 --> 00:14:01,510
+file again and we take a look it's just
+ 
+
+855
+00:14:01,510 --> 00:14:03,329
+file again and we take a look it's just
+got a semicolon here this doesn't tell
+
+856
+00:14:03,329 --> 00:14:03,339
+got a semicolon here this doesn't tell
+ 
+
+857
+00:14:03,339 --> 00:14:04,949
+got a semicolon here this doesn't tell
+us what the function actually does it
+
+858
+00:14:04,949 --> 00:14:04,959
+us what the function actually does it
+ 
+
+859
+00:14:04,959 --> 00:14:06,630
+us what the function actually does it
+just tells us that the function exists
+
+860
+00:14:06,630 --> 00:14:06,640
+just tells us that the function exists
+ 
+
+861
+00:14:06,640 --> 00:14:08,370
+just tells us that the function exists
+what we need to do is actually find a
+
+862
+00:14:08,370 --> 00:14:08,380
+what we need to do is actually find a
+ 
+
+863
+00:14:08,380 --> 00:14:10,079
+what we need to do is actually find a
+definition for that function
+
+864
+00:14:10,079 --> 00:14:10,089
+definition for that function
+ 
+
+865
+00:14:10,089 --> 00:14:12,240
+definition for that function
+now we could provide one I'll just show
+
+866
+00:14:12,240 --> 00:14:12,250
+now we could provide one I'll just show
+ 
+
+867
+00:14:12,250 --> 00:14:13,440
+now we could provide one I'll just show
+you I'm showing you this so that you
+
+868
+00:14:13,440 --> 00:14:13,450
+you I'm showing you this so that you
+ 
+
+869
+00:14:13,450 --> 00:14:15,360
+you I'm showing you this so that you
+know how it works so we know that U of W
+
+870
+00:14:15,360 --> 00:14:15,370
+know how it works so we know that U of W
+ 
+
+871
+00:14:15,370 --> 00:14:17,280
+know how it works so we know that U of W
+in here takes no parameters and returns
+
+872
+00:14:17,280 --> 00:14:17,290
+in here takes no parameters and returns
+ 
+
+873
+00:14:17,290 --> 00:14:18,750
+in here takes no parameters and returns
+an integer I could literally write
+
+874
+00:14:18,750 --> 00:14:18,760
+an integer I could literally write
+ 
+
+875
+00:14:18,760 --> 00:14:20,490
+an integer I could literally write
+chillip double unit here and it's like
+
+876
+00:14:20,490 --> 00:14:20,500
+chillip double unit here and it's like
+ 
+
+877
+00:14:20,500 --> 00:14:22,620
+chillip double unit here and it's like
+returns zero or something like that and
+
+878
+00:14:22,620 --> 00:14:22,630
+returns zero or something like that and
+ 
+
+879
+00:14:22,630 --> 00:14:24,720
+returns zero or something like that and
+then now if I build this and compile it
+
+880
+00:14:24,720 --> 00:14:24,730
+then now if I build this and compile it
+ 
+
+881
+00:14:24,730 --> 00:14:26,370
+then now if I build this and compile it
+you can see that it is going to
+
+882
+00:14:26,370 --> 00:14:26,380
+you can see that it is going to
+ 
+
+883
+00:14:26,380 --> 00:14:28,680
+you can see that it is going to
+successfully generate my hello world exe
+
+884
+00:14:28,680 --> 00:14:28,690
+successfully generate my hello world exe
+ 
+
+885
+00:14:28,690 --> 00:14:31,139
+successfully generate my hello world exe
+file and the build will succeed because
+
+886
+00:14:31,139 --> 00:14:31,149
+file and the build will succeed because
+ 
+
+887
+00:14:31,149 --> 00:14:33,329
+file and the build will succeed because
+I'm actually providing a definition for
+
+888
+00:14:33,329 --> 00:14:33,339
+I'm actually providing a definition for
+ 
+
+889
+00:14:33,339 --> 00:14:35,010
+I'm actually providing a definition for
+this function now obviously we don't
+
+890
+00:14:35,010 --> 00:14:35,020
+this function now obviously we don't
+ 
+
+891
+00:14:35,020 --> 00:14:36,510
+this function now obviously we don't
+want this definition we want the one
+
+892
+00:14:36,510 --> 00:14:36,520
+want this definition we want the one
+ 
+
+893
+00:14:36,520 --> 00:14:38,370
+want this definition we want the one
+that's actually in the library so we
+
+894
+00:14:38,370 --> 00:14:38,380
+that's actually in the library so we
+ 
+
+895
+00:14:38,380 --> 00:14:40,050
+that's actually in the library so we
+need to link against the library
+
+896
+00:14:40,050 --> 00:14:40,060
+need to link against the library
+ 
+
+897
+00:14:40,060 --> 00:14:42,090
+need to link against the library
+hopefully that clears things up so I'll
+
+898
+00:14:42,090 --> 00:14:42,100
+hopefully that clears things up so I'll
+ 
+
+899
+00:14:42,100 --> 00:14:44,040
+hopefully that clears things up so I'll
+right click on holo world hit properties
+
+900
+00:14:44,040 --> 00:14:44,050
+right click on holo world hit properties
+ 
+
+901
+00:14:44,050 --> 00:14:45,720
+right click on holo world hit properties
+to make sure again I'm in all
+
+902
+00:14:45,720 --> 00:14:45,730
+to make sure again I'm in all
+ 
+
+903
+00:14:45,730 --> 00:14:47,160
+to make sure again I'm in all
+configurations and on the right platform
+
+904
+00:14:47,160 --> 00:14:47,170
+configurations and on the right platform
+ 
+
+905
+00:14:47,170 --> 00:14:50,940
+configurations and on the right platform
+go to linker and in general now inside
+
+906
+00:14:50,940 --> 00:14:50,950
+go to linker and in general now inside
+ 
+
+907
+00:14:50,950 --> 00:14:53,220
+go to linker and in general now inside
+link input is where I actually want to
+
+908
+00:14:53,220 --> 00:14:53,230
+link input is where I actually want to
+ 
+
+909
+00:14:53,230 --> 00:14:56,490
+link input is where I actually want to
+include that chillip w3 don't live file
+
+910
+00:14:56,490 --> 00:14:56,500
+include that chillip w3 don't live file
+ 
+
+911
+00:14:56,500 --> 00:14:58,560
+include that chillip w3 don't live file
+right I actually want to include it over
+
+912
+00:14:58,560 --> 00:14:58,570
+right I actually want to include it over
+ 
+
+913
+00:14:58,570 --> 00:15:00,840
+right I actually want to include it over
+here however I don't want to have to
+
+914
+00:15:00,840 --> 00:15:00,850
+here however I don't want to have to
+ 
+
+915
+00:15:00,850 --> 00:15:02,850
+here however I don't want to have to
+specify the entire path so again I could
+
+916
+00:15:02,850 --> 00:15:02,860
+specify the entire path so again I could
+ 
+
+917
+00:15:02,860 --> 00:15:04,260
+specify the entire path so again I could
+do like you know solution directory
+
+918
+00:15:04,260 --> 00:15:04,270
+do like you know solution directory
+ 
+
+919
+00:15:04,270 --> 00:15:06,269
+do like you know solution directory
+slash blah blah I just want to keep this
+
+920
+00:15:06,269 --> 00:15:06,279
+slash blah blah I just want to keep this
+ 
+
+921
+00:15:06,279 --> 00:15:07,500
+slash blah blah I just want to keep this
+clean and just have
+
+922
+00:15:07,500 --> 00:15:07,510
+clean and just have
+ 
+
+923
+00:15:07,510 --> 00:15:09,870
+clean and just have
+we don't live here so if I want to do
+
+924
+00:15:09,870 --> 00:15:09,880
+we don't live here so if I want to do
+ 
+
+925
+00:15:09,880 --> 00:15:11,699
+we don't live here so if I want to do
+that I actually need to go back to
+
+926
+00:15:11,699 --> 00:15:11,709
+that I actually need to go back to
+ 
+
+927
+00:15:11,709 --> 00:15:13,800
+that I actually need to go back to
+general and set my additional library
+
+928
+00:15:13,800 --> 00:15:13,810
+general and set my additional library
+ 
+
+929
+00:15:13,810 --> 00:15:16,620
+general and set my additional library
+directory just like I did in C++ general
+
+930
+00:15:16,620 --> 00:15:16,630
+directory just like I did in C++ general
+ 
+
+931
+00:15:16,630 --> 00:15:18,360
+directory just like I did in C++ general
+with my additional include directory so
+
+932
+00:15:18,360 --> 00:15:18,370
+with my additional include directory so
+ 
+
+933
+00:15:18,370 --> 00:15:20,340
+with my additional include directory so
+this should be the root directory which
+
+934
+00:15:20,340 --> 00:15:20,350
+this should be the root directory which
+ 
+
+935
+00:15:20,350 --> 00:15:22,800
+this should be the root directory which
+contains my shell w3 don't live library
+
+936
+00:15:22,800 --> 00:15:22,810
+contains my shell w3 don't live library
+ 
+
+937
+00:15:22,810 --> 00:15:25,710
+contains my shell w3 don't live library
+file so I cannot go over here into my
+
+938
+00:15:25,710 --> 00:15:25,720
+file so I cannot go over here into my
+ 
+
+939
+00:15:25,720 --> 00:15:27,750
+file so I cannot go over here into my
+Java folder go back here to live and
+
+940
+00:15:27,750 --> 00:15:27,760
+Java folder go back here to live and
+ 
+
+941
+00:15:27,760 --> 00:15:29,819
+Java folder go back here to live and
+then this is the directory I care about
+
+942
+00:15:29,819 --> 00:15:29,829
+then this is the directory I care about
+ 
+
+943
+00:15:29,829 --> 00:15:31,620
+then this is the directory I care about
+so I'm going to grab this and copy it
+
+944
+00:15:31,620 --> 00:15:31,630
+so I'm going to grab this and copy it
+ 
+
+945
+00:15:31,630 --> 00:15:32,790
+so I'm going to grab this and copy it
+and then I'm going to come back to the
+
+946
+00:15:32,790 --> 00:15:32,800
+and then I'm going to come back to the
+ 
+
+947
+00:15:32,800 --> 00:15:36,509
+and then I'm going to come back to the
+library directories type in solution and
+
+948
+00:15:36,509 --> 00:15:36,519
+library directories type in solution and
+ 
+
+949
+00:15:36,519 --> 00:15:38,639
+library directories type in solution and
+then paste in that path just like that
+
+950
+00:15:38,639 --> 00:15:38,649
+then paste in that path just like that
+ 
+
+951
+00:15:38,649 --> 00:15:40,889
+then paste in that path just like that
+okay so I've specified a library
+
+952
+00:15:40,889 --> 00:15:40,899
+okay so I've specified a library
+ 
+
+953
+00:15:40,899 --> 00:15:42,870
+okay so I've specified a library
+directory and then I've also specify the
+
+954
+00:15:42,870 --> 00:15:42,880
+directory and then I've also specify the
+ 
+
+955
+00:15:42,880 --> 00:15:45,000
+directory and then I've also specify the
+name of a library file that is relative
+
+956
+00:15:45,000 --> 00:15:45,010
+name of a library file that is relative
+ 
+
+957
+00:15:45,010 --> 00:15:47,910
+name of a library file that is relative
+to that library directory so if I hit OK
+
+958
+00:15:47,910 --> 00:15:47,920
+to that library directory so if I hit OK
+ 
+
+959
+00:15:47,920 --> 00:15:50,639
+to that library directory so if I hit OK
+and I try and build this now you can see
+
+960
+00:15:50,639 --> 00:15:50,649
+and I try and build this now you can see
+ 
+
+961
+00:15:50,649 --> 00:15:52,019
+and I try and build this now you can see
+that this works fine and we don't
+
+962
+00:15:52,019 --> 00:15:52,029
+that this works fine and we don't
+ 
+
+963
+00:15:52,029 --> 00:15:54,569
+that this works fine and we don't
+actually get any errors and if I was to
+
+964
+00:15:54,569 --> 00:15:54,579
+actually get any errors and if I was to
+ 
+
+965
+00:15:54,579 --> 00:15:56,400
+actually get any errors and if I was to
+for example run this let's just print
+
+966
+00:15:56,400 --> 00:15:56,410
+for example run this let's just print
+ 
+
+967
+00:15:56,410 --> 00:15:58,590
+for example run this let's just print
+the result of this to the console here 5
+
+968
+00:15:58,590 --> 00:15:58,600
+the result of this to the console here 5
+ 
+
+969
+00:15:58,600 --> 00:16:00,210
+the result of this to the console here 5
+you can see that we actually get one
+
+970
+00:16:00,210 --> 00:16:00,220
+you can see that we actually get one
+ 
+
+971
+00:16:00,220 --> 00:16:01,949
+you can see that we actually get one
+printing here which basically means that
+
+972
+00:16:01,949 --> 00:16:01,959
+printing here which basically means that
+ 
+
+973
+00:16:01,959 --> 00:16:03,750
+printing here which basically means that
+you'll have W initialized successfully
+
+974
+00:16:03,750 --> 00:16:03,760
+you'll have W initialized successfully
+ 
+
+975
+00:16:03,760 --> 00:16:05,670
+you'll have W initialized successfully
+so everything is working fine now
+
+976
+00:16:05,670 --> 00:16:05,680
+so everything is working fine now
+ 
+
+977
+00:16:05,680 --> 00:16:07,290
+so everything is working fine now
+similarly to how I showed you how I
+
+978
+00:16:07,290 --> 00:16:07,300
+similarly to how I showed you how I
+ 
+
+979
+00:16:07,300 --> 00:16:09,870
+similarly to how I showed you how I
+actually manually added a G lfwe th
+
+980
+00:16:09,870 --> 00:16:09,880
+actually manually added a G lfwe th
+ 
+
+981
+00:16:09,880 --> 00:16:11,819
+actually manually added a G lfwe th
+function definition the same kind of
+
+982
+00:16:11,819 --> 00:16:11,829
+function definition the same kind of
+ 
+
+983
+00:16:11,829 --> 00:16:14,100
+function definition the same kind of
+applies for a header file right if I get
+
+984
+00:16:14,100 --> 00:16:14,110
+applies for a header file right if I get
+ 
+
+985
+00:16:14,110 --> 00:16:15,660
+applies for a header file right if I get
+rid of this include or I don't have my
+
+986
+00:16:15,660 --> 00:16:15,670
+rid of this include or I don't have my
+ 
+
+987
+00:16:15,670 --> 00:16:17,129
+rid of this include or I don't have my
+header files I just don't know that
+
+988
+00:16:17,129 --> 00:16:17,139
+header files I just don't know that
+ 
+
+989
+00:16:17,139 --> 00:16:18,689
+header files I just don't know that
+there's a function called G let's all be
+
+990
+00:16:18,689 --> 00:16:18,699
+there's a function called G let's all be
+ 
+
+991
+00:16:18,699 --> 00:16:20,280
+there's a function called G let's all be
+eating it actually available if I try
+
+992
+00:16:20,280 --> 00:16:20,290
+eating it actually available if I try
+ 
+
+993
+00:16:20,290 --> 00:16:22,019
+eating it actually available if I try
+and compile this code it's not it's not
+
+994
+00:16:22,019 --> 00:16:22,029
+and compile this code it's not it's not
+ 
+
+995
+00:16:22,029 --> 00:16:23,160
+and compile this code it's not it's not
+that it's not gonna link it's just not
+
+996
+00:16:23,160 --> 00:16:23,170
+that it's not gonna link it's just not
+ 
+
+997
+00:16:23,170 --> 00:16:26,129
+that it's not gonna link it's just not
+gonna compile because there is no such
+
+998
+00:16:26,129 --> 00:16:26,139
+gonna compile because there is no such
+ 
+
+999
+00:16:26,139 --> 00:16:27,420
+gonna compile because there is no such
+function the compiler can't see a
+
+1000
+00:16:27,420 --> 00:16:27,430
+function the compiler can't see a
+ 
+
+1001
+00:16:27,430 --> 00:16:28,650
+function the compiler can't see a
+function called shelf double-unit
+
+1002
+00:16:28,650 --> 00:16:28,660
+function called shelf double-unit
+ 
+
+1003
+00:16:28,660 --> 00:16:31,110
+function called shelf double-unit
+however if I provide the actual
+
+1004
+00:16:31,110 --> 00:16:31,120
+however if I provide the actual
+ 
+
+1005
+00:16:31,120 --> 00:16:33,180
+however if I provide the actual
+declaration here by typing in G left
+
+1006
+00:16:33,180 --> 00:16:33,190
+declaration here by typing in G left
+ 
+
+1007
+00:16:33,190 --> 00:16:34,769
+declaration here by typing in G left
+I'll be eating it and just returning
+
+1008
+00:16:34,769 --> 00:16:34,779
+I'll be eating it and just returning
+ 
+
+1009
+00:16:34,779 --> 00:16:37,650
+I'll be eating it and just returning
+nothing like that and hit f5 to run my
+
+1010
+00:16:37,650 --> 00:16:37,660
+nothing like that and hit f5 to run my
+ 
+
+1011
+00:16:37,660 --> 00:16:39,840
+nothing like that and hit f5 to run my
+code the idea of this will actually work
+
+1012
+00:16:39,840 --> 00:16:39,850
+code the idea of this will actually work
+ 
+
+1013
+00:16:39,850 --> 00:16:42,389
+code the idea of this will actually work
+however in this specific case we get an
+
+1014
+00:16:42,389 --> 00:16:42,399
+however in this specific case we get an
+ 
+
+1015
+00:16:42,399 --> 00:16:44,340
+however in this specific case we get an
+error because G of W is actually a C
+
+1016
+00:16:44,340 --> 00:16:44,350
+error because G of W is actually a C
+ 
+
+1017
+00:16:44,350 --> 00:16:45,660
+error because G of W is actually a C
+library and what we're doing here is
+
+1018
+00:16:45,660 --> 00:16:45,670
+library and what we're doing here is
+ 
+
+1019
+00:16:45,670 --> 00:16:48,300
+library and what we're doing here is
+mangling the name with C++ I'll have a
+
+1020
+00:16:48,300 --> 00:16:48,310
+mangling the name with C++ I'll have a
+ 
+
+1021
+00:16:48,310 --> 00:16:49,920
+mangling the name with C++ I'll have a
+video is specifically about kind of
+
+1022
+00:16:49,920 --> 00:16:49,930
+video is specifically about kind of
+ 
+
+1023
+00:16:49,930 --> 00:16:52,139
+video is specifically about kind of
+using C with C + + + name mangling and
+
+1024
+00:16:52,139 --> 00:16:52,149
+using C with C + + + name mangling and
+ 
+
+1025
+00:16:52,149 --> 00:16:54,150
+using C with C + + + name mangling and
+actually what's going on here but to cut
+
+1026
+00:16:54,150 --> 00:16:54,160
+actually what's going on here but to cut
+ 
+
+1027
+00:16:54,160 --> 00:16:55,879
+actually what's going on here but to cut
+this short we need to actually add
+
+1028
+00:16:55,879 --> 00:16:55,889
+this short we need to actually add
+ 
+
+1029
+00:16:55,889 --> 00:16:58,829
+this short we need to actually add
+extern C to this function declaration
+
+1030
+00:16:58,829 --> 00:16:58,839
+extern C to this function declaration
+ 
+
+1031
+00:16:58,839 --> 00:17:00,389
+extern C to this function declaration
+which basically just says that preserve
+
+1032
+00:17:00,389 --> 00:17:00,399
+which basically just says that preserve
+ 
+
+1033
+00:17:00,399 --> 00:17:01,949
+which basically just says that preserve
+this name as it is because you'll be
+
+1034
+00:17:01,949 --> 00:17:01,959
+this name as it is because you'll be
+ 
+
+1035
+00:17:01,959 --> 00:17:03,870
+this name as it is because you'll be
+linking against a library that was built
+
+1036
+00:17:03,870 --> 00:17:03,880
+linking against a library that was built
+ 
+
+1037
+00:17:03,880 --> 00:17:06,329
+linking against a library that was built
+in C so now if we compile this code you
+
+1038
+00:17:06,329 --> 00:17:06,339
+in C so now if we compile this code you
+ 
+
+1039
+00:17:06,339 --> 00:17:07,860
+in C so now if we compile this code you
+can see that it works successfully and
+
+1040
+00:17:07,860 --> 00:17:07,870
+can see that it works successfully and
+ 
+
+1041
+00:17:07,870 --> 00:17:10,250
+can see that it works successfully and
+if I run it as well we still get one
+
+1042
+00:17:10,250 --> 00:17:10,260
+if I run it as well we still get one
+ 
+
+1043
+00:17:10,260 --> 00:17:12,569
+if I run it as well we still get one
+same result that we got when we had the
+
+1044
+00:17:12,569 --> 00:17:12,579
+same result that we got when we had the
+ 
+
+1045
+00:17:12,579 --> 00:17:14,159
+same result that we got when we had the
+header file so just remember those
+
+1046
+00:17:14,159 --> 00:17:14,169
+header file so just remember those
+ 
+
+1047
+00:17:14,169 --> 00:17:15,510
+header file so just remember those
+header files are kind of just best that
+
+1048
+00:17:15,510 --> 00:17:15,520
+header files are kind of just best that
+ 
+
+1049
+00:17:15,520 --> 00:17:15,850
+header files are kind of just best that
+you
+
+1050
+00:17:15,850 --> 00:17:15,860
+you
+ 
+
+1051
+00:17:15,860 --> 00:17:17,350
+you
+have to do this stuff yourself it's not
+
+1052
+00:17:17,350 --> 00:17:17,360
+have to do this stuff yourself it's not
+ 
+
+1053
+00:17:17,360 --> 00:17:19,269
+have to do this stuff yourself it's not
+like the library linking is magically
+
+1054
+00:17:19,269 --> 00:17:19,279
+like the library linking is magically
+ 
+
+1055
+00:17:19,279 --> 00:17:20,649
+like the library linking is magically
+includes the magic or anything like that
+
+1056
+00:17:20,649 --> 00:17:20,659
+includes the magic or anything like that
+ 
+
+1057
+00:17:20,659 --> 00:17:23,350
+includes the magic or anything like that
+it's just all components of a system to
+
+1058
+00:17:23,350 --> 00:17:23,360
+it's just all components of a system to
+ 
+
+1059
+00:17:23,360 --> 00:17:24,220
+it's just all components of a system to
+kind of go together
+
+1060
+00:17:24,220 --> 00:17:24,230
+kind of go together
+ 
+
+1061
+00:17:24,230 --> 00:17:25,630
+kind of go together
+so the header files kind of just tell us
+
+1062
+00:17:25,630 --> 00:17:25,640
+so the header files kind of just tell us
+ 
+
+1063
+00:17:25,640 --> 00:17:27,009
+so the header files kind of just tell us
+which functions we have available by
+
+1064
+00:17:27,009 --> 00:17:27,019
+which functions we have available by
+ 
+
+1065
+00:17:27,019 --> 00:17:28,930
+which functions we have available by
+providing us with declarations and then
+
+1066
+00:17:28,930 --> 00:17:28,940
+providing us with declarations and then
+ 
+
+1067
+00:17:28,940 --> 00:17:30,190
+providing us with declarations and then
+that library file provides us with
+
+1068
+00:17:30,190 --> 00:17:30,200
+that library file provides us with
+ 
+
+1069
+00:17:30,200 --> 00:17:32,620
+that library file provides us with
+definitions so that we actually can link
+
+1070
+00:17:32,620 --> 00:17:32,630
+definitions so that we actually can link
+ 
+
+1071
+00:17:32,630 --> 00:17:34,990
+definitions so that we actually can link
+to those functions and execute the
+
+1072
+00:17:34,990 --> 00:17:35,000
+to those functions and execute the
+ 
+
+1073
+00:17:35,000 --> 00:17:37,120
+to those functions and execute the
+appropriate code when we call the
+
+1074
+00:17:37,120 --> 00:17:37,130
+appropriate code when we call the
+ 
+
+1075
+00:17:37,130 --> 00:17:38,740
+appropriate code when we call the
+functions in our C++ code
+
+1076
+00:17:38,740 --> 00:17:38,750
+functions in our C++ code
+ 
+
+1077
+00:17:38,750 --> 00:17:39,940
+functions in our C++ code
+okay I'm gonna wrap up the video there I
+
+1078
+00:17:39,940 --> 00:17:39,950
+okay I'm gonna wrap up the video there I
+ 
+
+1079
+00:17:39,950 --> 00:17:41,620
+okay I'm gonna wrap up the video there I
+know we did talk about dynamic libraries
+
+1080
+00:17:41,620 --> 00:17:41,630
+know we did talk about dynamic libraries
+ 
+
+1081
+00:17:41,630 --> 00:17:42,909
+know we did talk about dynamic libraries
+but this video is just been trailing I
+
+1082
+00:17:42,909 --> 00:17:42,919
+but this video is just been trailing I
+ 
+
+1083
+00:17:42,919 --> 00:17:44,110
+but this video is just been trailing I
+actually thought this would be pretty
+
+1084
+00:17:44,110 --> 00:17:44,120
+actually thought this would be pretty
+ 
+
+1085
+00:17:44,120 --> 00:17:45,759
+actually thought this would be pretty
+trivial to explain and it would take
+
+1086
+00:17:45,759 --> 00:17:45,769
+trivial to explain and it would take
+ 
+
+1087
+00:17:45,769 --> 00:17:47,080
+trivial to explain and it would take
+like five minutes but as always I've
+
+1088
+00:17:47,080 --> 00:17:47,090
+like five minutes but as always I've
+ 
+
+1089
+00:17:47,090 --> 00:17:48,940
+like five minutes but as always I've
+just gone pretty in-depth and just
+
+1090
+00:17:48,940 --> 00:17:48,950
+just gone pretty in-depth and just
+ 
+
+1091
+00:17:48,950 --> 00:17:50,500
+just gone pretty in-depth and just
+talked about this a lot which i think is
+
+1092
+00:17:50,500 --> 00:17:50,510
+talked about this a lot which i think is
+ 
+
+1093
+00:17:50,510 --> 00:17:51,820
+talked about this a lot which i think is
+a good thing we're gonna talk about
+
+1094
+00:17:51,820 --> 00:17:51,830
+a good thing we're gonna talk about
+ 
+
+1095
+00:17:51,830 --> 00:17:53,440
+a good thing we're gonna talk about
+dynamic libraries in another video
+
+1096
+00:17:53,440 --> 00:17:53,450
+dynamic libraries in another video
+ 
+
+1097
+00:17:53,450 --> 00:17:54,879
+dynamic libraries in another video
+though and specifically with that I'll
+
+1098
+00:17:54,879 --> 00:17:54,889
+though and specifically with that I'll
+ 
+
+1099
+00:17:54,889 --> 00:17:56,740
+though and specifically with that I'll
+show you how to also kind of pull them
+
+1100
+00:17:56,740 --> 00:17:56,750
+show you how to also kind of pull them
+ 
+
+1101
+00:17:56,750 --> 00:17:58,269
+show you how to also kind of pull them
+out if you don't have a static library
+
+1102
+00:17:58,269 --> 00:17:58,279
+out if you don't have a static library
+ 
+
+1103
+00:17:58,279 --> 00:17:59,680
+out if you don't have a static library
+to go along with them like we do with
+
+1104
+00:17:59,680 --> 00:17:59,690
+to go along with them like we do with
+ 
+
+1105
+00:17:59,690 --> 00:18:01,210
+to go along with them like we do with
+yellow to view some otherwise I'll show
+
+1106
+00:18:01,210 --> 00:18:01,220
+yellow to view some otherwise I'll show
+ 
+
+1107
+00:18:01,220 --> 00:18:03,039
+yellow to view some otherwise I'll show
+you how to pull out functions and do all
+
+1108
+00:18:03,039 --> 00:18:03,049
+you how to pull out functions and do all
+ 
+
+1109
+00:18:03,049 --> 00:18:04,930
+you how to pull out functions and do all
+that kind of actual runtime linking as
+
+1110
+00:18:04,930 --> 00:18:04,940
+that kind of actual runtime linking as
+ 
+
+1111
+00:18:04,940 --> 00:18:08,409
+that kind of actual runtime linking as
+well as linking against an actual DL but
+
+1112
+00:18:08,409 --> 00:18:08,419
+well as linking against an actual DL but
+ 
+
+1113
+00:18:08,419 --> 00:18:09,970
+well as linking against an actual DL but
+at compile time as well because there's
+
+1114
+00:18:09,970 --> 00:18:09,980
+at compile time as well because there's
+ 
+
+1115
+00:18:09,980 --> 00:18:11,710
+at compile time as well because there's
+a few kind of caveats with that as well
+
+1116
+00:18:11,710 --> 00:18:11,720
+a few kind of caveats with that as well
+ 
+
+1117
+00:18:11,720 --> 00:18:13,299
+a few kind of caveats with that as well
+I hope you guys enjoy this video if you
+
+1118
+00:18:13,299 --> 00:18:13,309
+I hope you guys enjoy this video if you
+ 
+
+1119
+00:18:13,309 --> 00:18:14,470
+I hope you guys enjoy this video if you
+did you can have that like button you
+
+1120
+00:18:14,470 --> 00:18:14,480
+did you can have that like button you
+ 
+
+1121
+00:18:14,480 --> 00:18:15,759
+did you can have that like button you
+can also help support the series on
+
+1122
+00:18:15,759 --> 00:18:15,769
+can also help support the series on
+ 
+
+1123
+00:18:15,769 --> 00:18:16,750
+can also help support the series on
+patreon we're going to
+
+1124
+00:18:16,750 --> 00:18:16,760
+patreon we're going to
+ 
+
+1125
+00:18:16,760 --> 00:18:18,669
+patreon we're going to
+patreon.com/scishow know you'll get
+
+1126
+00:18:18,669 --> 00:18:18,679
+patreon.com/scishow know you'll get
+ 
+
+1127
+00:18:18,679 --> 00:18:20,110
+patreon.com/scishow know you'll get
+episodes earlier there are some pretty
+
+1128
+00:18:20,110 --> 00:18:20,120
+episodes earlier there are some pretty
+ 
+
+1129
+00:18:20,120 --> 00:18:22,480
+episodes earlier there are some pretty
+cool new perks as well which you should
+
+1130
+00:18:22,480 --> 00:18:22,490
+cool new perks as well which you should
+ 
+
+1131
+00:18:22,490 --> 00:18:24,129
+cool new perks as well which you should
+check out I will see you guys next time
+
+1132
+00:18:24,129 --> 00:18:24,139
+check out I will see you guys next time
+ 
+
+1133
+00:18:24,139 --> 00:18:26,130
+check out I will see you guys next time
+goodbye
+
+1134
+00:18:26,130 --> 00:18:26,140
+goodbye
+ 
+
+1135
+00:18:26,140 --> 00:18:41,320
+goodbye
+[Music]
+

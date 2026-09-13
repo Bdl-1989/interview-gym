@@ -1,0 +1,3485 @@
+1
+00:00:00,080 --> 00:00:01,510
+
+Today we're here to answer one simple
+
+2
+00:00:01,510 --> 00:00:01,520
+Today we're here to answer one simple
+ 
+
+3
+00:00:01,520 --> 00:00:04,550
+Today we're here to answer one simple
+question. Is this safe or not? Welcome
+
+4
+00:00:04,550 --> 00:00:04,560
+question. Is this safe or not? Welcome
+ 
+
+5
+00:00:04,560 --> 00:00:07,269
+question. Is this safe or not? Welcome
+to bugs of C++. I don't have like an
+
+6
+00:00:07,269 --> 00:00:07,279
+to bugs of C++. I don't have like an
+ 
+
+7
+00:00:07,279 --> 00:00:09,190
+to bugs of C++. I don't have like an
+intro animation, so let's just get on
+
+8
+00:00:09,190 --> 00:00:09,200
+intro animation, so let's just get on
+ 
+
+9
+00:00:09,200 --> 00:00:10,549
+intro animation, so let's just get on
+with it. This video is pretty simple.
+
+10
+00:00:10,549 --> 00:00:10,559
+with it. This video is pretty simple.
+ 
+
+11
+00:00:10,559 --> 00:00:11,830
+with it. This video is pretty simple.
+Could probably have just been a YouTube
+
+12
+00:00:11,830 --> 00:00:11,840
+Could probably have just been a YouTube
+ 
+
+13
+00:00:11,840 --> 00:00:13,430
+Could probably have just been a YouTube
+short, but you know me. We're going to
+
+14
+00:00:13,430 --> 00:00:13,440
+short, but you know me. We're going to
+ 
+
+15
+00:00:13,440 --> 00:00:14,950
+short, but you know me. We're going to
+dive deep. So, fundamentally, let's have
+
+16
+00:00:14,950 --> 00:00:14,960
+dive deep. So, fundamentally, let's have
+ 
+
+17
+00:00:14,960 --> 00:00:16,150
+dive deep. So, fundamentally, let's have
+a look at this. What is actually
+
+18
+00:00:16,150 --> 00:00:16,160
+a look at this. What is actually
+ 
+
+19
+00:00:16,160 --> 00:00:17,910
+a look at this. What is actually
+happening here? We have a get name
+
+20
+00:00:17,910 --> 00:00:17,920
+happening here? We have a get name
+ 
+
+21
+00:00:17,920 --> 00:00:19,830
+happening here? We have a get name
+function which returns a string. It's
+
+22
+00:00:19,830 --> 00:00:19,840
+function which returns a string. It's
+ 
+
+23
+00:00:19,840 --> 00:00:21,429
+function which returns a string. It's
+returning a string literal. So, it's
+
+24
+00:00:21,429 --> 00:00:21,439
+returning a string literal. So, it's
+ 
+
+25
+00:00:21,439 --> 00:00:22,870
+returning a string literal. So, it's
+creating a new string. This is going to
+
+26
+00:00:22,870 --> 00:00:22,880
+creating a new string. This is going to
+ 
+
+27
+00:00:22,880 --> 00:00:24,950
+creating a new string. This is going to
+be using the implicit constructor of
+
+28
+00:00:24,950 --> 00:00:24,960
+be using the implicit constructor of
+ 
+
+29
+00:00:24,960 --> 00:00:28,710
+be using the implicit constructor of
+string to convert this const array into
+
+30
+00:00:28,710 --> 00:00:28,720
+string to convert this const array into
+ 
+
+31
+00:00:28,720 --> 00:00:31,109
+string to convert this const array into
+an actual string object. We're returning
+
+32
+00:00:31,109 --> 00:00:31,119
+an actual string object. We're returning
+ 
+
+33
+00:00:31,119 --> 00:00:34,630
+an actual string object. We're returning
+that. Here it is. And then we're doing C
+
+34
+00:00:34,630 --> 00:00:34,640
+that. Here it is. And then we're doing C
+ 
+
+35
+00:00:34,640 --> 00:00:37,430
+that. Here it is. And then we're doing C
+string to get the underlying const
+
+36
+00:00:37,430 --> 00:00:37,440
+string to get the underlying const
+ 
+
+37
+00:00:37,440 --> 00:00:39,510
+string to get the underlying const
+pointer buffer that is held by the
+
+38
+00:00:39,510 --> 00:00:39,520
+pointer buffer that is held by the
+ 
+
+39
+00:00:39,520 --> 00:00:41,510
+pointer buffer that is held by the
+string object and we're sending that
+
+40
+00:00:41,510 --> 00:00:41,520
+string object and we're sending that
+ 
+
+41
+00:00:41,520 --> 00:00:43,670
+string object and we're sending that
+into the print line function. Now, let
+
+42
+00:00:43,670 --> 00:00:43,680
+into the print line function. Now, let
+ 
+
+43
+00:00:43,680 --> 00:00:44,950
+into the print line function. Now, let
+me just quickly mention that you of
+
+44
+00:00:44,950 --> 00:00:44,960
+me just quickly mention that you of
+ 
+
+45
+00:00:44,960 --> 00:00:46,389
+me just quickly mention that you of
+course do not actually have to do this
+
+46
+00:00:46,389 --> 00:00:46,399
+course do not actually have to do this
+ 
+
+47
+00:00:46,399 --> 00:00:48,869
+course do not actually have to do this
+if you're trying to print a string
+
+48
+00:00:48,869 --> 00:00:48,879
+if you're trying to print a string
+ 
+
+49
+00:00:48,879 --> 00:00:50,310
+if you're trying to print a string
+because the print line function can
+
+50
+00:00:50,310 --> 00:00:50,320
+because the print line function can
+ 
+
+51
+00:00:50,320 --> 00:00:52,310
+because the print line function can
+handle a string object. So, if anyone
+
+52
+00:00:52,310 --> 00:00:52,320
+handle a string object. So, if anyone
+ 
+
+53
+00:00:52,320 --> 00:00:54,150
+handle a string object. So, if anyone
+here is new to C++ and you're like, why
+
+54
+00:00:54,150 --> 00:00:54,160
+here is new to C++ and you're like, why
+ 
+
+55
+00:00:54,160 --> 00:00:55,270
+here is new to C++ and you're like, why
+are you doing that? That's that's not
+
+56
+00:00:55,270 --> 00:00:55,280
+are you doing that? That's that's not
+ 
+
+57
+00:00:55,280 --> 00:00:56,790
+are you doing that? That's that's not
+the point of the video. The problem
+
+58
+00:00:56,790 --> 00:00:56,800
+the point of the video. The problem
+ 
+
+59
+00:00:56,800 --> 00:00:59,110
+the point of the video. The problem
+here, or the potential problem here, is
+
+60
+00:00:59,110 --> 00:00:59,120
+here, or the potential problem here, is
+ 
+
+61
+00:00:59,120 --> 00:01:02,310
+here, or the potential problem here, is
+that this string object, which kind of
+
+62
+00:01:02,310 --> 00:01:02,320
+that this string object, which kind of
+ 
+
+63
+00:01:02,320 --> 00:01:05,189
+that this string object, which kind of
+only exists in this context here, is
+
+64
+00:01:05,189 --> 00:01:05,199
+only exists in this context here, is
+ 
+
+65
+00:01:05,199 --> 00:01:07,590
+only exists in this context here, is
+responsible for holding the memory that
+
+66
+00:01:07,590 --> 00:01:07,600
+responsible for holding the memory that
+ 
+
+67
+00:01:07,600 --> 00:01:10,230
+responsible for holding the memory that
+makes up these characters. So obviously
+
+68
+00:01:10,230 --> 00:01:10,240
+makes up these characters. So obviously
+ 
+
+69
+00:01:10,240 --> 00:01:12,390
+makes up these characters. So obviously
+by that logic, since the string actually
+
+70
+00:01:12,390 --> 00:01:12,400
+by that logic, since the string actually
+ 
+
+71
+00:01:12,400 --> 00:01:14,710
+by that logic, since the string actually
+holds the conch char buffer that makes
+
+72
+00:01:14,710 --> 00:01:14,720
+holds the conch char buffer that makes
+ 
+
+73
+00:01:14,720 --> 00:01:17,030
+holds the conch char buffer that makes
+up the characters of the string, once
+
+74
+00:01:17,030 --> 00:01:17,040
+up the characters of the string, once
+ 
+
+75
+00:01:17,040 --> 00:01:19,429
+up the characters of the string, once
+the string dies, so does the const
+
+76
+00:01:19,429 --> 00:01:19,439
+the string dies, so does the const
+ 
+
+77
+00:01:19,439 --> 00:01:21,510
+the string dies, so does the const
+buffer. So if we deliberately expand
+
+78
+00:01:21,510 --> 00:01:21,520
+buffer. So if we deliberately expand
+ 
+
+79
+00:01:21,520 --> 00:01:23,270
+buffer. So if we deliberately expand
+this example to what a lot of people
+
+80
+00:01:23,270 --> 00:01:23,280
+this example to what a lot of people
+ 
+
+81
+00:01:23,280 --> 00:01:25,510
+this example to what a lot of people
+probably think is going on here. If I do
+
+82
+00:01:25,510 --> 00:01:25,520
+probably think is going on here. If I do
+ 
+
+83
+00:01:25,520 --> 00:01:28,870
+probably think is going on here. If I do
+const pointer name equals getname dot
+
+84
+00:01:28,870 --> 00:01:28,880
+const pointer name equals getname dot
+ 
+
+85
+00:01:28,880 --> 00:01:31,190
+const pointer name equals getname dot
+cring and then we try and print the
+
+86
+00:01:31,190 --> 00:01:31,200
+cring and then we try and print the
+ 
+
+87
+00:01:31,200 --> 00:01:33,590
+cring and then we try and print the
+name. This tells a slightly different
+
+88
+00:01:33,590 --> 00:01:33,600
+name. This tells a slightly different
+ 
+
+89
+00:01:33,600 --> 00:01:35,429
+name. This tells a slightly different
+story. And in fact Visual Studio is
+
+90
+00:01:35,429 --> 00:01:35,439
+story. And in fact Visual Studio is
+ 
+
+91
+00:01:35,439 --> 00:01:37,350
+story. And in fact Visual Studio is
+telling me immediately that the pointer
+
+92
+00:01:37,350 --> 00:01:37,360
+telling me immediately that the pointer
+ 
+
+93
+00:01:37,360 --> 00:01:39,030
+telling me immediately that the pointer
+is dangling because it points at a
+
+94
+00:01:39,030 --> 00:01:39,040
+is dangling because it points at a
+ 
+
+95
+00:01:39,040 --> 00:01:41,429
+is dangling because it points at a
+temporary instance which was destroyed.
+
+96
+00:01:41,429 --> 00:01:41,439
+temporary instance which was destroyed.
+ 
+
+97
+00:01:41,439 --> 00:01:43,030
+temporary instance which was destroyed.
+What we're doing here is we're calling
+
+98
+00:01:43,030 --> 00:01:43,040
+What we're doing here is we're calling
+ 
+
+99
+00:01:43,040 --> 00:01:45,670
+What we're doing here is we're calling
+get name which returns a brand new std
+
+100
+00:01:45,670 --> 00:01:45,680
+get name which returns a brand new std
+ 
+
+101
+00:01:45,680 --> 00:01:47,350
+get name which returns a brand new std
+string object. But notice we're not
+
+102
+00:01:47,350 --> 00:01:47,360
+string object. But notice we're not
+ 
+
+103
+00:01:47,360 --> 00:01:49,749
+string object. But notice we're not
+storing it in any sort of variable. It's
+
+104
+00:01:49,749 --> 00:01:49,759
+storing it in any sort of variable. It's
+ 
+
+105
+00:01:49,759 --> 00:01:52,310
+storing it in any sort of variable. It's
+sort of just transiently temporarily
+
+106
+00:01:52,310 --> 00:01:52,320
+sort of just transiently temporarily
+ 
+
+107
+00:01:52,320 --> 00:01:55,350
+sort of just transiently temporarily
+existing within this line of code. So
+
+108
+00:01:55,350 --> 00:01:55,360
+existing within this line of code. So
+ 
+
+109
+00:01:55,360 --> 00:01:57,350
+existing within this line of code. So
+then when we try and pull out a simple
+
+110
+00:01:57,350 --> 00:01:57,360
+then when we try and pull out a simple
+ 
+
+111
+00:01:57,360 --> 00:02:00,069
+then when we try and pull out a simple
+pointer from that object and remember a
+
+112
+00:02:00,069 --> 00:02:00,079
+pointer from that object and remember a
+ 
+
+113
+00:02:00,079 --> 00:02:01,830
+pointer from that object and remember a
+pointer is just an integer. It's just a
+
+114
+00:02:01,830 --> 00:02:01,840
+pointer is just an integer. It's just a
+ 
+
+115
+00:02:01,840 --> 00:02:03,429
+pointer is just an integer. It's just a
+memory address. So it's not like it's
+
+116
+00:02:03,429 --> 00:02:03,439
+memory address. So it's not like it's
+ 
+
+117
+00:02:03,439 --> 00:02:05,590
+memory address. So it's not like it's
+going to transfer ownership of that
+
+118
+00:02:05,590 --> 00:02:05,600
+going to transfer ownership of that
+ 
+
+119
+00:02:05,600 --> 00:02:07,429
+going to transfer ownership of that
+memory or anything. No, it is literally
+
+120
+00:02:07,429 --> 00:02:07,439
+memory or anything. No, it is literally
+ 
+
+121
+00:02:07,439 --> 00:02:09,749
+memory or anything. No, it is literally
+just a number. We're pulling an int out
+
+122
+00:02:09,749 --> 00:02:09,759
+just a number. We're pulling an int out
+ 
+
+123
+00:02:09,759 --> 00:02:11,830
+just a number. We're pulling an int out
+of this string and storing it within
+
+124
+00:02:11,830 --> 00:02:11,840
+of this string and storing it within
+ 
+
+125
+00:02:11,840 --> 00:02:14,309
+of this string and storing it within
+this object. So then get name which
+
+126
+00:02:14,309 --> 00:02:14,319
+this object. So then get name which
+ 
+
+127
+00:02:14,319 --> 00:02:16,470
+this object. So then get name which
+returns our string. That string is not
+
+128
+00:02:16,470 --> 00:02:16,480
+returns our string. That string is not
+ 
+
+129
+00:02:16,480 --> 00:02:18,710
+returns our string. That string is not
+being stored anywhere means that when we
+
+130
+00:02:18,710 --> 00:02:18,720
+being stored anywhere means that when we
+ 
+
+131
+00:02:18,720 --> 00:02:21,589
+being stored anywhere means that when we
+go to the next line of code that string
+
+132
+00:02:21,589 --> 00:02:21,599
+go to the next line of code that string
+ 
+
+133
+00:02:21,599 --> 00:02:23,670
+go to the next line of code that string
+is gone. That string has been deleted
+
+134
+00:02:23,670 --> 00:02:23,680
+is gone. That string has been deleted
+ 
+
+135
+00:02:23,680 --> 00:02:26,390
+is gone. That string has been deleted
+and it has obviously freed its buffer of
+
+136
+00:02:26,390 --> 00:02:26,400
+and it has obviously freed its buffer of
+ 
+
+137
+00:02:26,400 --> 00:02:29,270
+and it has obviously freed its buffer of
+memory which we are still pointing to
+
+138
+00:02:29,270 --> 00:02:29,280
+memory which we are still pointing to
+ 
+
+139
+00:02:29,280 --> 00:02:31,990
+memory which we are still pointing to
+with our little pointer into this name
+
+140
+00:02:31,990 --> 00:02:32,000
+with our little pointer into this name
+ 
+
+141
+00:02:32,000 --> 00:02:34,229
+with our little pointer into this name
+variable. So then when we go to print
+
+142
+00:02:34,229 --> 00:02:34,239
+variable. So then when we go to print
+ 
+
+143
+00:02:34,239 --> 00:02:36,390
+variable. So then when we go to print
+that name, the print line function is
+
+144
+00:02:36,390 --> 00:02:36,400
+that name, the print line function is
+ 
+
+145
+00:02:36,400 --> 00:02:38,550
+that name, the print line function is
+going to start reading characters from a
+
+146
+00:02:38,550 --> 00:02:38,560
+going to start reading characters from a
+ 
+
+147
+00:02:38,560 --> 00:02:40,550
+going to start reading characters from a
+buffer that doesn't actually exist
+
+148
+00:02:40,550 --> 00:02:40,560
+buffer that doesn't actually exist
+ 
+
+149
+00:02:40,560 --> 00:02:42,790
+buffer that doesn't actually exist
+anymore. It's been freed. But aren't we
+
+150
+00:02:42,790 --> 00:02:42,800
+anymore. It's been freed. But aren't we
+ 
+
+151
+00:02:42,800 --> 00:02:44,869
+anymore. It's been freed. But aren't we
+doing the same thing over here? Is this
+
+152
+00:02:44,869 --> 00:02:44,879
+doing the same thing over here? Is this
+ 
+
+153
+00:02:44,879 --> 00:02:48,229
+doing the same thing over here? Is this
+not the same code? It is the same code,
+
+154
+00:02:48,229 --> 00:02:48,239
+not the same code? It is the same code,
+ 
+
+155
+00:02:48,239 --> 00:02:51,190
+not the same code? It is the same code,
+but the difference is where the actual C
+
+156
+00:02:51,190 --> 00:02:51,200
+but the difference is where the actual C
+ 
+
+157
+00:02:51,200 --> 00:02:53,670
+but the difference is where the actual C
+string pointer is being used. In this
+
+158
+00:02:53,670 --> 00:02:53,680
+string pointer is being used. In this
+ 
+
+159
+00:02:53,680 --> 00:02:56,229
+string pointer is being used. In this
+case, it's being passed directly into
+
+160
+00:02:56,229 --> 00:02:56,239
+case, it's being passed directly into
+ 
+
+161
+00:02:56,239 --> 00:02:58,150
+case, it's being passed directly into
+the print line function. Think of it
+
+162
+00:02:58,150 --> 00:02:58,160
+the print line function. Think of it
+ 
+
+163
+00:02:58,160 --> 00:03:01,350
+the print line function. Think of it
+this way. Get name is our string, right?
+
+164
+00:03:01,350 --> 00:03:01,360
+this way. Get name is our string, right?
+ 
+
+165
+00:03:01,360 --> 00:03:04,470
+this way. Get name is our string, right?
+Our string dies when we hit this
+
+166
+00:03:04,470 --> 00:03:04,480
+Our string dies when we hit this
+ 
+
+167
+00:03:04,480 --> 00:03:06,869
+Our string dies when we hit this
+semicolon at the end of our statement.
+
+168
+00:03:06,869 --> 00:03:06,879
+semicolon at the end of our statement.
+ 
+
+169
+00:03:06,879 --> 00:03:08,229
+semicolon at the end of our statement.
+So basically what I'm saying is that
+
+170
+00:03:08,229 --> 00:03:08,239
+So basically what I'm saying is that
+ 
+
+171
+00:03:08,239 --> 00:03:10,309
+So basically what I'm saying is that
+this string that we're returning, it is
+
+172
+00:03:10,309 --> 00:03:10,319
+this string that we're returning, it is
+ 
+
+173
+00:03:10,319 --> 00:03:13,830
+this string that we're returning, it is
+safe within this exact line of code
+
+174
+00:03:13,830 --> 00:03:13,840
+safe within this exact line of code
+ 
+
+175
+00:03:13,840 --> 00:03:16,229
+safe within this exact line of code
+which includes going into the print line
+
+176
+00:03:16,229 --> 00:03:16,239
+which includes going into the print line
+ 
+
+177
+00:03:16,239 --> 00:03:19,509
+which includes going into the print line
+function. Our actual string object is
+
+178
+00:03:19,509 --> 00:03:19,519
+function. Our actual string object is
+ 
+
+179
+00:03:19,519 --> 00:03:22,070
+function. Our actual string object is
+not going to die until this statement,
+
+180
+00:03:22,070 --> 00:03:22,080
+not going to die until this statement,
+ 
+
+181
+00:03:22,080 --> 00:03:24,309
+not going to die until this statement,
+this expression actually finishes. When
+
+182
+00:03:24,309 --> 00:03:24,319
+this expression actually finishes. When
+ 
+
+183
+00:03:24,319 --> 00:03:26,470
+this expression actually finishes. When
+we drop to the next line of code, it's
+
+184
+00:03:26,470 --> 00:03:26,480
+we drop to the next line of code, it's
+ 
+
+185
+00:03:26,480 --> 00:03:29,509
+we drop to the next line of code, it's
+gone. But within this line of code, it's
+
+186
+00:03:29,509 --> 00:03:29,519
+gone. But within this line of code, it's
+ 
+
+187
+00:03:29,519 --> 00:03:32,390
+gone. But within this line of code, it's
+still alive, which means that this is in
+
+188
+00:03:32,390 --> 00:03:32,400
+still alive, which means that this is in
+ 
+
+189
+00:03:32,400 --> 00:03:35,509
+still alive, which means that this is in
+fact safe. The example below is a little
+
+190
+00:03:35,509 --> 00:03:35,519
+fact safe. The example below is a little
+ 
+
+191
+00:03:35,519 --> 00:03:37,990
+fact safe. The example below is a little
+bit different because by our same logic
+
+192
+00:03:37,990 --> 00:03:38,000
+bit different because by our same logic
+ 
+
+193
+00:03:38,000 --> 00:03:40,789
+bit different because by our same logic
+of our string existing within this line
+
+194
+00:03:40,789 --> 00:03:40,799
+of our string existing within this line
+ 
+
+195
+00:03:40,799 --> 00:03:42,949
+of our string existing within this line
+of code, yeah, it does exist within this
+
+196
+00:03:42,949 --> 00:03:42,959
+of code, yeah, it does exist within this
+ 
+
+197
+00:03:42,959 --> 00:03:44,229
+of code, yeah, it does exist within this
+line of code. And what are we doing with
+
+198
+00:03:44,229 --> 00:03:44,239
+line of code. And what are we doing with
+ 
+
+199
+00:03:44,239 --> 00:03:45,990
+line of code. And what are we doing with
+it? We're simply pulling out an integer.
+
+200
+00:03:45,990 --> 00:03:46,000
+it? We're simply pulling out an integer.
+ 
+
+201
+00:03:46,000 --> 00:03:47,750
+it? We're simply pulling out an integer.
+We're pulling out a const pointer. So
+
+202
+00:03:47,750 --> 00:03:47,760
+We're pulling out a const pointer. So
+ 
+
+203
+00:03:47,760 --> 00:03:49,589
+We're pulling out a const pointer. So
+then it clearly gets destroyed after
+
+204
+00:03:49,589 --> 00:03:49,599
+then it clearly gets destroyed after
+ 
+
+205
+00:03:49,599 --> 00:03:51,270
+then it clearly gets destroyed after
+that line of code. And when we go to
+
+206
+00:03:51,270 --> 00:03:51,280
+that line of code. And when we go to
+ 
+
+207
+00:03:51,280 --> 00:03:54,630
+that line of code. And when we go to
+print it now with name, a pointer within
+
+208
+00:03:54,630 --> 00:03:54,640
+print it now with name, a pointer within
+ 
+
+209
+00:03:54,640 --> 00:03:56,949
+print it now with name, a pointer within
+our string that has now been destroyed,
+
+210
+00:03:56,949 --> 00:03:56,959
+our string that has now been destroyed,
+ 
+
+211
+00:03:56,959 --> 00:03:58,470
+our string that has now been destroyed,
+boom. Now, if you want to make sure that
+
+212
+00:03:58,470 --> 00:03:58,480
+boom. Now, if you want to make sure that
+ 
+
+213
+00:03:58,480 --> 00:04:00,390
+boom. Now, if you want to make sure that
+you and your team catch bugs like this,
+
+214
+00:04:00,390 --> 00:04:00,400
+you and your team catch bugs like this,
+ 
+
+215
+00:04:00,400 --> 00:04:01,750
+you and your team catch bugs like this,
+then you should check out Code Rabbit,
+
+216
+00:04:01,750 --> 00:04:01,760
+then you should check out Code Rabbit,
+ 
+
+217
+00:04:01,760 --> 00:04:03,350
+then you should check out Code Rabbit,
+the sponsor of this video. Code Rabbit
+
+218
+00:04:03,350 --> 00:04:03,360
+the sponsor of this video. Code Rabbit
+ 
+
+219
+00:04:03,360 --> 00:04:05,110
+the sponsor of this video. Code Rabbit
+is your AI co-pilot, helping you and
+
+220
+00:04:05,110 --> 00:04:05,120
+is your AI co-pilot, helping you and
+ 
+
+221
+00:04:05,120 --> 00:04:06,949
+is your AI co-pilot, helping you and
+your team produce higher quality code.
+
+222
+00:04:06,949 --> 00:04:06,959
+your team produce higher quality code.
+ 
+
+223
+00:04:06,959 --> 00:04:08,309
+your team produce higher quality code.
+Dev teams are moving faster than ever
+
+224
+00:04:08,309 --> 00:04:08,319
+Dev teams are moving faster than ever
+ 
+
+225
+00:04:08,319 --> 00:04:09,990
+Dev teams are moving faster than ever
+with all these AI tools writing your
+
+226
+00:04:09,990 --> 00:04:10,000
+with all these AI tools writing your
+ 
+
+227
+00:04:10,000 --> 00:04:12,309
+with all these AI tools writing your
+code for you. So, how can you possibly
+
+228
+00:04:12,309 --> 00:04:12,319
+code for you. So, how can you possibly
+ 
+
+229
+00:04:12,319 --> 00:04:13,910
+code for you. So, how can you possibly
+keep up and ensure that you're still
+
+230
+00:04:13,910 --> 00:04:13,920
+keep up and ensure that you're still
+ 
+
+231
+00:04:13,920 --> 00:04:15,830
+keep up and ensure that you're still
+delivering quality code? Code reviews
+
+232
+00:04:15,830 --> 00:04:15,840
+delivering quality code? Code reviews
+ 
+
+233
+00:04:15,840 --> 00:04:18,150
+delivering quality code? Code reviews
+are super critical but timeconuming. So,
+
+234
+00:04:18,150 --> 00:04:18,160
+are super critical but timeconuming. So,
+ 
+
+235
+00:04:18,160 --> 00:04:19,909
+are super critical but timeconuming. So,
+we need better tools to help us. Code
+
+236
+00:04:19,909 --> 00:04:19,919
+we need better tools to help us. Code
+ 
+
+237
+00:04:19,919 --> 00:04:21,749
+we need better tools to help us. Code
+Rabbit is the category defining platform
+
+238
+00:04:21,749 --> 00:04:21,759
+Rabbit is the category defining platform
+ 
+
+239
+00:04:21,759 --> 00:04:23,830
+Rabbit is the category defining platform
+for AI code reviews with contextaware
+
+240
+00:04:23,830 --> 00:04:23,840
+for AI code reviews with contextaware
+ 
+
+241
+00:04:23,840 --> 00:04:25,830
+for AI code reviews with contextaware
+reviews that pull in dozens of points of
+
+242
+00:04:25,830 --> 00:04:25,840
+reviews that pull in dozens of points of
+ 
+
+243
+00:04:25,840 --> 00:04:27,430
+reviews that pull in dozens of points of
+context. Code Rabbit provides you with
+
+244
+00:04:27,430 --> 00:04:27,440
+context. Code Rabbit provides you with
+ 
+
+245
+00:04:27,440 --> 00:04:28,870
+context. Code Rabbit provides you with
+instant code review comments and shows
+
+246
+00:04:28,870 --> 00:04:28,880
+instant code review comments and shows
+ 
+
+247
+00:04:28,880 --> 00:04:30,790
+instant code review comments and shows
+you the potential impact of every pull
+
+248
+00:04:30,790 --> 00:04:30,800
+you the potential impact of every pull
+ 
+
+249
+00:04:30,800 --> 00:04:32,390
+you the potential impact of every pull
+request, meaning you can stay on top of
+
+250
+00:04:32,390 --> 00:04:32,400
+request, meaning you can stay on top of
+ 
+
+251
+00:04:32,400 --> 00:04:34,469
+request, meaning you can stay on top of
+every change in your codebase. Code
+
+252
+00:04:34,469 --> 00:04:34,479
+every change in your codebase. Code
+ 
+
+253
+00:04:34,479 --> 00:04:36,230
+every change in your codebase. Code
+Rabbit is a self-improving agent that
+
+254
+00:04:36,230 --> 00:04:36,240
+Rabbit is a self-improving agent that
+ 
+
+255
+00:04:36,240 --> 00:04:37,749
+Rabbit is a self-improving agent that
+learns from all of the interactions that
+
+256
+00:04:37,749 --> 00:04:37,759
+learns from all of the interactions that
+ 
+
+257
+00:04:37,759 --> 00:04:39,350
+learns from all of the interactions that
+you have with it with customization
+
+258
+00:04:39,350 --> 00:04:39,360
+you have with it with customization
+ 
+
+259
+00:04:39,360 --> 00:04:41,189
+you have with it with customization
+features that allow you to tailor it to
+
+260
+00:04:41,189 --> 00:04:41,199
+features that allow you to tailor it to
+ 
+
+261
+00:04:41,199 --> 00:04:43,350
+features that allow you to tailor it to
+your codebase. It helps organizations
+
+262
+00:04:43,350 --> 00:04:43,360
+your codebase. It helps organizations
+ 
+
+263
+00:04:43,360 --> 00:04:45,030
+your codebase. It helps organizations
+catch bugs, strengthen security, and
+
+264
+00:04:45,030 --> 00:04:45,040
+catch bugs, strengthen security, and
+ 
+
+265
+00:04:45,040 --> 00:04:46,950
+catch bugs, strengthen security, and
+ship reliable code at speed, which is
+
+266
+00:04:46,950 --> 00:04:46,960
+ship reliable code at speed, which is
+ 
+
+267
+00:04:46,960 --> 00:04:48,629
+ship reliable code at speed, which is
+why it's trusted by thousands of
+
+268
+00:04:48,629 --> 00:04:48,639
+why it's trusted by thousands of
+ 
+
+269
+00:04:48,639 --> 00:04:50,950
+why it's trusted by thousands of
+organizations and open-source projects
+
+270
+00:04:50,950 --> 00:04:50,960
+organizations and open-source projects
+ 
+
+271
+00:04:50,960 --> 00:04:53,270
+organizations and open-source projects
+worldwide, such as Nvidia. Code Rabbit
+
+272
+00:04:53,270 --> 00:04:53,280
+worldwide, such as Nvidia. Code Rabbit
+ 
+
+273
+00:04:53,280 --> 00:04:55,350
+worldwide, such as Nvidia. Code Rabbit
+reviews 1 million pull requests per week
+
+274
+00:04:55,350 --> 00:04:55,360
+reviews 1 million pull requests per week
+ 
+
+275
+00:04:55,360 --> 00:04:57,430
+reviews 1 million pull requests per week
+across 3 million repositories and is
+
+276
+00:04:57,430 --> 00:04:57,440
+across 3 million repositories and is
+ 
+
+277
+00:04:57,440 --> 00:05:00,070
+across 3 million repositories and is
+used by 100,000 open- source projects.
+
+278
+00:05:00,070 --> 00:05:00,080
+used by 100,000 open- source projects.
+ 
+
+279
+00:05:00,080 --> 00:05:01,909
+used by 100,000 open- source projects.
+Aside from seamlessly integrating into
+
+280
+00:05:01,909 --> 00:05:01,919
+Aside from seamlessly integrating into
+ 
+
+281
+00:05:01,919 --> 00:05:04,150
+Aside from seamlessly integrating into
+GitHub or GitLab, Code Rabbit is also
+
+282
+00:05:04,150 --> 00:05:04,160
+GitHub or GitLab, Code Rabbit is also
+ 
+
+283
+00:05:04,160 --> 00:05:06,950
+GitHub or GitLab, Code Rabbit is also
+available in CLI and IDE. So give it a
+
+284
+00:05:06,950 --> 00:05:06,960
+available in CLI and IDE. So give it a
+ 
+
+285
+00:05:06,960 --> 00:05:08,790
+available in CLI and IDE. So give it a
+try today and cut code review time and
+
+286
+00:05:08,790 --> 00:05:08,800
+try today and cut code review time and
+ 
+
+287
+00:05:08,800 --> 00:05:10,870
+try today and cut code review time and
+bugs in half instantly. Go to
+
+288
+00:05:10,870 --> 00:05:10,880
+bugs in half instantly. Go to
+ 
+
+289
+00:05:10,880 --> 00:05:12,550
+bugs in half instantly. Go to
+codrabbit.link/cho.
+
+290
+00:05:12,550 --> 00:05:12,560
+codrabbit.link/cho.
+ 
+
+291
+00:05:12,560 --> 00:05:14,070
+codrabbit.link/cho.
+Link will be in the description below.
+
+292
+00:05:14,070 --> 00:05:14,080
+Link will be in the description below.
+ 
+
+293
+00:05:14,080 --> 00:05:15,430
+Link will be in the description below.
+Huge thank you to Code Rabbit for
+
+294
+00:05:15,430 --> 00:05:15,440
+Huge thank you to Code Rabbit for
+ 
+
+295
+00:05:15,440 --> 00:05:17,510
+Huge thank you to Code Rabbit for
+sponsoring this video. I think this is a
+
+296
+00:05:17,510 --> 00:05:17,520
+sponsoring this video. I think this is a
+ 
+
+297
+00:05:17,520 --> 00:05:19,350
+sponsoring this video. I think this is a
+bit of a common misconception that
+
+298
+00:05:19,350 --> 00:05:19,360
+bit of a common misconception that
+ 
+
+299
+00:05:19,360 --> 00:05:21,189
+bit of a common misconception that
+people have because this looks like it
+
+300
+00:05:21,189 --> 00:05:21,199
+people have because this looks like it
+ 
+
+301
+00:05:21,199 --> 00:05:23,189
+people have because this looks like it
+might be dangerous. So, how would we
+
+302
+00:05:23,189 --> 00:05:23,199
+might be dangerous. So, how would we
+ 
+
+303
+00:05:23,199 --> 00:05:26,150
+might be dangerous. So, how would we
+then rewrite this so that it is in fact
+
+304
+00:05:26,150 --> 00:05:26,160
+then rewrite this so that it is in fact
+ 
+
+305
+00:05:26,160 --> 00:05:28,629
+then rewrite this so that it is in fact
+safe? Well, we just need to make sure
+
+306
+00:05:28,629 --> 00:05:28,639
+safe? Well, we just need to make sure
+ 
+
+307
+00:05:28,639 --> 00:05:31,350
+safe? Well, we just need to make sure
+that the string is stored until we're
+
+308
+00:05:31,350 --> 00:05:31,360
+that the string is stored until we're
+ 
+
+309
+00:05:31,360 --> 00:05:33,990
+that the string is stored until we're
+actually truly done with its memory. So,
+
+310
+00:05:33,990 --> 00:05:34,000
+actually truly done with its memory. So,
+ 
+
+311
+00:05:34,000 --> 00:05:36,950
+actually truly done with its memory. So,
+instead of constame, we would just do sd
+
+312
+00:05:36,950 --> 00:05:36,960
+instead of constame, we would just do sd
+ 
+
+313
+00:05:36,960 --> 00:05:39,590
+instead of constame, we would just do sd
+string name equals get name. And then
+
+314
+00:05:39,590 --> 00:05:39,600
+string name equals get name. And then
+ 
+
+315
+00:05:39,600 --> 00:05:41,909
+string name equals get name. And then
+from there, if we really wanted it to be
+
+316
+00:05:41,909 --> 00:05:41,919
+from there, if we really wanted it to be
+ 
+
+317
+00:05:41,919 --> 00:05:44,310
+from there, if we really wanted it to be
+like a char pointer in its own variable,
+
+318
+00:05:44,310 --> 00:05:44,320
+like a char pointer in its own variable,
+ 
+
+319
+00:05:44,320 --> 00:05:46,950
+like a char pointer in its own variable,
+we could do something like name cring
+
+320
+00:05:46,950 --> 00:05:46,960
+we could do something like name cring
+ 
+
+321
+00:05:46,960 --> 00:05:49,110
+we could do something like name cring
+like this. And then we would provide our
+
+322
+00:05:49,110 --> 00:05:49,120
+like this. And then we would provide our
+ 
+
+323
+00:05:49,120 --> 00:05:51,670
+like this. And then we would provide our
+function with that. I would just rewrite
+
+324
+00:05:51,670 --> 00:05:51,680
+function with that. I would just rewrite
+ 
+
+325
+00:05:51,680 --> 00:05:53,189
+function with that. I would just rewrite
+this like this though. There's no need
+
+326
+00:05:53,189 --> 00:05:53,199
+this like this though. There's no need
+ 
+
+327
+00:05:53,199 --> 00:05:54,950
+this like this though. There's no need
+to pull out the constru pointer into its
+
+328
+00:05:54,950 --> 00:05:54,960
+to pull out the constru pointer into its
+ 
+
+329
+00:05:54,960 --> 00:05:57,430
+to pull out the constru pointer into its
+own variable. But this is in fact safe.
+
+330
+00:05:57,430 --> 00:05:57,440
+own variable. But this is in fact safe.
+ 
+
+331
+00:05:57,440 --> 00:05:59,270
+own variable. But this is in fact safe.
+Our string that is created by this get
+
+332
+00:05:59,270 --> 00:05:59,280
+Our string that is created by this get
+ 
+
+333
+00:05:59,280 --> 00:06:00,790
+Our string that is created by this get
+name function is going to be stored
+
+334
+00:06:00,790 --> 00:06:00,800
+name function is going to be stored
+ 
+
+335
+00:06:00,800 --> 00:06:03,350
+name function is going to be stored
+within this string variable until this
+
+336
+00:06:03,350 --> 00:06:03,360
+within this string variable until this
+ 
+
+337
+00:06:03,360 --> 00:06:05,350
+within this string variable until this
+string variable name goes out of scope
+
+338
+00:06:05,350 --> 00:06:05,360
+string variable name goes out of scope
+ 
+
+339
+00:06:05,360 --> 00:06:06,950
+string variable name goes out of scope
+which in this case is of course going to
+
+340
+00:06:06,950 --> 00:06:06,960
+which in this case is of course going to
+ 
+
+341
+00:06:06,960 --> 00:06:09,189
+which in this case is of course going to
+be the end of our program. So that's it.
+
+342
+00:06:09,189 --> 00:06:09,199
+be the end of our program. So that's it.
+ 
+
+343
+00:06:09,199 --> 00:06:11,749
+be the end of our program. So that's it.
+This is 100% safe. So either of these
+
+344
+00:06:11,749 --> 00:06:11,759
+This is 100% safe. So either of these
+ 
+
+345
+00:06:11,759 --> 00:06:14,629
+This is 100% safe. So either of these
+are technically safe in this specific
+
+346
+00:06:14,629 --> 00:06:14,639
+are technically safe in this specific
+ 
+
+347
+00:06:14,639 --> 00:06:18,469
+are technically safe in this specific
+context. However, this is kind of
+
+348
+00:06:18,469 --> 00:06:18,479
+context. However, this is kind of
+ 
+
+349
+00:06:18,479 --> 00:06:21,350
+context. However, this is kind of
+guaranteed to be safe, but it's really
+
+350
+00:06:21,350 --> 00:06:21,360
+guaranteed to be safe, but it's really
+ 
+
+351
+00:06:21,360 --> 00:06:23,830
+guaranteed to be safe, but it's really
+up to what the function is actually
+
+352
+00:06:23,830 --> 00:06:23,840
+up to what the function is actually
+ 
+
+353
+00:06:23,840 --> 00:06:26,710
+up to what the function is actually
+doing with this pointer. For example,
+
+354
+00:06:26,710 --> 00:06:26,720
+doing with this pointer. For example,
+ 
+
+355
+00:06:26,720 --> 00:06:29,110
+doing with this pointer. For example,
+this is pretty unlikely in practice, I
+
+356
+00:06:29,110 --> 00:06:29,120
+this is pretty unlikely in practice, I
+ 
+
+357
+00:06:29,120 --> 00:06:31,350
+this is pretty unlikely in practice, I
+would have to say, but if the print line
+
+358
+00:06:31,350 --> 00:06:31,360
+would have to say, but if the print line
+ 
+
+359
+00:06:31,360 --> 00:06:33,830
+would have to say, but if the print line
+function decided to take this conchar
+
+360
+00:06:33,830 --> 00:06:33,840
+function decided to take this conchar
+ 
+
+361
+00:06:33,840 --> 00:06:36,870
+function decided to take this conchar
+pointer and store it for some reason,
+
+362
+00:06:36,870 --> 00:06:36,880
+pointer and store it for some reason,
+ 
+
+363
+00:06:36,880 --> 00:06:39,350
+pointer and store it for some reason,
+and then later in the program after this
+
+364
+00:06:39,350 --> 00:06:39,360
+and then later in the program after this
+ 
+
+365
+00:06:39,360 --> 00:06:41,510
+and then later in the program after this
+line has finished, it would then try and
+
+366
+00:06:41,510 --> 00:06:41,520
+line has finished, it would then try and
+ 
+
+367
+00:06:41,520 --> 00:06:43,830
+line has finished, it would then try and
+use the memory at that pointer. That of
+
+368
+00:06:43,830 --> 00:06:43,840
+use the memory at that pointer. That of
+ 
+
+369
+00:06:43,840 --> 00:06:46,390
+use the memory at that pointer. That of
+course is going to not be there anymore
+
+370
+00:06:46,390 --> 00:06:46,400
+course is going to not be there anymore
+ 
+
+371
+00:06:46,400 --> 00:06:48,550
+course is going to not be there anymore
+because the string has been destroyed.
+
+372
+00:06:48,550 --> 00:06:48,560
+because the string has been destroyed.
+ 
+
+373
+00:06:48,560 --> 00:06:51,110
+because the string has been destroyed.
+Now it would be pretty psychopathic for
+
+374
+00:06:51,110 --> 00:06:51,120
+Now it would be pretty psychopathic for
+ 
+
+375
+00:06:51,120 --> 00:06:53,270
+Now it would be pretty psychopathic for
+someone to write a function like this
+
+376
+00:06:53,270 --> 00:06:53,280
+someone to write a function like this
+ 
+
+377
+00:06:53,280 --> 00:06:56,309
+someone to write a function like this
+that takes in a pointer and then just
+
+378
+00:06:56,309 --> 00:06:56,319
+that takes in a pointer and then just
+ 
+
+379
+00:06:56,319 --> 00:06:58,950
+that takes in a pointer and then just
+stores it without any kind of copying it
+
+380
+00:06:58,950 --> 00:06:58,960
+stores it without any kind of copying it
+ 
+
+381
+00:06:58,960 --> 00:07:01,350
+stores it without any kind of copying it
+into its own internal buffer but just
+
+382
+00:07:01,350 --> 00:07:01,360
+into its own internal buffer but just
+ 
+
+383
+00:07:01,360 --> 00:07:03,350
+into its own internal buffer but just
+storing the the pointer directly. Like
+
+384
+00:07:03,350 --> 00:07:03,360
+storing the the pointer directly. Like
+ 
+
+385
+00:07:03,360 --> 00:07:05,430
+storing the the pointer directly. Like
+that doesn't really happen at least not
+
+386
+00:07:05,430 --> 00:07:05,440
+that doesn't really happen at least not
+ 
+
+387
+00:07:05,440 --> 00:07:08,550
+that doesn't really happen at least not
+with a string pointer like this. But in
+
+388
+00:07:08,550 --> 00:07:08,560
+with a string pointer like this. But in
+ 
+
+389
+00:07:08,560 --> 00:07:10,150
+with a string pointer like this. But in
+other cases it can certainly happen.
+
+390
+00:07:10,150 --> 00:07:10,160
+other cases it can certainly happen.
+ 
+
+391
+00:07:10,160 --> 00:07:12,390
+other cases it can certainly happen.
+Like if this was a pointer to an object,
+
+392
+00:07:12,390 --> 00:07:12,400
+Like if this was a pointer to an object,
+ 
+
+393
+00:07:12,400 --> 00:07:14,150
+Like if this was a pointer to an object,
+then by taking in a raw pointer into
+
+394
+00:07:14,150 --> 00:07:14,160
+then by taking in a raw pointer into
+ 
+
+395
+00:07:14,160 --> 00:07:15,189
+then by taking in a raw pointer into
+some sort of function then and
+
+396
+00:07:15,189 --> 00:07:15,199
+some sort of function then and
+ 
+
+397
+00:07:15,199 --> 00:07:16,629
+some sort of function then and
+potentially storing it, it's kind of
+
+398
+00:07:16,629 --> 00:07:16,639
+potentially storing it, it's kind of
+ 
+
+399
+00:07:16,639 --> 00:07:18,390
+potentially storing it, it's kind of
+like a weak pointer. But again, that
+
+400
+00:07:18,390 --> 00:07:18,400
+like a weak pointer. But again, that
+ 
+
+401
+00:07:18,400 --> 00:07:20,469
+like a weak pointer. But again, that
+would only apply if you have some sort
+
+402
+00:07:20,469 --> 00:07:20,479
+would only apply if you have some sort
+ 
+
+403
+00:07:20,479 --> 00:07:23,589
+would only apply if you have some sort
+of external object that internally is
+
+404
+00:07:23,589 --> 00:07:23,599
+of external object that internally is
+ 
+
+405
+00:07:23,599 --> 00:07:26,469
+of external object that internally is
+owning a pointer that will be freed when
+
+406
+00:07:26,469 --> 00:07:26,479
+owning a pointer that will be freed when
+ 
+
+407
+00:07:26,479 --> 00:07:28,790
+owning a pointer that will be freed when
+that external object dies. But the point
+
+408
+00:07:28,790 --> 00:07:28,800
+that external object dies. But the point
+ 
+
+409
+00:07:28,800 --> 00:07:30,469
+that external object dies. But the point
+is you don't technically know what's
+
+410
+00:07:30,469 --> 00:07:30,479
+is you don't technically know what's
+ 
+
+411
+00:07:30,479 --> 00:07:32,070
+is you don't technically know what's
+happening here. Maybe some logging
+
+412
+00:07:32,070 --> 00:07:32,080
+happening here. Maybe some logging
+ 
+
+413
+00:07:32,080 --> 00:07:34,390
+happening here. Maybe some logging
+library decides to buffer the log
+
+414
+00:07:34,390 --> 00:07:34,400
+library decides to buffer the log
+ 
+
+415
+00:07:34,400 --> 00:07:35,990
+library decides to buffer the log
+messages and not just print them
+
+416
+00:07:35,990 --> 00:07:36,000
+messages and not just print them
+ 
+
+417
+00:07:36,000 --> 00:07:37,589
+messages and not just print them
+immediately and they would just store
+
+418
+00:07:37,589 --> 00:07:37,599
+immediately and they would just store
+ 
+
+419
+00:07:37,599 --> 00:07:39,749
+immediately and they would just store
+the conch char pointer. Again, in that
+
+420
+00:07:39,749 --> 00:07:39,759
+the conch char pointer. Again, in that
+ 
+
+421
+00:07:39,759 --> 00:07:41,430
+the conch char pointer. Again, in that
+scenario, the logging library would
+
+422
+00:07:41,430 --> 00:07:41,440
+scenario, the logging library would
+ 
+
+423
+00:07:41,440 --> 00:07:43,749
+scenario, the logging library would
+almost certainly copy the string into
+
+424
+00:07:43,749 --> 00:07:43,759
+almost certainly copy the string into
+ 
+
+425
+00:07:43,759 --> 00:07:45,990
+almost certainly copy the string into
+its own internal memory so that you
+
+426
+00:07:45,990 --> 00:07:46,000
+its own internal memory so that you
+ 
+
+427
+00:07:46,000 --> 00:07:47,990
+its own internal memory so that you
+wouldn't be bound by some weird lifetime
+
+428
+00:07:47,990 --> 00:07:48,000
+wouldn't be bound by some weird lifetime
+ 
+
+429
+00:07:48,000 --> 00:07:50,230
+wouldn't be bound by some weird lifetime
+like this. Another really common example
+
+430
+00:07:50,230 --> 00:07:50,240
+like this. Another really common example
+ 
+
+431
+00:07:50,240 --> 00:07:52,550
+like this. Another really common example
+that I see that people are unsure about
+
+432
+00:07:52,550 --> 00:07:52,560
+that I see that people are unsure about
+ 
+
+433
+00:07:52,560 --> 00:07:55,110
+that I see that people are unsure about
+pretty often is if you have a file
+
+434
+00:07:55,110 --> 00:07:55,120
+pretty often is if you have a file
+ 
+
+435
+00:07:55,120 --> 00:07:58,309
+pretty often is if you have a file
+system path. So, let's do get path
+
+436
+00:07:58,309 --> 00:07:58,319
+system path. So, let's do get path
+ 
+
+437
+00:07:58,319 --> 00:08:01,270
+system path. So, let's do get path
+return image.png. If I have a file
+
+438
+00:08:01,270 --> 00:08:01,280
+return image.png. If I have a file
+ 
+
+439
+00:08:01,280 --> 00:08:03,029
+return image.png. If I have a file
+system path and I need to get a char
+
+440
+00:08:03,029 --> 00:08:03,039
+system path and I need to get a char
+ 
+
+441
+00:08:03,039 --> 00:08:04,790
+system path and I need to get a char
+pointer out of it, how do I do that? And
+
+442
+00:08:04,790 --> 00:08:04,800
+pointer out of it, how do I do that? And
+ 
+
+443
+00:08:04,800 --> 00:08:05,990
+pointer out of it, how do I do that? And
+in fact, let's just say that I'm
+
+444
+00:08:05,990 --> 00:08:06,000
+in fact, let's just say that I'm
+ 
+
+445
+00:08:06,000 --> 00:08:07,749
+in fact, let's just say that I'm
+actually storing this properly. So here
+
+446
+00:08:07,749 --> 00:08:07,759
+actually storing this properly. So here
+ 
+
+447
+00:08:07,759 --> 00:08:09,510
+actually storing this properly. So here
+is my path and then I want to I don't
+
+448
+00:08:09,510 --> 00:08:09,520
+is my path and then I want to I don't
+ 
+
+449
+00:08:09,520 --> 00:08:11,510
+is my path and then I want to I don't
+know display it in the UI using I'm
+
+450
+00:08:11,510 --> 00:08:11,520
+know display it in the UI using I'm
+ 
+
+451
+00:08:11,520 --> 00:08:13,430
+know display it in the UI using I'm
+guey. Maybe it needs an actual char
+
+452
+00:08:13,430 --> 00:08:13,440
+guey. Maybe it needs an actual char
+ 
+
+453
+00:08:13,440 --> 00:08:14,950
+guey. Maybe it needs an actual char
+pointer. So how do I get to a char
+
+454
+00:08:14,950 --> 00:08:14,960
+pointer. So how do I get to a char
+ 
+
+455
+00:08:14,960 --> 00:08:16,869
+pointer. So how do I get to a char
+pointer? Well file system path does have
+
+456
+00:08:16,869 --> 00:08:16,879
+pointer? Well file system path does have
+ 
+
+457
+00:08:16,879 --> 00:08:19,589
+pointer? Well file system path does have
+a cring function. However that doesn't
+
+458
+00:08:19,589 --> 00:08:19,599
+a cring function. However that doesn't
+ 
+
+459
+00:08:19,599 --> 00:08:22,070
+a cring function. However that doesn't
+actually return a char. It returns a
+
+460
+00:08:22,070 --> 00:08:22,080
+actually return a char. It returns a
+ 
+
+461
+00:08:22,080 --> 00:08:24,309
+actually return a char. It returns a
+wide string at least in MSVC's
+
+462
+00:08:24,309 --> 00:08:24,319
+wide string at least in MSVC's
+ 
+
+463
+00:08:24,319 --> 00:08:26,550
+wide string at least in MSVC's
+implementation. So that's no good. I
+
+464
+00:08:26,550 --> 00:08:26,560
+implementation. So that's no good. I
+ 
+
+465
+00:08:26,560 --> 00:08:29,510
+implementation. So that's no good. I
+need a normal cring. So I have to do dot
+
+466
+00:08:29,510 --> 00:08:29,520
+need a normal cring. So I have to do dot
+ 
+
+467
+00:08:29,520 --> 00:08:32,870
+need a normal cring. So I have to do dot
+string dot cring. That is the pattern
+
+468
+00:08:32,870 --> 00:08:32,880
+string dot cring. That is the pattern
+ 
+
+469
+00:08:32,880 --> 00:08:34,790
+string dot cring. That is the pattern
+that most people are used to. And you
+
+470
+00:08:34,790 --> 00:08:34,800
+that most people are used to. And you
+ 
+
+471
+00:08:34,800 --> 00:08:36,550
+that most people are used to. And you
+can see that this can also kind of look
+
+472
+00:08:36,550 --> 00:08:36,560
+can see that this can also kind of look
+ 
+
+473
+00:08:36,560 --> 00:08:38,630
+can see that this can also kind of look
+crazier if it's like this. So then if I
+
+474
+00:08:38,630 --> 00:08:38,640
+crazier if it's like this. So then if I
+ 
+
+475
+00:08:38,640 --> 00:08:40,949
+crazier if it's like this. So then if I
+had this and I wanted to log it, would
+
+476
+00:08:40,949 --> 00:08:40,959
+had this and I wanted to log it, would
+ 
+
+477
+00:08:40,959 --> 00:08:43,750
+had this and I wanted to log it, would
+something like this be acceptable? And
+
+478
+00:08:43,750 --> 00:08:43,760
+something like this be acceptable? And
+ 
+
+479
+00:08:43,760 --> 00:08:46,150
+something like this be acceptable? And
+again, if we apply our rules to it, we
+
+480
+00:08:46,150 --> 00:08:46,160
+again, if we apply our rules to it, we
+ 
+
+481
+00:08:46,160 --> 00:08:48,150
+again, if we apply our rules to it, we
+have a very transient string here
+
+482
+00:08:48,150 --> 00:08:48,160
+have a very transient string here
+ 
+
+483
+00:08:48,160 --> 00:08:50,310
+have a very transient string here
+because path.string, this doesn't return
+
+484
+00:08:50,310 --> 00:08:50,320
+because path.string, this doesn't return
+ 
+
+485
+00:08:50,320 --> 00:08:52,230
+because path.string, this doesn't return
+a const string reference or anything.
+
+486
+00:08:52,230 --> 00:08:52,240
+a const string reference or anything.
+ 
+
+487
+00:08:52,240 --> 00:08:54,389
+a const string reference or anything.
+You can see it's actually constructing a
+
+488
+00:08:54,389 --> 00:08:54,399
+You can see it's actually constructing a
+ 
+
+489
+00:08:54,399 --> 00:08:56,389
+You can see it's actually constructing a
+new string. And then we're calling cring
+
+490
+00:08:56,389 --> 00:08:56,399
+new string. And then we're calling cring
+ 
+
+491
+00:08:56,399 --> 00:08:58,470
+new string. And then we're calling cring
+to get the pointer to the char array
+
+492
+00:08:58,470 --> 00:08:58,480
+to get the pointer to the char array
+ 
+
+493
+00:08:58,480 --> 00:09:01,190
+to get the pointer to the char array
+buffer from within that transient
+
+494
+00:09:01,190 --> 00:09:01,200
+buffer from within that transient
+ 
+
+495
+00:09:01,200 --> 00:09:02,949
+buffer from within that transient
+string. However, because it's all
+
+496
+00:09:02,949 --> 00:09:02,959
+string. However, because it's all
+ 
+
+497
+00:09:02,959 --> 00:09:05,269
+string. However, because it's all
+happening within this one line and print
+
+498
+00:09:05,269 --> 00:09:05,279
+happening within this one line and print
+ 
+
+499
+00:09:05,279 --> 00:09:08,710
+happening within this one line and print
+line will consume and be done with that
+
+500
+00:09:08,710 --> 00:09:08,720
+line will consume and be done with that
+ 
+
+501
+00:09:08,720 --> 00:09:11,990
+line will consume and be done with that
+actual char pointer by the end of its
+
+502
+00:09:11,990 --> 00:09:12,000
+actual char pointer by the end of its
+ 
+
+503
+00:09:12,000 --> 00:09:15,750
+actual char pointer by the end of its
+scope. This is in fact safe. I should
+
+504
+00:09:15,750 --> 00:09:15,760
+scope. This is in fact safe. I should
+ 
+
+505
+00:09:15,760 --> 00:09:17,350
+scope. This is in fact safe. I should
+also note that the reason why
+
+506
+00:09:17,350 --> 00:09:17,360
+also note that the reason why
+ 
+
+507
+00:09:17,360 --> 00:09:19,269
+also note that the reason why
+specifically this is unclear is because
+
+508
+00:09:19,269 --> 00:09:19,279
+specifically this is unclear is because
+ 
+
+509
+00:09:19,279 --> 00:09:21,590
+specifically this is unclear is because
+we are constructing and returning a new
+
+510
+00:09:21,590 --> 00:09:21,600
+we are constructing and returning a new
+ 
+
+511
+00:09:21,600 --> 00:09:24,230
+we are constructing and returning a new
+string that clearly only exists within
+
+512
+00:09:24,230 --> 00:09:24,240
+string that clearly only exists within
+ 
+
+513
+00:09:24,240 --> 00:09:26,310
+string that clearly only exists within
+this line of code. If we had the
+
+514
+00:09:26,310 --> 00:09:26,320
+this line of code. If we had the
+ 
+
+515
+00:09:26,320 --> 00:09:28,790
+this line of code. If we had the
+function get name return a constring
+
+516
+00:09:28,790 --> 00:09:28,800
+function get name return a constring
+ 
+
+517
+00:09:28,800 --> 00:09:31,110
+function get name return a constring
+reference. So if this was actually
+
+518
+00:09:31,110 --> 00:09:31,120
+reference. So if this was actually
+ 
+
+519
+00:09:31,120 --> 00:09:33,670
+reference. So if this was actually
+stored here for example and then we
+
+520
+00:09:33,670 --> 00:09:33,680
+stored here for example and then we
+ 
+
+521
+00:09:33,680 --> 00:09:36,230
+stored here for example and then we
+simply returned the reference to this
+
+522
+00:09:36,230 --> 00:09:36,240
+simply returned the reference to this
+ 
+
+523
+00:09:36,240 --> 00:09:39,030
+simply returned the reference to this
+then this of course would always work
+
+524
+00:09:39,030 --> 00:09:39,040
+then this of course would always work
+ 
+
+525
+00:09:39,040 --> 00:09:40,949
+then this of course would always work
+even in that example where I was just
+
+526
+00:09:40,949 --> 00:09:40,959
+even in that example where I was just
+ 
+
+527
+00:09:40,959 --> 00:09:43,269
+even in that example where I was just
+pulling out the string like this and
+
+528
+00:09:43,269 --> 00:09:43,279
+pulling out the string like this and
+ 
+
+529
+00:09:43,279 --> 00:09:45,750
+pulling out the string like this and
+then printing it. This is legit now
+
+530
+00:09:45,750 --> 00:09:45,760
+then printing it. This is legit now
+ 
+
+531
+00:09:45,760 --> 00:09:48,230
+then printing it. This is legit now
+because get name returns a const
+
+532
+00:09:48,230 --> 00:09:48,240
+because get name returns a const
+ 
+
+533
+00:09:48,240 --> 00:09:50,790
+because get name returns a const
+reference of a string that is just
+
+534
+00:09:50,790 --> 00:09:50,800
+reference of a string that is just
+ 
+
+535
+00:09:50,800 --> 00:09:52,870
+reference of a string that is just
+global. So it's just it's always present
+
+536
+00:09:52,870 --> 00:09:52,880
+global. So it's just it's always present
+ 
+
+537
+00:09:52,880 --> 00:09:54,550
+global. So it's just it's always present
+and it's never going to get deleted. So
+
+538
+00:09:54,550 --> 00:09:54,560
+and it's never going to get deleted. So
+ 
+
+539
+00:09:54,560 --> 00:09:56,230
+and it's never going to get deleted. So
+therefore this pointer will always be
+
+540
+00:09:56,230 --> 00:09:56,240
+therefore this pointer will always be
+ 
+
+541
+00:09:56,240 --> 00:09:57,829
+therefore this pointer will always be
+valid not just within this line. The
+
+542
+00:09:57,829 --> 00:09:57,839
+valid not just within this line. The
+ 
+
+543
+00:09:57,839 --> 00:09:59,350
+valid not just within this line. The
+whole point of this was that it was
+
+544
+00:09:59,350 --> 00:09:59,360
+whole point of this was that it was
+ 
+
+545
+00:09:59,360 --> 00:10:01,190
+whole point of this was that it was
+constructing a new string that only
+
+546
+00:10:01,190 --> 00:10:01,200
+constructing a new string that only
+ 
+
+547
+00:10:01,200 --> 00:10:04,070
+constructing a new string that only
+existed within the line of code that it
+
+548
+00:10:04,070 --> 00:10:04,080
+existed within the line of code that it
+ 
+
+549
+00:10:04,080 --> 00:10:06,070
+existed within the line of code that it
+was used in. So you can see that things
+
+550
+00:10:06,070 --> 00:10:06,080
+was used in. So you can see that things
+ 
+
+551
+00:10:06,080 --> 00:10:08,070
+was used in. So you can see that things
+are a little bit messy here. And that's
+
+552
+00:10:08,070 --> 00:10:08,080
+are a little bit messy here. And that's
+ 
+
+553
+00:10:08,080 --> 00:10:11,590
+are a little bit messy here. And that's
+why I try and avoid as best as I can
+
+554
+00:10:11,590 --> 00:10:11,600
+why I try and avoid as best as I can
+ 
+
+555
+00:10:11,600 --> 00:10:14,150
+why I try and avoid as best as I can
+writing code like this really ever. What
+
+556
+00:10:14,150 --> 00:10:14,160
+writing code like this really ever. What
+ 
+
+557
+00:10:14,160 --> 00:10:16,710
+writing code like this really ever. What
+I normally do is I pull this out like
+
+558
+00:10:16,710 --> 00:10:16,720
+I normally do is I pull this out like
+ 
+
+559
+00:10:16,720 --> 00:10:19,269
+I normally do is I pull this out like
+this. And I have path.string string and
+
+560
+00:10:19,269 --> 00:10:19,279
+this. And I have path.string string and
+ 
+
+561
+00:10:19,279 --> 00:10:22,310
+this. And I have path.string string and
+then it's very very clear here that yes
+
+562
+00:10:22,310 --> 00:10:22,320
+then it's very very clear here that yes
+ 
+
+563
+00:10:22,320 --> 00:10:25,269
+then it's very very clear here that yes
+in fact I am taking a pointer from this
+
+564
+00:10:25,269 --> 00:10:25,279
+in fact I am taking a pointer from this
+ 
+
+565
+00:10:25,279 --> 00:10:27,990
+in fact I am taking a pointer from this
+string but the string is now a proper L
+
+566
+00:10:27,990 --> 00:10:28,000
+string but the string is now a proper L
+ 
+
+567
+00:10:28,000 --> 00:10:29,750
+string but the string is now a proper L
+value it's a proper variable I've made
+
+568
+00:10:29,750 --> 00:10:29,760
+value it's a proper variable I've made
+ 
+
+569
+00:10:29,760 --> 00:10:32,389
+value it's a proper variable I've made
+the lifetime super clear so even though
+
+570
+00:10:32,389 --> 00:10:32,399
+the lifetime super clear so even though
+ 
+
+571
+00:10:32,399 --> 00:10:34,230
+the lifetime super clear so even though
+something like this is safe and the way
+
+572
+00:10:34,230 --> 00:10:34,240
+something like this is safe and the way
+ 
+
+573
+00:10:34,240 --> 00:10:37,030
+something like this is safe and the way
+that this was written before is safe I
+
+574
+00:10:37,030 --> 00:10:37,040
+that this was written before is safe I
+ 
+
+575
+00:10:37,040 --> 00:10:39,750
+that this was written before is safe I
+still prefer to write it like this now
+
+576
+00:10:39,750 --> 00:10:39,760
+still prefer to write it like this now
+ 
+
+577
+00:10:39,760 --> 00:10:42,310
+still prefer to write it like this now
+one more thing that I want to say is the
+
+578
+00:10:42,310 --> 00:10:42,320
+one more thing that I want to say is the
+ 
+
+579
+00:10:42,320 --> 00:10:44,389
+one more thing that I want to say is the
+annoying thing about this bug is that
+
+580
+00:10:44,389 --> 00:10:44,399
+annoying thing about this bug is that
+ 
+
+581
+00:10:44,399 --> 00:10:47,430
+annoying thing about this bug is that
+sometimes even if you actually do things
+
+582
+00:10:47,430 --> 00:10:47,440
+sometimes even if you actually do things
+ 
+
+583
+00:10:47,440 --> 00:10:49,829
+sometimes even if you actually do things
+not properly Y. So if we go back to this
+
+584
+00:10:49,829 --> 00:10:49,839
+not properly Y. So if we go back to this
+ 
+
+585
+00:10:49,839 --> 00:10:53,030
+not properly Y. So if we go back to this
+example here, but I change the get name
+
+586
+00:10:53,030 --> 00:10:53,040
+example here, but I change the get name
+ 
+
+587
+00:10:53,040 --> 00:10:55,829
+example here, but I change the get name
+function to use this version instead.
+
+588
+00:10:55,829 --> 00:10:55,839
+function to use this version instead.
+ 
+
+589
+00:10:55,839 --> 00:10:57,350
+function to use this version instead.
+This clearly shouldn't work, right? I
+
+590
+00:10:57,350 --> 00:10:57,360
+This clearly shouldn't work, right? I
+ 
+
+591
+00:10:57,360 --> 00:10:58,949
+This clearly shouldn't work, right? I
+mean, even Visual Studio says that it
+
+592
+00:10:58,949 --> 00:10:58,959
+mean, even Visual Studio says that it
+ 
+
+593
+00:10:58,959 --> 00:11:02,230
+mean, even Visual Studio says that it
+shouldn't work. However, it can work.
+
+594
+00:11:02,230 --> 00:11:02,240
+shouldn't work. However, it can work.
+ 
+
+595
+00:11:02,240 --> 00:11:04,150
+shouldn't work. However, it can work.
+The reason why is because at the end of
+
+596
+00:11:04,150 --> 00:11:04,160
+The reason why is because at the end of
+ 
+
+597
+00:11:04,160 --> 00:11:06,630
+The reason why is because at the end of
+this line, the memory that this const
+
+598
+00:11:06,630 --> 00:11:06,640
+this line, the memory that this const
+ 
+
+599
+00:11:06,640 --> 00:11:08,630
+this line, the memory that this const
+pointer is pointing towards has in fact
+
+600
+00:11:08,630 --> 00:11:08,640
+pointer is pointing towards has in fact
+ 
+
+601
+00:11:08,640 --> 00:11:10,630
+pointer is pointing towards has in fact
+been freed, but it may not have
+
+602
+00:11:10,630 --> 00:11:10,640
+been freed, but it may not have
+ 
+
+603
+00:11:10,640 --> 00:11:14,470
+been freed, but it may not have
+necessarily changed or been rewritten
+
+604
+00:11:14,470 --> 00:11:14,480
+necessarily changed or been rewritten
+ 
+
+605
+00:11:14,480 --> 00:11:16,069
+necessarily changed or been rewritten
+yet. I mean, not much has probably
+
+606
+00:11:16,069 --> 00:11:16,079
+yet. I mean, not much has probably
+ 
+
+607
+00:11:16,079 --> 00:11:17,350
+yet. I mean, not much has probably
+happened between these two lines of
+
+608
+00:11:17,350 --> 00:11:17,360
+happened between these two lines of
+ 
+
+609
+00:11:17,360 --> 00:11:19,590
+happened between these two lines of
+code. And so technically if I run just
+
+610
+00:11:19,590 --> 00:11:19,600
+code. And so technically if I run just
+ 
+
+611
+00:11:19,600 --> 00:11:21,670
+code. And so technically if I run just
+sort of this section of code then our
+
+612
+00:11:21,670 --> 00:11:21,680
+sort of this section of code then our
+ 
+
+613
+00:11:21,680 --> 00:11:24,630
+sort of this section of code then our
+result is absolutely nothing is getting
+
+614
+00:11:24,630 --> 00:11:24,640
+result is absolutely nothing is getting
+ 
+
+615
+00:11:24,640 --> 00:11:26,710
+result is absolutely nothing is getting
+printed. If I switch to a release build
+
+616
+00:11:26,710 --> 00:11:26,720
+printed. If I switch to a release build
+ 
+
+617
+00:11:26,720 --> 00:11:29,430
+printed. If I switch to a release build
+and I also run this nothing again using
+
+618
+00:11:29,430 --> 00:11:29,440
+and I also run this nothing again using
+ 
+
+619
+00:11:29,440 --> 00:11:33,110
+and I also run this nothing again using
+MSVC. However this is where it gets fun.
+
+620
+00:11:33,110 --> 00:11:33,120
+MSVC. However this is where it gets fun.
+ 
+
+621
+00:11:33,120 --> 00:11:36,630
+MSVC. However this is where it gets fun.
+If we have a look at GCC same exact code
+
+622
+00:11:36,630 --> 00:11:36,640
+If we have a look at GCC same exact code
+ 
+
+623
+00:11:36,640 --> 00:11:39,030
+If we have a look at GCC same exact code
+we have this being returned. We're doing
+
+624
+00:11:39,030 --> 00:11:39,040
+we have this being returned. We're doing
+ 
+
+625
+00:11:39,040 --> 00:11:40,949
+we have this being returned. We're doing
+C string and then here in fact is our
+
+626
+00:11:40,949 --> 00:11:40,959
+C string and then here in fact is our
+ 
+
+627
+00:11:40,959 --> 00:11:42,870
+C string and then here in fact is our
+conchar pointer string that we're taking
+
+628
+00:11:42,870 --> 00:11:42,880
+conchar pointer string that we're taking
+ 
+
+629
+00:11:42,880 --> 00:11:46,790
+conchar pointer string that we're taking
+out and printing. The result is well, it
+
+630
+00:11:46,790 --> 00:11:46,800
+out and printing. The result is well, it
+ 
+
+631
+00:11:46,800 --> 00:11:49,430
+out and printing. The result is well, it
+says Cherno. If we turn optimization on
+
+632
+00:11:49,430 --> 00:11:49,440
+says Cherno. If we turn optimization on
+ 
+
+633
+00:11:49,440 --> 00:11:51,190
+says Cherno. If we turn optimization on
+and we run it again, we get a different
+
+634
+00:11:51,190 --> 00:11:51,200
+and we run it again, we get a different
+ 
+
+635
+00:11:51,200 --> 00:11:54,150
+and we run it again, we get a different
+result. Name I don't know. But with
+
+636
+00:11:54,150 --> 00:11:54,160
+result. Name I don't know. But with
+ 
+
+637
+00:11:54,160 --> 00:11:56,870
+result. Name I don't know. But with
+optimization off, name is Cherno. What
+
+638
+00:11:56,870 --> 00:11:56,880
+optimization off, name is Cherno. What
+ 
+
+639
+00:11:56,880 --> 00:11:58,790
+optimization off, name is Cherno. What
+about Clang? Here's Clang. Let's run
+
+640
+00:11:58,790 --> 00:11:58,800
+about Clang? Here's Clang. Let's run
+ 
+
+641
+00:11:58,800 --> 00:12:01,190
+about Clang? Here's Clang. Let's run
+that. We get a warning, which is nice,
+
+642
+00:12:01,190 --> 00:12:01,200
+that. We get a warning, which is nice,
+ 
+
+643
+00:12:01,200 --> 00:12:03,509
+that. We get a warning, which is nice,
+but it still prints correctly. Let's try
+
+644
+00:12:03,509 --> 00:12:03,519
+but it still prints correctly. Let's try
+ 
+
+645
+00:12:03,519 --> 00:12:06,230
+but it still prints correctly. Let's try
+optimization on again. Same warning, and
+
+646
+00:12:06,230 --> 00:12:06,240
+optimization on again. Same warning, and
+ 
+
+647
+00:12:06,240 --> 00:12:08,069
+optimization on again. Same warning, and
+it didn't actually run. So maybe it
+
+648
+00:12:08,069 --> 00:12:08,079
+it didn't actually run. So maybe it
+ 
+
+649
+00:12:08,079 --> 00:12:10,629
+it didn't actually run. So maybe it
+crashed. So clearly this is something
+
+650
+00:12:10,629 --> 00:12:10,639
+crashed. So clearly this is something
+ 
+
+651
+00:12:10,639 --> 00:12:13,110
+crashed. So clearly this is something
+that can kind of slip through the cracks
+
+652
+00:12:13,110 --> 00:12:13,120
+that can kind of slip through the cracks
+ 
+
+653
+00:12:13,120 --> 00:12:15,590
+that can kind of slip through the cracks
+because unless something has overwritten
+
+654
+00:12:15,590 --> 00:12:15,600
+because unless something has overwritten
+ 
+
+655
+00:12:15,600 --> 00:12:17,110
+because unless something has overwritten
+that memory. Just because it's free
+
+656
+00:12:17,110 --> 00:12:17,120
+that memory. Just because it's free
+ 
+
+657
+00:12:17,120 --> 00:12:18,230
+that memory. Just because it's free
+doesn't mean that you're completely
+
+658
+00:12:18,230 --> 00:12:18,240
+doesn't mean that you're completely
+ 
+
+659
+00:12:18,240 --> 00:12:20,150
+doesn't mean that you're completely
+banned from using it. So yes, this is
+
+660
+00:12:20,150 --> 00:12:20,160
+banned from using it. So yes, this is
+ 
+
+661
+00:12:20,160 --> 00:12:21,750
+banned from using it. So yes, this is
+something that you need to make sure
+
+662
+00:12:21,750 --> 00:12:21,760
+something that you need to make sure
+ 
+
+663
+00:12:21,760 --> 00:12:23,350
+something that you need to make sure
+that you are careful with. And a really
+
+664
+00:12:23,350 --> 00:12:23,360
+that you are careful with. And a really
+ 
+
+665
+00:12:23,360 --> 00:12:25,750
+that you are careful with. And a really
+good way of avoiding all of this is to
+
+666
+00:12:25,750 --> 00:12:25,760
+good way of avoiding all of this is to
+ 
+
+667
+00:12:25,760 --> 00:12:28,150
+good way of avoiding all of this is to
+just make sure that you basically don't
+
+668
+00:12:28,150 --> 00:12:28,160
+just make sure that you basically don't
+ 
+
+669
+00:12:28,160 --> 00:12:30,790
+just make sure that you basically don't
+have any sort of transient temporaries,
+
+670
+00:12:30,790 --> 00:12:30,800
+have any sort of transient temporaries,
+ 
+
+671
+00:12:30,800 --> 00:12:33,590
+have any sort of transient temporaries,
+but you clearly define the scope and the
+
+672
+00:12:33,590 --> 00:12:33,600
+but you clearly define the scope and the
+ 
+
+673
+00:12:33,600 --> 00:12:37,030
+but you clearly define the scope and the
+lifetime of every object whose data you
+
+674
+00:12:37,030 --> 00:12:37,040
+lifetime of every object whose data you
+ 
+
+675
+00:12:37,040 --> 00:12:39,910
+lifetime of every object whose data you
+then use. and are dependent on. Hope you
+
+676
+00:12:39,910 --> 00:12:39,920
+then use. and are dependent on. Hope you
+ 
+
+677
+00:12:39,920 --> 00:12:40,949
+then use. and are dependent on. Hope you
+all enjoyed this video. If you did,
+
+678
+00:12:40,949 --> 00:12:40,959
+all enjoyed this video. If you did,
+ 
+
+679
+00:12:40,959 --> 00:12:41,910
+all enjoyed this video. If you did,
+please don't forget to hit the like
+
+680
+00:12:41,910 --> 00:12:41,920
+please don't forget to hit the like
+ 
+
+681
+00:12:41,920 --> 00:12:43,750
+please don't forget to hit the like
+button. Let me know your thoughts in the
+
+682
+00:12:43,750 --> 00:12:43,760
+button. Let me know your thoughts in the
+ 
+
+683
+00:12:43,760 --> 00:12:45,430
+button. Let me know your thoughts in the
+comment section below as well. Do you
+
+684
+00:12:45,430 --> 00:12:45,440
+comment section below as well. Do you
+ 
+
+685
+00:12:45,440 --> 00:12:47,350
+comment section below as well. Do you
+encounter this often? How do you deal
+
+686
+00:12:47,350 --> 00:12:47,360
+encounter this often? How do you deal
+ 
+
+687
+00:12:47,360 --> 00:12:49,110
+encounter this often? How do you deal
+with it? Has this ever burned you?
+
+688
+00:12:49,110 --> 00:12:49,120
+with it? Has this ever burned you?
+ 
+
+689
+00:12:49,120 --> 00:12:50,949
+with it? Has this ever burned you?
+Because it's burned me. If you have any
+
+690
+00:12:50,949 --> 00:12:50,959
+Because it's burned me. If you have any
+ 
+
+691
+00:12:50,959 --> 00:12:52,150
+Because it's burned me. If you have any
+other bugs that you'd like me to make a
+
+692
+00:12:52,150 --> 00:12:52,160
+other bugs that you'd like me to make a
+ 
+
+693
+00:12:52,160 --> 00:12:53,110
+other bugs that you'd like me to make a
+video on, leave them in the comment
+
+694
+00:12:53,110 --> 00:12:53,120
+video on, leave them in the comment
+ 
+
+695
+00:12:53,120 --> 00:12:54,629
+video on, leave them in the comment
+section below. And I will see you guys
+
+696
+00:12:54,629 --> 00:12:54,639
+section below. And I will see you guys
+ 
+
+697
+00:12:54,639 --> 00:12:57,839
+section below. And I will see you guys
+next time. Goodbye.
+

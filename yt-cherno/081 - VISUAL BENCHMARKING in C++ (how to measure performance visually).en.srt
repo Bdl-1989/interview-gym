@@ -1,0 +1,5555 @@
+1
+00:00:00,000 --> 00:00:02,119
+
+looking at data visually has always been
+
+2
+00:00:02,119 --> 00:00:02,129
+looking at data visually has always been
+ 
+
+3
+00:00:02,129 --> 00:00:03,710
+looking at data visually has always been
+so useful to us humans
+
+4
+00:00:03,710 --> 00:00:03,720
+so useful to us humans
+ 
+
+5
+00:00:03,720 --> 00:00:05,150
+so useful to us humans
+I mean numbers a great don't get me
+
+6
+00:00:05,150 --> 00:00:05,160
+I mean numbers a great don't get me
+ 
+
+7
+00:00:05,160 --> 00:00:06,889
+I mean numbers a great don't get me
+wrong but I've always understood more
+
+8
+00:00:06,889 --> 00:00:06,899
+wrong but I've always understood more
+ 
+
+9
+00:00:06,899 --> 00:00:08,480
+wrong but I've always understood more
+when it's laid out in front of me in
+
+10
+00:00:08,480 --> 00:00:08,490
+when it's laid out in front of me in
+ 
+
+11
+00:00:08,490 --> 00:00:10,520
+when it's laid out in front of me in
+some kind of visual format we've talked
+
+12
+00:00:10,520 --> 00:00:10,530
+some kind of visual format we've talked
+ 
+
+13
+00:00:10,530 --> 00:00:12,259
+some kind of visual format we've talked
+about benchmarking before about how we
+
+14
+00:00:12,259 --> 00:00:12,269
+about benchmarking before about how we
+ 
+
+15
+00:00:12,269 --> 00:00:14,209
+about benchmarking before about how we
+can use timers to see how long certain
+
+16
+00:00:14,209 --> 00:00:14,219
+can use timers to see how long certain
+ 
+
+17
+00:00:14,219 --> 00:00:15,860
+can use timers to see how long certain
+blocks of code take if you miss that
+
+18
+00:00:15,860 --> 00:00:15,870
+blocks of code take if you miss that
+ 
+
+19
+00:00:15,870 --> 00:00:17,180
+blocks of code take if you miss that
+video you can find it in the top right
+
+20
+00:00:17,180 --> 00:00:17,190
+video you can find it in the top right
+ 
+
+21
+00:00:17,190 --> 00:00:18,830
+video you can find it in the top right
+corner but today we're gonna be looking
+
+22
+00:00:18,830 --> 00:00:18,840
+corner but today we're gonna be looking
+ 
+
+23
+00:00:18,840 --> 00:00:21,080
+corner but today we're gonna be looking
+at something much better we're gonna
+
+24
+00:00:21,080 --> 00:00:21,090
+at something much better we're gonna
+ 
+
+25
+00:00:21,090 --> 00:00:23,689
+at something much better we're gonna
+take that data and look at it visually
+
+26
+00:00:23,689 --> 00:00:23,699
+take that data and look at it visually
+ 
+
+27
+00:00:23,699 --> 00:00:25,910
+take that data and look at it visually
+hey what's up guys my name is Jonah
+
+28
+00:00:25,910 --> 00:00:25,920
+hey what's up guys my name is Jonah
+ 
+
+29
+00:00:25,920 --> 00:00:28,790
+hey what's up guys my name is Jonah
+welcome back to my C++ series yeah okay
+
+30
+00:00:28,790 --> 00:00:28,800
+welcome back to my C++ series yeah okay
+ 
+
+31
+00:00:28,800 --> 00:00:30,169
+welcome back to my C++ series yeah okay
+you guys get the point so this videos
+
+32
+00:00:30,169 --> 00:00:30,179
+you guys get the point so this videos
+ 
+
+33
+00:00:30,179 --> 00:00:31,279
+you guys get the point so this videos
+gonna be a little bit different than the
+
+34
+00:00:31,279 --> 00:00:31,289
+gonna be a little bit different than the
+ 
+
+35
+00:00:31,289 --> 00:00:32,930
+gonna be a little bit different than the
+usual ones I just thought I would mix it
+
+36
+00:00:32,930 --> 00:00:32,940
+usual ones I just thought I would mix it
+ 
+
+37
+00:00:32,940 --> 00:00:34,160
+usual ones I just thought I would mix it
+up a little bit let me know what you
+
+38
+00:00:34,160 --> 00:00:34,170
+up a little bit let me know what you
+ 
+
+39
+00:00:34,170 --> 00:00:36,680
+up a little bit let me know what you
+think of this kind of format what we're
+
+40
+00:00:36,680 --> 00:00:36,690
+think of this kind of format what we're
+ 
+
+41
+00:00:36,690 --> 00:00:38,030
+think of this kind of format what we're
+gonna be talking about today is gonna be
+
+42
+00:00:38,030 --> 00:00:38,040
+gonna be talking about today is gonna be
+ 
+
+43
+00:00:38,040 --> 00:00:40,100
+gonna be talking about today is gonna be
+really simple any one of you could just
+
+44
+00:00:40,100 --> 00:00:40,110
+really simple any one of you could just
+ 
+
+45
+00:00:40,110 --> 00:00:42,200
+really simple any one of you could just
+take this and slap it into your own code
+
+46
+00:00:42,200 --> 00:00:42,210
+take this and slap it into your own code
+ 
+
+47
+00:00:42,210 --> 00:00:44,180
+take this and slap it into your own code
+and actually use it in a matter of
+
+48
+00:00:44,180 --> 00:00:44,190
+and actually use it in a matter of
+ 
+
+49
+00:00:44,190 --> 00:00:45,619
+and actually use it in a matter of
+minutes and the benefit that you're
+
+50
+00:00:45,619 --> 00:00:45,629
+minutes and the benefit that you're
+ 
+
+51
+00:00:45,629 --> 00:00:48,110
+minutes and the benefit that you're
+gonna get is huge I mean I'm like doing
+
+52
+00:00:48,110 --> 00:00:48,120
+gonna get is huge I mean I'm like doing
+ 
+
+53
+00:00:48,120 --> 00:00:49,610
+gonna get is huge I mean I'm like doing
+this kind of stuff in any kind of
+
+54
+00:00:49,610 --> 00:00:49,620
+this kind of stuff in any kind of
+ 
+
+55
+00:00:49,620 --> 00:00:51,410
+this kind of stuff in any kind of
+project that I'm working on the kind of
+
+56
+00:00:51,410 --> 00:00:51,420
+project that I'm working on the kind of
+ 
+
+57
+00:00:51,420 --> 00:00:53,510
+project that I'm working on the kind of
+long term that I'm gonna keep coming
+
+58
+00:00:53,510 --> 00:00:53,520
+long term that I'm gonna keep coming
+ 
+
+59
+00:00:53,520 --> 00:00:55,400
+long term that I'm gonna keep coming
+back to and when I care about the
+
+60
+00:00:55,400 --> 00:00:55,410
+back to and when I care about the
+ 
+
+61
+00:00:55,410 --> 00:00:57,439
+back to and when I care about the
+performance you know I've got a system
+
+62
+00:00:57,439 --> 00:00:57,449
+performance you know I've got a system
+ 
+
+63
+00:00:57,449 --> 00:00:59,330
+performance you know I've got a system
+like this running because being able to
+
+64
+00:00:59,330 --> 00:00:59,340
+like this running because being able to
+ 
+
+65
+00:00:59,340 --> 00:01:01,880
+like this running because being able to
+see so visually obviously just so so so
+
+66
+00:01:01,880 --> 00:01:01,890
+see so visually obviously just so so so
+ 
+
+67
+00:01:01,890 --> 00:01:04,640
+see so visually obviously just so so so
+important but before we get into that I
+
+68
+00:01:04,640 --> 00:01:04,650
+important but before we get into that I
+ 
+
+69
+00:01:04,650 --> 00:01:06,200
+important but before we get into that I
+just want to thank Skillshare for
+
+70
+00:01:06,200 --> 00:01:06,210
+just want to thank Skillshare for
+ 
+
+71
+00:01:06,210 --> 00:01:07,730
+just want to thank Skillshare for
+sponsoring this video
+
+72
+00:01:07,730 --> 00:01:07,740
+sponsoring this video
+ 
+
+73
+00:01:07,740 --> 00:01:09,350
+sponsoring this video
+Skillshare is an online learning
+
+74
+00:01:09,350 --> 00:01:09,360
+Skillshare is an online learning
+ 
+
+75
+00:01:09,360 --> 00:01:11,090
+Skillshare is an online learning
+community with thousands of classes
+
+76
+00:01:11,090 --> 00:01:11,100
+community with thousands of classes
+ 
+
+77
+00:01:11,100 --> 00:01:12,740
+community with thousands of classes
+covering dozens of creative and
+
+78
+00:01:12,740 --> 00:01:12,750
+covering dozens of creative and
+ 
+
+79
+00:01:12,750 --> 00:01:14,539
+covering dozens of creative and
+entrepreneurial skills with unlimited
+
+80
+00:01:14,539 --> 00:01:14,549
+entrepreneurial skills with unlimited
+ 
+
+81
+00:01:14,549 --> 00:01:16,730
+entrepreneurial skills with unlimited
+access to all of these classes if you
+
+82
+00:01:16,730 --> 00:01:16,740
+access to all of these classes if you
+ 
+
+83
+00:01:16,740 --> 00:01:18,620
+access to all of these classes if you
+sign up for a premium membership which
+
+84
+00:01:18,620 --> 00:01:18,630
+sign up for a premium membership which
+ 
+
+85
+00:01:18,630 --> 00:01:20,690
+sign up for a premium membership which
+is less than $10 per month it's really
+
+86
+00:01:20,690 --> 00:01:20,700
+is less than $10 per month it's really
+ 
+
+87
+00:01:20,700 --> 00:01:22,070
+is less than $10 per month it's really
+one of the best places on the internet
+
+88
+00:01:22,070 --> 00:01:22,080
+one of the best places on the internet
+ 
+
+89
+00:01:22,080 --> 00:01:24,109
+one of the best places on the internet
+that you can go to to learn just such a
+
+90
+00:01:24,109 --> 00:01:24,119
+that you can go to to learn just such a
+ 
+
+91
+00:01:24,119 --> 00:01:26,149
+that you can go to to learn just such a
+wide variety of stuff they just have so
+
+92
+00:01:26,149 --> 00:01:26,159
+wide variety of stuff they just have so
+ 
+
+93
+00:01:26,159 --> 00:01:28,130
+wide variety of stuff they just have so
+many classes on there anything from
+
+94
+00:01:28,130 --> 00:01:28,140
+many classes on there anything from
+ 
+
+95
+00:01:28,140 --> 00:01:30,380
+many classes on there anything from
+illustration graphic design how to make
+
+96
+00:01:30,380 --> 00:01:30,390
+illustration graphic design how to make
+ 
+
+97
+00:01:30,390 --> 00:01:31,520
+illustration graphic design how to make
+better videos how to make better
+
+98
+00:01:31,520 --> 00:01:31,530
+better videos how to make better
+ 
+
+99
+00:01:31,530 --> 00:01:34,249
+better videos how to make better
+websites animation how to shoot better
+
+100
+00:01:34,249 --> 00:01:34,259
+websites animation how to shoot better
+ 
+
+101
+00:01:34,259 --> 00:01:36,740
+websites animation how to shoot better
+photos classes on music production and
+
+102
+00:01:36,740 --> 00:01:36,750
+photos classes on music production and
+ 
+
+103
+00:01:36,750 --> 00:01:39,950
+photos classes on music production and
+even interior design I mean who wouldn't
+
+104
+00:01:39,950 --> 00:01:39,960
+even interior design I mean who wouldn't
+ 
+
+105
+00:01:39,960 --> 00:01:41,600
+even interior design I mean who wouldn't
+benefit by just making their space
+
+106
+00:01:41,600 --> 00:01:41,610
+benefit by just making their space
+ 
+
+107
+00:01:41,610 --> 00:01:43,280
+benefit by just making their space
+better if you haven't checked out
+
+108
+00:01:43,280 --> 00:01:43,290
+better if you haven't checked out
+ 
+
+109
+00:01:43,290 --> 00:01:45,050
+better if you haven't checked out
+Skillshare yet I encourage you guys to
+
+110
+00:01:45,050 --> 00:01:45,060
+Skillshare yet I encourage you guys to
+ 
+
+111
+00:01:45,060 --> 00:01:46,730
+Skillshare yet I encourage you guys to
+do so there's really no reason not to
+
+112
+00:01:46,730 --> 00:01:46,740
+do so there's really no reason not to
+ 
+
+113
+00:01:46,740 --> 00:01:48,530
+do so there's really no reason not to
+because there is a link in the
+
+114
+00:01:48,530 --> 00:01:48,540
+because there is a link in the
+ 
+
+115
+00:01:48,540 --> 00:01:50,690
+because there is a link in the
+description to a two-month free trial
+
+116
+00:01:50,690 --> 00:01:50,700
+description to a two-month free trial
+ 
+
+117
+00:01:50,700 --> 00:01:52,010
+description to a two-month free trial
+that should give you more than enough
+
+118
+00:01:52,010 --> 00:01:52,020
+that should give you more than enough
+ 
+
+119
+00:01:52,020 --> 00:01:54,200
+that should give you more than enough
+time to check it out see if you'd like
+
+120
+00:01:54,200 --> 00:01:54,210
+time to check it out see if you'd like
+ 
+
+121
+00:01:54,210 --> 00:01:56,330
+time to check it out see if you'd like
+it and learn something new and of course
+
+122
+00:01:56,330 --> 00:01:56,340
+it and learn something new and of course
+ 
+
+123
+00:01:56,340 --> 00:01:58,760
+it and learn something new and of course
+that link to two months of fries you're
+
+124
+00:01:58,760 --> 00:01:58,770
+that link to two months of fries you're
+ 
+
+125
+00:01:58,770 --> 00:02:01,069
+that link to two months of fries you're
+sharing membership is in the description
+
+126
+00:02:01,069 --> 00:02:01,079
+sharing membership is in the description
+ 
+
+127
+00:02:01,079 --> 00:02:03,390
+sharing membership is in the description
+below
+
+128
+00:02:03,390 --> 00:02:03,400
+below
+ 
+
+129
+00:02:03,400 --> 00:02:05,920
+below
+let's talk about profiling okay so here
+
+130
+00:02:05,920 --> 00:02:05,930
+let's talk about profiling okay so here
+ 
+
+131
+00:02:05,930 --> 00:02:08,109
+let's talk about profiling okay so here
+we have a blank super floss project this
+
+132
+00:02:08,109 --> 00:02:08,119
+we have a blank super floss project this
+ 
+
+133
+00:02:08,119 --> 00:02:09,760
+we have a blank super floss project this
+is just like whole sandbox that I like
+
+134
+00:02:09,760 --> 00:02:09,770
+is just like whole sandbox that I like
+ 
+
+135
+00:02:09,770 --> 00:02:11,500
+is just like whole sandbox that I like
+to play with you guys know me I like to
+
+136
+00:02:11,500 --> 00:02:11,510
+to play with you guys know me I like to
+ 
+
+137
+00:02:11,510 --> 00:02:13,200
+to play with you guys know me I like to
+start off with a completely blank
+
+138
+00:02:13,200 --> 00:02:13,210
+start off with a completely blank
+ 
+
+139
+00:02:13,210 --> 00:02:15,250
+start off with a completely blank
+project that way you get to see
+
+140
+00:02:15,250 --> 00:02:15,260
+project that way you get to see
+ 
+
+141
+00:02:15,260 --> 00:02:17,110
+project that way you get to see
+everything from scratch so the first
+
+142
+00:02:17,110 --> 00:02:17,120
+everything from scratch so the first
+ 
+
+143
+00:02:17,120 --> 00:02:18,580
+everything from scratch so the first
+thing I want to do is actually write
+
+144
+00:02:18,580 --> 00:02:18,590
+thing I want to do is actually write
+ 
+
+145
+00:02:18,590 --> 00:02:20,500
+thing I want to do is actually write
+some functions for us to profile there's
+
+146
+00:02:20,500 --> 00:02:20,510
+some functions for us to profile there's
+ 
+
+147
+00:02:20,510 --> 00:02:22,660
+some functions for us to profile there's
+nothing here to actually record the
+
+148
+00:02:22,660 --> 00:02:22,670
+nothing here to actually record the
+ 
+
+149
+00:02:22,670 --> 00:02:24,340
+nothing here to actually record the
+performance of we want to come up with
+
+150
+00:02:24,340 --> 00:02:24,350
+performance of we want to come up with
+ 
+
+151
+00:02:24,350 --> 00:02:26,020
+performance of we want to come up with
+something for us to actually test out so
+
+152
+00:02:26,020 --> 00:02:26,030
+something for us to actually test out so
+ 
+
+153
+00:02:26,030 --> 00:02:27,340
+something for us to actually test out so
+I'm just gonna write two functions
+
+154
+00:02:27,340 --> 00:02:27,350
+I'm just gonna write two functions
+ 
+
+155
+00:02:27,350 --> 00:02:29,110
+I'm just gonna write two functions
+they're not gonna be anything
+
+156
+00:02:29,110 --> 00:02:29,120
+they're not gonna be anything
+ 
+
+157
+00:02:29,120 --> 00:02:30,460
+they're not gonna be anything
+particularly exciting they're just gonna
+
+158
+00:02:30,460 --> 00:02:30,470
+particularly exciting they're just gonna
+ 
+
+159
+00:02:30,470 --> 00:02:32,950
+particularly exciting they're just gonna
+print stuff off into the console I'll
+
+160
+00:02:32,950 --> 00:02:32,960
+print stuff off into the console I'll
+ 
+
+161
+00:02:32,960 --> 00:02:35,410
+print stuff off into the console I'll
+stick a square root in one of them just
+
+162
+00:02:35,410 --> 00:02:35,420
+stick a square root in one of them just
+ 
+
+163
+00:02:35,420 --> 00:02:37,240
+stick a square root in one of them just
+for fun but there's this can be
+
+164
+00:02:37,240 --> 00:02:37,250
+for fun but there's this can be
+ 
+
+165
+00:02:37,250 --> 00:02:38,890
+for fun but there's this can be
+absolutely anything if you have your own
+
+166
+00:02:38,890 --> 00:02:38,900
+absolutely anything if you have your own
+ 
+
+167
+00:02:38,900 --> 00:02:40,480
+absolutely anything if you have your own
+program of course you're gonna already
+
+168
+00:02:40,480 --> 00:02:40,490
+program of course you're gonna already
+ 
+
+169
+00:02:40,490 --> 00:02:42,580
+program of course you're gonna already
+have all these functions this is just
+
+170
+00:02:42,580 --> 00:02:42,590
+have all these functions this is just
+ 
+
+171
+00:02:42,590 --> 00:02:43,810
+have all these functions this is just
+something that I'm creating just some
+
+172
+00:02:43,810 --> 00:02:43,820
+something that I'm creating just some
+ 
+
+173
+00:02:43,820 --> 00:02:45,460
+something that I'm creating just some
+dummy data for us to actually deal with
+
+174
+00:02:45,460 --> 00:02:45,470
+dummy data for us to actually deal with
+ 
+
+175
+00:02:45,470 --> 00:02:47,230
+dummy data for us to actually deal with
+so with these functions ready to go the
+
+176
+00:02:47,230 --> 00:02:47,240
+so with these functions ready to go the
+ 
+
+177
+00:02:47,240 --> 00:02:49,300
+so with these functions ready to go the
+next step is to see how long they take
+
+178
+00:02:49,300 --> 00:02:49,310
+next step is to see how long they take
+ 
+
+179
+00:02:49,310 --> 00:02:51,640
+next step is to see how long they take
+to execute I did a video recently about
+
+180
+00:02:51,640 --> 00:02:51,650
+to execute I did a video recently about
+ 
+
+181
+00:02:51,650 --> 00:02:54,010
+to execute I did a video recently about
+benchmarking in C++ I'll have it linked
+
+182
+00:02:54,010 --> 00:02:54,020
+benchmarking in C++ I'll have it linked
+ 
+
+183
+00:02:54,020 --> 00:02:55,420
+benchmarking in C++ I'll have it linked
+in the top right corner make sure that
+
+184
+00:02:55,420 --> 00:02:55,430
+in the top right corner make sure that
+ 
+
+185
+00:02:55,430 --> 00:02:57,070
+in the top right corner make sure that
+you check it out we're basically gonna
+
+186
+00:02:57,070 --> 00:02:57,080
+you check it out we're basically gonna
+ 
+
+187
+00:02:57,080 --> 00:02:59,410
+you check it out we're basically gonna
+steal the timer class from there and use
+
+188
+00:02:59,410 --> 00:02:59,420
+steal the timer class from there and use
+ 
+
+189
+00:02:59,420 --> 00:03:01,180
+steal the timer class from there and use
+it here and as you can see what I've
+
+190
+00:03:01,180 --> 00:03:01,190
+it here and as you can see what I've
+ 
+
+191
+00:03:01,190 --> 00:03:03,850
+it here and as you can see what I've
+done is I'm just printing the name of
+
+192
+00:03:03,850 --> 00:03:03,860
+done is I'm just printing the name of
+ 
+
+193
+00:03:03,860 --> 00:03:06,070
+done is I'm just printing the name of
+the timer along with how long it took in
+
+194
+00:03:06,070 --> 00:03:06,080
+the timer along with how long it took in
+ 
+
+195
+00:03:06,080 --> 00:03:07,690
+the timer along with how long it took in
+milliseconds so that we know how long
+
+196
+00:03:07,690 --> 00:03:07,700
+milliseconds so that we know how long
+ 
+
+197
+00:03:07,700 --> 00:03:09,940
+milliseconds so that we know how long
+our timer took using our timer is pretty
+
+198
+00:03:09,940 --> 00:03:09,950
+our timer took using our timer is pretty
+ 
+
+199
+00:03:09,950 --> 00:03:11,710
+our timer took using our timer is pretty
+straightforward it's a scope based timer
+
+200
+00:03:11,710 --> 00:03:11,720
+straightforward it's a scope based timer
+ 
+
+201
+00:03:11,720 --> 00:03:13,150
+straightforward it's a scope based timer
+which basically just means that we need
+
+202
+00:03:13,150 --> 00:03:13,160
+which basically just means that we need
+ 
+
+203
+00:03:13,160 --> 00:03:15,340
+which basically just means that we need
+to construct an object for it to start
+
+204
+00:03:15,340 --> 00:03:15,350
+to construct an object for it to start
+ 
+
+205
+00:03:15,350 --> 00:03:17,710
+to construct an object for it to start
+timeing and then upon disruption or in
+
+206
+00:03:17,710 --> 00:03:17,720
+timeing and then upon disruption or in
+ 
+
+207
+00:03:17,720 --> 00:03:19,900
+timeing and then upon disruption or in
+other words when the scope ends it will
+
+208
+00:03:19,900 --> 00:03:19,910
+other words when the scope ends it will
+ 
+
+209
+00:03:19,910 --> 00:03:22,030
+other words when the scope ends it will
+automatically stop and print our results
+
+210
+00:03:22,030 --> 00:03:22,040
+automatically stop and print our results
+ 
+
+211
+00:03:22,040 --> 00:03:23,949
+automatically stop and print our results
+to the console let's go ahead and run
+
+212
+00:03:23,949 --> 00:03:23,959
+to the console let's go ahead and run
+ 
+
+213
+00:03:23,959 --> 00:03:26,590
+to the console let's go ahead and run
+this program and see what we get okay so
+
+214
+00:03:26,590 --> 00:03:26,600
+this program and see what we get okay so
+ 
+
+215
+00:03:26,600 --> 00:03:28,600
+this program and see what we get okay so
+here we have the result function - took
+
+216
+00:03:28,600 --> 00:03:28,610
+here we have the result function - took
+ 
+
+217
+00:03:28,610 --> 00:03:29,590
+here we have the result function - took
+nine hundred and eighty-seven
+
+218
+00:03:29,590 --> 00:03:29,600
+nine hundred and eighty-seven
+ 
+
+219
+00:03:29,600 --> 00:03:31,449
+nine hundred and eighty-seven
+milliseconds and then we annoyingly have
+
+220
+00:03:31,449 --> 00:03:31,459
+milliseconds and then we annoyingly have
+ 
+
+221
+00:03:31,459 --> 00:03:33,759
+milliseconds and then we annoyingly have
+to scroll all the way back here to find
+
+222
+00:03:33,759 --> 00:03:33,769
+to scroll all the way back here to find
+ 
+
+223
+00:03:33,769 --> 00:03:35,530
+to scroll all the way back here to find
+function one which actually took more
+
+224
+00:03:35,530 --> 00:03:35,540
+function one which actually took more
+ 
+
+225
+00:03:35,540 --> 00:03:39,009
+function one which actually took more
+time at 1012 milliseconds cool so we can
+
+226
+00:03:39,009 --> 00:03:39,019
+time at 1012 milliseconds cool so we can
+ 
+
+227
+00:03:39,019 --> 00:03:40,479
+time at 1012 milliseconds cool so we can
+get results out of this timer it's
+
+228
+00:03:40,479 --> 00:03:40,489
+get results out of this timer it's
+ 
+
+229
+00:03:40,489 --> 00:03:42,880
+get results out of this timer it's
+pretty nice but obviously they are still
+
+230
+00:03:42,880 --> 00:03:42,890
+pretty nice but obviously they are still
+ 
+
+231
+00:03:42,890 --> 00:03:46,030
+pretty nice but obviously they are still
+just numbers and not only that but they
+
+232
+00:03:46,030 --> 00:03:46,040
+just numbers and not only that but they
+ 
+
+233
+00:03:46,040 --> 00:03:48,190
+just numbers and not only that but they
+are just really hard to find and it's
+
+234
+00:03:48,190 --> 00:03:48,200
+are just really hard to find and it's
+ 
+
+235
+00:03:48,200 --> 00:03:50,050
+are just really hard to find and it's
+just super annoying to go through your
+
+236
+00:03:50,050 --> 00:03:50,060
+just super annoying to go through your
+ 
+
+237
+00:03:50,060 --> 00:03:51,520
+just super annoying to go through your
+console looking for these numbers and
+
+238
+00:03:51,520 --> 00:03:51,530
+console looking for these numbers and
+ 
+
+239
+00:03:51,530 --> 00:03:53,410
+console looking for these numbers and
+then trying to make sense of how
+
+240
+00:03:53,410 --> 00:03:53,420
+then trying to make sense of how
+ 
+
+241
+00:03:53,420 --> 00:03:55,979
+then trying to make sense of how
+everything worked out enter
+
+242
+00:03:55,979 --> 00:03:55,989
+everything worked out enter
+ 
+
+243
+00:03:55,989 --> 00:03:59,530
+everything worked out enter
+visualisation will actually enter Google
+
+244
+00:03:59,530 --> 00:03:59,540
+visualisation will actually enter Google
+ 
+
+245
+00:03:59,540 --> 00:04:01,960
+visualisation will actually enter Google
+Chrome how many of you guess that we
+
+246
+00:04:01,960 --> 00:04:01,970
+Chrome how many of you guess that we
+ 
+
+247
+00:04:01,970 --> 00:04:03,940
+Chrome how many of you guess that we
+would be using Google Chrome to
+
+248
+00:04:03,940 --> 00:04:03,950
+would be using Google Chrome to
+ 
+
+249
+00:04:03,950 --> 00:04:05,740
+would be using Google Chrome to
+visualize our profiles so chrome
+
+250
+00:04:05,740 --> 00:04:05,750
+visualize our profiles so chrome
+ 
+
+251
+00:04:05,750 --> 00:04:07,540
+visualize our profiles so chrome
+actually comes with some profiling tools
+
+252
+00:04:07,540 --> 00:04:07,550
+actually comes with some profiling tools
+ 
+
+253
+00:04:07,550 --> 00:04:09,699
+actually comes with some profiling tools
+of its own amongst other development
+
+254
+00:04:09,699 --> 00:04:09,709
+of its own amongst other development
+ 
+
+255
+00:04:09,709 --> 00:04:11,560
+of its own amongst other development
+tools obviously for things like web apps
+
+256
+00:04:11,560 --> 00:04:11,570
+tools obviously for things like web apps
+ 
+
+257
+00:04:11,570 --> 00:04:14,170
+tools obviously for things like web apps
+or web pages and there's this particular
+
+258
+00:04:14,170 --> 00:04:14,180
+or web pages and there's this particular
+ 
+
+259
+00:04:14,180 --> 00:04:16,879
+or web pages and there's this particular
+one called chrome tracing and it's
+
+260
+00:04:16,879 --> 00:04:16,889
+one called chrome tracing and it's
+ 
+
+261
+00:04:16,889 --> 00:04:19,189
+one called chrome tracing and it's
+really bare bones really really simple
+
+262
+00:04:19,189 --> 00:04:19,199
+really bare bones really really simple
+ 
+
+263
+00:04:19,199 --> 00:04:21,379
+really bare bones really really simple
+it lets us visualize our profile in kind
+
+264
+00:04:21,379 --> 00:04:21,389
+it lets us visualize our profile in kind
+ 
+
+265
+00:04:21,389 --> 00:04:24,800
+it lets us visualize our profile in kind
+of a stack trace for you like this you
+
+266
+00:04:24,800 --> 00:04:24,810
+of a stack trace for you like this you
+ 
+
+267
+00:04:24,810 --> 00:04:26,989
+of a stack trace for you like this you
+just type in chrome colon four slash
+
+268
+00:04:26,989 --> 00:04:26,999
+just type in chrome colon four slash
+ 
+
+269
+00:04:26,999 --> 00:04:29,600
+just type in chrome colon four slash
+four slash tracing into your URL bar and
+
+270
+00:04:29,600 --> 00:04:29,610
+four slash tracing into your URL bar and
+ 
+
+271
+00:04:29,610 --> 00:04:30,920
+four slash tracing into your URL bar and
+then there you have it
+
+272
+00:04:30,920 --> 00:04:30,930
+then there you have it
+ 
+
+273
+00:04:30,930 --> 00:04:33,110
+then there you have it
+chrome tracing and because it's just
+
+274
+00:04:33,110 --> 00:04:33,120
+chrome tracing and because it's just
+ 
+
+275
+00:04:33,120 --> 00:04:35,089
+chrome tracing and because it's just
+part of chrome it's most likely already
+
+276
+00:04:35,089 --> 00:04:35,099
+part of chrome it's most likely already
+ 
+
+277
+00:04:35,099 --> 00:04:36,499
+part of chrome it's most likely already
+installed on your computer and ready to
+
+278
+00:04:36,499 --> 00:04:36,509
+installed on your computer and ready to
+ 
+
+279
+00:04:36,509 --> 00:04:37,850
+installed on your computer and ready to
+go so as you can see it looks pretty
+
+280
+00:04:37,850 --> 00:04:37,860
+go so as you can see it looks pretty
+ 
+
+281
+00:04:37,860 --> 00:04:39,320
+go so as you can see it looks pretty
+bare-bones and that's one of the things
+
+282
+00:04:39,320 --> 00:04:39,330
+bare-bones and that's one of the things
+ 
+
+283
+00:04:39,330 --> 00:04:40,700
+bare-bones and that's one of the things
+that I love about it the way that it
+
+284
+00:04:40,700 --> 00:04:40,710
+that I love about it the way that it
+ 
+
+285
+00:04:40,710 --> 00:04:43,339
+that I love about it the way that it
+works is it simply loads in a JSON file
+
+286
+00:04:43,339 --> 00:04:43,349
+works is it simply loads in a JSON file
+ 
+
+287
+00:04:43,349 --> 00:04:46,249
+works is it simply loads in a JSON file
+which has all of the data in it so our
+
+288
+00:04:46,249 --> 00:04:46,259
+which has all of the data in it so our
+ 
+
+289
+00:04:46,259 --> 00:04:48,200
+which has all of the data in it so our
+next step is to take all of that timing
+
+290
+00:04:48,200 --> 00:04:48,210
+next step is to take all of that timing
+ 
+
+291
+00:04:48,210 --> 00:04:49,700
+next step is to take all of that timing
+data that we're recording with our timer
+
+292
+00:04:49,700 --> 00:04:49,710
+data that we're recording with our timer
+ 
+
+293
+00:04:49,710 --> 00:04:52,159
+data that we're recording with our timer
+and put it into a JSON file in the
+
+294
+00:04:52,159 --> 00:04:52,169
+and put it into a JSON file in the
+ 
+
+295
+00:04:52,169 --> 00:04:54,260
+and put it into a JSON file in the
+format that chrome tracing expects and
+
+296
+00:04:54,260 --> 00:04:54,270
+format that chrome tracing expects and
+ 
+
+297
+00:04:54,270 --> 00:04:55,909
+format that chrome tracing expects and
+that's what we're gonna do now so back
+
+298
+00:04:55,909 --> 00:04:55,919
+that's what we're gonna do now so back
+ 
+
+299
+00:04:55,919 --> 00:04:58,219
+that's what we're gonna do now so back
+here in our code just above our timer
+
+300
+00:04:58,219 --> 00:04:58,229
+here in our code just above our timer
+ 
+
+301
+00:04:58,229 --> 00:04:59,719
+here in our code just above our timer
+class I've got this other class called
+
+302
+00:04:59,719 --> 00:04:59,729
+class I've got this other class called
+ 
+
+303
+00:04:59,729 --> 00:05:01,879
+class I've got this other class called
+instrumental and this is this is quite a
+
+304
+00:05:01,879 --> 00:05:01,889
+instrumental and this is this is quite a
+ 
+
+305
+00:05:01,889 --> 00:05:03,619
+instrumental and this is this is quite a
+simple class really all it's doing is
+
+306
+00:05:03,619 --> 00:05:03,629
+simple class really all it's doing is
+ 
+
+307
+00:05:03,629 --> 00:05:05,839
+simple class really all it's doing is
+just formatting a JSON file and writing
+
+308
+00:05:05,839 --> 00:05:05,849
+just formatting a JSON file and writing
+ 
+
+309
+00:05:05,849 --> 00:05:07,820
+just formatting a JSON file and writing
+it out into a file so we begin with this
+
+310
+00:05:07,820 --> 00:05:07,830
+it out into a file so we begin with this
+ 
+
+311
+00:05:07,830 --> 00:05:10,189
+it out into a file so we begin with this
+begin session function really all that
+
+312
+00:05:10,189 --> 00:05:10,199
+begin session function really all that
+ 
+
+313
+00:05:10,199 --> 00:05:12,619
+begin session function really all that
+is doing is opening a file and then
+
+314
+00:05:12,619 --> 00:05:12,629
+is doing is opening a file and then
+ 
+
+315
+00:05:12,629 --> 00:05:14,360
+is doing is opening a file and then
+writing a header which is just
+
+316
+00:05:14,360 --> 00:05:14,370
+writing a header which is just
+ 
+
+317
+00:05:14,370 --> 00:05:16,219
+writing a header which is just
+essentially the beginning of the JSON
+
+318
+00:05:16,219 --> 00:05:16,229
+essentially the beginning of the JSON
+ 
+
+319
+00:05:16,229 --> 00:05:17,300
+essentially the beginning of the JSON
+file that needs to be in a particular
+
+320
+00:05:17,300 --> 00:05:17,310
+file that needs to be in a particular
+ 
+
+321
+00:05:17,310 --> 00:05:20,239
+file that needs to be in a particular
+format for Chrome tracing and then the
+
+322
+00:05:20,239 --> 00:05:20,249
+format for Chrome tracing and then the
+ 
+
+323
+00:05:20,249 --> 00:05:22,459
+format for Chrome tracing and then the
+end session does a similar thing but it
+
+324
+00:05:22,459 --> 00:05:22,469
+end session does a similar thing but it
+ 
+
+325
+00:05:22,469 --> 00:05:24,170
+end session does a similar thing but it
+just writes out a simple footer closes
+
+326
+00:05:24,170 --> 00:05:24,180
+just writes out a simple footer closes
+ 
+
+327
+00:05:24,180 --> 00:05:25,730
+just writes out a simple footer closes
+the file does all that kind of stuff and
+
+328
+00:05:25,730 --> 00:05:25,740
+the file does all that kind of stuff and
+ 
+
+329
+00:05:25,740 --> 00:05:27,230
+the file does all that kind of stuff and
+we also have this concept of sessions
+
+330
+00:05:27,230 --> 00:05:27,240
+we also have this concept of sessions
+ 
+
+331
+00:05:27,240 --> 00:05:29,300
+we also have this concept of sessions
+which is really simple now right profile
+
+332
+00:05:29,300 --> 00:05:29,310
+which is really simple now right profile
+ 
+
+333
+00:05:29,310 --> 00:05:31,909
+which is really simple now right profile
+is the meat of this entire class this is
+
+334
+00:05:31,909 --> 00:05:31,919
+is the meat of this entire class this is
+ 
+
+335
+00:05:31,919 --> 00:05:33,889
+is the meat of this entire class this is
+what writes and individually timed
+
+336
+00:05:33,889 --> 00:05:33,899
+what writes and individually timed
+ 
+
+337
+00:05:33,899 --> 00:05:35,420
+what writes and individually timed
+profile so every time we run our timer
+
+338
+00:05:35,420 --> 00:05:35,430
+profile so every time we run our timer
+ 
+
+339
+00:05:35,430 --> 00:05:37,369
+profile so every time we run our timer
+this is what we want to output and
+
+340
+00:05:37,369 --> 00:05:37,379
+this is what we want to output and
+ 
+
+341
+00:05:37,379 --> 00:05:39,230
+this is what we want to output and
+you'll notice that at the end of this
+
+342
+00:05:39,230 --> 00:05:39,240
+you'll notice that at the end of this
+ 
+
+343
+00:05:39,240 --> 00:05:41,179
+you'll notice that at the end of this
+once it's output all the board's JSON
+
+344
+00:05:41,179 --> 00:05:41,189
+once it's output all the board's JSON
+ 
+
+345
+00:05:41,189 --> 00:05:42,260
+once it's output all the board's JSON
+into the output stream it actually
+
+346
+00:05:42,260 --> 00:05:42,270
+into the output stream it actually
+ 
+
+347
+00:05:42,270 --> 00:05:43,909
+into the output stream it actually
+flushes it the reason we want to do this
+
+348
+00:05:43,909 --> 00:05:43,919
+flushes it the reason we want to do this
+ 
+
+349
+00:05:43,919 --> 00:05:46,850
+flushes it the reason we want to do this
+every time we write a profile is because
+
+350
+00:05:46,850 --> 00:05:46,860
+every time we write a profile is because
+ 
+
+351
+00:05:46,860 --> 00:05:48,709
+every time we write a profile is because
+just in case our program crashes or we
+
+352
+00:05:48,709 --> 00:05:48,719
+just in case our program crashes or we
+ 
+
+353
+00:05:48,719 --> 00:05:50,119
+just in case our program crashes or we
+terminate it or whatever we don't want
+
+354
+00:05:50,119 --> 00:05:50,129
+terminate it or whatever we don't want
+ 
+
+355
+00:05:50,129 --> 00:05:51,769
+terminate it or whatever we don't want
+to lose all of our profiling data we
+
+356
+00:05:51,769 --> 00:05:51,779
+to lose all of our profiling data we
+ 
+
+357
+00:05:51,779 --> 00:05:52,850
+to lose all of our profiling data we
+want to kind of stream this into the
+
+358
+00:05:52,850 --> 00:05:52,860
+want to kind of stream this into the
+ 
+
+359
+00:05:52,860 --> 00:05:54,950
+want to kind of stream this into the
+file as we go along so that if anything
+
+360
+00:05:54,950 --> 00:05:54,960
+file as we go along so that if anything
+ 
+
+361
+00:05:54,960 --> 00:05:57,469
+file as we go along so that if anything
+like happens and we we can't end
+
+362
+00:05:57,469 --> 00:05:57,479
+like happens and we we can't end
+ 
+
+363
+00:05:57,479 --> 00:06:00,110
+like happens and we we can't end
+smoothly everything all that data is
+
+364
+00:06:00,110 --> 00:06:00,120
+smoothly everything all that data is
+ 
+
+365
+00:06:00,120 --> 00:06:01,610
+smoothly everything all that data is
+just safe and ready for us to actually
+
+366
+00:06:01,610 --> 00:06:01,620
+just safe and ready for us to actually
+ 
+
+367
+00:06:01,620 --> 00:06:03,409
+just safe and ready for us to actually
+use so I'm gonna go ahead and rename
+
+368
+00:06:03,409 --> 00:06:03,419
+use so I'm gonna go ahead and rename
+ 
+
+369
+00:06:03,419 --> 00:06:06,230
+use so I'm gonna go ahead and rename
+this into instrumentation timer just so
+
+370
+00:06:06,230 --> 00:06:06,240
+this into instrumentation timer just so
+ 
+
+371
+00:06:06,240 --> 00:06:07,429
+this into instrumentation timer just so
+that it's a little bit more clear about
+
+372
+00:06:07,429 --> 00:06:07,439
+that it's a little bit more clear about
+ 
+
+373
+00:06:07,439 --> 00:06:08,600
+that it's a little bit more clear about
+what it's used for because we're gonna
+
+374
+00:06:08,600 --> 00:06:08,610
+what it's used for because we're gonna
+ 
+
+375
+00:06:08,610 --> 00:06:10,459
+what it's used for because we're gonna
+add some code here in a minute that
+
+376
+00:06:10,459 --> 00:06:10,469
+add some code here in a minute that
+ 
+
+377
+00:06:10,469 --> 00:06:12,499
+add some code here in a minute that
+actually makes it like specifically use
+
+378
+00:06:12,499 --> 00:06:12,509
+actually makes it like specifically use
+ 
+
+379
+00:06:12,509 --> 00:06:14,659
+actually makes it like specifically use
+the instrumentum and by the way this
+
+380
+00:06:14,659 --> 00:06:14,669
+the instrumentum and by the way this
+ 
+
+381
+00:06:14,669 --> 00:06:16,760
+the instrumentum and by the way this
+concept of instrumentation is is going
+
+382
+00:06:16,760 --> 00:06:16,770
+concept of instrumentation is is going
+ 
+
+383
+00:06:16,770 --> 00:06:18,050
+concept of instrumentation is is going
+through our code and adding like these
+
+384
+00:06:18,050 --> 00:06:18,060
+through our code and adding like these
+ 
+
+385
+00:06:18,060 --> 00:06:19,999
+through our code and adding like these
+profiling times that's why all of this
+
+386
+00:06:19,999 --> 00:06:20,009
+profiling times that's why all of this
+ 
+
+387
+00:06:20,009 --> 00:06:22,700
+profiling times that's why all of this
+is to do with instrumentation so again
+
+388
+00:06:22,700 --> 00:06:22,710
+is to do with instrumentation so again
+ 
+
+389
+00:06:22,710 --> 00:06:24,679
+is to do with instrumentation so again
+the right profile function is exactly
+
+390
+00:06:24,679 --> 00:06:24,689
+the right profile function is exactly
+ 
+
+391
+00:06:24,689 --> 00:06:26,570
+the right profile function is exactly
+what we're looking for so I'm gonna grab
+
+392
+00:06:26,570 --> 00:06:26,580
+what we're looking for so I'm gonna grab
+ 
+
+393
+00:06:26,580 --> 00:06:28,850
+what we're looking for so I'm gonna grab
+that it uses profile result as a struct
+
+394
+00:06:28,850 --> 00:06:28,860
+that it uses profile result as a struct
+ 
+
+395
+00:06:28,860 --> 00:06:30,330
+that it uses profile result as a struct
+that just contains
+
+396
+00:06:30,330 --> 00:06:30,340
+that just contains
+ 
+
+397
+00:06:30,340 --> 00:06:32,370
+that just contains
+data such as the name the start and the
+
+398
+00:06:32,370 --> 00:06:32,380
+data such as the name the start and the
+ 
+
+399
+00:06:32,380 --> 00:06:34,650
+data such as the name the start and the
+end so I'm just gonna call that function
+
+400
+00:06:34,650 --> 00:06:34,660
+end so I'm just gonna call that function
+ 
+
+401
+00:06:34,660 --> 00:06:37,350
+end so I'm just gonna call that function
+here with the name the start and the end
+
+402
+00:06:37,350 --> 00:06:37,360
+here with the name the start and the end
+ 
+
+403
+00:06:37,360 --> 00:06:39,840
+here with the name the start and the end
+time point okay so the next thing that
+
+404
+00:06:39,840 --> 00:06:39,850
+time point okay so the next thing that
+ 
+
+405
+00:06:39,850 --> 00:06:41,190
+time point okay so the next thing that
+I'm going to do is scroll down to our
+
+406
+00:06:41,190 --> 00:06:41,200
+I'm going to do is scroll down to our
+ 
+
+407
+00:06:41,200 --> 00:06:43,140
+I'm going to do is scroll down to our
+main function and what we need to do is
+
+408
+00:06:43,140 --> 00:06:43,150
+main function and what we need to do is
+ 
+
+409
+00:06:43,150 --> 00:06:46,050
+main function and what we need to do is
+begin and end our sessions so what
+
+410
+00:06:46,050 --> 00:06:46,060
+begin and end our sessions so what
+ 
+
+411
+00:06:46,060 --> 00:06:47,340
+begin and end our sessions so what
+begins session actually does is it
+
+412
+00:06:47,340 --> 00:06:47,350
+begins session actually does is it
+ 
+
+413
+00:06:47,350 --> 00:06:49,080
+begins session actually does is it
+creates a new file with a given file
+
+414
+00:06:49,080 --> 00:06:49,090
+creates a new file with a given file
+ 
+
+415
+00:06:49,090 --> 00:06:50,430
+creates a new file with a given file
+name we're just relying on the default
+
+416
+00:06:50,430 --> 00:06:50,440
+name we're just relying on the default
+ 
+
+417
+00:06:50,440 --> 00:06:52,440
+name we're just relying on the default
+parameter here which is results dot JSON
+
+418
+00:06:52,440 --> 00:06:52,450
+parameter here which is results dot JSON
+ 
+
+419
+00:06:52,450 --> 00:06:54,660
+parameter here which is results dot JSON
+and then everything in between the begin
+
+420
+00:06:54,660 --> 00:06:54,670
+and then everything in between the begin
+ 
+
+421
+00:06:54,670 --> 00:06:56,550
+and then everything in between the begin
+session and end session gets put into
+
+422
+00:06:56,550 --> 00:06:56,560
+session and end session gets put into
+ 
+
+423
+00:06:56,560 --> 00:06:58,980
+session and end session gets put into
+that specific profiling file and this
+
+424
+00:06:58,980 --> 00:06:58,990
+that specific profiling file and this
+ 
+
+425
+00:06:58,990 --> 00:07:00,630
+that specific profiling file and this
+enables us to split up our profiling
+
+426
+00:07:00,630 --> 00:07:00,640
+enables us to split up our profiling
+ 
+
+427
+00:07:00,640 --> 00:07:02,400
+enables us to split up our profiling
+data into multiple files which as you
+
+428
+00:07:02,400 --> 00:07:02,410
+data into multiple files which as you
+ 
+
+429
+00:07:02,410 --> 00:07:04,020
+data into multiple files which as you
+can imagine can be quite useful for
+
+430
+00:07:04,020 --> 00:07:04,030
+can imagine can be quite useful for
+ 
+
+431
+00:07:04,030 --> 00:07:06,030
+can imagine can be quite useful for
+example in a game we might want a
+
+432
+00:07:06,030 --> 00:07:06,040
+example in a game we might want a
+ 
+
+433
+00:07:06,040 --> 00:07:07,980
+example in a game we might want a
+profile specifically the kind of loading
+
+434
+00:07:07,980 --> 00:07:07,990
+profile specifically the kind of loading
+ 
+
+435
+00:07:07,990 --> 00:07:10,050
+profile specifically the kind of loading
+screen or the startup section of our
+
+436
+00:07:10,050 --> 00:07:10,060
+screen or the startup section of our
+ 
+
+437
+00:07:10,060 --> 00:07:11,310
+screen or the startup section of our
+code but then when we're actually
+
+438
+00:07:11,310 --> 00:07:11,320
+code but then when we're actually
+ 
+
+439
+00:07:11,320 --> 00:07:12,960
+code but then when we're actually
+rendering and we're running kind of
+
+440
+00:07:12,960 --> 00:07:12,970
+rendering and we're running kind of
+ 
+
+441
+00:07:12,970 --> 00:07:14,190
+rendering and we're running kind of
+frame-to-frame and we've actually got
+
+442
+00:07:14,190 --> 00:07:14,200
+frame-to-frame and we've actually got
+ 
+
+443
+00:07:14,200 --> 00:07:15,810
+frame-to-frame and we've actually got
+the gameplay that's like a completely
+
+444
+00:07:15,810 --> 00:07:15,820
+the gameplay that's like a completely
+ 
+
+445
+00:07:15,820 --> 00:07:17,970
+the gameplay that's like a completely
+different ballgame altogether maybe we
+
+446
+00:07:17,970 --> 00:07:17,980
+different ballgame altogether maybe we
+ 
+
+447
+00:07:17,980 --> 00:07:19,560
+different ballgame altogether maybe we
+want to profile that separately and by
+
+448
+00:07:19,560 --> 00:07:19,570
+want to profile that separately and by
+ 
+
+449
+00:07:19,570 --> 00:07:21,750
+want to profile that separately and by
+having this concept of sessions we can
+
+450
+00:07:21,750 --> 00:07:21,760
+having this concept of sessions we can
+ 
+
+451
+00:07:21,760 --> 00:07:23,760
+having this concept of sessions we can
+we can do that as as much as we want
+
+452
+00:07:23,760 --> 00:07:23,770
+we can do that as as much as we want
+ 
+
+453
+00:07:23,770 --> 00:07:25,470
+we can do that as as much as we want
+alright so after just cleaning up our
+
+454
+00:07:25,470 --> 00:07:25,480
+alright so after just cleaning up our
+ 
+
+455
+00:07:25,480 --> 00:07:26,940
+alright so after just cleaning up our
+code and fixing some errors a little bit
+
+456
+00:07:26,940 --> 00:07:26,950
+code and fixing some errors a little bit
+ 
+
+457
+00:07:26,950 --> 00:07:28,890
+code and fixing some errors a little bit
+we have our running program you can see
+
+458
+00:07:28,890 --> 00:07:28,900
+we have our running program you can see
+ 
+
+459
+00:07:28,900 --> 00:07:30,180
+we have our running program you can see
+it doesn't output anything into the
+
+460
+00:07:30,180 --> 00:07:30,190
+it doesn't output anything into the
+ 
+
+461
+00:07:30,190 --> 00:07:32,070
+it doesn't output anything into the
+console anymore because it should all be
+
+462
+00:07:32,070 --> 00:07:32,080
+console anymore because it should all be
+ 
+
+463
+00:07:32,080 --> 00:07:35,460
+console anymore because it should all be
+going into our results JSON file so
+
+464
+00:07:35,460 --> 00:07:35,470
+going into our results JSON file so
+ 
+
+465
+00:07:35,470 --> 00:07:36,810
+going into our results JSON file so
+let's take a look at that if we open the
+
+466
+00:07:36,810 --> 00:07:36,820
+let's take a look at that if we open the
+ 
+
+467
+00:07:36,820 --> 00:07:38,700
+let's take a look at that if we open the
+containing folder go to our root
+
+468
+00:07:38,700 --> 00:07:38,710
+containing folder go to our root
+ 
+
+469
+00:07:38,710 --> 00:07:40,560
+containing folder go to our root
+directory here we have results our JSON
+
+470
+00:07:40,560 --> 00:07:40,570
+directory here we have results our JSON
+ 
+
+471
+00:07:40,570 --> 00:07:42,060
+directory here we have results our JSON
+file let's just drop that into visual
+
+472
+00:07:42,060 --> 00:07:42,070
+file let's just drop that into visual
+ 
+
+473
+00:07:42,070 --> 00:07:43,950
+file let's just drop that into visual
+studio to take a look at the text
+
+474
+00:07:43,950 --> 00:07:43,960
+studio to take a look at the text
+ 
+
+475
+00:07:43,960 --> 00:07:45,630
+studio to take a look at the text
+contents of this file so we have
+
+476
+00:07:45,630 --> 00:07:45,640
+contents of this file so we have
+ 
+
+477
+00:07:45,640 --> 00:07:47,160
+contents of this file so we have
+function one for example which is that
+
+478
+00:07:47,160 --> 00:07:47,170
+function one for example which is that
+ 
+
+479
+00:07:47,170 --> 00:07:48,870
+function one for example which is that
+name of the time we have the duration
+
+480
+00:07:48,870 --> 00:07:48,880
+name of the time we have the duration
+ 
+
+481
+00:07:48,880 --> 00:07:50,910
+name of the time we have the duration
+and then we also have the actual
+
+482
+00:07:50,910 --> 00:07:50,920
+and then we also have the actual
+ 
+
+483
+00:07:50,920 --> 00:07:53,910
+and then we also have the actual
+starting time point TS I'm assuming
+
+484
+00:07:53,910 --> 00:07:53,920
+starting time point TS I'm assuming
+ 
+
+485
+00:07:53,920 --> 00:07:56,070
+starting time point TS I'm assuming
+stands for timestamp and then we just
+
+486
+00:07:56,070 --> 00:07:56,080
+stands for timestamp and then we just
+ 
+
+487
+00:07:56,080 --> 00:07:57,780
+stands for timestamp and then we just
+have like an array of this and that is
+
+488
+00:07:57,780 --> 00:07:57,790
+have like an array of this and that is
+ 
+
+489
+00:07:57,790 --> 00:07:59,730
+have like an array of this and that is
+essentially all of the data that we need
+
+490
+00:07:59,730 --> 00:07:59,740
+essentially all of the data that we need
+ 
+
+491
+00:07:59,740 --> 00:08:01,620
+essentially all of the data that we need
+to give chrome tracing so now that we
+
+492
+00:08:01,620 --> 00:08:01,630
+to give chrome tracing so now that we
+ 
+
+493
+00:08:01,630 --> 00:08:04,020
+to give chrome tracing so now that we
+have this JSON file let's go ahead and
+
+494
+00:08:04,020 --> 00:08:04,030
+have this JSON file let's go ahead and
+ 
+
+495
+00:08:04,030 --> 00:08:06,150
+have this JSON file let's go ahead and
+drop it into chrome tracing and see what
+
+496
+00:08:06,150 --> 00:08:06,160
+drop it into chrome tracing and see what
+ 
+
+497
+00:08:06,160 --> 00:08:08,610
+drop it into chrome tracing and see what
+we get okay so check this out we have
+
+498
+00:08:08,610 --> 00:08:08,620
+we get okay so check this out we have
+ 
+
+499
+00:08:08,620 --> 00:08:11,250
+we get okay so check this out we have
+our profiling data visualized now we
+
+500
+00:08:11,250 --> 00:08:11,260
+our profiling data visualized now we
+ 
+
+501
+00:08:11,260 --> 00:08:14,070
+our profiling data visualized now we
+have function one function two but you
+
+502
+00:08:14,070 --> 00:08:14,080
+have function one function two but you
+ 
+
+503
+00:08:14,080 --> 00:08:15,210
+have function one function two but you
+can see that something's a little bit
+
+504
+00:08:15,210 --> 00:08:15,220
+can see that something's a little bit
+ 
+
+505
+00:08:15,220 --> 00:08:17,190
+can see that something's a little bit
+wrong on the timeline here it says 1000
+
+506
+00:08:17,190 --> 00:08:17,200
+wrong on the timeline here it says 1000
+ 
+
+507
+00:08:17,200 --> 00:08:18,930
+wrong on the timeline here it says 1000
+microseconds and that's what the wall
+
+508
+00:08:18,930 --> 00:08:18,940
+microseconds and that's what the wall
+ 
+
+509
+00:08:18,940 --> 00:08:21,540
+microseconds and that's what the wall
+duration is down here as well one
+
+510
+00:08:21,540 --> 00:08:21,550
+duration is down here as well one
+ 
+
+511
+00:08:21,550 --> 00:08:23,520
+duration is down here as well one
+millisecond obviously this did not take
+
+512
+00:08:23,520 --> 00:08:23,530
+millisecond obviously this did not take
+ 
+
+513
+00:08:23,530 --> 00:08:24,750
+millisecond obviously this did not take
+one millisecond it took a thousand
+
+514
+00:08:24,750 --> 00:08:24,760
+one millisecond it took a thousand
+ 
+
+515
+00:08:24,760 --> 00:08:26,550
+one millisecond it took a thousand
+milliseconds so we're off by a factor of
+
+516
+00:08:26,550 --> 00:08:26,560
+milliseconds so we're off by a factor of
+ 
+
+517
+00:08:26,560 --> 00:08:28,410
+milliseconds so we're off by a factor of
+a thousand let's go back and see if we
+
+518
+00:08:28,410 --> 00:08:28,420
+a thousand let's go back and see if we
+ 
+
+519
+00:08:28,420 --> 00:08:30,240
+a thousand let's go back and see if we
+can fix that should be pretty simple if
+
+520
+00:08:30,240 --> 00:08:30,250
+can fix that should be pretty simple if
+ 
+
+521
+00:08:30,250 --> 00:08:32,460
+can fix that should be pretty simple if
+we just change our time point cast to
+
+522
+00:08:32,460 --> 00:08:32,470
+we just change our time point cast to
+ 
+
+523
+00:08:32,470 --> 00:08:34,410
+we just change our time point cast to
+cast into micro seconds instead of
+
+524
+00:08:34,410 --> 00:08:34,420
+cast into micro seconds instead of
+ 
+
+525
+00:08:34,420 --> 00:08:35,940
+cast into micro seconds instead of
+milliseconds and we should have our
+
+526
+00:08:35,940 --> 00:08:35,950
+milliseconds and we should have our
+ 
+
+527
+00:08:35,950 --> 00:08:37,890
+milliseconds and we should have our
+timing start and end data in the right
+
+528
+00:08:37,890 --> 00:08:37,900
+timing start and end data in the right
+ 
+
+529
+00:08:37,900 --> 00:08:40,590
+timing start and end data in the right
+format for chrome tracing let's rerun
+
+530
+00:08:40,590 --> 00:08:40,600
+format for chrome tracing let's rerun
+ 
+
+531
+00:08:40,600 --> 00:08:43,399
+format for chrome tracing let's rerun
+our program here to get some new data
+
+532
+00:08:43,399 --> 00:08:43,409
+our program here to get some new data
+ 
+
+533
+00:08:43,409 --> 00:08:45,050
+our program here to get some new data
+bit back into chrome tracing and now you
+
+534
+00:08:45,050 --> 00:08:45,060
+bit back into chrome tracing and now you
+ 
+
+535
+00:08:45,060 --> 00:08:46,850
+bit back into chrome tracing and now you
+can see where 2,000 milliseconds we've
+
+536
+00:08:46,850 --> 00:08:46,860
+can see where 2,000 milliseconds we've
+ 
+
+537
+00:08:46,860 --> 00:08:48,740
+can see where 2,000 milliseconds we've
+got the right kind of scale so this is
+
+538
+00:08:48,740 --> 00:08:48,750
+got the right kind of scale so this is
+ 
+
+539
+00:08:48,750 --> 00:08:50,569
+got the right kind of scale so this is
+really cool because obviously we can see
+
+540
+00:08:50,569 --> 00:08:50,579
+really cool because obviously we can see
+ 
+
+541
+00:08:50,579 --> 00:08:52,460
+really cool because obviously we can see
+all this stuff visually we have function
+
+542
+00:08:52,460 --> 00:08:52,470
+all this stuff visually we have function
+ 
+
+543
+00:08:52,470 --> 00:08:54,559
+all this stuff visually we have function
+one first then we run function two we
+
+544
+00:08:54,559 --> 00:08:54,569
+one first then we run function two we
+ 
+
+545
+00:08:54,569 --> 00:08:56,329
+one first then we run function two we
+can see how long it takes and of course
+
+546
+00:08:56,329 --> 00:08:56,339
+can see how long it takes and of course
+ 
+
+547
+00:08:56,339 --> 00:08:58,160
+can see how long it takes and of course
+as we saw earlier we can actually look
+
+548
+00:08:58,160 --> 00:08:58,170
+as we saw earlier we can actually look
+ 
+
+549
+00:08:58,170 --> 00:08:59,600
+as we saw earlier we can actually look
+at this in kind of like a stack trace
+
+550
+00:08:59,600 --> 00:08:59,610
+at this in kind of like a stack trace
+ 
+
+551
+00:08:59,610 --> 00:09:01,610
+at this in kind of like a stack trace
+format so let's go ahead and add another
+
+552
+00:09:01,610 --> 00:09:01,620
+format so let's go ahead and add another
+ 
+
+553
+00:09:01,620 --> 00:09:03,800
+format so let's go ahead and add another
+function I'll call it run benchmarks
+
+554
+00:09:03,800 --> 00:09:03,810
+function I'll call it run benchmarks
+ 
+
+555
+00:09:03,810 --> 00:09:05,809
+function I'll call it run benchmarks
+this will just call function 1 and
+
+556
+00:09:05,809 --> 00:09:05,819
+this will just call function 1 and
+ 
+
+557
+00:09:05,819 --> 00:09:07,579
+this will just call function 1 and
+function two but now since we have like
+
+558
+00:09:07,579 --> 00:09:07,589
+function two but now since we have like
+ 
+
+559
+00:09:07,589 --> 00:09:09,530
+function two but now since we have like
+another function up in the stack we
+
+560
+00:09:09,530 --> 00:09:09,540
+another function up in the stack we
+ 
+
+561
+00:09:09,540 --> 00:09:11,210
+another function up in the stack we
+should be able to visualize this as well
+
+562
+00:09:11,210 --> 00:09:11,220
+should be able to visualize this as well
+ 
+
+563
+00:09:11,220 --> 00:09:12,230
+should be able to visualize this as well
+I'll just print something out to the
+
+564
+00:09:12,230 --> 00:09:12,240
+I'll just print something out to the
+ 
+
+565
+00:09:12,240 --> 00:09:14,569
+I'll just print something out to the
+console like running benchmarks and then
+
+566
+00:09:14,569 --> 00:09:14,579
+console like running benchmarks and then
+ 
+
+567
+00:09:14,579 --> 00:09:16,699
+console like running benchmarks and then
+we'll stick that instrumentation timer
+
+568
+00:09:16,699 --> 00:09:16,709
+we'll stick that instrumentation timer
+ 
+
+569
+00:09:16,709 --> 00:09:19,579
+we'll stick that instrumentation timer
+into this function as well we'll have to
+
+570
+00:09:19,579 --> 00:09:19,589
+into this function as well we'll have to
+ 
+
+571
+00:09:19,589 --> 00:09:20,869
+into this function as well we'll have to
+give it a name of course which is
+
+572
+00:09:20,869 --> 00:09:20,879
+give it a name of course which is
+ 
+
+573
+00:09:20,879 --> 00:09:22,309
+give it a name of course which is
+getting a little bit annoying but we'll
+
+574
+00:09:22,309 --> 00:09:22,319
+getting a little bit annoying but we'll
+ 
+
+575
+00:09:22,319 --> 00:09:24,050
+getting a little bit annoying but we'll
+address that in a minute let's go ahead
+
+576
+00:09:24,050 --> 00:09:24,060
+address that in a minute let's go ahead
+ 
+
+577
+00:09:24,060 --> 00:09:27,439
+address that in a minute let's go ahead
+and run our code and see what we get you
+
+578
+00:09:27,439 --> 00:09:27,449
+and run our code and see what we get you
+ 
+
+579
+00:09:27,449 --> 00:09:28,699
+and run our code and see what we get you
+can see it's printing running benchmarks
+
+580
+00:09:28,699 --> 00:09:28,709
+can see it's printing running benchmarks
+ 
+
+581
+00:09:28,709 --> 00:09:31,189
+can see it's printing running benchmarks
+here at the top and if we get this new
+
+582
+00:09:31,189 --> 00:09:31,199
+here at the top and if we get this new
+ 
+
+583
+00:09:31,199 --> 00:09:32,840
+here at the top and if we get this new
+results like JSON file pop it into
+
+584
+00:09:32,840 --> 00:09:32,850
+results like JSON file pop it into
+ 
+
+585
+00:09:32,850 --> 00:09:34,759
+results like JSON file pop it into
+chrome tracing there you have it we have
+
+586
+00:09:34,759 --> 00:09:34,769
+chrome tracing there you have it we have
+ 
+
+587
+00:09:34,769 --> 00:09:37,639
+chrome tracing there you have it we have
+run benchmarks which calls function 1
+
+588
+00:09:37,639 --> 00:09:37,649
+run benchmarks which calls function 1
+ 
+
+589
+00:09:37,649 --> 00:09:39,949
+run benchmarks which calls function 1
+followed by function 2 we can seal this
+
+590
+00:09:39,949 --> 00:09:39,959
+followed by function 2 we can seal this
+ 
+
+591
+00:09:39,959 --> 00:09:41,780
+followed by function 2 we can seal this
+visually and we can see the entire time
+
+592
+00:09:41,780 --> 00:09:41,790
+visually and we can see the entire time
+ 
+
+593
+00:09:41,790 --> 00:09:43,850
+visually and we can see the entire time
+of both of the benchmarks by looking at
+
+594
+00:09:43,850 --> 00:09:43,860
+of both of the benchmarks by looking at
+ 
+
+595
+00:09:43,860 --> 00:09:46,819
+of both of the benchmarks by looking at
+wall duration of run benchmarks so this
+
+596
+00:09:46,819 --> 00:09:46,829
+wall duration of run benchmarks so this
+ 
+
+597
+00:09:46,829 --> 00:09:48,050
+wall duration of run benchmarks so this
+is where she's getting somewhere now I
+
+598
+00:09:48,050 --> 00:09:48,060
+is where she's getting somewhere now I
+ 
+
+599
+00:09:48,060 --> 00:09:49,579
+is where she's getting somewhere now I
+like this this is getting visual it's
+
+600
+00:09:49,579 --> 00:09:49,589
+like this this is getting visual it's
+ 
+
+601
+00:09:49,589 --> 00:09:51,499
+like this this is getting visual it's
+really nice but unfortunately this run
+
+602
+00:09:51,499 --> 00:09:51,509
+really nice but unfortunately this run
+ 
+
+603
+00:09:51,509 --> 00:09:53,689
+really nice but unfortunately this run
+benchmarks having to just just copy and
+
+604
+00:09:53,689 --> 00:09:53,699
+benchmarks having to just just copy and
+ 
+
+605
+00:09:53,699 --> 00:09:55,280
+benchmarks having to just just copy and
+paste and then image the name of each
+
+606
+00:09:55,280 --> 00:09:55,290
+paste and then image the name of each
+ 
+
+607
+00:09:55,290 --> 00:09:56,809
+paste and then image the name of each
+function that we call it's getting a
+
+608
+00:09:56,809 --> 00:09:56,819
+function that we call it's getting a
+ 
+
+609
+00:09:56,819 --> 00:09:59,030
+function that we call it's getting a
+little bit annoying what can we do to
+
+610
+00:09:59,030 --> 00:09:59,040
+little bit annoying what can we do to
+ 
+
+611
+00:09:59,040 --> 00:10:01,309
+little bit annoying what can we do to
+fix this up additionally this kind of
+
+612
+00:10:01,309 --> 00:10:01,319
+fix this up additionally this kind of
+ 
+
+613
+00:10:01,319 --> 00:10:02,960
+fix this up additionally this kind of
+timing code is not something that we
+
+614
+00:10:02,960 --> 00:10:02,970
+timing code is not something that we
+ 
+
+615
+00:10:02,970 --> 00:10:04,879
+timing code is not something that we
+want to run all the time in our program
+
+616
+00:10:04,879 --> 00:10:04,889
+want to run all the time in our program
+ 
+
+617
+00:10:04,889 --> 00:10:06,800
+want to run all the time in our program
+there should be an easy way to shut all
+
+618
+00:10:06,800 --> 00:10:06,810
+there should be an easy way to shut all
+ 
+
+619
+00:10:06,810 --> 00:10:08,360
+there should be an easy way to shut all
+of this off because of course it does
+
+620
+00:10:08,360 --> 00:10:08,370
+of this off because of course it does
+ 
+
+621
+00:10:08,370 --> 00:10:10,759
+of this off because of course it does
+add some considerable overhead so we're
+
+622
+00:10:10,759 --> 00:10:10,769
+add some considerable overhead so we're
+ 
+
+623
+00:10:10,769 --> 00:10:12,379
+add some considerable overhead so we're
+gonna solve both of these problems by
+
+624
+00:10:12,379 --> 00:10:12,389
+gonna solve both of these problems by
+ 
+
+625
+00:10:12,389 --> 00:10:14,689
+gonna solve both of these problems by
+writing some macros I'm gonna define a
+
+626
+00:10:14,689 --> 00:10:14,699
+writing some macros I'm gonna define a
+ 
+
+627
+00:10:14,699 --> 00:10:16,429
+writing some macros I'm gonna define a
+macro here called profile scope which is
+
+628
+00:10:16,429 --> 00:10:16,439
+macro here called profile scope which is
+ 
+
+629
+00:10:16,439 --> 00:10:18,019
+macro here called profile scope which is
+gonna take your name as a parameter this
+
+630
+00:10:18,019 --> 00:10:18,029
+gonna take your name as a parameter this
+ 
+
+631
+00:10:18,029 --> 00:10:19,970
+gonna take your name as a parameter this
+is basically just going to wrap our
+
+632
+00:10:19,970 --> 00:10:19,980
+is basically just going to wrap our
+ 
+
+633
+00:10:19,980 --> 00:10:22,819
+is basically just going to wrap our
+instrumentation time a call will just
+
+634
+00:10:22,819 --> 00:10:22,829
+instrumentation time a call will just
+ 
+
+635
+00:10:22,829 --> 00:10:24,829
+instrumentation time a call will just
+concatenate the line number here just so
+
+636
+00:10:24,829 --> 00:10:24,839
+concatenate the line number here just so
+ 
+
+637
+00:10:24,839 --> 00:10:26,449
+concatenate the line number here just so
+that we can have a unique name for our
+
+638
+00:10:26,449 --> 00:10:26,459
+that we can have a unique name for our
+ 
+
+639
+00:10:26,459 --> 00:10:28,040
+that we can have a unique name for our
+variable in case we have a bunch of
+
+640
+00:10:28,040 --> 00:10:28,050
+variable in case we have a bunch of
+ 
+
+641
+00:10:28,050 --> 00:10:30,679
+variable in case we have a bunch of
+these in a row but we don't need the
+
+642
+00:10:30,679 --> 00:10:30,689
+these in a row but we don't need the
+ 
+
+643
+00:10:30,689 --> 00:10:32,420
+these in a row but we don't need the
+double hash here depending on which
+
+644
+00:10:32,420 --> 00:10:32,430
+double hash here depending on which
+ 
+
+645
+00:10:32,430 --> 00:10:33,470
+double hash here depending on which
+compiler you use I'm just going to use
+
+646
+00:10:33,470 --> 00:10:33,480
+compiler you use I'm just going to use
+ 
+
+647
+00:10:33,480 --> 00:10:35,420
+compiler you use I'm just going to use
+it to be safe we're just concatenated
+
+648
+00:10:35,420 --> 00:10:35,430
+it to be safe we're just concatenated
+ 
+
+649
+00:10:35,430 --> 00:10:37,610
+it to be safe we're just concatenated
+timer along with the line number here
+
+650
+00:10:37,610 --> 00:10:37,620
+timer along with the line number here
+ 
+
+651
+00:10:37,620 --> 00:10:39,170
+timer along with the line number here
+now we can replace our instrumentation
+
+652
+00:10:39,170 --> 00:10:39,180
+now we can replace our instrumentation
+ 
+
+653
+00:10:39,180 --> 00:10:41,119
+now we can replace our instrumentation
+timer calls with this profile scope
+
+654
+00:10:41,119 --> 00:10:41,129
+timer calls with this profile scope
+ 
+
+655
+00:10:41,129 --> 00:10:43,699
+timer calls with this profile scope
+macro and then finally I'm just gonna
+
+656
+00:10:43,699 --> 00:10:43,709
+macro and then finally I'm just gonna
+ 
+
+657
+00:10:43,709 --> 00:10:46,069
+macro and then finally I'm just gonna
+add a define here called profiling which
+
+658
+00:10:46,069 --> 00:10:46,079
+add a define here called profiling which
+ 
+
+659
+00:10:46,079 --> 00:10:48,530
+add a define here called profiling which
+will set to 1 if this is set to 1 then
+
+660
+00:10:48,530 --> 00:10:48,540
+will set to 1 if this is set to 1 then
+ 
+
+661
+00:10:48,540 --> 00:10:50,299
+will set to 1 if this is set to 1 then
+profiling is enabled which means we will
+
+662
+00:10:50,299 --> 00:10:50,309
+profiling is enabled which means we will
+ 
+
+663
+00:10:50,309 --> 00:10:51,889
+profiling is enabled which means we will
+actually have profile score brought our
+
+664
+00:10:51,889 --> 00:10:51,899
+actually have profile score brought our
+ 
+
+665
+00:10:51,899 --> 00:10:53,449
+actually have profile score brought our
+instrumentation timer and do all that
+
+666
+00:10:53,449 --> 00:10:53,459
+instrumentation timer and do all that
+ 
+
+667
+00:10:53,459 --> 00:10:55,549
+instrumentation timer and do all that
+stuff however if it's disabled you can
+
+668
+00:10:55,549 --> 00:10:55,559
+stuff however if it's disabled you can
+ 
+
+669
+00:10:55,559 --> 00:10:56,900
+stuff however if it's disabled you can
+see that we can just
+
+670
+00:10:56,900 --> 00:10:56,910
+see that we can just
+ 
+
+671
+00:10:56,910 --> 00:10:58,760
+see that we can just
+have it just be empty which means that
+
+672
+00:10:58,760 --> 00:10:58,770
+have it just be empty which means that
+ 
+
+673
+00:10:58,770 --> 00:11:00,380
+have it just be empty which means that
+it would replace profile scope with just
+
+674
+00:11:00,380 --> 00:11:00,390
+it would replace profile scope with just
+ 
+
+675
+00:11:00,390 --> 00:11:02,240
+it would replace profile scope with just
+no occurred at all which effectively
+
+676
+00:11:02,240 --> 00:11:02,250
+no occurred at all which effectively
+ 
+
+677
+00:11:02,250 --> 00:11:05,030
+no occurred at all which effectively
+just strips out that timer from any kind
+
+678
+00:11:05,030 --> 00:11:05,040
+just strips out that timer from any kind
+ 
+
+679
+00:11:05,040 --> 00:11:07,060
+just strips out that timer from any kind
+of build which has profiling set to zero
+
+680
+00:11:07,060 --> 00:11:07,070
+of build which has profiling set to zero
+ 
+
+681
+00:11:07,070 --> 00:11:09,680
+of build which has profiling set to zero
+so this is great but obviously doesn't
+
+682
+00:11:09,680 --> 00:11:09,690
+so this is great but obviously doesn't
+ 
+
+683
+00:11:09,690 --> 00:11:11,330
+so this is great but obviously doesn't
+fix our problem of what if I just
+
+684
+00:11:11,330 --> 00:11:11,340
+fix our problem of what if I just
+ 
+
+685
+00:11:11,340 --> 00:11:13,190
+fix our problem of what if I just
+introduced a new function like this run
+
+686
+00:11:13,190 --> 00:11:13,200
+introduced a new function like this run
+ 
+
+687
+00:11:13,200 --> 00:11:15,200
+introduced a new function like this run
+app function and then I want to profile
+
+688
+00:11:15,200 --> 00:11:15,210
+app function and then I want to profile
+ 
+
+689
+00:11:15,210 --> 00:11:17,060
+app function and then I want to profile
+the scope oh no I have to go back here
+
+690
+00:11:17,060 --> 00:11:17,070
+the scope oh no I have to go back here
+ 
+
+691
+00:11:17,070 --> 00:11:19,130
+the scope oh no I have to go back here
+and change my string to run app that
+
+692
+00:11:19,130 --> 00:11:19,140
+and change my string to run app that
+ 
+
+693
+00:11:19,140 --> 00:11:20,570
+and change my string to run app that
+just makes it a little bit more
+
+694
+00:11:20,570 --> 00:11:20,580
+just makes it a little bit more
+ 
+
+695
+00:11:20,580 --> 00:11:22,910
+just makes it a little bit more
+cumbersome and annoying can we do
+
+696
+00:11:22,910 --> 00:11:22,920
+cumbersome and annoying can we do
+ 
+
+697
+00:11:22,920 --> 00:11:24,770
+cumbersome and annoying can we do
+something about this yes of course we
+
+698
+00:11:24,770 --> 00:11:24,780
+something about this yes of course we
+ 
+
+699
+00:11:24,780 --> 00:11:25,910
+something about this yes of course we
+can I'm going to write a new macro
+
+700
+00:11:25,910 --> 00:11:25,920
+can I'm going to write a new macro
+ 
+
+701
+00:11:25,920 --> 00:11:27,980
+can I'm going to write a new macro
+called profile function no parameters
+
+702
+00:11:27,980 --> 00:11:27,990
+called profile function no parameters
+ 
+
+703
+00:11:27,990 --> 00:11:29,780
+called profile function no parameters
+for this one this is just gonna call
+
+704
+00:11:29,780 --> 00:11:29,790
+for this one this is just gonna call
+ 
+
+705
+00:11:29,790 --> 00:11:31,850
+for this one this is just gonna call
+profile scope but for the name it's
+
+706
+00:11:31,850 --> 00:11:31,860
+profile scope but for the name it's
+ 
+
+707
+00:11:31,860 --> 00:11:33,920
+profile scope but for the name it's
+gonna take in the name of the function
+
+708
+00:11:33,920 --> 00:11:33,930
+gonna take in the name of the function
+ 
+
+709
+00:11:33,930 --> 00:11:35,840
+gonna take in the name of the function
+which we can do using this compiler
+
+710
+00:11:35,840 --> 00:11:35,850
+which we can do using this compiler
+ 
+
+711
+00:11:35,850 --> 00:11:38,390
+which we can do using this compiler
+macro called function don't forget to
+
+712
+00:11:38,390 --> 00:11:38,400
+macro called function don't forget to
+ 
+
+713
+00:11:38,400 --> 00:11:40,550
+macro called function don't forget to
+include this into the else statement of
+
+714
+00:11:40,550 --> 00:11:40,560
+include this into the else statement of
+ 
+
+715
+00:11:40,560 --> 00:11:42,530
+include this into the else statement of
+your macro like I did and then you can
+
+716
+00:11:42,530 --> 00:11:42,540
+your macro like I did and then you can
+ 
+
+717
+00:11:42,540 --> 00:11:44,090
+your macro like I did and then you can
+replace profile scope with profile
+
+718
+00:11:44,090 --> 00:11:44,100
+replace profile scope with profile
+ 
+
+719
+00:11:44,100 --> 00:11:45,680
+replace profile scope with profile
+function all throughout your code and
+
+720
+00:11:45,680 --> 00:11:45,690
+function all throughout your code and
+ 
+
+721
+00:11:45,690 --> 00:11:46,610
+function all throughout your code and
+this is just going to be completely
+
+722
+00:11:46,610 --> 00:11:46,620
+this is just going to be completely
+ 
+
+723
+00:11:46,620 --> 00:11:48,950
+this is just going to be completely
+magical we can just run this and it will
+
+724
+00:11:48,950 --> 00:11:48,960
+magical we can just run this and it will
+ 
+
+725
+00:11:48,960 --> 00:11:51,470
+magical we can just run this and it will
+actually take the name of the function
+
+726
+00:11:51,470 --> 00:11:51,480
+actually take the name of the function
+ 
+
+727
+00:11:51,480 --> 00:11:53,540
+actually take the name of the function
+and set that as the name of the profile
+
+728
+00:11:53,540 --> 00:11:53,550
+and set that as the name of the profile
+ 
+
+729
+00:11:53,550 --> 00:11:55,430
+and set that as the name of the profile
+so if we drop this back into chrome
+
+730
+00:11:55,430 --> 00:11:55,440
+so if we drop this back into chrome
+ 
+
+731
+00:11:55,440 --> 00:11:58,040
+so if we drop this back into chrome
+tracing you can see that we have the
+
+732
+00:11:58,040 --> 00:11:58,050
+tracing you can see that we have the
+ 
+
+733
+00:11:58,050 --> 00:11:59,840
+tracing you can see that we have the
+same result as before we have run run
+
+734
+00:11:59,840 --> 00:11:59,850
+same result as before we have run run
+ 
+
+735
+00:11:59,850 --> 00:12:02,240
+same result as before we have run run
+benchmarks function one function two but
+
+736
+00:12:02,240 --> 00:12:02,250
+benchmarks function one function two but
+ 
+
+737
+00:12:02,250 --> 00:12:04,190
+benchmarks function one function two but
+this was not a string that we actually
+
+738
+00:12:04,190 --> 00:12:04,200
+this was not a string that we actually
+ 
+
+739
+00:12:04,200 --> 00:12:06,740
+this was not a string that we actually
+put in ourselves this was done by the
+
+740
+00:12:06,740 --> 00:12:06,750
+put in ourselves this was done by the
+ 
+
+741
+00:12:06,750 --> 00:12:08,690
+put in ourselves this was done by the
+preprocessor which is really cool
+
+742
+00:12:08,690 --> 00:12:08,700
+preprocessor which is really cool
+ 
+
+743
+00:12:08,700 --> 00:12:10,520
+preprocessor which is really cool
+however we kind of run into a problem
+
+744
+00:12:10,520 --> 00:12:10,530
+however we kind of run into a problem
+ 
+
+745
+00:12:10,530 --> 00:12:13,010
+however we kind of run into a problem
+here what if we have parameters and by
+
+746
+00:12:13,010 --> 00:12:13,020
+here what if we have parameters and by
+ 
+
+747
+00:12:13,020 --> 00:12:14,510
+here what if we have parameters and by
+that I mean specifically overloaded
+
+748
+00:12:14,510 --> 00:12:14,520
+that I mean specifically overloaded
+ 
+
+749
+00:12:14,520 --> 00:12:15,680
+that I mean specifically overloaded
+functions what if both of these
+
+750
+00:12:15,680 --> 00:12:15,690
+functions what if both of these
+ 
+
+751
+00:12:15,690 --> 00:12:17,540
+functions what if both of these
+functions are called print function they
+
+752
+00:12:17,540 --> 00:12:17,550
+functions are called print function they
+ 
+
+753
+00:12:17,550 --> 00:12:19,910
+functions are called print function they
+have the same function name but dead
+
+754
+00:12:19,910 --> 00:12:19,920
+have the same function name but dead
+ 
+
+755
+00:12:19,920 --> 00:12:21,410
+have the same function name but dead
+they have different safe inches so in
+
+756
+00:12:21,410 --> 00:12:21,420
+they have different safe inches so in
+ 
+
+757
+00:12:21,420 --> 00:12:23,090
+they have different safe inches so in
+other words we've added an int value
+
+758
+00:12:23,090 --> 00:12:23,100
+other words we've added an int value
+ 
+
+759
+00:12:23,100 --> 00:12:25,430
+other words we've added an int value
+here which just adds its value to I and
+
+760
+00:12:25,430 --> 00:12:25,440
+here which just adds its value to I and
+ 
+
+761
+00:12:25,440 --> 00:12:27,650
+here which just adds its value to I and
+then I have print function with that
+
+762
+00:12:27,650 --> 00:12:27,660
+then I have print function with that
+ 
+
+763
+00:12:27,660 --> 00:12:29,120
+then I have print function with that
+parameter being called which is one
+
+764
+00:12:29,120 --> 00:12:29,130
+parameter being called which is one
+ 
+
+765
+00:12:29,130 --> 00:12:30,410
+parameter being called which is one
+function and then the other function
+
+766
+00:12:30,410 --> 00:12:30,420
+function and then the other function
+ 
+
+767
+00:12:30,420 --> 00:12:32,480
+function and then the other function
+without a parameter being cold if I run
+
+768
+00:12:32,480 --> 00:12:32,490
+without a parameter being cold if I run
+ 
+
+769
+00:12:32,490 --> 00:12:34,280
+without a parameter being cold if I run
+this now and take a look at it they're
+
+770
+00:12:34,280 --> 00:12:34,290
+this now and take a look at it they're
+ 
+
+771
+00:12:34,290 --> 00:12:36,290
+this now and take a look at it they're
+both gonna be called print function
+
+772
+00:12:36,290 --> 00:12:36,300
+both gonna be called print function
+ 
+
+773
+00:12:36,300 --> 00:12:38,960
+both gonna be called print function
+because all that preprocessor function
+
+774
+00:12:38,960 --> 00:12:38,970
+because all that preprocessor function
+ 
+
+775
+00:12:38,970 --> 00:12:40,820
+because all that preprocessor function
+defined is doing is taking the actual
+
+776
+00:12:40,820 --> 00:12:40,830
+defined is doing is taking the actual
+ 
+
+777
+00:12:40,830 --> 00:12:42,470
+defined is doing is taking the actual
+name of the function which is print
+
+778
+00:12:42,470 --> 00:12:42,480
+name of the function which is print
+ 
+
+779
+00:12:42,480 --> 00:12:43,580
+name of the function which is print
+function and that's it but we actually
+
+780
+00:12:43,580 --> 00:12:43,590
+function and that's it but we actually
+ 
+
+781
+00:12:43,590 --> 00:12:45,020
+function and that's it but we actually
+want more information we want the
+
+782
+00:12:45,020 --> 00:12:45,030
+want more information we want the
+ 
+
+783
+00:12:45,030 --> 00:12:46,280
+want more information we want the
+savings check can we do that
+
+784
+00:12:46,280 --> 00:12:46,290
+savings check can we do that
+ 
+
+785
+00:12:46,290 --> 00:12:47,930
+savings check can we do that
+there's another one called func cig
+
+786
+00:12:47,930 --> 00:12:47,940
+there's another one called func cig
+ 
+
+787
+00:12:47,940 --> 00:12:50,270
+there's another one called func cig
+which is a function signature if we plug
+
+788
+00:12:50,270 --> 00:12:50,280
+which is a function signature if we plug
+ 
+
+789
+00:12:50,280 --> 00:12:52,820
+which is a function signature if we plug
+that in to our profiles go back and take
+
+790
+00:12:52,820 --> 00:12:52,830
+that in to our profiles go back and take
+ 
+
+791
+00:12:52,830 --> 00:12:54,470
+that in to our profiles go back and take
+a look at this then of course we'll get
+
+792
+00:12:54,470 --> 00:12:54,480
+a look at this then of course we'll get
+ 
+
+793
+00:12:54,480 --> 00:12:56,510
+a look at this then of course we'll get
+the entire function signature which is
+
+794
+00:12:56,510 --> 00:12:56,520
+the entire function signature which is
+ 
+
+795
+00:12:56,520 --> 00:12:58,430
+the entire function signature which is
+great now there is this calling
+
+796
+00:12:58,430 --> 00:12:58,440
+great now there is this calling
+ 
+
+797
+00:12:58,440 --> 00:13:00,290
+great now there is this calling
+convention that's part of the signature
+
+798
+00:13:00,290 --> 00:13:00,300
+convention that's part of the signature
+ 
+
+799
+00:13:00,300 --> 00:13:01,850
+convention that's part of the signature
+which we don't really care about but of
+
+800
+00:13:01,850 --> 00:13:01,860
+which we don't really care about but of
+ 
+
+801
+00:13:01,860 --> 00:13:03,380
+which we don't really care about but of
+course if you really wanted to just buy
+
+802
+00:13:03,380 --> 00:13:03,390
+course if you really wanted to just buy
+ 
+
+803
+00:13:03,390 --> 00:13:05,150
+course if you really wanted to just buy
+some string processing you could easily
+
+804
+00:13:05,150 --> 00:13:05,160
+some string processing you could easily
+ 
+
+805
+00:13:05,160 --> 00:13:06,830
+some string processing you could easily
+just strip that out before you put it
+
+806
+00:13:06,830 --> 00:13:06,840
+just strip that out before you put it
+ 
+
+807
+00:13:06,840 --> 00:13:07,610
+just strip that out before you put it
+into your
+
+808
+00:13:07,610 --> 00:13:07,620
+into your
+ 
+
+809
+00:13:07,620 --> 00:13:10,220
+into your
+JSON file okay awesome this is looking
+
+810
+00:13:10,220 --> 00:13:10,230
+JSON file okay awesome this is looking
+ 
+
+811
+00:13:10,230 --> 00:13:11,090
+JSON file okay awesome this is looking
+pretty good
+
+812
+00:13:11,090 --> 00:13:11,100
+pretty good
+ 
+
+813
+00:13:11,100 --> 00:13:12,620
+pretty good
+now you can take this profile function
+
+814
+00:13:12,620 --> 00:13:12,630
+now you can take this profile function
+ 
+
+815
+00:13:12,630 --> 00:13:13,790
+now you can take this profile function
+macro and just put it into like
+
+816
+00:13:13,790 --> 00:13:13,800
+macro and just put it into like
+ 
+
+817
+00:13:13,800 --> 00:13:15,680
+macro and just put it into like
+literally every single function of your
+
+818
+00:13:15,680 --> 00:13:15,690
+literally every single function of your
+ 
+
+819
+00:13:15,690 --> 00:13:17,780
+literally every single function of your
+program if you want to see what this
+
+820
+00:13:17,780 --> 00:13:17,790
+program if you want to see what this
+ 
+
+821
+00:13:17,790 --> 00:13:19,250
+program if you want to see what this
+looks like and if we were to like add a
+
+822
+00:13:19,250 --> 00:13:19,260
+looks like and if we were to like add a
+ 
+
+823
+00:13:19,260 --> 00:13:21,500
+looks like and if we were to like add a
+namespace such as like benchmark or
+
+824
+00:13:21,500 --> 00:13:21,510
+namespace such as like benchmark or
+ 
+
+825
+00:13:21,510 --> 00:13:23,090
+namespace such as like benchmark or
+something into here since we're using
+
+826
+00:13:23,090 --> 00:13:23,100
+something into here since we're using
+ 
+
+827
+00:13:23,100 --> 00:13:25,190
+something into here since we're using
+that func macro of course we'll get all
+
+828
+00:13:25,190 --> 00:13:25,200
+that func macro of course we'll get all
+ 
+
+829
+00:13:25,200 --> 00:13:26,990
+that func macro of course we'll get all
+of that information as well which is
+
+830
+00:13:26,990 --> 00:13:27,000
+of that information as well which is
+ 
+
+831
+00:13:27,000 --> 00:13:28,910
+of that information as well which is
+really cool and in case there are areas
+
+832
+00:13:28,910 --> 00:13:28,920
+really cool and in case there are areas
+ 
+
+833
+00:13:28,920 --> 00:13:30,500
+really cool and in case there are areas
+in your code that you want to profile
+
+834
+00:13:30,500 --> 00:13:30,510
+in your code that you want to profile
+ 
+
+835
+00:13:30,510 --> 00:13:33,290
+in your code that you want to profile
+that I'm not functions specifically you
+
+836
+00:13:33,290 --> 00:13:33,300
+that I'm not functions specifically you
+ 
+
+837
+00:13:33,300 --> 00:13:35,420
+that I'm not functions specifically you
+can seek that profile scorpion to any
+
+838
+00:13:35,420 --> 00:13:35,430
+can seek that profile scorpion to any
+ 
+
+839
+00:13:35,430 --> 00:13:37,730
+can seek that profile scorpion to any
+scope whatsoever you can make an empty
+
+840
+00:13:37,730 --> 00:13:37,740
+scope whatsoever you can make an empty
+ 
+
+841
+00:13:37,740 --> 00:13:39,170
+scope whatsoever you can make an empty
+scope if you need to and you'll see
+
+842
+00:13:39,170 --> 00:13:39,180
+scope if you need to and you'll see
+ 
+
+843
+00:13:39,180 --> 00:13:40,730
+scope if you need to and you'll see
+everything here so here we have that
+
+844
+00:13:40,730 --> 00:13:40,740
+everything here so here we have that
+ 
+
+845
+00:13:40,740 --> 00:13:42,320
+everything here so here we have that
+benchmark namespace is showing up
+
+846
+00:13:42,320 --> 00:13:42,330
+benchmark namespace is showing up
+ 
+
+847
+00:13:42,330 --> 00:13:44,600
+benchmark namespace is showing up
+awesome so the other cool thing that
+
+848
+00:13:44,600 --> 00:13:44,610
+awesome so the other cool thing that
+ 
+
+849
+00:13:44,610 --> 00:13:46,850
+awesome so the other cool thing that
+chrome tracing supports is multiple
+
+850
+00:13:46,850 --> 00:13:46,860
+chrome tracing supports is multiple
+ 
+
+851
+00:13:46,860 --> 00:13:48,769
+chrome tracing supports is multiple
+threads you can actually set a thread ID
+
+852
+00:13:48,769 --> 00:13:48,779
+threads you can actually set a thread ID
+ 
+
+853
+00:13:48,779 --> 00:13:50,630
+threads you can actually set a thread ID
+over here we're just setting it to zero
+
+854
+00:13:50,630 --> 00:13:50,640
+over here we're just setting it to zero
+ 
+
+855
+00:13:50,640 --> 00:13:52,880
+over here we're just setting it to zero
+in this example and then if you do that
+
+856
+00:13:52,880 --> 00:13:52,890
+in this example and then if you do that
+ 
+
+857
+00:13:52,890 --> 00:13:54,740
+in this example and then if you do that
+you can actually visualize all of your
+
+858
+00:13:54,740 --> 00:13:54,750
+you can actually visualize all of your
+ 
+
+859
+00:13:54,750 --> 00:13:56,750
+you can actually visualize all of your
+threads running concurrently which first
+
+860
+00:13:56,750 --> 00:13:56,760
+threads running concurrently which first
+ 
+
+861
+00:13:56,760 --> 00:13:59,090
+threads running concurrently which first
+of all is useful outside of profiling to
+
+862
+00:13:59,090 --> 00:13:59,100
+of all is useful outside of profiling to
+ 
+
+863
+00:13:59,100 --> 00:14:00,890
+of all is useful outside of profiling to
+just see what on earth is going on in
+
+864
+00:14:00,890 --> 00:14:00,900
+just see what on earth is going on in
+ 
+
+865
+00:14:00,900 --> 00:14:02,120
+just see what on earth is going on in
+your program that's one of the things
+
+866
+00:14:02,120 --> 00:14:02,130
+your program that's one of the things
+ 
+
+867
+00:14:02,130 --> 00:14:03,440
+your program that's one of the things
+that I love about this but then of
+
+868
+00:14:03,440 --> 00:14:03,450
+that I love about this but then of
+ 
+
+869
+00:14:03,450 --> 00:14:05,660
+that I love about this but then of
+course it makes timing in general and
+
+870
+00:14:05,660 --> 00:14:05,670
+course it makes timing in general and
+ 
+
+871
+00:14:05,670 --> 00:14:07,220
+course it makes timing in general and
+profiling a lot more powerful so let's
+
+872
+00:14:07,220 --> 00:14:07,230
+profiling a lot more powerful so let's
+ 
+
+873
+00:14:07,230 --> 00:14:09,920
+profiling a lot more powerful so let's
+go ahead and stick a thread ID into our
+
+874
+00:14:09,920 --> 00:14:09,930
+go ahead and stick a thread ID into our
+ 
+
+875
+00:14:09,930 --> 00:14:11,840
+go ahead and stick a thread ID into our
+structure here and then we'll also
+
+876
+00:14:11,840 --> 00:14:11,850
+structure here and then we'll also
+ 
+
+877
+00:14:11,850 --> 00:14:14,630
+structure here and then we'll also
+output that thread ID into our JSON file
+
+878
+00:14:14,630 --> 00:14:14,640
+output that thread ID into our JSON file
+ 
+
+879
+00:14:14,640 --> 00:14:16,820
+output that thread ID into our JSON file
+of course now we need to go to our stop
+
+880
+00:14:16,820 --> 00:14:16,830
+of course now we need to go to our stop
+ 
+
+881
+00:14:16,830 --> 00:14:18,470
+of course now we need to go to our stop
+function in our timer and see what
+
+882
+00:14:18,470 --> 00:14:18,480
+function in our timer and see what
+ 
+
+883
+00:14:18,480 --> 00:14:20,420
+function in our timer and see what
+thread the time was actually run on so
+
+884
+00:14:20,420 --> 00:14:20,430
+thread the time was actually run on so
+ 
+
+885
+00:14:20,430 --> 00:14:23,090
+thread the time was actually run on so
+that we can set up this thread ID and of
+
+886
+00:14:23,090 --> 00:14:23,100
+that we can set up this thread ID and of
+ 
+
+887
+00:14:23,100 --> 00:14:24,890
+that we can set up this thread ID and of
+course the C++ standard library makes it
+
+888
+00:14:24,890 --> 00:14:24,900
+course the C++ standard library makes it
+ 
+
+889
+00:14:24,900 --> 00:14:26,510
+course the C++ standard library makes it
+very difficult to actually retrieve the
+
+890
+00:14:26,510 --> 00:14:26,520
+very difficult to actually retrieve the
+ 
+
+891
+00:14:26,520 --> 00:14:29,570
+very difficult to actually retrieve the
+thread ID as an actual integer but since
+
+892
+00:14:29,570 --> 00:14:29,580
+thread ID as an actual integer but since
+ 
+
+893
+00:14:29,580 --> 00:14:31,579
+thread ID as an actual integer but since
+thread ID implements a hash function we
+
+894
+00:14:31,579 --> 00:14:31,589
+thread ID implements a hash function we
+ 
+
+895
+00:14:31,589 --> 00:14:33,410
+thread ID implements a hash function we
+can just use this little trick we'll
+
+896
+00:14:33,410 --> 00:14:33,420
+can just use this little trick we'll
+ 
+
+897
+00:14:33,420 --> 00:14:35,840
+can just use this little trick we'll
+pass our thread ID into that struct of
+
+898
+00:14:35,840 --> 00:14:35,850
+pass our thread ID into that struct of
+ 
+
+899
+00:14:35,850 --> 00:14:38,090
+pass our thread ID into that struct of
+course into right profile and then let's
+
+900
+00:14:38,090 --> 00:14:38,100
+course into right profile and then let's
+ 
+
+901
+00:14:38,100 --> 00:14:39,890
+course into right profile and then let's
+just go down here and change our
+
+902
+00:14:39,890 --> 00:14:39,900
+just go down here and change our
+ 
+
+903
+00:14:39,900 --> 00:14:41,630
+just go down here and change our
+benchmarks a little bit so they actually
+
+904
+00:14:41,630 --> 00:14:41,640
+benchmarks a little bit so they actually
+ 
+
+905
+00:14:41,640 --> 00:14:43,579
+benchmarks a little bit so they actually
+use multiple threads so that we can see
+
+906
+00:14:43,579 --> 00:14:43,589
+use multiple threads so that we can see
+ 
+
+907
+00:14:43,589 --> 00:14:46,670
+use multiple threads so that we can see
+this thread stuff in action I initially
+
+908
+00:14:46,670 --> 00:14:46,680
+this thread stuff in action I initially
+ 
+
+909
+00:14:46,680 --> 00:14:49,010
+this thread stuff in action I initially
+tried to use sed bind here but that
+
+910
+00:14:49,010 --> 00:14:49,020
+tried to use sed bind here but that
+ 
+
+911
+00:14:49,020 --> 00:14:50,660
+tried to use sed bind here but that
+ended up being way more trouble than
+
+912
+00:14:50,660 --> 00:14:50,670
+ended up being way more trouble than
+ 
+
+913
+00:14:50,670 --> 00:14:52,340
+ended up being way more trouble than
+it's worth because of course it's an
+
+914
+00:14:52,340 --> 00:14:52,350
+it's worth because of course it's an
+ 
+
+915
+00:14:52,350 --> 00:14:54,110
+it's worth because of course it's an
+overload of an identically named
+
+916
+00:14:54,110 --> 00:14:54,120
+overload of an identically named
+ 
+
+917
+00:14:54,120 --> 00:14:56,000
+overload of an identically named
+function and so you have to cast into
+
+918
+00:14:56,000 --> 00:14:56,010
+function and so you have to cast into
+ 
+
+919
+00:14:56,010 --> 00:14:58,100
+function and so you have to cast into
+anyway it just becomes a huge mess it's
+
+920
+00:14:58,100 --> 00:14:58,110
+anyway it just becomes a huge mess it's
+ 
+
+921
+00:14:58,110 --> 00:15:00,110
+anyway it just becomes a huge mess it's
+a lot easier to just use lambdas so I
+
+922
+00:15:00,110 --> 00:15:00,120
+a lot easier to just use lambdas so I
+ 
+
+923
+00:15:00,120 --> 00:15:00,740
+a lot easier to just use lambdas so I
+used that
+
+924
+00:15:00,740 --> 00:15:00,750
+used that
+ 
+
+925
+00:15:00,750 --> 00:15:02,540
+used that
+I also added in these two joins at the
+
+926
+00:15:02,540 --> 00:15:02,550
+I also added in these two joins at the
+ 
+
+927
+00:15:02,550 --> 00:15:03,560
+I also added in these two joins at the
+end of this function just so that we
+
+928
+00:15:03,560 --> 00:15:03,570
+end of this function just so that we
+ 
+
+929
+00:15:03,570 --> 00:15:05,210
+end of this function just so that we
+don't actually exit this run benchmark
+
+930
+00:15:05,210 --> 00:15:05,220
+don't actually exit this run benchmark
+ 
+
+931
+00:15:05,220 --> 00:15:06,590
+don't actually exit this run benchmark
+function until both of these threads
+
+932
+00:15:06,590 --> 00:15:06,600
+function until both of these threads
+ 
+
+933
+00:15:06,600 --> 00:15:08,269
+function until both of these threads
+have completed their work all right
+
+934
+00:15:08,269 --> 00:15:08,279
+have completed their work all right
+ 
+
+935
+00:15:08,279 --> 00:15:10,010
+have completed their work all right
+let's run our new multi-threaded
+
+936
+00:15:10,010 --> 00:15:10,020
+let's run our new multi-threaded
+ 
+
+937
+00:15:10,020 --> 00:15:11,870
+let's run our new multi-threaded
+benchmark which in general is not a good
+
+938
+00:15:11,870 --> 00:15:11,880
+benchmark which in general is not a good
+ 
+
+939
+00:15:11,880 --> 00:15:13,220
+benchmark which in general is not a good
+multi-threading test because of all the
+
+940
+00:15:13,220 --> 00:15:13,230
+multi-threading test because of all the
+ 
+
+941
+00:15:13,230 --> 00:15:14,960
+multi-threading test because of all the
+flushing that is pinging that is
+
+942
+00:15:14,960 --> 00:15:14,970
+flushing that is pinging that is
+ 
+
+943
+00:15:14,970 --> 00:15:16,699
+flushing that is pinging that is
+happening from the C out function but
+
+944
+00:15:16,699 --> 00:15:16,709
+happening from the C out function but
+ 
+
+945
+00:15:16,709 --> 00:15:18,590
+happening from the C out function but
+that's not the point of course our point
+
+946
+00:15:18,590 --> 00:15:18,600
+that's not the point of course our point
+ 
+
+947
+00:15:18,600 --> 00:15:20,400
+that's not the point of course our point
+is actually to see the crew
+
+948
+00:15:20,400 --> 00:15:20,410
+is actually to see the crew
+ 
+
+949
+00:15:20,410 --> 00:15:22,050
+is actually to see the crew
+tracing results and if we drop that in
+
+950
+00:15:22,050 --> 00:15:22,060
+tracing results and if we drop that in
+ 
+
+951
+00:15:22,060 --> 00:15:23,819
+tracing results and if we drop that in
+you can see we have three distinct
+
+952
+00:15:23,819 --> 00:15:23,829
+you can see we have three distinct
+ 
+
+953
+00:15:23,829 --> 00:15:25,710
+you can see we have three distinct
+threads that run benchmark one and then
+
+954
+00:15:25,710 --> 00:15:25,720
+threads that run benchmark one and then
+ 
+
+955
+00:15:25,720 --> 00:15:27,749
+threads that run benchmark one and then
+the two other threads that it kicks off
+
+956
+00:15:27,749 --> 00:15:27,759
+the two other threads that it kicks off
+ 
+
+957
+00:15:27,759 --> 00:15:29,519
+the two other threads that it kicks off
+I'm just gonna go back into the code and
+
+958
+00:15:29,519 --> 00:15:29,529
+I'm just gonna go back into the code and
+ 
+
+959
+00:15:29,529 --> 00:15:31,410
+I'm just gonna go back into the code and
+get rid of that B thread we really
+
+960
+00:15:31,410 --> 00:15:31,420
+get rid of that B thread we really
+ 
+
+961
+00:15:31,420 --> 00:15:32,519
+get rid of that B thread we really
+needed just that we can see the call
+
+962
+00:15:32,519 --> 00:15:32,529
+needed just that we can see the call
+ 
+
+963
+00:15:32,529 --> 00:15:34,379
+needed just that we can see the call
+stack from that initial run benchmarks
+
+964
+00:15:34,379 --> 00:15:34,389
+stack from that initial run benchmarks
+ 
+
+965
+00:15:34,389 --> 00:15:36,449
+stack from that initial run benchmarks
+thread which is just our main thread if
+
+966
+00:15:36,449 --> 00:15:36,459
+thread which is just our main thread if
+ 
+
+967
+00:15:36,459 --> 00:15:38,610
+thread which is just our main thread if
+we read on this program and then drop in
+
+968
+00:15:38,610 --> 00:15:38,620
+we read on this program and then drop in
+ 
+
+969
+00:15:38,620 --> 00:15:40,740
+we read on this program and then drop in
+that file there you have it so we have
+
+970
+00:15:40,740 --> 00:15:40,750
+that file there you have it so we have
+ 
+
+971
+00:15:40,750 --> 00:15:42,749
+that file there you have it so we have
+run benchmarks which actually calls the
+
+972
+00:15:42,749 --> 00:15:42,759
+run benchmarks which actually calls the
+ 
+
+973
+00:15:42,759 --> 00:15:43,920
+run benchmarks which actually calls the
+print function with no parameter by
+
+974
+00:15:43,920 --> 00:15:43,930
+print function with no parameter by
+ 
+
+975
+00:15:43,930 --> 00:15:46,319
+print function with no parameter by
+itself and then the integer one is spun
+
+976
+00:15:46,319 --> 00:15:46,329
+itself and then the integer one is spun
+ 
+
+977
+00:15:46,329 --> 00:15:47,759
+itself and then the integer one is spun
+off on a different thread and you can
+
+978
+00:15:47,759 --> 00:15:47,769
+off on a different thread and you can
+ 
+
+979
+00:15:47,769 --> 00:15:49,889
+off on a different thread and you can
+see how we can visualize that in chrome
+
+980
+00:15:49,889 --> 00:15:49,899
+see how we can visualize that in chrome
+ 
+
+981
+00:15:49,899 --> 00:15:52,619
+see how we can visualize that in chrome
+tracing which is super cool finally I
+
+982
+00:15:52,619 --> 00:15:52,629
+tracing which is super cool finally I
+ 
+
+983
+00:15:52,629 --> 00:15:53,610
+tracing which is super cool finally I
+just want to show you guys more of a
+
+984
+00:15:53,610 --> 00:15:53,620
+just want to show you guys more of a
+ 
+
+985
+00:15:53,620 --> 00:15:55,290
+just want to show you guys more of a
+real-world example of how you can use
+
+986
+00:15:55,290 --> 00:15:55,300
+real-world example of how you can use
+ 
+
+987
+00:15:55,300 --> 00:15:56,579
+real-world example of how you can use
+this so here I have a branch of the
+
+988
+00:15:56,579 --> 00:15:56,589
+this so here I have a branch of the
+ 
+
+989
+00:15:56,589 --> 00:15:58,259
+this so here I have a branch of the
+hazel engine that I wanted to profile
+
+990
+00:15:58,259 --> 00:15:58,269
+hazel engine that I wanted to profile
+ 
+
+991
+00:15:58,269 --> 00:15:59,790
+hazel engine that I wanted to profile
+I've split it up into three sessions
+
+992
+00:15:59,790 --> 00:15:59,800
+I've split it up into three sessions
+ 
+
+993
+00:15:59,800 --> 00:16:02,429
+I've split it up into three sessions
+startup run time and shutdown let's
+
+994
+00:16:02,429 --> 00:16:02,439
+startup run time and shutdown let's
+ 
+
+995
+00:16:02,439 --> 00:16:04,290
+startup run time and shutdown let's
+start by taking a look at the startup so
+
+996
+00:16:04,290 --> 00:16:04,300
+start by taking a look at the startup so
+ 
+
+997
+00:16:04,300 --> 00:16:05,519
+start by taking a look at the startup so
+this is pretty cool because you can see
+
+998
+00:16:05,519 --> 00:16:05,529
+this is pretty cool because you can see
+ 
+
+999
+00:16:05,529 --> 00:16:07,740
+this is pretty cool because you can see
+how long it takes your application to
+
+1000
+00:16:07,740 --> 00:16:07,750
+how long it takes your application to
+ 
+
+1001
+00:16:07,750 --> 00:16:09,150
+how long it takes your application to
+basically start up and here most the
+
+1002
+00:16:09,150 --> 00:16:09,160
+basically start up and here most the
+ 
+
+1003
+00:16:09,160 --> 00:16:11,460
+basically start up and here most the
+time is spent in loading and mesh so you
+
+1004
+00:16:11,460 --> 00:16:11,470
+time is spent in loading and mesh so you
+ 
+
+1005
+00:16:11,470 --> 00:16:13,019
+time is spent in loading and mesh so you
+can see the import is ready in the file
+
+1006
+00:16:13,019 --> 00:16:13,029
+can see the import is ready in the file
+ 
+
+1007
+00:16:13,029 --> 00:16:15,269
+can see the import is ready in the file
+and we have a few other things going on
+
+1008
+00:16:15,269 --> 00:16:15,279
+and we have a few other things going on
+ 
+
+1009
+00:16:15,279 --> 00:16:16,889
+and we have a few other things going on
+here that you could of course drill down
+
+1010
+00:16:16,889 --> 00:16:16,899
+here that you could of course drill down
+ 
+
+1011
+00:16:16,899 --> 00:16:19,710
+here that you could of course drill down
+and take more of a look at if for
+
+1012
+00:16:19,710 --> 00:16:19,720
+and take more of a look at if for
+ 
+
+1013
+00:16:19,720 --> 00:16:20,790
+and take more of a look at if for
+example it was just taking a little bit
+
+1014
+00:16:20,790 --> 00:16:20,800
+example it was just taking a little bit
+ 
+
+1015
+00:16:20,800 --> 00:16:22,079
+example it was just taking a little bit
+too long to load and you weren't sure so
+
+1016
+00:16:22,079 --> 00:16:22,089
+too long to load and you weren't sure so
+ 
+
+1017
+00:16:22,089 --> 00:16:23,189
+too long to load and you weren't sure so
+this is really cool because you get to
+
+1018
+00:16:23,189 --> 00:16:23,199
+this is really cool because you get to
+ 
+
+1019
+00:16:23,199 --> 00:16:25,170
+this is really cool because you get to
+see everything visually obviously the
+
+1020
+00:16:25,170 --> 00:16:25,180
+see everything visually obviously the
+ 
+
+1021
+00:16:25,180 --> 00:16:26,550
+see everything visually obviously the
+runtime is probably the most interesting
+
+1022
+00:16:26,550 --> 00:16:26,560
+runtime is probably the most interesting
+ 
+
+1023
+00:16:26,560 --> 00:16:28,860
+runtime is probably the most interesting
+one this is actually the application as
+
+1024
+00:16:28,860 --> 00:16:28,870
+one this is actually the application as
+ 
+
+1025
+00:16:28,870 --> 00:16:30,480
+one this is actually the application as
+it renders frame to frame so if you
+
+1026
+00:16:30,480 --> 00:16:30,490
+it renders frame to frame so if you
+ 
+
+1027
+00:16:30,490 --> 00:16:32,160
+it renders frame to frame so if you
+drill down you can actually see exactly
+
+1028
+00:16:32,160 --> 00:16:32,170
+drill down you can actually see exactly
+ 
+
+1029
+00:16:32,170 --> 00:16:34,679
+drill down you can actually see exactly
+how long a frame took so in this case
+
+1030
+00:16:34,679 --> 00:16:34,689
+how long a frame took so in this case
+ 
+
+1031
+00:16:34,689 --> 00:16:37,410
+how long a frame took so in this case
+about 1 and 1/2 milliseconds that is the
+
+1032
+00:16:37,410 --> 00:16:37,420
+about 1 and 1/2 milliseconds that is the
+ 
+
+1033
+00:16:37,420 --> 00:16:39,059
+about 1 and 1/2 milliseconds that is the
+duration of an entire frame you can see
+
+1034
+00:16:39,059 --> 00:16:39,069
+duration of an entire frame you can see
+ 
+
+1035
+00:16:39,069 --> 00:16:40,800
+duration of an entire frame you can see
+how it gets a bit broken down here into
+
+1036
+00:16:40,800 --> 00:16:40,810
+how it gets a bit broken down here into
+ 
+
+1037
+00:16:40,810 --> 00:16:42,749
+how it gets a bit broken down here into
+all the different parts for example it's
+
+1038
+00:16:42,749 --> 00:16:42,759
+all the different parts for example it's
+ 
+
+1039
+00:16:42,759 --> 00:16:43,920
+all the different parts for example it's
+really easy to see how long the layer
+
+1040
+00:16:43,920 --> 00:16:43,930
+really easy to see how long the layer
+ 
+
+1041
+00:16:43,930 --> 00:16:45,840
+really easy to see how long the layer
+update took compared to everything else
+
+1042
+00:16:45,840 --> 00:16:45,850
+update took compared to everything else
+ 
+
+1043
+00:16:45,850 --> 00:16:47,910
+update took compared to everything else
+so yeah that's pretty much it I think
+
+1044
+00:16:47,910 --> 00:16:47,920
+so yeah that's pretty much it I think
+ 
+
+1045
+00:16:47,920 --> 00:16:49,439
+so yeah that's pretty much it I think
+this stuff is super useful I'll have a
+
+1046
+00:16:49,439 --> 00:16:49,449
+this stuff is super useful I'll have a
+ 
+
+1047
+00:16:49,449 --> 00:16:51,329
+this stuff is super useful I'll have a
+link in the description below to some
+
+1048
+00:16:51,329 --> 00:16:51,339
+link in the description below to some
+ 
+
+1049
+00:16:51,339 --> 00:16:52,860
+link in the description below to some
+kind of like gist or something like that
+
+1050
+00:16:52,860 --> 00:16:52,870
+kind of like gist or something like that
+ 
+
+1051
+00:16:52,870 --> 00:16:54,449
+kind of like gist or something like that
+that'll contain the code that I used in
+
+1052
+00:16:54,449 --> 00:16:54,459
+that'll contain the code that I used in
+ 
+
+1053
+00:16:54,459 --> 00:16:56,280
+that'll contain the code that I used in
+this video the guys to try it out
+
+1054
+00:16:56,280 --> 00:16:56,290
+this video the guys to try it out
+ 
+
+1055
+00:16:56,290 --> 00:16:58,259
+this video the guys to try it out
+yourselves anyway I hope you guys
+
+1056
+00:16:58,259 --> 00:16:58,269
+yourselves anyway I hope you guys
+ 
+
+1057
+00:16:58,269 --> 00:16:59,639
+yourselves anyway I hope you guys
+enjoyed this video if you did please hit
+
+1058
+00:16:59,639 --> 00:16:59,649
+enjoyed this video if you did please hit
+ 
+
+1059
+00:16:59,649 --> 00:17:01,379
+enjoyed this video if you did please hit
+that like button I want to see you guys
+
+1060
+00:17:01,379 --> 00:17:01,389
+that like button I want to see you guys
+ 
+
+1061
+00:17:01,389 --> 00:17:03,900
+that like button I want to see you guys
+actually use this put it into your code
+
+1062
+00:17:03,900 --> 00:17:03,910
+actually use this put it into your code
+ 
+
+1063
+00:17:03,910 --> 00:17:06,110
+actually use this put it into your code
+give it a shot right now and just
+
+1064
+00:17:06,110 --> 00:17:06,120
+give it a shot right now and just
+ 
+
+1065
+00:17:06,120 --> 00:17:08,039
+give it a shot right now and just
+visualize everything that you're doing
+
+1066
+00:17:08,039 --> 00:17:08,049
+visualize everything that you're doing
+ 
+
+1067
+00:17:08,049 --> 00:17:09,659
+visualize everything that you're doing
+it's amazing because not only is it
+
+1068
+00:17:09,659 --> 00:17:09,669
+it's amazing because not only is it
+ 
+
+1069
+00:17:09,669 --> 00:17:11,340
+it's amazing because not only is it
+gonna help you benchmark you've heard
+
+1070
+00:17:11,340 --> 00:17:11,350
+gonna help you benchmark you've heard
+ 
+
+1071
+00:17:11,350 --> 00:17:12,899
+gonna help you benchmark you've heard
+and see what pastas slow a pasta sauce
+
+1072
+00:17:12,899 --> 00:17:12,909
+and see what pastas slow a pasta sauce
+ 
+
+1073
+00:17:12,909 --> 00:17:15,179
+and see what pastas slow a pasta sauce
+but if you're building something quite
+
+1074
+00:17:15,179 --> 00:17:15,189
+but if you're building something quite
+ 
+
+1075
+00:17:15,189 --> 00:17:17,130
+but if you're building something quite
+big this will let you kind of visually
+
+1076
+00:17:17,130 --> 00:17:17,140
+big this will let you kind of visually
+ 
+
+1077
+00:17:17,140 --> 00:17:19,110
+big this will let you kind of visually
+look at the code as it runs because as I
+
+1078
+00:17:19,110 --> 00:17:19,120
+look at the code as it runs because as I
+ 
+
+1079
+00:17:19,120 --> 00:17:21,029
+look at the code as it runs because as I
+mentioned like it's not just the timing
+
+1080
+00:17:21,029 --> 00:17:21,039
+mentioned like it's not just the timing
+ 
+
+1081
+00:17:21,039 --> 00:17:22,710
+mentioned like it's not just the timing
+it's not just like the actual daughter
+
+1082
+00:17:22,710 --> 00:17:22,720
+it's not just like the actual daughter
+ 
+
+1083
+00:17:22,720 --> 00:17:24,809
+it's not just like the actual daughter
+of ok this took 60 milliseconds this
+
+1084
+00:17:24,809 --> 00:17:24,819
+of ok this took 60 milliseconds this
+ 
+
+1085
+00:17:24,819 --> 00:17:26,939
+of ok this took 60 milliseconds this
+took 3 milliseconds this turbo but it's
+
+1086
+00:17:26,939 --> 00:17:26,949
+took 3 milliseconds this turbo but it's
+ 
+
+1087
+00:17:26,949 --> 00:17:28,710
+took 3 milliseconds this turbo but it's
+not just that that's interesting it's
+
+1088
+00:17:28,710 --> 00:17:28,720
+not just that that's interesting it's
+ 
+
+1089
+00:17:28,720 --> 00:17:30,810
+not just that that's interesting it's
+the actual structure of your entire code
+
+1090
+00:17:30,810 --> 00:17:30,820
+the actual structure of your entire code
+ 
+
+1091
+00:17:30,820 --> 00:17:32,310
+the actual structure of your entire code
+especially if you've got numerous
+
+1092
+00:17:32,310 --> 00:17:32,320
+especially if you've got numerous
+ 
+
+1093
+00:17:32,320 --> 00:17:34,110
+especially if you've got numerous
+threats being able to see something like
+
+1094
+00:17:34,110 --> 00:17:34,120
+threats being able to see something like
+ 
+
+1095
+00:17:34,120 --> 00:17:36,749
+threats being able to see something like
+that is is so so so useful so let me
+
+1096
+00:17:36,749 --> 00:17:36,759
+that is is so so so useful so let me
+ 
+
+1097
+00:17:36,759 --> 00:17:37,830
+that is is so so so useful so let me
+know what you thought of this in the
+
+1098
+00:17:37,830 --> 00:17:37,840
+know what you thought of this in the
+ 
+
+1099
+00:17:37,840 --> 00:17:38,909
+know what you thought of this in the
+comment section below
+
+1100
+00:17:38,909 --> 00:17:38,919
+comment section below
+ 
+
+1101
+00:17:38,919 --> 00:17:40,409
+comment section below
+hopefully it was useful to you guys
+
+1102
+00:17:40,409 --> 00:17:40,419
+hopefully it was useful to you guys
+ 
+
+1103
+00:17:40,419 --> 00:17:42,570
+hopefully it was useful to you guys
+don't forget to check out the free two
+
+1104
+00:17:42,570 --> 00:17:42,580
+don't forget to check out the free two
+ 
+
+1105
+00:17:42,580 --> 00:17:44,610
+don't forget to check out the free two
+months of Skillshare premium link in the
+
+1106
+00:17:44,610 --> 00:17:44,620
+months of Skillshare premium link in the
+ 
+
+1107
+00:17:44,620 --> 00:17:46,470
+months of Skillshare premium link in the
+description below and I'll see you guys
+
+1108
+00:17:46,470 --> 00:17:46,480
+description below and I'll see you guys
+ 
+
+1109
+00:17:46,480 --> 00:17:49,100
+description below and I'll see you guys
+next time goodbye
+
+1110
+00:17:49,100 --> 00:17:49,110
+next time goodbye
+ 
+
+1111
+00:17:49,110 --> 00:18:02,069
+next time goodbye
+[Music]
+

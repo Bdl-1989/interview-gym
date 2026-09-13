@@ -1,0 +1,2315 @@
+1
+00:00:00,000 --> 00:00:01,430
+
+Hey, what's up, guys? My name is Cherno,
+
+2
+00:00:01,430 --> 00:00:01,440
+Hey, what's up, guys? My name is Cherno,
+ 
+
+3
+00:00:01,440 --> 00:00:03,390
+Hey, what's up, guys? My name is Cherno,
+and welcome back to my C++ series.
+
+4
+00:00:03,390 --> 00:00:03,400
+and welcome back to my C++ series.
+ 
+
+5
+00:00:03,400 --> 00:00:04,630
+and welcome back to my C++ series.
+Today, we're going to be talking about
+
+6
+00:00:04,630 --> 00:00:04,640
+Today, we're going to be talking about
+ 
+
+7
+00:00:04,640 --> 00:00:07,350
+Today, we're going to be talking about
+enums in C++. So, enum is short for
+
+8
+00:00:07,350 --> 00:00:07,360
+enums in C++. So, enum is short for
+ 
+
+9
+00:00:07,360 --> 00:00:09,430
+enums in C++. So, enum is short for
+enumeration, and basically all it is is
+
+10
+00:00:09,430 --> 00:00:09,440
+enumeration, and basically all it is is
+ 
+
+11
+00:00:09,440 --> 00:00:11,910
+enumeration, and basically all it is is
+a set of values. If you want a more
+
+12
+00:00:11,910 --> 00:00:11,920
+a set of values. If you want a more
+ 
+
+13
+00:00:11,920 --> 00:00:13,990
+a set of values. If you want a more
+practical definition, then all an enum
+
+14
+00:00:13,990 --> 00:00:14,000
+practical definition, then all an enum
+ 
+
+15
+00:00:14,000 --> 00:00:17,030
+practical definition, then all an enum
+is is a way to give a name to a value.
+
+16
+00:00:17,030 --> 00:00:17,040
+is is a way to give a name to a value.
+ 
+
+17
+00:00:17,040 --> 00:00:19,030
+is is a way to give a name to a value.
+So, instead of having a bunch of
+
+18
+00:00:19,030 --> 00:00:19,040
+So, instead of having a bunch of
+ 
+
+19
+00:00:19,040 --> 00:00:22,470
+So, instead of having a bunch of
+integers called ABC, we can have an enum
+
+20
+00:00:22,470 --> 00:00:22,480
+integers called ABC, we can have an enum
+ 
+
+21
+00:00:22,480 --> 00:00:24,190
+integers called ABC, we can have an enum
+which has the values ABC, which
+
+22
+00:00:24,190 --> 00:00:24,200
+which has the values ABC, which
+ 
+
+23
+00:00:24,200 --> 00:00:26,070
+which has the values ABC, which
+correspond to integers. It also helps us
+
+24
+00:00:26,070 --> 00:00:26,080
+correspond to integers. It also helps us
+ 
+
+25
+00:00:26,080 --> 00:00:28,350
+correspond to integers. It also helps us
+define a set of values, so that instead
+
+26
+00:00:28,350 --> 00:00:28,360
+define a set of values, so that instead
+ 
+
+27
+00:00:28,360 --> 00:00:30,750
+define a set of values, so that instead
+of just having an integer as the type,
+
+28
+00:00:30,750 --> 00:00:30,760
+of just having an integer as the type,
+ 
+
+29
+00:00:30,760 --> 00:00:32,070
+of just having an integer as the type,
+which of course you could assign any
+
+30
+00:00:32,070 --> 00:00:32,080
+which of course you could assign any
+ 
+
+31
+00:00:32,080 --> 00:00:34,550
+which of course you could assign any
+integer to, you limit which values can
+
+32
+00:00:34,550 --> 00:00:34,560
+integer to, you limit which values can
+ 
+
+33
+00:00:34,560 --> 00:00:36,030
+integer to, you limit which values can
+be assigned to what. So, without
+
+34
+00:00:36,030 --> 00:00:36,040
+be assigned to what. So, without
+ 
+
+35
+00:00:36,040 --> 00:00:37,870
+be assigned to what. So, without
+complicating things, that's really all
+
+36
+00:00:37,870 --> 00:00:37,880
+complicating things, that's really all
+ 
+
+37
+00:00:37,880 --> 00:00:39,910
+complicating things, that's really all
+that it is. It's just a way to name
+
+38
+00:00:39,910 --> 00:00:39,920
+that it is. It's just a way to name
+ 
+
+39
+00:00:39,920 --> 00:00:41,750
+that it is. It's just a way to name
+values. It's very useful for when you
+
+40
+00:00:41,750 --> 00:00:41,760
+values. It's very useful for when you
+ 
+
+41
+00:00:41,760 --> 00:00:43,510
+values. It's very useful for when you
+want to use integers to represent
+
+42
+00:00:43,510 --> 00:00:43,520
+want to use integers to represent
+ 
+
+43
+00:00:43,520 --> 00:00:45,510
+want to use integers to represent
+certain states or certain values.
+
+44
+00:00:45,510 --> 00:00:45,520
+certain states or certain values.
+ 
+
+45
+00:00:45,520 --> 00:00:47,030
+certain states or certain values.
+However, you want to give them a name so
+
+46
+00:00:47,030 --> 00:00:47,040
+However, you want to give them a name so
+ 
+
+47
+00:00:47,040 --> 00:00:48,670
+However, you want to give them a name so
+that your code is more readable. At the
+
+48
+00:00:48,670 --> 00:00:48,680
+that your code is more readable. At the
+ 
+
+49
+00:00:48,680 --> 00:00:50,630
+that your code is more readable. At the
+end of the day, an enum is just an
+
+50
+00:00:50,630 --> 00:00:50,640
+end of the day, an enum is just an
+ 
+
+51
+00:00:50,640 --> 00:00:52,390
+end of the day, an enum is just an
+integer. However, in your code it looks
+
+52
+00:00:52,390 --> 00:00:52,400
+integer. However, in your code it looks
+ 
+
+53
+00:00:52,400 --> 00:00:54,110
+integer. However, in your code it looks
+a little bit different, and it helps to
+
+54
+00:00:54,110 --> 00:00:54,120
+a little bit different, and it helps to
+ 
+
+55
+00:00:54,120 --> 00:00:55,830
+a little bit different, and it helps to
+keep your code a bit cleaner. Let's dive
+
+56
+00:00:55,830 --> 00:00:55,840
+keep your code a bit cleaner. Let's dive
+ 
+
+57
+00:00:55,840 --> 00:00:57,190
+keep your code a bit cleaner. Let's dive
+in and take a look. So, suppose that I
+
+58
+00:00:57,190 --> 00:00:57,200
+in and take a look. So, suppose that I
+ 
+
+59
+00:00:57,200 --> 00:00:58,910
+in and take a look. So, suppose that I
+have three values that I wanted to take
+
+60
+00:00:58,910 --> 00:00:58,920
+have three values that I wanted to take
+ 
+
+61
+00:00:58,920 --> 00:01:01,470
+have three values that I wanted to take
+care of. I had A, which I might set to
+
+62
+00:01:01,470 --> 00:01:01,480
+care of. I had A, which I might set to
+ 
+
+63
+00:01:01,480 --> 00:01:04,750
+care of. I had A, which I might set to
+zero, B, which I might set to one, and
+
+64
+00:01:04,750 --> 00:01:04,760
+zero, B, which I might set to one, and
+ 
+
+65
+00:01:04,760 --> 00:01:07,190
+zero, B, which I might set to one, and
+C, which I might set to two. So, I have
+
+66
+00:01:07,190 --> 00:01:07,200
+C, which I might set to two. So, I have
+ 
+
+67
+00:01:07,200 --> 00:01:09,270
+C, which I might set to two. So, I have
+three values to take care of. And then,
+
+68
+00:01:09,270 --> 00:01:09,280
+three values to take care of. And then,
+ 
+
+69
+00:01:09,280 --> 00:01:11,670
+three values to take care of. And then,
+somewhere in main, I might use my value,
+
+70
+00:01:11,670 --> 00:01:11,680
+somewhere in main, I might use my value,
+ 
+
+71
+00:01:11,680 --> 00:01:13,150
+somewhere in main, I might use my value,
+and I might set it equal to one of these
+
+72
+00:01:13,150 --> 00:01:13,160
+and I might set it equal to one of these
+ 
+
+73
+00:01:13,160 --> 00:01:14,870
+and I might set it equal to one of these
+three. Later on in my code, I might have
+
+74
+00:01:14,870 --> 00:01:14,880
+three. Later on in my code, I might have
+ 
+
+75
+00:01:14,880 --> 00:01:16,230
+three. Later on in my code, I might have
+some code to check what the current
+
+76
+00:01:16,230 --> 00:01:16,240
+some code to check what the current
+ 
+
+77
+00:01:16,240 --> 00:01:18,830
+some code to check what the current
+value is, and then perform some sort of
+
+78
+00:01:18,830 --> 00:01:18,840
+value is, and then perform some sort of
+ 
+
+79
+00:01:18,840 --> 00:01:21,350
+value is, and then perform some sort of
+action. This is fine, however it carries
+
+80
+00:01:21,350 --> 00:01:21,360
+action. This is fine, however it carries
+ 
+
+81
+00:01:21,360 --> 00:01:23,830
+action. This is fine, however it carries
+a few issues. First of all, these ABCs
+
+82
+00:01:23,830 --> 00:01:23,840
+a few issues. First of all, these ABCs
+ 
+
+83
+00:01:23,840 --> 00:01:25,950
+a few issues. First of all, these ABCs
+are not grouped at all. Somewhere later
+
+84
+00:01:25,950 --> 00:01:25,960
+are not grouped at all. Somewhere later
+ 
+
+85
+00:01:25,960 --> 00:01:28,310
+are not grouped at all. Somewhere later
+in your code, you might have a D, or you
+
+86
+00:01:28,310 --> 00:01:28,320
+in your code, you might have a D, or you
+ 
+
+87
+00:01:28,320 --> 00:01:29,830
+in your code, you might have a D, or you
+might want to declare A again, and
+
+88
+00:01:29,830 --> 00:01:29,840
+might want to declare A again, and
+ 
+
+89
+00:01:29,840 --> 00:01:32,270
+might want to declare A again, and
+suddenly this is a bit of an issue. But
+
+90
+00:01:32,270 --> 00:01:32,280
+suddenly this is a bit of an issue. But
+ 
+
+91
+00:01:32,280 --> 00:01:33,670
+suddenly this is a bit of an issue. But
+essentially, the biggest problem here is
+
+92
+00:01:33,670 --> 00:01:33,680
+essentially, the biggest problem here is
+ 
+
+93
+00:01:33,680 --> 00:01:35,150
+essentially, the biggest problem here is
+that these aren't grouped at all.
+
+94
+00:01:35,150 --> 00:01:35,160
+that these aren't grouped at all.
+ 
+
+95
+00:01:35,160 --> 00:01:36,710
+that these aren't grouped at all.
+Furthermore, they are just integers,
+
+96
+00:01:36,710 --> 00:01:36,720
+Furthermore, they are just integers,
+ 
+
+97
+00:01:36,720 --> 00:01:38,590
+Furthermore, they are just integers,
+meaning I can assign something like five
+
+98
+00:01:38,590 --> 00:01:38,600
+meaning I can assign something like five
+ 
+
+99
+00:01:38,600 --> 00:01:40,310
+meaning I can assign something like five
+here, and suddenly this doesn't make any
+
+100
+00:01:40,310 --> 00:01:40,320
+here, and suddenly this doesn't make any
+ 
+
+101
+00:01:40,320 --> 00:01:42,150
+here, and suddenly this doesn't make any
+sense anymore. We want to be able to
+
+102
+00:01:42,150 --> 00:01:42,160
+sense anymore. We want to be able to
+ 
+
+103
+00:01:42,160 --> 00:01:44,310
+sense anymore. We want to be able to
+essentially define a type which can only
+
+104
+00:01:44,310 --> 00:01:44,320
+essentially define a type which can only
+ 
+
+105
+00:01:44,320 --> 00:01:46,470
+essentially define a type which can only
+be one of these three, and is also
+
+106
+00:01:46,470 --> 00:01:46,480
+be one of these three, and is also
+ 
+
+107
+00:01:46,480 --> 00:01:48,030
+be one of these three, and is also
+grouped in some kind of fashion, which
+
+108
+00:01:48,030 --> 00:01:48,040
+grouped in some kind of fashion, which
+ 
+
+109
+00:01:48,040 --> 00:01:50,070
+grouped in some kind of fashion, which
+is exactly what enums can be used for.
+
+110
+00:01:50,070 --> 00:01:50,080
+is exactly what enums can be used for.
+ 
+
+111
+00:01:50,080 --> 00:01:52,110
+is exactly what enums can be used for.
+So, instead of this, I can have my enum,
+
+112
+00:01:52,110 --> 00:01:52,120
+So, instead of this, I can have my enum,
+ 
+
+113
+00:01:52,120 --> 00:01:53,790
+So, instead of this, I can have my enum,
+which I'll call example, and then I can
+
+114
+00:01:53,790 --> 00:01:53,800
+which I'll call example, and then I can
+ 
+
+115
+00:01:53,800 --> 00:01:55,870
+which I'll call example, and then I can
+list off which values I I to have here,
+
+116
+00:01:55,870 --> 00:01:55,880
+list off which values I I to have here,
+ 
+
+117
+00:01:55,880 --> 00:01:58,670
+list off which values I I to have here,
+such as A, B, or C. Instead of having an
+
+118
+00:01:58,670 --> 00:01:58,680
+such as A, B, or C. Instead of having an
+ 
+
+119
+00:01:58,680 --> 00:02:00,590
+such as A, B, or C. Instead of having an
+integer as my type, I can now use the
+
+120
+00:02:00,590 --> 00:02:00,600
+integer as my type, I can now use the
+ 
+
+121
+00:02:00,600 --> 00:02:02,750
+integer as my type, I can now use the
+enum name as an actual type. So, I can
+
+122
+00:02:02,750 --> 00:02:02,760
+enum name as an actual type. So, I can
+ 
+
+123
+00:02:02,760 --> 00:02:05,070
+enum name as an actual type. So, I can
+write example value. I'm going to change
+
+124
+00:02:05,070 --> 00:02:05,080
+write example value. I'm going to change
+ 
+
+125
+00:02:05,080 --> 00:02:06,750
+write example value. I'm going to change
+my integers to be lowercase here, just
+
+126
+00:02:06,750 --> 00:02:06,760
+my integers to be lowercase here, just
+ 
+
+127
+00:02:06,760 --> 00:02:08,109
+my integers to be lowercase here, just
+so that I can use my enum values
+
+128
+00:02:08,109 --> 00:02:08,119
+so that I can use my enum values
+ 
+
+129
+00:02:08,119 --> 00:02:09,630
+so that I can use my enum values
+properly. And you can see that I can
+
+130
+00:02:09,630 --> 00:02:09,640
+properly. And you can see that I can
+ 
+
+131
+00:02:09,640 --> 00:02:12,070
+properly. And you can see that I can
+assign my value just like this. If I try
+
+132
+00:02:12,070 --> 00:02:12,080
+assign my value just like this. If I try
+ 
+
+133
+00:02:12,080 --> 00:02:13,990
+assign my value just like this. If I try
+and assign something else, I'll get an
+
+134
+00:02:13,990 --> 00:02:14,000
+and assign something else, I'll get an
+ 
+
+135
+00:02:14,000 --> 00:02:16,150
+and assign something else, I'll get an
+error because it has to be one of these
+
+136
+00:02:16,150 --> 00:02:16,160
+error because it has to be one of these
+ 
+
+137
+00:02:16,160 --> 00:02:18,910
+error because it has to be one of these
+three. Now, these are just integers at
+
+138
+00:02:18,910 --> 00:02:18,920
+three. Now, these are just integers at
+ 
+
+139
+00:02:18,920 --> 00:02:20,550
+three. Now, these are just integers at
+the end of the day. Keep that in mind. I
+
+140
+00:02:20,550 --> 00:02:20,560
+the end of the day. Keep that in mind. I
+ 
+
+141
+00:02:20,560 --> 00:02:22,910
+the end of the day. Keep that in mind. I
+can still do a check if I If I revert
+
+142
+00:02:22,910 --> 00:02:22,920
+can still do a check if I If I revert
+ 
+
+143
+00:02:22,920 --> 00:02:24,590
+can still do a check if I If I revert
+this back to B, I can still do a check
+
+144
+00:02:24,590 --> 00:02:24,600
+this back to B, I can still do a check
+ 
+
+145
+00:02:24,600 --> 00:02:28,070
+this back to B, I can still do a check
+such as value equals equals one because
+
+146
+00:02:28,070 --> 00:02:28,080
+such as value equals equals one because
+ 
+
+147
+00:02:28,080 --> 00:02:30,270
+such as value equals equals one because
+B does carry the value one. If you hover
+
+148
+00:02:30,270 --> 00:02:30,280
+B does carry the value one. If you hover
+ 
+
+149
+00:02:30,280 --> 00:02:31,750
+B does carry the value one. If you hover
+your mouse over this, it'll even tell
+
+150
+00:02:31,750 --> 00:02:31,760
+your mouse over this, it'll even tell
+ 
+
+151
+00:02:31,760 --> 00:02:33,190
+your mouse over this, it'll even tell
+you that B is one. You can actually
+
+152
+00:02:33,190 --> 00:02:33,200
+you that B is one. You can actually
+ 
+
+153
+00:02:33,200 --> 00:02:34,670
+you that B is one. You can actually
+specify the value of each of these
+
+154
+00:02:34,670 --> 00:02:34,680
+specify the value of each of these
+ 
+
+155
+00:02:34,680 --> 00:02:36,110
+specify the value of each of these
+variables as well. If you don't, by
+
+156
+00:02:36,110 --> 00:02:36,120
+variables as well. If you don't, by
+ 
+
+157
+00:02:36,120 --> 00:02:37,910
+variables as well. If you don't, by
+default, the first one will be zero, and
+
+158
+00:02:37,910 --> 00:02:37,920
+default, the first one will be zero, and
+ 
+
+159
+00:02:37,920 --> 00:02:39,750
+default, the first one will be zero, and
+then it will increment one by one. To
+
+160
+00:02:39,750 --> 00:02:39,760
+then it will increment one by one. To
+ 
+
+161
+00:02:39,760 --> 00:02:41,390
+then it will increment one by one. To
+specify value, you just set it equal to
+
+162
+00:02:41,390 --> 00:02:41,400
+specify value, you just set it equal to
+ 
+
+163
+00:02:41,400 --> 00:02:42,590
+specify value, you just set it equal to
+something. So, I could have this as
+
+164
+00:02:42,590 --> 00:02:42,600
+something. So, I could have this as
+ 
+
+165
+00:02:42,600 --> 00:02:43,949
+something. So, I could have this as
+zero,
+
+166
+00:02:43,949 --> 00:02:43,959
+zero,
+ 
+
+167
+00:02:43,959 --> 00:02:46,710
+zero,
+this is two, this is six, whatever you
+
+168
+00:02:46,710 --> 00:02:46,720
+this is two, this is six, whatever you
+ 
+
+169
+00:02:46,720 --> 00:02:48,390
+this is two, this is six, whatever you
+really want. If you start from a number
+
+170
+00:02:48,390 --> 00:02:48,400
+really want. If you start from a number
+ 
+
+171
+00:02:48,400 --> 00:02:50,590
+really want. If you start from a number
+that is not zero, such as five, and you
+
+172
+00:02:50,590 --> 00:02:50,600
+that is not zero, such as five, and you
+ 
+
+173
+00:02:50,600 --> 00:02:52,550
+that is not zero, such as five, and you
+don't actually specify the rest of these
+
+174
+00:02:52,550 --> 00:02:52,560
+don't actually specify the rest of these
+ 
+
+175
+00:02:52,560 --> 00:02:54,470
+don't actually specify the rest of these
+values, you can see that this will be
+
+176
+00:02:54,470 --> 00:02:54,480
+values, you can see that this will be
+ 
+
+177
+00:02:54,480 --> 00:02:56,150
+values, you can see that this will be
+six, and this will be seven because it
+
+178
+00:02:56,150 --> 00:02:56,160
+six, and this will be seven because it
+ 
+
+179
+00:02:56,160 --> 00:02:57,870
+six, and this will be seven because it
+will basically just start from five and
+
+180
+00:02:57,870 --> 00:02:57,880
+will basically just start from five and
+ 
+
+181
+00:02:57,880 --> 00:02:59,509
+will basically just start from five and
+then keep going up. One other thing that
+
+182
+00:02:59,509 --> 00:02:59,519
+then keep going up. One other thing that
+ 
+
+183
+00:02:59,519 --> 00:03:01,870
+then keep going up. One other thing that
+you can also do here is specify which
+
+184
+00:03:01,870 --> 00:03:01,880
+you can also do here is specify which
+ 
+
+185
+00:03:01,880 --> 00:03:03,830
+you can also do here is specify which
+type of integer you want this enum to
+
+186
+00:03:03,830 --> 00:03:03,840
+type of integer you want this enum to
+ 
+
+187
+00:03:03,840 --> 00:03:05,910
+type of integer you want this enum to
+be, and you can do so by writing a colon
+
+188
+00:03:05,910 --> 00:03:05,920
+be, and you can do so by writing a colon
+ 
+
+189
+00:03:05,920 --> 00:03:07,550
+be, and you can do so by writing a colon
+and then the data type. So, for example,
+
+190
+00:03:07,550 --> 00:03:07,560
+and then the data type. So, for example,
+ 
+
+191
+00:03:07,560 --> 00:03:09,710
+and then the data type. So, for example,
+an unsigned char. Enums, by default, are
+
+192
+00:03:09,710 --> 00:03:09,720
+an unsigned char. Enums, by default, are
+ 
+
+193
+00:03:09,720 --> 00:03:11,430
+an unsigned char. Enums, by default, are
+32-bit integers. However, you can see in
+
+194
+00:03:11,430 --> 00:03:11,440
+32-bit integers. However, you can see in
+ 
+
+195
+00:03:11,440 --> 00:03:13,270
+32-bit integers. However, you can see in
+this case, there's no need for us to use
+
+196
+00:03:13,270 --> 00:03:13,280
+this case, there's no need for us to use
+ 
+
+197
+00:03:13,280 --> 00:03:15,590
+this case, there's no need for us to use
+a 32-bit value. We could We could get
+
+198
+00:03:15,590 --> 00:03:15,600
+a 32-bit value. We could We could get
+ 
+
+199
+00:03:15,600 --> 00:03:17,590
+a 32-bit value. We could We could get
+away with using an 8-bit integer, such
+
+200
+00:03:17,590 --> 00:03:17,600
+away with using an 8-bit integer, such
+ 
+
+201
+00:03:17,600 --> 00:03:19,270
+away with using an 8-bit integer, such
+as an unsigned char, and we'd be just
+
+202
+00:03:19,270 --> 00:03:19,280
+as an unsigned char, and we'd be just
+ 
+
+203
+00:03:19,280 --> 00:03:20,949
+as an unsigned char, and we'd be just
+fine. And suddenly, this is taking way
+
+204
+00:03:20,949 --> 00:03:20,959
+fine. And suddenly, this is taking way
+ 
+
+205
+00:03:20,959 --> 00:03:22,790
+fine. And suddenly, this is taking way
+less memory. You won't be able to assign
+
+206
+00:03:22,790 --> 00:03:22,800
+less memory. You won't be able to assign
+ 
+
+207
+00:03:22,800 --> 00:03:24,150
+less memory. You won't be able to assign
+this to something like a float, of
+
+208
+00:03:24,150 --> 00:03:24,160
+this to something like a float, of
+ 
+
+209
+00:03:24,160 --> 00:03:26,030
+this to something like a float, of
+course, because the float isn't an
+
+210
+00:03:26,030 --> 00:03:26,040
+course, because the float isn't an
+ 
+
+211
+00:03:26,040 --> 00:03:28,509
+course, because the float isn't an
+integer, and it has to be an integer.
+
+212
+00:03:28,509 --> 00:03:28,519
+integer, and it has to be an integer.
+ 
+
+213
+00:03:28,519 --> 00:03:30,390
+integer, and it has to be an integer.
+So, let's leave this as a char for our
+
+214
+00:03:30,390 --> 00:03:30,400
+So, let's leave this as a char for our
+ 
+
+215
+00:03:30,400 --> 00:03:31,830
+So, let's leave this as a char for our
+example. So, there we go. That's
+
+216
+00:03:31,830 --> 00:03:31,840
+example. So, there we go. That's
+ 
+
+217
+00:03:31,840 --> 00:03:33,550
+example. So, there we go. That's
+basically what an enum is. It's just a
+
+218
+00:03:33,550 --> 00:03:33,560
+basically what an enum is. It's just a
+ 
+
+219
+00:03:33,560 --> 00:03:35,630
+basically what an enum is. It's just a
+way to give a name to certain values so
+
+220
+00:03:35,630 --> 00:03:35,640
+way to give a name to certain values so
+ 
+
+221
+00:03:35,640 --> 00:03:37,630
+way to give a name to certain values so
+that you don't have to keep dealing with
+
+222
+00:03:37,630 --> 00:03:37,640
+that you don't have to keep dealing with
+ 
+
+223
+00:03:37,640 --> 00:03:39,310
+that you don't have to keep dealing with
+integers and be all over the place.
+
+224
+00:03:39,310 --> 00:03:39,320
+integers and be all over the place.
+ 
+
+225
+00:03:39,320 --> 00:03:40,270
+integers and be all over the place.
+Let's take a look at a real-world
+
+226
+00:03:40,270 --> 00:03:40,280
+Let's take a look at a real-world
+ 
+
+227
+00:03:40,280 --> 00:03:42,150
+Let's take a look at a real-world
+example of where you might use an enum
+
+228
+00:03:42,150 --> 00:03:42,160
+example of where you might use an enum
+ 
+
+229
+00:03:42,160 --> 00:03:43,790
+example of where you might use an enum
+by looking at our log class that we
+
+230
+00:03:43,790 --> 00:03:43,800
+by looking at our log class that we
+ 
+
+231
+00:03:43,800 --> 00:03:45,229
+by looking at our log class that we
+started writing in the how to write a
+
+232
+00:03:45,229 --> 00:03:45,239
+started writing in the how to write a
+ 
+
+233
+00:03:45,239 --> 00:03:47,630
+started writing in the how to write a
+C++ class video. If we jump over here to
+
+234
+00:03:47,630 --> 00:03:47,640
+C++ class video. If we jump over here to
+ 
+
+235
+00:03:47,640 --> 00:03:49,390
+C++ class video. If we jump over here to
+our log class, you can see what we
+
+236
+00:03:49,390 --> 00:03:49,400
+our log class, you can see what we
+ 
+
+237
+00:03:49,400 --> 00:03:51,310
+our log class, you can see what we
+actually ended up doing was using three
+
+238
+00:03:51,310 --> 00:03:51,320
+actually ended up doing was using three
+ 
+
+239
+00:03:51,320 --> 00:03:53,430
+actually ended up doing was using three
+different log levels, and they were just
+
+240
+00:03:53,430 --> 00:03:53,440
+different log levels, and they were just
+ 
+
+241
+00:03:53,440 --> 00:03:55,670
+different log levels, and they were just
+integers here, 0 1 2. Hopefully, you can
+
+242
+00:03:55,670 --> 00:03:55,680
+integers here, 0 1 2. Hopefully, you can
+ 
+
+243
+00:03:55,680 --> 00:03:56,990
+integers here, 0 1 2. Hopefully, you can
+see that this is pretty much a perfect
+
+244
+00:03:56,990 --> 00:03:57,000
+see that this is pretty much a perfect
+ 
+
+245
+00:03:57,000 --> 00:03:59,470
+see that this is pretty much a perfect
+candidate for an enum because we have
+
+246
+00:03:59,470 --> 00:03:59,480
+candidate for an enum because we have
+ 
+
+247
+00:03:59,480 --> 00:04:01,390
+candidate for an enum because we have
+three values which we just used as
+
+248
+00:04:01,390 --> 00:04:01,400
+three values which we just used as
+ 
+
+249
+00:04:01,400 --> 00:04:03,790
+three values which we just used as
+integers to represent a certain state.
+
+250
+00:04:03,790 --> 00:04:03,800
+integers to represent a certain state.
+ 
+
+251
+00:04:03,800 --> 00:04:05,630
+integers to represent a certain state.
+In this case, which log level our log
+
+252
+00:04:05,630 --> 00:04:05,640
+In this case, which log level our log
+ 
+
+253
+00:04:05,640 --> 00:04:07,590
+In this case, which log level our log
+will actually display. So, right over
+
+254
+00:04:07,590 --> 00:04:07,600
+will actually display. So, right over
+ 
+
+255
+00:04:07,600 --> 00:04:09,830
+will actually display. So, right over
+here inside this log class, I'm going to
+
+256
+00:04:09,830 --> 00:04:09,840
+here inside this log class, I'm going to
+ 
+
+257
+00:04:09,840 --> 00:04:12,430
+here inside this log class, I'm going to
+create a level enum. I'm going to create
+
+258
+00:04:12,430 --> 00:04:12,440
+create a level enum. I'm going to create
+ 
+
+259
+00:04:12,440 --> 00:04:15,550
+create a level enum. I'm going to create
+error, warning, and info as possible
+
+260
+00:04:15,550 --> 00:04:15,560
+error, warning, and info as possible
+ 
+
+261
+00:04:15,560 --> 00:04:17,509
+error, warning, and info as possible
+values. So, we're basically mirroring
+
+262
+00:04:17,509 --> 00:04:17,519
+values. So, we're basically mirroring
+ 
+
+263
+00:04:17,519 --> 00:04:19,630
+values. So, we're basically mirroring
+this. As a matter of style, I actually
+
+264
+00:04:19,630 --> 00:04:19,640
+this. As a matter of style, I actually
+ 
+
+265
+00:04:19,640 --> 00:04:21,870
+this. As a matter of style, I actually
+like to explicitly write equals zero.
+
+266
+00:04:21,870 --> 00:04:21,880
+like to explicitly write equals zero.
+ 
+
+267
+00:04:21,880 --> 00:04:23,870
+like to explicitly write equals zero.
+However, that's definitely not required
+
+268
+00:04:23,870 --> 00:04:23,880
+However, that's definitely not required
+ 
+
+269
+00:04:23,880 --> 00:04:25,990
+However, that's definitely not required
+because it will start at zero by
+
+270
+00:04:25,990 --> 00:04:26,000
+because it will start at zero by
+ 
+
+271
+00:04:26,000 --> 00:04:27,590
+because it will start at zero by
+default. But again, just something I
+
+272
+00:04:27,590 --> 00:04:27,600
+default. But again, just something I
+ 
+
+273
+00:04:27,600 --> 00:04:29,630
+default. But again, just something I
+like doing to help the readability of
+
+274
+00:04:29,630 --> 00:04:29,640
+like doing to help the readability of
+ 
+
+275
+00:04:29,640 --> 00:04:31,909
+like doing to help the readability of
+the code. I'll get rid of these now.
+
+276
+00:04:31,909 --> 00:04:31,919
+the code. I'll get rid of these now.
+ 
+
+277
+00:04:31,919 --> 00:04:33,510
+the code. I'll get rid of these now.
+Instead of having an int as my log
+
+278
+00:04:33,510 --> 00:04:33,520
+Instead of having an int as my log
+ 
+
+279
+00:04:33,520 --> 00:04:35,350
+Instead of having an int as my log
+level, which I could still have, of
+
+280
+00:04:35,350 --> 00:04:35,360
+level, which I could still have, of
+ 
+
+281
+00:04:35,360 --> 00:04:36,790
+level, which I could still have, of
+course, I could still assign this to
+
+282
+00:04:36,790 --> 00:04:36,800
+course, I could still assign this to
+ 
+
+283
+00:04:36,800 --> 00:04:39,350
+course, I could still assign this to
+info, and since an enum is just an int,
+
+284
+00:04:39,350 --> 00:04:39,360
+info, and since an enum is just an int,
+ 
+
+285
+00:04:39,360 --> 00:04:41,150
+info, and since an enum is just an int,
+this would still work. However, in this
+
+286
+00:04:41,150 --> 00:04:41,160
+this would still work. However, in this
+ 
+
+287
+00:04:41,160 --> 00:04:43,270
+this would still work. However, in this
+case, I would be able to set any value
+
+288
+00:04:43,270 --> 00:04:43,280
+case, I would be able to set any value
+ 
+
+289
+00:04:43,280 --> 00:04:45,110
+case, I would be able to set any value
+to log level, any integer value to log
+
+290
+00:04:45,110 --> 00:04:45,120
+to log level, any integer value to log
+ 
+
+291
+00:04:45,120 --> 00:04:47,030
+to log level, any integer value to log
+level, and I want to restrict it to to
+
+292
+00:04:47,030 --> 00:04:47,040
+level, and I want to restrict it to to
+ 
+
+293
+00:04:47,040 --> 00:04:48,990
+level, and I want to restrict it to to
+just being these three. So, I will
+
+294
+00:04:48,990 --> 00:04:49,000
+just being these three. So, I will
+ 
+
+295
+00:04:49,000 --> 00:04:51,070
+just being these three. So, I will
+actually set this to be level. Note
+
+296
+00:04:51,070 --> 00:04:51,080
+actually set this to be level. Note
+ 
+
+297
+00:04:51,080 --> 00:04:53,030
+actually set this to be level. Note
+restriction that I've created of it must
+
+298
+00:04:53,030 --> 00:04:53,040
+restriction that I've created of it must
+ 
+
+299
+00:04:53,040 --> 00:04:54,670
+restriction that I've created of it must
+be these three
+
+300
+00:04:54,670 --> 00:04:54,680
+be these three
+ 
+
+301
+00:04:54,680 --> 00:04:57,190
+be these three
+purely a syntactical C++ kind of
+
+302
+00:04:57,190 --> 00:04:57,200
+purely a syntactical C++ kind of
+ 
+
+303
+00:04:57,200 --> 00:04:59,030
+purely a syntactical C++ kind of
+compiler enforced thing. You can get
+
+304
+00:04:59,030 --> 00:04:59,040
+compiler enforced thing. You can get
+ 
+
+305
+00:04:59,040 --> 00:05:01,230
+compiler enforced thing. You can get
+around it really easily. It's not
+
+306
+00:05:01,230 --> 00:05:01,240
+around it really easily. It's not
+ 
+
+307
+00:05:01,240 --> 00:05:03,350
+around it really easily. It's not
+something that can't physically be set,
+
+308
+00:05:03,350 --> 00:05:03,360
+something that can't physically be set,
+ 
+
+309
+00:05:03,360 --> 00:05:04,830
+something that can't physically be set,
+of course. In this case, our enum is
+
+310
+00:05:04,830 --> 00:05:04,840
+of course. In this case, our enum is
+ 
+
+311
+00:05:04,840 --> 00:05:06,790
+of course. In this case, our enum is
+just a four-byte integer. It's just four
+
+312
+00:05:06,790 --> 00:05:06,800
+just a four-byte integer. It's just four
+ 
+
+313
+00:05:06,800 --> 00:05:08,150
+just a four-byte integer. It's just four
+bytes of memory. You can put anything
+
+314
+00:05:08,150 --> 00:05:08,160
+bytes of memory. You can put anything
+ 
+
+315
+00:05:08,160 --> 00:05:10,310
+bytes of memory. You can put anything
+you want into that memory. However, by
+
+316
+00:05:10,310 --> 00:05:10,320
+you want into that memory. However, by
+ 
+
+317
+00:05:10,320 --> 00:05:11,750
+you want into that memory. However, by
+setting the type to level, you're
+
+318
+00:05:11,750 --> 00:05:11,760
+setting the type to level, you're
+ 
+
+319
+00:05:11,760 --> 00:05:13,630
+setting the type to level, you're
+restricting the code, so to speak, to
+
+320
+00:05:13,630 --> 00:05:13,640
+restricting the code, so to speak, to
+ 
+
+321
+00:05:13,640 --> 00:05:16,470
+restricting the code, so to speak, to
+actually only allow levels. I'll change
+
+322
+00:05:16,470 --> 00:05:16,480
+actually only allow levels. I'll change
+ 
+
+323
+00:05:16,480 --> 00:05:18,710
+actually only allow levels. I'll change
+my set level to take in a level. Now,
+
+324
+00:05:18,710 --> 00:05:18,720
+my set level to take in a level. Now,
+ 
+
+325
+00:05:18,720 --> 00:05:20,350
+my set level to take in a level. Now,
+when I do these checks, they will still
+
+326
+00:05:20,350 --> 00:05:20,360
+when I do these checks, they will still
+ 
+
+327
+00:05:20,360 --> 00:05:21,830
+when I do these checks, they will still
+work just fine. I just need to change
+
+328
+00:05:21,830 --> 00:05:21,840
+work just fine. I just need to change
+ 
+
+329
+00:05:21,840 --> 00:05:24,190
+work just fine. I just need to change
+log level error to just be error.
+
+330
+00:05:24,190 --> 00:05:24,200
+log level error to just be error.
+ 
+
+331
+00:05:24,200 --> 00:05:26,750
+log level error to just be error.
+Because m_log_level is this enum type,
+
+332
+00:05:26,750 --> 00:05:26,760
+Because m_log_level is this enum type,
+ 
+
+333
+00:05:26,760 --> 00:05:29,030
+Because m_log_level is this enum type,
+which is an integer, I can still do
+
+334
+00:05:29,030 --> 00:05:29,040
+which is an integer, I can still do
+ 
+
+335
+00:05:29,040 --> 00:05:30,790
+which is an integer, I can still do
+comparisons between them, which is very,
+
+336
+00:05:30,790 --> 00:05:30,800
+comparisons between them, which is very,
+ 
+
+337
+00:05:30,800 --> 00:05:32,510
+comparisons between them, which is very,
+very useful for things like this. I'll
+
+338
+00:05:32,510 --> 00:05:32,520
+very useful for things like this. I'll
+ 
+
+339
+00:05:32,520 --> 00:05:34,230
+very useful for things like this. I'll
+change this to say warning, and I'll
+
+340
+00:05:34,230 --> 00:05:34,240
+change this to say warning, and I'll
+ 
+
+341
+00:05:34,240 --> 00:05:36,150
+change this to say warning, and I'll
+change this to say info. The other thing
+
+342
+00:05:36,150 --> 00:05:36,160
+change this to say info. The other thing
+ 
+
+343
+00:05:36,160 --> 00:05:38,630
+change this to say info. The other thing
+to change is here is the log.set_level.
+
+344
+00:05:38,630 --> 00:05:38,640
+to change is here is the log.set_level.
+ 
+
+345
+00:05:38,640 --> 00:05:40,270
+to change is here is the log.set_level.
+Instead of being log.log_level_error,
+
+346
+00:05:40,270 --> 00:05:40,280
+Instead of being log.log_level_error,
+ 
+
+347
+00:05:40,280 --> 00:05:42,190
+Instead of being log.log_level_error,
+which used to be that integer, it now
+
+348
+00:05:42,190 --> 00:05:42,200
+which used to be that integer, it now
+ 
+
+349
+00:05:42,200 --> 00:05:44,430
+which used to be that integer, it now
+simply becomes log error because we have
+
+350
+00:05:44,430 --> 00:05:44,440
+simply becomes log error because we have
+ 
+
+351
+00:05:44,440 --> 00:05:46,710
+simply becomes log error because we have
+an enum value called error inside our
+
+352
+00:05:46,710 --> 00:05:46,720
+an enum value called error inside our
+ 
+
+353
+00:05:46,720 --> 00:05:49,470
+an enum value called error inside our
+log namespace. Note that this enum level
+
+354
+00:05:49,470 --> 00:05:49,480
+log namespace. Note that this enum level
+ 
+
+355
+00:05:49,480 --> 00:05:51,750
+log namespace. Note that this enum level
+is not a name space in itself. There is
+
+356
+00:05:51,750 --> 00:05:51,760
+is not a name space in itself. There is
+ 
+
+357
+00:05:51,760 --> 00:05:53,270
+is not a name space in itself. There is
+something called an enum class, which we
+
+358
+00:05:53,270 --> 00:05:53,280
+something called an enum class, which we
+ 
+
+359
+00:05:53,280 --> 00:05:55,150
+something called an enum class, which we
+will talk about in another video.
+
+360
+00:05:55,150 --> 00:05:55,160
+will talk about in another video.
+ 
+
+361
+00:05:55,160 --> 00:05:57,150
+will talk about in another video.
+However, just for regular enums, this
+
+362
+00:05:57,150 --> 00:05:57,160
+However, just for regular enums, this
+ 
+
+363
+00:05:57,160 --> 00:05:59,150
+However, just for regular enums, this
+level isn't really a name space, so you
+
+364
+00:05:59,150 --> 00:05:59,160
+level isn't really a name space, so you
+ 
+
+365
+00:05:59,160 --> 00:06:00,950
+level isn't really a name space, so you
+can't use it as one. Which means that
+
+366
+00:06:00,950 --> 00:06:00,960
+can't use it as one. Which means that
+ 
+
+367
+00:06:00,960 --> 00:06:02,710
+can't use it as one. Which means that
+this error, warning, and info simply
+
+368
+00:06:02,710 --> 00:06:02,720
+this error, warning, and info simply
+ 
+
+369
+00:06:02,720 --> 00:06:05,790
+this error, warning, and info simply
+exists inside this log class. As you can
+
+370
+00:06:05,790 --> 00:06:05,800
+exists inside this log class. As you can
+ 
+
+371
+00:06:05,800 --> 00:06:07,070
+exists inside this log class. As you can
+see, I can set it to something like
+
+372
+00:06:07,070 --> 00:06:07,080
+see, I can set it to something like
+ 
+
+373
+00:06:07,080 --> 00:06:09,030
+see, I can set it to something like
+warning as well, and everything's fine.
+
+374
+00:06:09,030 --> 00:06:09,040
+warning as well, and everything's fine.
+ 
+
+375
+00:06:09,040 --> 00:06:10,830
+warning as well, and everything's fine.
+Now, you might have noticed the error
+
+376
+00:06:10,830 --> 00:06:10,840
+Now, you might have noticed the error
+ 
+
+377
+00:06:10,840 --> 00:06:12,230
+Now, you might have noticed the error
+doesn't actually work, and it gives us
+
+378
+00:06:12,230 --> 00:06:12,240
+doesn't actually work, and it gives us
+ 
+
+379
+00:06:12,240 --> 00:06:14,110
+doesn't actually work, and it gives us
+an error. The reason this is happening
+
+380
+00:06:14,110 --> 00:06:14,120
+an error. The reason this is happening
+ 
+
+381
+00:06:14,120 --> 00:06:15,590
+an error. The reason this is happening
+is because we actually have a function
+
+382
+00:06:15,590 --> 00:06:15,600
+is because we actually have a function
+ 
+
+383
+00:06:15,600 --> 00:06:17,950
+is because we actually have a function
+called error as well, so same name. And
+
+384
+00:06:17,950 --> 00:06:17,960
+called error as well, so same name. And
+ 
+
+385
+00:06:17,960 --> 00:06:19,190
+called error as well, so same name. And
+I've set this up deliberately to show
+
+386
+00:06:19,190 --> 00:06:19,200
+I've set this up deliberately to show
+ 
+
+387
+00:06:19,200 --> 00:06:20,710
+I've set this up deliberately to show
+you what happens if you have a
+
+388
+00:06:20,710 --> 00:06:20,720
+you what happens if you have a
+ 
+
+389
+00:06:20,720 --> 00:06:22,590
+you what happens if you have a
+conflicting name. Now, in this case,
+
+390
+00:06:22,590 --> 00:06:22,600
+conflicting name. Now, in this case,
+ 
+
+391
+00:06:22,600 --> 00:06:23,830
+conflicting name. Now, in this case,
+unfortunately, that wouldn't work
+
+392
+00:06:23,830 --> 00:06:23,840
+unfortunately, that wouldn't work
+ 
+
+393
+00:06:23,840 --> 00:06:25,950
+unfortunately, that wouldn't work
+because when we try and refer to things
+
+394
+00:06:25,950 --> 00:06:25,960
+because when we try and refer to things
+ 
+
+395
+00:06:25,960 --> 00:06:27,110
+because when we try and refer to things
+like error here, it doesn't know if
+
+396
+00:06:27,110 --> 00:06:27,120
+like error here, it doesn't know if
+ 
+
+397
+00:06:27,120 --> 00:06:28,150
+like error here, it doesn't know if
+we're referring to the function or not.
+
+398
+00:06:28,150 --> 00:06:28,160
+we're referring to the function or not.
+ 
+
+399
+00:06:28,160 --> 00:06:29,670
+we're referring to the function or not.
+So, we definitely can't have something
+
+400
+00:06:29,670 --> 00:06:29,680
+So, we definitely can't have something
+ 
+
+401
+00:06:29,680 --> 00:06:31,670
+So, we definitely can't have something
+called error here, unfortunately, if we
+
+402
+00:06:31,670 --> 00:06:31,680
+called error here, unfortunately, if we
+ 
+
+403
+00:06:31,680 --> 00:06:32,909
+called error here, unfortunately, if we
+want to have a function with the same
+
+404
+00:06:32,909 --> 00:06:32,919
+want to have a function with the same
+ 
+
+405
+00:06:32,919 --> 00:06:34,790
+want to have a function with the same
+name. So, for now, we can just add a
+
+406
+00:06:34,790 --> 00:06:34,800
+name. So, for now, we can just add a
+ 
+
+407
+00:06:34,800 --> 00:06:36,950
+name. So, for now, we can just add a
+level prefix to the enum, which, by the
+
+408
+00:06:36,950 --> 00:06:36,960
+level prefix to the enum, which, by the
+ 
+
+409
+00:06:36,960 --> 00:06:39,110
+level prefix to the enum, which, by the
+way, is very, very common practice, so
+
+410
+00:06:39,110 --> 00:06:39,120
+way, is very, very common practice, so
+ 
+
+411
+00:06:39,120 --> 00:06:40,150
+way, is very, very common practice, so
+that we know exactly what we're
+
+412
+00:06:40,150 --> 00:06:40,160
+that we know exactly what we're
+ 
+
+413
+00:06:40,160 --> 00:06:42,110
+that we know exactly what we're
+referring to. Since this name doesn't
+
+414
+00:06:42,110 --> 00:06:42,120
+referring to. Since this name doesn't
+ 
+
+415
+00:06:42,120 --> 00:06:43,670
+referring to. Since this name doesn't
+really mean much in the scope of things.
+
+416
+00:06:43,670 --> 00:06:43,680
+really mean much in the scope of things.
+ 
+
+417
+00:06:43,680 --> 00:06:47,070
+really mean much in the scope of things.
+So, I'll set this equal to level info,
+
+418
+00:06:47,070 --> 00:06:47,080
+So, I'll set this equal to level info,
+ 
+
+419
+00:06:47,080 --> 00:06:48,790
+So, I'll set this equal to level info,
+this to level error, this to level
+
+420
+00:06:48,790 --> 00:06:48,800
+this to level error, this to level
+ 
+
+421
+00:06:48,800 --> 00:06:50,070
+this to level error, this to level
+warning,
+
+422
+00:06:50,070 --> 00:06:50,080
+warning,
+ 
+
+423
+00:06:50,080 --> 00:06:52,150
+warning,
+and this to level info.
+
+424
+00:06:52,150 --> 00:06:52,160
+and this to level info.
+ 
+
+425
+00:06:52,160 --> 00:06:53,470
+and this to level info.
+And now, of course, I don't need this. I
+
+426
+00:06:53,470 --> 00:06:53,480
+And now, of course, I don't need this. I
+ 
+
+427
+00:06:53,480 --> 00:06:54,710
+And now, of course, I don't need this. I
+can get rid of this and just set this
+
+428
+00:06:54,710 --> 00:06:54,720
+can get rid of this and just set this
+ 
+
+429
+00:06:54,720 --> 00:06:57,270
+can get rid of this and just set this
+equal to level error. If I run my code,
+
+430
+00:06:57,270 --> 00:06:57,280
+equal to level error. If I run my code,
+ 
+
+431
+00:06:57,280 --> 00:06:58,590
+equal to level error. If I run my code,
+you can see that I would get the result
+
+432
+00:06:58,590 --> 00:06:58,600
+you can see that I would get the result
+ 
+
+433
+00:06:58,600 --> 00:07:00,310
+you can see that I would get the result
+that I expect, where only error is
+
+434
+00:07:00,310 --> 00:07:00,320
+that I expect, where only error is
+ 
+
+435
+00:07:00,320 --> 00:07:01,630
+that I expect, where only error is
+printing, of course, because we've set
+
+436
+00:07:01,630 --> 00:07:01,640
+printing, of course, because we've set
+ 
+
+437
+00:07:01,640 --> 00:07:03,630
+printing, of course, because we've set
+our level to be error. So, there you go.
+
+438
+00:07:03,630 --> 00:07:03,640
+our level to be error. So, there you go.
+ 
+
+439
+00:07:03,640 --> 00:07:05,550
+our level to be error. So, there you go.
+Enums just essentially exist to make our
+
+440
+00:07:05,550 --> 00:07:05,560
+Enums just essentially exist to make our
+ 
+
+441
+00:07:05,560 --> 00:07:07,190
+Enums just essentially exist to make our
+lives easier and to make our code
+
+442
+00:07:07,190 --> 00:07:07,200
+lives easier and to make our code
+ 
+
+443
+00:07:07,200 --> 00:07:09,270
+lives easier and to make our code
+cleaner. They are just integers behind
+
+444
+00:07:09,270 --> 00:07:09,280
+cleaner. They are just integers behind
+ 
+
+445
+00:07:09,280 --> 00:07:10,710
+cleaner. They are just integers behind
+the scenes, and you can use them pretty
+
+446
+00:07:10,710 --> 00:07:10,720
+the scenes, and you can use them pretty
+ 
+
+447
+00:07:10,720 --> 00:07:12,630
+the scenes, and you can use them pretty
+much in any way like integers. There are
+
+448
+00:07:12,630 --> 00:07:12,640
+much in any way like integers. There are
+ 
+
+449
+00:07:12,640 --> 00:07:14,990
+much in any way like integers. There are
+many, many uses for enums, which we will
+
+450
+00:07:14,990 --> 00:07:15,000
+many, many uses for enums, which we will
+ 
+
+451
+00:07:15,000 --> 00:07:16,990
+many, many uses for enums, which we will
+cover in future videos. We'll definitely
+
+452
+00:07:16,990 --> 00:07:17,000
+cover in future videos. We'll definitely
+ 
+
+453
+00:07:17,000 --> 00:07:18,790
+cover in future videos. We'll definitely
+talk about enum classes as well in
+
+454
+00:07:18,790 --> 00:07:18,800
+talk about enum classes as well in
+ 
+
+455
+00:07:18,800 --> 00:07:20,190
+talk about enum classes as well in
+another video. But, essentially,
+
+456
+00:07:20,190 --> 00:07:20,200
+another video. But, essentially,
+ 
+
+457
+00:07:20,200 --> 00:07:22,030
+another video. But, essentially,
+whenever you have a set of values which
+
+458
+00:07:22,030 --> 00:07:22,040
+whenever you have a set of values which
+ 
+
+459
+00:07:22,040 --> 00:07:24,230
+whenever you have a set of values which
+you want to represent numerically, an
+
+460
+00:07:24,230 --> 00:07:24,240
+you want to represent numerically, an
+ 
+
+461
+00:07:24,240 --> 00:07:25,590
+you want to represent numerically, an
+enum is probably the way to go. I'll see
+
+462
+00:07:25,590 --> 00:07:25,600
+enum is probably the way to go. I'll see
+ 
+
+463
+00:07:25,600 --> 00:07:28,880
+enum is probably the way to go. I'll see
+you guys next time. Goodbye.
+

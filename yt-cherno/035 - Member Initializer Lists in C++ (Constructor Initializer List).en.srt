@@ -1,0 +1,2515 @@
+1
+00:00:00,000 --> 00:00:02,030
+
+hey little guys my name is a cheddar and
+
+2
+00:00:02,030 --> 00:00:02,040
+hey little guys my name is a cheddar and
+ 
+
+3
+00:00:02,040 --> 00:00:04,070
+hey little guys my name is a cheddar and
+welcome back to my say plus plus series
+
+4
+00:00:04,070 --> 00:00:04,080
+welcome back to my say plus plus series
+ 
+
+5
+00:00:04,080 --> 00:00:05,180
+welcome back to my say plus plus series
+today I'm going to be talking about
+
+6
+00:00:05,180 --> 00:00:05,190
+today I'm going to be talking about
+ 
+
+7
+00:00:05,190 --> 00:00:08,150
+today I'm going to be talking about
+constructive member initializer lists
+
+8
+00:00:08,150 --> 00:00:08,160
+constructive member initializer lists
+ 
+
+9
+00:00:08,160 --> 00:00:10,970
+constructive member initializer lists
+that's quite a sentence basically what
+
+10
+00:00:10,970 --> 00:00:10,980
+that's quite a sentence basically what
+ 
+
+11
+00:00:10,980 --> 00:00:13,400
+that's quite a sentence basically what
+it means is it so it's a way for us to
+
+12
+00:00:13,400 --> 00:00:13,410
+it means is it so it's a way for us to
+ 
+
+13
+00:00:13,410 --> 00:00:16,550
+it means is it so it's a way for us to
+initialize our class member functions in
+
+14
+00:00:16,550 --> 00:00:16,560
+initialize our class member functions in
+ 
+
+15
+00:00:16,560 --> 00:00:18,410
+initialize our class member functions in
+the Constructors so when we write a
+
+16
+00:00:18,410 --> 00:00:18,420
+the Constructors so when we write a
+ 
+
+17
+00:00:18,420 --> 00:00:20,240
+the Constructors so when we write a
+class and we add members to that class
+
+18
+00:00:20,240 --> 00:00:20,250
+class and we add members to that class
+ 
+
+19
+00:00:20,250 --> 00:00:22,040
+class and we add members to that class
+we usually want some way of initializing
+
+20
+00:00:22,040 --> 00:00:22,050
+we usually want some way of initializing
+ 
+
+21
+00:00:22,050 --> 00:00:24,349
+we usually want some way of initializing
+those members and that's usually done in
+
+22
+00:00:24,349 --> 00:00:24,359
+those members and that's usually done in
+ 
+
+23
+00:00:24,359 --> 00:00:25,910
+those members and that's usually done in
+the constructor and there are two ways
+
+24
+00:00:25,910 --> 00:00:25,920
+the constructor and there are two ways
+ 
+
+25
+00:00:25,920 --> 00:00:28,460
+the constructor and there are two ways
+we can really initialize a class member
+
+26
+00:00:28,460 --> 00:00:28,470
+we can really initialize a class member
+ 
+
+27
+00:00:28,470 --> 00:00:30,140
+we can really initialize a class member
+in the constructor let's take a look so
+
+28
+00:00:30,140 --> 00:00:30,150
+in the constructor let's take a look so
+ 
+
+29
+00:00:30,150 --> 00:00:31,550
+in the constructor let's take a look so
+I've got this entity class here which
+
+30
+00:00:31,550 --> 00:00:31,560
+I've got this entity class here which
+ 
+
+31
+00:00:31,560 --> 00:00:33,380
+I've got this entity class here which
+just has a name string it doesn't have
+
+32
+00:00:33,380 --> 00:00:33,390
+just has a name string it doesn't have
+ 
+
+33
+00:00:33,390 --> 00:00:35,000
+just has a name string it doesn't have
+any constructors yes let's add one of
+
+34
+00:00:35,000 --> 00:00:35,010
+any constructors yes let's add one of
+ 
+
+35
+00:00:35,010 --> 00:00:36,950
+any constructors yes let's add one of
+those may be a constructor that actually
+
+36
+00:00:36,950 --> 00:00:36,960
+those may be a constructor that actually
+ 
+
+37
+00:00:36,960 --> 00:00:39,049
+those may be a constructor that actually
+takes a name in as a parameter I'll also
+
+38
+00:00:39,049 --> 00:00:39,059
+takes a name in as a parameter I'll also
+ 
+
+39
+00:00:39,059 --> 00:00:40,729
+takes a name in as a parameter I'll also
+create one more constructor that's just
+
+40
+00:00:40,729 --> 00:00:40,739
+create one more constructor that's just
+ 
+
+41
+00:00:40,739 --> 00:00:42,950
+create one more constructor that's just
+going to be a default constructor and it
+
+42
+00:00:42,950 --> 00:00:42,960
+going to be a default constructor and it
+ 
+
+43
+00:00:42,960 --> 00:00:44,510
+going to be a default constructor and it
+won't take any parameters so in this
+
+44
+00:00:44,510 --> 00:00:44,520
+won't take any parameters so in this
+ 
+
+45
+00:00:44,520 --> 00:00:46,459
+won't take any parameters so in this
+case I want to assign M name with value
+
+46
+00:00:46,459 --> 00:00:46,469
+case I want to assign M name with value
+ 
+
+47
+00:00:46,469 --> 00:00:48,619
+case I want to assign M name with value
+of this name as being passed in because
+
+48
+00:00:48,619 --> 00:00:48,629
+of this name as being passed in because
+ 
+
+49
+00:00:48,629 --> 00:00:50,119
+of this name as being passed in because
+I want to be able to set my entity to
+
+50
+00:00:50,119 --> 00:00:50,129
+I want to be able to set my entity to
+ 
+
+51
+00:00:50,129 --> 00:00:52,310
+I want to be able to set my entity to
+have the name that was passed in through
+
+52
+00:00:52,310 --> 00:00:52,320
+have the name that was passed in through
+ 
+
+53
+00:00:52,320 --> 00:00:54,740
+have the name that was passed in through
+this parameter in this case maybe I'll
+
+54
+00:00:54,740 --> 00:00:54,750
+this parameter in this case maybe I'll
+ 
+
+55
+00:00:54,750 --> 00:00:56,779
+this parameter in this case maybe I'll
+do something simple and just set the
+
+56
+00:00:56,779 --> 00:00:56,789
+do something simple and just set the
+ 
+
+57
+00:00:56,789 --> 00:00:58,760
+do something simple and just set the
+player's name to unknown now this might
+
+58
+00:00:58,760 --> 00:00:58,770
+player's name to unknown now this might
+ 
+
+59
+00:00:58,770 --> 00:01:00,170
+player's name to unknown now this might
+seem fine and it's probably the way that
+
+60
+00:01:00,170 --> 00:01:00,180
+seem fine and it's probably the way that
+ 
+
+61
+00:01:00,180 --> 00:01:01,400
+seem fine and it's probably the way that
+you've been doing this in all the
+
+62
+00:01:01,400 --> 00:01:01,410
+you've been doing this in all the
+ 
+
+63
+00:01:01,410 --> 00:01:03,500
+you've been doing this in all the
+languages but in C++ there's actually
+
+64
+00:01:03,500 --> 00:01:03,510
+languages but in C++ there's actually
+ 
+
+65
+00:01:03,510 --> 00:01:05,149
+languages but in C++ there's actually
+one other way we could do this and
+
+66
+00:01:05,149 --> 00:01:05,159
+one other way we could do this and
+ 
+
+67
+00:01:05,159 --> 00:01:06,920
+one other way we could do this and
+that's why I remember initialize a list
+
+68
+00:01:06,920 --> 00:01:06,930
+that's why I remember initialize a list
+ 
+
+69
+00:01:06,930 --> 00:01:08,480
+that's why I remember initialize a list
+first of all let's just take a look at
+
+70
+00:01:08,480 --> 00:01:08,490
+first of all let's just take a look at
+ 
+
+71
+00:01:08,490 --> 00:01:10,190
+first of all let's just take a look at
+this card and say it running and make
+
+72
+00:01:10,190 --> 00:01:10,200
+this card and say it running and make
+ 
+
+73
+00:01:10,200 --> 00:01:11,810
+this card and say it running and make
+sure it works so I'm just going to
+
+74
+00:01:11,810 --> 00:01:11,820
+sure it works so I'm just going to
+ 
+
+75
+00:01:11,820 --> 00:01:13,730
+sure it works so I'm just going to
+create a new entity over here and I'm
+
+76
+00:01:13,730 --> 00:01:13,740
+create a new entity over here and I'm
+ 
+
+77
+00:01:13,740 --> 00:01:15,230
+create a new entity over here and I'm
+going to print the name of that entity
+
+78
+00:01:15,230 --> 00:01:15,240
+going to print the name of that entity
+ 
+
+79
+00:01:15,240 --> 00:01:17,450
+going to print the name of that entity
+I'll pull this one easier to demonstrate
+
+80
+00:01:17,450 --> 00:01:17,460
+I'll pull this one easier to demonstrate
+ 
+
+81
+00:01:17,460 --> 00:01:20,480
+I'll pull this one easier to demonstrate
+my first kind of case and then another
+
+82
+00:01:20,480 --> 00:01:20,490
+my first kind of case and then another
+ 
+
+83
+00:01:20,490 --> 00:01:22,700
+my first kind of case and then another
+one with a one I'll give this one a name
+
+84
+00:01:22,700 --> 00:01:22,710
+one with a one I'll give this one a name
+ 
+
+85
+00:01:22,710 --> 00:01:25,429
+one with a one I'll give this one a name
+such as shadow and we'll hit f5 you can
+
+86
+00:01:25,429 --> 00:01:25,439
+such as shadow and we'll hit f5 you can
+ 
+
+87
+00:01:25,439 --> 00:01:27,050
+such as shadow and we'll hit f5 you can
+see in this case we get online printing
+
+88
+00:01:27,050 --> 00:01:27,060
+see in this case we get online printing
+ 
+
+89
+00:01:27,060 --> 00:01:28,789
+see in this case we get online printing
+first in that show okay great so
+
+90
+00:01:28,789 --> 00:01:28,799
+first in that show okay great so
+ 
+
+91
+00:01:28,799 --> 00:01:30,020
+first in that show okay great so
+everything seems to work let's take a
+
+92
+00:01:30,020 --> 00:01:30,030
+everything seems to work let's take a
+ 
+
+93
+00:01:30,030 --> 00:01:31,399
+everything seems to work let's take a
+look at the second way we can initialize
+
+94
+00:01:31,399 --> 00:01:31,409
+look at the second way we can initialize
+ 
+
+95
+00:01:31,409 --> 00:01:33,380
+look at the second way we can initialize
+this instead of us just setting M name
+
+96
+00:01:33,380 --> 00:01:33,390
+this instead of us just setting M name
+ 
+
+97
+00:01:33,390 --> 00:01:35,630
+this instead of us just setting M name
+equal to the value over here we can do
+
+98
+00:01:35,630 --> 00:01:35,640
+equal to the value over here we can do
+ 
+
+99
+00:01:35,640 --> 00:01:36,920
+equal to the value over here we can do
+it via remember initialize the list
+
+100
+00:01:36,920 --> 00:01:36,930
+it via remember initialize the list
+ 
+
+101
+00:01:36,930 --> 00:01:38,780
+it via remember initialize the list
+which looks like this after B construct
+
+102
+00:01:38,780 --> 00:01:38,790
+which looks like this after B construct
+ 
+
+103
+00:01:38,790 --> 00:01:39,859
+which looks like this after B construct
+after or after you write your
+
+104
+00:01:39,859 --> 00:01:39,869
+after or after you write your
+ 
+
+105
+00:01:39,869 --> 00:01:41,539
+after or after you write your
+constructor and the parameters we can
+
+106
+00:01:41,539 --> 00:01:41,549
+constructor and the parameters we can
+ 
+
+107
+00:01:41,549 --> 00:01:44,060
+constructor and the parameters we can
+add a colon this can be on the same line
+
+108
+00:01:44,060 --> 00:01:44,070
+add a colon this can be on the same line
+ 
+
+109
+00:01:44,070 --> 00:01:45,560
+add a colon this can be on the same line
+as this it doesn't really matter usually
+
+110
+00:01:45,560 --> 00:01:45,570
+as this it doesn't really matter usually
+ 
+
+111
+00:01:45,570 --> 00:01:47,389
+as this it doesn't really matter usually
+I like to write it on the next line over
+
+112
+00:01:47,389 --> 00:01:47,399
+I like to write it on the next line over
+ 
+
+113
+00:01:47,399 --> 00:01:49,399
+I like to write it on the next line over
+here invented like this and then you
+
+114
+00:01:49,399 --> 00:01:49,409
+here invented like this and then you
+ 
+
+115
+00:01:49,409 --> 00:01:51,410
+here invented like this and then you
+start listing off the members that you
+
+116
+00:01:51,410 --> 00:01:51,420
+start listing off the members that you
+ 
+
+117
+00:01:51,420 --> 00:01:53,300
+start listing off the members that you
+want to initialize now in this case
+
+118
+00:01:53,300 --> 00:01:53,310
+want to initialize now in this case
+ 
+
+119
+00:01:53,310 --> 00:01:54,920
+want to initialize now in this case
+we've just got M name so all we have to
+
+120
+00:01:54,920 --> 00:01:54,930
+we've just got M name so all we have to
+ 
+
+121
+00:01:54,930 --> 00:01:56,870
+we've just got M name so all we have to
+do is type in the name of this variable
+
+122
+00:01:56,870 --> 00:01:56,880
+do is type in the name of this variable
+ 
+
+123
+00:01:56,880 --> 00:01:57,720
+do is type in the name of this variable
+and then give
+
+124
+00:01:57,720 --> 00:01:57,730
+and then give
+ 
+
+125
+00:01:57,730 --> 00:01:59,700
+and then give
+some kind of values in this case unknown
+
+126
+00:01:59,700 --> 00:01:59,710
+some kind of values in this case unknown
+ 
+
+127
+00:01:59,710 --> 00:02:02,190
+some kind of values in this case unknown
+and that kind of replaces the need to do
+
+128
+00:02:02,190 --> 00:02:02,200
+and that kind of replaces the need to do
+ 
+
+129
+00:02:02,200 --> 00:02:04,200
+and that kind of replaces the need to do
+this so this is what a member in ich
+
+130
+00:02:04,200 --> 00:02:04,210
+this so this is what a member in ich
+ 
+
+131
+00:02:04,210 --> 00:02:06,060
+this so this is what a member in ich
+lies the list is now if we had another
+
+132
+00:02:06,060 --> 00:02:06,070
+lies the list is now if we had another
+ 
+
+133
+00:02:06,070 --> 00:02:08,609
+lies the list is now if we had another
+member such as score or something like
+
+134
+00:02:08,609 --> 00:02:08,619
+member such as score or something like
+ 
+
+135
+00:02:08,619 --> 00:02:10,560
+member such as score or something like
+that we would just add a comma and then
+
+136
+00:02:10,560 --> 00:02:10,570
+that we would just add a comma and then
+ 
+
+137
+00:02:10,570 --> 00:02:12,180
+that we would just add a comma and then
+the value of that man but so in this
+
+138
+00:02:12,180 --> 00:02:12,190
+the value of that man but so in this
+ 
+
+139
+00:02:12,190 --> 00:02:14,340
+the value of that man but so in this
+case I'm initializing it to zero one
+
+140
+00:02:14,340 --> 00:02:14,350
+case I'm initializing it to zero one
+ 
+
+141
+00:02:14,350 --> 00:02:16,020
+case I'm initializing it to zero one
+thing to note really quickly is that if
+
+142
+00:02:16,020 --> 00:02:16,030
+thing to note really quickly is that if
+ 
+
+143
+00:02:16,030 --> 00:02:17,820
+thing to note really quickly is that if
+we had defined these variables like this
+
+144
+00:02:17,820 --> 00:02:17,830
+we had defined these variables like this
+ 
+
+145
+00:02:17,830 --> 00:02:19,830
+we had defined these variables like this
+in this initializer list you should be
+
+146
+00:02:19,830 --> 00:02:19,840
+in this initializer list you should be
+ 
+
+147
+00:02:19,840 --> 00:02:22,170
+in this initializer list you should be
+listing off all the members in order and
+
+148
+00:02:22,170 --> 00:02:22,180
+listing off all the members in order and
+ 
+
+149
+00:02:22,180 --> 00:02:24,090
+listing off all the members in order and
+some compilers will actually warn you if
+
+150
+00:02:24,090 --> 00:02:24,100
+some compilers will actually warn you if
+ 
+
+151
+00:02:24,100 --> 00:02:26,010
+some compilers will actually warn you if
+you don't write the code in order and
+
+152
+00:02:26,010 --> 00:02:26,020
+you don't write the code in order and
+ 
+
+153
+00:02:26,020 --> 00:02:27,210
+you don't write the code in order and
+the reason this is important is because
+
+154
+00:02:27,210 --> 00:02:27,220
+the reason this is important is because
+ 
+
+155
+00:02:27,220 --> 00:02:29,700
+the reason this is important is because
+no matter how you write your initializer
+
+156
+00:02:29,700 --> 00:02:29,710
+no matter how you write your initializer
+ 
+
+157
+00:02:29,710 --> 00:02:32,790
+no matter how you write your initializer
+list it will be initialized in the order
+
+158
+00:02:32,790 --> 00:02:32,800
+list it will be initialized in the order
+ 
+
+159
+00:02:32,800 --> 00:02:34,710
+list it will be initialized in the order
+of the actual class members I defined
+
+160
+00:02:34,710 --> 00:02:34,720
+of the actual class members I defined
+ 
+
+161
+00:02:34,720 --> 00:02:36,900
+of the actual class members I defined
+them so in this case the integer will be
+
+162
+00:02:36,900 --> 00:02:36,910
+them so in this case the integer will be
+ 
+
+163
+00:02:36,910 --> 00:02:38,460
+them so in this case the integer will be
+initialized first and then the string
+
+164
+00:02:38,460 --> 00:02:38,470
+initialized first and then the string
+ 
+
+165
+00:02:38,470 --> 00:02:39,810
+initialized first and then the string
+even if you write it the other way
+
+166
+00:02:39,810 --> 00:02:39,820
+even if you write it the other way
+ 
+
+167
+00:02:39,820 --> 00:02:41,580
+even if you write it the other way
+around in the initializer list where you
+
+168
+00:02:41,580 --> 00:02:41,590
+around in the initializer list where you
+ 
+
+169
+00:02:41,590 --> 00:02:43,410
+around in the initializer list where you
+initialize the string first and then the
+
+170
+00:02:43,410 --> 00:02:43,420
+initialize the string first and then the
+ 
+
+171
+00:02:43,420 --> 00:02:45,420
+initialize the string first and then the
+integer so this can lead to all sorts of
+
+172
+00:02:45,420 --> 00:02:45,430
+integer so this can lead to all sorts of
+ 
+
+173
+00:02:45,430 --> 00:02:47,340
+integer so this can lead to all sorts of
+kind of dependency problems if you if
+
+174
+00:02:47,340 --> 00:02:47,350
+kind of dependency problems if you if
+ 
+
+175
+00:02:47,350 --> 00:02:48,990
+kind of dependency problems if you if
+you break that order so just make sure
+
+176
+00:02:48,990 --> 00:02:49,000
+you break that order so just make sure
+ 
+
+177
+00:02:49,000 --> 00:02:50,220
+you break that order so just make sure
+that you always initialize your
+
+178
+00:02:50,220 --> 00:02:50,230
+that you always initialize your
+ 
+
+179
+00:02:50,230 --> 00:02:52,350
+that you always initialize your
+variables in the same order that they
+
+180
+00:02:52,350 --> 00:02:52,360
+variables in the same order that they
+ 
+
+181
+00:02:52,360 --> 00:02:53,850
+variables in the same order that they
+declare in when you declare them as
+
+182
+00:02:53,850 --> 00:02:53,860
+declare in when you declare them as
+ 
+
+183
+00:02:53,860 --> 00:02:56,070
+declare in when you declare them as
+members in this situation it would look
+
+184
+00:02:56,070 --> 00:02:56,080
+members in this situation it would look
+ 
+
+185
+00:02:56,080 --> 00:02:57,990
+members in this situation it would look
+like this we have our name and then we
+
+186
+00:02:57,990 --> 00:02:58,000
+like this we have our name and then we
+ 
+
+187
+00:02:58,000 --> 00:02:59,820
+like this we have our name and then we
+just put in the value that we want to
+
+188
+00:02:59,820 --> 00:02:59,830
+just put in the value that we want to
+ 
+
+189
+00:02:59,830 --> 00:03:02,460
+just put in the value that we want to
+copy from into here like this and that's
+
+190
+00:03:02,460 --> 00:03:02,470
+copy from into here like this and that's
+ 
+
+191
+00:03:02,470 --> 00:03:04,020
+copy from into here like this and that's
+how we assign this it's just you're
+
+192
+00:03:04,020 --> 00:03:04,030
+how we assign this it's just you're
+ 
+
+193
+00:03:04,030 --> 00:03:05,550
+how we assign this it's just you're
+basically replacing the equals with
+
+194
+00:03:05,550 --> 00:03:05,560
+basically replacing the equals with
+ 
+
+195
+00:03:05,560 --> 00:03:07,320
+basically replacing the equals with
+parentheses and moving it up into this
+
+196
+00:03:07,320 --> 00:03:07,330
+parentheses and moving it up into this
+ 
+
+197
+00:03:07,330 --> 00:03:09,270
+parentheses and moving it up into this
+list if we run our code you'll see we
+
+198
+00:03:09,270 --> 00:03:09,280
+list if we run our code you'll see we
+ 
+
+199
+00:03:09,280 --> 00:03:11,640
+list if we run our code you'll see we
+get the exact same result okay that's it
+
+200
+00:03:11,640 --> 00:03:11,650
+get the exact same result okay that's it
+ 
+
+201
+00:03:11,650 --> 00:03:13,680
+get the exact same result okay that's it
+that's member initializer lists really
+
+202
+00:03:13,680 --> 00:03:13,690
+that's member initializer lists really
+ 
+
+203
+00:03:13,690 --> 00:03:16,860
+that's member initializer lists really
+easy the big question though is why why
+
+204
+00:03:16,860 --> 00:03:16,870
+easy the big question though is why why
+ 
+
+205
+00:03:16,870 --> 00:03:18,960
+easy the big question though is why why
+do why should we use this is it just a
+
+206
+00:03:18,960 --> 00:03:18,970
+do why should we use this is it just a
+ 
+
+207
+00:03:18,970 --> 00:03:21,390
+do why should we use this is it just a
+Coast style thing and the answer is well
+
+208
+00:03:21,390 --> 00:03:21,400
+Coast style thing and the answer is well
+ 
+
+209
+00:03:21,400 --> 00:03:24,449
+Coast style thing and the answer is well
+yes and no norm is probably the more
+
+210
+00:03:24,449 --> 00:03:24,459
+yes and no norm is probably the more
+ 
+
+211
+00:03:24,459 --> 00:03:26,550
+yes and no norm is probably the more
+right answer I like writing code like
+
+212
+00:03:26,550 --> 00:03:26,560
+right answer I like writing code like
+ 
+
+213
+00:03:26,560 --> 00:03:28,140
+right answer I like writing code like
+this first of all because if you have a
+
+214
+00:03:28,140 --> 00:03:28,150
+this first of all because if you have a
+ 
+
+215
+00:03:28,150 --> 00:03:30,090
+this first of all because if you have a
+lot of if you have a lot of member
+
+216
+00:03:30,090 --> 00:03:30,100
+lot of if you have a lot of member
+ 
+
+217
+00:03:30,100 --> 00:03:32,280
+lot of if you have a lot of member
+variables this can get really cluttered
+
+218
+00:03:32,280 --> 00:03:32,290
+variables this can get really cluttered
+ 
+
+219
+00:03:32,290 --> 00:03:34,170
+variables this can get really cluttered
+if you start analyzing them all in here
+
+220
+00:03:34,170 --> 00:03:34,180
+if you start analyzing them all in here
+ 
+
+221
+00:03:34,180 --> 00:03:36,300
+if you start analyzing them all in here
+and it might be hard to see what the
+
+222
+00:03:36,300 --> 00:03:36,310
+and it might be hard to see what the
+ 
+
+223
+00:03:36,310 --> 00:03:38,729
+and it might be hard to see what the
+constructor is actually doing because
+
+224
+00:03:38,729 --> 00:03:38,739
+constructor is actually doing because
+ 
+
+225
+00:03:38,739 --> 00:03:41,699
+constructor is actually doing because
+maybe you've got some code later on that
+
+226
+00:03:41,699 --> 00:03:41,709
+maybe you've got some code later on that
+ 
+
+227
+00:03:41,709 --> 00:03:43,500
+maybe you've got some code later on that
+does other stuff but most of your
+
+228
+00:03:43,500 --> 00:03:43,510
+does other stuff but most of your
+ 
+
+229
+00:03:43,510 --> 00:03:44,970
+does other stuff but most of your
+constructor is filled with just
+
+230
+00:03:44,970 --> 00:03:44,980
+constructor is filled with just
+ 
+
+231
+00:03:44,980 --> 00:03:46,710
+constructor is filled with just
+initializing variables such kind of
+
+232
+00:03:46,710 --> 00:03:46,720
+initializing variables such kind of
+ 
+
+233
+00:03:46,720 --> 00:03:48,600
+initializing variables such kind of
+trivial and boring casts that you
+
+234
+00:03:48,600 --> 00:03:48,610
+trivial and boring casts that you
+ 
+
+235
+00:03:48,610 --> 00:03:50,130
+trivial and boring casts that you
+probably don't even want you might want
+
+236
+00:03:50,130 --> 00:03:50,140
+probably don't even want you might want
+ 
+
+237
+00:03:50,140 --> 00:03:52,650
+probably don't even want you might want
+to hire them which is why I like to put
+
+238
+00:03:52,650 --> 00:03:52,660
+to hire them which is why I like to put
+ 
+
+239
+00:03:52,660 --> 00:03:54,060
+to hire them which is why I like to put
+them in the member initializer list
+
+240
+00:03:54,060 --> 00:03:54,070
+them in the member initializer list
+ 
+
+241
+00:03:54,070 --> 00:03:55,830
+them in the member initializer list
+because just from a code style point of
+
+242
+00:03:55,830 --> 00:03:55,840
+because just from a code style point of
+ 
+
+243
+00:03:55,840 --> 00:03:57,660
+because just from a code style point of
+view I just I do I like it more it keeps
+
+244
+00:03:57,660 --> 00:03:57,670
+view I just I do I like it more it keeps
+ 
+
+245
+00:03:57,670 --> 00:03:59,610
+view I just I do I like it more it keeps
+my actual code in my constructor very
+
+246
+00:03:59,610 --> 00:03:59,620
+my actual code in my constructor very
+ 
+
+247
+00:03:59,620 --> 00:04:01,949
+my actual code in my constructor very
+very clean and easy to read but there is
+
+248
+00:04:01,949 --> 00:04:01,959
+very clean and easy to read but there is
+ 
+
+249
+00:04:01,959 --> 00:04:03,910
+very clean and easy to read but there is
+actually a functional difference
+
+250
+00:04:03,910 --> 00:04:03,920
+actually a functional difference
+ 
+
+251
+00:04:03,920 --> 00:04:06,100
+actually a functional difference
+different supplies to classes
+
+252
+00:04:06,100 --> 00:04:06,110
+different supplies to classes
+ 
+
+253
+00:04:06,110 --> 00:04:08,800
+different supplies to classes
+specifically if you write code such as
+
+254
+00:04:08,800 --> 00:04:08,810
+specifically if you write code such as
+ 
+
+255
+00:04:08,810 --> 00:04:10,990
+specifically if you write code such as
+this where we assign an M name to
+
+256
+00:04:10,990 --> 00:04:11,000
+this where we assign an M name to
+ 
+
+257
+00:04:11,000 --> 00:04:13,030
+this where we assign an M name to
+something here like unknown and you
+
+258
+00:04:13,030 --> 00:04:13,040
+something here like unknown and you
+ 
+
+259
+00:04:13,040 --> 00:04:14,800
+something here like unknown and you
+don't have it any member initializer
+
+260
+00:04:14,800 --> 00:04:14,810
+don't have it any member initializer
+ 
+
+261
+00:04:14,810 --> 00:04:16,810
+don't have it any member initializer
+list like so what will actually happen
+
+262
+00:04:16,810 --> 00:04:16,820
+list like so what will actually happen
+ 
+
+263
+00:04:16,820 --> 00:04:18,970
+list like so what will actually happen
+is this M name object will be
+
+264
+00:04:18,970 --> 00:04:18,980
+is this M name object will be
+ 
+
+265
+00:04:18,980 --> 00:04:21,400
+is this M name object will be
+constructed twice once with the default
+
+266
+00:04:21,400 --> 00:04:21,410
+constructed twice once with the default
+ 
+
+267
+00:04:21,410 --> 00:04:24,790
+constructed twice once with the default
+constructor and then again with this
+
+268
+00:04:24,790 --> 00:04:24,800
+constructor and then again with this
+ 
+
+269
+00:04:24,800 --> 00:04:26,379
+constructor and then again with this
+unknown parameter because what's
+
+270
+00:04:26,379 --> 00:04:26,389
+unknown parameter because what's
+ 
+
+271
+00:04:26,389 --> 00:04:29,140
+unknown parameter because what's
+happening here is actually this so you
+
+272
+00:04:29,140 --> 00:04:29,150
+happening here is actually this so you
+ 
+
+273
+00:04:29,150 --> 00:04:30,670
+happening here is actually this so you
+just credit two strings one of them
+
+274
+00:04:30,670 --> 00:04:30,680
+just credit two strings one of them
+ 
+
+275
+00:04:30,680 --> 00:04:32,440
+just credit two strings one of them
+you've just thrown away pretty much
+
+276
+00:04:32,440 --> 00:04:32,450
+you've just thrown away pretty much
+ 
+
+277
+00:04:32,450 --> 00:04:34,870
+you've just thrown away pretty much
+straight away right it's a waste of
+
+278
+00:04:34,870 --> 00:04:34,880
+straight away right it's a waste of
+ 
+
+279
+00:04:34,880 --> 00:04:36,159
+straight away right it's a waste of
+performance right there let's
+
+280
+00:04:36,159 --> 00:04:36,169
+performance right there let's
+ 
+
+281
+00:04:36,169 --> 00:04:37,960
+performance right there let's
+demonstrate this I'm going to make a
+
+282
+00:04:37,960 --> 00:04:37,970
+demonstrate this I'm going to make a
+ 
+
+283
+00:04:37,970 --> 00:04:39,730
+demonstrate this I'm going to make a
+class here called example it's going to
+
+284
+00:04:39,730 --> 00:04:39,740
+class here called example it's going to
+ 
+
+285
+00:04:39,740 --> 00:04:41,710
+class here called example it's going to
+be very very simple just one public
+
+286
+00:04:41,710 --> 00:04:41,720
+be very very simple just one public
+ 
+
+287
+00:04:41,720 --> 00:04:43,420
+be very very simple just one public
+constructor here we'll make this kind of
+
+288
+00:04:43,420 --> 00:04:43,430
+constructor here we'll make this kind of
+ 
+
+289
+00:04:43,430 --> 00:04:44,920
+constructor here we'll make this kind of
+more of a real-world example I guess
+
+290
+00:04:44,920 --> 00:04:44,930
+more of a real-world example I guess
+ 
+
+291
+00:04:44,930 --> 00:04:47,860
+more of a real-world example I guess
+I'll just print created entity over here
+
+292
+00:04:47,860 --> 00:04:47,870
+I'll just print created entity over here
+ 
+
+293
+00:04:47,870 --> 00:04:50,560
+I'll just print created entity over here
+and then I'll also create one example
+
+294
+00:04:50,560 --> 00:04:50,570
+and then I'll also create one example
+ 
+
+295
+00:04:50,570 --> 00:04:52,810
+and then I'll also create one example
+which actually takes in a parameter and
+
+296
+00:04:52,810 --> 00:04:52,820
+which actually takes in a parameter and
+ 
+
+297
+00:04:52,820 --> 00:04:55,719
+which actually takes in a parameter and
+I'll Prince rated entity with and in
+
+298
+00:04:55,719 --> 00:04:55,729
+I'll Prince rated entity with and in
+ 
+
+299
+00:04:55,729 --> 00:04:58,450
+I'll Prince rated entity with and in
+that X variable I'm going to scroll down
+
+300
+00:04:58,450 --> 00:04:58,460
+that X variable I'm going to scroll down
+ 
+
+301
+00:04:58,460 --> 00:05:01,659
+that X variable I'm going to scroll down
+here get rid of all this X stuff I'm
+
+302
+00:05:01,659 --> 00:05:01,669
+here get rid of all this X stuff I'm
+ 
+
+303
+00:05:01,669 --> 00:05:03,580
+here get rid of all this X stuff I'm
+going to add this example class as an
+
+304
+00:05:03,580 --> 00:05:03,590
+going to add this example class as an
+ 
+
+305
+00:05:03,590 --> 00:05:06,040
+going to add this example class as an
+actual class member over here I'll call
+
+306
+00:05:06,040 --> 00:05:06,050
+actual class member over here I'll call
+ 
+
+307
+00:05:06,050 --> 00:05:08,230
+actual class member over here I'll call
+it m on this Court example to adhere to
+
+308
+00:05:08,230 --> 00:05:08,240
+it m on this Court example to adhere to
+ 
+
+309
+00:05:08,240 --> 00:05:10,180
+it m on this Court example to adhere to
+my convention so this is it that's the
+
+310
+00:05:10,180 --> 00:05:10,190
+my convention so this is it that's the
+ 
+
+311
+00:05:10,190 --> 00:05:11,650
+my convention so this is it that's the
+whole class it's got two constructors
+
+312
+00:05:11,650 --> 00:05:11,660
+whole class it's got two constructors
+ 
+
+313
+00:05:11,660 --> 00:05:13,600
+whole class it's got two constructors
+one which takes no parameters and one
+
+314
+00:05:13,600 --> 00:05:13,610
+one which takes no parameters and one
+ 
+
+315
+00:05:13,610 --> 00:05:15,340
+one which takes no parameters and one
+which takes this s and what I really
+
+316
+00:05:15,340 --> 00:05:15,350
+which takes this s and what I really
+ 
+
+317
+00:05:15,350 --> 00:05:17,650
+which takes this s and what I really
+want to do is in my default constructor
+
+318
+00:05:17,650 --> 00:05:17,660
+want to do is in my default constructor
+ 
+
+319
+00:05:17,660 --> 00:05:19,630
+want to do is in my default constructor
+for entity my constructor which takes no
+
+320
+00:05:19,630 --> 00:05:19,640
+for entity my constructor which takes no
+ 
+
+321
+00:05:19,640 --> 00:05:22,390
+for entity my constructor which takes no
+parameters I just want to set example
+
+322
+00:05:22,390 --> 00:05:22,400
+parameters I just want to set example
+ 
+
+323
+00:05:22,400 --> 00:05:25,180
+parameters I just want to set example
+equal to an example object that actually
+
+324
+00:05:25,180 --> 00:05:25,190
+equal to an example object that actually
+ 
+
+325
+00:05:25,190 --> 00:05:28,180
+equal to an example object that actually
+takes in 8 right so if I come down here
+
+326
+00:05:28,180 --> 00:05:28,190
+takes in 8 right so if I come down here
+ 
+
+327
+00:05:28,190 --> 00:05:29,920
+takes in 8 right so if I come down here
+and I make sure I'm actually creating
+
+328
+00:05:29,920 --> 00:05:29,930
+and I make sure I'm actually creating
+ 
+
+329
+00:05:29,930 --> 00:05:31,060
+and I make sure I'm actually creating
+this let's get rid of this other example
+
+330
+00:05:31,060 --> 00:05:31,070
+this let's get rid of this other example
+ 
+
+331
+00:05:31,070 --> 00:05:32,529
+this let's get rid of this other example
+we're going to print this and we get rid
+
+332
+00:05:32,529 --> 00:05:32,539
+we're going to print this and we get rid
+ 
+
+333
+00:05:32,539 --> 00:05:34,000
+we're going to print this and we get rid
+of the printing it get name all I'm
+
+334
+00:05:34,000 --> 00:05:34,010
+of the printing it get name all I'm
+ 
+
+335
+00:05:34,010 --> 00:05:35,800
+of the printing it get name all I'm
+doing here is just creating an instance
+
+336
+00:05:35,800 --> 00:05:35,810
+doing here is just creating an instance
+ 
+
+337
+00:05:35,810 --> 00:05:37,750
+doing here is just creating an instance
+of that entity object with this default
+
+338
+00:05:37,750 --> 00:05:37,760
+of that entity object with this default
+ 
+
+339
+00:05:37,760 --> 00:05:38,469
+of that entity object with this default
+constructor
+
+340
+00:05:38,469 --> 00:05:38,479
+constructor
+ 
+
+341
+00:05:38,479 --> 00:05:40,930
+constructor
+if I hit f5 to run my code look at that
+
+342
+00:05:40,930 --> 00:05:40,940
+if I hit f5 to run my code look at that
+ 
+
+343
+00:05:40,940 --> 00:05:43,180
+if I hit f5 to run my code look at that
+we created two entities once with the
+
+344
+00:05:43,180 --> 00:05:43,190
+we created two entities once with the
+ 
+
+345
+00:05:43,190 --> 00:05:44,920
+we created two entities once with the
+default constructor the one that takes
+
+346
+00:05:44,920 --> 00:05:44,930
+default constructor the one that takes
+ 
+
+347
+00:05:44,930 --> 00:05:46,719
+default constructor the one that takes
+no parameters and once with the
+
+348
+00:05:46,719 --> 00:05:46,729
+no parameters and once with the
+ 
+
+349
+00:05:46,729 --> 00:05:49,180
+no parameters and once with the
+constructor the techs in an integer so
+
+350
+00:05:49,180 --> 00:05:49,190
+constructor the techs in an integer so
+ 
+
+351
+00:05:49,190 --> 00:05:51,340
+constructor the techs in an integer so
+we've actually created two entities
+
+352
+00:05:51,340 --> 00:05:51,350
+we've actually created two entities
+ 
+
+353
+00:05:51,350 --> 00:05:54,250
+we've actually created two entities
+right one was created up here it's as if
+
+354
+00:05:54,250 --> 00:05:54,260
+right one was created up here it's as if
+ 
+
+355
+00:05:54,260 --> 00:05:57,490
+right one was created up here it's as if
+we wrote this like this right I mean it
+
+356
+00:05:57,490 --> 00:05:57,500
+we wrote this like this right I mean it
+ 
+
+357
+00:05:57,500 --> 00:06:00,070
+we wrote this like this right I mean it
+created an entity here why wouldn't it
+
+358
+00:06:00,070 --> 00:06:00,080
+created an entity here why wouldn't it
+ 
+
+359
+00:06:00,080 --> 00:06:01,600
+created an entity here why wouldn't it
+create an example up here just because
+
+360
+00:06:01,600 --> 00:06:01,610
+create an example up here just because
+ 
+
+361
+00:06:01,610 --> 00:06:03,490
+create an example up here just because
+it's in this kind of member region
+
+362
+00:06:03,490 --> 00:06:03,500
+it's in this kind of member region
+ 
+
+363
+00:06:03,500 --> 00:06:05,980
+it's in this kind of member region
+doesn't mean that it's not going to run
+
+364
+00:06:05,980 --> 00:06:05,990
+doesn't mean that it's not going to run
+ 
+
+365
+00:06:05,990 --> 00:06:06,309
+doesn't mean that it's not going to run
+this
+
+366
+00:06:06,309 --> 00:06:06,319
+this
+ 
+
+367
+00:06:06,319 --> 00:06:08,499
+this
+and created and then we've also created
+
+368
+00:06:08,499 --> 00:06:08,509
+and created and then we've also created
+ 
+
+369
+00:06:08,509 --> 00:06:11,529
+and created and then we've also created
+a new example instance here and assign
+
+370
+00:06:11,529 --> 00:06:11,539
+a new example instance here and assign
+ 
+
+371
+00:06:11,539 --> 00:06:12,850
+a new example instance here and assign
+it to the old one so we've thrown away
+
+372
+00:06:12,850 --> 00:06:12,860
+it to the old one so we've thrown away
+ 
+
+373
+00:06:12,860 --> 00:06:14,529
+it to the old one so we've thrown away
+the old one we've just created an
+
+374
+00:06:14,529 --> 00:06:14,539
+the old one we've just created an
+ 
+
+375
+00:06:14,539 --> 00:06:16,269
+the old one we've just created an
+example class instance throwing that
+
+376
+00:06:16,269 --> 00:06:16,279
+example class instance throwing that
+ 
+
+377
+00:06:16,279 --> 00:06:17,950
+example class instance throwing that
+away and just overwritten it with a new
+
+378
+00:06:17,950 --> 00:06:17,960
+away and just overwritten it with a new
+ 
+
+379
+00:06:17,960 --> 00:06:19,689
+away and just overwritten it with a new
+one we've created two objects instead of
+
+380
+00:06:19,689 --> 00:06:19,699
+one we've created two objects instead of
+ 
+
+381
+00:06:19,699 --> 00:06:23,079
+one we've created two objects instead of
+just one right whereas if we were to
+
+382
+00:06:23,079 --> 00:06:23,089
+just one right whereas if we were to
+ 
+
+383
+00:06:23,089 --> 00:06:25,899
+just one right whereas if we were to
+move this into the initializer list
+
+384
+00:06:25,899 --> 00:06:25,909
+move this into the initializer list
+ 
+
+385
+00:06:25,909 --> 00:06:27,999
+move this into the initializer list
+there's two options for us here we could
+
+386
+00:06:27,999 --> 00:06:28,009
+there's two options for us here we could
+ 
+
+387
+00:06:28,009 --> 00:06:29,950
+there's two options for us here we could
+either write exactly the same code as we
+
+388
+00:06:29,950 --> 00:06:29,960
+either write exactly the same code as we
+ 
+
+389
+00:06:29,960 --> 00:06:30,459
+either write exactly the same code as we
+did before
+
+390
+00:06:30,459 --> 00:06:30,469
+did before
+ 
+
+391
+00:06:30,469 --> 00:06:32,739
+did before
+like this and if I hit at five you'll
+
+392
+00:06:32,739 --> 00:06:32,749
+like this and if I hit at five you'll
+ 
+
+393
+00:06:32,749 --> 00:06:34,719
+like this and if I hit at five you'll
+see of course we just we just run the
+
+394
+00:06:34,719 --> 00:06:34,729
+see of course we just we just run the
+ 
+
+395
+00:06:34,729 --> 00:06:36,459
+see of course we just we just run the
+constructor that we want we create one
+
+396
+00:06:36,459 --> 00:06:36,469
+constructor that we want we create one
+ 
+
+397
+00:06:36,469 --> 00:06:38,619
+constructor that we want we create one
+st instance or I could even just get rid
+
+398
+00:06:38,619 --> 00:06:38,629
+st instance or I could even just get rid
+ 
+
+399
+00:06:38,629 --> 00:06:40,359
+st instance or I could even just get rid
+of this and just passing the parameters
+
+400
+00:06:40,359 --> 00:06:40,369
+of this and just passing the parameters
+ 
+
+401
+00:06:40,369 --> 00:06:42,489
+of this and just passing the parameters
+like this and just hit a file and you
+
+402
+00:06:42,489 --> 00:06:42,499
+like this and just hit a file and you
+ 
+
+403
+00:06:42,499 --> 00:06:44,139
+like this and just hit a file and you
+can see that does exactly the same thing
+
+404
+00:06:44,139 --> 00:06:44,149
+can see that does exactly the same thing
+ 
+
+405
+00:06:44,149 --> 00:06:45,850
+can see that does exactly the same thing
+so there you go that's the difference
+
+406
+00:06:45,850 --> 00:06:45,860
+so there you go that's the difference
+ 
+
+407
+00:06:45,860 --> 00:06:48,309
+so there you go that's the difference
+right you should be using member
+
+408
+00:06:48,309 --> 00:06:48,319
+right you should be using member
+ 
+
+409
+00:06:48,319 --> 00:06:50,980
+right you should be using member
+initializer lists everywhere right
+
+410
+00:06:50,980 --> 00:06:50,990
+initializer lists everywhere right
+ 
+
+411
+00:06:50,990 --> 00:06:52,869
+initializer lists everywhere right
+there's absolutely no reason not to use
+
+412
+00:06:52,869 --> 00:06:52,879
+there's absolutely no reason not to use
+ 
+
+413
+00:06:52,879 --> 00:06:54,100
+there's absolutely no reason not to use
+them if you don't like the code style
+
+414
+00:06:54,100 --> 00:06:54,110
+them if you don't like the code style
+ 
+
+415
+00:06:54,110 --> 00:06:55,899
+them if you don't like the code style
+get used to them because it's not just a
+
+416
+00:06:55,899 --> 00:06:55,909
+get used to them because it's not just a
+ 
+
+417
+00:06:55,909 --> 00:06:57,760
+get used to them because it's not just a
+matter of style it's actually there's
+
+418
+00:06:57,760 --> 00:06:57,770
+matter of style it's actually there's
+ 
+
+419
+00:06:57,770 --> 00:06:59,049
+matter of style it's actually there's
+actually a functional difference you'll
+
+420
+00:06:59,049 --> 00:06:59,059
+actually a functional difference you'll
+ 
+
+421
+00:06:59,059 --> 00:07:00,969
+actually a functional difference you'll
+be literally wasting performance if
+
+422
+00:07:00,969 --> 00:07:00,979
+be literally wasting performance if
+ 
+
+423
+00:07:00,979 --> 00:07:02,829
+be literally wasting performance if
+you're not using them of course not in
+
+424
+00:07:02,829 --> 00:07:02,839
+you're not using them of course not in
+ 
+
+425
+00:07:02,839 --> 00:07:04,389
+you're not using them of course not in
+all cases in the case of primitive types
+
+426
+00:07:04,389 --> 00:07:04,399
+all cases in the case of primitive types
+ 
+
+427
+00:07:04,399 --> 00:07:06,339
+all cases in the case of primitive types
+like integers you it wouldn't be
+
+428
+00:07:06,339 --> 00:07:06,349
+like integers you it wouldn't be
+ 
+
+429
+00:07:06,349 --> 00:07:08,109
+like integers you it wouldn't be
+initialized them until you initialize
+
+430
+00:07:08,109 --> 00:07:08,119
+initialized them until you initialize
+ 
+
+431
+00:07:08,119 --> 00:07:10,089
+initialized them until you initialize
+them yourself by assigning it but I use
+
+432
+00:07:10,089 --> 00:07:10,099
+them yourself by assigning it but I use
+ 
+
+433
+00:07:10,099 --> 00:07:11,709
+them yourself by assigning it but I use
+it everywhere I don't discriminate
+
+434
+00:07:11,709 --> 00:07:11,719
+it everywhere I don't discriminate
+ 
+
+435
+00:07:11,719 --> 00:07:13,600
+it everywhere I don't discriminate
+between primitive classes in class types
+
+436
+00:07:13,600 --> 00:07:13,610
+between primitive classes in class types
+ 
+
+437
+00:07:13,610 --> 00:07:15,279
+between primitive classes in class types
+you should just be using initialized
+
+438
+00:07:15,279 --> 00:07:15,289
+you should just be using initialized
+ 
+
+439
+00:07:15,289 --> 00:07:17,049
+you should just be using initialized
+lists like this everywhere but anyway
+
+440
+00:07:17,049 --> 00:07:17,059
+lists like this everywhere but anyway
+ 
+
+441
+00:07:17,059 --> 00:07:18,969
+lists like this everywhere but anyway
+that's gonna wrap up today's episode of
+
+442
+00:07:18,969 --> 00:07:18,979
+that's gonna wrap up today's episode of
+ 
+
+443
+00:07:18,979 --> 00:07:21,339
+that's gonna wrap up today's episode of
+my C++ series look at me saying today's
+
+444
+00:07:21,339 --> 00:07:21,349
+my C++ series look at me saying today's
+ 
+
+445
+00:07:21,349 --> 00:07:23,259
+my C++ series look at me saying today's
+episode as if this is daily now I think
+
+446
+00:07:23,259 --> 00:07:23,269
+episode as if this is daily now I think
+ 
+
+447
+00:07:23,269 --> 00:07:24,820
+episode as if this is daily now I think
+this is the third day in a row that's
+
+448
+00:07:24,820 --> 00:07:24,830
+this is the third day in a row that's
+ 
+
+449
+00:07:24,830 --> 00:07:27,100
+this is the third day in a row that's
+why I'm doing pretty well if you guys
+
+450
+00:07:27,100 --> 00:07:27,110
+why I'm doing pretty well if you guys
+ 
+
+451
+00:07:27,110 --> 00:07:29,139
+why I'm doing pretty well if you guys
+appreciate that please hit that like
+
+452
+00:07:29,139 --> 00:07:29,149
+appreciate that please hit that like
+ 
+
+453
+00:07:29,149 --> 00:07:30,579
+appreciate that please hit that like
+button if you want to support the series
+
+454
+00:07:30,579 --> 00:07:30,589
+button if you want to support the series
+ 
+
+455
+00:07:30,589 --> 00:07:32,110
+button if you want to support the series
+you can go over to patreon the concourse
+
+456
+00:07:32,110 --> 00:07:32,120
+you can go over to patreon the concourse
+ 
+
+457
+00:07:32,120 --> 00:07:33,730
+you can go over to patreon the concourse
+at rachona I've got some pretty cool
+
+458
+00:07:33,730 --> 00:07:33,740
+at rachona I've got some pretty cool
+ 
+
+459
+00:07:33,740 --> 00:07:35,649
+at rachona I've got some pretty cool
+rewards set up I'm actually kind of
+
+460
+00:07:35,649 --> 00:07:35,659
+rewards set up I'm actually kind of
+ 
+
+461
+00:07:35,659 --> 00:07:38,499
+rewards set up I'm actually kind of
+trying a bit of a discord server so
+
+462
+00:07:38,499 --> 00:07:38,509
+trying a bit of a discord server so
+ 
+
+463
+00:07:38,509 --> 00:07:40,719
+trying a bit of a discord server so
+patreon rewards include that you can
+
+464
+00:07:40,719 --> 00:07:40,729
+patreon rewards include that you can
+ 
+
+465
+00:07:40,729 --> 00:07:42,070
+patreon rewards include that you can
+also join it for free though of course
+
+466
+00:07:42,070 --> 00:07:42,080
+also join it for free though of course
+ 
+
+467
+00:07:42,080 --> 00:07:43,719
+also join it for free though of course
+link in the description below like a
+
+468
+00:07:43,719 --> 00:07:43,729
+link in the description below like a
+ 
+
+469
+00:07:43,729 --> 00:07:45,850
+link in the description below like a
+discord thing but on patreon you get
+
+470
+00:07:45,850 --> 00:07:45,860
+discord thing but on patreon you get
+ 
+
+471
+00:07:45,860 --> 00:07:48,100
+discord thing but on patreon you get
+some cool rolls on that server as well
+
+472
+00:07:48,100 --> 00:07:48,110
+some cool rolls on that server as well
+ 
+
+473
+00:07:48,110 --> 00:07:50,649
+some cool rolls on that server as well
+as access to some of these videos early
+
+474
+00:07:50,649 --> 00:07:50,659
+as access to some of these videos early
+ 
+
+475
+00:07:50,659 --> 00:07:52,719
+as access to some of these videos early
+when they happen to be ready early
+
+476
+00:07:52,719 --> 00:07:52,729
+when they happen to be ready early
+ 
+
+477
+00:07:52,729 --> 00:07:56,049
+when they happen to be ready early
+because sometimes that just not but for
+
+478
+00:07:56,049 --> 00:07:56,059
+because sometimes that just not but for
+ 
+
+479
+00:07:56,059 --> 00:07:57,699
+because sometimes that just not but for
+those times they are available to you as
+
+480
+00:07:57,699 --> 00:07:57,709
+those times they are available to you as
+ 
+
+481
+00:07:57,709 --> 00:07:59,279
+those times they are available to you as
+soon as I basically finish editing them
+
+482
+00:07:59,279 --> 00:07:59,289
+soon as I basically finish editing them
+ 
+
+483
+00:07:59,289 --> 00:08:02,460
+soon as I basically finish editing them
+as well as like a
+
+484
+00:08:02,460 --> 00:08:02,470
+as well as like a
+ 
+
+485
+00:08:02,470 --> 00:08:04,860
+as well as like a
+we've got like a private discord / slack
+
+486
+00:08:04,860 --> 00:08:04,870
+we've got like a private discord / slack
+ 
+
+487
+00:08:04,870 --> 00:08:07,340
+we've got like a private discord / slack
+kind of group in which we can talk about
+
+488
+00:08:07,340 --> 00:08:07,350
+kind of group in which we can talk about
+ 
+
+489
+00:08:07,350 --> 00:08:10,500
+kind of group in which we can talk about
+save us bus stop external just directly
+
+490
+00:08:10,500 --> 00:08:10,510
+save us bus stop external just directly
+ 
+
+491
+00:08:10,510 --> 00:08:12,120
+save us bus stop external just directly
+as well as as well as you guys can
+
+492
+00:08:12,120 --> 00:08:12,130
+as well as as well as you guys can
+ 
+
+493
+00:08:12,130 --> 00:08:14,340
+as well as as well as you guys can
+suggest new topics and videos for me to
+
+494
+00:08:14,340 --> 00:08:14,350
+suggest new topics and videos for me to
+ 
+
+495
+00:08:14,350 --> 00:08:15,840
+suggest new topics and videos for me to
+make and that's what I usually do like
+
+496
+00:08:15,840 --> 00:08:15,850
+make and that's what I usually do like
+ 
+
+497
+00:08:15,850 --> 00:08:17,910
+make and that's what I usually do like
+this one here so I'll see you guys next
+
+498
+00:08:17,910 --> 00:08:17,920
+this one here so I'll see you guys next
+ 
+
+499
+00:08:17,920 --> 00:08:19,990
+this one here so I'll see you guys next
+time good bye
+
+500
+00:08:19,990 --> 00:08:20,000
+time good bye
+ 
+
+501
+00:08:20,000 --> 00:08:28,510
+time good bye
+[Music]
+
+502
+00:08:28,510 --> 00:08:28,520
+
+ 
+
+503
+00:08:28,520 --> 00:08:35,549
+
+[Music]
+

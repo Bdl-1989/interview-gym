@@ -1,0 +1,3155 @@
+1
+00:00:00,000 --> 00:00:01,640
+
+hey what's up guys my name is a China
+
+2
+00:00:01,640 --> 00:00:01,650
+hey what's up guys my name is a China
+ 
+
+3
+00:00:01,650 --> 00:00:04,579
+hey what's up guys my name is a China
+welcome back to my c++ series so today
+
+4
+00:00:04,579 --> 00:00:04,589
+welcome back to my c++ series so today
+ 
+
+5
+00:00:04,589 --> 00:00:06,019
+welcome back to my c++ series so today
+we're gonna be talking all about timing
+
+6
+00:00:06,019 --> 00:00:06,029
+we're gonna be talking all about timing
+ 
+
+7
+00:00:06,029 --> 00:00:08,360
+we're gonna be talking all about timing
+so how do we time how long it takes for
+
+8
+00:00:08,360 --> 00:00:08,370
+so how do we time how long it takes for
+ 
+
+9
+00:00:08,370 --> 00:00:10,310
+so how do we time how long it takes for
+us to complete a certain operation or
+
+10
+00:00:10,310 --> 00:00:10,320
+us to complete a certain operation or
+ 
+
+11
+00:00:10,320 --> 00:00:12,440
+us to complete a certain operation or
+execute certain code that is what
+
+12
+00:00:12,440 --> 00:00:12,450
+execute certain code that is what
+ 
+
+13
+00:00:12,450 --> 00:00:14,240
+execute certain code that is what
+today's we are going to be about now
+
+14
+00:00:14,240 --> 00:00:14,250
+today's we are going to be about now
+ 
+
+15
+00:00:14,250 --> 00:00:17,300
+today's we are going to be about now
+timing is useful for so many things
+
+16
+00:00:17,300 --> 00:00:17,310
+timing is useful for so many things
+ 
+
+17
+00:00:17,310 --> 00:00:18,769
+timing is useful for so many things
+whether or not you want something to
+
+18
+00:00:18,769 --> 00:00:18,779
+whether or not you want something to
+ 
+
+19
+00:00:18,779 --> 00:00:21,080
+whether or not you want something to
+happen at a certain time or if you're
+
+20
+00:00:21,080 --> 00:00:21,090
+happen at a certain time or if you're
+ 
+
+21
+00:00:21,090 --> 00:00:22,220
+happen at a certain time or if you're
+just kind of evaluating your performance
+
+22
+00:00:22,220 --> 00:00:22,230
+just kind of evaluating your performance
+ 
+
+23
+00:00:22,230 --> 00:00:24,290
+just kind of evaluating your performance
+or benchmarking and seeing how fast your
+
+24
+00:00:24,290 --> 00:00:24,300
+or benchmarking and seeing how fast your
+ 
+
+25
+00:00:24,300 --> 00:00:27,800
+or benchmarking and seeing how fast your
+code runs you need to know how much time
+
+26
+00:00:27,800 --> 00:00:27,810
+code runs you need to know how much time
+ 
+
+27
+00:00:27,810 --> 00:00:29,660
+code runs you need to know how much time
+passes while you up while your
+
+28
+00:00:29,660 --> 00:00:29,670
+passes while you up while your
+ 
+
+29
+00:00:29,670 --> 00:00:31,910
+passes while you up while your
+application is actually running there
+
+30
+00:00:31,910 --> 00:00:31,920
+application is actually running there
+ 
+
+31
+00:00:31,920 --> 00:00:33,860
+application is actually running there
+are several ways to achieve this since
+
+32
+00:00:33,860 --> 00:00:33,870
+are several ways to achieve this since
+ 
+
+33
+00:00:33,870 --> 00:00:36,200
+are several ways to achieve this since
+C++ 11 we have something called Chronos
+
+34
+00:00:36,200 --> 00:00:36,210
+C++ 11 we have something called Chronos
+ 
+
+35
+00:00:36,210 --> 00:00:37,970
+C++ 11 we have something called Chronos
+essentially say it's essentially part of
+
+36
+00:00:37,970 --> 00:00:37,980
+essentially say it's essentially part of
+ 
+
+37
+00:00:37,980 --> 00:00:41,090
+essentially say it's essentially part of
+the library that is becomes with C++ and
+
+38
+00:00:41,090 --> 00:00:41,100
+the library that is becomes with C++ and
+ 
+
+39
+00:00:41,100 --> 00:00:42,560
+the library that is becomes with C++ and
+it's not something that we actually have
+
+40
+00:00:42,560 --> 00:00:42,570
+it's not something that we actually have
+ 
+
+41
+00:00:42,570 --> 00:00:44,540
+it's not something that we actually have
+to go to the operating system library to
+
+42
+00:00:44,540 --> 00:00:44,550
+to go to the operating system library to
+ 
+
+43
+00:00:44,550 --> 00:00:47,420
+to go to the operating system library to
+actually do before if you wanted a high
+
+44
+00:00:47,420 --> 00:00:47,430
+actually do before if you wanted a high
+ 
+
+45
+00:00:47,430 --> 00:00:49,100
+actually do before if you wanted a high
+resolution time on meaning you wanted a
+
+46
+00:00:49,100 --> 00:00:49,110
+resolution time on meaning you wanted a
+ 
+
+47
+00:00:49,110 --> 00:00:51,170
+resolution time on meaning you wanted a
+very very precise timer you need to
+
+48
+00:00:51,170 --> 00:00:51,180
+very very precise timer you need to
+ 
+
+49
+00:00:51,180 --> 00:00:52,970
+very very precise timer you need to
+actually use the operating systems
+
+50
+00:00:52,970 --> 00:00:52,980
+actually use the operating systems
+ 
+
+51
+00:00:52,980 --> 00:00:55,069
+actually use the operating systems
+library so in Windows for example we
+
+52
+00:00:55,069 --> 00:00:55,079
+library so in Windows for example we
+ 
+
+53
+00:00:55,079 --> 00:00:56,330
+library so in Windows for example we
+have something called query performance
+
+54
+00:00:56,330 --> 00:00:56,340
+have something called query performance
+ 
+
+55
+00:00:56,340 --> 00:00:58,819
+have something called query performance
+counter we can still use that stuff and
+
+56
+00:00:58,819 --> 00:00:58,829
+counter we can still use that stuff and
+ 
+
+57
+00:00:58,829 --> 00:01:00,229
+counter we can still use that stuff and
+in fact if you want a little bit more
+
+58
+00:01:00,229 --> 00:01:00,239
+in fact if you want a little bit more
+ 
+
+59
+00:01:00,239 --> 00:01:02,930
+in fact if you want a little bit more
+control of how you actually access that
+
+60
+00:01:02,930 --> 00:01:02,940
+control of how you actually access that
+ 
+
+61
+00:01:02,940 --> 00:01:06,109
+control of how you actually access that
+timing capability of your CPU then you
+
+62
+00:01:06,109 --> 00:01:06,119
+timing capability of your CPU then you
+ 
+
+63
+00:01:06,119 --> 00:01:07,820
+timing capability of your CPU then you
+probably do want to use the platform
+
+64
+00:01:07,820 --> 00:01:07,830
+probably do want to use the platform
+ 
+
+65
+00:01:07,830 --> 00:01:10,520
+probably do want to use the platform
+specific libraries however today we're
+
+66
+00:01:10,520 --> 00:01:10,530
+specific libraries however today we're
+ 
+
+67
+00:01:10,530 --> 00:01:12,020
+specific libraries however today we're
+just going to be taking a look at the
+
+68
+00:01:12,020 --> 00:01:12,030
+just going to be taking a look at the
+ 
+
+69
+00:01:12,030 --> 00:01:14,420
+just going to be taking a look at the
+kind of platform-independent c++
+
+70
+00:01:14,420 --> 00:01:14,430
+kind of platform-independent c++
+ 
+
+71
+00:01:14,430 --> 00:01:16,580
+kind of platform-independent c++
+standard library way of figuring out how
+
+72
+00:01:16,580 --> 00:01:16,590
+standard library way of figuring out how
+ 
+
+73
+00:01:16,590 --> 00:01:19,850
+standard library way of figuring out how
+long or how much time passes between our
+
+74
+00:01:19,850 --> 00:01:19,860
+long or how much time passes between our
+ 
+
+75
+00:01:19,860 --> 00:01:21,890
+long or how much time passes between our
+lines of code as they get executed and
+
+76
+00:01:21,890 --> 00:01:21,900
+lines of code as they get executed and
+ 
+
+77
+00:01:21,900 --> 00:01:24,320
+lines of code as they get executed and
+that is part of the chrono library now
+
+78
+00:01:24,320 --> 00:01:24,330
+that is part of the chrono library now
+ 
+
+79
+00:01:24,330 --> 00:01:27,649
+that is part of the chrono library now
+I've linked a link in the description
+
+80
+00:01:27,649 --> 00:01:27,659
+I've linked a link in the description
+ 
+
+81
+00:01:27,659 --> 00:01:30,499
+I've linked a link in the description
+below to the actual cpp reference for
+
+82
+00:01:30,499 --> 00:01:30,509
+below to the actual cpp reference for
+ 
+
+83
+00:01:30,509 --> 00:01:34,010
+below to the actual cpp reference for
+this chrono kind of API I'm going to
+
+84
+00:01:34,010 --> 00:01:34,020
+this chrono kind of API I'm going to
+ 
+
+85
+00:01:34,020 --> 00:01:35,390
+this chrono kind of API I'm going to
+show you a very simple way of how we can
+
+86
+00:01:35,390 --> 00:01:35,400
+show you a very simple way of how we can
+ 
+
+87
+00:01:35,400 --> 00:01:37,100
+show you a very simple way of how we can
+set it up and start using it here so
+
+88
+00:01:37,100 --> 00:01:37,110
+set it up and start using it here so
+ 
+
+89
+00:01:37,110 --> 00:01:38,480
+set it up and start using it here so
+that we can figure out how long it takes
+
+90
+00:01:38,480 --> 00:01:38,490
+that we can figure out how long it takes
+ 
+
+91
+00:01:38,490 --> 00:01:40,999
+that we can figure out how long it takes
+us to run certain code and I'll probably
+
+92
+00:01:40,999 --> 00:01:41,009
+us to run certain code and I'll probably
+ 
+
+93
+00:01:41,009 --> 00:01:43,160
+us to run certain code and I'll probably
+also show you one way in which it can be
+
+94
+00:01:43,160 --> 00:01:43,170
+also show you one way in which it can be
+ 
+
+95
+00:01:43,170 --> 00:01:45,319
+also show you one way in which it can be
+useful now this whole video is going to
+
+96
+00:01:45,319 --> 00:01:45,329
+useful now this whole video is going to
+ 
+
+97
+00:01:45,329 --> 00:01:46,520
+useful now this whole video is going to
+be important for the future of this
+
+98
+00:01:46,520 --> 00:01:46,530
+be important for the future of this
+ 
+
+99
+00:01:46,530 --> 00:01:48,380
+be important for the future of this
+series because as we start integrating
+
+100
+00:01:48,380 --> 00:01:48,390
+series because as we start integrating
+ 
+
+101
+00:01:48,390 --> 00:01:50,810
+series because as we start integrating
+more kind of complex features and I
+
+102
+00:01:50,810 --> 00:01:50,820
+more kind of complex features and I
+ 
+
+103
+00:01:50,820 --> 00:01:52,520
+more kind of complex features and I
+start talking more and more about how to
+
+104
+00:01:52,520 --> 00:01:52,530
+start talking more and more about how to
+ 
+
+105
+00:01:52,530 --> 00:01:55,580
+start talking more and more about how to
+do things properly and how to write good
+
+106
+00:01:55,580 --> 00:01:55,590
+do things properly and how to write good
+ 
+
+107
+00:01:55,590 --> 00:01:58,340
+do things properly and how to write good
+performing code we're going to be using
+
+108
+00:01:58,340 --> 00:01:58,350
+performing code we're going to be using
+ 
+
+109
+00:01:58,350 --> 00:02:01,910
+performing code we're going to be using
+timing to see that difference so if I
+
+110
+00:02:01,910 --> 00:02:01,920
+timing to see that difference so if I
+ 
+
+111
+00:02:01,920 --> 00:02:04,010
+timing to see that difference so if I
+show you a kind of slow way of doing
+
+112
+00:02:04,010 --> 00:02:04,020
+show you a kind of slow way of doing
+ 
+
+113
+00:02:04,020 --> 00:02:06,020
+show you a kind of slow way of doing
+things and then I say well actually it
+
+114
+00:02:06,020 --> 00:02:06,030
+things and then I say well actually it
+ 
+
+115
+00:02:06,030 --> 00:02:07,190
+things and then I say well actually it
+would be better if we did it this way
+
+116
+00:02:07,190 --> 00:02:07,200
+would be better if we did it this way
+ 
+
+117
+00:02:07,200 --> 00:02:09,619
+would be better if we did it this way
+you'll be able to actually see the
+
+118
+00:02:09,619 --> 00:02:09,629
+you'll be able to actually see the
+ 
+
+119
+00:02:09,629 --> 00:02:11,479
+you'll be able to actually see the
+difference in terms of how long it takes
+
+120
+00:02:11,479 --> 00:02:11,489
+difference in terms of how long it takes
+ 
+
+121
+00:02:11,489 --> 00:02:11,800
+difference in terms of how long it takes
+to
+
+122
+00:02:11,800 --> 00:02:11,810
+to
+ 
+
+123
+00:02:11,810 --> 00:02:13,809
+to
+actually run that code so this is very
+
+124
+00:02:13,809 --> 00:02:13,819
+actually run that code so this is very
+ 
+
+125
+00:02:13,819 --> 00:02:16,150
+actually run that code so this is very
+important from this will probably branch
+
+126
+00:02:16,150 --> 00:02:16,160
+important from this will probably branch
+ 
+
+127
+00:02:16,160 --> 00:02:17,710
+important from this will probably branch
+into benchmarking and I'll talk more
+
+128
+00:02:17,710 --> 00:02:17,720
+into benchmarking and I'll talk more
+ 
+
+129
+00:02:17,720 --> 00:02:19,690
+into benchmarking and I'll talk more
+about benchmarking in another video and
+
+130
+00:02:19,690 --> 00:02:19,700
+about benchmarking in another video and
+ 
+
+131
+00:02:19,700 --> 00:02:21,820
+about benchmarking in another video and
+we can set up some kind of API so that
+
+132
+00:02:21,820 --> 00:02:21,830
+we can set up some kind of API so that
+ 
+
+133
+00:02:21,830 --> 00:02:23,170
+we can set up some kind of API so that
+we can time how long it takes to
+
+134
+00:02:23,170 --> 00:02:23,180
+we can time how long it takes to
+ 
+
+135
+00:02:23,180 --> 00:02:25,690
+we can time how long it takes to
+complete functions and arbitrary scopes
+
+136
+00:02:25,690 --> 00:02:25,700
+complete functions and arbitrary scopes
+ 
+
+137
+00:02:25,700 --> 00:02:28,509
+complete functions and arbitrary scopes
+code probably as well so yeah pay
+
+138
+00:02:28,509 --> 00:02:28,519
+code probably as well so yeah pay
+ 
+
+139
+00:02:28,519 --> 00:02:30,040
+code probably as well so yeah pay
+attention to this video let's jump right
+
+140
+00:02:30,040 --> 00:02:30,050
+attention to this video let's jump right
+ 
+
+141
+00:02:30,050 --> 00:02:31,780
+attention to this video let's jump right
+into it and learn how we can time a
+
+142
+00:02:31,780 --> 00:02:31,790
+into it and learn how we can time a
+ 
+
+143
+00:02:31,790 --> 00:02:33,130
+into it and learn how we can time a
+curve so the first thing I'm going to do
+
+144
+00:02:33,130 --> 00:02:33,140
+curve so the first thing I'm going to do
+ 
+
+145
+00:02:33,140 --> 00:02:35,410
+curve so the first thing I'm going to do
+here is include Krona this contains
+
+146
+00:02:35,410 --> 00:02:35,420
+here is include Krona this contains
+ 
+
+147
+00:02:35,420 --> 00:02:36,820
+here is include Krona this contains
+pretty much everything we need I'm also
+
+148
+00:02:36,820 --> 00:02:36,830
+pretty much everything we need I'm also
+ 
+
+149
+00:02:36,830 --> 00:02:38,170
+pretty much everything we need I'm also
+going to include thread because we'll do
+
+150
+00:02:38,170 --> 00:02:38,180
+going to include thread because we'll do
+ 
+
+151
+00:02:38,180 --> 00:02:39,460
+going to include thread because we'll do
+some stuff with that in a minute as well
+
+152
+00:02:39,460 --> 00:02:39,470
+some stuff with that in a minute as well
+ 
+
+153
+00:02:39,470 --> 00:02:42,280
+some stuff with that in a minute as well
+so from chrono it's very very simple to
+
+154
+00:02:42,280 --> 00:02:42,290
+so from chrono it's very very simple to
+ 
+
+155
+00:02:42,290 --> 00:02:44,259
+so from chrono it's very very simple to
+actually use that library and figure out
+
+156
+00:02:44,259 --> 00:02:44,269
+actually use that library and figure out
+ 
+
+157
+00:02:44,269 --> 00:02:45,580
+actually use that library and figure out
+what the current time is we can just
+
+158
+00:02:45,580 --> 00:02:45,590
+what the current time is we can just
+ 
+
+159
+00:02:45,590 --> 00:02:48,610
+what the current time is we can just
+type in STD chrono high resolution clock
+
+160
+00:02:48,610 --> 00:02:48,620
+type in STD chrono high resolution clock
+ 
+
+161
+00:02:48,620 --> 00:02:51,580
+type in STD chrono high resolution clock
+and then now this is what actually gives
+
+162
+00:02:51,580 --> 00:02:51,590
+and then now this is what actually gives
+ 
+
+163
+00:02:51,590 --> 00:02:54,220
+and then now this is what actually gives
+us the current time if you hover over
+
+164
+00:02:54,220 --> 00:02:54,230
+us the current time if you hover over
+ 
+
+165
+00:02:54,230 --> 00:02:56,050
+us the current time if you hover over
+this you can see it returns a time point
+
+166
+00:02:56,050 --> 00:02:56,060
+this you can see it returns a time point
+ 
+
+167
+00:02:56,060 --> 00:02:57,580
+this you can see it returns a time point
+of SUV current sit o'clock it's quite a
+
+168
+00:02:57,580 --> 00:02:57,590
+of SUV current sit o'clock it's quite a
+ 
+
+169
+00:02:57,590 --> 00:02:59,589
+of SUV current sit o'clock it's quite a
+long type which is why I'm just going to
+
+170
+00:02:59,589 --> 00:02:59,599
+long type which is why I'm just going to
+ 
+
+171
+00:02:59,599 --> 00:03:01,570
+long type which is why I'm just going to
+use order and kind of label this as the
+
+172
+00:03:01,570 --> 00:03:01,580
+use order and kind of label this as the
+ 
+
+173
+00:03:01,580 --> 00:03:03,370
+use order and kind of label this as the
+starting time we're then going to
+
+174
+00:03:03,370 --> 00:03:03,380
+starting time we're then going to
+ 
+
+175
+00:03:03,380 --> 00:03:05,800
+starting time we're then going to
+execute some kind of code here what I'm
+
+176
+00:03:05,800 --> 00:03:05,810
+execute some kind of code here what I'm
+ 
+
+177
+00:03:05,810 --> 00:03:07,120
+execute some kind of code here what I'm
+going to do for now because I don't
+
+178
+00:03:07,120 --> 00:03:07,130
+going to do for now because I don't
+ 
+
+179
+00:03:07,130 --> 00:03:08,620
+going to do for now because I don't
+actually have any other code to execute
+
+180
+00:03:08,620 --> 00:03:08,630
+actually have any other code to execute
+ 
+
+181
+00:03:08,630 --> 00:03:10,780
+actually have any other code to execute
+of the week and time I'm just going to
+
+182
+00:03:10,780 --> 00:03:10,790
+of the week and time I'm just going to
+ 
+
+183
+00:03:10,790 --> 00:03:14,470
+of the week and time I'm just going to
+write sed this thread sleep for and then
+
+184
+00:03:14,470 --> 00:03:14,480
+write sed this thread sleep for and then
+ 
+
+185
+00:03:14,480 --> 00:03:16,509
+write sed this thread sleep for and then
+we'll just write 1s for one second and
+
+186
+00:03:16,509 --> 00:03:16,519
+we'll just write 1s for one second and
+ 
+
+187
+00:03:16,519 --> 00:03:18,220
+we'll just write 1s for one second and
+to get that will actually have to use a
+
+188
+00:03:18,220 --> 00:03:18,230
+to get that will actually have to use a
+ 
+
+189
+00:03:18,230 --> 00:03:23,110
+to get that will actually have to use a
+namespace STD literals and chrono
+
+190
+00:03:23,110 --> 00:03:23,120
+namespace STD literals and chrono
+ 
+
+191
+00:03:23,120 --> 00:03:26,470
+namespace STD literals and chrono
+literals to get that s there okay cool
+
+192
+00:03:26,470 --> 00:03:26,480
+literals to get that s there okay cool
+ 
+
+193
+00:03:26,480 --> 00:03:28,090
+literals to get that s there okay cool
+so basically what we're doing now is
+
+194
+00:03:28,090 --> 00:03:28,100
+so basically what we're doing now is
+ 
+
+195
+00:03:28,100 --> 00:03:29,470
+so basically what we're doing now is
+we're telling this thread this current
+
+196
+00:03:29,470 --> 00:03:29,480
+we're telling this thread this current
+ 
+
+197
+00:03:29,480 --> 00:03:31,330
+we're telling this thread this current
+thread to sleep for one second so we're
+
+198
+00:03:31,330 --> 00:03:31,340
+thread to sleep for one second so we're
+ 
+
+199
+00:03:31,340 --> 00:03:32,710
+thread to sleep for one second so we're
+saying just kind of pauses pause
+
+200
+00:03:32,710 --> 00:03:32,720
+saying just kind of pauses pause
+ 
+
+201
+00:03:32,720 --> 00:03:36,190
+saying just kind of pauses pause
+execution for one second so obviously by
+
+202
+00:03:36,190 --> 00:03:36,200
+execution for one second so obviously by
+ 
+
+203
+00:03:36,200 --> 00:03:38,080
+execution for one second so obviously by
+writing this code when we have our start
+
+204
+00:03:38,080 --> 00:03:38,090
+writing this code when we have our start
+ 
+
+205
+00:03:38,090 --> 00:03:40,449
+writing this code when we have our start
+and our end timing we should see it be
+
+206
+00:03:40,449 --> 00:03:40,459
+and our end timing we should see it be
+ 
+
+207
+00:03:40,459 --> 00:03:42,400
+and our end timing we should see it be
+around one second probably won't be
+
+208
+00:03:42,400 --> 00:03:42,410
+around one second probably won't be
+ 
+
+209
+00:03:42,410 --> 00:03:44,470
+around one second probably won't be
+exactly one second because first of all
+
+210
+00:03:44,470 --> 00:03:44,480
+exactly one second because first of all
+ 
+
+211
+00:03:44,480 --> 00:03:46,809
+exactly one second because first of all
+thread sleeps are not guaranteed to be
+
+212
+00:03:46,809 --> 00:03:46,819
+thread sleeps are not guaranteed to be
+ 
+
+213
+00:03:46,819 --> 00:03:49,090
+thread sleeps are not guaranteed to be
+exactly how much you tell it to sleep
+
+214
+00:03:49,090 --> 00:03:49,100
+exactly how much you tell it to sleep
+ 
+
+215
+00:03:49,100 --> 00:03:50,920
+exactly how much you tell it to sleep
+for but also they'll be overhead from
+
+216
+00:03:50,920 --> 00:03:50,930
+for but also they'll be overhead from
+ 
+
+217
+00:03:50,930 --> 00:03:53,590
+for but also they'll be overhead from
+the actual timing so if we get back into
+
+218
+00:03:53,590 --> 00:03:53,600
+the actual timing so if we get back into
+ 
+
+219
+00:03:53,600 --> 00:03:55,900
+the actual timing so if we get back into
+this I'll right order end and this will
+
+220
+00:03:55,900 --> 00:03:55,910
+this I'll right order end and this will
+ 
+
+221
+00:03:55,910 --> 00:03:58,030
+this I'll right order end and this will
+be exactly the same as this start code
+
+222
+00:03:58,030 --> 00:03:58,040
+be exactly the same as this start code
+ 
+
+223
+00:03:58,040 --> 00:03:59,559
+be exactly the same as this start code
+here and finally we want to figure out
+
+224
+00:03:59,559 --> 00:03:59,569
+here and finally we want to figure out
+ 
+
+225
+00:03:59,569 --> 00:04:01,569
+here and finally we want to figure out
+the actual duration so I'll write SVD
+
+226
+00:04:01,569 --> 00:04:01,579
+the actual duration so I'll write SVD
+ 
+
+227
+00:04:01,579 --> 00:04:04,509
+the actual duration so I'll write SVD
+chrono duration well we can just get
+
+228
+00:04:04,509 --> 00:04:04,519
+chrono duration well we can just get
+ 
+
+229
+00:04:04,519 --> 00:04:06,039
+chrono duration well we can just get
+this in floats that'll be high enough
+
+230
+00:04:06,039 --> 00:04:06,049
+this in floats that'll be high enough
+ 
+
+231
+00:04:06,049 --> 00:04:07,840
+this in floats that'll be high enough
+resolution for us I'll call this
+
+232
+00:04:07,840 --> 00:04:07,850
+resolution for us I'll call this
+ 
+
+233
+00:04:07,850 --> 00:04:10,479
+resolution for us I'll call this
+duration and it will just be end minus
+
+234
+00:04:10,479 --> 00:04:10,489
+duration and it will just be end minus
+ 
+
+235
+00:04:10,489 --> 00:04:12,309
+duration and it will just be end minus
+start just like that we could have used
+
+236
+00:04:12,309 --> 00:04:12,319
+start just like that we could have used
+ 
+
+237
+00:04:12,319 --> 00:04:14,050
+start just like that we could have used
+order here as well but this type isn't
+
+238
+00:04:14,050 --> 00:04:14,060
+order here as well but this type isn't
+ 
+
+239
+00:04:14,060 --> 00:04:15,520
+order here as well but this type isn't
+quite as long so it's fine to write down
+
+240
+00:04:15,520 --> 00:04:15,530
+quite as long so it's fine to write down
+ 
+
+241
+00:04:15,530 --> 00:04:17,920
+quite as long so it's fine to write down
+and finally I'm just going to see out
+
+242
+00:04:17,920 --> 00:04:17,930
+and finally I'm just going to see out
+ 
+
+243
+00:04:17,930 --> 00:04:19,509
+and finally I'm just going to see out
+that into the console direction don't
+
+244
+00:04:19,509 --> 00:04:19,519
+that into the console direction don't
+ 
+
+245
+00:04:19,519 --> 00:04:21,789
+that into the console direction don't
+count and
+
+246
+00:04:21,789 --> 00:04:21,799
+count and
+ 
+
+247
+00:04:21,799 --> 00:04:23,860
+count and
+and this will be in seconds I'll just
+
+248
+00:04:23,860 --> 00:04:23,870
+and this will be in seconds I'll just
+ 
+
+249
+00:04:23,870 --> 00:04:26,499
+and this will be in seconds I'll just
+add s to the end of that so that's clear
+
+250
+00:04:26,499 --> 00:04:26,509
+add s to the end of that so that's clear
+ 
+
+251
+00:04:26,509 --> 00:04:28,990
+add s to the end of that so that's clear
+if I hit f5 you can see the number we
+
+252
+00:04:28,990 --> 00:04:29,000
+if I hit f5 you can see the number we
+ 
+
+253
+00:04:29,000 --> 00:04:30,730
+if I hit f5 you can see the number we
+get here is pretty much around one
+
+254
+00:04:30,730 --> 00:04:30,740
+get here is pretty much around one
+ 
+
+255
+00:04:30,740 --> 00:04:32,710
+get here is pretty much around one
+second so that's it what I just showed
+
+256
+00:04:32,710 --> 00:04:32,720
+second so that's it what I just showed
+ 
+
+257
+00:04:32,720 --> 00:04:34,510
+second so that's it what I just showed
+you is a platform-independent way of
+
+258
+00:04:34,510 --> 00:04:34,520
+you is a platform-independent way of
+ 
+
+259
+00:04:34,520 --> 00:04:35,950
+you is a platform-independent way of
+actually figuring out how long something
+
+260
+00:04:35,950 --> 00:04:35,960
+actually figuring out how long something
+ 
+
+261
+00:04:35,960 --> 00:04:38,230
+actually figuring out how long something
+takes or how much time passes or getting
+
+262
+00:04:38,230 --> 00:04:38,240
+takes or how much time passes or getting
+ 
+
+263
+00:04:38,240 --> 00:04:39,760
+takes or how much time passes or getting
+the current time and all that this
+
+264
+00:04:39,760 --> 00:04:39,770
+the current time and all that this
+ 
+
+265
+00:04:39,770 --> 00:04:41,379
+the current time and all that this
+kernel library is fantastic it's very
+
+266
+00:04:41,379 --> 00:04:41,389
+kernel library is fantastic it's very
+ 
+
+267
+00:04:41,389 --> 00:04:43,180
+kernel library is fantastic it's very
+high resolution timing and it works on
+
+268
+00:04:43,180 --> 00:04:43,190
+high resolution timing and it works on
+ 
+
+269
+00:04:43,190 --> 00:04:45,129
+high resolution timing and it works on
+pretty much all platforms so really I
+
+270
+00:04:45,129 --> 00:04:45,139
+pretty much all platforms so really I
+ 
+
+271
+00:04:45,139 --> 00:04:46,390
+pretty much all platforms so really I
+recommend that you use this for all of
+
+272
+00:04:46,390 --> 00:04:46,400
+recommend that you use this for all of
+ 
+
+273
+00:04:46,400 --> 00:04:47,740
+recommend that you use this for all of
+your timing needs unless you're
+
+274
+00:04:47,740 --> 00:04:47,750
+your timing needs unless you're
+ 
+
+275
+00:04:47,750 --> 00:04:48,879
+your timing needs unless you're
+specifically doing some kind of
+
+276
+00:04:48,879 --> 00:04:48,889
+specifically doing some kind of
+ 
+
+277
+00:04:48,889 --> 00:04:50,200
+specifically doing some kind of
+low-level things so you want to reduce
+
+278
+00:04:50,200 --> 00:04:50,210
+low-level things so you want to reduce
+ 
+
+279
+00:04:50,210 --> 00:04:52,330
+low-level things so you want to reduce
+overhead even more if you're running a
+
+280
+00:04:52,330 --> 00:04:52,340
+overhead even more if you're running a
+ 
+
+281
+00:04:52,340 --> 00:04:53,770
+overhead even more if you're running a
+huge game engine or some kind of cool
+
+282
+00:04:53,770 --> 00:04:53,780
+huge game engine or some kind of cool
+ 
+
+283
+00:04:53,780 --> 00:04:55,210
+huge game engine or some kind of cool
+library you might want to use the
+
+284
+00:04:55,210 --> 00:04:55,220
+library you might want to use the
+ 
+
+285
+00:04:55,220 --> 00:04:57,100
+library you might want to use the
+platform independent I'm sorry the
+
+286
+00:04:57,100 --> 00:04:57,110
+platform independent I'm sorry the
+ 
+
+287
+00:04:57,110 --> 00:04:59,559
+platform independent I'm sorry the
+platform specific library such as the
+
+288
+00:04:59,559 --> 00:04:59,569
+platform specific library such as the
+ 
+
+289
+00:04:59,569 --> 00:05:01,300
+platform specific library such as the
+win32 api with the query performance
+
+290
+00:05:01,300 --> 00:05:01,310
+win32 api with the query performance
+ 
+
+291
+00:05:01,310 --> 00:05:03,100
+win32 api with the query performance
+counter and stuff we might look into
+
+292
+00:05:03,100 --> 00:05:03,110
+counter and stuff we might look into
+ 
+
+293
+00:05:03,110 --> 00:05:04,930
+counter and stuff we might look into
+that in the future but really there's
+
+294
+00:05:04,930 --> 00:05:04,940
+that in the future but really there's
+ 
+
+295
+00:05:04,940 --> 00:05:07,390
+that in the future but really there's
+pretty much no need for 99% of cases
+
+296
+00:05:07,390 --> 00:05:07,400
+pretty much no need for 99% of cases
+ 
+
+297
+00:05:07,400 --> 00:05:10,270
+pretty much no need for 99% of cases
+just use STD kroehner now if we dive
+
+298
+00:05:10,270 --> 00:05:10,280
+just use STD kroehner now if we dive
+ 
+
+299
+00:05:10,280 --> 00:05:11,770
+just use STD kroehner now if we dive
+back into this I'm going to show you a
+
+300
+00:05:11,770 --> 00:05:11,780
+back into this I'm going to show you a
+ 
+
+301
+00:05:11,780 --> 00:05:13,300
+back into this I'm going to show you a
+bit of a smarter way of actually dealing
+
+302
+00:05:13,300 --> 00:05:13,310
+bit of a smarter way of actually dealing
+ 
+
+303
+00:05:13,310 --> 00:05:14,680
+bit of a smarter way of actually dealing
+with this because you can see that this
+
+304
+00:05:14,680 --> 00:05:14,690
+with this because you can see that this
+ 
+
+305
+00:05:14,690 --> 00:05:16,480
+with this because you can see that this
+is quite a lot of code that we have to
+
+306
+00:05:16,480 --> 00:05:16,490
+is quite a lot of code that we have to
+ 
+
+307
+00:05:16,490 --> 00:05:18,610
+is quite a lot of code that we have to
+run so support suppose that we have a
+
+308
+00:05:18,610 --> 00:05:18,620
+run so support suppose that we have a
+ 
+
+309
+00:05:18,620 --> 00:05:21,309
+run so support suppose that we have a
+function I'll call it function and it
+
+310
+00:05:21,309 --> 00:05:21,319
+function I'll call it function and it
+ 
+
+311
+00:05:21,319 --> 00:05:23,529
+function I'll call it function and it
+does something like maybe just prints
+
+312
+00:05:23,529 --> 00:05:23,539
+does something like maybe just prints
+ 
+
+313
+00:05:23,539 --> 00:05:25,959
+does something like maybe just prints
+out in our hello to the console a bunch
+
+314
+00:05:25,959 --> 00:05:25,969
+out in our hello to the console a bunch
+ 
+
+315
+00:05:25,969 --> 00:05:27,790
+out in our hello to the console a bunch
+of times so I'll just wrap this in a for
+
+316
+00:05:27,790 --> 00:05:27,800
+of times so I'll just wrap this in a for
+ 
+
+317
+00:05:27,800 --> 00:05:30,010
+of times so I'll just wrap this in a for
+loop and I'll say maybe it does that
+
+318
+00:05:30,010 --> 00:05:30,020
+loop and I'll say maybe it does that
+ 
+
+319
+00:05:30,020 --> 00:05:32,290
+loop and I'll say maybe it does that
+about a hundred times or something like
+
+320
+00:05:32,290 --> 00:05:32,300
+about a hundred times or something like
+ 
+
+321
+00:05:32,300 --> 00:05:32,529
+about a hundred times or something like
+that
+
+322
+00:05:32,529 --> 00:05:32,539
+that
+ 
+
+323
+00:05:32,539 --> 00:05:34,420
+that
+right so we have a for loop it runs a
+
+324
+00:05:34,420 --> 00:05:34,430
+right so we have a for loop it runs a
+ 
+
+325
+00:05:34,430 --> 00:05:35,950
+right so we have a for loop it runs a
+hundred times we want to figure out well
+
+326
+00:05:35,950 --> 00:05:35,960
+hundred times we want to figure out well
+ 
+
+327
+00:05:35,960 --> 00:05:37,839
+hundred times we want to figure out well
+how long is this see out operation
+
+328
+00:05:37,839 --> 00:05:37,849
+how long is this see out operation
+ 
+
+329
+00:05:37,849 --> 00:05:40,269
+how long is this see out operation
+really how long does it take C out to
+
+330
+00:05:40,269 --> 00:05:40,279
+really how long does it take C out to
+ 
+
+331
+00:05:40,279 --> 00:05:42,070
+really how long does it take C out to
+actually write stuff out to the console
+
+332
+00:05:42,070 --> 00:05:42,080
+actually write stuff out to the console
+ 
+
+333
+00:05:42,080 --> 00:05:43,990
+actually write stuff out to the console
+a hundred times I want to time this
+
+334
+00:05:43,990 --> 00:05:44,000
+a hundred times I want to time this
+ 
+
+335
+00:05:44,000 --> 00:05:45,879
+a hundred times I want to time this
+function so what I could do at this
+
+336
+00:05:45,879 --> 00:05:45,889
+function so what I could do at this
+ 
+
+337
+00:05:45,889 --> 00:05:47,830
+function so what I could do at this
+point is copy start and end and do all
+
+338
+00:05:47,830 --> 00:05:47,840
+point is copy start and end and do all
+ 
+
+339
+00:05:47,840 --> 00:05:49,600
+point is copy start and end and do all
+of that stuff that's a lot of work I
+
+340
+00:05:49,600 --> 00:05:49,610
+of that stuff that's a lot of work I
+ 
+
+341
+00:05:49,610 --> 00:05:51,430
+of that stuff that's a lot of work I
+don't really want to do that instead I'm
+
+342
+00:05:51,430 --> 00:05:51,440
+don't really want to do that instead I'm
+ 
+
+343
+00:05:51,440 --> 00:05:53,019
+don't really want to do that instead I'm
+actually going to set up a very very
+
+344
+00:05:53,019 --> 00:05:53,029
+actually going to set up a very very
+ 
+
+345
+00:05:53,029 --> 00:05:54,999
+actually going to set up a very very
+basic struct or class doesn't matter
+
+346
+00:05:54,999 --> 00:05:55,009
+basic struct or class doesn't matter
+ 
+
+347
+00:05:55,009 --> 00:05:57,370
+basic struct or class doesn't matter
+just make this a struct called timer and
+
+348
+00:05:57,370 --> 00:05:57,380
+just make this a struct called timer and
+ 
+
+349
+00:05:57,380 --> 00:05:59,080
+just make this a struct called timer and
+this will actually do everything for me
+
+350
+00:05:59,080 --> 00:05:59,090
+this will actually do everything for me
+ 
+
+351
+00:05:59,090 --> 00:06:01,029
+this will actually do everything for me
+and what I'm going to do here is I'm
+
+352
+00:06:01,029 --> 00:06:01,039
+and what I'm going to do here is I'm
+ 
+
+353
+00:06:01,039 --> 00:06:03,100
+and what I'm going to do here is I'm
+going to use the whole object lifetime
+
+354
+00:06:03,100 --> 00:06:03,110
+going to use the whole object lifetime
+ 
+
+355
+00:06:03,110 --> 00:06:06,580
+going to use the whole object lifetime
+kind of paradigm to actually get it to
+
+356
+00:06:06,580 --> 00:06:06,590
+kind of paradigm to actually get it to
+ 
+
+357
+00:06:06,590 --> 00:06:08,409
+kind of paradigm to actually get it to
+basically automatically time everything
+
+358
+00:06:08,409 --> 00:06:08,419
+basically automatically time everything
+ 
+
+359
+00:06:08,419 --> 00:06:10,240
+basically automatically time everything
+for me if you guys haven't checked out
+
+360
+00:06:10,240 --> 00:06:10,250
+for me if you guys haven't checked out
+ 
+
+361
+00:06:10,250 --> 00:06:12,189
+for me if you guys haven't checked out
+the video on object lifetime and C++
+
+362
+00:06:12,189 --> 00:06:12,199
+the video on object lifetime and C++
+ 
+
+363
+00:06:12,199 --> 00:06:14,320
+the video on object lifetime and C++
+definitely do that it's very very useful
+
+364
+00:06:14,320 --> 00:06:14,330
+definitely do that it's very very useful
+ 
+
+365
+00:06:14,330 --> 00:06:16,540
+definitely do that it's very very useful
+and in fact this example I'm pretty sure
+
+366
+00:06:16,540 --> 00:06:16,550
+and in fact this example I'm pretty sure
+ 
+
+367
+00:06:16,550 --> 00:06:18,430
+and in fact this example I'm pretty sure
+I did actually give in that video as
+
+368
+00:06:18,430 --> 00:06:18,440
+I did actually give in that video as
+ 
+
+369
+00:06:18,440 --> 00:06:21,129
+I did actually give in that video as
+well and so jumping back into our code
+
+370
+00:06:21,129 --> 00:06:21,139
+well and so jumping back into our code
+ 
+
+371
+00:06:21,139 --> 00:06:23,439
+well and so jumping back into our code
+the constructor is going to actually
+
+372
+00:06:23,439 --> 00:06:23,449
+the constructor is going to actually
+ 
+
+373
+00:06:23,449 --> 00:06:25,300
+the constructor is going to actually
+start the timer so I'm going to grab
+
+374
+00:06:25,300 --> 00:06:25,310
+start the timer so I'm going to grab
+ 
+
+375
+00:06:25,310 --> 00:06:27,339
+start the timer so I'm going to grab
+this and put it in here unfortunately I
+
+376
+00:06:27,339 --> 00:06:27,349
+this and put it in here unfortunately I
+ 
+
+377
+00:06:27,349 --> 00:06:28,930
+this and put it in here unfortunately I
+actually use order so I'm gonna have to
+
+378
+00:06:28,930 --> 00:06:28,940
+actually use order so I'm gonna have to
+ 
+
+379
+00:06:28,940 --> 00:06:30,909
+actually use order so I'm gonna have to
+figure out what the type is which is sed
+
+380
+00:06:30,909 --> 00:06:30,919
+figure out what the type is which is sed
+ 
+
+381
+00:06:30,919 --> 00:06:32,740
+figure out what the type is which is sed
+Pro note time point s any corner City
+
+382
+00:06:32,740 --> 00:06:32,750
+Pro note time point s any corner City
+ 
+
+383
+00:06:32,750 --> 00:06:33,749
+Pro note time point s any corner City
+cloth so
+
+384
+00:06:33,749 --> 00:06:33,759
+cloth so
+ 
+
+385
+00:06:33,759 --> 00:06:41,790
+cloth so
+TV chrono time point s TV chrono steady
+
+386
+00:06:41,790 --> 00:06:41,800
+TV chrono time point s TV chrono steady
+ 
+
+387
+00:06:41,800 --> 00:06:44,070
+TV chrono time point s TV chrono steady
+clock so that's how kind of start just
+
+388
+00:06:44,070 --> 00:06:44,080
+clock so that's how kind of start just
+ 
+
+389
+00:06:44,080 --> 00:06:47,850
+clock so that's how kind of start just
+call this start and put it up here so we
+
+390
+00:06:47,850 --> 00:06:47,860
+call this start and put it up here so we
+ 
+
+391
+00:06:47,860 --> 00:06:50,429
+call this start and put it up here so we
+have our start and our end and I also
+
+392
+00:06:50,429 --> 00:06:50,439
+have our start and our end and I also
+ 
+
+393
+00:06:50,439 --> 00:06:52,589
+have our start and our end and I also
+grabbed this from here a direction and
+
+394
+00:06:52,589 --> 00:06:52,599
+grabbed this from here a direction and
+ 
+
+395
+00:06:52,599 --> 00:06:55,860
+grabbed this from here a direction and
+put this in that's the duration start
+
+396
+00:06:55,860 --> 00:06:55,870
+put this in that's the duration start
+ 
+
+397
+00:06:55,870 --> 00:06:57,809
+put this in that's the duration start
+I'm going to assign to this in the
+
+398
+00:06:57,809 --> 00:06:57,819
+I'm going to assign to this in the
+ 
+
+399
+00:06:57,819 --> 00:07:00,600
+I'm going to assign to this in the
+constructor and in the destructor when I
+
+400
+00:07:00,600 --> 00:07:00,610
+constructor and in the destructor when I
+ 
+
+401
+00:07:00,610 --> 00:07:02,790
+constructor and in the destructor when I
+copy this whole code here in the in the
+
+402
+00:07:02,790 --> 00:07:02,800
+copy this whole code here in the in the
+ 
+
+403
+00:07:02,800 --> 00:07:04,409
+copy this whole code here in the in the
+destructor what I'm actually going to do
+
+404
+00:07:04,409 --> 00:07:04,419
+destructor what I'm actually going to do
+ 
+
+405
+00:07:04,419 --> 00:07:10,010
+destructor what I'm actually going to do
+is write and equals the same thing and
+
+406
+00:07:10,010 --> 00:07:10,020
+is write and equals the same thing and
+ 
+
+407
+00:07:10,020 --> 00:07:12,629
+is write and equals the same thing and
+then finally curation and I mean you
+
+408
+00:07:12,629 --> 00:07:12,639
+then finally curation and I mean you
+ 
+
+409
+00:07:12,639 --> 00:07:14,010
+then finally curation and I mean you
+don't really have to store and as you
+
+410
+00:07:14,010 --> 00:07:14,020
+don't really have to store and as you
+ 
+
+411
+00:07:14,020 --> 00:07:15,450
+don't really have to store and as you
+can see because we're really just up at
+
+412
+00:07:15,450 --> 00:07:15,460
+can see because we're really just up at
+ 
+
+413
+00:07:15,460 --> 00:07:17,610
+can see because we're really just up at
+the duration but in case people want to
+
+414
+00:07:17,610 --> 00:07:17,620
+the duration but in case people want to
+ 
+
+415
+00:07:17,620 --> 00:07:18,989
+the duration but in case people want to
+access that maybe I want to kind of
+
+416
+00:07:18,989 --> 00:07:18,999
+access that maybe I want to kind of
+ 
+
+417
+00:07:18,999 --> 00:07:20,820
+access that maybe I want to kind of
+write that into my timer struct so
+
+418
+00:07:20,820 --> 00:07:20,830
+write that into my timer struct so
+ 
+
+419
+00:07:20,830 --> 00:07:23,279
+write that into my timer struct so
+generation equals and minus dot and that
+
+420
+00:07:23,279 --> 00:07:23,289
+generation equals and minus dot and that
+ 
+
+421
+00:07:23,289 --> 00:07:25,320
+generation equals and minus dot and that
+will give us the direction in seconds of
+
+422
+00:07:25,320 --> 00:07:25,330
+will give us the direction in seconds of
+ 
+
+423
+00:07:25,330 --> 00:07:28,139
+will give us the direction in seconds of
+course okay and that's really all I need
+
+424
+00:07:28,139 --> 00:07:28,149
+course okay and that's really all I need
+ 
+
+425
+00:07:28,149 --> 00:07:29,610
+course okay and that's really all I need
+let's just make it even easier and say
+
+426
+00:07:29,610 --> 00:07:29,620
+let's just make it even easier and say
+ 
+
+427
+00:07:29,620 --> 00:07:31,709
+let's just make it even easier and say
+that we actually print the duration so
+
+428
+00:07:31,709 --> 00:07:31,719
+that we actually print the duration so
+ 
+
+429
+00:07:31,719 --> 00:07:34,619
+that we actually print the duration so
+we'll say time I took and then I'll
+
+430
+00:07:34,619 --> 00:07:34,629
+we'll say time I took and then I'll
+ 
+
+431
+00:07:34,629 --> 00:07:37,949
+we'll say time I took and then I'll
+write in duration seconds now because
+
+432
+00:07:37,949 --> 00:07:37,959
+write in duration seconds now because
+ 
+
+433
+00:07:37,959 --> 00:07:39,600
+write in duration seconds now because
+this is such a quick operation we
+
+434
+00:07:39,600 --> 00:07:39,610
+this is such a quick operation we
+ 
+
+435
+00:07:39,610 --> 00:07:40,679
+this is such a quick operation we
+actually might want to print the
+
+436
+00:07:40,679 --> 00:07:40,689
+actually might want to print the
+ 
+
+437
+00:07:40,689 --> 00:07:43,980
+actually might want to print the
+milliseconds instead so I will say flirt
+
+438
+00:07:43,980 --> 00:07:43,990
+milliseconds instead so I will say flirt
+ 
+
+439
+00:07:43,990 --> 00:07:48,480
+milliseconds instead so I will say flirt
+M s equals duration of count times 1,000
+
+440
+00:07:48,480 --> 00:07:48,490
+M s equals duration of count times 1,000
+ 
+
+441
+00:07:48,490 --> 00:07:50,459
+M s equals duration of count times 1,000
+which will give us the value in
+
+442
+00:07:50,459 --> 00:07:50,469
+which will give us the value in
+ 
+
+443
+00:07:50,469 --> 00:07:52,260
+which will give us the value in
+milliseconds and I'll change this to be
+
+444
+00:07:52,260 --> 00:07:52,270
+milliseconds and I'll change this to be
+ 
+
+445
+00:07:52,270 --> 00:07:56,550
+milliseconds and I'll change this to be
+m/s and this to be MS okay cool sounds
+
+446
+00:07:56,550 --> 00:07:56,560
+m/s and this to be MS okay cool sounds
+ 
+
+447
+00:07:56,560 --> 00:07:58,709
+m/s and this to be MS okay cool sounds
+pretty good to me that's pretty much all
+
+448
+00:07:58,709 --> 00:07:58,719
+pretty good to me that's pretty much all
+ 
+
+449
+00:07:58,719 --> 00:08:00,659
+pretty good to me that's pretty much all
+I need here and now we have a basic
+
+450
+00:08:00,659 --> 00:08:00,669
+I need here and now we have a basic
+ 
+
+451
+00:08:00,669 --> 00:08:02,189
+I need here and now we have a basic
+structure that will basically do the
+
+452
+00:08:02,189 --> 00:08:02,199
+structure that will basically do the
+ 
+
+453
+00:08:02,199 --> 00:08:03,600
+structure that will basically do the
+timing and even print it up for us
+
+454
+00:08:03,600 --> 00:08:03,610
+timing and even print it up for us
+ 
+
+455
+00:08:03,610 --> 00:08:05,459
+timing and even print it up for us
+automatically and it will of course do
+
+456
+00:08:05,459 --> 00:08:05,469
+automatically and it will of course do
+ 
+
+457
+00:08:05,469 --> 00:08:07,199
+automatically and it will of course do
+that upon destruction all we really need
+
+458
+00:08:07,199 --> 00:08:07,209
+that upon destruction all we really need
+ 
+
+459
+00:08:07,209 --> 00:08:09,179
+that upon destruction all we really need
+to do is just create the object at the
+
+460
+00:08:09,179 --> 00:08:09,189
+to do is just create the object at the
+ 
+
+461
+00:08:09,189 --> 00:08:11,249
+to do is just create the object at the
+beginning of our function and that's
+
+462
+00:08:11,249 --> 00:08:11,259
+beginning of our function and that's
+ 
+
+463
+00:08:11,259 --> 00:08:13,619
+beginning of our function and that's
+that's it so over here in my function
+
+464
+00:08:13,619 --> 00:08:13,629
+that's it so over here in my function
+ 
+
+465
+00:08:13,629 --> 00:08:15,119
+that's it so over here in my function
+the way I'm going to do this is just
+
+466
+00:08:15,119 --> 00:08:15,129
+the way I'm going to do this is just
+ 
+
+467
+00:08:15,129 --> 00:08:16,980
+the way I'm going to do this is just
+type in time a time up like that that's
+
+468
+00:08:16,980 --> 00:08:16,990
+type in time a time up like that that's
+ 
+
+469
+00:08:16,990 --> 00:08:18,329
+type in time a time up like that that's
+all I have to do and I'm done
+
+470
+00:08:18,329 --> 00:08:18,339
+all I have to do and I'm done
+ 
+
+471
+00:08:18,339 --> 00:08:20,189
+all I have to do and I'm done
+this entire scope this entire function
+
+472
+00:08:20,189 --> 00:08:20,199
+this entire scope this entire function
+ 
+
+473
+00:08:20,199 --> 00:08:22,949
+this entire scope this entire function
+will now be timed so if I go back and
+
+474
+00:08:22,949 --> 00:08:22,959
+will now be timed so if I go back and
+ 
+
+475
+00:08:22,959 --> 00:08:24,839
+will now be timed so if I go back and
+delete all of this crap that I that I
+
+476
+00:08:24,839 --> 00:08:24,849
+delete all of this crap that I that I
+ 
+
+477
+00:08:24,849 --> 00:08:27,570
+delete all of this crap that I that I
+don't care about I'm just going to call
+
+478
+00:08:27,570 --> 00:08:27,580
+don't care about I'm just going to call
+ 
+
+479
+00:08:27,580 --> 00:08:30,089
+don't care about I'm just going to call
+function like that and we'll hit f5 and
+
+480
+00:08:30,089 --> 00:08:30,099
+function like that and we'll hit f5 and
+ 
+
+481
+00:08:30,099 --> 00:08:31,949
+function like that and we'll hit f5 and
+say what happens okay cool so check this
+
+482
+00:08:31,949 --> 00:08:31,959
+say what happens okay cool so check this
+ 
+
+483
+00:08:31,959 --> 00:08:33,689
+say what happens okay cool so check this
+out we get pelo printing a hundred times
+
+484
+00:08:33,689 --> 00:08:33,699
+out we get pelo printing a hundred times
+ 
+
+485
+00:08:33,699 --> 00:08:36,240
+out we get pelo printing a hundred times
+to the console and at the very end we
+
+486
+00:08:36,240 --> 00:08:36,250
+to the console and at the very end we
+ 
+
+487
+00:08:36,250 --> 00:08:39,269
+to the console and at the very end we
+say that this took 122 milliseconds cool
+
+488
+00:08:39,269 --> 00:08:39,279
+say that this took 122 milliseconds cool
+ 
+
+489
+00:08:39,279 --> 00:08:40,800
+say that this took 122 milliseconds cool
+so we now know how long our part
+
+490
+00:08:40,800 --> 00:08:40,810
+so we now know how long our part
+ 
+
+491
+00:08:40,810 --> 00:08:43,079
+so we now know how long our part
+actually takes 122 milliseconds very
+
+492
+00:08:43,079 --> 00:08:43,089
+actually takes 122 milliseconds very
+ 
+
+493
+00:08:43,089 --> 00:08:44,880
+actually takes 122 milliseconds very
+very slow let's see if we might be able
+
+494
+00:08:44,880 --> 00:08:44,890
+very slow let's see if we might be able
+ 
+
+495
+00:08:44,890 --> 00:08:45,400
+very slow let's see if we might be able
+to optimize
+
+496
+00:08:45,400 --> 00:08:45,410
+to optimize
+ 
+
+497
+00:08:45,410 --> 00:08:47,350
+to optimize
+a little bit so a CDN line seems to be
+
+498
+00:08:47,350 --> 00:08:47,360
+a little bit so a CDN line seems to be
+ 
+
+499
+00:08:47,360 --> 00:08:49,180
+a little bit so a CDN line seems to be
+quite slower for some reason so if we
+
+500
+00:08:49,180 --> 00:08:49,190
+quite slower for some reason so if we
+ 
+
+501
+00:08:49,190 --> 00:08:50,829
+quite slower for some reason so if we
+just get rid of that and actually put a
+
+502
+00:08:50,829 --> 00:08:50,839
+just get rid of that and actually put a
+ 
+
+503
+00:08:50,839 --> 00:08:53,019
+just get rid of that and actually put a
+backslash n into our print here inside
+
+504
+00:08:53,019 --> 00:08:53,029
+backslash n into our print here inside
+ 
+
+505
+00:08:53,029 --> 00:08:54,850
+backslash n into our print here inside
+our function let's see how much faster
+
+506
+00:08:54,850 --> 00:08:54,860
+our function let's see how much faster
+ 
+
+507
+00:08:54,860 --> 00:08:56,530
+our function let's see how much faster
+this will be and you can see over here
+
+508
+00:08:56,530 --> 00:08:56,540
+this will be and you can see over here
+ 
+
+509
+00:08:56,540 --> 00:08:58,420
+this will be and you can see over here
+that we've caught out about a third of
+
+510
+00:08:58,420 --> 00:08:58,430
+that we've caught out about a third of
+ 
+
+511
+00:08:58,430 --> 00:09:00,160
+that we've caught out about a third of
+our execution time obviously you should
+
+512
+00:09:00,160 --> 00:09:00,170
+our execution time obviously you should
+ 
+
+513
+00:09:00,170 --> 00:09:02,410
+our execution time obviously you should
+run this a few more times and in release
+
+514
+00:09:02,410 --> 00:09:02,420
+run this a few more times and in release
+ 
+
+515
+00:09:02,420 --> 00:09:04,230
+run this a few more times and in release
+mode if you actually care about
+
+516
+00:09:04,230 --> 00:09:04,240
+mode if you actually care about
+ 
+
+517
+00:09:04,240 --> 00:09:06,460
+mode if you actually care about
+benchmarking and all of that but for now
+
+518
+00:09:06,460 --> 00:09:06,470
+benchmarking and all of that but for now
+ 
+
+519
+00:09:06,470 --> 00:09:07,869
+benchmarking and all of that but for now
+we can still see the difference anyway
+
+520
+00:09:07,869 --> 00:09:07,879
+we can still see the difference anyway
+ 
+
+521
+00:09:07,879 --> 00:09:10,240
+we can still see the difference anyway
+that is a basic overview of timing in
+
+522
+00:09:10,240 --> 00:09:10,250
+that is a basic overview of timing in
+ 
+
+523
+00:09:10,250 --> 00:09:12,129
+that is a basic overview of timing in
+C++ and how you can time your functions
+
+524
+00:09:12,129 --> 00:09:12,139
+C++ and how you can time your functions
+ 
+
+525
+00:09:12,139 --> 00:09:13,300
+C++ and how you can time your functions
+and see how long it takes to execute
+
+526
+00:09:13,300 --> 00:09:13,310
+and see how long it takes to execute
+ 
+
+527
+00:09:13,310 --> 00:09:15,460
+and see how long it takes to execute
+certain code obviously this was a very
+
+528
+00:09:15,460 --> 00:09:15,470
+certain code obviously this was a very
+ 
+
+529
+00:09:15,470 --> 00:09:16,990
+certain code obviously this was a very
+very rough example I was just showing
+
+530
+00:09:16,990 --> 00:09:17,000
+very rough example I was just showing
+ 
+
+531
+00:09:17,000 --> 00:09:19,170
+very rough example I was just showing
+you how to actually use that timing API
+
+532
+00:09:19,170 --> 00:09:19,180
+you how to actually use that timing API
+ 
+
+533
+00:09:19,180 --> 00:09:22,780
+you how to actually use that timing API
+not how to actually perform benchmarks
+
+534
+00:09:22,780 --> 00:09:22,790
+not how to actually perform benchmarks
+ 
+
+535
+00:09:22,790 --> 00:09:24,069
+not how to actually perform benchmarks
+we're going to have a video all about
+
+536
+00:09:24,069 --> 00:09:24,079
+we're going to have a video all about
+ 
+
+537
+00:09:24,079 --> 00:09:26,439
+we're going to have a video all about
+that in the future you can of course
+
+538
+00:09:26,439 --> 00:09:26,449
+that in the future you can of course
+ 
+
+539
+00:09:26,449 --> 00:09:28,389
+that in the future you can of course
+also use visual studios profiling tools
+
+540
+00:09:28,389 --> 00:09:28,399
+also use visual studios profiling tools
+ 
+
+541
+00:09:28,399 --> 00:09:29,949
+also use visual studios profiling tools
+or whatever idea you're using whatever
+
+542
+00:09:29,949 --> 00:09:29,959
+or whatever idea you're using whatever
+ 
+
+543
+00:09:29,959 --> 00:09:32,290
+or whatever idea you're using whatever
+tool say you're using a lot of tools do
+
+544
+00:09:32,290 --> 00:09:32,300
+tool say you're using a lot of tools do
+ 
+
+545
+00:09:32,300 --> 00:09:34,300
+tool say you're using a lot of tools do
+have profiling tools built in so you can
+
+546
+00:09:34,300 --> 00:09:34,310
+have profiling tools built in so you can
+ 
+
+547
+00:09:34,310 --> 00:09:36,129
+have profiling tools built in so you can
+actually automate a lot of this this is
+
+548
+00:09:36,129 --> 00:09:36,139
+actually automate a lot of this this is
+ 
+
+549
+00:09:36,139 --> 00:09:37,119
+actually automate a lot of this this is
+more or less something called
+
+550
+00:09:37,119 --> 00:09:37,129
+more or less something called
+ 
+
+551
+00:09:37,129 --> 00:09:38,650
+more or less something called
+instrumentation where you actually
+
+552
+00:09:38,650 --> 00:09:38,660
+instrumentation where you actually
+ 
+
+553
+00:09:38,660 --> 00:09:41,410
+instrumentation where you actually
+modify your source code to contain kind
+
+554
+00:09:41,410 --> 00:09:41,420
+modify your source code to contain kind
+ 
+
+555
+00:09:41,420 --> 00:09:43,920
+modify your source code to contain kind
+of profiling tools such as this timing
+
+556
+00:09:43,920 --> 00:09:43,930
+of profiling tools such as this timing
+ 
+
+557
+00:09:43,930 --> 00:09:46,780
+of profiling tools such as this timing
+that can be very very useful because not
+
+558
+00:09:46,780 --> 00:09:46,790
+that can be very very useful because not
+ 
+
+559
+00:09:46,790 --> 00:09:49,030
+that can be very very useful because not
+all platforms you work with are going to
+
+560
+00:09:49,030 --> 00:09:49,040
+all platforms you work with are going to
+ 
+
+561
+00:09:49,040 --> 00:09:51,069
+all platforms you work with are going to
+have good enough profile of the dart and
+
+562
+00:09:51,069 --> 00:09:51,079
+have good enough profile of the dart and
+ 
+
+563
+00:09:51,079 --> 00:09:52,660
+have good enough profile of the dart and
+overhead and this is a really simple way
+
+564
+00:09:52,660 --> 00:09:52,670
+overhead and this is a really simple way
+ 
+
+565
+00:09:52,670 --> 00:09:54,730
+overhead and this is a really simple way
+to do it there are so many things that
+
+566
+00:09:54,730 --> 00:09:54,740
+to do it there are so many things that
+ 
+
+567
+00:09:54,740 --> 00:09:56,800
+to do it there are so many things that
+you can actually do from this you can
+
+568
+00:09:56,800 --> 00:09:56,810
+you can actually do from this you can
+ 
+
+569
+00:09:56,810 --> 00:09:59,079
+you can actually do from this you can
+basically collect the data into like one
+
+570
+00:09:59,079 --> 00:09:59,089
+basically collect the data into like one
+ 
+
+571
+00:09:59,089 --> 00:10:01,240
+basically collect the data into like one
+big file and output it and read it in
+
+572
+00:10:01,240 --> 00:10:01,250
+big file and output it and read it in
+ 
+
+573
+00:10:01,250 --> 00:10:03,129
+big file and output it and read it in
+another tool so that you can see graphs
+
+574
+00:10:03,129 --> 00:10:03,139
+another tool so that you can see graphs
+ 
+
+575
+00:10:03,139 --> 00:10:06,069
+another tool so that you can see graphs
+or even like kind of a diagram of how
+
+576
+00:10:06,069 --> 00:10:06,079
+or even like kind of a diagram of how
+ 
+
+577
+00:10:06,079 --> 00:10:07,660
+or even like kind of a diagram of how
+long each function takes and what
+
+578
+00:10:07,660 --> 00:10:07,670
+long each function takes and what
+ 
+
+579
+00:10:07,670 --> 00:10:09,639
+long each function takes and what
+function that function calls and there's
+
+580
+00:10:09,639 --> 00:10:09,649
+function that function calls and there's
+ 
+
+581
+00:10:09,649 --> 00:10:11,410
+function that function calls and there's
+so many things that will extend from
+
+582
+00:10:11,410 --> 00:10:11,420
+so many things that will extend from
+ 
+
+583
+00:10:11,420 --> 00:10:13,420
+so many things that will extend from
+this that we'll explore in the future so
+
+584
+00:10:13,420 --> 00:10:13,430
+this that we'll explore in the future so
+ 
+
+585
+00:10:13,430 --> 00:10:15,699
+this that we'll explore in the future so
+definitely get excited about that very
+
+586
+00:10:15,699 --> 00:10:15,709
+definitely get excited about that very
+ 
+
+587
+00:10:15,709 --> 00:10:16,990
+definitely get excited about that very
+important that you start doing this if
+
+588
+00:10:16,990 --> 00:10:17,000
+important that you start doing this if
+ 
+
+589
+00:10:17,000 --> 00:10:18,970
+important that you start doing this if
+you do care about performance since I
+
+590
+00:10:18,970 --> 00:10:18,980
+you do care about performance since I
+ 
+
+591
+00:10:18,980 --> 00:10:20,410
+you do care about performance since I
+imagine a lot of people watching this
+
+592
+00:10:20,410 --> 00:10:20,420
+imagine a lot of people watching this
+ 
+
+593
+00:10:20,420 --> 00:10:22,629
+imagine a lot of people watching this
+series are game developers or people who
+
+594
+00:10:22,629 --> 00:10:22,639
+series are game developers or people who
+ 
+
+595
+00:10:22,639 --> 00:10:25,030
+series are game developers or people who
+want to write game engines you need to
+
+596
+00:10:25,030 --> 00:10:25,040
+want to write game engines you need to
+ 
+
+597
+00:10:25,040 --> 00:10:26,710
+want to write game engines you need to
+be doing stuff like this all the time to
+
+598
+00:10:26,710 --> 00:10:26,720
+be doing stuff like this all the time to
+ 
+
+599
+00:10:26,720 --> 00:10:28,720
+be doing stuff like this all the time to
+actually see how fast your probe
+
+600
+00:10:28,720 --> 00:10:28,730
+actually see how fast your probe
+ 
+
+601
+00:10:28,730 --> 00:10:30,879
+actually see how fast your probe
+performs and since you are using C++ as
+
+602
+00:10:30,879 --> 00:10:30,889
+performs and since you are using C++ as
+ 
+
+603
+00:10:30,889 --> 00:10:34,090
+performs and since you are using C++ as
+a language you're using C++ probably
+
+604
+00:10:34,090 --> 00:10:34,100
+a language you're using C++ probably
+ 
+
+605
+00:10:34,100 --> 00:10:35,769
+a language you're using C++ probably
+because you care about performance and
+
+606
+00:10:35,769 --> 00:10:35,779
+because you care about performance and
+ 
+
+607
+00:10:35,779 --> 00:10:38,590
+because you care about performance and
+you want to write fast code so
+
+608
+00:10:38,590 --> 00:10:38,600
+you want to write fast code so
+ 
+
+609
+00:10:38,600 --> 00:10:39,699
+you want to write fast code so
+definitely get used to this kind of
+
+610
+00:10:39,699 --> 00:10:39,709
+definitely get used to this kind of
+ 
+
+611
+00:10:39,709 --> 00:10:41,110
+definitely get used to this kind of
+stuff anyway I hope you guys enjoyed
+
+612
+00:10:41,110 --> 00:10:41,120
+stuff anyway I hope you guys enjoyed
+ 
+
+613
+00:10:41,120 --> 00:10:42,610
+stuff anyway I hope you guys enjoyed
+this video if you did you can hit the
+
+614
+00:10:42,610 --> 00:10:42,620
+this video if you did you can hit the
+ 
+
+615
+00:10:42,620 --> 00:10:44,110
+this video if you did you can hit the
+like button you can also help support
+
+616
+00:10:44,110 --> 00:10:44,120
+like button you can also help support
+ 
+
+617
+00:10:44,120 --> 00:10:45,549
+like button you can also help support
+this series by going over to patreon
+
+618
+00:10:45,549 --> 00:10:45,559
+this series by going over to patreon
+ 
+
+619
+00:10:45,559 --> 00:10:47,920
+this series by going over to patreon
+look on 4/2 churner huge thank you as
+
+620
+00:10:47,920 --> 00:10:47,930
+look on 4/2 churner huge thank you as
+ 
+
+621
+00:10:47,930 --> 00:10:50,079
+look on 4/2 churner huge thank you as
+always to all of my patrons this series
+
+622
+00:10:50,079 --> 00:10:50,089
+always to all of my patrons this series
+ 
+
+623
+00:10:50,089 --> 00:10:52,720
+always to all of my patrons this series
+would not be here without you I can kind
+
+624
+00:10:52,720 --> 00:10:52,730
+would not be here without you I can kind
+ 
+
+625
+00:10:52,730 --> 00:10:54,210
+would not be here without you I can kind
+of cent guarantee that so they
+
+626
+00:10:54,210 --> 00:10:54,220
+of cent guarantee that so they
+ 
+
+627
+00:10:54,220 --> 00:10:56,100
+of cent guarantee that so they
+he's so much and I will see you guys in
+
+628
+00:10:56,100 --> 00:10:56,110
+he's so much and I will see you guys in
+ 
+
+629
+00:10:56,110 --> 00:10:58,410
+he's so much and I will see you guys in
+the next video goodbye
+
+630
+00:10:58,410 --> 00:10:58,420
+the next video goodbye
+ 
+
+631
+00:10:58,420 --> 00:11:13,600
+the next video goodbye
+[Music]
+

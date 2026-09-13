@@ -1,0 +1,2595 @@
+1
+00:00:00,080 --> 00:00:01,990
+
+hey what's up guys my name is the Cho
+
+2
+00:00:01,990 --> 00:00:02,000
+hey what's up guys my name is the Cho
+ 
+
+3
+00:00:02,000 --> 00:00:04,470
+hey what's up guys my name is the Cho
+and welcome back to my C++ series I know
+
+4
+00:00:04,470 --> 00:00:04,480
+and welcome back to my C++ series I know
+ 
+
+5
+00:00:04,480 --> 00:00:06,950
+and welcome back to my C++ series I know
+this is weird I'm in like some Czech
+
+6
+00:00:06,950 --> 00:00:06,960
+this is weird I'm in like some Czech
+ 
+
+7
+00:00:06,960 --> 00:00:09,190
+this is weird I'm in like some Czech
+Hotel just don't ask questions so today
+
+8
+00:00:09,190 --> 00:00:09,200
+Hotel just don't ask questions so today
+ 
+
+9
+00:00:09,200 --> 00:00:10,390
+Hotel just don't ask questions so today
+we're going to be talking about what
+
+10
+00:00:10,390 --> 00:00:10,400
+we're going to be talking about what
+ 
+
+11
+00:00:10,400 --> 00:00:13,310
+we're going to be talking about what
+static means inside a class or a struct
+
+12
+00:00:13,310 --> 00:00:13,320
+static means inside a class or a struct
+ 
+
+13
+00:00:13,320 --> 00:00:14,829
+static means inside a class or a struct
+last time we talked about the static
+
+14
+00:00:14,829 --> 00:00:14,839
+last time we talked about the static
+ 
+
+15
+00:00:14,839 --> 00:00:17,670
+last time we talked about the static
+keyword in C++ and what its meaning was
+
+16
+00:00:17,670 --> 00:00:17,680
+keyword in C++ and what its meaning was
+ 
+
+17
+00:00:17,680 --> 00:00:19,790
+keyword in C++ and what its meaning was
+if it was outside of a class or a struct
+
+18
+00:00:19,790 --> 00:00:19,800
+if it was outside of a class or a struct
+ 
+
+19
+00:00:19,800 --> 00:00:21,109
+if it was outside of a class or a struct
+and there's a link to that video in the
+
+20
+00:00:21,109 --> 00:00:21,119
+and there's a link to that video in the
+ 
+
+21
+00:00:21,119 --> 00:00:22,470
+and there's a link to that video in the
+description below as well as a card on
+
+22
+00:00:22,470 --> 00:00:22,480
+description below as well as a card on
+ 
+
+23
+00:00:22,480 --> 00:00:24,070
+description below as well as a card on
+the screen so go ahead and watch that
+
+24
+00:00:24,070 --> 00:00:24,080
+the screen so go ahead and watch that
+ 
+
+25
+00:00:24,080 --> 00:00:26,470
+the screen so go ahead and watch that
+but today what does static mean if it is
+
+26
+00:00:26,470 --> 00:00:26,480
+but today what does static mean if it is
+ 
+
+27
+00:00:26,480 --> 00:00:28,990
+but today what does static mean if it is
+inside a class or a struct in pretty
+
+28
+00:00:28,990 --> 00:00:29,000
+inside a class or a struct in pretty
+ 
+
+29
+00:00:29,000 --> 00:00:31,509
+inside a class or a struct in pretty
+much all object Ed languages static
+
+30
+00:00:31,509 --> 00:00:31,519
+much all object Ed languages static
+ 
+
+31
+00:00:31,519 --> 00:00:34,030
+much all object Ed languages static
+inside a class means a certain thing if
+
+32
+00:00:34,030 --> 00:00:34,040
+inside a class means a certain thing if
+ 
+
+33
+00:00:34,040 --> 00:00:35,950
+inside a class means a certain thing if
+you use it with a variable it means that
+
+34
+00:00:35,950 --> 00:00:35,960
+you use it with a variable it means that
+ 
+
+35
+00:00:35,960 --> 00:00:37,950
+you use it with a variable it means that
+there is only going to be one instance
+
+36
+00:00:37,950 --> 00:00:37,960
+there is only going to be one instance
+ 
+
+37
+00:00:37,960 --> 00:00:40,790
+there is only going to be one instance
+of that variable across all instances of
+
+38
+00:00:40,790 --> 00:00:40,800
+of that variable across all instances of
+ 
+
+39
+00:00:40,800 --> 00:00:42,670
+of that variable across all instances of
+the class so if I make a class called
+
+40
+00:00:42,670 --> 00:00:42,680
+the class so if I make a class called
+ 
+
+41
+00:00:42,680 --> 00:00:44,869
+the class so if I make a class called
+entity and I keep making entity
+
+42
+00:00:44,869 --> 00:00:44,879
+entity and I keep making entity
+ 
+
+43
+00:00:44,879 --> 00:00:46,709
+entity and I keep making entity
+instances I'm still only going to have
+
+44
+00:00:46,709 --> 00:00:46,719
+instances I'm still only going to have
+ 
+
+45
+00:00:46,719 --> 00:00:48,590
+instances I'm still only going to have
+one version of that variable meaning if
+
+46
+00:00:48,590 --> 00:00:48,600
+one version of that variable meaning if
+ 
+
+47
+00:00:48,600 --> 00:00:51,150
+one version of that variable meaning if
+one of the instances changes one of the
+
+48
+00:00:51,150 --> 00:00:51,160
+one of the instances changes one of the
+ 
+
+49
+00:00:51,160 --> 00:00:52,990
+one of the instances changes one of the
+variable meaning if one of those
+
+50
+00:00:52,990 --> 00:00:53,000
+variable meaning if one of those
+ 
+
+51
+00:00:53,000 --> 00:00:55,470
+variable meaning if one of those
+instances changes my static variable
+
+52
+00:00:55,470 --> 00:00:55,480
+instances changes my static variable
+ 
+
+53
+00:00:55,480 --> 00:00:57,229
+instances changes my static variable
+it's going to reflect that change across
+
+54
+00:00:57,229 --> 00:00:57,239
+it's going to reflect that change across
+ 
+
+55
+00:00:57,239 --> 00:00:58,790
+it's going to reflect that change across
+all instances because really there's
+
+56
+00:00:58,790 --> 00:00:58,800
+all instances because really there's
+ 
+
+57
+00:00:58,800 --> 00:01:00,630
+all instances because really there's
+only one variable even though I've made
+
+58
+00:01:00,630 --> 00:01:00,640
+only one variable even though I've made
+ 
+
+59
+00:01:00,640 --> 00:01:02,630
+only one variable even though I've made
+a whole bunch of class instances and so
+
+60
+00:01:02,630 --> 00:01:02,640
+a whole bunch of class instances and so
+ 
+
+61
+00:01:02,640 --> 00:01:04,189
+a whole bunch of class instances and so
+because of that there's no point of
+
+62
+00:01:04,189 --> 00:01:04,199
+because of that there's no point of
+ 
+
+63
+00:01:04,199 --> 00:01:05,910
+because of that there's no point of
+referring to the variable through a
+
+64
+00:01:05,910 --> 00:01:05,920
+referring to the variable through a
+ 
+
+65
+00:01:05,920 --> 00:01:08,990
+referring to the variable through a
+class instance because there's like
+
+66
+00:01:08,990 --> 00:01:09,000
+class instance because there's like
+ 
+
+67
+00:01:09,000 --> 00:01:10,789
+class instance because there's like
+there's like a global instance for that
+
+68
+00:01:10,789 --> 00:01:10,799
+there's like a global instance for that
+ 
+
+69
+00:01:10,799 --> 00:01:12,710
+there's like a global instance for that
+class with static methods you get a
+
+70
+00:01:12,710 --> 00:01:12,720
+class with static methods you get a
+ 
+
+71
+00:01:12,720 --> 00:01:15,550
+class with static methods you get a
+similar effect where you just you don't
+
+72
+00:01:15,550 --> 00:01:15,560
+similar effect where you just you don't
+ 
+
+73
+00:01:15,560 --> 00:01:17,990
+similar effect where you just you don't
+have access to the class instance a
+
+74
+00:01:17,990 --> 00:01:18,000
+have access to the class instance a
+ 
+
+75
+00:01:18,000 --> 00:01:19,749
+have access to the class instance a
+static method can be called without a
+
+76
+00:01:19,749 --> 00:01:19,759
+static method can be called without a
+ 
+
+77
+00:01:19,759 --> 00:01:21,910
+static method can be called without a
+class instance and inside a static
+
+78
+00:01:21,910 --> 00:01:21,920
+class instance and inside a static
+ 
+
+79
+00:01:21,920 --> 00:01:24,190
+class instance and inside a static
+method you cannot write code which
+
+80
+00:01:24,190 --> 00:01:24,200
+method you cannot write code which
+ 
+
+81
+00:01:24,200 --> 00:01:26,190
+method you cannot write code which
+refers to a class instance since you
+
+82
+00:01:26,190 --> 00:01:26,200
+refers to a class instance since you
+ 
+
+83
+00:01:26,200 --> 00:01:28,109
+refers to a class instance since you
+don't have that class instance to refer
+
+84
+00:01:28,109 --> 00:01:28,119
+don't have that class instance to refer
+ 
+
+85
+00:01:28,119 --> 00:01:29,630
+don't have that class instance to refer
+to Let's jump in and take a look at some
+
+86
+00:01:29,630 --> 00:01:29,640
+to Let's jump in and take a look at some
+ 
+
+87
+00:01:29,640 --> 00:01:31,109
+to Let's jump in and take a look at some
+examples examples so over here I'm going
+
+88
+00:01:31,109 --> 00:01:31,119
+examples examples so over here I'm going
+ 
+
+89
+00:01:31,119 --> 00:01:33,350
+examples examples so over here I'm going
+to write a struct called entity and I'm
+
+90
+00:01:33,350 --> 00:01:33,360
+to write a struct called entity and I'm
+ 
+
+91
+00:01:33,360 --> 00:01:35,830
+to write a struct called entity and I'm
+going to give it two integers X and Y
+
+92
+00:01:35,830 --> 00:01:35,840
+going to give it two integers X and Y
+ 
+
+93
+00:01:35,840 --> 00:01:37,510
+going to give it two integers X and Y
+know that I'm using a struct here but
+
+94
+00:01:37,510 --> 00:01:37,520
+know that I'm using a struct here but
+ 
+
+95
+00:01:37,520 --> 00:01:39,870
+know that I'm using a struct here but
+you could use a class it doesn't matter
+
+96
+00:01:39,870 --> 00:01:39,880
+you could use a class it doesn't matter
+ 
+
+97
+00:01:39,880 --> 00:01:41,230
+you could use a class it doesn't matter
+the reason I've chosen a struct here is
+
+98
+00:01:41,230 --> 00:01:41,240
+the reason I've chosen a struct here is
+ 
+
+99
+00:01:41,240 --> 00:01:42,749
+the reason I've chosen a struct here is
+because I want those X and Y variables
+
+100
+00:01:42,749 --> 00:01:42,759
+because I want those X and Y variables
+ 
+
+101
+00:01:42,759 --> 00:01:45,870
+because I want those X and Y variables
+to be public and by using a struct
+
+102
+00:01:45,870 --> 00:01:45,880
+to be public and by using a struct
+ 
+
+103
+00:01:45,880 --> 00:01:47,190
+to be public and by using a struct
+they're going to be public by default
+
+104
+00:01:47,190 --> 00:01:47,200
+they're going to be public by default
+ 
+
+105
+00:01:47,200 --> 00:01:48,350
+they're going to be public by default
+I've made a video about the differences
+
+106
+00:01:48,350 --> 00:01:48,360
+I've made a video about the differences
+ 
+
+107
+00:01:48,360 --> 00:01:50,030
+I've made a video about the differences
+between classes and structs as well if
+
+108
+00:01:50,030 --> 00:01:50,040
+between classes and structs as well if
+ 
+
+109
+00:01:50,040 --> 00:01:51,950
+between classes and structs as well if
+you haven't seen that there's a link
+
+110
+00:01:51,950 --> 00:01:51,960
+you haven't seen that there's a link
+ 
+
+111
+00:01:51,960 --> 00:01:53,469
+you haven't seen that there's a link
+everywhere check it out so right now we
+
+112
+00:01:53,469 --> 00:01:53,479
+everywhere check it out so right now we
+ 
+
+113
+00:01:53,479 --> 00:01:55,190
+everywhere check it out so right now we
+have a pretty straightforward entity
+
+114
+00:01:55,190 --> 00:01:55,200
+have a pretty straightforward entity
+ 
+
+115
+00:01:55,200 --> 00:01:57,789
+have a pretty straightforward entity
+class we can instantiate it like so set
+
+116
+00:01:57,789 --> 00:01:57,799
+class we can instantiate it like so set
+ 
+
+117
+00:01:57,799 --> 00:02:00,190
+class we can instantiate it like so set
+the values to what we want them to B
+
+118
+00:02:00,190 --> 00:02:00,200
+the values to what we want them to B
+ 
+
+119
+00:02:00,200 --> 00:02:02,550
+the values to what we want them to B
+such as 2 and three and we're ready to
+
+120
+00:02:02,550 --> 00:02:02,560
+such as 2 and three and we're ready to
+ 
+
+121
+00:02:02,560 --> 00:02:04,350
+such as 2 and three and we're ready to
+roll if I want to make another instance
+
+122
+00:02:04,350 --> 00:02:04,360
+roll if I want to make another instance
+ 
+
+123
+00:02:04,360 --> 00:02:05,990
+roll if I want to make another instance
+of that class I can also do that this
+
+124
+00:02:05,990 --> 00:02:06,000
+of that class I can also do that this
+ 
+
+125
+00:02:06,000 --> 00:02:07,590
+of that class I can also do that this
+time I'll initialize it using an
+
+126
+00:02:07,590 --> 00:02:07,600
+time I'll initialize it using an
+ 
+
+127
+00:02:07,600 --> 00:02:09,469
+time I'll initialize it using an
+initializer so we'll set it to like 5
+
+128
+00:02:09,469 --> 00:02:09,479
+initializer so we'll set it to like 5
+ 
+
+129
+00:02:09,479 --> 00:02:11,710
+initializer so we'll set it to like 5
+and 8 for example and also let's give
+
+130
+00:02:11,710 --> 00:02:11,720
+and 8 for example and also let's give
+ 
+
+131
+00:02:11,720 --> 00:02:13,790
+and 8 for example and also let's give
+our entity struct some kind of function
+
+132
+00:02:13,790 --> 00:02:13,800
+our entity struct some kind of function
+ 
+
+133
+00:02:13,800 --> 00:02:15,869
+our entity struct some kind of function
+so that we can print what we have to the
+
+134
+00:02:15,869 --> 00:02:15,879
+so that we can print what we have to the
+ 
+
+135
+00:02:15,879 --> 00:02:18,630
+so that we can print what we have to the
+console just using standard C
+
+136
+00:02:18,630 --> 00:02:18,640
+console just using standard C
+ 
+
+137
+00:02:18,640 --> 00:02:21,070
+console just using standard C
+out and there we go so if I come down
+
+138
+00:02:21,070 --> 00:02:21,080
+out and there we go so if I come down
+ 
+
+139
+00:02:21,080 --> 00:02:24,550
+out and there we go so if I come down
+here and I print e and
+
+140
+00:02:24,550 --> 00:02:24,560
+here and I print e and
+ 
+
+141
+00:02:24,560 --> 00:02:26,750
+here and I print e and
+E1 the behavior here is going to be
+
+142
+00:02:26,750 --> 00:02:26,760
+E1 the behavior here is going to be
+ 
+
+143
+00:02:26,760 --> 00:02:28,509
+E1 the behavior here is going to be
+fairly normal and what you would expect
+
+144
+00:02:28,509 --> 00:02:28,519
+fairly normal and what you would expect
+ 
+
+145
+00:02:28,519 --> 00:02:30,710
+fairly normal and what you would expect
+so we should get 2 three and then 58 for
+
+146
+00:02:30,710 --> 00:02:30,720
+so we should get 2 three and then 58 for
+ 
+
+147
+00:02:30,720 --> 00:02:32,390
+so we should get 2 three and then 58 for
+our second one and you can see that's
+
+148
+00:02:32,390 --> 00:02:32,400
+our second one and you can see that's
+ 
+
+149
+00:02:32,400 --> 00:02:34,150
+our second one and you can see that's
+what we get however things will change
+
+150
+00:02:34,150 --> 00:02:34,160
+what we get however things will change
+ 
+
+151
+00:02:34,160 --> 00:02:36,070
+what we get however things will change
+if I make the variable static so if I
+
+152
+00:02:36,070 --> 00:02:36,080
+if I make the variable static so if I
+ 
+
+153
+00:02:36,080 --> 00:02:39,270
+if I make the variable static so if I
+come over here and I make these X and Y
+
+154
+00:02:39,270 --> 00:02:39,280
+come over here and I make these X and Y
+ 
+
+155
+00:02:39,280 --> 00:02:41,229
+come over here and I make these X and Y
+static first of all my initializer here
+
+156
+00:02:41,229 --> 00:02:41,239
+static first of all my initializer here
+ 
+
+157
+00:02:41,239 --> 00:02:44,190
+static first of all my initializer here
+will fail because X and Y are no longer
+
+158
+00:02:44,190 --> 00:02:44,200
+will fail because X and Y are no longer
+ 
+
+159
+00:02:44,200 --> 00:02:46,149
+will fail because X and Y are no longer
+class members so we can forget about
+
+160
+00:02:46,149 --> 00:02:46,159
+class members so we can forget about
+ 
+
+161
+00:02:46,159 --> 00:02:47,910
+class members so we can forget about
+that and rewrite our code to be this
+
+162
+00:02:47,910 --> 00:02:47,920
+that and rewrite our code to be this
+ 
+
+163
+00:02:47,920 --> 00:02:49,750
+that and rewrite our code to be this
+which again is not strictly written
+
+164
+00:02:49,750 --> 00:02:49,760
+which again is not strictly written
+ 
+
+165
+00:02:49,760 --> 00:02:52,309
+which again is not strictly written
+correctly however for an example it will
+
+166
+00:02:52,309 --> 00:02:52,319
+correctly however for an example it will
+ 
+
+167
+00:02:52,319 --> 00:02:54,270
+correctly however for an example it will
+work make sure we're referring to E1
+
+168
+00:02:54,270 --> 00:02:54,280
+work make sure we're referring to E1
+ 
+
+169
+00:02:54,280 --> 00:02:55,750
+work make sure we're referring to E1
+here so you can see we are referring to
+
+170
+00:02:55,750 --> 00:02:55,760
+here so you can see we are referring to
+ 
+
+171
+00:02:55,760 --> 00:02:58,350
+here so you can see we are referring to
+two different instances or it appears to
+
+172
+00:02:58,350 --> 00:02:58,360
+two different instances or it appears to
+ 
+
+173
+00:02:58,360 --> 00:03:00,589
+two different instances or it appears to
+be so at least if we run this code we're
+
+174
+00:03:00,589 --> 00:03:00,599
+be so at least if we run this code we're
+ 
+
+175
+00:03:00,599 --> 00:03:02,670
+be so at least if we run this code we're
+going to get unresolved external symbols
+
+176
+00:03:02,670 --> 00:03:02,680
+going to get unresolved external symbols
+ 
+
+177
+00:03:02,680 --> 00:03:05,470
+going to get unresolved external symbols
+because we actually have to define those
+
+178
+00:03:05,470 --> 00:03:05,480
+because we actually have to define those
+ 
+
+179
+00:03:05,480 --> 00:03:07,390
+because we actually have to define those
+static variables somewhere and we can do
+
+180
+00:03:07,390 --> 00:03:07,400
+static variables somewhere and we can do
+ 
+
+181
+00:03:07,400 --> 00:03:10,229
+static variables somewhere and we can do
+so over here by just writing int entity
+
+182
+00:03:10,229 --> 00:03:10,239
+so over here by just writing int entity
+ 
+
+183
+00:03:10,239 --> 00:03:11,830
+so over here by just writing int entity
+which is the scope of these static
+
+184
+00:03:11,830 --> 00:03:11,840
+which is the scope of these static
+ 
+
+185
+00:03:11,840 --> 00:03:13,550
+which is the scope of these static
+variables then the name of the variable
+
+186
+00:03:13,550 --> 00:03:13,560
+variables then the name of the variable
+ 
+
+187
+00:03:13,560 --> 00:03:15,190
+variables then the name of the variable
+and we don't really need to set them
+
+188
+00:03:15,190 --> 00:03:15,200
+and we don't really need to set them
+ 
+
+189
+00:03:15,200 --> 00:03:17,350
+and we don't really need to set them
+equal to anything if we don't want to we
+
+190
+00:03:17,350 --> 00:03:17,360
+equal to anything if we don't want to we
+ 
+
+191
+00:03:17,360 --> 00:03:19,190
+equal to anything if we don't want to we
+can just write this so now that they've
+
+192
+00:03:19,190 --> 00:03:19,200
+can just write this so now that they've
+ 
+
+193
+00:03:19,200 --> 00:03:21,030
+can just write this so now that they've
+been defined the Linker can link to the
+
+194
+00:03:21,030 --> 00:03:21,040
+been defined the Linker can link to the
+ 
+
+195
+00:03:21,040 --> 00:03:22,589
+been defined the Linker can link to the
+appropriate variable and we can run our
+
+196
+00:03:22,589 --> 00:03:22,599
+appropriate variable and we can run our
+ 
+
+197
+00:03:22,599 --> 00:03:24,830
+appropriate variable and we can run our
+code however if we do so you'll see that
+
+198
+00:03:24,830 --> 00:03:24,840
+code however if we do so you'll see that
+ 
+
+199
+00:03:24,840 --> 00:03:27,309
+code however if we do so you'll see that
+we actually get 58 58 printing twice
+
+200
+00:03:27,309 --> 00:03:27,319
+we actually get 58 58 printing twice
+ 
+
+201
+00:03:27,319 --> 00:03:28,949
+we actually get 58 58 printing twice
+which is a little bit weird you can see
+
+202
+00:03:28,949 --> 00:03:28,959
+which is a little bit weird you can see
+ 
+
+203
+00:03:28,959 --> 00:03:30,470
+which is a little bit weird you can see
+here in our code that it clearly appears
+
+204
+00:03:30,470 --> 00:03:30,480
+here in our code that it clearly appears
+ 
+
+205
+00:03:30,480 --> 00:03:32,670
+here in our code that it clearly appears
+that we're setting X and Y to 2 and 3
+
+206
+00:03:32,670 --> 00:03:32,680
+that we're setting X and Y to 2 and 3
+ 
+
+207
+00:03:32,680 --> 00:03:34,910
+that we're setting X and Y to 2 and 3
+for the first instance but then 5 and 8
+
+208
+00:03:34,910 --> 00:03:34,920
+for the first instance but then 5 and 8
+ 
+
+209
+00:03:34,920 --> 00:03:36,670
+for the first instance but then 5 and 8
+for the second one however remember that
+
+210
+00:03:36,670 --> 00:03:36,680
+for the second one however remember that
+ 
+
+211
+00:03:36,680 --> 00:03:38,550
+for the second one however remember that
+those X and Y variables when we made
+
+212
+00:03:38,550 --> 00:03:38,560
+those X and Y variables when we made
+ 
+
+213
+00:03:38,560 --> 00:03:40,710
+those X and Y variables when we made
+them static we made it so that there was
+
+214
+00:03:40,710 --> 00:03:40,720
+them static we made it so that there was
+ 
+
+215
+00:03:40,720 --> 00:03:43,509
+them static we made it so that there was
+only one instance of those two variables
+
+216
+00:03:43,509 --> 00:03:43,519
+only one instance of those two variables
+ 
+
+217
+00:03:43,519 --> 00:03:45,550
+only one instance of those two variables
+across all instances of our entity
+
+218
+00:03:45,550 --> 00:03:45,560
+across all instances of our entity
+ 
+
+219
+00:03:45,560 --> 00:03:47,229
+across all instances of our entity
+classes which means that when I'm
+
+220
+00:03:47,229 --> 00:03:47,239
+classes which means that when I'm
+ 
+
+221
+00:03:47,239 --> 00:03:50,030
+classes which means that when I'm
+changing the second entities X and Y
+
+222
+00:03:50,030 --> 00:03:50,040
+changing the second entities X and Y
+ 
+
+223
+00:03:50,040 --> 00:03:52,110
+changing the second entities X and Y
+they're actually the exact same as the
+
+224
+00:03:52,110 --> 00:03:52,120
+they're actually the exact same as the
+ 
+
+225
+00:03:52,120 --> 00:03:53,910
+they're actually the exact same as the
+first one they're pointing to the same
+
+226
+00:03:53,910 --> 00:03:53,920
+first one they're pointing to the same
+ 
+
+227
+00:03:53,920 --> 00:03:55,830
+first one they're pointing to the same
+memory picture two different entity
+
+228
+00:03:55,830 --> 00:03:55,840
+memory picture two different entity
+ 
+
+229
+00:03:55,840 --> 00:03:57,750
+memory picture two different entity
+instances however the X and Y that
+
+230
+00:03:57,750 --> 00:03:57,760
+instances however the X and Y that
+ 
+
+231
+00:03:57,760 --> 00:04:00,910
+instances however the X and Y that
+they're pointing to are shared they're
+
+232
+00:04:00,910 --> 00:04:00,920
+they're pointing to are shared they're
+ 
+
+233
+00:04:00,920 --> 00:04:03,630
+they're pointing to are shared they're
+pointing to the same X and Y and as such
+
+234
+00:04:03,630 --> 00:04:03,640
+pointing to the same X and Y and as such
+ 
+
+235
+00:04:03,640 --> 00:04:05,949
+pointing to the same X and Y and as such
+there's no point in US referring to them
+
+236
+00:04:05,949 --> 00:04:05,959
+there's no point in US referring to them
+ 
+
+237
+00:04:05,959 --> 00:04:07,910
+there's no point in US referring to them
+like this we can actually just refer to
+
+238
+00:04:07,910 --> 00:04:07,920
+like this we can actually just refer to
+ 
+
+239
+00:04:07,920 --> 00:04:10,910
+like this we can actually just refer to
+them like this as if they were inside
+
+240
+00:04:10,910 --> 00:04:10,920
+them like this as if they were inside
+ 
+
+241
+00:04:10,920 --> 00:04:13,030
+them like this as if they were inside
+the entity scope because really that's
+
+242
+00:04:13,030 --> 00:04:13,040
+the entity scope because really that's
+ 
+
+243
+00:04:13,040 --> 00:04:15,350
+the entity scope because really that's
+all they are it's like we've made two
+
+244
+00:04:15,350 --> 00:04:15,360
+all they are it's like we've made two
+ 
+
+245
+00:04:15,360 --> 00:04:17,550
+all they are it's like we've made two
+variables that are inside a namespace
+
+246
+00:04:17,550 --> 00:04:17,560
+variables that are inside a namespace
+ 
+
+247
+00:04:17,560 --> 00:04:20,270
+variables that are inside a namespace
+called entity They Don't Really belong
+
+248
+00:04:20,270 --> 00:04:20,280
+called entity They Don't Really belong
+ 
+
+249
+00:04:20,280 --> 00:04:22,270
+called entity They Don't Really belong
+to the class they do of course in the
+
+250
+00:04:22,270 --> 00:04:22,280
+to the class they do of course in the
+ 
+
+251
+00:04:22,280 --> 00:04:23,790
+to the class they do of course in the
+sense that they can be private and
+
+252
+00:04:23,790 --> 00:04:23,800
+sense that they can be private and
+ 
+
+253
+00:04:23,800 --> 00:04:25,990
+sense that they can be private and
+public and they have like so they are
+
+254
+00:04:25,990 --> 00:04:26,000
+public and they have like so they are
+ 
+
+255
+00:04:26,000 --> 00:04:27,830
+public and they have like so they are
+still kind of part of a class and not
+
+256
+00:04:27,830 --> 00:04:27,840
+still kind of part of a class and not
+ 
+
+257
+00:04:27,840 --> 00:04:30,790
+still kind of part of a class and not
+just a nam space but for all intents and
+
+258
+00:04:30,790 --> 00:04:30,800
+just a nam space but for all intents and
+ 
+
+259
+00:04:30,800 --> 00:04:33,230
+just a nam space but for all intents and
+purposes they basically are just in a
+
+260
+00:04:33,230 --> 00:04:33,240
+purposes they basically are just in a
+ 
+
+261
+00:04:33,240 --> 00:04:35,390
+purposes they basically are just in a
+namespace and they have nothing to do
+
+262
+00:04:35,390 --> 00:04:35,400
+namespace and they have nothing to do
+ 
+
+263
+00:04:35,400 --> 00:04:37,150
+namespace and they have nothing to do
+with any kind of allocation when you
+
+264
+00:04:37,150 --> 00:04:37,160
+with any kind of allocation when you
+ 
+
+265
+00:04:37,160 --> 00:04:38,830
+with any kind of allocation when you
+create a new class instance or anything
+
+266
+00:04:38,830 --> 00:04:38,840
+create a new class instance or anything
+ 
+
+267
+00:04:38,840 --> 00:04:40,430
+create a new class instance or anything
+like that so if we were to rewrite our
+
+268
+00:04:40,430 --> 00:04:40,440
+like that so if we were to rewrite our
+ 
+
+269
+00:04:40,440 --> 00:04:42,790
+like that so if we were to rewrite our
+code
+
+270
+00:04:42,790 --> 00:04:42,800
+code
+ 
+
+271
+00:04:42,800 --> 00:04:44,870
+code
+correctly you can see this makes a lot
+
+272
+00:04:44,870 --> 00:04:44,880
+correctly you can see this makes a lot
+ 
+
+273
+00:04:44,880 --> 00:04:46,830
+correctly you can see this makes a lot
+more sense now why we're getting 58
+
+274
+00:04:46,830 --> 00:04:46,840
+more sense now why we're getting 58
+ 
+
+275
+00:04:46,840 --> 00:04:48,230
+more sense now why we're getting 58
+everywhere because we are actually
+
+276
+00:04:48,230 --> 00:04:48,240
+everywhere because we are actually
+ 
+
+277
+00:04:48,240 --> 00:04:50,629
+everywhere because we are actually
+modifying the exact same variable this
+
+278
+00:04:50,629 --> 00:04:50,639
+modifying the exact same variable this
+ 
+
+279
+00:04:50,639 --> 00:04:52,550
+modifying the exact same variable this
+is of course really useful when you want
+
+280
+00:04:52,550 --> 00:04:52,560
+is of course really useful when you want
+ 
+
+281
+00:04:52,560 --> 00:04:54,550
+is of course really useful when you want
+to have variables across classes you
+
+282
+00:04:54,550 --> 00:04:54,560
+to have variables across classes you
+ 
+
+283
+00:04:54,560 --> 00:04:56,350
+to have variables across classes you
+could of course just create a global
+
+284
+00:04:56,350 --> 00:04:56,360
+could of course just create a global
+ 
+
+285
+00:04:56,360 --> 00:04:58,510
+could of course just create a global
+variable or instead of a global variable
+
+286
+00:04:58,510 --> 00:04:58,520
+variable or instead of a global variable
+ 
+
+287
+00:04:58,520 --> 00:05:00,830
+variable or instead of a global variable
+it could be like a stack IC Global
+
+288
+00:05:00,830 --> 00:05:00,840
+it could be like a stack IC Global
+ 
+
+289
+00:05:00,840 --> 00:05:02,550
+it could be like a stack IC Global
+variable right so it's still internally
+
+290
+00:05:02,550 --> 00:05:02,560
+variable right so it's still internally
+ 
+
+291
+00:05:02,560 --> 00:05:03,909
+variable right so it's still internally
+linked and all that stuff it's not going
+
+292
+00:05:03,909 --> 00:05:03,919
+linked and all that stuff it's not going
+ 
+
+293
+00:05:03,919 --> 00:05:06,270
+linked and all that stuff it's not going
+to be Global across your entire program
+
+294
+00:05:06,270 --> 00:05:06,280
+to be Global across your entire program
+ 
+
+295
+00:05:06,280 --> 00:05:08,230
+to be Global across your entire program
+however doing that would have the same
+
+296
+00:05:08,230 --> 00:05:08,240
+however doing that would have the same
+ 
+
+297
+00:05:08,240 --> 00:05:10,590
+however doing that would have the same
+effect of this so why would you do this
+
+298
+00:05:10,590 --> 00:05:10,600
+effect of this so why would you do this
+ 
+
+299
+00:05:10,600 --> 00:05:12,909
+effect of this so why would you do this
+the answer is basically just it makes
+
+300
+00:05:12,909 --> 00:05:12,919
+the answer is basically just it makes
+ 
+
+301
+00:05:12,919 --> 00:05:15,189
+the answer is basically just it makes
+sense to put it inside entity if you
+
+302
+00:05:15,189 --> 00:05:15,199
+sense to put it inside entity if you
+ 
+
+303
+00:05:15,199 --> 00:05:16,950
+sense to put it inside entity if you
+have something if you have a piece of
+
+304
+00:05:16,950 --> 00:05:16,960
+have something if you have a piece of
+ 
+
+305
+00:05:16,960 --> 00:05:19,230
+have something if you have a piece of
+information a piece of data that you
+
+306
+00:05:19,230 --> 00:05:19,240
+information a piece of data that you
+ 
+
+307
+00:05:19,240 --> 00:05:21,870
+information a piece of data that you
+want to be shared across all entity
+
+308
+00:05:21,870 --> 00:05:21,880
+want to be shared across all entity
+ 
+
+309
+00:05:21,880 --> 00:05:24,110
+want to be shared across all entity
+instances or it makes sense to actually
+
+310
+00:05:24,110 --> 00:05:24,120
+instances or it makes sense to actually
+ 
+
+311
+00:05:24,120 --> 00:05:26,550
+instances or it makes sense to actually
+store it inside the entity class because
+
+312
+00:05:26,550 --> 00:05:26,560
+store it inside the entity class because
+ 
+
+313
+00:05:26,560 --> 00:05:28,590
+store it inside the entity class because
+it's to do with entities for
+
+314
+00:05:28,590 --> 00:05:28,600
+it's to do with entities for
+ 
+
+315
+00:05:28,600 --> 00:05:30,309
+it's to do with entities for
+organizational purpose says you're much
+
+316
+00:05:30,309 --> 00:05:30,319
+organizational purpose says you're much
+ 
+
+317
+00:05:30,319 --> 00:05:33,029
+organizational purpose says you're much
+better making a static variable inside
+
+318
+00:05:33,029 --> 00:05:33,039
+better making a static variable inside
+ 
+
+319
+00:05:33,039 --> 00:05:35,150
+better making a static variable inside
+this class rather than having some
+
+320
+00:05:35,150 --> 00:05:35,160
+this class rather than having some
+ 
+
+321
+00:05:35,160 --> 00:05:36,870
+this class rather than having some
+static or Global floating around
+
+322
+00:05:36,870 --> 00:05:36,880
+static or Global floating around
+ 
+
+323
+00:05:36,880 --> 00:05:38,309
+static or Global floating around
+somewhere static methods work in a
+
+324
+00:05:38,309 --> 00:05:38,319
+somewhere static methods work in a
+ 
+
+325
+00:05:38,319 --> 00:05:40,670
+somewhere static methods work in a
+similar way if I make this print method
+
+326
+00:05:40,670 --> 00:05:40,680
+similar way if I make this print method
+ 
+
+327
+00:05:40,680 --> 00:05:43,070
+similar way if I make this print method
+static then it's going to work fine
+
+328
+00:05:43,070 --> 00:05:43,080
+static then it's going to work fine
+ 
+
+329
+00:05:43,080 --> 00:05:44,710
+static then it's going to work fine
+because you can see it's referring to X
+
+330
+00:05:44,710 --> 00:05:44,720
+because you can see it's referring to X
+ 
+
+331
+00:05:44,720 --> 00:05:47,430
+because you can see it's referring to X
+and Y which are also static variables I
+
+332
+00:05:47,430 --> 00:05:47,440
+and Y which are also static variables I
+ 
+
+333
+00:05:47,440 --> 00:05:49,189
+and Y which are also static variables I
+no longer have to call it like this I
+
+334
+00:05:49,189 --> 00:05:49,199
+no longer have to call it like this I
+ 
+
+335
+00:05:49,199 --> 00:05:51,870
+no longer have to call it like this I
+can also call it like so in fact this
+
+336
+00:05:51,870 --> 00:05:51,880
+can also call it like so in fact this
+ 
+
+337
+00:05:51,880 --> 00:05:53,390
+can also call it like so in fact this
+would be the correct way to call it and
+
+338
+00:05:53,390 --> 00:05:53,400
+would be the correct way to call it and
+ 
+
+339
+00:05:53,400 --> 00:05:54,790
+would be the correct way to call it and
+of course you can also notice that it's
+
+340
+00:05:54,790 --> 00:05:54,800
+of course you can also notice that it's
+ 
+
+341
+00:05:54,800 --> 00:05:56,230
+of course you can also notice that it's
+clearly going to be printing the same
+
+342
+00:05:56,230 --> 00:05:56,240
+clearly going to be printing the same
+ 
+
+343
+00:05:56,240 --> 00:05:57,870
+clearly going to be printing the same
+thing because we're running the same
+
+344
+00:05:57,870 --> 00:05:57,880
+thing because we're running the same
+ 
+
+345
+00:05:57,880 --> 00:05:59,990
+thing because we're running the same
+exact method twice and in this
+
+346
+00:05:59,990 --> 00:06:00,000
+exact method twice and in this
+ 
+
+347
+00:06:00,000 --> 00:06:02,029
+exact method twice and in this
+particular example we don't even need
+
+348
+00:06:02,029 --> 00:06:02,039
+particular example we don't even need
+ 
+
+349
+00:06:02,039 --> 00:06:03,790
+particular example we don't even need
+class instances at all because
+
+350
+00:06:03,790 --> 00:06:03,800
+class instances at all because
+ 
+
+351
+00:06:03,800 --> 00:06:05,870
+class instances at all because
+everything we're doing is static however
+
+352
+00:06:05,870 --> 00:06:05,880
+everything we're doing is static however
+ 
+
+353
+00:06:05,880 --> 00:06:07,430
+everything we're doing is static however
+things would break here if we decided to
+
+354
+00:06:07,430 --> 00:06:07,440
+things would break here if we decided to
+ 
+
+355
+00:06:07,440 --> 00:06:10,110
+things would break here if we decided to
+make X and Y non-static but keep our
+
+356
+00:06:10,110 --> 00:06:10,120
+make X and Y non-static but keep our
+ 
+
+357
+00:06:10,120 --> 00:06:11,830
+make X and Y non-static but keep our
+print method a static because static
+
+358
+00:06:11,830 --> 00:06:11,840
+print method a static because static
+ 
+
+359
+00:06:11,840 --> 00:06:14,430
+print method a static because static
+methods cannot access non-static
+
+360
+00:06:14,430 --> 00:06:14,440
+methods cannot access non-static
+ 
+
+361
+00:06:14,440 --> 00:06:16,430
+methods cannot access non-static
+variables and there's a very very simple
+
+362
+00:06:16,430 --> 00:06:16,440
+variables and there's a very very simple
+ 
+
+363
+00:06:16,440 --> 00:06:18,029
+variables and there's a very very simple
+reason to that some people get a little
+
+364
+00:06:18,029 --> 00:06:18,039
+reason to that some people get a little
+ 
+
+365
+00:06:18,039 --> 00:06:20,990
+reason to that some people get a little
+bit confused as to what static thing can
+
+366
+00:06:20,990 --> 00:06:21,000
+bit confused as to what static thing can
+ 
+
+367
+00:06:21,000 --> 00:06:22,990
+bit confused as to what static thing can
+access what non-static thing it's really
+
+368
+00:06:22,990 --> 00:06:23,000
+access what non-static thing it's really
+ 
+
+369
+00:06:23,000 --> 00:06:25,189
+access what non-static thing it's really
+not confusing at all check this out I'm
+
+370
+00:06:25,189 --> 00:06:25,199
+not confusing at all check this out I'm
+ 
+
+371
+00:06:25,199 --> 00:06:28,589
+not confusing at all check this out I'm
+going to bring back my entity instances
+
+372
+00:06:28,589 --> 00:06:28,599
+going to bring back my entity instances
+ 
+
+373
+00:06:28,599 --> 00:06:30,589
+going to bring back my entity instances
+and rewrite my code so that we actually
+
+374
+00:06:30,589 --> 00:06:30,599
+and rewrite my code so that we actually
+ 
+
+375
+00:06:30,599 --> 00:06:33,390
+and rewrite my code so that we actually
+do have a separate X and Y for each
+
+376
+00:06:33,390 --> 00:06:33,400
+do have a separate X and Y for each
+ 
+
+377
+00:06:33,400 --> 00:06:35,270
+do have a separate X and Y for each
+instance of the entity class I'm going
+
+378
+00:06:35,270 --> 00:06:35,280
+instance of the entity class I'm going
+ 
+
+379
+00:06:35,280 --> 00:06:37,749
+instance of the entity class I'm going
+to still leave this print method as
+
+380
+00:06:37,749 --> 00:06:37,759
+to still leave this print method as
+ 
+
+381
+00:06:37,759 --> 00:06:39,589
+to still leave this print method as
+static I'm going to get rid of this
+
+382
+00:06:39,589 --> 00:06:39,599
+static I'm going to get rid of this
+ 
+
+383
+00:06:39,599 --> 00:06:41,950
+static I'm going to get rid of this
+definition of our static variables and
+
+384
+00:06:41,950 --> 00:06:41,960
+definition of our static variables and
+ 
+
+385
+00:06:41,960 --> 00:06:43,950
+definition of our static variables and
+get rid of static in front of X and Y if
+
+386
+00:06:43,950 --> 00:06:43,960
+get rid of static in front of X and Y if
+ 
+
+387
+00:06:43,960 --> 00:06:45,950
+get rid of static in front of X and Y if
+we were to try and compile this code now
+
+388
+00:06:45,950 --> 00:06:45,960
+we were to try and compile this code now
+ 
+
+389
+00:06:45,960 --> 00:06:47,550
+we were to try and compile this code now
+we're going to get an error and you can
+
+390
+00:06:47,550 --> 00:06:47,560
+we're going to get an error and you can
+ 
+
+391
+00:06:47,560 --> 00:06:49,550
+we're going to get an error and you can
+see our error reads illegal reference to
+
+392
+00:06:49,550 --> 00:06:49,560
+see our error reads illegal reference to
+ 
+
+393
+00:06:49,560 --> 00:06:52,629
+see our error reads illegal reference to
+non-static member entity X because you
+
+394
+00:06:52,629 --> 00:06:52,639
+non-static member entity X because you
+ 
+
+395
+00:06:52,639 --> 00:06:56,270
+non-static member entity X because you
+cannot access this from a static method
+
+396
+00:06:56,270 --> 00:06:56,280
+cannot access this from a static method
+ 
+
+397
+00:06:56,280 --> 00:06:59,670
+cannot access this from a static method
+the reason is that a static method does
+
+398
+00:06:59,670 --> 00:06:59,680
+the reason is that a static method does
+ 
+
+399
+00:06:59,680 --> 00:07:01,909
+the reason is that a static method does
+not have a class instance I might go a
+
+400
+00:07:01,909 --> 00:07:01,919
+not have a class instance I might go a
+ 
+
+401
+00:07:01,919 --> 00:07:03,589
+not have a class instance I might go a
+little bit more into how classes
+
+402
+00:07:03,589 --> 00:07:03,599
+little bit more into how classes
+ 
+
+403
+00:07:03,599 --> 00:07:06,150
+little bit more into how classes
+actually work in a future video but
+
+404
+00:07:06,150 --> 00:07:06,160
+actually work in a future video but
+ 
+
+405
+00:07:06,160 --> 00:07:08,029
+actually work in a future video but
+essentially every method that you write
+
+406
+00:07:08,029 --> 00:07:08,039
+essentially every method that you write
+ 
+
+407
+00:07:08,039 --> 00:07:10,510
+essentially every method that you write
+inside a class every non-static method
+
+408
+00:07:10,510 --> 00:07:10,520
+inside a class every non-static method
+ 
+
+409
+00:07:10,520 --> 00:07:12,510
+inside a class every non-static method
+always gets an instance of the current
+
+410
+00:07:12,510 --> 00:07:12,520
+always gets an instance of the current
+ 
+
+411
+00:07:12,520 --> 00:07:14,710
+always gets an instance of the current
+class as a parameter that's how classes
+
+412
+00:07:14,710 --> 00:07:14,720
+class as a parameter that's how classes
+ 
+
+413
+00:07:14,720 --> 00:07:16,150
+class as a parameter that's how classes
+actually work behind the scenes there's
+
+414
+00:07:16,150 --> 00:07:16,160
+actually work behind the scenes there's
+ 
+
+415
+00:07:16,160 --> 00:07:18,230
+actually work behind the scenes there's
+no such thing as a class they just
+
+416
+00:07:18,230 --> 00:07:18,240
+no such thing as a class they just
+ 
+
+417
+00:07:18,240 --> 00:07:20,589
+no such thing as a class they just
+functions with a hidden parameter of
+
+418
+00:07:20,589 --> 00:07:20,599
+functions with a hidden parameter of
+ 
+
+419
+00:07:20,599 --> 00:07:22,869
+functions with a hidden parameter of
+sorts a static method does not get that
+
+420
+00:07:22,869 --> 00:07:22,879
+sorts a static method does not get that
+ 
+
+421
+00:07:22,879 --> 00:07:25,029
+sorts a static method does not get that
+hidden parameter a static method is the
+
+422
+00:07:25,029 --> 00:07:25,039
+hidden parameter a static method is the
+ 
+
+423
+00:07:25,039 --> 00:07:26,950
+hidden parameter a static method is the
+same as if you wrote a method outside of
+
+424
+00:07:26,950 --> 00:07:26,960
+same as if you wrote a method outside of
+ 
+
+425
+00:07:26,960 --> 00:07:28,990
+same as if you wrote a method outside of
+the class if I were to write a print
+
+426
+00:07:28,990 --> 00:07:29,000
+the class if I were to write a print
+ 
+
+427
+00:07:29,000 --> 00:07:30,710
+the class if I were to write a print
+method out side here suddenly this
+
+428
+00:07:30,710 --> 00:07:30,720
+method out side here suddenly this
+ 
+
+429
+00:07:30,720 --> 00:07:32,189
+method out side here suddenly this
+probably makes a lot more sense as to
+
+430
+00:07:32,189 --> 00:07:32,199
+probably makes a lot more sense as to
+ 
+
+431
+00:07:32,199 --> 00:07:33,830
+probably makes a lot more sense as to
+why you can't access X and Y because you
+
+432
+00:07:33,830 --> 00:07:33,840
+why you can't access X and Y because you
+ 
+
+433
+00:07:33,840 --> 00:07:35,629
+why you can't access X and Y because you
+don't know what they are now picture
+
+434
+00:07:35,629 --> 00:07:35,639
+don't know what they are now picture
+ 
+
+435
+00:07:35,639 --> 00:07:37,469
+don't know what they are now picture
+that you had this exact same method
+
+436
+00:07:37,469 --> 00:07:37,479
+that you had this exact same method
+ 
+
+437
+00:07:37,479 --> 00:07:39,550
+that you had this exact same method
+however an entity actually was passed in
+
+438
+00:07:39,550 --> 00:07:39,560
+however an entity actually was passed in
+ 
+
+439
+00:07:39,560 --> 00:07:41,869
+however an entity actually was passed in
+as a parameter and your code was
+
+440
+00:07:41,869 --> 00:07:41,879
+as a parameter and your code was
+ 
+
+441
+00:07:41,879 --> 00:07:44,990
+as a parameter and your code was
+converted to this suddenly this works
+
+442
+00:07:44,990 --> 00:07:45,000
+converted to this suddenly this works
+ 
+
+443
+00:07:45,000 --> 00:07:47,029
+converted to this suddenly this works
+what we've just written here this method
+
+444
+00:07:47,029 --> 00:07:47,039
+what we've just written here this method
+ 
+
+445
+00:07:47,039 --> 00:07:48,909
+what we've just written here this method
+that we've just written here is
+
+446
+00:07:48,909 --> 00:07:48,919
+that we've just written here is
+ 
+
+447
+00:07:48,919 --> 00:07:51,670
+that we've just written here is
+essentially what a class method that is
+
+448
+00:07:51,670 --> 00:07:51,680
+essentially what a class method that is
+ 
+
+449
+00:07:51,680 --> 00:07:53,950
+essentially what a class method that is
+non-static actually looks like when it's
+
+450
+00:07:53,950 --> 00:07:53,960
+non-static actually looks like when it's
+ 
+
+451
+00:07:53,960 --> 00:07:55,990
+non-static actually looks like when it's
+compiled and so if we take away this
+
+452
+00:07:55,990 --> 00:07:56,000
+compiled and so if we take away this
+ 
+
+453
+00:07:56,000 --> 00:07:57,869
+compiled and so if we take away this
+instance which is exactly what we're
+
+454
+00:07:57,869 --> 00:07:57,879
+instance which is exactly what we're
+ 
+
+455
+00:07:57,879 --> 00:08:01,029
+instance which is exactly what we're
+doing when we add this static keyword to
+
+456
+00:08:01,029 --> 00:08:01,039
+doing when we add this static keyword to
+ 
+
+457
+00:08:01,039 --> 00:08:03,790
+doing when we add this static keyword to
+a class method we get errors that's why
+
+458
+00:08:03,790 --> 00:08:03,800
+a class method we get errors that's why
+ 
+
+459
+00:08:03,800 --> 00:08:05,430
+a class method we get errors that's why
+you're getting errors it doesn't know
+
+460
+00:08:05,430 --> 00:08:05,440
+you're getting errors it doesn't know
+ 
+
+461
+00:08:05,440 --> 00:08:07,189
+you're getting errors it doesn't know
+which entities X and Y you want to
+
+462
+00:08:07,189 --> 00:08:07,199
+which entities X and Y you want to
+ 
+
+463
+00:08:07,199 --> 00:08:09,309
+which entities X and Y you want to
+access because you haven't given it a
+
+464
+00:08:09,309 --> 00:08:09,319
+access because you haven't given it a
+ 
+
+465
+00:08:09,319 --> 00:08:10,990
+access because you haven't given it a
+reference to an entity so hopefully that
+
+466
+00:08:10,990 --> 00:08:11,000
+reference to an entity so hopefully that
+ 
+
+467
+00:08:11,000 --> 00:08:12,749
+reference to an entity so hopefully that
+makes a lot of sense and that clears
+
+468
+00:08:12,749 --> 00:08:12,759
+makes a lot of sense and that clears
+ 
+
+469
+00:08:12,759 --> 00:08:14,029
+makes a lot of sense and that clears
+everything up next time we're going to
+
+470
+00:08:14,029 --> 00:08:14,039
+everything up next time we're going to
+ 
+
+471
+00:08:14,039 --> 00:08:15,869
+everything up next time we're going to
+take a look at integrating this new
+
+472
+00:08:15,869 --> 00:08:15,879
+take a look at integrating this new
+ 
+
+473
+00:08:15,879 --> 00:08:18,149
+take a look at integrating this new
+found static knowledge into our log
+
+474
+00:08:18,149 --> 00:08:18,159
+found static knowledge into our log
+ 
+
+475
+00:08:18,159 --> 00:08:19,710
+found static knowledge into our log
+class that we've been working on if you
+
+476
+00:08:19,710 --> 00:08:19,720
+class that we've been working on if you
+ 
+
+477
+00:08:19,720 --> 00:08:20,950
+class that we've been working on if you
+guys want to see what that looks like
+
+478
+00:08:20,950 --> 00:08:20,960
+guys want to see what that looks like
+ 
+
+479
+00:08:20,960 --> 00:08:22,670
+guys want to see what that looks like
+you can look at the how to write a C++
+
+480
+00:08:22,670 --> 00:08:22,680
+you can look at the how to write a C++
+ 
+
+481
+00:08:22,680 --> 00:08:24,950
+you can look at the how to write a C++
+class video as we go along with this
+
+482
+00:08:24,950 --> 00:08:24,960
+class video as we go along with this
+ 
+
+483
+00:08:24,960 --> 00:08:26,510
+class video as we go along with this
+series we're going to keep adding to
+
+484
+00:08:26,510 --> 00:08:26,520
+series we're going to keep adding to
+ 
+
+485
+00:08:26,520 --> 00:08:28,070
+series we're going to keep adding to
+that low class and figure out some new
+
+486
+00:08:28,070 --> 00:08:28,080
+that low class and figure out some new
+ 
+
+487
+00:08:28,080 --> 00:08:29,629
+that low class and figure out some new
+things we can do and kind of keep keep
+
+488
+00:08:29,629 --> 00:08:29,639
+things we can do and kind of keep keep
+ 
+
+489
+00:08:29,639 --> 00:08:31,710
+things we can do and kind of keep keep
+improving it as we learn new Concepts
+
+490
+00:08:31,710 --> 00:08:31,720
+improving it as we learn new Concepts
+ 
+
+491
+00:08:31,720 --> 00:08:34,269
+improving it as we learn new Concepts
+static is incredibly useful for static
+
+492
+00:08:34,269 --> 00:08:34,279
+static is incredibly useful for static
+ 
+
+493
+00:08:34,279 --> 00:08:36,190
+static is incredibly useful for static
+data data that doesn't change between
+
+494
+00:08:36,190 --> 00:08:36,200
+data data that doesn't change between
+ 
+
+495
+00:08:36,200 --> 00:08:37,790
+data data that doesn't change between
+Class instances but that we actually
+
+496
+00:08:37,790 --> 00:08:37,800
+Class instances but that we actually
+ 
+
+497
+00:08:37,800 --> 00:08:40,350
+Class instances but that we actually
+want to use in our classes thank you
+
+498
+00:08:40,350 --> 00:08:40,360
+want to use in our classes thank you
+ 
+
+499
+00:08:40,360 --> 00:08:41,589
+want to use in our classes thank you
+guys for watching as always you can
+
+500
+00:08:41,589 --> 00:08:41,599
+guys for watching as always you can
+ 
+
+501
+00:08:41,599 --> 00:08:43,870
+guys for watching as always you can
+follow me on Twitter and Instagram links
+
+502
+00:08:43,870 --> 00:08:43,880
+follow me on Twitter and Instagram links
+ 
+
+503
+00:08:43,880 --> 00:08:45,310
+follow me on Twitter and Instagram links
+in the description below and if you
+
+504
+00:08:45,310 --> 00:08:45,320
+in the description below and if you
+ 
+
+505
+00:08:45,320 --> 00:08:46,630
+in the description below and if you
+really like this series you can support
+
+506
+00:08:46,630 --> 00:08:46,640
+really like this series you can support
+ 
+
+507
+00:08:46,640 --> 00:08:48,910
+really like this series you can support
+it on patreon.com Theo thank you to
+
+508
+00:08:48,910 --> 00:08:48,920
+it on patreon.com Theo thank you to
+ 
+
+509
+00:08:48,920 --> 00:08:50,150
+it on patreon.com Theo thank you to
+everyone who's supporting this and
+
+510
+00:08:50,150 --> 00:08:50,160
+everyone who's supporting this and
+ 
+
+511
+00:08:50,160 --> 00:08:52,070
+everyone who's supporting this and
+making this possible love you guys I'll
+
+512
+00:08:52,070 --> 00:08:52,080
+making this possible love you guys I'll
+ 
+
+513
+00:08:52,080 --> 00:08:54,940
+making this possible love you guys I'll
+see you next time goodbye
+
+514
+00:08:54,940 --> 00:08:54,950
+see you next time goodbye
+ 
+
+515
+00:08:54,950 --> 00:09:01,190
+see you next time goodbye
+[Music]
+
+516
+00:09:01,190 --> 00:09:01,200
+
+ 
+
+517
+00:09:01,200 --> 00:09:03,080
+
+he
+
+518
+00:09:03,080 --> 00:09:03,090
+he
+ 
+
+519
+00:09:03,090 --> 00:09:10,130
+he
+[Music]
+

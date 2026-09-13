@@ -1,0 +1,1727 @@
+WARNING: Your yt-dlp version (2026.02.04) is older than 90 days!
+         It is strongly recommended to always use the latest version.
+         Run "yt-dlp --update" or "yt-dlp -U" to update.
+         To suppress this warning, add --no-update to your command/config.
+[youtube:tab] Extracting URL: https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+[youtube:tab] Downloading playlist PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb - add --no-playlist to download just the video 18c3MTX0PK0
+[youtube:tab] PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb: Downloading webpage
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: C++
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb page 1: Downloading API JSON
+[youtube:tab] Playlist C++: Downloading 115 items of 115
+[download] Downloading item 1 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=18c3MTX0PK0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 18c3MTX0PK0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 18c3MTX0PK0: Downloading android vr player API JSON
+WARNING: [youtube] 18c3MTX0PK0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 18c3MTX0PK0: Downloading subtitles: en
+[info] 18c3MTX0PK0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 001 - Welcome to C++.en.vtt
+[download] Destination: 001 - Welcome to C++.en.vtt
+[download]    1.00KiB at  405.44KiB/s (00:00:00)[download]    3.00KiB at  850.43KiB/s (00:00:00)[download]    7.00KiB at  603.27KiB/s (00:00:00)[download]   15.00KiB at  277.18KiB/s (00:00:00)[download]   31.00KiB at  165.81KiB/s (00:00:00)[download]   63.00KiB at  239.88KiB/s (00:00:01)[download]   73.44KiB at  246.48KiB/s (00:00:01)[download] 100% of   73.44KiB in 00:00:01 at 69.89KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 001 - Welcome to C++.en.vtt (pass -k to keep)
+[download] Downloading item 2 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=1OsGXuNA5cc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 1OsGXuNA5cc: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 1OsGXuNA5cc: Downloading android vr player API JSON
+WARNING: [youtube] 1OsGXuNA5cc: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 1OsGXuNA5cc: Downloading subtitles: en
+[info] 1OsGXuNA5cc: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 002 - How to Setup C++ on Windows.en.vtt
+[download] Destination: 002 - How to Setup C++ on Windows.en.vtt
+[download]    1.00KiB at  309.84KiB/s (00:00:00)[download]    3.00KiB at  614.31KiB/s (00:00:00)[download]    7.00KiB at  534.00KiB/s (00:00:00)[download]   15.00KiB at  306.57KiB/s (00:00:00)[download]   31.00KiB at  148.75KiB/s (00:00:01)[download]   63.00KiB at  226.49KiB/s (00:00:01)[download]   89.11KiB at  257.18KiB/s (00:00:01)[download] 100% of   89.11KiB in 00:00:01 at 78.09KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 002 - How to Setup C++ on Windows.en.vtt (pass -k to keep)
+[download] Downloading item 3 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=1E_kBSka_ec
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 1E_kBSka_ec: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 1E_kBSka_ec: Downloading android vr player API JSON
+WARNING: [youtube] 1E_kBSka_ec: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 1E_kBSka_ec: Downloading subtitles: en
+[info] 1E_kBSka_ec: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 003 - How to Setup C++ on Mac.en.vtt
+[download] Destination: 003 - How to Setup C++ on Mac.en.vtt
+[download]    1.00KiB at  501.95KiB/s (00:00:00)[download]    3.00KiB at  958.26KiB/s (00:00:00)[download]    7.00KiB at  836.92KiB/s (00:00:00)[download]   15.00KiB at  312.25KiB/s (00:00:00)[download]   31.00KiB at  170.77KiB/s (00:00:00)[download]   32.83KiB at  179.75KiB/s (00:00:00)[download] 100% of   32.83KiB in 00:00:00 at 34.63KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 003 - How to Setup C++ on Mac.en.vtt (pass -k to keep)
+[download] Downloading item 4 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=LKLuvoY6U0I
+[youtube] Sleeping 1.0 seconds ...
+[youtube] LKLuvoY6U0I: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] LKLuvoY6U0I: Downloading android vr player API JSON
+WARNING: [youtube] LKLuvoY6U0I: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] LKLuvoY6U0I: Downloading subtitles: en
+[info] LKLuvoY6U0I: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 004 - How to Setup C++ on Linux.en.vtt
+[download] Destination: 004 - How to Setup C++ on Linux.en.vtt
+[download]    1.00KiB at  516.16KiB/s (00:00:00)[download]    3.00KiB at  940.01KiB/s (00:00:00)[download]    7.00KiB at  790.89KiB/s (00:00:00)[download]   15.00KiB at  382.07KiB/s (00:00:00)[download]   31.00KiB at  105.70KiB/s (00:00:00)[download]   63.00KiB at  147.62KiB/s (00:00:01)[download]   80.82KiB at  177.05KiB/s (00:00:01)[download] 100% of   80.82KiB in 00:00:01 at 69.84KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 004 - How to Setup C++ on Linux.en.vtt (pass -k to keep)
+[download] Downloading item 5 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=SfGuIVzE_Os
+[youtube] Sleeping 1.0 seconds ...
+[youtube] SfGuIVzE_Os: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] SfGuIVzE_Os: Downloading android vr player API JSON
+WARNING: [youtube] SfGuIVzE_Os: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] SfGuIVzE_Os: Downloading subtitles: en
+[info] SfGuIVzE_Os: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 005 - How C++ Works.en.vtt
+[download] Destination: 005 - How C++ Works.en.vtt
+[download]    1.00KiB at  633.77KiB/s (00:00:00)[download]    3.00KiB at    1.10MiB/s (00:00:00)[download]    7.00KiB at  402.17KiB/s (00:00:00)[download]   15.00KiB at  317.15KiB/s (00:00:00)[download]   31.00KiB at  175.35KiB/s (00:00:00)[download]   63.00KiB at  235.03KiB/s (00:00:00)[download]  127.00KiB at  307.99KiB/s (00:00:01)[download]  198.12KiB at  400.17KiB/s (00:00:01)[download] 100% of  198.12KiB in 00:00:01 at 169.62KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 005 - How C++ Works.en.vtt (pass -k to keep)
+[download] Downloading item 6 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3tIqpEmWMLI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3tIqpEmWMLI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3tIqpEmWMLI: Downloading android vr player API JSON
+WARNING: [youtube] 3tIqpEmWMLI: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 3tIqpEmWMLI: Downloading subtitles: en
+[info] 3tIqpEmWMLI: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 006 - How the C++ Compiler Works.en.vtt
+[download] Destination: 006 - How the C++ Compiler Works.en.vtt
+[download]    1.00KiB at  308.02KiB/s (00:00:00)[download]    3.00KiB at  390.56KiB/s (00:00:00)[download]    7.00KiB at  179.06KiB/s (00:00:00)[download]   15.00KiB at  249.91KiB/s (00:00:00)[download]   31.00KiB at  172.61KiB/s (00:00:00)[download]   63.00KiB at  244.84KiB/s (00:00:00)[download]  127.00KiB at  333.83KiB/s (00:00:01)[download]  185.61KiB at  413.85KiB/s (00:00:01)[download] 100% of  185.61KiB in 00:00:01 at 172.68KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 006 - How the C++ Compiler Works.en.vtt (pass -k to keep)
+[download] Downloading item 7 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=H4s55GgAg0I
+[youtube] Sleeping 1.0 seconds ...
+[youtube] H4s55GgAg0I: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] H4s55GgAg0I: Downloading android vr player API JSON
+WARNING: [youtube] H4s55GgAg0I: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] H4s55GgAg0I: Downloading subtitles: en
+[info] H4s55GgAg0I: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 007 - How the C++ Linker Works.en.vtt
+[download] Destination: 007 - How the C++ Linker Works.en.vtt
+[download]    1.00KiB at  653.22KiB/s (00:00:03)[download]    3.00KiB at  848.53KiB/s (00:00:03)[download]    7.00KiB at  313.26KiB/s (00:00:03)[download]   15.00KiB at  307.22KiB/s (00:00:03)[download]   31.00KiB at  191.60KiB/s (00:00:03)[download]   63.00KiB at  269.58KiB/s (00:00:03)[download]  127.00KiB at  347.36KiB/s (00:00:04)[download]  162.64KiB at  397.72KiB/s (00:00:04)[download] 100% of  162.64KiB in 00:00:04 at 39.59KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 007 - How the C++ Linker Works.en.vtt (pass -k to keep)
+[download] Downloading item 8 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zB9RI8_wExo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zB9RI8_wExo: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zB9RI8_wExo: Downloading android vr player API JSON
+WARNING: [youtube] zB9RI8_wExo: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] zB9RI8_wExo: Downloading subtitles: en
+[info] zB9RI8_wExo: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 008 - Variables in C++.en.vtt
+[download] Destination: 008 - Variables in C++.en.vtt
+[download]    1.00KiB at  613.47KiB/s (00:00:01)[download]    3.00KiB at    1.35MiB/s (00:00:01)[download]    7.00KiB at  401.84KiB/s (00:00:01)[download]   15.00KiB at  332.79KiB/s (00:00:01)[download]   31.00KiB at   41.77KiB/s (00:00:02)[download]   53.95KiB at   55.00KiB/s (00:00:02)[download]   99.86KiB at   72.77KiB/s (00:00:02)[download]  134.17KiB at   82.70KiB/s (00:00:03)[download] 100% of  134.17KiB in 00:00:03 at 41.72KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 008 - Variables in C++.en.vtt (pass -k to keep)
+[download] Downloading item 9 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=V9zuox47zr0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] V9zuox47zr0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] V9zuox47zr0: Downloading android vr player API JSON
+WARNING: [youtube] V9zuox47zr0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] V9zuox47zr0: Downloading subtitles: en
+[info] V9zuox47zr0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 009 - Functions in C++.en.vtt
+[download] Destination: 009 - Functions in C++.en.vtt
+[download]    1.00KiB at  567.72KiB/s (00:00:02)[download]    3.00KiB at  727.55KiB/s (00:00:02)[download]    7.00KiB at  456.12KiB/s (00:00:02)[download]   15.00KiB at  243.82KiB/s (00:00:02)[download]   31.00KiB at  188.27KiB/s (00:00:02)[download]   63.00KiB at  231.19KiB/s (00:00:02)[download]  104.48KiB at  271.81KiB/s (00:00:02)[download] 100% of  104.48KiB in 00:00:02 at 39.00KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 009 - Functions in C++.en.vtt (pass -k to keep)
+[download] Downloading item 10 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9RJTQmK0YPI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9RJTQmK0YPI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9RJTQmK0YPI: Downloading android vr player API JSON
+WARNING: [youtube] 9RJTQmK0YPI: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 9RJTQmK0YPI: Downloading subtitles: en
+[info] 9RJTQmK0YPI: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 010 - C++ Header Files.en.vtt
+[download] Destination: 010 - C++ Header Files.en.vtt
+[download]    1.00KiB at  327.25KiB/s (00:00:00)[download]    3.00KiB at  692.66KiB/s (00:00:00)[download]    7.00KiB at    1.22MiB/s (00:00:00)[download]   15.00KiB at    1.83MiB/s (00:00:00)[download]   31.00KiB at  151.38KiB/s (00:00:00)[download]   63.00KiB at  254.68KiB/s (00:00:00)[download]  127.00KiB at  271.65KiB/s (00:00:01)[download]  157.31KiB at  305.07KiB/s (00:00:01)[download] 100% of  157.31KiB in 00:00:01 at 126.76KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 010 - C++ Header Files.en.vtt (pass -k to keep)
+[download] Downloading item 11 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=0ebzPwixrJA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 0ebzPwixrJA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 0ebzPwixrJA: Downloading android vr player API JSON
+WARNING: [youtube] 0ebzPwixrJA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 0ebzPwixrJA: Downloading subtitles: en
+[info] 0ebzPwixrJA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 011 - How to DEBUG C++ in VISUAL STUDIO.en.vtt
+[download] Destination: 011 - How to DEBUG C++ in VISUAL STUDIO.en.vtt
+[download]    1.00KiB at  498.49KiB/s (00:00:00)[download]    3.00KiB at    1.46MiB/s (00:00:00)[download]    7.00KiB at    1.51MiB/s (00:00:00)[download]   15.00KiB at  426.96KiB/s (00:00:00)[download]   31.00KiB at  192.47KiB/s (00:00:00)[download]   63.00KiB at  230.56KiB/s (00:00:00)[download]  127.00KiB at  316.03KiB/s (00:00:01)[download]  195.64KiB at  414.44KiB/s (00:00:01)[download] 100% of  195.64KiB in 00:00:01 at 168.55KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 011 - How to DEBUG C++ in VISUAL STUDIO.en.vtt (pass -k to keep)
+[download] Downloading item 12 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qEgCT87KOfc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qEgCT87KOfc: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qEgCT87KOfc: Downloading android vr player API JSON
+WARNING: [youtube] qEgCT87KOfc: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] qEgCT87KOfc: Downloading subtitles: en
+[info] qEgCT87KOfc: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 012 - CONDITIONS and BRANCHES in C++ (if statements).en.vtt
+[download] Destination: 012 - CONDITIONS and BRANCHES in C++ (if statements).en.vtt
+[download]    1.00KiB at  548.99KiB/s (00:00:00)[download]    3.00KiB at  338.28KiB/s (00:00:00)[download]    7.00KiB at  374.99KiB/s (00:00:00)[download]   15.00KiB at  304.27KiB/s (00:00:00)[download]   31.00KiB at  161.94KiB/s (00:00:01)[download]   63.00KiB at  215.74KiB/s (00:00:01)[download]  127.00KiB at  287.35KiB/s (00:00:01)[download]  240.77KiB at  430.14KiB/s (00:00:01)[download] 100% of  240.77KiB in 00:00:01 at 171.94KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 012 - CONDITIONS and BRANCHES in C++ (if statements).en.vtt (pass -k to keep)
+[download] Downloading item 13 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qeH9Xv_90KM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qeH9Xv_90KM: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qeH9Xv_90KM: Downloading android vr player API JSON
+WARNING: [youtube] qeH9Xv_90KM: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] qeH9Xv_90KM: Downloading subtitles: en
+[info] qeH9Xv_90KM: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 013 - BEST Visual Studio Setup for C++ Projects!.en.vtt
+[download] Destination: 013 - BEST Visual Studio Setup for C++ Projects!.en.vtt
+[download]    1.00KiB at  456.35KiB/s (00:00:01)[download]    3.00KiB at   20.87KiB/s (00:00:01)[download]    7.00KiB at   47.46KiB/s (00:00:01)[download]   15.00KiB at   53.82KiB/s (00:00:01)[download]   31.00KiB at   92.43KiB/s (00:00:01)[download]   63.00KiB at  129.80KiB/s (00:00:01)[download]  126.28KiB at  204.25KiB/s (00:00:01)[download] 100% of  126.28KiB in 00:00:01 at 65.05KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 013 - BEST Visual Studio Setup for C++ Projects!.en.vtt (pass -k to keep)
+[download] Downloading item 14 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=_1AwR-un4Hk
+[youtube] Sleeping 1.0 seconds ...
+[youtube] _1AwR-un4Hk: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] _1AwR-un4Hk: Downloading android vr player API JSON
+WARNING: [youtube] _1AwR-un4Hk: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] _1AwR-un4Hk: Downloading subtitles: en
+[info] _1AwR-un4Hk: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 014 - Loops in C++ (for loops, while loops).en.vtt
+[download] Destination: 014 - Loops in C++ (for loops, while loops).en.vtt
+[download]    1.00KiB at  345.12KiB/s (00:00:00)[download]    3.00KiB at  177.46KiB/s (00:00:00)[download]    7.00KiB at  240.61KiB/s (00:00:00)[download]   15.00KiB at  225.33KiB/s (00:00:00)[download]   31.00KiB at  188.94KiB/s (00:00:00)[download]   63.00KiB at  238.74KiB/s (00:00:01)[download]  127.00KiB at  321.58KiB/s (00:00:01)[download]  133.11KiB at  336.03KiB/s (00:00:01)[download] 100% of  133.11KiB in 00:00:01 at 109.85KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 014 - Loops in C++ (for loops, while loops).en.vtt (pass -k to keep)
+[download] Downloading item 15 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=a3IZ8WaIFAA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] a3IZ8WaIFAA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] a3IZ8WaIFAA: Downloading android vr player API JSON
+WARNING: [youtube] a3IZ8WaIFAA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] a3IZ8WaIFAA: Downloading subtitles: en
+[info] a3IZ8WaIFAA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 015 - Control Flow in C++ (continue, break, return).en.vtt
+[download] Destination: 015 - Control Flow in C++ (continue, break, return).en.vtt
+[download]    1.00KiB at  614.55KiB/s (00:00:00)[download]    3.00KiB at  727.80KiB/s (00:00:00)[download]    7.00KiB at  273.93KiB/s (00:00:00)[download]   15.00KiB at  255.98KiB/s (00:00:00)[download]   31.00KiB at  168.38KiB/s (00:00:00)[download]   63.00KiB at  214.42KiB/s (00:00:00)[download]   87.80KiB at  258.79KiB/s (00:00:01)[download] 100% of   87.80KiB in 00:00:01 at 87.20KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 015 - Control Flow in C++ (continue, break, return).en.vtt (pass -k to keep)
+[download] Downloading item 16 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=DTxHyVn0ODg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] DTxHyVn0ODg: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] DTxHyVn0ODg: Downloading android vr player API JSON
+WARNING: [youtube] DTxHyVn0ODg: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] DTxHyVn0ODg: Downloading subtitles: en
+[info] DTxHyVn0ODg: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 016 - POINTERS in C++.en.vtt
+[download] Destination: 016 - POINTERS in C++.en.vtt
+[download]    1.00KiB at  352.14KiB/s (00:00:00)[download]    3.00KiB at  745.21KiB/s (00:00:00)[download]    7.00KiB at  413.10KiB/s (00:00:00)[download]   15.00KiB at  374.98KiB/s (00:00:00)[download]   31.00KiB at  190.98KiB/s (00:00:00)[download]   63.00KiB at   69.63KiB/s (00:00:01)[download]  106.10KiB at   79.41KiB/s (00:00:01)[download]  173.92KiB at  106.03KiB/s (00:00:02)[download] 100% of  173.92KiB in 00:00:02 at 77.72KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 016 - POINTERS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 17 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=IzoFn3dfsPA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] IzoFn3dfsPA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] IzoFn3dfsPA: Downloading android vr player API JSON
+WARNING: [youtube] IzoFn3dfsPA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] IzoFn3dfsPA: Downloading subtitles: en
+[info] IzoFn3dfsPA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 017 - REFERENCES in C++.en.vtt
+[download] Destination: 017 - REFERENCES in C++.en.vtt
+[download]    1.00KiB at  537.04KiB/s (00:00:00)[download]    3.00KiB at  187.58KiB/s (00:00:00)[download]    7.00KiB at  257.13KiB/s (00:00:00)[download]   15.00KiB at  296.63KiB/s (00:00:00)[download]   31.00KiB at  182.24KiB/s (00:00:00)[download]   63.00KiB at  233.47KiB/s (00:00:00)[download]  108.28KiB at  299.38KiB/s (00:00:00)[download] 100% of  108.28KiB in 00:00:00 at 109.57KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 017 - REFERENCES in C++.en.vtt (pass -k to keep)
+[download] Downloading item 18 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2BP8NhxjrO0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 2BP8NhxjrO0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 2BP8NhxjrO0: Downloading android vr player API JSON
+WARNING: [youtube] 2BP8NhxjrO0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 2BP8NhxjrO0: Downloading subtitles: en
+[info] 2BP8NhxjrO0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 018 - CLASSES in C++.en.vtt
+[download] Destination: 018 - CLASSES in C++.en.vtt
+[download]    1.00KiB at  424.65KiB/s (00:00:00)[download]    3.00KiB at  215.46KiB/s (00:00:00)[download]    7.00KiB at  289.79KiB/s (00:00:00)[download]   15.00KiB at  194.25KiB/s (00:00:00)[download]   31.00KiB at  153.54KiB/s (00:00:00)[download]   63.00KiB at  206.73KiB/s (00:00:01)[download]   91.29KiB at  246.30KiB/s (00:00:01)[download] 100% of   91.29KiB in 00:00:01 at 78.48KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 018 - CLASSES in C++.en.vtt (pass -k to keep)
+[download] Downloading item 19 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=fLgTtaqqJp0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] fLgTtaqqJp0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] fLgTtaqqJp0: Downloading android vr player API JSON
+WARNING: [youtube] fLgTtaqqJp0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] fLgTtaqqJp0: Downloading subtitles: en
+[info] fLgTtaqqJp0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 019 - CLASSES vs STRUCTS in C++.en.vtt
+[download] Destination: 019 - CLASSES vs STRUCTS in C++.en.vtt
+[download]    1.00KiB at  570.19KiB/s (00:00:00)[download]    3.00KiB at  754.91KiB/s (00:00:00)[download]    7.00KiB at  293.73KiB/s (00:00:00)[download]   12.41KiB at  356.83KiB/s (00:00:00)[download] 100% of   12.41KiB in 00:00:00 at 16.93KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 019 - CLASSES vs STRUCTS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 20 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3dHBFBw13E0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3dHBFBw13E0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3dHBFBw13E0: Downloading android vr player API JSON
+WARNING: [youtube] 3dHBFBw13E0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 3dHBFBw13E0: Downloading subtitles: en
+[info] 3dHBFBw13E0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 020 - How to Write a C++ Class.en.vtt
+[download] Destination: 020 - How to Write a C++ Class.en.vtt
+[download]    1.00KiB at  647.07KiB/s (00:00:00)[download]    3.00KiB at  244.31KiB/s (00:00:00)[download]    7.00KiB at  322.87KiB/s (00:00:00)[download]    9.72KiB at  398.18KiB/s (00:00:00)[download] 100% of    9.72KiB in 00:00:00 at 16.85KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 020 - How to Write a C++ Class.en.vtt (pass -k to keep)
+[download] Downloading item 21 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=f3FVU-iwNuA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] f3FVU-iwNuA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] f3FVU-iwNuA: Downloading android vr player API JSON
+WARNING: [youtube] f3FVU-iwNuA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] f3FVU-iwNuA: Downloading subtitles: en
+[info] f3FVU-iwNuA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 021 - Static in C++.en.vtt
+[download] Destination: 021 - Static in C++.en.vtt
+[download]    1.00KiB at  648.47KiB/s (00:00:00)[download]    3.00KiB at    1.08MiB/s (00:00:00)[download]    7.00KiB at  680.10KiB/s (00:00:00)[download]   10.19KiB at  458.39KiB/s (00:00:00)[download] 100% of   10.19KiB in 00:00:00 at 14.88KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 021 - Static in C++.en.vtt (pass -k to keep)
+[download] Downloading item 22 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=V-BFlMrBtqQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] V-BFlMrBtqQ: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] V-BFlMrBtqQ: Downloading android vr player API JSON
+WARNING: [youtube] V-BFlMrBtqQ: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] V-BFlMrBtqQ: Downloading subtitles: en
+[info] V-BFlMrBtqQ: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 022 - Static for Classes and Structs in C++.en.vtt
+[download] Destination: 022 - Static for Classes and Structs in C++.en.vtt
+[download]    1.00KiB at  455.80KiB/s (00:00:00)[download]    3.00KiB at  317.25KiB/s (00:00:00)[download]    7.00KiB at  393.40KiB/s (00:00:00)[download]   15.00KiB at  319.36KiB/s (00:00:00)[download]   31.00KiB at  201.48KiB/s (00:00:00)[download]   63.00KiB at  245.51KiB/s (00:00:00)[download]   90.58KiB at  293.83KiB/s (00:00:00)[download] 100% of   90.58KiB in 00:00:00 at 95.28KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 022 - Static for Classes and Structs in C++.en.vtt (pass -k to keep)
+[download] Downloading item 23 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=x55jfOd5PEE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] x55jfOd5PEE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] x55jfOd5PEE: Downloading android vr player API JSON
+WARNING: [youtube] x55jfOd5PEE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] x55jfOd5PEE: Downloading subtitles: en
+[info] x55jfOd5PEE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 023 - ENUMS in C++.en.vtt
+[download] Destination: 023 - ENUMS in C++.en.vtt
+[download]    1.00KiB at  374.86KiB/s (00:00:00)[download]    3.00KiB at  895.01KiB/s (00:00:00)[download]    7.00KiB at    1.73MiB/s (00:00:00)[download]   15.00KiB at    3.26MiB/s (00:00:00)[download]   31.00KiB at  151.30KiB/s (00:00:01)[download]   63.00KiB at  188.53KiB/s (00:00:01)[download]   81.53KiB at  223.14KiB/s (00:00:01)[download] 100% of   81.53KiB in 00:00:01 at 62.68KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 023 - ENUMS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 24 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=FXhALMsHwEY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FXhALMsHwEY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FXhALMsHwEY: Downloading android vr player API JSON
+WARNING: [youtube] FXhALMsHwEY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] FXhALMsHwEY: Downloading subtitles: en
+[info] FXhALMsHwEY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 024 - Constructors in C++.en.vtt
+[download] Destination: 024 - Constructors in C++.en.vtt
+[download]    1.00KiB at  384.59KiB/s (00:00:00)[download]    3.00KiB at  366.15KiB/s (00:00:00)[download]    7.00KiB at  355.19KiB/s (00:00:00)[download]   15.00KiB at  309.29KiB/s (00:00:00)[download]   31.00KiB at  179.48KiB/s (00:00:00)[download]   63.00KiB at  236.66KiB/s (00:00:00)[download]   69.40KiB at  252.73KiB/s (00:00:00)[download] 100% of   69.40KiB in 00:00:00 at 73.98KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 024 - Constructors in C++.en.vtt (pass -k to keep)
+[download] Downloading item 25 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=D8cWquReFqw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] D8cWquReFqw: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] D8cWquReFqw: Downloading android vr player API JSON
+WARNING: [youtube] D8cWquReFqw: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] D8cWquReFqw: Downloading subtitles: en
+[info] D8cWquReFqw: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 025 - Destructors in C++.en.vtt
+[download] Destination: 025 - Destructors in C++.en.vtt
+[download]    1.00KiB at  491.37KiB/s (00:00:00)[download]    3.00KiB at  831.76KiB/s (00:00:00)[download]    7.00KiB at  320.91KiB/s (00:00:00)[download]   15.00KiB at  293.27KiB/s (00:00:00)[download]   31.00KiB at  183.57KiB/s (00:00:00)[download]   48.30KiB at  231.52KiB/s (00:00:00)[download] 100% of   48.30KiB in 00:00:00 at 57.50KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 025 - Destructors in C++.en.vtt (pass -k to keep)
+[download] Downloading item 26 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=X8nYM8wdNRE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] X8nYM8wdNRE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] X8nYM8wdNRE: Downloading android vr player API JSON
+WARNING: [youtube] X8nYM8wdNRE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] X8nYM8wdNRE: Downloading subtitles: en
+[info] X8nYM8wdNRE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 026 - Inheritance in C++.en.vtt
+[download] Destination: 026 - Inheritance in C++.en.vtt
+[download]    1.00KiB at  424.87KiB/s (00:00:00)[download]    3.00KiB at  740.61KiB/s (00:00:00)[download]    7.00KiB at  503.23KiB/s (00:00:00)[download]    9.77KiB at  399.14KiB/s (00:00:00)[download] 100% of    9.77KiB in 00:00:00 at 16.37KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 026 - Inheritance in C++.en.vtt (pass -k to keep)
+[download] Downloading item 27 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=oIV2KchSyGQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] oIV2KchSyGQ: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] oIV2KchSyGQ: Downloading android vr player API JSON
+WARNING: [youtube] oIV2KchSyGQ: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] oIV2KchSyGQ: Downloading subtitles: en
+[info] oIV2KchSyGQ: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 027 - Virtual Functions in C++.en.vtt
+[download] Destination: 027 - Virtual Functions in C++.en.vtt
+[download]    1.00KiB at  411.93KiB/s (00:00:00)[download]    3.00KiB at  829.73KiB/s (00:00:00)[download]    7.00KiB at  398.87KiB/s (00:00:00)[download]   15.00KiB at  268.88KiB/s (00:00:00)[download]   31.00KiB at  201.52KiB/s (00:00:00)[download]   63.00KiB at  243.65KiB/s (00:00:01)[download]   65.59KiB at  252.57KiB/s (00:00:01)[download] 100% of   65.59KiB in 00:00:01 at 64.57KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 027 - Virtual Functions in C++.en.vtt (pass -k to keep)
+[download] Downloading item 28 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UWAdd13EfM8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UWAdd13EfM8: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UWAdd13EfM8: Downloading android vr player API JSON
+WARNING: [youtube] UWAdd13EfM8: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] UWAdd13EfM8: Downloading subtitles: en
+[info] UWAdd13EfM8: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 028 - Interfaces in C++ (Pure Virtual Functions).en.vtt
+[download] Destination: 028 - Interfaces in C++ (Pure Virtual Functions).en.vtt
+[download]    1.00KiB at  200.98KiB/s (00:00:00)[download]    3.00KiB at  523.39KiB/s (00:00:00)[download]    7.00KiB at  361.83KiB/s (00:00:00)[download]   15.00KiB at  331.91KiB/s (00:00:00)[download]   31.00KiB at  186.85KiB/s (00:00:00)[download]   63.00KiB at  231.15KiB/s (00:00:00)[download]   68.29KiB at  249.47KiB/s (00:00:00)[download] 100% of   68.29KiB in 00:00:00 at 79.64KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 028 - Interfaces in C++ (Pure Virtual Functions).en.vtt (pass -k to keep)
+[download] Downloading item 29 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=6OVQ8nh3KP0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 6OVQ8nh3KP0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 6OVQ8nh3KP0: Downloading android vr player API JSON
+WARNING: [youtube] 6OVQ8nh3KP0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 6OVQ8nh3KP0: Downloading subtitles: en
+[info] 6OVQ8nh3KP0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 029 - Visibility in C++.en.vtt
+[download] Destination: 029 - Visibility in C++.en.vtt
+[download]    1.00KiB at  622.02KiB/s (00:00:00)[download]    3.00KiB at    1.36MiB/s (00:00:00)[download]    7.00KiB at  377.97KiB/s (00:00:00)[download]   15.00KiB at  402.43KiB/s (00:00:00)[download]   31.00KiB at  179.18KiB/s (00:00:00)[download]   63.00KiB at  188.87KiB/s (00:00:01)[download]   83.17KiB at  210.45KiB/s (00:00:01)[download] 100% of   83.17KiB in 00:00:01 at 77.43KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 029 - Visibility in C++.en.vtt (pass -k to keep)
+[download] Downloading item 30 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ENDaJi08jCU
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ENDaJi08jCU: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ENDaJi08jCU: Downloading android vr player API JSON
+WARNING: [youtube] ENDaJi08jCU: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ENDaJi08jCU: Downloading subtitles: en
+[info] ENDaJi08jCU: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 030 - Arrays in C++.en.vtt
+[download] Destination: 030 - Arrays in C++.en.vtt
+[download]    1.00KiB at  925.08KiB/s (00:00:00)[download]    3.00KiB at  891.33KiB/s (00:00:00)[download]    7.00KiB at  496.62KiB/s (00:00:00)[download]   15.00KiB at  327.71KiB/s (00:00:00)[download]   31.00KiB at  186.36KiB/s (00:00:00)[download]   63.00KiB at  239.20KiB/s (00:00:00)[download]  127.00KiB at  334.09KiB/s (00:00:01)[download]  194.62KiB at  424.13KiB/s (00:00:01)[download] 100% of  194.62KiB in 00:00:01 at 173.99KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 030 - Arrays in C++.en.vtt (pass -k to keep)
+[download] Downloading item 31 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ijIxcB9qjaU
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ijIxcB9qjaU: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ijIxcB9qjaU: Downloading android vr player API JSON
+WARNING: [youtube] ijIxcB9qjaU: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ijIxcB9qjaU: Downloading subtitles: en
+[info] ijIxcB9qjaU: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 031 - How Strings Work in C++ (and how to use them).en.vtt
+[download] Destination: 031 - How Strings Work in C++ (and how to use them).en.vtt
+[download]    1.00KiB at  325.47KiB/s (00:00:00)[download]    3.00KiB at  329.48KiB/s (00:00:00)[download]    7.00KiB at  232.16KiB/s (00:00:00)[download]   15.00KiB at  301.68KiB/s (00:00:00)[download]   31.00KiB at  184.36KiB/s (00:00:00)[download]   63.00KiB at  213.38KiB/s (00:00:00)[download]  127.00KiB at  326.60KiB/s (00:00:01)[download]  199.39KiB at  419.19KiB/s (00:00:01)[download] 100% of  199.39KiB in 00:00:01 at 181.65KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 031 - How Strings Work in C++ (and how to use them).en.vtt (pass -k to keep)
+[download] Downloading item 32 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=FeHZHF0f2dw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FeHZHF0f2dw: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FeHZHF0f2dw: Downloading android vr player API JSON
+WARNING: [youtube] FeHZHF0f2dw: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] FeHZHF0f2dw: Downloading subtitles: en
+[info] FeHZHF0f2dw: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 032 - String Literals in C++.en.vtt
+[download] Destination: 032 - String Literals in C++.en.vtt
+[download]    1.00KiB at  572.99KiB/s (00:00:00)[download]    3.00KiB at    1.23MiB/s (00:00:00)[download]    7.00KiB at  717.64KiB/s (00:00:00)[download]   15.00KiB at  426.41KiB/s (00:00:00)[download]   31.00KiB at  100.20KiB/s (00:00:00)[download]   63.00KiB at  173.67KiB/s (00:00:01)[download]  127.00KiB at  257.78KiB/s (00:00:01)[download]  138.77KiB at  271.09KiB/s (00:00:01)[download] 100% of  138.77KiB in 00:00:01 at 116.92KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 032 - String Literals in C++.en.vtt (pass -k to keep)
+[download] Downloading item 33 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=4fJBrditnJU
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 4fJBrditnJU: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 4fJBrditnJU: Downloading android vr player API JSON
+WARNING: [youtube] 4fJBrditnJU: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 4fJBrditnJU: Downloading subtitles: en
+[info] 4fJBrditnJU: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 033 - CONST in C++.en.vtt
+[download] Destination: 033 - CONST in C++.en.vtt
+[download]    1.00KiB at  114.22KiB/s (00:00:00)[download]    3.00KiB at  291.94KiB/s (00:00:00)[download]    7.00KiB at  620.94KiB/s (00:00:00)[download]   15.00KiB at  449.00KiB/s (00:00:00)[download]   31.00KiB at  146.05KiB/s (00:00:00)[download]   63.00KiB at  208.41KiB/s (00:00:01)[download]  127.00KiB at  275.95KiB/s (00:00:01)[download]  131.53KiB at  283.10KiB/s (00:00:01)[download] 100% of  131.53KiB in 00:00:01 at 112.68KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 033 - CONST in C++.en.vtt (pass -k to keep)
+[download] Downloading item 34 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=bP9z3H3cVMY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] bP9z3H3cVMY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] bP9z3H3cVMY: Downloading android vr player API JSON
+WARNING: [youtube] bP9z3H3cVMY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] bP9z3H3cVMY: Downloading subtitles: en
+[info] bP9z3H3cVMY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 034 - The Mutable Keyword in C++.en.vtt
+[download] Destination: 034 - The Mutable Keyword in C++.en.vtt
+[download]    1.00KiB at  597.99KiB/s (00:00:01)[download]    3.00KiB at  483.07KiB/s (00:00:01)[download]    7.00KiB at  547.31KiB/s (00:00:01)[download]   15.00KiB at  276.68KiB/s (00:00:01)[download]   31.00KiB at  172.63KiB/s (00:00:01)[download]   63.00KiB at  237.11KiB/s (00:00:01)[download]   71.27KiB at  245.81KiB/s (00:00:01)[download] 100% of   71.27KiB in 00:00:01 at 37.09KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 034 - The Mutable Keyword in C++.en.vtt (pass -k to keep)
+[download] Downloading item 35 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=1nfuYMXjZsA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 1nfuYMXjZsA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 1nfuYMXjZsA: Downloading android vr player API JSON
+WARNING: [youtube] 1nfuYMXjZsA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 1nfuYMXjZsA: Downloading subtitles: en
+[info] 1nfuYMXjZsA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 035 - Member Initializer Lists in C++ (Constructor Initializer List).en.vtt
+[download] Destination: 035 - Member Initializer Lists in C++ (Constructor Initializer List).en.vtt
+[download]    1.00KiB at  586.70KiB/s (00:00:00)[download]    3.00KiB at  473.77KiB/s (00:00:00)[download]    7.00KiB at  251.73KiB/s (00:00:00)[download]   15.00KiB at  264.97KiB/s (00:00:00)[download]   31.00KiB at  162.87KiB/s (00:00:01)[download]   63.00KiB at  183.79KiB/s (00:00:01)[download]   87.57KiB at  221.36KiB/s (00:00:01)[download] 100% of   87.57KiB in 00:00:01 at 66.58KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 035 - Member Initializer Lists in C++ (Constructor Initializer List).en.vtt (pass -k to keep)
+[download] Downloading item 36 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ezqsL-st8qg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ezqsL-st8qg: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ezqsL-st8qg: Downloading android vr player API JSON
+WARNING: [youtube] ezqsL-st8qg: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ezqsL-st8qg: Downloading 1 format(s): 18
+[info] There are no subtitles for the requested languages
+[SubtitlesConvertor] There aren't any subtitles to convert
+[download] Downloading item 37 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Ks97R1knQDY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Ks97R1knQDY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Ks97R1knQDY: Downloading android vr player API JSON
+WARNING: [youtube] Ks97R1knQDY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Ks97R1knQDY: Downloading subtitles: en
+[info] Ks97R1knQDY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 037 - How to CREATEINSTANTIATE OBJECTS in C++.en.vtt
+[download] Destination: 037 - How to CREATEINSTANTIATE OBJECTS in C++.en.vtt
+[download]    1.00KiB at  498.97KiB/s (00:00:00)[download]    3.00KiB at    1.16MiB/s (00:00:00)[download]    7.00KiB at  560.29KiB/s (00:00:00)[download]   15.00KiB at  300.15KiB/s (00:00:00)[download]   31.00KiB at  176.82KiB/s (00:00:00)[download]   63.00KiB at  225.20KiB/s (00:00:00)[download]  127.00KiB at  308.65KiB/s (00:00:01)[download]  133.96KiB at  324.76KiB/s (00:00:01)[download] 100% of  133.96KiB in 00:00:01 at 125.24KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 037 - How to CREATEINSTANTIATE OBJECTS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 38 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=NUZdUSqsCs4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] NUZdUSqsCs4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] NUZdUSqsCs4: Downloading android vr player API JSON
+WARNING: [youtube] NUZdUSqsCs4: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] NUZdUSqsCs4: Downloading subtitles: en
+[info] NUZdUSqsCs4: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 038 - The NEW Keyword in C++.en.vtt
+[download] Destination: 038 - The NEW Keyword in C++.en.vtt
+[download]    1.00KiB at  580.21KiB/s (00:00:01)[download]    3.00KiB at  193.12KiB/s (00:00:01)[download]    7.00KiB at  318.02KiB/s (00:00:01)[download]   15.00KiB at  108.97KiB/s (00:00:01)[download]   31.00KiB at  164.69KiB/s (00:00:01)[download]   63.00KiB at  212.43KiB/s (00:00:01)[download]  109.43KiB at  278.75KiB/s (00:00:01)[download] 100% of  109.43KiB in 00:00:01 at 58.95KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 038 - The NEW Keyword in C++.en.vtt (pass -k to keep)
+[download] Downloading item 39 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Rr1NX1lH3oE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Rr1NX1lH3oE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Rr1NX1lH3oE: Downloading android vr player API JSON
+WARNING: [youtube] Rr1NX1lH3oE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Rr1NX1lH3oE: Downloading subtitles: en
+[info] Rr1NX1lH3oE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 039 - Implicit Conversion and the Explicit Keyword in C++.en.vtt
+[download] Destination: 039 - Implicit Conversion and the Explicit Keyword in C++.en.vtt
+[download]    1.00KiB at  638.01KiB/s (00:00:00)[download]    3.00KiB at  937.62KiB/s (00:00:00)[download]    7.00KiB at  511.94KiB/s (00:00:00)[download]   15.00KiB at  342.11KiB/s (00:00:00)[download]   31.00KiB at  199.74KiB/s (00:00:00)[download]   63.00KiB at  264.29KiB/s (00:00:00)[download]   76.28KiB at  261.11KiB/s (00:00:00)[download] 100% of   76.28KiB in 00:00:00 at 86.21KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 039 - Implicit Conversion and the Explicit Keyword in C++.en.vtt (pass -k to keep)
+[download] Downloading item 40 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mS9755gF66w
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mS9755gF66w: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mS9755gF66w: Downloading android vr player API JSON
+WARNING: [youtube] mS9755gF66w: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] mS9755gF66w: Downloading subtitles: en
+[info] mS9755gF66w: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 040 - OPERATORS and OPERATOR OVERLOADING in C++.en.vtt
+[download] Destination: 040 - OPERATORS and OPERATOR OVERLOADING in C++.en.vtt
+[download]    1.00KiB at  397.49KiB/s (00:00:00)[download]    3.00KiB at  337.33KiB/s (00:00:00)[download]    7.00KiB at  333.71KiB/s (00:00:00)[download]   15.00KiB at  271.06KiB/s (00:00:00)[download]   31.00KiB at  168.31KiB/s (00:00:01)[download]   63.00KiB at  225.59KiB/s (00:00:01)[download]  127.00KiB at  317.34KiB/s (00:00:01)[download]  132.77KiB at  325.28KiB/s (00:00:01)[download] 100% of  132.77KiB in 00:00:01 at 99.24KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 040 - OPERATORS and OPERATOR OVERLOADING in C++.en.vtt (pass -k to keep)
+[download] Downloading item 41 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Z_hPJ_EhceI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Z_hPJ_EhceI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Z_hPJ_EhceI: Downloading android vr player API JSON
+WARNING: [youtube] Z_hPJ_EhceI: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Z_hPJ_EhceI: Downloading subtitles: en
+[info] Z_hPJ_EhceI: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 041 - The £¢this£¢ keyword in C++.en.vtt
+[download] Destination: 041 - The £¢this£¢ keyword in C++.en.vtt
+[download]    1.00KiB at  197.70KiB/s (00:00:00)[download]    3.00KiB at  494.28KiB/s (00:00:00)[download]    7.00KiB at 1003.28KiB/s (00:00:00)[download]   15.00KiB at  327.16KiB/s (00:00:00)[download]   31.00KiB at  185.09KiB/s (00:00:00)[download]   63.00KiB at  256.48KiB/s (00:00:00)[download]   63.41KiB at  257.52KiB/s (00:00:00)[download] 100% of   63.41KiB in 00:00:00 at 67.70KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 041 - The £¢this£¢ keyword in C++.en.vtt (pass -k to keep)
+[download] Downloading item 42 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iNuTwvD6ciI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iNuTwvD6ciI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iNuTwvD6ciI: Downloading android vr player API JSON
+WARNING: [youtube] iNuTwvD6ciI: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] iNuTwvD6ciI: Downloading subtitles: en
+[info] iNuTwvD6ciI: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 042 - Object Lifetime in C++ (StackScope Lifetimes).en.vtt
+[download] Destination: 042 - Object Lifetime in C++ (StackScope Lifetimes).en.vtt
+[download]    1.00KiB at  440.86KiB/s (00:00:00)[download]    3.00KiB at  976.71KiB/s (00:00:00)[download]    7.00KiB at  432.92KiB/s (00:00:00)[download]   15.00KiB at  322.04KiB/s (00:00:00)[download]   31.00KiB at  190.42KiB/s (00:00:00)[download]   63.00KiB at  261.89KiB/s (00:00:00)[download]  121.35KiB at  333.48KiB/s (00:00:01)[download] 100% of  121.35KiB in 00:00:01 at 118.91KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 042 - Object Lifetime in C++ (StackScope Lifetimes).en.vtt (pass -k to keep)
+[download] Downloading item 43 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UOB7-B2MfwA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UOB7-B2MfwA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UOB7-B2MfwA: Downloading android vr player API JSON
+WARNING: [youtube] UOB7-B2MfwA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] UOB7-B2MfwA: Downloading subtitles: en
+[info] UOB7-B2MfwA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 043 - SMART POINTERS in C++ (std£º£ºunique_ptr, std£º£ºshared_ptr, std£º£ºweak_ptr).en.vtt
+[download] Destination: 043 - SMART POINTERS in C++ (std£º£ºunique_ptr, std£º£ºshared_ptr, std£º£ºweak_ptr).en.vtt
+[download]    1.00KiB at  509.57KiB/s (00:00:00)[download]    3.00KiB at  337.46KiB/s (00:00:00)[download]    7.00KiB at  180.77KiB/s (00:00:00)[download]   15.00KiB at  103.20KiB/s (00:00:00)[download]   31.00KiB at  162.08KiB/s (00:00:00)[download]   63.00KiB at  215.29KiB/s (00:00:01)[download]  127.00KiB at  298.25KiB/s (00:00:01)[download]  130.44KiB at  303.99KiB/s (00:00:01)[download] 100% of  130.44KiB in 00:00:01 at 107.55KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 043 - SMART POINTERS in C++ (std£º£ºunique_ptr, std£º£ºshared_ptr, std£º£ºweak_ptr).en.vtt (pass -k to keep)
+[download] Downloading item 44 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BvR1Pgzzr38
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BvR1Pgzzr38: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BvR1Pgzzr38: Downloading android vr player API JSON
+WARNING: [youtube] BvR1Pgzzr38: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] BvR1Pgzzr38: Downloading subtitles: en
+[info] BvR1Pgzzr38: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 044 - Copying and Copy Constructors in C++.en.vtt
+[download] Destination: 044 - Copying and Copy Constructors in C++.en.vtt
+[download]    1.00KiB at  416.85KiB/s (00:00:00)[download]    3.00KiB at  377.73KiB/s (00:00:00)[download]    7.00KiB at  236.21KiB/s (00:00:00)[download]   15.00KiB at  253.42KiB/s (00:00:00)[download]   31.00KiB at  171.12KiB/s (00:00:00)[download]   63.00KiB at  228.23KiB/s (00:00:00)[download]  127.00KiB at  270.96KiB/s (00:00:01)[download]  223.68KiB at  370.32KiB/s (00:00:01)[download] 100% of  223.68KiB in 00:00:01 at 168.13KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 044 - Copying and Copy Constructors in C++.en.vtt (pass -k to keep)
+[download] Downloading item 45 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=4p3grlSpWYA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 4p3grlSpWYA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 4p3grlSpWYA: Downloading android vr player API JSON
+WARNING: [youtube] 4p3grlSpWYA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 4p3grlSpWYA: Downloading subtitles: en
+[info] 4p3grlSpWYA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 045 - The Arrow Operator in C++.en.vtt
+[download] Destination: 045 - The Arrow Operator in C++.en.vtt
+[download]    1.00KiB at  412.10KiB/s (00:00:00)[download]    3.00KiB at  784.08KiB/s (00:00:00)[download]    7.00KiB at  507.23KiB/s (00:00:00)[download]   15.00KiB at  347.11KiB/s (00:00:00)[download]   31.00KiB at  153.73KiB/s (00:00:01)[download]   63.00KiB at  185.45KiB/s (00:00:01)[download]   80.56KiB at  210.59KiB/s (00:00:01)[download] 100% of   80.56KiB in 00:00:01 at 64.10KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 045 - The Arrow Operator in C++.en.vtt (pass -k to keep)
+[download] Downloading item 46 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=PocJ5jXv8No
+[youtube] Sleeping 1.0 seconds ...
+[youtube] PocJ5jXv8No: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] PocJ5jXv8No: Downloading android vr player API JSON
+WARNING: [youtube] PocJ5jXv8No: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] PocJ5jXv8No: Downloading subtitles: en
+[info] PocJ5jXv8No: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 046 - Dynamic Arrays in C++ (std£º£ºvector).en.vtt
+[download] Destination: 046 - Dynamic Arrays in C++ (std£º£ºvector).en.vtt
+[download]    1.00KiB at  308.90KiB/s (00:00:00)[download]    3.00KiB at  622.64KiB/s (00:00:00)[download]    7.00KiB at  450.83KiB/s (00:00:00)[download]   15.00KiB at  325.97KiB/s (00:00:01)[download]   31.00KiB at  174.14KiB/s (00:00:01)[download]   63.00KiB at  207.62KiB/s (00:00:01)[download]  127.00KiB at  285.02KiB/s (00:00:01)[download]  149.13KiB at  319.71KiB/s (00:00:01)[download] 100% of  149.13KiB in 00:00:01 at 104.35KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 046 - Dynamic Arrays in C++ (std£º£ºvector).en.vtt (pass -k to keep)
+[download] Downloading item 47 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HcESuwmlHEY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HcESuwmlHEY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HcESuwmlHEY: Downloading android vr player API JSON
+WARNING: [youtube] HcESuwmlHEY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] HcESuwmlHEY: Downloading subtitles: en
+[info] HcESuwmlHEY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 047 - Optimizing the usage of std£º£ºvector in C++.en.vtt
+[download] Destination: 047 - Optimizing the usage of std£º£ºvector in C++.en.vtt
+[download]    1.00KiB at  558.12KiB/s (00:00:00)[download]    3.00KiB at 1016.72KiB/s (00:00:00)[download]    7.00KiB at  733.47KiB/s (00:00:00)[download]   15.00KiB at  450.29KiB/s (00:00:00)[download]   31.00KiB at  187.13KiB/s (00:00:00)[download]   63.00KiB at  160.41KiB/s (00:00:01)[download]  100.64KiB at  252.38KiB/s (00:00:01)[download] 100% of  100.64KiB in 00:00:01 at 88.88KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 047 - Optimizing the usage of std£º£ºvector in C++.en.vtt (pass -k to keep)
+[download] Downloading item 48 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=f7mtWD9GdJ4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] f7mtWD9GdJ4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] f7mtWD9GdJ4: Downloading android vr player API JSON
+WARNING: [youtube] f7mtWD9GdJ4: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] f7mtWD9GdJ4: Downloading subtitles: en
+[info] f7mtWD9GdJ4: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 048 - Local Static in C++.en.vtt
+[download] Destination: 048 - Local Static in C++.en.vtt
+[download]    1.00KiB at  580.21KiB/s (00:00:00)[download]    3.00KiB at    1.01MiB/s (00:00:00)[download]    7.00KiB at  748.14KiB/s (00:00:00)[download]   15.00KiB at  360.98KiB/s (00:00:00)[download]   31.00KiB at  184.98KiB/s (00:00:00)[download]   63.00KiB at  223.10KiB/s (00:00:00)[download]   77.90KiB at  236.60KiB/s (00:00:01)[download] 100% of   77.90KiB in 00:00:01 at 74.33KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 048 - Local Static in C++.en.vtt (pass -k to keep)
+[download] Downloading item 49 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=or1dAmUO8k0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] or1dAmUO8k0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] or1dAmUO8k0: Downloading android vr player API JSON
+WARNING: [youtube] or1dAmUO8k0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] or1dAmUO8k0: Downloading subtitles: en
+[info] or1dAmUO8k0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 049 - Using Libraries in C++ (Static Linking).en.vtt
+[download] Destination: 049 - Using Libraries in C++ (Static Linking).en.vtt
+[download]    1.00KiB at  463.61KiB/s (00:00:00)[download]    3.00KiB at  941.76KiB/s (00:00:00)[download]    7.00KiB at  400.88KiB/s (00:00:00)[download]   15.00KiB at  328.10KiB/s (00:00:00)[download]   31.00KiB at  186.92KiB/s (00:00:00)[download]   63.00KiB at  232.55KiB/s (00:00:00)[download]  127.00KiB at  323.97KiB/s (00:00:01)[download]  196.91KiB at  422.12KiB/s (00:00:01)[download] 100% of  196.91KiB in 00:00:01 at 178.21KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 049 - Using Libraries in C++ (Static Linking).en.vtt (pass -k to keep)
+[download] Downloading item 50 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=pLy69V2F_8M
+[youtube] Sleeping 1.0 seconds ...
+[youtube] pLy69V2F_8M: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] pLy69V2F_8M: Downloading android vr player API JSON
+WARNING: [youtube] pLy69V2F_8M: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] pLy69V2F_8M: Downloading subtitles: en
+[info] pLy69V2F_8M: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 050 - Using Dynamic Libraries in C++.en.vtt
+[download] Destination: 050 - Using Dynamic Libraries in C++.en.vtt
+[download]    1.00KiB at  521.94KiB/s (00:00:00)[download]    3.00KiB at  839.48KiB/s (00:00:00)[download]    7.00KiB at  685.49KiB/s (00:00:00)[download]   15.00KiB at  345.29KiB/s (00:00:00)[download]   31.00KiB at  188.30KiB/s (00:00:00)[download]   63.00KiB at  246.30KiB/s (00:00:00)[download]  106.69KiB at  286.19KiB/s (00:00:01)[download] 100% of  106.69KiB in 00:00:01 at 103.18KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 050 - Using Dynamic Libraries in C++.en.vtt (pass -k to keep)
+[download] Downloading item 51 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Wt4dxDNmDA8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Wt4dxDNmDA8: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Wt4dxDNmDA8: Downloading android vr player API JSON
+WARNING: [youtube] Wt4dxDNmDA8: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Wt4dxDNmDA8: Downloading subtitles: en
+[info] Wt4dxDNmDA8: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 051 - Making and Working with Libraries in C++ (Multiple Projects in Visual Studio).en.vtt
+[download] Destination: 051 - Making and Working with Libraries in C++ (Multiple Projects in Visual Studio).en.vtt
+[download]    1.00KiB at  642.21KiB/s (00:00:00)[download]    3.00KiB at  297.03KiB/s (00:00:00)[download]    7.00KiB at  361.40KiB/s (00:00:00)[download]   15.00KiB at  287.13KiB/s (00:00:00)[download]   31.00KiB at  166.13KiB/s (00:00:01)[download]   63.00KiB at  228.31KiB/s (00:00:01)[download]  127.00KiB at  301.75KiB/s (00:00:01)[download]  131.66KiB at  311.92KiB/s (00:00:01)[download] 100% of  131.66KiB in 00:00:01 at 100.85KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 051 - Making and Working with Libraries in C++ (Multiple Projects in Visual Studio).en.vtt (pass -k to keep)
+[download] Downloading item 52 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3cm0VckC8q0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3cm0VckC8q0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3cm0VckC8q0: Downloading android vr player API JSON
+WARNING: [youtube] 3cm0VckC8q0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 3cm0VckC8q0: Downloading subtitles: en
+[info] 3cm0VckC8q0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 052 - How to Deal with Multiple Return Values in C++.en.vtt
+[download] Destination: 052 - How to Deal with Multiple Return Values in C++.en.vtt
+[download]    1.00KiB at  349.85KiB/s (00:00:00)[download]    3.00KiB at  666.50KiB/s (00:00:00)[download]    7.00KiB at  717.83KiB/s (00:00:00)[download]   15.00KiB at  352.24KiB/s (00:00:00)[download]   31.00KiB at  170.36KiB/s (00:00:00)[download]   63.00KiB at  226.96KiB/s (00:00:01)[download]  127.00KiB at  281.36KiB/s (00:00:01)[download]  168.07KiB at  347.13KiB/s (00:00:01)[download] 100% of  168.07KiB in 00:00:01 at 129.94KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 052 - How to Deal with Multiple Return Values in C++.en.vtt (pass -k to keep)
+[download] Downloading item 53 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=I-hZkUa9mIs
+[youtube] Sleeping 1.0 seconds ...
+[youtube] I-hZkUa9mIs: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] I-hZkUa9mIs: Downloading android vr player API JSON
+WARNING: [youtube] I-hZkUa9mIs: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] I-hZkUa9mIs: Downloading subtitles: en
+[info] I-hZkUa9mIs: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 053 - Templates in C++.en.vtt
+[download] Destination: 053 - Templates in C++.en.vtt
+[download]    1.00KiB at  785.74KiB/s (00:00:00)[download]    3.00KiB at  298.81KiB/s (00:00:00)[download]    7.00KiB at  304.40KiB/s (00:00:00)[download]   15.00KiB at  247.57KiB/s (00:00:00)[download]   31.00KiB at  159.55KiB/s (00:00:00)[download]   63.00KiB at  158.55KiB/s (00:00:01)[download]  127.00KiB at  239.65KiB/s (00:00:01)[download]  179.76KiB at  307.30KiB/s (00:00:01)[download] 100% of  179.76KiB in 00:00:01 at 131.90KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 053 - Templates in C++.en.vtt (pass -k to keep)
+[download] Downloading item 54 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=wJ1L2nSIV1s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] wJ1L2nSIV1s: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] wJ1L2nSIV1s: Downloading android vr player API JSON
+WARNING: [youtube] wJ1L2nSIV1s: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] wJ1L2nSIV1s: Downloading subtitles: en
+[info] wJ1L2nSIV1s: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 054 - Stack vs Heap Memory in C++.en.vtt
+[download] Destination: 054 - Stack vs Heap Memory in C++.en.vtt
+[download]    1.00KiB at  645.08KiB/s (00:00:00)[download]    3.00KiB at    1.35MiB/s (00:00:00)[download]    7.00KiB at  443.40KiB/s (00:00:00)[download]   15.00KiB at  428.46KiB/s (00:00:00)[download]   31.00KiB at  188.64KiB/s (00:00:00)[download]   63.00KiB at  238.68KiB/s (00:00:00)[download]  127.00KiB at  331.15KiB/s (00:00:00)[download]  205.01KiB at  448.86KiB/s (00:00:01)[download] 100% of  205.01KiB in 00:00:01 at 195.69KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 054 - Stack vs Heap Memory in C++.en.vtt (pass -k to keep)
+[download] Downloading item 55 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=j3mYki1SrKE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] j3mYki1SrKE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] j3mYki1SrKE: Downloading android vr player API JSON
+WARNING: [youtube] j3mYki1SrKE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] j3mYki1SrKE: Downloading subtitles: en
+[info] j3mYki1SrKE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 055 - Macros in C++.en.vtt
+[download] Destination: 055 - Macros in C++.en.vtt
+[download]    1.00KiB at  573.78KiB/s (00:00:00)[download]    3.00KiB at  357.72KiB/s (00:00:00)[download]    7.00KiB at  261.07KiB/s (00:00:00)[download]   15.00KiB at  328.59KiB/s (00:00:00)[download]   31.00KiB at  150.03KiB/s (00:00:00)[download]   63.00KiB at  205.00KiB/s (00:00:00)[download]  127.00KiB at   89.37KiB/s (00:00:01)[download]  184.46KiB at  111.11KiB/s (00:00:02)[download]  196.13KiB at  116.11KiB/s (00:00:02)[download] 100% of  196.13KiB in 00:00:02 at 86.48KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 055 - Macros in C++.en.vtt (pass -k to keep)
+[download] Downloading item 56 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2vOPEuiGXVo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 2vOPEuiGXVo: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 2vOPEuiGXVo: Downloading android vr player API JSON
+WARNING: [youtube] 2vOPEuiGXVo: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 2vOPEuiGXVo: Downloading subtitles: en
+[info] 2vOPEuiGXVo: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 056 - The £¢auto£¢ keyword in C++.en.vtt
+[download] Destination: 056 - The £¢auto£¢ keyword in C++.en.vtt
+[download]    1.00KiB at  452.90KiB/s (00:00:00)[download]    3.00KiB at  327.40KiB/s (00:00:00)[download]    7.00KiB at  184.98KiB/s (00:00:00)[download]   15.00KiB at  260.23KiB/s (00:00:00)[download]   31.00KiB at  168.17KiB/s (00:00:00)[download]   63.00KiB at  231.19KiB/s (00:00:00)[download]  127.00KiB at  314.89KiB/s (00:00:01)[download]  162.71KiB at  368.65KiB/s (00:00:01)[download] 100% of  162.71KiB in 00:00:01 at 141.06KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 056 - The £¢auto£¢ keyword in C++.en.vtt (pass -k to keep)
+[download] Downloading item 57 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Hw42GkHPyvk
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Hw42GkHPyvk: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Hw42GkHPyvk: Downloading android vr player API JSON
+WARNING: [youtube] Hw42GkHPyvk: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Hw42GkHPyvk: Downloading subtitles: en
+[info] Hw42GkHPyvk: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 057 - Static Arrays in C++ (std£º£ºarray).en.vtt
+[download] Destination: 057 - Static Arrays in C++ (std£º£ºarray).en.vtt
+[download]    1.00KiB at  501.23KiB/s (00:00:01)[download]    3.00KiB at  331.39KiB/s (00:00:01)[download]    7.00KiB at  264.24KiB/s (00:00:01)[download]   12.39KiB at  335.63KiB/s (00:00:01)[download] 100% of   12.39KiB in 00:00:01 at 11.67KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 057 - Static Arrays in C++ (std£º£ºarray).en.vtt (pass -k to keep)
+[download] Downloading item 58 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=p4sDgQ-jao4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] p4sDgQ-jao4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] p4sDgQ-jao4: Downloading android vr player API JSON
+WARNING: [youtube] p4sDgQ-jao4: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] p4sDgQ-jao4: Downloading subtitles: en
+[info] p4sDgQ-jao4: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 058 - Function Pointers in C++.en.vtt
+[download] Destination: 058 - Function Pointers in C++.en.vtt
+[download]    1.00KiB at  858.43KiB/s (00:00:00)[download]    3.00KiB at    1.02MiB/s (00:00:00)[download]    7.00KiB at  559.10KiB/s (00:00:00)[download]   15.00KiB at  194.31KiB/s (00:00:00)[download]   31.00KiB at  166.84KiB/s (00:00:00)[download]   63.00KiB at  200.61KiB/s (00:00:00)[download]  127.00KiB at  290.89KiB/s (00:00:01)[download]  127.88KiB at  292.52KiB/s (00:00:01)[download] 100% of  127.88KiB in 00:00:01 at 113.78KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 058 - Function Pointers in C++.en.vtt (pass -k to keep)
+[download] Downloading item 59 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mWgmBBz0y8c
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mWgmBBz0y8c: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mWgmBBz0y8c: Downloading android vr player API JSON
+WARNING: [youtube] mWgmBBz0y8c: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] mWgmBBz0y8c: Downloading subtitles: en
+[info] mWgmBBz0y8c: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 059 - Lambdas in C++.en.vtt
+[download] Destination: 059 - Lambdas in C++.en.vtt
+[download]    1.00KiB at  423.75KiB/s (00:00:01)[download]    3.00KiB at  758.33KiB/s (00:00:01)[download]    7.00KiB at  364.65KiB/s (00:00:01)[download]   15.00KiB at  378.05KiB/s (00:00:01)[download]   31.00KiB at  171.82KiB/s (00:00:01)[download]   63.00KiB at  224.99KiB/s (00:00:01)[download]  122.85KiB at  298.95KiB/s (00:00:02)[download] 100% of  122.85KiB in 00:00:02 at 58.38KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 059 - Lambdas in C++.en.vtt (pass -k to keep)
+[download] Downloading item 60 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=4NYC-VU-svE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 4NYC-VU-svE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 4NYC-VU-svE: Downloading android vr player API JSON
+WARNING: [youtube] 4NYC-VU-svE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 4NYC-VU-svE: Downloading subtitles: en
+[info] 4NYC-VU-svE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 060 - Why I don't £¢using namespace std£¢.en.vtt
+[download] Destination: 060 - Why I don't £¢using namespace std£¢.en.vtt
+[download]    1.00KiB at  586.70KiB/s (00:00:00)[download]    3.00KiB at  324.36KiB/s (00:00:00)[download]    7.00KiB at  338.17KiB/s (00:00:00)[download]   15.00KiB at  268.26KiB/s (00:00:00)[download]   31.00KiB at  187.04KiB/s (00:00:00)[download]   63.00KiB at  237.89KiB/s (00:00:00)[download]  110.21KiB at  315.01KiB/s (00:00:01)[download] 100% of  110.21KiB in 00:00:01 at 107.87KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 060 - Why I don't £¢using namespace std£¢.en.vtt (pass -k to keep)
+[download] Downloading item 61 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ts1Eek5w7ZA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ts1Eek5w7ZA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ts1Eek5w7ZA: Downloading android vr player API JSON
+WARNING: [youtube] ts1Eek5w7ZA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ts1Eek5w7ZA: Downloading subtitles: en
+[info] ts1Eek5w7ZA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 061 - Namespaces in C++.en.vtt
+[download] Destination: 061 - Namespaces in C++.en.vtt
+[download]    1.00KiB at  390.53KiB/s (00:00:10)[download]    3.00KiB at  283.55KiB/s (00:00:10)[download]    7.00KiB at  331.91KiB/s (00:00:10)[download]   15.00KiB at  355.21KiB/s (00:00:10)[download]   31.00KiB at  188.49KiB/s (00:00:11)[download]   63.00KiB at  220.65KiB/s (00:00:11)[download]  123.21KiB at  295.71KiB/s (00:00:11)[download] 100% of  123.21KiB in 00:00:11 at 10.89KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 061 - Namespaces in C++.en.vtt (pass -k to keep)
+[download] Downloading item 62 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=wXBcwHwIt_I
+[youtube] Sleeping 1.0 seconds ...
+[youtube] wXBcwHwIt_I: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] wXBcwHwIt_I: Downloading android vr player API JSON
+WARNING: [youtube] wXBcwHwIt_I: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] wXBcwHwIt_I: Downloading subtitles: en
+[info] wXBcwHwIt_I: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 062 - Threads in C++.en.vtt
+[download] Destination: 062 - Threads in C++.en.vtt
+[download]    1.00KiB at  888.06KiB/s (00:00:00)[download]    3.00KiB at  306.72KiB/s (00:00:00)[download]    7.00KiB at  335.14KiB/s (00:00:00)[download]   15.00KiB at  275.02KiB/s (00:00:00)[download]   31.00KiB at  144.71KiB/s (00:00:00)[download]   63.00KiB at  201.84KiB/s (00:00:01)[download]  112.18KiB at  261.52KiB/s (00:00:01)[download] 100% of  112.18KiB in 00:00:01 at 99.24KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 062 - Threads in C++.en.vtt (pass -k to keep)
+[download] Downloading item 63 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=oEx5vGNFrLk
+[youtube] Sleeping 1.0 seconds ...
+[youtube] oEx5vGNFrLk: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] oEx5vGNFrLk: Downloading android vr player API JSON
+WARNING: [youtube] oEx5vGNFrLk: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] oEx5vGNFrLk: Downloading subtitles: en
+[info] oEx5vGNFrLk: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 063 - Timing in C++.en.vtt
+[download] Destination: 063 - Timing in C++.en.vtt
+[download]    1.00KiB at  580.53KiB/s (00:00:00)[download]    3.00KiB at  658.93KiB/s (00:00:00)[download]    7.00KiB at  376.93KiB/s (00:00:00)[download]   15.00KiB at  311.27KiB/s (00:00:00)[download]   31.00KiB at  168.62KiB/s (00:00:01)[download]   63.00KiB at  198.29KiB/s (00:00:01)[download]  111.17KiB at  262.34KiB/s (00:00:01)[download] 100% of  111.17KiB in 00:00:01 at 83.64KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 063 - Timing in C++.en.vtt (pass -k to keep)
+[download] Downloading item 64 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=gNgUMA_Ur0U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] gNgUMA_Ur0U: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] gNgUMA_Ur0U: Downloading android vr player API JSON
+WARNING: [youtube] gNgUMA_Ur0U: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] gNgUMA_Ur0U: Downloading subtitles: en
+[info] gNgUMA_Ur0U: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 064 - Multidimensional Arrays in C++ (2D arrays).en.vtt
+[download] Destination: 064 - Multidimensional Arrays in C++ (2D arrays).en.vtt
+[download]    1.00KiB at  639.96KiB/s (00:00:00)[download]    3.00KiB at    1.41MiB/s (00:00:00)[download]    7.00KiB at    1.16MiB/s (00:00:00)[download]   15.00KiB at  421.02KiB/s (00:00:00)[download]   31.00KiB at  180.43KiB/s (00:00:00)[download]   63.00KiB at  221.43KiB/s (00:00:00)[download]  127.00KiB at  293.10KiB/s (00:00:01)[download]  184.76KiB at  364.31KiB/s (00:00:01)[download] 100% of  184.76KiB in 00:00:01 at 154.81KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 064 - Multidimensional Arrays in C++ (2D arrays).en.vtt (pass -k to keep)
+[download] Downloading item 65 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=x0uUKWJzSO4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] x0uUKWJzSO4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] x0uUKWJzSO4: Downloading android vr player API JSON
+WARNING: [youtube] x0uUKWJzSO4: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] x0uUKWJzSO4: Downloading subtitles: en
+[info] x0uUKWJzSO4: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 065 - Sorting in C++.en.vtt
+[download] Destination: 065 - Sorting in C++.en.vtt
+[download]    1.00KiB at  998.64KiB/s (00:00:00)[download]    3.00KiB at  289.82KiB/s (00:00:00)[download]    7.00KiB at  339.00KiB/s (00:00:00)[download]   15.00KiB at  339.35KiB/s (00:00:00)[download]   31.00KiB at  164.02KiB/s (00:00:00)[download]   63.00KiB at  210.53KiB/s (00:00:01)[download]   69.42KiB at  223.66KiB/s (00:00:01)[download] 100% of   69.42KiB in 00:00:01 at 65.23KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 065 - Sorting in C++.en.vtt (pass -k to keep)
+[download] Downloading item 66 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8egZ_5GA9Bc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8egZ_5GA9Bc: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8egZ_5GA9Bc: Downloading android vr player API JSON
+WARNING: [youtube] 8egZ_5GA9Bc: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 8egZ_5GA9Bc: Downloading subtitles: en
+[info] 8egZ_5GA9Bc: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 066 - Type Punning in C++.en.vtt
+[download] Destination: 066 - Type Punning in C++.en.vtt
+[download]    1.00KiB at  546.92KiB/s (00:00:00)[download]    3.00KiB at  709.10KiB/s (00:00:00)[download]    7.00KiB at  275.54KiB/s (00:00:00)[download]   15.00KiB at  283.30KiB/s (00:00:00)[download]   31.00KiB at  169.41KiB/s (00:00:00)[download]   63.00KiB at  219.78KiB/s (00:00:00)[download]  127.00KiB at  296.73KiB/s (00:00:01)[download]  130.19KiB at  303.80KiB/s (00:00:01)[download] 100% of  130.19KiB in 00:00:01 at 118.37KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 066 - Type Punning in C++.en.vtt (pass -k to keep)
+[download] Downloading item 67 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=6uqU9Y578n4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 6uqU9Y578n4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 6uqU9Y578n4: Downloading android vr player API JSON
+WARNING: [youtube] 6uqU9Y578n4: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 6uqU9Y578n4: Downloading subtitles: en
+[info] 6uqU9Y578n4: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 067 - Unions in C++.en.vtt
+[download] Destination: 067 - Unions in C++.en.vtt
+[download]    1.00KiB at  453.34KiB/s (00:00:01)[download]    3.00KiB at  883.51KiB/s (00:00:01)[download]    7.00KiB at  928.97KiB/s (00:00:01)[download]   15.00KiB at  369.20KiB/s (00:00:01)[download]   31.00KiB at  140.57KiB/s (00:00:01)[download]   63.00KiB at  132.92KiB/s (00:00:01)[download]   86.11KiB at  167.99KiB/s (00:00:01)[download] 100% of   86.11KiB in 00:00:01 at 56.13KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 067 - Unions in C++.en.vtt (pass -k to keep)
+[download] Downloading item 68 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jELbKhGkEi0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jELbKhGkEi0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jELbKhGkEi0: Downloading android vr player API JSON
+WARNING: [youtube] jELbKhGkEi0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] jELbKhGkEi0: Downloading subtitles: en
+[info] jELbKhGkEi0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 068 - Virtual Destructors in C++.en.vtt
+[download] Destination: 068 - Virtual Destructors in C++.en.vtt
+[download]    1.00KiB at  396.14KiB/s (00:00:02)[download]    3.00KiB at  743.50KiB/s (00:00:02)[download]    7.00KiB at    1.35MiB/s (00:00:02)[download]   15.00KiB at  534.99KiB/s (00:00:02)[download]   31.00KiB at  169.44KiB/s (00:00:02)[download]   63.00KiB at  220.13KiB/s (00:00:02)[download]   75.48KiB at  235.34KiB/s (00:00:02)[download] 100% of   75.48KiB in 00:00:02 at 31.27KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 068 - Virtual Destructors in C++.en.vtt (pass -k to keep)
+[download] Downloading item 69 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=pWZS1MtxI-A
+[youtube] Sleeping 1.0 seconds ...
+[youtube] pWZS1MtxI-A: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] pWZS1MtxI-A: Downloading android vr player API JSON
+WARNING: [youtube] pWZS1MtxI-A: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] pWZS1MtxI-A: Downloading subtitles: en
+[info] pWZS1MtxI-A: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 069 - Casting in C++.en.vtt
+[download] Destination: 069 - Casting in C++.en.vtt
+[download]    1.00KiB at  589.42KiB/s (00:00:00)[download]    3.00KiB at  207.16KiB/s (00:00:00)[download]    7.00KiB at  234.63KiB/s (00:00:00)[download]   15.00KiB at  177.79KiB/s (00:00:00)[download]   31.00KiB at  162.65KiB/s (00:00:01)[download]   63.00KiB at  195.41KiB/s (00:00:01)[download]  127.00KiB at  279.10KiB/s (00:00:01)[download]  128.07KiB at  280.37KiB/s (00:00:01)[download] 100% of  128.07KiB in 00:00:01 at 96.70KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 069 - Casting in C++.en.vtt (pass -k to keep)
+[download] Downloading item 70 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9ncNA6Co2Nk
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9ncNA6Co2Nk: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9ncNA6Co2Nk: Downloading android vr player API JSON
+WARNING: [youtube] 9ncNA6Co2Nk: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 9ncNA6Co2Nk: Downloading subtitles: en
+[info] 9ncNA6Co2Nk: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 070 - Conditional and Action Breakpoints in C++.en.vtt
+[download] Destination: 070 - Conditional and Action Breakpoints in C++.en.vtt
+[download]    1.00KiB at  328.68KiB/s (00:00:00)[download]    3.00KiB at  825.05KiB/s (00:00:00)[download]    7.00KiB at    1.62MiB/s (00:00:00)[download]   15.00KiB at    2.67MiB/s (00:00:00)[download]   31.00KiB at  189.12KiB/s (00:00:00)[download]   63.00KiB at  239.81KiB/s (00:00:01)[download]  114.89KiB at  228.87KiB/s (00:00:01)[download] 100% of  114.89KiB in 00:00:01 at 88.46KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 070 - Conditional and Action Breakpoints in C++.en.vtt (pass -k to keep)
+[download] Downloading item 71 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CWglkNBUmD4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CWglkNBUmD4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CWglkNBUmD4: Downloading android vr player API JSON
+WARNING: [youtube] CWglkNBUmD4: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] CWglkNBUmD4: Downloading subtitles: en
+[info] CWglkNBUmD4: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 071 - Safety in modern C++ and how to teach it.en.vtt
+[download] Destination: 071 - Safety in modern C++ and how to teach it.en.vtt
+[download]    1.00KiB at  279.97KiB/s (00:00:00)[download]    3.00KiB at  729.23KiB/s (00:00:00)[download]    7.00KiB at  748.45KiB/s (00:00:00)[download]   15.00KiB at  360.00KiB/s (00:00:00)[download]   31.00KiB at  109.95KiB/s (00:00:01)[download]   63.00KiB at  128.94KiB/s (00:00:01)[download]  127.00KiB at  185.89KiB/s (00:00:01)[download]  173.53KiB at  223.47KiB/s (00:00:01)[download] 100% of  173.53KiB in 00:00:01 at 103.13KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 071 - Safety in modern C++ and how to teach it.en.vtt (pass -k to keep)
+[download] Downloading item 72 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eSI4wctZUto
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eSI4wctZUto: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eSI4wctZUto: Downloading android vr player API JSON
+WARNING: [youtube] eSI4wctZUto: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] eSI4wctZUto: Downloading subtitles: en
+[info] eSI4wctZUto: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 072 - Precompiled Headers in C++.en.vtt
+[download] Destination: 072 - Precompiled Headers in C++.en.vtt
+[download]    1.00KiB at  422.22KiB/s (00:00:00)[download]    3.00KiB at  883.69KiB/s (00:00:00)[download]    7.00KiB at  404.72KiB/s (00:00:00)[download]   15.00KiB at  410.27KiB/s (00:00:00)[download]   31.00KiB at  175.99KiB/s (00:00:00)[download]   63.00KiB at  198.21KiB/s (00:00:01)[download]  127.00KiB at  222.89KiB/s (00:00:01)[download]  211.59KiB at  362.18KiB/s (00:00:01)[download] 100% of  211.59KiB in 00:00:01 at 161.04KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 072 - Precompiled Headers in C++.en.vtt (pass -k to keep)
+[download] Downloading item 73 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CiHfz6pTolQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CiHfz6pTolQ: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CiHfz6pTolQ: Downloading android vr player API JSON
+WARNING: [youtube] CiHfz6pTolQ: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] CiHfz6pTolQ: Downloading subtitles: en
+[info] CiHfz6pTolQ: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 073 - Dynamic Casting in C++.en.vtt
+[download] Destination: 073 - Dynamic Casting in C++.en.vtt
+[download]    1.00KiB at  575.19KiB/s (00:00:01)[download]    3.00KiB at    1.29MiB/s (00:00:01)[download]    7.00KiB at    2.44MiB/s (00:00:01)[download]   15.00KiB at    4.19MiB/s (00:00:01)[download]   31.00KiB at   80.86KiB/s (00:00:02)[download]   63.00KiB at  162.53KiB/s (00:00:02)[download]  127.00KiB at  228.39KiB/s (00:00:02)[download]  132.25KiB at  235.82KiB/s (00:00:02)[download] 100% of  132.25KiB in 00:00:02 at 52.98KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 073 - Dynamic Casting in C++.en.vtt (pass -k to keep)
+[download] Downloading item 74 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=YG4jexlSAjc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] YG4jexlSAjc: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] YG4jexlSAjc: Downloading android vr player API JSON
+WARNING: [youtube] YG4jexlSAjc: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] YG4jexlSAjc: Downloading subtitles: en
+[info] YG4jexlSAjc: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 074 - BENCHMARKING in C++ (how to measure performance).en.vtt
+[download] Destination: 074 - BENCHMARKING in C++ (how to measure performance).en.vtt
+[download]    1.00KiB at  396.70KiB/s (00:00:01)[download]    3.00KiB at  803.40KiB/s (00:00:01)[download]    7.00KiB at    1.55MiB/s (00:00:01)[download]   15.00KiB at    2.35MiB/s (00:00:01)[download]   31.00KiB at  151.50KiB/s (00:00:01)[download]   63.00KiB at  181.47KiB/s (00:00:01)[download]  127.00KiB at  254.57KiB/s (00:00:01)[download]  149.03KiB at  281.78KiB/s (00:00:01)[download] 100% of  149.03KiB in 00:00:01 at 81.76KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 074 - BENCHMARKING in C++ (how to measure performance).en.vtt (pass -k to keep)
+[download] Downloading item 75 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eUsTO5BO3WI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eUsTO5BO3WI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eUsTO5BO3WI: Downloading android vr player API JSON
+WARNING: [youtube] eUsTO5BO3WI: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] eUsTO5BO3WI: Downloading subtitles: en
+[info] eUsTO5BO3WI: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 075 - STRUCTURED BINDINGS in C++.en.vtt
+[download] Destination: 075 - STRUCTURED BINDINGS in C++.en.vtt
+[download]    1.00KiB at  455.46KiB/s (00:00:00)[download]    3.00KiB at  900.39KiB/s (00:00:00)[download]    7.00KiB at  827.30KiB/s (00:00:00)[download]   15.00KiB at  376.83KiB/s (00:00:00)[download]   31.00KiB at  174.73KiB/s (00:00:00)[download]   63.00KiB at  215.63KiB/s (00:00:01)[download]  101.96KiB at  273.17KiB/s (00:00:01)[download] 100% of  101.96KiB in 00:00:01 at 92.36KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 075 - STRUCTURED BINDINGS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 76 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UAAiwObNhQ0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UAAiwObNhQ0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UAAiwObNhQ0: Downloading android vr player API JSON
+WARNING: [youtube] UAAiwObNhQ0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] UAAiwObNhQ0: Downloading subtitles: en
+[info] UAAiwObNhQ0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 076 - How to Deal with OPTIONAL Data in C++.en.vtt
+[download] Destination: 076 - How to Deal with OPTIONAL Data in C++.en.vtt
+[download]    1.00KiB at  606.20KiB/s (00:00:00)[download]    3.00KiB at  493.70KiB/s (00:00:00)[download]    7.00KiB at  290.58KiB/s (00:00:00)[download]   15.00KiB at  328.76KiB/s (00:00:00)[download]   31.00KiB at  187.63KiB/s (00:00:00)[download]   63.00KiB at  234.14KiB/s (00:00:01)[download]   96.48KiB at  298.05KiB/s (00:00:01)[download] 100% of   96.48KiB in 00:00:01 at 90.26KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 076 - How to Deal with OPTIONAL Data in C++.en.vtt (pass -k to keep)
+[download] Downloading item 77 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qCc_Vqg3hJk
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qCc_Vqg3hJk: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qCc_Vqg3hJk: Downloading android vr player API JSON
+WARNING: [youtube] qCc_Vqg3hJk: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] qCc_Vqg3hJk: Downloading 1 format(s): 18
+[info] There are no subtitles for the requested languages
+[SubtitlesConvertor] There aren't any subtitles to convert
+[download] Downloading item 78 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=7nPrUBNGRAk
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 7nPrUBNGRAk: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 7nPrUBNGRAk: Downloading android vr player API JSON
+WARNING: [youtube] 7nPrUBNGRAk: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 7nPrUBNGRAk: Downloading subtitles: en
+[info] 7nPrUBNGRAk: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 078 - How to store ANY data in C++.en.vtt
+[download] Destination: 078 - How to store ANY data in C++.en.vtt
+[download]    1.00KiB at  590.33KiB/s (00:00:00)[download]    3.00KiB at    1.05MiB/s (00:00:00)[download]    7.00KiB at  362.63KiB/s (00:00:00)[download]   15.00KiB at  292.95KiB/s (00:00:00)[download]   31.00KiB at  184.68KiB/s (00:00:00)[download]   63.00KiB at  237.55KiB/s (00:00:00)[download]  127.00KiB at  317.10KiB/s (00:00:01)[download]  128.76KiB at  320.61KiB/s (00:00:01)[download] 100% of  128.76KiB in 00:00:01 at 115.10KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 078 - How to store ANY data in C++.en.vtt (pass -k to keep)
+[download] Downloading item 79 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5HWCsmE9DrE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5HWCsmE9DrE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5HWCsmE9DrE: Downloading android vr player API JSON
+WARNING: [youtube] 5HWCsmE9DrE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 5HWCsmE9DrE: Downloading 1 format(s): 18
+[info] There are no subtitles for the requested languages
+[SubtitlesConvertor] There aren't any subtitles to convert
+[download] Downloading item 80 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZO68JEgoPeg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZO68JEgoPeg: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZO68JEgoPeg: Downloading android vr player API JSON
+WARNING: [youtube] ZO68JEgoPeg: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ZO68JEgoPeg: Downloading subtitles: en
+[info] ZO68JEgoPeg: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 080 - How to make your STRINGS FASTER in C++!.en.vtt
+[download] Destination: 080 - How to make your STRINGS FASTER in C++!.en.vtt
+[download]    1.00KiB at  431.69KiB/s (00:00:00)[download]    3.00KiB at    1.00MiB/s (00:00:00)[download]    7.00KiB at  804.01KiB/s (00:00:00)[download]   15.00KiB at  403.20KiB/s (00:00:00)[download]   31.00KiB at  179.18KiB/s (00:00:00)[download]   63.00KiB at  219.02KiB/s (00:00:01)[download]  127.00KiB at  297.29KiB/s (00:00:01)[download]  149.72KiB at  334.55KiB/s (00:00:01)[download] 100% of  149.72KiB in 00:00:01 at 123.14KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 080 - How to make your STRINGS FASTER in C++!.en.vtt (pass -k to keep)
+[download] Downloading item 81 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=xlAH4dbMVnU
+[youtube] Sleeping 1.0 seconds ...
+[youtube] xlAH4dbMVnU: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] xlAH4dbMVnU: Downloading android vr player API JSON
+WARNING: [youtube] xlAH4dbMVnU: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] xlAH4dbMVnU: Downloading subtitles: en
+[info] xlAH4dbMVnU: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 081 - VISUAL BENCHMARKING in C++ (how to measure performance visually).en.vtt
+[download] Destination: 081 - VISUAL BENCHMARKING in C++ (how to measure performance visually).en.vtt
+[download]    1.00KiB at  571.98KiB/s (00:00:00)[download]    3.00KiB at    1.24MiB/s (00:00:00)[download]    7.00KiB at  395.71KiB/s (00:00:00)[download]   15.00KiB at  421.32KiB/s (00:00:00)[download]   31.00KiB at  191.71KiB/s (00:00:00)[download]   63.00KiB at  233.16KiB/s (00:00:00)[download]  127.00KiB at  285.85KiB/s (00:00:01)[download]  193.39KiB at  382.07KiB/s (00:00:01)[download] 100% of  193.39KiB in 00:00:01 at 166.19KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 081 - VISUAL BENCHMARKING in C++ (how to measure performance visually).en.vtt (pass -k to keep)
+[download] Downloading item 82 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=PPup1yeU45I
+[youtube] Sleeping 1.0 seconds ...
+[youtube] PPup1yeU45I: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] PPup1yeU45I: Downloading android vr player API JSON
+WARNING: [youtube] PPup1yeU45I: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] PPup1yeU45I: Downloading subtitles: en
+[info] PPup1yeU45I: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 082 - SINGLETONS in C++.en.vtt
+[download] Destination: 082 - SINGLETONS in C++.en.vtt
+[download]    1.00KiB at  610.70KiB/s (00:00:00)[download]    3.00KiB at    1.05MiB/s (00:00:00)[download]    7.00KiB at  241.67KiB/s (00:00:00)[download]   15.00KiB at  405.42KiB/s (00:00:00)[download]   31.00KiB at  189.30KiB/s (00:00:00)[download]   63.00KiB at  245.51KiB/s (00:00:01)[download]  127.00KiB at  328.94KiB/s (00:00:01)[download]  185.19KiB at  409.05KiB/s (00:00:01)[download] 100% of  185.19KiB in 00:00:01 at 145.43KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 082 - SINGLETONS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 83 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=S7oVXMzTo4w
+[youtube] Sleeping 1.0 seconds ...
+[youtube] S7oVXMzTo4w: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] S7oVXMzTo4w: Downloading android vr player API JSON
+WARNING: [youtube] S7oVXMzTo4w: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] S7oVXMzTo4w: Downloading subtitles: en
+[info] S7oVXMzTo4w: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 083 - Small String Optimization in C++.en.vtt
+[download] Destination: 083 - Small String Optimization in C++.en.vtt
+[download]    1.00KiB at  493.91KiB/s (00:00:00)[download]    3.00KiB at    1.16MiB/s (00:00:00)[download]    7.00KiB at  666.25KiB/s (00:00:00)[download]   15.00KiB at  407.30KiB/s (00:00:00)[download]   31.00KiB at  167.73KiB/s (00:00:00)[download]   63.00KiB at  198.47KiB/s (00:00:00)[download]  127.00KiB at  294.18KiB/s (00:00:01)[download]  128.03KiB at  295.75KiB/s (00:00:01)[download] 100% of  128.03KiB in 00:00:01 at 122.79KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 083 - Small String Optimization in C++.en.vtt (pass -k to keep)
+[download] Downloading item 84 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=sLlGEUO_EGE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] sLlGEUO_EGE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] sLlGEUO_EGE: Downloading android vr player API JSON
+WARNING: [youtube] sLlGEUO_EGE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] sLlGEUO_EGE: Downloading subtitles: en
+[info] sLlGEUO_EGE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 084 - Track MEMORY ALLOCATIONS the Easy Way in C++.en.vtt
+[download] Destination: 084 - Track MEMORY ALLOCATIONS the Easy Way in C++.en.vtt
+[download]    1.00KiB at  649.07KiB/s (00:00:01)[download]    3.00KiB at  291.55KiB/s (00:00:01)[download]    7.00KiB at  368.08KiB/s (00:00:01)[download]   15.00KiB at  316.95KiB/s (00:00:01)[download]   31.00KiB at  181.74KiB/s (00:00:01)[download]   63.00KiB at  152.34KiB/s (00:00:01)[download]  127.00KiB at  301.74KiB/s (00:00:01)[download]  130.75KiB at  309.78KiB/s (00:00:01)[download] 100% of  130.75KiB in 00:00:01 at 80.44KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 084 - Track MEMORY ALLOCATIONS the Easy Way in C++.en.vtt (pass -k to keep)
+[download] Downloading item 85 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=fbYknr-HPYE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] fbYknr-HPYE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] fbYknr-HPYE: Downloading android vr player API JSON
+WARNING: [youtube] fbYknr-HPYE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] fbYknr-HPYE: Downloading subtitles: en
+[info] fbYknr-HPYE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 085 - lvalues and rvalues in C++.en.vtt
+[download] Destination: 085 - lvalues and rvalues in C++.en.vtt
+[download]    1.00KiB at  484.22KiB/s (00:00:00)[download]    3.00KiB at  820.21KiB/s (00:00:00)[download]    7.00KiB at   40.25KiB/s (00:00:00)[download]   15.00KiB at   84.73KiB/s (00:00:00)[download]   31.00KiB at  173.50KiB/s (00:00:00)[download]   63.00KiB at  201.46KiB/s (00:00:00)[download]  127.00KiB at  269.71KiB/s (00:00:01)[download]  140.93KiB at  290.15KiB/s (00:00:01)[download] 100% of  140.93KiB in 00:00:01 at 124.40KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 085 - lvalues and rvalues in C++.en.vtt (pass -k to keep)
+[download] Downloading item 86 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=FHPtchw-eHA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FHPtchw-eHA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FHPtchw-eHA: Downloading android vr player API JSON
+WARNING: [youtube] FHPtchw-eHA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] FHPtchw-eHA: Downloading subtitles: en
+[info] FHPtchw-eHA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 086 - Continuous Integration in C++.en.vtt
+[download] Destination: 086 - Continuous Integration in C++.en.vtt
+[download]    1.00KiB at  444.50KiB/s (00:00:00)[download]    3.00KiB at   17.38KiB/s (00:00:00)[download]    7.00KiB at   40.29KiB/s (00:00:00)[download]   15.00KiB at   85.55KiB/s (00:00:00)[download]   31.00KiB at  175.15KiB/s (00:00:00)[download]   63.00KiB at  191.49KiB/s (00:00:01)[download]  127.00KiB at  265.61KiB/s (00:00:01)[download]  154.50KiB at  303.04KiB/s (00:00:01)[download] 100% of  154.50KiB in 00:00:01 at 120.35KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 086 - Continuous Integration in C++.en.vtt (pass -k to keep)
+[download] Downloading item 87 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=vYW6TOwFK2M
+[youtube] Sleeping 1.0 seconds ...
+[youtube] vYW6TOwFK2M: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] vYW6TOwFK2M: Downloading android vr player API JSON
+WARNING: [youtube] vYW6TOwFK2M: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] vYW6TOwFK2M: Downloading subtitles: en
+[info] vYW6TOwFK2M: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 087 - Static Analysis in C++.en.vtt
+[download] Destination: 087 - Static Analysis in C++.en.vtt
+[download]    1.00KiB at  521.94KiB/s (00:00:01)[download]    3.00KiB at  594.85KiB/s (00:00:01)[download]    7.00KiB at  235.59KiB/s (00:00:01)[download]   15.00KiB at   93.14KiB/s (00:00:02)[download]   31.00KiB at  112.23KiB/s (00:00:02)[download]   63.00KiB at  146.40KiB/s (00:00:02)[download]  127.00KiB at  213.88KiB/s (00:00:02)[download]  150.14KiB at  238.93KiB/s (00:00:02)[download] 100% of  150.14KiB in 00:00:02 at 59.41KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 087 - Static Analysis in C++.en.vtt (pass -k to keep)
+[download] Downloading item 88 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qYxTP7wrCho
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qYxTP7wrCho: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qYxTP7wrCho: Downloading android vr player API JSON
+WARNING: [youtube] qYxTP7wrCho: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] qYxTP7wrCho: Downloading subtitles: en
+[info] qYxTP7wrCho: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 088 - Argument Evaluation Order in C++.en.vtt
+[download] Destination: 088 - Argument Evaluation Order in C++.en.vtt
+[download]    1.00KiB at  642.61KiB/s (00:00:01)[download]    3.00KiB at  323.14KiB/s (00:00:01)[download]    7.00KiB at  358.62KiB/s (00:00:01)[download]   15.00KiB at  375.31KiB/s (00:00:01)[download]   31.00KiB at  172.85KiB/s (00:00:01)[download]   63.00KiB at  202.27KiB/s (00:00:01)[download]  109.96KiB at  271.09KiB/s (00:00:01)[download] 100% of  109.96KiB in 00:00:01 at 76.32KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 088 - Argument Evaluation Order in C++.en.vtt (pass -k to keep)
+[download] Downloading item 89 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ehMg6zvXuMY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ehMg6zvXuMY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ehMg6zvXuMY: Downloading android vr player API JSON
+WARNING: [youtube] ehMg6zvXuMY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ehMg6zvXuMY: Downloading subtitles: en
+[info] ehMg6zvXuMY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 089 - Move Semantics in C++.en.vtt
+[download] Destination: 089 - Move Semantics in C++.en.vtt
+[download]    1.00KiB at  269.75KiB/s (00:00:01)[download]    3.00KiB at  601.68KiB/s (00:00:01)[download]    7.00KiB at  677.94KiB/s (00:00:01)[download]   15.00KiB at  378.93KiB/s (00:00:01)[download]   31.00KiB at  182.47KiB/s (00:00:02)[download]   63.00KiB at  245.85KiB/s (00:00:02)[download]  127.00KiB at  322.50KiB/s (00:00:02)[download]  135.91KiB at  337.44KiB/s (00:00:02)[download] 100% of  135.91KiB in 00:00:02 at 60.38KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 089 - Move Semantics in C++.en.vtt (pass -k to keep)
+[download] Downloading item 90 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OWNeCTd7yQE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OWNeCTd7yQE: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OWNeCTd7yQE: Downloading android vr player API JSON
+WARNING: [youtube] OWNeCTd7yQE: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] OWNeCTd7yQE: Downloading subtitles: en
+[info] OWNeCTd7yQE: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 090 - std£º£ºmove and the Move Assignment Operator in C++.en.vtt
+[download] Destination: 090 - std£º£ºmove and the Move Assignment Operator in C++.en.vtt
+[download]    1.00KiB at  341.31KiB/s (00:00:00)[download]    3.00KiB at   69.08KiB/s (00:00:00)[download]    7.00KiB at  125.93KiB/s (00:00:00)[download]   15.00KiB at  165.88KiB/s (00:00:00)[download]   31.00KiB at  137.80KiB/s (00:00:01)[download]   63.00KiB at  212.61KiB/s (00:00:01)[download]  127.00KiB at  282.88KiB/s (00:00:01)[download]  156.26KiB at  325.80KiB/s (00:00:01)[download] 100% of  156.26KiB in 00:00:01 at 118.43KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 090 - std£º£ºmove and the Move Assignment Operator in C++.en.vtt (pass -k to keep)
+[download] Downloading item 91 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=TzB5ZeKQIHM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] TzB5ZeKQIHM: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] TzB5ZeKQIHM: Downloading android vr player API JSON
+WARNING: [youtube] TzB5ZeKQIHM: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] TzB5ZeKQIHM: Downloading subtitles: en
+[info] TzB5ZeKQIHM: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 091 - ARRAY - Making DATA STRUCTURES in C++.en.vtt
+[download] Destination: 091 - ARRAY - Making DATA STRUCTURES in C++.en.vtt
+[download]    1.00KiB at  571.51KiB/s (00:00:10)[download]    3.00KiB at    1.23MiB/s (00:00:10)[download]    7.00KiB at  851.59KiB/s (00:00:10)[download]   15.00KiB at  343.96KiB/s (00:00:10)[download]   31.00KiB at  186.02KiB/s (00:00:10)[download]   63.00KiB at  233.62KiB/s (00:00:10)[download]  127.00KiB at  308.99KiB/s (00:00:11)[download]  250.27KiB at  393.39KiB/s (00:00:11)[download] 100% of  250.27KiB in 00:00:11 at 22.04KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 091 - ARRAY - Making DATA STRUCTURES in C++.en.vtt (pass -k to keep)
+[download] Downloading item 92 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ryRf4Jh_YC0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ryRf4Jh_YC0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ryRf4Jh_YC0: Downloading android vr player API JSON
+WARNING: [youtube] ryRf4Jh_YC0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] ryRf4Jh_YC0: Downloading subtitles: en
+[info] ryRf4Jh_YC0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 092 - VECTORDYNAMIC ARRAY -  Making DATA STRUCTURES in C++.en.vtt
+[download] Destination: 092 - VECTORDYNAMIC ARRAY -  Making DATA STRUCTURES in C++.en.vtt
+[download]    1.00KiB at  443.75KiB/s (00:00:00)[download]    3.00KiB at  862.67KiB/s (00:00:00)[download]    7.00KiB at  394.89KiB/s (00:00:00)[download]   15.00KiB at  336.50KiB/s (00:00:00)[download]   31.00KiB at  163.62KiB/s (00:00:00)[download]   63.00KiB at  205.03KiB/s (00:00:01)[download]  127.00KiB at  278.60KiB/s (00:00:01)[download]  255.00KiB at  435.69KiB/s (00:00:01)[download]  485.09KiB at  558.48KiB/s (00:00:01)[download] 100% of  485.09KiB in 00:00:01 at 291.10KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 092 - VECTORDYNAMIC ARRAY -  Making DATA STRUCTURES in C++.en.vtt (pass -k to keep)
+[download] Downloading item 93 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=SgcHcbQ0RCQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] SgcHcbQ0RCQ: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] SgcHcbQ0RCQ: Downloading android vr player API JSON
+WARNING: [youtube] SgcHcbQ0RCQ: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] SgcHcbQ0RCQ: Downloading subtitles: en
+[info] SgcHcbQ0RCQ: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 093 - ITERATORS in C++.en.vtt
+[download] Destination: 093 - ITERATORS in C++.en.vtt
+[download]    1.00KiB at  651.59KiB/s (00:00:00)[download]    3.00KiB at  296.10KiB/s (00:00:00)[download]    7.00KiB at  347.80KiB/s (00:00:00)[download]   15.00KiB at  392.74KiB/s (00:00:00)[download]   31.00KiB at  161.49KiB/s (00:00:00)[download]   63.00KiB at  196.74KiB/s (00:00:00)[download]  127.00KiB at  279.74KiB/s (00:00:01)[download]  171.47KiB at  335.44KiB/s (00:00:01)[download] 100% of  171.47KiB in 00:00:01 at 145.54KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 093 - ITERATORS in C++.en.vtt (pass -k to keep)
+[download] Downloading item 94 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=F9eDv-YIOQ0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] F9eDv-YIOQ0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] F9eDv-YIOQ0: Downloading android vr player API JSON
+WARNING: [youtube] F9eDv-YIOQ0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] F9eDv-YIOQ0: Downloading 1 format(s): 18
+[info] There are no subtitles for the requested languages
+[SubtitlesConvertor] There aren't any subtitles to convert
+[download] Downloading item 95 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=_zQqN5OYCCM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] _zQqN5OYCCM: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] _zQqN5OYCCM: Downloading android vr player API JSON
+WARNING: [youtube] _zQqN5OYCCM: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] _zQqN5OYCCM: Downloading subtitles: en
+[info] _zQqN5OYCCM: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 095 - How to REALLY learn C++.en.vtt
+[download] Destination: 095 - How to REALLY learn C++.en.vtt
+[download]    1.00KiB at  415.40KiB/s (00:00:01)[download]    3.00KiB at  642.77KiB/s (00:00:01)[download]    7.00KiB at  190.31KiB/s (00:00:01)[download]   15.00KiB at  105.89KiB/s (00:00:01)[download]   31.00KiB at  150.12KiB/s (00:00:01)[download]   63.00KiB at  192.71KiB/s (00:00:01)[download]   89.39KiB at  217.97KiB/s (00:00:01)[download] 100% of   89.39KiB in 00:00:01 at 63.11KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 095 - How to REALLY learn C++.en.vtt (pass -k to keep)
+[download] Downloading item 96 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=KXwRt7og0gI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] KXwRt7og0gI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] KXwRt7og0gI: Downloading android vr player API JSON
+WARNING: [youtube] KXwRt7og0gI: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] KXwRt7og0gI: Downloading subtitles: en
+[info] KXwRt7og0gI: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 096 - Intro to Binary and Bitwise Operators in C++.en.vtt
+[download] Destination: 096 - Intro to Binary and Bitwise Operators in C++.en.vtt
+[download]    1.00KiB at  512.88KiB/s (00:00:01)[download]    3.00KiB at    1.17MiB/s (00:00:01)[download]    7.00KiB at  264.79KiB/s (00:00:01)[download]   15.00KiB at  508.06KiB/s (00:00:01)[download]   31.00KiB at  197.48KiB/s (00:00:01)[download]   63.00KiB at  269.11KiB/s (00:00:01)[download]  127.00KiB at  266.39KiB/s (00:00:01)[download]  133.89KiB at  280.52KiB/s (00:00:01)[download] 100% of  133.89KiB in 00:00:01 at 81.19KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 096 - Intro to Binary and Bitwise Operators in C++.en.vtt (pass -k to keep)
+[download] Downloading item 97 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HoQhw6_1NAA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HoQhw6_1NAA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HoQhw6_1NAA: Downloading android vr player API JSON
+WARNING: [youtube] HoQhw6_1NAA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] HoQhw6_1NAA: Downloading subtitles: en
+[info] HoQhw6_1NAA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 097 - Bitwise AND (&), OR (£ü), XOR (^) and NOT (~) in C++.en.vtt
+[download] Destination: 097 - Bitwise AND (&), OR (£ü), XOR (^) and NOT (~) in C++.en.vtt
+[download]    1.00KiB at  333.94KiB/s (00:00:00)[download]    3.00KiB at  358.39KiB/s (00:00:00)[download]    7.00KiB at  368.06KiB/s (00:00:00)[download]   15.00KiB at  308.60KiB/s (00:00:00)[download]   31.00KiB at  182.71KiB/s (00:00:00)[download]   63.00KiB at  220.94KiB/s (00:00:01)[download]  127.00KiB at  301.14KiB/s (00:00:01)[download]  209.93KiB at  395.34KiB/s (00:00:01)[download] 100% of  209.93KiB in 00:00:01 at 160.39KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 097 - Bitwise AND (&), OR (£ü), XOR (^) and NOT (~) in C++.en.vtt (pass -k to keep)
+[download] Downloading item 98 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kQsHF7C-FUY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kQsHF7C-FUY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kQsHF7C-FUY: Downloading android vr player API JSON
+WARNING: [youtube] kQsHF7C-FUY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] kQsHF7C-FUY: Downloading subtitles: en
+[info] kQsHF7C-FUY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 098 - I did a C++ University Assignment.en.vtt
+[download] Destination: 098 - I did a C++ University Assignment.en.vtt
+[download]    1.00KiB at  340.28KiB/s (00:00:00)[download]    3.00KiB at  742.22KiB/s (00:00:00)[download]    7.00KiB at  434.42KiB/s (00:00:00)[download]   15.00KiB at  317.13KiB/s (00:00:00)[download]   31.00KiB at   83.44KiB/s (00:00:01)[download]   63.00KiB at  154.83KiB/s (00:00:01)[download]  127.00KiB at  222.53KiB/s (00:00:01)[download]  255.00KiB at  344.73KiB/s (00:00:01)[download]  511.00KiB at  562.80KiB/s (00:00:01)[download]  511.70KiB at  562.79KiB/s (00:00:01)[download] 100% of  511.70KiB in 00:00:01 at 292.19KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 098 - I did a C++ University Assignment.en.vtt (pass -k to keep)
+[download] Downloading item 99 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=vWXrFetSH8w
+[youtube] Sleeping 1.0 seconds ...
+[youtube] vWXrFetSH8w: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] vWXrFetSH8w: Downloading android vr player API JSON
+WARNING: [youtube] vWXrFetSH8w: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] vWXrFetSH8w: Downloading subtitles: en
+[info] vWXrFetSH8w: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 099 - BEST WAY to make Desktop Applications in C++.en.vtt
+[download] Destination: 099 - BEST WAY to make Desktop Applications in C++.en.vtt
+[download]    1.00KiB at  553.41KiB/s (00:00:00)[download]    3.00KiB at    1.25MiB/s (00:00:00)[download]    7.00KiB at  729.88KiB/s (00:00:00)[download]   15.00KiB at  373.15KiB/s (00:00:00)[download]   31.00KiB at   60.54KiB/s (00:00:01)[download]   63.00KiB at  122.05KiB/s (00:00:01)[download]  127.00KiB at  205.65KiB/s (00:00:01)[download]  255.00KiB at  310.61KiB/s (00:00:01)[download]  259.28KiB at  315.41KiB/s (00:00:01)[download] 100% of  259.28KiB in 00:00:01 at 156.47KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 099 - BEST WAY to make Desktop Applications in C++.en.vtt (pass -k to keep)
+[download] Downloading item 100 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=KiB0vRi2wlc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] KiB0vRi2wlc: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] KiB0vRi2wlc: Downloading android vr player API JSON
+WARNING: [youtube] KiB0vRi2wlc: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] KiB0vRi2wlc: Downloading subtitles: en
+[info] KiB0vRi2wlc: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 100 - Maps in C++ (std£º£ºmap and std£º£ºunordered_map).en.vtt
+[download] Destination: 100 - Maps in C++ (std£º£ºmap and std£º£ºunordered_map).en.vtt
+[download]    1.00KiB at  461.98KiB/s (00:00:00)[download]    3.00KiB at  895.84KiB/s (00:00:00)[download]    7.00KiB at  739.40KiB/s (00:00:00)[download]   15.00KiB at  344.64KiB/s (00:00:00)[download]   31.00KiB at  169.54KiB/s (00:00:00)[download]   63.00KiB at  216.66KiB/s (00:00:01)[download]  127.00KiB at  220.05KiB/s (00:00:01)[download]  255.00KiB at  384.51KiB/s (00:00:01)[download]  299.74KiB at  417.06KiB/s (00:00:01)[download] 100% of  299.74KiB in 00:00:01 at 205.55KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 100 - Maps in C++ (std£º£ºmap and std£º£ºunordered_map).en.vtt (pass -k to keep)
+[download] Downloading item 101 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=PksUUwvq-po
+[youtube] Sleeping 1.0 seconds ...
+[youtube] PksUUwvq-po: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] PksUUwvq-po: Downloading android vr player API JSON
+WARNING: [youtube] PksUUwvq-po: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] PksUUwvq-po: Downloading subtitles: en
+[info] PksUUwvq-po: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 101 - What exactly is NULL£¿.en.vtt
+[download] Destination: 101 - What exactly is NULL£¿.en.vtt
+[download]    1.00KiB at  329.59KiB/s (00:00:00)[download]    3.00KiB at  372.31KiB/s (00:00:00)[download]    7.00KiB at  252.87KiB/s (00:00:00)[download]   15.00KiB at  267.75KiB/s (00:00:01)[download]   31.00KiB at  166.89KiB/s (00:00:01)[download]   63.00KiB at  214.20KiB/s (00:00:01)[download]  127.00KiB at  301.46KiB/s (00:00:01)[download]  172.31KiB at  363.74KiB/s (00:00:01)[download] 100% of  172.31KiB in 00:00:01 at 121.14KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 101 - What exactly is NULL£¿.en.vtt (pass -k to keep)
+[download] Downloading item 102 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5glH8dGoeCA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5glH8dGoeCA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5glH8dGoeCA: Downloading android vr player API JSON
+WARNING: [youtube] 5glH8dGoeCA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] 5glH8dGoeCA: Downloading subtitles: en
+[info] 5glH8dGoeCA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 102 - How to Properly Setup C++ Projects.en.vtt
+[download] Destination: 102 - How to Properly Setup C++ Projects.en.vtt
+[download]    1.00KiB at  571.98KiB/s (00:00:01)[download]    3.00KiB at    1.30MiB/s (00:00:01)[download]    7.00KiB at  336.99KiB/s (00:00:01)[download]   15.00KiB at  307.10KiB/s (00:00:01)[download]   31.00KiB at  158.99KiB/s (00:00:01)[download]   63.00KiB at  192.42KiB/s (00:00:01)[download]  127.00KiB at  269.53KiB/s (00:00:02)[download]  255.00KiB at  282.60KiB/s (00:00:02)[download]  348.62KiB at  373.61KiB/s (00:00:02)[download] 100% of  348.62KiB in 00:00:02 at 139.18KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 102 - How to Properly Setup C++ Projects.en.vtt (pass -k to keep)
+[download] Downloading item 103 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OK0G4cmeX-I
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OK0G4cmeX-I: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OK0G4cmeX-I: Downloading android vr player API JSON
+WARNING: [youtube] OK0G4cmeX-I: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] OK0G4cmeX-I: Downloading subtitles: en
+[info] OK0G4cmeX-I: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 103 - Conversion Operators in C++.en.vtt
+[download] Got error: Failed to perform, curl: (35) TLS connect error: error:00000000:invalid library (0):OPENSSL_internal:invalid library (0). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.. Retrying (1/10)...
+[download] Destination: 103 - Conversion Operators in C++.en.vtt
+[download]    1.00KiB at  581.90KiB/s (00:00:04)[download]    3.00KiB at  645.21KiB/s (00:00:04)[download]    7.00KiB at  295.20KiB/s (00:00:04)[download]   15.00KiB at  355.15KiB/s (00:00:04)[download]   31.00KiB at  165.75KiB/s (00:00:04)[download]   63.00KiB at  199.75KiB/s (00:00:04)[download]  127.00KiB at  280.53KiB/s (00:00:04)[download]  211.68KiB at  366.52KiB/s (00:00:04)[download] 100% of  211.68KiB in 00:00:04 at 44.47KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 103 - Conversion Operators in C++.en.vtt (pass -k to keep)
+[download] Downloading item 104 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=JPlTuRj1OJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] JPlTuRj1OJo: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] JPlTuRj1OJo: Downloading android vr player API JSON
+WARNING: [youtube] JPlTuRj1OJo: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] JPlTuRj1OJo: Downloading subtitles: en
+[info] JPlTuRj1OJo: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 104 - Make C++ Apps & Games FOR THE WEB.en.vtt
+[download] Destination: 104 - Make C++ Apps & Games FOR THE WEB.en.vtt
+[download]    1.00KiB at  659.48KiB/s (00:00:01)[download]    3.00KiB at    1.42MiB/s (00:00:01)[download]    7.00KiB at  439.41KiB/s (00:00:01)[download]   15.00KiB at  225.36KiB/s (00:00:01)[download]   31.00KiB at  162.84KiB/s (00:00:02)[download]   63.00KiB at  213.18KiB/s (00:00:02)[download]  127.00KiB at  224.81KiB/s (00:00:02)[download]  161.73KiB at  283.71KiB/s (00:00:02)[download] 100% of  161.73KiB in 00:00:02 at 65.67KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 104 - Make C++ Apps & Games FOR THE WEB.en.vtt (pass -k to keep)
+[download] Downloading item 105 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=M0GLQEfplxs
+[youtube] Sleeping 1.0 seconds ...
+[youtube] M0GLQEfplxs: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] M0GLQEfplxs: Downloading android vr player API JSON
+WARNING: [youtube] M0GLQEfplxs: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] M0GLQEfplxs: Downloading subtitles: en
+[info] M0GLQEfplxs: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 105 - Weak Pointers in C++ (std£º£ºweak_ptr).en.vtt
+[download] Destination: 105 - Weak Pointers in C++ (std£º£ºweak_ptr).en.vtt
+[download]    1.00KiB at  424.01KiB/s (00:00:00)[download]    3.00KiB at  808.72KiB/s (00:00:00)[download]    7.00KiB at  276.84KiB/s (00:00:00)[download]   15.00KiB at  342.85KiB/s (00:00:00)[download]   31.00KiB at  156.41KiB/s (00:00:01)[download]   63.00KiB at  215.61KiB/s (00:00:01)[download]  127.00KiB at  281.55KiB/s (00:00:01)[download]  181.56KiB at  361.58KiB/s (00:00:01)[download] 100% of  181.56KiB in 00:00:01 at 134.78KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 105 - Weak Pointers in C++ (std£º£ºweak_ptr).en.vtt (pass -k to keep)
+[download] Downloading item 106 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Xx-NcqmveDc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Xx-NcqmveDc: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Xx-NcqmveDc: Downloading android vr player API JSON
+WARNING: [youtube] Xx-NcqmveDc: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Xx-NcqmveDc: Downloading subtitles: en
+[info] Xx-NcqmveDc: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 106 - Stop using std£º£ºvector wrong.en.vtt
+[download] Destination: 106 - Stop using std£º£ºvector wrong.en.vtt
+[download]    1.00KiB at  455.85KiB/s (00:00:01)[download]    3.00KiB at  895.77KiB/s (00:00:01)[download]    7.00KiB at  503.33KiB/s (00:00:01)[download]   15.00KiB at  340.33KiB/s (00:00:01)[download]   31.00KiB at  159.31KiB/s (00:00:01)[download]   63.00KiB at  202.49KiB/s (00:00:01)[download]  127.00KiB at  286.03KiB/s (00:00:02)[download]  240.00KiB at  334.24KiB/s (00:00:02)[download] 100% of  240.00KiB in 00:00:02 at 101.32KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 106 - Stop using std£º£ºvector wrong.en.vtt (pass -k to keep)
+[download] Downloading item 107 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=LlzT3OBD5fA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] LlzT3OBD5fA: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] LlzT3OBD5fA: Downloading android vr player API JSON
+WARNING: [youtube] LlzT3OBD5fA: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] LlzT3OBD5fA: Downloading subtitles: en
+[info] LlzT3OBD5fA: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 107 - Naming Conventions in C++.en.vtt
+[download] Destination: 107 - Naming Conventions in C++.en.vtt
+[download]    1.00KiB at  334.13KiB/s (00:00:12)[download]    3.00KiB at  322.66KiB/s (00:00:12)[download]    7.00KiB at  318.88KiB/s (00:00:12)[download]   15.00KiB at  341.35KiB/s (00:00:12)[download]   31.00KiB at  171.64KiB/s (00:00:13)[download]   63.00KiB at  205.68KiB/s (00:00:13)[download]  127.00KiB at  278.76KiB/s (00:00:13)[download]  172.94KiB at  334.77KiB/s (00:00:13)[download] 100% of  172.94KiB in 00:00:13 at 12.88KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 107 - Naming Conventions in C++.en.vtt (pass -k to keep)
+[download] Downloading item 108 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=teOe2IKGlC0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] teOe2IKGlC0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] teOe2IKGlC0: Downloading android vr player API JSON
+WARNING: [youtube] teOe2IKGlC0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] teOe2IKGlC0: Downloading subtitles: en
+[info] teOe2IKGlC0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 108 - C++ FINALLY Made Logging GOOD!.en.vtt
+[download] Destination: 108 - C++ FINALLY Made Logging GOOD!.en.vtt
+[download]    1.00KiB at  329.25KiB/s (00:00:00)[download]    3.00KiB at  608.63KiB/s (00:00:00)[download]    7.00KiB at   32.23KiB/s (00:00:00)[download]   15.00KiB at   68.40KiB/s (00:00:00)[download]   31.00KiB at   97.64KiB/s (00:00:01)[download]   63.00KiB at  156.70KiB/s (00:00:01)[download]  127.00KiB at  210.20KiB/s (00:00:01)[download]  133.79KiB at  217.97KiB/s (00:00:01)[download] 100% of  133.79KiB in 00:00:01 at 96.71KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 108 - C++ FINALLY Made Logging GOOD!.en.vtt (pass -k to keep)
+[download] Downloading item 109 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vz40rDiWnN8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vz40rDiWnN8: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vz40rDiWnN8: Downloading android vr player API JSON
+WARNING: [youtube] Vz40rDiWnN8: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] Vz40rDiWnN8: Downloading subtitles: en
+[info] Vz40rDiWnN8: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 109 - C++ FINALLY Improved Error Handling with std£º£ºexpected!.en.vtt
+[download] Destination: 109 - C++ FINALLY Improved Error Handling with std£º£ºexpected!.en.vtt
+[download]    1.00KiB at  174.88KiB/s (00:00:00)[download]    3.00KiB at   53.93KiB/s (00:00:00)[download]    7.00KiB at  110.45KiB/s (00:00:00)[download]   15.00KiB at  160.65KiB/s (00:00:00)[download]   31.00KiB at  132.22KiB/s (00:00:01)[download]   63.00KiB at  189.34KiB/s (00:00:01)[download]  127.00KiB at  269.37KiB/s (00:00:01)[download]  233.30KiB at  400.95KiB/s (00:00:01)[download] 100% of  233.30KiB in 00:00:01 at 159.95KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 109 - C++ FINALLY Improved Error Handling with std£º£ºexpected!.en.vtt (pass -k to keep)
+[download] Downloading item 110 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=RzdM54i7buY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] RzdM54i7buY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] RzdM54i7buY: Downloading android vr player API JSON
+WARNING: [youtube] RzdM54i7buY: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] RzdM54i7buY: Downloading subtitles: en
+[info] RzdM54i7buY: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 110 - HTTP in C++.en.vtt
+[download] Destination: 110 - HTTP in C++.en.vtt
+[download]    1.00KiB at  359.53KiB/s (00:00:01)[download]    3.00KiB at  300.01KiB/s (00:00:01)[download]    7.00KiB at  335.51KiB/s (00:00:01)[download]   15.00KiB at  139.70KiB/s (00:00:01)[download]   31.00KiB at  157.59KiB/s (00:00:01)[download]   63.00KiB at  189.85KiB/s (00:00:02)[download]  127.00KiB at  266.10KiB/s (00:00:02)[download]  142.09KiB at  286.53KiB/s (00:00:02)[download] 100% of  142.09KiB in 00:00:02 at 63.83KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 110 - HTTP in C++.en.vtt (pass -k to keep)
+[download] Downloading item 111 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=y5MQPlIASHg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] y5MQPlIASHg: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] y5MQPlIASHg: Downloading android vr player API JSON
+WARNING: [youtube] y5MQPlIASHg: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] y5MQPlIASHg: Downloading subtitles: en
+[info] y5MQPlIASHg: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 111 - Be Careful with References!  Bugs of C++.en.vtt
+[download] Destination: 111 - Be Careful with References!  Bugs of C++.en.vtt
+[download]    1.00KiB at  348.91KiB/s (00:00:01)[download]    3.00KiB at  112.72KiB/s (00:00:01)[download]    7.00KiB at  251.55KiB/s (00:00:01)[download]   15.00KiB at  292.72KiB/s (00:00:01)[download]   31.00KiB at  149.55KiB/s (00:00:01)[download]   63.00KiB at  203.37KiB/s (00:00:01)[download]  125.29KiB at  269.85KiB/s (00:00:01)[download] 100% of  125.29KiB in 00:00:01 at 82.73KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 111 - Be Careful with References!  Bugs of C++.en.vtt (pass -k to keep)
+[download] Downloading item 112 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CKgNHc9YNe0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CKgNHc9YNe0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CKgNHc9YNe0: Downloading android vr player API JSON
+WARNING: [youtube] CKgNHc9YNe0: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] CKgNHc9YNe0: Downloading subtitles: en
+[info] CKgNHc9YNe0: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 112 - HTTP SERVER in C++.en.vtt
+[download] Destination: 112 - HTTP SERVER in C++.en.vtt
+[download]    1.00KiB at  491.08KiB/s (00:00:00)[download]    3.00KiB at  416.31KiB/s (00:00:00)[download]    7.00KiB at  347.98KiB/s (00:00:00)[download]   15.00KiB at  328.26KiB/s (00:00:00)[download]   31.00KiB at  119.96KiB/s (00:00:00)[download]   63.00KiB at  240.46KiB/s (00:00:00)[download]  127.00KiB at  251.17KiB/s (00:00:01)[download]  161.99KiB at  291.63KiB/s (00:00:01)[download] 100% of  161.99KiB in 00:00:01 at 127.61KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 112 - HTTP SERVER in C++.en.vtt (pass -k to keep)
+[download] Downloading item 113 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=KhftHT09F5g
+[youtube] Sleeping 1.0 seconds ...
+[youtube] KhftHT09F5g: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] KhftHT09F5g: Downloading android vr player API JSON
+WARNING: [youtube] KhftHT09F5g: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] KhftHT09F5g: Downloading subtitles: en
+[info] KhftHT09F5g: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 113 - DON'T DELETE THIS!  Bugs of C++.en.vtt
+[download] Destination: 113 - DON'T DELETE THIS!  Bugs of C++.en.vtt
+[download]    1.00KiB at  282.81KiB/s (00:00:01)[download]    3.00KiB at   95.13KiB/s (00:00:01)[download]    7.00KiB at  130.05KiB/s (00:00:01)[download]   15.00KiB at  137.85KiB/s (00:00:01)[download]   31.00KiB at   81.79KiB/s (00:00:01)[download]   63.00KiB at  107.67KiB/s (00:00:02)[download]  127.00KiB at  174.79KiB/s (00:00:02)[download]  173.40KiB at  230.63KiB/s (00:00:02)[download] 100% of  173.40KiB in 00:00:02 at 75.46KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 113 - DON'T DELETE THIS!  Bugs of C++.en.vtt (pass -k to keep)
+[download] Downloading item 114 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=FP27I7v0BeM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FP27I7v0BeM: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] FP27I7v0BeM: Downloading android vr player API JSON
+WARNING: [youtube] FP27I7v0BeM: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] FP27I7v0BeM: Downloading subtitles: en
+[info] FP27I7v0BeM: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 114 - Reference Counting in C++.en.vtt
+[download] Destination: 114 - Reference Counting in C++.en.vtt
+[download]    1.00KiB at  591.00KiB/s (00:00:00)[download]    3.00KiB at    1.33MiB/s (00:00:00)[download]    7.00KiB at  671.35KiB/s (00:00:00)[download]   15.00KiB at  349.67KiB/s (00:00:00)[download]   31.00KiB at  162.54KiB/s (00:00:00)[download]   63.00KiB at  224.94KiB/s (00:00:00)[download]  127.00KiB at  224.72KiB/s (00:00:01)[download]  136.12KiB at  240.09KiB/s (00:00:01)[download] 100% of  136.12KiB in 00:00:01 at 108.37KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 114 - Reference Counting in C++.en.vtt (pass -k to keep)
+[download] Downloading item 115 of 115
+[youtube] Extracting URL: https://www.youtube.com/watch?v=vtGjBFBrYEw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] vtGjBFBrYEw: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] Sleeping 1.0 seconds ...
+[youtube] vtGjBFBrYEw: Downloading android vr player API JSON
+WARNING: [youtube] vtGjBFBrYEw: Some android_vr client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[info] vtGjBFBrYEw: Downloading subtitles: en
+[info] vtGjBFBrYEw: Downloading 1 format(s): 18
+[info] Writing video subtitles to: 115 - Is This C++ Code Actually Safe£¿.en.vtt
+[download] Destination: 115 - Is This C++ Code Actually Safe£¿.en.vtt
+[download]    1.00KiB at  230.56KiB/s (00:00:00)[download]    3.00KiB at  619.27KiB/s (00:00:00)[download]    7.00KiB at    1.17MiB/s (00:00:00)[download]   15.00KiB at  419.39KiB/s (00:00:00)[download]   31.00KiB at   95.16KiB/s (00:00:01)[download]   63.00KiB at  163.32KiB/s (00:00:01)[download]  121.09KiB at  264.54KiB/s (00:00:01)[download] 100% of  121.09KiB in 00:00:01 at 102.49KiB/s
+[SubtitlesConvertor] Converting subtitles
+Deleting original file 115 - Is This C++ Code Actually Safe£¿.en.vtt (pass -k to keep)
+[download] Finished downloading playlist: C++

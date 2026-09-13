@@ -1,0 +1,3875 @@
+1
+00:00:00,000 --> 00:00:01,230
+
+Hey, what's up guys? My name is a
+
+2
+00:00:01,230 --> 00:00:01,240
+Hey, what's up guys? My name is a
+ 
+
+3
+00:00:01,240 --> 00:00:03,070
+Hey, what's up guys? My name is a
+channel, and welcome back to my C++
+
+4
+00:00:03,070 --> 00:00:03,080
+channel, and welcome back to my C++
+ 
+
+5
+00:00:03,080 --> 00:00:04,310
+channel, and welcome back to my C++
+series. Today, we're going to be talking
+
+6
+00:00:04,310 --> 00:00:04,320
+series. Today, we're going to be talking
+ 
+
+7
+00:00:04,320 --> 00:00:06,750
+series. Today, we're going to be talking
+all about operators in C++ and operator
+
+8
+00:00:06,750 --> 00:00:06,760
+all about operators in C++ and operator
+ 
+
+9
+00:00:06,760 --> 00:00:08,950
+all about operators in C++ and operator
+overloading in C++. So, first of all,
+
+10
+00:00:08,950 --> 00:00:08,960
+overloading in C++. So, first of all,
+ 
+
+11
+00:00:08,960 --> 00:00:11,750
+overloading in C++. So, first of all,
+what's an operator? Well, an operator is
+
+12
+00:00:11,750 --> 00:00:11,760
+what's an operator? Well, an operator is
+ 
+
+13
+00:00:11,760 --> 00:00:13,430
+what's an operator? Well, an operator is
+basically some kind of symbol that we
+
+14
+00:00:13,430 --> 00:00:13,440
+basically some kind of symbol that we
+ 
+
+15
+00:00:13,440 --> 00:00:15,310
+basically some kind of symbol that we
+use usually instead of a function to
+
+16
+00:00:15,310 --> 00:00:15,320
+use usually instead of a function to
+ 
+
+17
+00:00:15,320 --> 00:00:17,110
+use usually instead of a function to
+perform something. So, I'm not just
+
+18
+00:00:17,110 --> 00:00:17,120
+perform something. So, I'm not just
+ 
+
+19
+00:00:17,120 --> 00:00:18,550
+perform something. So, I'm not just
+talking about mathematical operators
+
+20
+00:00:18,550 --> 00:00:18,560
+talking about mathematical operators
+ 
+
+21
+00:00:18,560 --> 00:00:20,390
+talking about mathematical operators
+that we have such as plus, minus,
+
+22
+00:00:20,390 --> 00:00:20,400
+that we have such as plus, minus,
+ 
+
+23
+00:00:20,400 --> 00:00:22,350
+that we have such as plus, minus,
+divide, you know, multiply, all that
+
+24
+00:00:22,350 --> 00:00:22,360
+divide, you know, multiply, all that
+ 
+
+25
+00:00:22,360 --> 00:00:23,710
+divide, you know, multiply, all that
+kind of stuff. But, we've also got other
+
+26
+00:00:23,710 --> 00:00:23,720
+kind of stuff. But, we've also got other
+ 
+
+27
+00:00:23,720 --> 00:00:25,270
+kind of stuff. But, we've also got other
+operators that we use very commonly, and
+
+28
+00:00:25,270 --> 00:00:25,280
+operators that we use very commonly, and
+ 
+
+29
+00:00:25,280 --> 00:00:26,830
+operators that we use very commonly, and
+we've actually been using quite a few
+
+30
+00:00:26,830 --> 00:00:26,840
+we've actually been using quite a few
+ 
+
+31
+00:00:26,840 --> 00:00:28,470
+we've actually been using quite a few
+already. These include things like the
+
+32
+00:00:28,470 --> 00:00:28,480
+already. These include things like the
+ 
+
+33
+00:00:28,480 --> 00:00:30,110
+already. These include things like the
+dereference operator, the arrow
+
+34
+00:00:30,110 --> 00:00:30,120
+dereference operator, the arrow
+ 
+
+35
+00:00:30,120 --> 00:00:32,790
+dereference operator, the arrow
+operator, plus equals, there's the
+
+36
+00:00:32,790 --> 00:00:32,800
+operator, plus equals, there's the
+ 
+
+37
+00:00:32,800 --> 00:00:34,510
+operator, plus equals, there's the
+ampersand operator that we use for
+
+38
+00:00:34,510 --> 00:00:34,520
+ampersand operator that we use for
+ 
+
+39
+00:00:34,520 --> 00:00:36,230
+ampersand operator that we use for
+memory addresses. We've also been using
+
+40
+00:00:36,230 --> 00:00:36,240
+memory addresses. We've also been using
+ 
+
+41
+00:00:36,240 --> 00:00:37,790
+memory addresses. We've also been using
+the bit shift left operator, which is
+
+42
+00:00:37,790 --> 00:00:37,800
+the bit shift left operator, which is
+ 
+
+43
+00:00:37,800 --> 00:00:40,110
+the bit shift left operator, which is
+two left angle brackets for printing out
+
+44
+00:00:40,110 --> 00:00:40,120
+two left angle brackets for printing out
+ 
+
+45
+00:00:40,120 --> 00:00:42,230
+two left angle brackets for printing out
+stuff into our C out into our console.
+
+46
+00:00:42,230 --> 00:00:42,240
+stuff into our C out into our console.
+ 
+
+47
+00:00:42,240 --> 00:00:43,510
+stuff into our C out into our console.
+And then, we've got other operators
+
+48
+00:00:43,510 --> 00:00:43,520
+And then, we've got other operators
+ 
+
+49
+00:00:43,520 --> 00:00:44,830
+And then, we've got other operators
+which you probably don't think of as
+
+50
+00:00:44,830 --> 00:00:44,840
+which you probably don't think of as
+ 
+
+51
+00:00:44,840 --> 00:00:46,590
+which you probably don't think of as
+operators at all, such as new and
+
+52
+00:00:46,590 --> 00:00:46,600
+operators at all, such as new and
+ 
+
+53
+00:00:46,600 --> 00:00:48,310
+operators at all, such as new and
+delete. They're actually they're also
+
+54
+00:00:48,310 --> 00:00:48,320
+delete. They're actually they're also
+ 
+
+55
+00:00:48,320 --> 00:00:50,150
+delete. They're actually they're also
+operators. And then, we have entirely
+
+56
+00:00:50,150 --> 00:00:50,160
+operators. And then, we have entirely
+ 
+
+57
+00:00:50,160 --> 00:00:52,110
+operators. And then, we have entirely
+different operators which are weird,
+
+58
+00:00:52,110 --> 00:00:52,120
+different operators which are weird,
+ 
+
+59
+00:00:52,120 --> 00:00:54,110
+different operators which are weird,
+such as the comma operator. Yes, the
+
+60
+00:00:54,110 --> 00:00:54,120
+such as the comma operator. Yes, the
+ 
+
+61
+00:00:54,120 --> 00:00:56,550
+such as the comma operator. Yes, the
+comma can also be an operator, as well
+
+62
+00:00:56,550 --> 00:00:56,560
+comma can also be an operator, as well
+ 
+
+63
+00:00:56,560 --> 00:00:58,550
+comma can also be an operator, as well
+as parentheses. Yeah, that's right. Two
+
+64
+00:00:58,550 --> 00:00:58,560
+as parentheses. Yeah, that's right. Two
+ 
+
+65
+00:00:58,560 --> 00:01:00,870
+as parentheses. Yeah, that's right. Two
+like brackets, two parentheses.
+
+66
+00:01:00,870 --> 00:01:00,880
+like brackets, two parentheses.
+ 
+
+67
+00:01:00,880 --> 00:01:02,270
+like brackets, two parentheses.
+That's also an operator. I'm not going
+
+68
+00:01:02,270 --> 00:01:02,280
+That's also an operator. I'm not going
+ 
+
+69
+00:01:02,280 --> 00:01:03,590
+That's also an operator. I'm not going
+to list off all of the operators we have
+
+70
+00:01:03,590 --> 00:01:03,600
+to list off all of the operators we have
+ 
+
+71
+00:01:03,600 --> 00:01:05,710
+to list off all of the operators we have
+available in C++. I will make videos
+
+72
+00:01:05,710 --> 00:01:05,720
+available in C++. I will make videos
+ 
+
+73
+00:01:05,720 --> 00:01:07,390
+available in C++. I will make videos
+specific videos about some of them
+
+74
+00:01:07,390 --> 00:01:07,400
+specific videos about some of them
+ 
+
+75
+00:01:07,400 --> 00:01:09,750
+specific videos about some of them
+because they they they need some talking
+
+76
+00:01:09,750 --> 00:01:09,760
+because they they they need some talking
+ 
+
+77
+00:01:09,760 --> 00:01:11,110
+because they they they need some talking
+about. But, if you want to see the full
+
+78
+00:01:11,110 --> 00:01:11,120
+about. But, if you want to see the full
+ 
+
+79
+00:01:11,120 --> 00:01:13,190
+about. But, if you want to see the full
+list of C++ operators that exist, then
+
+80
+00:01:13,190 --> 00:01:13,200
+list of C++ operators that exist, then
+ 
+
+81
+00:01:13,200 --> 00:01:14,750
+list of C++ operators that exist, then
+I've linked a reference in the in the
+
+82
+00:01:14,750 --> 00:01:14,760
+I've linked a reference in the in the
+ 
+
+83
+00:01:14,760 --> 00:01:16,590
+I've linked a reference in the in the
+description below. So, operator
+
+84
+00:01:16,590 --> 00:01:16,600
+description below. So, operator
+ 
+
+85
+00:01:16,600 --> 00:01:18,750
+description below. So, operator
+overloading, what does that mean? Well,
+
+86
+00:01:18,750 --> 00:01:18,760
+overloading, what does that mean? Well,
+ 
+
+87
+00:01:18,760 --> 00:01:20,350
+overloading, what does that mean? Well,
+the term overloading in this sense just
+
+88
+00:01:20,350 --> 00:01:20,360
+the term overloading in this sense just
+ 
+
+89
+00:01:20,360 --> 00:01:22,870
+the term overloading in this sense just
+means kind of giving a new meaning to or
+
+90
+00:01:22,870 --> 00:01:22,880
+means kind of giving a new meaning to or
+ 
+
+91
+00:01:22,880 --> 00:01:26,310
+means kind of giving a new meaning to or
+adding parameters to or creating,
+
+92
+00:01:26,310 --> 00:01:26,320
+adding parameters to or creating,
+ 
+
+93
+00:01:26,320 --> 00:01:28,190
+adding parameters to or creating,
+essentially. In the case of operator
+
+94
+00:01:28,190 --> 00:01:28,200
+essentially. In the case of operator
+ 
+
+95
+00:01:28,200 --> 00:01:30,310
+essentially. In the case of operator
+overloading, you're allowed to define or
+
+96
+00:01:30,310 --> 00:01:30,320
+overloading, you're allowed to define or
+ 
+
+97
+00:01:30,320 --> 00:01:32,830
+overloading, you're allowed to define or
+change the behavior of an operator in
+
+98
+00:01:32,830 --> 00:01:32,840
+change the behavior of an operator in
+ 
+
+99
+00:01:32,840 --> 00:01:34,630
+change the behavior of an operator in
+your program. This is a very, very
+
+100
+00:01:34,630 --> 00:01:34,640
+your program. This is a very, very
+ 
+
+101
+00:01:34,640 --> 00:01:36,670
+your program. This is a very, very
+useful feature that isn't supported in
+
+102
+00:01:36,670 --> 00:01:36,680
+useful feature that isn't supported in
+ 
+
+103
+00:01:36,680 --> 00:01:39,070
+useful feature that isn't supported in
+languages such as Java. It is partially
+
+104
+00:01:39,070 --> 00:01:39,080
+languages such as Java. It is partially
+ 
+
+105
+00:01:39,080 --> 00:01:41,670
+languages such as Java. It is partially
+supported in languages such as C#.
+
+106
+00:01:41,670 --> 00:01:41,680
+supported in languages such as C#.
+ 
+
+107
+00:01:41,680 --> 00:01:43,230
+supported in languages such as C#.
+Usually, the the good parts of it are
+
+108
+00:01:43,230 --> 00:01:43,240
+Usually, the the good parts of it are
+ 
+
+109
+00:01:43,240 --> 00:01:45,350
+Usually, the the good parts of it are
+supported, but C++ kind of gives us full
+
+110
+00:01:45,350 --> 00:01:45,360
+supported, but C++ kind of gives us full
+ 
+
+111
+00:01:45,360 --> 00:01:47,950
+supported, but C++ kind of gives us full
+control. And that's kind of
+
+112
+00:01:47,950 --> 00:01:47,960
+control. And that's kind of
+ 
+
+113
+00:01:47,960 --> 00:01:49,910
+control. And that's kind of
+it's kind of a good thing, but it can
+
+114
+00:01:49,910 --> 00:01:49,920
+it's kind of a good thing, but it can
+ 
+
+115
+00:01:49,920 --> 00:01:51,790
+it's kind of a good thing, but it can
+also be a bad thing. And that's just the
+
+116
+00:01:51,790 --> 00:01:51,800
+also be a bad thing. And that's just the
+ 
+
+117
+00:01:51,800 --> 00:01:54,070
+also be a bad thing. And that's just the
+case with C++. It gives you so much
+
+118
+00:01:54,070 --> 00:01:54,080
+case with C++. It gives you so much
+ 
+
+119
+00:01:54,080 --> 00:01:56,230
+case with C++. It gives you so much
+control that it can lead to so many bad
+
+120
+00:01:56,230 --> 00:01:56,240
+control that it can lead to so many bad
+ 
+
+121
+00:01:56,240 --> 00:01:57,670
+control that it can lead to so many bad
+programs and people hating on the
+
+122
+00:01:57,670 --> 00:01:57,680
+programs and people hating on the
+ 
+
+123
+00:01:57,680 --> 00:01:59,510
+programs and people hating on the
+language. I might actually make a video
+
+124
+00:01:59,510 --> 00:01:59,520
+language. I might actually make a video
+ 
+
+125
+00:01:59,520 --> 00:02:01,070
+language. I might actually make a video
+just talking about all this because I
+
+126
+00:02:01,070 --> 00:02:01,080
+just talking about all this because I
+ 
+
+127
+00:02:01,080 --> 00:02:02,990
+just talking about all this because I
+know that a lot of people are are
+
+128
+00:02:02,990 --> 00:02:03,000
+know that a lot of people are are
+ 
+
+129
+00:02:03,000 --> 00:02:04,270
+know that a lot of people are are
+interested in that. But, at the end of
+
+130
+00:02:04,270 --> 00:02:04,280
+interested in that. But, at the end of
+ 
+
+131
+00:02:04,280 --> 00:02:06,630
+interested in that. But, at the end of
+the day, operators are just functions.
+
+132
+00:02:06,630 --> 00:02:06,640
+the day, operators are just functions.
+ 
+
+133
+00:02:06,640 --> 00:02:08,190
+the day, operators are just functions.
+They're just functions. Instead of
+
+134
+00:02:08,190 --> 00:02:08,200
+They're just functions. Instead of
+ 
+
+135
+00:02:08,200 --> 00:02:10,870
+They're just functions. Instead of
+giving your function a name such as add,
+
+136
+00:02:10,870 --> 00:02:10,880
+giving your function a name such as add,
+ 
+
+137
+00:02:10,880 --> 00:02:12,550
+giving your function a name such as add,
+you can give it an operator such as
+
+138
+00:02:12,550 --> 00:02:12,560
+you can give it an operator such as
+ 
+
+139
+00:02:12,560 --> 00:02:14,830
+you can give it an operator such as
+plus. And in a lot of cases, that really
+
+140
+00:02:14,830 --> 00:02:14,840
+plus. And in a lot of cases, that really
+ 
+
+141
+00:02:14,840 --> 00:02:16,110
+plus. And in a lot of cases, that really
+helps to clean up your code and
+
+142
+00:02:16,110 --> 00:02:16,120
+helps to clean up your code and
+ 
+
+143
+00:02:16,120 --> 00:02:18,110
+helps to clean up your code and
+streamline it. It'll just it just looks
+
+144
+00:02:18,110 --> 00:02:18,120
+streamline it. It'll just it just looks
+ 
+
+145
+00:02:18,120 --> 00:02:19,830
+streamline it. It'll just it just looks
+better and it's easier to read. However,
+
+146
+00:02:19,830 --> 00:02:19,840
+better and it's easier to read. However,
+ 
+
+147
+00:02:19,840 --> 00:02:22,310
+better and it's easier to read. However,
+in other cases, if you're using the
+
+148
+00:02:22,310 --> 00:02:22,320
+in other cases, if you're using the
+ 
+
+149
+00:02:22,320 --> 00:02:24,670
+in other cases, if you're using the
+ampersand operator to push a variable
+
+150
+00:02:24,670 --> 00:02:24,680
+ampersand operator to push a variable
+ 
+
+151
+00:02:24,680 --> 00:02:27,350
+ampersand operator to push a variable
+into a data set,
+
+152
+00:02:27,350 --> 00:02:27,360
+into a data set,
+ 
+
+153
+00:02:27,360 --> 00:02:28,990
+into a data set,
+what are you doing? Looking at you,
+
+154
+00:02:28,990 --> 00:02:29,000
+what are you doing? Looking at you,
+ 
+
+155
+00:02:29,000 --> 00:02:31,510
+what are you doing? Looking at you,
+Boost serialization. Really, at the end
+
+156
+00:02:31,510 --> 00:02:31,520
+Boost serialization. Really, at the end
+ 
+
+157
+00:02:31,520 --> 00:02:33,070
+Boost serialization. Really, at the end
+of the day, your use of operator
+
+158
+00:02:33,070 --> 00:02:33,080
+of the day, your use of operator
+ 
+
+159
+00:02:33,080 --> 00:02:35,550
+of the day, your use of operator
+overloading should be rather minimal and
+
+160
+00:02:35,550 --> 00:02:35,560
+overloading should be rather minimal and
+ 
+
+161
+00:02:35,560 --> 00:02:37,630
+overloading should be rather minimal and
+only in cases where it makes perfect
+
+162
+00:02:37,630 --> 00:02:37,640
+only in cases where it makes perfect
+ 
+
+163
+00:02:37,640 --> 00:02:39,510
+only in cases where it makes perfect
+sense. If people need to go to the
+
+164
+00:02:39,510 --> 00:02:39,520
+sense. If people need to go to the
+ 
+
+165
+00:02:39,520 --> 00:02:41,750
+sense. If people need to go to the
+definition of your operator or the
+
+166
+00:02:41,750 --> 00:02:41,760
+definition of your operator or the
+ 
+
+167
+00:02:41,760 --> 00:02:43,550
+definition of your operator or the
+definition of your class or struct or
+
+168
+00:02:43,550 --> 00:02:43,560
+definition of your class or struct or
+ 
+
+169
+00:02:43,560 --> 00:02:46,110
+definition of your class or struct or
+whatever to see what it actually does,
+
+170
+00:02:46,110 --> 00:02:46,120
+whatever to see what it actually does,
+ 
+
+171
+00:02:46,120 --> 00:02:47,550
+whatever to see what it actually does,
+then
+
+172
+00:02:47,550 --> 00:02:47,560
+then
+ 
+
+173
+00:02:47,560 --> 00:02:49,150
+then
+then you've probably failed. For
+
+174
+00:02:49,150 --> 00:02:49,160
+then you've probably failed. For
+ 
+
+175
+00:02:49,160 --> 00:02:50,830
+then you've probably failed. For
+example, when defining a math class and
+
+176
+00:02:50,830 --> 00:02:50,840
+example, when defining a math class and
+ 
+
+177
+00:02:50,840 --> 00:02:52,550
+example, when defining a math class and
+you need to add two mathematical objects
+
+178
+00:02:52,550 --> 00:02:52,560
+you need to add two mathematical objects
+ 
+
+179
+00:02:52,560 --> 00:02:54,630
+you need to add two mathematical objects
+together, then overloading the plus
+
+180
+00:02:54,630 --> 00:02:54,640
+together, then overloading the plus
+ 
+
+181
+00:02:54,640 --> 00:02:56,510
+together, then overloading the plus
+operator makes perfect sense because you
+
+182
+00:02:56,510 --> 00:02:56,520
+operator makes perfect sense because you
+ 
+
+183
+00:02:56,520 --> 00:02:58,990
+operator makes perfect sense because you
+can literally write code like A + B, and
+
+184
+00:02:58,990 --> 00:02:59,000
+can literally write code like A + B, and
+ 
+
+185
+00:02:59,000 --> 00:03:00,750
+can literally write code like A + B, and
+it will work. In fact, let's take a look
+
+186
+00:03:00,750 --> 00:03:00,760
+it will work. In fact, let's take a look
+ 
+
+187
+00:03:00,760 --> 00:03:02,430
+it will work. In fact, let's take a look
+at some examples. I'm going to write a
+
+188
+00:03:02,430 --> 00:03:02,440
+at some examples. I'm going to write a
+ 
+
+189
+00:03:02,440 --> 00:03:04,630
+at some examples. I'm going to write a
+vector two struct. So, basically, what
+
+190
+00:03:04,630 --> 00:03:04,640
+vector two struct. So, basically, what
+ 
+
+191
+00:03:04,640 --> 00:03:06,350
+vector two struct. So, basically, what
+this is going to be is a vector two.
+
+192
+00:03:06,350 --> 00:03:06,360
+this is going to be is a vector two.
+ 
+
+193
+00:03:06,360 --> 00:03:08,350
+this is going to be is a vector two.
+I've I've decided to make it a struct
+
+194
+00:03:08,350 --> 00:03:08,360
+I've I've decided to make it a struct
+ 
+
+195
+00:03:08,360 --> 00:03:09,670
+I've I've decided to make it a struct
+because the fields are going to be
+
+196
+00:03:09,670 --> 00:03:09,680
+because the fields are going to be
+ 
+
+197
+00:03:09,680 --> 00:03:11,710
+because the fields are going to be
+public. It's going to have two floats,
+
+198
+00:03:11,710 --> 00:03:11,720
+public. It's going to have two floats,
+ 
+
+199
+00:03:11,720 --> 00:03:13,270
+public. It's going to have two floats,
+an X and a Y. That's all the vector two
+
+200
+00:03:13,270 --> 00:03:13,280
+an X and a Y. That's all the vector two
+ 
+
+201
+00:03:13,280 --> 00:03:14,990
+an X and a Y. That's all the vector two
+is, it's a two-component vector. I'm
+
+202
+00:03:14,990 --> 00:03:15,000
+is, it's a two-component vector. I'm
+ 
+
+203
+00:03:15,000 --> 00:03:16,870
+is, it's a two-component vector. I'm
+going to define a constructor quickly
+
+204
+00:03:16,870 --> 00:03:16,880
+going to define a constructor quickly
+ 
+
+205
+00:03:16,880 --> 00:03:19,550
+going to define a constructor quickly
+for this, which just takes in
+
+206
+00:03:19,550 --> 00:03:19,560
+for this, which just takes in
+ 
+
+207
+00:03:19,560 --> 00:03:21,870
+for this, which just takes in
+an X and a Y. And now, inside our main,
+
+208
+00:03:21,870 --> 00:03:21,880
+an X and a Y. And now, inside our main,
+ 
+
+209
+00:03:21,880 --> 00:03:23,310
+an X and a Y. And now, inside our main,
+we can actually start to create these
+
+210
+00:03:23,310 --> 00:03:23,320
+we can actually start to create these
+ 
+
+211
+00:03:23,320 --> 00:03:24,990
+we can actually start to create these
+things. So, let's just say that I want
+
+212
+00:03:24,990 --> 00:03:25,000
+things. So, let's just say that I want
+ 
+
+213
+00:03:25,000 --> 00:03:27,510
+things. So, let's just say that I want
+to store a position and maybe a speed as
+
+214
+00:03:27,510 --> 00:03:27,520
+to store a position and maybe a speed as
+ 
+
+215
+00:03:27,520 --> 00:03:29,590
+to store a position and maybe a speed as
+well. Okay, great. So, I've got two
+
+216
+00:03:29,590 --> 00:03:29,600
+well. Okay, great. So, I've got two
+ 
+
+217
+00:03:29,600 --> 00:03:31,110
+well. Okay, great. So, I've got two
+vectors. And now, I would like to add
+
+218
+00:03:31,110 --> 00:03:31,120
+vectors. And now, I would like to add
+ 
+
+219
+00:03:31,120 --> 00:03:33,270
+vectors. And now, I would like to add
+them together and store the result say
+
+220
+00:03:33,270 --> 00:03:33,280
+them together and store the result say
+ 
+
+221
+00:03:33,280 --> 00:03:35,430
+them together and store the result say
+over here. So, I come to the problem of
+
+222
+00:03:35,430 --> 00:03:35,440
+over here. So, I come to the problem of
+ 
+
+223
+00:03:35,440 --> 00:03:37,350
+over here. So, I come to the problem of
+what do I write? Well, in a language
+
+224
+00:03:37,350 --> 00:03:37,360
+what do I write? Well, in a language
+ 
+
+225
+00:03:37,360 --> 00:03:38,790
+what do I write? Well, in a language
+without operator overloading or if
+
+226
+00:03:38,790 --> 00:03:38,800
+without operator overloading or if
+ 
+
+227
+00:03:38,800 --> 00:03:40,710
+without operator overloading or if
+you're in C++, but you don't want to use
+
+228
+00:03:40,710 --> 00:03:40,720
+you're in C++, but you don't want to use
+ 
+
+229
+00:03:40,720 --> 00:03:42,350
+you're in C++, but you don't want to use
+operator overloading, then you would
+
+230
+00:03:42,350 --> 00:03:42,360
+operator overloading, then you would
+ 
+
+231
+00:03:42,360 --> 00:03:43,550
+operator overloading, then you would
+probably write something like
+
+232
+00:03:43,550 --> 00:03:43,560
+probably write something like
+ 
+
+233
+00:03:43,560 --> 00:03:45,830
+probably write something like
+position.add speed. So, if we go up
+
+234
+00:03:45,830 --> 00:03:45,840
+position.add speed. So, if we go up
+ 
+
+235
+00:03:45,840 --> 00:03:47,150
+position.add speed. So, if we go up
+here, we'll quickly define the add
+
+236
+00:03:47,150 --> 00:03:47,160
+here, we'll quickly define the add
+ 
+
+237
+00:03:47,160 --> 00:03:48,270
+here, we'll quickly define the add
+function. This is going to return a
+
+238
+00:03:48,270 --> 00:03:48,280
+function. This is going to return a
+ 
+
+239
+00:03:48,280 --> 00:03:50,110
+function. This is going to return a
+brand new vector two. We'll call the
+
+240
+00:03:50,110 --> 00:03:50,120
+brand new vector two. We'll call the
+ 
+
+241
+00:03:50,120 --> 00:03:51,990
+brand new vector two. We'll call the
+function add. It's going to take in an
+
+242
+00:03:51,990 --> 00:03:52,000
+function add. It's going to take in an
+ 
+
+243
+00:03:52,000 --> 00:03:53,670
+function add. It's going to take in an
+existing vector two. We'll pass this by
+
+244
+00:03:53,670 --> 00:03:53,680
+existing vector two. We'll pass this by
+ 
+
+245
+00:03:53,680 --> 00:03:55,870
+existing vector two. We'll pass this by
+const reference to avoid copying. We'll
+
+246
+00:03:55,870 --> 00:03:55,880
+const reference to avoid copying. We'll
+ 
+
+247
+00:03:55,880 --> 00:03:57,470
+const reference to avoid copying. We'll
+mark the function as const since it's
+
+248
+00:03:57,470 --> 00:03:57,480
+mark the function as const since it's
+ 
+
+249
+00:03:57,480 --> 00:03:59,110
+mark the function as const since it's
+not going to modify this class. It's
+
+250
+00:03:59,110 --> 00:03:59,120
+not going to modify this class. It's
+ 
+
+251
+00:03:59,120 --> 00:04:00,670
+not going to modify this class. It's
+just going to create a new vector two
+
+252
+00:04:00,670 --> 00:04:00,680
+just going to create a new vector two
+ 
+
+253
+00:04:00,680 --> 00:04:02,550
+just going to create a new vector two
+with the result. And we'll just return
+
+254
+00:04:02,550 --> 00:04:02,560
+with the result. And we'll just return
+ 
+
+255
+00:04:02,560 --> 00:04:07,070
+with the result. And we'll just return
+vector two X + other.x and Y + other.y.
+
+256
+00:04:07,070 --> 00:04:07,080
+vector two X + other.x and Y + other.y.
+ 
+
+257
+00:04:07,080 --> 00:04:08,510
+vector two X + other.x and Y + other.y.
+Okay, seems pretty simple. We've got
+
+258
+00:04:08,510 --> 00:04:08,520
+Okay, seems pretty simple. We've got
+ 
+
+259
+00:04:08,520 --> 00:04:10,390
+Okay, seems pretty simple. We've got
+this working here. Looks relatively
+
+260
+00:04:10,390 --> 00:04:10,400
+this working here. Looks relatively
+ 
+
+261
+00:04:10,400 --> 00:04:13,590
+this working here. Looks relatively
+okay. But, what if we wanted to modify
+
+262
+00:04:13,590 --> 00:04:13,600
+okay. But, what if we wanted to modify
+ 
+
+263
+00:04:13,600 --> 00:04:16,069
+okay. But, what if we wanted to modify
+our speed by some kind of modifier? We
+
+264
+00:04:16,069 --> 00:04:16,079
+our speed by some kind of modifier? We
+ 
+
+265
+00:04:16,079 --> 00:04:17,789
+our speed by some kind of modifier? We
+might have had a power up that changes
+
+266
+00:04:17,789 --> 00:04:17,799
+might have had a power up that changes
+ 
+
+267
+00:04:17,799 --> 00:04:20,229
+might have had a power up that changes
+our speed to be slightly faster, maybe
+
+268
+00:04:20,229 --> 00:04:20,239
+our speed to be slightly faster, maybe
+ 
+
+269
+00:04:20,239 --> 00:04:22,310
+our speed to be slightly faster, maybe
+10% faster or something like that.
+
+270
+00:04:22,310 --> 00:04:22,320
+10% faster or something like that.
+ 
+
+271
+00:04:22,320 --> 00:04:23,670
+10% faster or something like that.
+Suddenly, we want to be able to do
+
+272
+00:04:23,670 --> 00:04:23,680
+Suddenly, we want to be able to do
+ 
+
+273
+00:04:23,680 --> 00:04:26,830
+Suddenly, we want to be able to do
+something like speed times power up. So,
+
+274
+00:04:26,830 --> 00:04:26,840
+something like speed times power up. So,
+ 
+
+275
+00:04:26,840 --> 00:04:28,470
+something like speed times power up. So,
+with this current set, that means that
+
+276
+00:04:28,470 --> 00:04:28,480
+with this current set, that means that
+ 
+
+277
+00:04:28,480 --> 00:04:30,030
+with this current set, that means that
+we have to write code like
+
+278
+00:04:30,030 --> 00:04:30,040
+we have to write code like
+ 
+
+279
+00:04:30,040 --> 00:04:32,750
+we have to write code like
+speed.multiply power up. Uh we have to
+
+280
+00:04:32,750 --> 00:04:32,760
+speed.multiply power up. Uh we have to
+ 
+
+281
+00:04:32,760 --> 00:04:34,230
+speed.multiply power up. Uh we have to
+add the multiply function. So, I'm just
+
+282
+00:04:34,230 --> 00:04:34,240
+add the multiply function. So, I'm just
+ 
+
+283
+00:04:34,240 --> 00:04:35,630
+add the multiply function. So, I'm just
+going to copy and paste this add
+
+284
+00:04:35,630 --> 00:04:35,640
+going to copy and paste this add
+ 
+
+285
+00:04:35,640 --> 00:04:38,070
+going to copy and paste this add
+function, change it to say multiply, and
+
+286
+00:04:38,070 --> 00:04:38,080
+function, change it to say multiply, and
+ 
+
+287
+00:04:38,080 --> 00:04:40,830
+function, change it to say multiply, and
+just change the operators here to be the
+
+288
+00:04:40,830 --> 00:04:40,840
+just change the operators here to be the
+ 
+
+289
+00:04:40,840 --> 00:04:43,270
+just change the operators here to be the
+multiplication operator. Okay, cool.
+
+290
+00:04:43,270 --> 00:04:43,280
+multiplication operator. Okay, cool.
+ 
+
+291
+00:04:43,280 --> 00:04:45,790
+multiplication operator. Okay, cool.
+Now, this is where it starts to look a
+
+292
+00:04:45,790 --> 00:04:45,800
+Now, this is where it starts to look a
+ 
+
+293
+00:04:45,800 --> 00:04:47,870
+Now, this is where it starts to look a
+little bit hard to read. And
+
+294
+00:04:47,870 --> 00:04:47,880
+little bit hard to read. And
+ 
+
+295
+00:04:47,880 --> 00:04:49,230
+little bit hard to read. And
+unfortunately, in a language such as
+
+296
+00:04:49,230 --> 00:04:49,240
+unfortunately, in a language such as
+ 
+
+297
+00:04:49,240 --> 00:04:50,350
+unfortunately, in a language such as
+Java,
+
+298
+00:04:50,350 --> 00:04:50,360
+Java,
+ 
+
+299
+00:04:50,360 --> 00:04:52,470
+Java,
+this really is your only choice. But, in
+
+300
+00:04:52,470 --> 00:04:52,480
+this really is your only choice. But, in
+ 
+
+301
+00:04:52,480 --> 00:04:54,470
+this really is your only choice. But, in
+C++, we have operator overloading, which
+
+302
+00:04:54,470 --> 00:04:54,480
+C++, we have operator overloading, which
+ 
+
+303
+00:04:54,480 --> 00:04:55,870
+C++, we have operator overloading, which
+means that we can take advantage of
+
+304
+00:04:55,870 --> 00:04:55,880
+means that we can take advantage of
+ 
+
+305
+00:04:55,880 --> 00:04:57,670
+means that we can take advantage of
+those operators and actually define our
+
+306
+00:04:57,670 --> 00:04:57,680
+those operators and actually define our
+ 
+
+307
+00:04:57,680 --> 00:04:59,750
+those operators and actually define our
+own to deal with the vector two struct.
+
+308
+00:04:59,750 --> 00:04:59,760
+own to deal with the vector two struct.
+ 
+
+309
+00:04:59,760 --> 00:05:01,470
+own to deal with the vector two struct.
+So, potentially, instead of writing
+
+310
+00:05:01,470 --> 00:05:01,480
+So, potentially, instead of writing
+ 
+
+311
+00:05:01,480 --> 00:05:04,110
+So, potentially, instead of writing
+something like this, we can convert this
+
+312
+00:05:04,110 --> 00:05:04,120
+something like this, we can convert this
+ 
+
+313
+00:05:04,120 --> 00:05:05,870
+something like this, we can convert this
+to just use the mathematical operator.
+
+314
+00:05:05,870 --> 00:05:05,880
+to just use the mathematical operator.
+ 
+
+315
+00:05:05,880 --> 00:05:07,310
+to just use the mathematical operator.
+So, we'll do something like position
+
+316
+00:05:07,310 --> 00:05:07,320
+So, we'll do something like position
+ 
+
+317
+00:05:07,320 --> 00:05:10,790
+So, we'll do something like position
+plus speed times power up. And with
+
+318
+00:05:10,790 --> 00:05:10,800
+plus speed times power up. And with
+ 
+
+319
+00:05:10,800 --> 00:05:12,830
+plus speed times power up. And with
+operator precedence playing a role here,
+
+320
+00:05:12,830 --> 00:05:12,840
+operator precedence playing a role here,
+ 
+
+321
+00:05:12,840 --> 00:05:15,110
+operator precedence playing a role here,
+this should get evaluated before this.
+
+322
+00:05:15,110 --> 00:05:15,120
+this should get evaluated before this.
+ 
+
+323
+00:05:15,120 --> 00:05:16,950
+this should get evaluated before this.
+So, let's pop up here and define two
+
+324
+00:05:16,950 --> 00:05:16,960
+So, let's pop up here and define two
+ 
+
+325
+00:05:16,960 --> 00:05:18,870
+So, let's pop up here and define two
+operators, the multiplication operator,
+
+326
+00:05:18,870 --> 00:05:18,880
+operators, the multiplication operator,
+ 
+
+327
+00:05:18,880 --> 00:05:20,470
+operators, the multiplication operator,
+which is just an asterisk, and this
+
+328
+00:05:20,470 --> 00:05:20,480
+which is just an asterisk, and this
+ 
+
+329
+00:05:20,480 --> 00:05:21,710
+which is just an asterisk, and this
+addition operator, which is the plus
+
+330
+00:05:21,710 --> 00:05:21,720
+addition operator, which is the plus
+ 
+
+331
+00:05:21,720 --> 00:05:23,190
+addition operator, which is the plus
+sign. So, the way that we define these
+
+332
+00:05:23,190 --> 00:05:23,200
+sign. So, the way that we define these
+ 
+
+333
+00:05:23,200 --> 00:05:25,150
+sign. So, the way that we define these
+is like any other function. We write the
+
+334
+00:05:25,150 --> 00:05:25,160
+is like any other function. We write the
+ 
+
+335
+00:05:25,160 --> 00:05:26,670
+is like any other function. We write the
+return result, which is of course is
+
+336
+00:05:26,670 --> 00:05:26,680
+return result, which is of course is
+ 
+
+337
+00:05:26,680 --> 00:05:28,630
+return result, which is of course is
+going to be the exact same. The return
+
+338
+00:05:28,630 --> 00:05:28,640
+going to be the exact same. The return
+ 
+
+339
+00:05:28,640 --> 00:05:29,990
+going to be the exact same. The return
+type is going to be the same as it is
+
+340
+00:05:29,990 --> 00:05:30,000
+type is going to be the same as it is
+ 
+
+341
+00:05:30,000 --> 00:05:31,830
+type is going to be the same as it is
+for these functions. So, for if we're
+
+342
+00:05:31,830 --> 00:05:31,840
+for these functions. So, for if we're
+ 
+
+343
+00:05:31,840 --> 00:05:33,790
+for these functions. So, for if we're
+writing add over here, let's move this
+
+344
+00:05:33,790 --> 00:05:33,800
+writing add over here, let's move this
+ 
+
+345
+00:05:33,800 --> 00:05:35,070
+writing add over here, let's move this
+up here so that we can kind of group
+
+346
+00:05:35,070 --> 00:05:35,080
+up here so that we can kind of group
+ 
+
+347
+00:05:35,080 --> 00:05:36,870
+up here so that we can kind of group
+them. Instead of the function name, we
+
+348
+00:05:36,870 --> 00:05:36,880
+them. Instead of the function name, we
+ 
+
+349
+00:05:36,880 --> 00:05:38,950
+them. Instead of the function name, we
+write the word operator followed by the
+
+350
+00:05:38,950 --> 00:05:38,960
+write the word operator followed by the
+ 
+
+351
+00:05:38,960 --> 00:05:40,950
+write the word operator followed by the
+operator, which is plus.
+
+352
+00:05:40,950 --> 00:05:40,960
+operator, which is plus.
+ 
+
+353
+00:05:40,960 --> 00:05:42,990
+operator, which is plus.
+We then open up our parentheses and type
+
+354
+00:05:42,990 --> 00:05:43,000
+We then open up our parentheses and type
+ 
+
+355
+00:05:43,000 --> 00:05:44,270
+We then open up our parentheses and type
+in the parameter that we want. So,
+
+356
+00:05:44,270 --> 00:05:44,280
+in the parameter that we want. So,
+ 
+
+357
+00:05:44,280 --> 00:05:45,550
+in the parameter that we want. So,
+really, you can see it's exactly the
+
+358
+00:05:45,550 --> 00:05:45,560
+really, you can see it's exactly the
+ 
+
+359
+00:05:45,560 --> 00:05:47,190
+really, you can see it's exactly the
+same. And then, we write const at the
+
+360
+00:05:47,190 --> 00:05:47,200
+same. And then, we write const at the
+ 
+
+361
+00:05:47,200 --> 00:05:48,190
+same. And then, we write const at the
+end of this because like any other
+
+362
+00:05:48,190 --> 00:05:48,200
+end of this because like any other
+ 
+
+363
+00:05:48,200 --> 00:05:49,550
+end of this because like any other
+function that doesn't modify the class
+
+364
+00:05:49,550 --> 00:05:49,560
+function that doesn't modify the class
+ 
+
+365
+00:05:49,560 --> 00:05:51,270
+function that doesn't modify the class
+like this add function, we still we
+
+366
+00:05:51,270 --> 00:05:51,280
+like this add function, we still we
+ 
+
+367
+00:05:51,280 --> 00:05:52,910
+like this add function, we still we
+still want it to be const. And then,
+
+368
+00:05:52,910 --> 00:05:52,920
+still want it to be const. And then,
+ 
+
+369
+00:05:52,920 --> 00:05:54,150
+still want it to be const. And then,
+what we can do is just return the same
+
+370
+00:05:54,150 --> 00:05:54,160
+what we can do is just return the same
+ 
+
+371
+00:05:54,160 --> 00:05:56,190
+what we can do is just return the same
+result. Or in this case, it would be
+
+372
+00:05:56,190 --> 00:05:56,200
+result. Or in this case, it would be
+ 
+
+373
+00:05:56,200 --> 00:05:58,270
+result. Or in this case, it would be
+much simpler to just return add other.
+
+374
+00:05:58,270 --> 00:05:58,280
+much simpler to just return add other.
+ 
+
+375
+00:05:58,280 --> 00:05:59,990
+much simpler to just return add other.
+And that's it. We've created the plus
+
+376
+00:05:59,990 --> 00:06:00,000
+And that's it. We've created the plus
+ 
+
+377
+00:06:00,000 --> 00:06:01,830
+And that's it. We've created the plus
+operator. If we come back here and we
+
+378
+00:06:01,830 --> 00:06:01,840
+operator. If we come back here and we
+ 
+
+379
+00:06:01,840 --> 00:06:03,510
+operator. If we come back here and we
+just comment out the rest of this code,
+
+380
+00:06:03,510 --> 00:06:03,520
+just comment out the rest of this code,
+ 
+
+381
+00:06:03,520 --> 00:06:05,310
+just comment out the rest of this code,
+you can see that this code is fine. And
+
+382
+00:06:05,310 --> 00:06:05,320
+you can see that this code is fine. And
+ 
+
+383
+00:06:05,320 --> 00:06:06,710
+you can see that this code is fine. And
+if we can we can compile this, then it
+
+384
+00:06:06,710 --> 00:06:06,720
+if we can we can compile this, then it
+ 
+
+385
+00:06:06,720 --> 00:06:08,710
+if we can we can compile this, then it
+will compile, and everything is great.
+
+386
+00:06:08,710 --> 00:06:08,720
+will compile, and everything is great.
+ 
+
+387
+00:06:08,720 --> 00:06:10,350
+will compile, and everything is great.
+Now, since these are like any other
+
+388
+00:06:10,350 --> 00:06:10,360
+Now, since these are like any other
+ 
+
+389
+00:06:10,360 --> 00:06:11,950
+Now, since these are like any other
+function, I could have basically done
+
+390
+00:06:11,950 --> 00:06:11,960
+function, I could have basically done
+ 
+
+391
+00:06:11,960 --> 00:06:13,350
+function, I could have basically done
+the reverse of this. Instead of this
+
+392
+00:06:13,350 --> 00:06:13,360
+the reverse of this. Instead of this
+ 
+
+393
+00:06:13,360 --> 00:06:15,470
+the reverse of this. Instead of this
+operator calling the add function, I
+
+394
+00:06:15,470 --> 00:06:15,480
+operator calling the add function, I
+ 
+
+395
+00:06:15,480 --> 00:06:16,910
+operator calling the add function, I
+could make the add function call the
+
+396
+00:06:16,910 --> 00:06:16,920
+could make the add function call the
+ 
+
+397
+00:06:16,920 --> 00:06:18,470
+could make the add function call the
+plus operator. And a lot of people
+
+398
+00:06:18,470 --> 00:06:18,480
+plus operator. And a lot of people
+ 
+
+399
+00:06:18,480 --> 00:06:19,670
+plus operator. And a lot of people
+actually don't know about this because
+
+400
+00:06:19,670 --> 00:06:19,680
+actually don't know about this because
+ 
+
+401
+00:06:19,680 --> 00:06:21,470
+actually don't know about this because
+the syntax looks a bit weird, and you
+
+402
+00:06:21,470 --> 00:06:21,480
+the syntax looks a bit weird, and you
+ 
+
+403
+00:06:21,480 --> 00:06:23,310
+the syntax looks a bit weird, and you
+don't see this very often. But, what you
+
+404
+00:06:23,310 --> 00:06:23,320
+don't see this very often. But, what you
+ 
+
+405
+00:06:23,320 --> 00:06:25,710
+don't see this very often. But, what you
+could do is just change this to be
+
+406
+00:06:25,710 --> 00:06:25,720
+could do is just change this to be
+ 
+
+407
+00:06:25,720 --> 00:06:27,990
+could do is just change this to be
+basically that.
+
+408
+00:06:27,990 --> 00:06:28,000
+basically that.
+ 
+
+409
+00:06:28,000 --> 00:06:29,910
+basically that.
+And then, over here in add, we could
+
+410
+00:06:29,910 --> 00:06:29,920
+And then, over here in add, we could
+ 
+
+411
+00:06:29,920 --> 00:06:33,310
+And then, over here in add, we could
+either return this plus other, which is
+
+412
+00:06:33,310 --> 00:06:33,320
+either return this plus other, which is
+ 
+
+413
+00:06:33,320 --> 00:06:34,870
+either return this plus other, which is
+kind of the easy case, I guess. We're
+
+414
+00:06:34,870 --> 00:06:34,880
+kind of the easy case, I guess. We're
+ 
+
+415
+00:06:34,880 --> 00:06:36,790
+kind of the easy case, I guess. We're
+converting this. We really need to make
+
+416
+00:06:36,790 --> 00:06:36,800
+converting this. We really need to make
+ 
+
+417
+00:06:36,800 --> 00:06:39,310
+converting this. We really need to make
+a video on this because the this keyword
+
+418
+00:06:39,310 --> 00:06:39,320
+a video on this because the this keyword
+ 
+
+419
+00:06:39,320 --> 00:06:41,430
+a video on this because the this keyword
+is is quite special, and we need to talk
+
+420
+00:06:41,430 --> 00:06:41,440
+is is quite special, and we need to talk
+ 
+
+421
+00:06:41,440 --> 00:06:43,390
+is is quite special, and we need to talk
+about that. There'll be a there'll be a
+
+422
+00:06:43,390 --> 00:06:43,400
+about that. There'll be a there'll be a
+ 
+
+423
+00:06:43,400 --> 00:06:44,910
+about that. There'll be a there'll be a
+card up there if that's already done.
+
+424
+00:06:44,910 --> 00:06:44,920
+card up there if that's already done.
+ 
+
+425
+00:06:44,920 --> 00:06:46,350
+card up there if that's already done.
+We're dereferencing it because this is
+
+426
+00:06:46,350 --> 00:06:46,360
+We're dereferencing it because this is
+ 
+
+427
+00:06:46,360 --> 00:06:48,270
+We're dereferencing it because this is
+originally a pointer, a const pointer in
+
+428
+00:06:48,270 --> 00:06:48,280
+originally a pointer, a const pointer in
+ 
+
+429
+00:06:48,280 --> 00:06:50,150
+originally a pointer, a const pointer in
+this case. We're dereferencing it to
+
+430
+00:06:50,150 --> 00:06:50,160
+this case. We're dereferencing it to
+ 
+
+431
+00:06:50,160 --> 00:06:51,910
+this case. We're dereferencing it to
+just turn this into a normal vector two,
+
+432
+00:06:51,910 --> 00:06:51,920
+just turn this into a normal vector two,
+ 
+
+433
+00:06:51,920 --> 00:06:52,790
+just turn this into a normal vector two,
+and then we're just adding it with
+
+434
+00:06:52,790 --> 00:06:52,800
+and then we're just adding it with
+ 
+
+435
+00:06:52,800 --> 00:06:54,510
+and then we're just adding it with
+other. That's pretty common. People
+
+436
+00:06:54,510 --> 00:06:54,520
+other. That's pretty common. People
+ 
+
+437
+00:06:54,520 --> 00:06:56,550
+other. That's pretty common. People
+write code like that a lot. But, what we
+
+438
+00:06:56,550 --> 00:06:56,560
+write code like that a lot. But, what we
+ 
+
+439
+00:06:56,560 --> 00:06:58,110
+write code like that a lot. But, what we
+can do is just address this operator
+
+440
+00:06:58,110 --> 00:06:58,120
+can do is just address this operator
+ 
+
+441
+00:06:58,120 --> 00:06:59,950
+can do is just address this operator
+plus like a function by just writing
+
+442
+00:06:59,950 --> 00:06:59,960
+plus like a function by just writing
+ 
+
+443
+00:06:59,960 --> 00:07:03,510
+plus like a function by just writing
+return operator plus and then other.
+
+444
+00:07:03,510 --> 00:07:03,520
+return operator plus and then other.
+ 
+
+445
+00:07:03,520 --> 00:07:05,110
+return operator plus and then other.
+Again, it looks a bit weird, but totally
+
+446
+00:07:05,110 --> 00:07:05,120
+Again, it looks a bit weird, but totally
+ 
+
+447
+00:07:05,120 --> 00:07:07,430
+Again, it looks a bit weird, but totally
+going to compile, and it totally works.
+
+448
+00:07:07,430 --> 00:07:07,440
+going to compile, and it totally works.
+ 
+
+449
+00:07:07,440 --> 00:07:09,550
+going to compile, and it totally works.
+Me personally, due to just code style, I
+
+450
+00:07:09,550 --> 00:07:09,560
+Me personally, due to just code style, I
+ 
+
+451
+00:07:09,560 --> 00:07:13,470
+Me personally, due to just code style, I
+like to return code like this instead.
+
+452
+00:07:13,470 --> 00:07:13,480
+like to return code like this instead.
+ 
+
+453
+00:07:13,480 --> 00:07:15,070
+like to return code like this instead.
+Okay, cool. So, to complete this, we'll
+
+454
+00:07:15,070 --> 00:07:15,080
+Okay, cool. So, to complete this, we'll
+ 
+
+455
+00:07:15,080 --> 00:07:16,870
+Okay, cool. So, to complete this, we'll
+just add our multiply operator. I'll
+
+456
+00:07:16,870 --> 00:07:16,880
+just add our multiply operator. I'll
+ 
+
+457
+00:07:16,880 --> 00:07:18,830
+just add our multiply operator. I'll
+copy this operator plus,
+
+458
+00:07:18,830 --> 00:07:18,840
+copy this operator plus,
+ 
+
+459
+00:07:18,840 --> 00:07:20,590
+copy this operator plus,
+paste it over here, and change this to
+
+460
+00:07:20,590 --> 00:07:20,600
+paste it over here, and change this to
+ 
+
+461
+00:07:20,600 --> 00:07:23,790
+paste it over here, and change this to
+be operator times or operator multiply.
+
+462
+00:07:23,790 --> 00:07:23,800
+be operator times or operator multiply.
+ 
+
+463
+00:07:23,800 --> 00:07:25,830
+be operator times or operator multiply.
+And we'll change this to say multiply.
+
+464
+00:07:25,830 --> 00:07:25,840
+And we'll change this to say multiply.
+ 
+
+465
+00:07:25,840 --> 00:07:27,790
+And we'll change this to say multiply.
+Now, if we uncomment this, then you can
+
+466
+00:07:27,790 --> 00:07:27,800
+Now, if we uncomment this, then you can
+ 
+
+467
+00:07:27,800 --> 00:07:30,150
+Now, if we uncomment this, then you can
+see that we have this code here, which
+
+468
+00:07:30,150 --> 00:07:30,160
+see that we have this code here, which
+ 
+
+469
+00:07:30,160 --> 00:07:31,870
+see that we have this code here, which
+in my opinion looks much, much, much
+
+470
+00:07:31,870 --> 00:07:31,880
+in my opinion looks much, much, much
+ 
+
+471
+00:07:31,880 --> 00:07:33,430
+in my opinion looks much, much, much
+better than this, and it makes a lot
+
+472
+00:07:33,430 --> 00:07:33,440
+better than this, and it makes a lot
+ 
+
+473
+00:07:33,440 --> 00:07:35,870
+better than this, and it makes a lot
+more sense. Okay, great. So, as I said,
+
+474
+00:07:35,870 --> 00:07:35,880
+more sense. Okay, great. So, as I said,
+ 
+
+475
+00:07:35,880 --> 00:07:37,030
+more sense. Okay, great. So, as I said,
+I'm not going to go through every single
+
+476
+00:07:37,030 --> 00:07:37,040
+I'm not going to go through every single
+ 
+
+477
+00:07:37,040 --> 00:07:38,190
+I'm not going to go through every single
+operator because that would take all
+
+478
+00:07:38,190 --> 00:07:38,200
+operator because that would take all
+ 
+
+479
+00:07:38,200 --> 00:07:40,150
+operator because that would take all
+day, and it's probably not that useful.
+
+480
+00:07:40,150 --> 00:07:40,160
+day, and it's probably not that useful.
+ 
+
+481
+00:07:40,160 --> 00:07:42,270
+day, and it's probably not that useful.
+I will make future videos on operators
+
+482
+00:07:42,270 --> 00:07:42,280
+I will make future videos on operators
+ 
+
+483
+00:07:42,280 --> 00:07:44,710
+I will make future videos on operators
+as we use them or as I see fit. However,
+
+484
+00:07:44,710 --> 00:07:44,720
+as we use them or as I see fit. However,
+ 
+
+485
+00:07:44,720 --> 00:07:46,070
+as we use them or as I see fit. However,
+I will show you one more operator, and
+
+486
+00:07:46,070 --> 00:07:46,080
+I will show you one more operator, and
+ 
+
+487
+00:07:46,080 --> 00:07:47,870
+I will show you one more operator, and
+that's the left shift kind of operator
+
+488
+00:07:47,870 --> 00:07:47,880
+that's the left shift kind of operator
+ 
+
+489
+00:07:47,880 --> 00:07:50,390
+that's the left shift kind of operator
+that we use with std::cout. So, suppose
+
+490
+00:07:50,390 --> 00:07:50,400
+that we use with std::cout. So, suppose
+ 
+
+491
+00:07:50,400 --> 00:07:52,070
+that we use with std::cout. So, suppose
+that now that we've got this vector two,
+
+492
+00:07:52,070 --> 00:07:52,080
+that now that we've got this vector two,
+ 
+
+493
+00:07:52,080 --> 00:07:53,310
+that now that we've got this vector two,
+we want to actually print it to the
+
+494
+00:07:53,310 --> 00:07:53,320
+we want to actually print it to the
+ 
+
+495
+00:07:53,320 --> 00:07:55,950
+we want to actually print it to the
+console. std::cout, as you probably
+
+496
+00:07:55,950 --> 00:07:55,960
+console. std::cout, as you probably
+ 
+
+497
+00:07:55,960 --> 00:07:57,950
+console. std::cout, as you probably
+would have noticed, has this kind of
+
+498
+00:07:57,950 --> 00:07:57,960
+would have noticed, has this kind of
+ 
+
+499
+00:07:57,960 --> 00:08:00,710
+would have noticed, has this kind of
+shift left operator, which takes in
+
+500
+00:08:00,710 --> 00:08:00,720
+shift left operator, which takes in
+ 
+
+501
+00:08:00,720 --> 00:08:02,510
+shift left operator, which takes in
+various types. At the left side, we've
+
+502
+00:08:02,510 --> 00:08:02,520
+various types. At the left side, we've
+ 
+
+503
+00:08:02,520 --> 00:08:04,030
+various types. At the left side, we've
+got the cout class, and at the right
+
+504
+00:08:04,030 --> 00:08:04,040
+got the cout class, and at the right
+ 
+
+505
+00:08:04,040 --> 00:08:06,070
+got the cout class, and at the right
+side, we've got some kind of data type.
+
+506
+00:08:06,070 --> 00:08:06,080
+side, we've got some kind of data type.
+ 
+
+507
+00:08:06,080 --> 00:08:07,750
+side, we've got some kind of data type.
+So, we'll type in result two, which is
+
+508
+00:08:07,750 --> 00:08:07,760
+So, we'll type in result two, which is
+ 
+
+509
+00:08:07,760 --> 00:08:10,110
+So, we'll type in result two, which is
+our vector, and then we'll type in endl
+
+510
+00:08:10,110 --> 00:08:10,120
+our vector, and then we'll type in endl
+ 
+
+511
+00:08:10,120 --> 00:08:11,870
+our vector, and then we'll type in endl
+as if we were just able to do this. Now,
+
+512
+00:08:11,870 --> 00:08:11,880
+as if we were just able to do this. Now,
+ 
+
+513
+00:08:11,880 --> 00:08:13,790
+as if we were just able to do this. Now,
+we can't do this because there is no
+
+514
+00:08:13,790 --> 00:08:13,800
+we can't do this because there is no
+ 
+
+515
+00:08:13,800 --> 00:08:15,670
+we can't do this because there is no
+overload for this operator which takes
+
+516
+00:08:15,670 --> 00:08:15,680
+overload for this operator which takes
+ 
+
+517
+00:08:15,680 --> 00:08:17,670
+overload for this operator which takes
+in an output stream, which is what cout
+
+518
+00:08:17,670 --> 00:08:17,680
+in an output stream, which is what cout
+ 
+
+519
+00:08:17,680 --> 00:08:20,630
+in an output stream, which is what cout
+is, and then an actual vector two. But,
+
+520
+00:08:20,630 --> 00:08:20,640
+is, and then an actual vector two. But,
+ 
+
+521
+00:08:20,640 --> 00:08:22,470
+is, and then an actual vector two. But,
+we can add that. So, outside of the
+
+522
+00:08:22,470 --> 00:08:22,480
+we can add that. So, outside of the
+ 
+
+523
+00:08:22,480 --> 00:08:23,910
+we can add that. So, outside of the
+vector two class, cuz this has nothing
+
+524
+00:08:23,910 --> 00:08:23,920
+vector two class, cuz this has nothing
+ 
+
+525
+00:08:23,920 --> 00:08:25,030
+vector two class, cuz this has nothing
+to do with vector, we're just adding
+
+526
+00:08:25,030 --> 00:08:25,040
+to do with vector, we're just adding
+ 
+
+527
+00:08:25,040 --> 00:08:27,750
+to do with vector, we're just adding
+this to cout, what we're going to do is
+
+528
+00:08:27,750 --> 00:08:27,760
+this to cout, what we're going to do is
+ 
+
+529
+00:08:27,760 --> 00:08:29,830
+this to cout, what we're going to do is
+write std::ostream, which stands for
+
+530
+00:08:29,830 --> 00:08:29,840
+write std::ostream, which stands for
+ 
+
+531
+00:08:29,840 --> 00:08:31,430
+write std::ostream, which stands for
+output stream, as a reference. So, this
+
+532
+00:08:31,430 --> 00:08:31,440
+output stream, as a reference. So, this
+ 
+
+533
+00:08:31,440 --> 00:08:33,589
+output stream, as a reference. So, this
+is the original kind of definition of
+
+534
+00:08:33,589 --> 00:08:33,599
+is the original kind of definition of
+ 
+
+535
+00:08:33,599 --> 00:08:35,270
+is the original kind of definition of
+this operator that I'm overloading here.
+
+536
+00:08:35,270 --> 00:08:35,280
+this operator that I'm overloading here.
+ 
+
+537
+00:08:35,280 --> 00:08:37,350
+this operator that I'm overloading here.
+We're going to write operator
+
+538
+00:08:37,350 --> 00:08:37,360
+We're going to write operator
+ 
+
+539
+00:08:37,360 --> 00:08:39,469
+We're going to write operator
+left shift. Inside here, we're going to
+
+540
+00:08:39,469 --> 00:08:39,479
+left shift. Inside here, we're going to
+ 
+
+541
+00:08:39,479 --> 00:08:41,790
+left shift. Inside here, we're going to
+take in the class because you can see
+
+542
+00:08:41,790 --> 00:08:41,800
+take in the class because you can see
+ 
+
+543
+00:08:41,800 --> 00:08:43,149
+take in the class because you can see
+this is a definition outside of the
+
+544
+00:08:43,149 --> 00:08:43,159
+this is a definition outside of the
+ 
+
+545
+00:08:43,159 --> 00:08:44,630
+this is a definition outside of the
+class. So, we still need a reference to
+
+546
+00:08:44,630 --> 00:08:44,640
+class. So, we still need a reference to
+ 
+
+547
+00:08:44,640 --> 00:08:46,270
+class. So, we still need a reference to
+the existing stream, which in this case
+
+548
+00:08:46,270 --> 00:08:46,280
+the existing stream, which in this case
+ 
+
+549
+00:08:46,280 --> 00:08:48,110
+the existing stream, which in this case
+is going to be cout. And then, I'm going
+
+550
+00:08:48,110 --> 00:08:48,120
+is going to be cout. And then, I'm going
+ 
+
+551
+00:08:48,120 --> 00:08:50,830
+is going to be cout. And then, I'm going
+to pass my const vec2 by reference here.
+
+552
+00:08:50,830 --> 00:08:50,840
+to pass my const vec2 by reference here.
+ 
+
+553
+00:08:50,840 --> 00:08:52,670
+to pass my const vec2 by reference here.
+Over here, I'm going to say stream, and
+
+554
+00:08:52,670 --> 00:08:52,680
+Over here, I'm going to say stream, and
+ 
+
+555
+00:08:52,680 --> 00:08:54,630
+Over here, I'm going to say stream, and
+then shift basically whatever I want to
+
+556
+00:08:54,630 --> 00:08:54,640
+then shift basically whatever I want to
+ 
+
+557
+00:08:54,640 --> 00:08:57,070
+then shift basically whatever I want to
+print. So, in this case, other.x. The
+
+558
+00:08:57,070 --> 00:08:57,080
+print. So, in this case, other.x. The
+ 
+
+559
+00:08:57,080 --> 00:08:58,790
+print. So, in this case, other.x. The
+stream already knows how to print a
+
+560
+00:08:58,790 --> 00:08:58,800
+stream already knows how to print a
+ 
+
+561
+00:08:58,800 --> 00:09:00,430
+stream already knows how to print a
+float, so we don't need to overload the
+
+562
+00:09:00,430 --> 00:09:00,440
+float, so we don't need to overload the
+ 
+
+563
+00:09:00,440 --> 00:09:02,030
+float, so we don't need to overload the
+float or anything like that. And then,
+
+564
+00:09:02,030 --> 00:09:02,040
+float or anything like that. And then,
+ 
+
+565
+00:09:02,040 --> 00:09:04,390
+float or anything like that. And then,
+maybe a comma, and then other.y. And
+
+566
+00:09:04,390 --> 00:09:04,400
+maybe a comma, and then other.y. And
+ 
+
+567
+00:09:04,400 --> 00:09:05,710
+maybe a comma, and then other.y. And
+make sure that you of course write
+
+568
+00:09:05,710 --> 00:09:05,720
+make sure that you of course write
+ 
+
+569
+00:09:05,720 --> 00:09:08,790
+make sure that you of course write
+ostream here, and not string like like
+
+570
+00:09:08,790 --> 00:09:08,800
+ostream here, and not string like like
+ 
+
+571
+00:09:08,800 --> 00:09:10,870
+ostream here, and not string like like
+me. Okay, so this is what it looks like.
+
+572
+00:09:10,870 --> 00:09:10,880
+me. Okay, so this is what it looks like.
+ 
+
+573
+00:09:10,880 --> 00:09:12,470
+me. Okay, so this is what it looks like.
+And then, finally, we need to return a
+
+574
+00:09:12,470 --> 00:09:12,480
+And then, finally, we need to return a
+ 
+
+575
+00:09:12,480 --> 00:09:13,990
+And then, finally, we need to return a
+reference to the stream, which is just
+
+576
+00:09:13,990 --> 00:09:14,000
+reference to the stream, which is just
+ 
+
+577
+00:09:14,000 --> 00:09:16,550
+reference to the stream, which is just
+this stream. So, we can just hit return
+
+578
+00:09:16,550 --> 00:09:16,560
+this stream. So, we can just hit return
+ 
+
+579
+00:09:16,560 --> 00:09:18,190
+this stream. So, we can just hit return
+stream. And that's it. You can see that
+
+580
+00:09:18,190 --> 00:09:18,200
+stream. And that's it. You can see that
+ 
+
+581
+00:09:18,200 --> 00:09:20,390
+stream. And that's it. You can see that
+this code now compiles. And if I run
+
+582
+00:09:20,390 --> 00:09:20,400
+this code now compiles. And if I run
+ 
+
+583
+00:09:20,400 --> 00:09:23,910
+this code now compiles. And if I run
+this code, we'll get 4.55 \{{}comma} 5.65
+
+584
+00:09:23,910 --> 00:09:23,920
+this code, we'll get 4.55 \{{}comma} 5.65
+ 
+
+585
+00:09:23,920 --> 00:09:25,510
+this code, we'll get 4.55 \{{}comma} 5.65
+printing, which of course is the right
+
+586
+00:09:25,510 --> 00:09:25,520
+printing, which of course is the right
+ 
+
+587
+00:09:25,520 --> 00:09:26,990
+printing, which of course is the right
+answer. So, there we go. That's a look
+
+588
+00:09:26,990 --> 00:09:27,000
+answer. So, there we go. That's a look
+ 
+
+589
+00:09:27,000 --> 00:09:28,230
+answer. So, there we go. That's a look
+at a few of the operators that we can
+
+590
+00:09:28,230 --> 00:09:28,240
+at a few of the operators that we can
+ 
+
+591
+00:09:28,240 --> 00:09:30,190
+at a few of the operators that we can
+overload in C++ and how just operators
+
+592
+00:09:30,190 --> 00:09:30,200
+overload in C++ and how just operators
+ 
+
+593
+00:09:30,200 --> 00:09:32,070
+overload in C++ and how just operators
+work in general. Remember, they're just
+
+594
+00:09:32,070 --> 00:09:32,080
+work in general. Remember, they're just
+ 
+
+595
+00:09:32,080 --> 00:09:34,150
+work in general. Remember, they're just
+functions. And remember, just because
+
+596
+00:09:34,150 --> 00:09:34,160
+functions. And remember, just because
+ 
+
+597
+00:09:34,160 --> 00:09:36,070
+functions. And remember, just because
+you can overload an operator and make
+
+598
+00:09:36,070 --> 00:09:36,080
+you can overload an operator and make
+ 
+
+599
+00:09:36,080 --> 00:09:39,230
+you can overload an operator and make
+your code look weird, don't because it's
+
+600
+00:09:39,230 --> 00:09:39,240
+your code look weird, don't because it's
+ 
+
+601
+00:09:39,240 --> 00:09:40,350
+your code look weird, don't because it's
+going to make it harder for people to
+
+602
+00:09:40,350 --> 00:09:40,360
+going to make it harder for people to
+ 
+
+603
+00:09:40,360 --> 00:09:41,510
+going to make it harder for people to
+read. It's probably going to annoy you
+
+604
+00:09:41,510 --> 00:09:41,520
+read. It's probably going to annoy you
+ 
+
+605
+00:09:41,520 --> 00:09:44,510
+read. It's probably going to annoy you
+yourself, and it's just it's just bad
+
+606
+00:09:44,510 --> 00:09:44,520
+yourself, and it's just it's just bad
+ 
+
+607
+00:09:44,520 --> 00:09:46,870
+yourself, and it's just it's just bad
+just bad code style. Don't do it. This
+
+608
+00:09:46,870 --> 00:09:46,880
+just bad code style. Don't do it. This
+ 
+
+609
+00:09:46,880 --> 00:09:48,630
+just bad code style. Don't do it. This
+left shift operator that we overloaded
+
+610
+00:09:48,630 --> 00:09:48,640
+left shift operator that we overloaded
+ 
+
+611
+00:09:48,640 --> 00:09:51,470
+left shift operator that we overloaded
+is kind of like the to string function
+
+612
+00:09:51,470 --> 00:09:51,480
+is kind of like the to string function
+ 
+
+613
+00:09:51,480 --> 00:09:53,190
+is kind of like the to string function
+that you commonly override in languages
+
+614
+00:09:53,190 --> 00:09:53,200
+that you commonly override in languages
+ 
+
+615
+00:09:53,200 --> 00:09:55,470
+that you commonly override in languages
+such as Java or C#. And so, that's one
+
+616
+00:09:55,470 --> 00:09:55,480
+such as Java or C#. And so, that's one
+ 
+
+617
+00:09:55,480 --> 00:09:57,110
+such as Java or C#. And so, that's one
+of the great things about C++. you can
+
+618
+00:09:57,110 --> 00:09:57,120
+of the great things about C++. you can
+ 
+
+619
+00:09:57,120 --> 00:09:58,830
+of the great things about C++. you can
+kind of have operators instead of
+
+620
+00:09:58,830 --> 00:09:58,840
+kind of have operators instead of
+ 
+
+621
+00:09:58,840 --> 00:10:00,670
+kind of have operators instead of
+functions. Another great example which
+
+622
+00:10:00,670 --> 00:10:00,680
+functions. Another great example which
+ 
+
+623
+00:10:00,680 --> 00:10:03,310
+functions. Another great example which
+C# does support but Java doesn't is the
+
+624
+00:10:03,310 --> 00:10:03,320
+C# does support but Java doesn't is the
+ 
+
+625
+00:10:03,320 --> 00:10:05,230
+C# does support but Java doesn't is the
+equals equals operator. In Java you have
+
+626
+00:10:05,230 --> 00:10:05,240
+equals equals operator. In Java you have
+ 
+
+627
+00:10:05,240 --> 00:10:07,110
+equals equals operator. In Java you have
+to write an equals override for every
+
+628
+00:10:07,110 --> 00:10:07,120
+to write an equals override for every
+ 
+
+629
+00:10:07,120 --> 00:10:08,630
+to write an equals override for every
+class if you want to be able to compare
+
+630
+00:10:08,630 --> 00:10:08,640
+class if you want to be able to compare
+ 
+
+631
+00:10:08,640 --> 00:10:10,630
+class if you want to be able to compare
+it. And then later on you have to write
+
+632
+00:10:10,630 --> 00:10:10,640
+it. And then later on you have to write
+ 
+
+633
+00:10:10,640 --> 00:10:12,310
+it. And then later on you have to write
+dot equals everywhere. So, if I wanted
+
+634
+00:10:12,310 --> 00:10:12,320
+dot equals everywhere. So, if I wanted
+ 
+
+635
+00:10:12,320 --> 00:10:14,150
+dot equals everywhere. So, if I wanted
+to compare result one and result two,
+
+636
+00:10:14,150 --> 00:10:14,160
+to compare result one and result two,
+ 
+
+637
+00:10:14,160 --> 00:10:16,190
+to compare result one and result two,
+I'd have to write if result one equals
+
+638
+00:10:16,190 --> 00:10:16,200
+I'd have to write if result one equals
+ 
+
+639
+00:10:16,200 --> 00:10:18,310
+I'd have to write if result one equals
+result two or something like that. Or
+
+640
+00:10:18,310 --> 00:10:18,320
+result two or something like that. Or
+ 
+
+641
+00:10:18,320 --> 00:10:20,470
+result two or something like that. Or
+maybe if it doesn't equal I would write
+
+642
+00:10:20,470 --> 00:10:20,480
+maybe if it doesn't equal I would write
+ 
+
+643
+00:10:20,480 --> 00:10:22,030
+maybe if it doesn't equal I would write
+that and that just looks all messy. So,
+
+644
+00:10:22,030 --> 00:10:22,040
+that and that just looks all messy. So,
+ 
+
+645
+00:10:22,040 --> 00:10:24,230
+that and that just looks all messy. So,
+instead of that we also have the option
+
+646
+00:10:24,230 --> 00:10:24,240
+instead of that we also have the option
+ 
+
+647
+00:10:24,240 --> 00:10:25,870
+instead of that we also have the option
+of writing the equals equals operator.
+
+648
+00:10:25,870 --> 00:10:25,880
+of writing the equals equals operator.
+ 
+
+649
+00:10:25,880 --> 00:10:26,910
+of writing the equals equals operator.
+That's the final one that I'll show you
+
+650
+00:10:26,910 --> 00:10:26,920
+That's the final one that I'll show you
+ 
+
+651
+00:10:26,920 --> 00:10:28,630
+That's the final one that I'll show you
+guys for today cuz I I wanted to show
+
+652
+00:10:28,630 --> 00:10:28,640
+guys for today cuz I I wanted to show
+ 
+
+653
+00:10:28,640 --> 00:10:30,150
+guys for today cuz I I wanted to show
+it. We'll write bool because that's the
+
+654
+00:10:30,150 --> 00:10:30,160
+it. We'll write bool because that's the
+ 
+
+655
+00:10:30,160 --> 00:10:31,430
+it. We'll write bool because that's the
+return result of course going to return
+
+656
+00:10:31,430 --> 00:10:31,440
+return result of course going to return
+ 
+
+657
+00:10:31,440 --> 00:10:33,550
+return result of course going to return
+true or false. Operator equals equals
+
+658
+00:10:33,550 --> 00:10:33,560
+true or false. Operator equals equals
+ 
+
+659
+00:10:33,560 --> 00:10:36,830
+true or false. Operator equals equals
+const vector two reference other. Const
+
+660
+00:10:36,830 --> 00:10:36,840
+const vector two reference other. Const
+ 
+
+661
+00:10:36,840 --> 00:10:38,270
+const vector two reference other. Const
+because it's just a comparison. We're
+
+662
+00:10:38,270 --> 00:10:38,280
+because it's just a comparison. We're
+ 
+
+663
+00:10:38,280 --> 00:10:40,070
+because it's just a comparison. We're
+not going to be modifying this class.
+
+664
+00:10:40,070 --> 00:10:40,080
+not going to be modifying this class.
+ 
+
+665
+00:10:40,080 --> 00:10:42,710
+not going to be modifying this class.
+And we'll just return x equals equals
+
+666
+00:10:42,710 --> 00:10:42,720
+And we'll just return x equals equals
+ 
+
+667
+00:10:42,720 --> 00:10:46,110
+And we'll just return x equals equals
+other.x and y equals equals other.y. So,
+
+668
+00:10:46,110 --> 00:10:46,120
+other.x and y equals equals other.y. So,
+ 
+
+669
+00:10:46,120 --> 00:10:47,790
+other.x and y equals equals other.y. So,
+we're basically checking to see if those
+
+670
+00:10:47,790 --> 00:10:47,800
+we're basically checking to see if those
+ 
+
+671
+00:10:47,800 --> 00:10:49,830
+we're basically checking to see if those
+floats are exactly the same. Scrolling
+
+672
+00:10:49,830 --> 00:10:49,840
+floats are exactly the same. Scrolling
+ 
+
+673
+00:10:49,840 --> 00:10:52,070
+floats are exactly the same. Scrolling
+down here we can change this code to say
+
+674
+00:10:52,070 --> 00:10:52,080
+down here we can change this code to say
+ 
+
+675
+00:10:52,080 --> 00:10:54,270
+down here we can change this code to say
+something like result equals equals
+
+676
+00:10:54,270 --> 00:10:54,280
+something like result equals equals
+ 
+
+677
+00:10:54,280 --> 00:10:55,710
+something like result equals equals
+result two.
+
+678
+00:10:55,710 --> 00:10:55,720
+result two.
+ 
+
+679
+00:10:55,720 --> 00:10:57,670
+result two.
+You can see that works perfectly fine.
+
+680
+00:10:57,670 --> 00:10:57,680
+You can see that works perfectly fine.
+ 
+
+681
+00:10:57,680 --> 00:10:59,829
+You can see that works perfectly fine.
+And finally if we wanted a not equals
+
+682
+00:10:59,829 --> 00:10:59,839
+And finally if we wanted a not equals
+ 
+
+683
+00:10:59,839 --> 00:11:01,829
+And finally if we wanted a not equals
+operator we we could copy this code,
+
+684
+00:11:01,829 --> 00:11:01,839
+operator we we could copy this code,
+ 
+
+685
+00:11:01,839 --> 00:11:04,190
+operator we we could copy this code,
+change this to not equals and then just
+
+686
+00:11:04,190 --> 00:11:04,200
+change this to not equals and then just
+ 
+
+687
+00:11:04,200 --> 00:11:06,270
+change this to not equals and then just
+call basically the opposite of equals.
+
+688
+00:11:06,270 --> 00:11:06,280
+call basically the opposite of equals.
+ 
+
+689
+00:11:06,280 --> 00:11:09,070
+call basically the opposite of equals.
+So, we'll call this equals equals other
+
+690
+00:11:09,070 --> 00:11:09,080
+So, we'll call this equals equals other
+ 
+
+691
+00:11:09,080 --> 00:11:10,950
+So, we'll call this equals equals other
+but we'll put this in parentheses with
+
+692
+00:11:10,950 --> 00:11:10,960
+but we'll put this in parentheses with
+ 
+
+693
+00:11:10,960 --> 00:11:12,990
+but we'll put this in parentheses with
+an exclamation mark out the front to
+
+694
+00:11:12,990 --> 00:11:13,000
+an exclamation mark out the front to
+ 
+
+695
+00:11:13,000 --> 00:11:14,950
+an exclamation mark out the front to
+reverse the result of that.
+
+696
+00:11:14,950 --> 00:11:14,960
+reverse the result of that.
+ 
+
+697
+00:11:14,960 --> 00:11:17,150
+reverse the result of that.
+Alternatively with the kind of syntax
+
+698
+00:11:17,150 --> 00:11:17,160
+Alternatively with the kind of syntax
+ 
+
+699
+00:11:17,160 --> 00:11:18,870
+Alternatively with the kind of syntax
+that I showed you earlier you could
+
+700
+00:11:18,870 --> 00:11:18,880
+that I showed you earlier you could
+ 
+
+701
+00:11:18,880 --> 00:11:21,070
+that I showed you earlier you could
+write something like return operator
+
+702
+00:11:21,070 --> 00:11:21,080
+write something like return operator
+ 
+
+703
+00:11:21,080 --> 00:11:23,270
+write something like return operator
+equals equals other and then kind of
+
+704
+00:11:23,270 --> 00:11:23,280
+equals equals other and then kind of
+ 
+
+705
+00:11:23,280 --> 00:11:25,070
+equals equals other and then kind of
+reverse that result and return that.
+
+706
+00:11:25,070 --> 00:11:25,080
+reverse that result and return that.
+ 
+
+707
+00:11:25,080 --> 00:11:27,270
+reverse that result and return that.
+That looks weird. Don't do it that way.
+
+708
+00:11:27,270 --> 00:11:27,280
+That looks weird. Don't do it that way.
+ 
+
+709
+00:11:27,280 --> 00:11:28,670
+That looks weird. Don't do it that way.
+If you are doing it this way which you
+
+710
+00:11:28,670 --> 00:11:28,680
+If you are doing it this way which you
+ 
+
+711
+00:11:28,680 --> 00:11:31,110
+If you are doing it this way which you
+probably should return this. Or maybe
+
+712
+00:11:31,110 --> 00:11:31,120
+probably should return this. Or maybe
+ 
+
+713
+00:11:31,120 --> 00:11:33,070
+probably should return this. Or maybe
+alternatively just have an equals
+
+714
+00:11:33,070 --> 00:11:33,080
+alternatively just have an equals
+ 
+
+715
+00:11:33,080 --> 00:11:34,710
+alternatively just have an equals
+function and call that and return the
+
+716
+00:11:34,710 --> 00:11:34,720
+function and call that and return the
+ 
+
+717
+00:11:34,720 --> 00:11:36,510
+function and call that and return the
+reverse of that or something like that.
+
+718
+00:11:36,510 --> 00:11:36,520
+reverse of that or something like that.
+ 
+
+719
+00:11:36,520 --> 00:11:38,270
+reverse of that or something like that.
+Again, you have these operators but some
+
+720
+00:11:38,270 --> 00:11:38,280
+Again, you have these operators but some
+ 
+
+721
+00:11:38,280 --> 00:11:40,470
+Again, you have these operators but some
+people prefer not to use them.
+
+722
+00:11:40,470 --> 00:11:40,480
+people prefer not to use them.
+ 
+
+723
+00:11:40,480 --> 00:11:42,190
+people prefer not to use them.
+When creating a library I like to add
+
+724
+00:11:42,190 --> 00:11:42,200
+When creating a library I like to add
+ 
+
+725
+00:11:42,200 --> 00:11:44,750
+When creating a library I like to add
+both. So, I would still have a like like
+
+726
+00:11:44,750 --> 00:11:44,760
+both. So, I would still have a like like
+ 
+
+727
+00:11:44,760 --> 00:11:46,590
+both. So, I would still have a like like
+I did over here I would still have this
+
+728
+00:11:46,590 --> 00:11:46,600
+I did over here I would still have this
+ 
+
+729
+00:11:46,600 --> 00:11:48,750
+I did over here I would still have this
+add function but I would also have an
+
+730
+00:11:48,750 --> 00:11:48,760
+add function but I would also have an
+ 
+
+731
+00:11:48,760 --> 00:11:51,190
+add function but I would also have an
+operator. So, you've basically got you
+
+732
+00:11:51,190 --> 00:11:51,200
+operator. So, you've basically got you
+ 
+
+733
+00:11:51,200 --> 00:11:52,270
+operator. So, you've basically got you
+you're basically giving anyone using
+
+734
+00:11:52,270 --> 00:11:52,280
+you're basically giving anyone using
+ 
+
+735
+00:11:52,280 --> 00:11:54,310
+you're basically giving anyone using
+your API choices as to what they want to
+
+736
+00:11:54,310 --> 00:11:54,320
+your API choices as to what they want to
+ 
+
+737
+00:11:54,320 --> 00:11:55,790
+your API choices as to what they want to
+use. Hopefully you guys enjoyed this
+
+738
+00:11:55,790 --> 00:11:55,800
+use. Hopefully you guys enjoyed this
+ 
+
+739
+00:11:55,800 --> 00:11:57,270
+use. Hopefully you guys enjoyed this
+video. If you did you can hit that like
+
+740
+00:11:57,270 --> 00:11:57,280
+video. If you did you can hit that like
+ 
+
+741
+00:11:57,280 --> 00:11:58,790
+video. If you did you can hit that like
+button and you can support this series
+
+742
+00:11:58,790 --> 00:11:58,800
+button and you can support this series
+ 
+
+743
+00:11:58,800 --> 00:11:59,390
+button and you can support this series
+by heading over to
+
+744
+00:11:59,390 --> 00:11:59,400
+by heading over to
+ 
+
+745
+00:11:59,400 --> 00:12:02,070
+by heading over to
+patreon.com/thecherneau.
+
+746
+00:12:02,070 --> 00:12:02,080
+patreon.com/thecherneau.
+ 
+
+747
+00:12:02,080 --> 00:12:03,510
+patreon.com/thecherneau.
+I hear that people there are getting
+
+748
+00:12:03,510 --> 00:12:03,520
+I hear that people there are getting
+ 
+
+749
+00:12:03,520 --> 00:12:05,550
+I hear that people there are getting
+videos early like every day which is
+
+750
+00:12:05,550 --> 00:12:05,560
+videos early like every day which is
+ 
+
+751
+00:12:05,560 --> 00:12:06,910
+videos early like every day which is
+pretty cool. So, if you want to if you
+
+752
+00:12:06,910 --> 00:12:06,920
+pretty cool. So, if you want to if you
+ 
+
+753
+00:12:06,920 --> 00:12:08,710
+pretty cool. So, if you want to if you
+want to jump on this train early earlier
+
+754
+00:12:08,710 --> 00:12:08,720
+want to jump on this train early earlier
+ 
+
+755
+00:12:08,720 --> 00:12:10,110
+want to jump on this train early earlier
+than anyone else and get to see the
+
+756
+00:12:10,110 --> 00:12:10,120
+than anyone else and get to see the
+ 
+
+757
+00:12:10,120 --> 00:12:11,990
+than anyone else and get to see the
+videos early as soon as possible. As
+
+758
+00:12:11,990 --> 00:12:12,000
+videos early as soon as possible. As
+ 
+
+759
+00:12:12,000 --> 00:12:13,430
+videos early as soon as possible. As
+soon as I'm done editing them they go up
+
+760
+00:12:13,430 --> 00:12:13,440
+soon as I'm done editing them they go up
+ 
+
+761
+00:12:13,440 --> 00:12:15,230
+soon as I'm done editing them they go up
+on Patreon. If you guys want to get on
+
+762
+00:12:15,230 --> 00:12:15,240
+on Patreon. If you guys want to get on
+ 
+
+763
+00:12:15,240 --> 00:12:16,870
+on Patreon. If you guys want to get on
+that train then link in the description
+
+764
+00:12:16,870 --> 00:12:16,880
+that train then link in the description
+ 
+
+765
+00:12:16,880 --> 00:12:18,670
+that train then link in the description
+below. You're also ensuring that I have
+
+766
+00:12:18,670 --> 00:12:18,680
+below. You're also ensuring that I have
+ 
+
+767
+00:12:18,680 --> 00:12:20,870
+below. You're also ensuring that I have
+more time to make these videos which
+
+768
+00:12:20,870 --> 00:12:20,880
+more time to make these videos which
+ 
+
+769
+00:12:20,880 --> 00:12:23,070
+more time to make these videos which
+results in more videos. So, fun for the
+
+770
+00:12:23,070 --> 00:12:23,080
+results in more videos. So, fun for the
+ 
+
+771
+00:12:23,080 --> 00:12:25,310
+results in more videos. So, fun for the
+whole family. I will see you guys next
+
+772
+00:12:25,310 --> 00:12:25,320
+whole family. I will see you guys next
+ 
+
+773
+00:12:25,320 --> 00:12:27,770
+whole family. I will see you guys next
+time. Goodbye.
+
+774
+00:12:27,770 --> 00:12:27,780
+time. Goodbye.
+ 
+
+775
+00:12:27,780 --> 00:12:42,549
+time. Goodbye.
+[Music]
+

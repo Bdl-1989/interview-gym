@@ -1,0 +1,3845 @@
+1
+00:00:00,160 --> 00:00:02,070
+
+This is a big deal. This is going to
+
+2
+00:00:02,070 --> 00:00:02,080
+This is a big deal. This is going to
+ 
+
+3
+00:00:02,080 --> 00:00:04,070
+This is a big deal. This is going to
+change the way that you write hello
+
+4
+00:00:04,070 --> 00:00:04,080
+change the way that you write hello
+ 
+
+5
+00:00:04,080 --> 00:00:06,390
+change the way that you write hello
+world in C++. That's how big of a deal
+
+6
+00:00:06,390 --> 00:00:06,400
+world in C++. That's how big of a deal
+ 
+
+7
+00:00:06,400 --> 00:00:09,270
+world in C++. That's how big of a deal
+this is. It used to be this. In fact,
+
+8
+00:00:09,270 --> 00:00:09,280
+this is. It used to be this. In fact,
+ 
+
+9
+00:00:09,280 --> 00:00:12,230
+this is. It used to be this. In fact,
+even worse, this and I'm not going to
+
+10
+00:00:12,230 --> 00:00:12,240
+even worse, this and I'm not going to
+ 
+
+11
+00:00:12,240 --> 00:00:14,709
+even worse, this and I'm not going to
+lie, the first time I saw this when I
+
+12
+00:00:14,709 --> 00:00:14,719
+lie, the first time I saw this when I
+ 
+
+13
+00:00:14,719 --> 00:00:16,310
+lie, the first time I saw this when I
+was just teaching myself programming
+
+14
+00:00:16,310 --> 00:00:16,320
+was just teaching myself programming
+ 
+
+15
+00:00:16,320 --> 00:00:18,630
+was just teaching myself programming
+back when I was 16 and young Cherno was
+
+16
+00:00:18,630 --> 00:00:18,640
+back when I was 16 and young Cherno was
+ 
+
+17
+00:00:18,640 --> 00:00:20,870
+back when I was 16 and young Cherno was
+like, "Ooh, C++ like a low-level
+
+18
+00:00:20,870 --> 00:00:20,880
+like, "Ooh, C++ like a low-level
+ 
+
+19
+00:00:20,880 --> 00:00:22,550
+like, "Ooh, C++ like a low-level
+language that games and game engines are
+
+20
+00:00:22,550 --> 00:00:22,560
+language that games and game engines are
+ 
+
+21
+00:00:22,560 --> 00:00:23,910
+language that games and game engines are
+written in. I'm so interested in this.
+
+22
+00:00:23,910 --> 00:00:23,920
+written in. I'm so interested in this.
+ 
+
+23
+00:00:23,920 --> 00:00:27,429
+written in. I'm so interested in this.
+Let me take a look at it." Oh,
+
+24
+00:00:27,429 --> 00:00:27,439
+Let me take a look at it." Oh,
+ 
+
+25
+00:00:27,439 --> 00:00:31,750
+Let me take a look at it." Oh,
+why are they bitshifting the string into
+
+26
+00:00:31,750 --> 00:00:31,760
+why are they bitshifting the string into
+ 
+
+27
+00:00:31,760 --> 00:00:33,910
+why are they bitshifting the string into
+what does count mean? By the way, if you
+
+28
+00:00:33,910 --> 00:00:33,920
+what does count mean? By the way, if you
+ 
+
+29
+00:00:33,920 --> 00:00:34,950
+what does count mean? By the way, if you
+think that I'm making up the story
+
+30
+00:00:34,950 --> 00:00:34,960
+think that I'm making up the story
+ 
+
+31
+00:00:34,960 --> 00:00:36,389
+think that I'm making up the story
+because why would a 16-year-old who's
+
+32
+00:00:36,389 --> 00:00:36,399
+because why would a 16-year-old who's
+ 
+
+33
+00:00:36,399 --> 00:00:37,670
+because why would a 16-year-old who's
+just started learning programming know
+
+34
+00:00:37,670 --> 00:00:37,680
+just started learning programming know
+ 
+
+35
+00:00:37,680 --> 00:00:39,350
+just started learning programming know
+what a bit shift operator is? It's
+
+36
+00:00:39,350 --> 00:00:39,360
+what a bit shift operator is? It's
+ 
+
+37
+00:00:39,360 --> 00:00:40,310
+what a bit shift operator is? It's
+because the thing that got me into
+
+38
+00:00:40,310 --> 00:00:40,320
+because the thing that got me into
+ 
+
+39
+00:00:40,320 --> 00:00:41,590
+because the thing that got me into
+programming in the first place was
+
+40
+00:00:41,590 --> 00:00:41,600
+programming in the first place was
+ 
+
+41
+00:00:41,600 --> 00:00:43,190
+programming in the first place was
+writing a 3D renderer. And it's pretty
+
+42
+00:00:43,190 --> 00:00:43,200
+writing a 3D renderer. And it's pretty
+ 
+
+43
+00:00:43,200 --> 00:00:45,110
+writing a 3D renderer. And it's pretty
+common to use bit operations in graphics
+
+44
+00:00:45,110 --> 00:00:45,120
+common to use bit operations in graphics
+ 
+
+45
+00:00:45,120 --> 00:00:46,630
+common to use bit operations in graphics
+and rendering programming, such as to
+
+46
+00:00:46,630 --> 00:00:46,640
+and rendering programming, such as to
+ 
+
+47
+00:00:46,640 --> 00:00:48,229
+and rendering programming, such as to
+separate out all the channels of a color
+
+48
+00:00:48,229 --> 00:00:48,239
+separate out all the channels of a color
+ 
+
+49
+00:00:48,239 --> 00:00:49,510
+separate out all the channels of a color
+that's packed into an integer, for
+
+50
+00:00:49,510 --> 00:00:49,520
+that's packed into an integer, for
+ 
+
+51
+00:00:49,520 --> 00:00:51,990
+that's packed into an integer, for
+example. So, yeah, true story. Anyway, I
+
+52
+00:00:51,990 --> 00:00:52,000
+example. So, yeah, true story. Anyway, I
+ 
+
+53
+00:00:52,000 --> 00:00:54,790
+example. So, yeah, true story. Anyway, I
+took one long look at this monstrosity
+
+54
+00:00:54,790 --> 00:00:54,800
+took one long look at this monstrosity
+ 
+
+55
+00:00:54,800 --> 00:00:58,069
+took one long look at this monstrosity
+and I was like, "Yeah, nah." And so from
+
+56
+00:00:58,069 --> 00:00:58,079
+and I was like, "Yeah, nah." And so from
+ 
+
+57
+00:00:58,079 --> 00:01:01,349
+and I was like, "Yeah, nah." And so from
+the age of 16 to around the age of 19, I
+
+58
+00:01:01,349 --> 00:01:01,359
+the age of 16 to around the age of 19, I
+ 
+
+59
+00:01:01,359 --> 00:01:04,549
+the age of 16 to around the age of 19, I
+didn't program in C++. I stuck with
+
+60
+00:01:04,549 --> 00:01:04,559
+didn't program in C++. I stuck with
+ 
+
+61
+00:01:04,559 --> 00:01:06,630
+didn't program in C++. I stuck with
+Java. But then when I just turned 20, I
+
+62
+00:01:06,630 --> 00:01:06,640
+Java. But then when I just turned 20, I
+ 
+
+63
+00:01:06,640 --> 00:01:08,070
+Java. But then when I just turned 20, I
+started working at EA and of course they
+
+64
+00:01:08,070 --> 00:01:08,080
+started working at EA and of course they
+ 
+
+65
+00:01:08,080 --> 00:01:10,630
+started working at EA and of course they
+use C++. So I learned C++ and it became
+
+66
+00:01:10,630 --> 00:01:10,640
+use C++. So I learned C++ and it became
+ 
+
+67
+00:01:10,640 --> 00:01:12,950
+use C++. So I learned C++ and it became
+my language of choice. That's right. It
+
+68
+00:01:12,950 --> 00:01:12,960
+my language of choice. That's right. It
+ 
+
+69
+00:01:12,960 --> 00:01:15,510
+my language of choice. That's right. It
+took working at EA to get me to use C++.
+
+70
+00:01:15,510 --> 00:01:15,520
+took working at EA to get me to use C++.
+ 
+
+71
+00:01:15,520 --> 00:01:17,510
+took working at EA to get me to use C++.
+And you know what? Somewhat anecdotally,
+
+72
+00:01:17,510 --> 00:01:17,520
+And you know what? Somewhat anecdotally,
+ 
+
+73
+00:01:17,520 --> 00:01:18,870
+And you know what? Somewhat anecdotally,
+I'm going to go ahead and blame it on
+
+74
+00:01:18,870 --> 00:01:18,880
+I'm going to go ahead and blame it on
+ 
+
+75
+00:01:18,880 --> 00:01:20,469
+I'm going to go ahead and blame it on
+this. I'm going to go ahead and blame
+
+76
+00:01:20,469 --> 00:01:20,479
+this. I'm going to go ahead and blame
+ 
+
+77
+00:01:20,479 --> 00:01:23,510
+this. I'm going to go ahead and blame
+this on bit shifting strings into
+
+78
+00:01:23,510 --> 00:01:23,520
+this on bit shifting strings into
+ 
+
+79
+00:01:23,520 --> 00:01:27,350
+this on bit shifting strings into
+couchs. But no more. A new breed of C++
+
+80
+00:01:27,350 --> 00:01:27,360
+couchs. But no more. A new breed of C++
+ 
+
+81
+00:01:27,360 --> 00:01:29,270
+couchs. But no more. A new breed of C++
+developers is about to hit the market
+
+82
+00:01:29,270 --> 00:01:29,280
+developers is about to hit the market
+ 
+
+83
+00:01:29,280 --> 00:01:32,469
+developers is about to hit the market
+because this monstrosity is finally
+
+84
+00:01:32,469 --> 00:01:32,479
+because this monstrosity is finally
+ 
+
+85
+00:01:32,479 --> 00:01:35,830
+because this monstrosity is finally
+changing. Starting from C++ 23, which
+
+86
+00:01:35,830 --> 00:01:35,840
+changing. Starting from C++ 23, which
+ 
+
+87
+00:01:35,840 --> 00:01:37,670
+changing. Starting from C++ 23, which
+sounds like a while ago because, you
+
+88
+00:01:37,670 --> 00:01:37,680
+sounds like a while ago because, you
+ 
+
+89
+00:01:37,680 --> 00:01:40,870
+sounds like a while ago because, you
+know, C++ 23 corresponds with 2023 and
+
+90
+00:01:40,870 --> 00:01:40,880
+know, C++ 23 corresponds with 2023 and
+ 
+
+91
+00:01:40,880 --> 00:01:43,749
+know, C++ 23 corresponds with 2023 and
+it's like 2025. But on the latest
+
+92
+00:01:43,749 --> 00:01:43,759
+it's like 2025. But on the latest
+ 
+
+93
+00:01:43,759 --> 00:01:46,230
+it's like 2025. But on the latest
+version of Visual Studio, as of the 23rd
+
+94
+00:01:46,230 --> 00:01:46,240
+version of Visual Studio, as of the 23rd
+ 
+
+95
+00:01:46,240 --> 00:01:49,190
+version of Visual Studio, as of the 23rd
+of June 2025, if we go into our project
+
+96
+00:01:49,190 --> 00:01:49,200
+of June 2025, if we go into our project
+ 
+
+97
+00:01:49,200 --> 00:01:52,789
+of June 2025, if we go into our project
+and properties C, C++, and language, to
+
+98
+00:01:52,789 --> 00:01:52,799
+and properties C, C++, and language, to
+ 
+
+99
+00:01:52,799 --> 00:01:57,670
+and properties C, C++, and language, to
+use C++ 23, you have to go past ISO C++
+
+100
+00:01:57,670 --> 00:01:57,680
+use C++ 23, you have to go past ISO C++
+ 
+
+101
+00:01:57,680 --> 00:02:01,270
+use C++ 23, you have to go past ISO C++
+20 standard to the preview features from
+
+102
+00:02:01,270 --> 00:02:01,280
+20 standard to the preview features from
+ 
+
+103
+00:02:01,280 --> 00:02:04,069
+20 standard to the preview features from
+the latest C++ working draft. So halfway
+
+104
+00:02:04,069 --> 00:02:04,079
+the latest C++ working draft. So halfway
+ 
+
+105
+00:02:04,079 --> 00:02:07,190
+the latest C++ working draft. So halfway
+through 2025 in Visual Studio, MSVC,
+
+106
+00:02:07,190 --> 00:02:07,200
+through 2025 in Visual Studio, MSVC,
+ 
+
+107
+00:02:07,200 --> 00:02:09,990
+through 2025 in Visual Studio, MSVC,
+pretty major compiler. Still does not
+
+108
+00:02:09,990 --> 00:02:10,000
+pretty major compiler. Still does not
+ 
+
+109
+00:02:10,000 --> 00:02:13,190
+pretty major compiler. Still does not
+list C++ 23 as like its own thing. It's
+
+110
+00:02:13,190 --> 00:02:13,200
+list C++ 23 as like its own thing. It's
+ 
+
+111
+00:02:13,200 --> 00:02:15,110
+list C++ 23 as like its own thing. It's
+just a it's preview. It's features from
+
+112
+00:02:15,110 --> 00:02:15,120
+just a it's preview. It's features from
+ 
+
+113
+00:02:15,120 --> 00:02:16,790
+just a it's preview. It's features from
+the latest working draft, which by the
+
+114
+00:02:16,790 --> 00:02:16,800
+the latest working draft, which by the
+ 
+
+115
+00:02:16,800 --> 00:02:19,030
+the latest working draft, which by the
+way, you will have to set to this if you
+
+116
+00:02:19,030 --> 00:02:19,040
+way, you will have to set to this if you
+ 
+
+117
+00:02:19,040 --> 00:02:20,150
+way, you will have to set to this if you
+want to follow along with all the code
+
+118
+00:02:20,150 --> 00:02:20,160
+want to follow along with all the code
+ 
+
+119
+00:02:20,160 --> 00:02:21,670
+want to follow along with all the code
+I'm going to write in this video. Well,
+
+120
+00:02:21,670 --> 00:02:21,680
+I'm going to write in this video. Well,
+ 
+
+121
+00:02:21,680 --> 00:02:23,670
+I'm going to write in this video. Well,
+not all the code, not this. So yeah, I'm
+
+122
+00:02:23,670 --> 00:02:23,680
+not all the code, not this. So yeah, I'm
+ 
+
+123
+00:02:23,680 --> 00:02:25,430
+not all the code, not this. So yeah, I'm
+not exactly 2 years late to the party
+
+124
+00:02:25,430 --> 00:02:25,440
+not exactly 2 years late to the party
+ 
+
+125
+00:02:25,440 --> 00:02:27,350
+not exactly 2 years late to the party
+because the party is really just
+
+126
+00:02:27,350 --> 00:02:27,360
+because the party is really just
+ 
+
+127
+00:02:27,360 --> 00:02:28,869
+because the party is really just
+beginning. And obviously if you are
+
+128
+00:02:28,869 --> 00:02:28,879
+beginning. And obviously if you are
+ 
+
+129
+00:02:28,879 --> 00:02:30,390
+beginning. And obviously if you are
+working on any kind of major projects,
+
+130
+00:02:30,390 --> 00:02:30,400
+working on any kind of major projects,
+ 
+
+131
+00:02:30,400 --> 00:02:32,630
+working on any kind of major projects,
+you will probably not be able to update
+
+132
+00:02:32,630 --> 00:02:32,640
+you will probably not be able to update
+ 
+
+133
+00:02:32,640 --> 00:02:35,270
+you will probably not be able to update
+your C++ version in a while. That's
+
+134
+00:02:35,270 --> 00:02:35,280
+your C++ version in a while. That's
+ 
+
+135
+00:02:35,280 --> 00:02:37,030
+your C++ version in a while. That's
+usually how it works, but that's a
+
+136
+00:02:37,030 --> 00:02:37,040
+usually how it works, but that's a
+ 
+
+137
+00:02:37,040 --> 00:02:40,229
+usually how it works, but that's a
+different story. Anyway, as of C++ 23,
+
+138
+00:02:40,229 --> 00:02:40,239
+different story. Anyway, as of C++ 23,
+ 
+
+139
+00:02:40,239 --> 00:02:42,390
+different story. Anyway, as of C++ 23,
+subject to your compiler and tool chain
+
+140
+00:02:42,390 --> 00:02:42,400
+subject to your compiler and tool chain
+ 
+
+141
+00:02:42,400 --> 00:02:44,630
+subject to your compiler and tool chain
+and whatever else, you should be able to
+
+142
+00:02:44,630 --> 00:02:44,640
+and whatever else, you should be able to
+ 
+
+143
+00:02:44,640 --> 00:02:47,750
+and whatever else, you should be able to
+include print instead of IO stream and
+
+144
+00:02:47,750 --> 00:02:47,760
+include print instead of IO stream and
+ 
+
+145
+00:02:47,760 --> 00:02:51,350
+include print instead of IO stream and
+use this amazing function called std
+
+146
+00:02:51,350 --> 00:02:51,360
+use this amazing function called std
+ 
+
+147
+00:02:51,360 --> 00:02:53,430
+use this amazing function called std
+print line. That's right, just like
+
+148
+00:02:53,430 --> 00:02:53,440
+print line. That's right, just like
+ 
+
+149
+00:02:53,440 --> 00:02:56,550
+print line. That's right, just like
+Java, just like C. I mean C# has a right
+
+150
+00:02:56,550 --> 00:02:56,560
+Java, just like C. I mean C# has a right
+ 
+
+151
+00:02:56,560 --> 00:02:59,830
+Java, just like C. I mean C# has a right
+line but anyway we have our we have a
+
+152
+00:02:59,830 --> 00:02:59,840
+line but anyway we have our we have a
+ 
+
+153
+00:02:59,840 --> 00:03:02,970
+line but anyway we have our we have a
+print line function in C++
+
+154
+00:03:02,970 --> 00:03:02,980
+print line function in C++
+ 
+
+155
+00:03:02,980 --> 00:03:04,790
+print line function in C++
+[Applause]
+
+156
+00:03:04,790 --> 00:03:04,800
+[Applause]
+ 
+
+157
+00:03:04,800 --> 00:03:07,190
+[Applause]
+it's this is exciting this this is come
+
+158
+00:03:07,190 --> 00:03:07,200
+it's this is exciting this this is come
+ 
+
+159
+00:03:07,200 --> 00:03:08,869
+it's this is exciting this this is come
+on I'm not playing this up for the
+
+160
+00:03:08,869 --> 00:03:08,879
+on I'm not playing this up for the
+ 
+
+161
+00:03:08,879 --> 00:03:10,949
+on I'm not playing this up for the
+camera or YouTube this this is exciting
+
+162
+00:03:10,949 --> 00:03:10,959
+camera or YouTube this this is exciting
+ 
+
+163
+00:03:10,959 --> 00:03:12,869
+camera or YouTube this this is exciting
+let me execute this program to show you
+
+164
+00:03:12,869 --> 00:03:12,879
+let me execute this program to show you
+ 
+
+165
+00:03:12,879 --> 00:03:14,869
+let me execute this program to show you
+that this is in fact reality and not a
+
+166
+00:03:14,869 --> 00:03:14,879
+that this is in fact reality and not a
+ 
+
+167
+00:03:14,879 --> 00:03:18,309
+that this is in fact reality and not a
+fantasy world
+
+168
+00:03:18,309 --> 00:03:18,319
+
+ 
+
+169
+00:03:18,319 --> 00:03:20,949
+
+we did it there's going to be a time
+
+170
+00:03:20,949 --> 00:03:20,959
+we did it there's going to be a time
+ 
+
+171
+00:03:20,959 --> 00:03:23,670
+we did it there's going to be a time
+where our current generation or older
+
+172
+00:03:23,670 --> 00:03:23,680
+where our current generation or older
+ 
+
+173
+00:03:23,680 --> 00:03:26,149
+where our current generation or older
+generations are going to look at the new
+
+174
+00:03:26,149 --> 00:03:26,159
+generations are going to look at the new
+ 
+
+175
+00:03:26,159 --> 00:03:28,790
+generations are going to look at the new
+generations of people and be like they
+
+176
+00:03:28,790 --> 00:03:28,800
+generations of people and be like they
+ 
+
+177
+00:03:28,800 --> 00:03:31,509
+generations of people and be like they
+don't even know what this is. That no
+
+178
+00:03:31,509 --> 00:03:31,519
+don't even know what this is. That no
+ 
+
+179
+00:03:31,519 --> 00:03:34,229
+don't even know what this is. That no
+one knows what this is. None of the none
+
+180
+00:03:34,229 --> 00:03:34,239
+one knows what this is. None of the none
+ 
+
+181
+00:03:34,239 --> 00:03:35,910
+one knows what this is. None of the none
+of the kids know what this is. You know,
+
+182
+00:03:35,910 --> 00:03:35,920
+of the kids know what this is. You know,
+ 
+
+183
+00:03:35,920 --> 00:03:37,830
+of the kids know what this is. You know,
+back in my day, we used to bit shift
+
+184
+00:03:37,830 --> 00:03:37,840
+back in my day, we used to bit shift
+ 
+
+185
+00:03:37,840 --> 00:03:40,070
+back in my day, we used to bit shift
+left our strings into see outs. Sorry,
+
+186
+00:03:40,070 --> 00:03:40,080
+left our strings into see outs. Sorry,
+ 
+
+187
+00:03:40,080 --> 00:03:41,509
+left our strings into see outs. Sorry,
+couts. It's going to be like floppy
+
+188
+00:03:41,509 --> 00:03:41,519
+couts. It's going to be like floppy
+ 
+
+189
+00:03:41,519 --> 00:03:42,789
+couts. It's going to be like floppy
+discs. It's going to be like floppy
+
+190
+00:03:42,789 --> 00:03:42,799
+discs. It's going to be like floppy
+ 
+
+191
+00:03:42,799 --> 00:03:44,149
+discs. It's going to be like floppy
+discs. You know what? Speaking of new
+
+192
+00:03:44,149 --> 00:03:44,159
+discs. You know what? Speaking of new
+ 
+
+193
+00:03:44,159 --> 00:03:46,550
+discs. You know what? Speaking of new
+generation things and improvements to
+
+194
+00:03:46,550 --> 00:03:46,560
+generation things and improvements to
+ 
+
+195
+00:03:46,560 --> 00:03:48,710
+generation things and improvements to
+current workflows and tools, let me
+
+196
+00:03:48,710 --> 00:03:48,720
+current workflows and tools, let me
+ 
+
+197
+00:03:48,720 --> 00:03:50,309
+current workflows and tools, let me
+introduce Codeex, the sponsor of this
+
+198
+00:03:50,309 --> 00:03:50,319
+introduce Codeex, the sponsor of this
+ 
+
+199
+00:03:50,319 --> 00:03:52,229
+introduce Codeex, the sponsor of this
+video. Codex is a really fun, intuitive
+
+200
+00:03:52,229 --> 00:03:52,239
+video. Codex is a really fun, intuitive
+ 
+
+201
+00:03:52,239 --> 00:03:53,750
+video. Codex is a really fun, intuitive
+way to manage software projects,
+
+202
+00:03:53,750 --> 00:03:53,760
+way to manage software projects,
+ 
+
+203
+00:03:53,760 --> 00:03:55,589
+way to manage software projects,
+particularly games. In fact, it's
+
+204
+00:03:55,589 --> 00:03:55,599
+particularly games. In fact, it's
+ 
+
+205
+00:03:55,599 --> 00:03:57,110
+particularly games. In fact, it's
+actually made by game developers,
+
+206
+00:03:57,110 --> 00:03:57,120
+actually made by game developers,
+ 
+
+207
+00:03:57,120 --> 00:03:58,470
+actually made by game developers,
+centralizing everything from
+
+208
+00:03:58,470 --> 00:03:58,480
+centralizing everything from
+ 
+
+209
+00:03:58,480 --> 00:04:00,149
+centralizing everything from
+brainstorming to bug tracking and
+
+210
+00:04:00,149 --> 00:04:00,159
+brainstorming to bug tracking and
+ 
+
+211
+00:04:00,159 --> 00:04:01,910
+brainstorming to bug tracking and
+community feedback. Put simply, it
+
+212
+00:04:01,910 --> 00:04:01,920
+community feedback. Put simply, it
+ 
+
+213
+00:04:01,920 --> 00:04:03,910
+community feedback. Put simply, it
+offers what other generic tools can't. A
+
+214
+00:04:03,910 --> 00:04:03,920
+offers what other generic tools can't. A
+ 
+
+215
+00:04:03,920 --> 00:04:05,509
+offers what other generic tools can't. A
+playful process to ship better games
+
+216
+00:04:05,509 --> 00:04:05,519
+playful process to ship better games
+ 
+
+217
+00:04:05,519 --> 00:04:07,670
+playful process to ship better games
+that's faster and smoother for everyone.
+
+218
+00:04:07,670 --> 00:04:07,680
+that's faster and smoother for everyone.
+ 
+
+219
+00:04:07,680 --> 00:04:09,429
+that's faster and smoother for everyone.
+It's unique and it's super fun to use.
+
+220
+00:04:09,429 --> 00:04:09,439
+It's unique and it's super fun to use.
+ 
+
+221
+00:04:09,439 --> 00:04:11,350
+It's unique and it's super fun to use.
+It makes a whole project management into
+
+222
+00:04:11,350 --> 00:04:11,360
+It makes a whole project management into
+ 
+
+223
+00:04:11,360 --> 00:04:13,589
+It makes a whole project management into
+a game itself. So, for example, here is
+
+224
+00:04:13,589 --> 00:04:13,599
+a game itself. So, for example, here is
+ 
+
+225
+00:04:13,599 --> 00:04:15,670
+a game itself. So, for example, here is
+my Genesis 3D project. I'm remaking the
+
+226
+00:04:15,670 --> 00:04:15,680
+my Genesis 3D project. I'm remaking the
+ 
+
+227
+00:04:15,680 --> 00:04:18,229
+my Genesis 3D project. I'm remaking the
+first game I ever made in 3D in Hazel.
+
+228
+00:04:18,229 --> 00:04:18,239
+first game I ever made in 3D in Hazel.
+ 
+
+229
+00:04:18,239 --> 00:04:20,069
+first game I ever made in 3D in Hazel.
+I've got my hand. These are tasks that
+
+230
+00:04:20,069 --> 00:04:20,079
+I've got my hand. These are tasks that
+ 
+
+231
+00:04:20,079 --> 00:04:21,590
+I've got my hand. These are tasks that
+I'm currently working on and that I want
+
+232
+00:04:21,590 --> 00:04:21,600
+I'm currently working on and that I want
+ 
+
+233
+00:04:21,600 --> 00:04:23,590
+I'm currently working on and that I want
+to start working on soon. I've got all
+
+234
+00:04:23,590 --> 00:04:23,600
+to start working on soon. I've got all
+ 
+
+235
+00:04:23,600 --> 00:04:25,430
+to start working on soon. I've got all
+of these different decks that signify
+
+236
+00:04:25,430 --> 00:04:25,440
+of these different decks that signify
+ 
+
+237
+00:04:25,440 --> 00:04:28,070
+of these different decks that signify
+different areas of work that needs to be
+
+238
+00:04:28,070 --> 00:04:28,080
+different areas of work that needs to be
+ 
+
+239
+00:04:28,080 --> 00:04:29,749
+different areas of work that needs to be
+done. And then there's another tab here
+
+240
+00:04:29,749 --> 00:04:29,759
+done. And then there's another tab here
+ 
+
+241
+00:04:29,759 --> 00:04:31,510
+done. And then there's another tab here
+called timeline where I can basically
+
+242
+00:04:31,510 --> 00:04:31,520
+called timeline where I can basically
+ 
+
+243
+00:04:31,520 --> 00:04:33,670
+called timeline where I can basically
+mark out various milestones of when I
+
+244
+00:04:33,670 --> 00:04:33,680
+mark out various milestones of when I
+ 
+
+245
+00:04:33,680 --> 00:04:35,909
+mark out various milestones of when I
+want to get groups of tasks done. The
+
+246
+00:04:35,909 --> 00:04:35,919
+want to get groups of tasks done. The
+ 
+
+247
+00:04:35,919 --> 00:04:37,830
+want to get groups of tasks done. The
+process is pretty simple. I can go into
+
+248
+00:04:37,830 --> 00:04:37,840
+process is pretty simple. I can go into
+ 
+
+249
+00:04:37,840 --> 00:04:39,749
+process is pretty simple. I can go into
+like these decks, create various
+
+250
+00:04:39,749 --> 00:04:39,759
+like these decks, create various
+ 
+
+251
+00:04:39,759 --> 00:04:42,629
+like these decks, create various
+different cards, fix that annoying bug,
+
+252
+00:04:42,629 --> 00:04:42,639
+different cards, fix that annoying bug,
+ 
+
+253
+00:04:42,639 --> 00:04:45,110
+different cards, fix that annoying bug,
+save that card to my deck or directly to
+
+254
+00:04:45,110 --> 00:04:45,120
+save that card to my deck or directly to
+ 
+
+255
+00:04:45,120 --> 00:04:47,030
+save that card to my deck or directly to
+my hand, give it various properties such
+
+256
+00:04:47,030 --> 00:04:47,040
+my hand, give it various properties such
+ 
+
+257
+00:04:47,040 --> 00:04:48,950
+my hand, give it various properties such
+as effort required to actually complete
+
+258
+00:04:48,950 --> 00:04:48,960
+as effort required to actually complete
+ 
+
+259
+00:04:48,960 --> 00:04:51,270
+as effort required to actually complete
+the task, various priorities. Once I put
+
+260
+00:04:51,270 --> 00:04:51,280
+the task, various priorities. Once I put
+ 
+
+261
+00:04:51,280 --> 00:04:53,590
+the task, various priorities. Once I put
+it into my hand, I can hit play over
+
+262
+00:04:53,590 --> 00:04:53,600
+it into my hand, I can hit play over
+ 
+
+263
+00:04:53,600 --> 00:04:55,270
+it into my hand, I can hit play over
+here to signify that I'm actually
+
+264
+00:04:55,270 --> 00:04:55,280
+here to signify that I'm actually
+ 
+
+265
+00:04:55,280 --> 00:04:56,950
+here to signify that I'm actually
+working on that particular task. And
+
+266
+00:04:56,950 --> 00:04:56,960
+working on that particular task. And
+ 
+
+267
+00:04:56,960 --> 00:04:58,469
+working on that particular task. And
+then when it's done, I can move it into
+
+268
+00:04:58,469 --> 00:04:58,479
+then when it's done, I can move it into
+ 
+
+269
+00:04:58,479 --> 00:05:00,629
+then when it's done, I can move it into
+my done pile. And all of this is super
+
+270
+00:05:00,629 --> 00:05:00,639
+my done pile. And all of this is super
+ 
+
+271
+00:05:00,639 --> 00:05:02,310
+my done pile. And all of this is super
+elegant, super fun to use. You can see
+
+272
+00:05:02,310 --> 00:05:02,320
+elegant, super fun to use. You can see
+ 
+
+273
+00:05:02,320 --> 00:05:04,390
+elegant, super fun to use. You can see
+it really makes this whole process into
+
+274
+00:05:04,390 --> 00:05:04,400
+it really makes this whole process into
+ 
+
+275
+00:05:04,400 --> 00:05:06,310
+it really makes this whole process into
+a card game. And there are so many more
+
+276
+00:05:06,310 --> 00:05:06,320
+a card game. And there are so many more
+ 
+
+277
+00:05:06,320 --> 00:05:08,150
+a card game. And there are so many more
+cool features such as journeys which
+
+278
+00:05:08,150 --> 00:05:08,160
+cool features such as journeys which
+ 
+
+279
+00:05:08,160 --> 00:05:10,230
+cool features such as journeys which
+kind of define the process of completing
+
+280
+00:05:10,230 --> 00:05:10,240
+kind of define the process of completing
+ 
+
+281
+00:05:10,240 --> 00:05:12,150
+kind of define the process of completing
+tasks as well as integrations with
+
+282
+00:05:12,150 --> 00:05:12,160
+tasks as well as integrations with
+ 
+
+283
+00:05:12,160 --> 00:05:13,909
+tasks as well as integrations with
+things like Discord and Steam for
+
+284
+00:05:13,909 --> 00:05:13,919
+things like Discord and Steam for
+ 
+
+285
+00:05:13,919 --> 00:05:15,430
+things like Discord and Steam for
+community management. So go ahead and
+
+286
+00:05:15,430 --> 00:05:15,440
+community management. So go ahead and
+ 
+
+287
+00:05:15,440 --> 00:05:17,029
+community management. So go ahead and
+check out Codeex using my link in
+
+288
+00:05:17,029 --> 00:05:17,039
+check out Codeex using my link in
+ 
+
+289
+00:05:17,039 --> 00:05:18,790
+check out Codeex using my link in
+description below to make better games
+
+290
+00:05:18,790 --> 00:05:18,800
+description below to make better games
+ 
+
+291
+00:05:18,800 --> 00:05:20,230
+description below to make better games
+in a better way. Huge thank you to
+
+292
+00:05:20,230 --> 00:05:20,240
+in a better way. Huge thank you to
+ 
+
+293
+00:05:20,240 --> 00:05:22,230
+in a better way. Huge thank you to
+Codeex for sponsoring this video. Okay,
+
+294
+00:05:22,230 --> 00:05:22,240
+Codeex for sponsoring this video. Okay,
+ 
+
+295
+00:05:22,240 --> 00:05:24,310
+Codeex for sponsoring this video. Okay,
+Cho. So did you really make a video all
+
+296
+00:05:24,310 --> 00:05:24,320
+Cho. So did you really make a video all
+ 
+
+297
+00:05:24,320 --> 00:05:25,670
+Cho. So did you really make a video all
+about the fact that there's a new way to
+
+298
+00:05:25,670 --> 00:05:25,680
+about the fact that there's a new way to
+ 
+
+299
+00:05:25,680 --> 00:05:28,230
+about the fact that there's a new way to
+write Hello World in C++?
+
+300
+00:05:28,230 --> 00:05:28,240
+write Hello World in C++?
+ 
+
+301
+00:05:28,240 --> 00:05:30,469
+write Hello World in C++?
+Not quite. Because there's a lot more to
+
+302
+00:05:30,469 --> 00:05:30,479
+Not quite. Because there's a lot more to
+ 
+
+303
+00:05:30,479 --> 00:05:32,390
+Not quite. Because there's a lot more to
+this than believe me this is a good
+
+304
+00:05:32,390 --> 00:05:32,400
+this than believe me this is a good
+ 
+
+305
+00:05:32,400 --> 00:05:34,550
+this than believe me this is a good
+video. There's a lot more to this than
+
+306
+00:05:34,550 --> 00:05:34,560
+video. There's a lot more to this than
+ 
+
+307
+00:05:34,560 --> 00:05:37,189
+video. There's a lot more to this than
+just this to the point that I would say
+
+308
+00:05:37,189 --> 00:05:37,199
+just this to the point that I would say
+ 
+
+309
+00:05:37,199 --> 00:05:39,430
+just this to the point that I would say
+that logging is now much much much
+
+310
+00:05:39,430 --> 00:05:39,440
+that logging is now much much much
+ 
+
+311
+00:05:39,440 --> 00:05:42,550
+that logging is now much much much
+better in C++ than it ever was before.
+
+312
+00:05:42,550 --> 00:05:42,560
+better in C++ than it ever was before.
+ 
+
+313
+00:05:42,560 --> 00:05:44,230
+better in C++ than it ever was before.
+In fact, really this kind of started
+
+314
+00:05:44,230 --> 00:05:44,240
+In fact, really this kind of started
+ 
+
+315
+00:05:44,240 --> 00:05:47,909
+In fact, really this kind of started
+with C++ 20 because C++ 20 introduced
+
+316
+00:05:47,909 --> 00:05:47,919
+with C++ 20 because C++ 20 introduced
+ 
+
+317
+00:05:47,919 --> 00:05:50,870
+with C++ 20 because C++ 20 introduced
+this new thing called format std format
+
+318
+00:05:50,870 --> 00:05:50,880
+this new thing called format std format
+ 
+
+319
+00:05:50,880 --> 00:05:53,110
+this new thing called format std format
+or standard format. What that allows you
+
+320
+00:05:53,110 --> 00:05:53,120
+or standard format. What that allows you
+ 
+
+321
+00:05:53,120 --> 00:05:55,830
+or standard format. What that allows you
+to do is basically format a string in a
+
+322
+00:05:55,830 --> 00:05:55,840
+to do is basically format a string in a
+ 
+
+323
+00:05:55,840 --> 00:05:57,909
+to do is basically format a string in a
+much more userfriendly or developer
+
+324
+00:05:57,909 --> 00:05:57,919
+much more userfriendly or developer
+ 
+
+325
+00:05:57,919 --> 00:06:00,230
+much more userfriendly or developer
+friendly way. So for example, you can
+
+326
+00:06:00,230 --> 00:06:00,240
+friendly way. So for example, you can
+ 
+
+327
+00:06:00,240 --> 00:06:02,870
+friendly way. So for example, you can
+write something like speed is and then
+
+328
+00:06:02,870 --> 00:06:02,880
+write something like speed is and then
+ 
+
+329
+00:06:02,880 --> 00:06:05,189
+write something like speed is and then
+these curly brackets followed by a
+
+330
+00:06:05,189 --> 00:06:05,199
+these curly brackets followed by a
+ 
+
+331
+00:06:05,199 --> 00:06:08,309
+these curly brackets followed by a
+parameter like 5.5F. You can put any
+
+332
+00:06:08,309 --> 00:06:08,319
+parameter like 5.5F. You can put any
+ 
+
+333
+00:06:08,319 --> 00:06:10,710
+parameter like 5.5F. You can put any
+type you want into here and you don't
+
+334
+00:06:10,710 --> 00:06:10,720
+type you want into here and you don't
+ 
+
+335
+00:06:10,720 --> 00:06:13,110
+type you want into here and you don't
+need to specify it in the actual string.
+
+336
+00:06:13,110 --> 00:06:13,120
+need to specify it in the actual string.
+ 
+
+337
+00:06:13,120 --> 00:06:15,350
+need to specify it in the actual string.
+However, the type that you put in here
+
+338
+00:06:15,350 --> 00:06:15,360
+However, the type that you put in here
+ 
+
+339
+00:06:15,360 --> 00:06:16,870
+However, the type that you put in here
+does actually need some kind of
+
+340
+00:06:16,870 --> 00:06:16,880
+does actually need some kind of
+ 
+
+341
+00:06:16,880 --> 00:06:18,790
+does actually need some kind of
+definition that tells it how to convert
+
+342
+00:06:18,790 --> 00:06:18,800
+definition that tells it how to convert
+ 
+
+343
+00:06:18,800 --> 00:06:20,629
+definition that tells it how to convert
+itself to a string because otherwise
+
+344
+00:06:20,629 --> 00:06:20,639
+itself to a string because otherwise
+ 
+
+345
+00:06:20,639 --> 00:06:22,469
+itself to a string because otherwise
+this wouldn't exactly work. As you would
+
+346
+00:06:22,469 --> 00:06:22,479
+this wouldn't exactly work. As you would
+ 
+
+347
+00:06:22,479 --> 00:06:24,309
+this wouldn't exactly work. As you would
+expect, all of the primitive types and
+
+348
+00:06:24,309 --> 00:06:24,319
+expect, all of the primitive types and
+ 
+
+349
+00:06:24,319 --> 00:06:26,309
+expect, all of the primitive types and
+most of the kind of built-in types do
+
+350
+00:06:26,309 --> 00:06:26,319
+most of the kind of built-in types do
+ 
+
+351
+00:06:26,319 --> 00:06:28,150
+most of the kind of built-in types do
+already support this conversion. But if
+
+352
+00:06:28,150 --> 00:06:28,160
+already support this conversion. But if
+ 
+
+353
+00:06:28,160 --> 00:06:30,070
+already support this conversion. But if
+you're using like a class or a strruct
+
+354
+00:06:30,070 --> 00:06:30,080
+you're using like a class or a strruct
+ 
+
+355
+00:06:30,080 --> 00:06:31,830
+you're using like a class or a strruct
+that you've written a custom type, then
+
+356
+00:06:31,830 --> 00:06:31,840
+that you've written a custom type, then
+ 
+
+357
+00:06:31,840 --> 00:06:33,029
+that you've written a custom type, then
+of course you'll have to create an
+
+358
+00:06:33,029 --> 00:06:33,039
+of course you'll have to create an
+ 
+
+359
+00:06:33,039 --> 00:06:34,710
+of course you'll have to create an
+implementation for this string
+
+360
+00:06:34,710 --> 00:06:34,720
+implementation for this string
+ 
+
+361
+00:06:34,720 --> 00:06:36,870
+implementation for this string
+conversion. You can also write multiple
+
+362
+00:06:36,870 --> 00:06:36,880
+conversion. You can also write multiple
+ 
+
+363
+00:06:36,880 --> 00:06:39,430
+conversion. You can also write multiple
+things like for example specifying
+
+364
+00:06:39,430 --> 00:06:39,440
+things like for example specifying
+ 
+
+365
+00:06:39,440 --> 00:06:41,189
+things like for example specifying
+another parameter and you can use
+
+366
+00:06:41,189 --> 00:06:41,199
+another parameter and you can use
+ 
+
+367
+00:06:41,199 --> 00:06:44,230
+another parameter and you can use
+whatever types you want over here and
+
+368
+00:06:44,230 --> 00:06:44,240
+whatever types you want over here and
+ 
+
+369
+00:06:44,240 --> 00:06:46,629
+whatever types you want over here and
+the result of this format is an std
+
+370
+00:06:46,629 --> 00:06:46,639
+the result of this format is an std
+ 
+
+371
+00:06:46,639 --> 00:06:49,110
+the result of this format is an std
+string. So this is basically the string
+
+372
+00:06:49,110 --> 00:06:49,120
+string. So this is basically the string
+ 
+
+373
+00:06:49,120 --> 00:06:50,870
+string. So this is basically the string
+that we have created. I'll go ahead and
+
+374
+00:06:50,870 --> 00:06:50,880
+that we have created. I'll go ahead and
+ 
+
+375
+00:06:50,880 --> 00:06:52,469
+that we have created. I'll go ahead and
+print it the old school way that our
+
+376
+00:06:52,469 --> 00:06:52,479
+print it the old school way that our
+ 
+
+377
+00:06:52,479 --> 00:06:54,550
+print it the old school way that our
+elders will remember to show that this
+
+378
+00:06:54,550 --> 00:06:54,560
+elders will remember to show that this
+ 
+
+379
+00:06:54,560 --> 00:06:56,469
+elders will remember to show that this
+is the only kind of modern functionality
+
+380
+00:06:56,469 --> 00:06:56,479
+is the only kind of modern functionality
+ 
+
+381
+00:06:56,479 --> 00:06:58,230
+is the only kind of modern functionality
+we're using. And you can see our string
+
+382
+00:06:58,230 --> 00:06:58,240
+we're using. And you can see our string
+ 
+
+383
+00:06:58,240 --> 00:06:59,990
+we're using. And you can see our string
+prints here correctly as you would
+
+384
+00:06:59,990 --> 00:07:00,000
+prints here correctly as you would
+ 
+
+385
+00:07:00,000 --> 00:07:02,390
+prints here correctly as you would
+expect. Now, this itself is a fairly new
+
+386
+00:07:02,390 --> 00:07:02,400
+expect. Now, this itself is a fairly new
+ 
+
+387
+00:07:02,400 --> 00:07:04,790
+expect. Now, this itself is a fairly new
+contribution to C++ being introduced in
+
+388
+00:07:04,790 --> 00:07:04,800
+contribution to C++ being introduced in
+ 
+
+389
+00:07:04,800 --> 00:07:07,830
+contribution to C++ being introduced in
+C++ 20. And it really is like the
+
+390
+00:07:07,830 --> 00:07:07,840
+C++ 20. And it really is like the
+ 
+
+391
+00:07:07,840 --> 00:07:10,070
+C++ 20. And it really is like the
+backbone for this whole new print
+
+392
+00:07:10,070 --> 00:07:10,080
+backbone for this whole new print
+ 
+
+393
+00:07:10,080 --> 00:07:12,469
+backbone for this whole new print
+functionality. And this actually comes
+
+394
+00:07:12,469 --> 00:07:12,479
+functionality. And this actually comes
+ 
+
+395
+00:07:12,479 --> 00:07:16,550
+functionality. And this actually comes
+from something called FMT. FMT is like a
+
+396
+00:07:16,550 --> 00:07:16,560
+from something called FMT. FMT is like a
+ 
+
+397
+00:07:16,560 --> 00:07:19,510
+from something called FMT. FMT is like a
+formatting library that has been around
+
+398
+00:07:19,510 --> 00:07:19,520
+formatting library that has been around
+ 
+
+399
+00:07:19,520 --> 00:07:23,029
+formatting library that has been around
+for a very long time and you can see FMT
+
+400
+00:07:23,029 --> 00:07:23,039
+for a very long time and you can see FMT
+ 
+
+401
+00:07:23,039 --> 00:07:25,670
+for a very long time and you can see FMT
+print and FMT format. This has been
+
+402
+00:07:25,670 --> 00:07:25,680
+print and FMT format. This has been
+ 
+
+403
+00:07:25,680 --> 00:07:27,830
+print and FMT format. This has been
+around for a very long time and the
+
+404
+00:07:27,830 --> 00:07:27,840
+around for a very long time and the
+ 
+
+405
+00:07:27,840 --> 00:07:29,909
+around for a very long time and the
+author of this library is the one who
+
+406
+00:07:29,909 --> 00:07:29,919
+author of this library is the one who
+ 
+
+407
+00:07:29,919 --> 00:07:32,070
+author of this library is the one who
+actually submitted the proposal to the
+
+408
+00:07:32,070 --> 00:07:32,080
+actually submitted the proposal to the
+ 
+
+409
+00:07:32,080 --> 00:07:34,309
+actually submitted the proposal to the
+C++ committee to get this into the call
+
+410
+00:07:34,309 --> 00:07:34,319
+C++ committee to get this into the call
+ 
+
+411
+00:07:34,319 --> 00:07:37,350
+C++ committee to get this into the call
+language. So, we have this guy to thank.
+
+412
+00:07:37,350 --> 00:07:37,360
+language. So, we have this guy to thank.
+ 
+
+413
+00:07:37,360 --> 00:07:38,950
+language. So, we have this guy to thank.
+I actually don't know what his name is.
+
+414
+00:07:38,950 --> 00:07:38,960
+I actually don't know what his name is.
+ 
+
+415
+00:07:38,960 --> 00:07:41,029
+I actually don't know what his name is.
+Anyway, thank you guy. And like this
+
+416
+00:07:41,029 --> 00:07:41,039
+Anyway, thank you guy. And like this
+ 
+
+417
+00:07:41,039 --> 00:07:43,350
+Anyway, thank you guy. And like this
+library is good. It's really good. I've
+
+418
+00:07:43,350 --> 00:07:43,360
+library is good. It's really good. I've
+ 
+
+419
+00:07:43,360 --> 00:07:45,830
+library is good. It's really good. I've
+been using it for years. Everyone's been
+
+420
+00:07:45,830 --> 00:07:45,840
+been using it for years. Everyone's been
+ 
+
+421
+00:07:45,840 --> 00:07:47,510
+been using it for years. Everyone's been
+basically using this. That's why this
+
+422
+00:07:47,510 --> 00:07:47,520
+basically using this. That's why this
+ 
+
+423
+00:07:47,520 --> 00:07:49,510
+basically using this. That's why this
+actually made it into the standard and
+
+424
+00:07:49,510 --> 00:07:49,520
+actually made it into the standard and
+ 
+
+425
+00:07:49,520 --> 00:07:51,830
+actually made it into the standard and
+into the standard library. FMT is
+
+426
+00:07:51,830 --> 00:07:51,840
+into the standard library. FMT is
+ 
+
+427
+00:07:51,840 --> 00:07:54,469
+into the standard library. FMT is
+actually what speed log uses for its
+
+428
+00:07:54,469 --> 00:07:54,479
+actually what speed log uses for its
+ 
+
+429
+00:07:54,479 --> 00:07:57,350
+actually what speed log uses for its
+formatting. So speed log is a very very
+
+430
+00:07:57,350 --> 00:07:57,360
+formatting. So speed log is a very very
+ 
+
+431
+00:07:57,360 --> 00:07:59,990
+formatting. So speed log is a very very
+good and popular fast C++ logging
+
+432
+00:07:59,990 --> 00:08:00,000
+good and popular fast C++ logging
+ 
+
+433
+00:08:00,000 --> 00:08:01,670
+good and popular fast C++ logging
+library that I have been using since
+
+434
+00:08:01,670 --> 00:08:01,680
+library that I have been using since
+ 
+
+435
+00:08:01,680 --> 00:08:03,110
+library that I have been using since
+like the very beginning of the game
+
+436
+00:08:03,110 --> 00:08:03,120
+like the very beginning of the game
+ 
+
+437
+00:08:03,120 --> 00:08:05,909
+like the very beginning of the game
+engine series back in like 2018. And you
+
+438
+00:08:05,909 --> 00:08:05,919
+engine series back in like 2018. And you
+ 
+
+439
+00:08:05,919 --> 00:08:07,189
+engine series back in like 2018. And you
+can see that it has featurerich
+
+440
+00:08:07,189 --> 00:08:07,199
+can see that it has featurerich
+ 
+
+441
+00:08:07,199 --> 00:08:08,950
+can see that it has featurerich
+formatting using the excellent FMT
+
+442
+00:08:08,950 --> 00:08:08,960
+formatting using the excellent FMT
+ 
+
+443
+00:08:08,960 --> 00:08:11,990
+formatting using the excellent FMT
+library. So, I've been using speed log
+
+444
+00:08:11,990 --> 00:08:12,000
+library. So, I've been using speed log
+ 
+
+445
+00:08:12,000 --> 00:08:15,270
+library. So, I've been using speed log
+and then also FMT in Hazel since the
+
+446
+00:08:15,270 --> 00:08:15,280
+and then also FMT in Hazel since the
+ 
+
+447
+00:08:15,280 --> 00:08:16,950
+and then also FMT in Hazel since the
+beginning for all of our logging and
+
+448
+00:08:16,950 --> 00:08:16,960
+beginning for all of our logging and
+ 
+
+449
+00:08:16,960 --> 00:08:18,790
+beginning for all of our logging and
+string formatting needs. In fact, in
+
+450
+00:08:18,790 --> 00:08:18,800
+string formatting needs. In fact, in
+ 
+
+451
+00:08:18,800 --> 00:08:22,309
+string formatting needs. In fact, in
+Hazel, if we go to log.h, which is the
+
+452
+00:08:22,309 --> 00:08:22,319
+Hazel, if we go to log.h, which is the
+ 
+
+453
+00:08:22,319 --> 00:08:24,550
+Hazel, if we go to log.h, which is the
+header for all the logging stuff, you
+
+454
+00:08:24,550 --> 00:08:24,560
+header for all the logging stuff, you
+ 
+
+455
+00:08:24,560 --> 00:08:26,710
+header for all the logging stuff, you
+can see that our macros here, they now
+
+456
+00:08:26,710 --> 00:08:26,720
+can see that our macros here, they now
+ 
+
+457
+00:08:26,720 --> 00:08:29,270
+can see that our macros here, they now
+use scd format to actually format the
+
+458
+00:08:29,270 --> 00:08:29,280
+use scd format to actually format the
+ 
+
+459
+00:08:29,280 --> 00:08:31,670
+use scd format to actually format the
+string. Because Hazel uses C++ 20, this
+
+460
+00:08:31,670 --> 00:08:31,680
+string. Because Hazel uses C++ 20, this
+ 
+
+461
+00:08:31,680 --> 00:08:33,990
+string. Because Hazel uses C++ 20, this
+used to be FMT format. And then finally
+
+462
+00:08:33,990 --> 00:08:34,000
+used to be FMT format. And then finally
+ 
+
+463
+00:08:34,000 --> 00:08:35,829
+used to be FMT format. And then finally
+this logger stuff that's going on over
+
+464
+00:08:35,829 --> 00:08:35,839
+this logger stuff that's going on over
+ 
+
+465
+00:08:35,839 --> 00:08:38,230
+this logger stuff that's going on over
+here to actually log everything uses
+
+466
+00:08:38,230 --> 00:08:38,240
+here to actually log everything uses
+ 
+
+467
+00:08:38,240 --> 00:08:40,230
+here to actually log everything uses
+speed log as you can see over here. So
+
+468
+00:08:40,230 --> 00:08:40,240
+speed log as you can see over here. So
+ 
+
+469
+00:08:40,240 --> 00:08:42,469
+speed log as you can see over here. So
+slowly we are kind of moving from third
+
+470
+00:08:42,469 --> 00:08:42,479
+slowly we are kind of moving from third
+ 
+
+471
+00:08:42,479 --> 00:08:44,870
+slowly we are kind of moving from third
+party libraries to just having this
+
+472
+00:08:44,870 --> 00:08:44,880
+party libraries to just having this
+ 
+
+473
+00:08:44,880 --> 00:08:47,190
+party libraries to just having this
+stuff in the actual C++ standard library
+
+474
+00:08:47,190 --> 00:08:47,200
+stuff in the actual C++ standard library
+ 
+
+475
+00:08:47,200 --> 00:08:50,150
+stuff in the actual C++ standard library
+which I think is great. So since std
+
+476
+00:08:50,150 --> 00:08:50,160
+which I think is great. So since std
+ 
+
+477
+00:08:50,160 --> 00:08:53,910
+which I think is great. So since std
+format was introduced in C++ 20 std
+
+478
+00:08:53,910 --> 00:08:53,920
+format was introduced in C++ 20 std
+ 
+
+479
+00:08:53,920 --> 00:08:56,230
+format was introduced in C++ 20 std
+print standard print I don't know I
+
+480
+00:08:56,230 --> 00:08:56,240
+print standard print I don't know I
+ 
+
+481
+00:08:56,240 --> 00:08:57,590
+print standard print I don't know I
+don't really like saying standard
+
+482
+00:08:57,590 --> 00:08:57,600
+don't really like saying standard
+ 
+
+483
+00:08:57,600 --> 00:08:59,190
+don't really like saying standard
+instead of std I just always end up
+
+484
+00:08:59,190 --> 00:08:59,200
+instead of std I just always end up
+ 
+
+485
+00:08:59,200 --> 00:09:00,710
+instead of std I just always end up
+saying std because that's what's
+
+486
+00:09:00,710 --> 00:09:00,720
+saying std because that's what's
+ 
+
+487
+00:09:00,720 --> 00:09:02,389
+saying std because that's what's
+written. I know it kind of stands for
+
+488
+00:09:02,389 --> 00:09:02,399
+written. I know it kind of stands for
+ 
+
+489
+00:09:02,399 --> 00:09:03,829
+written. I know it kind of stands for
+standard, but maybe I should do a poll
+
+490
+00:09:03,829 --> 00:09:03,839
+standard, but maybe I should do a poll
+ 
+
+491
+00:09:03,839 --> 00:09:05,509
+standard, but maybe I should do a poll
+or something. Anyway, I don't care. I'm
+
+492
+00:09:05,509 --> 00:09:05,519
+or something. Anyway, I don't care. I'm
+ 
+
+493
+00:09:05,519 --> 00:09:09,910
+or something. Anyway, I don't care. I'm
+going to keep saying sd print in C++ 23.
+
+494
+00:09:09,910 --> 00:09:09,920
+going to keep saying sd print in C++ 23.
+ 
+
+495
+00:09:09,920 --> 00:09:11,430
+going to keep saying sd print in C++ 23.
+There's actually two versions of this.
+
+496
+00:09:11,430 --> 00:09:11,440
+There's actually two versions of this.
+ 
+
+497
+00:09:11,440 --> 00:09:12,949
+There's actually two versions of this.
+There's print and there's print line.
+
+498
+00:09:12,949 --> 00:09:12,959
+There's print and there's print line.
+ 
+
+499
+00:09:12,959 --> 00:09:15,030
+There's print and there's print line.
+Print line is simply print with like a
+
+500
+00:09:15,030 --> 00:09:15,040
+Print line is simply print with like a
+ 
+
+501
+00:09:15,040 --> 00:09:16,870
+Print line is simply print with like a
+new line character at the end as you
+
+502
+00:09:16,870 --> 00:09:16,880
+new line character at the end as you
+ 
+
+503
+00:09:16,880 --> 00:09:18,949
+new line character at the end as you
+would expect. It basically does this.
+
+504
+00:09:18,949 --> 00:09:18,959
+would expect. It basically does this.
+ 
+
+505
+00:09:18,959 --> 00:09:20,550
+would expect. It basically does this.
+So, if we have a look at the definition
+
+506
+00:09:20,550 --> 00:09:20,560
+So, if we have a look at the definition
+ 
+
+507
+00:09:20,560 --> 00:09:22,389
+So, if we have a look at the definition
+here, you can see that it can take in
+
+508
+00:09:22,389 --> 00:09:22,399
+here, you can see that it can take in
+ 
+
+509
+00:09:22,399 --> 00:09:24,230
+here, you can see that it can take in
+this format string. And then if we take
+
+510
+00:09:24,230 --> 00:09:24,240
+this format string. And then if we take
+ 
+
+511
+00:09:24,240 --> 00:09:26,230
+this format string. And then if we take
+a look at the print implementation then
+
+512
+00:09:26,230 --> 00:09:26,240
+a look at the print implementation then
+ 
+
+513
+00:09:26,240 --> 00:09:29,030
+a look at the print implementation then
+over here it's going to be using stdv
+
+514
+00:09:29,030 --> 00:09:29,040
+over here it's going to be using stdv
+ 
+
+515
+00:09:29,040 --> 00:09:31,509
+over here it's going to be using stdv
+format which is just a variant of std
+
+516
+00:09:31,509 --> 00:09:31,519
+format which is just a variant of std
+ 
+
+517
+00:09:31,519 --> 00:09:33,110
+format which is just a variant of std
+format which is kind of based off of
+
+518
+00:09:33,110 --> 00:09:33,120
+format which is kind of based off of
+ 
+
+519
+00:09:33,120 --> 00:09:35,350
+format which is kind of based off of
+that fmt format library that we were
+
+520
+00:09:35,350 --> 00:09:35,360
+that fmt format library that we were
+ 
+
+521
+00:09:35,360 --> 00:09:36,949
+that fmt format library that we were
+just talking about. So what that means
+
+522
+00:09:36,949 --> 00:09:36,959
+just talking about. So what that means
+ 
+
+523
+00:09:36,959 --> 00:09:38,949
+just talking about. So what that means
+is back in our code we can just take
+
+524
+00:09:38,949 --> 00:09:38,959
+is back in our code we can just take
+ 
+
+525
+00:09:38,959 --> 00:09:41,910
+is back in our code we can just take
+this and simply print this. We don't
+
+526
+00:09:41,910 --> 00:09:41,920
+this and simply print this. We don't
+ 
+
+527
+00:09:41,920 --> 00:09:44,070
+this and simply print this. We don't
+need to first format our string and then
+
+528
+00:09:44,070 --> 00:09:44,080
+need to first format our string and then
+ 
+
+529
+00:09:44,080 --> 00:09:45,750
+need to first format our string and then
+convert it to like an std string and
+
+530
+00:09:45,750 --> 00:09:45,760
+convert it to like an std string and
+ 
+
+531
+00:09:45,760 --> 00:09:48,070
+convert it to like an std string and
+then send that into C out as would have
+
+532
+00:09:48,070 --> 00:09:48,080
+then send that into C out as would have
+ 
+
+533
+00:09:48,080 --> 00:09:51,430
+then send that into C out as would have
+been the case in C++ 20. We can just do
+
+534
+00:09:51,430 --> 00:09:51,440
+been the case in C++ 20. We can just do
+ 
+
+535
+00:09:51,440 --> 00:09:54,150
+been the case in C++ 20. We can just do
+std print line. Here is our string, our
+
+536
+00:09:54,150 --> 00:09:54,160
+std print line. Here is our string, our
+ 
+
+537
+00:09:54,160 --> 00:09:55,910
+std print line. Here is our string, our
+format string which defines all of our
+
+538
+00:09:55,910 --> 00:09:55,920
+format string which defines all of our
+ 
+
+539
+00:09:55,920 --> 00:09:58,470
+format string which defines all of our
+parameters and the actual I guess layout
+
+540
+00:09:58,470 --> 00:09:58,480
+parameters and the actual I guess layout
+ 
+
+541
+00:09:58,480 --> 00:10:00,710
+parameters and the actual I guess layout
+of what gets printed as well as all of
+
+542
+00:10:00,710 --> 00:10:00,720
+of what gets printed as well as all of
+ 
+
+543
+00:10:00,720 --> 00:10:03,509
+of what gets printed as well as all of
+the variables as arguments. We can run
+
+544
+00:10:03,509 --> 00:10:03,519
+the variables as arguments. We can run
+ 
+
+545
+00:10:03,519 --> 00:10:05,990
+the variables as arguments. We can run
+this and there you go. There's the
+
+546
+00:10:05,990 --> 00:10:06,000
+this and there you go. There's the
+ 
+
+547
+00:10:06,000 --> 00:10:07,750
+this and there you go. There's the
+result. If we have a look at
+
+548
+00:10:07,750 --> 00:10:07,760
+result. If we have a look at
+ 
+
+549
+00:10:07,760 --> 00:10:09,350
+result. If we have a look at
+cppreerence.com
+
+550
+00:10:09,350 --> 00:10:09,360
+cppreerence.com
+ 
+
+551
+00:10:09,360 --> 00:10:10,870
+cppreerence.com
+that of course has some more
+
+552
+00:10:10,870 --> 00:10:10,880
+that of course has some more
+ 
+
+553
+00:10:10,880 --> 00:10:12,630
+that of course has some more
+information. You can see that all of
+
+554
+00:10:12,630 --> 00:10:12,640
+information. You can see that all of
+ 
+
+555
+00:10:12,640 --> 00:10:15,269
+information. You can see that all of
+this stuff was introduced in C++ 23.
+
+556
+00:10:15,269 --> 00:10:15,279
+this stuff was introduced in C++ 23.
+ 
+
+557
+00:10:15,279 --> 00:10:18,230
+this stuff was introduced in C++ 23.
+However, for some reason print line with
+
+558
+00:10:18,230 --> 00:10:18,240
+However, for some reason print line with
+ 
+
+559
+00:10:18,240 --> 00:10:20,790
+However, for some reason print line with
+no arguments was only introduced in C++
+
+560
+00:10:20,790 --> 00:10:20,800
+no arguments was only introduced in C++
+ 
+
+561
+00:10:20,800 --> 00:10:22,310
+no arguments was only introduced in C++
+26. So we're going to have to wait.
+
+562
+00:10:22,310 --> 00:10:22,320
+26. So we're going to have to wait.
+ 
+
+563
+00:10:22,320 --> 00:10:23,670
+26. So we're going to have to wait.
+basically longer for that which is a
+
+564
+00:10:23,670 --> 00:10:23,680
+basically longer for that which is a
+ 
+
+565
+00:10:23,680 --> 00:10:24,710
+basically longer for that which is a
+little bit annoying. And if you're
+
+566
+00:10:24,710 --> 00:10:24,720
+little bit annoying. And if you're
+ 
+
+567
+00:10:24,720 --> 00:10:26,310
+little bit annoying. And if you're
+wondering what on earth print line with
+
+568
+00:10:26,310 --> 00:10:26,320
+wondering what on earth print line with
+ 
+
+569
+00:10:26,320 --> 00:10:27,990
+wondering what on earth print line with
+no arguments would do, it would just
+
+570
+00:10:27,990 --> 00:10:28,000
+no arguments would do, it would just
+ 
+
+571
+00:10:28,000 --> 00:10:29,509
+no arguments would do, it would just
+print a blank line. So if you want to
+
+572
+00:10:29,509 --> 00:10:29,519
+print a blank line. So if you want to
+ 
+
+573
+00:10:29,519 --> 00:10:32,230
+print a blank line. So if you want to
+print a blank line, you still have to I
+
+574
+00:10:32,230 --> 00:10:32,240
+print a blank line, you still have to I
+ 
+
+575
+00:10:32,240 --> 00:10:34,949
+print a blank line, you still have to I
+guess do std print with a new line
+
+576
+00:10:34,949 --> 00:10:34,959
+guess do std print with a new line
+ 
+
+577
+00:10:34,959 --> 00:10:36,710
+guess do std print with a new line
+character in there. Or you could do see
+
+578
+00:10:36,710 --> 00:10:36,720
+character in there. Or you could do see
+ 
+
+579
+00:10:36,720 --> 00:10:39,750
+character in there. Or you could do see
+out shift left sd end line or something,
+
+580
+00:10:39,750 --> 00:10:39,760
+out shift left sd end line or something,
+ 
+
+581
+00:10:39,760 --> 00:10:42,389
+out shift left sd end line or something,
+but that will have other functionality
+
+582
+00:10:42,389 --> 00:10:42,399
+but that will have other functionality
+ 
+
+583
+00:10:42,399 --> 00:10:44,230
+but that will have other functionality
+as well technically. Here it is valid
+
+584
+00:10:44,230 --> 00:10:44,240
+as well technically. Here it is valid
+ 
+
+585
+00:10:44,240 --> 00:10:48,710
+as well technically. Here it is valid
+since C++ 26. Same effect as sdrint new
+
+586
+00:10:48,710 --> 00:10:48,720
+since C++ 26. Same effect as sdrint new
+ 
+
+587
+00:10:48,720 --> 00:10:51,269
+since C++ 26. Same effect as sdrint new
+line. But what about custom types? What
+
+588
+00:10:51,269 --> 00:10:51,279
+line. But what about custom types? What
+ 
+
+589
+00:10:51,279 --> 00:10:53,269
+line. But what about custom types? What
+if I want to make this work with like a
+
+590
+00:10:53,269 --> 00:10:53,279
+if I want to make this work with like a
+ 
+
+591
+00:10:53,279 --> 00:10:56,310
+if I want to make this work with like a
+GLM vec 2 or I have my own strct over
+
+592
+00:10:56,310 --> 00:10:56,320
+GLM vec 2 or I have my own strct over
+ 
+
+593
+00:10:56,320 --> 00:10:58,550
+GLM vec 2 or I have my own strct over
+here called point with X and Y. How do I
+
+594
+00:10:58,550 --> 00:10:58,560
+here called point with X and Y. How do I
+ 
+
+595
+00:10:58,560 --> 00:11:00,550
+here called point with X and Y. How do I
+get that to easily print so that I don't
+
+596
+00:11:00,550 --> 00:11:00,560
+get that to easily print so that I don't
+ 
+
+597
+00:11:00,560 --> 00:11:02,790
+get that to easily print so that I don't
+have to manually type out all of the
+
+598
+00:11:02,790 --> 00:11:02,800
+have to manually type out all of the
+ 
+
+599
+00:11:02,800 --> 00:11:04,790
+have to manually type out all of the
+variables inside it? Well, you can use
+
+600
+00:11:04,790 --> 00:11:04,800
+variables inside it? Well, you can use
+ 
+
+601
+00:11:04,800 --> 00:11:07,269
+variables inside it? Well, you can use
+this template specialization over here.
+
+602
+00:11:07,269 --> 00:11:07,279
+this template specialization over here.
+ 
+
+603
+00:11:07,279 --> 00:11:09,750
+this template specialization over here.
+So, what we're doing is we're creating a
+
+604
+00:11:09,750 --> 00:11:09,760
+So, what we're doing is we're creating a
+ 
+
+605
+00:11:09,760 --> 00:11:12,710
+So, what we're doing is we're creating a
+subclass of this class which has our
+
+606
+00:11:12,710 --> 00:11:12,720
+subclass of this class which has our
+ 
+
+607
+00:11:12,720 --> 00:11:15,030
+subclass of this class which has our
+type over here and then we are adding
+
+608
+00:11:15,030 --> 00:11:15,040
+type over here and then we are adding
+ 
+
+609
+00:11:15,040 --> 00:11:17,269
+type over here and then we are adding
+this function auto format. We're taking
+
+610
+00:11:17,269 --> 00:11:17,279
+this function auto format. We're taking
+ 
+
+611
+00:11:17,279 --> 00:11:19,269
+this function auto format. We're taking
+in the actual variable. We're taking in
+
+612
+00:11:19,269 --> 00:11:19,279
+in the actual variable. We're taking in
+ 
+
+613
+00:11:19,279 --> 00:11:21,110
+in the actual variable. We're taking in
+this format context and then you have to
+
+614
+00:11:21,110 --> 00:11:21,120
+this format context and then you have to
+ 
+
+615
+00:11:21,120 --> 00:11:22,870
+this format context and then you have to
+make sure it's also const and it will
+
+616
+00:11:22,870 --> 00:11:22,880
+make sure it's also const and it will
+ 
+
+617
+00:11:22,880 --> 00:11:25,509
+make sure it's also const and it will
+return this std formatter string format
+
+618
+00:11:25,509 --> 00:11:25,519
+return this std formatter string format
+ 
+
+619
+00:11:25,519 --> 00:11:27,910
+return this std formatter string format
+with an sd format inside here and this
+
+620
+00:11:27,910 --> 00:11:27,920
+with an sd format inside here and this
+ 
+
+621
+00:11:27,920 --> 00:11:29,829
+with an sd format inside here and this
+format context is taken in as an
+
+622
+00:11:29,829 --> 00:11:29,839
+format context is taken in as an
+ 
+
+623
+00:11:29,839 --> 00:11:30,949
+format context is taken in as an
+argument. This is a little bit
+
+624
+00:11:30,949 --> 00:11:30,959
+argument. This is a little bit
+ 
+
+625
+00:11:30,959 --> 00:11:32,870
+argument. This is a little bit
+confusing. It just has to be defined in
+
+626
+00:11:32,870 --> 00:11:32,880
+confusing. It just has to be defined in
+ 
+
+627
+00:11:32,880 --> 00:11:34,389
+confusing. It just has to be defined in
+this particular way. If you get the
+
+628
+00:11:34,389 --> 00:11:34,399
+this particular way. If you get the
+ 
+
+629
+00:11:34,399 --> 00:11:36,150
+this particular way. If you get the
+definition wrong, so like for example,
+
+630
+00:11:36,150 --> 00:11:36,160
+definition wrong, so like for example,
+ 
+
+631
+00:11:36,160 --> 00:11:38,069
+definition wrong, so like for example,
+if I forget const and you try and
+
+632
+00:11:38,069 --> 00:11:38,079
+if I forget const and you try and
+ 
+
+633
+00:11:38,079 --> 00:11:39,829
+if I forget const and you try and
+compile, there are several static
+
+634
+00:11:39,829 --> 00:11:39,839
+compile, there are several static
+ 
+
+635
+00:11:39,839 --> 00:11:41,990
+compile, there are several static
+asserts inside this make format args
+
+636
+00:11:41,990 --> 00:11:42,000
+asserts inside this make format args
+ 
+
+637
+00:11:42,000 --> 00:11:43,030
+asserts inside this make format args
+that will actually tell you what you're
+
+638
+00:11:43,030 --> 00:11:43,040
+that will actually tell you what you're
+ 
+
+639
+00:11:43,040 --> 00:11:45,350
+that will actually tell you what you're
+doing wrong reasonably well as long as
+
+640
+00:11:45,350 --> 00:11:45,360
+doing wrong reasonably well as long as
+ 
+
+641
+00:11:45,360 --> 00:11:46,790
+doing wrong reasonably well as long as
+you can like look up the standard. So
+
+642
+00:11:46,790 --> 00:11:46,800
+you can like look up the standard. So
+ 
+
+643
+00:11:46,800 --> 00:11:48,470
+you can like look up the standard. So
+for example, if you forget the const
+
+644
+00:11:48,470 --> 00:11:48,480
+for example, if you forget the const
+ 
+
+645
+00:11:48,480 --> 00:11:49,829
+for example, if you forget the const
+thing, it will tell you to make the
+
+646
+00:11:49,829 --> 00:11:49,839
+thing, it will tell you to make the
+ 
+
+647
+00:11:49,839 --> 00:11:51,509
+thing, it will tell you to make the
+format usable, add const to format.
+
+648
+00:11:51,509 --> 00:11:51,519
+format usable, add const to format.
+ 
+
+649
+00:11:51,519 --> 00:11:52,790
+format usable, add const to format.
+Otherwise, if you don't just don't have
+
+650
+00:11:52,790 --> 00:11:52,800
+Otherwise, if you don't just don't have
+ 
+
+651
+00:11:52,800 --> 00:11:54,949
+Otherwise, if you don't just don't have
+a definition for that at all, it will
+
+652
+00:11:54,949 --> 00:11:54,959
+a definition for that at all, it will
+ 
+
+653
+00:11:54,959 --> 00:11:56,630
+a definition for that at all, it will
+say that it cannot format an argument.
+
+654
+00:11:56,630 --> 00:11:56,640
+say that it cannot format an argument.
+ 
+
+655
+00:11:56,640 --> 00:11:58,790
+say that it cannot format an argument.
+And to make t your custom type
+
+656
+00:11:58,790 --> 00:11:58,800
+And to make t your custom type
+ 
+
+657
+00:11:58,800 --> 00:12:00,630
+And to make t your custom type
+formattable, provide a format T
+
+658
+00:12:00,630 --> 00:12:00,640
+formattable, provide a format T
+ 
+
+659
+00:12:00,640 --> 00:12:01,750
+formattable, provide a format T
+specialization. And there's some
+
+660
+00:12:01,750 --> 00:12:01,760
+specialization. And there's some
+ 
+
+661
+00:12:01,760 --> 00:12:03,829
+specialization. And there's some
+instructions over here inside the
+
+662
+00:12:03,829 --> 00:12:03,839
+instructions over here inside the
+ 
+
+663
+00:12:03,839 --> 00:12:06,150
+instructions over here inside the
+standard. But if you don't forget const,
+
+664
+00:12:06,150 --> 00:12:06,160
+standard. But if you don't forget const,
+ 
+
+665
+00:12:06,160 --> 00:12:08,389
+standard. But if you don't forget const,
+then over here in using this actual st
+
+666
+00:12:08,389 --> 00:12:08,399
+then over here in using this actual st
+ 
+
+667
+00:12:08,399 --> 00:12:10,230
+then over here in using this actual st
+format, you can see I'm specifying how I
+
+668
+00:12:10,230 --> 00:12:10,240
+format, you can see I'm specifying how I
+ 
+
+669
+00:12:10,240 --> 00:12:12,389
+format, you can see I'm specifying how I
+want my point to be printed and then I'm
+
+670
+00:12:12,389 --> 00:12:12,399
+want my point to be printed and then I'm
+ 
+
+671
+00:12:12,399 --> 00:12:13,670
+want my point to be printed and then I'm
+adding it over here. I've just got a
+
+672
+00:12:13,670 --> 00:12:13,680
+adding it over here. I've just got a
+ 
+
+673
+00:12:13,680 --> 00:12:15,910
+adding it over here. I've just got a
+basic point here, 28, and I'm printing
+
+674
+00:12:15,910 --> 00:12:15,920
+basic point here, 28, and I'm printing
+ 
+
+675
+00:12:15,920 --> 00:12:18,629
+basic point here, 28, and I'm printing
+it here. Point is, and then that. And if
+
+676
+00:12:18,629 --> 00:12:18,639
+it here. Point is, and then that. And if
+ 
+
+677
+00:12:18,639 --> 00:12:20,790
+it here. Point is, and then that. And if
+I run that, you can see that my point is
+
+678
+00:12:20,790 --> 00:12:20,800
+I run that, you can see that my point is
+ 
+
+679
+00:12:20,800 --> 00:12:24,310
+I run that, you can see that my point is
+28. So, yeah, long story short, C++ now
+
+680
+00:12:24,310 --> 00:12:24,320
+28. So, yeah, long story short, C++ now
+ 
+
+681
+00:12:24,320 --> 00:12:25,750
+28. So, yeah, long story short, C++ now
+kind of has like a logging
+
+682
+00:12:25,750 --> 00:12:25,760
+kind of has like a logging
+ 
+
+683
+00:12:25,760 --> 00:12:27,670
+kind of has like a logging
+library/formatting library. Again,
+
+684
+00:12:27,670 --> 00:12:27,680
+library/formatting library. Again,
+ 
+
+685
+00:12:27,680 --> 00:12:29,750
+library/formatting library. Again,
+really the bulk of this functionality is
+
+686
+00:12:29,750 --> 00:12:29,760
+really the bulk of this functionality is
+ 
+
+687
+00:12:29,760 --> 00:12:32,150
+really the bulk of this functionality is
+due to SCD format, which has been around
+
+688
+00:12:32,150 --> 00:12:32,160
+due to SCD format, which has been around
+ 
+
+689
+00:12:32,160 --> 00:12:35,750
+due to SCD format, which has been around
+since C++ 20. So most projects that
+
+690
+00:12:35,750 --> 00:12:35,760
+since C++ 20. So most projects that
+ 
+
+691
+00:12:35,760 --> 00:12:40,069
+since C++ 20. So most projects that
+aren't huge scale corporate C++ projects
+
+692
+00:12:40,069 --> 00:12:40,079
+aren't huge scale corporate C++ projects
+ 
+
+693
+00:12:40,079 --> 00:12:42,710
+aren't huge scale corporate C++ projects
+that are probably still on like C++ 03,
+
+694
+00:12:42,710 --> 00:12:42,720
+that are probably still on like C++ 03,
+ 
+
+695
+00:12:42,720 --> 00:12:44,389
+that are probably still on like C++ 03,
+all of your projects should almost
+
+696
+00:12:44,389 --> 00:12:44,399
+all of your projects should almost
+ 
+
+697
+00:12:44,399 --> 00:12:47,269
+all of your projects should almost
+definitely be on C++ 20 by now. So you
+
+698
+00:12:47,269 --> 00:12:47,279
+definitely be on C++ 20 by now. So you
+ 
+
+699
+00:12:47,279 --> 00:12:49,509
+definitely be on C++ 20 by now. So you
+should still have std format even if you
+
+700
+00:12:49,509 --> 00:12:49,519
+should still have std format even if you
+ 
+
+701
+00:12:49,519 --> 00:12:51,590
+should still have std format even if you
+don't have sd print line. But sd print
+
+702
+00:12:51,590 --> 00:12:51,600
+don't have sd print line. But sd print
+ 
+
+703
+00:12:51,600 --> 00:12:53,990
+don't have sd print line. But sd print
+and sd print line just make this kind of
+
+704
+00:12:53,990 --> 00:12:54,000
+and sd print line just make this kind of
+ 
+
+705
+00:12:54,000 --> 00:12:55,430
+and sd print line just make this kind of
+formatting a little bit easier because
+
+706
+00:12:55,430 --> 00:12:55,440
+formatting a little bit easier because
+ 
+
+707
+00:12:55,440 --> 00:12:57,269
+formatting a little bit easier because
+now it's in the actual print function
+
+708
+00:12:57,269 --> 00:12:57,279
+now it's in the actual print function
+ 
+
+709
+00:12:57,279 --> 00:12:59,269
+now it's in the actual print function
+rather than first having to use sedd
+
+710
+00:12:59,269 --> 00:12:59,279
+rather than first having to use sedd
+ 
+
+711
+00:12:59,279 --> 00:13:00,949
+rather than first having to use sedd
+format getting a string from that and
+
+712
+00:13:00,949 --> 00:13:00,959
+format getting a string from that and
+ 
+
+713
+00:13:00,959 --> 00:13:02,710
+format getting a string from that and
+then putting that into like print f or
+
+714
+00:13:02,710 --> 00:13:02,720
+then putting that into like print f or
+ 
+
+715
+00:13:02,720 --> 00:13:06,069
+then putting that into like print f or
+into sdc see out or into your own
+
+716
+00:13:06,069 --> 00:13:06,079
+into sdc see out or into your own
+ 
+
+717
+00:13:06,079 --> 00:13:07,829
+into sdc see out or into your own
+logging library. I kid you not when I
+
+718
+00:13:07,829 --> 00:13:07,839
+logging library. I kid you not when I
+ 
+
+719
+00:13:07,839 --> 00:13:09,590
+logging library. I kid you not when I
+say that this is probably one of my
+
+720
+00:13:09,590 --> 00:13:09,600
+say that this is probably one of my
+ 
+
+721
+00:13:09,600 --> 00:13:11,910
+say that this is probably one of my
+favorite additions to C++ 23. There are
+
+722
+00:13:11,910 --> 00:13:11,920
+favorite additions to C++ 23. There are
+ 
+
+723
+00:13:11,920 --> 00:13:13,670
+favorite additions to C++ 23. There are
+some other good ones which I probably
+
+724
+00:13:13,670 --> 00:13:13,680
+some other good ones which I probably
+ 
+
+725
+00:13:13,680 --> 00:13:15,670
+some other good ones which I probably
+will cover soon. In fact, maybe I should
+
+726
+00:13:15,670 --> 00:13:15,680
+will cover soon. In fact, maybe I should
+ 
+
+727
+00:13:15,680 --> 00:13:17,190
+will cover soon. In fact, maybe I should
+just make a video talking about all the
+
+728
+00:13:17,190 --> 00:13:17,200
+just make a video talking about all the
+ 
+
+729
+00:13:17,200 --> 00:13:19,110
+just make a video talking about all the
+new C++ 23 features now that it's
+
+730
+00:13:19,110 --> 00:13:19,120
+new C++ 23 features now that it's
+ 
+
+731
+00:13:19,120 --> 00:13:20,710
+new C++ 23 features now that it's
+beginning to get some adoption. Let me
+
+732
+00:13:20,710 --> 00:13:20,720
+beginning to get some adoption. Let me
+ 
+
+733
+00:13:20,720 --> 00:13:21,670
+beginning to get some adoption. Let me
+know if you want to see that in the
+
+734
+00:13:21,670 --> 00:13:21,680
+know if you want to see that in the
+ 
+
+735
+00:13:21,680 --> 00:13:23,110
+know if you want to see that in the
+comment section below. But otherwise,
+
+736
+00:13:23,110 --> 00:13:23,120
+comment section below. But otherwise,
+ 
+
+737
+00:13:23,120 --> 00:13:25,829
+comment section below. But otherwise,
+what do you think of this new print
+
+738
+00:13:25,829 --> 00:13:25,839
+what do you think of this new print
+ 
+
+739
+00:13:25,839 --> 00:13:27,670
+what do you think of this new print
+functionality? Isn't it a big deal? I
+
+740
+00:13:27,670 --> 00:13:27,680
+functionality? Isn't it a big deal? I
+ 
+
+741
+00:13:27,680 --> 00:13:29,430
+functionality? Isn't it a big deal? I
+mean, hello world has changed. Come on,
+
+742
+00:13:29,430 --> 00:13:29,440
+mean, hello world has changed. Come on,
+ 
+
+743
+00:13:29,440 --> 00:13:31,269
+mean, hello world has changed. Come on,
+it's it's it's a big deal. I mean, SC
+
+744
+00:13:31,269 --> 00:13:31,279
+it's it's it's a big deal. I mean, SC
+ 
+
+745
+00:13:31,279 --> 00:13:33,430
+it's it's it's a big deal. I mean, SC
+format is a bigger deal in my opinion.
+
+746
+00:13:33,430 --> 00:13:33,440
+format is a bigger deal in my opinion.
+ 
+
+747
+00:13:33,440 --> 00:13:35,509
+format is a bigger deal in my opinion.
+That's actually a huge reason to jump up
+
+748
+00:13:35,509 --> 00:13:35,519
+That's actually a huge reason to jump up
+ 
+
+749
+00:13:35,519 --> 00:13:38,710
+That's actually a huge reason to jump up
+to C++ 20. I don't know if this itself
+
+750
+00:13:38,710 --> 00:13:38,720
+to C++ 20. I don't know if this itself
+ 
+
+751
+00:13:38,720 --> 00:13:40,790
+to C++ 20. I don't know if this itself
+is a reason for existing projects which
+
+752
+00:13:40,790 --> 00:13:40,800
+is a reason for existing projects which
+ 
+
+753
+00:13:40,800 --> 00:13:41,750
+is a reason for existing projects which
+probably have their own logging
+
+754
+00:13:41,750 --> 00:13:41,760
+probably have their own logging
+ 
+
+755
+00:13:41,760 --> 00:13:44,150
+probably have their own logging
+functionality to actually jump up to C++
+
+756
+00:13:44,150 --> 00:13:44,160
+functionality to actually jump up to C++
+ 
+
+757
+00:13:44,160 --> 00:13:46,310
+functionality to actually jump up to C++
+23. However, I think I'm going to be
+
+758
+00:13:46,310 --> 00:13:46,320
+23. However, I think I'm going to be
+ 
+
+759
+00:13:46,320 --> 00:13:48,629
+23. However, I think I'm going to be
+starting new projects with C++ 23 from
+
+760
+00:13:48,629 --> 00:13:48,639
+starting new projects with C++ 23 from
+ 
+
+761
+00:13:48,639 --> 00:13:50,389
+starting new projects with C++ 23 from
+now on and just using these print
+
+762
+00:13:50,389 --> 00:13:50,399
+now on and just using these print
+ 
+
+763
+00:13:50,399 --> 00:13:51,829
+now on and just using these print
+functions. Thank you guys for watching.
+
+764
+00:13:51,829 --> 00:13:51,839
+functions. Thank you guys for watching.
+ 
+
+765
+00:13:51,839 --> 00:13:53,190
+functions. Thank you guys for watching.
+Don't forget to check out Codeex using
+
+766
+00:13:53,190 --> 00:13:53,200
+Don't forget to check out Codeex using
+ 
+
+767
+00:13:53,200 --> 00:13:55,110
+Don't forget to check out Codeex using
+my link in description below and I will
+
+768
+00:13:55,110 --> 00:13:55,120
+my link in description below and I will
+ 
+
+769
+00:13:55,120 --> 00:13:58,480
+my link in description below and I will
+see you next time. Goodbye.
+

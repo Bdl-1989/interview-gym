@@ -1,0 +1,3785 @@
+1
+00:00:00,000 --> 00:00:01,990
+
+Hey, what's up guys? My name is The
+
+2
+00:00:01,990 --> 00:00:02,000
+Hey, what's up guys? My name is The
+ 
+
+3
+00:00:02,000 --> 00:00:04,430
+Hey, what's up guys? My name is The
+Cherno. Welcome back to my C++ series.
+
+4
+00:00:04,430 --> 00:00:04,440
+Cherno. Welcome back to my C++ series.
+ 
+
+5
+00:00:04,440 --> 00:00:06,550
+Cherno. Welcome back to my C++ series.
+Today, we're going to be taking a look
+
+6
+00:00:06,550 --> 00:00:06,560
+Today, we're going to be taking a look
+ 
+
+7
+00:00:06,560 --> 00:00:08,470
+Today, we're going to be taking a look
+at loops. So, when I say loops, I'm
+
+8
+00:00:08,470 --> 00:00:08,480
+at loops. So, when I say loops, I'm
+ 
+
+9
+00:00:08,480 --> 00:00:10,630
+at loops. So, when I say loops, I'm
+specifically talking about for loops and
+
+10
+00:00:10,630 --> 00:00:10,640
+specifically talking about for loops and
+ 
+
+11
+00:00:10,640 --> 00:00:12,270
+specifically talking about for loops and
+while loops. To put it into simple
+
+12
+00:00:12,270 --> 00:00:12,280
+while loops. To put it into simple
+ 
+
+13
+00:00:12,280 --> 00:00:14,310
+while loops. To put it into simple
+terms, loops are basically things that
+
+14
+00:00:14,310 --> 00:00:14,320
+terms, loops are basically things that
+ 
+
+15
+00:00:14,320 --> 00:00:16,030
+terms, loops are basically things that
+we can write in our code when we want to
+
+16
+00:00:16,030 --> 00:00:16,040
+we can write in our code when we want to
+ 
+
+17
+00:00:16,040 --> 00:00:17,870
+we can write in our code when we want to
+perform certain operations multiple
+
+18
+00:00:17,870 --> 00:00:17,880
+perform certain operations multiple
+ 
+
+19
+00:00:17,880 --> 00:00:20,670
+perform certain operations multiple
+times. So, a really simple example is
+
+20
+00:00:20,670 --> 00:00:20,680
+times. So, a really simple example is
+ 
+
+21
+00:00:20,680 --> 00:00:22,670
+times. So, a really simple example is
+what if we wanted to print Hello World
+
+22
+00:00:22,670 --> 00:00:22,680
+what if we wanted to print Hello World
+ 
+
+23
+00:00:22,680 --> 00:00:25,070
+what if we wanted to print Hello World
+five times, right? Would we just copy
+
+24
+00:00:25,070 --> 00:00:25,080
+five times, right? Would we just copy
+ 
+
+25
+00:00:25,080 --> 00:00:26,990
+five times, right? Would we just copy
+and paste that line of code five times
+
+26
+00:00:26,990 --> 00:00:27,000
+and paste that line of code five times
+ 
+
+27
+00:00:27,000 --> 00:00:29,110
+and paste that line of code five times
+or maybe put that code into a function
+
+28
+00:00:29,110 --> 00:00:29,120
+or maybe put that code into a function
+ 
+
+29
+00:00:29,120 --> 00:00:31,030
+or maybe put that code into a function
+and then call that function five times,
+
+30
+00:00:31,030 --> 00:00:31,040
+and then call that function five times,
+ 
+
+31
+00:00:31,040 --> 00:00:33,230
+and then call that function five times,
+like literally five times in our code?
+
+32
+00:00:33,230 --> 00:00:33,240
+like literally five times in our code?
+ 
+
+33
+00:00:33,240 --> 00:00:35,230
+like literally five times in our code?
+Should we do it that way? Or can we just
+
+34
+00:00:35,230 --> 00:00:35,240
+Should we do it that way? Or can we just
+ 
+
+35
+00:00:35,240 --> 00:00:37,230
+Should we do it that way? Or can we just
+use a loop to say, "Hey, I want this
+
+36
+00:00:37,230 --> 00:00:37,240
+use a loop to say, "Hey, I want this
+ 
+
+37
+00:00:37,240 --> 00:00:39,830
+use a loop to say, "Hey, I want this
+code here to run five times in a row."
+
+38
+00:00:39,830 --> 00:00:39,840
+code here to run five times in a row."
+ 
+
+39
+00:00:39,840 --> 00:00:41,550
+code here to run five times in a row."
+Loops are also important kind of for big
+
+40
+00:00:41,550 --> 00:00:41,560
+Loops are also important kind of for big
+ 
+
+41
+00:00:41,560 --> 00:00:43,790
+Loops are also important kind of for big
+picture stuff. So, picture a game,
+
+42
+00:00:43,790 --> 00:00:43,800
+picture stuff. So, picture a game,
+ 
+
+43
+00:00:43,800 --> 00:00:45,990
+picture stuff. So, picture a game,
+right? If you've written a game, odds
+
+44
+00:00:45,990 --> 00:00:46,000
+right? If you've written a game, odds
+ 
+
+45
+00:00:46,000 --> 00:00:47,830
+right? If you've written a game, odds
+are you want to keep the game running,
+
+46
+00:00:47,830 --> 00:00:47,840
+are you want to keep the game running,
+ 
+
+47
+00:00:47,840 --> 00:00:49,230
+are you want to keep the game running,
+right? You don't want to just like run
+
+48
+00:00:49,230 --> 00:00:49,240
+right? You don't want to just like run
+ 
+
+49
+00:00:49,240 --> 00:00:51,150
+right? You don't want to just like run
+the game and render one frame and exit
+
+50
+00:00:51,150 --> 00:00:51,160
+the game and render one frame and exit
+ 
+
+51
+00:00:51,160 --> 00:00:53,110
+the game and render one frame and exit
+and that's it, right? Game done, like
+
+52
+00:00:53,110 --> 00:00:53,120
+and that's it, right? Game done, like
+ 
+
+53
+00:00:53,120 --> 00:00:54,790
+and that's it, right? Game done, like
+one frame, I rendered my frame, I'm
+
+54
+00:00:54,790 --> 00:00:54,800
+one frame, I rendered my frame, I'm
+ 
+
+55
+00:00:54,800 --> 00:00:56,710
+one frame, I rendered my frame, I'm
+going to exit, I'm done now. That would
+
+56
+00:00:56,710 --> 00:00:56,720
+going to exit, I'm done now. That would
+ 
+
+57
+00:00:56,720 --> 00:00:58,670
+going to exit, I'm done now. That would
+be very weird. You want to keep the game
+
+58
+00:00:58,670 --> 00:00:58,680
+be very weird. You want to keep the game
+ 
+
+59
+00:00:58,680 --> 00:01:01,070
+be very weird. You want to keep the game
+actually playing. And so, for that, what
+
+60
+00:01:01,070 --> 00:01:01,080
+actually playing. And so, for that, what
+ 
+
+61
+00:01:01,080 --> 00:01:02,310
+actually playing. And so, for that, what
+you need is something called a game
+
+62
+00:01:02,310 --> 00:01:02,320
+you need is something called a game
+ 
+
+63
+00:01:02,320 --> 00:01:04,470
+you need is something called a game
+loop. And a game loop is just something
+
+64
+00:01:04,470 --> 00:01:04,480
+loop. And a game loop is just something
+ 
+
+65
+00:01:04,480 --> 00:01:06,590
+loop. And a game loop is just something
+that essentially says, "Hey,
+
+66
+00:01:06,590 --> 00:01:06,600
+that essentially says, "Hey,
+ 
+
+67
+00:01:06,600 --> 00:01:08,710
+that essentially says, "Hey,
+like while the game is running, so while
+
+68
+00:01:08,710 --> 00:01:08,720
+like while the game is running, so while
+ 
+
+69
+00:01:08,720 --> 00:01:10,390
+like while the game is running, so while
+the user hasn't decided to quit the
+
+70
+00:01:10,390 --> 00:01:10,400
+the user hasn't decided to quit the
+ 
+
+71
+00:01:10,400 --> 00:01:13,070
+the user hasn't decided to quit the
+game, keep updating the game, keep
+
+72
+00:01:13,070 --> 00:01:13,080
+game, keep updating the game, keep
+ 
+
+73
+00:01:13,080 --> 00:01:14,870
+game, keep updating the game, keep
+rendering the game, keep moving all the
+
+74
+00:01:14,870 --> 00:01:14,880
+rendering the game, keep moving all the
+ 
+
+75
+00:01:14,880 --> 00:01:16,470
+rendering the game, keep moving all the
+characters around, keep doing
+
+76
+00:01:16,470 --> 00:01:16,480
+characters around, keep doing
+ 
+
+77
+00:01:16,480 --> 00:01:18,670
+characters around, keep doing
+everything, like over and over again,
+
+78
+00:01:18,670 --> 00:01:18,680
+everything, like over and over again,
+ 
+
+79
+00:01:18,680 --> 00:01:20,230
+everything, like over and over again,
+frame by frame." So, loops are very
+
+80
+00:01:20,230 --> 00:01:20,240
+frame by frame." So, loops are very
+ 
+
+81
+00:01:20,240 --> 00:01:21,670
+frame by frame." So, loops are very
+important for programming. They're used
+
+82
+00:01:21,670 --> 00:01:21,680
+important for programming. They're used
+ 
+
+83
+00:01:21,680 --> 00:01:23,550
+important for programming. They're used
+in like every program, right? It's the
+
+84
+00:01:23,550 --> 00:01:23,560
+in like every program, right? It's the
+ 
+
+85
+00:01:23,560 --> 00:01:25,110
+in like every program, right? It's the
+same thing as like conditionals, which
+
+86
+00:01:25,110 --> 00:01:25,120
+same thing as like conditionals, which
+ 
+
+87
+00:01:25,120 --> 00:01:26,910
+same thing as like conditionals, which
+we talked about last week, video up
+
+88
+00:01:26,910 --> 00:01:26,920
+we talked about last week, video up
+ 
+
+89
+00:01:26,920 --> 00:01:27,990
+we talked about last week, video up
+here.
+
+90
+00:01:27,990 --> 00:01:28,000
+here.
+ 
+
+91
+00:01:28,000 --> 00:01:29,910
+here.
+That kind of stuff, right? This is much
+
+92
+00:01:29,910 --> 00:01:29,920
+That kind of stuff, right? This is much
+ 
+
+93
+00:01:29,920 --> 00:01:31,550
+That kind of stuff, right? This is much
+like that. Like you need to know this
+
+94
+00:01:31,550 --> 00:01:31,560
+like that. Like you need to know this
+ 
+
+95
+00:01:31,560 --> 00:01:33,070
+like that. Like you need to know this
+stuff really well because you're going
+
+96
+00:01:33,070 --> 00:01:33,080
+stuff really well because you're going
+ 
+
+97
+00:01:33,080 --> 00:01:34,670
+stuff really well because you're going
+to be using it as one of your primary
+
+98
+00:01:34,670 --> 00:01:34,680
+to be using it as one of your primary
+ 
+
+99
+00:01:34,680 --> 00:01:36,230
+to be using it as one of your primary
+tools when you actually write code, when
+
+100
+00:01:36,230 --> 00:01:36,240
+tools when you actually write code, when
+ 
+
+101
+00:01:36,240 --> 00:01:37,830
+tools when you actually write code, when
+you write a program. So, first of all,
+
+102
+00:01:37,830 --> 00:01:37,840
+you write a program. So, first of all,
+ 
+
+103
+00:01:37,840 --> 00:01:39,430
+you write a program. So, first of all,
+let's start with for loops. The example
+
+104
+00:01:39,430 --> 00:01:39,440
+let's start with for loops. The example
+ 
+
+105
+00:01:39,440 --> 00:01:41,070
+let's start with for loops. The example
+that I gave earlier was printing Hello
+
+106
+00:01:41,070 --> 00:01:41,080
+that I gave earlier was printing Hello
+ 
+
+107
+00:01:41,080 --> 00:01:42,630
+that I gave earlier was printing Hello
+World five times. And again, we could
+
+108
+00:01:42,630 --> 00:01:42,640
+World five times. And again, we could
+ 
+
+109
+00:01:42,640 --> 00:01:44,630
+World five times. And again, we could
+achieve that just by copying and pasting
+
+110
+00:01:44,630 --> 00:01:44,640
+achieve that just by copying and pasting
+ 
+
+111
+00:01:44,640 --> 00:01:46,910
+achieve that just by copying and pasting
+this log call five times. And if I run
+
+112
+00:01:46,910 --> 00:01:46,920
+this log call five times. And if I run
+ 
+
+113
+00:01:46,920 --> 00:01:48,670
+this log call five times. And if I run
+this code, you're going to see that we,
+
+114
+00:01:48,670 --> 00:01:48,680
+this code, you're going to see that we,
+ 
+
+115
+00:01:48,680 --> 00:01:50,390
+this code, you're going to see that we,
+of course, do get Hello World printed to
+
+116
+00:01:50,390 --> 00:01:50,400
+of course, do get Hello World printed to
+ 
+
+117
+00:01:50,400 --> 00:01:52,950
+of course, do get Hello World printed to
+the console five times. However, to make
+
+118
+00:01:52,950 --> 00:01:52,960
+the console five times. However, to make
+ 
+
+119
+00:01:52,960 --> 00:01:54,350
+the console five times. However, to make
+our lives a little bit easier, what we
+
+120
+00:01:54,350 --> 00:01:54,360
+our lives a little bit easier, what we
+ 
+
+121
+00:01:54,360 --> 00:01:56,070
+our lives a little bit easier, what we
+can do is write a for loop. For loops
+
+122
+00:01:56,070 --> 00:01:56,080
+can do is write a for loop. For loops
+ 
+
+123
+00:01:56,080 --> 00:01:58,390
+can do is write a for loop. For loops
+start with the keyword for and then
+
+124
+00:01:58,390 --> 00:01:58,400
+start with the keyword for and then
+ 
+
+125
+00:01:58,400 --> 00:02:00,950
+start with the keyword for and then
+basically break up into three parts.
+
+126
+00:02:00,950 --> 00:02:00,960
+basically break up into three parts.
+ 
+
+127
+00:02:00,960 --> 00:02:02,630
+basically break up into three parts.
+Each of these three parts are separated
+
+128
+00:02:02,630 --> 00:02:02,640
+Each of these three parts are separated
+ 
+
+129
+00:02:02,640 --> 00:02:04,950
+Each of these three parts are separated
+by a semicolon. The first part is a
+
+130
+00:02:04,950 --> 00:02:04,960
+by a semicolon. The first part is a
+ 
+
+131
+00:02:04,960 --> 00:02:06,830
+by a semicolon. The first part is a
+variable declaration. So, usually you
+
+132
+00:02:06,830 --> 00:02:06,840
+variable declaration. So, usually you
+ 
+
+133
+00:02:06,840 --> 00:02:08,430
+variable declaration. So, usually you
+would declare some sort of variable
+
+134
+00:02:08,430 --> 00:02:08,440
+would declare some sort of variable
+ 
+
+135
+00:02:08,440 --> 00:02:10,870
+would declare some sort of variable
+here. So, we're going to write int i =
+
+136
+00:02:10,870 --> 00:02:10,880
+here. So, we're going to write int i =
+ 
+
+137
+00:02:10,880 --> 00:02:13,030
+here. So, we're going to write int i =
+0. Now, the variable name being i is a
+
+138
+00:02:13,030 --> 00:02:13,040
+0. Now, the variable name being i is a
+ 
+
+139
+00:02:13,040 --> 00:02:14,910
+0. Now, the variable name being i is a
+little bit of a convention. Some say it
+
+140
+00:02:14,910 --> 00:02:14,920
+little bit of a convention. Some say it
+ 
+
+141
+00:02:14,920 --> 00:02:16,710
+little bit of a convention. Some say it
+stands for iterator, which of course is
+
+142
+00:02:16,710 --> 00:02:16,720
+stands for iterator, which of course is
+ 
+
+143
+00:02:16,720 --> 00:02:18,190
+stands for iterator, which of course is
+relevant here because we'll be iterating
+
+144
+00:02:18,190 --> 00:02:18,200
+relevant here because we'll be iterating
+ 
+
+145
+00:02:18,200 --> 00:02:19,790
+relevant here because we'll be iterating
+over this code. You can really call this
+
+146
+00:02:19,790 --> 00:02:19,800
+over this code. You can really call this
+ 
+
+147
+00:02:19,800 --> 00:02:21,470
+over this code. You can really call this
+variable absolutely anything. It also
+
+148
+00:02:21,470 --> 00:02:21,480
+variable absolutely anything. It also
+ 
+
+149
+00:02:21,480 --> 00:02:22,790
+variable absolutely anything. It also
+doesn't have to be an integer and it
+
+150
+00:02:22,790 --> 00:02:22,800
+doesn't have to be an integer and it
+ 
+
+151
+00:02:22,800 --> 00:02:24,710
+doesn't have to be an integer and it
+also doesn't have to be equal to zero.
+
+152
+00:02:24,710 --> 00:02:24,720
+also doesn't have to be equal to zero.
+ 
+
+153
+00:02:24,720 --> 00:02:26,350
+also doesn't have to be equal to zero.
+After I show you guys a simple for loop,
+
+154
+00:02:26,350 --> 00:02:26,360
+After I show you guys a simple for loop,
+ 
+
+155
+00:02:26,360 --> 00:02:27,670
+After I show you guys a simple for loop,
+we are going to break it down a little
+
+156
+00:02:27,670 --> 00:02:27,680
+we are going to break it down a little
+ 
+
+157
+00:02:27,680 --> 00:02:29,510
+we are going to break it down a little
+bit and see what we can do because for
+
+158
+00:02:29,510 --> 00:02:29,520
+bit and see what we can do because for
+ 
+
+159
+00:02:29,520 --> 00:02:30,510
+bit and see what we can do because for
+loops are actually really, really
+
+160
+00:02:30,510 --> 00:02:30,520
+loops are actually really, really
+ 
+
+161
+00:02:30,520 --> 00:02:32,670
+loops are actually really, really
+flexible and you can really like make
+
+162
+00:02:32,670 --> 00:02:32,680
+flexible and you can really like make
+ 
+
+163
+00:02:32,680 --> 00:02:34,150
+flexible and you can really like make
+them do pretty much anything you want.
+
+164
+00:02:34,150 --> 00:02:34,160
+them do pretty much anything you want.
+ 
+
+165
+00:02:34,160 --> 00:02:35,790
+them do pretty much anything you want.
+The second part is a condition.
+
+166
+00:02:35,790 --> 00:02:35,800
+The second part is a condition.
+ 
+
+167
+00:02:35,800 --> 00:02:37,550
+The second part is a condition.
+Basically, this says that as long as
+
+168
+00:02:37,550 --> 00:02:37,560
+Basically, this says that as long as
+ 
+
+169
+00:02:37,560 --> 00:02:39,350
+Basically, this says that as long as
+this condition is true, I'm going to
+
+170
+00:02:39,350 --> 00:02:39,360
+this condition is true, I'm going to
+ 
+
+171
+00:02:39,360 --> 00:02:42,070
+this condition is true, I'm going to
+keep executing code inside the for loop.
+
+172
+00:02:42,070 --> 00:02:42,080
+keep executing code inside the for loop.
+ 
+
+173
+00:02:42,080 --> 00:02:43,750
+keep executing code inside the for loop.
+So, in this case, since we want this
+
+174
+00:02:43,750 --> 00:02:43,760
+So, in this case, since we want this
+ 
+
+175
+00:02:43,760 --> 00:02:46,150
+So, in this case, since we want this
+code to execute five times, right? This
+
+176
+00:02:46,150 --> 00:02:46,160
+code to execute five times, right? This
+ 
+
+177
+00:02:46,160 --> 00:02:47,750
+code to execute five times, right? This
+log hello world, we want to call that
+
+178
+00:02:47,750 --> 00:02:47,760
+log hello world, we want to call that
+ 
+
+179
+00:02:47,760 --> 00:02:50,070
+log hello world, we want to call that
+five times, we're going to write i is
+
+180
+00:02:50,070 --> 00:02:50,080
+five times, we're going to write i is
+ 
+
+181
+00:02:50,080 --> 00:02:51,550
+five times, we're going to write i is
+less than five and I'll explain how this
+
+182
+00:02:51,550 --> 00:02:51,560
+less than five and I'll explain how this
+ 
+
+183
+00:02:51,560 --> 00:02:53,390
+less than five and I'll explain how this
+ties in together in just a second. The
+
+184
+00:02:53,390 --> 00:02:53,400
+ties in together in just a second. The
+ 
+
+185
+00:02:53,400 --> 00:02:56,270
+ties in together in just a second. The
+last statement is basically code that
+
+186
+00:02:56,270 --> 00:02:56,280
+last statement is basically code that
+ 
+
+187
+00:02:56,280 --> 00:02:58,510
+last statement is basically code that
+will be called before the next iteration
+
+188
+00:02:58,510 --> 00:02:58,520
+will be called before the next iteration
+ 
+
+189
+00:02:58,520 --> 00:03:00,430
+will be called before the next iteration
+of the for loop. So, in this case, what
+
+190
+00:03:00,430 --> 00:03:00,440
+of the for loop. So, in this case, what
+ 
+
+191
+00:03:00,440 --> 00:03:02,310
+of the for loop. So, in this case, what
+we want to do is write i ++, which
+
+192
+00:03:02,310 --> 00:03:02,320
+we want to do is write i ++, which
+ 
+
+193
+00:03:02,320 --> 00:03:03,870
+we want to do is write i ++, which
+basically is the same thing as saying i
+
+194
+00:03:03,870 --> 00:03:03,880
+basically is the same thing as saying i
+ 
+
+195
+00:03:03,880 --> 00:03:08,030
+basically is the same thing as saying i
++ = 1 or i = i + 1, which basically
+
+196
+00:03:08,030 --> 00:03:08,040
++ = 1 or i = i + 1, which basically
+ 
+
+197
+00:03:08,040 --> 00:03:10,150
++ = 1 or i = i + 1, which basically
+means that we're going to increment our
+
+198
+00:03:10,150 --> 00:03:10,160
+means that we're going to increment our
+ 
+
+199
+00:03:10,160 --> 00:03:12,150
+means that we're going to increment our
+i variable, which starts at zero of
+
+200
+00:03:12,150 --> 00:03:12,160
+i variable, which starts at zero of
+ 
+
+201
+00:03:12,160 --> 00:03:14,150
+i variable, which starts at zero of
+course here. We're going to increment it
+
+202
+00:03:14,150 --> 00:03:14,160
+course here. We're going to increment it
+ 
+
+203
+00:03:14,160 --> 00:03:16,670
+course here. We're going to increment it
+by one, we're going to plus one it every
+
+204
+00:03:16,670 --> 00:03:16,680
+by one, we're going to plus one it every
+ 
+
+205
+00:03:16,680 --> 00:03:18,910
+by one, we're going to plus one it every
+single iteration of this for loop. And
+
+206
+00:03:18,910 --> 00:03:18,920
+single iteration of this for loop. And
+ 
+
+207
+00:03:18,920 --> 00:03:20,630
+single iteration of this for loop. And
+then of course, we provide a body, which
+
+208
+00:03:20,630 --> 00:03:20,640
+then of course, we provide a body, which
+ 
+
+209
+00:03:20,640 --> 00:03:22,190
+then of course, we provide a body, which
+is basically just saying that anything
+
+210
+00:03:22,190 --> 00:03:22,200
+is basically just saying that anything
+ 
+
+211
+00:03:22,200 --> 00:03:24,030
+is basically just saying that anything
+in this body is the contents of our for
+
+212
+00:03:24,030 --> 00:03:24,040
+in this body is the contents of our for
+ 
+
+213
+00:03:24,040 --> 00:03:25,350
+in this body is the contents of our for
+loop. So, this is actually what's going
+
+214
+00:03:25,350 --> 00:03:25,360
+loop. So, this is actually what's going
+ 
+
+215
+00:03:25,360 --> 00:03:26,949
+loop. So, this is actually what's going
+to be looped. This is the code that will
+
+216
+00:03:26,949 --> 00:03:26,959
+to be looped. This is the code that will
+ 
+
+217
+00:03:26,959 --> 00:03:29,150
+to be looped. This is the code that will
+be executed multiple times. I say
+
+218
+00:03:29,150 --> 00:03:29,160
+be executed multiple times. I say
+ 
+
+219
+00:03:29,160 --> 00:03:30,590
+be executed multiple times. I say
+multiple times, but of course, these
+
+220
+00:03:30,590 --> 00:03:30,600
+multiple times, but of course, these
+ 
+
+221
+00:03:30,600 --> 00:03:31,949
+multiple times, but of course, these
+conditions are going to determine
+
+222
+00:03:31,949 --> 00:03:31,959
+conditions are going to determine
+ 
+
+223
+00:03:31,959 --> 00:03:34,710
+conditions are going to determine
+whether this code is executed at all or
+
+224
+00:03:34,710 --> 00:03:34,720
+whether this code is executed at all or
+ 
+
+225
+00:03:34,720 --> 00:03:36,390
+whether this code is executed at all or
+maybe once or it could be a hundred
+
+226
+00:03:36,390 --> 00:03:36,400
+maybe once or it could be a hundred
+ 
+
+227
+00:03:36,400 --> 00:03:38,190
+maybe once or it could be a hundred
+times, right? It's all depending on this
+
+228
+00:03:38,190 --> 00:03:38,200
+times, right? It's all depending on this
+ 
+
+229
+00:03:38,200 --> 00:03:39,790
+times, right? It's all depending on this
+condition. So, let's go ahead and stick
+
+230
+00:03:39,790 --> 00:03:39,800
+condition. So, let's go ahead and stick
+ 
+
+231
+00:03:39,800 --> 00:03:42,470
+condition. So, let's go ahead and stick
+one of our log calls into here
+
+232
+00:03:42,470 --> 00:03:42,480
+one of our log calls into here
+ 
+
+233
+00:03:42,480 --> 00:03:43,870
+one of our log calls into here
+and I'll get rid of all of these extra
+
+234
+00:03:43,870 --> 00:03:43,880
+and I'll get rid of all of these extra
+ 
+
+235
+00:03:43,880 --> 00:03:45,750
+and I'll get rid of all of these extra
+ones. If we hit our five to run our
+
+236
+00:03:45,750 --> 00:03:45,760
+ones. If we hit our five to run our
+ 
+
+237
+00:03:45,760 --> 00:03:47,509
+ones. If we hit our five to run our
+code, you'll see we get the same result,
+
+238
+00:03:47,509 --> 00:03:47,519
+code, you'll see we get the same result,
+ 
+
+239
+00:03:47,519 --> 00:03:49,910
+code, you'll see we get the same result,
+five times hello world. Okay, cool. So,
+
+240
+00:03:49,910 --> 00:03:49,920
+five times hello world. Okay, cool. So,
+ 
+
+241
+00:03:49,920 --> 00:03:51,310
+five times hello world. Okay, cool. So,
+let's break this down a little bit. This
+
+242
+00:03:51,310 --> 00:03:51,320
+let's break this down a little bit. This
+ 
+
+243
+00:03:51,320 --> 00:03:53,190
+let's break this down a little bit. This
+declaration is the first thing that will
+
+244
+00:03:53,190 --> 00:03:53,200
+declaration is the first thing that will
+ 
+
+245
+00:03:53,200 --> 00:03:55,310
+declaration is the first thing that will
+happen. When our instruction pointer
+
+246
+00:03:55,310 --> 00:03:55,320
+happen. When our instruction pointer
+ 
+
+247
+00:03:55,320 --> 00:03:57,550
+happen. When our instruction pointer
+reaches this line of code here, it will
+
+248
+00:03:57,550 --> 00:03:57,560
+reaches this line of code here, it will
+ 
+
+249
+00:03:57,560 --> 00:03:59,630
+reaches this line of code here, it will
+first of all declare whatever is written
+
+250
+00:03:59,630 --> 00:03:59,640
+first of all declare whatever is written
+ 
+
+251
+00:03:59,640 --> 00:04:01,190
+first of all declare whatever is written
+in here, right? So, in this case, we're
+
+252
+00:04:01,190 --> 00:04:01,200
+in here, right? So, in this case, we're
+ 
+
+253
+00:04:01,200 --> 00:04:03,030
+in here, right? So, in this case, we're
+creating a new variable called I. What
+
+254
+00:04:03,030 --> 00:04:03,040
+creating a new variable called I. What
+ 
+
+255
+00:04:03,040 --> 00:04:04,950
+creating a new variable called I. What
+it will then do is immediately check to
+
+256
+00:04:04,950 --> 00:04:04,960
+it will then do is immediately check to
+ 
+
+257
+00:04:04,960 --> 00:04:07,550
+it will then do is immediately check to
+see if this condition is true. If this
+
+258
+00:04:07,550 --> 00:04:07,560
+see if this condition is true. If this
+ 
+
+259
+00:04:07,560 --> 00:04:09,190
+see if this condition is true. If this
+condition is true, we're going to go
+
+260
+00:04:09,190 --> 00:04:09,200
+condition is true, we're going to go
+ 
+
+261
+00:04:09,200 --> 00:04:11,230
+condition is true, we're going to go
+ahead and jump to the body of our for
+
+262
+00:04:11,230 --> 00:04:11,240
+ahead and jump to the body of our for
+ 
+
+263
+00:04:11,240 --> 00:04:13,350
+ahead and jump to the body of our for
+loop and execute whatever is there. When
+
+264
+00:04:13,350 --> 00:04:13,360
+loop and execute whatever is there. When
+ 
+
+265
+00:04:13,360 --> 00:04:15,190
+loop and execute whatever is there. When
+we have finished executing the body and
+
+266
+00:04:15,190 --> 00:04:15,200
+we have finished executing the body and
+ 
+
+267
+00:04:15,200 --> 00:04:16,830
+we have finished executing the body and
+we hit this curly bracket here, this
+
+268
+00:04:16,830 --> 00:04:16,840
+we hit this curly bracket here, this
+ 
+
+269
+00:04:16,840 --> 00:04:18,910
+we hit this curly bracket here, this
+closing one, we're going to go back up
+
+270
+00:04:18,910 --> 00:04:18,920
+closing one, we're going to go back up
+ 
+
+271
+00:04:18,920 --> 00:04:21,069
+closing one, we're going to go back up
+to here and perform whatever code is
+
+272
+00:04:21,069 --> 00:04:21,079
+to here and perform whatever code is
+ 
+
+273
+00:04:21,079 --> 00:04:22,190
+to here and perform whatever code is
+written here. So, in this case, we're
+
+274
+00:04:22,190 --> 00:04:22,200
+written here. So, in this case, we're
+ 
+
+275
+00:04:22,200 --> 00:04:24,110
+written here. So, in this case, we're
+incrementing I by one. After that
+
+276
+00:04:24,110 --> 00:04:24,120
+incrementing I by one. After that
+ 
+
+277
+00:04:24,120 --> 00:04:25,390
+incrementing I by one. After that
+happens, we're going to go back to the
+
+278
+00:04:25,390 --> 00:04:25,400
+happens, we're going to go back to the
+ 
+
+279
+00:04:25,400 --> 00:04:27,030
+happens, we're going to go back to the
+condition and check to see if the
+
+280
+00:04:27,030 --> 00:04:27,040
+condition and check to see if the
+ 
+
+281
+00:04:27,040 --> 00:04:28,790
+condition and check to see if the
+condition is true. Now, of course, at
+
+282
+00:04:28,790 --> 00:04:28,800
+condition is true. Now, of course, at
+ 
+
+283
+00:04:28,800 --> 00:04:30,550
+condition is true. Now, of course, at
+this point, I used to be zero, now we've
+
+284
+00:04:30,550 --> 00:04:30,560
+this point, I used to be zero, now we've
+ 
+
+285
+00:04:30,560 --> 00:04:32,230
+this point, I used to be zero, now we've
+incremented it by one, so now we're
+
+286
+00:04:32,230 --> 00:04:32,240
+incremented it by one, so now we're
+ 
+
+287
+00:04:32,240 --> 00:04:34,070
+incremented it by one, so now we're
+checking if one is less than five. It
+
+288
+00:04:34,070 --> 00:04:34,080
+checking if one is less than five. It
+ 
+
+289
+00:04:34,080 --> 00:04:35,230
+checking if one is less than five. It
+is, of course, less than five, so we're
+
+290
+00:04:35,230 --> 00:04:35,240
+is, of course, less than five, so we're
+ 
+
+291
+00:04:35,240 --> 00:04:36,950
+is, of course, less than five, so we're
+going to jump back here and perform this
+
+292
+00:04:36,950 --> 00:04:36,960
+going to jump back here and perform this
+ 
+
+293
+00:04:36,960 --> 00:04:38,830
+going to jump back here and perform this
+code. This is going to keep going until
+
+294
+00:04:38,830 --> 00:04:38,840
+code. This is going to keep going until
+ 
+
+295
+00:04:38,840 --> 00:04:41,310
+code. This is going to keep going until
+finally I will be equal to four, we're
+
+296
+00:04:41,310 --> 00:04:41,320
+finally I will be equal to four, we're
+ 
+
+297
+00:04:41,320 --> 00:04:43,630
+finally I will be equal to four, we're
+going to run this code, jump up here,
+
+298
+00:04:43,630 --> 00:04:43,640
+going to run this code, jump up here,
+ 
+
+299
+00:04:43,640 --> 00:04:46,750
+going to run this code, jump up here,
+increment I by one, which gives us five,
+
+300
+00:04:46,750 --> 00:04:46,760
+increment I by one, which gives us five,
+ 
+
+301
+00:04:46,760 --> 00:04:48,510
+increment I by one, which gives us five,
+and now we're comparing if five is less
+
+302
+00:04:48,510 --> 00:04:48,520
+and now we're comparing if five is less
+ 
+
+303
+00:04:48,520 --> 00:04:49,950
+and now we're comparing if five is less
+than five. However, five is not less
+
+304
+00:04:49,950 --> 00:04:49,960
+than five. However, five is not less
+ 
+
+305
+00:04:49,960 --> 00:04:52,030
+than five. However, five is not less
+than five because five is equal to five.
+
+306
+00:04:52,030 --> 00:04:52,040
+than five because five is equal to five.
+ 
+
+307
+00:04:52,040 --> 00:04:53,590
+than five because five is equal to five.
+So, this condition is false, which means
+
+308
+00:04:53,590 --> 00:04:53,600
+So, this condition is false, which means
+ 
+
+309
+00:04:53,600 --> 00:04:55,909
+So, this condition is false, which means
+we now jump to line 10 over here to
+
+310
+00:04:55,909 --> 00:04:55,919
+we now jump to line 10 over here to
+ 
+
+311
+00:04:55,919 --> 00:04:58,270
+we now jump to line 10 over here to
+execute cin.get. And that, in essence,
+
+312
+00:04:58,270 --> 00:04:58,280
+execute cin.get. And that, in essence,
+ 
+
+313
+00:04:58,280 --> 00:05:00,230
+execute cin.get. And that, in essence,
+is how that for loop will actually run
+
+314
+00:05:00,230 --> 00:05:00,240
+is how that for loop will actually run
+ 
+
+315
+00:05:00,240 --> 00:05:02,430
+is how that for loop will actually run
+five times. Now, I just want to stress
+
+316
+00:05:02,430 --> 00:05:02,440
+five times. Now, I just want to stress
+ 
+
+317
+00:05:02,440 --> 00:05:04,550
+five times. Now, I just want to stress
+that these three parts of this for loop
+
+318
+00:05:04,550 --> 00:05:04,560
+that these three parts of this for loop
+ 
+
+319
+00:05:04,560 --> 00:05:07,110
+that these three parts of this for loop
+declaration are exactly what I said they
+
+320
+00:05:07,110 --> 00:05:07,120
+declaration are exactly what I said they
+ 
+
+321
+00:05:07,120 --> 00:05:08,870
+declaration are exactly what I said they
+are, right? This is just code that will
+
+322
+00:05:08,870 --> 00:05:08,880
+are, right? This is just code that will
+ 
+
+323
+00:05:08,880 --> 00:05:10,870
+are, right? This is just code that will
+be executed at the beginning of the for
+
+324
+00:05:10,870 --> 00:05:10,880
+be executed at the beginning of the for
+ 
+
+325
+00:05:10,880 --> 00:05:14,550
+be executed at the beginning of the for
+loop once only. This is a comparison or
+
+326
+00:05:14,550 --> 00:05:14,560
+loop once only. This is a comparison or
+ 
+
+327
+00:05:14,560 --> 00:05:16,750
+loop once only. This is a comparison or
+some some kind of boolean that will be
+
+328
+00:05:16,750 --> 00:05:16,760
+some some kind of boolean that will be
+ 
+
+329
+00:05:16,760 --> 00:05:19,150
+some some kind of boolean that will be
+evaluated before the next iteration of
+
+330
+00:05:19,150 --> 00:05:19,160
+evaluated before the next iteration of
+ 
+
+331
+00:05:19,160 --> 00:05:21,630
+evaluated before the next iteration of
+the for loop. And then this is some kind
+
+332
+00:05:21,630 --> 00:05:21,640
+the for loop. And then this is some kind
+ 
+
+333
+00:05:21,640 --> 00:05:23,909
+the for loop. And then this is some kind
+of dec- like it's some kind of code that
+
+334
+00:05:23,909 --> 00:05:23,919
+of dec- like it's some kind of code that
+ 
+
+335
+00:05:23,919 --> 00:05:26,430
+of dec- like it's some kind of code that
+will be executed at the end of our for
+
+336
+00:05:26,430 --> 00:05:26,440
+will be executed at the end of our for
+ 
+
+337
+00:05:26,440 --> 00:05:28,710
+will be executed at the end of our for
+loop. So, what I could do is like
+
+338
+00:05:28,710 --> 00:05:28,720
+loop. So, what I could do is like
+ 
+
+339
+00:05:28,720 --> 00:05:30,909
+loop. So, what I could do is like
+literally I could say actually in I
+
+340
+00:05:30,909 --> 00:05:30,919
+literally I could say actually in I
+ 
+
+341
+00:05:30,919 --> 00:05:32,030
+literally I could say actually in I
+equals zero, I'm going to put that over
+
+342
+00:05:32,030 --> 00:05:32,040
+equals zero, I'm going to put that over
+ 
+
+343
+00:05:32,040 --> 00:05:33,990
+equals zero, I'm going to put that over
+here and leave this completely blank,
+
+344
+00:05:33,990 --> 00:05:34,000
+here and leave this completely blank,
+ 
+
+345
+00:05:34,000 --> 00:05:35,710
+here and leave this completely blank,
+just like that, right? That's perfectly
+
+346
+00:05:35,710 --> 00:05:35,720
+just like that, right? That's perfectly
+ 
+
+347
+00:05:35,720 --> 00:05:37,830
+just like that, right? That's perfectly
+valid code. I could also say that this I
+
+348
+00:05:37,830 --> 00:05:37,840
+valid code. I could also say that this I
+ 
+
+349
+00:05:37,840 --> 00:05:39,470
+valid code. I could also say that this I
+plus plus, I'm actually just going to
+
+350
+00:05:39,470 --> 00:05:39,480
+plus plus, I'm actually just going to
+ 
+
+351
+00:05:39,480 --> 00:05:41,430
+plus plus, I'm actually just going to
+drop it here, right? Cuz it's that's
+
+352
+00:05:41,430 --> 00:05:41,440
+drop it here, right? Cuz it's that's
+ 
+
+353
+00:05:41,440 --> 00:05:42,990
+drop it here, right? Cuz it's that's
+going to have the same result. And if I
+
+354
+00:05:42,990 --> 00:05:43,000
+going to have the same result. And if I
+ 
+
+355
+00:05:43,000 --> 00:05:44,270
+going to have the same result. And if I
+run this, even though it looks a little
+
+356
+00:05:44,270 --> 00:05:44,280
+run this, even though it looks a little
+ 
+
+357
+00:05:44,280 --> 00:05:45,909
+run this, even though it looks a little
+bit weird, we're actually going to get
+
+358
+00:05:45,909 --> 00:05:45,919
+bit weird, we're actually going to get
+ 
+
+359
+00:05:45,919 --> 00:05:47,470
+bit weird, we're actually going to get
+the exact same result because we haven't
+
+360
+00:05:47,470 --> 00:05:47,480
+the exact same result because we haven't
+ 
+
+361
+00:05:47,480 --> 00:05:48,830
+the exact same result because we haven't
+actually changed the behavior of this
+
+362
+00:05:48,830 --> 00:05:48,840
+actually changed the behavior of this
+ 
+
+363
+00:05:48,840 --> 00:05:50,550
+actually changed the behavior of this
+code at all. We've just moved some
+
+364
+00:05:50,550 --> 00:05:50,560
+code at all. We've just moved some
+ 
+
+365
+00:05:50,560 --> 00:05:52,230
+code at all. We've just moved some
+things around. Similarly, I could write
+
+366
+00:05:52,230 --> 00:05:52,240
+things around. Similarly, I could write
+ 
+
+367
+00:05:52,240 --> 00:05:54,350
+things around. Similarly, I could write
+a Boolean here called like condition or
+
+368
+00:05:54,350 --> 00:05:54,360
+a Boolean here called like condition or
+ 
+
+369
+00:05:54,360 --> 00:05:56,550
+a Boolean here called like condition or
+something, set it equal to true, and
+
+370
+00:05:56,550 --> 00:05:56,560
+something, set it equal to true, and
+ 
+
+371
+00:05:56,560 --> 00:05:59,670
+something, set it equal to true, and
+have that to be my actual condition,
+
+372
+00:05:59,670 --> 00:05:59,680
+have that to be my actual condition,
+ 
+
+373
+00:05:59,680 --> 00:06:01,350
+have that to be my actual condition,
+right? So, I've got my condition. I'm
+
+374
+00:06:01,350 --> 00:06:01,360
+right? So, I've got my condition. I'm
+ 
+
+375
+00:06:01,360 --> 00:06:02,670
+right? So, I've got my condition. I'm
+going to do I plus plus, and then I
+
+376
+00:06:02,670 --> 00:06:02,680
+going to do I plus plus, and then I
+ 
+
+377
+00:06:02,680 --> 00:06:05,870
+going to do I plus plus, and then I
+might do something like if I
+
+378
+00:06:05,870 --> 00:06:05,880
+might do something like if I
+ 
+
+379
+00:06:05,880 --> 00:06:09,150
+might do something like if I
+is not less than five anymore, right?
+
+380
+00:06:09,150 --> 00:06:09,160
+is not less than five anymore, right?
+ 
+
+381
+00:06:09,160 --> 00:06:10,750
+is not less than five anymore, right?
+I'm going to set condition equal to
+
+382
+00:06:10,750 --> 00:06:10,760
+I'm going to set condition equal to
+ 
+
+383
+00:06:10,760 --> 00:06:13,110
+I'm going to set condition equal to
+false. And if I run this code, you can
+
+384
+00:06:13,110 --> 00:06:13,120
+false. And if I run this code, you can
+ 
+
+385
+00:06:13,120 --> 00:06:14,470
+false. And if I run this code, you can
+see that I'm still going to get hello
+
+386
+00:06:14,470 --> 00:06:14,480
+see that I'm still going to get hello
+ 
+
+387
+00:06:14,480 --> 00:06:15,910
+see that I'm still going to get hello
+world printed five times, because again,
+
+388
+00:06:15,910 --> 00:06:15,920
+world printed five times, because again,
+ 
+
+389
+00:06:15,920 --> 00:06:17,190
+world printed five times, because again,
+I haven't changed the behavior of my
+
+390
+00:06:17,190 --> 00:06:17,200
+I haven't changed the behavior of my
+ 
+
+391
+00:06:17,200 --> 00:06:19,190
+I haven't changed the behavior of my
+program. I've just rewritten the code in
+
+392
+00:06:19,190 --> 00:06:19,200
+program. I've just rewritten the code in
+ 
+
+393
+00:06:19,200 --> 00:06:20,750
+program. I've just rewritten the code in
+a slightly different way. But I'm
+
+394
+00:06:20,750 --> 00:06:20,760
+a slightly different way. But I'm
+ 
+
+395
+00:06:20,760 --> 00:06:22,070
+a slightly different way. But I'm
+telling you all this so that you know
+
+396
+00:06:22,070 --> 00:06:22,080
+telling you all this so that you know
+ 
+
+397
+00:06:22,080 --> 00:06:23,870
+telling you all this so that you know
+that for loops, they can do anything,
+
+398
+00:06:23,870 --> 00:06:23,880
+that for loops, they can do anything,
+ 
+
+399
+00:06:23,880 --> 00:06:25,590
+that for loops, they can do anything,
+right? Like you don't have to always be
+
+400
+00:06:25,590 --> 00:06:25,600
+right? Like you don't have to always be
+ 
+
+401
+00:06:25,600 --> 00:06:27,470
+right? Like you don't have to always be
+like for in I equals zero, I is less
+
+402
+00:06:27,470 --> 00:06:27,480
+like for in I equals zero, I is less
+ 
+
+403
+00:06:27,480 --> 00:06:29,150
+like for in I equals zero, I is less
+than five, I plus plus. That's boring,
+
+404
+00:06:29,150 --> 00:06:29,160
+than five, I plus plus. That's boring,
+ 
+
+405
+00:06:29,160 --> 00:06:30,590
+than five, I plus plus. That's boring,
+right? They can contain any kind of
+
+406
+00:06:30,590 --> 00:06:30,600
+right? They can contain any kind of
+ 
+
+407
+00:06:30,600 --> 00:06:32,230
+right? They can contain any kind of
+statements you want. You could also, of
+
+408
+00:06:32,230 --> 00:06:32,240
+statements you want. You could also, of
+ 
+
+409
+00:06:32,240 --> 00:06:34,390
+statements you want. You could also, of
+course, call functions in that like for
+
+410
+00:06:34,390 --> 00:06:34,400
+course, call functions in that like for
+ 
+
+411
+00:06:34,400 --> 00:06:36,790
+course, call functions in that like for
+loop statement. Anything, right? The
+
+412
+00:06:36,790 --> 00:06:36,800
+loop statement. Anything, right? The
+ 
+
+413
+00:06:36,800 --> 00:06:38,430
+loop statement. Anything, right? The
+possibilities are literally endless. You
+
+414
+00:06:38,430 --> 00:06:38,440
+possibilities are literally endless. You
+ 
+
+415
+00:06:38,440 --> 00:06:39,630
+possibilities are literally endless. You
+could also get rid of the condition
+
+416
+00:06:39,630 --> 00:06:39,640
+could also get rid of the condition
+ 
+
+417
+00:06:39,640 --> 00:06:41,070
+could also get rid of the condition
+entirely, which basically means that
+
+418
+00:06:41,070 --> 00:06:41,080
+entirely, which basically means that
+ 
+
+419
+00:06:41,080 --> 00:06:42,670
+entirely, which basically means that
+it's the same thing as writing true,
+
+420
+00:06:42,670 --> 00:06:42,680
+it's the same thing as writing true,
+ 
+
+421
+00:06:42,680 --> 00:06:44,670
+it's the same thing as writing true,
+right? This will never be false. And if
+
+422
+00:06:44,670 --> 00:06:44,680
+right? This will never be false. And if
+ 
+
+423
+00:06:44,680 --> 00:06:46,990
+right? This will never be false. And if
+I run this, it's actually going to be an
+
+424
+00:06:46,990 --> 00:06:47,000
+I run this, it's actually going to be an
+ 
+
+425
+00:06:47,000 --> 00:06:48,990
+I run this, it's actually going to be an
+endless loop, right? It's never going to
+
+426
+00:06:48,990 --> 00:06:49,000
+endless loop, right? It's never going to
+ 
+
+427
+00:06:49,000 --> 00:06:51,110
+endless loop, right? It's never going to
+end. So, if I hit F5 right now to run
+
+428
+00:06:51,110 --> 00:06:51,120
+end. So, if I hit F5 right now to run
+ 
+
+429
+00:06:51,120 --> 00:06:52,430
+end. So, if I hit F5 right now to run
+this, you'll see that we're going to
+
+430
+00:06:52,430 --> 00:06:52,440
+this, you'll see that we're going to
+ 
+
+431
+00:06:52,440 --> 00:06:54,550
+this, you'll see that we're going to
+actually keep printing hello world as
+
+432
+00:06:54,550 --> 00:06:54,560
+actually keep printing hello world as
+ 
+
+433
+00:06:54,560 --> 00:06:55,909
+actually keep printing hello world as
+our program keeps running until we
+
+434
+00:06:55,909 --> 00:06:55,919
+our program keeps running until we
+ 
+
+435
+00:06:55,919 --> 00:06:57,350
+our program keeps running until we
+manually terminate it. So, that's pretty
+
+436
+00:06:57,350 --> 00:06:57,360
+manually terminate it. So, that's pretty
+ 
+
+437
+00:06:57,360 --> 00:06:58,670
+manually terminate it. So, that's pretty
+much it for for loops. I mean, they're
+
+438
+00:06:58,670 --> 00:06:58,680
+much it for for loops. I mean, they're
+ 
+
+439
+00:06:58,680 --> 00:07:01,750
+much it for for loops. I mean, they're
+really, really simple for doing like for
+
+440
+00:07:01,750 --> 00:07:01,760
+really, really simple for doing like for
+ 
+
+441
+00:07:01,760 --> 00:07:03,470
+really, really simple for doing like for
+for running code multiple times. So, for
+
+442
+00:07:03,470 --> 00:07:03,480
+for running code multiple times. So, for
+ 
+
+443
+00:07:03,480 --> 00:07:04,710
+for running code multiple times. So, for
+example, I want to print hello world
+
+444
+00:07:04,710 --> 00:07:04,720
+example, I want to print hello world
+ 
+
+445
+00:07:04,720 --> 00:07:06,870
+example, I want to print hello world
+five times. Fantastic for that. Really
+
+446
+00:07:06,870 --> 00:07:06,880
+five times. Fantastic for that. Really
+ 
+
+447
+00:07:06,880 --> 00:07:08,710
+five times. Fantastic for that. Really
+easy to set up for that. Also, they're
+
+448
+00:07:08,710 --> 00:07:08,720
+easy to set up for that. Also, they're
+ 
+
+449
+00:07:08,720 --> 00:07:10,310
+easy to set up for that. Also, they're
+really useful with arrays when you want
+
+450
+00:07:10,310 --> 00:07:10,320
+really useful with arrays when you want
+ 
+
+451
+00:07:10,320 --> 00:07:12,710
+really useful with arrays when you want
+to kind of go through an array kind of
+
+452
+00:07:12,710 --> 00:07:12,720
+to kind of go through an array kind of
+ 
+
+453
+00:07:12,720 --> 00:07:14,790
+to kind of go through an array kind of
+linearly like that as well. Very useful
+
+454
+00:07:14,790 --> 00:07:14,800
+linearly like that as well. Very useful
+ 
+
+455
+00:07:14,800 --> 00:07:16,630
+linearly like that as well. Very useful
+for that. Um the next thing that we'll
+
+456
+00:07:16,630 --> 00:07:16,640
+for that. Um the next thing that we'll
+ 
+
+457
+00:07:16,640 --> 00:07:18,470
+for that. Um the next thing that we'll
+move on to is while loops. So, a while
+
+458
+00:07:18,470 --> 00:07:18,480
+move on to is while loops. So, a while
+ 
+
+459
+00:07:18,480 --> 00:07:21,030
+move on to is while loops. So, a while
+loop is much like a for loop. It's just
+
+460
+00:07:21,030 --> 00:07:21,040
+loop is much like a for loop. It's just
+ 
+
+461
+00:07:21,040 --> 00:07:22,750
+loop is much like a for loop. It's just
+that it doesn't have this kind of
+
+462
+00:07:22,750 --> 00:07:22,760
+that it doesn't have this kind of
+ 
+
+463
+00:07:22,760 --> 00:07:24,070
+that it doesn't have this kind of
+statement at the beginning and this
+
+464
+00:07:24,070 --> 00:07:24,080
+statement at the beginning and this
+ 
+
+465
+00:07:24,080 --> 00:07:25,390
+statement at the beginning and this
+statement at the end. It's just got a
+
+466
+00:07:25,390 --> 00:07:25,400
+statement at the end. It's just got a
+ 
+
+467
+00:07:25,400 --> 00:07:26,790
+statement at the end. It's just got a
+condition. So, basically, to write a
+
+468
+00:07:26,790 --> 00:07:26,800
+condition. So, basically, to write a
+ 
+
+469
+00:07:26,800 --> 00:07:28,510
+condition. So, basically, to write a
+while loop, we'll write the keyword
+
+470
+00:07:28,510 --> 00:07:28,520
+while loop, we'll write the keyword
+ 
+
+471
+00:07:28,520 --> 00:07:30,790
+while loop, we'll write the keyword
+while, and then inside here, we put some
+
+472
+00:07:30,790 --> 00:07:30,800
+while, and then inside here, we put some
+ 
+
+473
+00:07:30,800 --> 00:07:33,830
+while, and then inside here, we put some
+kind of condition. So, for example, I is
+
+474
+00:07:33,830 --> 00:07:33,840
+kind of condition. So, for example, I is
+ 
+
+475
+00:07:33,840 --> 00:07:35,870
+kind of condition. So, for example, I is
+less than five, right? As an example.
+
+476
+00:07:35,870 --> 00:07:35,880
+less than five, right? As an example.
+ 
+
+477
+00:07:35,880 --> 00:07:37,710
+less than five, right? As an example.
+And of course, I was declared up here.
+
+478
+00:07:37,710 --> 00:07:37,720
+And of course, I was declared up here.
+ 
+
+479
+00:07:37,720 --> 00:07:40,070
+And of course, I was declared up here.
+So, if we run this, this will basically
+
+480
+00:07:40,070 --> 00:07:40,080
+So, if we run this, this will basically
+ 
+
+481
+00:07:40,080 --> 00:07:42,030
+So, if we run this, this will basically
+perform whatever code is in here as long
+
+482
+00:07:42,030 --> 00:07:42,040
+perform whatever code is in here as long
+ 
+
+483
+00:07:42,040 --> 00:07:44,430
+perform whatever code is in here as long
+as I is less than five. So, if we were
+
+484
+00:07:44,430 --> 00:07:44,440
+as I is less than five. So, if we were
+ 
+
+485
+00:07:44,440 --> 00:07:45,870
+as I is less than five. So, if we were
+to rewrite our for loop, let me just
+
+486
+00:07:45,870 --> 00:07:45,880
+to rewrite our for loop, let me just
+ 
+
+487
+00:07:45,880 --> 00:07:47,750
+to rewrite our for loop, let me just
+bring back the for loop to what it was
+
+488
+00:07:47,750 --> 00:07:47,760
+bring back the for loop to what it was
+ 
+
+489
+00:07:47,760 --> 00:07:49,390
+bring back the for loop to what it was
+originally.
+
+490
+00:07:49,390 --> 00:07:49,400
+originally.
+ 
+
+491
+00:07:49,400 --> 00:07:51,110
+originally.
+If we If we wanted to basically
+
+492
+00:07:51,110 --> 00:07:51,120
+If we If we wanted to basically
+ 
+
+493
+00:07:51,120 --> 00:07:53,910
+If we If we wanted to basically
+replicate this for loop in here, we
+
+494
+00:07:53,910 --> 00:07:53,920
+replicate this for loop in here, we
+ 
+
+495
+00:07:53,920 --> 00:07:56,110
+replicate this for loop in here, we
+would have to write int I equals zero
+
+496
+00:07:56,110 --> 00:07:56,120
+would have to write int I equals zero
+ 
+
+497
+00:07:56,120 --> 00:07:58,630
+would have to write int I equals zero
+out here and then do the I plus plus at
+
+498
+00:07:58,630 --> 00:07:58,640
+out here and then do the I plus plus at
+ 
+
+499
+00:07:58,640 --> 00:08:00,710
+out here and then do the I plus plus at
+the end of the loop. So, over here,
+
+500
+00:08:00,710 --> 00:08:00,720
+the end of the loop. So, over here,
+ 
+
+501
+00:08:00,720 --> 00:08:02,510
+the end of the loop. So, over here,
+right? And then right now what we have
+
+502
+00:08:02,510 --> 00:08:02,520
+right? And then right now what we have
+ 
+
+503
+00:08:02,520 --> 00:08:04,790
+right? And then right now what we have
+here is actually exactly the same. I'm
+
+504
+00:08:04,790 --> 00:08:04,800
+here is actually exactly the same. I'm
+ 
+
+505
+00:08:04,800 --> 00:08:06,030
+here is actually exactly the same. I'm
+just going to in between these, I'm just
+
+506
+00:08:06,030 --> 00:08:06,040
+just going to in between these, I'm just
+ 
+
+507
+00:08:06,040 --> 00:08:07,470
+just going to in between these, I'm just
+going to print like a whole bunch of
+
+508
+00:08:07,470 --> 00:08:07,480
+going to print like a whole bunch of
+ 
+
+509
+00:08:07,480 --> 00:08:09,910
+going to print like a whole bunch of
+equal signs just to separate the two
+
+510
+00:08:09,910 --> 00:08:09,920
+equal signs just to separate the two
+ 
+
+511
+00:08:09,920 --> 00:08:11,710
+equal signs just to separate the two
+statements, but if I run this, you can
+
+512
+00:08:11,710 --> 00:08:11,720
+statements, but if I run this, you can
+ 
+
+513
+00:08:11,720 --> 00:08:13,110
+statements, but if I run this, you can
+see that we get the same result from
+
+514
+00:08:13,110 --> 00:08:13,120
+see that we get the same result from
+ 
+
+515
+00:08:13,120 --> 00:08:14,710
+see that we get the same result from
+both loops, right? They're both printing
+
+516
+00:08:14,710 --> 00:08:14,720
+both loops, right? They're both printing
+ 
+
+517
+00:08:14,720 --> 00:08:17,030
+both loops, right? They're both printing
+hello world five times. So, why use a
+
+518
+00:08:17,030 --> 00:08:17,040
+hello world five times. So, why use a
+ 
+
+519
+00:08:17,040 --> 00:08:19,150
+hello world five times. So, why use a
+while loop instead of a for loop or like
+
+520
+00:08:19,150 --> 00:08:19,160
+while loop instead of a for loop or like
+ 
+
+521
+00:08:19,160 --> 00:08:20,550
+while loop instead of a for loop or like
+when would you use a for loop instead of
+
+522
+00:08:20,550 --> 00:08:20,560
+when would you use a for loop instead of
+ 
+
+523
+00:08:20,560 --> 00:08:22,909
+when would you use a for loop instead of
+a while loop? Basically, it comes down
+
+524
+00:08:22,909 --> 00:08:22,919
+a while loop? Basically, it comes down
+ 
+
+525
+00:08:22,919 --> 00:08:24,790
+a while loop? Basically, it comes down
+to whether or not you need a variable,
+
+526
+00:08:24,790 --> 00:08:24,800
+to whether or not you need a variable,
+ 
+
+527
+00:08:24,800 --> 00:08:25,950
+to whether or not you need a variable,
+right? Because these loops are
+
+528
+00:08:25,950 --> 00:08:25,960
+right? Because these loops are
+ 
+
+529
+00:08:25,960 --> 00:08:27,150
+right? Because these loops are
+identical. You can use them
+
+530
+00:08:27,150 --> 00:08:27,160
+identical. You can use them
+ 
+
+531
+00:08:27,160 --> 00:08:29,230
+identical. You can use them
+interchangeably, right? It's more a
+
+532
+00:08:29,230 --> 00:08:29,240
+interchangeably, right? It's more a
+ 
+
+533
+00:08:29,240 --> 00:08:31,030
+interchangeably, right? It's more a
+matter of convention or a matter of
+
+534
+00:08:31,030 --> 00:08:31,040
+matter of convention or a matter of
+ 
+
+535
+00:08:31,040 --> 00:08:33,750
+matter of convention or a matter of
+style than it is an actual hard rule
+
+536
+00:08:33,750 --> 00:08:33,760
+style than it is an actual hard rule
+ 
+
+537
+00:08:33,760 --> 00:08:36,270
+style than it is an actual hard rule
+because again, like there's no actual
+
+538
+00:08:36,270 --> 00:08:36,280
+because again, like there's no actual
+ 
+
+539
+00:08:36,280 --> 00:08:37,750
+because again, like there's no actual
+difference between the two loops. They
+
+540
+00:08:37,750 --> 00:08:37,760
+difference between the two loops. They
+ 
+
+541
+00:08:37,760 --> 00:08:40,390
+difference between the two loops. They
+can do exactly the same thing. Uh if if
+
+542
+00:08:40,390 --> 00:08:40,400
+can do exactly the same thing. Uh if if
+ 
+
+543
+00:08:40,400 --> 00:08:41,950
+can do exactly the same thing. Uh if if
+you so want want them to, but the
+
+544
+00:08:41,950 --> 00:08:41,960
+you so want want them to, but the
+ 
+
+545
+00:08:41,960 --> 00:08:43,990
+you so want want them to, but the
+conventions are basically if you have a
+
+546
+00:08:43,990 --> 00:08:44,000
+conventions are basically if you have a
+ 
+
+547
+00:08:44,000 --> 00:08:46,070
+conventions are basically if you have a
+certain condition that already exists
+
+548
+00:08:46,070 --> 00:08:46,080
+certain condition that already exists
+ 
+
+549
+00:08:46,080 --> 00:08:47,870
+certain condition that already exists
+that you want to just kind of compare.
+
+550
+00:08:47,870 --> 00:08:47,880
+that you want to just kind of compare.
+ 
+
+551
+00:08:47,880 --> 00:08:49,470
+that you want to just kind of compare.
+So, for example, I mentioned that whole
+
+552
+00:08:49,470 --> 00:08:49,480
+So, for example, I mentioned that whole
+ 
+
+553
+00:08:49,480 --> 00:08:51,310
+So, for example, I mentioned that whole
+game loop example where you had a
+
+554
+00:08:51,310 --> 00:08:51,320
+game loop example where you had a
+ 
+
+555
+00:08:51,320 --> 00:08:53,590
+game loop example where you had a
+variable called running and you might
+
+556
+00:08:53,590 --> 00:08:53,600
+variable called running and you might
+ 
+
+557
+00:08:53,600 --> 00:08:55,310
+variable called running and you might
+want to kind of keep that game loop
+
+558
+00:08:55,310 --> 00:08:55,320
+want to kind of keep that game loop
+ 
+
+559
+00:08:55,320 --> 00:08:56,870
+want to kind of keep that game loop
+going as long as that running variable
+
+560
+00:08:56,870 --> 00:08:56,880
+going as long as that running variable
+ 
+
+561
+00:08:56,880 --> 00:08:58,630
+going as long as that running variable
+is true because running equals true
+
+562
+00:08:58,630 --> 00:08:58,640
+is true because running equals true
+ 
+
+563
+00:08:58,640 --> 00:09:00,070
+is true because running equals true
+basically means that your program is
+
+564
+00:09:00,070 --> 00:09:00,080
+basically means that your program is
+ 
+
+565
+00:09:00,080 --> 00:09:01,590
+basically means that your program is
+still running. If you wanted to do
+
+566
+00:09:01,590 --> 00:09:01,600
+still running. If you wanted to do
+ 
+
+567
+00:09:01,600 --> 00:09:02,710
+still running. If you wanted to do
+something like that, I would probably
+
+568
+00:09:02,710 --> 00:09:02,720
+something like that, I would probably
+ 
+
+569
+00:09:02,720 --> 00:09:04,270
+something like that, I would probably
+use a while loop because all we need is
+
+570
+00:09:04,270 --> 00:09:04,280
+use a while loop because all we need is
+ 
+
+571
+00:09:04,280 --> 00:09:05,270
+use a while loop because all we need is
+a condition. We don't need to be
+
+572
+00:09:05,270 --> 00:09:05,280
+a condition. We don't need to be
+ 
+
+573
+00:09:05,280 --> 00:09:06,829
+a condition. We don't need to be
+changing the condition after every
+
+574
+00:09:06,829 --> 00:09:06,839
+changing the condition after every
+ 
+
+575
+00:09:06,839 --> 00:09:08,550
+changing the condition after every
+iteration. We don't need to declare the
+
+576
+00:09:08,550 --> 00:09:08,560
+iteration. We don't need to declare the
+ 
+
+577
+00:09:08,560 --> 00:09:10,110
+iteration. We don't need to declare the
+condition to start off the loop. It's
+
+578
+00:09:10,110 --> 00:09:10,120
+condition to start off the loop. It's
+ 
+
+579
+00:09:10,120 --> 00:09:11,670
+condition to start off the loop. It's
+already a variable that we've got or a
+
+580
+00:09:11,670 --> 00:09:11,680
+already a variable that we've got or a
+ 
+
+581
+00:09:11,680 --> 00:09:13,870
+already a variable that we've got or a
+function call that we can use and that's
+
+582
+00:09:13,870 --> 00:09:13,880
+function call that we can use and that's
+ 
+
+583
+00:09:13,880 --> 00:09:15,470
+function call that we can use and that's
+just going to be completely like fine,
+
+584
+00:09:15,470 --> 00:09:15,480
+just going to be completely like fine,
+ 
+
+585
+00:09:15,480 --> 00:09:16,510
+just going to be completely like fine,
+right? It's not something that we
+
+586
+00:09:16,510 --> 00:09:16,520
+right? It's not something that we
+ 
+
+587
+00:09:16,520 --> 00:09:18,829
+right? It's not something that we
+actually have to keep kind of updating
+
+588
+00:09:18,829 --> 00:09:18,839
+actually have to keep kind of updating
+ 
+
+589
+00:09:18,839 --> 00:09:20,750
+actually have to keep kind of updating
+or set up initially, none of that stuff,
+
+590
+00:09:20,750 --> 00:09:20,760
+or set up initially, none of that stuff,
+ 
+
+591
+00:09:20,760 --> 00:09:22,430
+or set up initially, none of that stuff,
+right? Whereas if I wanted to go through
+
+592
+00:09:22,430 --> 00:09:22,440
+right? Whereas if I wanted to go through
+ 
+
+593
+00:09:22,440 --> 00:09:24,390
+right? Whereas if I wanted to go through
+an array and the array had a certain
+
+594
+00:09:24,390 --> 00:09:24,400
+an array and the array had a certain
+ 
+
+595
+00:09:24,400 --> 00:09:26,470
+an array and the array had a certain
+size, for example, my array was 10
+
+596
+00:09:26,470 --> 00:09:26,480
+size, for example, my array was 10
+ 
+
+597
+00:09:26,480 --> 00:09:28,270
+size, for example, my array was 10
+elements long, then I would use a for
+
+598
+00:09:28,270 --> 00:09:28,280
+elements long, then I would use a for
+ 
+
+599
+00:09:28,280 --> 00:09:30,350
+elements long, then I would use a for
+loop because first of all, I want to run
+
+600
+00:09:30,350 --> 00:09:30,360
+loop because first of all, I want to run
+ 
+
+601
+00:09:30,360 --> 00:09:32,310
+loop because first of all, I want to run
+that code exactly 10 times, so I want to
+
+602
+00:09:32,310 --> 00:09:32,320
+that code exactly 10 times, so I want to
+ 
+
+603
+00:09:32,320 --> 00:09:34,310
+that code exactly 10 times, so I want to
+keep track of some kind of variable and
+
+604
+00:09:34,310 --> 00:09:34,320
+keep track of some kind of variable and
+ 
+
+605
+00:09:34,320 --> 00:09:36,790
+keep track of some kind of variable and
+only run that loop 10 times, but also
+
+606
+00:09:36,790 --> 00:09:36,800
+only run that loop 10 times, but also
+ 
+
+607
+00:09:36,800 --> 00:09:38,390
+only run that loop 10 times, but also
+that variable will be useful for
+
+608
+00:09:38,390 --> 00:09:38,400
+that variable will be useful for
+ 
+
+609
+00:09:38,400 --> 00:09:40,470
+that variable will be useful for
+accessing elements inside that array
+
+610
+00:09:40,470 --> 00:09:40,480
+accessing elements inside that array
+ 
+
+611
+00:09:40,480 --> 00:09:42,270
+accessing elements inside that array
+because if I want to access every
+
+612
+00:09:42,270 --> 00:09:42,280
+because if I want to access every
+ 
+
+613
+00:09:42,280 --> 00:09:44,830
+because if I want to access every
+element in a 10 element array, I need
+
+614
+00:09:44,830 --> 00:09:44,840
+element in a 10 element array, I need
+ 
+
+615
+00:09:44,840 --> 00:09:47,150
+element in a 10 element array, I need
+some kind of offset so that I can like
+
+616
+00:09:47,150 --> 00:09:47,160
+some kind of offset so that I can like
+ 
+
+617
+00:09:47,160 --> 00:09:49,670
+some kind of offset so that I can like
+an index so that I can access an element
+
+618
+00:09:49,670 --> 00:09:49,680
+an index so that I can access an element
+ 
+
+619
+00:09:49,680 --> 00:09:51,270
+an index so that I can access an element
+in that array. And of course we're going
+
+620
+00:09:51,270 --> 00:09:51,280
+in that array. And of course we're going
+ 
+
+621
+00:09:51,280 --> 00:09:53,270
+in that array. And of course we're going
+to talk about arrays in the future, but
+
+622
+00:09:53,270 --> 00:09:53,280
+to talk about arrays in the future, but
+ 
+
+623
+00:09:53,280 --> 00:09:55,150
+to talk about arrays in the future, but
+that I variable that we happen to be
+
+624
+00:09:55,150 --> 00:09:55,160
+that I variable that we happen to be
+ 
+
+625
+00:09:55,160 --> 00:09:57,350
+that I variable that we happen to be
+tracking and it's going to go 0 1 2 3 4
+
+626
+00:09:57,350 --> 00:09:57,360
+tracking and it's going to go 0 1 2 3 4
+ 
+
+627
+00:09:57,360 --> 00:09:59,190
+tracking and it's going to go 0 1 2 3 4
+5 as our iterations go on is going to be
+
+628
+00:09:59,190 --> 00:09:59,200
+5 as our iterations go on is going to be
+ 
+
+629
+00:09:59,200 --> 00:10:01,270
+5 as our iterations go on is going to be
+absolutely perfect for that. So we've
+
+630
+00:10:01,270 --> 00:10:01,280
+absolutely perfect for that. So we've
+ 
+
+631
+00:10:01,280 --> 00:10:02,670
+absolutely perfect for that. So we've
+got four and we've got while, but there
+
+632
+00:10:02,670 --> 00:10:02,680
+got four and we've got while, but there
+ 
+
+633
+00:10:02,680 --> 00:10:04,390
+got four and we've got while, but there
+is actually one more loop that we have
+
+634
+00:10:04,390 --> 00:10:04,400
+is actually one more loop that we have
+ 
+
+635
+00:10:04,400 --> 00:10:06,270
+is actually one more loop that we have
+and it's called do-while loop. Now these
+
+636
+00:10:06,270 --> 00:10:06,280
+and it's called do-while loop. Now these
+ 
+
+637
+00:10:06,280 --> 00:10:08,550
+and it's called do-while loop. Now these
+aren't that useful. I don't personally
+
+638
+00:10:08,550 --> 00:10:08,560
+aren't that useful. I don't personally
+ 
+
+639
+00:10:08,560 --> 00:10:11,430
+aren't that useful. I don't personally
+use these that often, but they are there
+
+640
+00:10:11,430 --> 00:10:11,440
+use these that often, but they are there
+ 
+
+641
+00:10:11,440 --> 00:10:13,910
+use these that often, but they are there
+and they do have some uses. Although
+
+642
+00:10:13,910 --> 00:10:13,920
+and they do have some uses. Although
+ 
+
+643
+00:10:13,920 --> 00:10:15,230
+and they do have some uses. Although
+again, you won't be seeing these
+
+644
+00:10:15,230 --> 00:10:15,240
+again, you won't be seeing these
+ 
+
+645
+00:10:15,240 --> 00:10:17,630
+again, you won't be seeing these
+anywhere near as much as for loops or
+
+646
+00:10:17,630 --> 00:10:17,640
+anywhere near as much as for loops or
+ 
+
+647
+00:10:17,640 --> 00:10:19,030
+anywhere near as much as for loops or
+while loops. So basically we write the
+
+648
+00:10:19,030 --> 00:10:19,040
+while loops. So basically we write the
+ 
+
+649
+00:10:19,040 --> 00:10:21,510
+while loops. So basically we write the
+do keyword and then we have a body and
+
+650
+00:10:21,510 --> 00:10:21,520
+do keyword and then we have a body and
+ 
+
+651
+00:10:21,520 --> 00:10:23,270
+do keyword and then we have a body and
+then at the end we write while and we
+
+652
+00:10:23,270 --> 00:10:23,280
+then at the end we write while and we
+ 
+
+653
+00:10:23,280 --> 00:10:24,950
+then at the end we write while and we
+have some kind of condition. So for
+
+654
+00:10:24,950 --> 00:10:24,960
+have some kind of condition. So for
+ 
+
+655
+00:10:24,960 --> 00:10:26,750
+have some kind of condition. So for
+example, again, I'll just do I is less
+
+656
+00:10:26,750 --> 00:10:26,760
+example, again, I'll just do I is less
+ 
+
+657
+00:10:26,760 --> 00:10:28,310
+example, again, I'll just do I is less
+than five. The only difference between a
+
+658
+00:10:28,310 --> 00:10:28,320
+than five. The only difference between a
+ 
+
+659
+00:10:28,320 --> 00:10:30,070
+than five. The only difference between a
+do-while loop and a while loop is that
+
+660
+00:10:30,070 --> 00:10:30,080
+do-while loop and a while loop is that
+ 
+
+661
+00:10:30,080 --> 00:10:33,350
+do-while loop and a while loop is that
+this body will be executed at least once
+
+662
+00:10:33,350 --> 00:10:33,360
+this body will be executed at least once
+ 
+
+663
+00:10:33,360 --> 00:10:35,830
+this body will be executed at least once
+no matter what, right? So for example,
+
+664
+00:10:35,830 --> 00:10:35,840
+no matter what, right? So for example,
+ 
+
+665
+00:10:35,840 --> 00:10:39,150
+no matter what, right? So for example,
+if we if we change this into I situation
+
+666
+00:10:39,150 --> 00:10:39,160
+if we if we change this into I situation
+ 
+
+667
+00:10:39,160 --> 00:10:40,670
+if we if we change this into I situation
+so that instead we actually just have a
+
+668
+00:10:40,670 --> 00:10:40,680
+so that instead we actually just have a
+ 
+
+669
+00:10:40,680 --> 00:10:42,350
+so that instead we actually just have a
+condition
+
+670
+00:10:42,350 --> 00:10:42,360
+condition
+ 
+
+671
+00:10:42,360 --> 00:10:44,230
+condition
+and it might be equal to false.
+
+672
+00:10:44,230 --> 00:10:44,240
+and it might be equal to false.
+ 
+
+673
+00:10:44,240 --> 00:10:46,470
+and it might be equal to false.
+If I stick that condition in here, this
+
+674
+00:10:46,470 --> 00:10:46,480
+If I stick that condition in here, this
+ 
+
+675
+00:10:46,480 --> 00:10:49,110
+If I stick that condition in here, this
+while is actually going to function much
+
+676
+00:10:49,110 --> 00:10:49,120
+while is actually going to function much
+ 
+
+677
+00:10:49,120 --> 00:10:51,670
+while is actually going to function much
+like an if statement in the sense that
+
+678
+00:10:51,670 --> 00:10:51,680
+like an if statement in the sense that
+ 
+
+679
+00:10:51,680 --> 00:10:53,829
+like an if statement in the sense that
+if this is false, well then it's never
+
+680
+00:10:53,829 --> 00:10:53,839
+if this is false, well then it's never
+ 
+
+681
+00:10:53,839 --> 00:10:56,110
+if this is false, well then it's never
+going to run the code in here. However,
+
+682
+00:10:56,110 --> 00:10:56,120
+going to run the code in here. However,
+ 
+
+683
+00:10:56,120 --> 00:10:58,550
+going to run the code in here. However,
+a do-while loop, even if this is false,
+
+684
+00:10:58,550 --> 00:10:58,560
+a do-while loop, even if this is false,
+ 
+
+685
+00:10:58,560 --> 00:11:00,150
+a do-while loop, even if this is false,
+right? If it is set to condition,
+
+686
+00:11:00,150 --> 00:11:00,160
+right? If it is set to condition,
+ 
+
+687
+00:11:00,160 --> 00:11:01,910
+right? If it is set to condition,
+condition is false, it will function as
+
+688
+00:11:01,910 --> 00:11:01,920
+condition is false, it will function as
+ 
+
+689
+00:11:01,920 --> 00:11:03,190
+condition is false, it will function as
+if it's not a loop. It's going to run
+
+690
+00:11:03,190 --> 00:11:03,200
+if it's not a loop. It's going to run
+ 
+
+691
+00:11:03,200 --> 00:11:05,030
+if it's not a loop. It's going to run
+the code here once. It's going to come
+
+692
+00:11:05,030 --> 00:11:05,040
+the code here once. It's going to come
+ 
+
+693
+00:11:05,040 --> 00:11:05,910
+the code here once. It's going to come
+down to the while, look at the
+
+694
+00:11:05,910 --> 00:11:05,920
+down to the while, look at the
+ 
+
+695
+00:11:05,920 --> 00:11:07,510
+down to the while, look at the
+condition. Ah, the condition's false, so
+
+696
+00:11:07,510 --> 00:11:07,520
+condition. Ah, the condition's false, so
+ 
+
+697
+00:11:07,520 --> 00:11:08,950
+condition. Ah, the condition's false, so
+I'm not going to loop. And that's pretty
+
+698
+00:11:08,950 --> 00:11:08,960
+I'm not going to loop. And that's pretty
+ 
+
+699
+00:11:08,960 --> 00:11:10,590
+I'm not going to loop. And that's pretty
+much it. That's how do-while loops work.
+
+700
+00:11:10,590 --> 00:11:10,600
+much it. That's how do-while loops work.
+ 
+
+701
+00:11:10,600 --> 00:11:11,870
+much it. That's how do-while loops work.
+All right. So that's pretty much it for
+
+702
+00:11:11,870 --> 00:11:11,880
+All right. So that's pretty much it for
+ 
+
+703
+00:11:11,880 --> 00:11:13,750
+All right. So that's pretty much it for
+today's video. Hope you guys enjoyed
+
+704
+00:11:13,750 --> 00:11:13,760
+today's video. Hope you guys enjoyed
+ 
+
+705
+00:11:13,760 --> 00:11:15,390
+today's video. Hope you guys enjoyed
+very basic introduction to loops. We're
+
+706
+00:11:15,390 --> 00:11:15,400
+very basic introduction to loops. We're
+ 
+
+707
+00:11:15,400 --> 00:11:16,870
+very basic introduction to loops. We're
+going to be using these a lot throughout
+
+708
+00:11:16,870 --> 00:11:16,880
+going to be using these a lot throughout
+ 
+
+709
+00:11:16,880 --> 00:11:19,190
+going to be using these a lot throughout
+the series. They're used in like pretty
+
+710
+00:11:19,190 --> 00:11:19,200
+the series. They're used in like pretty
+ 
+
+711
+00:11:19,200 --> 00:11:21,270
+the series. They're used in like pretty
+much every algorithm you can think of.
+
+712
+00:11:21,270 --> 00:11:21,280
+much every algorithm you can think of.
+ 
+
+713
+00:11:21,280 --> 00:11:22,990
+much every algorithm you can think of.
+Loops are extremely useful. When we talk
+
+714
+00:11:22,990 --> 00:11:23,000
+Loops are extremely useful. When we talk
+ 
+
+715
+00:11:23,000 --> 00:11:24,670
+Loops are extremely useful. When we talk
+about arrays, we'll be talking about how
+
+716
+00:11:24,670 --> 00:11:24,680
+about arrays, we'll be talking about how
+ 
+
+717
+00:11:24,680 --> 00:11:26,510
+about arrays, we'll be talking about how
+we can use for loops to access arrays
+
+718
+00:11:26,510 --> 00:11:26,520
+we can use for loops to access arrays
+ 
+
+719
+00:11:26,520 --> 00:11:27,910
+we can use for loops to access arrays
+and all of that stuff. So everything
+
+720
+00:11:27,910 --> 00:11:27,920
+and all of that stuff. So everything
+ 
+
+721
+00:11:27,920 --> 00:11:30,270
+and all of that stuff. So everything
+will tie in nicely. I'm going to do a
+
+722
+00:11:30,270 --> 00:11:30,280
+will tie in nicely. I'm going to do a
+ 
+
+723
+00:11:30,280 --> 00:11:32,270
+will tie in nicely. I'm going to do a
+more in-depth look at them sometime in
+
+724
+00:11:32,270 --> 00:11:32,280
+more in-depth look at them sometime in
+ 
+
+725
+00:11:32,280 --> 00:11:33,590
+more in-depth look at them sometime in
+the future where we're actually going to
+
+726
+00:11:33,590 --> 00:11:33,600
+the future where we're actually going to
+ 
+
+727
+00:11:33,600 --> 00:11:35,430
+the future where we're actually going to
+look at the disassembly and look at the
+
+728
+00:11:35,430 --> 00:11:35,440
+look at the disassembly and look at the
+ 
+
+729
+00:11:35,440 --> 00:11:36,990
+look at the disassembly and look at the
+actual CPU instructions that get
+
+730
+00:11:36,990 --> 00:11:37,000
+actual CPU instructions that get
+ 
+
+731
+00:11:37,000 --> 00:11:38,470
+actual CPU instructions that get
+generated for loops and take a bit of a
+
+732
+00:11:38,470 --> 00:11:38,480
+generated for loops and take a bit of a
+ 
+
+733
+00:11:38,480 --> 00:11:40,070
+generated for loops and take a bit of a
+deeper look. I just didn't want to make
+
+734
+00:11:40,070 --> 00:11:40,080
+deeper look. I just didn't want to make
+ 
+
+735
+00:11:40,080 --> 00:11:41,910
+deeper look. I just didn't want to make
+this video too complicated, so the link
+
+736
+00:11:41,910 --> 00:11:41,920
+this video too complicated, so the link
+ 
+
+737
+00:11:41,920 --> 00:11:43,870
+this video too complicated, so the link
+to that in-depth video will be somewhere
+
+738
+00:11:43,870 --> 00:11:43,880
+to that in-depth video will be somewhere
+ 
+
+739
+00:11:43,880 --> 00:11:45,270
+to that in-depth video will be somewhere
+in the description when that video
+
+740
+00:11:45,270 --> 00:11:45,280
+in the description when that video
+ 
+
+741
+00:11:45,280 --> 00:11:46,710
+in the description when that video
+actually comes out. But, I hope you guys
+
+742
+00:11:46,710 --> 00:11:46,720
+actually comes out. But, I hope you guys
+ 
+
+743
+00:11:46,720 --> 00:11:48,030
+actually comes out. But, I hope you guys
+enjoyed this video. If you did, please
+
+744
+00:11:48,030 --> 00:11:48,040
+enjoyed this video. If you did, please
+ 
+
+745
+00:11:48,040 --> 00:11:49,590
+enjoyed this video. If you did, please
+hit that like button. You can follow me
+
+746
+00:11:49,590 --> 00:11:49,600
+hit that like button. You can follow me
+ 
+
+747
+00:11:49,600 --> 00:11:52,310
+hit that like button. You can follow me
+on Twitter and Instagram. And, if you
+
+748
+00:11:52,310 --> 00:11:52,320
+on Twitter and Instagram. And, if you
+ 
+
+749
+00:11:52,320 --> 00:11:53,470
+on Twitter and Instagram. And, if you
+really like this series and you want to
+
+750
+00:11:53,470 --> 00:11:53,480
+really like this series and you want to
+ 
+
+751
+00:11:53,480 --> 00:11:54,790
+really like this series and you want to
+see more episodes and you want to
+
+752
+00:11:54,790 --> 00:11:54,800
+see more episodes and you want to
+ 
+
+753
+00:11:54,800 --> 00:11:56,750
+see more episodes and you want to
+support this series, you can support me
+
+754
+00:11:56,750 --> 00:11:56,760
+support this series, you can support me
+ 
+
+755
+00:11:56,760 --> 00:11:59,150
+support this series, you can support me
+on patreon.com/thecherneau.
+
+756
+00:11:59,150 --> 00:11:59,160
+on patreon.com/thecherneau.
+ 
+
+757
+00:11:59,160 --> 00:12:03,840
+on patreon.com/thecherneau.
+And, I will see you next time. Goodbye.
+

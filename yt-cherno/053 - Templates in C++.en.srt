@@ -1,0 +1,5145 @@
+1
+00:00:00,000 --> 00:00:01,730
+
+hey what's up guys my name is Jonah and
+
+2
+00:00:01,730 --> 00:00:01,740
+hey what's up guys my name is Jonah and
+ 
+
+3
+00:00:01,740 --> 00:00:03,350
+hey what's up guys my name is Jonah and
+welcome back to my safe loss loss series
+
+4
+00:00:03,350 --> 00:00:03,360
+welcome back to my safe loss loss series
+ 
+
+5
+00:00:03,360 --> 00:00:05,420
+welcome back to my safe loss loss series
+so today we're going to be talking all
+
+6
+00:00:05,420 --> 00:00:05,430
+so today we're going to be talking all
+ 
+
+7
+00:00:05,430 --> 00:00:07,010
+so today we're going to be talking all
+about templates and I know that you guys
+
+8
+00:00:07,010 --> 00:00:07,020
+about templates and I know that you guys
+ 
+
+9
+00:00:07,020 --> 00:00:08,299
+about templates and I know that you guys
+have been requesting this for a while
+
+10
+00:00:08,299 --> 00:00:08,309
+have been requesting this for a while
+ 
+
+11
+00:00:08,309 --> 00:00:10,339
+have been requesting this for a while
+but it is kind of an advanced topic so I
+
+12
+00:00:10,339 --> 00:00:10,349
+but it is kind of an advanced topic so I
+ 
+
+13
+00:00:10,349 --> 00:00:11,780
+but it is kind of an advanced topic so I
+didn't want to jump into it too quickly
+
+14
+00:00:11,780 --> 00:00:11,790
+didn't want to jump into it too quickly
+ 
+
+15
+00:00:11,790 --> 00:00:14,390
+didn't want to jump into it too quickly
+but today we're finally going to start
+
+16
+00:00:14,390 --> 00:00:14,400
+but today we're finally going to start
+ 
+
+17
+00:00:14,400 --> 00:00:16,820
+but today we're finally going to start
+off with a fairly gentle introduction to
+
+18
+00:00:16,820 --> 00:00:16,830
+off with a fairly gentle introduction to
+ 
+
+19
+00:00:16,830 --> 00:00:19,609
+off with a fairly gentle introduction to
+templates in C++ so first of all what is
+
+20
+00:00:19,609 --> 00:00:19,619
+templates in C++ so first of all what is
+ 
+
+21
+00:00:19,619 --> 00:00:21,500
+templates in C++ so first of all what is
+a template well those of you familiar
+
+22
+00:00:21,500 --> 00:00:21,510
+a template well those of you familiar
+ 
+
+23
+00:00:21,510 --> 00:00:23,779
+a template well those of you familiar
+with other languages might see this as
+
+24
+00:00:23,779 --> 00:00:23,789
+with other languages might see this as
+ 
+
+25
+00:00:23,789 --> 00:00:26,240
+with other languages might see this as
+kind of generics Riesling Java or C
+
+26
+00:00:26,240 --> 00:00:26,250
+kind of generics Riesling Java or C
+ 
+
+27
+00:00:26,250 --> 00:00:27,820
+kind of generics Riesling Java or C
+sharp they're kind of called generic
+
+28
+00:00:27,820 --> 00:00:27,830
+sharp they're kind of called generic
+ 
+
+29
+00:00:27,830 --> 00:00:30,230
+sharp they're kind of called generic
+templates are completely different well
+
+30
+00:00:30,230 --> 00:00:30,240
+templates are completely different well
+ 
+
+31
+00:00:30,240 --> 00:00:32,030
+templates are completely different well
+they're not completely different but
+
+32
+00:00:32,030 --> 00:00:32,040
+they're not completely different but
+ 
+
+33
+00:00:32,040 --> 00:00:34,400
+they're not completely different but
+they are like infinitely more powerful
+
+34
+00:00:34,400 --> 00:00:34,410
+they are like infinitely more powerful
+ 
+
+35
+00:00:34,410 --> 00:00:36,920
+they are like infinitely more powerful
+than generics in those managed languages
+
+36
+00:00:36,920 --> 00:00:36,930
+than generics in those managed languages
+ 
+
+37
+00:00:36,930 --> 00:00:40,130
+than generics in those managed languages
+right templates are almost like a bit of
+
+38
+00:00:40,130 --> 00:00:40,140
+right templates are almost like a bit of
+ 
+
+39
+00:00:40,140 --> 00:00:42,410
+right templates are almost like a bit of
+a macro they let you do pretty much
+
+40
+00:00:42,410 --> 00:00:42,420
+a macro they let you do pretty much
+ 
+
+41
+00:00:42,420 --> 00:00:44,479
+a macro they let you do pretty much
+anything whereas generics is very
+
+42
+00:00:44,479 --> 00:00:44,489
+anything whereas generics is very
+ 
+
+43
+00:00:44,489 --> 00:00:46,520
+anything whereas generics is very
+heavily limited by the type system and
+
+44
+00:00:46,520 --> 00:00:46,530
+heavily limited by the type system and
+ 
+
+45
+00:00:46,530 --> 00:00:49,340
+heavily limited by the type system and
+by a lot of other factors templates
+
+46
+00:00:49,340 --> 00:00:49,350
+by a lot of other factors templates
+ 
+
+47
+00:00:49,350 --> 00:00:52,520
+by a lot of other factors templates
+specifically are much more powerful and
+
+48
+00:00:52,520 --> 00:00:52,530
+specifically are much more powerful and
+ 
+
+49
+00:00:52,530 --> 00:00:53,689
+specifically are much more powerful and
+we're gonna see this as we go along
+
+50
+00:00:53,689 --> 00:00:53,699
+we're gonna see this as we go along
+ 
+
+51
+00:00:53,699 --> 00:00:55,340
+we're gonna see this as we go along
+don't worry I'm gonna probably end up
+
+52
+00:00:55,340 --> 00:00:55,350
+don't worry I'm gonna probably end up
+ 
+
+53
+00:00:55,350 --> 00:00:56,959
+don't worry I'm gonna probably end up
+having like dozens of videos on
+
+54
+00:00:56,959 --> 00:00:56,969
+having like dozens of videos on
+ 
+
+55
+00:00:56,969 --> 00:00:59,479
+having like dozens of videos on
+templates or something like that so by
+
+56
+00:00:59,479 --> 00:00:59,489
+templates or something like that so by
+ 
+
+57
+00:00:59,489 --> 00:01:01,549
+templates or something like that so by
+no means is this gonna be the only video
+
+58
+00:01:01,549 --> 00:01:01,559
+no means is this gonna be the only video
+ 
+
+59
+00:01:01,559 --> 00:01:03,290
+no means is this gonna be the only video
+I make on templates templates are such a
+
+60
+00:01:03,290 --> 00:01:03,300
+I make on templates templates are such a
+ 
+
+61
+00:01:03,300 --> 00:01:05,440
+I make on templates templates are such a
+huge and complex topic and can be
+
+62
+00:01:05,440 --> 00:01:05,450
+huge and complex topic and can be
+ 
+
+63
+00:01:05,450 --> 00:01:08,390
+huge and complex topic and can be
+incredibly crazy so we're gonna be
+
+64
+00:01:08,390 --> 00:01:08,400
+incredibly crazy so we're gonna be
+ 
+
+65
+00:01:08,400 --> 00:01:09,920
+incredibly crazy so we're gonna be
+exploring all of that as a serious goes
+
+66
+00:01:09,920 --> 00:01:09,930
+exploring all of that as a serious goes
+ 
+
+67
+00:01:09,930 --> 00:01:11,690
+exploring all of that as a serious goes
+on so first of all well what is a
+
+68
+00:01:11,690 --> 00:01:11,700
+on so first of all well what is a
+ 
+
+69
+00:01:11,700 --> 00:01:14,210
+on so first of all well what is a
+template a template basically allows you
+
+70
+00:01:14,210 --> 00:01:14,220
+template a template basically allows you
+ 
+
+71
+00:01:14,220 --> 00:01:17,359
+template a template basically allows you
+to define a template that will be
+
+72
+00:01:17,359 --> 00:01:17,369
+to define a template that will be
+ 
+
+73
+00:01:17,369 --> 00:01:21,440
+to define a template that will be
+compiled but like by your usage if that
+
+74
+00:01:21,440 --> 00:01:21,450
+compiled but like by your usage if that
+ 
+
+75
+00:01:21,450 --> 00:01:23,179
+compiled but like by your usage if that
+makes sense you can get the compiler to
+
+76
+00:01:23,179 --> 00:01:23,189
+makes sense you can get the compiler to
+ 
+
+77
+00:01:23,189 --> 00:01:25,490
+makes sense you can get the compiler to
+write code for you based on a set of
+
+78
+00:01:25,490 --> 00:01:25,500
+write code for you based on a set of
+ 
+
+79
+00:01:25,500 --> 00:01:27,200
+write code for you based on a set of
+rules that's really what a template is
+
+80
+00:01:27,200 --> 00:01:27,210
+rules that's really what a template is
+ 
+
+81
+00:01:27,210 --> 00:01:29,420
+rules that's really what a template is
+just the compiler writing code for you
+
+82
+00:01:29,420 --> 00:01:29,430
+just the compiler writing code for you
+ 
+
+83
+00:01:29,430 --> 00:01:30,890
+just the compiler writing code for you
+based on the rules that you've given it
+
+84
+00:01:30,890 --> 00:01:30,900
+based on the rules that you've given it
+ 
+
+85
+00:01:30,900 --> 00:01:33,020
+based on the rules that you've given it
+when I write a function for example and
+
+86
+00:01:33,020 --> 00:01:33,030
+when I write a function for example and
+ 
+
+87
+00:01:33,030 --> 00:01:35,450
+when I write a function for example and
+I use a template in that function what
+
+88
+00:01:35,450 --> 00:01:35,460
+I use a template in that function what
+ 
+
+89
+00:01:35,460 --> 00:01:36,770
+I use a template in that function what
+I'm actually doing is creating almost
+
+90
+00:01:36,770 --> 00:01:36,780
+I'm actually doing is creating almost
+ 
+
+91
+00:01:36,780 --> 00:01:38,929
+I'm actually doing is creating almost
+like a blueprint so that what I decide
+
+92
+00:01:38,929 --> 00:01:38,939
+like a blueprint so that what I decide
+ 
+
+93
+00:01:38,939 --> 00:01:40,429
+like a blueprint so that what I decide
+to call that function I can specify
+
+94
+00:01:40,429 --> 00:01:40,439
+to call that function I can specify
+ 
+
+95
+00:01:40,439 --> 00:01:42,560
+to call that function I can specify
+certain parameters which determine what
+
+96
+00:01:42,560 --> 00:01:42,570
+certain parameters which determine what
+ 
+
+97
+00:01:42,570 --> 00:01:44,630
+certain parameters which determine what
+code actually gets put into the template
+
+98
+00:01:44,630 --> 00:01:44,640
+code actually gets put into the template
+ 
+
+99
+00:01:44,640 --> 00:01:46,789
+code actually gets put into the template
+and that is all kind of determined by
+
+100
+00:01:46,789 --> 00:01:46,799
+and that is all kind of determined by
+ 
+
+101
+00:01:46,799 --> 00:01:48,170
+and that is all kind of determined by
+the way that I actually use that
+
+102
+00:01:48,170 --> 00:01:48,180
+the way that I actually use that
+ 
+
+103
+00:01:48,180 --> 00:01:50,090
+the way that I actually use that
+function again it's a little bit
+
+104
+00:01:50,090 --> 00:01:50,100
+function again it's a little bit
+ 
+
+105
+00:01:50,100 --> 00:01:52,429
+function again it's a little bit
+difficult to explain and in fact I could
+
+106
+00:01:52,429 --> 00:01:52,439
+difficult to explain and in fact I could
+ 
+
+107
+00:01:52,439 --> 00:01:54,139
+difficult to explain and in fact I could
+just give you the definition that's on
+
+108
+00:01:54,139 --> 00:01:54,149
+just give you the definition that's on
+ 
+
+109
+00:01:54,149 --> 00:01:56,179
+just give you the definition that's on
+like say BP reference or on Wikipedia
+
+110
+00:01:56,179 --> 00:01:56,189
+like say BP reference or on Wikipedia
+ 
+
+111
+00:01:56,189 --> 00:01:58,100
+like say BP reference or on Wikipedia
+I'm trying not to do that obviously I
+
+112
+00:01:58,100 --> 00:01:58,110
+I'm trying not to do that obviously I
+ 
+
+113
+00:01:58,110 --> 00:02:00,200
+I'm trying not to do that obviously I
+think the best way is just gonna be to
+
+114
+00:02:00,200 --> 00:02:00,210
+think the best way is just gonna be to
+ 
+
+115
+00:02:00,210 --> 00:02:01,580
+think the best way is just gonna be to
+show you what it actually looks like in
+
+116
+00:02:01,580 --> 00:02:01,590
+show you what it actually looks like in
+ 
+
+117
+00:02:01,590 --> 00:02:03,260
+show you what it actually looks like in
+the code so a good example of why I
+
+118
+00:02:03,260 --> 00:02:03,270
+the code so a good example of why I
+ 
+
+119
+00:02:03,270 --> 00:02:05,300
+the code so a good example of why I
+might want to use a template is if I
+
+120
+00:02:05,300 --> 00:02:05,310
+might want to use a template is if I
+ 
+
+121
+00:02:05,310 --> 00:02:07,130
+might want to use a template is if I
+want to create a function that is
+
+122
+00:02:07,130 --> 00:02:07,140
+want to create a function that is
+ 
+
+123
+00:02:07,140 --> 00:02:09,290
+want to create a function that is
+largely going to be the same but may
+
+124
+00:02:09,290 --> 00:02:09,300
+largely going to be the same but may
+ 
+
+125
+00:02:09,300 --> 00:02:11,570
+largely going to be the same but may
+take in different types maybe I have a
+
+126
+00:02:11,570 --> 00:02:11,580
+take in different types maybe I have a
+ 
+
+127
+00:02:11,580 --> 00:02:12,309
+take in different types maybe I have a
+print
+
+128
+00:02:12,309 --> 00:02:12,319
+print
+ 
+
+129
+00:02:12,319 --> 00:02:14,709
+print
+that I want to use to print integers so
+
+130
+00:02:14,709 --> 00:02:14,719
+that I want to use to print integers so
+ 
+
+131
+00:02:14,719 --> 00:02:17,080
+that I want to use to print integers so
+I might do something like print in value
+
+132
+00:02:17,080 --> 00:02:17,090
+I might do something like print in value
+ 
+
+133
+00:02:17,090 --> 00:02:18,429
+I might do something like print in value
+and all this is gonna do is see out my
+
+134
+00:02:18,429 --> 00:02:18,439
+and all this is gonna do is see out my
+ 
+
+135
+00:02:18,439 --> 00:02:20,679
+and all this is gonna do is see out my
+value and if I go back down to main I
+
+136
+00:02:20,679 --> 00:02:20,689
+value and if I go back down to main I
+ 
+
+137
+00:02:20,689 --> 00:02:22,780
+value and if I go back down to main I
+can call print with a value such as five
+
+138
+00:02:22,780 --> 00:02:22,790
+can call print with a value such as five
+ 
+
+139
+00:02:22,790 --> 00:02:25,209
+can call print with a value such as five
+and everything will be fine now what if
+
+140
+00:02:25,209 --> 00:02:25,219
+and everything will be fine now what if
+ 
+
+141
+00:02:25,219 --> 00:02:26,530
+and everything will be fine now what if
+I want to actually use a string there
+
+142
+00:02:26,530 --> 00:02:26,540
+I want to actually use a string there
+ 
+
+143
+00:02:26,540 --> 00:02:29,050
+I want to actually use a string there
+instead like Hello so suddenly I need to
+
+144
+00:02:29,050 --> 00:02:29,060
+instead like Hello so suddenly I need to
+ 
+
+145
+00:02:29,060 --> 00:02:30,309
+instead like Hello so suddenly I need to
+actually define another overload for
+
+146
+00:02:30,309 --> 00:02:30,319
+actually define another overload for
+ 
+
+147
+00:02:30,319 --> 00:02:32,229
+actually define another overload for
+this function which actually takes in a
+
+148
+00:02:32,229 --> 00:02:32,239
+this function which actually takes in a
+ 
+
+149
+00:02:32,239 --> 00:02:36,190
+this function which actually takes in a
+string so just like this note that I'm
+
+150
+00:02:36,190 --> 00:02:36,200
+string so just like this note that I'm
+ 
+
+151
+00:02:36,200 --> 00:02:37,509
+string so just like this note that I'm
+actually passing this string by value
+
+152
+00:02:37,509 --> 00:02:37,519
+actually passing this string by value
+ 
+
+153
+00:02:37,519 --> 00:02:39,280
+actually passing this string by value
+here because I want to kind of have it
+
+154
+00:02:39,280 --> 00:02:39,290
+here because I want to kind of have it
+ 
+
+155
+00:02:39,290 --> 00:02:41,020
+here because I want to kind of have it
+be the same as my print function here
+
+156
+00:02:41,020 --> 00:02:41,030
+be the same as my print function here
+ 
+
+157
+00:02:41,030 --> 00:02:42,729
+be the same as my print function here
+which also takes in the integer by value
+
+158
+00:02:42,729 --> 00:02:42,739
+which also takes in the integer by value
+ 
+
+159
+00:02:42,739 --> 00:02:44,619
+which also takes in the integer by value
+then I'm going to basically end up
+
+160
+00:02:44,619 --> 00:02:44,629
+then I'm going to basically end up
+ 
+
+161
+00:02:44,629 --> 00:02:47,259
+then I'm going to basically end up
+copying and pasting this code this works
+
+162
+00:02:47,259 --> 00:02:47,269
+copying and pasting this code this works
+ 
+
+163
+00:02:47,269 --> 00:02:48,610
+copying and pasting this code this works
+fine in order for this to actually
+
+164
+00:02:48,610 --> 00:02:48,620
+fine in order for this to actually
+ 
+
+165
+00:02:48,620 --> 00:02:50,170
+fine in order for this to actually
+compile though we do need to include
+
+166
+00:02:50,170 --> 00:02:50,180
+compile though we do need to include
+ 
+
+167
+00:02:50,180 --> 00:02:54,399
+compile though we do need to include
+string now what if I want to print a
+
+168
+00:02:54,399 --> 00:02:54,409
+string now what if I want to print a
+ 
+
+169
+00:02:54,409 --> 00:02:56,679
+string now what if I want to print a
+float well you kind of are seeing the
+
+170
+00:02:56,679 --> 00:02:56,689
+float well you kind of are seeing the
+ 
+
+171
+00:02:56,689 --> 00:02:58,149
+float well you kind of are seeing the
+picture here I hope if I want to print a
+
+172
+00:02:58,149 --> 00:02:58,159
+picture here I hope if I want to print a
+ 
+
+173
+00:02:58,159 --> 00:03:00,220
+picture here I hope if I want to print a
+float like five point five then I also
+
+174
+00:03:00,220 --> 00:03:00,230
+float like five point five then I also
+ 
+
+175
+00:03:00,230 --> 00:03:01,899
+float like five point five then I also
+need to basically copy and paste this
+
+176
+00:03:01,899 --> 00:03:01,909
+need to basically copy and paste this
+ 
+
+177
+00:03:01,909 --> 00:03:03,610
+need to basically copy and paste this
+function again so now I have three
+
+178
+00:03:03,610 --> 00:03:03,620
+function again so now I have three
+ 
+
+179
+00:03:03,620 --> 00:03:05,589
+function again so now I have three
+different functions here which basically
+
+180
+00:03:05,589 --> 00:03:05,599
+different functions here which basically
+ 
+
+181
+00:03:05,599 --> 00:03:07,449
+different functions here which basically
+the only thing that changes here is the
+
+182
+00:03:07,449 --> 00:03:07,459
+the only thing that changes here is the
+ 
+
+183
+00:03:07,459 --> 00:03:09,280
+the only thing that changes here is the
+actual type of data I'm passing in
+
+184
+00:03:09,280 --> 00:03:09,290
+actual type of data I'm passing in
+ 
+
+185
+00:03:09,290 --> 00:03:11,679
+actual type of data I'm passing in
+because C out can of course accept any
+
+186
+00:03:11,679 --> 00:03:11,689
+because C out can of course accept any
+ 
+
+187
+00:03:11,689 --> 00:03:15,009
+because C out can of course accept any
+kind of primitive or or built-in C++
+
+188
+00:03:15,009 --> 00:03:15,019
+kind of primitive or or built-in C++
+ 
+
+189
+00:03:15,019 --> 00:03:16,990
+kind of primitive or or built-in C++
+type that we're actually using here so
+
+190
+00:03:16,990 --> 00:03:17,000
+type that we're actually using here so
+ 
+
+191
+00:03:17,000 --> 00:03:19,300
+type that we're actually using here so
+what we've ended up with is manually
+
+192
+00:03:19,300 --> 00:03:19,310
+what we've ended up with is manually
+ 
+
+193
+00:03:19,310 --> 00:03:21,219
+what we've ended up with is manually
+defining three different overloads for a
+
+194
+00:03:21,219 --> 00:03:21,229
+defining three different overloads for a
+ 
+
+195
+00:03:21,229 --> 00:03:24,399
+defining three different overloads for a
+print function that's okay some people
+
+196
+00:03:24,399 --> 00:03:24,409
+print function that's okay some people
+ 
+
+197
+00:03:24,409 --> 00:03:26,500
+print function that's okay some people
+actually prefer to do it this way but
+
+198
+00:03:26,500 --> 00:03:26,510
+actually prefer to do it this way but
+ 
+
+199
+00:03:26,510 --> 00:03:27,399
+actually prefer to do it this way but
+what if we could just define that
+
+200
+00:03:27,399 --> 00:03:27,409
+what if we could just define that
+ 
+
+201
+00:03:27,409 --> 00:03:30,430
+what if we could just define that
+function once a good goal for software
+
+202
+00:03:30,430 --> 00:03:30,440
+function once a good goal for software
+ 
+
+203
+00:03:30,440 --> 00:03:32,469
+function once a good goal for software
+engineering in general really is to kind
+
+204
+00:03:32,469 --> 00:03:32,479
+engineering in general really is to kind
+ 
+
+205
+00:03:32,479 --> 00:03:34,869
+engineering in general really is to kind
+of avoid code duplication right because
+
+206
+00:03:34,869 --> 00:03:34,879
+of avoid code duplication right because
+ 
+
+207
+00:03:34,879 --> 00:03:36,909
+of avoid code duplication right because
+if we decide to actually change one of
+
+208
+00:03:36,909 --> 00:03:36,919
+if we decide to actually change one of
+ 
+
+209
+00:03:36,919 --> 00:03:38,589
+if we decide to actually change one of
+these print functions to do something
+
+210
+00:03:38,589 --> 00:03:38,599
+these print functions to do something
+ 
+
+211
+00:03:38,599 --> 00:03:41,110
+these print functions to do something
+extraordinary we decide to go from using
+
+212
+00:03:41,110 --> 00:03:41,120
+extraordinary we decide to go from using
+ 
+
+213
+00:03:41,120 --> 00:03:43,119
+extraordinary we decide to go from using
+C out to print air for one of our own
+
+214
+00:03:43,119 --> 00:03:43,129
+C out to print air for one of our own
+ 
+
+215
+00:03:43,129 --> 00:03:45,189
+C out to print air for one of our own
+custom logging functions we have to
+
+216
+00:03:45,189 --> 00:03:45,199
+custom logging functions we have to
+ 
+
+217
+00:03:45,199 --> 00:03:46,539
+custom logging functions we have to
+change it in all of the places that
+
+218
+00:03:46,539 --> 00:03:46,549
+change it in all of the places that
+ 
+
+219
+00:03:46,549 --> 00:03:48,369
+change it in all of the places that
+we've actually defined that right so in
+
+220
+00:03:48,369 --> 00:03:48,379
+we've actually defined that right so in
+ 
+
+221
+00:03:48,379 --> 00:03:50,379
+we've actually defined that right so in
+this case in all three print functions
+
+222
+00:03:50,379 --> 00:03:50,389
+this case in all three print functions
+ 
+
+223
+00:03:50,389 --> 00:03:52,509
+this case in all three print functions
+we have to actually just occurred what
+
+224
+00:03:52,509 --> 00:03:52,519
+we have to actually just occurred what
+ 
+
+225
+00:03:52,519 --> 00:03:53,770
+we have to actually just occurred what
+if we could just write that code once
+
+226
+00:03:53,770 --> 00:03:53,780
+if we could just write that code once
+ 
+
+227
+00:03:53,780 --> 00:03:56,949
+if we could just write that code once
+and then somehow be able to fill in the
+
+228
+00:03:56,949 --> 00:03:56,959
+and then somehow be able to fill in the
+ 
+
+229
+00:03:56,959 --> 00:03:59,979
+and then somehow be able to fill in the
+blank for the type that's where we can
+
+230
+00:03:59,979 --> 00:03:59,989
+blank for the type that's where we can
+ 
+
+231
+00:03:59,989 --> 00:04:02,020
+blank for the type that's where we can
+use a template so instead of writing
+
+232
+00:04:02,020 --> 00:04:02,030
+use a template so instead of writing
+ 
+
+233
+00:04:02,030 --> 00:04:03,550
+use a template so instead of writing
+this code this many times what I'm
+
+234
+00:04:03,550 --> 00:04:03,560
+this code this many times what I'm
+ 
+
+235
+00:04:03,560 --> 00:04:05,500
+this code this many times what I'm
+actually going to do is just convert
+
+236
+00:04:05,500 --> 00:04:05,510
+actually going to do is just convert
+ 
+
+237
+00:04:05,510 --> 00:04:07,689
+actually going to do is just convert
+this into being a template the way that
+
+238
+00:04:07,689 --> 00:04:07,699
+this into being a template the way that
+ 
+
+239
+00:04:07,699 --> 00:04:09,429
+this into being a template the way that
+we do this in tactically is before the
+
+240
+00:04:09,429 --> 00:04:09,439
+we do this in tactically is before the
+ 
+
+241
+00:04:09,439 --> 00:04:12,819
+we do this in tactically is before the
+return type we write template then open
+
+242
+00:04:12,819 --> 00:04:12,829
+return type we write template then open
+ 
+
+243
+00:04:12,829 --> 00:04:16,569
+return type we write template then open
+an angular bracket type name and then
+
+244
+00:04:16,569 --> 00:04:16,579
+an angular bracket type name and then
+ 
+
+245
+00:04:16,579 --> 00:04:17,529
+an angular bracket type name and then
+give it a name
+
+246
+00:04:17,529 --> 00:04:17,539
+give it a name
+ 
+
+247
+00:04:17,539 --> 00:04:19,930
+give it a name
+typically T is used and then finally we
+
+248
+00:04:19,930 --> 00:04:19,940
+typically T is used and then finally we
+ 
+
+249
+00:04:19,940 --> 00:04:21,789
+typically T is used and then finally we
+can use T instead of our actual type
+
+250
+00:04:21,789 --> 00:04:21,799
+can use T instead of our actual type
+ 
+
+251
+00:04:21,799 --> 00:04:24,399
+can use T instead of our actual type
+over here so this becomes void print T
+
+252
+00:04:24,399 --> 00:04:24,409
+over here so this becomes void print T
+ 
+
+253
+00:04:24,409 --> 00:04:25,440
+over here so this becomes void print T
+value
+
+254
+00:04:25,440 --> 00:04:25,450
+value
+ 
+
+255
+00:04:25,450 --> 00:04:27,240
+value
+suddenly if I actually compile this code
+
+256
+00:04:27,240 --> 00:04:27,250
+suddenly if I actually compile this code
+ 
+
+257
+00:04:27,250 --> 00:04:29,520
+suddenly if I actually compile this code
+by hitting ctrl f7 you can see it
+
+258
+00:04:29,520 --> 00:04:29,530
+by hitting ctrl f7 you can see it
+ 
+
+259
+00:04:29,530 --> 00:04:31,320
+by hitting ctrl f7 you can see it
+compiles just fine and if in fact if I
+
+260
+00:04:31,320 --> 00:04:31,330
+compiles just fine and if in fact if I
+ 
+
+261
+00:04:31,330 --> 00:04:33,390
+compiles just fine and if in fact if I
+run my try by hitting f5 look at that
+
+262
+00:04:33,390 --> 00:04:33,400
+run my try by hitting f5 look at that
+ 
+
+263
+00:04:33,400 --> 00:04:35,250
+run my try by hitting f5 look at that
+all three all three functions actually
+
+264
+00:04:35,250 --> 00:04:35,260
+all three all three functions actually
+ 
+
+265
+00:04:35,260 --> 00:04:37,500
+all three all three functions actually
+work even though we've just written one
+
+266
+00:04:37,500 --> 00:04:37,510
+work even though we've just written one
+ 
+
+267
+00:04:37,510 --> 00:04:39,840
+work even though we've just written one
+function so how on earth does this work
+
+268
+00:04:39,840 --> 00:04:39,850
+function so how on earth does this work
+ 
+
+269
+00:04:39,850 --> 00:04:41,610
+function so how on earth does this work
+and what's actually happening here well
+
+270
+00:04:41,610 --> 00:04:41,620
+and what's actually happening here well
+ 
+
+271
+00:04:41,620 --> 00:04:42,930
+and what's actually happening here well
+the first thing that gives away that
+
+272
+00:04:42,930 --> 00:04:42,940
+the first thing that gives away that
+ 
+
+273
+00:04:42,940 --> 00:04:44,850
+the first thing that gives away that
+this is an actual template is well the
+
+274
+00:04:44,850 --> 00:04:44,860
+this is an actual template is well the
+ 
+
+275
+00:04:44,860 --> 00:04:47,160
+this is an actual template is well the
+word template right this means that this
+
+276
+00:04:47,160 --> 00:04:47,170
+word template right this means that this
+ 
+
+277
+00:04:47,170 --> 00:04:49,290
+word template right this means that this
+is a template that will be evaluated at
+
+278
+00:04:49,290 --> 00:04:49,300
+is a template that will be evaluated at
+ 
+
+279
+00:04:49,300 --> 00:04:51,360
+is a template that will be evaluated at
+compile time so basically this is an
+
+280
+00:04:51,360 --> 00:04:51,370
+compile time so basically this is an
+ 
+
+281
+00:04:51,370 --> 00:04:53,640
+compile time so basically this is an
+actual code this isn't actually a real
+
+282
+00:04:53,640 --> 00:04:53,650
+actual code this isn't actually a real
+ 
+
+283
+00:04:53,650 --> 00:04:56,400
+actual code this isn't actually a real
+function this only gets created when we
+
+284
+00:04:56,400 --> 00:04:56,410
+function this only gets created when we
+ 
+
+285
+00:04:56,410 --> 00:04:58,470
+function this only gets created when we
+actually call it and when we call it
+
+286
+00:04:58,470 --> 00:04:58,480
+actually call it and when we call it
+ 
+
+287
+00:04:58,480 --> 00:05:00,900
+actually call it and when we call it
+based on how we call it with what types
+
+288
+00:05:00,900 --> 00:05:00,910
+based on how we call it with what types
+ 
+
+289
+00:05:00,910 --> 00:05:03,150
+based on how we call it with what types
+does this actually get created and
+
+290
+00:05:03,150 --> 00:05:03,160
+does this actually get created and
+ 
+
+291
+00:05:03,160 --> 00:05:05,370
+does this actually get created and
+compiled as source code now this next
+
+292
+00:05:05,370 --> 00:05:05,380
+compiled as source code now this next
+ 
+
+293
+00:05:05,380 --> 00:05:06,750
+compiled as source code now this next
+part is something called a template
+
+294
+00:05:06,750 --> 00:05:06,760
+part is something called a template
+ 
+
+295
+00:05:06,760 --> 00:05:08,970
+part is something called a template
+parameter in this case we've chosen to
+
+296
+00:05:08,970 --> 00:05:08,980
+parameter in this case we've chosen to
+ 
+
+297
+00:05:08,980 --> 00:05:11,280
+parameter in this case we've chosen to
+use type name as the type of template
+
+298
+00:05:11,280 --> 00:05:11,290
+use type name as the type of template
+ 
+
+299
+00:05:11,290 --> 00:05:14,250
+use type name as the type of template
+parameter and then T is just a name so
+
+300
+00:05:14,250 --> 00:05:14,260
+parameter and then T is just a name so
+ 
+
+301
+00:05:14,260 --> 00:05:15,450
+parameter and then T is just a name so
+this could be anything we could call
+
+302
+00:05:15,450 --> 00:05:15,460
+this could be anything we could call
+ 
+
+303
+00:05:15,460 --> 00:05:17,460
+this could be anything we could call
+this type with the call this churn over
+
+304
+00:05:17,460 --> 00:05:17,470
+this type with the call this churn over
+ 
+
+305
+00:05:17,470 --> 00:05:18,840
+this type with the call this churn over
+the course anything we really wanted to
+
+306
+00:05:18,840 --> 00:05:18,850
+the course anything we really wanted to
+ 
+
+307
+00:05:18,850 --> 00:05:21,380
+the course anything we really wanted to
+and so what happens is this specific
+
+308
+00:05:21,380 --> 00:05:21,390
+and so what happens is this specific
+ 
+
+309
+00:05:21,390 --> 00:05:23,700
+and so what happens is this specific
+variable name this template kind of
+
+310
+00:05:23,700 --> 00:05:23,710
+variable name this template kind of
+ 
+
+311
+00:05:23,710 --> 00:05:26,130
+variable name this template kind of
+argument name we can use that throughout
+
+312
+00:05:26,130 --> 00:05:26,140
+argument name we can use that throughout
+ 
+
+313
+00:05:26,140 --> 00:05:28,290
+argument name we can use that throughout
+our actual template code to substitute
+
+314
+00:05:28,290 --> 00:05:28,300
+our actual template code to substitute
+ 
+
+315
+00:05:28,300 --> 00:05:31,110
+our actual template code to substitute
+whatever type in this case gets used so
+
+316
+00:05:31,110 --> 00:05:31,120
+whatever type in this case gets used so
+ 
+
+317
+00:05:31,120 --> 00:05:32,760
+whatever type in this case gets used so
+what we've done is instead of just
+
+318
+00:05:32,760 --> 00:05:32,770
+what we've done is instead of just
+ 
+
+319
+00:05:32,770 --> 00:05:35,550
+what we've done is instead of just
+writing int value like that where we've
+
+320
+00:05:35,550 --> 00:05:35,560
+writing int value like that where we've
+ 
+
+321
+00:05:35,560 --> 00:05:37,800
+writing int value like that where we've
+written T value which means that when we
+
+322
+00:05:37,800 --> 00:05:37,810
+written T value which means that when we
+ 
+
+323
+00:05:37,810 --> 00:05:40,290
+written T value which means that when we
+actually call this code whatever type we
+
+324
+00:05:40,290 --> 00:05:40,300
+actually call this code whatever type we
+ 
+
+325
+00:05:40,300 --> 00:05:42,600
+actually call this code whatever type we
+specify here is the type that actually
+
+326
+00:05:42,600 --> 00:05:42,610
+specify here is the type that actually
+ 
+
+327
+00:05:42,610 --> 00:05:45,150
+specify here is the type that actually
+goes into this argument now this is a
+
+328
+00:05:45,150 --> 00:05:45,160
+goes into this argument now this is a
+ 
+
+329
+00:05:45,160 --> 00:05:46,770
+goes into this argument now this is a
+little bit harder to read in this case
+
+330
+00:05:46,770 --> 00:05:46,780
+little bit harder to read in this case
+ 
+
+331
+00:05:46,780 --> 00:05:48,180
+little bit harder to read in this case
+because when I actually specifying the
+
+332
+00:05:48,180 --> 00:05:48,190
+because when I actually specifying the
+ 
+
+333
+00:05:48,190 --> 00:05:50,310
+because when I actually specifying the
+type explicitly it's just kind of
+
+334
+00:05:50,310 --> 00:05:50,320
+type explicitly it's just kind of
+ 
+
+335
+00:05:50,320 --> 00:05:52,410
+type explicitly it's just kind of
+getting it implicitly from the actual
+
+336
+00:05:52,410 --> 00:05:52,420
+getting it implicitly from the actual
+ 
+
+337
+00:05:52,420 --> 00:05:54,450
+getting it implicitly from the actual
+parameters here in this case but what we
+
+338
+00:05:54,450 --> 00:05:54,460
+parameters here in this case but what we
+ 
+
+339
+00:05:54,460 --> 00:05:56,340
+parameters here in this case but what we
+can do is when we call print we can
+
+340
+00:05:56,340 --> 00:05:56,350
+can do is when we call print we can
+ 
+
+341
+00:05:56,350 --> 00:05:58,410
+can do is when we call print we can
+actually specify using angular brackets
+
+342
+00:05:58,410 --> 00:05:58,420
+actually specify using angular brackets
+ 
+
+343
+00:05:58,420 --> 00:05:59,970
+actually specify using angular brackets
+here the type that we want so for
+
+344
+00:05:59,970 --> 00:05:59,980
+here the type that we want so for
+ 
+
+345
+00:05:59,980 --> 00:06:02,040
+here the type that we want so for
+example print int if I let's just get
+
+346
+00:06:02,040 --> 00:06:02,050
+example print int if I let's just get
+ 
+
+347
+00:06:02,050 --> 00:06:03,780
+example print int if I let's just get
+rid of these and keep it real simple for
+
+348
+00:06:03,780 --> 00:06:03,790
+rid of these and keep it real simple for
+ 
+
+349
+00:06:03,790 --> 00:06:05,640
+rid of these and keep it real simple for
+now so what we've done here is we've
+
+350
+00:06:05,640 --> 00:06:05,650
+now so what we've done here is we've
+ 
+
+351
+00:06:05,650 --> 00:06:07,950
+now so what we've done here is we've
+pulled the print function with the type
+
+352
+00:06:07,950 --> 00:06:07,960
+pulled the print function with the type
+ 
+
+353
+00:06:07,960 --> 00:06:11,010
+pulled the print function with the type
+int this this template argument here
+
+354
+00:06:11,010 --> 00:06:11,020
+int this this template argument here
+ 
+
+355
+00:06:11,020 --> 00:06:13,050
+int this this template argument here
+accepts a type name now you can also
+
+356
+00:06:13,050 --> 00:06:13,060
+accepts a type name now you can also
+ 
+
+357
+00:06:13,060 --> 00:06:15,240
+accepts a type name now you can also
+write this as class by the way it is
+
+358
+00:06:15,240 --> 00:06:15,250
+write this as class by the way it is
+ 
+
+359
+00:06:15,250 --> 00:06:17,490
+write this as class by the way it is
+exactly the same synonymous right class
+
+360
+00:06:17,490 --> 00:06:17,500
+exactly the same synonymous right class
+ 
+
+361
+00:06:17,500 --> 00:06:20,280
+exactly the same synonymous right class
+class type name I tend to use type name
+
+362
+00:06:20,280 --> 00:06:20,290
+class type name I tend to use type name
+ 
+
+363
+00:06:20,290 --> 00:06:22,620
+class type name I tend to use type name
+because class by just reading the code
+
+364
+00:06:22,620 --> 00:06:22,630
+because class by just reading the code
+ 
+
+365
+00:06:22,630 --> 00:06:24,480
+because class by just reading the code
+class kind of implies that it has to be
+
+366
+00:06:24,480 --> 00:06:24,490
+class kind of implies that it has to be
+ 
+
+367
+00:06:24,490 --> 00:06:27,420
+class kind of implies that it has to be
+a class type that's not true as you can
+
+368
+00:06:27,420 --> 00:06:27,430
+a class type that's not true as you can
+ 
+
+369
+00:06:27,430 --> 00:06:28,770
+a class type that's not true as you can
+see this coastal compiles even though
+
+370
+00:06:28,770 --> 00:06:28,780
+see this coastal compiles even though
+ 
+
+371
+00:06:28,780 --> 00:06:31,500
+see this coastal compiles even though
+I'm using int so because of that I tend
+
+372
+00:06:31,500 --> 00:06:31,510
+I'm using int so because of that I tend
+ 
+
+373
+00:06:31,510 --> 00:06:33,840
+I'm using int so because of that I tend
+to just use type name because it just
+
+374
+00:06:33,840 --> 00:06:33,850
+to just use type name because it just
+ 
+
+375
+00:06:33,850 --> 00:06:34,490
+to just use type name because it just
+makes more
+
+376
+00:06:34,490 --> 00:06:34,500
+makes more
+ 
+
+377
+00:06:34,500 --> 00:06:37,130
+makes more
+so we write type name T which means that
+
+378
+00:06:37,130 --> 00:06:37,140
+so we write type name T which means that
+ 
+
+379
+00:06:37,140 --> 00:06:38,600
+so we write type name T which means that
+the first half of that argument that we
+
+380
+00:06:38,600 --> 00:06:38,610
+the first half of that argument that we
+ 
+
+381
+00:06:38,610 --> 00:06:41,150
+the first half of that argument that we
+have here is an actual type so we can
+
+382
+00:06:41,150 --> 00:06:41,160
+have here is an actual type so we can
+ 
+
+383
+00:06:41,160 --> 00:06:43,550
+have here is an actual type so we can
+write end here we can write STD string
+
+384
+00:06:43,550 --> 00:06:43,560
+write end here we can write STD string
+ 
+
+385
+00:06:43,560 --> 00:06:45,140
+write end here we can write STD string
+we can write whatever we want obviously
+
+386
+00:06:45,140 --> 00:06:45,150
+we can write whatever we want obviously
+ 
+
+387
+00:06:45,150 --> 00:06:47,000
+we can write whatever we want obviously
+if we write STD string then what
+
+388
+00:06:47,000 --> 00:06:47,010
+if we write STD string then what
+ 
+
+389
+00:06:47,010 --> 00:06:48,770
+if we write STD string then what
+actually happens as T gets replaced with
+
+390
+00:06:48,770 --> 00:06:48,780
+actually happens as T gets replaced with
+ 
+
+391
+00:06:48,780 --> 00:06:51,020
+actually happens as T gets replaced with
+the type that we've specified STD string
+
+392
+00:06:51,020 --> 00:06:51,030
+the type that we've specified STD string
+ 
+
+393
+00:06:51,030 --> 00:06:52,970
+the type that we've specified STD string
+which means that we are obviously are
+
+394
+00:06:52,970 --> 00:06:52,980
+which means that we are obviously are
+ 
+
+395
+00:06:52,980 --> 00:06:55,760
+which means that we are obviously are
+taking in a string value hence why this
+
+396
+00:06:55,760 --> 00:06:55,770
+taking in a string value hence why this
+ 
+
+397
+00:06:55,770 --> 00:06:57,260
+taking in a string value hence why this
+code is not compiling so we actually
+
+398
+00:06:57,260 --> 00:06:57,270
+code is not compiling so we actually
+ 
+
+399
+00:06:57,270 --> 00:06:59,540
+code is not compiling so we actually
+have to write something here like China
+
+400
+00:06:59,540 --> 00:06:59,550
+have to write something here like China
+ 
+
+401
+00:06:59,550 --> 00:07:01,220
+have to write something here like China
+or something now if we go back to our
+
+402
+00:07:01,220 --> 00:07:01,230
+or something now if we go back to our
+ 
+
+403
+00:07:01,230 --> 00:07:04,970
+or something now if we go back to our
+five example we can specify int here but
+
+404
+00:07:04,970 --> 00:07:04,980
+five example we can specify int here but
+ 
+
+405
+00:07:04,980 --> 00:07:07,250
+five example we can specify int here but
+we don't have to if it's possible for
+
+406
+00:07:07,250 --> 00:07:07,260
+we don't have to if it's possible for
+ 
+
+407
+00:07:07,260 --> 00:07:09,560
+we don't have to if it's possible for
+the type to actually be worked out by
+
+408
+00:07:09,560 --> 00:07:09,570
+the type to actually be worked out by
+ 
+
+409
+00:07:09,570 --> 00:07:11,870
+the type to actually be worked out by
+the argument that we use here either by
+
+410
+00:07:11,870 --> 00:07:11,880
+the argument that we use here either by
+ 
+
+411
+00:07:11,880 --> 00:07:13,910
+the argument that we use here either by
+the return value which which we can talk
+
+412
+00:07:13,910 --> 00:07:13,920
+the return value which which we can talk
+ 
+
+413
+00:07:13,920 --> 00:07:16,460
+the return value which which we can talk
+about later or by the actual parameter
+
+414
+00:07:16,460 --> 00:07:16,470
+about later or by the actual parameter
+ 
+
+415
+00:07:16,470 --> 00:07:18,290
+about later or by the actual parameter
+here so in other words a plus boss knows
+
+416
+00:07:18,290 --> 00:07:18,300
+here so in other words a plus boss knows
+ 
+
+417
+00:07:18,300 --> 00:07:20,450
+here so in other words a plus boss knows
+that five is an integer it can
+
+418
+00:07:20,450 --> 00:07:20,460
+that five is an integer it can
+ 
+
+419
+00:07:20,460 --> 00:07:22,580
+that five is an integer it can
+automatically deduce what type T should
+
+420
+00:07:22,580 --> 00:07:22,590
+automatically deduce what type T should
+ 
+
+421
+00:07:22,590 --> 00:07:24,530
+automatically deduce what type T should
+be which is why we don't actually have
+
+422
+00:07:24,530 --> 00:07:24,540
+be which is why we don't actually have
+ 
+
+423
+00:07:24,540 --> 00:07:26,210
+be which is why we don't actually have
+to specify it using those angular
+
+424
+00:07:26,210 --> 00:07:26,220
+to specify it using those angular
+ 
+
+425
+00:07:26,220 --> 00:07:28,250
+to specify it using those angular
+brackets which makes our job a bit even
+
+426
+00:07:28,250 --> 00:07:28,260
+brackets which makes our job a bit even
+ 
+
+427
+00:07:28,260 --> 00:07:30,020
+brackets which makes our job a bit even
+easier now that being said let me show
+
+428
+00:07:30,020 --> 00:07:30,030
+easier now that being said let me show
+ 
+
+429
+00:07:30,030 --> 00:07:32,090
+easier now that being said let me show
+you explicitly what actually happens if
+
+430
+00:07:32,090 --> 00:07:32,100
+you explicitly what actually happens if
+ 
+
+431
+00:07:32,100 --> 00:07:34,340
+you explicitly what actually happens if
+you do not write anything so I'm not
+
+432
+00:07:34,340 --> 00:07:34,350
+you do not write anything so I'm not
+ 
+
+433
+00:07:34,350 --> 00:07:37,190
+you do not write anything so I'm not
+using this print function at all this
+
+434
+00:07:37,190 --> 00:07:37,200
+using this print function at all this
+ 
+
+435
+00:07:37,200 --> 00:07:39,200
+using this print function at all this
+print function does not really exist
+
+436
+00:07:39,200 --> 00:07:39,210
+print function does not really exist
+ 
+
+437
+00:07:39,210 --> 00:07:41,720
+print function does not really exist
+this print function is just a template
+
+438
+00:07:41,720 --> 00:07:41,730
+this print function is just a template
+ 
+
+439
+00:07:41,730 --> 00:07:44,510
+this print function is just a template
+which actually gets created when we call
+
+440
+00:07:44,510 --> 00:07:44,520
+which actually gets created when we call
+ 
+
+441
+00:07:44,520 --> 00:07:46,250
+which actually gets created when we call
+the print function with the given
+
+442
+00:07:46,250 --> 00:07:46,260
+the print function with the given
+ 
+
+443
+00:07:46,260 --> 00:07:48,080
+the print function with the given
+template argument and I can even prove
+
+444
+00:07:48,080 --> 00:07:48,090
+template argument and I can even prove
+ 
+
+445
+00:07:48,090 --> 00:07:50,300
+template argument and I can even prove
+this by making a syntax error here so
+
+446
+00:07:50,300 --> 00:07:50,310
+this by making a syntax error here so
+ 
+
+447
+00:07:50,310 --> 00:07:52,310
+this by making a syntax error here so
+let's just say instead of value I forget
+
+448
+00:07:52,310 --> 00:07:52,320
+let's just say instead of value I forget
+ 
+
+449
+00:07:52,320 --> 00:07:54,440
+let's just say instead of value I forget
+not a know the e or something so I'm
+
+450
+00:07:54,440 --> 00:07:54,450
+not a know the e or something so I'm
+ 
+
+451
+00:07:54,450 --> 00:07:55,940
+not a know the e or something so I'm
+just printing value now clearly this is
+
+452
+00:07:55,940 --> 00:07:55,950
+just printing value now clearly this is
+ 
+
+453
+00:07:55,950 --> 00:07:57,890
+just printing value now clearly this is
+an error because there is no variable
+
+454
+00:07:57,890 --> 00:07:57,900
+an error because there is no variable
+ 
+
+455
+00:07:57,900 --> 00:08:00,080
+an error because there is no variable
+called value so if I hit control f7 to
+
+456
+00:08:00,080 --> 00:08:00,090
+called value so if I hit control f7 to
+ 
+
+457
+00:08:00,090 --> 00:08:02,150
+called value so if I hit control f7 to
+compile my code look at that it compiles
+
+458
+00:08:02,150 --> 00:08:02,160
+compile my code look at that it compiles
+ 
+
+459
+00:08:02,160 --> 00:08:03,950
+compile my code look at that it compiles
+just fine and that's because the
+
+460
+00:08:03,950 --> 00:08:03,960
+just fine and that's because the
+ 
+
+461
+00:08:03,960 --> 00:08:06,290
+just fine and that's because the
+template doesn't really exist until we
+
+462
+00:08:06,290 --> 00:08:06,300
+template doesn't really exist until we
+ 
+
+463
+00:08:06,300 --> 00:08:08,690
+template doesn't really exist until we
+call it if I go back to my code and I
+
+464
+00:08:08,690 --> 00:08:08,700
+call it if I go back to my code and I
+ 
+
+465
+00:08:08,700 --> 00:08:10,490
+call it if I go back to my code and I
+actually try and call print with like
+
+466
+00:08:10,490 --> 00:08:10,500
+actually try and call print with like
+ 
+
+467
+00:08:10,500 --> 00:08:12,680
+actually try and call print with like
+the value 5 or something and hit control
+
+468
+00:08:12,680 --> 00:08:12,690
+the value 5 or something and hit control
+ 
+
+469
+00:08:12,690 --> 00:08:13,190
+the value 5 or something and hit control
+f7
+
+470
+00:08:13,190 --> 00:08:13,200
+f7
+ 
+
+471
+00:08:13,200 --> 00:08:16,010
+f7
+at that point you can see I actually do
+
+472
+00:08:16,010 --> 00:08:16,020
+at that point you can see I actually do
+ 
+
+473
+00:08:16,020 --> 00:08:18,320
+at that point you can see I actually do
+get an error here telling me the value
+
+474
+00:08:18,320 --> 00:08:18,330
+get an error here telling me the value
+ 
+
+475
+00:08:18,330 --> 00:08:20,510
+get an error here telling me the value
+is an undeclared identifier and again
+
+476
+00:08:20,510 --> 00:08:20,520
+is an undeclared identifier and again
+ 
+
+477
+00:08:20,520 --> 00:08:22,190
+is an undeclared identifier and again
+that's because the template only gets
+
+478
+00:08:22,190 --> 00:08:22,200
+that's because the template only gets
+ 
+
+479
+00:08:22,200 --> 00:08:24,830
+that's because the template only gets
+created when we actually call it because
+
+480
+00:08:24,830 --> 00:08:24,840
+created when we actually call it because
+ 
+
+481
+00:08:24,840 --> 00:08:26,510
+created when we actually call it because
+it's just a template it's not actual
+
+482
+00:08:26,510 --> 00:08:26,520
+it's just a template it's not actual
+ 
+
+483
+00:08:26,520 --> 00:08:29,120
+it's just a template it's not actual
+card it gets materialized I guess into
+
+484
+00:08:29,120 --> 00:08:29,130
+card it gets materialized I guess into
+ 
+
+485
+00:08:29,130 --> 00:08:31,520
+card it gets materialized I guess into
+real code that gets sent to the compiler
+
+486
+00:08:31,520 --> 00:08:31,530
+real code that gets sent to the compiler
+ 
+
+487
+00:08:31,530 --> 00:08:33,770
+real code that gets sent to the compiler
+and compiled based on the usage of the
+
+488
+00:08:33,770 --> 00:08:33,780
+and compiled based on the usage of the
+ 
+
+489
+00:08:33,780 --> 00:08:36,920
+and compiled based on the usage of the
+template now MSV c won't tell you about
+
+490
+00:08:36,920 --> 00:08:36,930
+template now MSV c won't tell you about
+ 
+
+491
+00:08:36,930 --> 00:08:38,630
+template now MSV c won't tell you about
+errors in templates that you're not
+
+492
+00:08:38,630 --> 00:08:38,640
+errors in templates that you're not
+ 
+
+493
+00:08:38,640 --> 00:08:40,940
+errors in templates that you're not
+actually using some compilers like clang
+
+494
+00:08:40,940 --> 00:08:40,950
+actually using some compilers like clang
+ 
+
+495
+00:08:40,950 --> 00:08:43,230
+actually using some compilers like clang
+actually will so it is kind of compiled
+
+496
+00:08:43,230 --> 00:08:43,240
+actually will so it is kind of compiled
+ 
+
+497
+00:08:43,240 --> 00:08:45,030
+actually will so it is kind of compiled
+dependent but in this case you can see
+
+498
+00:08:45,030 --> 00:08:45,040
+dependent but in this case you can see
+ 
+
+499
+00:08:45,040 --> 00:08:46,829
+dependent but in this case you can see
+we don't actually get any errors we've
+
+500
+00:08:46,829 --> 00:08:46,839
+we don't actually get any errors we've
+ 
+
+501
+00:08:46,839 --> 00:08:48,420
+we don't actually get any errors we've
+written code that's not really correct
+
+502
+00:08:48,420 --> 00:08:48,430
+written code that's not really correct
+ 
+
+503
+00:08:48,430 --> 00:08:50,250
+written code that's not really correct
+but until we call the template it
+
+504
+00:08:50,250 --> 00:08:50,260
+but until we call the template it
+ 
+
+505
+00:08:50,260 --> 00:08:51,600
+but until we call the template it
+doesn't exist so we don't get any
+
+506
+00:08:51,600 --> 00:08:51,610
+doesn't exist so we don't get any
+ 
+
+507
+00:08:51,610 --> 00:08:53,220
+doesn't exist so we don't get any
+compiler errors so what actually happens
+
+508
+00:08:53,220 --> 00:08:53,230
+compiler errors so what actually happens
+ 
+
+509
+00:08:53,230 --> 00:08:56,460
+compiler errors so what actually happens
+when we compile this template is it
+
+510
+00:08:56,460 --> 00:08:56,470
+when we compile this template is it
+ 
+
+511
+00:08:56,470 --> 00:08:57,990
+when we compile this template is it
+knows in this case that we have used
+
+512
+00:08:57,990 --> 00:08:58,000
+knows in this case that we have used
+ 
+
+513
+00:08:58,000 --> 00:09:00,000
+knows in this case that we have used
+five here right which means that the
+
+514
+00:09:00,000 --> 00:09:00,010
+five here right which means that the
+ 
+
+515
+00:09:00,010 --> 00:09:03,389
+five here right which means that the
+type name is actually an integer so what
+
+516
+00:09:03,389 --> 00:09:03,399
+type name is actually an integer so what
+ 
+
+517
+00:09:03,399 --> 00:09:05,699
+type name is actually an integer so what
+happens is it basically fills in the
+
+518
+00:09:05,699 --> 00:09:05,709
+happens is it basically fills in the
+ 
+
+519
+00:09:05,709 --> 00:09:07,920
+happens is it basically fills in the
+blanks here so it would be equivalent as
+
+520
+00:09:07,920 --> 00:09:07,930
+blanks here so it would be equivalent as
+ 
+
+521
+00:09:07,930 --> 00:09:09,810
+blanks here so it would be equivalent as
+to if we just copied and pasted this
+
+522
+00:09:09,810 --> 00:09:09,820
+to if we just copied and pasted this
+ 
+
+523
+00:09:09,820 --> 00:09:12,570
+to if we just copied and pasted this
+method and then replace T with an actual
+
+524
+00:09:12,570 --> 00:09:12,580
+method and then replace T with an actual
+ 
+
+525
+00:09:12,580 --> 00:09:14,010
+method and then replace T with an actual
+int because that's what we're calling
+
+526
+00:09:14,010 --> 00:09:14,020
+int because that's what we're calling
+ 
+
+527
+00:09:14,020 --> 00:09:16,470
+int because that's what we're calling
+here and now this is a real function
+
+528
+00:09:16,470 --> 00:09:16,480
+here and now this is a real function
+ 
+
+529
+00:09:16,480 --> 00:09:18,360
+here and now this is a real function
+that has to get linked and everything
+
+530
+00:09:18,360 --> 00:09:18,370
+that has to get linked and everything
+ 
+
+531
+00:09:18,370 --> 00:09:20,370
+that has to get linked and everything
+when we actually compile and Link this
+
+532
+00:09:20,370 --> 00:09:20,380
+when we actually compile and Link this
+ 
+
+533
+00:09:20,380 --> 00:09:22,260
+when we actually compile and Link this
+code so let's just fix that syntax error
+
+534
+00:09:22,260 --> 00:09:22,270
+code so let's just fix that syntax error
+ 
+
+535
+00:09:22,270 --> 00:09:23,850
+code so let's just fix that syntax error
+we had there and that is actually what
+
+536
+00:09:23,850 --> 00:09:23,860
+we had there and that is actually what
+ 
+
+537
+00:09:23,860 --> 00:09:26,190
+we had there and that is actually what
+happens in this case now when we call
+
+538
+00:09:26,190 --> 00:09:26,200
+happens in this case now when we call
+ 
+
+539
+00:09:26,200 --> 00:09:28,350
+happens in this case now when we call
+print with a different argument like a
+
+540
+00:09:28,350 --> 00:09:28,360
+print with a different argument like a
+ 
+
+541
+00:09:28,360 --> 00:09:31,050
+print with a different argument like a
+flirt for example another version of
+
+542
+00:09:31,050 --> 00:09:31,060
+flirt for example another version of
+ 
+
+543
+00:09:31,060 --> 00:09:32,910
+flirt for example another version of
+this template actually gets created so
+
+544
+00:09:32,910 --> 00:09:32,920
+this template actually gets created so
+ 
+
+545
+00:09:32,920 --> 00:09:34,800
+this template actually gets created so
+this gets copied and pasted and then
+
+546
+00:09:34,800 --> 00:09:34,810
+this gets copied and pasted and then
+ 
+
+547
+00:09:34,810 --> 00:09:36,690
+this gets copied and pasted and then
+instead of T this time we're using a
+
+548
+00:09:36,690 --> 00:09:36,700
+instead of T this time we're using a
+ 
+
+549
+00:09:36,700 --> 00:09:38,940
+instead of T this time we're using a
+flirt so you kind of get the picture
+
+550
+00:09:38,940 --> 00:09:38,950
+flirt so you kind of get the picture
+ 
+
+551
+00:09:38,950 --> 00:09:40,860
+flirt so you kind of get the picture
+really all this is is a template
+
+552
+00:09:40,860 --> 00:09:40,870
+really all this is is a template
+ 
+
+553
+00:09:40,870 --> 00:09:43,079
+really all this is is a template
+specifying how to create methods and
+
+554
+00:09:43,079 --> 00:09:43,089
+specifying how to create methods and
+ 
+
+555
+00:09:43,089 --> 00:09:45,030
+specifying how to create methods and
+these methods all these functions can be
+
+556
+00:09:45,030 --> 00:09:45,040
+these methods all these functions can be
+ 
+
+557
+00:09:45,040 --> 00:09:46,889
+these methods all these functions can be
+created or automatically by the compiler
+
+558
+00:09:46,889 --> 00:09:46,899
+created or automatically by the compiler
+ 
+
+559
+00:09:46,899 --> 00:09:49,230
+created or automatically by the compiler
+based on your usage of them which is
+
+560
+00:09:49,230 --> 00:09:49,240
+based on your usage of them which is
+ 
+
+561
+00:09:49,240 --> 00:09:51,269
+based on your usage of them which is
+pretty cool now templates are by no
+
+562
+00:09:51,269 --> 00:09:51,279
+pretty cool now templates are by no
+ 
+
+563
+00:09:51,279 --> 00:09:53,190
+pretty cool now templates are by no
+means just limited to types or anything
+
+564
+00:09:53,190 --> 00:09:53,200
+means just limited to types or anything
+ 
+
+565
+00:09:53,200 --> 00:09:54,810
+means just limited to types or anything
+like that and they're not limited to
+
+566
+00:09:54,810 --> 00:09:54,820
+like that and they're not limited to
+ 
+
+567
+00:09:54,820 --> 00:09:56,550
+like that and they're not limited to
+functions either you can actually create
+
+568
+00:09:56,550 --> 00:09:56,560
+functions either you can actually create
+ 
+
+569
+00:09:56,560 --> 00:09:59,040
+functions either you can actually create
+entire classes based on templates and in
+
+570
+00:09:59,040 --> 00:09:59,050
+entire classes based on templates and in
+ 
+
+571
+00:09:59,050 --> 00:10:01,410
+entire classes based on templates and in
+fact that's a lot of what the standard
+
+572
+00:10:01,410 --> 00:10:01,420
+fact that's a lot of what the standard
+ 
+
+573
+00:10:01,420 --> 00:10:04,139
+fact that's a lot of what the standard
+template library actually is in C++ it's
+
+574
+00:10:04,139 --> 00:10:04,149
+template library actually is in C++ it's
+ 
+
+575
+00:10:04,149 --> 00:10:06,660
+template library actually is in C++ it's
+just completely using templates let's
+
+576
+00:10:06,660 --> 00:10:06,670
+just completely using templates let's
+ 
+
+577
+00:10:06,670 --> 00:10:07,980
+just completely using templates let's
+take a look at an example where we're
+
+578
+00:10:07,980 --> 00:10:07,990
+take a look at an example where we're
+ 
+
+579
+00:10:07,990 --> 00:10:09,810
+take a look at an example where we're
+not actually using a type as a template
+
+580
+00:10:09,810 --> 00:10:09,820
+not actually using a type as a template
+ 
+
+581
+00:10:09,820 --> 00:10:12,030
+not actually using a type as a template
+argument and let's do it for a class
+
+582
+00:10:12,030 --> 00:10:12,040
+argument and let's do it for a class
+ 
+
+583
+00:10:12,040 --> 00:10:13,620
+argument and let's do it for a class
+instead of for a function let's just get
+
+584
+00:10:13,620 --> 00:10:13,630
+instead of for a function let's just get
+ 
+
+585
+00:10:13,630 --> 00:10:15,360
+instead of for a function let's just get
+rid of this print function that we've
+
+586
+00:10:15,360 --> 00:10:15,370
+rid of this print function that we've
+ 
+
+587
+00:10:15,370 --> 00:10:16,860
+rid of this print function that we've
+created over here and let's create a
+
+588
+00:10:16,860 --> 00:10:16,870
+created over here and let's create a
+ 
+
+589
+00:10:16,870 --> 00:10:18,210
+created over here and let's create a
+class suppose that I wanted to create an
+
+590
+00:10:18,210 --> 00:10:18,220
+class suppose that I wanted to create an
+ 
+
+591
+00:10:18,220 --> 00:10:20,850
+class suppose that I wanted to create an
+array but I wanted this array class to
+
+592
+00:10:20,850 --> 00:10:20,860
+array but I wanted this array class to
+ 
+
+593
+00:10:20,860 --> 00:10:22,800
+array but I wanted this array class to
+actually be created on the stack so what
+
+594
+00:10:22,800 --> 00:10:22,810
+actually be created on the stack so what
+ 
+
+595
+00:10:22,810 --> 00:10:24,449
+actually be created on the stack so what
+I basically mean is let's just create a
+
+596
+00:10:24,449 --> 00:10:24,459
+I basically mean is let's just create a
+ 
+
+597
+00:10:24,459 --> 00:10:26,460
+I basically mean is let's just create a
+class called array and then over here
+
+598
+00:10:26,460 --> 00:10:26,470
+class called array and then over here
+ 
+
+599
+00:10:26,470 --> 00:10:29,100
+class called array and then over here
+maybe it's an integer array in this case
+
+600
+00:10:29,100 --> 00:10:29,110
+maybe it's an integer array in this case
+ 
+
+601
+00:10:29,110 --> 00:10:31,470
+maybe it's an integer array in this case
+I actually want to have an array that
+
+602
+00:10:31,470 --> 00:10:31,480
+I actually want to have an array that
+ 
+
+603
+00:10:31,480 --> 00:10:34,199
+I actually want to have an array that
+has some kind of size that is determined
+
+604
+00:10:34,199 --> 00:10:34,209
+has some kind of size that is determined
+ 
+
+605
+00:10:34,209 --> 00:10:37,139
+has some kind of size that is determined
+at compile time now I can't just kind of
+
+606
+00:10:37,139 --> 00:10:37,149
+at compile time now I can't just kind of
+ 
+
+607
+00:10:37,149 --> 00:10:39,540
+at compile time now I can't just kind of
+put in a variable size or anything like
+
+608
+00:10:39,540 --> 00:10:39,550
+put in a variable size or anything like
+ 
+
+609
+00:10:39,550 --> 00:10:41,370
+put in a variable size or anything like
+that because since this is a stack
+
+610
+00:10:41,370 --> 00:10:41,380
+that because since this is a stack
+ 
+
+611
+00:10:41,380 --> 00:10:43,290
+that because since this is a stack
+allocated array it actually has to be
+
+612
+00:10:43,290 --> 00:10:43,300
+allocated array it actually has to be
+ 
+
+613
+00:10:43,300 --> 00:10:44,970
+allocated array it actually has to be
+known at compile time now obviously we
+
+614
+00:10:44,970 --> 00:10:44,980
+known at compile time now obviously we
+ 
+
+615
+00:10:44,980 --> 00:10:46,500
+known at compile time now obviously we
+could use alakay or something like that
+
+616
+00:10:46,500 --> 00:10:46,510
+could use alakay or something like that
+ 
+
+617
+00:10:46,510 --> 00:10:48,510
+could use alakay or something like that
+to grow the stack dynamically we're not
+
+618
+00:10:48,510 --> 00:10:48,520
+to grow the stack dynamically we're not
+ 
+
+619
+00:10:48,520 --> 00:10:50,040
+to grow the stack dynamically we're not
+going to use any of that in this example
+
+620
+00:10:50,040 --> 00:10:50,050
+going to use any of that in this example
+ 
+
+621
+00:10:50,050 --> 00:10:52,650
+going to use any of that in this example
+we just want to basically create a
+
+622
+00:10:52,650 --> 00:10:52,660
+we just want to basically create a
+ 
+
+623
+00:10:52,660 --> 00:10:53,280
+we just want to basically create a
+normal
+
+624
+00:10:53,280 --> 00:10:53,290
+normal
+ 
+
+625
+00:10:53,290 --> 00:10:55,590
+normal
+kind of see style array on the stack so
+
+626
+00:10:55,590 --> 00:10:55,600
+kind of see style array on the stack so
+ 
+
+627
+00:10:55,600 --> 00:10:57,330
+kind of see style array on the stack so
+this size value does in fact have to be
+
+628
+00:10:57,330 --> 00:10:57,340
+this size value does in fact have to be
+ 
+
+629
+00:10:57,340 --> 00:10:59,400
+this size value does in fact have to be
+known at compile time now templates are
+
+630
+00:10:59,400 --> 00:10:59,410
+known at compile time now templates are
+ 
+
+631
+00:10:59,410 --> 00:11:01,260
+known at compile time now templates are
+evaluated at compile time so this is
+
+632
+00:11:01,260 --> 00:11:01,270
+evaluated at compile time so this is
+ 
+
+633
+00:11:01,270 --> 00:11:03,240
+evaluated at compile time so this is
+perfect what I can do is convert this
+
+634
+00:11:03,240 --> 00:11:03,250
+perfect what I can do is convert this
+ 
+
+635
+00:11:03,250 --> 00:11:05,370
+perfect what I can do is convert this
+class into being a template but instead
+
+636
+00:11:05,370 --> 00:11:05,380
+class into being a template but instead
+ 
+
+637
+00:11:05,380 --> 00:11:07,650
+class into being a template but instead
+of using type name as it as my template
+
+638
+00:11:07,650 --> 00:11:07,660
+of using type name as it as my template
+ 
+
+639
+00:11:07,660 --> 00:11:10,320
+of using type name as it as my template
+argument I can actually use just an
+
+640
+00:11:10,320 --> 00:11:10,330
+argument I can actually use just an
+ 
+
+641
+00:11:10,330 --> 00:11:13,170
+argument I can actually use just an
+integer right I'll call this n which is
+
+642
+00:11:13,170 --> 00:11:13,180
+integer right I'll call this n which is
+ 
+
+643
+00:11:13,180 --> 00:11:15,000
+integer right I'll call this n which is
+basically just as for number and then
+
+644
+00:11:15,000 --> 00:11:15,010
+basically just as for number and then
+ 
+
+645
+00:11:15,010 --> 00:11:16,500
+basically just as for number and then
+instead of size over here I'm going to
+
+646
+00:11:16,500 --> 00:11:16,510
+instead of size over here I'm going to
+ 
+
+647
+00:11:16,510 --> 00:11:18,540
+instead of size over here I'm going to
+write n and then finally I'll just add
+
+648
+00:11:18,540 --> 00:11:18,550
+write n and then finally I'll just add
+ 
+
+649
+00:11:18,550 --> 00:11:20,370
+write n and then finally I'll just add
+one public function to this array which
+
+650
+00:11:20,370 --> 00:11:20,380
+one public function to this array which
+ 
+
+651
+00:11:20,380 --> 00:11:21,870
+one public function to this array which
+is just going to return the size of the
+
+652
+00:11:21,870 --> 00:11:21,880
+is just going to return the size of the
+ 
+
+653
+00:11:21,880 --> 00:11:23,790
+is just going to return the size of the
+array so I'll write int get size and
+
+654
+00:11:23,790 --> 00:11:23,800
+array so I'll write int get size and
+ 
+
+655
+00:11:23,800 --> 00:11:26,790
+array so I'll write int get size and
+then I'll just return and okay so what's
+
+656
+00:11:26,790 --> 00:11:26,800
+then I'll just return and okay so what's
+ 
+
+657
+00:11:26,800 --> 00:11:28,830
+then I'll just return and okay so what's
+going to happen here is exactly the same
+
+658
+00:11:28,830 --> 00:11:28,840
+going to happen here is exactly the same
+ 
+
+659
+00:11:28,840 --> 00:11:30,600
+going to happen here is exactly the same
+thing that actually happened with our
+
+660
+00:11:30,600 --> 00:11:30,610
+thing that actually happened with our
+ 
+
+661
+00:11:30,610 --> 00:11:33,060
+thing that actually happened with our
+function when we call this array and we
+
+662
+00:11:33,060 --> 00:11:33,070
+function when we call this array and we
+ 
+
+663
+00:11:33,070 --> 00:11:36,300
+function when we call this array and we
+specify a size like five and I'll just
+
+664
+00:11:36,300 --> 00:11:36,310
+specify a size like five and I'll just
+ 
+
+665
+00:11:36,310 --> 00:11:39,390
+specify a size like five and I'll just
+call this array what happens is if this
+
+666
+00:11:39,390 --> 00:11:39,400
+call this array what happens is if this
+ 
+
+667
+00:11:39,400 --> 00:11:41,790
+call this array what happens is if this
+card gets compiled based on its usage so
+
+668
+00:11:41,790 --> 00:11:41,800
+card gets compiled based on its usage so
+ 
+
+669
+00:11:41,800 --> 00:11:43,140
+card gets compiled based on its usage so
+in this case five is the template
+
+670
+00:11:43,140 --> 00:11:43,150
+in this case five is the template
+ 
+
+671
+00:11:43,150 --> 00:11:45,180
+in this case five is the template
+argument which means that a version of
+
+672
+00:11:45,180 --> 00:11:45,190
+argument which means that a version of
+ 
+
+673
+00:11:45,190 --> 00:11:47,910
+argument which means that a version of
+this class gets created which replaces n
+
+674
+00:11:47,910 --> 00:11:47,920
+this class gets created which replaces n
+ 
+
+675
+00:11:47,920 --> 00:11:50,610
+this class gets created which replaces n
+with five like that and like that so
+
+676
+00:11:50,610 --> 00:11:50,620
+with five like that and like that so
+ 
+
+677
+00:11:50,620 --> 00:11:52,470
+with five like that and like that so
+this is actually what we end up with
+
+678
+00:11:52,470 --> 00:11:52,480
+this is actually what we end up with
+ 
+
+679
+00:11:52,480 --> 00:11:54,660
+this is actually what we end up with
+this is the code that we end up with and
+
+680
+00:11:54,660 --> 00:11:54,670
+this is the code that we end up with and
+ 
+
+681
+00:11:54,670 --> 00:11:56,970
+this is the code that we end up with and
+then of course if I call a raid or get
+
+682
+00:11:56,970 --> 00:11:56,980
+then of course if I call a raid or get
+ 
+
+683
+00:11:56,980 --> 00:11:59,400
+then of course if I call a raid or get
+size here and print that to the console
+
+684
+00:11:59,400 --> 00:11:59,410
+size here and print that to the console
+ 
+
+685
+00:11:59,410 --> 00:12:00,720
+size here and print that to the console
+or get rid of this extra copy I've
+
+686
+00:12:00,720 --> 00:12:00,730
+or get rid of this extra copy I've
+ 
+
+687
+00:12:00,730 --> 00:12:02,970
+or get rid of this extra copy I've
+created here that's my card let's hit f5
+
+688
+00:12:02,970 --> 00:12:02,980
+created here that's my card let's hit f5
+ 
+
+689
+00:12:02,980 --> 00:12:05,040
+created here that's my card let's hit f5
+you can see that I get five printing so
+
+690
+00:12:05,040 --> 00:12:05,050
+you can see that I get five printing so
+ 
+
+691
+00:12:05,050 --> 00:12:06,720
+you can see that I get five printing so
+that's how it works so you can see that
+
+692
+00:12:06,720 --> 00:12:06,730
+that's how it works so you can see that
+ 
+
+693
+00:12:06,730 --> 00:12:08,130
+that's how it works so you can see that
+we don't just have to use types we can
+
+694
+00:12:08,130 --> 00:12:08,140
+we don't just have to use types we can
+ 
+
+695
+00:12:08,140 --> 00:12:10,800
+we don't just have to use types we can
+even use integers or other data types to
+
+696
+00:12:10,800 --> 00:12:10,810
+even use integers or other data types to
+ 
+
+697
+00:12:10,810 --> 00:12:12,390
+even use integers or other data types to
+basically specify how we want to
+
+698
+00:12:12,390 --> 00:12:12,400
+basically specify how we want to
+ 
+
+699
+00:12:12,400 --> 00:12:14,760
+basically specify how we want to
+generate a class an entire class in this
+
+700
+00:12:14,760 --> 00:12:14,770
+generate a class an entire class in this
+ 
+
+701
+00:12:14,770 --> 00:12:17,160
+generate a class an entire class in this
+case let's go one step further suppose
+
+702
+00:12:17,160 --> 00:12:17,170
+case let's go one step further suppose
+ 
+
+703
+00:12:17,170 --> 00:12:18,300
+case let's go one step further suppose
+it is said of this being an INT
+
+704
+00:12:18,300 --> 00:12:18,310
+it is said of this being an INT
+ 
+
+705
+00:12:18,310 --> 00:12:20,220
+it is said of this being an INT
+explicitly oh I also wanted to make the
+
+706
+00:12:20,220 --> 00:12:20,230
+explicitly oh I also wanted to make the
+ 
+
+707
+00:12:20,230 --> 00:12:22,710
+explicitly oh I also wanted to make the
+type actually variable so I wanted to be
+
+708
+00:12:22,710 --> 00:12:22,720
+type actually variable so I wanted to be
+ 
+
+709
+00:12:22,720 --> 00:12:24,870
+type actually variable so I wanted to be
+able to specify what type this array
+
+710
+00:12:24,870 --> 00:12:24,880
+able to specify what type this array
+ 
+
+711
+00:12:24,880 --> 00:12:27,630
+able to specify what type this array
+actually contains at compile time well I
+
+712
+00:12:27,630 --> 00:12:27,640
+actually contains at compile time well I
+ 
+
+713
+00:12:27,640 --> 00:12:29,310
+actually contains at compile time well I
+can add another template arguments let's
+
+714
+00:12:29,310 --> 00:12:29,320
+can add another template arguments let's
+ 
+
+715
+00:12:29,320 --> 00:12:31,230
+can add another template arguments let's
+add this one before the number so I'll
+
+716
+00:12:31,230 --> 00:12:31,240
+add this one before the number so I'll
+ 
+
+717
+00:12:31,240 --> 00:12:34,350
+add this one before the number so I'll
+just write type name T and then int n
+
+718
+00:12:34,350 --> 00:12:34,360
+just write type name T and then int n
+ 
+
+719
+00:12:34,360 --> 00:12:36,420
+just write type name T and then int n
+right so now I'm going to replace this
+
+720
+00:12:36,420 --> 00:12:36,430
+right so now I'm going to replace this
+ 
+
+721
+00:12:36,430 --> 00:12:38,790
+right so now I'm going to replace this
+int with T and suddenly what I've got is
+
+722
+00:12:38,790 --> 00:12:38,800
+int with T and suddenly what I've got is
+ 
+
+723
+00:12:38,800 --> 00:12:41,520
+int with T and suddenly what I've got is
+an array of type T which is specified at
+
+724
+00:12:41,520 --> 00:12:41,530
+an array of type T which is specified at
+ 
+
+725
+00:12:41,530 --> 00:12:44,160
+an array of type T which is specified at
+compile time by the template that is of
+
+726
+00:12:44,160 --> 00:12:44,170
+compile time by the template that is of
+ 
+
+727
+00:12:44,170 --> 00:12:46,020
+compile time by the template that is of
+size n which is also specified by
+
+728
+00:12:46,020 --> 00:12:46,030
+size n which is also specified by
+ 
+
+729
+00:12:46,030 --> 00:12:47,610
+size n which is also specified by
+compile times so now over here what I
+
+730
+00:12:47,610 --> 00:12:47,620
+compile times so now over here what I
+ 
+
+731
+00:12:47,620 --> 00:12:49,320
+compile times so now over here what I
+actually call this array I have to
+
+732
+00:12:49,320 --> 00:12:49,330
+actually call this array I have to
+ 
+
+733
+00:12:49,330 --> 00:12:51,810
+actually call this array I have to
+specify int as an example and five for
+
+734
+00:12:51,810 --> 00:12:51,820
+specify int as an example and five for
+ 
+
+735
+00:12:51,820 --> 00:12:53,670
+specify int as an example and five for
+my size and I can obviously change this
+
+736
+00:12:53,670 --> 00:12:53,680
+my size and I can obviously change this
+ 
+
+737
+00:12:53,680 --> 00:12:55,500
+my size and I can obviously change this
+to be anything I want like SAEs string
+
+738
+00:12:55,500 --> 00:12:55,510
+to be anything I want like SAEs string
+ 
+
+739
+00:12:55,510 --> 00:12:58,200
+to be anything I want like SAEs string
+and 50 or whatever and you can see that
+
+740
+00:12:58,200 --> 00:12:58,210
+and 50 or whatever and you can see that
+ 
+
+741
+00:12:58,210 --> 00:12:59,640
+and 50 or whatever and you can see that
+what I've created is kind of a class
+
+742
+00:12:59,640 --> 00:12:59,650
+what I've created is kind of a class
+ 
+
+743
+00:12:59,650 --> 00:13:01,800
+what I've created is kind of a class
+that gets automatically created every
+
+744
+00:13:01,800 --> 00:13:01,810
+that gets automatically created every
+ 
+
+745
+00:13:01,810 --> 00:13:03,900
+that gets automatically created every
+time I actually use this array so that's
+
+746
+00:13:03,900 --> 00:13:03,910
+time I actually use this array so that's
+ 
+
+747
+00:13:03,910 --> 00:13:04,920
+time I actually use this array so that's
+pretty cool and what we've actually
+
+748
+00:13:04,920 --> 00:13:04,930
+pretty cool and what we've actually
+ 
+
+749
+00:13:04,930 --> 00:13:05,670
+pretty cool and what we've actually
+created
+
+750
+00:13:05,670 --> 00:13:05,680
+created
+ 
+
+751
+00:13:05,680 --> 00:13:07,650
+created
+is very similar to how the standard
+
+752
+00:13:07,650 --> 00:13:07,660
+is very similar to how the standard
+ 
+
+753
+00:13:07,660 --> 00:13:09,150
+is very similar to how the standard
+array class actually works in the
+
+754
+00:13:09,150 --> 00:13:09,160
+array class actually works in the
+ 
+
+755
+00:13:09,160 --> 00:13:11,129
+array class actually works in the
+standard template library that say the
+
+756
+00:13:11,129 --> 00:13:11,139
+standard template library that say the
+ 
+
+757
+00:13:11,139 --> 00:13:12,929
+standard template library that say the
+say plus plus right it just has two
+
+758
+00:13:12,929 --> 00:13:12,939
+say plus plus right it just has two
+ 
+
+759
+00:13:12,939 --> 00:13:15,150
+say plus plus right it just has two
+template arguments type and size and it
+
+760
+00:13:15,150 --> 00:13:15,160
+template arguments type and size and it
+ 
+
+761
+00:13:15,160 --> 00:13:16,710
+template arguments type and size and it
+creates an array very similar to the way
+
+762
+00:13:16,710 --> 00:13:16,720
+creates an array very similar to the way
+ 
+
+763
+00:13:16,720 --> 00:13:18,359
+creates an array very similar to the way
+that we've actually done it here now
+
+764
+00:13:18,359 --> 00:13:18,369
+that we've actually done it here now
+ 
+
+765
+00:13:18,369 --> 00:13:20,699
+that we've actually done it here now
+this is a sort of matter programming in
+
+766
+00:13:20,699 --> 00:13:20,709
+this is a sort of matter programming in
+ 
+
+767
+00:13:20,709 --> 00:13:22,679
+this is a sort of matter programming in
+C++ because you can see instead of
+
+768
+00:13:22,679 --> 00:13:22,689
+C++ because you can see instead of
+ 
+
+769
+00:13:22,689 --> 00:13:24,210
+C++ because you can see instead of
+actually programming what our code does
+
+770
+00:13:24,210 --> 00:13:24,220
+actually programming what our code does
+ 
+
+771
+00:13:24,220 --> 00:13:26,579
+actually programming what our code does
+at runtime were kind of programming what
+
+772
+00:13:26,579 --> 00:13:26,589
+at runtime were kind of programming what
+ 
+
+773
+00:13:26,589 --> 00:13:28,230
+at runtime were kind of programming what
+the compiler will actually do during
+
+774
+00:13:28,230 --> 00:13:28,240
+the compiler will actually do during
+ 
+
+775
+00:13:28,240 --> 00:13:30,629
+the compiler will actually do during
+compile time and this is extremely
+
+776
+00:13:30,629 --> 00:13:30,639
+compile time and this is extremely
+ 
+
+777
+00:13:30,639 --> 00:13:32,970
+compile time and this is extremely
+powerful now what we're doing here I
+
+778
+00:13:32,970 --> 00:13:32,980
+powerful now what we're doing here I
+ 
+
+779
+00:13:32,980 --> 00:13:34,590
+powerful now what we're doing here I
+think this is a pretty good kind of
+
+780
+00:13:34,590 --> 00:13:34,600
+think this is a pretty good kind of
+ 
+
+781
+00:13:34,600 --> 00:13:36,299
+think this is a pretty good kind of
+gentle introduction we've even kind of
+
+782
+00:13:36,299 --> 00:13:36,309
+gentle introduction we've even kind of
+ 
+
+783
+00:13:36,309 --> 00:13:37,769
+gentle introduction we've even kind of
+gone as far as to create multiple
+
+784
+00:13:37,769 --> 00:13:37,779
+gone as far as to create multiple
+ 
+
+785
+00:13:37,779 --> 00:13:39,480
+gone as far as to create multiple
+template arguments and use integers
+
+786
+00:13:39,480 --> 00:13:39,490
+template arguments and use integers
+ 
+
+787
+00:13:39,490 --> 00:13:41,790
+template arguments and use integers
+instead of just kind of type names but
+
+788
+00:13:41,790 --> 00:13:41,800
+instead of just kind of type names but
+ 
+
+789
+00:13:41,800 --> 00:13:43,530
+instead of just kind of type names but
+this is just scratching the surface I
+
+790
+00:13:43,530 --> 00:13:43,540
+this is just scratching the surface I
+ 
+
+791
+00:13:43,540 --> 00:13:47,040
+this is just scratching the surface I
+mean this can get really crazy really
+
+792
+00:13:47,040 --> 00:13:47,050
+mean this can get really crazy really
+ 
+
+793
+00:13:47,050 --> 00:13:49,230
+mean this can get really crazy really
+quickly and because of that I kind of
+
+794
+00:13:49,230 --> 00:13:49,240
+quickly and because of that I kind of
+ 
+
+795
+00:13:49,240 --> 00:13:51,210
+quickly and because of that I kind of
+want to talk about where you might want
+
+796
+00:13:51,210 --> 00:13:51,220
+want to talk about where you might want
+ 
+
+797
+00:13:51,220 --> 00:13:53,040
+want to talk about where you might want
+to use templates and where you might not
+
+798
+00:13:53,040 --> 00:13:53,050
+to use templates and where you might not
+ 
+
+799
+00:13:53,050 --> 00:13:54,900
+to use templates and where you might not
+want to use templates so this part is
+
+800
+00:13:54,900 --> 00:13:54,910
+want to use templates so this part is
+ 
+
+801
+00:13:54,910 --> 00:13:57,030
+want to use templates so this part is
+kind of entirely subjective it's
+
+802
+00:13:57,030 --> 00:13:57,040
+kind of entirely subjective it's
+ 
+
+803
+00:13:57,040 --> 00:14:00,809
+kind of entirely subjective it's
+opinionated but in my experience this is
+
+804
+00:14:00,809 --> 00:14:00,819
+opinionated but in my experience this is
+ 
+
+805
+00:14:00,819 --> 00:14:02,009
+opinionated but in my experience this is
+this is how it works right
+
+806
+00:14:02,009 --> 00:14:02,019
+this is how it works right
+ 
+
+807
+00:14:02,019 --> 00:14:04,079
+this is how it works right
+so first of all a whole bunch of game
+
+808
+00:14:04,079 --> 00:14:04,089
+so first of all a whole bunch of game
+ 
+
+809
+00:14:04,089 --> 00:14:06,119
+so first of all a whole bunch of game
+studios out there or software companies
+
+810
+00:14:06,119 --> 00:14:06,129
+studios out there or software companies
+ 
+
+811
+00:14:06,129 --> 00:14:08,040
+studios out there or software companies
+whatever actually just outright down
+
+812
+00:14:08,040 --> 00:14:08,050
+whatever actually just outright down
+ 
+
+813
+00:14:08,050 --> 00:14:10,199
+whatever actually just outright down
+templates they say never use templates
+
+814
+00:14:10,199 --> 00:14:10,209
+templates they say never use templates
+ 
+
+815
+00:14:10,209 --> 00:14:11,819
+templates they say never use templates
+ever now I think that's a little bit
+
+816
+00:14:11,819 --> 00:14:11,829
+ever now I think that's a little bit
+ 
+
+817
+00:14:11,829 --> 00:14:14,249
+ever now I think that's a little bit
+kind of overreacting to the situation
+
+818
+00:14:14,249 --> 00:14:14,259
+kind of overreacting to the situation
+ 
+
+819
+00:14:14,259 --> 00:14:16,049
+kind of overreacting to the situation
+because I think the templates can be
+
+820
+00:14:16,049 --> 00:14:16,059
+because I think the templates can be
+ 
+
+821
+00:14:16,059 --> 00:14:19,230
+because I think the templates can be
+extremely useful for situations where
+
+822
+00:14:19,230 --> 00:14:19,240
+extremely useful for situations where
+ 
+
+823
+00:14:19,240 --> 00:14:21,119
+extremely useful for situations where
+like I don't know like a logging system
+
+824
+00:14:21,119 --> 00:14:21,129
+like I don't know like a logging system
+ 
+
+825
+00:14:21,129 --> 00:14:22,769
+like I don't know like a logging system
+or something like that you have every
+
+826
+00:14:22,769 --> 00:14:22,779
+or something like that you have every
+ 
+
+827
+00:14:22,779 --> 00:14:25,799
+or something like that you have every
+possible type that you want to log do
+
+828
+00:14:25,799 --> 00:14:25,809
+possible type that you want to log do
+ 
+
+829
+00:14:25,809 --> 00:14:27,929
+possible type that you want to log do
+you really have to like specify an
+
+830
+00:14:27,929 --> 00:14:27,939
+you really have to like specify an
+ 
+
+831
+00:14:27,939 --> 00:14:30,660
+you really have to like specify an
+overload for every single function well
+
+832
+00:14:30,660 --> 00:14:30,670
+overload for every single function well
+ 
+
+833
+00:14:30,670 --> 00:14:32,579
+overload for every single function well
+you can automate that with templates
+
+834
+00:14:32,579 --> 00:14:32,589
+you can automate that with templates
+ 
+
+835
+00:14:32,589 --> 00:14:34,410
+you can automate that with templates
+right you can get the compiler to write
+
+836
+00:14:34,410 --> 00:14:34,420
+right you can get the compiler to write
+ 
+
+837
+00:14:34,420 --> 00:14:36,660
+right you can get the compiler to write
+code for you based on a set of rules
+
+838
+00:14:36,660 --> 00:14:36,670
+code for you based on a set of rules
+ 
+
+839
+00:14:36,670 --> 00:14:38,309
+code for you based on a set of rules
+that's really what a template is just
+
+840
+00:14:38,309 --> 00:14:38,319
+that's really what a template is just
+ 
+
+841
+00:14:38,319 --> 00:14:40,559
+that's really what a template is just
+the compiler writing code for you based
+
+842
+00:14:40,559 --> 00:14:40,569
+the compiler writing code for you based
+ 
+
+843
+00:14:40,569 --> 00:14:41,910
+the compiler writing code for you based
+on the rules that you've given it and
+
+844
+00:14:41,910 --> 00:14:41,920
+on the rules that you've given it and
+ 
+
+845
+00:14:41,920 --> 00:14:44,280
+on the rules that you've given it and
+based on the usage of that function or
+
+846
+00:14:44,280 --> 00:14:44,290
+based on the usage of that function or
+ 
+
+847
+00:14:44,290 --> 00:14:46,829
+based on the usage of that function or
+class or anything like that right that
+
+848
+00:14:46,829 --> 00:14:46,839
+class or anything like that right that
+ 
+
+849
+00:14:46,839 --> 00:14:49,470
+class or anything like that right that
+being said if you start using templates
+
+850
+00:14:49,470 --> 00:14:49,480
+being said if you start using templates
+ 
+
+851
+00:14:49,480 --> 00:14:50,730
+being said if you start using templates
+if you start getting really really
+
+852
+00:14:50,730 --> 00:14:50,740
+if you start getting really really
+ 
+
+853
+00:14:50,740 --> 00:14:52,439
+if you start getting really really
+complex with your templates and you
+
+854
+00:14:52,439 --> 00:14:52,449
+complex with your templates and you
+ 
+
+855
+00:14:52,449 --> 00:14:54,749
+complex with your templates and you
+start just having it generate an entire
+
+856
+00:14:54,749 --> 00:14:54,759
+start just having it generate an entire
+ 
+
+857
+00:14:54,759 --> 00:14:56,819
+start just having it generate an entire
+like meta language for you and I've seen
+
+858
+00:14:56,819 --> 00:14:56,829
+like meta language for you and I've seen
+ 
+
+859
+00:14:56,829 --> 00:14:59,970
+like meta language for you and I've seen
+code that would probably give you
+
+860
+00:14:59,970 --> 00:14:59,980
+code that would probably give you
+ 
+
+861
+00:14:59,980 --> 00:15:01,769
+code that would probably give you
+nightmares like seriously you can go
+
+862
+00:15:01,769 --> 00:15:01,779
+nightmares like seriously you can go
+ 
+
+863
+00:15:01,779 --> 00:15:04,530
+nightmares like seriously you can go
+really far with templates that might be
+
+864
+00:15:04,530 --> 00:15:04,540
+really far with templates that might be
+ 
+
+865
+00:15:04,540 --> 00:15:07,439
+really far with templates that might be
+pushing it right that might be going a
+
+866
+00:15:07,439 --> 00:15:07,449
+pushing it right that might be going a
+ 
+
+867
+00:15:07,449 --> 00:15:09,179
+pushing it right that might be going a
+little bit too far because there's a
+
+868
+00:15:09,179 --> 00:15:09,189
+little bit too far because there's a
+ 
+
+869
+00:15:09,189 --> 00:15:11,129
+little bit too far because there's a
+point where the templates become so
+
+870
+00:15:11,129 --> 00:15:11,139
+point where the templates become so
+ 
+
+871
+00:15:11,139 --> 00:15:13,319
+point where the templates become so
+complex that if there's an issue with it
+
+872
+00:15:13,319 --> 00:15:13,329
+complex that if there's an issue with it
+ 
+
+873
+00:15:13,329 --> 00:15:15,820
+complex that if there's an issue with it
+no one can understand what's going
+
+874
+00:15:15,820 --> 00:15:15,830
+no one can understand what's going
+ 
+
+875
+00:15:15,830 --> 00:15:18,340
+no one can understand what's going
+and you'll literally have to just get
+
+876
+00:15:18,340 --> 00:15:18,350
+and you'll literally have to just get
+ 
+
+877
+00:15:18,350 --> 00:15:20,680
+and you'll literally have to just get
+like a notebook get a piece of paper and
+
+878
+00:15:20,680 --> 00:15:20,690
+like a notebook get a piece of paper and
+ 
+
+879
+00:15:20,690 --> 00:15:22,300
+like a notebook get a piece of paper and
+start filling in all these types
+
+880
+00:15:22,300 --> 00:15:22,310
+start filling in all these types
+ 
+
+881
+00:15:22,310 --> 00:15:23,770
+start filling in all these types
+manually of course you can get the
+
+882
+00:15:23,770 --> 00:15:23,780
+manually of course you can get the
+ 
+
+883
+00:15:23,780 --> 00:15:26,080
+manually of course you can get the
+compiler to actually tell you what code
+
+884
+00:15:26,080 --> 00:15:26,090
+compiler to actually tell you what code
+ 
+
+885
+00:15:26,090 --> 00:15:28,420
+compiler to actually tell you what code
+is generating and all of that but even
+
+886
+00:15:28,420 --> 00:15:28,430
+is generating and all of that but even
+ 
+
+887
+00:15:28,430 --> 00:15:32,980
+is generating and all of that but even
+so like at work we've had cases where
+
+888
+00:15:32,980 --> 00:15:32,990
+so like at work we've had cases where
+ 
+
+889
+00:15:32,990 --> 00:15:34,630
+so like at work we've had cases where
+we've just had to sit down and spend
+
+890
+00:15:34,630 --> 00:15:34,640
+we've just had to sit down and spend
+ 
+
+891
+00:15:34,640 --> 00:15:37,060
+we've just had to sit down and spend
+three hours figuring out what code has
+
+892
+00:15:37,060 --> 00:15:37,070
+three hours figuring out what code has
+ 
+
+893
+00:15:37,070 --> 00:15:38,800
+three hours figuring out what code has
+actually been compiled and what's going
+
+894
+00:15:38,800 --> 00:15:38,810
+actually been compiled and what's going
+ 
+
+895
+00:15:38,810 --> 00:15:40,030
+actually been compiled and what's going
+on with our templates and why they're
+
+896
+00:15:40,030 --> 00:15:40,040
+on with our templates and why they're
+ 
+
+897
+00:15:40,040 --> 00:15:42,790
+on with our templates and why they're
+not working when that happens I think
+
+898
+00:15:42,790 --> 00:15:42,800
+not working when that happens I think
+ 
+
+899
+00:15:42,800 --> 00:15:43,570
+not working when that happens I think
+you've gone too far
+
+900
+00:15:43,570 --> 00:15:43,580
+you've gone too far
+ 
+
+901
+00:15:43,580 --> 00:15:45,850
+you've gone too far
+and I don't think that you should get
+
+902
+00:15:45,850 --> 00:15:45,860
+and I don't think that you should get
+ 
+
+903
+00:15:45,860 --> 00:15:47,710
+and I don't think that you should get
+too crazy with templates even though you
+
+904
+00:15:47,710 --> 00:15:47,720
+too crazy with templates even though you
+ 
+
+905
+00:15:47,720 --> 00:15:49,750
+too crazy with templates even though you
+can there is a point where doing things
+
+906
+00:15:49,750 --> 00:15:49,760
+can there is a point where doing things
+ 
+
+907
+00:15:49,760 --> 00:15:51,130
+can there is a point where doing things
+manually and writing out code yourself
+
+908
+00:15:51,130 --> 00:15:51,140
+manually and writing out code yourself
+ 
+
+909
+00:15:51,140 --> 00:15:53,140
+manually and writing out code yourself
+is actually going to benefit you and
+
+910
+00:15:53,140 --> 00:15:53,150
+is actually going to benefit you and
+ 
+
+911
+00:15:53,150 --> 00:15:54,970
+is actually going to benefit you and
+your team a lot more than trying to
+
+912
+00:15:54,970 --> 00:15:54,980
+your team a lot more than trying to
+ 
+
+913
+00:15:54,980 --> 00:15:56,680
+your team a lot more than trying to
+create this massive template magic that
+
+914
+00:15:56,680 --> 00:15:56,690
+create this massive template magic that
+ 
+
+915
+00:15:56,690 --> 00:15:58,960
+create this massive template magic that
+just does everything for you but is kind
+
+916
+00:15:58,960 --> 00:15:58,970
+just does everything for you but is kind
+ 
+
+917
+00:15:58,970 --> 00:16:00,430
+just does everything for you but is kind
+of fragile and very difficult to
+
+918
+00:16:00,430 --> 00:16:00,440
+of fragile and very difficult to
+ 
+
+919
+00:16:00,440 --> 00:16:01,960
+of fragile and very difficult to
+understand so I don't think the template
+
+920
+00:16:01,960 --> 00:16:01,970
+understand so I don't think the template
+ 
+
+921
+00:16:01,970 --> 00:16:04,540
+understand so I don't think the template
+should be completely banned but I also
+
+922
+00:16:04,540 --> 00:16:04,550
+should be completely banned but I also
+ 
+
+923
+00:16:04,550 --> 00:16:06,910
+should be completely banned but I also
+don't think that you should go crazy
+
+924
+00:16:06,910 --> 00:16:06,920
+don't think that you should go crazy
+ 
+
+925
+00:16:06,920 --> 00:16:10,120
+don't think that you should go crazy
+templates and abuse them a lot anyway
+
+926
+00:16:10,120 --> 00:16:10,130
+templates and abuse them a lot anyway
+ 
+
+927
+00:16:10,130 --> 00:16:11,680
+templates and abuse them a lot anyway
+we're gonna have a lot more videos about
+
+928
+00:16:11,680 --> 00:16:11,690
+we're gonna have a lot more videos about
+ 
+
+929
+00:16:11,690 --> 00:16:12,940
+we're gonna have a lot more videos about
+templates because there's a lot more
+
+930
+00:16:12,940 --> 00:16:12,950
+templates because there's a lot more
+ 
+
+931
+00:16:12,950 --> 00:16:14,500
+templates because there's a lot more
+than I want to talk about is just
+
+932
+00:16:14,500 --> 00:16:14,510
+than I want to talk about is just
+ 
+
+933
+00:16:14,510 --> 00:16:15,700
+than I want to talk about is just
+scratching the surface once we actually
+
+934
+00:16:15,700 --> 00:16:15,710
+scratching the surface once we actually
+ 
+
+935
+00:16:15,710 --> 00:16:18,070
+scratching the surface once we actually
+get into kind of the game engine series
+
+936
+00:16:18,070 --> 00:16:18,080
+get into kind of the game engine series
+ 
+
+937
+00:16:18,080 --> 00:16:19,840
+get into kind of the game engine series
+as well will people start to see real
+
+938
+00:16:19,840 --> 00:16:19,850
+as well will people start to see real
+ 
+
+939
+00:16:19,850 --> 00:16:22,630
+as well will people start to see real
+examples of where we might want to use
+
+940
+00:16:22,630 --> 00:16:22,640
+examples of where we might want to use
+ 
+
+941
+00:16:22,640 --> 00:16:25,720
+examples of where we might want to use
+templates off the top of my head I think
+
+942
+00:16:25,720 --> 00:16:25,730
+templates off the top of my head I think
+ 
+
+943
+00:16:25,730 --> 00:16:29,050
+templates off the top of my head I think
+two kind of really important places
+
+944
+00:16:29,050 --> 00:16:29,060
+two kind of really important places
+ 
+
+945
+00:16:29,060 --> 00:16:30,490
+two kind of really important places
+where I would definitely use templates
+
+946
+00:16:30,490 --> 00:16:30,500
+where I would definitely use templates
+ 
+
+947
+00:16:30,500 --> 00:16:32,080
+where I would definitely use templates
+are things like logging systems and also
+
+948
+00:16:32,080 --> 00:16:32,090
+are things like logging systems and also
+ 
+
+949
+00:16:32,090 --> 00:16:34,390
+are things like logging systems and also
+even like a material system like for
+
+950
+00:16:34,390 --> 00:16:34,400
+even like a material system like for
+ 
+
+951
+00:16:34,400 --> 00:16:36,160
+even like a material system like for
+rendering graphics right when you have a
+
+952
+00:16:36,160 --> 00:16:36,170
+rendering graphics right when you have a
+ 
+
+953
+00:16:36,170 --> 00:16:38,590
+rendering graphics right when you have a
+uniform buffer that can contain various
+
+954
+00:16:38,590 --> 00:16:38,600
+uniform buffer that can contain various
+ 
+
+955
+00:16:38,600 --> 00:16:40,570
+uniform buffer that can contain various
+different types templating that to an
+
+956
+00:16:40,570 --> 00:16:40,580
+different types templating that to an
+ 
+
+957
+00:16:40,580 --> 00:16:42,760
+different types templating that to an
+extent can be extremely useful anyway I
+
+958
+00:16:42,760 --> 00:16:42,770
+extent can be extremely useful anyway I
+ 
+
+959
+00:16:42,770 --> 00:16:43,930
+extent can be extremely useful anyway I
+hope you guys enjoy this video if you
+
+960
+00:16:43,930 --> 00:16:43,940
+hope you guys enjoy this video if you
+ 
+
+961
+00:16:43,940 --> 00:16:45,730
+hope you guys enjoy this video if you
+did you can hit that like button you can
+
+962
+00:16:45,730 --> 00:16:45,740
+did you can hit that like button you can
+ 
+
+963
+00:16:45,740 --> 00:16:47,110
+did you can hit that like button you can
+also you can you can help support this
+
+964
+00:16:47,110 --> 00:16:47,120
+also you can you can help support this
+ 
+
+965
+00:16:47,120 --> 00:16:48,580
+also you can you can help support this
+series in all the series that I make
+
+966
+00:16:48,580 --> 00:16:48,590
+series in all the series that I make
+ 
+
+967
+00:16:48,590 --> 00:16:50,170
+series in all the series that I make
+here on my channel by going to pay for a
+
+968
+00:16:50,170 --> 00:16:50,180
+here on my channel by going to pay for a
+ 
+
+969
+00:16:50,180 --> 00:16:52,330
+here on my channel by going to pay for a
+Mac on 4/2 Cherno massive shout out as
+
+970
+00:16:52,330 --> 00:16:52,340
+Mac on 4/2 Cherno massive shout out as
+ 
+
+971
+00:16:52,340 --> 00:16:54,070
+Mac on 4/2 Cherno massive shout out as
+always to all the wonderful supporters
+
+972
+00:16:54,070 --> 00:16:54,080
+always to all the wonderful supporters
+ 
+
+973
+00:16:54,080 --> 00:16:56,230
+always to all the wonderful supporters
+that helped make this possible there are
+
+974
+00:16:56,230 --> 00:16:56,240
+that helped make this possible there are
+ 
+
+975
+00:16:56,240 --> 00:16:57,340
+that helped make this possible there are
+some pretty cool rewards that you can
+
+976
+00:16:57,340 --> 00:16:57,350
+some pretty cool rewards that you can
+ 
+
+977
+00:16:57,350 --> 00:16:58,780
+some pretty cool rewards that you can
+get such as access to all the source
+
+978
+00:16:58,780 --> 00:16:58,790
+get such as access to all the source
+ 
+
+979
+00:16:58,790 --> 00:17:00,550
+get such as access to all the source
+code from my OpenGL series as well as
+
+980
+00:17:00,550 --> 00:17:00,560
+code from my OpenGL series as well as
+ 
+
+981
+00:17:00,560 --> 00:17:02,740
+code from my OpenGL series as well as
+the soon to come game engine series by
+
+982
+00:17:02,740 --> 00:17:02,750
+the soon to come game engine series by
+ 
+
+983
+00:17:02,750 --> 00:17:04,960
+the soon to come game engine series by
+supporting then you also get like for
+
+984
+00:17:04,960 --> 00:17:04,970
+supporting then you also get like for
+ 
+
+985
+00:17:04,970 --> 00:17:06,280
+supporting then you also get like for
+the top tier supporters we do this thing
+
+986
+00:17:06,280 --> 00:17:06,290
+the top tier supporters we do this thing
+ 
+
+987
+00:17:06,290 --> 00:17:07,540
+the top tier supporters we do this thing
+while we basically hang out for an hour
+
+988
+00:17:07,540 --> 00:17:07,550
+while we basically hang out for an hour
+ 
+
+989
+00:17:07,550 --> 00:17:09,070
+while we basically hang out for an hour
+once a month and we just talk about
+
+990
+00:17:09,070 --> 00:17:09,080
+once a month and we just talk about
+ 
+
+991
+00:17:09,080 --> 00:17:10,780
+once a month and we just talk about
+whatever the next one is actually coming
+
+992
+00:17:10,780 --> 00:17:10,790
+whatever the next one is actually coming
+ 
+
+993
+00:17:10,790 --> 00:17:13,030
+whatever the next one is actually coming
+up in like a week so definitely sign up
+
+994
+00:17:13,030 --> 00:17:13,040
+up in like a week so definitely sign up
+ 
+
+995
+00:17:13,040 --> 00:17:14,560
+up in like a week so definitely sign up
+for that if you're interested and then
+
+996
+00:17:14,560 --> 00:17:14,570
+for that if you're interested and then
+ 
+
+997
+00:17:14,570 --> 00:17:16,180
+for that if you're interested and then
+also you'll get videos early and a whole
+
+998
+00:17:16,180 --> 00:17:16,190
+also you'll get videos early and a whole
+ 
+
+999
+00:17:16,190 --> 00:17:18,580
+also you'll get videos early and a whole
+bunch of other rewards but most of all
+
+1000
+00:17:18,580 --> 00:17:18,590
+bunch of other rewards but most of all
+ 
+
+1001
+00:17:18,590 --> 00:17:19,750
+bunch of other rewards but most of all
+you're helping to support this series
+
+1002
+00:17:19,750 --> 00:17:19,760
+you're helping to support this series
+ 
+
+1003
+00:17:19,760 --> 00:17:21,580
+you're helping to support this series
+which is awesome because I can basically
+
+1004
+00:17:21,580 --> 00:17:21,590
+which is awesome because I can basically
+ 
+
+1005
+00:17:21,590 --> 00:17:23,470
+which is awesome because I can basically
+just lets me make more videos you can
+
+1006
+00:17:23,470 --> 00:17:23,480
+just lets me make more videos you can
+ 
+
+1007
+00:17:23,480 --> 00:17:25,480
+just lets me make more videos you can
+also join discord I have just called
+
+1008
+00:17:25,480 --> 00:17:25,490
+also join discord I have just called
+ 
+
+1009
+00:17:25,490 --> 00:17:26,330
+also join discord I have just called
+server over
+
+1010
+00:17:26,330 --> 00:17:26,340
+server over
+ 
+
+1011
+00:17:26,340 --> 00:17:28,250
+server over
+- sherrilyn home slash discord that's
+
+1012
+00:17:28,250 --> 00:17:28,260
+- sherrilyn home slash discord that's
+ 
+
+1013
+00:17:28,260 --> 00:17:29,960
+- sherrilyn home slash discord that's
+basically just a community of people
+
+1014
+00:17:29,960 --> 00:17:29,970
+basically just a community of people
+ 
+
+1015
+00:17:29,970 --> 00:17:31,100
+basically just a community of people
+where you can talk about whatever you
+
+1016
+00:17:31,100 --> 00:17:31,110
+where you can talk about whatever you
+ 
+
+1017
+00:17:31,110 --> 00:17:32,690
+where you can talk about whatever you
+want including this programming stuff
+
+1018
+00:17:32,690 --> 00:17:32,700
+want including this programming stuff
+ 
+
+1019
+00:17:32,700 --> 00:17:34,340
+want including this programming stuff
+and just discuss it with other people
+
+1020
+00:17:34,340 --> 00:17:34,350
+and just discuss it with other people
+ 
+
+1021
+00:17:34,350 --> 00:17:35,600
+and just discuss it with other people
+ask for help with your kirtan all that
+
+1022
+00:17:35,600 --> 00:17:35,610
+ask for help with your kirtan all that
+ 
+
+1023
+00:17:35,610 --> 00:17:36,860
+ask for help with your kirtan all that
+definitely encourage you guys to join
+
+1024
+00:17:36,860 --> 00:17:36,870
+definitely encourage you guys to join
+ 
+
+1025
+00:17:36,870 --> 00:17:39,440
+definitely encourage you guys to join
+that and as always I will see you in the
+
+1026
+00:17:39,440 --> 00:17:39,450
+that and as always I will see you in the
+ 
+
+1027
+00:17:39,450 --> 00:17:41,740
+that and as always I will see you in the
+next video goodbye
+
+1028
+00:17:41,740 --> 00:17:41,750
+next video goodbye
+ 
+
+1029
+00:17:41,750 --> 00:17:56,920
+next video goodbye
+[Music]
+

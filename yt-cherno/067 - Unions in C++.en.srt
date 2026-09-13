@@ -1,0 +1,2385 @@
+1
+00:00:00,000 --> 00:00:01,250
+
+hey what's up guys my name is Shawn and
+
+2
+00:00:01,250 --> 00:00:01,260
+hey what's up guys my name is Shawn and
+ 
+
+3
+00:00:01,260 --> 00:00:02,570
+hey what's up guys my name is Shawn and
+welcome back to my state boss boss
+
+4
+00:00:02,570 --> 00:00:02,580
+welcome back to my state boss boss
+ 
+
+5
+00:00:02,580 --> 00:00:04,130
+welcome back to my state boss boss
+series so today we're gonna be talking
+
+6
+00:00:04,130 --> 00:00:04,140
+series so today we're gonna be talking
+ 
+
+7
+00:00:04,140 --> 00:00:07,940
+series so today we're gonna be talking
+all about unions in C++ so a union is a
+
+8
+00:00:07,940 --> 00:00:07,950
+all about unions in C++ so a union is a
+ 
+
+9
+00:00:07,950 --> 00:00:09,320
+all about unions in C++ so a union is a
+little bit like a class type like a
+
+10
+00:00:09,320 --> 00:00:09,330
+little bit like a class type like a
+ 
+
+11
+00:00:09,330 --> 00:00:12,350
+little bit like a class type like a
+struct type except it can only occupy
+
+12
+00:00:12,350 --> 00:00:12,360
+struct type except it can only occupy
+ 
+
+13
+00:00:12,360 --> 00:00:14,539
+struct type except it can only occupy
+the memory of like one member at a time
+
+14
+00:00:14,539 --> 00:00:14,549
+the memory of like one member at a time
+ 
+
+15
+00:00:14,549 --> 00:00:17,300
+the memory of like one member at a time
+what that means is that typically if we
+
+16
+00:00:17,300 --> 00:00:17,310
+what that means is that typically if we
+ 
+
+17
+00:00:17,310 --> 00:00:19,099
+what that means is that typically if we
+have a struct and we declare let's just
+
+18
+00:00:19,099 --> 00:00:19,109
+have a struct and we declare let's just
+ 
+
+19
+00:00:19,109 --> 00:00:20,990
+have a struct and we declare let's just
+say four floats or something in it that
+
+20
+00:00:20,990 --> 00:00:21,000
+say four floats or something in it that
+ 
+
+21
+00:00:21,000 --> 00:00:24,859
+say four floats or something in it that
+means that we can have four times four
+
+22
+00:00:24,859 --> 00:00:24,869
+means that we can have four times four
+ 
+
+23
+00:00:24,869 --> 00:00:27,349
+means that we can have four times four
+bytes which is a total of 16 bytes and
+
+24
+00:00:27,349 --> 00:00:27,359
+bytes which is a total of 16 bytes and
+ 
+
+25
+00:00:27,359 --> 00:00:29,330
+bytes which is a total of 16 bytes and
+that's dropped that's how much space it
+
+26
+00:00:29,330 --> 00:00:29,340
+that's dropped that's how much space it
+ 
+
+27
+00:00:29,340 --> 00:00:30,740
+that's dropped that's how much space it
+occupies because we have four members
+
+28
+00:00:30,740 --> 00:00:30,750
+occupies because we have four members
+ 
+
+29
+00:00:30,750 --> 00:00:32,810
+occupies because we have four members
+and obviously as you keep adding more
+
+30
+00:00:32,810 --> 00:00:32,820
+and obviously as you keep adding more
+ 
+
+31
+00:00:32,820 --> 00:00:34,760
+and obviously as you keep adding more
+members to a class or a struct the size
+
+32
+00:00:34,760 --> 00:00:34,770
+members to a class or a struct the size
+ 
+
+33
+00:00:34,770 --> 00:00:36,979
+members to a class or a struct the size
+keeps growing a union can only have one
+
+34
+00:00:36,979 --> 00:00:36,989
+keeps growing a union can only have one
+ 
+
+35
+00:00:36,989 --> 00:00:40,369
+keeps growing a union can only have one
+member so if I were if I was to declare
+
+36
+00:00:40,369 --> 00:00:40,379
+member so if I were if I was to declare
+ 
+
+37
+00:00:40,379 --> 00:00:43,520
+member so if I were if I was to declare
+four floats like a b c d the size of the
+
+38
+00:00:43,520 --> 00:00:43,530
+four floats like a b c d the size of the
+ 
+
+39
+00:00:43,530 --> 00:00:45,440
+four floats like a b c d the size of the
+union would still be four bytes and when
+
+40
+00:00:45,440 --> 00:00:45,450
+union would still be four bytes and when
+ 
+
+41
+00:00:45,450 --> 00:00:47,600
+union would still be four bytes and when
+i try to address either a like if i try
+
+42
+00:00:47,600 --> 00:00:47,610
+i try to address either a like if i try
+ 
+
+43
+00:00:47,610 --> 00:00:49,790
+i try to address either a like if i try
+to change the value of a or b or c or d
+
+44
+00:00:49,790 --> 00:00:49,800
+to change the value of a or b or c or d
+ 
+
+45
+00:00:49,800 --> 00:00:51,799
+to change the value of a or b or c or d
+it would literally be the same memory so
+
+46
+00:00:51,799 --> 00:00:51,809
+it would literally be the same memory so
+ 
+
+47
+00:00:51,809 --> 00:00:54,200
+it would literally be the same memory so
+if i change a and set it to 5 the value
+
+48
+00:00:54,200 --> 00:00:54,210
+if i change a and set it to 5 the value
+ 
+
+49
+00:00:54,210 --> 00:00:56,389
+if i change a and set it to 5 the value
+of d would also be fine that's how
+
+50
+00:00:56,389 --> 00:00:56,399
+of d would also be fine that's how
+ 
+
+51
+00:00:56,399 --> 00:00:58,880
+of d would also be fine that's how
+unions work and you can use them exactly
+
+52
+00:00:58,880 --> 00:00:58,890
+unions work and you can use them exactly
+ 
+
+53
+00:00:58,890 --> 00:01:01,010
+unions work and you can use them exactly
+like you can use structs or classes like
+
+54
+00:01:01,010 --> 00:01:01,020
+like you can use structs or classes like
+ 
+
+55
+00:01:01,020 --> 00:01:04,369
+like you can use structs or classes like
+you can add like static functions to
+
+56
+00:01:04,369 --> 00:01:04,379
+you can add like static functions to
+ 
+
+57
+00:01:04,379 --> 00:01:05,780
+you can add like static functions to
+them and just normal functions and Men
+
+58
+00:01:05,780 --> 00:01:05,790
+them and just normal functions and Men
+ 
+
+59
+00:01:05,790 --> 00:01:07,070
+them and just normal functions and Men
+and methods to them and all of that
+
+60
+00:01:07,070 --> 00:01:07,080
+and methods to them and all of that
+ 
+
+61
+00:01:07,080 --> 00:01:09,380
+and methods to them and all of that
+stuff however you can't like have
+
+62
+00:01:09,380 --> 00:01:09,390
+stuff however you can't like have
+ 
+
+63
+00:01:09,390 --> 00:01:11,210
+stuff however you can't like have
+virtual methods and there are some other
+
+64
+00:01:11,210 --> 00:01:11,220
+virtual methods and there are some other
+ 
+
+65
+00:01:11,220 --> 00:01:13,130
+virtual methods and there are some other
+restrictions but usually what people use
+
+66
+00:01:13,130 --> 00:01:13,140
+restrictions but usually what people use
+ 
+
+67
+00:01:13,140 --> 00:01:15,830
+restrictions but usually what people use
+unions for is very kind of closely
+
+68
+00:01:15,830 --> 00:01:15,840
+unions for is very kind of closely
+ 
+
+69
+00:01:15,840 --> 00:01:17,929
+unions for is very kind of closely
+linked to type planning which is what we
+
+70
+00:01:17,929 --> 00:01:17,939
+linked to type planning which is what we
+ 
+
+71
+00:01:17,939 --> 00:01:19,999
+linked to type planning which is what we
+did in last bit in the last video so if
+
+72
+00:01:19,999 --> 00:01:20,009
+did in last bit in the last video so if
+ 
+
+73
+00:01:20,009 --> 00:01:20,899
+did in last bit in the last video so if
+you haven't check that out definitely
+
+74
+00:01:20,899 --> 00:01:20,909
+you haven't check that out definitely
+ 
+
+75
+00:01:20,909 --> 00:01:22,550
+you haven't check that out definitely
+check that out right now
+
+76
+00:01:22,550 --> 00:01:22,560
+check that out right now
+ 
+
+77
+00:01:22,560 --> 00:01:24,859
+check that out right now
+but it's really useful for when you want
+
+78
+00:01:24,859 --> 00:01:24,869
+but it's really useful for when you want
+ 
+
+79
+00:01:24,869 --> 00:01:26,929
+but it's really useful for when you want
+to basically be able to either give two
+
+80
+00:01:26,929 --> 00:01:26,939
+to basically be able to either give two
+ 
+
+81
+00:01:26,939 --> 00:01:28,789
+to basically be able to either give two
+different names to the same variable
+
+82
+00:01:28,789 --> 00:01:28,799
+different names to the same variable
+ 
+
+83
+00:01:28,799 --> 00:01:31,069
+different names to the same variable
+like for example if I had like a
+
+84
+00:01:31,069 --> 00:01:31,079
+like for example if I had like a
+ 
+
+85
+00:01:31,079 --> 00:01:33,859
+like for example if I had like a
+mathematical vector class X Y Z avec 3 I
+
+86
+00:01:33,859 --> 00:01:33,869
+mathematical vector class X Y Z avec 3 I
+ 
+
+87
+00:01:33,869 --> 00:01:36,050
+mathematical vector class X Y Z avec 3 I
+might also want to address it as if it
+
+88
+00:01:36,050 --> 00:01:36,060
+might also want to address it as if it
+ 
+
+89
+00:01:36,060 --> 00:01:40,520
+might also want to address it as if it
+was a color RGB right XYZ RGB how can I
+
+90
+00:01:40,520 --> 00:01:40,530
+was a color RGB right XYZ RGB how can I
+ 
+
+91
+00:01:40,530 --> 00:01:43,069
+was a color RGB right XYZ RGB how can I
+get it so that I can use it both ways
+
+92
+00:01:43,069 --> 00:01:43,079
+get it so that I can use it both ways
+ 
+
+93
+00:01:43,079 --> 00:01:45,020
+get it so that I can use it both ways
+and basically you know X will align with
+
+94
+00:01:45,020 --> 00:01:45,030
+and basically you know X will align with
+ 
+
+95
+00:01:45,030 --> 00:01:47,510
+and basically you know X will align with
+aa and J will align with dull with Y and
+
+96
+00:01:47,510 --> 00:01:47,520
+aa and J will align with dull with Y and
+ 
+
+97
+00:01:47,520 --> 00:01:49,850
+aa and J will align with dull with Y and
+all that kind of stuff that's that's all
+
+98
+00:01:49,850 --> 00:01:49,860
+all that kind of stuff that's that's all
+ 
+
+99
+00:01:49,860 --> 00:01:53,030
+all that kind of stuff that's that's all
+achievable through the use of a union so
+
+100
+00:01:53,030 --> 00:01:53,040
+achievable through the use of a union so
+ 
+
+101
+00:01:53,040 --> 00:01:54,399
+achievable through the use of a union so
+we'll take a look at some examples here
+
+102
+00:01:54,399 --> 00:01:54,409
+we'll take a look at some examples here
+ 
+
+103
+00:01:54,409 --> 00:01:56,990
+we'll take a look at some examples here
+usually I would say that unions are used
+
+104
+00:01:56,990 --> 00:01:57,000
+usually I would say that unions are used
+ 
+
+105
+00:01:57,000 --> 00:01:58,609
+usually I would say that unions are used
+anonymously which means your give them a
+
+106
+00:01:58,609 --> 00:01:58,619
+anonymously which means your give them a
+ 
+
+107
+00:01:58,619 --> 00:02:00,050
+anonymously which means your give them a
+name and you definitely don't have like
+
+108
+00:02:00,050 --> 00:02:00,060
+name and you definitely don't have like
+ 
+
+109
+00:02:00,060 --> 00:02:01,840
+name and you definitely don't have like
+methods or anything in the movement
+
+110
+00:02:01,840 --> 00:02:01,850
+methods or anything in the movement
+ 
+
+111
+00:02:01,850 --> 00:02:04,539
+methods or anything in the movement
+can't have that if they're not anonymous
+
+112
+00:02:04,539 --> 00:02:04,549
+can't have that if they're not anonymous
+ 
+
+113
+00:02:04,549 --> 00:02:06,160
+can't have that if they're not anonymous
+but overall unions are really really
+
+114
+00:02:06,160 --> 00:02:06,170
+but overall unions are really really
+ 
+
+115
+00:02:06,170 --> 00:02:08,169
+but overall unions are really really
+useful and we'll just take a look a few
+
+116
+00:02:08,169 --> 00:02:08,179
+useful and we'll just take a look a few
+ 
+
+117
+00:02:08,179 --> 00:02:09,760
+useful and we'll just take a look a few
+examples to see how we can use them so
+
+118
+00:02:09,760 --> 00:02:09,770
+examples to see how we can use them so
+ 
+
+119
+00:02:09,770 --> 00:02:11,080
+examples to see how we can use them so
+I've got some code already written out
+
+120
+00:02:11,080 --> 00:02:11,090
+I've got some code already written out
+ 
+
+121
+00:02:11,090 --> 00:02:12,280
+I've got some code already written out
+here but we'll get to that in a minute
+
+122
+00:02:12,280 --> 00:02:12,290
+here but we'll get to that in a minute
+ 
+
+123
+00:02:12,290 --> 00:02:13,809
+here but we'll get to that in a minute
+if we just take a look at a basic
+
+124
+00:02:13,809 --> 00:02:13,819
+if we just take a look at a basic
+ 
+
+125
+00:02:13,819 --> 00:02:16,690
+if we just take a look at a basic
+example of a union let's just say let's
+
+126
+00:02:16,690 --> 00:02:16,700
+example of a union let's just say let's
+ 
+
+127
+00:02:16,700 --> 00:02:17,770
+example of a union let's just say let's
+just say that I'm gonna write an
+
+128
+00:02:17,770 --> 00:02:17,780
+just say that I'm gonna write an
+ 
+
+129
+00:02:17,780 --> 00:02:19,660
+just say that I'm gonna write an
+anonymous Union here we write it the
+
+130
+00:02:19,660 --> 00:02:19,670
+anonymous Union here we write it the
+ 
+
+131
+00:02:19,670 --> 00:02:20,710
+anonymous Union here we write it the
+same way as we kind of deal with a
+
+132
+00:02:20,710 --> 00:02:20,720
+same way as we kind of deal with a
+ 
+
+133
+00:02:20,720 --> 00:02:22,600
+same way as we kind of deal with a
+struct like an anonymous struct but it's
+
+134
+00:02:22,600 --> 00:02:22,610
+struct like an anonymous struct but it's
+ 
+
+135
+00:02:22,610 --> 00:02:25,210
+struct like an anonymous struct but it's
+called a union and then I can give it
+
+136
+00:02:25,210 --> 00:02:25,220
+called a union and then I can give it
+ 
+
+137
+00:02:25,220 --> 00:02:27,880
+called a union and then I can give it
+two different variables let's just say
+
+138
+00:02:27,880 --> 00:02:27,890
+two different variables let's just say
+ 
+
+139
+00:02:27,890 --> 00:02:30,699
+two different variables let's just say
+I'll give it a float a and then int B so
+
+140
+00:02:30,699 --> 00:02:30,709
+I'll give it a float a and then int B so
+ 
+
+141
+00:02:30,709 --> 00:02:33,280
+I'll give it a float a and then int B so
+what this means is that if this was a
+
+142
+00:02:33,280 --> 00:02:33,290
+what this means is that if this was a
+ 
+
+143
+00:02:33,290 --> 00:02:34,420
+what this means is that if this was a
+struct we just have two different
+
+144
+00:02:34,420 --> 00:02:34,430
+struct we just have two different
+ 
+
+145
+00:02:34,430 --> 00:02:36,040
+struct we just have two different
+members however what we have here
+
+146
+00:02:36,040 --> 00:02:36,050
+members however what we have here
+ 
+
+147
+00:02:36,050 --> 00:02:39,370
+members however what we have here
+instead is two different ways to address
+
+148
+00:02:39,370 --> 00:02:39,380
+instead is two different ways to address
+ 
+
+149
+00:02:39,380 --> 00:02:41,770
+instead is two different ways to address
+the same memory which means that if I
+
+150
+00:02:41,770 --> 00:02:41,780
+the same memory which means that if I
+ 
+
+151
+00:02:41,780 --> 00:02:43,870
+the same memory which means that if I
+was to say put this into like a struct
+
+152
+00:02:43,870 --> 00:02:43,880
+was to say put this into like a struct
+ 
+
+153
+00:02:43,880 --> 00:02:46,930
+was to say put this into like a struct
+called I don't know Union this might
+
+154
+00:02:46,930 --> 00:02:46,940
+called I don't know Union this might
+ 
+
+155
+00:02:46,940 --> 00:02:50,140
+called I don't know Union this might
+confuse things hopefully not and do
+
+156
+00:02:50,140 --> 00:02:50,150
+confuse things hopefully not and do
+ 
+
+157
+00:02:50,150 --> 00:02:52,479
+confuse things hopefully not and do
+something like this if I was to make an
+
+158
+00:02:52,479 --> 00:02:52,489
+something like this if I was to make an
+ 
+
+159
+00:02:52,489 --> 00:02:54,430
+something like this if I was to make an
+instance of this Union class and then
+
+160
+00:02:54,430 --> 00:02:54,440
+instance of this Union class and then
+ 
+
+161
+00:02:54,440 --> 00:02:57,759
+instance of this Union class and then
+said you don't a 22.0 app or something
+
+162
+00:02:57,759 --> 00:02:57,769
+said you don't a 22.0 app or something
+ 
+
+163
+00:02:57,769 --> 00:03:00,070
+said you don't a 22.0 app or something
+like that if I go ahead and print the
+
+164
+00:03:00,070 --> 00:03:00,080
+like that if I go ahead and print the
+ 
+
+165
+00:03:00,080 --> 00:03:03,580
+like that if I go ahead and print the
+value of youdo a and you don't be like
+
+166
+00:03:03,580 --> 00:03:03,590
+value of youdo a and you don't be like
+ 
+
+167
+00:03:03,590 --> 00:03:05,310
+value of youdo a and you don't be like
+this
+
+168
+00:03:05,310 --> 00:03:05,320
+this
+ 
+
+169
+00:03:05,320 --> 00:03:07,870
+this
+five then you can see that what we get
+
+170
+00:03:07,870 --> 00:03:07,880
+five then you can see that what we get
+ 
+
+171
+00:03:07,880 --> 00:03:10,210
+five then you can see that what we get
+here is two and then one zero seven blah
+
+172
+00:03:10,210 --> 00:03:10,220
+here is two and then one zero seven blah
+ 
+
+173
+00:03:10,220 --> 00:03:12,880
+here is two and then one zero seven blah
+blah because this value is the bio
+
+174
+00:03:12,880 --> 00:03:12,890
+blah because this value is the bio
+ 
+
+175
+00:03:12,890 --> 00:03:15,850
+blah because this value is the bio
+representation of two as a float if that
+
+176
+00:03:15,850 --> 00:03:15,860
+representation of two as a float if that
+ 
+
+177
+00:03:15,860 --> 00:03:18,099
+representation of two as a float if that
+makes sense so it's as if we took that
+
+178
+00:03:18,099 --> 00:03:18,109
+makes sense so it's as if we took that
+ 
+
+179
+00:03:18,109 --> 00:03:20,890
+makes sense so it's as if we took that
+memory that made up the float and then
+
+180
+00:03:20,890 --> 00:03:20,900
+memory that made up the float and then
+ 
+
+181
+00:03:20,900 --> 00:03:23,410
+memory that made up the float and then
+just interpreted it as it was an int so
+
+182
+00:03:23,410 --> 00:03:23,420
+just interpreted it as it was an int so
+ 
+
+183
+00:03:23,420 --> 00:03:25,240
+just interpreted it as it was an int so
+we've typed punted basically so that's
+
+184
+00:03:25,240 --> 00:03:25,250
+we've typed punted basically so that's
+ 
+
+185
+00:03:25,250 --> 00:03:26,830
+we've typed punted basically so that's
+what you can use unions for that's what
+
+186
+00:03:26,830 --> 00:03:26,840
+what you can use unions for that's what
+ 
+
+187
+00:03:26,840 --> 00:03:28,210
+what you can use unions for that's what
+they are commonly used towards just a
+
+188
+00:03:28,210 --> 00:03:28,220
+they are commonly used towards just a
+ 
+
+189
+00:03:28,220 --> 00:03:29,949
+they are commonly used towards just a
+way of type honey if I wants to try and
+
+190
+00:03:29,949 --> 00:03:29,959
+way of type honey if I wants to try and
+ 
+
+191
+00:03:29,959 --> 00:03:31,330
+way of type honey if I wants to try and
+convert it into two different variable
+
+192
+00:03:31,330 --> 00:03:31,340
+convert it into two different variable
+ 
+
+193
+00:03:31,340 --> 00:03:32,560
+convert it into two different variable
+type something or something like that I
+
+194
+00:03:32,560 --> 00:03:32,570
+type something or something like that I
+ 
+
+195
+00:03:32,570 --> 00:03:34,240
+type something or something like that I
+could easily do that so let's take a
+
+196
+00:03:34,240 --> 00:03:34,250
+could easily do that so let's take a
+ 
+
+197
+00:03:34,250 --> 00:03:35,740
+could easily do that so let's take a
+little bit more useful example what I've
+
+198
+00:03:35,740 --> 00:03:35,750
+little bit more useful example what I've
+ 
+
+199
+00:03:35,750 --> 00:03:39,220
+little bit more useful example what I've
+got up here is essentially a vector to
+
+200
+00:03:39,220 --> 00:03:39,230
+got up here is essentially a vector to
+ 
+
+201
+00:03:39,230 --> 00:03:41,860
+got up here is essentially a vector to
+an effective for now I've also got a
+
+202
+00:03:41,860 --> 00:03:41,870
+an effective for now I've also got a
+ 
+
+203
+00:03:41,870 --> 00:03:43,390
+an effective for now I've also got a
+function called print vector two which
+
+204
+00:03:43,390 --> 00:03:43,400
+function called print vector two which
+ 
+
+205
+00:03:43,400 --> 00:03:45,880
+function called print vector two which
+takes in a vector two and prints it now
+
+206
+00:03:45,880 --> 00:03:45,890
+takes in a vector two and prints it now
+ 
+
+207
+00:03:45,890 --> 00:03:48,190
+takes in a vector two and prints it now
+at the moment I can't print two vector
+
+208
+00:03:48,190 --> 00:03:48,200
+at the moment I can't print two vector
+ 
+
+209
+00:03:48,200 --> 00:03:49,690
+at the moment I can't print two vector
+four however you can see that a vector
+
+210
+00:03:49,690 --> 00:03:49,700
+four however you can see that a vector
+ 
+
+211
+00:03:49,700 --> 00:03:52,870
+four however you can see that a vector
+four is really just two vector twos or
+
+212
+00:03:52,870 --> 00:03:52,880
+four is really just two vector twos or
+ 
+
+213
+00:03:52,880 --> 00:03:54,670
+four is really just two vector twos or
+at least that might be one way to look
+
+214
+00:03:54,670 --> 00:03:54,680
+at least that might be one way to look
+ 
+
+215
+00:03:54,680 --> 00:03:56,349
+at least that might be one way to look
+at it I mean it's got four floats this
+
+216
+00:03:56,349 --> 00:03:56,359
+at it I mean it's got four floats this
+ 
+
+217
+00:03:56,359 --> 00:03:58,270
+at it I mean it's got four floats this
+has two floats why can't we just see
+
+218
+00:03:58,270 --> 00:03:58,280
+has two floats why can't we just see
+ 
+
+219
+00:03:58,280 --> 00:04:02,020
+has two floats why can't we just see
+this vector 4 as two vector twos well
+
+220
+00:04:02,020 --> 00:04:02,030
+this vector 4 as two vector twos well
+ 
+
+221
+00:04:02,030 --> 00:04:03,729
+this vector 4 as two vector twos well
+what we could do if we wanted to again
+
+222
+00:04:03,729 --> 00:04:03,739
+what we could do if we wanted to again
+ 
+
+223
+00:04:03,739 --> 00:04:05,979
+what we could do if we wanted to again
+get the vector 2 out out of this thing
+
+224
+00:04:05,979 --> 00:04:05,989
+get the vector 2 out out of this thing
+ 
+
+225
+00:04:05,989 --> 00:04:08,229
+get the vector 2 out out of this thing
+is we could do something like you know
+
+226
+00:04:08,229 --> 00:04:08,239
+is we could do something like you know
+ 
+
+227
+00:04:08,239 --> 00:04:10,569
+is we could do something like you know
+get I don't know we'll call this first
+
+228
+00:04:10,569 --> 00:04:10,579
+get I don't know we'll call this first
+ 
+
+229
+00:04:10,579 --> 00:04:12,610
+get I don't know we'll call this first
+part a and then the second part B so the
+
+230
+00:04:12,610 --> 00:04:12,620
+part a and then the second part B so the
+ 
+
+231
+00:04:12,620 --> 00:04:12,910
+part a and then the second part B so the
+vector
+
+232
+00:04:12,910 --> 00:04:12,920
+vector
+ 
+
+233
+00:04:12,920 --> 00:04:15,280
+vector
+to a would be X&Y and they would be 7w
+
+234
+00:04:15,280 --> 00:04:15,290
+to a would be X&Y and they would be 7w
+ 
+
+235
+00:04:15,290 --> 00:04:17,199
+to a would be X&Y and they would be 7w
+we could do something like this where we
+
+236
+00:04:17,199 --> 00:04:17,209
+we could do something like this where we
+ 
+
+237
+00:04:17,209 --> 00:04:19,569
+we could do something like this where we
+construct a whole Effect 2 or something
+
+238
+00:04:19,569 --> 00:04:19,579
+construct a whole Effect 2 or something
+ 
+
+239
+00:04:19,579 --> 00:04:20,890
+construct a whole Effect 2 or something
+like that and then give it some members
+
+240
+00:04:20,890 --> 00:04:20,900
+like that and then give it some members
+ 
+
+241
+00:04:20,900 --> 00:04:23,200
+like that and then give it some members
+and return that whole thing and we could
+
+242
+00:04:23,200 --> 00:04:23,210
+and return that whole thing and we could
+ 
+
+243
+00:04:23,210 --> 00:04:25,030
+and return that whole thing and we could
+do something like that however that's
+
+244
+00:04:25,030 --> 00:04:25,040
+do something like that however that's
+ 
+
+245
+00:04:25,040 --> 00:04:26,379
+do something like that however that's
+going to create a whole new object and
+
+246
+00:04:26,379 --> 00:04:26,389
+going to create a whole new object and
+ 
+
+247
+00:04:26,389 --> 00:04:28,300
+going to create a whole new object and
+we don't really want to do that we could
+
+248
+00:04:28,300 --> 00:04:28,310
+we don't really want to do that we could
+ 
+
+249
+00:04:28,310 --> 00:04:30,400
+we don't really want to do that we could
+also type on our way into this by not
+
+250
+00:04:30,400 --> 00:04:30,410
+also type on our way into this by not
+ 
+
+251
+00:04:30,410 --> 00:04:32,050
+also type on our way into this by not
+having to copy anything we still will
+
+252
+00:04:32,050 --> 00:04:32,060
+having to copy anything we still will
+ 
+
+253
+00:04:32,060 --> 00:04:33,580
+having to copy anything we still will
+need to copy something because of the
+
+254
+00:04:33,580 --> 00:04:33,590
+need to copy something because of the
+ 
+
+255
+00:04:33,590 --> 00:04:35,020
+need to copy something because of the
+creating a whole new type but what we
+
+256
+00:04:35,020 --> 00:04:35,030
+creating a whole new type but what we
+ 
+
+257
+00:04:35,030 --> 00:04:36,790
+creating a whole new type but what we
+could do instead is just return a
+
+258
+00:04:36,790 --> 00:04:36,800
+could do instead is just return a
+ 
+
+259
+00:04:36,800 --> 00:04:39,010
+could do instead is just return a
+reference to a vector which is really
+
+260
+00:04:39,010 --> 00:04:39,020
+reference to a vector which is really
+ 
+
+261
+00:04:39,020 --> 00:04:42,159
+reference to a vector which is really
+just a type on version of X so the way
+
+262
+00:04:42,159 --> 00:04:42,169
+just a type on version of X so the way
+ 
+
+263
+00:04:42,169 --> 00:04:44,140
+just a type on version of X so the way
+that we would do that is we would cast
+
+264
+00:04:44,140 --> 00:04:44,150
+that we would do that is we would cast
+ 
+
+265
+00:04:44,150 --> 00:04:48,000
+that we would do that is we would cast
+the memory address of X to a vector 2
+
+266
+00:04:48,000 --> 00:04:48,010
+the memory address of X to a vector 2
+ 
+
+267
+00:04:48,010 --> 00:04:51,159
+the memory address of X to a vector 2
+like that and then dereference it so you
+
+268
+00:04:51,159 --> 00:04:51,169
+like that and then dereference it so you
+ 
+
+269
+00:04:51,169 --> 00:04:52,930
+like that and then dereference it so you
+get this right and that could be one way
+
+270
+00:04:52,930 --> 00:04:52,940
+get this right and that could be one way
+ 
+
+271
+00:04:52,940 --> 00:04:54,730
+get this right and that could be one way
+of doing that but another way of doing
+
+272
+00:04:54,730 --> 00:04:54,740
+of doing that but another way of doing
+ 
+
+273
+00:04:54,740 --> 00:04:56,950
+of doing that but another way of doing
+that is by using a Union and that will
+
+274
+00:04:56,950 --> 00:04:56,960
+that is by using a Union and that will
+ 
+
+275
+00:04:56,960 --> 00:04:59,080
+that is by using a Union and that will
+probably look a lot better as well so to
+
+276
+00:04:59,080 --> 00:04:59,090
+probably look a lot better as well so to
+ 
+
+277
+00:04:59,090 --> 00:05:00,790
+probably look a lot better as well so to
+do that I'm just going to get rid of
+
+278
+00:05:00,790 --> 00:05:00,800
+do that I'm just going to get rid of
+ 
+
+279
+00:05:00,800 --> 00:05:03,250
+do that I'm just going to get rid of
+this function and then wrap this in a
+
+280
+00:05:03,250 --> 00:05:03,260
+this function and then wrap this in a
+ 
+
+281
+00:05:03,260 --> 00:05:06,129
+this function and then wrap this in a
+Union so a union as we know and I'll
+
+282
+00:05:06,129 --> 00:05:06,139
+Union so a union as we know and I'll
+ 
+
+283
+00:05:06,139 --> 00:05:07,690
+Union so a union as we know and I'll
+just get rid of the name because it's
+
+284
+00:05:07,690 --> 00:05:07,700
+just get rid of the name because it's
+ 
+
+285
+00:05:07,700 --> 00:05:09,940
+just get rid of the name because it's
+going to be an anonymous Union a Union
+
+286
+00:05:09,940 --> 00:05:09,950
+going to be an anonymous Union a Union
+ 
+
+287
+00:05:09,950 --> 00:05:12,219
+going to be an anonymous Union a Union
+as you know can only have one member so
+
+288
+00:05:12,219 --> 00:05:12,229
+as you know can only have one member so
+ 
+
+289
+00:05:12,229 --> 00:05:14,200
+as you know can only have one member so
+we can't just leave the float X by the W
+
+290
+00:05:14,200 --> 00:05:14,210
+we can't just leave the float X by the W
+ 
+
+291
+00:05:14,210 --> 00:05:16,390
+we can't just leave the float X by the W
+like this because that would mean that X
+
+292
+00:05:16,390 --> 00:05:16,400
+like this because that would mean that X
+ 
+
+293
+00:05:16,400 --> 00:05:18,760
+like this because that would mean that X
+Y Z and W would both occupy that same
+
+294
+00:05:18,760 --> 00:05:18,770
+Y Z and W would both occupy that same
+ 
+
+295
+00:05:18,770 --> 00:05:20,950
+Y Z and W would both occupy that same
+for by space what we need to do is
+
+296
+00:05:20,950 --> 00:05:20,960
+for by space what we need to do is
+ 
+
+297
+00:05:20,960 --> 00:05:22,719
+for by space what we need to do is
+actually wrap this in an anonymous
+
+298
+00:05:22,719 --> 00:05:22,729
+actually wrap this in an anonymous
+ 
+
+299
+00:05:22,729 --> 00:05:25,390
+actually wrap this in an anonymous
+struct like this so I'll just say struct
+
+300
+00:05:25,390 --> 00:05:25,400
+struct like this so I'll just say struct
+ 
+
+301
+00:05:25,400 --> 00:05:28,510
+struct like this so I'll just say struct
+and then put that float XY the W in
+
+302
+00:05:28,510 --> 00:05:28,520
+and then put that float XY the W in
+ 
+
+303
+00:05:28,520 --> 00:05:31,120
+and then put that float XY the W in
+there like that so now this struct is is
+
+304
+00:05:31,120 --> 00:05:31,130
+there like that so now this struct is is
+ 
+
+305
+00:05:31,130 --> 00:05:33,219
+there like that so now this struct is is
+the one kind of member that the Union
+
+306
+00:05:33,219 --> 00:05:33,229
+the one kind of member that the Union
+ 
+
+307
+00:05:33,229 --> 00:05:35,110
+the one kind of member that the Union
+has wishes which happens to be like a
+
+308
+00:05:35,110 --> 00:05:35,120
+has wishes which happens to be like a
+ 
+
+309
+00:05:35,120 --> 00:05:37,120
+has wishes which happens to be like a
+sixteen by structure now at this point
+
+310
+00:05:37,120 --> 00:05:37,130
+sixteen by structure now at this point
+ 
+
+311
+00:05:37,130 --> 00:05:39,070
+sixteen by structure now at this point
+nothing's changed right if I go ahead
+
+312
+00:05:39,070 --> 00:05:39,080
+nothing's changed right if I go ahead
+ 
+
+313
+00:05:39,080 --> 00:05:40,680
+nothing's changed right if I go ahead
+and let's actually create a vector two
+
+314
+00:05:40,680 --> 00:05:40,690
+and let's actually create a vector two
+ 
+
+315
+00:05:40,690 --> 00:05:43,750
+and let's actually create a vector two
+or rather I'll create a vector four I'll
+
+316
+00:05:43,750 --> 00:05:43,760
+or rather I'll create a vector four I'll
+ 
+
+317
+00:05:43,760 --> 00:05:45,880
+or rather I'll create a vector four I'll
+just call it vector and I'll set it
+
+318
+00:05:45,880 --> 00:05:45,890
+just call it vector and I'll set it
+ 
+
+319
+00:05:45,890 --> 00:05:50,350
+just call it vector and I'll set it
+equal to one two three four I can still
+
+320
+00:05:50,350 --> 00:05:50,360
+equal to one two three four I can still
+ 
+
+321
+00:05:50,360 --> 00:05:52,990
+equal to one two three four I can still
+access vector dot X and whatever like
+
+322
+00:05:52,990 --> 00:05:53,000
+access vector dot X and whatever like
+ 
+
+323
+00:05:53,000 --> 00:05:54,670
+access vector dot X and whatever like
+normal right I can set this to like two
+
+324
+00:05:54,670 --> 00:05:54,680
+normal right I can set this to like two
+ 
+
+325
+00:05:54,680 --> 00:05:56,620
+normal right I can set this to like two
+or whatever I can still access it as
+
+326
+00:05:56,620 --> 00:05:56,630
+or whatever I can still access it as
+ 
+
+327
+00:05:56,630 --> 00:05:59,050
+or whatever I can still access it as
+usual because like I haven't given this
+
+328
+00:05:59,050 --> 00:05:59,060
+usual because like I haven't given this
+ 
+
+329
+00:05:59,060 --> 00:06:00,400
+usual because like I haven't given this
+a name or any thought that if I start
+
+330
+00:06:00,400 --> 00:06:00,410
+a name or any thought that if I start
+ 
+
+331
+00:06:00,410 --> 00:06:02,080
+a name or any thought that if I start
+doing that it's gonna grow everything
+
+332
+00:06:02,080 --> 00:06:02,090
+doing that it's gonna grow everything
+ 
+
+333
+00:06:02,090 --> 00:06:04,450
+doing that it's gonna grow everything
+but if it's an anonymous thing it's just
+
+334
+00:06:04,450 --> 00:06:04,460
+but if it's an anonymous thing it's just
+ 
+
+335
+00:06:04,460 --> 00:06:05,860
+but if it's an anonymous thing it's just
+really just a way to kind of structure
+
+336
+00:06:05,860 --> 00:06:05,870
+really just a way to kind of structure
+ 
+
+337
+00:06:05,870 --> 00:06:07,450
+really just a way to kind of structure
+the data it's not really adding anything
+
+338
+00:06:07,450 --> 00:06:07,460
+the data it's not really adding anything
+ 
+
+339
+00:06:07,460 --> 00:06:09,370
+the data it's not really adding anything
+but again the benefit here is that it's
+
+340
+00:06:09,370 --> 00:06:09,380
+but again the benefit here is that it's
+ 
+
+341
+00:06:09,380 --> 00:06:11,080
+but again the benefit here is that it's
+converting all this into a single member
+
+342
+00:06:11,080 --> 00:06:11,090
+converting all this into a single member
+ 
+
+343
+00:06:11,090 --> 00:06:12,520
+converting all this into a single member
+which is what the Union expects and
+
+344
+00:06:12,520 --> 00:06:12,530
+which is what the Union expects and
+ 
+
+345
+00:06:12,530 --> 00:06:15,190
+which is what the Union expects and
+finally I'll make another struct here so
+
+346
+00:06:15,190 --> 00:06:15,200
+finally I'll make another struct here so
+ 
+
+347
+00:06:15,200 --> 00:06:17,140
+finally I'll make another struct here so
+obviously this is adding a second member
+
+348
+00:06:17,140 --> 00:06:17,150
+obviously this is adding a second member
+ 
+
+349
+00:06:17,150 --> 00:06:18,730
+obviously this is adding a second member
+to the Union which means that it's going
+
+350
+00:06:18,730 --> 00:06:18,740
+to the Union which means that it's going
+ 
+
+351
+00:06:18,740 --> 00:06:21,880
+to the Union which means that it's going
+to occupy the same space as this first
+
+352
+00:06:21,880 --> 00:06:21,890
+to occupy the same space as this first
+ 
+
+353
+00:06:21,890 --> 00:06:24,520
+to occupy the same space as this first
+member and that's going to consist of
+
+354
+00:06:24,520 --> 00:06:24,530
+member and that's going to consist of
+ 
+
+355
+00:06:24,530 --> 00:06:26,220
+member and that's going to consist of
+two dr. twos
+
+356
+00:06:26,220 --> 00:06:26,230
+two dr. twos
+ 
+
+357
+00:06:26,230 --> 00:06:30,030
+two dr. twos
+just like that okay so now I have a few
+
+358
+00:06:30,030 --> 00:06:30,040
+just like that okay so now I have a few
+ 
+
+359
+00:06:30,040 --> 00:06:31,590
+just like that okay so now I have a few
+ways of accessing this data inside back
+
+360
+00:06:31,590 --> 00:06:31,600
+ways of accessing this data inside back
+ 
+
+361
+00:06:31,600 --> 00:06:33,810
+ways of accessing this data inside back
+to four I can in it I can either use X Y
+
+362
+00:06:33,810 --> 00:06:33,820
+to four I can in it I can either use X Y
+ 
+
+363
+00:06:33,820 --> 00:06:36,990
+to four I can in it I can either use X Y
+Z W or I can use a and B and a will be
+
+364
+00:06:36,990 --> 00:06:37,000
+Z W or I can use a and B and a will be
+ 
+
+365
+00:06:37,000 --> 00:06:39,360
+Z W or I can use a and B and a will be
+the same memory as x and Y and B will be
+
+366
+00:06:39,360 --> 00:06:39,370
+the same memory as x and Y and B will be
+ 
+
+367
+00:06:39,370 --> 00:06:41,250
+the same memory as x and Y and B will be
+the same memory set in W so let's check
+
+368
+00:06:41,250 --> 00:06:41,260
+the same memory set in W so let's check
+ 
+
+369
+00:06:41,260 --> 00:06:43,770
+the same memory set in W so let's check
+out how that can work so I've got one
+
+370
+00:06:43,770 --> 00:06:43,780
+out how that can work so I've got one
+ 
+
+371
+00:06:43,780 --> 00:06:45,480
+out how that can work so I've got one
+two three four written down here what
+
+372
+00:06:45,480 --> 00:06:45,490
+two three four written down here what
+ 
+
+373
+00:06:45,490 --> 00:06:47,280
+two three four written down here what
+I'll do is I'll print vector to our
+
+374
+00:06:47,280 --> 00:06:47,290
+I'll do is I'll print vector to our
+ 
+
+375
+00:06:47,290 --> 00:06:50,040
+I'll do is I'll print vector to our
+print vector dot a okay just to get that
+
+376
+00:06:50,040 --> 00:06:50,050
+print vector dot a okay just to get that
+ 
+
+377
+00:06:50,050 --> 00:06:52,230
+print vector dot a okay just to get that
+result out and then I'll set vector dot
+
+378
+00:06:52,230 --> 00:06:52,240
+result out and then I'll set vector dot
+ 
+
+379
+00:06:52,240 --> 00:06:53,730
+result out and then I'll set vector dot
+we'll want to know let's just say vector
+
+380
+00:06:53,730 --> 00:06:53,740
+we'll want to know let's just say vector
+ 
+
+381
+00:06:53,740 --> 00:06:54,540
+we'll want to know let's just say vector
+dog's Zed
+
+382
+00:06:54,540 --> 00:06:54,550
+dog's Zed
+ 
+
+383
+00:06:54,550 --> 00:06:57,030
+dog's Zed
+I'll set equal to 500 and then I'll
+
+384
+00:06:57,030 --> 00:06:57,040
+I'll set equal to 500 and then I'll
+ 
+
+385
+00:06:57,040 --> 00:06:58,590
+I'll set equal to 500 and then I'll
+print it after two but this time I'll
+
+386
+00:06:58,590 --> 00:06:58,600
+print it after two but this time I'll
+ 
+
+387
+00:06:58,600 --> 00:07:00,450
+print it after two but this time I'll
+print event above be one factor probably
+
+388
+00:07:00,450 --> 00:07:00,460
+print event above be one factor probably
+ 
+
+389
+00:07:00,460 --> 00:07:03,210
+print event above be one factor probably
+might be useful to print both of them
+
+390
+00:07:03,210 --> 00:07:03,220
+might be useful to print both of them
+ 
+
+391
+00:07:03,220 --> 00:07:06,990
+might be useful to print both of them
+both times just for fun again I also
+
+392
+00:07:06,990 --> 00:07:07,000
+both times just for fun again I also
+ 
+
+393
+00:07:07,000 --> 00:07:08,850
+both times just for fun again I also
+have a little bit of a divider I guess
+
+394
+00:07:08,850 --> 00:07:08,860
+have a little bit of a divider I guess
+ 
+
+395
+00:07:08,860 --> 00:07:10,400
+have a little bit of a divider I guess
+so that is clear when we actually
+
+396
+00:07:10,400 --> 00:07:10,410
+so that is clear when we actually
+ 
+
+397
+00:07:10,410 --> 00:07:13,410
+so that is clear when we actually
+modified the Domino inside I'll click
+
+398
+00:07:13,410 --> 00:07:13,420
+modified the Domino inside I'll click
+ 
+
+399
+00:07:13,420 --> 00:07:15,480
+modified the Domino inside I'll click
+done so let's take a look at this okay
+
+400
+00:07:15,480 --> 00:07:15,490
+done so let's take a look at this okay
+ 
+
+401
+00:07:15,490 --> 00:07:16,920
+done so let's take a look at this okay
+so check that out we have one two three
+
+402
+00:07:16,920 --> 00:07:16,930
+so check that out we have one two three
+ 
+
+403
+00:07:16,930 --> 00:07:18,450
+so check that out we have one two three
+four as we would expect the first time
+
+404
+00:07:18,450 --> 00:07:18,460
+four as we would expect the first time
+ 
+
+405
+00:07:18,460 --> 00:07:20,790
+four as we would expect the first time
+and then one to 504 so I haven't even
+
+406
+00:07:20,790 --> 00:07:20,800
+and then one to 504 so I haven't even
+ 
+
+407
+00:07:20,800 --> 00:07:23,190
+and then one to 504 so I haven't even
+touched the actual be part of that
+
+408
+00:07:23,190 --> 00:07:23,200
+touched the actual be part of that
+ 
+
+409
+00:07:23,200 --> 00:07:25,860
+touched the actual be part of that
+vector obviously I haven't said B dot X
+
+410
+00:07:25,860 --> 00:07:25,870
+vector obviously I haven't said B dot X
+ 
+
+411
+00:07:25,870 --> 00:07:29,070
+vector obviously I haven't said B dot X
+to 500 I've said vector dot Z to 500
+
+412
+00:07:29,070 --> 00:07:29,080
+to 500 I've said vector dot Z to 500
+ 
+
+413
+00:07:29,080 --> 00:07:31,650
+to 500 I've said vector dot Z to 500
+which is actually this variable here but
+
+414
+00:07:31,650 --> 00:07:31,660
+which is actually this variable here but
+ 
+
+415
+00:07:31,660 --> 00:07:34,230
+which is actually this variable here but
+this variable here corresponds to B dot
+
+416
+00:07:34,230 --> 00:07:34,240
+this variable here corresponds to B dot
+ 
+
+417
+00:07:34,240 --> 00:07:36,510
+this variable here corresponds to B dot
+X because it's occupy because it's
+
+418
+00:07:36,510 --> 00:07:36,520
+X because it's occupy because it's
+ 
+
+419
+00:07:36,520 --> 00:07:38,460
+X because it's occupy because it's
+occupying the same memory okay so
+
+420
+00:07:38,460 --> 00:07:38,470
+occupying the same memory okay so
+ 
+
+421
+00:07:38,470 --> 00:07:39,600
+occupying the same memory okay so
+hopefully that's a pretty good example
+
+422
+00:07:39,600 --> 00:07:39,610
+hopefully that's a pretty good example
+ 
+
+423
+00:07:39,610 --> 00:07:42,000
+hopefully that's a pretty good example
+of how unions work again they're really
+
+424
+00:07:42,000 --> 00:07:42,010
+of how unions work again they're really
+ 
+
+425
+00:07:42,010 --> 00:07:43,410
+of how unions work again they're really
+useful when you want to do stuff like
+
+426
+00:07:43,410 --> 00:07:43,420
+useful when you want to do stuff like
+ 
+
+427
+00:07:43,420 --> 00:07:45,780
+useful when you want to do stuff like
+this when you have multiple or when you
+
+428
+00:07:45,780 --> 00:07:45,790
+this when you have multiple or when you
+ 
+
+429
+00:07:45,790 --> 00:07:47,670
+this when you have multiple or when you
+want multiple ways to address that same
+
+430
+00:07:47,670 --> 00:07:47,680
+want multiple ways to address that same
+ 
+
+431
+00:07:47,680 --> 00:07:49,710
+want multiple ways to address that same
+data because it might be useful in a
+
+432
+00:07:49,710 --> 00:07:49,720
+data because it might be useful in a
+ 
+
+433
+00:07:49,720 --> 00:07:53,190
+data because it might be useful in a
+number of ways again you could use type
+
+434
+00:07:53,190 --> 00:07:53,200
+number of ways again you could use type
+ 
+
+435
+00:07:53,200 --> 00:07:54,630
+number of ways again you could use type
+planning or something like this usually
+
+436
+00:07:54,630 --> 00:07:54,640
+planning or something like this usually
+ 
+
+437
+00:07:54,640 --> 00:07:57,510
+planning or something like this usually
+unions are much more readable there can
+
+438
+00:07:57,510 --> 00:07:57,520
+unions are much more readable there can
+ 
+
+439
+00:07:57,520 --> 00:07:59,580
+unions are much more readable there can
+be some problems that come out of this
+
+440
+00:07:59,580 --> 00:07:59,590
+be some problems that come out of this
+ 
+
+441
+00:07:59,590 --> 00:08:00,870
+be some problems that come out of this
+which we might talk about in another
+
+442
+00:08:00,870 --> 00:08:00,880
+which we might talk about in another
+ 
+
+443
+00:08:00,880 --> 00:08:02,910
+which we might talk about in another
+video but I don't like talking about
+
+444
+00:08:02,910 --> 00:08:02,920
+video but I don't like talking about
+ 
+
+445
+00:08:02,920 --> 00:08:04,860
+video but I don't like talking about
+that kind of stuff because it's some of
+
+446
+00:08:04,860 --> 00:08:04,870
+that kind of stuff because it's some of
+ 
+
+447
+00:08:04,870 --> 00:08:06,960
+that kind of stuff because it's some of
+those I just like very unlikely to
+
+448
+00:08:06,960 --> 00:08:06,970
+those I just like very unlikely to
+ 
+
+449
+00:08:06,970 --> 00:08:09,180
+those I just like very unlikely to
+happen and you'll probably be fine but
+
+450
+00:08:09,180 --> 00:08:09,190
+happen and you'll probably be fine but
+ 
+
+451
+00:08:09,190 --> 00:08:10,410
+happen and you'll probably be fine but
+anyway hopefully that will give you the
+
+452
+00:08:10,410 --> 00:08:10,420
+anyway hopefully that will give you the
+ 
+
+453
+00:08:10,420 --> 00:08:11,640
+anyway hopefully that will give you the
+confidence you need I hope you guys
+
+454
+00:08:11,640 --> 00:08:11,650
+confidence you need I hope you guys
+ 
+
+455
+00:08:11,650 --> 00:08:12,900
+confidence you need I hope you guys
+enjoy this video if you did you know
+
+456
+00:08:12,900 --> 00:08:12,910
+enjoy this video if you did you know
+ 
+
+457
+00:08:12,910 --> 00:08:15,140
+enjoy this video if you did you know
+it's a like button let me know
+
+458
+00:08:15,140 --> 00:08:15,150
+it's a like button let me know
+ 
+
+459
+00:08:15,150 --> 00:08:17,670
+it's a like button let me know
+patreon.com force us to share our best
+
+460
+00:08:17,670 --> 00:08:17,680
+patreon.com force us to share our best
+ 
+
+461
+00:08:17,680 --> 00:08:19,140
+patreon.com force us to share our best
+way to support the series huge thank you
+
+462
+00:08:19,140 --> 00:08:19,150
+way to support the series huge thank you
+ 
+
+463
+00:08:19,150 --> 00:08:20,910
+way to support the series huge thank you
+as always to all the lovely patrons who
+
+464
+00:08:20,910 --> 00:08:20,920
+as always to all the lovely patrons who
+ 
+
+465
+00:08:20,920 --> 00:08:23,310
+as always to all the lovely patrons who
+made this possible leave any comments
+
+466
+00:08:23,310 --> 00:08:23,320
+made this possible leave any comments
+ 
+
+467
+00:08:23,320 --> 00:08:26,220
+made this possible leave any comments
+you have below about like unions why you
+
+468
+00:08:26,220 --> 00:08:26,230
+you have below about like unions why you
+ 
+
+469
+00:08:26,230 --> 00:08:27,910
+you have below about like unions why you
+use them why you want
+
+470
+00:08:27,910 --> 00:08:27,920
+use them why you want
+ 
+
+471
+00:08:27,920 --> 00:08:30,040
+use them why you want
+use them or why bet why they've been
+
+472
+00:08:30,040 --> 00:08:30,050
+use them or why bet why they've been
+ 
+
+473
+00:08:30,050 --> 00:08:31,840
+use them or why bet why they've been
+useful to you I'll see you guys in the
+
+474
+00:08:31,840 --> 00:08:31,850
+useful to you I'll see you guys in the
+ 
+
+475
+00:08:31,850 --> 00:08:33,810
+useful to you I'll see you guys in the
+next video goodbye
+
+476
+00:08:33,810 --> 00:08:33,820
+next video goodbye
+ 
+
+477
+00:08:33,820 --> 00:08:49,000
+next video goodbye
+[Music]
+

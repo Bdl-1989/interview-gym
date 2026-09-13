@@ -1,0 +1,6355 @@
+1
+00:00:00,000 --> 00:00:01,910
+
+hey what's up guys my name is the chana
+
+2
+00:00:01,910 --> 00:00:01,920
+hey what's up guys my name is the chana
+ 
+
+3
+00:00:01,920 --> 00:00:04,220
+hey what's up guys my name is the chana
+welcome back to my C++ series today
+
+4
+00:00:04,220 --> 00:00:04,230
+welcome back to my C++ series today
+ 
+
+5
+00:00:04,230 --> 00:00:05,420
+welcome back to my C++ series today
+we're gonna be talking all about copying
+
+6
+00:00:05,420 --> 00:00:05,430
+we're gonna be talking all about copying
+ 
+
+7
+00:00:05,430 --> 00:00:07,099
+we're gonna be talking all about copying
+and what a copy constructor is the in
+
+8
+00:00:07,099 --> 00:00:07,109
+and what a copy constructor is the in
+ 
+
+9
+00:00:07,109 --> 00:00:10,070
+and what a copy constructor is the in
+C++ so copying refers to us copying data
+
+10
+00:00:10,070 --> 00:00:10,080
+C++ so copying refers to us copying data
+ 
+
+11
+00:00:10,080 --> 00:00:12,259
+C++ so copying refers to us copying data
+copying memory when we literally want to
+
+12
+00:00:12,259 --> 00:00:12,269
+copying memory when we literally want to
+ 
+
+13
+00:00:12,269 --> 00:00:14,600
+copying memory when we literally want to
+copy one object or primitive or just a
+
+14
+00:00:14,600 --> 00:00:14,610
+copy one object or primitive or just a
+ 
+
+15
+00:00:14,610 --> 00:00:16,460
+copy one object or primitive or just a
+piece of data from kind of one place
+
+16
+00:00:16,460 --> 00:00:16,470
+piece of data from kind of one place
+ 
+
+17
+00:00:16,470 --> 00:00:17,990
+piece of data from kind of one place
+into another so that we literally have
+
+18
+00:00:17,990 --> 00:00:18,000
+into another so that we literally have
+ 
+
+19
+00:00:18,000 --> 00:00:20,060
+into another so that we literally have
+two copies of it a lot of the time we
+
+20
+00:00:20,060 --> 00:00:20,070
+two copies of it a lot of the time we
+ 
+
+21
+00:00:20,070 --> 00:00:21,890
+two copies of it a lot of the time we
+want to copy objects that we can modify
+
+22
+00:00:21,890 --> 00:00:21,900
+want to copy objects that we can modify
+ 
+
+23
+00:00:21,900 --> 00:00:23,960
+want to copy objects that we can modify
+them in certain ways but if if we can
+
+24
+00:00:23,960 --> 00:00:23,970
+them in certain ways but if if we can
+ 
+
+25
+00:00:23,970 --> 00:00:25,429
+them in certain ways but if if we can
+avoid copying if we can avoid
+
+26
+00:00:25,429 --> 00:00:25,439
+avoid copying if we can avoid
+ 
+
+27
+00:00:25,439 --> 00:00:27,109
+avoid copying if we can avoid
+unnecessary copying because we just want
+
+28
+00:00:27,109 --> 00:00:27,119
+unnecessary copying because we just want
+ 
+
+29
+00:00:27,119 --> 00:00:28,849
+unnecessary copying because we just want
+to read the value or we want to actually
+
+30
+00:00:28,849 --> 00:00:28,859
+to read the value or we want to actually
+ 
+
+31
+00:00:28,859 --> 00:00:31,310
+to read the value or we want to actually
+modify an existing object we absolutely
+
+32
+00:00:31,310 --> 00:00:31,320
+modify an existing object we absolutely
+ 
+
+33
+00:00:31,320 --> 00:00:33,560
+modify an existing object we absolutely
+want to do that because copying takes
+
+34
+00:00:33,560 --> 00:00:33,570
+want to do that because copying takes
+ 
+
+35
+00:00:33,570 --> 00:00:35,450
+want to do that because copying takes
+time so copying can be both a really
+
+36
+00:00:35,450 --> 00:00:35,460
+time so copying can be both a really
+ 
+
+37
+00:00:35,460 --> 00:00:37,190
+time so copying can be both a really
+useful thing that we actually need to
+
+38
+00:00:37,190 --> 00:00:37,200
+useful thing that we actually need to
+ 
+
+39
+00:00:37,200 --> 00:00:38,660
+useful thing that we actually need to
+make our program work the way that we
+
+40
+00:00:38,660 --> 00:00:38,670
+make our program work the way that we
+ 
+
+41
+00:00:38,670 --> 00:00:40,209
+make our program work the way that we
+wanted to but on the flip side
+
+42
+00:00:40,209 --> 00:00:40,219
+wanted to but on the flip side
+ 
+
+43
+00:00:40,219 --> 00:00:42,799
+wanted to but on the flip side
+unnecessary copying is bad and we want
+
+44
+00:00:42,799 --> 00:00:42,809
+unnecessary copying is bad and we want
+ 
+
+45
+00:00:42,809 --> 00:00:43,910
+unnecessary copying is bad and we want
+to avoid that as much as possible
+
+46
+00:00:43,910 --> 00:00:43,920
+to avoid that as much as possible
+ 
+
+47
+00:00:43,920 --> 00:00:46,430
+to avoid that as much as possible
+because it wastes performance so
+
+48
+00:00:46,430 --> 00:00:46,440
+because it wastes performance so
+ 
+
+49
+00:00:46,440 --> 00:00:48,080
+because it wastes performance so
+understanding how copying actually works
+
+50
+00:00:48,080 --> 00:00:48,090
+understanding how copying actually works
+ 
+
+51
+00:00:48,090 --> 00:00:50,660
+understanding how copying actually works
+in C++ and how to get it to work and
+
+52
+00:00:50,660 --> 00:00:50,670
+in C++ and how to get it to work and
+ 
+
+53
+00:00:50,670 --> 00:00:52,939
+in C++ and how to get it to work and
+also how to avoid getting it to work or
+
+54
+00:00:52,939 --> 00:00:52,949
+also how to avoid getting it to work or
+ 
+
+55
+00:00:52,949 --> 00:00:54,500
+also how to avoid getting it to work or
+avoid copying when you don't want to
+
+56
+00:00:54,500 --> 00:00:54,510
+avoid copying when you don't want to
+ 
+
+57
+00:00:54,510 --> 00:00:56,689
+avoid copying when you don't want to
+copy is very important to understanding
+
+58
+00:00:56,689 --> 00:00:56,699
+copy is very important to understanding
+ 
+
+59
+00:00:56,699 --> 00:00:58,340
+copy is very important to understanding
+the language and being able to write C++
+
+60
+00:00:58,340 --> 00:00:58,350
+the language and being able to write C++
+ 
+
+61
+00:00:58,350 --> 00:01:01,099
+the language and being able to write C++
+code efficiently and correctly so to
+
+62
+00:01:01,099 --> 00:01:01,109
+code efficiently and correctly so to
+ 
+
+63
+00:01:01,109 --> 00:01:02,930
+code efficiently and correctly so to
+demonstrate this in an effective way I'm
+
+64
+00:01:02,930 --> 00:01:02,940
+demonstrate this in an effective way I'm
+ 
+
+65
+00:01:02,940 --> 00:01:04,070
+demonstrate this in an effective way I'm
+actually going to write a full on
+
+66
+00:01:04,070 --> 00:01:04,080
+actually going to write a full on
+ 
+
+67
+00:01:04,080 --> 00:01:05,600
+actually going to write a full on
+example window write a class it's gonna
+
+68
+00:01:05,600 --> 00:01:05,610
+example window write a class it's gonna
+ 
+
+69
+00:01:05,610 --> 00:01:07,160
+example window write a class it's gonna
+be a string class and we're gonna talk
+
+70
+00:01:07,160 --> 00:01:07,170
+be a string class and we're gonna talk
+ 
+
+71
+00:01:07,170 --> 00:01:09,320
+be a string class and we're gonna talk
+about how copying affects that and what
+
+72
+00:01:09,320 --> 00:01:09,330
+about how copying affects that and what
+ 
+
+73
+00:01:09,330 --> 00:01:11,899
+about how copying affects that and what
+we can do to to both remove copying when
+
+74
+00:01:11,899 --> 00:01:11,909
+we can do to to both remove copying when
+ 
+
+75
+00:01:11,909 --> 00:01:14,060
+we can do to to both remove copying when
+we don't want copying but also even you
+
+76
+00:01:14,060 --> 00:01:14,070
+we don't want copying but also even you
+ 
+
+77
+00:01:14,070 --> 00:01:15,380
+we don't want copying but also even you
+know add copying so that we can copy
+
+78
+00:01:15,380 --> 00:01:15,390
+know add copying so that we can copy
+ 
+
+79
+00:01:15,390 --> 00:01:17,149
+know add copying so that we can copy
+correctly so first of all let's jump
+
+80
+00:01:17,149 --> 00:01:17,159
+correctly so first of all let's jump
+ 
+
+81
+00:01:17,159 --> 00:01:18,380
+correctly so first of all let's jump
+into the code and take a look at what
+
+82
+00:01:18,380 --> 00:01:18,390
+into the code and take a look at what
+ 
+
+83
+00:01:18,390 --> 00:01:20,120
+into the code and take a look at what
+copying looks like so if I declare a
+
+84
+00:01:20,120 --> 00:01:20,130
+copying looks like so if I declare a
+ 
+
+85
+00:01:20,130 --> 00:01:21,890
+copying looks like so if I declare a
+variable a primitive type like a and
+
+86
+00:01:21,890 --> 00:01:21,900
+variable a primitive type like a and
+ 
+
+87
+00:01:21,900 --> 00:01:23,359
+variable a primitive type like a and
+then I declare another primitive type
+
+88
+00:01:23,359 --> 00:01:23,369
+then I declare another primitive type
+ 
+
+89
+00:01:23,369 --> 00:01:25,789
+then I declare another primitive type
+called B and I assign it to a and what
+
+90
+00:01:25,789 --> 00:01:25,799
+called B and I assign it to a and what
+ 
+
+91
+00:01:25,799 --> 00:01:26,899
+called B and I assign it to a and what
+I'm actually doing is I'm creating a
+
+92
+00:01:26,899 --> 00:01:26,909
+I'm actually doing is I'm creating a
+ 
+
+93
+00:01:26,909 --> 00:01:28,880
+I'm actually doing is I'm creating a
+copy of it so a and B are two separate
+
+94
+00:01:28,880 --> 00:01:28,890
+copy of it so a and B are two separate
+ 
+
+95
+00:01:28,890 --> 00:01:30,230
+copy of it so a and B are two separate
+variables which have different memory
+
+96
+00:01:30,230 --> 00:01:30,240
+variables which have different memory
+ 
+
+97
+00:01:30,240 --> 00:01:32,179
+variables which have different memory
+addresses because of this if I change B
+
+98
+00:01:32,179 --> 00:01:32,189
+addresses because of this if I change B
+ 
+
+99
+00:01:32,189 --> 00:01:34,640
+addresses because of this if I change B
+to three a will remain at - I literally
+
+100
+00:01:34,640 --> 00:01:34,650
+to three a will remain at - I literally
+ 
+
+101
+00:01:34,650 --> 00:01:36,890
+to three a will remain at - I literally
+have two different values in my memory
+
+102
+00:01:36,890 --> 00:01:36,900
+have two different values in my memory
+ 
+
+103
+00:01:36,900 --> 00:01:38,840
+have two different values in my memory
+with classes this works the same way if
+
+104
+00:01:38,840 --> 00:01:38,850
+with classes this works the same way if
+ 
+
+105
+00:01:38,850 --> 00:01:40,370
+with classes this works the same way if
+I just have a struct maybe that's going
+
+106
+00:01:40,370 --> 00:01:40,380
+I just have a struct maybe that's going
+ 
+
+107
+00:01:40,380 --> 00:01:42,920
+I just have a struct maybe that's going
+to be a two component vector float X Y
+
+108
+00:01:42,920 --> 00:01:42,930
+to be a two component vector float X Y
+ 
+
+109
+00:01:42,930 --> 00:01:44,929
+to be a two component vector float X Y
+whatever if I have one back to here
+
+110
+00:01:44,929 --> 00:01:44,939
+whatever if I have one back to here
+ 
+
+111
+00:01:44,939 --> 00:01:48,200
+whatever if I have one back to here
+which is set to two and three and I then
+
+112
+00:01:48,200 --> 00:01:48,210
+which is set to two and three and I then
+ 
+
+113
+00:01:48,210 --> 00:01:49,819
+which is set to two and three and I then
+create another vector called me and
+
+114
+00:01:49,819 --> 00:01:49,829
+create another vector called me and
+ 
+
+115
+00:01:49,829 --> 00:01:52,219
+create another vector called me and
+assign it to a if I start modifying B
+
+116
+00:01:52,219 --> 00:01:52,229
+assign it to a if I start modifying B
+ 
+
+117
+00:01:52,229 --> 00:01:55,069
+assign it to a if I start modifying B
+and set the X to 5 then a dot X is still
+
+118
+00:01:55,069 --> 00:01:55,079
+and set the X to 5 then a dot X is still
+ 
+
+119
+00:01:55,079 --> 00:01:56,749
+and set the X to 5 then a dot X is still
+actually going to remain it too because
+
+120
+00:01:56,749 --> 00:01:56,759
+actually going to remain it too because
+ 
+
+121
+00:01:56,759 --> 00:01:58,730
+actually going to remain it too because
+by doing something like this I'm copying
+
+122
+00:01:58,730 --> 00:01:58,740
+by doing something like this I'm copying
+ 
+
+123
+00:01:58,740 --> 00:02:01,910
+by doing something like this I'm copying
+the value I'm copying what a is into B
+
+124
+00:02:01,910 --> 00:02:01,920
+the value I'm copying what a is into B
+ 
+
+125
+00:02:01,920 --> 00:02:03,889
+the value I'm copying what a is into B
+just like with that integer example
+
+126
+00:02:03,889 --> 00:02:03,899
+just like with that integer example
+ 
+
+127
+00:02:03,899 --> 00:02:05,359
+just like with that integer example
+there going to be two separate variables
+
+128
+00:02:05,359 --> 00:02:05,369
+there going to be two separate variables
+ 
+
+129
+00:02:05,369 --> 00:02:07,039
+there going to be two separate variables
+which occupy two different memory
+
+130
+00:02:07,039 --> 00:02:07,049
+which occupy two different memory
+ 
+
+131
+00:02:07,049 --> 00:02:09,589
+which occupy two different memory
+addresses now if you must use the new
+
+132
+00:02:09,589 --> 00:02:09,599
+addresses now if you must use the new
+ 
+
+133
+00:02:09,599 --> 00:02:11,449
+addresses now if you must use the new
+keyword here in heap allocate this so
+
+134
+00:02:11,449 --> 00:02:11,459
+keyword here in heap allocate this so
+ 
+
+135
+00:02:11,459 --> 00:02:12,590
+keyword here in heap allocate this so
+I'll do something like
+
+136
+00:02:12,590 --> 00:02:12,600
+I'll do something like
+ 
+
+137
+00:02:12,600 --> 00:02:15,110
+I'll do something like
+Victor 2a equals new vector2 we're
+
+138
+00:02:15,110 --> 00:02:15,120
+Victor 2a equals new vector2 we're
+ 
+
+139
+00:02:15,120 --> 00:02:16,220
+Victor 2a equals new vector2 we're
+actually going to need to either define
+
+140
+00:02:16,220 --> 00:02:16,230
+actually going to need to either define
+ 
+
+141
+00:02:16,230 --> 00:02:17,930
+actually going to need to either define
+a constructor or in this case well it
+
+142
+00:02:17,930 --> 00:02:17,940
+a constructor or in this case well it
+ 
+
+143
+00:02:17,940 --> 00:02:19,910
+a constructor or in this case well it
+will be empty if I then try and do
+
+144
+00:02:19,910 --> 00:02:19,920
+will be empty if I then try and do
+ 
+
+145
+00:02:19,920 --> 00:02:23,090
+will be empty if I then try and do
+something like a sine B with with a this
+
+146
+00:02:23,090 --> 00:02:23,100
+something like a sine B with with a this
+ 
+
+147
+00:02:23,100 --> 00:02:24,050
+something like a sine B with with a this
+is going to be something completely
+
+148
+00:02:24,050 --> 00:02:24,060
+is going to be something completely
+ 
+
+149
+00:02:24,060 --> 00:02:25,850
+is going to be something completely
+different because the vector two right
+
+150
+00:02:25,850 --> 00:02:25,860
+different because the vector two right
+ 
+
+151
+00:02:25,860 --> 00:02:27,890
+different because the vector two right
+now is a pointer which means that by
+
+152
+00:02:27,890 --> 00:02:27,900
+now is a pointer which means that by
+ 
+
+153
+00:02:27,900 --> 00:02:30,470
+now is a pointer which means that by
+writing back to point a B equals a what
+
+154
+00:02:30,470 --> 00:02:30,480
+writing back to point a B equals a what
+ 
+
+155
+00:02:30,480 --> 00:02:32,750
+writing back to point a B equals a what
+I'm still copying something but I'm not
+
+156
+00:02:32,750 --> 00:02:32,760
+I'm still copying something but I'm not
+ 
+
+157
+00:02:32,760 --> 00:02:34,340
+I'm still copying something but I'm not
+copying the actual vector which can
+
+158
+00:02:34,340 --> 00:02:34,350
+copying the actual vector which can
+ 
+
+159
+00:02:34,350 --> 00:02:35,810
+copying the actual vector which can
+track it which contains the x and y
+
+160
+00:02:35,810 --> 00:02:35,820
+track it which contains the x and y
+ 
+
+161
+00:02:35,820 --> 00:02:37,520
+track it which contains the x and y
+variables I'm actually copying the
+
+162
+00:02:37,520 --> 00:02:37,530
+variables I'm actually copying the
+ 
+
+163
+00:02:37,530 --> 00:02:40,430
+variables I'm actually copying the
+pointer so now I have two pointers which
+
+164
+00:02:40,430 --> 00:02:40,440
+pointer so now I have two pointers which
+ 
+
+165
+00:02:40,440 --> 00:02:42,380
+pointer so now I have two pointers which
+essentially have the same value of
+
+166
+00:02:42,380 --> 00:02:42,390
+essentially have the same value of
+ 
+
+167
+00:02:42,390 --> 00:02:43,640
+essentially have the same value of
+course because they're copies they point
+
+168
+00:02:43,640 --> 00:02:43,650
+course because they're copies they point
+ 
+
+169
+00:02:43,650 --> 00:02:45,050
+course because they're copies they point
+to different things find it something
+
+170
+00:02:45,050 --> 00:02:45,060
+to different things find it something
+ 
+
+171
+00:02:45,060 --> 00:02:46,850
+to different things find it something
+like B plus plus or whatever to modify
+
+172
+00:02:46,850 --> 00:02:46,860
+like B plus plus or whatever to modify
+ 
+
+173
+00:02:46,860 --> 00:02:48,830
+like B plus plus or whatever to modify
+the pointer my a pointer would still be
+
+174
+00:02:48,830 --> 00:02:48,840
+the pointer my a pointer would still be
+ 
+
+175
+00:02:48,840 --> 00:02:51,800
+the pointer my a pointer would still be
+intact but if I access the memory at
+
+176
+00:02:51,800 --> 00:02:51,810
+intact but if I access the memory at
+ 
+
+177
+00:02:51,810 --> 00:02:53,780
+intact but if I access the memory at
+that address and set it to something in
+
+178
+00:02:53,780 --> 00:02:53,790
+that address and set it to something in
+ 
+
+179
+00:02:53,790 --> 00:02:55,550
+that address and set it to something in
+this case is kind of going to affect
+
+180
+00:02:55,550 --> 00:02:55,560
+this case is kind of going to affect
+ 
+
+181
+00:02:55,560 --> 00:02:57,740
+this case is kind of going to affect
+both a and B because at the moment a and
+
+182
+00:02:57,740 --> 00:02:57,750
+both a and B because at the moment a and
+ 
+
+183
+00:02:57,750 --> 00:02:59,630
+both a and B because at the moment a and
+B are both pointing to the same memory
+
+184
+00:02:59,630 --> 00:02:59,640
+B are both pointing to the same memory
+ 
+
+185
+00:02:59,640 --> 00:03:01,130
+B are both pointing to the same memory
+address and what I'm doing here is I'm
+
+186
+00:03:01,130 --> 00:03:01,140
+address and what I'm doing here is I'm
+ 
+
+187
+00:03:01,140 --> 00:03:03,080
+address and what I'm doing here is I'm
+not affecting the pointer I'm affecting
+
+188
+00:03:03,080 --> 00:03:03,090
+not affecting the pointer I'm affecting
+ 
+
+189
+00:03:03,090 --> 00:03:04,370
+not affecting the pointer I'm affecting
+the memory address so that's just
+
+190
+00:03:04,370 --> 00:03:04,380
+the memory address so that's just
+ 
+
+191
+00:03:04,380 --> 00:03:05,600
+the memory address so that's just
+something important to note when you
+
+192
+00:03:05,600 --> 00:03:05,610
+something important to note when you
+ 
+
+193
+00:03:05,610 --> 00:03:08,120
+something important to note when you
+actually do write any equals when you
+
+194
+00:03:08,120 --> 00:03:08,130
+actually do write any equals when you
+ 
+
+195
+00:03:08,130 --> 00:03:09,230
+actually do write any equals when you
+write when you use the assignment
+
+196
+00:03:09,230 --> 00:03:09,240
+write when you use the assignment
+ 
+
+197
+00:03:09,240 --> 00:03:11,270
+write when you use the assignment
+operator and you set a variable equal to
+
+198
+00:03:11,270 --> 00:03:11,280
+operator and you set a variable equal to
+ 
+
+199
+00:03:11,280 --> 00:03:14,330
+operator and you set a variable equal to
+another variable you are always well
+
+200
+00:03:14,330 --> 00:03:14,340
+another variable you are always well
+ 
+
+201
+00:03:14,340 --> 00:03:16,550
+another variable you are always well
+always asterisk you're always copying
+
+202
+00:03:16,550 --> 00:03:16,560
+always asterisk you're always copying
+ 
+
+203
+00:03:16,560 --> 00:03:18,650
+always asterisk you're always copying
+the value the asterisk was there for
+
+204
+00:03:18,650 --> 00:03:18,660
+the value the asterisk was there for
+ 
+
+205
+00:03:18,660 --> 00:03:20,360
+the value the asterisk was there for
+references because with references if
+
+206
+00:03:20,360 --> 00:03:20,370
+references because with references if
+ 
+
+207
+00:03:20,370 --> 00:03:21,790
+references because with references if
+you assign a reference to something else
+
+208
+00:03:21,790 --> 00:03:21,800
+you assign a reference to something else
+ 
+
+209
+00:03:21,800 --> 00:03:24,350
+you assign a reference to something else
+you can't reassign references when you
+
+210
+00:03:24,350 --> 00:03:24,360
+you can't reassign references when you
+ 
+
+211
+00:03:24,360 --> 00:03:26,360
+you can't reassign references when you
+copy I guess a reference or you assign
+
+212
+00:03:26,360 --> 00:03:26,370
+copy I guess a reference or you assign
+ 
+
+213
+00:03:26,370 --> 00:03:27,770
+copy I guess a reference or you assign
+one reference to another reference
+
+214
+00:03:27,770 --> 00:03:27,780
+one reference to another reference
+ 
+
+215
+00:03:27,780 --> 00:03:29,530
+one reference to another reference
+you're actually changing the underlying
+
+216
+00:03:29,530 --> 00:03:29,540
+you're actually changing the underlying
+ 
+
+217
+00:03:29,540 --> 00:03:31,490
+you're actually changing the underlying
+thing that's pointing to because
+
+218
+00:03:31,490 --> 00:03:31,500
+thing that's pointing to because
+ 
+
+219
+00:03:31,500 --> 00:03:33,440
+thing that's pointing to because
+references are just aliases so kind of
+
+220
+00:03:33,440 --> 00:03:33,450
+references are just aliases so kind of
+ 
+
+221
+00:03:33,450 --> 00:03:35,570
+references are just aliases so kind of
+with the exception of references
+
+222
+00:03:35,570 --> 00:03:35,580
+with the exception of references
+ 
+
+223
+00:03:35,580 --> 00:03:37,940
+with the exception of references
+whenever you write code where one
+
+224
+00:03:37,940 --> 00:03:37,950
+whenever you write code where one
+ 
+
+225
+00:03:37,950 --> 00:03:39,740
+whenever you write code where one
+variable is assigned another variable
+
+226
+00:03:39,740 --> 00:03:39,750
+variable is assigned another variable
+ 
+
+227
+00:03:39,750 --> 00:03:41,510
+variable is assigned another variable
+you are always copying it it's just with
+
+228
+00:03:41,510 --> 00:03:41,520
+you are always copying it it's just with
+ 
+
+229
+00:03:41,520 --> 00:03:43,310
+you are always copying it it's just with
+the case of pointers you're copying the
+
+230
+00:03:43,310 --> 00:03:43,320
+the case of pointers you're copying the
+ 
+
+231
+00:03:43,320 --> 00:03:45,320
+the case of pointers you're copying the
+pointer that that memory address then
+
+232
+00:03:45,320 --> 00:03:45,330
+pointer that that memory address then
+ 
+
+233
+00:03:45,330 --> 00:03:46,910
+pointer that that memory address then
+muted the numeric memory address the
+
+234
+00:03:46,910 --> 00:03:46,920
+muted the numeric memory address the
+ 
+
+235
+00:03:46,920 --> 00:03:49,220
+muted the numeric memory address the
+number rather than the actual memory at
+
+236
+00:03:49,220 --> 00:03:49,230
+number rather than the actual memory at
+ 
+
+237
+00:03:49,230 --> 00:03:51,110
+number rather than the actual memory at
+the pointer if that makes sense so with
+
+238
+00:03:51,110 --> 00:03:51,120
+the pointer if that makes sense so with
+ 
+
+239
+00:03:51,120 --> 00:03:53,060
+the pointer if that makes sense so with
+that in mind let's write a string class
+
+240
+00:03:53,060 --> 00:03:53,070
+that in mind let's write a string class
+ 
+
+241
+00:03:53,070 --> 00:03:55,310
+that in mind let's write a string class
+and see about how we can make that
+
+242
+00:03:55,310 --> 00:03:55,320
+and see about how we can make that
+ 
+
+243
+00:03:55,320 --> 00:03:57,290
+and see about how we can make that
+copyable and what challenges we might
+
+244
+00:03:57,290 --> 00:03:57,300
+copyable and what challenges we might
+ 
+
+245
+00:03:57,300 --> 00:03:58,880
+copyable and what challenges we might
+face with that so I'm going to write a
+
+246
+00:03:58,880 --> 00:03:58,890
+face with that so I'm going to write a
+ 
+
+247
+00:03:58,890 --> 00:04:00,650
+face with that so I'm going to write a
+class called string now I'm going to
+
+248
+00:04:00,650 --> 00:04:00,660
+class called string now I'm going to
+ 
+
+249
+00:04:00,660 --> 00:04:02,000
+class called string now I'm going to
+write this string class in a very kind
+
+250
+00:04:02,000 --> 00:04:02,010
+write this string class in a very kind
+ 
+
+251
+00:04:02,010 --> 00:04:03,830
+write this string class in a very kind
+of well I guess also called primitive
+
+252
+00:04:03,830 --> 00:04:03,840
+of well I guess also called primitive
+ 
+
+253
+00:04:03,840 --> 00:04:05,600
+of well I guess also called primitive
+C++ way I'm not going to be using like
+
+254
+00:04:05,600 --> 00:04:05,610
+C++ way I'm not going to be using like
+ 
+
+255
+00:04:05,610 --> 00:04:07,370
+C++ way I'm not going to be using like
+STD vector or anything like that or
+
+256
+00:04:07,370 --> 00:04:07,380
+STD vector or anything like that or
+ 
+
+257
+00:04:07,380 --> 00:04:09,230
+STD vector or anything like that or
+smart pointers I'm just going to write a
+
+258
+00:04:09,230 --> 00:04:09,240
+smart pointers I'm just going to write a
+ 
+
+259
+00:04:09,240 --> 00:04:11,300
+smart pointers I'm just going to write a
+base kind of string class implementation
+
+260
+00:04:11,300 --> 00:04:11,310
+base kind of string class implementation
+ 
+
+261
+00:04:11,310 --> 00:04:13,790
+base kind of string class implementation
+that is using just the raw metal kind of
+
+262
+00:04:13,790 --> 00:04:13,800
+that is using just the raw metal kind of
+ 
+
+263
+00:04:13,800 --> 00:04:15,440
+that is using just the raw metal kind of
+C++ features and that's necessary
+
+264
+00:04:15,440 --> 00:04:15,450
+C++ features and that's necessary
+ 
+
+265
+00:04:15,450 --> 00:04:18,530
+C++ features and that's necessary
+because if I start using modern modern
+
+266
+00:04:18,530 --> 00:04:18,540
+because if I start using modern modern
+ 
+
+267
+00:04:18,540 --> 00:04:20,510
+because if I start using modern modern
+kind of C++ features to write this bus
+
+268
+00:04:20,510 --> 00:04:20,520
+kind of C++ features to write this bus
+ 
+
+269
+00:04:20,520 --> 00:04:22,010
+kind of C++ features to write this bus
+then it is actually going to automate a
+
+270
+00:04:22,010 --> 00:04:22,020
+then it is actually going to automate a
+ 
+
+271
+00:04:22,020 --> 00:04:24,230
+then it is actually going to automate a
+lot of this stuff for me and in this
+
+272
+00:04:24,230 --> 00:04:24,240
+lot of this stuff for me and in this
+ 
+
+273
+00:04:24,240 --> 00:04:24,990
+lot of this stuff for me and in this
+case it's not going
+
+274
+00:04:24,990 --> 00:04:25,000
+case it's not going
+ 
+
+275
+00:04:25,000 --> 00:04:26,520
+case it's not going
+demonstrate my point about copying very
+
+276
+00:04:26,520 --> 00:04:26,530
+demonstrate my point about copying very
+ 
+
+277
+00:04:26,530 --> 00:04:27,870
+demonstrate my point about copying very
+well so just keep that in mind this
+
+278
+00:04:27,870 --> 00:04:27,880
+well so just keep that in mind this
+ 
+
+279
+00:04:27,880 --> 00:04:29,280
+well so just keep that in mind this
+isn't how I would necessarily write a
+
+280
+00:04:29,280 --> 00:04:29,290
+isn't how I would necessarily write a
+ 
+
+281
+00:04:29,290 --> 00:04:31,710
+isn't how I would necessarily write a
+string class nowadays but it is a way to
+
+282
+00:04:31,710 --> 00:04:31,720
+string class nowadays but it is a way to
+ 
+
+283
+00:04:31,720 --> 00:04:33,450
+string class nowadays but it is a way to
+do it and it's going to be a kind of
+
+284
+00:04:33,450 --> 00:04:33,460
+do it and it's going to be a kind of
+ 
+
+285
+00:04:33,460 --> 00:04:35,640
+do it and it's going to be a kind of
+nice bare metal Wayne is certainly not
+
+286
+00:04:35,640 --> 00:04:35,650
+nice bare metal Wayne is certainly not
+ 
+
+287
+00:04:35,650 --> 00:04:37,320
+nice bare metal Wayne is certainly not
+going to be slow and if I don't probably
+
+288
+00:04:37,320 --> 00:04:37,330
+going to be slow and if I don't probably
+ 
+
+289
+00:04:37,330 --> 00:04:39,660
+going to be slow and if I don't probably
+be faster than if I was to use modern
+
+290
+00:04:39,660 --> 00:04:39,670
+be faster than if I was to use modern
+ 
+
+291
+00:04:39,670 --> 00:04:41,580
+be faster than if I was to use modern
+see what boss pages so a string is made
+
+292
+00:04:41,580 --> 00:04:41,590
+see what boss pages so a string is made
+ 
+
+293
+00:04:41,590 --> 00:04:43,260
+see what boss pages so a string is made
+up of an array of characters so the
+
+294
+00:04:43,260 --> 00:04:43,270
+up of an array of characters so the
+ 
+
+295
+00:04:43,270 --> 00:04:44,850
+up of an array of characters so the
+first thing that I'm going to do is
+
+296
+00:04:44,850 --> 00:04:44,860
+first thing that I'm going to do is
+ 
+
+297
+00:04:44,860 --> 00:04:47,070
+first thing that I'm going to do is
+place down an array of characters I'm
+
+298
+00:04:47,070 --> 00:04:47,080
+place down an array of characters I'm
+ 
+
+299
+00:04:47,080 --> 00:04:48,420
+place down an array of characters I'm
+going to write a char pointer that's
+
+300
+00:04:48,420 --> 00:04:48,430
+going to write a char pointer that's
+ 
+
+301
+00:04:48,430 --> 00:04:50,100
+going to write a char pointer that's
+called M buffer and this was going to
+
+302
+00:04:50,100 --> 00:04:50,110
+called M buffer and this was going to
+ 
+
+303
+00:04:50,110 --> 00:04:53,070
+called M buffer and this was going to
+point to my buffer of chars I'm also
+
+304
+00:04:53,070 --> 00:04:53,080
+point to my buffer of chars I'm also
+ 
+
+305
+00:04:53,080 --> 00:04:54,420
+point to my buffer of chars I'm also
+going to keep track of how big the
+
+306
+00:04:54,420 --> 00:04:54,430
+going to keep track of how big the
+ 
+
+307
+00:04:54,430 --> 00:04:56,610
+going to keep track of how big the
+string is by writing a variable called
+
+308
+00:04:56,610 --> 00:04:56,620
+string is by writing a variable called
+ 
+
+309
+00:04:56,620 --> 00:04:59,070
+string is by writing a variable called
+size here okay that should be enough so
+
+310
+00:04:59,070 --> 00:04:59,080
+size here okay that should be enough so
+ 
+
+311
+00:04:59,080 --> 00:05:00,720
+size here okay that should be enough so
+the constructor for string is going to
+
+312
+00:05:00,720 --> 00:05:00,730
+the constructor for string is going to
+ 
+
+313
+00:05:00,730 --> 00:05:02,850
+the constructor for string is going to
+take in a constant char which we'll call
+
+314
+00:05:02,850 --> 00:05:02,860
+take in a constant char which we'll call
+ 
+
+315
+00:05:02,860 --> 00:05:04,680
+take in a constant char which we'll call
+string constant a pointer called string
+
+316
+00:05:04,680 --> 00:05:04,690
+string constant a pointer called string
+ 
+
+317
+00:05:04,690 --> 00:05:05,700
+string constant a pointer called string
+first thing we're going to do is
+
+318
+00:05:05,700 --> 00:05:05,710
+first thing we're going to do is
+ 
+
+319
+00:05:05,710 --> 00:05:07,440
+first thing we're going to do is
+calculate how long the string is so that
+
+320
+00:05:07,440 --> 00:05:07,450
+calculate how long the string is so that
+ 
+
+321
+00:05:07,450 --> 00:05:08,970
+calculate how long the string is so that
+we can copy the data from the string
+
+322
+00:05:08,970 --> 00:05:08,980
+we can copy the data from the string
+ 
+
+323
+00:05:08,980 --> 00:05:10,980
+we can copy the data from the string
+into our buffer so I'm just going to use
+
+324
+00:05:10,980 --> 00:05:10,990
+into our buffer so I'm just going to use
+ 
+
+325
+00:05:10,990 --> 00:05:12,870
+into our buffer so I'm just going to use
+a see function called sterlin or string
+
+326
+00:05:12,870 --> 00:05:12,880
+a see function called sterlin or string
+ 
+
+327
+00:05:12,880 --> 00:05:15,180
+a see function called sterlin or string
+length to actually get the size of this
+
+328
+00:05:15,180 --> 00:05:15,190
+length to actually get the size of this
+ 
+
+329
+00:05:15,190 --> 00:05:16,860
+length to actually get the size of this
+string now that I've got the size I know
+
+330
+00:05:16,860 --> 00:05:16,870
+string now that I've got the size I know
+ 
+
+331
+00:05:16,870 --> 00:05:18,540
+string now that I've got the size I know
+how big I want my buffer it's going to
+
+332
+00:05:18,540 --> 00:05:18,550
+how big I want my buffer it's going to
+ 
+
+333
+00:05:18,550 --> 00:05:21,120
+how big I want my buffer it's going to
+be these size of the string so new char
+
+334
+00:05:21,120 --> 00:05:21,130
+be these size of the string so new char
+ 
+
+335
+00:05:21,130 --> 00:05:23,250
+be these size of the string so new char
+em size now we actually have to allow
+
+336
+00:05:23,250 --> 00:05:23,260
+em size now we actually have to allow
+ 
+
+337
+00:05:23,260 --> 00:05:24,960
+em size now we actually have to allow
+for the null termination character as
+
+338
+00:05:24,960 --> 00:05:24,970
+for the null termination character as
+ 
+
+339
+00:05:24,970 --> 00:05:26,670
+for the null termination character as
+well so this should be +1 but I'm
+
+340
+00:05:26,670 --> 00:05:26,680
+well so this should be +1 but I'm
+ 
+
+341
+00:05:26,680 --> 00:05:28,110
+well so this should be +1 but I'm
+deliberately not going to write that so
+
+342
+00:05:28,110 --> 00:05:28,120
+deliberately not going to write that so
+ 
+
+343
+00:05:28,120 --> 00:05:29,520
+deliberately not going to write that so
+that you guys can see what happens so
+
+344
+00:05:29,520 --> 00:05:29,530
+that you guys can see what happens so
+ 
+
+345
+00:05:29,530 --> 00:05:31,170
+that you guys can see what happens so
+the next step is going to be copy the
+
+346
+00:05:31,170 --> 00:05:31,180
+the next step is going to be copy the
+ 
+
+347
+00:05:31,180 --> 00:05:32,940
+the next step is going to be copy the
+value from this pointer into our actual
+
+348
+00:05:32,940 --> 00:05:32,950
+value from this pointer into our actual
+ 
+
+349
+00:05:32,950 --> 00:05:34,740
+value from this pointer into our actual
+buffer so that our buffer is populated
+
+350
+00:05:34,740 --> 00:05:34,750
+buffer so that our buffer is populated
+ 
+
+351
+00:05:34,750 --> 00:05:36,990
+buffer so that our buffer is populated
+with all our characters I could write a
+
+352
+00:05:36,990 --> 00:05:37,000
+with all our characters I could write a
+ 
+
+353
+00:05:37,000 --> 00:05:38,430
+with all our characters I could write a
+for loop here just to keep it really
+
+354
+00:05:38,430 --> 00:05:38,440
+for loop here just to keep it really
+ 
+
+355
+00:05:38,440 --> 00:05:40,050
+for loop here just to keep it really
+simple something like this really simple
+
+356
+00:05:40,050 --> 00:05:40,060
+simple something like this really simple
+ 
+
+357
+00:05:40,060 --> 00:05:41,400
+simple something like this really simple
+to go through every character that we
+
+358
+00:05:41,400 --> 00:05:41,410
+to go through every character that we
+ 
+
+359
+00:05:41,410 --> 00:05:43,080
+to go through every character that we
+have in here and copies at one by one
+
+360
+00:05:43,080 --> 00:05:43,090
+have in here and copies at one by one
+ 
+
+361
+00:05:43,090 --> 00:05:45,360
+have in here and copies at one by one
+like so however a much cleaner way to
+
+362
+00:05:45,360 --> 00:05:45,370
+like so however a much cleaner way to
+ 
+
+363
+00:05:45,370 --> 00:05:46,860
+like so however a much cleaner way to
+write this is just to use mem copy
+
+364
+00:05:46,860 --> 00:05:46,870
+write this is just to use mem copy
+ 
+
+365
+00:05:46,870 --> 00:05:49,380
+write this is just to use mem copy
+someone to type in mem copy the
+
+366
+00:05:49,380 --> 00:05:49,390
+someone to type in mem copy the
+ 
+
+367
+00:05:49,390 --> 00:05:50,730
+someone to type in mem copy the
+parameters for this is the other
+
+368
+00:05:50,730 --> 00:05:50,740
+parameters for this is the other
+ 
+
+369
+00:05:50,740 --> 00:05:52,920
+parameters for this is the other
+destination that goes first so don't
+
+370
+00:05:52,920 --> 00:05:52,930
+destination that goes first so don't
+ 
+
+371
+00:05:52,930 --> 00:05:55,020
+destination that goes first so don't
+screw that up the destination the source
+
+372
+00:05:55,020 --> 00:05:55,030
+screw that up the destination the source
+ 
+
+373
+00:05:55,030 --> 00:05:57,420
+screw that up the destination the source
+and the size so the destination is going
+
+374
+00:05:57,420 --> 00:05:57,430
+and the size so the destination is going
+ 
+
+375
+00:05:57,430 --> 00:05:59,610
+and the size so the destination is going
+to be M buffer the source is going to be
+
+376
+00:05:59,610 --> 00:05:59,620
+to be M buffer the source is going to be
+ 
+
+377
+00:05:59,620 --> 00:06:01,950
+to be M buffer the source is going to be
+string and the size is in bytes so how
+
+378
+00:06:01,950 --> 00:06:01,960
+string and the size is in bytes so how
+ 
+
+379
+00:06:01,960 --> 00:06:03,600
+string and the size is in bytes so how
+many bytes do we want to copy m size
+
+380
+00:06:03,600 --> 00:06:03,610
+many bytes do we want to copy m size
+ 
+
+381
+00:06:03,610 --> 00:06:05,460
+many bytes do we want to copy m size
+because at the moment each character is
+
+382
+00:06:05,460 --> 00:06:05,470
+because at the moment each character is
+ 
+
+383
+00:06:05,470 --> 00:06:06,960
+because at the moment each character is
+one byte of memory now we are missing
+
+384
+00:06:06,960 --> 00:06:06,970
+one byte of memory now we are missing
+ 
+
+385
+00:06:06,970 --> 00:06:08,130
+one byte of memory now we are missing
+that null termination character keep
+
+386
+00:06:08,130 --> 00:06:08,140
+that null termination character keep
+ 
+
+387
+00:06:08,140 --> 00:06:09,420
+that null termination character keep
+that in mind but let's write something
+
+388
+00:06:09,420 --> 00:06:09,430
+that in mind but let's write something
+ 
+
+389
+00:06:09,430 --> 00:06:10,860
+that in mind but let's write something
+that can at least print our string and
+
+390
+00:06:10,860 --> 00:06:10,870
+that can at least print our string and
+ 
+
+391
+00:06:10,870 --> 00:06:12,990
+that can at least print our string and
+something that will they will be able to
+
+392
+00:06:12,990 --> 00:06:13,000
+something that will they will be able to
+ 
+
+393
+00:06:13,000 --> 00:06:14,940
+something that will they will be able to
+use to print our spring so I want to be
+
+394
+00:06:14,940 --> 00:06:14,950
+use to print our spring so I want to be
+ 
+
+395
+00:06:14,950 --> 00:06:16,530
+use to print our spring so I want to be
+able to use this with standard that C
+
+396
+00:06:16,530 --> 00:06:16,540
+able to use this with standard that C
+ 
+
+397
+00:06:16,540 --> 00:06:19,140
+able to use this with standard that C
+out so what I'm going to do is write an
+
+398
+00:06:19,140 --> 00:06:19,150
+out so what I'm going to do is write an
+ 
+
+399
+00:06:19,150 --> 00:06:20,760
+out so what I'm going to do is write an
+overload for that operator so we'll
+
+400
+00:06:20,760 --> 00:06:20,770
+overload for that operator so we'll
+ 
+
+401
+00:06:20,770 --> 00:06:24,240
+overload for that operator so we'll
+write STD outlet stream operator shift
+
+402
+00:06:24,240 --> 00:06:24,250
+write STD outlet stream operator shift
+ 
+
+403
+00:06:24,250 --> 00:06:28,830
+write STD outlet stream operator shift
+left STD output stream stream our string
+
+404
+00:06:28,830 --> 00:06:28,840
+left STD output stream stream our string
+ 
+
+405
+00:06:28,840 --> 00:06:30,540
+left STD output stream stream our string
+classes will be a constant string
+
+406
+00:06:30,540 --> 00:06:30,550
+classes will be a constant string
+ 
+
+407
+00:06:30,550 --> 00:06:33,240
+classes will be a constant string
+reference string is going to return our
+
+408
+00:06:33,240 --> 00:06:33,250
+reference string is going to return our
+ 
+
+409
+00:06:33,250 --> 00:06:35,190
+reference string is going to return our
+stream and before it does that is just
+
+410
+00:06:35,190 --> 00:06:35,200
+stream and before it does that is just
+ 
+
+411
+00:06:35,200 --> 00:06:36,320
+stream and before it does that is just
+going to show
+
+412
+00:06:36,320 --> 00:06:36,330
+going to show
+ 
+
+413
+00:06:36,330 --> 00:06:38,520
+going to show
+stringbuffer which is a method I'm just
+
+414
+00:06:38,520 --> 00:06:38,530
+stringbuffer which is a method I'm just
+ 
+
+415
+00:06:38,530 --> 00:06:40,170
+stringbuffer which is a method I'm just
+about a ride into there we could also
+
+416
+00:06:40,170 --> 00:06:40,180
+about a ride into there we could also
+ 
+
+417
+00:06:40,180 --> 00:06:42,210
+about a ride into there we could also
+make this operator a friend of this
+
+418
+00:06:42,210 --> 00:06:42,220
+make this operator a friend of this
+ 
+
+419
+00:06:42,220 --> 00:06:43,680
+make this operator a friend of this
+class and then we'd be able to call em
+
+420
+00:06:43,680 --> 00:06:43,690
+class and then we'd be able to call em
+ 
+
+421
+00:06:43,690 --> 00:06:45,930
+class and then we'd be able to call em
+buffer from this function because it
+
+422
+00:06:45,930 --> 00:06:45,940
+buffer from this function because it
+ 
+
+423
+00:06:45,940 --> 00:06:47,460
+buffer from this function because it
+would be a friend in fact I think I
+
+424
+00:06:47,460 --> 00:06:47,470
+would be a friend in fact I think I
+ 
+
+425
+00:06:47,470 --> 00:06:48,360
+would be a friend in fact I think I
+might do it that way instead of doing
+
+426
+00:06:48,360 --> 00:06:48,370
+might do it that way instead of doing
+ 
+
+427
+00:06:48,370 --> 00:06:50,400
+might do it that way instead of doing
+get buffer I might just copy this
+
+428
+00:06:50,400 --> 00:06:50,410
+get buffer I might just copy this
+ 
+
+429
+00:06:50,410 --> 00:06:52,800
+get buffer I might just copy this
+declaration pop it in here name it a
+
+430
+00:06:52,800 --> 00:06:52,810
+declaration pop it in here name it a
+ 
+
+431
+00:06:52,810 --> 00:06:55,440
+declaration pop it in here name it a
+friend like so and what that means is
+
+432
+00:06:55,440 --> 00:06:55,450
+friend like so and what that means is
+ 
+
+433
+00:06:55,450 --> 00:06:57,570
+friend like so and what that means is
+that I'll actually be able to write code
+
+434
+00:06:57,570 --> 00:06:57,580
+that I'll actually be able to write code
+ 
+
+435
+00:06:57,580 --> 00:06:58,800
+that I'll actually be able to write code
+such as this so you can see I'm
+
+436
+00:06:58,800 --> 00:06:58,810
+such as this so you can see I'm
+ 
+
+437
+00:06:58,810 --> 00:07:00,510
+such as this so you can see I'm
+accessing a private member if this code
+
+438
+00:07:00,510 --> 00:07:00,520
+accessing a private member if this code
+ 
+
+439
+00:07:00,520 --> 00:07:02,400
+accessing a private member if this code
+wasn't present here that wouldn't be
+
+440
+00:07:02,400 --> 00:07:02,410
+wasn't present here that wouldn't be
+ 
+
+441
+00:07:02,410 --> 00:07:04,770
+wasn't present here that wouldn't be
+acceptable because M buffer is a private
+
+442
+00:07:04,770 --> 00:07:04,780
+acceptable because M buffer is a private
+ 
+
+443
+00:07:04,780 --> 00:07:06,930
+acceptable because M buffer is a private
+member of the string class but since
+
+444
+00:07:06,930 --> 00:07:06,940
+member of the string class but since
+ 
+
+445
+00:07:06,940 --> 00:07:08,640
+member of the string class but since
+we've declared this operator as a friend
+
+446
+00:07:08,640 --> 00:07:08,650
+we've declared this operator as a friend
+ 
+
+447
+00:07:08,650 --> 00:07:10,380
+we've declared this operator as a friend
+we can now write code like this
+
+448
+00:07:10,380 --> 00:07:10,390
+we can now write code like this
+ 
+
+449
+00:07:10,390 --> 00:07:12,060
+we can now write code like this
+beautiful so if I go back to men and I
+
+450
+00:07:12,060 --> 00:07:12,070
+beautiful so if I go back to men and I
+ 
+
+451
+00:07:12,070 --> 00:07:13,890
+beautiful so if I go back to men and I
+write my string variable here I'll just
+
+452
+00:07:13,890 --> 00:07:13,900
+write my string variable here I'll just
+ 
+
+453
+00:07:13,900 --> 00:07:17,160
+write my string variable here I'll just
+set it equal to shadow and then I'll
+
+454
+00:07:17,160 --> 00:07:17,170
+set it equal to shadow and then I'll
+ 
+
+455
+00:07:17,170 --> 00:07:20,270
+set it equal to shadow and then I'll
+just pop it in to see house like that
+
+456
+00:07:20,270 --> 00:07:20,280
+just pop it in to see house like that
+ 
+
+457
+00:07:20,280 --> 00:07:22,950
+just pop it in to see house like that
+all right looks pretty good hit f5 and
+
+458
+00:07:22,950 --> 00:07:22,960
+all right looks pretty good hit f5 and
+ 
+
+459
+00:07:22,960 --> 00:07:24,750
+all right looks pretty good hit f5 and
+there we have our shadows string
+
+460
+00:07:24,750 --> 00:07:24,760
+there we have our shadows string
+ 
+
+461
+00:07:24,760 --> 00:07:26,070
+there we have our shadows string
+printing you can see it's accompanied by
+
+462
+00:07:26,070 --> 00:07:26,080
+printing you can see it's accompanied by
+ 
+
+463
+00:07:26,080 --> 00:07:28,500
+printing you can see it's accompanied by
+a lot of other random characters because
+
+464
+00:07:28,500 --> 00:07:28,510
+a lot of other random characters because
+ 
+
+465
+00:07:28,510 --> 00:07:29,760
+a lot of other random characters because
+we don't have that null termination
+
+466
+00:07:29,760 --> 00:07:29,770
+we don't have that null termination
+ 
+
+467
+00:07:29,770 --> 00:07:31,380
+we don't have that null termination
+character so let's go ahead and add that
+
+468
+00:07:31,380 --> 00:07:31,390
+character so let's go ahead and add that
+ 
+
+469
+00:07:31,390 --> 00:07:33,390
+character so let's go ahead and add that
+in the way I'm going to do that is just
+
+470
+00:07:33,390 --> 00:07:33,400
+in the way I'm going to do that is just
+ 
+
+471
+00:07:33,400 --> 00:07:35,340
+in the way I'm going to do that is just
+when I allocates a buffer I'm going to
+
+472
+00:07:35,340 --> 00:07:35,350
+when I allocates a buffer I'm going to
+ 
+
+473
+00:07:35,350 --> 00:07:37,020
+when I allocates a buffer I'm going to
+do M size plus 1 you could also use
+
+474
+00:07:37,020 --> 00:07:37,030
+do M size plus 1 you could also use
+ 
+
+475
+00:07:37,030 --> 00:07:38,580
+do M size plus 1 you could also use
+string copy which one I'm going to talk
+
+476
+00:07:38,580 --> 00:07:38,590
+string copy which one I'm going to talk
+ 
+
+477
+00:07:38,590 --> 00:07:39,930
+string copy which one I'm going to talk
+about for now but I'm just gonna
+
+478
+00:07:39,930 --> 00:07:39,940
+about for now but I'm just gonna
+ 
+
+479
+00:07:39,940 --> 00:07:41,640
+about for now but I'm just gonna
+allocate m / + 1 to make room for that
+
+480
+00:07:41,640 --> 00:07:41,650
+allocate m / + 1 to make room for that
+ 
+
+481
+00:07:41,650 --> 00:07:44,250
+allocate m / + 1 to make room for that
+we know that this string does have a
+
+482
+00:07:44,250 --> 00:07:44,260
+we know that this string does have a
+ 
+
+483
+00:07:44,260 --> 00:07:45,600
+we know that this string does have a
+null termination character so to make
+
+484
+00:07:45,600 --> 00:07:45,610
+null termination character so to make
+ 
+
+485
+00:07:45,610 --> 00:07:47,280
+null termination character so to make
+this easy I could write code like this
+
+486
+00:07:47,280 --> 00:07:47,290
+this easy I could write code like this
+ 
+
+487
+00:07:47,290 --> 00:07:49,170
+this easy I could write code like this
+which kind of seems to copy over the
+
+488
+00:07:49,170 --> 00:07:49,180
+which kind of seems to copy over the
+ 
+
+489
+00:07:49,180 --> 00:07:51,810
+which kind of seems to copy over the
+length of this if I hit at 5 this will
+
+490
+00:07:51,810 --> 00:07:51,820
+length of this if I hit at 5 this will
+ 
+
+491
+00:07:51,820 --> 00:07:53,430
+length of this if I hit at 5 this will
+work but this is working under the
+
+492
+00:07:53,430 --> 00:07:53,440
+work but this is working under the
+ 
+
+493
+00:07:53,440 --> 00:07:55,050
+work but this is working under the
+assumption that this string that this
+
+494
+00:07:55,050 --> 00:07:55,060
+assumption that this string that this
+ 
+
+495
+00:07:55,060 --> 00:07:57,060
+assumption that this string that this
+child pointer is actually properly not
+
+496
+00:07:57,060 --> 00:07:57,070
+child pointer is actually properly not
+ 
+
+497
+00:07:57,070 --> 00:07:59,420
+child pointer is actually properly not
+terminated if we can't guarantee that
+
+498
+00:07:59,420 --> 00:07:59,430
+terminated if we can't guarantee that
+ 
+
+499
+00:07:59,430 --> 00:08:01,830
+terminated if we can't guarantee that
+just to be a bit safe I'm just going to
+
+500
+00:08:01,830 --> 00:08:01,840
+just to be a bit safe I'm just going to
+ 
+
+501
+00:08:01,840 --> 00:08:05,040
+just to be a bit safe I'm just going to
+set m buffer m size here equal to 0 like
+
+502
+00:08:05,040 --> 00:08:05,050
+set m buffer m size here equal to 0 like
+ 
+
+503
+00:08:05,050 --> 00:08:06,420
+set m buffer m size here equal to 0 like
+this manually adding my own null
+
+504
+00:08:06,420 --> 00:08:06,430
+this manually adding my own null
+ 
+
+505
+00:08:06,430 --> 00:08:07,980
+this manually adding my own null
+termination character at the end of this
+
+506
+00:08:07,980 --> 00:08:07,990
+termination character at the end of this
+ 
+
+507
+00:08:07,990 --> 00:08:10,830
+termination character at the end of this
+hit f5 and we should be good and you can
+
+508
+00:08:10,830 --> 00:08:10,840
+hit f5 and we should be good and you can
+ 
+
+509
+00:08:10,840 --> 00:08:12,300
+hit f5 and we should be good and you can
+see that we are well finally writing
+
+510
+00:08:12,300 --> 00:08:12,310
+see that we are well finally writing
+ 
+
+511
+00:08:12,310 --> 00:08:13,560
+see that we are well finally writing
+some actual code in this series really
+
+512
+00:08:13,560 --> 00:08:13,570
+some actual code in this series really
+ 
+
+513
+00:08:13,570 --> 00:08:14,730
+some actual code in this series really
+excited about that hope I'm not going
+
+514
+00:08:14,730 --> 00:08:14,740
+excited about that hope I'm not going
+ 
+
+515
+00:08:14,740 --> 00:08:15,960
+excited about that hope I'm not going
+too fast I'm kind of trying to rush
+
+516
+00:08:15,960 --> 00:08:15,970
+too fast I'm kind of trying to rush
+ 
+
+517
+00:08:15,970 --> 00:08:17,820
+too fast I'm kind of trying to rush
+through this this is mostly basic kind
+
+518
+00:08:17,820 --> 00:08:17,830
+through this this is mostly basic kind
+ 
+
+519
+00:08:17,830 --> 00:08:19,470
+through this this is mostly basic kind
+of there's me kind of setting up the
+
+520
+00:08:19,470 --> 00:08:19,480
+of there's me kind of setting up the
+ 
+
+521
+00:08:19,480 --> 00:08:20,760
+of there's me kind of setting up the
+string class so that I can actually show
+
+522
+00:08:20,760 --> 00:08:20,770
+string class so that I can actually show
+ 
+
+523
+00:08:20,770 --> 00:08:21,750
+string class so that I can actually show
+you the copying which is what this
+
+524
+00:08:21,750 --> 00:08:21,760
+you the copying which is what this
+ 
+
+525
+00:08:21,760 --> 00:08:24,090
+you the copying which is what this
+videos about so if you have any
+
+526
+00:08:24,090 --> 00:08:24,100
+videos about so if you have any
+ 
+
+527
+00:08:24,100 --> 00:08:25,770
+videos about so if you have any
+questions about anything I wrote in this
+
+528
+00:08:25,770 --> 00:08:25,780
+questions about anything I wrote in this
+ 
+
+529
+00:08:25,780 --> 00:08:28,590
+questions about anything I wrote in this
+kind of segment or another I guess maybe
+
+530
+00:08:28,590 --> 00:08:28,600
+kind of segment or another I guess maybe
+ 
+
+531
+00:08:28,600 --> 00:08:30,000
+kind of segment or another I guess maybe
+other sections of this video where I
+
+532
+00:08:30,000 --> 00:08:30,010
+other sections of this video where I
+ 
+
+533
+00:08:30,010 --> 00:08:32,310
+other sections of this video where I
+rush through things the best place to
+
+534
+00:08:32,310 --> 00:08:32,320
+rush through things the best place to
+ 
+
+535
+00:08:32,320 --> 00:08:33,660
+rush through things the best place to
+ask these questions is to join my
+
+536
+00:08:33,660 --> 00:08:33,670
+ask these questions is to join my
+ 
+
+537
+00:08:33,670 --> 00:08:34,710
+ask these questions is to join my
+discord server
+
+538
+00:08:34,710 --> 00:08:34,720
+discord server
+ 
+
+539
+00:08:34,720 --> 00:08:35,850
+discord server
+there'll be a link in description if you
+
+540
+00:08:35,850 --> 00:08:35,860
+there'll be a link in description if you
+ 
+
+541
+00:08:35,860 --> 00:08:37,380
+there'll be a link in description if you
+just go to the channel to calm slash
+
+542
+00:08:37,380 --> 00:08:37,390
+just go to the channel to calm slash
+ 
+
+543
+00:08:37,390 --> 00:08:39,570
+just go to the channel to calm slash
+discord then you'll be able to join that
+
+544
+00:08:39,570 --> 00:08:39,580
+discord then you'll be able to join that
+ 
+
+545
+00:08:39,580 --> 00:08:41,850
+discord then you'll be able to join that
+server and you can talk to a lot of
+
+546
+00:08:41,850 --> 00:08:41,860
+server and you can talk to a lot of
+ 
+
+547
+00:08:41,860 --> 00:08:44,190
+server and you can talk to a lot of
+people about how all this works and I'll
+
+548
+00:08:44,190 --> 00:08:44,200
+people about how all this works and I'll
+ 
+
+549
+00:08:44,200 --> 00:08:45,300
+people about how all this works and I'll
+be there as well to explain this stuff
+
+550
+00:08:45,300 --> 00:08:45,310
+be there as well to explain this stuff
+ 
+
+551
+00:08:45,310 --> 00:08:46,410
+be there as well to explain this stuff
+too if you don't get it
+
+552
+00:08:46,410 --> 00:08:46,420
+too if you don't get it
+ 
+
+553
+00:08:46,420 --> 00:08:47,850
+too if you don't get it
+okay so we've got a basic set up here
+
+554
+00:08:47,850 --> 00:08:47,860
+okay so we've got a basic set up here
+ 
+
+555
+00:08:47,860 --> 00:08:48,960
+okay so we've got a basic set up here
+and everything looks pretty good we've
+
+556
+00:08:48,960 --> 00:08:48,970
+and everything looks pretty good we've
+ 
+
+557
+00:08:48,970 --> 00:08:50,310
+and everything looks pretty good we've
+actually got a bit of a memory leak here
+
+558
+00:08:50,310 --> 00:08:50,320
+actually got a bit of a memory leak here
+ 
+
+559
+00:08:50,320 --> 00:08:51,660
+actually got a bit of a memory leak here
+that we should really fix and that is
+
+560
+00:08:51,660 --> 00:08:51,670
+that we should really fix and that is
+ 
+
+561
+00:08:51,670 --> 00:08:53,250
+that we should really fix and that is
+when we allocate this new char right
+
+562
+00:08:53,250 --> 00:08:53,260
+when we allocate this new char right
+ 
+
+563
+00:08:53,260 --> 00:08:55,800
+when we allocate this new char right
+here we never delete it if we use a
+
+564
+00:08:55,800 --> 00:08:55,810
+here we never delete it if we use a
+ 
+
+565
+00:08:55,810 --> 00:08:57,420
+here we never delete it if we use a
+smart pointer or a vector we wouldn't
+
+566
+00:08:57,420 --> 00:08:57,430
+smart pointer or a vector we wouldn't
+ 
+
+567
+00:08:57,430 --> 00:08:59,190
+smart pointer or a vector we wouldn't
+need to but since we're using the new
+
+568
+00:08:59,190 --> 00:08:59,200
+need to but since we're using the new
+ 
+
+569
+00:08:59,200 --> 00:09:01,259
+need to but since we're using the new
+keyword and we're allocating a raw array
+
+570
+00:09:01,259 --> 00:09:01,269
+keyword and we're allocating a raw array
+ 
+
+571
+00:09:01,269 --> 00:09:03,269
+keyword and we're allocating a raw array
+we have to actually delete it over here
+
+572
+00:09:03,269 --> 00:09:03,279
+we have to actually delete it over here
+ 
+
+573
+00:09:03,279 --> 00:09:04,980
+we have to actually delete it over here
+by calling delete buffer in the
+
+574
+00:09:04,980 --> 00:09:04,990
+by calling delete buffer in the
+ 
+
+575
+00:09:04,990 --> 00:09:07,319
+by calling delete buffer in the
+destructor okay fantastic so if we
+
+576
+00:09:07,319 --> 00:09:07,329
+destructor okay fantastic so if we
+ 
+
+577
+00:09:07,329 --> 00:09:09,090
+destructor okay fantastic so if we
+launch this code we'll just verify that
+
+578
+00:09:09,090 --> 00:09:09,100
+launch this code we'll just verify that
+ 
+
+579
+00:09:09,100 --> 00:09:10,710
+launch this code we'll just verify that
+our program Gemini successful and you
+
+580
+00:09:10,710 --> 00:09:10,720
+our program Gemini successful and you
+ 
+
+581
+00:09:10,720 --> 00:09:12,600
+our program Gemini successful and you
+can see it does now let's try to copy
+
+582
+00:09:12,600 --> 00:09:12,610
+can see it does now let's try to copy
+ 
+
+583
+00:09:12,610 --> 00:09:14,699
+can see it does now let's try to copy
+this string so the way so in this
+
+584
+00:09:14,699 --> 00:09:14,709
+this string so the way so in this
+ 
+
+585
+00:09:14,709 --> 00:09:16,439
+this string so the way so in this
+scenario maybe I want to print out this
+
+586
+00:09:16,439 --> 00:09:16,449
+scenario maybe I want to print out this
+ 
+
+587
+00:09:16,449 --> 00:09:18,930
+scenario maybe I want to print out this
+string and then later on I actually want
+
+588
+00:09:18,930 --> 00:09:18,940
+string and then later on I actually want
+ 
+
+589
+00:09:18,940 --> 00:09:20,610
+string and then later on I actually want
+to print I want to make an adjustment to
+
+590
+00:09:20,610 --> 00:09:20,620
+to print I want to make an adjustment to
+ 
+
+591
+00:09:20,620 --> 00:09:21,990
+to print I want to make an adjustment to
+this string I'll just call this second
+
+592
+00:09:21,990 --> 00:09:22,000
+this string I'll just call this second
+ 
+
+593
+00:09:22,000 --> 00:09:23,550
+this string I'll just call this second
+for this our second string let's assign
+
+594
+00:09:23,550 --> 00:09:23,560
+for this our second string let's assign
+ 
+
+595
+00:09:23,560 --> 00:09:26,610
+for this our second string let's assign
+this to this string for now and let's
+
+596
+00:09:26,610 --> 00:09:26,620
+this to this string for now and let's
+ 
+
+597
+00:09:26,620 --> 00:09:28,550
+this to this string for now and let's
+try some code that prints both of these
+
+598
+00:09:28,550 --> 00:09:28,560
+try some code that prints both of these
+ 
+
+599
+00:09:28,560 --> 00:09:31,350
+try some code that prints both of these
+okay let's hit f5 you can see that we
+
+600
+00:09:31,350 --> 00:09:31,360
+okay let's hit f5 you can see that we
+ 
+
+601
+00:09:31,360 --> 00:09:32,850
+okay let's hit f5 you can see that we
+get channel pretty twice which is
+
+602
+00:09:32,850 --> 00:09:32,860
+get channel pretty twice which is
+ 
+
+603
+00:09:32,860 --> 00:09:34,680
+get channel pretty twice which is
+exactly what we expect everything seems
+
+604
+00:09:34,680 --> 00:09:34,690
+exactly what we expect everything seems
+ 
+
+605
+00:09:34,690 --> 00:09:36,960
+exactly what we expect everything seems
+to be working once hit enter to proceed
+
+606
+00:09:36,960 --> 00:09:36,970
+to be working once hit enter to proceed
+ 
+
+607
+00:09:36,970 --> 00:09:38,550
+to be working once hit enter to proceed
+past this scene get and terminate our
+
+608
+00:09:38,550 --> 00:09:38,560
+past this scene get and terminate our
+ 
+
+609
+00:09:38,560 --> 00:09:40,590
+past this scene get and terminate our
+application oh look at that it crashed
+
+610
+00:09:40,590 --> 00:09:40,600
+application oh look at that it crashed
+ 
+
+611
+00:09:40,600 --> 00:09:42,240
+application oh look at that it crashed
+and if you look at the Cole stack which
+
+612
+00:09:42,240 --> 00:09:42,250
+and if you look at the Cole stack which
+ 
+
+613
+00:09:42,250 --> 00:09:43,949
+and if you look at the Cole stack which
+I'm going to bring over here so that you
+
+614
+00:09:43,949 --> 00:09:43,959
+I'm going to bring over here so that you
+ 
+
+615
+00:09:43,959 --> 00:09:46,110
+I'm going to bring over here so that you
+can actually see it it looks kind of
+
+616
+00:09:46,110 --> 00:09:46,120
+can actually see it it looks kind of
+ 
+
+617
+00:09:46,120 --> 00:09:48,300
+can actually see it it looks kind of
+cryptic isn't it's inside anti DLL since
+
+618
+00:09:48,300 --> 00:09:48,310
+cryptic isn't it's inside anti DLL since
+ 
+
+619
+00:09:48,310 --> 00:09:51,000
+cryptic isn't it's inside anti DLL since
+I've kernel32.dll well we don't know
+
+620
+00:09:51,000 --> 00:09:51,010
+I've kernel32.dll well we don't know
+ 
+
+621
+00:09:51,010 --> 00:09:52,050
+I've kernel32.dll well we don't know
+what's going on it looks a bit weird
+
+622
+00:09:52,050 --> 00:09:52,060
+what's going on it looks a bit weird
+ 
+
+623
+00:09:52,060 --> 00:09:54,420
+what's going on it looks a bit weird
+what on earth happened so if I terminate
+
+624
+00:09:54,420 --> 00:09:54,430
+what on earth happened so if I terminate
+ 
+
+625
+00:09:54,430 --> 00:09:55,230
+what on earth happened so if I terminate
+my application
+
+626
+00:09:55,230 --> 00:09:55,240
+my application
+ 
+
+627
+00:09:55,240 --> 00:09:57,569
+my application
+let's talk about this what we did here
+
+628
+00:09:57,569 --> 00:09:57,579
+let's talk about this what we did here
+ 
+
+629
+00:09:57,579 --> 00:09:59,550
+let's talk about this what we did here
+is we copied the string and when we copy
+
+630
+00:09:59,550 --> 00:09:59,560
+is we copied the string and when we copy
+ 
+
+631
+00:09:59,560 --> 00:10:01,500
+is we copied the string and when we copy
+the string what C++ does for us
+
+632
+00:10:01,500 --> 00:10:01,510
+the string what C++ does for us
+ 
+
+633
+00:10:01,510 --> 00:10:03,540
+the string what C++ does for us
+automatically is it just takes whatever
+
+634
+00:10:03,540 --> 00:10:03,550
+automatically is it just takes whatever
+ 
+
+635
+00:10:03,550 --> 00:10:04,949
+automatically is it just takes whatever
+members there are here which is
+
+636
+00:10:04,949 --> 00:10:04,959
+members there are here which is
+ 
+
+637
+00:10:04,959 --> 00:10:06,509
+members there are here which is
+basically what what this class is made
+
+638
+00:10:06,509 --> 00:10:06,519
+basically what what this class is made
+ 
+
+639
+00:10:06,519 --> 00:10:08,100
+basically what what this class is made
+up it's made but it's made up of a child
+
+640
+00:10:08,100 --> 00:10:08,110
+up it's made but it's made up of a child
+ 
+
+641
+00:10:08,110 --> 00:10:10,590
+up it's made but it's made up of a child
+pointer and an on side end and it takes
+
+642
+00:10:10,590 --> 00:10:10,600
+pointer and an on side end and it takes
+ 
+
+643
+00:10:10,600 --> 00:10:12,389
+pointer and an on side end and it takes
+those values and it copies them into a
+
+644
+00:10:12,389 --> 00:10:12,399
+those values and it copies them into a
+ 
+
+645
+00:10:12,399 --> 00:10:14,610
+those values and it copies them into a
+new memory address which contains this
+
+646
+00:10:14,610 --> 00:10:14,620
+new memory address which contains this
+ 
+
+647
+00:10:14,620 --> 00:10:17,189
+new memory address which contains this
+string the second string of ours now
+
+648
+00:10:17,189 --> 00:10:17,199
+string the second string of ours now
+ 
+
+649
+00:10:17,199 --> 00:10:19,230
+string the second string of ours now
+here's the problem what we have now in
+
+650
+00:10:19,230 --> 00:10:19,240
+here's the problem what we have now in
+ 
+
+651
+00:10:19,240 --> 00:10:22,139
+here's the problem what we have now in
+memory is two strings and since they did
+
+652
+00:10:22,139 --> 00:10:22,149
+memory is two strings and since they did
+ 
+
+653
+00:10:22,149 --> 00:10:23,939
+memory is two strings and since they did
+it did a direct copy something called a
+
+654
+00:10:23,939 --> 00:10:23,949
+it did a direct copy something called a
+ 
+
+655
+00:10:23,949 --> 00:10:26,160
+it did a direct copy something called a
+shallow copy what it did is it copied
+
+656
+00:10:26,160 --> 00:10:26,170
+shallow copy what it did is it copied
+ 
+
+657
+00:10:26,170 --> 00:10:28,590
+shallow copy what it did is it copied
+this pointer so we have two strings in
+
+658
+00:10:28,590 --> 00:10:28,600
+this pointer so we have two strings in
+ 
+
+659
+00:10:28,600 --> 00:10:30,660
+this pointer so we have two strings in
+memory which of course have the exact
+
+660
+00:10:30,660 --> 00:10:30,670
+memory which of course have the exact
+ 
+
+661
+00:10:30,670 --> 00:10:33,329
+memory which of course have the exact
+same child pointer value in other words
+
+662
+00:10:33,329 --> 00:10:33,339
+same child pointer value in other words
+ 
+
+663
+00:10:33,339 --> 00:10:35,639
+same child pointer value in other words
+the memory address the memory address of
+
+664
+00:10:35,639 --> 00:10:35,649
+the memory address the memory address of
+ 
+
+665
+00:10:35,649 --> 00:10:38,160
+the memory address the memory address of
+this buffer is the same for both of
+
+666
+00:10:38,160 --> 00:10:38,170
+this buffer is the same for both of
+ 
+
+667
+00:10:38,170 --> 00:10:38,970
+this buffer is the same for both of
+these strings
+
+668
+00:10:38,970 --> 00:10:38,980
+these strings
+ 
+
+669
+00:10:38,980 --> 00:10:40,710
+these strings
+and we get the crash because when we
+
+670
+00:10:40,710 --> 00:10:40,720
+and we get the crash because when we
+ 
+
+671
+00:10:40,720 --> 00:10:42,240
+and we get the crash because when we
+come over here to the end of this scope
+
+672
+00:10:42,240 --> 00:10:42,250
+come over here to the end of this scope
+ 
+
+673
+00:10:42,250 --> 00:10:43,980
+come over here to the end of this scope
+and both of these strings get destroyed
+
+674
+00:10:43,980 --> 00:10:43,990
+and both of these strings get destroyed
+ 
+
+675
+00:10:43,990 --> 00:10:46,889
+and both of these strings get destroyed
+the destructor gets called and we end up
+
+676
+00:10:46,889 --> 00:10:46,899
+the destructor gets called and we end up
+ 
+
+677
+00:10:46,899 --> 00:10:48,210
+the destructor gets called and we end up
+deleting this buffer twice so we're
+
+678
+00:10:48,210 --> 00:10:48,220
+deleting this buffer twice so we're
+ 
+
+679
+00:10:48,220 --> 00:10:49,769
+deleting this buffer twice so we're
+trying to free the same block of memory
+
+680
+00:10:49,769 --> 00:10:49,779
+trying to free the same block of memory
+ 
+
+681
+00:10:49,779 --> 00:10:51,809
+trying to free the same block of memory
+twice that's why we get a crash because
+
+682
+00:10:51,809 --> 00:10:51,819
+twice that's why we get a crash because
+ 
+
+683
+00:10:51,819 --> 00:10:53,280
+twice that's why we get a crash because
+the memory has already been freed it's
+
+684
+00:10:53,280 --> 00:10:53,290
+the memory has already been freed it's
+ 
+
+685
+00:10:53,290 --> 00:10:53,819
+the memory has already been freed it's
+not ours
+
+686
+00:10:53,819 --> 00:10:53,829
+not ours
+ 
+
+687
+00:10:53,829 --> 00:10:55,530
+not ours
+we can't free it again so perhaps a
+
+688
+00:10:55,530 --> 00:10:55,540
+we can't free it again so perhaps a
+ 
+
+689
+00:10:55,540 --> 00:10:57,120
+we can't free it again so perhaps a
+better example to demonstrate how this
+
+690
+00:10:57,120 --> 00:10:57,130
+better example to demonstrate how this
+ 
+
+691
+00:10:57,130 --> 00:10:58,440
+better example to demonstrate how this
+really is the same
+
+692
+00:10:58,440 --> 00:10:58,450
+really is the same
+ 
+
+693
+00:10:58,450 --> 00:11:00,150
+really is the same
+I'm just putting a breakpoint here
+
+694
+00:11:00,150 --> 00:11:00,160
+I'm just putting a breakpoint here
+ 
+
+695
+00:11:00,160 --> 00:11:02,550
+I'm just putting a breakpoint here
+hitting f5 and then being able to mouse
+
+696
+00:11:02,550 --> 00:11:02,560
+hitting f5 and then being able to mouse
+ 
+
+697
+00:11:02,560 --> 00:11:04,080
+hitting f5 and then being able to mouse
+over both of these you'll see that in
+
+698
+00:11:04,080 --> 00:11:04,090
+over both of these you'll see that in
+ 
+
+699
+00:11:04,090 --> 00:11:05,790
+over both of these you'll see that in
+this case M buffer has a memory address
+
+700
+00:11:05,790 --> 00:11:05,800
+this case M buffer has a memory address
+ 
+
+701
+00:11:05,800 --> 00:11:11,280
+this case M buffer has a memory address
+ae 0 4 4 0 & 4 second we also have a e0
+
+702
+00:11:11,280 --> 00:11:11,290
+ae 0 4 4 0 & 4 second we also have a e0
+ 
+
+703
+00:11:11,290 --> 00:11:13,470
+ae 0 4 4 0 & 4 second we also have a e0
+4 4 0 so clearly the pointer is the same
+
+704
+00:11:13,470 --> 00:11:13,480
+4 4 0 so clearly the pointer is the same
+ 
+
+705
+00:11:13,480 --> 00:11:15,630
+4 4 0 so clearly the pointer is the same
+apart from doing that let's say that we
+
+706
+00:11:15,630 --> 00:11:15,640
+apart from doing that let's say that we
+ 
+
+707
+00:11:15,640 --> 00:11:17,850
+apart from doing that let's say that we
+actually want to modify the second
+
+708
+00:11:17,850 --> 00:11:17,860
+actually want to modify the second
+ 
+
+709
+00:11:17,860 --> 00:11:19,950
+actually want to modify the second
+string so I maybe instead of I'll change
+
+710
+00:11:19,950 --> 00:11:19,960
+string so I maybe instead of I'll change
+ 
+
+711
+00:11:19,960 --> 00:11:22,230
+string so I maybe instead of I'll change
+the third character from E to a to get
+
+712
+00:11:22,230 --> 00:11:22,240
+the third character from E to a to get
+ 
+
+713
+00:11:22,240 --> 00:11:24,600
+the third character from E to a to get
+China which which you guys love will
+
+714
+00:11:24,600 --> 00:11:24,610
+China which which you guys love will
+ 
+
+715
+00:11:24,610 --> 00:11:26,100
+China which which you guys love will
+access the second index and assign it to
+
+716
+00:11:26,100 --> 00:11:26,110
+access the second index and assign it to
+ 
+
+717
+00:11:26,110 --> 00:11:28,110
+access the second index and assign it to
+a of course in order to get this
+
+718
+00:11:28,110 --> 00:11:28,120
+a of course in order to get this
+ 
+
+719
+00:11:28,120 --> 00:11:29,430
+a of course in order to get this
+operator to work for the string class
+
+720
+00:11:29,430 --> 00:11:29,440
+operator to work for the string class
+ 
+
+721
+00:11:29,440 --> 00:11:31,230
+operator to work for the string class
+we'll have to write it so here I'm just
+
+722
+00:11:31,230 --> 00:11:31,240
+we'll have to write it so here I'm just
+ 
+
+723
+00:11:31,240 --> 00:11:32,940
+we'll have to write it so here I'm just
+going to write something that returns a
+
+724
+00:11:32,940 --> 00:11:32,950
+going to write something that returns a
+ 
+
+725
+00:11:32,950 --> 00:11:35,370
+going to write something that returns a
+char reference operator index operator
+
+726
+00:11:35,370 --> 00:11:35,380
+char reference operator index operator
+ 
+
+727
+00:11:35,380 --> 00:11:38,400
+char reference operator index operator
+unsigned int index we're not going to do
+
+728
+00:11:38,400 --> 00:11:38,410
+unsigned int index we're not going to do
+ 
+
+729
+00:11:38,410 --> 00:11:39,720
+unsigned int index we're not going to do
+any kind of safety checks to make sure
+
+730
+00:11:39,720 --> 00:11:39,730
+any kind of safety checks to make sure
+ 
+
+731
+00:11:39,730 --> 00:11:41,340
+any kind of safety checks to make sure
+we're inside the bounds we're just going
+
+732
+00:11:41,340 --> 00:11:41,350
+we're inside the bounds we're just going
+ 
+
+733
+00:11:41,350 --> 00:11:44,820
+we're inside the bounds we're just going
+to return and buffer at index to keep it
+
+734
+00:11:44,820 --> 00:11:44,830
+to return and buffer at index to keep it
+ 
+
+735
+00:11:44,830 --> 00:11:47,190
+to return and buffer at index to keep it
+nice and simple ok this works let's hit
+
+736
+00:11:47,190 --> 00:11:47,200
+nice and simple ok this works let's hit
+ 
+
+737
+00:11:47,200 --> 00:11:50,190
+nice and simple ok this works let's hit
+f5 and check this out there boys charnot
+
+738
+00:11:50,190 --> 00:11:50,200
+f5 and check this out there boys charnot
+ 
+
+739
+00:11:50,200 --> 00:11:52,920
+f5 and check this out there boys charnot
+so why why is that happy and we get and
+
+740
+00:11:52,920 --> 00:11:52,930
+so why why is that happy and we get and
+ 
+
+741
+00:11:52,930 --> 00:11:54,900
+so why why is that happy and we get and
+of course we also get the crash so why
+
+742
+00:11:54,900 --> 00:11:54,910
+of course we also get the crash so why
+ 
+
+743
+00:11:54,910 --> 00:11:56,040
+of course we also get the crash so why
+is this happening it looks like we've
+
+744
+00:11:56,040 --> 00:11:56,050
+is this happening it looks like we've
+ 
+
+745
+00:11:56,050 --> 00:11:57,780
+is this happening it looks like we've
+copied it but we haven't what we
+
+746
+00:11:57,780 --> 00:11:57,790
+copied it but we haven't what we
+ 
+
+747
+00:11:57,790 --> 00:12:00,570
+copied it but we haven't what we
+actually need to do is allocate a new
+
+748
+00:12:00,570 --> 00:12:00,580
+actually need to do is allocate a new
+ 
+
+749
+00:12:00,580 --> 00:12:03,330
+actually need to do is allocate a new
+char array to store the copied string
+
+750
+00:12:03,330 --> 00:12:03,340
+char array to store the copied string
+ 
+
+751
+00:12:03,340 --> 00:12:04,680
+char array to store the copied string
+right because what we're doing now is
+
+752
+00:12:04,680 --> 00:12:04,690
+right because what we're doing now is
+ 
+
+753
+00:12:04,690 --> 00:12:07,140
+right because what we're doing now is
+we're copying the the pointer and what
+
+754
+00:12:07,140 --> 00:12:07,150
+we're copying the the pointer and what
+ 
+
+755
+00:12:07,150 --> 00:12:09,060
+we're copying the the pointer and what
+we have is two string objects pointing
+
+756
+00:12:09,060 --> 00:12:09,070
+we have is two string objects pointing
+ 
+
+757
+00:12:09,070 --> 00:12:11,760
+we have is two string objects pointing
+to the exact same buffer of memory which
+
+758
+00:12:11,760 --> 00:12:11,770
+to the exact same buffer of memory which
+ 
+
+759
+00:12:11,770 --> 00:12:13,440
+to the exact same buffer of memory which
+means that when we either try and change
+
+760
+00:12:13,440 --> 00:12:13,450
+means that when we either try and change
+ 
+
+761
+00:12:13,450 --> 00:12:15,180
+means that when we either try and change
+one of them it changes both of them
+
+762
+00:12:15,180 --> 00:12:15,190
+one of them it changes both of them
+ 
+
+763
+00:12:15,190 --> 00:12:16,230
+one of them it changes both of them
+because they're pointing to the same
+
+764
+00:12:16,230 --> 00:12:16,240
+because they're pointing to the same
+ 
+
+765
+00:12:16,240 --> 00:12:18,210
+because they're pointing to the same
+block of memory or when we delete one of
+
+766
+00:12:18,210 --> 00:12:18,220
+block of memory or when we delete one of
+ 
+
+767
+00:12:18,220 --> 00:12:19,590
+block of memory or when we delete one of
+them it's gonna delete both of them
+
+768
+00:12:19,590 --> 00:12:19,600
+them it's gonna delete both of them
+ 
+
+769
+00:12:19,600 --> 00:12:20,970
+them it's gonna delete both of them
+because well they're pointing to the
+
+770
+00:12:20,970 --> 00:12:20,980
+because well they're pointing to the
+ 
+
+771
+00:12:20,980 --> 00:12:22,650
+because well they're pointing to the
+same block of memory we want to actually
+
+772
+00:12:22,650 --> 00:12:22,660
+same block of memory we want to actually
+ 
+
+773
+00:12:22,660 --> 00:12:24,090
+same block of memory we want to actually
+copy that block of memory we want the
+
+774
+00:12:24,090 --> 00:12:24,100
+copy that block of memory we want the
+ 
+
+775
+00:12:24,100 --> 00:12:26,670
+copy that block of memory we want the
+second string to have its own pointer to
+
+776
+00:12:26,670 --> 00:12:26,680
+second string to have its own pointer to
+ 
+
+777
+00:12:26,680 --> 00:12:28,110
+second string to have its own pointer to
+have its own unique block of memory
+
+778
+00:12:28,110 --> 00:12:28,120
+have its own unique block of memory
+ 
+
+779
+00:12:28,120 --> 00:12:29,970
+have its own unique block of memory
+that's pointing to so that when we
+
+780
+00:12:29,970 --> 00:12:29,980
+that's pointing to so that when we
+ 
+
+781
+00:12:29,980 --> 00:12:31,590
+that's pointing to so that when we
+either modify or delete the second
+
+782
+00:12:31,590 --> 00:12:31,600
+either modify or delete the second
+ 
+
+783
+00:12:31,600 --> 00:12:33,090
+either modify or delete the second
+string it doesn't touch the first string
+
+784
+00:12:33,090 --> 00:12:33,100
+string it doesn't touch the first string
+ 
+
+785
+00:12:33,100 --> 00:12:35,010
+string it doesn't touch the first string
+and vice versa and the way that we can
+
+786
+00:12:35,010 --> 00:12:35,020
+and vice versa and the way that we can
+ 
+
+787
+00:12:35,020 --> 00:12:36,510
+and vice versa and the way that we can
+do that is by performing something
+
+788
+00:12:36,510 --> 00:12:36,520
+do that is by performing something
+ 
+
+789
+00:12:36,520 --> 00:12:37,920
+do that is by performing something
+called a deep copy meaning we're
+
+790
+00:12:37,920 --> 00:12:37,930
+called a deep copy meaning we're
+ 
+
+791
+00:12:37,930 --> 00:12:39,510
+called a deep copy meaning we're
+actually copying the entire object not
+
+792
+00:12:39,510 --> 00:12:39,520
+actually copying the entire object not
+ 
+
+793
+00:12:39,520 --> 00:12:42,390
+actually copying the entire object not
+just the kind of shallow like features
+
+794
+00:12:42,390 --> 00:12:42,400
+just the kind of shallow like features
+ 
+
+795
+00:12:42,400 --> 00:12:45,060
+just the kind of shallow like features
+that we see on the very top such as what
+
+796
+00:12:45,060 --> 00:12:45,070
+that we see on the very top such as what
+ 
+
+797
+00:12:45,070 --> 00:12:47,160
+that we see on the very top such as what
+actually makes up the object because if
+
+798
+00:12:47,160 --> 00:12:47,170
+actually makes up the object because if
+ 
+
+799
+00:12:47,170 --> 00:12:48,930
+actually makes up the object because if
+you look at the object in memory it's a
+
+800
+00:12:48,930 --> 00:12:48,940
+you look at the object in memory it's a
+ 
+
+801
+00:12:48,940 --> 00:12:51,120
+you look at the object in memory it's a
+pointer and an int that's all it is but
+
+802
+00:12:51,120 --> 00:12:51,130
+pointer and an int that's all it is but
+ 
+
+803
+00:12:51,130 --> 00:12:53,460
+pointer and an int that's all it is but
+a shallow copy is not gonna go to the
+
+804
+00:12:53,460 --> 00:12:53,470
+a shallow copy is not gonna go to the
+ 
+
+805
+00:12:53,470 --> 00:12:55,200
+a shallow copy is not gonna go to the
+contents of the pointer or where the
+
+806
+00:12:55,200 --> 00:12:55,210
+contents of the pointer or where the
+ 
+
+807
+00:12:55,210 --> 00:12:57,240
+contents of the pointer or where the
+point is pointing to and actually copy
+
+808
+00:12:57,240 --> 00:12:57,250
+point is pointing to and actually copy
+ 
+
+809
+00:12:57,250 --> 00:13:00,060
+point is pointing to and actually copy
+that as well a deep copy is by
+
+810
+00:13:00,060 --> 00:13:00,070
+that as well a deep copy is by
+ 
+
+811
+00:13:00,070 --> 00:13:02,130
+that as well a deep copy is by
+definition going to copy the object in
+
+812
+00:13:02,130 --> 00:13:02,140
+definition going to copy the object in
+ 
+
+813
+00:13:02,140 --> 00:13:04,320
+definition going to copy the object in
+its entirety so how do we make a perform
+
+814
+00:13:04,320 --> 00:13:04,330
+its entirety so how do we make a perform
+ 
+
+815
+00:13:04,330 --> 00:13:06,090
+its entirety so how do we make a perform
+a deep copy well of course we could
+
+816
+00:13:06,090 --> 00:13:06,100
+a deep copy well of course we could
+ 
+
+817
+00:13:06,100 --> 00:13:08,460
+a deep copy well of course we could
+write our own clone like method or
+
+818
+00:13:08,460 --> 00:13:08,470
+write our own clone like method or
+ 
+
+819
+00:13:08,470 --> 00:13:09,220
+write our own clone like method or
+function on it
+
+820
+00:13:09,220 --> 00:13:09,230
+function on it
+ 
+
+821
+00:13:09,230 --> 00:13:11,110
+function on it
+that and have it just returned a new
+
+822
+00:13:11,110 --> 00:13:11,120
+that and have it just returned a new
+ 
+
+823
+00:13:11,120 --> 00:13:12,820
+that and have it just returned a new
+string which contains anyway that's I
+
+824
+00:13:12,820 --> 00:13:12,830
+string which contains anyway that's I
+ 
+
+825
+00:13:12,830 --> 00:13:14,050
+string which contains anyway that's I
+don't even want to explain that because
+
+826
+00:13:14,050 --> 00:13:14,060
+don't even want to explain that because
+ 
+
+827
+00:13:14,060 --> 00:13:16,480
+don't even want to explain that because
+that's not the way you do it the way
+
+828
+00:13:16,480 --> 00:13:16,490
+that's not the way you do it the way
+ 
+
+829
+00:13:16,490 --> 00:13:18,400
+that's not the way you do it the way
+that you do it is you write a copy
+
+830
+00:13:18,400 --> 00:13:18,410
+that you do it is you write a copy
+ 
+
+831
+00:13:18,410 --> 00:13:20,800
+that you do it is you write a copy
+constructor and a copy constructor is a
+
+832
+00:13:20,800 --> 00:13:20,810
+constructor and a copy constructor is a
+ 
+
+833
+00:13:20,810 --> 00:13:23,080
+constructor and a copy constructor is a
+constructor that gets called for that
+
+834
+00:13:23,080 --> 00:13:23,090
+constructor that gets called for that
+ 
+
+835
+00:13:23,090 --> 00:13:25,900
+constructor that gets called for that
+second string when you actually copy it
+
+836
+00:13:25,900 --> 00:13:25,910
+second string when you actually copy it
+ 
+
+837
+00:13:25,910 --> 00:13:29,050
+second string when you actually copy it
+so when you assign a string to an object
+
+838
+00:13:29,050 --> 00:13:29,060
+so when you assign a string to an object
+ 
+
+839
+00:13:29,060 --> 00:13:31,000
+so when you assign a string to an object
+that is also a string when you try to
+
+840
+00:13:31,000 --> 00:13:31,010
+that is also a string when you try to
+ 
+
+841
+00:13:31,010 --> 00:13:32,350
+that is also a string when you try to
+create a new variable and you assign it
+
+842
+00:13:32,350 --> 00:13:32,360
+create a new variable and you assign it
+ 
+
+843
+00:13:32,360 --> 00:13:34,180
+create a new variable and you assign it
+with another variable which has the same
+
+844
+00:13:34,180 --> 00:13:34,190
+with another variable which has the same
+ 
+
+845
+00:13:34,190 --> 00:13:36,400
+with another variable which has the same
+type as a variable that you're actually
+
+846
+00:13:36,400 --> 00:13:36,410
+type as a variable that you're actually
+ 
+
+847
+00:13:36,410 --> 00:13:38,680
+type as a variable that you're actually
+creating you're copying that variable
+
+848
+00:13:38,680 --> 00:13:38,690
+creating you're copying that variable
+ 
+
+849
+00:13:38,690 --> 00:13:40,360
+creating you're copying that variable
+and thus you're calling something called
+
+850
+00:13:40,360 --> 00:13:40,370
+and thus you're calling something called
+ 
+
+851
+00:13:40,370 --> 00:13:43,030
+and thus you're calling something called
+the copy constructor let's write one of
+
+852
+00:13:43,030 --> 00:13:43,040
+the copy constructor let's write one of
+ 
+
+853
+00:13:43,040 --> 00:13:45,190
+the copy constructor let's write one of
+these now C++ by default will actually
+
+854
+00:13:45,190 --> 00:13:45,200
+these now C++ by default will actually
+ 
+
+855
+00:13:45,200 --> 00:13:46,990
+these now C++ by default will actually
+provide you with a copy constructor you
+
+856
+00:13:46,990 --> 00:13:47,000
+provide you with a copy constructor you
+ 
+
+857
+00:13:47,000 --> 00:13:48,190
+provide you with a copy constructor you
+can do several things with this copy
+
+858
+00:13:48,190 --> 00:13:48,200
+can do several things with this copy
+ 
+
+859
+00:13:48,200 --> 00:13:49,750
+can do several things with this copy
+constructor the definition or the
+
+860
+00:13:49,750 --> 00:13:49,760
+constructor the definition or the
+ 
+
+861
+00:13:49,760 --> 00:13:51,670
+constructor the definition or the
+declaration for this copy constructor
+
+862
+00:13:51,670 --> 00:13:51,680
+declaration for this copy constructor
+ 
+
+863
+00:13:51,680 --> 00:13:53,410
+declaration for this copy constructor
+the signature is a constructor that
+
+864
+00:13:53,410 --> 00:13:53,420
+the signature is a constructor that
+ 
+
+865
+00:13:53,420 --> 00:13:56,050
+the signature is a constructor that
+takes in a reference a const reference
+
+866
+00:13:56,050 --> 00:13:56,060
+takes in a reference a const reference
+ 
+
+867
+00:13:56,060 --> 00:14:00,070
+takes in a reference a const reference
+to the same class so string costs string
+
+868
+00:14:00,070 --> 00:14:00,080
+to the same class so string costs string
+ 
+
+869
+00:14:00,080 --> 00:14:01,480
+to the same class so string costs string
+reference and then you can call it
+
+870
+00:14:01,480 --> 00:14:01,490
+reference and then you can call it
+ 
+
+871
+00:14:01,490 --> 00:14:02,740
+reference and then you can call it
+something like other because that's a
+
+872
+00:14:02,740 --> 00:14:02,750
+something like other because that's a
+ 
+
+873
+00:14:02,750 --> 00:14:04,480
+something like other because that's a
+sensible name so as i say this a plus
+
+874
+00:14:04,480 --> 00:14:04,490
+sensible name so as i say this a plus
+ 
+
+875
+00:14:04,490 --> 00:14:05,950
+sensible name so as i say this a plus
+plus actually supplies you with one of
+
+876
+00:14:05,950 --> 00:14:05,960
+plus actually supplies you with one of
+ 
+
+877
+00:14:05,960 --> 00:14:07,570
+plus actually supplies you with one of
+these automatically and what that does
+
+878
+00:14:07,570 --> 00:14:07,580
+these automatically and what that does
+ 
+
+879
+00:14:07,580 --> 00:14:09,250
+these automatically and what that does
+is literally a mem copy it's just going
+
+880
+00:14:09,250 --> 00:14:09,260
+is literally a mem copy it's just going
+ 
+
+881
+00:14:09,260 --> 00:14:12,460
+is literally a mem copy it's just going
+to copy the memory of the other object a
+
+882
+00:14:12,460 --> 00:14:12,470
+to copy the memory of the other object a
+ 
+
+883
+00:14:12,470 --> 00:14:15,250
+to copy the memory of the other object a
+shallow copy into these members so in
+
+884
+00:14:15,250 --> 00:14:15,260
+shallow copy into these members so in
+ 
+
+885
+00:14:15,260 --> 00:14:17,740
+shallow copy into these members so in
+other words if we were to write a one of
+
+886
+00:14:17,740 --> 00:14:17,750
+other words if we were to write a one of
+ 
+
+887
+00:14:17,750 --> 00:14:19,000
+other words if we were to write a one of
+these constructors ourselves it would
+
+888
+00:14:19,000 --> 00:14:19,010
+these constructors ourselves it would
+ 
+
+889
+00:14:19,010 --> 00:14:20,290
+these constructors ourselves it would
+probably look something like this and
+
+890
+00:14:20,290 --> 00:14:20,300
+probably look something like this and
+ 
+
+891
+00:14:20,300 --> 00:14:22,690
+probably look something like this and
+buffer other door and buffer and then
+
+892
+00:14:22,690 --> 00:14:22,700
+buffer other door and buffer and then
+ 
+
+893
+00:14:22,700 --> 00:14:25,570
+buffer other door and buffer and then
+emphasize other door size okay that's
+
+894
+00:14:25,570 --> 00:14:25,580
+emphasize other door size okay that's
+ 
+
+895
+00:14:25,580 --> 00:14:27,430
+emphasize other door size okay that's
+pretty much that is exactly what it was
+
+896
+00:14:27,430 --> 00:14:27,440
+pretty much that is exactly what it was
+ 
+
+897
+00:14:27,440 --> 00:14:33,260
+pretty much that is exactly what it was
+cost kind of supplies us with
+
+898
+00:14:33,260 --> 00:14:33,270
+
+ 
+
+899
+00:14:33,270 --> 00:14:35,560
+
+so that's not gonna cut it here
+
+900
+00:14:35,560 --> 00:14:35,570
+so that's not gonna cut it here
+ 
+
+901
+00:14:35,570 --> 00:14:37,090
+so that's not gonna cut it here
+we don't just want to copy the pointer
+
+902
+00:14:37,090 --> 00:14:37,100
+we don't just want to copy the pointer
+ 
+
+903
+00:14:37,100 --> 00:14:38,950
+we don't just want to copy the pointer
+we want to copy the memory at the
+
+904
+00:14:38,950 --> 00:14:38,960
+we want to copy the memory at the
+ 
+
+905
+00:14:38,960 --> 00:14:40,930
+we want to copy the memory at the
+pointer now if we decide that we don't
+
+906
+00:14:40,930 --> 00:14:40,940
+pointer now if we decide that we don't
+ 
+
+907
+00:14:40,940 --> 00:14:43,030
+pointer now if we decide that we don't
+want a copy constructed because we don't
+
+908
+00:14:43,030 --> 00:14:43,040
+want a copy constructed because we don't
+ 
+
+909
+00:14:43,040 --> 00:14:44,770
+want a copy constructed because we don't
+want to allow copying we can just
+
+910
+00:14:44,770 --> 00:14:44,780
+want to allow copying we can just
+ 
+
+911
+00:14:44,780 --> 00:14:46,660
+want to allow copying we can just
+declare this copy constructor as equals
+
+912
+00:14:46,660 --> 00:14:46,670
+declare this copy constructor as equals
+ 
+
+913
+00:14:46,670 --> 00:14:48,250
+declare this copy constructor as equals
+delete and you can see down over here
+
+914
+00:14:48,250 --> 00:14:48,260
+delete and you can see down over here
+ 
+
+915
+00:14:48,260 --> 00:14:49,870
+delete and you can see down over here
+this code will not compile anymore
+
+916
+00:14:49,870 --> 00:14:49,880
+this code will not compile anymore
+ 
+
+917
+00:14:49,880 --> 00:14:51,670
+this code will not compile anymore
+this is exactly what unique point it
+
+918
+00:14:51,670 --> 00:14:51,680
+this is exactly what unique point it
+ 
+
+919
+00:14:51,680 --> 00:14:53,710
+this is exactly what unique point it
+does if you look at my other video on
+
+920
+00:14:53,710 --> 00:14:53,720
+does if you look at my other video on
+ 
+
+921
+00:14:53,720 --> 00:14:55,150
+does if you look at my other video on
+smart pointers that are released like
+
+922
+00:14:55,150 --> 00:14:55,160
+smart pointers that are released like
+ 
+
+923
+00:14:55,160 --> 00:14:55,900
+smart pointers that are released like
+two days ago
+
+924
+00:14:55,900 --> 00:14:55,910
+two days ago
+ 
+
+925
+00:14:55,910 --> 00:14:58,690
+two days ago
+linked up there you saw this in action
+
+926
+00:14:58,690 --> 00:14:58,700
+linked up there you saw this in action
+ 
+
+927
+00:14:58,700 --> 00:15:00,310
+linked up there you saw this in action
+when we talked about unique pointers so
+
+928
+00:15:00,310 --> 00:15:00,320
+when we talked about unique pointers so
+ 
+
+929
+00:15:00,320 --> 00:15:01,960
+when we talked about unique pointers so
+that's how we kind of disable that but
+
+930
+00:15:01,960 --> 00:15:01,970
+that's how we kind of disable that but
+ 
+
+931
+00:15:01,970 --> 00:15:03,790
+that's how we kind of disable that but
+what we want to do here is to find our
+
+932
+00:15:03,790 --> 00:15:03,800
+what we want to do here is to find our
+ 
+
+933
+00:15:03,800 --> 00:15:05,500
+what we want to do here is to find our
+own copying instructor which does that
+
+934
+00:15:05,500 --> 00:15:05,510
+own copying instructor which does that
+ 
+
+935
+00:15:05,510 --> 00:15:07,720
+own copying instructor which does that
+deep copy so what I'll do over here is
+
+936
+00:15:07,720 --> 00:15:07,730
+deep copy so what I'll do over here is
+ 
+
+937
+00:15:07,730 --> 00:15:10,960
+deep copy so what I'll do over here is
+I'll copy size because well that is that
+
+938
+00:15:10,960 --> 00:15:10,970
+I'll copy size because well that is that
+ 
+
+939
+00:15:10,970 --> 00:15:12,610
+I'll copy size because well that is that
+is an integer we can just shallow copy
+
+940
+00:15:12,610 --> 00:15:12,620
+is an integer we can just shallow copy
+ 
+
+941
+00:15:12,620 --> 00:15:14,230
+is an integer we can just shallow copy
+that and then over here what I'm going
+
+942
+00:15:14,230 --> 00:15:14,240
+that and then over here what I'm going
+ 
+
+943
+00:15:14,240 --> 00:15:16,300
+that and then over here what I'm going
+to do is just simply allocate a new
+
+944
+00:15:16,300 --> 00:15:16,310
+to do is just simply allocate a new
+ 
+
+945
+00:15:16,310 --> 00:15:18,100
+to do is just simply allocate a new
+buffer we already know how big it needs
+
+946
+00:15:18,100 --> 00:15:18,110
+buffer we already know how big it needs
+ 
+
+947
+00:15:18,110 --> 00:15:20,140
+buffer we already know how big it needs
+to be it needs to be M size which we've
+
+948
+00:15:20,140 --> 00:15:20,150
+to be it needs to be M size which we've
+ 
+
+949
+00:15:20,150 --> 00:15:22,480
+to be it needs to be M size which we've
+already signed up here plus one we know
+
+950
+00:15:22,480 --> 00:15:22,490
+already signed up here plus one we know
+ 
+
+951
+00:15:22,490 --> 00:15:23,950
+already signed up here plus one we know
+that we're copying from another string
+
+952
+00:15:23,950 --> 00:15:23,960
+that we're copying from another string
+ 
+
+953
+00:15:23,960 --> 00:15:26,170
+that we're copying from another string
+object so what we really need to do here
+
+954
+00:15:26,170 --> 00:15:26,180
+object so what we really need to do here
+ 
+
+955
+00:15:26,180 --> 00:15:28,870
+object so what we really need to do here
+is simply copy the other buffer so
+
+956
+00:15:28,870 --> 00:15:28,880
+is simply copy the other buffer so
+ 
+
+957
+00:15:28,880 --> 00:15:31,090
+is simply copy the other buffer so
+Arthur dot M buffer into the buffer for
+
+958
+00:15:31,090 --> 00:15:31,100
+Arthur dot M buffer into the buffer for
+ 
+
+959
+00:15:31,100 --> 00:15:33,130
+Arthur dot M buffer into the buffer for
+this string class and then we'll set
+
+960
+00:15:33,130 --> 00:15:33,140
+this string class and then we'll set
+ 
+
+961
+00:15:33,140 --> 00:15:34,810
+this string class and then we'll set
+this to be precise plus one over here I
+
+962
+00:15:34,810 --> 00:15:34,820
+this to be precise plus one over here I
+ 
+
+963
+00:15:34,820 --> 00:15:36,490
+this to be precise plus one over here I
+can just write this because I know that
+
+964
+00:15:36,490 --> 00:15:36,500
+can just write this because I know that
+ 
+
+965
+00:15:36,500 --> 00:15:38,080
+can just write this because I know that
+the other size the other string is
+
+966
+00:15:38,080 --> 00:15:38,090
+the other size the other string is
+ 
+
+967
+00:15:38,090 --> 00:15:39,490
+the other size the other string is
+already gonna have that null termination
+
+968
+00:15:39,490 --> 00:15:39,500
+already gonna have that null termination
+ 
+
+969
+00:15:39,500 --> 00:15:41,110
+already gonna have that null termination
+character because it's a string and it
+
+970
+00:15:41,110 --> 00:15:41,120
+character because it's a string and it
+ 
+
+971
+00:15:41,120 --> 00:15:42,970
+character because it's a string and it
+has to and that's it that's all the code
+
+972
+00:15:42,970 --> 00:15:42,980
+has to and that's it that's all the code
+ 
+
+973
+00:15:42,980 --> 00:15:44,410
+has to and that's it that's all the code
+that I have to write to perform an
+
+974
+00:15:44,410 --> 00:15:44,420
+that I have to write to perform an
+ 
+
+975
+00:15:44,420 --> 00:15:47,740
+that I have to write to perform an
+actual deep copy in this case so now if
+
+976
+00:15:47,740 --> 00:15:47,750
+actual deep copy in this case so now if
+ 
+
+977
+00:15:47,750 --> 00:15:49,720
+actual deep copy in this case so now if
+I scroll down here to my code and I hit
+
+978
+00:15:49,720 --> 00:15:49,730
+I scroll down here to my code and I hit
+ 
+
+979
+00:15:49,730 --> 00:15:51,730
+I scroll down here to my code and I hit
+f5 to run my code the first thing you'll
+
+980
+00:15:51,730 --> 00:15:51,740
+f5 to run my code the first thing you'll
+ 
+
+981
+00:15:51,740 --> 00:15:53,590
+f5 to run my code the first thing you'll
+notice is that I actually have China and
+
+982
+00:15:53,590 --> 00:15:53,600
+notice is that I actually have China and
+ 
+
+983
+00:15:53,600 --> 00:15:55,600
+notice is that I actually have China and
+China written here so the first string
+
+984
+00:15:55,600 --> 00:15:55,610
+China written here so the first string
+ 
+
+985
+00:15:55,610 --> 00:15:57,610
+China written here so the first string
+did not change how awesome is that when
+
+986
+00:15:57,610 --> 00:15:57,620
+did not change how awesome is that when
+ 
+
+987
+00:15:57,620 --> 00:15:59,530
+did not change how awesome is that when
+we change the second string it didn't
+
+988
+00:15:59,530 --> 00:15:59,540
+we change the second string it didn't
+ 
+
+989
+00:15:59,540 --> 00:16:00,940
+we change the second string it didn't
+change our first string that's pretty
+
+990
+00:16:00,940 --> 00:16:00,950
+change our first string that's pretty
+ 
+
+991
+00:16:00,950 --> 00:16:03,670
+change our first string that's pretty
+cool and then when I hit enter it
+
+992
+00:16:03,670 --> 00:16:03,680
+cool and then when I hit enter it
+ 
+
+993
+00:16:03,680 --> 00:16:05,260
+cool and then when I hit enter it
+doesn't crash our program terminates
+
+994
+00:16:05,260 --> 00:16:05,270
+doesn't crash our program terminates
+ 
+
+995
+00:16:05,270 --> 00:16:07,510
+doesn't crash our program terminates
+successfully so as we discussed if you
+
+996
+00:16:07,510 --> 00:16:07,520
+successfully so as we discussed if you
+ 
+
+997
+00:16:07,520 --> 00:16:08,890
+successfully so as we discussed if you
+write code like this it will of course
+
+998
+00:16:08,890 --> 00:16:08,900
+write code like this it will of course
+ 
+
+999
+00:16:08,900 --> 00:16:11,140
+write code like this it will of course
+copy your string if you decide to
+
+1000
+00:16:11,140 --> 00:16:11,150
+copy your string if you decide to
+ 
+
+1001
+00:16:11,150 --> 00:16:13,150
+copy your string if you decide to
+actually write a function here that
+
+1002
+00:16:13,150 --> 00:16:13,160
+actually write a function here that
+ 
+
+1003
+00:16:13,160 --> 00:16:14,710
+actually write a function here that
+prints our string so I'll just write
+
+1004
+00:16:14,710 --> 00:16:14,720
+prints our string so I'll just write
+ 
+
+1005
+00:16:14,720 --> 00:16:16,330
+prints our string so I'll just write
+void print string I'll pass in a string
+
+1006
+00:16:16,330 --> 00:16:16,340
+void print string I'll pass in a string
+ 
+
+1007
+00:16:16,340 --> 00:16:18,960
+void print string I'll pass in a string
+like this and I'll just call STD C out
+
+1008
+00:16:18,960 --> 00:16:18,970
+like this and I'll just call STD C out
+ 
+
+1009
+00:16:18,970 --> 00:16:22,630
+like this and I'll just call STD C out
+string and we end up using this function
+
+1010
+00:16:22,630 --> 00:16:22,640
+string and we end up using this function
+ 
+
+1011
+00:16:22,640 --> 00:16:24,880
+string and we end up using this function
+instead of these C outs I'll get rid of
+
+1012
+00:16:24,880 --> 00:16:24,890
+instead of these C outs I'll get rid of
+ 
+
+1013
+00:16:24,890 --> 00:16:26,680
+instead of these C outs I'll get rid of
+these C outs and I'll just call print
+
+1014
+00:16:26,680 --> 00:16:26,690
+these C outs and I'll just call print
+ 
+
+1015
+00:16:26,690 --> 00:16:31,840
+these C outs and I'll just call print
+string string and print string second if
+
+1016
+00:16:31,840 --> 00:16:31,850
+string string and print string second if
+ 
+
+1017
+00:16:31,850 --> 00:16:34,060
+string string and print string second if
+I hit f5 everything appears to work but
+
+1018
+00:16:34,060 --> 00:16:34,070
+I hit f5 everything appears to work but
+ 
+
+1019
+00:16:34,070 --> 00:16:35,620
+I hit f5 everything appears to work but
+what what we're actually doing is we're
+
+1020
+00:16:35,620 --> 00:16:35,630
+what what we're actually doing is we're
+ 
+
+1021
+00:16:35,630 --> 00:16:38,230
+what what we're actually doing is we're
+actually needlessly copying this if we
+
+1022
+00:16:38,230 --> 00:16:38,240
+actually needlessly copying this if we
+ 
+
+1023
+00:16:38,240 --> 00:16:40,150
+actually needlessly copying this if we
+come over here to the copy constructor
+
+1024
+00:16:40,150 --> 00:16:40,160
+come over here to the copy constructor
+ 
+
+1025
+00:16:40,160 --> 00:16:41,929
+come over here to the copy constructor
+and just write a quick message here
+
+1026
+00:16:41,929 --> 00:16:41,939
+and just write a quick message here
+ 
+
+1027
+00:16:41,939 --> 00:16:44,869
+and just write a quick message here
+says copied string it kind of looks like
+
+1028
+00:16:44,869 --> 00:16:44,879
+says copied string it kind of looks like
+ 
+
+1029
+00:16:44,879 --> 00:16:46,909
+says copied string it kind of looks like
+maybe we're doing one copy over here but
+
+1030
+00:16:46,909 --> 00:16:46,919
+maybe we're doing one copy over here but
+ 
+
+1031
+00:16:46,919 --> 00:16:48,229
+maybe we're doing one copy over here but
+we're actually doing two more when we
+
+1032
+00:16:48,229 --> 00:16:48,239
+we're actually doing two more when we
+ 
+
+1033
+00:16:48,239 --> 00:16:49,460
+we're actually doing two more when we
+pass it into this function and we can
+
+1034
+00:16:49,460 --> 00:16:49,470
+pass it into this function and we can
+ 
+
+1035
+00:16:49,470 --> 00:16:51,469
+pass it into this function and we can
+prove it by hitting out five you can see
+
+1036
+00:16:51,469 --> 00:16:51,479
+prove it by hitting out five you can see
+ 
+
+1037
+00:16:51,479 --> 00:16:53,089
+prove it by hitting out five you can see
+that we get three string copies
+
+1038
+00:16:53,089 --> 00:16:53,099
+that we get three string copies
+ 
+
+1039
+00:16:53,099 --> 00:16:55,669
+that we get three string copies
+happening ridiculous because when we
+
+1040
+00:16:55,669 --> 00:16:55,679
+happening ridiculous because when we
+ 
+
+1041
+00:16:55,679 --> 00:16:57,049
+happening ridiculous because when we
+don't want to be doing that what's
+
+1042
+00:16:57,049 --> 00:16:57,059
+don't want to be doing that what's
+ 
+
+1043
+00:16:57,059 --> 00:16:58,759
+don't want to be doing that what's
+actually happening is every time we copy
+
+1044
+00:16:58,759 --> 00:16:58,769
+actually happening is every time we copy
+ 
+
+1045
+00:16:58,769 --> 00:17:01,009
+actually happening is every time we copy
+a string we allocate memory on the heap
+
+1046
+00:17:01,009 --> 00:17:01,019
+a string we allocate memory on the heap
+ 
+
+1047
+00:17:01,019 --> 00:17:03,409
+a string we allocate memory on the heap
+copy all that memory and then at the end
+
+1048
+00:17:03,409 --> 00:17:03,419
+copy all that memory and then at the end
+ 
+
+1049
+00:17:03,419 --> 00:17:05,149
+copy all that memory and then at the end
+of it we free it that's completely
+
+1050
+00:17:05,149 --> 00:17:05,159
+of it we free it that's completely
+ 
+
+1051
+00:17:05,159 --> 00:17:07,189
+of it we free it that's completely
+unnecessary what we actually want to do
+
+1052
+00:17:07,189 --> 00:17:07,199
+unnecessary what we actually want to do
+ 
+
+1053
+00:17:07,199 --> 00:17:08,990
+unnecessary what we actually want to do
+is just pass the existing string into
+
+1054
+00:17:08,990 --> 00:17:09,000
+is just pass the existing string into
+ 
+
+1055
+00:17:09,000 --> 00:17:10,639
+is just pass the existing string into
+this print string function because we
+
+1056
+00:17:10,639 --> 00:17:10,649
+this print string function because we
+ 
+
+1057
+00:17:10,649 --> 00:17:11,960
+this print string function because we
+know that we're not going to need to
+
+1058
+00:17:11,960 --> 00:17:11,970
+know that we're not going to need to
+ 
+
+1059
+00:17:11,970 --> 00:17:13,669
+know that we're not going to need to
+copy we don't need another copy of it we
+
+1060
+00:17:13,669 --> 00:17:13,679
+copy we don't need another copy of it we
+ 
+
+1061
+00:17:13,679 --> 00:17:15,679
+copy we don't need another copy of it we
+can just reference the existing one and
+
+1062
+00:17:15,679 --> 00:17:15,689
+can just reference the existing one and
+ 
+
+1063
+00:17:15,689 --> 00:17:17,059
+can just reference the existing one and
+the way that we do that is by passing
+
+1064
+00:17:17,059 --> 00:17:17,069
+the way that we do that is by passing
+ 
+
+1065
+00:17:17,069 --> 00:17:18,470
+the way that we do that is by passing
+this by reference which we can do by
+
+1066
+00:17:18,470 --> 00:17:18,480
+this by reference which we can do by
+ 
+
+1067
+00:17:18,480 --> 00:17:21,470
+this by reference which we can do by
+staking a reference here now this class
+
+1068
+00:17:21,470 --> 00:17:21,480
+staking a reference here now this class
+ 
+
+1069
+00:17:21,480 --> 00:17:23,449
+staking a reference here now this class
+will actually not be modifying the
+
+1070
+00:17:23,449 --> 00:17:23,459
+will actually not be modifying the
+ 
+
+1071
+00:17:23,459 --> 00:17:25,970
+will actually not be modifying the
+string so what we should do really is
+
+1072
+00:17:25,970 --> 00:17:25,980
+string so what we should do really is
+ 
+
+1073
+00:17:25,980 --> 00:17:27,799
+string so what we should do really is
+market as a Const reference if we don't
+
+1074
+00:17:27,799 --> 00:17:27,809
+market as a Const reference if we don't
+ 
+
+1075
+00:17:27,809 --> 00:17:29,810
+market as a Const reference if we don't
+mark it as Const not only does that mean
+
+1076
+00:17:29,810 --> 00:17:29,820
+mark it as Const not only does that mean
+ 
+
+1077
+00:17:29,820 --> 00:17:31,519
+mark it as Const not only does that mean
+that we can actually edit this so in
+
+1078
+00:17:31,519 --> 00:17:31,529
+that we can actually edit this so in
+ 
+
+1079
+00:17:31,529 --> 00:17:33,860
+that we can actually edit this so in
+other words I can just do write code
+
+1080
+00:17:33,860 --> 00:17:33,870
+other words I can just do write code
+ 
+
+1081
+00:17:33,870 --> 00:17:35,659
+other words I can just do write code
+like this if it wasn't marked as Const
+
+1082
+00:17:35,659 --> 00:17:35,669
+like this if it wasn't marked as Const
+ 
+
+1083
+00:17:35,669 --> 00:17:37,730
+like this if it wasn't marked as Const
+maybe let's make us a character just so
+
+1084
+00:17:37,730 --> 00:17:37,740
+maybe let's make us a character just so
+ 
+
+1085
+00:17:37,740 --> 00:17:40,159
+maybe let's make us a character just so
+it's clearer but because if it if it's
+
+1086
+00:17:40,159 --> 00:17:40,169
+it's clearer but because if it if it's
+ 
+
+1087
+00:17:40,169 --> 00:17:42,230
+it's clearer but because if it if it's
+not constant I can actually edit the
+
+1088
+00:17:42,230 --> 00:17:42,240
+not constant I can actually edit the
+ 
+
+1089
+00:17:42,240 --> 00:17:44,629
+not constant I can actually edit the
+existing string and if it's constant con
+
+1090
+00:17:44,629 --> 00:17:44,639
+existing string and if it's constant con
+ 
+
+1091
+00:17:44,639 --> 00:17:47,180
+existing string and if it's constant con
+means that we can't pass temporary our
+
+1092
+00:17:47,180 --> 00:17:47,190
+means that we can't pass temporary our
+ 
+
+1093
+00:17:47,190 --> 00:17:49,669
+means that we can't pass temporary our
+values into the actual function we'll
+
+1094
+00:17:49,669 --> 00:17:49,679
+values into the actual function we'll
+ 
+
+1095
+00:17:49,679 --> 00:17:51,529
+values into the actual function we'll
+talk about L values and our values soon
+
+1096
+00:17:51,529 --> 00:17:51,539
+talk about L values and our values soon
+ 
+
+1097
+00:17:51,539 --> 00:17:53,899
+talk about L values and our values soon
+I don't even want to get into them now
+
+1098
+00:17:53,899 --> 00:17:53,909
+I don't even want to get into them now
+ 
+
+1099
+00:17:53,909 --> 00:17:55,190
+I don't even want to get into them now
+because it's actually quite a complex
+
+1100
+00:17:55,190 --> 00:17:55,200
+because it's actually quite a complex
+ 
+
+1101
+00:17:55,200 --> 00:17:56,840
+because it's actually quite a complex
+topic and this isn't meant to be about
+
+1102
+00:17:56,840 --> 00:17:56,850
+topic and this isn't meant to be about
+ 
+
+1103
+00:17:56,850 --> 00:17:59,240
+topic and this isn't meant to be about
+that but eventually all I'm saying here
+
+1104
+00:17:59,240 --> 00:17:59,250
+that but eventually all I'm saying here
+ 
+
+1105
+00:17:59,250 --> 00:18:01,009
+that but eventually all I'm saying here
+is that if we change this function
+
+1106
+00:18:01,009 --> 00:18:01,019
+is that if we change this function
+ 
+
+1107
+00:18:01,019 --> 00:18:03,320
+is that if we change this function
+signature to accept a cost reference of
+
+1108
+00:18:03,320 --> 00:18:03,330
+signature to accept a cost reference of
+ 
+
+1109
+00:18:03,330 --> 00:18:05,360
+signature to accept a cost reference of
+a string rather than just a string then
+
+1110
+00:18:05,360 --> 00:18:05,370
+a string rather than just a string then
+ 
+
+1111
+00:18:05,370 --> 00:18:08,360
+a string rather than just a string then
+if I hit f5 you can see we only have one
+
+1112
+00:18:08,360 --> 00:18:08,370
+if I hit f5 you can see we only have one
+ 
+
+1113
+00:18:08,370 --> 00:18:11,210
+if I hit f5 you can see we only have one
+copy and that one copy happens over here
+
+1114
+00:18:11,210 --> 00:18:11,220
+copy and that one copy happens over here
+ 
+
+1115
+00:18:11,220 --> 00:18:13,129
+copy and that one copy happens over here
+when we assign a second with the value
+
+1116
+00:18:13,129 --> 00:18:13,139
+when we assign a second with the value
+ 
+
+1117
+00:18:13,139 --> 00:18:14,509
+when we assign a second with the value
+of string because that actually needs to
+
+1118
+00:18:14,509 --> 00:18:14,519
+of string because that actually needs to
+ 
+
+1119
+00:18:14,519 --> 00:18:16,249
+of string because that actually needs to
+be a copy because we're trying to create
+
+1120
+00:18:16,249 --> 00:18:16,259
+be a copy because we're trying to create
+ 
+
+1121
+00:18:16,259 --> 00:18:18,110
+be a copy because we're trying to create
+two different strings if we suddenly
+
+1122
+00:18:18,110 --> 00:18:18,120
+two different strings if we suddenly
+ 
+
+1123
+00:18:18,120 --> 00:18:20,060
+two different strings if we suddenly
+decide in the print string function oh
+
+1124
+00:18:20,060 --> 00:18:20,070
+decide in the print string function oh
+ 
+
+1125
+00:18:20,070 --> 00:18:22,580
+decide in the print string function oh
+actually I do want to copy guess what we
+
+1126
+00:18:22,580 --> 00:18:22,590
+actually I do want to copy guess what we
+ 
+
+1127
+00:18:22,590 --> 00:18:24,470
+actually I do want to copy guess what we
+can actually do that just by typing in
+
+1128
+00:18:24,470 --> 00:18:24,480
+can actually do that just by typing in
+ 
+
+1129
+00:18:24,480 --> 00:18:26,029
+can actually do that just by typing in
+code like this so what I'm trying to
+
+1130
+00:18:26,029 --> 00:18:26,039
+code like this so what I'm trying to
+ 
+
+1131
+00:18:26,039 --> 00:18:28,310
+code like this so what I'm trying to
+tell you is always pass your objects by
+
+1132
+00:18:28,310 --> 00:18:28,320
+tell you is always pass your objects by
+ 
+
+1133
+00:18:28,320 --> 00:18:30,769
+tell you is always pass your objects by
+constant reference always we'll talk
+
+1134
+00:18:30,769 --> 00:18:30,779
+constant reference always we'll talk
+ 
+
+1135
+00:18:30,779 --> 00:18:32,090
+constant reference always we'll talk
+about really kind of being depth
+
+1136
+00:18:32,090 --> 00:18:32,100
+about really kind of being depth
+ 
+
+1137
+00:18:32,100 --> 00:18:33,440
+about really kind of being depth
+optimization about that in the future
+
+1138
+00:18:33,440 --> 00:18:33,450
+optimization about that in the future
+ 
+
+1139
+00:18:33,450 --> 00:18:36,049
+optimization about that in the future
+because maybe in some situations it
+
+1140
+00:18:36,049 --> 00:18:36,059
+because maybe in some situations it
+ 
+
+1141
+00:18:36,059 --> 00:18:38,600
+because maybe in some situations it
+actually might be faster to copy but for
+
+1142
+00:18:38,600 --> 00:18:38,610
+actually might be faster to copy but for
+ 
+
+1143
+00:18:38,610 --> 00:18:39,889
+actually might be faster to copy but for
+all intents and purposes is better than
+
+1144
+00:18:39,889 --> 00:18:39,899
+all intents and purposes is better than
+ 
+
+1145
+00:18:39,899 --> 00:18:42,649
+all intents and purposes is better than
+a basic level always pass your objects
+
+1146
+00:18:42,649 --> 00:18:42,659
+a basic level always pass your objects
+ 
+
+1147
+00:18:42,659 --> 00:18:44,690
+a basic level always pass your objects
+by constant reference because the
+
+1148
+00:18:44,690 --> 00:18:44,700
+by constant reference because the
+ 
+
+1149
+00:18:44,700 --> 00:18:46,519
+by constant reference because the
+function itself that you're writing you
+
+1150
+00:18:46,519 --> 00:18:46,529
+function itself that you're writing you
+ 
+
+1151
+00:18:46,529 --> 00:18:48,110
+function itself that you're writing you
+can decide if you want to copy in that
+
+1152
+00:18:48,110 --> 00:18:48,120
+can decide if you want to copy in that
+ 
+
+1153
+00:18:48,120 --> 00:18:50,029
+can decide if you want to copy in that
+function but there's no reason for you
+
+1154
+00:18:50,029 --> 00:18:50,039
+function but there's no reason for you
+ 
+
+1155
+00:18:50,039 --> 00:18:51,710
+function but there's no reason for you
+just to be throwing around copies all
+
+1156
+00:18:51,710 --> 00:18:51,720
+just to be throwing around copies all
+ 
+
+1157
+00:18:51,720 --> 00:18:53,580
+just to be throwing around copies all
+the time that's close it program down
+
+1158
+00:18:53,580 --> 00:18:53,590
+the time that's close it program down
+ 
+
+1159
+00:18:53,590 --> 00:18:55,560
+the time that's close it program down
+it's stupid whenever you pass a string
+
+1160
+00:18:55,560 --> 00:18:55,570
+it's stupid whenever you pass a string
+ 
+
+1161
+00:18:55,570 --> 00:18:56,850
+it's stupid whenever you pass a string
+doesn't matter if it's your own string
+
+1162
+00:18:56,850 --> 00:18:56,860
+doesn't matter if it's your own string
+ 
+
+1163
+00:18:56,860 --> 00:18:58,529
+doesn't matter if it's your own string
+class or if this is just STD string
+
+1164
+00:18:58,529 --> 00:18:58,539
+class or if this is just STD string
+ 
+
+1165
+00:18:58,539 --> 00:19:01,560
+class or if this is just STD string
+always always plus that by constants
+
+1166
+00:19:01,560 --> 00:19:01,570
+always always plus that by constants
+ 
+
+1167
+00:19:01,570 --> 00:19:02,880
+always always plus that by constants
+sometime in the future I want to make a
+
+1168
+00:19:02,880 --> 00:19:02,890
+sometime in the future I want to make a
+ 
+
+1169
+00:19:02,890 --> 00:19:04,230
+sometime in the future I want to make a
+quick video that actually talks about
+
+1170
+00:19:04,230 --> 00:19:04,240
+quick video that actually talks about
+ 
+
+1171
+00:19:04,240 --> 00:19:05,789
+quick video that actually talks about
+passing by Const reference and a lot
+
+1172
+00:19:05,789 --> 00:19:05,799
+passing by Const reference and a lot
+ 
+
+1173
+00:19:05,799 --> 00:19:07,980
+passing by Const reference and a lot
+more detail and what advantages it gives
+
+1174
+00:19:07,980 --> 00:19:07,990
+more detail and what advantages it gives
+ 
+
+1175
+00:19:07,990 --> 00:19:10,169
+more detail and what advantages it gives
+us apart from reducing copies but for
+
+1176
+00:19:10,169 --> 00:19:10,179
+us apart from reducing copies but for
+ 
+
+1177
+00:19:10,179 --> 00:19:11,940
+us apart from reducing copies but for
+now just kind of keep that in mind
+
+1178
+00:19:11,940 --> 00:19:11,950
+now just kind of keep that in mind
+ 
+
+1179
+00:19:11,950 --> 00:19:13,169
+now just kind of keep that in mind
+anyway I hope you guys enjoyed this
+
+1180
+00:19:13,169 --> 00:19:13,179
+anyway I hope you guys enjoyed this
+ 
+
+1181
+00:19:13,179 --> 00:19:14,640
+anyway I hope you guys enjoyed this
+video about copying hopefully you guys
+
+1182
+00:19:14,640 --> 00:19:14,650
+video about copying hopefully you guys
+ 
+
+1183
+00:19:14,650 --> 00:19:17,340
+video about copying hopefully you guys
+are experts now on how copying actually
+
+1184
+00:19:17,340 --> 00:19:17,350
+are experts now on how copying actually
+ 
+
+1185
+00:19:17,350 --> 00:19:18,810
+are experts now on how copying actually
+works and say bus blast went to use it
+
+1186
+00:19:18,810 --> 00:19:18,820
+works and say bus blast went to use it
+ 
+
+1187
+00:19:18,820 --> 00:19:20,010
+works and say bus blast went to use it
+how to write a class that supports
+
+1188
+00:19:20,010 --> 00:19:20,020
+how to write a class that supports
+ 
+
+1189
+00:19:20,020 --> 00:19:21,960
+how to write a class that supports
+copying correctly you need to specify
+
+1190
+00:19:21,960 --> 00:19:21,970
+copying correctly you need to specify
+ 
+
+1191
+00:19:21,970 --> 00:19:23,850
+copying correctly you need to specify
+that copy constructor and hopefully you
+
+1192
+00:19:23,850 --> 00:19:23,860
+that copy constructor and hopefully you
+ 
+
+1193
+00:19:23,860 --> 00:19:26,850
+that copy constructor and hopefully you
+also know what copying does now and how
+
+1194
+00:19:26,850 --> 00:19:26,860
+also know what copying does now and how
+ 
+
+1195
+00:19:26,860 --> 00:19:28,560
+also know what copying does now and how
+you can and help preventing it or how
+
+1196
+00:19:28,560 --> 00:19:28,570
+you can and help preventing it or how
+ 
+
+1197
+00:19:28,570 --> 00:19:30,480
+you can and help preventing it or how
+mitigating it can kind of make your
+
+1198
+00:19:30,480 --> 00:19:30,490
+mitigating it can kind of make your
+ 
+
+1199
+00:19:30,490 --> 00:19:31,950
+mitigating it can kind of make your
+program run a lot faster because it's
+
+1200
+00:19:31,950 --> 00:19:31,960
+program run a lot faster because it's
+ 
+
+1201
+00:19:31,960 --> 00:19:34,049
+program run a lot faster because it's
+not just copying data and wasting CPU
+
+1202
+00:19:34,049 --> 00:19:34,059
+not just copying data and wasting CPU
+ 
+
+1203
+00:19:34,059 --> 00:19:36,330
+not just copying data and wasting CPU
+cycles is doing that for absolutely no
+
+1204
+00:19:36,330 --> 00:19:36,340
+cycles is doing that for absolutely no
+ 
+
+1205
+00:19:36,340 --> 00:19:37,860
+cycles is doing that for absolutely no
+reason at all if you guys liked this
+
+1206
+00:19:37,860 --> 00:19:37,870
+reason at all if you guys liked this
+ 
+
+1207
+00:19:37,870 --> 00:19:39,120
+reason at all if you guys liked this
+series and you want to support it and
+
+1208
+00:19:39,120 --> 00:19:39,130
+series and you want to support it and
+ 
+
+1209
+00:19:39,130 --> 00:19:40,440
+series and you want to support it and
+you want to see more episodes and you
+
+1210
+00:19:40,440 --> 00:19:40,450
+you want to see more episodes and you
+ 
+
+1211
+00:19:40,450 --> 00:19:42,570
+you want to see more episodes and you
+can do so by going to patreon.com 4/2
+
+1212
+00:19:42,570 --> 00:19:42,580
+can do so by going to patreon.com 4/2
+ 
+
+1213
+00:19:42,580 --> 00:19:44,549
+can do so by going to patreon.com 4/2
+Cherno you'll be able to see episodes
+
+1214
+00:19:44,549 --> 00:19:44,559
+Cherno you'll be able to see episodes
+ 
+
+1215
+00:19:44,559 --> 00:19:45,840
+Cherno you'll be able to see episodes
+earlier for example i think this video
+
+1216
+00:19:45,840 --> 00:19:45,850
+earlier for example i think this video
+ 
+
+1217
+00:19:45,850 --> 00:19:47,639
+earlier for example i think this video
+is probably gonna get out a day earlier
+
+1218
+00:19:47,639 --> 00:19:47,649
+is probably gonna get out a day earlier
+ 
+
+1219
+00:19:47,649 --> 00:19:49,529
+is probably gonna get out a day earlier
+for patrons than it is for anyone else
+
+1220
+00:19:49,529 --> 00:19:49,539
+for patrons than it is for anyone else
+ 
+
+1221
+00:19:49,539 --> 00:19:51,180
+for patrons than it is for anyone else
+you'll also get access to a private disc
+
+1222
+00:19:51,180 --> 00:19:51,190
+you'll also get access to a private disc
+ 
+
+1223
+00:19:51,190 --> 00:19:52,380
+you'll also get access to a private disc
+or channel where we kind of talk about
+
+1224
+00:19:52,380 --> 00:19:52,390
+or channel where we kind of talk about
+ 
+
+1225
+00:19:52,390 --> 00:19:53,970
+or channel where we kind of talk about
+these episodes and what goes into them
+
+1226
+00:19:53,970 --> 00:19:53,980
+these episodes and what goes into them
+ 
+
+1227
+00:19:53,980 --> 00:19:56,039
+these episodes and what goes into them
+and plan them and all that fun stuff I
+
+1228
+00:19:56,039 --> 00:19:56,049
+and plan them and all that fun stuff I
+ 
+
+1229
+00:19:56,049 --> 00:19:57,360
+and plan them and all that fun stuff I
+think this was kind of the first video
+
+1230
+00:19:57,360 --> 00:19:57,370
+think this was kind of the first video
+ 
+
+1231
+00:19:57,370 --> 00:19:58,799
+think this was kind of the first video
+where we actually wrote quite a bit of
+
+1232
+00:19:58,799 --> 00:19:58,809
+where we actually wrote quite a bit of
+ 
+
+1233
+00:19:58,809 --> 00:20:00,960
+where we actually wrote quite a bit of
+code and got some stuff done so I hope
+
+1234
+00:20:00,960 --> 00:20:00,970
+code and got some stuff done so I hope
+ 
+
+1235
+00:20:00,970 --> 00:20:03,690
+code and got some stuff done so I hope
+you enjoy videos like this because now
+
+1236
+00:20:03,690 --> 00:20:03,700
+you enjoy videos like this because now
+ 
+
+1237
+00:20:03,700 --> 00:20:05,730
+you enjoy videos like this because now
+that we kind of know the basics of C++
+
+1238
+00:20:05,730 --> 00:20:05,740
+that we kind of know the basics of C++
+ 
+
+1239
+00:20:05,740 --> 00:20:08,010
+that we kind of know the basics of C++
+apart from little tips and tricks I
+
+1240
+00:20:08,010 --> 00:20:08,020
+apart from little tips and tricks I
+ 
+
+1241
+00:20:08,020 --> 00:20:09,539
+apart from little tips and tricks I
+guess here and there we're gonna be
+
+1242
+00:20:09,539 --> 00:20:09,549
+guess here and there we're gonna be
+ 
+
+1243
+00:20:09,549 --> 00:20:11,010
+guess here and there we're gonna be
+actually writing code now and especially
+
+1244
+00:20:11,010 --> 00:20:11,020
+actually writing code now and especially
+ 
+
+1245
+00:20:11,020 --> 00:20:13,110
+actually writing code now and especially
+when I start the new series that I'm
+
+1246
+00:20:13,110 --> 00:20:13,120
+when I start the new series that I'm
+ 
+
+1247
+00:20:13,120 --> 00:20:14,159
+when I start the new series that I'm
+going to if you guys haven't seen the
+
+1248
+00:20:14,159 --> 00:20:14,169
+going to if you guys haven't seen the
+ 
+
+1249
+00:20:14,169 --> 00:20:15,899
+going to if you guys haven't seen the
+video I made on the weekend about the
+
+1250
+00:20:15,899 --> 00:20:15,909
+video I made on the weekend about the
+ 
+
+1251
+00:20:15,909 --> 00:20:18,060
+video I made on the weekend about the
+new series I'm starting check that out
+
+1252
+00:20:18,060 --> 00:20:18,070
+new series I'm starting check that out
+ 
+
+1253
+00:20:18,070 --> 00:20:20,760
+new series I'm starting check that out
+for sure link up there but when we start
+
+1254
+00:20:20,760 --> 00:20:20,770
+for sure link up there but when we start
+ 
+
+1255
+00:20:20,770 --> 00:20:22,590
+for sure link up there but when we start
+those series this is what they're gonna
+
+1256
+00:20:22,590 --> 00:20:22,600
+those series this is what they're gonna
+ 
+
+1257
+00:20:22,600 --> 00:20:24,330
+those series this is what they're gonna
+be like so if you're excited about that
+
+1258
+00:20:24,330 --> 00:20:24,340
+be like so if you're excited about that
+ 
+
+1259
+00:20:24,340 --> 00:20:26,700
+be like so if you're excited about that
+hit the like button support this series
+
+1260
+00:20:26,700 --> 00:20:26,710
+hit the like button support this series
+ 
+
+1261
+00:20:26,710 --> 00:20:28,320
+hit the like button support this series
+and not and everything I do on patreon
+
+1262
+00:20:28,320 --> 00:20:28,330
+and not and everything I do on patreon
+ 
+
+1263
+00:20:28,330 --> 00:20:29,580
+and not and everything I do on patreon
+because that's gonna be sure that I can
+
+1264
+00:20:29,580 --> 00:20:29,590
+because that's gonna be sure that I can
+ 
+
+1265
+00:20:29,590 --> 00:20:32,399
+because that's gonna be sure that I can
+make more videos and I will see you guys
+
+1266
+00:20:32,399 --> 00:20:32,409
+make more videos and I will see you guys
+ 
+
+1267
+00:20:32,409 --> 00:20:35,290
+make more videos and I will see you guys
+in the next episode goodbye
+
+1268
+00:20:35,290 --> 00:20:35,300
+in the next episode goodbye
+ 
+
+1269
+00:20:35,300 --> 00:20:47,270
+in the next episode goodbye
+[Music]
+
+1270
+00:20:47,270 --> 00:20:47,280
+
+ 
+
+1271
+00:20:47,280 --> 00:20:50,480
+
+[Music]
+

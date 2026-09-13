@@ -1,0 +1,2965 @@
+1
+00:00:00,080 --> 00:00:01,790
+
+hey what's up guys my name is aeno
+
+2
+00:00:01,790 --> 00:00:01,800
+hey what's up guys my name is aeno
+ 
+
+3
+00:00:01,800 --> 00:00:03,629
+hey what's up guys my name is aeno
+welcome to another video today we're
+
+4
+00:00:03,629 --> 00:00:03,639
+welcome to another video today we're
+ 
+
+5
+00:00:03,639 --> 00:00:04,870
+welcome to another video today we're
+going to be talking about functions in
+
+6
+00:00:04,870 --> 00:00:04,880
+going to be talking about functions in
+ 
+
+7
+00:00:04,880 --> 00:00:08,470
+going to be talking about functions in
+C++ what a midweek video Am I Dreaming
+
+8
+00:00:08,470 --> 00:00:08,480
+C++ what a midweek video Am I Dreaming
+ 
+
+9
+00:00:08,480 --> 00:00:11,190
+C++ what a midweek video Am I Dreaming
+has Cho gone crazy maybe but that's not
+
+10
+00:00:11,190 --> 00:00:11,200
+has Cho gone crazy maybe but that's not
+ 
+
+11
+00:00:11,200 --> 00:00:12,749
+has Cho gone crazy maybe but that's not
+the point I just want to say a huge
+
+12
+00:00:12,749 --> 00:00:12,759
+the point I just want to say a huge
+ 
+
+13
+00:00:12,759 --> 00:00:14,030
+the point I just want to say a huge
+thank you for everyone who's enjoying
+
+14
+00:00:14,030 --> 00:00:14,040
+thank you for everyone who's enjoying
+ 
+
+15
+00:00:14,040 --> 00:00:15,390
+thank you for everyone who's enjoying
+the series I'm really glad you guys are
+
+16
+00:00:15,390 --> 00:00:15,400
+the series I'm really glad you guys are
+ 
+
+17
+00:00:15,400 --> 00:00:17,390
+the series I'm really glad you guys are
+enjoying this cuz it's been a real blast
+
+18
+00:00:17,390 --> 00:00:17,400
+enjoying this cuz it's been a real blast
+ 
+
+19
+00:00:17,400 --> 00:00:18,990
+enjoying this cuz it's been a real blast
+to make if you want to show me how much
+
+20
+00:00:18,990 --> 00:00:19,000
+to make if you want to show me how much
+ 
+
+21
+00:00:19,000 --> 00:00:20,790
+to make if you want to show me how much
+you appreciate my videos you can follow
+
+22
+00:00:20,790 --> 00:00:20,800
+you appreciate my videos you can follow
+ 
+
+23
+00:00:20,800 --> 00:00:22,509
+you appreciate my videos you can follow
+me on Instagram Link in the description
+
+24
+00:00:22,509 --> 00:00:22,519
+me on Instagram Link in the description
+ 
+
+25
+00:00:22,519 --> 00:00:23,910
+me on Instagram Link in the description
+below lately I've been really into
+
+26
+00:00:23,910 --> 00:00:23,920
+below lately I've been really into
+ 
+
+27
+00:00:23,920 --> 00:00:25,269
+below lately I've been really into
+photography and it would mean the world
+
+28
+00:00:25,269 --> 00:00:25,279
+photography and it would mean the world
+ 
+
+29
+00:00:25,279 --> 00:00:26,870
+photography and it would mean the world
+to me if you guys could follow me just
+
+30
+00:00:26,870 --> 00:00:26,880
+to me if you guys could follow me just
+ 
+
+31
+00:00:26,880 --> 00:00:28,990
+to me if you guys could follow me just
+like pause this video right now and just
+
+32
+00:00:28,990 --> 00:00:29,000
+like pause this video right now and just
+ 
+
+33
+00:00:29,000 --> 00:00:31,070
+like pause this video right now and just
+go and follow me anyway back to
+
+34
+00:00:31,070 --> 00:00:31,080
+go and follow me anyway back to
+ 
+
+35
+00:00:31,080 --> 00:00:33,590
+go and follow me anyway back to
+functions so what exactly are functions
+
+36
+00:00:33,590 --> 00:00:33,600
+functions so what exactly are functions
+ 
+
+37
+00:00:33,600 --> 00:00:35,150
+functions so what exactly are functions
+functions are basically blocks of code
+
+38
+00:00:35,150 --> 00:00:35,160
+functions are basically blocks of code
+ 
+
+39
+00:00:35,160 --> 00:00:36,590
+functions are basically blocks of code
+that we write that are designed to
+
+40
+00:00:36,590 --> 00:00:36,600
+that we write that are designed to
+ 
+
+41
+00:00:36,600 --> 00:00:39,030
+that we write that are designed to
+perform a specific task later when we
+
+42
+00:00:39,030 --> 00:00:39,040
+perform a specific task later when we
+ 
+
+43
+00:00:39,040 --> 00:00:41,270
+perform a specific task later when we
+get to classes those blocks are called
+
+44
+00:00:41,270 --> 00:00:41,280
+get to classes those blocks are called
+ 
+
+45
+00:00:41,280 --> 00:00:43,510
+get to classes those blocks are called
+Methods but when I say functions I'm
+
+46
+00:00:43,510 --> 00:00:43,520
+Methods but when I say functions I'm
+ 
+
+47
+00:00:43,520 --> 00:00:45,069
+Methods but when I say functions I'm
+explicitly talking about something that
+
+48
+00:00:45,069 --> 00:00:45,079
+explicitly talking about something that
+ 
+
+49
+00:00:45,079 --> 00:00:47,110
+explicitly talking about something that
+isn't part of a class it's pretty common
+
+50
+00:00:47,110 --> 00:00:47,120
+isn't part of a class it's pretty common
+ 
+
+51
+00:00:47,120 --> 00:00:48,990
+isn't part of a class it's pretty common
+for us to split up functions to prevent
+
+52
+00:00:48,990 --> 00:00:49,000
+for us to split up functions to prevent
+ 
+
+53
+00:00:49,000 --> 00:00:50,590
+for us to split up functions to prevent
+code duplication we don't want to be
+
+54
+00:00:50,590 --> 00:00:50,600
+code duplication we don't want to be
+ 
+
+55
+00:00:50,600 --> 00:00:52,750
+code duplication we don't want to be
+writing the same code multiple times
+
+56
+00:00:52,750 --> 00:00:52,760
+writing the same code multiple times
+ 
+
+57
+00:00:52,760 --> 00:00:54,549
+writing the same code multiple times
+because of course if we did apart from
+
+58
+00:00:54,549 --> 00:00:54,559
+because of course if we did apart from
+ 
+
+59
+00:00:54,559 --> 00:00:56,110
+because of course if we did apart from
+copying and pasting a lot of code and
+
+60
+00:00:56,110 --> 00:00:56,120
+copying and pasting a lot of code and
+ 
+
+61
+00:00:56,120 --> 00:00:59,549
+copying and pasting a lot of code and
+just ending up with this huge mess it
+
+62
+00:00:59,549 --> 00:00:59,559
+just ending up with this huge mess it
+ 
+
+63
+00:00:59,559 --> 00:01:01,670
+just ending up with this huge mess it
+also means that if we decide to change
+
+64
+00:01:01,670 --> 00:01:01,680
+also means that if we decide to change
+ 
+
+65
+00:01:01,680 --> 00:01:03,349
+also means that if we decide to change
+some codee we have to change it in all
+
+66
+00:01:03,349 --> 00:01:03,359
+some codee we have to change it in all
+ 
+
+67
+00:01:03,359 --> 00:01:05,189
+some codee we have to change it in all
+of those places where we pasted the
+
+68
+00:01:05,189 --> 00:01:05,199
+of those places where we pasted the
+ 
+
+69
+00:01:05,199 --> 00:01:06,510
+of those places where we pasted the
+original code and that's just going to
+
+70
+00:01:06,510 --> 00:01:06,520
+original code and that's just going to
+ 
+
+71
+00:01:06,520 --> 00:01:08,469
+original code and that's just going to
+be a disaster to maintain so what we can
+
+72
+00:01:08,469 --> 00:01:08,479
+be a disaster to maintain so what we can
+ 
+
+73
+00:01:08,479 --> 00:01:10,390
+be a disaster to maintain so what we can
+do instead is just write a nice little
+
+74
+00:01:10,390 --> 00:01:10,400
+do instead is just write a nice little
+ 
+
+75
+00:01:10,400 --> 00:01:12,469
+do instead is just write a nice little
+function that does what we want it to
+
+76
+00:01:12,469 --> 00:01:12,479
+function that does what we want it to
+ 
+
+77
+00:01:12,479 --> 00:01:13,789
+function that does what we want it to
+and then we can call it multiple times
+
+78
+00:01:13,789 --> 00:01:13,799
+and then we can call it multiple times
+ 
+
+79
+00:01:13,799 --> 00:01:15,550
+and then we can call it multiple times
+in our code if we need to you can think
+
+80
+00:01:15,550 --> 00:01:15,560
+in our code if we need to you can think
+ 
+
+81
+00:01:15,560 --> 00:01:17,550
+in our code if we need to you can think
+of functions as having an input and an
+
+82
+00:01:17,550 --> 00:01:17,560
+of functions as having an input and an
+ 
+
+83
+00:01:17,560 --> 00:01:19,429
+of functions as having an input and an
+output although they don't necessarily
+
+84
+00:01:19,429 --> 00:01:19,439
+output although they don't necessarily
+ 
+
+85
+00:01:19,439 --> 00:01:21,270
+output although they don't necessarily
+need to we can provide the function with
+
+86
+00:01:21,270 --> 00:01:21,280
+need to we can provide the function with
+ 
+
+87
+00:01:21,280 --> 00:01:23,510
+need to we can provide the function with
+certain parameters and the function can
+
+88
+00:01:23,510 --> 00:01:23,520
+certain parameters and the function can
+ 
+
+89
+00:01:23,520 --> 00:01:25,469
+certain parameters and the function can
+return a value for us so suppose that we
+
+90
+00:01:25,469 --> 00:01:25,479
+return a value for us so suppose that we
+ 
+
+91
+00:01:25,479 --> 00:01:27,670
+return a value for us so suppose that we
+wanted to multiply two numbers together
+
+92
+00:01:27,670 --> 00:01:27,680
+wanted to multiply two numbers together
+ 
+
+93
+00:01:27,680 --> 00:01:29,149
+wanted to multiply two numbers together
+and we wanted to write a function that
+
+94
+00:01:29,149 --> 00:01:29,159
+and we wanted to write a function that
+ 
+
+95
+00:01:29,159 --> 00:01:30,390
+and we wanted to write a function that
+did that so the the first thing I'm
+
+96
+00:01:30,390 --> 00:01:30,400
+did that so the the first thing I'm
+ 
+
+97
+00:01:30,400 --> 00:01:31,710
+did that so the the first thing I'm
+going to write here is something called
+
+98
+00:01:31,710 --> 00:01:31,720
+going to write here is something called
+ 
+
+99
+00:01:31,720 --> 00:01:33,990
+going to write here is something called
+a return value that is this is the type
+
+100
+00:01:33,990 --> 00:01:34,000
+a return value that is this is the type
+ 
+
+101
+00:01:34,000 --> 00:01:35,830
+a return value that is this is the type
+that this function would return since
+
+102
+00:01:35,830 --> 00:01:35,840
+that this function would return since
+ 
+
+103
+00:01:35,840 --> 00:01:37,469
+that this function would return since
+we're multiplying two integers that of
+
+104
+00:01:37,469 --> 00:01:37,479
+we're multiplying two integers that of
+ 
+
+105
+00:01:37,479 --> 00:01:39,429
+we're multiplying two integers that of
+course will result in an integer so our
+
+106
+00:01:39,429 --> 00:01:39,439
+course will result in an integer so our
+ 
+
+107
+00:01:39,439 --> 00:01:41,030
+course will result in an integer so our
+return type is going to be int I'm going
+
+108
+00:01:41,030 --> 00:01:41,040
+return type is going to be int I'm going
+ 
+
+109
+00:01:41,040 --> 00:01:43,190
+return type is going to be int I'm going
+to give the function a name in this case
+
+110
+00:01:43,190 --> 00:01:43,200
+to give the function a name in this case
+ 
+
+111
+00:01:43,200 --> 00:01:45,109
+to give the function a name in this case
+multiply and it's going to take two
+
+112
+00:01:45,109 --> 00:01:45,119
+multiply and it's going to take two
+ 
+
+113
+00:01:45,119 --> 00:01:46,749
+multiply and it's going to take two
+parameters these are actually the
+
+114
+00:01:46,749 --> 00:01:46,759
+parameters these are actually the
+ 
+
+115
+00:01:46,759 --> 00:01:48,069
+parameters these are actually the
+numbers that we want to multiply
+
+116
+00:01:48,069 --> 00:01:48,079
+numbers that we want to multiply
+ 
+
+117
+00:01:48,079 --> 00:01:50,310
+numbers that we want to multiply
+together I'll just call them A and B
+
+118
+00:01:50,310 --> 00:01:50,320
+together I'll just call them A and B
+ 
+
+119
+00:01:50,320 --> 00:01:51,830
+together I'll just call them A and B
+I'll give the function a body and all
+
+120
+00:01:51,830 --> 00:01:51,840
+I'll give the function a body and all
+ 
+
+121
+00:01:51,840 --> 00:01:55,030
+I'll give the function a body and all
+this is going to do is return a * B so
+
+122
+00:01:55,030 --> 00:01:55,040
+this is going to do is return a * B so
+ 
+
+123
+00:01:55,040 --> 00:01:56,270
+this is going to do is return a * B so
+you can see that we've got a function
+
+124
+00:01:56,270 --> 00:01:56,280
+you can see that we've got a function
+ 
+
+125
+00:01:56,280 --> 00:01:57,990
+you can see that we've got a function
+here that takes in two parameters both
+
+126
+00:01:57,990 --> 00:01:58,000
+here that takes in two parameters both
+ 
+
+127
+00:01:58,000 --> 00:02:00,469
+here that takes in two parameters both
+integers and simply returns the product
+
+128
+00:02:00,469 --> 00:02:00,479
+integers and simply returns the product
+ 
+
+129
+00:02:00,479 --> 00:02:01,870
+integers and simply returns the product
+of those two numbers we don't
+
+130
+00:02:01,870 --> 00:02:01,880
+of those two numbers we don't
+ 
+
+131
+00:02:01,880 --> 00:02:03,749
+of those two numbers we don't
+necessarily have to provide parameters
+
+132
+00:02:03,749 --> 00:02:03,759
+necessarily have to provide parameters
+ 
+
+133
+00:02:03,759 --> 00:02:05,630
+necessarily have to provide parameters
+for example I could just not provide any
+
+134
+00:02:05,630 --> 00:02:05,640
+for example I could just not provide any
+ 
+
+135
+00:02:05,640 --> 00:02:08,190
+for example I could just not provide any
+parameters and return something like 5 *
+
+136
+00:02:08,190 --> 00:02:08,200
+parameters and return something like 5 *
+ 
+
+137
+00:02:08,200 --> 00:02:10,389
+parameters and return something like 5 *
+8 this is still a function that returns
+
+138
+00:02:10,389 --> 00:02:10,399
+8 this is still a function that returns
+ 
+
+139
+00:02:10,399 --> 00:02:13,110
+8 this is still a function that returns
+an integer but it is just not taking any
+
+140
+00:02:13,110 --> 00:02:13,120
+an integer but it is just not taking any
+ 
+
+141
+00:02:13,120 --> 00:02:14,790
+an integer but it is just not taking any
+parameters we could also tell the
+
+142
+00:02:14,790 --> 00:02:14,800
+parameters we could also tell the
+ 
+
+143
+00:02:14,800 --> 00:02:16,470
+parameters we could also tell the
+function that we don't want it to return
+
+144
+00:02:16,470 --> 00:02:16,480
+function that we don't want it to return
+ 
+
+145
+00:02:16,480 --> 00:02:18,309
+function that we don't want it to return
+anything and we do that by writing void
+
+146
+00:02:18,309 --> 00:02:18,319
+anything and we do that by writing void
+ 
+
+147
+00:02:18,319 --> 00:02:20,229
+anything and we do that by writing void
+as its return type void of course means
+
+148
+00:02:20,229 --> 00:02:20,239
+as its return type void of course means
+ 
+
+149
+00:02:20,239 --> 00:02:21,589
+as its return type void of course means
+nothing so instead this could do
+
+150
+00:02:21,589 --> 00:02:21,599
+nothing so instead this could do
+ 
+
+151
+00:02:21,599 --> 00:02:25,470
+nothing so instead this could do
+something like log the result to the
+
+152
+00:02:25,470 --> 00:02:25,480
+
+ 
+
+153
+00:02:25,480 --> 00:02:28,030
+
+console so let's go back to our original
+
+154
+00:02:28,030 --> 00:02:28,040
+console so let's go back to our original
+ 
+
+155
+00:02:28,040 --> 00:02:30,390
+console so let's go back to our original
+example here where we had int a and int
+
+156
+00:02:30,390 --> 00:02:30,400
+example here where we had int a and int
+ 
+
+157
+00:02:30,400 --> 00:02:32,990
+example here where we had int a and int
+B and we returned the product of those
+
+158
+00:02:32,990 --> 00:02:33,000
+B and we returned the product of those
+ 
+
+159
+00:02:33,000 --> 00:02:34,869
+B and we returned the product of those
+two integers so how do we call this
+
+160
+00:02:34,869 --> 00:02:34,879
+two integers so how do we call this
+ 
+
+161
+00:02:34,879 --> 00:02:36,910
+two integers so how do we call this
+function well calling a function is
+
+162
+00:02:36,910 --> 00:02:36,920
+function well calling a function is
+ 
+
+163
+00:02:36,920 --> 00:02:38,910
+function well calling a function is
+pretty simple let's go ahead and try and
+
+164
+00:02:38,910 --> 00:02:38,920
+pretty simple let's go ahead and try and
+ 
+
+165
+00:02:38,920 --> 00:02:40,750
+pretty simple let's go ahead and try and
+print the result of a multiplication I'm
+
+166
+00:02:40,750 --> 00:02:40,760
+print the result of a multiplication I'm
+ 
+
+167
+00:02:40,760 --> 00:02:42,309
+print the result of a multiplication I'm
+going to first of all make a variable
+
+168
+00:02:42,309 --> 00:02:42,319
+going to first of all make a variable
+ 
+
+169
+00:02:42,319 --> 00:02:44,270
+going to first of all make a variable
+which holds this result so I'll type in
+
+170
+00:02:44,270 --> 00:02:44,280
+which holds this result so I'll type in
+ 
+
+171
+00:02:44,280 --> 00:02:46,949
+which holds this result so I'll type in
+result equals multiply and we'll go with
+
+172
+00:02:46,949 --> 00:02:46,959
+result equals multiply and we'll go with
+ 
+
+173
+00:02:46,959 --> 00:02:49,190
+result equals multiply and we'll go with
+three and two so what this is going to
+
+174
+00:02:49,190 --> 00:02:49,200
+three and two so what this is going to
+ 
+
+175
+00:02:49,200 --> 00:02:51,430
+three and two so what this is going to
+do is call this multiply function with
+
+176
+00:02:51,430 --> 00:02:51,440
+do is call this multiply function with
+ 
+
+177
+00:02:51,440 --> 00:02:53,589
+do is call this multiply function with
+these two parameters and then store the
+
+178
+00:02:53,589 --> 00:02:53,599
+these two parameters and then store the
+ 
+
+179
+00:02:53,599 --> 00:02:56,309
+these two parameters and then store the
+return value that is this result of a *
+
+180
+00:02:56,309 --> 00:02:56,319
+return value that is this result of a *
+ 
+
+181
+00:02:56,319 --> 00:02:59,030
+return value that is this result of a *
+B in this result integer we can then
+
+182
+00:02:59,030 --> 00:02:59,040
+B in this result integer we can then
+ 
+
+183
+00:02:59,040 --> 00:03:01,229
+B in this result integer we can then
+output that result result to the console
+
+184
+00:03:01,229 --> 00:03:01,239
+output that result result to the console
+ 
+
+185
+00:03:01,239 --> 00:03:03,270
+output that result result to the console
+let's hit F5 to run our program and
+
+186
+00:03:03,270 --> 00:03:03,280
+let's hit F5 to run our program and
+ 
+
+187
+00:03:03,280 --> 00:03:04,630
+let's hit F5 to run our program and
+after it builds you can see that we get
+
+188
+00:03:04,630 --> 00:03:04,640
+after it builds you can see that we get
+ 
+
+189
+00:03:04,640 --> 00:03:07,430
+after it builds you can see that we get
+six which of course is what 3 * 2 is so
+
+190
+00:03:07,430 --> 00:03:07,440
+six which of course is what 3 * 2 is so
+ 
+
+191
+00:03:07,440 --> 00:03:09,110
+six which of course is what 3 * 2 is so
+let's kick this up a not suppose that I
+
+192
+00:03:09,110 --> 00:03:09,120
+let's kick this up a not suppose that I
+ 
+
+193
+00:03:09,120 --> 00:03:10,830
+let's kick this up a not suppose that I
+want to do a bunch of multiplications
+
+194
+00:03:10,830 --> 00:03:10,840
+want to do a bunch of multiplications
+ 
+
+195
+00:03:10,840 --> 00:03:12,670
+want to do a bunch of multiplications
+and I want to log all of them to the
+
+196
+00:03:12,670 --> 00:03:12,680
+and I want to log all of them to the
+ 
+
+197
+00:03:12,680 --> 00:03:14,229
+and I want to log all of them to the
+console if I do something like that
+
+198
+00:03:14,229 --> 00:03:14,239
+console if I do something like that
+ 
+
+199
+00:03:14,239 --> 00:03:15,789
+console if I do something like that
+without a function then it would look
+
+200
+00:03:15,789 --> 00:03:15,799
+without a function then it would look
+ 
+
+201
+00:03:15,799 --> 00:03:17,550
+without a function then it would look
+pretty messy so for example I need to
+
+202
+00:03:17,550 --> 00:03:17,560
+pretty messy so for example I need to
+ 
+
+203
+00:03:17,560 --> 00:03:19,949
+pretty messy so for example I need to
+repeat this code so let's go ahead and
+
+204
+00:03:19,949 --> 00:03:19,959
+repeat this code so let's go ahead and
+ 
+
+205
+00:03:19,959 --> 00:03:21,630
+repeat this code so let's go ahead and
+copy and paste it a few times I'll call
+
+206
+00:03:21,630 --> 00:03:21,640
+copy and paste it a few times I'll call
+ 
+
+207
+00:03:21,640 --> 00:03:24,350
+copy and paste it a few times I'll call
+this something like result 2 result 3
+
+208
+00:03:24,350 --> 00:03:24,360
+this something like result 2 result 3
+ 
+
+209
+00:03:24,360 --> 00:03:29,830
+this something like result 2 result 3
+we'll do 8 * 5 90 * 45 and if I run my
+
+210
+00:03:29,830 --> 00:03:29,840
+we'll do 8 * 5 90 * 45 and if I run my
+ 
+
+211
+00:03:29,840 --> 00:03:32,149
+we'll do 8 * 5 90 * 45 and if I run my
+program and oh hang on a minute why am I
+
+212
+00:03:32,149 --> 00:03:32,159
+program and oh hang on a minute why am I
+ 
+
+213
+00:03:32,159 --> 00:03:33,630
+program and oh hang on a minute why am I
+getting the same value everywhere oh
+
+214
+00:03:33,630 --> 00:03:33,640
+getting the same value everywhere oh
+ 
+
+215
+00:03:33,640 --> 00:03:35,229
+getting the same value everywhere oh
+look when I copied and pasted this code
+
+216
+00:03:35,229 --> 00:03:35,239
+look when I copied and pasted this code
+ 
+
+217
+00:03:35,239 --> 00:03:37,270
+look when I copied and pasted this code
+I forgot to change the variable now you
+
+218
+00:03:37,270 --> 00:03:37,280
+I forgot to change the variable now you
+ 
+
+219
+00:03:37,280 --> 00:03:38,630
+I forgot to change the variable now you
+may have thought that I did that by
+
+220
+00:03:38,630 --> 00:03:38,640
+may have thought that I did that by
+ 
+
+221
+00:03:38,640 --> 00:03:39,830
+may have thought that I did that by
+accident but I actually did it on
+
+222
+00:03:39,830 --> 00:03:39,840
+accident but I actually did it on
+ 
+
+223
+00:03:39,840 --> 00:03:42,270
+accident but I actually did it on
+purpose to prove something this actually
+
+224
+00:03:42,270 --> 00:03:42,280
+purpose to prove something this actually
+ 
+
+225
+00:03:42,280 --> 00:03:45,229
+purpose to prove something this actually
+happens all the time people copy and
+
+226
+00:03:45,229 --> 00:03:45,239
+happens all the time people copy and
+ 
+
+227
+00:03:45,239 --> 00:03:47,509
+happens all the time people copy and
+paste blocks of code and then forget to
+
+228
+00:03:47,509 --> 00:03:47,519
+paste blocks of code and then forget to
+ 
+
+229
+00:03:47,519 --> 00:03:50,070
+paste blocks of code and then forget to
+change one minor detail and in certain
+
+230
+00:03:50,070 --> 00:03:50,080
+change one minor detail and in certain
+ 
+
+231
+00:03:50,080 --> 00:03:51,670
+change one minor detail and in certain
+situations you might actually just run
+
+232
+00:03:51,670 --> 00:03:51,680
+situations you might actually just run
+ 
+
+233
+00:03:51,680 --> 00:03:53,069
+situations you might actually just run
+your program and not even notice that
+
+234
+00:03:53,069 --> 00:03:53,079
+your program and not even notice that
+ 
+
+235
+00:03:53,079 --> 00:03:55,350
+your program and not even notice that
+it's not working correctly Until It
+
+236
+00:03:55,350 --> 00:03:55,360
+it's not working correctly Until It
+ 
+
+237
+00:03:55,360 --> 00:03:57,670
+it's not working correctly Until It
+Breaks somewhere down the line and yet
+
+238
+00:03:57,670 --> 00:03:57,680
+Breaks somewhere down the line and yet
+ 
+
+239
+00:03:57,680 --> 00:03:58,990
+Breaks somewhere down the line and yet
+something like this can actually be
+
+240
+00:03:58,990 --> 00:03:59,000
+something like this can actually be
+ 
+
+241
+00:03:59,000 --> 00:04:00,509
+something like this can actually be
+fixed really easily if you just create a
+
+242
+00:04:00,509 --> 00:04:00,519
+fixed really easily if you just create a
+ 
+
+243
+00:04:00,519 --> 00:04:01,830
+fixed really easily if you just create a
+function for it so let's go ahead and
+
+244
+00:04:01,830 --> 00:04:01,840
+function for it so let's go ahead and
+ 
+
+245
+00:04:01,840 --> 00:04:03,390
+function for it so let's go ahead and
+fix this by actually printing out result
+
+246
+00:04:03,390 --> 00:04:03,400
+fix this by actually printing out result
+ 
+
+247
+00:04:03,400 --> 00:04:05,550
+fix this by actually printing out result
+2 and three if I run this we will get
+
+248
+00:04:05,550 --> 00:04:05,560
+2 and three if I run this we will get
+ 
+
+249
+00:04:05,560 --> 00:04:07,309
+2 and three if I run this we will get
+our correct results which is great
+
+250
+00:04:07,309 --> 00:04:07,319
+our correct results which is great
+ 
+
+251
+00:04:07,319 --> 00:04:08,270
+our correct results which is great
+however you can see that I'm actually
+
+252
+00:04:08,270 --> 00:04:08,280
+however you can see that I'm actually
+ 
+
+253
+00:04:08,280 --> 00:04:10,550
+however you can see that I'm actually
+calling this multiple times and it's
+
+254
+00:04:10,550 --> 00:04:10,560
+calling this multiple times and it's
+ 
+
+255
+00:04:10,560 --> 00:04:12,149
+calling this multiple times and it's
+just a little bit annoying like for
+
+256
+00:04:12,149 --> 00:04:12,159
+just a little bit annoying like for
+ 
+
+257
+00:04:12,159 --> 00:04:14,069
+just a little bit annoying like for
+example further down the road if I
+
+258
+00:04:14,069 --> 00:04:14,079
+example further down the road if I
+ 
+
+259
+00:04:14,079 --> 00:04:16,349
+example further down the road if I
+decide to replace this multiply function
+
+260
+00:04:16,349 --> 00:04:16,359
+decide to replace this multiply function
+ 
+
+261
+00:04:16,359 --> 00:04:19,390
+decide to replace this multiply function
+by simply doing something like 8 * 5
+
+262
+00:04:19,390 --> 00:04:19,400
+by simply doing something like 8 * 5
+ 
+
+263
+00:04:19,400 --> 00:04:20,830
+by simply doing something like 8 * 5
+look at this I have to replace it in
+
+264
+00:04:20,830 --> 00:04:20,840
+look at this I have to replace it in
+ 
+
+265
+00:04:20,840 --> 00:04:25,430
+look at this I have to replace it in
+every single place 3 * 2 90 * 45 that's
+
+266
+00:04:25,430 --> 00:04:25,440
+every single place 3 * 2 90 * 45 that's
+ 
+
+267
+00:04:25,440 --> 00:04:26,749
+every single place 3 * 2 90 * 45 that's
+I don't want to have to deal with that
+
+268
+00:04:26,749 --> 00:04:26,759
+I don't want to have to deal with that
+ 
+
+269
+00:04:26,759 --> 00:04:28,510
+I don't want to have to deal with that
+so this multiplication and then logging
+
+270
+00:04:28,510 --> 00:04:28,520
+so this multiplication and then logging
+ 
+
+271
+00:04:28,520 --> 00:04:30,390
+so this multiplication and then logging
+the result let's go ahead and make a
+
+272
+00:04:30,390 --> 00:04:30,400
+the result let's go ahead and make a
+ 
+
+273
+00:04:30,400 --> 00:04:32,189
+the result let's go ahead and make a
+function for that it'll be void because
+
+274
+00:04:32,189 --> 00:04:32,199
+function for that it'll be void because
+ 
+
+275
+00:04:32,199 --> 00:04:33,629
+function for that it'll be void because
+it's not really going to return anything
+
+276
+00:04:33,629 --> 00:04:33,639
+it's not really going to return anything
+ 
+
+277
+00:04:33,639 --> 00:04:35,670
+it's not really going to return anything
+to us it's just going to perform what we
+
+278
+00:04:35,670 --> 00:04:35,680
+to us it's just going to perform what we
+ 
+
+279
+00:04:35,680 --> 00:04:37,230
+to us it's just going to perform what we
+ask it to do we'll call this something
+
+280
+00:04:37,230 --> 00:04:37,240
+ask it to do we'll call this something
+ 
+
+281
+00:04:37,240 --> 00:04:39,550
+ask it to do we'll call this something
+like multiply and log and then let's
+
+282
+00:04:39,550 --> 00:04:39,560
+like multiply and log and then let's
+ 
+
+283
+00:04:39,560 --> 00:04:40,950
+like multiply and log and then let's
+take a look at which parameters we might
+
+284
+00:04:40,950 --> 00:04:40,960
+take a look at which parameters we might
+ 
+
+285
+00:04:40,960 --> 00:04:43,510
+take a look at which parameters we might
+want so what actually changes between
+
+286
+00:04:43,510 --> 00:04:43,520
+want so what actually changes between
+ 
+
+287
+00:04:43,520 --> 00:04:45,430
+want so what actually changes between
+these three blocks of code the values
+
+288
+00:04:45,430 --> 00:04:45,440
+these three blocks of code the values
+ 
+
+289
+00:04:45,440 --> 00:04:47,950
+these three blocks of code the values
+that we actually multiply that's it so
+
+290
+00:04:47,950 --> 00:04:47,960
+that we actually multiply that's it so
+ 
+
+291
+00:04:47,960 --> 00:04:49,870
+that we actually multiply that's it so
+those become the parameters for our
+
+292
+00:04:49,870 --> 00:04:49,880
+those become the parameters for our
+ 
+
+293
+00:04:49,880 --> 00:04:52,310
+those become the parameters for our
+function what actually changes between
+
+294
+00:04:52,310 --> 00:04:52,320
+function what actually changes between
+ 
+
+295
+00:04:52,320 --> 00:04:53,790
+function what actually changes between
+these blocks of code what needs to be
+
+296
+00:04:53,790 --> 00:04:53,800
+these blocks of code what needs to be
+ 
+
+297
+00:04:53,800 --> 00:04:55,350
+these blocks of code what needs to be
+specified for this function to perform
+
+298
+00:04:55,350 --> 00:04:55,360
+specified for this function to perform
+ 
+
+299
+00:04:55,360 --> 00:04:57,189
+specified for this function to perform
+its job let's go ahead and write in our
+
+300
+00:04:57,189 --> 00:04:57,199
+its job let's go ahead and write in our
+ 
+
+301
+00:04:57,199 --> 00:04:58,430
+its job let's go ahead and write in our
+parameters so we're going to be taking
+
+302
+00:04:58,430 --> 00:04:58,440
+parameters so we're going to be taking
+ 
+
+303
+00:04:58,440 --> 00:05:00,350
+parameters so we're going to be taking
+in two integers A and B you can really
+
+304
+00:05:00,350 --> 00:05:00,360
+in two integers A and B you can really
+ 
+
+305
+00:05:00,360 --> 00:05:01,830
+in two integers A and B you can really
+call them anything you want but A and B
+
+306
+00:05:01,830 --> 00:05:01,840
+call them anything you want but A and B
+ 
+
+307
+00:05:01,840 --> 00:05:03,310
+call them anything you want but A and B
+seems sensible we'll copy and paste one
+
+308
+00:05:03,310 --> 00:05:03,320
+seems sensible we'll copy and paste one
+ 
+
+309
+00:05:03,320 --> 00:05:05,110
+seems sensible we'll copy and paste one
+of these blocks into this function this
+
+310
+00:05:05,110 --> 00:05:05,120
+of these blocks into this function this
+ 
+
+311
+00:05:05,120 --> 00:05:06,510
+of these blocks into this function this
+looks pretty good of course I'll replace
+
+312
+00:05:06,510 --> 00:05:06,520
+looks pretty good of course I'll replace
+ 
+
+313
+00:05:06,520 --> 00:05:08,230
+looks pretty good of course I'll replace
+three and two with our parameters so
+
+314
+00:05:08,230 --> 00:05:08,240
+three and two with our parameters so
+ 
+
+315
+00:05:08,240 --> 00:05:09,430
+three and two with our parameters so
+that we're using the parameters we
+
+316
+00:05:09,430 --> 00:05:09,440
+that we're using the parameters we
+ 
+
+317
+00:05:09,440 --> 00:05:11,430
+that we're using the parameters we
+specify into this function to perform
+
+318
+00:05:11,430 --> 00:05:11,440
+specify into this function to perform
+ 
+
+319
+00:05:11,440 --> 00:05:13,070
+specify into this function to perform
+the multiplication against which will
+
+320
+00:05:13,070 --> 00:05:13,080
+the multiplication against which will
+ 
+
+321
+00:05:13,080 --> 00:05:15,070
+the multiplication against which will
+cause a * B to get multiplied here and
+
+322
+00:05:15,070 --> 00:05:15,080
+cause a * B to get multiplied here and
+ 
+
+323
+00:05:15,080 --> 00:05:16,070
+cause a * B to get multiplied here and
+then we're going to be logging our
+
+324
+00:05:16,070 --> 00:05:16,080
+then we're going to be logging our
+ 
+
+325
+00:05:16,080 --> 00:05:18,110
+then we're going to be logging our
+result to the console so now instead of
+
+326
+00:05:18,110 --> 00:05:18,120
+result to the console so now instead of
+ 
+
+327
+00:05:18,120 --> 00:05:20,990
+result to the console so now instead of
+doing this so many times all I have to
+
+328
+00:05:20,990 --> 00:05:21,000
+doing this so many times all I have to
+ 
+
+329
+00:05:21,000 --> 00:05:24,909
+doing this so many times all I have to
+do is simply call multiply and log with
+
+330
+00:05:24,909 --> 00:05:24,919
+do is simply call multiply and log with
+ 
+
+331
+00:05:24,919 --> 00:05:27,430
+do is simply call multiply and log with
+my parameters so 3 and two for example
+
+332
+00:05:27,430 --> 00:05:27,440
+my parameters so 3 and two for example
+ 
+
+333
+00:05:27,440 --> 00:05:31,070
+my parameters so 3 and two for example
+and then we have 8 and five
+
+334
+00:05:31,070 --> 00:05:31,080
+and then we have 8 and five
+ 
+
+335
+00:05:31,080 --> 00:05:34,790
+and then we have 8 and five
+and then we have 90 and
+
+336
+00:05:34,790 --> 00:05:34,800
+and then we have 90 and
+ 
+
+337
+00:05:34,800 --> 00:05:37,309
+and then we have 90 and
+45 and that's it look at that I can get
+
+338
+00:05:37,309 --> 00:05:37,319
+45 and that's it look at that I can get
+ 
+
+339
+00:05:37,319 --> 00:05:38,909
+45 and that's it look at that I can get
+rid of all of this code and this is what
+
+340
+00:05:38,909 --> 00:05:38,919
+rid of all of this code and this is what
+ 
+
+341
+00:05:38,919 --> 00:05:41,189
+rid of all of this code and this is what
+we end up with a nice clean and easy to
+
+342
+00:05:41,189 --> 00:05:41,199
+we end up with a nice clean and easy to
+ 
+
+343
+00:05:41,199 --> 00:05:44,070
+we end up with a nice clean and easy to
+read program if I launch my program you
+
+344
+00:05:44,070 --> 00:05:44,080
+read program if I launch my program you
+ 
+
+345
+00:05:44,080 --> 00:05:46,029
+read program if I launch my program you
+can see that we get the correct values
+
+346
+00:05:46,029 --> 00:05:46,039
+can see that we get the correct values
+ 
+
+347
+00:05:46,039 --> 00:05:48,110
+can see that we get the correct values
+here so this is a pretty simple example
+
+348
+00:05:48,110 --> 00:05:48,120
+here so this is a pretty simple example
+ 
+
+349
+00:05:48,120 --> 00:05:49,150
+here so this is a pretty simple example
+but I think it's effective in
+
+350
+00:05:49,150 --> 00:05:49,160
+but I think it's effective in
+ 
+
+351
+00:05:49,160 --> 00:05:50,629
+but I think it's effective in
+demonstrating that functions are really
+
+352
+00:05:50,629 --> 00:05:50,639
+demonstrating that functions are really
+ 
+
+353
+00:05:50,639 --> 00:05:52,270
+demonstrating that functions are really
+really important you should be aiming to
+
+354
+00:05:52,270 --> 00:05:52,280
+really important you should be aiming to
+ 
+
+355
+00:05:52,280 --> 00:05:54,070
+really important you should be aiming to
+split up your code into many many
+
+356
+00:05:54,070 --> 00:05:54,080
+split up your code into many many
+ 
+
+357
+00:05:54,080 --> 00:05:55,670
+split up your code into many many
+functions however one thing that I want
+
+358
+00:05:55,670 --> 00:05:55,680
+functions however one thing that I want
+ 
+
+359
+00:05:55,680 --> 00:05:57,350
+functions however one thing that I want
+to stress is don't go overboard you
+
+360
+00:05:57,350 --> 00:05:57,360
+to stress is don't go overboard you
+ 
+
+361
+00:05:57,360 --> 00:05:59,189
+to stress is don't go overboard you
+don't need a function for absolutely
+
+362
+00:05:59,189 --> 00:05:59,199
+don't need a function for absolutely
+ 
+
+363
+00:05:59,199 --> 00:06:01,590
+don't need a function for absolutely
+every line of code that's not going to
+
+364
+00:06:01,590 --> 00:06:01,600
+every line of code that's not going to
+ 
+
+365
+00:06:01,600 --> 00:06:03,430
+every line of code that's not going to
+be good for anyone it's going to be hard
+
+366
+00:06:03,430 --> 00:06:03,440
+be good for anyone it's going to be hard
+ 
+
+367
+00:06:03,440 --> 00:06:04,950
+be good for anyone it's going to be hard
+to maintain your code's going to look
+
+368
+00:06:04,950 --> 00:06:04,960
+to maintain your code's going to look
+ 
+
+369
+00:06:04,960 --> 00:06:06,670
+to maintain your code's going to look
+messy and cluttered and it's actually
+
+370
+00:06:06,670 --> 00:06:06,680
+messy and cluttered and it's actually
+ 
+
+371
+00:06:06,680 --> 00:06:08,510
+messy and cluttered and it's actually
+going to make your program slower every
+
+372
+00:06:08,510 --> 00:06:08,520
+going to make your program slower every
+ 
+
+373
+00:06:08,520 --> 00:06:10,710
+going to make your program slower every
+time we call a function asterisk the
+
+374
+00:06:10,710 --> 00:06:10,720
+time we call a function asterisk the
+ 
+
+375
+00:06:10,720 --> 00:06:12,710
+time we call a function asterisk the
+compiler generates a call instruction
+
+376
+00:06:12,710 --> 00:06:12,720
+compiler generates a call instruction
+ 
+
+377
+00:06:12,720 --> 00:06:14,909
+compiler generates a call instruction
+what this basically means is that in a
+
+378
+00:06:14,909 --> 00:06:14,919
+what this basically means is that in a
+ 
+
+379
+00:06:14,919 --> 00:06:16,870
+what this basically means is that in a
+running program in order for us to call
+
+380
+00:06:16,870 --> 00:06:16,880
+running program in order for us to call
+ 
+
+381
+00:06:16,880 --> 00:06:19,390
+running program in order for us to call
+a function we need to create the entire
+
+382
+00:06:19,390 --> 00:06:19,400
+a function we need to create the entire
+ 
+
+383
+00:06:19,400 --> 00:06:20,830
+a function we need to create the entire
+stack frame for the function meaning we
+
+384
+00:06:20,830 --> 00:06:20,840
+stack frame for the function meaning we
+ 
+
+385
+00:06:20,840 --> 00:06:22,469
+stack frame for the function meaning we
+have to push things like the parameters
+
+386
+00:06:22,469 --> 00:06:22,479
+have to push things like the parameters
+ 
+
+387
+00:06:22,479 --> 00:06:23,990
+have to push things like the parameters
+onto the stack we have to also push
+
+388
+00:06:23,990 --> 00:06:24,000
+onto the stack we have to also push
+ 
+
+389
+00:06:24,000 --> 00:06:25,309
+onto the stack we have to also push
+something called a return address onto
+
+390
+00:06:25,309 --> 00:06:25,319
+something called a return address onto
+ 
+
+391
+00:06:25,319 --> 00:06:26,990
+something called a return address onto
+the stack and then what we do is we
+
+392
+00:06:26,990 --> 00:06:27,000
+the stack and then what we do is we
+ 
+
+393
+00:06:27,000 --> 00:06:29,070
+the stack and then what we do is we
+actually jump to a different part of our
+
+394
+00:06:29,070 --> 00:06:29,080
+actually jump to a different part of our
+ 
+
+395
+00:06:29,080 --> 00:06:31,230
+actually jump to a different part of our
+binary in order to start executing the
+
+396
+00:06:31,230 --> 00:06:31,240
+binary in order to start executing the
+ 
+
+397
+00:06:31,240 --> 00:06:33,309
+binary in order to start executing the
+instructions from our function and that
+
+398
+00:06:33,309 --> 00:06:33,319
+instructions from our function and that
+ 
+
+399
+00:06:33,319 --> 00:06:35,070
+instructions from our function and that
+return value that we push we need to get
+
+400
+00:06:35,070 --> 00:06:35,080
+return value that we push we need to get
+ 
+
+401
+00:06:35,080 --> 00:06:36,629
+return value that we push we need to get
+back to where we originally were before
+
+402
+00:06:36,629 --> 00:06:36,639
+back to where we originally were before
+ 
+
+403
+00:06:36,639 --> 00:06:37,950
+back to where we originally were before
+we called the function so there's this
+
+404
+00:06:37,950 --> 00:06:37,960
+we called the function so there's this
+ 
+
+405
+00:06:37,960 --> 00:06:39,670
+we called the function so there's this
+whole like jumping around memory in
+
+406
+00:06:39,670 --> 00:06:39,680
+whole like jumping around memory in
+ 
+
+407
+00:06:39,680 --> 00:06:41,270
+whole like jumping around memory in
+order to execute function instructions
+
+408
+00:06:41,270 --> 00:06:41,280
+order to execute function instructions
+ 
+
+409
+00:06:41,280 --> 00:06:43,390
+order to execute function instructions
+and all of that takes time so it slows
+
+410
+00:06:43,390 --> 00:06:43,400
+and all of that takes time so it slows
+ 
+
+411
+00:06:43,400 --> 00:06:44,870
+and all of that takes time so it slows
+down our program now the reason I said
+
+412
+00:06:44,870 --> 00:06:44,880
+down our program now the reason I said
+ 
+
+413
+00:06:44,880 --> 00:06:46,830
+down our program now the reason I said
+asterisk earlier was because this is all
+
+414
+00:06:46,830 --> 00:06:46,840
+asterisk earlier was because this is all
+ 
+
+415
+00:06:46,840 --> 00:06:48,309
+asterisk earlier was because this is all
+assuming that the compiler decides to
+
+416
+00:06:48,309 --> 00:06:48,319
+assuming that the compiler decides to
+ 
+
+417
+00:06:48,319 --> 00:06:50,110
+assuming that the compiler decides to
+keep our function as an actual function
+
+418
+00:06:50,110 --> 00:06:50,120
+keep our function as an actual function
+ 
+
+419
+00:06:50,120 --> 00:06:51,550
+keep our function as an actual function
+and doesn't inline it we're going to
+
+420
+00:06:51,550 --> 00:06:51,560
+and doesn't inline it we're going to
+ 
+
+421
+00:06:51,560 --> 00:06:53,189
+and doesn't inline it we're going to
+talk in- depth about inlining in a
+
+422
+00:06:53,189 --> 00:06:53,199
+talk in- depth about inlining in a
+ 
+
+423
+00:06:53,199 --> 00:06:54,670
+talk in- depth about inlining in a
+future video so the reason I'm saying
+
+424
+00:06:54,670 --> 00:06:54,680
+future video so the reason I'm saying
+ 
+
+425
+00:06:54,680 --> 00:06:56,189
+future video so the reason I'm saying
+all this is because you don't want to
+
+426
+00:06:56,189 --> 00:06:56,199
+all this is because you don't want to
+ 
+
+427
+00:06:56,199 --> 00:06:57,670
+all this is because you don't want to
+just go ahead and create a function for
+
+428
+00:06:57,670 --> 00:06:57,680
+just go ahead and create a function for
+ 
+
+429
+00:06:57,680 --> 00:06:59,150
+just go ahead and create a function for
+absolutely every line of code don't be
+
+430
+00:06:59,150 --> 00:06:59,160
+absolutely every line of code don't be
+ 
+
+431
+00:06:59,160 --> 00:07:00,749
+absolutely every line of code don't be
+ridiculous about it it takes a little
+
+432
+00:07:00,749 --> 00:07:00,759
+ridiculous about it it takes a little
+ 
+
+433
+00:07:00,759 --> 00:07:02,270
+ridiculous about it it takes a little
+bit of experience to realize what you
+
+434
+00:07:02,270 --> 00:07:02,280
+bit of experience to realize what you
+ 
+
+435
+00:07:02,280 --> 00:07:04,189
+bit of experience to realize what you
+need a function for but basically if you
+
+436
+00:07:04,189 --> 00:07:04,199
+need a function for but basically if you
+ 
+
+437
+00:07:04,199 --> 00:07:06,350
+need a function for but basically if you
+see yourself doing a common task
+
+438
+00:07:06,350 --> 00:07:06,360
+see yourself doing a common task
+ 
+
+439
+00:07:06,360 --> 00:07:08,350
+see yourself doing a common task
+multiple times create a function for
+
+440
+00:07:08,350 --> 00:07:08,360
+multiple times create a function for
+ 
+
+441
+00:07:08,360 --> 00:07:10,629
+multiple times create a function for
+that the primary point of functions is
+
+442
+00:07:10,629 --> 00:07:10,639
+that the primary point of functions is
+ 
+
+443
+00:07:10,639 --> 00:07:13,189
+that the primary point of functions is
+to prevent code duplication we don't
+
+444
+00:07:13,189 --> 00:07:13,199
+to prevent code duplication we don't
+ 
+
+445
+00:07:13,199 --> 00:07:15,990
+to prevent code duplication we don't
+want to just be copying and pasting code
+
+446
+00:07:15,990 --> 00:07:16,000
+want to just be copying and pasting code
+ 
+
+447
+00:07:16,000 --> 00:07:17,830
+want to just be copying and pasting code
+everywhere now if we go back to our code
+
+448
+00:07:17,830 --> 00:07:17,840
+everywhere now if we go back to our code
+ 
+
+449
+00:07:17,840 --> 00:07:19,390
+everywhere now if we go back to our code
+for just a second you might have noticed
+
+450
+00:07:19,390 --> 00:07:19,400
+for just a second you might have noticed
+ 
+
+451
+00:07:19,400 --> 00:07:20,830
+for just a second you might have noticed
+something a little bit odd about this
+
+452
+00:07:20,830 --> 00:07:20,840
+something a little bit odd about this
+ 
+
+453
+00:07:20,840 --> 00:07:23,110
+something a little bit odd about this
+main function it says that it return
+
+454
+00:07:23,110 --> 00:07:23,120
+main function it says that it return
+ 
+
+455
+00:07:23,120 --> 00:07:25,629
+main function it says that it return
+value is int however the return keyword
+
+456
+00:07:25,629 --> 00:07:25,639
+value is int however the return keyword
+ 
+
+457
+00:07:25,639 --> 00:07:28,589
+value is int however the return keyword
+is nowhere to be found and I'm obviously
+
+458
+00:07:28,589 --> 00:07:28,599
+is nowhere to be found and I'm obviously
+ 
+
+459
+00:07:28,599 --> 00:07:31,390
+is nowhere to be found and I'm obviously
+not returning anything so if I specify a
+
+460
+00:07:31,390 --> 00:07:31,400
+not returning anything so if I specify a
+ 
+
+461
+00:07:31,400 --> 00:07:33,230
+not returning anything so if I specify a
+return value do I actually need to
+
+462
+00:07:33,230 --> 00:07:33,240
+return value do I actually need to
+ 
+
+463
+00:07:33,240 --> 00:07:34,950
+return value do I actually need to
+return something let's go ahead and try
+
+464
+00:07:34,950 --> 00:07:34,960
+return something let's go ahead and try
+ 
+
+465
+00:07:34,960 --> 00:07:36,430
+return something let's go ahead and try
+and just do nothing in this multiply
+
+466
+00:07:36,430 --> 00:07:36,440
+and just do nothing in this multiply
+ 
+
+467
+00:07:36,440 --> 00:07:38,670
+and just do nothing in this multiply
+function I'll hitr F7 to compile my file
+
+468
+00:07:38,670 --> 00:07:38,680
+function I'll hitr F7 to compile my file
+ 
+
+469
+00:07:38,680 --> 00:07:39,830
+function I'll hitr F7 to compile my file
+look at this I'm getting an error
+
+470
+00:07:39,830 --> 00:07:39,840
+look at this I'm getting an error
+ 
+
+471
+00:07:39,840 --> 00:07:41,430
+look at this I'm getting an error
+telling me that multiply must return a
+
+472
+00:07:41,430 --> 00:07:41,440
+telling me that multiply must return a
+ 
+
+473
+00:07:41,440 --> 00:07:43,589
+telling me that multiply must return a
+value so do functions with a return type
+
+474
+00:07:43,589 --> 00:07:43,599
+value so do functions with a return type
+ 
+
+475
+00:07:43,599 --> 00:07:45,189
+value so do functions with a return type
+actually need to return values the
+
+476
+00:07:45,189 --> 00:07:45,199
+actually need to return values the
+ 
+
+477
+00:07:45,199 --> 00:07:47,990
+actually need to return values the
+answer is yes they do the main function
+
+478
+00:07:47,990 --> 00:07:48,000
+answer is yes they do the main function
+ 
+
+479
+00:07:48,000 --> 00:07:50,309
+answer is yes they do the main function
+is actually a special function the main
+
+480
+00:07:50,309 --> 00:07:50,319
+is actually a special function the main
+ 
+
+481
+00:07:50,319 --> 00:07:52,589
+is actually a special function the main
+function and only the main function is
+
+482
+00:07:52,589 --> 00:07:52,599
+function and only the main function is
+ 
+
+483
+00:07:52,599 --> 00:07:55,110
+function and only the main function is
+exempt from this kind of must return a
+
+484
+00:07:55,110 --> 00:07:55,120
+exempt from this kind of must return a
+ 
+
+485
+00:07:55,120 --> 00:07:56,869
+exempt from this kind of must return a
+value if you don't specify a return
+
+486
+00:07:56,869 --> 00:07:56,879
+value if you don't specify a return
+ 
+
+487
+00:07:56,879 --> 00:07:58,790
+value if you don't specify a return
+value it will automatically assume that
+
+488
+00:07:58,790 --> 00:07:58,800
+value it will automatically assume that
+ 
+
+489
+00:07:58,800 --> 00:08:00,749
+value it will automatically assume that
+you're returning so it will be identical
+
+490
+00:08:00,749 --> 00:08:00,759
+you're returning so it will be identical
+ 
+
+491
+00:08:00,759 --> 00:08:02,589
+you're returning so it will be identical
+to if I had written this this is just a
+
+492
+00:08:02,589 --> 00:08:02,599
+to if I had written this this is just a
+ 
+
+493
+00:08:02,599 --> 00:08:04,749
+to if I had written this this is just a
+feature of modern C and C++ versions
+
+494
+00:08:04,749 --> 00:08:04,759
+feature of modern C and C++ versions
+ 
+
+495
+00:08:04,759 --> 00:08:06,629
+feature of modern C and C++ versions
+that lets you just keep your code a
+
+496
+00:08:06,629 --> 00:08:06,639
+that lets you just keep your code a
+ 
+
+497
+00:08:06,639 --> 00:08:08,550
+that lets you just keep your code a
+little bit cleaner and just for fun know
+
+498
+00:08:08,550 --> 00:08:08,560
+little bit cleaner and just for fun know
+ 
+
+499
+00:08:08,560 --> 00:08:10,510
+little bit cleaner and just for fun know
+that this must return a value thing is
+
+500
+00:08:10,510 --> 00:08:10,520
+that this must return a value thing is
+ 
+
+501
+00:08:10,520 --> 00:08:12,469
+that this must return a value thing is
+actually something that only applies in
+
+502
+00:08:12,469 --> 00:08:12,479
+actually something that only applies in
+ 
+
+503
+00:08:12,479 --> 00:08:14,309
+actually something that only applies in
+debug mode if we compile in release mode
+
+504
+00:08:14,309 --> 00:08:14,319
+debug mode if we compile in release mode
+ 
+
+505
+00:08:14,319 --> 00:08:15,830
+debug mode if we compile in release mode
+here you'll see that we actually don't
+
+506
+00:08:15,830 --> 00:08:15,840
+here you'll see that we actually don't
+ 
+
+507
+00:08:15,840 --> 00:08:17,510
+here you'll see that we actually don't
+get an error that's not to say that what
+
+508
+00:08:17,510 --> 00:08:17,520
+get an error that's not to say that what
+ 
+
+509
+00:08:17,520 --> 00:08:19,430
+get an error that's not to say that what
+we're doing here is correct because if
+
+510
+00:08:19,430 --> 00:08:19,440
+we're doing here is correct because if
+ 
+
+511
+00:08:19,440 --> 00:08:21,550
+we're doing here is correct because if
+we actually do capture that return value
+
+512
+00:08:21,550 --> 00:08:21,560
+we actually do capture that return value
+ 
+
+513
+00:08:21,560 --> 00:08:22,790
+we actually do capture that return value
+and decide to do something we will get
+
+514
+00:08:22,790 --> 00:08:22,800
+and decide to do something we will get
+ 
+
+515
+00:08:22,800 --> 00:08:24,430
+and decide to do something we will get
+undefined Behavior it's just that the
+
+516
+00:08:24,430 --> 00:08:24,440
+undefined Behavior it's just that the
+ 
+
+517
+00:08:24,440 --> 00:08:26,309
+undefined Behavior it's just that the
+compiler won't actually yell at us
+
+518
+00:08:26,309 --> 00:08:26,319
+compiler won't actually yell at us
+ 
+
+519
+00:08:26,319 --> 00:08:28,589
+compiler won't actually yell at us
+however in debug mode with certain debug
+
+520
+00:08:28,589 --> 00:08:28,599
+however in debug mode with certain debug
+ 
+
+521
+00:08:28,599 --> 00:08:31,710
+however in debug mode with certain debug
+compilation Flags enabled we will get an
+
+522
+00:08:31,710 --> 00:08:31,720
+compilation Flags enabled we will get an
+ 
+
+523
+00:08:31,720 --> 00:08:33,670
+compilation Flags enabled we will get an
+error which will just help us debug our
+
+524
+00:08:33,670 --> 00:08:33,680
+error which will just help us debug our
+ 
+
+525
+00:08:33,680 --> 00:08:35,550
+error which will just help us debug our
+code because at no point should you be
+
+526
+00:08:35,550 --> 00:08:35,560
+code because at no point should you be
+ 
+
+527
+00:08:35,560 --> 00:08:37,149
+code because at no point should you be
+writing a function that says it's going
+
+528
+00:08:37,149 --> 00:08:37,159
+writing a function that says it's going
+ 
+
+529
+00:08:37,159 --> 00:08:39,550
+writing a function that says it's going
+to return something but doesn't Okay so
+
+530
+00:08:39,550 --> 00:08:39,560
+to return something but doesn't Okay so
+ 
+
+531
+00:08:39,560 --> 00:08:41,310
+to return something but doesn't Okay so
+that's pretty much a basic introduction
+
+532
+00:08:41,310 --> 00:08:41,320
+that's pretty much a basic introduction
+ 
+
+533
+00:08:41,320 --> 00:08:43,630
+that's pretty much a basic introduction
+to functions functions are really useful
+
+534
+00:08:43,630 --> 00:08:43,640
+to functions functions are really useful
+ 
+
+535
+00:08:43,640 --> 00:08:45,190
+to functions functions are really useful
+I'm going to be writing a lot more of
+
+536
+00:08:45,190 --> 00:08:45,200
+I'm going to be writing a lot more of
+ 
+
+537
+00:08:45,200 --> 00:08:47,150
+I'm going to be writing a lot more of
+them in the future every program is
+
+538
+00:08:47,150 --> 00:08:47,160
+them in the future every program is
+ 
+
+539
+00:08:47,160 --> 00:08:49,389
+them in the future every program is
+built from a collection of functions so
+
+540
+00:08:49,389 --> 00:08:49,399
+built from a collection of functions so
+ 
+
+541
+00:08:49,399 --> 00:08:50,790
+built from a collection of functions so
+this is really important stuff if you
+
+542
+00:08:50,790 --> 00:08:50,800
+this is really important stuff if you
+ 
+
+543
+00:08:50,800 --> 00:08:52,070
+this is really important stuff if you
+don't think you fully understand how
+
+544
+00:08:52,070 --> 00:08:52,080
+don't think you fully understand how
+ 
+
+545
+00:08:52,080 --> 00:08:53,949
+don't think you fully understand how
+functions work don't worry because
+
+546
+00:08:53,949 --> 00:08:53,959
+functions work don't worry because
+ 
+
+547
+00:08:53,959 --> 00:08:55,190
+functions work don't worry because
+throughout this series we're going to be
+
+548
+00:08:55,190 --> 00:08:55,200
+throughout this series we're going to be
+ 
+
+549
+00:08:55,200 --> 00:08:56,790
+throughout this series we're going to be
+writing so many functions that you're
+
+550
+00:08:56,790 --> 00:08:56,800
+writing so many functions that you're
+ 
+
+551
+00:08:56,800 --> 00:08:58,030
+writing so many functions that you're
+just going to get used to it and the
+
+552
+00:08:58,030 --> 00:08:58,040
+just going to get used to it and the
+ 
+
+553
+00:08:58,040 --> 00:08:59,230
+just going to get used to it and the
+best way to learn is of course to
+
+554
+00:08:59,230 --> 00:08:59,240
+best way to learn is of course to
+ 
+
+555
+00:08:59,240 --> 00:09:00,870
+best way to learn is of course to
+practice practice we also commonly break
+
+556
+00:09:00,870 --> 00:09:00,880
+practice practice we also commonly break
+ 
+
+557
+00:09:00,880 --> 00:09:02,949
+practice practice we also commonly break
+up functions into declarations and
+
+558
+00:09:02,949 --> 00:09:02,959
+up functions into declarations and
+ 
+
+559
+00:09:02,959 --> 00:09:04,710
+up functions into declarations and
+definitions so declarations we usually
+
+560
+00:09:04,710 --> 00:09:04,720
+definitions so declarations we usually
+ 
+
+561
+00:09:04,720 --> 00:09:06,430
+definitions so declarations we usually
+store in header files and then
+
+562
+00:09:06,430 --> 00:09:06,440
+store in header files and then
+ 
+
+563
+00:09:06,440 --> 00:09:08,030
+store in header files and then
+definitions we write in Translation
+
+564
+00:09:08,030 --> 00:09:08,040
+definitions we write in Translation
+ 
+
+565
+00:09:08,040 --> 00:09:09,870
+definitions we write in Translation
+units or CPP files soon I'm going to
+
+566
+00:09:09,870 --> 00:09:09,880
+units or CPP files soon I'm going to
+ 
+
+567
+00:09:09,880 --> 00:09:11,750
+units or CPP files soon I'm going to
+make a whole video dedicated to header
+
+568
+00:09:11,750 --> 00:09:11,760
+make a whole video dedicated to header
+ 
+
+569
+00:09:11,760 --> 00:09:13,829
+make a whole video dedicated to header
+files and we're going to cover function
+
+570
+00:09:13,829 --> 00:09:13,839
+files and we're going to cover function
+ 
+
+571
+00:09:13,839 --> 00:09:15,790
+files and we're going to cover function
+declarations in header files in that
+
+572
+00:09:15,790 --> 00:09:15,800
+declarations in header files in that
+ 
+
+573
+00:09:15,800 --> 00:09:17,590
+declarations in header files in that
+video but anyway guys I hope you enjoyed
+
+574
+00:09:17,590 --> 00:09:17,600
+video but anyway guys I hope you enjoyed
+ 
+
+575
+00:09:17,600 --> 00:09:19,269
+video but anyway guys I hope you enjoyed
+this episode if you did please hit the
+
+576
+00:09:19,269 --> 00:09:19,279
+this episode if you did please hit the
+ 
+
+577
+00:09:19,279 --> 00:09:20,710
+this episode if you did please hit the
+like button don't forget to follow me on
+
+578
+00:09:20,710 --> 00:09:20,720
+like button don't forget to follow me on
+ 
+
+579
+00:09:20,720 --> 00:09:22,670
+like button don't forget to follow me on
+Twitter and Instagram and if you really
+
+580
+00:09:22,670 --> 00:09:22,680
+Twitter and Instagram and if you really
+ 
+
+581
+00:09:22,680 --> 00:09:23,990
+Twitter and Instagram and if you really
+enjoyed this video and you want to see
+
+582
+00:09:23,990 --> 00:09:24,000
+enjoyed this video and you want to see
+ 
+
+583
+00:09:24,000 --> 00:09:26,430
+enjoyed this video and you want to see
+drafts of future videos early as well as
+
+584
+00:09:26,430 --> 00:09:26,440
+drafts of future videos early as well as
+ 
+
+585
+00:09:26,440 --> 00:09:27,990
+drafts of future videos early as well as
+discuss what actually goes into these
+
+586
+00:09:27,990 --> 00:09:28,000
+discuss what actually goes into these
+ 
+
+587
+00:09:28,000 --> 00:09:30,230
+discuss what actually goes into these
+videos you can support on patreon link
+
+588
+00:09:30,230 --> 00:09:30,240
+videos you can support on patreon link
+ 
+
+589
+00:09:30,240 --> 00:09:31,470
+videos you can support on patreon link
+will be in the description below but
+
+590
+00:09:31,470 --> 00:09:31,480
+will be in the description below but
+ 
+
+591
+00:09:31,480 --> 00:09:34,460
+will be in the description below but
+until next time guys goodbye
+
+592
+00:09:34,460 --> 00:09:34,470
+until next time guys goodbye
+ 
+
+593
+00:09:34,470 --> 00:09:45,700
+until next time guys goodbye
+[Music]
+

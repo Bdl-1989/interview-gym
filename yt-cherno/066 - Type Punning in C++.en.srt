@@ -1,0 +1,3635 @@
+1
+00:00:00,000 --> 00:00:01,370
+
+hey what's up guys my name is Jonah
+
+2
+00:00:01,370 --> 00:00:01,380
+hey what's up guys my name is Jonah
+ 
+
+3
+00:00:01,380 --> 00:00:03,679
+hey what's up guys my name is Jonah
+welcome back to my C++ series so today
+
+4
+00:00:03,679 --> 00:00:03,689
+welcome back to my C++ series so today
+ 
+
+5
+00:00:03,689 --> 00:00:05,240
+welcome back to my C++ series so today
+we're gonna be talking all about type
+
+6
+00:00:05,240 --> 00:00:05,250
+we're gonna be talking all about type
+ 
+
+7
+00:00:05,250 --> 00:00:07,519
+we're gonna be talking all about type
+punning in C++ and type planning is
+
+8
+00:00:07,519 --> 00:00:07,529
+punning in C++ and type planning is
+ 
+
+9
+00:00:07,529 --> 00:00:10,040
+punning in C++ and type planning is
+really just a fancy term for just us
+
+10
+00:00:10,040 --> 00:00:10,050
+really just a fancy term for just us
+ 
+
+11
+00:00:10,050 --> 00:00:11,810
+really just a fancy term for just us
+kind of getting around the type system
+
+12
+00:00:11,810 --> 00:00:11,820
+kind of getting around the type system
+ 
+
+13
+00:00:11,820 --> 00:00:14,900
+kind of getting around the type system
+in C++ so C++ is a strongly typed
+
+14
+00:00:14,900 --> 00:00:14,910
+in C++ so C++ is a strongly typed
+ 
+
+15
+00:00:14,910 --> 00:00:16,910
+in C++ so C++ is a strongly typed
+language which means that we have a type
+
+16
+00:00:16,910 --> 00:00:16,920
+language which means that we have a type
+ 
+
+17
+00:00:16,920 --> 00:00:18,710
+language which means that we have a type
+system we don't declare everything as
+
+18
+00:00:18,710 --> 00:00:18,720
+system we don't declare everything as
+ 
+
+19
+00:00:18,720 --> 00:00:20,689
+system we don't declare everything as
+auto I mean we kind of can because of
+
+20
+00:00:20,689 --> 00:00:20,699
+auto I mean we kind of can because of
+ 
+
+21
+00:00:20,699 --> 00:00:22,490
+auto I mean we kind of can because of
+that kit word but in other languages
+
+22
+00:00:22,490 --> 00:00:22,500
+that kit word but in other languages
+ 
+
+23
+00:00:22,500 --> 00:00:24,650
+that kit word but in other languages
+like JavaScript there are no kind of
+
+24
+00:00:24,650 --> 00:00:24,660
+like JavaScript there are no kind of
+ 
+
+25
+00:00:24,660 --> 00:00:27,470
+like JavaScript there are no kind of
+sense of variable types really and we
+
+26
+00:00:27,470 --> 00:00:27,480
+sense of variable types really and we
+ 
+
+27
+00:00:27,480 --> 00:00:29,120
+sense of variable types really and we
+just have we don't need to declare a
+
+28
+00:00:29,120 --> 00:00:29,130
+just have we don't need to declare a
+ 
+
+29
+00:00:29,130 --> 00:00:30,560
+just have we don't need to declare a
+variable type when we create a variable
+
+30
+00:00:30,560 --> 00:00:30,570
+variable type when we create a variable
+ 
+
+31
+00:00:30,570 --> 00:00:32,630
+variable type when we create a variable
+and when we accept it in its parameters
+
+32
+00:00:32,630 --> 00:00:32,640
+and when we accept it in its parameters
+ 
+
+33
+00:00:32,640 --> 00:00:34,910
+and when we accept it in its parameters
+into functions or anything like that we
+
+34
+00:00:34,910 --> 00:00:34,920
+into functions or anything like that we
+ 
+
+35
+00:00:34,920 --> 00:00:36,440
+into functions or anything like that we
+don't have a type system really but it's
+
+36
+00:00:36,440 --> 00:00:36,450
+don't have a type system really but it's
+ 
+
+37
+00:00:36,450 --> 00:00:37,760
+don't have a type system really but it's
+a plus plus of course we do have a type
+
+38
+00:00:37,760 --> 00:00:37,770
+a plus plus of course we do have a type
+ 
+
+39
+00:00:37,770 --> 00:00:39,200
+a plus plus of course we do have a type
+system we have to declare things as
+
+40
+00:00:39,200 --> 00:00:39,210
+system we have to declare things as
+ 
+
+41
+00:00:39,210 --> 00:00:41,360
+system we have to declare things as
+integers or doubles or bullying's or
+
+42
+00:00:41,360 --> 00:00:41,370
+integers or doubles or bullying's or
+ 
+
+43
+00:00:41,370 --> 00:00:43,850
+integers or doubles or bullying's or
+structs or classes all that stuff when
+
+44
+00:00:43,850 --> 00:00:43,860
+structs or classes all that stuff when
+ 
+
+45
+00:00:43,860 --> 00:00:45,560
+structs or classes all that stuff when
+we actually create variables however
+
+46
+00:00:45,560 --> 00:00:45,570
+we actually create variables however
+ 
+
+47
+00:00:45,570 --> 00:00:49,069
+we actually create variables however
+this type system is not really enforced
+
+48
+00:00:49,069 --> 00:00:49,079
+this type system is not really enforced
+ 
+
+49
+00:00:49,079 --> 00:00:51,229
+this type system is not really enforced
+as strongly as it is in other languages
+
+50
+00:00:51,229 --> 00:00:51,239
+as strongly as it is in other languages
+ 
+
+51
+00:00:51,239 --> 00:00:53,450
+as strongly as it is in other languages
+such as Java where it's really hard to
+
+52
+00:00:53,450 --> 00:00:53,460
+such as Java where it's really hard to
+ 
+
+53
+00:00:53,460 --> 00:00:55,760
+such as Java where it's really hard to
+get around types and even c-sharp but
+
+54
+00:00:55,760 --> 00:00:55,770
+get around types and even c-sharp but
+ 
+
+55
+00:00:55,770 --> 00:00:57,950
+get around types and even c-sharp but
+you can do it but it's a bit more work
+
+56
+00:00:57,950 --> 00:00:57,960
+you can do it but it's a bit more work
+ 
+
+57
+00:00:57,960 --> 00:01:01,939
+you can do it but it's a bit more work
+in C++ whilst types are kind of enforced
+
+58
+00:01:01,939 --> 00:01:01,949
+in C++ whilst types are kind of enforced
+ 
+
+59
+00:01:01,949 --> 00:01:04,340
+in C++ whilst types are kind of enforced
+by the compiler you can directly access
+
+60
+00:01:04,340 --> 00:01:04,350
+by the compiler you can directly access
+ 
+
+61
+00:01:04,350 --> 00:01:07,730
+by the compiler you can directly access
+memory which means that you can kind of
+
+62
+00:01:07,730 --> 00:01:07,740
+memory which means that you can kind of
+ 
+
+63
+00:01:07,740 --> 00:01:10,789
+memory which means that you can kind of
+say that hang on a minute I know that at
+
+64
+00:01:10,789 --> 00:01:10,799
+say that hang on a minute I know that at
+ 
+
+65
+00:01:10,799 --> 00:01:12,770
+say that hang on a minute I know that at
+the moment in my code I've been using
+
+66
+00:01:12,770 --> 00:01:12,780
+the moment in my code I've been using
+ 
+
+67
+00:01:12,780 --> 00:01:16,460
+the moment in my code I've been using
+this type as say an integer but actually
+
+68
+00:01:16,460 --> 00:01:16,470
+this type as say an integer but actually
+ 
+
+69
+00:01:16,470 --> 00:01:18,530
+this type as say an integer but actually
+I'm gonna just grab that memory that
+
+70
+00:01:18,530 --> 00:01:18,540
+I'm gonna just grab that memory that
+ 
+
+71
+00:01:18,540 --> 00:01:20,210
+I'm gonna just grab that memory that
+same memory and just treat it as a
+
+72
+00:01:20,210 --> 00:01:20,220
+same memory and just treat it as a
+ 
+
+73
+00:01:20,220 --> 00:01:22,460
+same memory and just treat it as a
+double now or as a class or something
+
+74
+00:01:22,460 --> 00:01:22,470
+double now or as a class or something
+ 
+
+75
+00:01:22,470 --> 00:01:23,450
+double now or as a class or something
+like that
+
+76
+00:01:23,450 --> 00:01:23,460
+like that
+ 
+
+77
+00:01:23,460 --> 00:01:25,340
+like that
+and you can just get around the type
+
+78
+00:01:25,340 --> 00:01:25,350
+and you can just get around the type
+ 
+
+79
+00:01:25,350 --> 00:01:28,070
+and you can just get around the type
+system really easily now whether what
+
+80
+00:01:28,070 --> 00:01:28,080
+system really easily now whether what
+ 
+
+81
+00:01:28,080 --> 00:01:30,770
+system really easily now whether what
+you should is going to again depend on
+
+82
+00:01:30,770 --> 00:01:30,780
+you should is going to again depend on
+ 
+
+83
+00:01:30,780 --> 00:01:33,620
+you should is going to again depend on
+your actual circumstance in some cases
+
+84
+00:01:33,620 --> 00:01:33,630
+your actual circumstance in some cases
+ 
+
+85
+00:01:33,630 --> 00:01:35,690
+your actual circumstance in some cases
+you absolutely should not circumvent the
+
+86
+00:01:35,690 --> 00:01:35,700
+you absolutely should not circumvent the
+ 
+
+87
+00:01:35,700 --> 00:01:38,450
+you absolutely should not circumvent the
+type system because the type system is
+
+88
+00:01:38,450 --> 00:01:38,460
+type system because the type system is
+ 
+
+89
+00:01:38,460 --> 00:01:39,200
+type system because the type system is
+there for a reason
+
+90
+00:01:39,200 --> 00:01:39,210
+there for a reason
+ 
+
+91
+00:01:39,210 --> 00:01:40,550
+there for a reason
+and you probably don't want to be
+
+92
+00:01:40,550 --> 00:01:40,560
+and you probably don't want to be
+ 
+
+93
+00:01:40,560 --> 00:01:42,289
+and you probably don't want to be
+playing around with a 2-month unless you
+
+94
+00:01:42,289 --> 00:01:42,299
+playing around with a 2-month unless you
+ 
+
+95
+00:01:42,299 --> 00:01:43,910
+playing around with a 2-month unless you
+have a good reason but in other cases
+
+96
+00:01:43,910 --> 00:01:43,920
+have a good reason but in other cases
+ 
+
+97
+00:01:43,920 --> 00:01:46,460
+have a good reason but in other cases
+it's totally okay to do that for example
+
+98
+00:01:46,460 --> 00:01:46,470
+it's totally okay to do that for example
+ 
+
+99
+00:01:46,470 --> 00:01:48,499
+it's totally okay to do that for example
+let's just say we had a class and we
+
+100
+00:01:48,499 --> 00:01:48,509
+let's just say we had a class and we
+ 
+
+101
+00:01:48,509 --> 00:01:49,969
+let's just say we had a class and we
+wanted to write it out as a stream of
+
+102
+00:01:49,969 --> 00:01:49,979
+wanted to write it out as a stream of
+ 
+
+103
+00:01:49,979 --> 00:01:51,889
+wanted to write it out as a stream of
+bytes well instead of kind of going
+
+104
+00:01:51,889 --> 00:01:51,899
+bytes well instead of kind of going
+ 
+
+105
+00:01:51,899 --> 00:01:53,630
+bytes well instead of kind of going
+through everything as assuming it's like
+
+106
+00:01:53,630 --> 00:01:53,640
+through everything as assuming it's like
+ 
+
+107
+00:01:53,640 --> 00:01:54,980
+through everything as assuming it's like
+a structure of primitive types it
+
+108
+00:01:54,980 --> 00:01:54,990
+a structure of primitive types it
+ 
+
+109
+00:01:54,990 --> 00:01:56,420
+a structure of primitive types it
+doesn't have pointers to other places in
+
+110
+00:01:56,420 --> 00:01:56,430
+doesn't have pointers to other places in
+ 
+
+111
+00:01:56,430 --> 00:01:59,510
+doesn't have pointers to other places in
+memory we can just kind of reinterpret
+
+112
+00:01:59,510 --> 00:01:59,520
+memory we can just kind of reinterpret
+ 
+
+113
+00:01:59,520 --> 00:02:01,550
+memory we can just kind of reinterpret
+that entire struct or class or whatever
+
+114
+00:02:01,550 --> 00:02:01,560
+that entire struct or class or whatever
+ 
+
+115
+00:02:01,560 --> 00:02:04,310
+that entire struct or class or whatever
+we have as just a byte array and just
+
+116
+00:02:04,310 --> 00:02:04,320
+we have as just a byte array and just
+ 
+
+117
+00:02:04,320 --> 00:02:06,889
+we have as just a byte array and just
+write that out or stream it somewhere
+
+118
+00:02:06,889 --> 00:02:06,899
+write that out or stream it somewhere
+ 
+
+119
+00:02:06,899 --> 00:02:09,199
+write that out or stream it somewhere
+right we don't have to even care about
+
+120
+00:02:09,199 --> 00:02:09,209
+right we don't have to even care about
+ 
+
+121
+00:02:09,209 --> 00:02:11,180
+right we don't have to even care about
+what types are in it so we know the size
+
+122
+00:02:11,180 --> 00:02:11,190
+what types are in it so we know the size
+ 
+
+123
+00:02:11,190 --> 00:02:12,160
+what types are in it so we know the size
+we can just get the
+
+124
+00:02:12,160 --> 00:02:12,170
+we can just get the
+ 
+
+125
+00:02:12,170 --> 00:02:13,960
+we can just get the
+get to get the data access it and then
+
+126
+00:02:13,960 --> 00:02:13,970
+get to get the data access it and then
+ 
+
+127
+00:02:13,970 --> 00:02:16,780
+get to get the data access it and then
+just put it somewhere so in a lot of
+
+128
+00:02:16,780 --> 00:02:16,790
+just put it somewhere so in a lot of
+ 
+
+129
+00:02:16,790 --> 00:02:18,820
+just put it somewhere so in a lot of
+cases it is really useful and it means
+
+130
+00:02:18,820 --> 00:02:18,830
+cases it is really useful and it means
+ 
+
+131
+00:02:18,830 --> 00:02:22,449
+cases it is really useful and it means
+that it's kind of that raw I guess
+
+132
+00:02:22,449 --> 00:02:22,459
+that it's kind of that raw I guess
+ 
+
+133
+00:02:22,459 --> 00:02:25,330
+that it's kind of that raw I guess
+low level access that is why I really
+
+134
+00:02:25,330 --> 00:02:25,340
+low level access that is why I really
+ 
+
+135
+00:02:25,340 --> 00:02:27,370
+low level access that is why I really
+like C++ and why suppose was is so
+
+136
+00:02:27,370 --> 00:02:27,380
+like C++ and why suppose was is so
+ 
+
+137
+00:02:27,380 --> 00:02:29,140
+like C++ and why suppose was is so
+effective in applications where
+
+138
+00:02:29,140 --> 00:02:29,150
+effective in applications where
+ 
+
+139
+00:02:29,150 --> 00:02:31,300
+effective in applications where
+performance is required anyway not
+
+140
+00:02:31,300 --> 00:02:31,310
+performance is required anyway not
+ 
+
+141
+00:02:31,310 --> 00:02:32,559
+performance is required anyway not
+talking let's just dive in take a look
+
+142
+00:02:32,559 --> 00:02:32,569
+talking let's just dive in take a look
+ 
+
+143
+00:02:32,569 --> 00:02:34,420
+talking let's just dive in take a look
+at a few examples this is something that
+
+144
+00:02:34,420 --> 00:02:34,430
+at a few examples this is something that
+ 
+
+145
+00:02:34,430 --> 00:02:37,059
+at a few examples this is something that
+I use quite often so you'll probably see
+
+146
+00:02:37,059 --> 00:02:37,069
+I use quite often so you'll probably see
+ 
+
+147
+00:02:37,069 --> 00:02:38,440
+I use quite often so you'll probably see
+it in other videos and especially like
+
+148
+00:02:38,440 --> 00:02:38,450
+it in other videos and especially like
+ 
+
+149
+00:02:38,450 --> 00:02:40,180
+it in other videos and especially like
+in the OpenGL serious and the game end
+
+150
+00:02:40,180 --> 00:02:40,190
+in the OpenGL serious and the game end
+ 
+
+151
+00:02:40,190 --> 00:02:41,290
+in the OpenGL serious and the game end
+deserts and all that so you'll see
+
+152
+00:02:41,290 --> 00:02:41,300
+deserts and all that so you'll see
+ 
+
+153
+00:02:41,300 --> 00:02:42,790
+deserts and all that so you'll see
+plenty of this this is just gonna be a
+
+154
+00:02:42,790 --> 00:02:42,800
+plenty of this this is just gonna be a
+ 
+
+155
+00:02:42,800 --> 00:02:44,290
+plenty of this this is just gonna be a
+basic overview but let's just dive in
+
+156
+00:02:44,290 --> 00:02:44,300
+basic overview but let's just dive in
+ 
+
+157
+00:02:44,300 --> 00:02:45,670
+basic overview but let's just dive in
+and see what we can do okay so in that
+
+158
+00:02:45,670 --> 00:02:45,680
+and see what we can do okay so in that
+ 
+
+159
+00:02:45,680 --> 00:02:47,199
+and see what we can do okay so in that
+first example I kind of declared an
+
+160
+00:02:47,199 --> 00:02:47,209
+first example I kind of declared an
+ 
+
+161
+00:02:47,209 --> 00:02:49,120
+first example I kind of declared an
+integer well I just said that I had an
+
+162
+00:02:49,120 --> 00:02:49,130
+integer well I just said that I had an
+ 
+
+163
+00:02:49,130 --> 00:02:50,890
+integer well I just said that I had an
+integer and then I just wanted to treat
+
+164
+00:02:50,890 --> 00:02:50,900
+integer and then I just wanted to treat
+ 
+
+165
+00:02:50,900 --> 00:02:53,770
+integer and then I just wanted to treat
+it as a double well of course in this
+
+166
+00:02:53,770 --> 00:02:53,780
+it as a double well of course in this
+ 
+
+167
+00:02:53,780 --> 00:02:55,509
+it as a double well of course in this
+case that's probably gonna result in and
+
+168
+00:02:55,509 --> 00:02:55,519
+case that's probably gonna result in and
+ 
+
+169
+00:02:55,519 --> 00:02:57,190
+case that's probably gonna result in and
+pretty weird-looking double and not
+
+170
+00:02:57,190 --> 00:02:57,200
+pretty weird-looking double and not
+ 
+
+171
+00:02:57,200 --> 00:02:58,539
+pretty weird-looking double and not
+something that you want to do but again
+
+172
+00:02:58,539 --> 00:02:58,549
+something that you want to do but again
+ 
+
+173
+00:02:58,549 --> 00:03:00,039
+something that you want to do but again
+just to demonstrate how this works I'll
+
+174
+00:03:00,039 --> 00:03:00,049
+just to demonstrate how this works I'll
+ 
+
+175
+00:03:00,049 --> 00:03:01,930
+just to demonstrate how this works I'll
+show you anyway we're going to make it
+
+176
+00:03:01,930 --> 00:03:01,940
+show you anyway we're going to make it
+ 
+
+177
+00:03:01,940 --> 00:03:03,940
+show you anyway we're going to make it
+double we're gonna call it value and
+
+178
+00:03:03,940 --> 00:03:03,950
+double we're gonna call it value and
+ 
+
+179
+00:03:03,950 --> 00:03:05,559
+double we're gonna call it value and
+we're gonna set it equal to a that's
+
+180
+00:03:05,559 --> 00:03:05,569
+we're gonna set it equal to a that's
+ 
+
+181
+00:03:05,569 --> 00:03:07,270
+we're gonna set it equal to a that's
+kind of step one now first of all you
+
+182
+00:03:07,270 --> 00:03:07,280
+kind of step one now first of all you
+ 
+
+183
+00:03:07,280 --> 00:03:09,160
+kind of step one now first of all you
+can see it works right everything seems
+
+184
+00:03:09,160 --> 00:03:09,170
+can see it works right everything seems
+ 
+
+185
+00:03:09,170 --> 00:03:11,830
+can see it works right everything seems
+to work fine if we were to print this
+
+186
+00:03:11,830 --> 00:03:11,840
+to work fine if we were to print this
+ 
+
+187
+00:03:11,840 --> 00:03:15,580
+to work fine if we were to print this
+out like this and I even put a
+
+188
+00:03:15,580 --> 00:03:15,590
+out like this and I even put a
+ 
+
+189
+00:03:15,590 --> 00:03:17,680
+out like this and I even put a
+breakpoint over here get at five you can
+
+190
+00:03:17,680 --> 00:03:17,690
+breakpoint over here get at five you can
+ 
+
+191
+00:03:17,690 --> 00:03:19,300
+breakpoint over here get at five you can
+see what we get is 50 okay interesting
+
+192
+00:03:19,300 --> 00:03:19,310
+see what we get is 50 okay interesting
+ 
+
+193
+00:03:19,310 --> 00:03:21,520
+see what we get is 50 okay interesting
+reasonable I guess I mean it converted
+
+194
+00:03:21,520 --> 00:03:21,530
+reasonable I guess I mean it converted
+ 
+
+195
+00:03:21,530 --> 00:03:23,949
+reasonable I guess I mean it converted
+our integer to a double now so it's 50
+
+196
+00:03:23,949 --> 00:03:23,959
+our integer to a double now so it's 50
+ 
+
+197
+00:03:23,959 --> 00:03:25,870
+our integer to a double now so it's 50
+let's take a look at the memory so I'll
+
+198
+00:03:25,870 --> 00:03:25,880
+let's take a look at the memory so I'll
+ 
+
+199
+00:03:25,880 --> 00:03:29,530
+let's take a look at the memory so I'll
+go debug Windows memory and memory 1 I'm
+
+200
+00:03:29,530 --> 00:03:29,540
+go debug Windows memory and memory 1 I'm
+ 
+
+201
+00:03:29,540 --> 00:03:30,580
+go debug Windows memory and memory 1 I'm
+gonna go to the memory address of a and
+
+202
+00:03:30,580 --> 00:03:30,590
+gonna go to the memory address of a and
+ 
+
+203
+00:03:30,590 --> 00:03:32,650
+gonna go to the memory address of a and
+take a look at what is in there ok cool
+
+204
+00:03:32,650 --> 00:03:32,660
+take a look at what is in there ok cool
+ 
+
+205
+00:03:32,660 --> 00:03:35,380
+take a look at what is in there ok cool
+32 zero zero zero zero zero zero okay
+
+206
+00:03:35,380 --> 00:03:35,390
+32 zero zero zero zero zero zero okay
+ 
+
+207
+00:03:35,390 --> 00:03:38,650
+32 zero zero zero zero zero zero okay
+makes sense 32 is 50 in hexadecimal now
+
+208
+00:03:38,650 --> 00:03:38,660
+makes sense 32 is 50 in hexadecimal now
+ 
+
+209
+00:03:38,660 --> 00:03:39,729
+makes sense 32 is 50 in hexadecimal now
+let's take a look at the memory address
+
+210
+00:03:39,729 --> 00:03:39,739
+let's take a look at the memory address
+ 
+
+211
+00:03:39,739 --> 00:03:41,229
+let's take a look at the memory address
+of value now first of all is going to
+
+212
+00:03:41,229 --> 00:03:41,239
+of value now first of all is going to
+ 
+
+213
+00:03:41,239 --> 00:03:42,880
+of value now first of all is going to
+have a different memory address the
+
+214
+00:03:42,880 --> 00:03:42,890
+have a different memory address the
+ 
+
+215
+00:03:42,890 --> 00:03:44,380
+have a different memory address the
+second of all well we know how many
+
+216
+00:03:44,380 --> 00:03:44,390
+second of all well we know how many
+ 
+
+217
+00:03:44,390 --> 00:03:46,030
+second of all well we know how many
+bytes it is it's eight bytes look at
+
+218
+00:03:46,030 --> 00:03:46,040
+bytes it is it's eight bytes look at
+ 
+
+219
+00:03:46,040 --> 00:03:46,300
+bytes it is it's eight bytes look at
+that
+
+220
+00:03:46,300 --> 00:03:46,310
+that
+ 
+
+221
+00:03:46,310 --> 00:03:48,729
+that
+it's completely different I mean 49 49
+
+222
+00:03:48,729 --> 00:03:48,739
+it's completely different I mean 49 49
+ 
+
+223
+00:03:48,739 --> 00:03:51,009
+it's completely different I mean 49 49
+and 40 over here and like what's going
+
+224
+00:03:51,009 --> 00:03:51,019
+and 40 over here and like what's going
+ 
+
+225
+00:03:51,019 --> 00:03:53,080
+and 40 over here and like what's going
+on it's it's not even it's not it's not
+
+226
+00:03:53,080 --> 00:03:53,090
+on it's it's not even it's not it's not
+ 
+
+227
+00:03:53,090 --> 00:03:54,880
+on it's it's not even it's not it's not
+the same memory at all because what's
+
+228
+00:03:54,880 --> 00:03:54,890
+the same memory at all because what's
+ 
+
+229
+00:03:54,890 --> 00:03:57,400
+the same memory at all because what's
+actually done is this just actually done
+
+230
+00:03:57,400 --> 00:03:57,410
+actually done is this just actually done
+ 
+
+231
+00:03:57,410 --> 00:03:59,500
+actually done is this just actually done
+a conversion it's converted an int into
+
+232
+00:03:59,500 --> 00:03:59,510
+a conversion it's converted an int into
+ 
+
+233
+00:03:59,510 --> 00:04:01,090
+a conversion it's converted an int into
+a double because that's what happens if
+
+234
+00:04:01,090 --> 00:04:01,100
+a double because that's what happens if
+ 
+
+235
+00:04:01,100 --> 00:04:02,830
+a double because that's what happens if
+you do something like this now in this
+
+236
+00:04:02,830 --> 00:04:02,840
+you do something like this now in this
+ 
+
+237
+00:04:02,840 --> 00:04:04,660
+you do something like this now in this
+case it was an implicit conversion
+
+238
+00:04:04,660 --> 00:04:04,670
+case it was an implicit conversion
+ 
+
+239
+00:04:04,670 --> 00:04:05,920
+case it was an implicit conversion
+meaning we didn't actually tell it to
+
+240
+00:04:05,920 --> 00:04:05,930
+meaning we didn't actually tell it to
+ 
+
+241
+00:04:05,930 --> 00:04:07,509
+meaning we didn't actually tell it to
+convert anything if we wanted to be
+
+242
+00:04:07,509 --> 00:04:07,519
+convert anything if we wanted to be
+ 
+
+243
+00:04:07,519 --> 00:04:10,240
+convert anything if we wanted to be
+explicit we could write double a like
+
+244
+00:04:10,240 --> 00:04:10,250
+explicit we could write double a like
+ 
+
+245
+00:04:10,250 --> 00:04:11,650
+explicit we could write double a like
+that which is fine I mean it doesn't get
+
+246
+00:04:11,650 --> 00:04:11,660
+that which is fine I mean it doesn't get
+ 
+
+247
+00:04:11,660 --> 00:04:13,180
+that which is fine I mean it doesn't get
+anything in this case we don't have to
+
+248
+00:04:13,180 --> 00:04:13,190
+anything in this case we don't have to
+ 
+
+249
+00:04:13,190 --> 00:04:14,740
+anything in this case we don't have to
+write double here because it will do an
+
+250
+00:04:14,740 --> 00:04:14,750
+write double here because it will do an
+ 
+
+251
+00:04:14,750 --> 00:04:15,220
+write double here because it will do an
+implicit
+
+252
+00:04:15,220 --> 00:04:15,230
+implicit
+ 
+
+253
+00:04:15,230 --> 00:04:16,930
+implicit
+but if we wanted to be explicit this is
+
+254
+00:04:16,930 --> 00:04:16,940
+but if we wanted to be explicit this is
+ 
+
+255
+00:04:16,940 --> 00:04:18,759
+but if we wanted to be explicit this is
+actually what's happening is converting
+
+256
+00:04:18,759 --> 00:04:18,769
+actually what's happening is converting
+ 
+
+257
+00:04:18,769 --> 00:04:20,710
+actually what's happening is converting
+that a from being an integer into an
+
+258
+00:04:20,710 --> 00:04:20,720
+that a from being an integer into an
+ 
+
+259
+00:04:20,720 --> 00:04:22,629
+that a from being an integer into an
+actual double now what if we wanted to
+
+260
+00:04:22,629 --> 00:04:22,639
+actual double now what if we wanted to
+ 
+
+261
+00:04:22,639 --> 00:04:26,350
+actual double now what if we wanted to
+just take that existing memory we saw 32
+
+262
+00:04:26,350 --> 00:04:26,360
+just take that existing memory we saw 32
+ 
+
+263
+00:04:26,360 --> 00:04:28,629
+just take that existing memory we saw 32
+and then zero zero zero zero zero zero
+
+264
+00:04:28,629 --> 00:04:28,639
+and then zero zero zero zero zero zero
+ 
+
+265
+00:04:28,639 --> 00:04:30,850
+and then zero zero zero zero zero zero
+in our memory I wouldn't take that same
+
+266
+00:04:30,850 --> 00:04:30,860
+in our memory I wouldn't take that same
+ 
+
+267
+00:04:30,860 --> 00:04:34,210
+in our memory I wouldn't take that same
+memory but I just want that memory to be
+
+268
+00:04:34,210 --> 00:04:34,220
+memory but I just want that memory to be
+ 
+
+269
+00:04:34,220 --> 00:04:36,370
+memory but I just want that memory to be
+treated as a double how do I do that
+
+270
+00:04:36,370 --> 00:04:36,380
+treated as a double how do I do that
+ 
+
+271
+00:04:36,380 --> 00:04:38,080
+treated as a double how do I do that
+well the first thing to do that that we
+
+272
+00:04:38,080 --> 00:04:38,090
+well the first thing to do that that we
+ 
+
+273
+00:04:38,090 --> 00:04:39,640
+well the first thing to do that that we
+need to do there are a few ways actually
+
+274
+00:04:39,640 --> 00:04:39,650
+need to do there are a few ways actually
+ 
+
+275
+00:04:39,650 --> 00:04:41,350
+need to do there are a few ways actually
+but this is the kind of wrong way I
+
+276
+00:04:41,350 --> 00:04:41,360
+but this is the kind of wrong way I
+ 
+
+277
+00:04:41,360 --> 00:04:43,950
+but this is the kind of wrong way I
+guess we take the memory dose of a and
+
+278
+00:04:43,950 --> 00:04:43,960
+guess we take the memory dose of a and
+ 
+
+279
+00:04:43,960 --> 00:04:48,360
+guess we take the memory dose of a and
+then we cast that to a double pointer so
+
+280
+00:04:48,360 --> 00:04:48,370
+then we cast that to a double pointer so
+ 
+
+281
+00:04:48,370 --> 00:04:50,770
+then we cast that to a double pointer so
+and a double by double pointer I mean
+
+282
+00:04:50,770 --> 00:04:50,780
+and a double by double pointer I mean
+ 
+
+283
+00:04:50,780 --> 00:04:52,870
+and a double by double pointer I mean
+obviously a double pointer not two
+
+284
+00:04:52,870 --> 00:04:52,880
+obviously a double pointer not two
+ 
+
+285
+00:04:52,880 --> 00:04:56,860
+obviously a double pointer not two
+pointers now this part here is of course
+
+286
+00:04:56,860 --> 00:04:56,870
+pointers now this part here is of course
+ 
+
+287
+00:04:56,870 --> 00:04:58,900
+pointers now this part here is of course
+just taking the memory address of a so
+
+288
+00:04:58,900 --> 00:04:58,910
+just taking the memory address of a so
+ 
+
+289
+00:04:58,910 --> 00:05:00,820
+just taking the memory address of a so
+this gives us an integer pointer and
+
+290
+00:05:00,820 --> 00:05:00,830
+this gives us an integer pointer and
+ 
+
+291
+00:05:00,830 --> 00:05:03,070
+this gives us an integer pointer and
+then we're converting that into pointer
+
+292
+00:05:03,070 --> 00:05:03,080
+then we're converting that into pointer
+ 
+
+293
+00:05:03,080 --> 00:05:06,159
+then we're converting that into pointer
+into a double pointer and then we
+
+294
+00:05:06,159 --> 00:05:06,169
+into a double pointer and then we
+ 
+
+295
+00:05:06,169 --> 00:05:07,750
+into a double pointer and then we
+obviously need to get back to having a
+
+296
+00:05:07,750 --> 00:05:07,760
+obviously need to get back to having a
+ 
+
+297
+00:05:07,760 --> 00:05:09,279
+obviously need to get back to having a
+double so how do we go from pointer to
+
+298
+00:05:09,279 --> 00:05:09,289
+double so how do we go from pointer to
+ 
+
+299
+00:05:09,289 --> 00:05:11,560
+double so how do we go from pointer to
+the actual type we dereference it and
+
+300
+00:05:11,560 --> 00:05:11,570
+the actual type we dereference it and
+ 
+
+301
+00:05:11,570 --> 00:05:13,750
+the actual type we dereference it and
+that's what we get so this is this looks
+
+302
+00:05:13,750 --> 00:05:13,760
+that's what we get so this is this looks
+ 
+
+303
+00:05:13,760 --> 00:05:15,520
+that's what we get so this is this looks
+a bit weird maybe if it's the first time
+
+304
+00:05:15,520 --> 00:05:15,530
+a bit weird maybe if it's the first time
+ 
+
+305
+00:05:15,530 --> 00:05:16,990
+a bit weird maybe if it's the first time
+you've seen it but essentially what
+
+306
+00:05:16,990 --> 00:05:17,000
+you've seen it but essentially what
+ 
+
+307
+00:05:17,000 --> 00:05:19,270
+you've seen it but essentially what
+we're doing here is we're type punting
+
+308
+00:05:19,270 --> 00:05:19,280
+we're doing here is we're type punting
+ 
+
+309
+00:05:19,280 --> 00:05:21,969
+we're doing here is we're type punting
+our integer into a double so if we hit
+
+310
+00:05:21,969 --> 00:05:21,979
+our integer into a double so if we hit
+ 
+
+311
+00:05:21,979 --> 00:05:23,830
+our integer into a double so if we hit
+f5 now let's see what we get okay so
+
+312
+00:05:23,830 --> 00:05:23,840
+f5 now let's see what we get okay so
+ 
+
+313
+00:05:23,840 --> 00:05:25,270
+f5 now let's see what we get okay so
+it's a pretty weird-looking double
+
+314
+00:05:25,270 --> 00:05:25,280
+it's a pretty weird-looking double
+ 
+
+315
+00:05:25,280 --> 00:05:26,620
+it's a pretty weird-looking double
+I mean it's negative nine point two
+
+316
+00:05:26,620 --> 00:05:26,630
+I mean it's negative nine point two
+ 
+
+317
+00:05:26,630 --> 00:05:30,129
+I mean it's negative nine point two
+eight plus sixty-one so yeah whatever
+
+318
+00:05:30,129 --> 00:05:30,139
+eight plus sixty-one so yeah whatever
+ 
+
+319
+00:05:30,139 --> 00:05:31,870
+eight plus sixty-one so yeah whatever
+clearly not something that we'd probably
+
+320
+00:05:31,870 --> 00:05:31,880
+clearly not something that we'd probably
+ 
+
+321
+00:05:31,880 --> 00:05:33,219
+clearly not something that we'd probably
+want to do but again it's just an
+
+322
+00:05:33,219 --> 00:05:33,229
+want to do but again it's just an
+ 
+
+323
+00:05:33,229 --> 00:05:35,020
+want to do but again it's just an
+example if we take a look at the memory
+
+324
+00:05:35,020 --> 00:05:35,030
+example if we take a look at the memory
+ 
+
+325
+00:05:35,030 --> 00:05:36,790
+example if we take a look at the memory
+address of a you can see that of course
+
+326
+00:05:36,790 --> 00:05:36,800
+address of a you can see that of course
+ 
+
+327
+00:05:36,800 --> 00:05:39,339
+address of a you can see that of course
+it has 32 like that and if we take it
+
+328
+00:05:39,339 --> 00:05:39,349
+it has 32 like that and if we take it
+ 
+
+329
+00:05:39,349 --> 00:05:41,620
+it has 32 like that and if we take it
+the memory address of B oh sorry I'll
+
+330
+00:05:41,620 --> 00:05:41,630
+the memory address of B oh sorry I'll
+ 
+
+331
+00:05:41,630 --> 00:05:44,589
+the memory address of B oh sorry I'll
+value you can see what we have over here
+
+332
+00:05:44,589 --> 00:05:44,599
+value you can see what we have over here
+ 
+
+333
+00:05:44,599 --> 00:05:48,040
+value you can see what we have over here
+now what you also see is if you remember
+
+334
+00:05:48,040 --> 00:05:48,050
+now what you also see is if you remember
+ 
+
+335
+00:05:48,050 --> 00:05:50,080
+now what you also see is if you remember
+that we have eight bytes of double the
+
+336
+00:05:50,080 --> 00:05:50,090
+that we have eight bytes of double the
+ 
+
+337
+00:05:50,090 --> 00:05:52,300
+that we have eight bytes of double the
+rest is our initialize memory because
+
+338
+00:05:52,300 --> 00:05:52,310
+rest is our initialize memory because
+ 
+
+339
+00:05:52,310 --> 00:05:55,540
+rest is our initialize memory because
+what we've done here is something pretty
+
+340
+00:05:55,540 --> 00:05:55,550
+what we've done here is something pretty
+ 
+
+341
+00:05:55,550 --> 00:05:57,670
+what we've done here is something pretty
+bad because these are different sizes
+
+342
+00:05:57,670 --> 00:05:57,680
+bad because these are different sizes
+ 
+
+343
+00:05:57,680 --> 00:05:59,589
+bad because these are different sizes
+right I mean we've taken a four byte
+
+344
+00:05:59,589 --> 00:05:59,599
+right I mean we've taken a four byte
+ 
+
+345
+00:05:59,599 --> 00:06:03,400
+right I mean we've taken a four byte
+integer and kind of decided to a double
+
+346
+00:06:03,400 --> 00:06:03,410
+integer and kind of decided to a double
+ 
+
+347
+00:06:03,410 --> 00:06:04,810
+integer and kind of decided to a double
+so what that's done since we've
+
+348
+00:06:04,810 --> 00:06:04,820
+so what that's done since we've
+ 
+
+349
+00:06:04,820 --> 00:06:06,640
+so what that's done since we've
+converted an int pointer into a double
+
+350
+00:06:06,640 --> 00:06:06,650
+converted an int pointer into a double
+ 
+
+351
+00:06:06,650 --> 00:06:09,100
+converted an int pointer into a double
+pointer and then dereferenced it that's
+
+352
+00:06:09,100 --> 00:06:09,110
+pointer and then dereferenced it that's
+ 
+
+353
+00:06:09,110 --> 00:06:10,390
+pointer and then dereferenced it that's
+actually gone ahead and looked four
+
+354
+00:06:10,390 --> 00:06:10,400
+actually gone ahead and looked four
+ 
+
+355
+00:06:10,400 --> 00:06:13,060
+actually gone ahead and looked four
+bytes past our integer and grabbed that
+
+356
+00:06:13,060 --> 00:06:13,070
+bytes past our integer and grabbed that
+ 
+
+357
+00:06:13,070 --> 00:06:15,189
+bytes past our integer and grabbed that
+memory which is not our memory it's not
+
+358
+00:06:15,189 --> 00:06:15,199
+memory which is not our memory it's not
+ 
+
+359
+00:06:15,199 --> 00:06:17,140
+memory which is not our memory it's not
+the memory we have for integer so this
+
+360
+00:06:17,140 --> 00:06:17,150
+the memory we have for integer so this
+ 
+
+361
+00:06:17,150 --> 00:06:19,000
+the memory we have for integer so this
+is very bad and it could even cause a
+
+362
+00:06:19,000 --> 00:06:19,010
+is very bad and it could even cause a
+ 
+
+363
+00:06:19,010 --> 00:06:20,379
+is very bad and it could even cause a
+crash in some circumstance it's
+
+364
+00:06:20,379 --> 00:06:20,389
+crash in some circumstance it's
+ 
+
+365
+00:06:20,389 --> 00:06:21,230
+crash in some circumstance it's
+definitely something you want
+
+366
+00:06:21,230 --> 00:06:21,240
+definitely something you want
+ 
+
+367
+00:06:21,240 --> 00:06:23,540
+definitely something you want
+do I mean we've copied that memory into
+
+368
+00:06:23,540 --> 00:06:23,550
+do I mean we've copied that memory into
+ 
+
+369
+00:06:23,550 --> 00:06:25,400
+do I mean we've copied that memory into
+a new double value blog so that's safe
+
+370
+00:06:25,400 --> 00:06:25,410
+a new double value blog so that's safe
+ 
+
+371
+00:06:25,410 --> 00:06:28,189
+a new double value blog so that's safe
+so we haven't written and we if we can't
+
+372
+00:06:28,189 --> 00:06:28,199
+so we haven't written and we if we can't
+ 
+
+373
+00:06:28,199 --> 00:06:29,629
+so we haven't written and we if we can't
+at this point even if we do write to
+
+374
+00:06:29,629 --> 00:06:29,639
+at this point even if we do write to
+ 
+
+375
+00:06:29,639 --> 00:06:31,730
+at this point even if we do write to
+value we're not going to be writing to
+
+376
+00:06:31,730 --> 00:06:31,740
+value we're not going to be writing to
+ 
+
+377
+00:06:31,740 --> 00:06:33,800
+value we're not going to be writing to
+memory this on ours but we definitely
+
+378
+00:06:33,800 --> 00:06:33,810
+memory this on ours but we definitely
+ 
+
+379
+00:06:33,810 --> 00:06:35,629
+memory this on ours but we definitely
+have read from memory that's not ours
+
+380
+00:06:35,629 --> 00:06:35,639
+have read from memory that's not ours
+ 
+
+381
+00:06:35,639 --> 00:06:37,460
+have read from memory that's not ours
+that's not good let's take a look at a
+
+382
+00:06:37,460 --> 00:06:37,470
+that's not good let's take a look at a
+ 
+
+383
+00:06:37,470 --> 00:06:40,159
+that's not good let's take a look at a
+more practical example so what I'm going
+
+384
+00:06:40,159 --> 00:06:40,169
+more practical example so what I'm going
+ 
+
+385
+00:06:40,169 --> 00:06:41,779
+more practical example so what I'm going
+to do now of course if you didn't want
+
+386
+00:06:41,779 --> 00:06:41,789
+to do now of course if you didn't want
+ 
+
+387
+00:06:41,789 --> 00:06:43,460
+to do now of course if you didn't want
+to just just a quick note if you didn't
+
+388
+00:06:43,460 --> 00:06:43,470
+to just just a quick note if you didn't
+ 
+
+389
+00:06:43,470 --> 00:06:45,140
+to just just a quick note if you didn't
+want to actually create a whole new
+
+390
+00:06:45,140 --> 00:06:45,150
+want to actually create a whole new
+ 
+
+391
+00:06:45,150 --> 00:06:46,790
+want to actually create a whole new
+variable and you just wanted to access
+
+392
+00:06:46,790 --> 00:06:46,800
+variable and you just wanted to access
+ 
+
+393
+00:06:46,800 --> 00:06:48,890
+variable and you just wanted to access
+this int as if it was a double then you
+
+394
+00:06:48,890 --> 00:06:48,900
+this int as if it was a double then you
+ 
+
+395
+00:06:48,900 --> 00:06:50,689
+this int as if it was a double then you
+can just add an ampersand to the end of
+
+396
+00:06:50,689 --> 00:06:50,699
+can just add an ampersand to the end of
+ 
+
+397
+00:06:50,699 --> 00:06:53,540
+can just add an ampersand to the end of
+this double here which will just
+
+398
+00:06:53,540 --> 00:06:53,550
+this double here which will just
+ 
+
+399
+00:06:53,550 --> 00:06:55,249
+this double here which will just
+reference it and not copy it into a
+
+400
+00:06:55,249 --> 00:06:55,259
+reference it and not copy it into a
+ 
+
+401
+00:06:55,259 --> 00:06:56,839
+reference it and not copy it into a
+whole new variable and that way you will
+
+402
+00:06:56,839 --> 00:06:56,849
+whole new variable and that way you will
+ 
+
+403
+00:06:56,849 --> 00:06:59,089
+whole new variable and that way you will
+be actually editing this integer memory
+
+404
+00:06:59,089 --> 00:06:59,099
+be actually editing this integer memory
+ 
+
+405
+00:06:59,099 --> 00:07:00,980
+be actually editing this integer memory
+so that is dangerous because if I decide
+
+406
+00:07:00,980 --> 00:07:00,990
+so that is dangerous because if I decide
+ 
+
+407
+00:07:00,990 --> 00:07:03,710
+so that is dangerous because if I decide
+to write something like 0 into here then
+
+408
+00:07:03,710 --> 00:07:03,720
+to write something like 0 into here then
+ 
+
+409
+00:07:03,720 --> 00:07:05,300
+to write something like 0 into here then
+guess what it's actually going to write
+
+410
+00:07:05,300 --> 00:07:05,310
+guess what it's actually going to write
+ 
+
+411
+00:07:05,310 --> 00:07:07,070
+guess what it's actually going to write
+8 bytes instead of 4 but we only have
+
+412
+00:07:07,070 --> 00:07:07,080
+8 bytes instead of 4 but we only have
+ 
+
+413
+00:07:07,080 --> 00:07:08,839
+8 bytes instead of 4 but we only have
+space before this might even crash so
+
+414
+00:07:08,839 --> 00:07:08,849
+space before this might even crash so
+ 
+
+415
+00:07:08,849 --> 00:07:10,999
+space before this might even crash so
+let's take a look at a more practical
+
+416
+00:07:10,999 --> 00:07:11,009
+let's take a look at a more practical
+ 
+
+417
+00:07:11,009 --> 00:07:14,029
+let's take a look at a more practical
+example what if I have a struct called
+
+418
+00:07:14,029 --> 00:07:14,039
+example what if I have a struct called
+ 
+
+419
+00:07:14,039 --> 00:07:17,510
+example what if I have a struct called
+entity and this has two variables in X Y
+
+420
+00:07:17,510 --> 00:07:17,520
+entity and this has two variables in X Y
+ 
+
+421
+00:07:17,520 --> 00:07:19,779
+entity and this has two variables in X Y
+now we know really say I hope you know
+
+422
+00:07:19,779 --> 00:07:19,789
+now we know really say I hope you know
+ 
+
+423
+00:07:19,789 --> 00:07:22,309
+now we know really say I hope you know
+that if we have let's just initializes
+
+424
+00:07:22,309 --> 00:07:22,319
+that if we have let's just initializes
+ 
+
+425
+00:07:22,319 --> 00:07:24,830
+that if we have let's just initializes
+to 5 and 8 if we have something like
+
+426
+00:07:24,830 --> 00:07:24,840
+to 5 and 8 if we have something like
+ 
+
+427
+00:07:24,840 --> 00:07:27,290
+to 5 and 8 if we have something like
+this in memory then really all that
+
+428
+00:07:27,290 --> 00:07:27,300
+this in memory then really all that
+ 
+
+429
+00:07:27,300 --> 00:07:31,310
+this in memory then really all that
+struct is is like it it is it is made up
+
+430
+00:07:31,310 --> 00:07:31,320
+struct is is like it it is it is made up
+ 
+
+431
+00:07:31,320 --> 00:07:32,600
+struct is is like it it is it is made up
+of those two integers it has literally
+
+432
+00:07:32,600 --> 00:07:32,610
+of those two integers it has literally
+ 
+
+433
+00:07:32,610 --> 00:07:34,490
+of those two integers it has literally
+those two integers and that's it if we
+
+434
+00:07:34,490 --> 00:07:34,500
+those two integers and that's it if we
+ 
+
+435
+00:07:34,500 --> 00:07:36,499
+those two integers and that's it if we
+look at its memory you can see we have 5
+
+436
+00:07:36,499 --> 00:07:36,509
+look at its memory you can see we have 5
+ 
+
+437
+00:07:36,509 --> 00:07:38,930
+look at its memory you can see we have 5
+& 8 that's it the struct itself does not
+
+438
+00:07:38,930 --> 00:07:38,940
+& 8 that's it the struct itself does not
+ 
+
+439
+00:07:38,940 --> 00:07:40,850
+& 8 that's it the struct itself does not
+contain any kind of padding any kind of
+
+440
+00:07:40,850 --> 00:07:40,860
+contain any kind of padding any kind of
+ 
+
+441
+00:07:40,860 --> 00:07:43,310
+contain any kind of padding any kind of
+data whatever if it's an am C struct
+
+442
+00:07:43,310 --> 00:07:43,320
+data whatever if it's an am C struct
+ 
+
+443
+00:07:43,320 --> 00:07:44,810
+data whatever if it's an am C struct
+then there has to be at least one bites
+
+444
+00:07:44,810 --> 00:07:44,820
+then there has to be at least one bites
+ 
+
+445
+00:07:44,820 --> 00:07:46,399
+then there has to be at least one bites
+the will be something in there because
+
+446
+00:07:46,399 --> 00:07:46,409
+the will be something in there because
+ 
+
+447
+00:07:46,409 --> 00:07:47,570
+the will be something in there because
+we need to be able to address that
+
+448
+00:07:47,570 --> 00:07:47,580
+we need to be able to address that
+ 
+
+449
+00:07:47,580 --> 00:07:50,240
+we need to be able to address that
+memory and we can't address it it's not
+
+450
+00:07:50,240 --> 00:07:50,250
+memory and we can't address it it's not
+ 
+
+451
+00:07:50,250 --> 00:07:52,129
+memory and we can't address it it's not
+there so we have to have at least one
+
+452
+00:07:52,129 --> 00:07:52,139
+there so we have to have at least one
+ 
+
+453
+00:07:52,139 --> 00:07:54,350
+there so we have to have at least one
+byte instructive and if it is empty but
+
+454
+00:07:54,350 --> 00:07:54,360
+byte instructive and if it is empty but
+ 
+
+455
+00:07:54,360 --> 00:07:56,719
+byte instructive and if it is empty but
+if we have variables in there like in x
+
+456
+00:07:56,719 --> 00:07:56,729
+if we have variables in there like in x
+ 
+
+457
+00:07:56,729 --> 00:07:59,899
+if we have variables in there like in x
+and y that struct is just two integers
+
+458
+00:07:59,899 --> 00:07:59,909
+and y that struct is just two integers
+ 
+
+459
+00:07:59,909 --> 00:08:01,790
+and y that struct is just two integers
+that's all it is there's no like extra
+
+460
+00:08:01,790 --> 00:08:01,800
+that's all it is there's no like extra
+ 
+
+461
+00:08:01,800 --> 00:08:04,430
+that's all it is there's no like extra
+data that says this is an entity struct
+
+462
+00:08:04,430 --> 00:08:04,440
+data that says this is an entity struct
+ 
+
+463
+00:08:04,440 --> 00:08:06,709
+data that says this is an entity struct
+it's not how any of that works it's just
+
+464
+00:08:06,709 --> 00:08:06,719
+it's not how any of that works it's just
+ 
+
+465
+00:08:06,719 --> 00:08:10,640
+it's not how any of that works it's just
+the two integers so what we can do here
+
+466
+00:08:10,640 --> 00:08:10,650
+the two integers so what we can do here
+ 
+
+467
+00:08:10,650 --> 00:08:12,559
+the two integers so what we can do here
+is we can actually just treat this empty
+
+468
+00:08:12,559 --> 00:08:12,569
+is we can actually just treat this empty
+ 
+
+469
+00:08:12,569 --> 00:08:15,700
+is we can actually just treat this empty
+struct as an int array or maybe just
+
+470
+00:08:15,700 --> 00:08:15,710
+struct as an int array or maybe just
+ 
+
+471
+00:08:15,710 --> 00:08:18,439
+struct as an int array or maybe just
+extract one of its integers by not even
+
+472
+00:08:18,439 --> 00:08:18,449
+extract one of its integers by not even
+ 
+
+473
+00:08:18,449 --> 00:08:20,209
+extract one of its integers by not even
+doing it so you don't why it's take a
+
+474
+00:08:20,209 --> 00:08:20,219
+doing it so you don't why it's take a
+ 
+
+475
+00:08:20,219 --> 00:08:22,370
+doing it so you don't why it's take a
+look so I could just say a dot X and
+
+476
+00:08:22,370 --> 00:08:22,380
+look so I could just say a dot X and
+ 
+
+477
+00:08:22,380 --> 00:08:25,879
+look so I could just say a dot X and
+that would give me my X variable but
+
+478
+00:08:25,879 --> 00:08:25,889
+that would give me my X variable but
+ 
+
+479
+00:08:25,889 --> 00:08:28,159
+that would give me my X variable but
+what I could do also is just say well
+
+480
+00:08:28,159 --> 00:08:28,169
+what I could do also is just say well
+ 
+
+481
+00:08:28,169 --> 00:08:30,649
+what I could do also is just say well
+let's make it a read out of it so this
+
+482
+00:08:30,649 --> 00:08:30,659
+let's make it a read out of it so this
+ 
+
+483
+00:08:30,659 --> 00:08:33,020
+let's make it a read out of it so this
+will be a raw array say in point up
+
+484
+00:08:33,020 --> 00:08:33,030
+will be a raw array say in point up
+ 
+
+485
+00:08:33,030 --> 00:08:36,830
+will be a raw array say in point up
+call this out of my position equals the
+
+486
+00:08:36,830 --> 00:08:36,840
+call this out of my position equals the
+ 
+
+487
+00:08:36,840 --> 00:08:40,370
+call this out of my position equals the
+memory address of a and then just cost
+
+488
+00:08:40,370 --> 00:08:40,380
+memory address of a and then just cost
+ 
+
+489
+00:08:40,380 --> 00:08:42,590
+memory address of a and then just cost
+that Twitter points up like that and now
+
+490
+00:08:42,590 --> 00:08:42,600
+that Twitter points up like that and now
+ 
+
+491
+00:08:42,600 --> 00:08:44,090
+that Twitter points up like that and now
+if I wanted to print this out I'll just
+
+492
+00:08:44,090 --> 00:08:44,100
+if I wanted to print this out I'll just
+ 
+
+493
+00:08:44,100 --> 00:08:50,560
+if I wanted to print this out I'll just
+write it as CDC out position zero and
+
+494
+00:08:50,560 --> 00:08:50,570
+write it as CDC out position zero and
+ 
+
+495
+00:08:50,570 --> 00:08:54,860
+write it as CDC out position zero and
+then comma position one like that as if
+
+496
+00:08:54,860 --> 00:08:54,870
+then comma position one like that as if
+ 
+
+497
+00:08:54,870 --> 00:08:56,570
+then comma position one like that as if
+it was Justin all right and you can see
+
+498
+00:08:56,570 --> 00:08:56,580
+it was Justin all right and you can see
+ 
+
+499
+00:08:56,580 --> 00:08:57,230
+it was Justin all right and you can see
+there I have it
+
+500
+00:08:57,230 --> 00:08:57,240
+there I have it
+ 
+
+501
+00:08:57,240 --> 00:08:59,030
+there I have it
+five eight I mean I'm accessing it like
+
+502
+00:08:59,030 --> 00:08:59,040
+five eight I mean I'm accessing it like
+ 
+
+503
+00:08:59,040 --> 00:09:00,500
+five eight I mean I'm accessing it like
+it was an array because I've converted
+
+504
+00:09:00,500 --> 00:09:00,510
+it was an array because I've converted
+ 
+
+505
+00:09:00,510 --> 00:09:02,000
+it was an array because I've converted
+it into an array basically I've said
+
+506
+00:09:02,000 --> 00:09:02,010
+it into an array basically I've said
+ 
+
+507
+00:09:02,010 --> 00:09:05,150
+it into an array basically I've said
+that this entity memory address contains
+
+508
+00:09:05,150 --> 00:09:05,160
+that this entity memory address contains
+ 
+
+509
+00:09:05,160 --> 00:09:07,550
+that this entity memory address contains
+the beginning of an int array right or
+
+510
+00:09:07,550 --> 00:09:07,560
+the beginning of an int array right or
+ 
+
+511
+00:09:07,560 --> 00:09:08,870
+the beginning of an int array right or
+it just contains a pointer to an integer
+
+512
+00:09:08,870 --> 00:09:08,880
+it just contains a pointer to an integer
+ 
+
+513
+00:09:08,880 --> 00:09:10,610
+it just contains a pointer to an integer
+and then I've just looked one integer
+
+514
+00:09:10,610 --> 00:09:10,620
+and then I've just looked one integer
+ 
+
+515
+00:09:10,620 --> 00:09:12,950
+and then I've just looked one integer
+ahead using the same kind of method what
+
+516
+00:09:12,950 --> 00:09:12,960
+ahead using the same kind of method what
+ 
+
+517
+00:09:12,960 --> 00:09:15,050
+ahead using the same kind of method what
+I could do is something even crazier
+
+518
+00:09:15,050 --> 00:09:15,060
+I could do is something even crazier
+ 
+
+519
+00:09:15,060 --> 00:09:17,030
+I could do is something even crazier
+perhaps let's just say I wanted to get
+
+520
+00:09:17,030 --> 00:09:17,040
+perhaps let's just say I wanted to get
+ 
+
+521
+00:09:17,040 --> 00:09:19,010
+perhaps let's just say I wanted to get
+that Y variable out of it now of course
+
+522
+00:09:19,010 --> 00:09:19,020
+that Y variable out of it now of course
+ 
+
+523
+00:09:19,020 --> 00:09:20,690
+that Y variable out of it now of course
+any sane person would just write that
+
+524
+00:09:20,690 --> 00:09:20,700
+any sane person would just write that
+ 
+
+525
+00:09:20,700 --> 00:09:22,340
+any sane person would just write that
+and fact that's probably what I would
+
+526
+00:09:22,340 --> 00:09:22,350
+and fact that's probably what I would
+ 
+
+527
+00:09:22,350 --> 00:09:23,960
+and fact that's probably what I would
+write as a well I mean man because I'm
+
+528
+00:09:23,960 --> 00:09:23,970
+write as a well I mean man because I'm
+ 
+
+529
+00:09:23,970 --> 00:09:27,650
+write as a well I mean man because I'm
+pretty sane but what you could do is you
+
+530
+00:09:27,650 --> 00:09:27,660
+pretty sane but what you could do is you
+ 
+
+531
+00:09:27,660 --> 00:09:29,510
+pretty sane but what you could do is you
+could get the memory address off e like
+
+532
+00:09:29,510 --> 00:09:29,520
+could get the memory address off e like
+ 
+
+533
+00:09:29,520 --> 00:09:32,690
+could get the memory address off e like
+that converted into maybe like a char
+
+534
+00:09:32,690 --> 00:09:32,700
+that converted into maybe like a char
+ 
+
+535
+00:09:32,700 --> 00:09:35,060
+that converted into maybe like a char
+pointer again not sure why you would but
+
+536
+00:09:35,060 --> 00:09:35,070
+pointer again not sure why you would but
+ 
+
+537
+00:09:35,070 --> 00:09:37,220
+pointer again not sure why you would but
+let's just say that you did that is of
+
+538
+00:09:37,220 --> 00:09:37,230
+let's just say that you did that is of
+ 
+
+539
+00:09:37,230 --> 00:09:39,230
+let's just say that you did that is of
+course of one byte in size so we need to
+
+540
+00:09:39,230 --> 00:09:39,240
+course of one byte in size so we need to
+ 
+
+541
+00:09:39,240 --> 00:09:43,310
+course of one byte in size so we need to
+go four bytes forward like that and then
+
+542
+00:09:43,310 --> 00:09:43,320
+go four bytes forward like that and then
+ 
+
+543
+00:09:43,320 --> 00:09:47,410
+go four bytes forward like that and then
+convert that memory into an int pointer
+
+544
+00:09:47,410 --> 00:09:47,420
+convert that memory into an int pointer
+ 
+
+545
+00:09:47,420 --> 00:09:50,660
+convert that memory into an int pointer
+and then dereference that and then we
+
+546
+00:09:50,660 --> 00:09:50,670
+and then dereference that and then we
+ 
+
+547
+00:09:50,670 --> 00:09:52,460
+and then dereference that and then we
+have access to Y so let's go ahead and
+
+548
+00:09:52,460 --> 00:09:52,470
+have access to Y so let's go ahead and
+ 
+
+549
+00:09:52,470 --> 00:09:56,720
+have access to Y so let's go ahead and
+print this crazy piece of card like that
+
+550
+00:09:56,720 --> 00:09:56,730
+print this crazy piece of card like that
+ 
+
+551
+00:09:56,730 --> 00:10:00,140
+print this crazy piece of card like that
+and I'll check that out we get a which
+
+552
+00:10:00,140 --> 00:10:00,150
+and I'll check that out we get a which
+ 
+
+553
+00:10:00,150 --> 00:10:02,240
+and I'll check that out we get a which
+is of course the Y position of the
+
+554
+00:10:02,240 --> 00:10:02,250
+is of course the Y position of the
+ 
+
+555
+00:10:02,250 --> 00:10:03,440
+is of course the Y position of the
+entity but the point is what we've done
+
+556
+00:10:03,440 --> 00:10:03,450
+entity but the point is what we've done
+ 
+
+557
+00:10:03,450 --> 00:10:05,510
+entity but the point is what we've done
+here is we're just kind of just reverted
+
+558
+00:10:05,510 --> 00:10:05,520
+here is we're just kind of just reverted
+ 
+
+559
+00:10:05,520 --> 00:10:07,280
+here is we're just kind of just reverted
+to raw memory operation so I mean that
+
+560
+00:10:07,280 --> 00:10:07,290
+to raw memory operation so I mean that
+ 
+
+561
+00:10:07,290 --> 00:10:09,080
+to raw memory operation so I mean that
+simples Clause does really well which is
+
+562
+00:10:09,080 --> 00:10:09,090
+simples Clause does really well which is
+ 
+
+563
+00:10:09,090 --> 00:10:11,000
+simples Clause does really well which is
+why it's such a powerful language one of
+
+564
+00:10:11,000 --> 00:10:11,010
+why it's such a powerful language one of
+ 
+
+565
+00:10:11,010 --> 00:10:12,140
+why it's such a powerful language one of
+the big reasons why it is such a
+
+566
+00:10:12,140 --> 00:10:12,150
+the big reasons why it is such a
+ 
+
+567
+00:10:12,150 --> 00:10:13,970
+the big reasons why it is such a
+powerful language because it has that
+
+568
+00:10:13,970 --> 00:10:13,980
+powerful language because it has that
+ 
+
+569
+00:10:13,980 --> 00:10:17,150
+powerful language because it has that
+kind of it can manipulate memory really
+
+570
+00:10:17,150 --> 00:10:17,160
+kind of it can manipulate memory really
+ 
+
+571
+00:10:17,160 --> 00:10:19,850
+kind of it can manipulate memory really
+easily and really freely and memory is
+
+572
+00:10:19,850 --> 00:10:19,860
+easily and really freely and memory is
+ 
+
+573
+00:10:19,860 --> 00:10:22,010
+easily and really freely and memory is
+by far one of the biggest things we
+
+574
+00:10:22,010 --> 00:10:22,020
+by far one of the biggest things we
+ 
+
+575
+00:10:22,020 --> 00:10:23,990
+by far one of the biggest things we
+actually have to deal with when we're
+
+576
+00:10:23,990 --> 00:10:24,000
+actually have to deal with when we're
+ 
+
+577
+00:10:24,000 --> 00:10:27,410
+actually have to deal with when we're
+actually programming so whilst this code
+
+578
+00:10:27,410 --> 00:10:27,420
+actually programming so whilst this code
+ 
+
+579
+00:10:27,420 --> 00:10:30,530
+actually programming so whilst this code
+probably should never exist like in real
+
+580
+00:10:30,530 --> 00:10:30,540
+probably should never exist like in real
+ 
+
+581
+00:10:30,540 --> 00:10:32,180
+probably should never exist like in real
+applications because it's crazy and of
+
+582
+00:10:32,180 --> 00:10:32,190
+applications because it's crazy and of
+ 
+
+583
+00:10:32,190 --> 00:10:34,220
+applications because it's crazy and of
+course in this case you can just use a
+
+584
+00:10:34,220 --> 00:10:34,230
+course in this case you can just use a
+ 
+
+585
+00:10:34,230 --> 00:10:37,730
+course in this case you can just use a
+dot Y it can be very useful if you don't
+
+586
+00:10:37,730 --> 00:10:37,740
+dot Y it can be very useful if you don't
+ 
+
+587
+00:10:37,740 --> 00:10:39,350
+dot Y it can be very useful if you don't
+want to deal with kind of copying or
+
+588
+00:10:39,350 --> 00:10:39,360
+want to deal with kind of copying or
+ 
+
+589
+00:10:39,360 --> 00:10:42,200
+want to deal with kind of copying or
+conversions because again if we wanted
+
+590
+00:10:42,200 --> 00:10:42,210
+conversions because again if we wanted
+ 
+
+591
+00:10:42,210 --> 00:10:43,400
+conversions because again if we wanted
+this as an array
+
+592
+00:10:43,400 --> 00:10:43,410
+this as an array
+ 
+
+593
+00:10:43,410 --> 00:10:46,369
+this as an array
+well we can't like if you let's just say
+
+594
+00:10:46,369 --> 00:10:46,379
+well we can't like if you let's just say
+ 
+
+595
+00:10:46,379 --> 00:10:47,989
+well we can't like if you let's just say
+you wanted to create you know how did I
+
+596
+00:10:47,989 --> 00:10:47,999
+you wanted to create you know how did I
+ 
+
+597
+00:10:47,999 --> 00:10:51,229
+you wanted to create you know how did I
+get positions or whatever as an int
+
+598
+00:10:51,229 --> 00:10:51,239
+get positions or whatever as an int
+ 
+
+599
+00:10:51,239 --> 00:10:53,089
+get positions or whatever as an int
+array well how would you do that well I
+
+600
+00:10:53,089 --> 00:10:53,099
+array well how would you do that well I
+ 
+
+601
+00:10:53,099 --> 00:10:55,549
+array well how would you do that well I
+mean I guess like well you would have to
+
+602
+00:10:55,549 --> 00:10:55,559
+mean I guess like well you would have to
+ 
+
+603
+00:10:55,559 --> 00:10:57,139
+mean I guess like well you would have to
+kind of do it well this is not an array
+
+604
+00:10:57,139 --> 00:10:57,149
+kind of do it well this is not an array
+ 
+
+605
+00:10:57,149 --> 00:10:59,269
+kind of do it well this is not an array
+so I have to just create like a new int
+
+606
+00:10:59,269 --> 00:10:59,279
+so I have to just create like a new int
+ 
+
+607
+00:10:59,279 --> 00:11:01,399
+so I have to just create like a new int
+array right now because this isn't a
+
+608
+00:11:01,399 --> 00:11:01,409
+array right now because this isn't a
+ 
+
+609
+00:11:01,409 --> 00:11:03,859
+array right now because this isn't a
+function and you know we're not taking
+
+610
+00:11:03,859 --> 00:11:03,869
+function and you know we're not taking
+ 
+
+611
+00:11:03,869 --> 00:11:06,139
+function and you know we're not taking
+in like some kind of memory to put that
+
+612
+00:11:06,139 --> 00:11:06,149
+in like some kind of memory to put that
+ 
+
+613
+00:11:06,149 --> 00:11:08,449
+in like some kind of memory to put that
+that array into we probably need to
+
+614
+00:11:08,449 --> 00:11:08,459
+that array into we probably need to
+ 
+
+615
+00:11:08,459 --> 00:11:10,789
+that array into we probably need to
+create our own array which means we need
+
+616
+00:11:10,789 --> 00:11:10,799
+create our own array which means we need
+ 
+
+617
+00:11:10,799 --> 00:11:12,859
+create our own array which means we need
+to heap allocated and then copy that and
+
+618
+00:11:12,859 --> 00:11:12,869
+to heap allocated and then copy that and
+ 
+
+619
+00:11:12,869 --> 00:11:13,849
+to heap allocated and then copy that and
+I don't even want to write this code
+
+620
+00:11:13,849 --> 00:11:13,859
+I don't even want to write this code
+ 
+
+621
+00:11:13,859 --> 00:11:15,379
+I don't even want to write this code
+it's disgusting it's terribly slow it's
+
+622
+00:11:15,379 --> 00:11:15,389
+it's disgusting it's terribly slow it's
+ 
+
+623
+00:11:15,389 --> 00:11:17,539
+it's disgusting it's terribly slow it's
+awful what I could do instead is just
+
+624
+00:11:17,539 --> 00:11:17,549
+awful what I could do instead is just
+ 
+
+625
+00:11:17,549 --> 00:11:20,179
+awful what I could do instead is just
+return well I don't know memory address
+
+626
+00:11:20,179 --> 00:11:20,189
+return well I don't know memory address
+ 
+
+627
+00:11:20,189 --> 00:11:23,299
+return well I don't know memory address
+of X right now this of course really
+
+628
+00:11:23,299 --> 00:11:23,309
+of X right now this of course really
+ 
+
+629
+00:11:23,309 --> 00:11:25,789
+of X right now this of course really
+depends on the user not trying to do
+
+630
+00:11:25,789 --> 00:11:25,799
+depends on the user not trying to do
+ 
+
+631
+00:11:25,799 --> 00:11:28,909
+depends on the user not trying to do
+something like position two because
+
+632
+00:11:28,909 --> 00:11:28,919
+something like position two because
+ 
+
+633
+00:11:28,919 --> 00:11:30,229
+something like position two because
+there is no third element and that's
+
+634
+00:11:30,229 --> 00:11:30,239
+there is no third element and that's
+ 
+
+635
+00:11:30,239 --> 00:11:32,299
+there is no third element and that's
+going to go away bus to memory however
+
+636
+00:11:32,299 --> 00:11:32,309
+going to go away bus to memory however
+ 
+
+637
+00:11:32,309 --> 00:11:34,279
+going to go away bus to memory however
+you can see that now what I have access
+
+638
+00:11:34,279 --> 00:11:34,289
+you can see that now what I have access
+ 
+
+639
+00:11:34,289 --> 00:11:37,219
+you can see that now what I have access
+to if I fall you get positions he is an
+
+640
+00:11:37,219 --> 00:11:37,229
+to if I fall you get positions he is an
+ 
+
+641
+00:11:37,229 --> 00:11:39,079
+to if I fall you get positions he is an
+actual int array with two elements in it
+
+642
+00:11:39,079 --> 00:11:39,089
+actual int array with two elements in it
+ 
+
+643
+00:11:39,089 --> 00:11:41,449
+actual int array with two elements in it
+that I can access and I haven't I can
+
+644
+00:11:41,449 --> 00:11:41,459
+that I can access and I haven't I can
+ 
+
+645
+00:11:41,459 --> 00:11:44,779
+that I can access and I haven't I can
+also write to it so I can say position
+
+646
+00:11:44,779 --> 00:11:44,789
+also write to it so I can say position
+ 
+
+647
+00:11:44,789 --> 00:11:46,699
+also write to it so I can say position
+zero equals two and I've changed the
+
+648
+00:11:46,699 --> 00:11:46,709
+zero equals two and I've changed the
+ 
+
+649
+00:11:46,709 --> 00:11:50,389
+zero equals two and I've changed the
+x-coordinate of my entity but also I you
+
+650
+00:11:50,389 --> 00:11:50,399
+x-coordinate of my entity but also I you
+ 
+
+651
+00:11:50,399 --> 00:11:52,999
+x-coordinate of my entity but also I you
+know I haven't copy anything I haven't
+
+652
+00:11:52,999 --> 00:11:53,009
+know I haven't copy anything I haven't
+ 
+
+653
+00:11:53,009 --> 00:11:55,279
+know I haven't copy anything I haven't
+copied memory redundantly I've just
+
+654
+00:11:55,279 --> 00:11:55,289
+copied memory redundantly I've just
+ 
+
+655
+00:11:55,289 --> 00:11:56,689
+copied memory redundantly I've just
+linking to the same memory I'm just
+
+656
+00:11:56,689 --> 00:11:56,699
+linking to the same memory I'm just
+ 
+
+657
+00:11:56,699 --> 00:11:58,460
+linking to the same memory I'm just
+choosing a different way to actually
+
+658
+00:11:58,460 --> 00:11:58,470
+choosing a different way to actually
+ 
+
+659
+00:11:58,470 --> 00:12:00,739
+choosing a different way to actually
+interpret that memory if you don't want
+
+660
+00:12:00,739 --> 00:12:00,749
+interpret that memory if you don't want
+ 
+
+661
+00:12:00,749 --> 00:12:02,239
+interpret that memory if you don't want
+to deal with the raw cost so you can use
+
+662
+00:12:02,239 --> 00:12:02,249
+to deal with the raw cost so you can use
+ 
+
+663
+00:12:02,249 --> 00:12:04,039
+to deal with the raw cost so you can use
+reinterpret class to do exactly the same
+
+664
+00:12:04,039 --> 00:12:04,049
+reinterpret class to do exactly the same
+ 
+
+665
+00:12:04,049 --> 00:12:06,379
+reinterpret class to do exactly the same
+thing we will have a video for simple
+
+666
+00:12:06,379 --> 00:12:06,389
+thing we will have a video for simple
+ 
+
+667
+00:12:06,389 --> 00:12:08,869
+thing we will have a video for simple
+space costs in the future reason I
+
+668
+00:12:08,869 --> 00:12:08,879
+space costs in the future reason I
+ 
+
+669
+00:12:08,879 --> 00:12:09,739
+space costs in the future reason I
+haven't done one yet it's because I
+
+670
+00:12:09,739 --> 00:12:09,749
+haven't done one yet it's because I
+ 
+
+671
+00:12:09,749 --> 00:12:11,539
+haven't done one yet it's because I
+don't use them too often - you see style
+
+672
+00:12:11,539 --> 00:12:11,549
+don't use them too often - you see style
+ 
+
+673
+00:12:11,549 --> 00:12:13,579
+don't use them too often - you see style
+passed most of the time I probably
+
+674
+00:12:13,579 --> 00:12:13,589
+passed most of the time I probably
+ 
+
+675
+00:12:13,589 --> 00:12:15,619
+passed most of the time I probably
+should use if I spot star class but what
+
+676
+00:12:15,619 --> 00:12:15,629
+should use if I spot star class but what
+ 
+
+677
+00:12:15,629 --> 00:12:17,539
+should use if I spot star class but what
+are you gonna do anyway that is
+
+678
+00:12:17,539 --> 00:12:17,549
+are you gonna do anyway that is
+ 
+
+679
+00:12:17,549 --> 00:12:19,909
+are you gonna do anyway that is
+basically tie pudding it's just us being
+
+680
+00:12:19,909 --> 00:12:19,919
+basically tie pudding it's just us being
+ 
+
+681
+00:12:19,919 --> 00:12:22,099
+basically tie pudding it's just us being
+able to say I'm gonna treat this memory
+
+682
+00:12:22,099 --> 00:12:22,109
+able to say I'm gonna treat this memory
+ 
+
+683
+00:12:22,109 --> 00:12:23,599
+able to say I'm gonna treat this memory
+I have as a different type than it
+
+684
+00:12:23,599 --> 00:12:23,609
+I have as a different type than it
+ 
+
+685
+00:12:23,609 --> 00:12:25,069
+I have as a different type than it
+actually is and you can see if we can do
+
+686
+00:12:25,069 --> 00:12:25,079
+actually is and you can see if we can do
+ 
+
+687
+00:12:25,079 --> 00:12:27,169
+actually is and you can see if we can do
+that really freely all we really need to
+
+688
+00:12:27,169 --> 00:12:27,179
+that really freely all we really need to
+ 
+
+689
+00:12:27,179 --> 00:12:30,829
+that really freely all we really need to
+do is just get that type as a pointer
+
+690
+00:12:30,829 --> 00:12:30,839
+do is just get that type as a pointer
+ 
+
+691
+00:12:30,839 --> 00:12:33,499
+do is just get that type as a pointer
+and then cost it to a different pointer
+
+692
+00:12:33,499 --> 00:12:33,509
+and then cost it to a different pointer
+ 
+
+693
+00:12:33,509 --> 00:12:35,449
+and then cost it to a different pointer
+and then we can dereference it if we
+
+694
+00:12:35,449 --> 00:12:35,459
+and then we can dereference it if we
+ 
+
+695
+00:12:35,459 --> 00:12:37,460
+and then we can dereference it if we
+need to and just deal with it anyway I
+
+696
+00:12:37,460 --> 00:12:37,470
+need to and just deal with it anyway I
+ 
+
+697
+00:12:37,470 --> 00:12:38,569
+need to and just deal with it anyway I
+hope you guys enjoy this video if you
+
+698
+00:12:38,569 --> 00:12:38,579
+hope you guys enjoy this video if you
+ 
+
+699
+00:12:38,579 --> 00:12:39,649
+hope you guys enjoy this video if you
+did please hit the like button let me
+
+700
+00:12:39,649 --> 00:12:39,659
+did please hit the like button let me
+ 
+
+701
+00:12:39,659 --> 00:12:40,849
+did please hit the like button let me
+know what you think about try planning
+
+702
+00:12:40,849 --> 00:12:40,859
+know what you think about try planning
+ 
+
+703
+00:12:40,859 --> 00:12:43,279
+know what you think about try planning
+and this type system and why like why
+
+704
+00:12:43,279 --> 00:12:43,289
+and this type system and why like why
+ 
+
+705
+00:12:43,289 --> 00:12:44,839
+and this type system and why like why
+try planning is useful and why you love
+
+706
+00:12:44,839 --> 00:12:44,849
+try planning is useful and why you love
+ 
+
+707
+00:12:44,849 --> 00:12:47,149
+try planning is useful and why you love
+it so much or you do I hated I don't
+
+708
+00:12:47,149 --> 00:12:47,159
+it so much or you do I hated I don't
+ 
+
+709
+00:12:47,159 --> 00:12:47,680
+it so much or you do I hated I don't
+know
+
+710
+00:12:47,680 --> 00:12:47,690
+know
+ 
+
+711
+00:12:47,690 --> 00:12:49,270
+know
+well how do you feel about it leave your
+
+712
+00:12:49,270 --> 00:12:49,280
+well how do you feel about it leave your
+ 
+
+713
+00:12:49,280 --> 00:12:51,190
+well how do you feel about it leave your
+thoughts in the comment section below if
+
+714
+00:12:51,190 --> 00:12:51,200
+thoughts in the comment section below if
+ 
+
+715
+00:12:51,200 --> 00:12:52,960
+thoughts in the comment section below if
+you want to support the series please go
+
+716
+00:12:52,960 --> 00:12:52,970
+you want to support the series please go
+ 
+
+717
+00:12:52,970 --> 00:12:55,000
+you want to support the series please go
+to Petra non compos - to Cherno huge
+
+718
+00:12:55,000 --> 00:12:55,010
+to Petra non compos - to Cherno huge
+ 
+
+719
+00:12:55,010 --> 00:12:56,560
+to Petra non compos - to Cherno huge
+shout out as always to all my lovely
+
+720
+00:12:56,560 --> 00:12:56,570
+shout out as always to all my lovely
+ 
+
+721
+00:12:56,570 --> 00:12:58,420
+shout out as always to all my lovely
+supporters this series would not be here
+
+722
+00:12:58,420 --> 00:12:58,430
+supporters this series would not be here
+ 
+
+723
+00:12:58,430 --> 00:13:01,000
+supporters this series would not be here
+without you guys so thank you and I'll
+
+724
+00:13:01,000 --> 00:13:01,010
+without you guys so thank you and I'll
+ 
+
+725
+00:13:01,010 --> 00:13:03,650
+without you guys so thank you and I'll
+see you next time goodbye
+
+726
+00:13:03,650 --> 00:13:03,660
+see you next time goodbye
+ 
+
+727
+00:13:03,660 --> 00:13:18,840
+see you next time goodbye
+[Music]
+

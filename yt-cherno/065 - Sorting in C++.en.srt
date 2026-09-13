@@ -1,0 +1,1935 @@
+1
+00:00:00,000 --> 00:00:01,640
+
+hey what's up guys my name is a turn-on
+
+2
+00:00:01,640 --> 00:00:01,650
+hey what's up guys my name is a turn-on
+ 
+
+3
+00:00:01,650 --> 00:00:03,710
+hey what's up guys my name is a turn-on
+welcome back to my stable spas series so
+
+4
+00:00:03,710 --> 00:00:03,720
+welcome back to my stable spas series so
+ 
+
+5
+00:00:03,720 --> 00:00:04,910
+welcome back to my stable spas series so
+today we will be talking all about
+
+6
+00:00:04,910 --> 00:00:04,920
+today we will be talking all about
+ 
+
+7
+00:00:04,920 --> 00:00:08,210
+today we will be talking all about
+sorting in C++ so talking about various
+
+8
+00:00:08,210 --> 00:00:08,220
+sorting in C++ so talking about various
+ 
+
+9
+00:00:08,220 --> 00:00:09,650
+sorting in C++ so talking about various
+different data structures and as the
+
+10
+00:00:09,650 --> 00:00:09,660
+different data structures and as the
+ 
+
+11
+00:00:09,660 --> 00:00:11,660
+different data structures and as the
+series goes on we will continue talking
+
+12
+00:00:11,660 --> 00:00:11,670
+series goes on we will continue talking
+ 
+
+13
+00:00:11,670 --> 00:00:14,169
+series goes on we will continue talking
+about various data structures because
+
+14
+00:00:14,169 --> 00:00:14,179
+about various data structures because
+ 
+
+15
+00:00:14,179 --> 00:00:16,490
+about various data structures because
+data structures are how you store data
+
+16
+00:00:16,490 --> 00:00:16,500
+data structures are how you store data
+ 
+
+17
+00:00:16,500 --> 00:00:18,200
+data structures are how you store data
+and data is very important when you're
+
+18
+00:00:18,200 --> 00:00:18,210
+and data is very important when you're
+ 
+
+19
+00:00:18,210 --> 00:00:19,580
+and data is very important when you're
+programming and dealing with signals bus
+
+20
+00:00:19,580 --> 00:00:19,590
+programming and dealing with signals bus
+ 
+
+21
+00:00:19,590 --> 00:00:22,010
+programming and dealing with signals bus
+what we haven't talked about yet is how
+
+22
+00:00:22,010 --> 00:00:22,020
+what we haven't talked about yet is how
+ 
+
+23
+00:00:22,020 --> 00:00:24,080
+what we haven't talked about yet is how
+do you sort the data that you have so
+
+24
+00:00:24,080 --> 00:00:24,090
+do you sort the data that you have so
+ 
+
+25
+00:00:24,090 --> 00:00:25,820
+do you sort the data that you have so
+suppose that I have a vector or an array
+
+26
+00:00:25,820 --> 00:00:25,830
+suppose that I have a vector or an array
+ 
+
+27
+00:00:25,830 --> 00:00:29,330
+suppose that I have a vector or an array
+of values integers and I want them to be
+
+28
+00:00:29,330 --> 00:00:29,340
+of values integers and I want them to be
+ 
+
+29
+00:00:29,340 --> 00:00:32,659
+of values integers and I want them to be
+sorted by their value or by some kind of
+
+30
+00:00:32,659 --> 00:00:32,669
+sorted by their value or by some kind of
+ 
+
+31
+00:00:32,669 --> 00:00:34,850
+sorted by their value or by some kind of
+predicate how do I actually gets
+
+32
+00:00:34,850 --> 00:00:34,860
+predicate how do I actually gets
+ 
+
+33
+00:00:34,860 --> 00:00:36,380
+predicate how do I actually gets
+impossible to sort something for me now
+
+34
+00:00:36,380 --> 00:00:36,390
+impossible to sort something for me now
+ 
+
+35
+00:00:36,390 --> 00:00:37,910
+impossible to sort something for me now
+obviously you could just write your own
+
+36
+00:00:37,910 --> 00:00:37,920
+obviously you could just write your own
+ 
+
+37
+00:00:37,920 --> 00:00:39,709
+obviously you could just write your own
+algorithm like bubble sort a quick sort
+
+38
+00:00:39,709 --> 00:00:39,719
+algorithm like bubble sort a quick sort
+ 
+
+39
+00:00:39,719 --> 00:00:41,450
+algorithm like bubble sort a quick sort
+or any kind of algorithm that just
+
+40
+00:00:41,450 --> 00:00:41,460
+or any kind of algorithm that just
+ 
+
+41
+00:00:41,460 --> 00:00:43,490
+or any kind of algorithm that just
+iterates through the list and source the
+
+42
+00:00:43,490 --> 00:00:43,500
+iterates through the list and source the
+ 
+
+43
+00:00:43,500 --> 00:00:44,630
+iterates through the list and source the
+elements into the order that you want
+
+44
+00:00:44,630 --> 00:00:44,640
+elements into the order that you want
+ 
+
+45
+00:00:44,640 --> 00:00:46,520
+elements into the order that you want
+them to be sorted in that's totally fine
+
+46
+00:00:46,520 --> 00:00:46,530
+them to be sorted in that's totally fine
+ 
+
+47
+00:00:46,530 --> 00:00:48,319
+them to be sorted in that's totally fine
+and there are cases when you would want
+
+48
+00:00:48,319 --> 00:00:48,329
+and there are cases when you would want
+ 
+
+49
+00:00:48,329 --> 00:00:49,310
+and there are cases when you would want
+to do something like that
+
+50
+00:00:49,310 --> 00:00:49,320
+to do something like that
+ 
+
+51
+00:00:49,320 --> 00:00:52,310
+to do something like that
+however usually if you're dealing with
+
+52
+00:00:52,310 --> 00:00:52,320
+however usually if you're dealing with
+ 
+
+53
+00:00:52,320 --> 00:00:54,950
+however usually if you're dealing with
+simple sports kind of with its inbuilt
+
+54
+00:00:54,950 --> 00:00:54,960
+simple sports kind of with its inbuilt
+ 
+
+55
+00:00:54,960 --> 00:00:57,529
+simple sports kind of with its inbuilt
+collection types like STD vector there's
+
+56
+00:00:57,529 --> 00:00:57,539
+collection types like STD vector there's
+ 
+
+57
+00:00:57,539 --> 00:00:59,180
+collection types like STD vector there's
+no reason for you to have to write an
+
+58
+00:00:59,180 --> 00:00:59,190
+no reason for you to have to write an
+ 
+
+59
+00:00:59,190 --> 00:01:01,400
+no reason for you to have to write an
+algorithm yourself if you could just get
+
+60
+00:01:01,400 --> 00:01:01,410
+algorithm yourself if you could just get
+ 
+
+61
+00:01:01,410 --> 00:01:03,319
+algorithm yourself if you could just get
+the disabled spot library to do the
+
+62
+00:01:03,319 --> 00:01:03,329
+the disabled spot library to do the
+ 
+
+63
+00:01:03,329 --> 00:01:05,690
+the disabled spot library to do the
+sorting for you and that's why today
+
+64
+00:01:05,690 --> 00:01:05,700
+sorting for you and that's why today
+ 
+
+65
+00:01:05,700 --> 00:01:07,100
+sorting for you and that's why today
+we're going to focus on something called
+
+66
+00:01:07,100 --> 00:01:07,110
+we're going to focus on something called
+ 
+
+67
+00:01:07,110 --> 00:01:09,710
+we're going to focus on something called
+STD sort which is a sort function that's
+
+68
+00:01:09,710 --> 00:01:09,720
+STD sort which is a sort function that's
+ 
+
+69
+00:01:09,720 --> 00:01:11,179
+STD sort which is a sort function that's
+kind of built into this tablecloth
+
+70
+00:01:11,179 --> 00:01:11,189
+kind of built into this tablecloth
+ 
+
+71
+00:01:11,189 --> 00:01:13,670
+kind of built into this tablecloth
+library that can actually perform that
+
+72
+00:01:13,670 --> 00:01:13,680
+library that can actually perform that
+ 
+
+73
+00:01:13,680 --> 00:01:15,200
+library that can actually perform that
+sorting for you over any kind of
+
+74
+00:01:15,200 --> 00:01:15,210
+sorting for you over any kind of
+ 
+
+75
+00:01:15,210 --> 00:01:16,820
+sorting for you over any kind of
+iterator that you provide it with so if
+
+76
+00:01:16,820 --> 00:01:16,830
+iterator that you provide it with so if
+ 
+
+77
+00:01:16,830 --> 00:01:18,530
+iterator that you provide it with so if
+we pop over to CBP reference so come and
+
+78
+00:01:18,530 --> 00:01:18,540
+we pop over to CBP reference so come and
+ 
+
+79
+00:01:18,540 --> 00:01:20,270
+we pop over to CBP reference so come and
+take a look at STDs so it you can see we
+
+80
+00:01:20,270 --> 00:01:20,280
+take a look at STDs so it you can see we
+ 
+
+81
+00:01:20,280 --> 00:01:22,100
+take a look at STDs so it you can see we
+have this function here that will sort
+
+82
+00:01:22,100 --> 00:01:22,110
+have this function here that will sort
+ 
+
+83
+00:01:22,110 --> 00:01:23,660
+have this function here that will sort
+elements in a certain range that we
+
+84
+00:01:23,660 --> 00:01:23,670
+elements in a certain range that we
+ 
+
+85
+00:01:23,670 --> 00:01:24,920
+elements in a certain range that we
+provide it with and what we have to
+
+86
+00:01:24,920 --> 00:01:24,930
+provide it with and what we have to
+ 
+
+87
+00:01:24,930 --> 00:01:26,929
+provide it with and what we have to
+provide it with is essentially just an
+
+88
+00:01:26,929 --> 00:01:26,939
+provide it with is essentially just an
+ 
+
+89
+00:01:26,939 --> 00:01:28,969
+provide it with is essentially just an
+iterator and beginning interrater and an
+
+90
+00:01:28,969 --> 00:01:28,979
+iterator and beginning interrater and an
+ 
+
+91
+00:01:28,979 --> 00:01:30,740
+iterator and beginning interrater and an
+end iterate and everything inside that
+
+92
+00:01:30,740 --> 00:01:30,750
+end iterate and everything inside that
+ 
+
+93
+00:01:30,750 --> 00:01:32,690
+end iterate and everything inside that
+iterator will be sorted based on a
+
+94
+00:01:32,690 --> 00:01:32,700
+iterator will be sorted based on a
+ 
+
+95
+00:01:32,700 --> 00:01:34,039
+iterator will be sorted based on a
+certain predicate that we provide it
+
+96
+00:01:34,039 --> 00:01:34,049
+certain predicate that we provide it
+ 
+
+97
+00:01:34,049 --> 00:01:35,359
+certain predicate that we provide it
+with so what we can do is kind of just
+
+98
+00:01:35,359 --> 00:01:35,369
+with so what we can do is kind of just
+ 
+
+99
+00:01:35,369 --> 00:01:36,800
+with so what we can do is kind of just
+not provide it with any kind of
+
+100
+00:01:36,800 --> 00:01:36,810
+not provide it with any kind of
+ 
+
+101
+00:01:36,810 --> 00:01:38,420
+not provide it with any kind of
+predicate and we'll just attempt to sort
+
+102
+00:01:38,420 --> 00:01:38,430
+predicate and we'll just attempt to sort
+ 
+
+103
+00:01:38,430 --> 00:01:40,580
+predicate and we'll just attempt to sort
+of kind of in order based on the type or
+
+104
+00:01:40,580 --> 00:01:40,590
+of kind of in order based on the type or
+ 
+
+105
+00:01:40,590 --> 00:01:42,940
+of kind of in order based on the type or
+we can actually give it some kind of
+
+106
+00:01:42,940 --> 00:01:42,950
+we can actually give it some kind of
+ 
+
+107
+00:01:42,950 --> 00:01:44,870
+we can actually give it some kind of
+function for it to actually use for
+
+108
+00:01:44,870 --> 00:01:44,880
+function for it to actually use for
+ 
+
+109
+00:01:44,880 --> 00:01:46,639
+function for it to actually use for
+comparison and we can provide it with a
+
+110
+00:01:46,639 --> 00:01:46,649
+comparison and we can provide it with a
+ 
+
+111
+00:01:46,649 --> 00:01:48,319
+comparison and we can provide it with a
+lambda as well which we'll take a look
+
+112
+00:01:48,319 --> 00:01:48,329
+lambda as well which we'll take a look
+ 
+
+113
+00:01:48,329 --> 00:01:49,789
+lambda as well which we'll take a look
+at it doesn't have any kind of return
+
+114
+00:01:49,789 --> 00:01:49,799
+at it doesn't have any kind of return
+ 
+
+115
+00:01:49,799 --> 00:01:51,679
+at it doesn't have any kind of return
+value and the complexity for sorting is
+
+116
+00:01:51,679 --> 00:01:51,689
+value and the complexity for sorting is
+ 
+
+117
+00:01:51,689 --> 00:01:54,469
+value and the complexity for sorting is
+n times log n which is fairly good so if
+
+118
+00:01:54,469 --> 00:01:54,479
+n times log n which is fairly good so if
+ 
+
+119
+00:01:54,479 --> 00:01:55,999
+n times log n which is fairly good so if
+we jump back here into our source code
+
+120
+00:01:55,999 --> 00:01:56,009
+we jump back here into our source code
+ 
+
+121
+00:01:56,009 --> 00:01:58,310
+we jump back here into our source code
+let's take a look at a basic example so
+
+122
+00:01:58,310 --> 00:01:58,320
+let's take a look at a basic example so
+ 
+
+123
+00:01:58,320 --> 00:01:59,330
+let's take a look at a basic example so
+what I'll do here is I'll create a
+
+124
+00:01:59,330 --> 00:01:59,340
+what I'll do here is I'll create a
+ 
+
+125
+00:01:59,340 --> 00:02:00,859
+what I'll do here is I'll create a
+vector it could be an array doesn't
+
+126
+00:02:00,859 --> 00:02:00,869
+vector it could be an array doesn't
+ 
+
+127
+00:02:00,869 --> 00:02:02,899
+vector it could be an array doesn't
+really matter of integers I'll call
+
+128
+00:02:02,899 --> 00:02:02,909
+really matter of integers I'll call
+ 
+
+129
+00:02:02,909 --> 00:02:04,670
+really matter of integers I'll call
+these values and I'll just provide some
+
+130
+00:02:04,670 --> 00:02:04,680
+these values and I'll just provide some
+ 
+
+131
+00:02:04,680 --> 00:02:07,219
+these values and I'll just provide some
+basic values let's just say three five
+
+132
+00:02:07,219 --> 00:02:07,229
+basic values let's just say three five
+ 
+
+133
+00:02:07,229 --> 00:02:10,820
+basic values let's just say three five
+one four two okay so these are clearly
+
+134
+00:02:10,820 --> 00:02:10,830
+one four two okay so these are clearly
+ 
+
+135
+00:02:10,830 --> 00:02:11,809
+one four two okay so these are clearly
+not in order
+
+136
+00:02:11,809 --> 00:02:11,819
+not in order
+ 
+
+137
+00:02:11,819 --> 00:02:13,250
+not in order
+promoting any kind of water they're in a
+
+138
+00:02:13,250 --> 00:02:13,260
+promoting any kind of water they're in a
+ 
+
+139
+00:02:13,260 --> 00:02:15,229
+promoting any kind of water they're in a
+bit of a random order here I'll include
+
+140
+00:02:15,229 --> 00:02:15,239
+bit of a random order here I'll include
+ 
+
+141
+00:02:15,239 --> 00:02:17,690
+bit of a random order here I'll include
+vector and also include algorithms that
+
+142
+00:02:17,690 --> 00:02:17,700
+vector and also include algorithms that
+ 
+
+143
+00:02:17,700 --> 00:02:20,330
+vector and also include algorithms that
+we get STDs sort and what I want to do
+
+144
+00:02:20,330 --> 00:02:20,340
+we get STDs sort and what I want to do
+ 
+
+145
+00:02:20,340 --> 00:02:21,619
+we get STDs sort and what I want to do
+with this vector now is I want to sort
+
+146
+00:02:21,619 --> 00:02:21,629
+with this vector now is I want to sort
+ 
+
+147
+00:02:21,629 --> 00:02:23,179
+with this vector now is I want to sort
+this in ascending order so they go from
+
+148
+00:02:23,179 --> 00:02:23,189
+this in ascending order so they go from
+ 
+
+149
+00:02:23,189 --> 00:02:24,860
+this in ascending order so they go from
+one two three four five so to do that
+
+150
+00:02:24,860 --> 00:02:24,870
+one two three four five so to do that
+ 
+
+151
+00:02:24,870 --> 00:02:26,750
+one two three four five so to do that
+what I'll do is I'll just type in STDs
+
+152
+00:02:26,750 --> 00:02:26,760
+what I'll do is I'll just type in STDs
+ 
+
+153
+00:02:26,760 --> 00:02:29,780
+what I'll do is I'll just type in STDs
+sort I'll pass in the start of this
+
+154
+00:02:29,780 --> 00:02:29,790
+sort I'll pass in the start of this
+ 
+
+155
+00:02:29,790 --> 00:02:31,339
+sort I'll pass in the start of this
+vector iterator which is values don't
+
+156
+00:02:31,339 --> 00:02:31,349
+vector iterator which is values don't
+ 
+
+157
+00:02:31,349 --> 00:02:34,459
+vector iterator which is values don't
+begin the end wishes values or end so
+
+158
+00:02:34,459 --> 00:02:34,469
+begin the end wishes values or end so
+ 
+
+159
+00:02:34,469 --> 00:02:36,440
+begin the end wishes values or end so
+that provides it with a range and they
+
+160
+00:02:36,440 --> 00:02:36,450
+that provides it with a range and they
+ 
+
+161
+00:02:36,450 --> 00:02:37,640
+that provides it with a range and they
+don't I need to provide some kind of
+
+162
+00:02:37,640 --> 00:02:37,650
+don't I need to provide some kind of
+ 
+
+163
+00:02:37,650 --> 00:02:38,990
+don't I need to provide some kind of
+predicate now if I don't provide any
+
+164
+00:02:38,990 --> 00:02:39,000
+predicate now if I don't provide any
+ 
+
+165
+00:02:39,000 --> 00:02:40,520
+predicate now if I don't provide any
+kind of predicate so best I don't
+
+166
+00:02:40,520 --> 00:02:40,530
+kind of predicate so best I don't
+ 
+
+167
+00:02:40,530 --> 00:02:42,409
+kind of predicate so best I don't
+provide it with a function for it to
+
+168
+00:02:42,409 --> 00:02:42,419
+provide it with a function for it to
+ 
+
+169
+00:02:42,419 --> 00:02:44,330
+provide it with a function for it to
+perform this sorting it will just sort
+
+170
+00:02:44,330 --> 00:02:44,340
+perform this sorting it will just sort
+ 
+
+171
+00:02:44,340 --> 00:02:46,309
+perform this sorting it will just sort
+it in ascending order in the case of
+
+172
+00:02:46,309 --> 00:02:46,319
+it in ascending order in the case of
+ 
+
+173
+00:02:46,319 --> 00:02:48,020
+it in ascending order in the case of
+integers here so in other words if I was
+
+174
+00:02:48,020 --> 00:02:48,030
+integers here so in other words if I was
+ 
+
+175
+00:02:48,030 --> 00:02:49,640
+integers here so in other words if I was
+a princess to the console after the
+
+176
+00:02:49,640 --> 00:02:49,650
+a princess to the console after the
+ 
+
+177
+00:02:49,650 --> 00:02:51,619
+a princess to the console after the
+sorting happens I'll say for unit value
+
+178
+00:02:51,619 --> 00:02:51,629
+sorting happens I'll say for unit value
+ 
+
+179
+00:02:51,629 --> 00:02:55,610
+sorting happens I'll say for unit value
+inside values let's do a CBC out the
+
+180
+00:02:55,610 --> 00:02:55,620
+inside values let's do a CBC out the
+ 
+
+181
+00:02:55,620 --> 00:02:58,939
+inside values let's do a CBC out the
+value just like that at five then you'll
+
+182
+00:02:58,939 --> 00:02:58,949
+value just like that at five then you'll
+ 
+
+183
+00:02:58,949 --> 00:03:01,250
+value just like that at five then you'll
+see I get a perfectly sorted list if I
+
+184
+00:03:01,250 --> 00:03:01,260
+see I get a perfectly sorted list if I
+ 
+
+185
+00:03:01,260 --> 00:03:02,869
+see I get a perfectly sorted list if I
+do want to provide some kind of a way
+
+186
+00:03:02,869 --> 00:03:02,879
+do want to provide some kind of a way
+ 
+
+187
+00:03:02,879 --> 00:03:05,179
+do want to provide some kind of a way
+for it to sort I can do that by passing
+
+188
+00:03:05,179 --> 00:03:05,189
+for it to sort I can do that by passing
+ 
+
+189
+00:03:05,189 --> 00:03:06,740
+for it to sort I can do that by passing
+in a function and this can be either
+
+190
+00:03:06,740 --> 00:03:06,750
+in a function and this can be either
+ 
+
+191
+00:03:06,750 --> 00:03:08,750
+in a function and this can be either
+literally a function inside like a
+
+192
+00:03:08,750 --> 00:03:08,760
+literally a function inside like a
+ 
+
+193
+00:03:08,760 --> 00:03:11,270
+literally a function inside like a
+stroke that you do you make or it can be
+
+194
+00:03:11,270 --> 00:03:11,280
+stroke that you do you make or it can be
+ 
+
+195
+00:03:11,280 --> 00:03:12,589
+stroke that you do you make or it can be
+a lambda so there are quite a few
+
+196
+00:03:12,589 --> 00:03:12,599
+a lambda so there are quite a few
+ 
+
+197
+00:03:12,599 --> 00:03:14,750
+a lambda so there are quite a few
+built-in ones as well if I go to include
+
+198
+00:03:14,750 --> 00:03:14,760
+built-in ones as well if I go to include
+ 
+
+199
+00:03:14,760 --> 00:03:17,899
+built-in ones as well if I go to include
+functional I can use something like STD
+
+200
+00:03:17,899 --> 00:03:17,909
+functional I can use something like STD
+ 
+
+201
+00:03:17,909 --> 00:03:18,319
+functional I can use something like STD
+Breda
+
+202
+00:03:18,319 --> 00:03:18,329
+Breda
+ 
+
+203
+00:03:18,329 --> 00:03:21,490
+Breda
+for example with ant just like that
+
+204
+00:03:21,490 --> 00:03:21,500
+for example with ant just like that
+ 
+
+205
+00:03:21,500 --> 00:03:23,929
+for example with ant just like that
+if I can hit that five this will sort it
+
+206
+00:03:23,929 --> 00:03:23,939
+if I can hit that five this will sort it
+ 
+
+207
+00:03:23,939 --> 00:03:26,689
+if I can hit that five this will sort it
+based on the greater value so you can
+
+208
+00:03:26,689 --> 00:03:26,699
+based on the greater value so you can
+ 
+
+209
+00:03:26,699 --> 00:03:28,219
+based on the greater value so you can
+see that I get five four three two one
+
+210
+00:03:28,219 --> 00:03:28,229
+see that I get five four three two one
+ 
+
+211
+00:03:28,229 --> 00:03:30,740
+see that I get five four three two one
+and finally I'll write a lambda as well
+
+212
+00:03:30,740 --> 00:03:30,750
+and finally I'll write a lambda as well
+ 
+
+213
+00:03:30,750 --> 00:03:33,110
+and finally I'll write a lambda as well
+so I'll get rid of this and I'll just
+
+214
+00:03:33,110 --> 00:03:33,120
+so I'll get rid of this and I'll just
+ 
+
+215
+00:03:33,120 --> 00:03:35,809
+so I'll get rid of this and I'll just
+have a normal lambda in a into B and
+
+216
+00:03:35,809 --> 00:03:35,819
+have a normal lambda in a into B and
+ 
+
+217
+00:03:35,819 --> 00:03:38,270
+have a normal lambda in a into B and
+then I'll explain this a bit so it's
+
+218
+00:03:38,270 --> 00:03:38,280
+then I'll explain this a bit so it's
+ 
+
+219
+00:03:38,280 --> 00:03:40,399
+then I'll explain this a bit so it's
+either C I'm basically just providing it
+
+220
+00:03:40,399 --> 00:03:40,409
+either C I'm basically just providing it
+ 
+
+221
+00:03:40,409 --> 00:03:41,809
+either C I'm basically just providing it
+with a function that it's going to use
+
+222
+00:03:41,809 --> 00:03:41,819
+with a function that it's going to use
+ 
+
+223
+00:03:41,819 --> 00:03:44,509
+with a function that it's going to use
+to sort these values now based on the
+
+224
+00:03:44,509 --> 00:03:44,519
+to sort these values now based on the
+ 
+
+225
+00:03:44,519 --> 00:03:46,969
+to sort these values now based on the
+documentation you can see that this this
+
+226
+00:03:46,969 --> 00:03:46,979
+documentation you can see that this this
+ 
+
+227
+00:03:46,979 --> 00:03:49,699
+documentation you can see that this this
+comparison function returns a bool so
+
+228
+00:03:49,699 --> 00:03:49,709
+comparison function returns a bool so
+ 
+
+229
+00:03:49,709 --> 00:03:53,119
+comparison function returns a bool so
+true or false and it returns true if the
+
+230
+00:03:53,119 --> 00:03:53,129
+true or false and it returns true if the
+ 
+
+231
+00:03:53,129 --> 00:03:54,979
+true or false and it returns true if the
+first argument so that is the first
+
+232
+00:03:54,979 --> 00:03:54,989
+first argument so that is the first
+ 
+
+233
+00:03:54,989 --> 00:03:56,809
+first argument so that is the first
+argument that we pass in here into the
+
+234
+00:03:56,809 --> 00:03:56,819
+argument that we pass in here into the
+ 
+
+235
+00:03:56,819 --> 00:03:59,390
+argument that we pass in here into the
+parameter is less than so is ordered
+
+236
+00:03:59,390 --> 00:03:59,400
+parameter is less than so is ordered
+ 
+
+237
+00:03:59,400 --> 00:04:01,729
+parameter is less than so is ordered
+before the second so basically what that
+
+238
+00:04:01,729 --> 00:04:01,739
+before the second so basically what that
+ 
+
+239
+00:04:01,739 --> 00:04:04,879
+before the second so basically what that
+means is that if we give it two values a
+
+240
+00:04:04,879 --> 00:04:04,889
+means is that if we give it two values a
+ 
+
+241
+00:04:04,889 --> 00:04:07,069
+means is that if we give it two values a
+and B which one of these should appear
+
+242
+00:04:07,069 --> 00:04:07,079
+and B which one of these should appear
+ 
+
+243
+00:04:07,079 --> 00:04:09,740
+and B which one of these should appear
+first in the list that's kind of what
+
+244
+00:04:09,740 --> 00:04:09,750
+first in the list that's kind of what
+ 
+
+245
+00:04:09,750 --> 00:04:11,689
+first in the list that's kind of what
+we're trying to determine here and if we
+
+246
+00:04:11,689 --> 00:04:11,699
+we're trying to determine here and if we
+ 
+
+247
+00:04:11,699 --> 00:04:14,240
+we're trying to determine here and if we
+return true it means that a will be
+
+248
+00:04:14,240 --> 00:04:14,250
+return true it means that a will be
+ 
+
+249
+00:04:14,250 --> 00:04:16,909
+return true it means that a will be
+ordered before B whereas if we return
+
+250
+00:04:16,909 --> 00:04:16,919
+ordered before B whereas if we return
+ 
+
+251
+00:04:16,919 --> 00:04:19,099
+ordered before B whereas if we return
+false then they will be before a so as a
+
+252
+00:04:19,099 --> 00:04:19,109
+false then they will be before a so as a
+ 
+
+253
+00:04:19,109 --> 00:04:20,930
+false then they will be before a so as a
+basic example let's just let it sort
+
+254
+00:04:20,930 --> 00:04:20,940
+basic example let's just let it sort
+ 
+
+255
+00:04:20,940 --> 00:04:21,830
+basic example let's just let it sort
+this you know in a
+
+256
+00:04:21,830 --> 00:04:21,840
+this you know in a
+ 
+
+257
+00:04:21,840 --> 00:04:23,900
+this you know in a
+in order from one to five so what I'll
+
+258
+00:04:23,900 --> 00:04:23,910
+in order from one to five so what I'll
+ 
+
+259
+00:04:23,910 --> 00:04:26,300
+in order from one to five so what I'll
+do here is I'll simply say return a less
+
+260
+00:04:26,300 --> 00:04:26,310
+do here is I'll simply say return a less
+ 
+
+261
+00:04:26,310 --> 00:04:29,240
+do here is I'll simply say return a less
+than B so if a is less than B we'll sort
+
+262
+00:04:29,240 --> 00:04:29,250
+than B so if a is less than B we'll sort
+ 
+
+263
+00:04:29,250 --> 00:04:30,590
+than B so if a is less than B we'll sort
+it to the front of the list
+
+264
+00:04:30,590 --> 00:04:30,600
+it to the front of the list
+ 
+
+265
+00:04:30,600 --> 00:04:32,210
+it to the front of the list
+let's hit at five and you can see that I
+
+266
+00:04:32,210 --> 00:04:32,220
+let's hit at five and you can see that I
+ 
+
+267
+00:04:32,220 --> 00:04:34,010
+let's hit at five and you can see that I
+get the same result as we had before and
+
+268
+00:04:34,010 --> 00:04:34,020
+get the same result as we had before and
+ 
+
+269
+00:04:34,020 --> 00:04:36,020
+get the same result as we had before and
+if I reverse this and obviously it's
+
+270
+00:04:36,020 --> 00:04:36,030
+if I reverse this and obviously it's
+ 
+
+271
+00:04:36,030 --> 00:04:37,460
+if I reverse this and obviously it's
+going to sort it the other way around
+
+272
+00:04:37,460 --> 00:04:37,470
+going to sort it the other way around
+ 
+
+273
+00:04:37,470 --> 00:04:39,680
+going to sort it the other way around
+where if a is greater than B it's going
+
+274
+00:04:39,680 --> 00:04:39,690
+where if a is greater than B it's going
+ 
+
+275
+00:04:39,690 --> 00:04:41,180
+where if a is greater than B it's going
+to fall to the front which means that
+
+276
+00:04:41,180 --> 00:04:41,190
+to fall to the front which means that
+ 
+
+277
+00:04:41,190 --> 00:04:42,710
+to fall to the front which means that
+the bigger values get sorted to the
+
+278
+00:04:42,710 --> 00:04:42,720
+the bigger values get sorted to the
+ 
+
+279
+00:04:42,720 --> 00:04:44,570
+the bigger values get sorted to the
+front and then let's just do something
+
+280
+00:04:44,570 --> 00:04:44,580
+front and then let's just do something
+ 
+
+281
+00:04:44,580 --> 00:04:46,010
+front and then let's just do something
+for fun let's just make it so that one
+
+282
+00:04:46,010 --> 00:04:46,020
+for fun let's just make it so that one
+ 
+
+283
+00:04:46,020 --> 00:04:47,930
+for fun let's just make it so that one
+goes to the very end I think this
+
+284
+00:04:47,930 --> 00:04:47,940
+goes to the very end I think this
+ 
+
+285
+00:04:47,940 --> 00:04:49,640
+goes to the very end I think this
+demonstrates the predicate pretty well
+
+286
+00:04:49,640 --> 00:04:49,650
+demonstrates the predicate pretty well
+ 
+
+287
+00:04:49,650 --> 00:04:52,969
+demonstrates the predicate pretty well
+as well so if we say if a is one what do
+
+288
+00:04:52,969 --> 00:04:52,979
+as well so if we say if a is one what do
+ 
+
+289
+00:04:52,979 --> 00:04:55,280
+as well so if we say if a is one what do
+we want to do well if a is currently the
+
+290
+00:04:55,280 --> 00:04:55,290
+we want to do well if a is currently the
+ 
+
+291
+00:04:55,290 --> 00:04:57,080
+we want to do well if a is currently the
+first value we want to move to the back
+
+292
+00:04:57,080 --> 00:04:57,090
+first value we want to move to the back
+ 
+
+293
+00:04:57,090 --> 00:04:58,879
+first value we want to move to the back
+of the list so in other words we want to
+
+294
+00:04:58,879 --> 00:04:58,889
+of the list so in other words we want to
+ 
+
+295
+00:04:58,889 --> 00:05:01,250
+of the list so in other words we want to
+return false because we don't want it to
+
+296
+00:05:01,250 --> 00:05:01,260
+return false because we don't want it to
+ 
+
+297
+00:05:01,260 --> 00:05:05,420
+return false because we don't want it to
+be ordered before B however if B is one
+
+298
+00:05:05,420 --> 00:05:05,430
+be ordered before B however if B is one
+ 
+
+299
+00:05:05,430 --> 00:05:07,760
+be ordered before B however if B is one
+then we want a to actually move to the
+
+300
+00:05:07,760 --> 00:05:07,770
+then we want a to actually move to the
+ 
+
+301
+00:05:07,770 --> 00:05:09,170
+then we want a to actually move to the
+final list and the way that we do that
+
+302
+00:05:09,170 --> 00:05:09,180
+final list and the way that we do that
+ 
+
+303
+00:05:09,180 --> 00:05:10,129
+final list and the way that we do that
+is we return true
+
+304
+00:05:10,129 --> 00:05:10,139
+is we return true
+ 
+
+305
+00:05:10,139 --> 00:05:12,890
+is we return true
+because if we return true it means that
+
+306
+00:05:12,890 --> 00:05:12,900
+because if we return true it means that
+ 
+
+307
+00:05:12,900 --> 00:05:15,409
+because if we return true it means that
+move a to the front of the list right so
+
+308
+00:05:15,409 --> 00:05:15,419
+move a to the front of the list right so
+ 
+
+309
+00:05:15,419 --> 00:05:17,090
+move a to the front of the list right so
+if I change this back to what it was so
+
+310
+00:05:17,090 --> 00:05:17,100
+if I change this back to what it was so
+ 
+
+311
+00:05:17,100 --> 00:05:19,159
+if I change this back to what it was so
+that we still have a before B and I hit
+
+312
+00:05:19,159 --> 00:05:19,169
+that we still have a before B and I hit
+ 
+
+313
+00:05:19,169 --> 00:05:21,260
+that we still have a before B and I hit
+f5 you can see that we get our list in
+
+314
+00:05:21,260 --> 00:05:21,270
+f5 you can see that we get our list in
+ 
+
+315
+00:05:21,270 --> 00:05:22,939
+f5 you can see that we get our list in
+ascending order except for one which is
+
+316
+00:05:22,939 --> 00:05:22,949
+ascending order except for one which is
+ 
+
+317
+00:05:22,949 --> 00:05:24,710
+ascending order except for one which is
+at the end so anyway that was a pretty
+
+318
+00:05:24,710 --> 00:05:24,720
+at the end so anyway that was a pretty
+ 
+
+319
+00:05:24,720 --> 00:05:26,390
+at the end so anyway that was a pretty
+basic and quick example of how to use
+
+320
+00:05:26,390 --> 00:05:26,400
+basic and quick example of how to use
+ 
+
+321
+00:05:26,400 --> 00:05:28,310
+basic and quick example of how to use
+SUV sort and sorting a simple plus in
+
+322
+00:05:28,310 --> 00:05:28,320
+SUV sort and sorting a simple plus in
+ 
+
+323
+00:05:28,320 --> 00:05:30,980
+SUV sort and sorting a simple plus in
+general sorting is of course very useful
+
+324
+00:05:30,980 --> 00:05:30,990
+general sorting is of course very useful
+ 
+
+325
+00:05:30,990 --> 00:05:32,540
+general sorting is of course very useful
+you can do this with all types doesn't
+
+326
+00:05:32,540 --> 00:05:32,550
+you can do this with all types doesn't
+ 
+
+327
+00:05:32,550 --> 00:05:34,340
+you can do this with all types doesn't
+have to be integers integers that are
+
+328
+00:05:34,340 --> 00:05:34,350
+have to be integers integers that are
+ 
+
+329
+00:05:34,350 --> 00:05:35,840
+have to be integers integers that are
+just really easy to show because they're
+
+330
+00:05:35,840 --> 00:05:35,850
+just really easy to show because they're
+ 
+
+331
+00:05:35,850 --> 00:05:37,909
+just really easy to show because they're
+literally numbers and we kind of I used
+
+332
+00:05:37,909 --> 00:05:37,919
+literally numbers and we kind of I used
+ 
+
+333
+00:05:37,919 --> 00:05:39,830
+literally numbers and we kind of I used
+to sing them in a particular order you
+
+334
+00:05:39,830 --> 00:05:39,840
+to sing them in a particular order you
+ 
+
+335
+00:05:39,840 --> 00:05:41,510
+to sing them in a particular order you
+can do this with strings you can do this
+
+336
+00:05:41,510 --> 00:05:41,520
+can do this with strings you can do this
+ 
+
+337
+00:05:41,520 --> 00:05:43,550
+can do this with strings you can do this
+with this with custom classes that's
+
+338
+00:05:43,550 --> 00:05:43,560
+with this with custom classes that's
+ 
+
+339
+00:05:43,560 --> 00:05:44,779
+with this with custom classes that's
+what this predicate here this lambda
+
+340
+00:05:44,779 --> 00:05:44,789
+what this predicate here this lambda
+ 
+
+341
+00:05:44,789 --> 00:05:46,279
+what this predicate here this lambda
+that we could supply is so useful
+
+342
+00:05:46,279 --> 00:05:46,289
+that we could supply is so useful
+ 
+
+343
+00:05:46,289 --> 00:05:48,230
+that we could supply is so useful
+because that means that we can set the
+
+344
+00:05:48,230 --> 00:05:48,240
+because that means that we can set the
+ 
+
+345
+00:05:48,240 --> 00:05:50,360
+because that means that we can set the
+rules and it doesn't rely on only
+
+346
+00:05:50,360 --> 00:05:50,370
+rules and it doesn't rely on only
+ 
+
+347
+00:05:50,370 --> 00:05:51,950
+rules and it doesn't rely on only
+working on inbuilt types or anything
+
+348
+00:05:51,950 --> 00:05:51,960
+working on inbuilt types or anything
+ 
+
+349
+00:05:51,960 --> 00:05:54,219
+working on inbuilt types or anything
+like that we can use this with anything
+
+350
+00:05:54,219 --> 00:05:54,229
+like that we can use this with anything
+ 
+
+351
+00:05:54,229 --> 00:05:56,390
+like that we can use this with anything
+finally we have a bit of a quick video
+
+352
+00:05:56,390 --> 00:05:56,400
+finally we have a bit of a quick video
+ 
+
+353
+00:05:56,400 --> 00:05:57,770
+finally we have a bit of a quick video
+if you're trying to do these for ages
+
+354
+00:05:57,770 --> 00:05:57,780
+if you're trying to do these for ages
+ 
+
+355
+00:05:57,780 --> 00:05:59,629
+if you're trying to do these for ages
+and we end up just making in 58 20
+
+356
+00:05:59,629 --> 00:05:59,639
+and we end up just making in 58 20
+ 
+
+357
+00:05:59,639 --> 00:06:02,300
+and we end up just making in 58 20
+minutes long but anyway sorting really
+
+358
+00:06:02,300 --> 00:06:02,310
+minutes long but anyway sorting really
+ 
+
+359
+00:06:02,310 --> 00:06:03,350
+minutes long but anyway sorting really
+useful let me know what you can give
+
+360
+00:06:03,350 --> 00:06:03,360
+useful let me know what you can give
+ 
+
+361
+00:06:03,360 --> 00:06:05,089
+useful let me know what you can give
+this if you have another way or other
+
+362
+00:06:05,089 --> 00:06:05,099
+this if you have another way or other
+ 
+
+363
+00:06:05,099 --> 00:06:06,830
+this if you have another way or other
+kind of scenarios in which this stuff is
+
+364
+00:06:06,830 --> 00:06:06,840
+kind of scenarios in which this stuff is
+ 
+
+365
+00:06:06,840 --> 00:06:08,180
+kind of scenarios in which this stuff is
+useful and some predators that might
+
+366
+00:06:08,180 --> 00:06:08,190
+useful and some predators that might
+ 
+
+367
+00:06:08,190 --> 00:06:09,920
+useful and some predators that might
+work really well then just leave a
+
+368
+00:06:09,920 --> 00:06:09,930
+work really well then just leave a
+ 
+
+369
+00:06:09,930 --> 00:06:11,210
+work really well then just leave a
+comment below and we can kind of talk
+
+370
+00:06:11,210 --> 00:06:11,220
+comment below and we can kind of talk
+ 
+
+371
+00:06:11,220 --> 00:06:13,070
+comment below and we can kind of talk
+about it I hope you guys enjoyed the
+
+372
+00:06:13,070 --> 00:06:13,080
+about it I hope you guys enjoyed the
+ 
+
+373
+00:06:13,080 --> 00:06:14,150
+about it I hope you guys enjoyed the
+video if you did you can hit the like
+
+374
+00:06:14,150 --> 00:06:14,160
+video if you did you can hit the like
+ 
+
+375
+00:06:14,160 --> 00:06:15,650
+video if you did you can hit the like
+button you can also have support series
+
+376
+00:06:15,650 --> 00:06:15,660
+button you can also have support series
+ 
+
+377
+00:06:15,660 --> 00:06:16,909
+button you can also have support series
+by going to patreon I'll come for such
+
+378
+00:06:16,909 --> 00:06:16,919
+by going to patreon I'll come for such
+ 
+
+379
+00:06:16,919 --> 00:06:18,890
+by going to patreon I'll come for such
+the cherokees thank you as always to all
+
+380
+00:06:18,890 --> 00:06:18,900
+the cherokees thank you as always to all
+ 
+
+381
+00:06:18,900 --> 00:06:20,600
+the cherokees thank you as always to all
+the lovely people who helped support
+
+382
+00:06:20,600 --> 00:06:20,610
+the lovely people who helped support
+ 
+
+383
+00:06:20,610 --> 00:06:23,240
+the lovely people who helped support
+this series and make it possible I will
+
+384
+00:06:23,240 --> 00:06:23,250
+this series and make it possible I will
+ 
+
+385
+00:06:23,250 --> 00:06:26,250
+this series and make it possible I will
+see you guys in the next video goodbye
+
+386
+00:06:26,250 --> 00:06:26,260
+see you guys in the next video goodbye
+ 
+
+387
+00:06:26,260 --> 00:06:41,439
+see you guys in the next video goodbye
+[Music]
+

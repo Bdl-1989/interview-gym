@@ -1,0 +1,5725 @@
+1
+00:00:00,030 --> 00:00:01,819
+
+hey little guys my name is a cello and
+
+2
+00:00:01,819 --> 00:00:01,829
+hey little guys my name is a cello and
+ 
+
+3
+00:00:01,829 --> 00:00:03,649
+hey little guys my name is a cello and
+walked back to my skipper but series and
+
+4
+00:00:03,649 --> 00:00:03,659
+walked back to my skipper but series and
+ 
+
+5
+00:00:03,659 --> 00:00:04,849
+walked back to my skipper but series and
+today I'm going to be talking all about
+
+6
+00:00:04,849 --> 00:00:04,859
+today I'm going to be talking all about
+ 
+
+7
+00:00:04,859 --> 00:00:07,369
+today I'm going to be talking all about
+strings in C++ too many years that you
+
+8
+00:00:07,369 --> 00:00:07,379
+strings in C++ too many years that you
+ 
+
+9
+00:00:07,379 --> 00:00:09,230
+strings in C++ too many years that you
+should watch if you haven't already are
+
+10
+00:00:09,230 --> 00:00:09,240
+should watch if you haven't already are
+ 
+
+11
+00:00:09,240 --> 00:00:11,480
+should watch if you haven't already are
+the pointers videos video and pointers
+
+12
+00:00:11,480 --> 00:00:11,490
+the pointers videos video and pointers
+ 
+
+13
+00:00:11,490 --> 00:00:14,509
+the pointers videos video and pointers
+and the last week's video rather two
+
+14
+00:00:14,509 --> 00:00:14,519
+and the last week's video rather two
+ 
+
+15
+00:00:14,519 --> 00:00:17,000
+and the last week's video rather two
+days ago video which was on about arrays
+
+16
+00:00:17,000 --> 00:00:17,010
+days ago video which was on about arrays
+ 
+
+17
+00:00:17,010 --> 00:00:19,910
+days ago video which was on about arrays
+because as we're about to discover trims
+
+18
+00:00:19,910 --> 00:00:19,920
+because as we're about to discover trims
+ 
+
+19
+00:00:19,920 --> 00:00:22,010
+because as we're about to discover trims
+very much tied with arrays so first of
+
+20
+00:00:22,010 --> 00:00:22,020
+very much tied with arrays so first of
+ 
+
+21
+00:00:22,020 --> 00:00:24,710
+very much tied with arrays so first of
+all what is a string in general a string
+
+22
+00:00:24,710 --> 00:00:24,720
+all what is a string in general a string
+ 
+
+23
+00:00:24,720 --> 00:00:27,290
+all what is a string in general a string
+is essentially a group of characters by
+
+24
+00:00:27,290 --> 00:00:27,300
+is essentially a group of characters by
+ 
+
+25
+00:00:27,300 --> 00:00:29,240
+is essentially a group of characters by
+characters I mean letters numbers
+
+26
+00:00:29,240 --> 00:00:29,250
+characters I mean letters numbers
+ 
+
+27
+00:00:29,250 --> 00:00:31,189
+characters I mean letters numbers
+symbols that kind of stuff it's
+
+28
+00:00:31,189 --> 00:00:31,199
+symbols that kind of stuff it's
+ 
+
+29
+00:00:31,199 --> 00:00:33,740
+symbols that kind of stuff it's
+basically tacked so it's very very
+
+30
+00:00:33,740 --> 00:00:33,750
+basically tacked so it's very very
+ 
+
+31
+00:00:33,750 --> 00:00:35,930
+basically tacked so it's very very
+common for us as humans of course to
+
+32
+00:00:35,930 --> 00:00:35,940
+common for us as humans of course to
+ 
+
+33
+00:00:35,940 --> 00:00:38,780
+common for us as humans of course to
+want to represent text in some in some
+
+34
+00:00:38,780 --> 00:00:38,790
+want to represent text in some in some
+ 
+
+35
+00:00:38,790 --> 00:00:41,270
+want to represent text in some in some
+way shape or form on our computers so it
+
+36
+00:00:41,270 --> 00:00:41,280
+way shape or form on our computers so it
+ 
+
+37
+00:00:41,280 --> 00:00:42,860
+way shape or form on our computers so it
+has this problem of well my programming
+
+38
+00:00:42,860 --> 00:00:42,870
+has this problem of well my programming
+ 
+
+39
+00:00:42,870 --> 00:00:44,799
+has this problem of well my programming
+we want to be able to represent text and
+
+40
+00:00:44,799 --> 00:00:44,809
+we want to be able to represent text and
+ 
+
+41
+00:00:44,809 --> 00:00:47,869
+we want to be able to represent text and
+that kind of group of text it could be a
+
+42
+00:00:47,869 --> 00:00:47,879
+that kind of group of text it could be a
+ 
+
+43
+00:00:47,879 --> 00:00:49,340
+that kind of group of text it could be a
+single character it could be an entire
+
+44
+00:00:49,340 --> 00:00:49,350
+single character it could be an entire
+ 
+
+45
+00:00:49,350 --> 00:00:51,410
+single character it could be an entire
+paragraph it could be a single word it
+
+46
+00:00:51,410 --> 00:00:51,420
+paragraph it could be a single word it
+ 
+
+47
+00:00:51,420 --> 00:00:53,389
+paragraph it could be a single word it
+could be a bunch of words all that stuff
+
+48
+00:00:53,389 --> 00:00:53,399
+could be a bunch of words all that stuff
+ 
+
+49
+00:00:53,399 --> 00:00:55,970
+could be a bunch of words all that stuff
+that's called string it's a string of
+
+50
+00:00:55,970 --> 00:00:55,980
+that's called string it's a string of
+ 
+
+51
+00:00:55,980 --> 00:00:58,760
+that's called string it's a string of
+text so we need some way to be able to
+
+52
+00:00:58,760 --> 00:00:58,770
+text so we need some way to be able to
+ 
+
+53
+00:00:58,770 --> 00:01:01,040
+text so we need some way to be able to
+represent that in our program and that
+
+54
+00:01:01,040 --> 00:01:01,050
+represent that in our program and that
+ 
+
+55
+00:01:01,050 --> 00:01:03,709
+represent that in our program and that
+what a string in table cloth is it's a
+
+56
+00:01:03,709 --> 00:01:03,719
+what a string in table cloth is it's a
+ 
+
+57
+00:01:03,719 --> 00:01:05,329
+what a string in table cloth is it's a
+way for us to actually be able to
+
+58
+00:01:05,329 --> 00:01:05,339
+way for us to actually be able to
+ 
+
+59
+00:01:05,339 --> 00:01:08,539
+way for us to actually be able to
+represent and manipulate that text so if
+
+60
+00:01:08,539 --> 00:01:08,549
+represent and manipulate that text so if
+ 
+
+61
+00:01:08,549 --> 00:01:10,490
+represent and manipulate that text so if
+you understand how strings work which is
+
+62
+00:01:10,490 --> 00:01:10,500
+you understand how strings work which is
+ 
+
+63
+00:01:10,500 --> 00:01:11,690
+you understand how strings work which is
+really we're going to talk about I mean
+
+64
+00:01:11,690 --> 00:01:11,700
+really we're going to talk about I mean
+ 
+
+65
+00:01:11,700 --> 00:01:13,219
+really we're going to talk about I mean
+in this type of foot series you know
+
+66
+00:01:13,219 --> 00:01:13,229
+in this type of foot series you know
+ 
+
+67
+00:01:13,229 --> 00:01:14,840
+in this type of foot series you know
+that I like to kind of go in depth and
+
+68
+00:01:14,840 --> 00:01:14,850
+that I like to kind of go in depth and
+ 
+
+69
+00:01:14,850 --> 00:01:16,820
+that I like to kind of go in depth and
+to share with you guys how things
+
+70
+00:01:16,820 --> 00:01:16,830
+to share with you guys how things
+ 
+
+71
+00:01:16,830 --> 00:01:19,700
+to share with you guys how things
+actually work because like for me
+
+72
+00:01:19,700 --> 00:01:19,710
+actually work because like for me
+ 
+
+73
+00:01:19,710 --> 00:01:21,020
+actually work because like for me
+personally when I'm learning something
+
+74
+00:01:21,020 --> 00:01:21,030
+personally when I'm learning something
+ 
+
+75
+00:01:21,030 --> 00:01:23,719
+personally when I'm learning something
+new I really really like to understand
+
+76
+00:01:23,719 --> 00:01:23,729
+new I really really like to understand
+ 
+
+77
+00:01:23,729 --> 00:01:25,460
+new I really really like to understand
+how it actually works that helps me
+
+78
+00:01:25,460 --> 00:01:25,470
+how it actually works that helps me
+ 
+
+79
+00:01:25,470 --> 00:01:27,649
+how it actually works that helps me
+understand the way that I can use it
+
+80
+00:01:27,649 --> 00:01:27,659
+understand the way that I can use it
+ 
+
+81
+00:01:27,659 --> 00:01:30,260
+understand the way that I can use it
+because if you just tell me what I
+
+82
+00:01:30,260 --> 00:01:30,270
+because if you just tell me what I
+ 
+
+83
+00:01:30,270 --> 00:01:30,950
+because if you just tell me what I
+should do
+
+84
+00:01:30,950 --> 00:01:30,960
+should do
+ 
+
+85
+00:01:30,960 --> 00:01:32,899
+should do
+the type string of code for example
+
+86
+00:01:32,899 --> 00:01:32,909
+the type string of code for example
+ 
+
+87
+00:01:32,909 --> 00:01:34,789
+the type string of code for example
+that's cool like I know what a string is
+
+88
+00:01:34,789 --> 00:01:34,799
+that's cool like I know what a string is
+ 
+
+89
+00:01:34,799 --> 00:01:37,609
+that's cool like I know what a string is
+however in the future when I run into
+
+90
+00:01:37,609 --> 00:01:37,619
+however in the future when I run into
+ 
+
+91
+00:01:37,619 --> 00:01:38,780
+however in the future when I run into
+something and I'm not sure if it all
+
+92
+00:01:38,780 --> 00:01:38,790
+something and I'm not sure if it all
+ 
+
+93
+00:01:38,790 --> 00:01:40,760
+something and I'm not sure if it all
+work or not if I know how the underlying
+
+94
+00:01:40,760 --> 00:01:40,770
+work or not if I know how the underlying
+ 
+
+95
+00:01:40,770 --> 00:01:43,160
+work or not if I know how the underlying
+technology works I can kind of make make
+
+96
+00:01:43,160 --> 00:01:43,170
+technology works I can kind of make make
+ 
+
+97
+00:01:43,170 --> 00:01:45,200
+technology works I can kind of make make
+an educated guess and determine whether
+
+98
+00:01:45,200 --> 00:01:45,210
+an educated guess and determine whether
+ 
+
+99
+00:01:45,210 --> 00:01:46,730
+an educated guess and determine whether
+or not what I'm trying to do is is
+
+100
+00:01:46,730 --> 00:01:46,740
+or not what I'm trying to do is is
+ 
+
+101
+00:01:46,740 --> 00:01:48,950
+or not what I'm trying to do is is
+impossible in the first place so you
+
+102
+00:01:48,950 --> 00:01:48,960
+impossible in the first place so you
+ 
+
+103
+00:01:48,960 --> 00:01:50,960
+impossible in the first place so you
+want to standing up strings work in C++
+
+104
+00:01:50,960 --> 00:01:50,970
+want to standing up strings work in C++
+ 
+
+105
+00:01:50,970 --> 00:01:53,240
+want to standing up strings work in C++
+you first need to understand how
+
+106
+00:01:53,240 --> 00:01:53,250
+you first need to understand how
+ 
+
+107
+00:01:53,250 --> 00:01:55,340
+you first need to understand how
+characters works and what what
+
+108
+00:01:55,340 --> 00:01:55,350
+characters works and what what
+ 
+
+109
+00:01:55,350 --> 00:01:57,319
+characters works and what what
+characters actually are so characters
+
+110
+00:01:57,319 --> 00:01:57,329
+characters actually are so characters
+ 
+
+111
+00:01:57,329 --> 00:01:58,580
+characters actually are so characters
+being things like letters in book
+
+112
+00:01:58,580 --> 00:01:58,590
+being things like letters in book
+ 
+
+113
+00:01:58,590 --> 00:02:01,190
+being things like letters in book
+numbers they're represented in various
+
+114
+00:02:01,190 --> 00:02:01,200
+numbers they're represented in various
+ 
+
+115
+00:02:01,200 --> 00:02:03,830
+numbers they're represented in various
+forms and this is not going to be a
+
+116
+00:02:03,830 --> 00:02:03,840
+forms and this is not going to be a
+ 
+
+117
+00:02:03,840 --> 00:02:07,210
+forms and this is not going to be a
+tutorial or or a video about
+
+118
+00:02:07,210 --> 00:02:07,220
+tutorial or or a video about
+ 
+
+119
+00:02:07,220 --> 00:02:09,330
+tutorial or or a video about
+different kind of character encoding
+
+120
+00:02:09,330 --> 00:02:09,340
+different kind of character encoding
+ 
+
+121
+00:02:09,340 --> 00:02:11,170
+different kind of character encoding
+systems that we have in the world
+
+122
+00:02:11,170 --> 00:02:11,180
+systems that we have in the world
+ 
+
+123
+00:02:11,180 --> 00:02:13,120
+systems that we have in the world
+because there are probably too many to
+
+124
+00:02:13,120 --> 00:02:13,130
+because there are probably too many to
+ 
+
+125
+00:02:13,130 --> 00:02:14,830
+because there are probably too many to
+count and they're all very complicated
+
+126
+00:02:14,830 --> 00:02:14,840
+count and they're all very complicated
+ 
+
+127
+00:02:14,840 --> 00:02:16,630
+count and they're all very complicated
+and they're all very kind of depending
+
+128
+00:02:16,630 --> 00:02:16,640
+and they're all very kind of depending
+ 
+
+129
+00:02:16,640 --> 00:02:18,670
+and they're all very kind of depending
+on what what the specification actually
+
+130
+00:02:18,670 --> 00:02:18,680
+on what what the specification actually
+ 
+
+131
+00:02:18,680 --> 00:02:21,460
+on what what the specification actually
+is so wherever you get to in depth about
+
+132
+00:02:21,460 --> 00:02:21,470
+is so wherever you get to in depth about
+ 
+
+133
+00:02:21,470 --> 00:02:23,440
+is so wherever you get to in depth about
+that maybe in a future video but we are
+
+134
+00:02:23,440 --> 00:02:23,450
+that maybe in a future video but we are
+ 
+
+135
+00:02:23,450 --> 00:02:24,520
+that maybe in a future video but we are
+going to talk about how characters work
+
+136
+00:02:24,520 --> 00:02:24,530
+going to talk about how characters work
+ 
+
+137
+00:02:24,530 --> 00:02:25,870
+going to talk about how characters work
+in general now you may have noticed
+
+138
+00:02:25,870 --> 00:02:25,880
+in general now you may have noticed
+ 
+
+139
+00:02:25,880 --> 00:02:28,180
+in general now you may have noticed
+already that there is a data type in C++
+
+140
+00:02:28,180 --> 00:02:28,190
+already that there is a data type in C++
+ 
+
+141
+00:02:28,190 --> 00:02:30,100
+already that there is a data type in C++
+called char which is shot to character
+
+142
+00:02:30,100 --> 00:02:30,110
+called char which is shot to character
+ 
+
+143
+00:02:30,110 --> 00:02:32,020
+called char which is shot to character
+and so far we've kind of used it with
+
+144
+00:02:32,020 --> 00:02:32,030
+and so far we've kind of used it with
+ 
+
+145
+00:02:32,030 --> 00:02:33,550
+and so far we've kind of used it with
+the reference of this is one byte of
+
+146
+00:02:33,550 --> 00:02:33,560
+the reference of this is one byte of
+ 
+
+147
+00:02:33,560 --> 00:02:35,950
+the reference of this is one byte of
+memory and so it's useful for being able
+
+148
+00:02:35,950 --> 00:02:35,960
+memory and so it's useful for being able
+ 
+
+149
+00:02:35,960 --> 00:02:37,840
+memory and so it's useful for being able
+to do things like cut pointers into a
+
+150
+00:02:37,840 --> 00:02:37,850
+to do things like cut pointers into a
+ 
+
+151
+00:02:37,850 --> 00:02:39,310
+to do things like cut pointers into a
+child pointer so you can do pointer
+
+152
+00:02:39,310 --> 00:02:39,320
+child pointer so you can do pointer
+ 
+
+153
+00:02:39,320 --> 00:02:41,140
+child pointer so you can do pointer
+arithmetic in terms of bias it's also
+
+154
+00:02:41,140 --> 00:02:41,150
+arithmetic in terms of bias it's also
+ 
+
+155
+00:02:41,150 --> 00:02:42,670
+arithmetic in terms of bias it's also
+useful for allocating memory buffers
+
+156
+00:02:42,670 --> 00:02:42,680
+useful for allocating memory buffers
+ 
+
+157
+00:02:42,680 --> 00:02:44,770
+useful for allocating memory buffers
+because if you want allocate if you want
+
+158
+00:02:44,770 --> 00:02:44,780
+because if you want allocate if you want
+ 
+
+159
+00:02:44,780 --> 00:02:46,180
+because if you want allocate if you want
+to allocate one kilobyte of memory you
+
+160
+00:02:46,180 --> 00:02:46,190
+to allocate one kilobyte of memory you
+ 
+
+161
+00:02:46,190 --> 00:02:49,300
+to allocate one kilobyte of memory you
+can dissipate 1,024 charts and there you
+
+162
+00:02:49,300 --> 00:02:49,310
+can dissipate 1,024 charts and there you
+ 
+
+163
+00:02:49,310 --> 00:02:49,750
+can dissipate 1,024 charts and there you
+go
+
+164
+00:02:49,750 --> 00:02:49,760
+go
+ 
+
+165
+00:02:49,760 --> 00:02:52,180
+go
+but it's also very useful for strength
+
+166
+00:02:52,180 --> 00:02:52,190
+but it's also very useful for strength
+ 
+
+167
+00:02:52,190 --> 00:02:55,030
+but it's also very useful for strength
+and test because the way it is people
+
+168
+00:02:55,030 --> 00:02:55,040
+and test because the way it is people
+ 
+
+169
+00:02:55,040 --> 00:02:57,070
+and test because the way it is people
+put treats characters by default release
+
+170
+00:02:57,070 --> 00:02:57,080
+put treats characters by default release
+ 
+
+171
+00:02:57,080 --> 00:02:59,290
+put treats characters by default release
+ASCII characters again text encoding not
+
+172
+00:02:59,290 --> 00:02:59,300
+ASCII characters again text encoding not
+ 
+
+173
+00:02:59,300 --> 00:03:00,760
+ASCII characters again text encoding not
+trying to get into that in this video
+
+174
+00:03:00,760 --> 00:03:00,770
+trying to get into that in this video
+ 
+
+175
+00:03:00,770 --> 00:03:02,650
+trying to get into that in this video
+but the way that we kind of deal with
+
+176
+00:03:02,650 --> 00:03:02,660
+but the way that we kind of deal with
+ 
+
+177
+00:03:02,660 --> 00:03:05,260
+but the way that we kind of deal with
+characters in C++ is in the form that
+
+178
+00:03:05,260 --> 00:03:05,270
+characters in C++ is in the form that
+ 
+
+179
+00:03:05,270 --> 00:03:07,210
+characters in C++ is in the form that
+the character is won by it and that is
+
+180
+00:03:07,210 --> 00:03:07,220
+the character is won by it and that is
+ 
+
+181
+00:03:07,220 --> 00:03:09,400
+the character is won by it and that is
+what ASCII is that extended asking is a
+
+182
+00:03:09,400 --> 00:03:09,410
+what ASCII is that extended asking is a
+ 
+
+183
+00:03:09,410 --> 00:03:12,370
+what ASCII is that extended asking is a
+lot of other than utf-8 utf-16 you have
+
+184
+00:03:12,370 --> 00:03:12,380
+lot of other than utf-8 utf-16 you have
+ 
+
+185
+00:03:12,380 --> 00:03:14,530
+lot of other than utf-8 utf-16 you have
+to - we have things like Y strings and
+
+186
+00:03:14,530 --> 00:03:14,540
+to - we have things like Y strings and
+ 
+
+187
+00:03:14,540 --> 00:03:16,510
+to - we have things like Y strings and
+we have we have of course character
+
+188
+00:03:16,510 --> 00:03:16,520
+we have we have of course character
+ 
+
+189
+00:03:16,520 --> 00:03:19,090
+we have we have of course character
+tested in which characters a way above
+
+190
+00:03:19,090 --> 00:03:19,100
+tested in which characters a way above
+ 
+
+191
+00:03:19,100 --> 00:03:21,790
+tested in which characters a way above
+won by it we are - by characters 3 by 4
+
+192
+00:03:21,790 --> 00:03:21,800
+won by it we are - by characters 3 by 4
+ 
+
+193
+00:03:21,800 --> 00:03:24,520
+won by it we are - by characters 3 by 4
+by characters with other languages such
+
+194
+00:03:24,520 --> 00:03:24,530
+by characters with other languages such
+ 
+
+195
+00:03:24,530 --> 00:03:27,400
+by characters with other languages such
+as Japanese or Chinese or languages that
+
+196
+00:03:27,400 --> 00:03:27,410
+as Japanese or Chinese or languages that
+ 
+
+197
+00:03:27,410 --> 00:03:29,440
+as Japanese or Chinese or languages that
+actually have different characters than
+
+198
+00:03:29,440 --> 00:03:29,450
+actually have different characters than
+ 
+
+199
+00:03:29,450 --> 00:03:31,600
+actually have different characters than
+the ones we see in English we need to be
+
+200
+00:03:31,600 --> 00:03:31,610
+the ones we see in English we need to be
+ 
+
+201
+00:03:31,610 --> 00:03:32,979
+the ones we see in English we need to be
+able to use them because they're simply
+
+202
+00:03:32,979 --> 00:03:32,989
+able to use them because they're simply
+ 
+
+203
+00:03:32,989 --> 00:03:35,199
+able to use them because they're simply
+anointeth code if we only have one byte
+
+204
+00:03:35,199 --> 00:03:35,209
+anointeth code if we only have one byte
+ 
+
+205
+00:03:35,209 --> 00:03:36,910
+anointeth code if we only have one byte
+to represent a character that 8 bits
+
+206
+00:03:36,910 --> 00:03:36,920
+to represent a character that 8 bits
+ 
+
+207
+00:03:36,920 --> 00:03:38,500
+to represent a character that 8 bits
+which means we have 2 to the power of 8
+
+208
+00:03:38,500 --> 00:03:38,510
+which means we have 2 to the power of 8
+ 
+
+209
+00:03:38,510 --> 00:03:40,360
+which means we have 2 to the power of 8
+possibilities of what that number would
+
+210
+00:03:40,360 --> 00:03:40,370
+possibilities of what that number would
+ 
+
+211
+00:03:40,370 --> 00:03:43,780
+possibilities of what that number would
+be which is 256 possibilities there are
+
+212
+00:03:43,780 --> 00:03:43,790
+be which is 256 possibilities there are
+ 
+
+213
+00:03:43,790 --> 00:03:46,930
+be which is 256 possibilities there are
+way more than 256 characters if you take
+
+214
+00:03:46,930 --> 00:03:46,940
+way more than 256 characters if you take
+ 
+
+215
+00:03:46,940 --> 00:03:49,770
+way more than 256 characters if you take
+into account English letters numbers
+
+216
+00:03:49,770 --> 00:03:49,780
+into account English letters numbers
+ 
+
+217
+00:03:49,780 --> 00:03:54,550
+into account English letters numbers
+symbol you know Japanese letters Korean
+
+218
+00:03:54,550 --> 00:03:54,560
+symbol you know Japanese letters Korean
+ 
+
+219
+00:03:54,560 --> 00:03:56,410
+symbol you know Japanese letters Korean
+letters all that kind of stuff so we
+
+220
+00:03:56,410 --> 00:03:56,420
+letters all that kind of stuff so we
+ 
+
+221
+00:03:56,420 --> 00:03:59,140
+letters all that kind of stuff so we
+can't fit all languages into you know a
+
+222
+00:03:59,140 --> 00:03:59,150
+can't fit all languages into you know a
+ 
+
+223
+00:03:59,150 --> 00:04:01,030
+can't fit all languages into you know a
+fifth character set that wouldn't work
+
+224
+00:04:01,030 --> 00:04:01,040
+fifth character set that wouldn't work
+ 
+
+225
+00:04:01,040 --> 00:04:03,100
+fifth character set that wouldn't work
+so we have like utf-16 for example which
+
+226
+00:04:03,100 --> 00:04:03,110
+so we have like utf-16 for example which
+ 
+
+227
+00:04:03,110 --> 00:04:05,080
+so we have like utf-16 for example which
+is a 16-bit character encoding which
+
+228
+00:04:05,080 --> 00:04:05,090
+is a 16-bit character encoding which
+ 
+
+229
+00:04:05,090 --> 00:04:07,000
+is a 16-bit character encoding which
+means that we have to have 16 different
+
+230
+00:04:07,000 --> 00:04:07,010
+means that we have to have 16 different
+ 
+
+231
+00:04:07,010 --> 00:04:10,060
+means that we have to have 16 different
+possibilities which is 65536 to four
+
+232
+00:04:10,060 --> 00:04:10,070
+possibilities which is 65536 to four
+ 
+
+233
+00:04:10,070 --> 00:04:11,800
+possibilities which is 65536 to four
+characters we have all these other
+
+234
+00:04:11,800 --> 00:04:11,810
+characters we have all these other
+ 
+
+235
+00:04:11,810 --> 00:04:14,229
+characters we have all these other
+things but in C++ just didn't say sign
+
+236
+00:04:14,229 --> 00:04:14,239
+things but in C++ just didn't say sign
+ 
+
+237
+00:04:14,239 --> 00:04:16,570
+things but in C++ just didn't say sign
+language without any library kind of
+
+238
+00:04:16,570 --> 00:04:16,580
+language without any library kind of
+ 
+
+239
+00:04:16,580 --> 00:04:18,370
+language without any library kind of
+uses just the primitive data type char
+
+240
+00:04:18,370 --> 00:04:18,380
+uses just the primitive data type char
+ 
+
+241
+00:04:18,380 --> 00:04:20,620
+uses just the primitive data type char
+is one byte which is why when you use a
+
+242
+00:04:20,620 --> 00:04:20,630
+is one byte which is why when you use a
+ 
+
+243
+00:04:20,630 --> 00:04:23,200
+is one byte which is why when you use a
+string as we're about to in C++ not a
+
+244
+00:04:23,200 --> 00:04:23,210
+string as we're about to in C++ not a
+ 
+
+245
+00:04:23,210 --> 00:04:25,659
+string as we're about to in C++ not a
+wide string which is two bytes per
+
+246
+00:04:25,659 --> 00:04:25,669
+wide string which is two bytes per
+ 
+
+247
+00:04:25,669 --> 00:04:27,820
+wide string which is two bytes per
+character but a normal string with which
+
+248
+00:04:27,820 --> 00:04:27,830
+character but a normal string with which
+ 
+
+249
+00:04:27,830 --> 00:04:29,940
+character but a normal string with which
+uses a normal child of each character
+
+250
+00:04:29,940 --> 00:04:29,950
+uses a normal child of each character
+ 
+
+251
+00:04:29,950 --> 00:04:32,290
+uses a normal child of each character
+we're talking about 1 by characters and
+
+252
+00:04:32,290 --> 00:04:32,300
+we're talking about 1 by characters and
+ 
+
+253
+00:04:32,300 --> 00:04:34,090
+we're talking about 1 by characters and
+we're primarily talking about just being
+
+254
+00:04:34,090 --> 00:04:34,100
+we're primarily talking about just being
+ 
+
+255
+00:04:34,100 --> 00:04:35,409
+we're primarily talking about just being
+able to do English if you're going to
+
+256
+00:04:35,409 --> 00:04:35,419
+able to do English if you're going to
+ 
+
+257
+00:04:35,419 --> 00:04:36,640
+able to do English if you're going to
+need to do some other language such as
+
+258
+00:04:36,640 --> 00:04:36,650
+need to do some other language such as
+ 
+
+259
+00:04:36,650 --> 00:04:38,380
+need to do some other language such as
+Russian you're not gonna be able to do
+
+260
+00:04:38,380 --> 00:04:38,390
+Russian you're not gonna be able to do
+ 
+
+261
+00:04:38,390 --> 00:04:40,330
+Russian you're not gonna be able to do
+that using this you you and have to use
+
+262
+00:04:40,330 --> 00:04:40,340
+that using this you you and have to use
+ 
+
+263
+00:04:40,340 --> 00:04:41,980
+that using this you you and have to use
+some kind of different character
+
+264
+00:04:41,980 --> 00:04:41,990
+some kind of different character
+ 
+
+265
+00:04:41,990 --> 00:04:43,300
+some kind of different character
+occurring which we've talked about other
+
+266
+00:04:43,300 --> 00:04:43,310
+occurring which we've talked about other
+ 
+
+267
+00:04:43,310 --> 00:04:45,010
+occurring which we've talked about other
+languages and all that in the future but
+
+268
+00:04:45,010 --> 00:04:45,020
+languages and all that in the future but
+ 
+
+269
+00:04:45,020 --> 00:04:47,050
+languages and all that in the future but
+interesting to talk about strings
+
+270
+00:04:47,050 --> 00:04:47,060
+interesting to talk about strings
+ 
+
+271
+00:04:47,060 --> 00:04:49,450
+interesting to talk about strings
+because strings and text and and all
+
+272
+00:04:49,450 --> 00:04:49,460
+because strings and text and and all
+ 
+
+273
+00:04:49,460 --> 00:04:51,550
+because strings and text and and all
+that stuff and maybe later into the game
+
+274
+00:04:51,550 --> 00:04:51,560
+that stuff and maybe later into the game
+ 
+
+275
+00:04:51,560 --> 00:04:53,710
+that stuff and maybe later into the game
+engine font rendering is actually a
+
+276
+00:04:53,710 --> 00:04:53,720
+engine font rendering is actually a
+ 
+
+277
+00:04:53,720 --> 00:04:56,350
+engine font rendering is actually a
+hugely complicated problem that the most
+
+278
+00:04:56,350 --> 00:04:56,360
+hugely complicated problem that the most
+ 
+
+279
+00:04:56,360 --> 00:04:58,990
+hugely complicated problem that the most
+people overlook just text in general and
+
+280
+00:04:58,990 --> 00:04:59,000
+people overlook just text in general and
+ 
+
+281
+00:04:59,000 --> 00:05:01,690
+people overlook just text in general and
+language is isn't massive massively
+
+282
+00:05:01,690 --> 00:05:01,700
+language is isn't massive massively
+ 
+
+283
+00:05:01,700 --> 00:05:03,460
+language is isn't massive massively
+complicated problem ok so that's a
+
+284
+00:05:03,460 --> 00:05:03,470
+complicated problem ok so that's a
+ 
+
+285
+00:05:03,470 --> 00:05:04,719
+complicated problem ok so that's a
+pretty big introduction but let's talk
+
+286
+00:05:04,719 --> 00:05:04,729
+pretty big introduction but let's talk
+ 
+
+287
+00:05:04,729 --> 00:05:06,330
+pretty big introduction but let's talk
+about how things actually work in a C++
+
+288
+00:05:06,330 --> 00:05:06,340
+about how things actually work in a C++
+ 
+
+289
+00:05:06,340 --> 00:05:08,290
+about how things actually work in a C++
+characters I mentioned characters I
+
+290
+00:05:08,290 --> 00:05:08,300
+characters I mentioned characters I
+ 
+
+291
+00:05:08,300 --> 00:05:10,029
+characters I mentioned characters I
+mentioned the char data type a string is
+
+292
+00:05:10,029 --> 00:05:10,039
+mentioned the char data type a string is
+ 
+
+293
+00:05:10,039 --> 00:05:11,770
+mentioned the char data type a string is
+basically an array of characters that's
+
+294
+00:05:11,770 --> 00:05:11,780
+basically an array of characters that's
+ 
+
+295
+00:05:11,780 --> 00:05:13,000
+basically an array of characters that's
+why I want you guys to watch that arrays
+
+296
+00:05:13,000 --> 00:05:13,010
+why I want you guys to watch that arrays
+ 
+
+297
+00:05:13,010 --> 00:05:15,969
+why I want you guys to watch that arrays
+video in the description everywhere a
+
+298
+00:05:15,969 --> 00:05:15,979
+video in the description everywhere a
+ 
+
+299
+00:05:15,979 --> 00:05:17,260
+video in the description everywhere a
+string is just an array of characters
+
+300
+00:05:17,260 --> 00:05:17,270
+string is just an array of characters
+ 
+
+301
+00:05:17,270 --> 00:05:19,360
+string is just an array of characters
+and array being a sort of set of
+
+302
+00:05:19,360 --> 00:05:19,370
+and array being a sort of set of
+ 
+
+303
+00:05:19,370 --> 00:05:21,159
+and array being a sort of set of
+elements so we have a quarter set of
+
+304
+00:05:21,159 --> 00:05:21,169
+elements so we have a quarter set of
+ 
+
+305
+00:05:21,169 --> 00:05:23,170
+elements so we have a quarter set of
+characters which make up a string of
+
+306
+00:05:23,170 --> 00:05:23,180
+characters which make up a string of
+ 
+
+307
+00:05:23,180 --> 00:05:24,730
+characters which make up a string of
+text you may have noticed in the series
+
+308
+00:05:24,730 --> 00:05:24,740
+text you may have noticed in the series
+ 
+
+309
+00:05:24,740 --> 00:05:26,830
+text you may have noticed in the series
+that we've often referred to strings of
+
+310
+00:05:26,830 --> 00:05:26,840
+that we've often referred to strings of
+ 
+
+311
+00:05:26,840 --> 00:05:28,750
+that we've often referred to strings of
+char pointers so let's take a look at
+
+312
+00:05:28,750 --> 00:05:28,760
+char pointers so let's take a look at
+ 
+
+313
+00:05:28,760 --> 00:05:30,400
+char pointers so let's take a look at
+how that works we can declare a space
+
+314
+00:05:30,400 --> 00:05:30,410
+how that works we can declare a space
+ 
+
+315
+00:05:30,410 --> 00:05:31,990
+how that works we can declare a space
+start string by writing const char
+
+316
+00:05:31,990 --> 00:05:32,000
+start string by writing const char
+ 
+
+317
+00:05:32,000 --> 00:05:34,990
+start string by writing const char
+pointer the name of the string like name
+
+318
+00:05:34,990 --> 00:05:35,000
+pointer the name of the string like name
+ 
+
+319
+00:05:35,000 --> 00:05:37,060
+pointer the name of the string like name
+and then setting it equal to in double
+
+320
+00:05:37,060 --> 00:05:37,070
+and then setting it equal to in double
+ 
+
+321
+00:05:37,070 --> 00:05:39,909
+and then setting it equal to in double
+quote some kind of text so we'll set it
+
+322
+00:05:39,909 --> 00:05:39,919
+quote some kind of text so we'll set it
+ 
+
+323
+00:05:39,919 --> 00:05:41,409
+quote some kind of text so we'll set it
+equal to china for example this is
+
+324
+00:05:41,409 --> 00:05:41,419
+equal to china for example this is
+ 
+
+325
+00:05:41,419 --> 00:05:43,270
+equal to china for example this is
+essentially a c style way of defining
+
+326
+00:05:43,270 --> 00:05:43,280
+essentially a c style way of defining
+ 
+
+327
+00:05:43,280 --> 00:05:44,860
+essentially a c style way of defining
+strengths because we do have a library
+
+328
+00:05:44,860 --> 00:05:44,870
+strengths because we do have a library
+ 
+
+329
+00:05:44,870 --> 00:05:47,830
+strengths because we do have a library
+in C++ which means which makes string
+
+330
+00:05:47,830 --> 00:05:47,840
+in C++ which means which makes string
+ 
+
+331
+00:05:47,840 --> 00:05:49,690
+in C++ which means which makes string
+operations much much easier for us than
+
+332
+00:05:49,690 --> 00:05:49,700
+operations much much easier for us than
+ 
+
+333
+00:05:49,700 --> 00:05:51,640
+operations much much easier for us than
+this but it's still important to kind of
+
+334
+00:05:51,640 --> 00:05:51,650
+this but it's still important to kind of
+ 
+
+335
+00:05:51,650 --> 00:05:52,900
+this but it's still important to kind of
+know how to work so that you know how to
+
+336
+00:05:52,900 --> 00:05:52,910
+know how to work so that you know how to
+ 
+
+337
+00:05:52,910 --> 00:05:54,279
+know how to work so that you know how to
+take off both version work you also
+
+338
+00:05:54,279 --> 00:05:54,289
+take off both version work you also
+ 
+
+339
+00:05:54,289 --> 00:05:56,290
+take off both version work you also
+don't need to declare it as comped char
+
+340
+00:05:56,290 --> 00:05:56,300
+don't need to declare it as comped char
+ 
+
+341
+00:05:56,300 --> 00:05:58,390
+don't need to declare it as comped char
+but the reason people usually do that is
+
+342
+00:05:58,390 --> 00:05:58,400
+but the reason people usually do that is
+ 
+
+343
+00:05:58,400 --> 00:06:00,040
+but the reason people usually do that is
+because you really don't want to be
+
+344
+00:06:00,040 --> 00:06:00,050
+because you really don't want to be
+ 
+
+345
+00:06:00,050 --> 00:06:02,200
+because you really don't want to be
+going around and changing the value of
+
+346
+00:06:02,200 --> 00:06:02,210
+going around and changing the value of
+ 
+
+347
+00:06:02,210 --> 00:06:04,719
+going around and changing the value of
+these strings are immutable in the sense
+
+348
+00:06:04,719 --> 00:06:04,729
+these strings are immutable in the sense
+ 
+
+349
+00:06:04,729 --> 00:06:06,760
+these strings are immutable in the sense
+that you can't just extend a string and
+
+350
+00:06:06,760 --> 00:06:06,770
+that you can't just extend a string and
+ 
+
+351
+00:06:06,770 --> 00:06:09,370
+that you can't just extend a string and
+make it bigger because this is a fixed
+
+352
+00:06:09,370 --> 00:06:09,380
+make it bigger because this is a fixed
+ 
+
+353
+00:06:09,380 --> 00:06:11,380
+make it bigger because this is a fixed
+allocated block of memory if you want to
+
+354
+00:06:11,380 --> 00:06:11,390
+allocated block of memory if you want to
+ 
+
+355
+00:06:11,390 --> 00:06:13,210
+allocated block of memory if you want to
+have a bigger string you need to perform
+
+356
+00:06:13,210 --> 00:06:13,220
+have a bigger string you need to perform
+ 
+
+357
+00:06:13,220 --> 00:06:15,040
+have a bigger string you need to perform
+a brand new allocation and delete the
+
+358
+00:06:15,040 --> 00:06:15,050
+a brand new allocation and delete the
+ 
+
+359
+00:06:15,050 --> 00:06:17,170
+a brand new allocation and delete the
+old string now just because this is a
+
+360
+00:06:17,170 --> 00:06:17,180
+old string now just because this is a
+ 
+
+361
+00:06:17,180 --> 00:06:19,480
+old string now just because this is a
+child pointer does not mean this is
+
+362
+00:06:19,480 --> 00:06:19,490
+child pointer does not mean this is
+ 
+
+363
+00:06:19,490 --> 00:06:21,040
+child pointer does not mean this is
+actually here allocated you do not
+
+364
+00:06:21,040 --> 00:06:21,050
+actually here allocated you do not
+ 
+
+365
+00:06:21,050 --> 00:06:23,140
+actually here allocated you do not
+delete these things by either calling
+
+366
+00:06:23,140 --> 00:06:23,150
+delete these things by either calling
+ 
+
+367
+00:06:23,150 --> 00:06:24,490
+delete these things by either calling
+the lease name
+
+368
+00:06:24,490 --> 00:06:24,500
+the lease name
+ 
+
+369
+00:06:24,500 --> 00:06:26,230
+the lease name
+or delete name or anything like that we
+
+370
+00:06:26,230 --> 00:06:26,240
+or delete name or anything like that we
+ 
+
+371
+00:06:26,240 --> 00:06:27,850
+or delete name or anything like that we
+haven't talked about new and delete and
+
+372
+00:06:27,850 --> 00:06:27,860
+haven't talked about new and delete and
+ 
+
+373
+00:06:27,860 --> 00:06:29,290
+haven't talked about new and delete and
+all this kind of heap allocation stuff
+
+374
+00:06:29,290 --> 00:06:29,300
+all this kind of heap allocation stuff
+ 
+
+375
+00:06:29,300 --> 00:06:31,660
+all this kind of heap allocation stuff
+I've added stuff coming very very soon I
+
+376
+00:06:31,660 --> 00:06:31,670
+I've added stuff coming very very soon I
+ 
+
+377
+00:06:31,670 --> 00:06:33,460
+I've added stuff coming very very soon I
+know that we need to get into this but
+
+378
+00:06:33,460 --> 00:06:33,470
+know that we need to get into this but
+ 
+
+379
+00:06:33,470 --> 00:06:35,950
+know that we need to get into this but
+the rule of thumb is just if you don't
+
+380
+00:06:35,950 --> 00:06:35,960
+the rule of thumb is just if you don't
+ 
+
+381
+00:06:35,960 --> 00:06:38,050
+the rule of thumb is just if you don't
+use the new keyword don't use the delete
+
+382
+00:06:38,050 --> 00:06:38,060
+use the new keyword don't use the delete
+ 
+
+383
+00:06:38,060 --> 00:06:40,420
+use the new keyword don't use the delete
+keyword so in this case we made this
+
+384
+00:06:40,420 --> 00:06:40,430
+keyword so in this case we made this
+ 
+
+385
+00:06:40,430 --> 00:06:42,880
+keyword so in this case we made this
+sure no string we didn't write new child
+
+386
+00:06:42,880 --> 00:06:42,890
+sure no string we didn't write new child
+ 
+
+387
+00:06:42,890 --> 00:06:44,770
+sure no string we didn't write new child
+something like that we just wrote oh no
+
+388
+00:06:44,770 --> 00:06:44,780
+something like that we just wrote oh no
+ 
+
+389
+00:06:44,780 --> 00:06:47,170
+something like that we just wrote oh no
+so no delete required if you do declare
+
+390
+00:06:47,170 --> 00:06:47,180
+so no delete required if you do declare
+ 
+
+391
+00:06:47,180 --> 00:06:48,880
+so no delete required if you do declare
+cons that of course means that you can't
+
+392
+00:06:48,880 --> 00:06:48,890
+cons that of course means that you can't
+ 
+
+393
+00:06:48,890 --> 00:06:50,680
+cons that of course means that you can't
+change the content of this again we'll
+
+394
+00:06:50,680 --> 00:06:50,690
+change the content of this again we'll
+ 
+
+395
+00:06:50,690 --> 00:06:52,150
+change the content of this again we'll
+have a comp with you in the future but
+
+396
+00:06:52,150 --> 00:06:52,160
+have a comp with you in the future but
+ 
+
+397
+00:06:52,160 --> 00:06:54,580
+have a comp with you in the future but
+you cannot for example change the third
+
+398
+00:06:54,580 --> 00:06:54,590
+you cannot for example change the third
+ 
+
+399
+00:06:54,590 --> 00:06:56,470
+you cannot for example change the third
+character here which is the letter e to
+
+400
+00:06:56,470 --> 00:06:56,480
+character here which is the letter e to
+ 
+
+401
+00:06:56,480 --> 00:06:58,900
+character here which is the letter e to
+be something like a you won't be able to
+
+402
+00:06:58,900 --> 00:06:58,910
+be something like a you won't be able to
+ 
+
+403
+00:06:58,910 --> 00:07:00,520
+be something like a you won't be able to
+do that because you might just comps so
+
+404
+00:07:00,520 --> 00:07:00,530
+do that because you might just comps so
+ 
+
+405
+00:07:00,530 --> 00:07:01,330
+do that because you might just comps so
+if you know that you're not going to
+
+406
+00:07:01,330 --> 00:07:01,340
+if you know that you're not going to
+ 
+
+407
+00:07:01,340 --> 00:07:02,890
+if you know that you're not going to
+modify the strange market its Const
+
+408
+00:07:02,890 --> 00:07:02,900
+modify the strange market its Const
+ 
+
+409
+00:07:02,900 --> 00:07:04,210
+modify the strange market its Const
+otherwise you can just leave it as a
+
+410
+00:07:04,210 --> 00:07:04,220
+otherwise you can just leave it as a
+ 
+
+411
+00:07:04,220 --> 00:07:05,530
+otherwise you can just leave it as a
+child pointer that's totally fine okay
+
+412
+00:07:05,530 --> 00:07:05,540
+child pointer that's totally fine okay
+ 
+
+413
+00:07:05,540 --> 00:07:07,840
+child pointer that's totally fine okay
+so the next question is cool this is a
+
+414
+00:07:07,840 --> 00:07:07,850
+so the next question is cool this is a
+ 
+
+415
+00:07:07,850 --> 00:07:09,520
+so the next question is cool this is a
+string what does this look like in
+
+416
+00:07:09,520 --> 00:07:09,530
+string what does this look like in
+ 
+
+417
+00:07:09,530 --> 00:07:10,900
+string what does this look like in
+memory and how long is that going to
+
+418
+00:07:10,900 --> 00:07:10,910
+memory and how long is that going to
+ 
+
+419
+00:07:10,910 --> 00:07:12,520
+memory and how long is that going to
+work so we'll set a breakpoint over here
+
+420
+00:07:12,520 --> 00:07:12,530
+work so we'll set a breakpoint over here
+ 
+
+421
+00:07:12,530 --> 00:07:14,260
+work so we'll set a breakpoint over here
+and just get a spider on our program so
+
+422
+00:07:14,260 --> 00:07:14,270
+and just get a spider on our program so
+ 
+
+423
+00:07:14,270 --> 00:07:15,460
+and just get a spider on our program so
+that we can look at the memory that
+
+424
+00:07:15,460 --> 00:07:15,470
+that we can look at the memory that
+ 
+
+425
+00:07:15,470 --> 00:07:17,530
+that we can look at the memory that
+makes up name if I go to my memory view
+
+426
+00:07:17,530 --> 00:07:17,540
+makes up name if I go to my memory view
+ 
+
+427
+00:07:17,540 --> 00:07:19,660
+makes up name if I go to my memory view
+over here and type in name it's already
+
+428
+00:07:19,660 --> 00:07:19,670
+over here and type in name it's already
+ 
+
+429
+00:07:19,670 --> 00:07:21,670
+over here and type in name it's already
+points as soon as I enter you can see
+
+430
+00:07:21,670 --> 00:07:21,680
+points as soon as I enter you can see
+ 
+
+431
+00:07:21,680 --> 00:07:23,950
+points as soon as I enter you can see
+that we have a bunch of memory here and
+
+432
+00:07:23,950 --> 00:07:23,960
+that we have a bunch of memory here and
+ 
+
+433
+00:07:23,960 --> 00:07:26,650
+that we have a bunch of memory here and
+if you look over here we have the word
+
+434
+00:07:26,650 --> 00:07:26,660
+if you look over here we have the word
+ 
+
+435
+00:07:26,660 --> 00:07:29,230
+if you look over here we have the word
+check so what this side of the memory
+
+436
+00:07:29,230 --> 00:07:29,240
+check so what this side of the memory
+ 
+
+437
+00:07:29,240 --> 00:07:31,480
+check so what this side of the memory
+view is is basically an ASCII
+
+438
+00:07:31,480 --> 00:07:31,490
+view is is basically an ASCII
+ 
+
+439
+00:07:31,490 --> 00:07:33,760
+view is is basically an ASCII
+representation of this these are all
+
+440
+00:07:33,760 --> 00:07:33,770
+representation of this these are all
+ 
+
+441
+00:07:33,770 --> 00:07:35,980
+representation of this these are all
+individual bytes and this is what that
+
+442
+00:07:35,980 --> 00:07:35,990
+individual bytes and this is what that
+ 
+
+443
+00:07:35,990 --> 00:07:38,440
+individual bytes and this is what that
+by it would be if you convert it into
+
+444
+00:07:38,440 --> 00:07:38,450
+by it would be if you convert it into
+ 
+
+445
+00:07:38,450 --> 00:07:40,030
+by it would be if you convert it into
+ASCII you can check out a certain
+
+446
+00:07:40,030 --> 00:07:40,040
+ASCII you can check out a certain
+ 
+
+447
+00:07:40,040 --> 00:07:42,190
+ASCII you can check out a certain
+website such as ASCII table comm which
+
+448
+00:07:42,190 --> 00:07:42,200
+website such as ASCII table comm which
+ 
+
+449
+00:07:42,200 --> 00:07:44,890
+website such as ASCII table comm which
+has a table of what those ASCII codes
+
+450
+00:07:44,890 --> 00:07:44,900
+has a table of what those ASCII codes
+ 
+
+451
+00:07:44,900 --> 00:07:46,510
+has a table of what those ASCII codes
+actually are you can see in this case we
+
+452
+00:07:46,510 --> 00:07:46,520
+actually are you can see in this case we
+ 
+
+453
+00:07:46,520 --> 00:07:49,300
+actually are you can see in this case we
+have 43 this is in hexadecimal so if we
+
+454
+00:07:49,300 --> 00:07:49,310
+have 43 this is in hexadecimal so if we
+ 
+
+455
+00:07:49,310 --> 00:07:52,480
+have 43 this is in hexadecimal so if we
+go to the head column here find 43 you
+
+456
+00:07:52,480 --> 00:07:52,490
+go to the head column here find 43 you
+ 
+
+457
+00:07:52,490 --> 00:07:54,100
+go to the head column here find 43 you
+can see that it corresponds to a capital
+
+458
+00:07:54,100 --> 00:07:54,110
+can see that it corresponds to a capital
+ 
+
+459
+00:07:54,110 --> 00:07:56,370
+can see that it corresponds to a capital
+letter C that's what you see over here
+
+460
+00:07:56,370 --> 00:07:56,380
+letter C that's what you see over here
+ 
+
+461
+00:07:56,380 --> 00:07:58,990
+letter C that's what you see over here
+that's the first letter of China now
+
+462
+00:07:58,990 --> 00:07:59,000
+that's the first letter of China now
+ 
+
+463
+00:07:59,000 --> 00:08:00,400
+that's the first letter of China now
+hearing all these other strings which
+
+464
+00:08:00,400 --> 00:08:00,410
+hearing all these other strings which
+ 
+
+465
+00:08:00,410 --> 00:08:03,130
+hearing all these other strings which
+are basically debug only helpers you can
+
+466
+00:08:03,130 --> 00:08:03,140
+are basically debug only helpers you can
+ 
+
+467
+00:08:03,140 --> 00:08:05,500
+are basically debug only helpers you can
+see that we have those six characters
+
+468
+00:08:05,500 --> 00:08:05,510
+see that we have those six characters
+ 
+
+469
+00:08:05,510 --> 00:08:07,240
+see that we have those six characters
+which make up the word Chan oh and then
+
+470
+00:08:07,240 --> 00:08:07,250
+which make up the word Chan oh and then
+ 
+
+471
+00:08:07,250 --> 00:08:10,270
+which make up the word Chan oh and then
+we have advice that is set to zero this
+
+472
+00:08:10,270 --> 00:08:10,280
+we have advice that is set to zero this
+ 
+
+473
+00:08:10,280 --> 00:08:12,010
+we have advice that is set to zero this
+is called the null termination character
+
+474
+00:08:12,010 --> 00:08:12,020
+is called the null termination character
+ 
+
+475
+00:08:12,020 --> 00:08:14,590
+is called the null termination character
+that is how we know that that is where
+
+476
+00:08:14,590 --> 00:08:14,600
+that is how we know that that is where
+ 
+
+477
+00:08:14,600 --> 00:08:16,240
+that is how we know that that is where
+the string ends you'll note that we
+
+478
+00:08:16,240 --> 00:08:16,250
+the string ends you'll note that we
+ 
+
+479
+00:08:16,250 --> 00:08:18,640
+the string ends you'll note that we
+never we don't know what the size of
+
+480
+00:08:18,640 --> 00:08:18,650
+never we don't know what the size of
+ 
+
+481
+00:08:18,650 --> 00:08:20,590
+never we don't know what the size of
+China is we can't it's just a pointer
+
+482
+00:08:20,590 --> 00:08:20,600
+China is we can't it's just a pointer
+ 
+
+483
+00:08:20,600 --> 00:08:22,480
+China is we can't it's just a pointer
+right so how can we find out what the
+
+484
+00:08:22,480 --> 00:08:22,490
+right so how can we find out what the
+ 
+
+485
+00:08:22,490 --> 00:08:23,950
+right so how can we find out what the
+size is that's where that null
+
+486
+00:08:23,950 --> 00:08:23,960
+size is that's where that null
+ 
+
+487
+00:08:23,960 --> 00:08:25,750
+size is that's where that null
+termination character comes in a string
+
+488
+00:08:25,750 --> 00:08:25,760
+termination character comes in a string
+ 
+
+489
+00:08:25,760 --> 00:08:28,420
+termination character comes in a string
+begins as that pointer at that memory
+
+490
+00:08:28,420 --> 00:08:28,430
+begins as that pointer at that memory
+ 
+
+491
+00:08:28,430 --> 00:08:29,770
+begins as that pointer at that memory
+address and then it continues on until
+
+492
+00:08:29,770 --> 00:08:29,780
+address and then it continues on until
+ 
+
+493
+00:08:29,780 --> 00:08:30,980
+address and then it continues on until
+it hits zero
+
+494
+00:08:30,980 --> 00:08:30,990
+it hits zero
+ 
+
+495
+00:08:30,990 --> 00:08:33,079
+it hits zero
+that's how when we decide to print this
+
+496
+00:08:33,079 --> 00:08:33,089
+that's how when we decide to print this
+ 
+
+497
+00:08:33,089 --> 00:08:35,240
+that's how when we decide to print this
+out to the console for example we can
+
+498
+00:08:35,240 --> 00:08:35,250
+out to the console for example we can
+ 
+
+499
+00:08:35,250 --> 00:08:38,240
+out to the console for example we can
+write a the our name if I were to rerun
+
+500
+00:08:38,240 --> 00:08:38,250
+write a the our name if I were to rerun
+ 
+
+501
+00:08:38,250 --> 00:08:39,980
+write a the our name if I were to rerun
+this you consider we get shown and print
+
+502
+00:08:39,980 --> 00:08:39,990
+this you consider we get shown and print
+ 
+
+503
+00:08:39,990 --> 00:08:41,750
+this you consider we get shown and print
+into the console and yet it's just a
+
+504
+00:08:41,750 --> 00:08:41,760
+into the console and yet it's just a
+ 
+
+505
+00:08:41,760 --> 00:08:42,980
+into the console and yet it's just a
+pointer so how does it know where it
+
+506
+00:08:42,980 --> 00:08:42,990
+pointer so how does it know where it
+ 
+
+507
+00:08:42,990 --> 00:08:44,900
+pointer so how does it know where it
+ends it runs into that zero and it
+
+508
+00:08:44,900 --> 00:08:44,910
+ends it runs into that zero and it
+ 
+
+509
+00:08:44,910 --> 00:08:46,550
+ends it runs into that zero and it
+realizes okay that's my null termination
+
+510
+00:08:46,550 --> 00:08:46,560
+realizes okay that's my null termination
+ 
+
+511
+00:08:46,560 --> 00:08:48,050
+realizes okay that's my null termination
+character that at the end of the string
+
+512
+00:08:48,050 --> 00:08:48,060
+character that at the end of the string
+ 
+
+513
+00:08:48,060 --> 00:08:50,540
+character that at the end of the string
+if you were to declare this by yourself
+
+514
+00:08:50,540 --> 00:08:50,550
+if you were to declare this by yourself
+ 
+
+515
+00:08:50,550 --> 00:08:52,880
+if you were to declare this by yourself
+that's our example I create a other
+
+516
+00:08:52,880 --> 00:08:52,890
+that's our example I create a other
+ 
+
+517
+00:08:52,890 --> 00:08:54,920
+that's our example I create a other
+string called name too
+
+518
+00:08:54,920 --> 00:08:54,930
+string called name too
+ 
+
+519
+00:08:54,930 --> 00:08:56,780
+string called name too
+I'm going to do is it's fully manually
+
+520
+00:08:56,780 --> 00:08:56,790
+I'm going to do is it's fully manually
+ 
+
+521
+00:08:56,790 --> 00:08:59,780
+I'm going to do is it's fully manually
+so I'll just make a new char array to 36
+
+522
+00:08:59,780 --> 00:08:59,790
+so I'll just make a new char array to 36
+ 
+
+523
+00:08:59,790 --> 00:09:01,460
+so I'll just make a new char array to 36
+characters and then I think I'm a not
+
+524
+00:09:01,460 --> 00:09:01,470
+characters and then I think I'm a not
+ 
+
+525
+00:09:01,470 --> 00:09:02,690
+characters and then I think I'm a not
+going to initialize it right here
+
+526
+00:09:02,690 --> 00:09:02,700
+going to initialize it right here
+ 
+
+527
+00:09:02,700 --> 00:09:04,100
+going to initialize it right here
+I'll set it equal to the individual
+
+528
+00:09:04,100 --> 00:09:04,110
+I'll set it equal to the individual
+ 
+
+529
+00:09:04,110 --> 00:09:05,870
+I'll set it equal to the individual
+characters characters and see what works
+
+530
+00:09:05,870 --> 00:09:05,880
+characters characters and see what works
+ 
+
+531
+00:09:05,880 --> 00:09:07,280
+characters characters and see what works
+by the way I define with a single quote
+
+532
+00:09:07,280 --> 00:09:07,290
+by the way I define with a single quote
+ 
+
+533
+00:09:07,290 --> 00:09:09,260
+by the way I define with a single quote
+not double quotes if it's double quotes
+
+534
+00:09:09,260 --> 00:09:09,270
+not double quotes if it's double quotes
+ 
+
+535
+00:09:09,270 --> 00:09:11,990
+not double quotes if it's double quotes
+then by default it becomes a child
+
+536
+00:09:11,990 --> 00:09:12,000
+then by default it becomes a child
+ 
+
+537
+00:09:12,000 --> 00:09:14,510
+then by default it becomes a child
+pointer okay not a string a child
+
+538
+00:09:14,510 --> 00:09:14,520
+pointer okay not a string a child
+ 
+
+539
+00:09:14,520 --> 00:09:15,590
+pointer okay not a string a child
+pointer will get into strings in a
+
+540
+00:09:15,590 --> 00:09:15,600
+pointer will get into strings in a
+ 
+
+541
+00:09:15,600 --> 00:09:20,600
+pointer will get into strings in a
+minute we have c h e RN r now this is an
+
+542
+00:09:20,600 --> 00:09:20,610
+minute we have c h e RN r now this is an
+ 
+
+543
+00:09:20,610 --> 00:09:22,550
+minute we have c h e RN r now this is an
+array not a string right just an array
+
+544
+00:09:22,550 --> 00:09:22,560
+array not a string right just an array
+ 
+
+545
+00:09:22,560 --> 00:09:23,840
+array not a string right just an array
+of six characters you can see there's
+
+546
+00:09:23,840 --> 00:09:23,850
+of six characters you can see there's
+ 
+
+547
+00:09:23,850 --> 00:09:26,150
+of six characters you can see there's
+Nord null termination character so by
+
+548
+00:09:26,150 --> 00:09:26,160
+Nord null termination character so by
+ 
+
+549
+00:09:26,160 --> 00:09:28,100
+Nord null termination character so by
+trying to print name to to the convoy
+
+550
+00:09:28,100 --> 00:09:28,110
+trying to print name to to the convoy
+ 
+
+551
+00:09:28,110 --> 00:09:29,720
+trying to print name to to the convoy
+attack so we can we can expect the
+
+552
+00:09:29,720 --> 00:09:29,730
+attack so we can we can expect the
+ 
+
+553
+00:09:29,730 --> 00:09:31,670
+attack so we can we can expect the
+memory as well but we'll Princeton will
+
+554
+00:09:31,670 --> 00:09:31,680
+memory as well but we'll Princeton will
+ 
+
+555
+00:09:31,680 --> 00:09:33,530
+memory as well but we'll Princeton will
+print it to the console here you can see
+
+556
+00:09:33,530 --> 00:09:33,540
+print it to the console here you can see
+ 
+
+557
+00:09:33,540 --> 00:09:35,210
+print it to the console here you can see
+that we get 0 and then a whole bunch of
+
+558
+00:09:35,210 --> 00:09:35,220
+that we get 0 and then a whole bunch of
+ 
+
+559
+00:09:35,220 --> 00:09:37,250
+that we get 0 and then a whole bunch of
+random characters which is again the ask
+
+560
+00:09:37,250 --> 00:09:37,260
+random characters which is again the ask
+ 
+
+561
+00:09:37,260 --> 00:09:38,870
+random characters which is again the ask
+interpretation of whatever the memory
+
+562
+00:09:38,870 --> 00:09:38,880
+interpretation of whatever the memory
+ 
+
+563
+00:09:38,880 --> 00:09:41,870
+interpretation of whatever the memory
+was a name to we go back to this memory
+
+564
+00:09:41,870 --> 00:09:41,880
+was a name to we go back to this memory
+ 
+
+565
+00:09:41,880 --> 00:09:44,300
+was a name to we go back to this memory
+view and type in name to you can see
+
+566
+00:09:44,300 --> 00:09:44,310
+view and type in name to you can see
+ 
+
+567
+00:09:44,310 --> 00:09:46,280
+view and type in name to you can see
+that we have a bunch we have our Cherno
+
+568
+00:09:46,280 --> 00:09:46,290
+that we have a bunch we have our Cherno
+ 
+
+569
+00:09:46,290 --> 00:09:48,230
+that we have a bunch we have our Cherno
+written and then a bunch of weird
+
+570
+00:09:48,230 --> 00:09:48,240
+written and then a bunch of weird
+ 
+
+571
+00:09:48,240 --> 00:09:49,699
+written and then a bunch of weird
+characters which is you can see the
+
+572
+00:09:49,699 --> 00:09:49,709
+characters which is you can see the
+ 
+
+573
+00:09:49,709 --> 00:09:51,319
+characters which is you can see the
+memory set to CC which are actually
+
+574
+00:09:51,319 --> 00:09:51,329
+memory set to CC which are actually
+ 
+
+575
+00:09:51,329 --> 00:09:53,569
+memory set to CC which are actually
+array guys to let us know that that that
+
+576
+00:09:53,569 --> 00:09:53,579
+array guys to let us know that that that
+ 
+
+577
+00:09:53,579 --> 00:09:55,340
+array guys to let us know that that that
+memory is outside of our location
+
+578
+00:09:55,340 --> 00:09:55,350
+memory is outside of our location
+ 
+
+579
+00:09:55,350 --> 00:09:57,260
+memory is outside of our location
+whenever we allocate arrays and memory
+
+580
+00:09:57,260 --> 00:09:57,270
+whenever we allocate arrays and memory
+ 
+
+581
+00:09:57,270 --> 00:09:58,100
+whenever we allocate arrays and memory
+in debug mode
+
+582
+00:09:58,100 --> 00:09:58,110
+in debug mode
+ 
+
+583
+00:09:58,110 --> 00:10:00,050
+in debug mode
+we lost the debug version of the C
+
+584
+00:10:00,050 --> 00:10:00,060
+we lost the debug version of the C
+ 
+
+585
+00:10:00,060 --> 00:10:01,699
+we lost the debug version of the C
+standard library the standard library
+
+586
+00:10:01,699 --> 00:10:01,709
+standard library the standard library
+ 
+
+587
+00:10:01,709 --> 00:10:04,069
+standard library the standard library
+virtually the things like start guides
+
+588
+00:10:04,069 --> 00:10:04,079
+virtually the things like start guides
+ 
+
+589
+00:10:04,079 --> 00:10:06,710
+virtually the things like start guides
+so that we know we know that we know
+
+590
+00:10:06,710 --> 00:10:06,720
+so that we know we know that we know
+ 
+
+591
+00:10:06,720 --> 00:10:08,630
+so that we know we know that we know
+when we're right outside of the bounds
+
+592
+00:10:08,630 --> 00:10:08,640
+when we're right outside of the bounds
+ 
+
+593
+00:10:08,640 --> 00:10:10,400
+when we're right outside of the bounds
+of our allocation again for me for
+
+594
+00:10:10,400 --> 00:10:10,410
+of our allocation again for me for
+ 
+
+595
+00:10:10,410 --> 00:10:11,840
+of our allocation again for me for
+another video so because we don't have
+
+596
+00:10:11,840 --> 00:10:11,850
+another video so because we don't have
+ 
+
+597
+00:10:11,850 --> 00:10:14,540
+another video so because we don't have
+that zero here at CDC ours does not
+
+598
+00:10:14,540 --> 00:10:14,550
+that zero here at CDC ours does not
+ 
+
+599
+00:10:14,550 --> 00:10:16,579
+that zero here at CDC ours does not
+actually know when to and printing which
+
+600
+00:10:16,579 --> 00:10:16,589
+actually know when to and printing which
+ 
+
+601
+00:10:16,589 --> 00:10:18,139
+actually know when to and printing which
+is why we get this random thing here
+
+602
+00:10:18,139 --> 00:10:18,149
+is why we get this random thing here
+ 
+
+603
+00:10:18,149 --> 00:10:20,240
+is why we get this random thing here
+however if we were to expand it and
+
+604
+00:10:20,240 --> 00:10:20,250
+however if we were to expand it and
+ 
+
+605
+00:10:20,250 --> 00:10:23,269
+however if we were to expand it and
+write 0 either expressed as as a
+
+606
+00:10:23,269 --> 00:10:23,279
+write 0 either expressed as as a
+ 
+
+607
+00:10:23,279 --> 00:10:26,389
+write 0 either expressed as as a
+backslash 0 which is the actual ASCII
+
+608
+00:10:26,389 --> 00:10:26,399
+backslash 0 which is the actual ASCII
+ 
+
+609
+00:10:26,399 --> 00:10:27,889
+backslash 0 which is the actual ASCII
+character if we go back to the ASCII
+
+610
+00:10:27,889 --> 00:10:27,899
+character if we go back to the ASCII
+ 
+
+611
+00:10:27,899 --> 00:10:30,199
+character if we go back to the ASCII
+table you can see that the null is what
+
+612
+00:10:30,199 --> 00:10:30,209
+table you can see that the null is what
+ 
+
+613
+00:10:30,209 --> 00:10:31,670
+table you can see that the null is what
+it actually is that how you declare a
+
+614
+00:10:31,670 --> 00:10:31,680
+it actually is that how you declare a
+ 
+
+615
+00:10:31,680 --> 00:10:33,950
+it actually is that how you declare a
+null you write a backslash 0 the errors
+
+616
+00:10:33,950 --> 00:10:33,960
+null you write a backslash 0 the errors
+ 
+
+617
+00:10:33,960 --> 00:10:36,139
+null you write a backslash 0 the errors
+we've got seven characters now right or
+
+618
+00:10:36,139 --> 00:10:36,149
+we've got seven characters now right or
+ 
+
+619
+00:10:36,149 --> 00:10:37,850
+we've got seven characters now right or
+you can literally write the numeric
+
+620
+00:10:37,850 --> 00:10:37,860
+you can literally write the numeric
+ 
+
+621
+00:10:37,860 --> 00:10:40,220
+you can literally write the numeric
+constant zero as well because that is
+
+622
+00:10:40,220 --> 00:10:40,230
+constant zero as well because that is
+ 
+
+623
+00:10:40,230 --> 00:10:42,139
+constant zero as well because that is
+the actual value of this if we hit our
+
+624
+00:10:42,139 --> 00:10:42,149
+the actual value of this if we hit our
+ 
+
+625
+00:10:42,149 --> 00:10:44,210
+the actual value of this if we hit our
+five you can see now we're printer know
+
+626
+00:10:44,210 --> 00:10:44,220
+five you can see now we're printer know
+ 
+
+627
+00:10:44,220 --> 00:10:45,350
+five you can see now we're printer know
+properly with nothing else
+
+628
+00:10:45,350 --> 00:10:45,360
+properly with nothing else
+ 
+
+629
+00:10:45,360 --> 00:10:47,900
+properly with nothing else
+that's how char arrays work that's how
+
+630
+00:10:47,900 --> 00:10:47,910
+that's how char arrays work that's how
+ 
+
+631
+00:10:47,910 --> 00:10:49,730
+that's how char arrays work that's how
+string basically works that's what
+
+632
+00:10:49,730 --> 00:10:49,740
+string basically works that's what
+ 
+
+633
+00:10:49,740 --> 00:10:51,470
+string basically works that's what
+string is it's a collection of
+
+634
+00:10:51,470 --> 00:10:51,480
+string is it's a collection of
+ 
+
+635
+00:10:51,480 --> 00:10:53,180
+string is it's a collection of
+characters I think that I think that's
+
+636
+00:10:53,180 --> 00:10:53,190
+characters I think that I think that's
+ 
+
+637
+00:10:53,190 --> 00:10:55,250
+characters I think that I think that's
+probably deep enough if you have any
+
+638
+00:10:55,250 --> 00:10:55,260
+probably deep enough if you have any
+ 
+
+639
+00:10:55,260 --> 00:10:57,740
+probably deep enough if you have any
+other questions about how that actually
+
+640
+00:10:57,740 --> 00:10:57,750
+other questions about how that actually
+ 
+
+641
+00:10:57,750 --> 00:10:58,220
+other questions about how that actually
+works
+
+642
+00:10:58,220 --> 00:10:58,230
+works
+ 
+
+643
+00:10:58,230 --> 00:10:59,660
+works
+just leave the comment below I'll try
+
+644
+00:10:59,660 --> 00:10:59,670
+just leave the comment below I'll try
+ 
+
+645
+00:10:59,670 --> 00:11:02,630
+just leave the comment below I'll try
+and answer as many as I can I don't I
+
+646
+00:11:02,630 --> 00:11:02,640
+and answer as many as I can I don't I
+ 
+
+647
+00:11:02,640 --> 00:11:04,280
+and answer as many as I can I don't I
+think I've mentioned everything ok so a
+
+648
+00:11:04,280 --> 00:11:04,290
+think I've mentioned everything ok so a
+ 
+
+649
+00:11:04,290 --> 00:11:05,630
+think I've mentioned everything ok so a
+simple plot how does paper Club come
+
+650
+00:11:05,630 --> 00:11:05,640
+simple plot how does paper Club come
+ 
+
+651
+00:11:05,640 --> 00:11:07,250
+simple plot how does paper Club come
+into this and how should we be actually
+
+652
+00:11:07,250 --> 00:11:07,260
+into this and how should we be actually
+ 
+
+653
+00:11:07,260 --> 00:11:08,810
+into this and how should we be actually
+making strings in c plus plus the
+
+654
+00:11:08,810 --> 00:11:08,820
+making strings in c plus plus the
+ 
+
+655
+00:11:08,820 --> 00:11:11,090
+making strings in c plus plus the
+standard library in C++ has a class
+
+656
+00:11:11,090 --> 00:11:11,100
+standard library in C++ has a class
+ 
+
+657
+00:11:11,100 --> 00:11:13,550
+standard library in C++ has a class
+called string it actually has a class
+
+658
+00:11:13,550 --> 00:11:13,560
+called string it actually has a class
+ 
+
+659
+00:11:13,560 --> 00:11:15,139
+called string it actually has a class
+called basic string which is a template
+
+660
+00:11:15,139 --> 00:11:15,149
+called basic string which is a template
+ 
+
+661
+00:11:15,149 --> 00:11:18,490
+called basic string which is a template
+class and STD colon colon string is
+
+662
+00:11:18,490 --> 00:11:18,500
+class and STD colon colon string is
+ 
+
+663
+00:11:18,500 --> 00:11:22,160
+class and STD colon colon string is
+basically a templated version of that
+
+664
+00:11:22,160 --> 00:11:22,170
+basically a templated version of that
+ 
+
+665
+00:11:22,170 --> 00:11:23,810
+basically a templated version of that
+basic string class which is templated
+
+666
+00:11:23,810 --> 00:11:23,820
+basic string class which is templated
+ 
+
+667
+00:11:23,820 --> 00:11:26,720
+basic string class which is templated
+with charge but it's a it's a template
+
+668
+00:11:26,720 --> 00:11:26,730
+with charge but it's a it's a template
+ 
+
+669
+00:11:26,730 --> 00:11:28,460
+with charge but it's a it's a template
+specialization that's what I'm looking
+
+670
+00:11:28,460 --> 00:11:28,470
+specialization that's what I'm looking
+ 
+
+671
+00:11:28,470 --> 00:11:31,850
+specialization that's what I'm looking
+for of the basic string class with char
+
+672
+00:11:31,850 --> 00:11:31,860
+for of the basic string class with char
+ 
+
+673
+00:11:31,860 --> 00:11:33,800
+for of the basic string class with char
+as the template parameter which means
+
+674
+00:11:33,800 --> 00:11:33,810
+as the template parameter which means
+ 
+
+675
+00:11:33,810 --> 00:11:36,320
+as the template parameter which means
+charge the underlying data type for each
+
+676
+00:11:36,320 --> 00:11:36,330
+charge the underlying data type for each
+ 
+
+677
+00:11:36,330 --> 00:11:38,030
+charge the underlying data type for each
+character so that is really what you
+
+678
+00:11:38,030 --> 00:11:38,040
+character so that is really what you
+ 
+
+679
+00:11:38,040 --> 00:11:39,199
+character so that is really what you
+should be using there is something
+
+680
+00:11:39,199 --> 00:11:39,209
+should be using there is something
+ 
+
+681
+00:11:39,209 --> 00:11:40,460
+should be using there is something
+called W string which is the wire
+
+682
+00:11:40,460 --> 00:11:40,470
+called W string which is the wire
+ 
+
+683
+00:11:40,470 --> 00:11:41,540
+called W string which is the wire
+strength again we're not going to talk
+
+684
+00:11:41,540 --> 00:11:41,550
+strength again we're not going to talk
+ 
+
+685
+00:11:41,550 --> 00:11:42,620
+strength again we're not going to talk
+about that we're going to be real simple
+
+686
+00:11:42,620 --> 00:11:42,630
+about that we're going to be real simple
+ 
+
+687
+00:11:42,630 --> 00:11:45,350
+about that we're going to be real simple
+here STD string is what you should be
+
+688
+00:11:45,350 --> 00:11:45,360
+here STD string is what you should be
+ 
+
+689
+00:11:45,360 --> 00:11:47,329
+here STD string is what you should be
+using to strengthen C++ how does Hanna
+
+690
+00:11:47,329 --> 00:11:47,339
+using to strengthen C++ how does Hanna
+ 
+
+691
+00:11:47,339 --> 00:11:49,370
+using to strengthen C++ how does Hanna
+string actually work basically it is
+
+692
+00:11:49,370 --> 00:11:49,380
+string actually work basically it is
+ 
+
+693
+00:11:49,380 --> 00:11:51,680
+string actually work basically it is
+it's just that it's a char array so it's
+
+694
+00:11:51,680 --> 00:11:51,690
+it's just that it's a char array so it's
+ 
+
+695
+00:11:51,690 --> 00:11:53,180
+it's just that it's a char array so it's
+an array of chars and a bunch of
+
+696
+00:11:53,180 --> 00:11:53,190
+an array of chars and a bunch of
+ 
+
+697
+00:11:53,190 --> 00:11:55,190
+an array of chars and a bunch of
+functions built-in manipulators later on
+
+698
+00:11:55,190 --> 00:11:55,200
+functions built-in manipulators later on
+ 
+
+699
+00:11:55,200 --> 00:11:56,390
+functions built-in manipulators later on
+in this series when we start talking
+
+700
+00:11:56,390 --> 00:11:56,400
+in this series when we start talking
+ 
+
+701
+00:11:56,400 --> 00:11:58,100
+in this series when we start talking
+about data structures we're actually
+
+702
+00:11:58,100 --> 00:11:58,110
+about data structures we're actually
+ 
+
+703
+00:11:58,110 --> 00:12:00,110
+about data structures we're actually
+going to write our own data structures
+
+704
+00:12:00,110 --> 00:12:00,120
+going to write our own data structures
+ 
+
+705
+00:12:00,120 --> 00:12:02,360
+going to write our own data structures
+so all the people floss all the kind of
+
+706
+00:12:02,360 --> 00:12:02,370
+so all the people floss all the kind of
+ 
+
+707
+00:12:02,370 --> 00:12:04,010
+so all the people floss all the kind of
+people's data structures that you see in
+
+708
+00:12:04,010 --> 00:12:04,020
+people's data structures that you see in
+ 
+
+709
+00:12:04,020 --> 00:12:05,660
+people's data structures that you see in
+a standard template library we're going
+
+710
+00:12:05,660 --> 00:12:05,670
+a standard template library we're going
+ 
+
+711
+00:12:05,670 --> 00:12:07,010
+a standard template library we're going
+to manually write our own version of
+
+712
+00:12:07,010 --> 00:12:07,020
+to manually write our own version of
+ 
+
+713
+00:12:07,020 --> 00:12:08,810
+to manually write our own version of
+that and see how and see how that works
+
+714
+00:12:08,810 --> 00:12:08,820
+that and see how and see how that works
+ 
+
+715
+00:12:08,820 --> 00:12:10,340
+that and see how and see how that works
+and how we can optimize and all that
+
+716
+00:12:10,340 --> 00:12:10,350
+and how we can optimize and all that
+ 
+
+717
+00:12:10,350 --> 00:12:11,780
+and how we can optimize and all that
+stuff so it stick around for that you're
+
+718
+00:12:11,780 --> 00:12:11,790
+stuff so it stick around for that you're
+ 
+
+719
+00:12:11,790 --> 00:12:14,150
+stuff so it stick around for that you're
+interested but for now it's just a child
+
+720
+00:12:14,150 --> 00:12:14,160
+interested but for now it's just a child
+ 
+
+721
+00:12:14,160 --> 00:12:15,260
+interested but for now it's just a child
+point it's basically just an array of
+
+722
+00:12:15,260 --> 00:12:15,270
+point it's basically just an array of
+ 
+
+723
+00:12:15,270 --> 00:12:16,579
+point it's basically just an array of
+characters and functions built
+
+724
+00:12:16,579 --> 00:12:16,589
+characters and functions built
+ 
+
+725
+00:12:16,589 --> 00:12:17,840
+characters and functions built
+immediately like that so let's talk
+
+726
+00:12:17,840 --> 00:12:17,850
+immediately like that so let's talk
+ 
+
+727
+00:12:17,850 --> 00:12:19,069
+immediately like that so let's talk
+about how we can use Center strengths
+
+728
+00:12:19,069 --> 00:12:19,079
+about how we can use Center strengths
+ 
+
+729
+00:12:19,079 --> 00:12:20,810
+about how we can use Center strengths
+okay the best turn our programs will
+
+730
+00:12:20,810 --> 00:12:20,820
+okay the best turn our programs will
+ 
+
+731
+00:12:20,820 --> 00:12:22,670
+okay the best turn our programs will
+change this current set up to use a
+
+732
+00:12:22,670 --> 00:12:22,680
+change this current set up to use a
+ 
+
+733
+00:12:22,680 --> 00:12:24,560
+change this current set up to use a
+standard string so the first thing we
+
+734
+00:12:24,560 --> 00:12:24,570
+standard string so the first thing we
+ 
+
+735
+00:12:24,570 --> 00:12:26,720
+standard string so the first thing we
+need to do is include strength iostream
+
+736
+00:12:26,720 --> 00:12:26,730
+need to do is include strength iostream
+ 
+
+737
+00:12:26,730 --> 00:12:27,800
+need to do is include strength iostream
+actually does have a definition to
+
+738
+00:12:27,800 --> 00:12:27,810
+actually does have a definition to
+ 
+
+739
+00:12:27,810 --> 00:12:29,569
+actually does have a definition to
+string calibers once we always print it
+
+740
+00:12:29,569 --> 00:12:29,579
+string calibers once we always print it
+ 
+
+741
+00:12:29,579 --> 00:12:32,090
+string calibers once we always print it
+to the console as we'll see in a minute
+
+742
+00:12:32,090 --> 00:12:32,100
+to the console as we'll see in a minute
+ 
+
+743
+00:12:32,100 --> 00:12:33,259
+to the console as we'll see in a minute
+actually need to include the string
+
+744
+00:12:33,259 --> 00:12:33,269
+actually need to include the string
+ 
+
+745
+00:12:33,269 --> 00:12:34,639
+actually need to include the string
+header file will change this child
+
+746
+00:12:34,639 --> 00:12:34,649
+header file will change this child
+ 
+
+747
+00:12:34,649 --> 00:12:37,189
+header file will change this child
+pointer to be an STD string and that's
+
+748
+00:12:37,189 --> 00:12:37,199
+pointer to be an STD string and that's
+ 
+
+749
+00:12:37,199 --> 00:12:38,480
+pointer to be an STD string and that's
+actually it we're done
+
+750
+00:12:38,480 --> 00:12:38,490
+actually it we're done
+ 
+
+751
+00:12:38,490 --> 00:12:40,519
+actually it we're done
+string has a constructor that actually
+
+752
+00:12:40,519 --> 00:12:40,529
+string has a constructor that actually
+ 
+
+753
+00:12:40,529 --> 00:12:43,129
+string has a constructor that actually
+takes in a child pointer or a comp child
+
+754
+00:12:43,129 --> 00:12:43,139
+takes in a child pointer or a comp child
+ 
+
+755
+00:12:43,139 --> 00:12:44,540
+takes in a child pointer or a comp child
+pointer if you hover your mouse over
+
+756
+00:12:44,540 --> 00:12:44,550
+pointer if you hover your mouse over
+ 
+
+757
+00:12:44,550 --> 00:12:45,889
+pointer if you hover your mouse over
+this you'll see that it is actually a
+
+758
+00:12:45,889 --> 00:12:45,899
+this you'll see that it is actually a
+ 
+
+759
+00:12:45,899 --> 00:12:48,110
+this you'll see that it is actually a
+Const our array not a char array that's
+
+760
+00:12:48,110 --> 00:12:48,120
+Const our array not a char array that's
+ 
+
+761
+00:12:48,120 --> 00:12:49,280
+Const our array not a char array that's
+one thing that I forgot to mention when
+
+762
+00:12:49,280 --> 00:12:49,290
+one thing that I forgot to mention when
+ 
+
+763
+00:12:49,290 --> 00:12:51,230
+one thing that I forgot to mention when
+talk about conch-shell pointers that's
+
+764
+00:12:51,230 --> 00:12:51,240
+talk about conch-shell pointers that's
+ 
+
+765
+00:12:51,240 --> 00:12:52,400
+talk about conch-shell pointers that's
+why you typically assign it to the
+
+766
+00:12:52,400 --> 00:12:52,410
+why you typically assign it to the
+ 
+
+767
+00:12:52,410 --> 00:12:54,980
+why you typically assign it to the
+concho pointer because insert the child
+
+768
+00:12:54,980 --> 00:12:54,990
+concho pointer because insert the child
+ 
+
+769
+00:12:54,990 --> 00:12:57,769
+concho pointer because insert the child
+pointer because intrinsically it is when
+
+770
+00:12:57,769 --> 00:12:57,779
+pointer because intrinsically it is when
+ 
+
+771
+00:12:57,779 --> 00:12:59,420
+pointer because intrinsically it is when
+you define strings by literally double
+
+772
+00:12:59,420 --> 00:12:59,430
+you define strings by literally double
+ 
+
+773
+00:12:59,430 --> 00:13:01,460
+you define strings by literally double
+quotes in a word or multiple words in
+
+774
+00:13:01,460 --> 00:13:01,470
+quotes in a word or multiple words in
+ 
+
+775
+00:13:01,470 --> 00:13:04,069
+quotes in a word or multiple words in
+people but it's actually concentrate not
+
+776
+00:13:04,069 --> 00:13:04,079
+people but it's actually concentrate not
+ 
+
+777
+00:13:04,079 --> 00:13:06,170
+people but it's actually concentrate not
+just the char array but again any put
+
+778
+00:13:06,170 --> 00:13:06,180
+just the char array but again any put
+ 
+
+779
+00:13:06,180 --> 00:13:07,879
+just the char array but again any put
+the card to a child pointer if you need
+
+780
+00:13:07,879 --> 00:13:07,889
+the card to a child pointer if you need
+ 
+
+781
+00:13:07,889 --> 00:13:09,199
+the card to a child pointer if you need
+to manipulate the contents of the
+
+782
+00:13:09,199 --> 00:13:09,209
+to manipulate the contents of the
+ 
+
+783
+00:13:09,209 --> 00:13:10,970
+to manipulate the contents of the
+strength totally fine so printing this
+
+784
+00:13:10,970 --> 00:13:10,980
+strength totally fine so printing this
+ 
+
+785
+00:13:10,980 --> 00:13:13,670
+strength totally fine so printing this
+again we can just call name - you can
+
+786
+00:13:13,670 --> 00:13:13,680
+again we can just call name - you can
+ 
+
+787
+00:13:13,680 --> 00:13:14,569
+again we can just call name - you can
+see that there's a lot clearer than
+
+788
+00:13:14,569 --> 00:13:14,579
+see that there's a lot clearer than
+ 
+
+789
+00:13:14,579 --> 00:13:16,970
+see that there's a lot clearer than
+having a conch our pointer if we hit f5
+
+790
+00:13:16,970 --> 00:13:16,980
+having a conch our pointer if we hit f5
+ 
+
+791
+00:13:16,980 --> 00:13:19,220
+having a conch our pointer if we hit f5
+you can see it works the same way now if
+
+792
+00:13:19,220 --> 00:13:19,230
+you can see it works the same way now if
+ 
+
+793
+00:13:19,230 --> 00:13:21,050
+you can see it works the same way now if
+I hadn't included this string header
+
+794
+00:13:21,050 --> 00:13:21,060
+I hadn't included this string header
+ 
+
+795
+00:13:21,060 --> 00:13:23,090
+I hadn't included this string header
+file and just dealt with iostream you
+
+796
+00:13:23,090 --> 00:13:23,100
+file and just dealt with iostream you
+ 
+
+797
+00:13:23,100 --> 00:13:24,470
+file and just dealt with iostream you
+can see we get an error on this output
+
+798
+00:13:24,470 --> 00:13:24,480
+can see we get an error on this output
+ 
+
+799
+00:13:24,480 --> 00:13:25,999
+can see we get an error on this output
+stream operators telling us that we
+
+800
+00:13:25,999 --> 00:13:26,009
+stream operators telling us that we
+ 
+
+801
+00:13:26,009 --> 00:13:28,999
+stream operators telling us that we
+cannot send a string into the center to
+
+802
+00:13:28,999 --> 00:13:29,009
+cannot send a string into the center to
+ 
+
+803
+00:13:29,009 --> 00:13:31,340
+cannot send a string into the center to
+be our output string because the
+
+804
+00:13:31,340 --> 00:13:31,350
+be our output string because the
+ 
+
+805
+00:13:31,350 --> 00:13:33,860
+be our output string because the
+overload for this operator that allows
+
+806
+00:13:33,860 --> 00:13:33,870
+overload for this operator that allows
+ 
+
+807
+00:13:33,870 --> 00:13:35,749
+overload for this operator that allows
+us to push string in there is inside
+
+808
+00:13:35,749 --> 00:13:35,759
+us to push string in there is inside
+ 
+
+809
+00:13:35,759 --> 00:13:37,670
+us to push string in there is inside
+that is inside this header file okay
+
+810
+00:13:37,670 --> 00:13:37,680
+that is inside this header file okay
+ 
+
+811
+00:13:37,680 --> 00:13:39,499
+that is inside this header file okay
+that's why I included string even though
+
+812
+00:13:39,499 --> 00:13:39,509
+that's why I included string even though
+ 
+
+813
+00:13:39,509 --> 00:13:41,329
+that's why I included string even though
+iostream actually does have a
+
+814
+00:13:41,329 --> 00:13:41,339
+iostream actually does have a
+ 
+
+815
+00:13:41,339 --> 00:13:43,160
+iostream actually does have a
+destination border and of course because
+
+816
+00:13:43,160 --> 00:13:43,170
+destination border and of course because
+ 
+
+817
+00:13:43,170 --> 00:13:45,230
+destination border and of course because
+this is a proper class with a bunch of
+
+818
+00:13:45,230 --> 00:13:45,240
+this is a proper class with a bunch of
+ 
+
+819
+00:13:45,240 --> 00:13:46,970
+this is a proper class with a bunch of
+functions we actually have all these
+
+820
+00:13:46,970 --> 00:13:46,980
+functions we actually have all these
+ 
+
+821
+00:13:46,980 --> 00:13:49,790
+functions we actually have all these
+methods such as name dot size we can
+
+822
+00:13:49,790 --> 00:13:49,800
+methods such as name dot size we can
+ 
+
+823
+00:13:49,800 --> 00:13:52,160
+methods such as name dot size we can
+find out what the size is if we just had
+
+824
+00:13:52,160 --> 00:13:52,170
+find out what the size is if we just had
+ 
+
+825
+00:13:52,170 --> 00:13:53,749
+find out what the size is if we just had
+a constant our pointer or a child
+
+826
+00:13:53,749 --> 00:13:53,759
+a constant our pointer or a child
+ 
+
+827
+00:13:53,759 --> 00:13:55,370
+a constant our pointer or a child
+pointer we would actually have to use
+
+828
+00:13:55,370 --> 00:13:55,380
+pointer we would actually have to use
+ 
+
+829
+00:13:55,380 --> 00:13:57,769
+pointer we would actually have to use
+big functions like sterling which is the
+
+830
+00:13:57,769 --> 00:13:57,779
+big functions like sterling which is the
+ 
+
+831
+00:13:57,779 --> 00:14:00,679
+big functions like sterling which is the
+length of the string and to copy for
+
+832
+00:14:00,679 --> 00:14:00,689
+length of the string and to copy for
+ 
+
+833
+00:14:00,689 --> 00:14:02,689
+length of the string and to copy for
+example to copy strings and all this
+
+834
+00:14:02,689 --> 00:14:02,699
+example to copy strings and all this
+ 
+
+835
+00:14:02,699 --> 00:14:04,910
+example to copy strings and all this
+stuff we have the function defined for
+
+836
+00:14:04,910 --> 00:14:04,920
+stuff we have the function defined for
+ 
+
+837
+00:14:04,920 --> 00:14:06,710
+stuff we have the function defined for
+up inside shrink us which makes it
+
+838
+00:14:06,710 --> 00:14:06,720
+up inside shrink us which makes it
+ 
+
+839
+00:14:06,720 --> 00:14:08,840
+up inside shrink us which makes it
+lovely that is how we use strings now I
+
+840
+00:14:08,840 --> 00:14:08,850
+lovely that is how we use strings now I
+ 
+
+841
+00:14:08,850 --> 00:14:09,980
+lovely that is how we use strings now I
+know this Homer thing that you might
+
+842
+00:14:09,980 --> 00:14:09,990
+know this Homer thing that you might
+ 
+
+843
+00:14:09,990 --> 00:14:11,840
+know this Homer thing that you might
+find yourself doing its appending
+
+844
+00:14:11,840 --> 00:14:11,850
+find yourself doing its appending
+ 
+
+845
+00:14:11,850 --> 00:14:14,600
+find yourself doing its appending
+strings I want to do Cherno plus hello
+
+846
+00:14:14,600 --> 00:14:14,610
+strings I want to do Cherno plus hello
+ 
+
+847
+00:14:14,610 --> 00:14:15,949
+strings I want to do Cherno plus hello
+or something like that
+
+848
+00:14:15,949 --> 00:14:15,959
+or something like that
+ 
+
+849
+00:14:15,959 --> 00:14:18,740
+or something like that
+now you might get errors here the reason
+
+850
+00:14:18,740 --> 00:14:18,750
+now you might get errors here the reason
+ 
+
+851
+00:14:18,750 --> 00:14:19,819
+now you might get errors here the reason
+this is happening is because you're
+
+852
+00:14:19,819 --> 00:14:19,829
+this is happening is because you're
+ 
+
+853
+00:14:19,829 --> 00:14:21,769
+this is happening is because you're
+actually trying to add to column chart
+
+854
+00:14:21,769 --> 00:14:21,779
+actually trying to add to column chart
+ 
+
+855
+00:14:21,779 --> 00:14:24,889
+actually trying to add to column chart
+arrays right this double quote is kind
+
+856
+00:14:24,889 --> 00:14:24,899
+arrays right this double quote is kind
+ 
+
+857
+00:14:24,899 --> 00:14:28,550
+arrays right this double quote is kind
+of thing is a contra array it's not not
+
+858
+00:14:28,550 --> 00:14:28,560
+of thing is a contra array it's not not
+ 
+
+859
+00:14:28,560 --> 00:14:31,579
+of thing is a contra array it's not not
+an actual string or it's not a strength
+
+860
+00:14:31,579 --> 00:14:31,589
+an actual string or it's not a strength
+ 
+
+861
+00:14:31,589 --> 00:14:33,199
+an actual string or it's not a strength
+you can't just add two points together
+
+862
+00:14:33,199 --> 00:14:33,209
+you can't just add two points together
+ 
+
+863
+00:14:33,209 --> 00:14:34,910
+you can't just add two points together
+dozen or two arrays together doesn't
+
+864
+00:14:34,910 --> 00:14:34,920
+dozen or two arrays together doesn't
+ 
+
+865
+00:14:34,920 --> 00:14:36,740
+dozen or two arrays together doesn't
+work that way so if you want to do
+
+866
+00:14:36,740 --> 00:14:36,750
+work that way so if you want to do
+ 
+
+867
+00:14:36,750 --> 00:14:38,809
+work that way so if you want to do
+something like this a nice easy way to
+
+868
+00:14:38,809 --> 00:14:38,819
+something like this a nice easy way to
+ 
+
+869
+00:14:38,819 --> 00:14:41,569
+something like this a nice easy way to
+do that is either with this up into
+
+870
+00:14:41,569 --> 00:14:41,579
+do that is either with this up into
+ 
+
+871
+00:14:41,579 --> 00:14:42,750
+do that is either with this up into
+multiple lines because
+
+872
+00:14:42,750 --> 00:14:42,760
+multiple lines because
+ 
+
+873
+00:14:42,760 --> 00:14:45,930
+multiple lines because
+now you're doing name plus equals colors
+
+874
+00:14:45,930 --> 00:14:45,940
+now you're doing name plus equals colors
+ 
+
+875
+00:14:45,940 --> 00:14:47,220
+now you're doing name plus equals colors
+so what you're doing is you're adding a
+
+876
+00:14:47,220 --> 00:14:47,230
+so what you're doing is you're adding a
+ 
+
+877
+00:14:47,230 --> 00:14:49,500
+so what you're doing is you're adding a
+pointer to an actual name which is a
+
+878
+00:14:49,500 --> 00:14:49,510
+pointer to an actual name which is a
+ 
+
+879
+00:14:49,510 --> 00:14:51,720
+pointer to an actual name which is a
+string you're adding it to a string and
+
+880
+00:14:51,720 --> 00:14:51,730
+string you're adding it to a string and
+ 
+
+881
+00:14:51,730 --> 00:14:54,390
+string you're adding it to a string and
+plus equal is overloaded in the string
+
+882
+00:14:54,390 --> 00:14:54,400
+plus equal is overloaded in the string
+ 
+
+883
+00:14:54,400 --> 00:14:55,980
+plus equal is overloaded in the string
+class to be able to let you to let you
+
+884
+00:14:55,980 --> 00:14:55,990
+class to be able to let you to let you
+ 
+
+885
+00:14:55,990 --> 00:14:58,710
+class to be able to let you to let you
+do that or one thing that I do quite
+
+886
+00:14:58,710 --> 00:14:58,720
+do that or one thing that I do quite
+ 
+
+887
+00:14:58,720 --> 00:15:00,390
+do that or one thing that I do quite
+often as well is just threw out one of
+
+888
+00:15:00,390 --> 00:15:00,400
+often as well is just threw out one of
+ 
+
+889
+00:15:00,400 --> 00:15:02,160
+often as well is just threw out one of
+them with the strings instructor for you
+
+890
+00:15:02,160 --> 00:15:02,170
+them with the strings instructor for you
+ 
+
+891
+00:15:02,170 --> 00:15:03,840
+them with the strings instructor for you
+explicitly calling a string constructor
+
+892
+00:15:03,840 --> 00:15:03,850
+explicitly calling a string constructor
+ 
+
+893
+00:15:03,850 --> 00:15:05,370
+explicitly calling a string constructor
+so you're making a string out it is and
+
+894
+00:15:05,370 --> 00:15:05,380
+so you're making a string out it is and
+ 
+
+895
+00:15:05,380 --> 00:15:07,290
+so you're making a string out it is and
+then appending that to it as well and
+
+896
+00:15:07,290 --> 00:15:07,300
+then appending that to it as well and
+ 
+
+897
+00:15:07,300 --> 00:15:09,300
+then appending that to it as well and
+that will be totally fine sure this way
+
+898
+00:15:09,300 --> 00:15:09,310
+that will be totally fine sure this way
+ 
+
+899
+00:15:09,310 --> 00:15:10,890
+that will be totally fine sure this way
+you might end up with more copies but
+
+900
+00:15:10,890 --> 00:15:10,900
+you might end up with more copies but
+ 
+
+901
+00:15:10,900 --> 00:15:13,290
+you might end up with more copies but
+for most reason looks like for most
+
+902
+00:15:13,290 --> 00:15:13,300
+for most reason looks like for most
+ 
+
+903
+00:15:13,300 --> 00:15:15,510
+for most reason looks like for most
+purposes it's fine if you want to find
+
+904
+00:15:15,510 --> 00:15:15,520
+purposes it's fine if you want to find
+ 
+
+905
+00:15:15,520 --> 00:15:17,850
+purposes it's fine if you want to find
+text in string you can use name dot fine
+
+906
+00:15:17,850 --> 00:15:17,860
+text in string you can use name dot fine
+ 
+
+907
+00:15:17,860 --> 00:15:19,530
+text in string you can use name dot fine
+and then these string of text that you
+
+908
+00:15:19,530 --> 00:15:19,540
+and then these string of text that you
+ 
+
+909
+00:15:19,540 --> 00:15:21,060
+and then these string of text that you
+want to look for for example I want to
+
+910
+00:15:21,060 --> 00:15:21,070
+want to look for for example I want to
+ 
+
+911
+00:15:21,070 --> 00:15:22,650
+want to look for for example I want to
+look for the note inside
+
+912
+00:15:22,650 --> 00:15:22,660
+look for the note inside
+ 
+
+913
+00:15:22,660 --> 00:15:25,050
+look for the note inside
+Cherno hello so I'll do named offline
+
+914
+00:15:25,050 --> 00:15:25,060
+Cherno hello so I'll do named offline
+ 
+
+915
+00:15:25,060 --> 00:15:28,920
+Cherno hello so I'll do named offline
+node if that does not equal strip SP or
+
+916
+00:15:28,920 --> 00:15:28,930
+node if that does not equal strip SP or
+ 
+
+917
+00:15:28,930 --> 00:15:31,650
+node if that does not equal strip SP or
+the educated E string and pods which is
+
+918
+00:15:31,650 --> 00:15:31,660
+the educated E string and pods which is
+ 
+
+919
+00:15:31,660 --> 00:15:34,230
+the educated E string and pods which is
+basically an illegal position for that
+
+920
+00:15:34,230 --> 00:15:34,240
+basically an illegal position for that
+ 
+
+921
+00:15:34,240 --> 00:15:37,680
+basically an illegal position for that
+fine then it contains that noticing
+
+922
+00:15:37,680 --> 00:15:37,690
+fine then it contains that noticing
+ 
+
+923
+00:15:37,690 --> 00:15:39,300
+fine then it contains that noticing
+because what name dot find actually
+
+924
+00:15:39,300 --> 00:15:39,310
+because what name dot find actually
+ 
+
+925
+00:15:39,310 --> 00:15:42,450
+because what name dot find actually
+returns is the position of this test so
+
+926
+00:15:42,450 --> 00:15:42,460
+returns is the position of this test so
+ 
+
+927
+00:15:42,460 --> 00:15:44,010
+returns is the position of this test so
+in this case it will return the position
+
+928
+00:15:44,010 --> 00:15:44,020
+in this case it will return the position
+ 
+
+929
+00:15:44,020 --> 00:15:46,050
+in this case it will return the position
+of the beginning of this so if you just
+
+930
+00:15:46,050 --> 00:15:46,060
+of the beginning of this so if you just
+ 
+
+931
+00:15:46,060 --> 00:15:47,340
+of the beginning of this so if you just
+want to see if it contains something or
+
+932
+00:15:47,340 --> 00:15:47,350
+want to see if it contains something or
+ 
+
+933
+00:15:47,350 --> 00:15:48,750
+want to see if it contains something or
+not you use this because there's no
+
+934
+00:15:48,750 --> 00:15:48,760
+not you use this because there's no
+ 
+
+935
+00:15:48,760 --> 00:15:50,790
+not you use this because there's no
+actual dot contained function anyway I
+
+936
+00:15:50,790 --> 00:15:50,800
+actual dot contained function anyway I
+ 
+
+937
+00:15:50,800 --> 00:15:52,560
+actual dot contained function anyway I
+could go on and describe the entire
+
+938
+00:15:52,560 --> 00:15:52,570
+could go on and describe the entire
+ 
+
+939
+00:15:52,570 --> 00:15:55,290
+could go on and describe the entire
+string API to you I've linked HTTP
+
+940
+00:15:55,290 --> 00:15:55,300
+string API to you I've linked HTTP
+ 
+
+941
+00:15:55,300 --> 00:15:58,230
+string API to you I've linked HTTP
+reference kind of link to strengthen it
+
+942
+00:15:58,230 --> 00:15:58,240
+reference kind of link to strengthen it
+ 
+
+943
+00:15:58,240 --> 00:15:59,370
+reference kind of link to strengthen it
+in the description below so you can
+
+944
+00:15:59,370 --> 00:15:59,380
+in the description below so you can
+ 
+
+945
+00:15:59,380 --> 00:16:01,080
+in the description below so you can
+check that out if you want to see
+
+946
+00:16:01,080 --> 00:16:01,090
+check that out if you want to see
+ 
+
+947
+00:16:01,090 --> 00:16:02,670
+check that out if you want to see
+everything that that string cloud office
+
+948
+00:16:02,670 --> 00:16:02,680
+everything that that string cloud office
+ 
+
+949
+00:16:02,680 --> 00:16:05,340
+everything that that string cloud office
+but yes that strings super easy to use
+
+950
+00:16:05,340 --> 00:16:05,350
+but yes that strings super easy to use
+ 
+
+951
+00:16:05,350 --> 00:16:06,660
+but yes that strings super easy to use
+we'll be using them a lot in the future
+
+952
+00:16:06,660 --> 00:16:06,670
+we'll be using them a lot in the future
+ 
+
+953
+00:16:06,670 --> 00:16:09,090
+we'll be using them a lot in the future
+and another series that I'm maybe going
+
+954
+00:16:09,090 --> 00:16:09,100
+and another series that I'm maybe going
+ 
+
+955
+00:16:09,100 --> 00:16:12,270
+and another series that I'm maybe going
+to start soon wink so yes that's pretty
+
+956
+00:16:12,270 --> 00:16:12,280
+to start soon wink so yes that's pretty
+ 
+
+957
+00:16:12,280 --> 00:16:13,440
+to start soon wink so yes that's pretty
+much all there is to it one other thing
+
+958
+00:16:13,440 --> 00:16:13,450
+much all there is to it one other thing
+ 
+
+959
+00:16:13,450 --> 00:16:14,760
+much all there is to it one other thing
+that I want to quickly mention is
+
+960
+00:16:14,760 --> 00:16:14,770
+that I want to quickly mention is
+ 
+
+961
+00:16:14,770 --> 00:16:16,770
+that I want to quickly mention is
+passing these strings around to other
+
+962
+00:16:16,770 --> 00:16:16,780
+passing these strings around to other
+ 
+
+963
+00:16:16,780 --> 00:16:18,900
+passing these strings around to other
+functions if I write if I wrote a
+
+964
+00:16:18,900 --> 00:16:18,910
+functions if I write if I wrote a
+ 
+
+965
+00:16:18,910 --> 00:16:20,820
+functions if I write if I wrote a
+function called print string and I
+
+966
+00:16:20,820 --> 00:16:20,830
+function called print string and I
+ 
+
+967
+00:16:20,830 --> 00:16:22,110
+function called print string and I
+wanted to be able to pass a string
+
+968
+00:16:22,110 --> 00:16:22,120
+wanted to be able to pass a string
+ 
+
+969
+00:16:22,120 --> 00:16:24,420
+wanted to be able to pass a string
+around I would not simply write a city
+
+970
+00:16:24,420 --> 00:16:24,430
+around I would not simply write a city
+ 
+
+971
+00:16:24,430 --> 00:16:27,270
+around I would not simply write a city
+string string and then have my
+
+972
+00:16:27,270 --> 00:16:27,280
+string string and then have my
+ 
+
+973
+00:16:27,280 --> 00:16:29,490
+string string and then have my
+university our strength the reason I
+
+974
+00:16:29,490 --> 00:16:29,500
+university our strength the reason I
+ 
+
+975
+00:16:29,500 --> 00:16:31,530
+university our strength the reason I
+wouldn't do this is because then it's
+
+976
+00:16:31,530 --> 00:16:31,540
+wouldn't do this is because then it's
+ 
+
+977
+00:16:31,540 --> 00:16:33,180
+wouldn't do this is because then it's
+actually a copy we haven't talked about
+
+978
+00:16:33,180 --> 00:16:33,190
+actually a copy we haven't talked about
+ 
+
+979
+00:16:33,190 --> 00:16:35,550
+actually a copy we haven't talked about
+this too much but when you pass in a
+
+980
+00:16:35,550 --> 00:16:35,560
+this too much but when you pass in a
+ 
+
+981
+00:16:35,560 --> 00:16:39,540
+this too much but when you pass in a
+class like this to a function what
+
+982
+00:16:39,540 --> 00:16:39,550
+class like this to a function what
+ 
+
+983
+00:16:39,550 --> 00:16:40,350
+class like this to a function what
+you're actually doing is you're creating
+
+984
+00:16:40,350 --> 00:16:40,360
+you're actually doing is you're creating
+ 
+
+985
+00:16:40,360 --> 00:16:43,440
+you're actually doing is you're creating
+a brand you're creating a copy of that
+
+986
+00:16:43,440 --> 00:16:43,450
+a brand you're creating a copy of that
+ 
+
+987
+00:16:43,450 --> 00:16:45,630
+a brand you're creating a copy of that
+class of that object and giving it to
+
+988
+00:16:45,630 --> 00:16:45,640
+class of that object and giving it to
+ 
+
+989
+00:16:45,640 --> 00:16:47,340
+class of that object and giving it to
+this function so if I then was to do
+
+990
+00:16:47,340 --> 00:16:47,350
+this function so if I then was to do
+ 
+
+991
+00:16:47,350 --> 00:16:50,370
+this function so if I then was to do
+something like string class equals a
+
+992
+00:16:50,370 --> 00:16:50,380
+something like string class equals a
+ 
+
+993
+00:16:50,380 --> 00:16:51,629
+something like string class equals a
+short
+
+994
+00:16:51,629 --> 00:16:51,639
+short
+ 
+
+995
+00:16:51,639 --> 00:16:53,730
+short
+it wouldn't affect the original string
+
+996
+00:16:53,730 --> 00:16:53,740
+it wouldn't affect the original string
+ 
+
+997
+00:16:53,740 --> 00:16:56,480
+it wouldn't affect the original string
+that was passed in say over here however
+
+998
+00:16:56,480 --> 00:16:56,490
+that was passed in say over here however
+ 
+
+999
+00:16:56,490 --> 00:16:59,639
+that was passed in say over here however
+this is clearly a read-only function
+
+1000
+00:16:59,639 --> 00:16:59,649
+this is clearly a read-only function
+ 
+
+1001
+00:16:59,649 --> 00:17:01,860
+this is clearly a read-only function
+we're not gonna be modifying anything we
+
+1002
+00:17:01,860 --> 00:17:01,870
+we're not gonna be modifying anything we
+ 
+
+1003
+00:17:01,870 --> 00:17:03,569
+we're not gonna be modifying anything we
+just want to print it so why would we
+
+1004
+00:17:03,569 --> 00:17:03,579
+just want to print it so why would we
+ 
+
+1005
+00:17:03,579 --> 00:17:05,370
+just want to print it so why would we
+copy an entire string copying a string
+
+1006
+00:17:05,370 --> 00:17:05,380
+copy an entire string copying a string
+ 
+
+1007
+00:17:05,380 --> 00:17:07,380
+copy an entire string copying a string
+means we have to dynamically on the heat
+
+1008
+00:17:07,380 --> 00:17:07,390
+means we have to dynamically on the heat
+ 
+
+1009
+00:17:07,390 --> 00:17:09,809
+means we have to dynamically on the heat
+allocate the brand-new char array to
+
+1010
+00:17:09,809 --> 00:17:09,819
+allocate the brand-new char array to
+ 
+
+1011
+00:17:09,819 --> 00:17:11,610
+allocate the brand-new char array to
+store that exact same text that we've
+
+1012
+00:17:11,610 --> 00:17:11,620
+store that exact same text that we've
+ 
+
+1013
+00:17:11,620 --> 00:17:13,620
+store that exact same text that we've
+already got that's not fast string
+
+1014
+00:17:13,620 --> 00:17:13,630
+already got that's not fast string
+ 
+
+1015
+00:17:13,630 --> 00:17:16,079
+already got that's not fast string
+copying is actually really quite close
+
+1016
+00:17:16,079 --> 00:17:16,089
+copying is actually really quite close
+ 
+
+1017
+00:17:16,089 --> 00:17:19,319
+copying is actually really quite close
+apparently and it's if it's the major
+
+1018
+00:17:19,319 --> 00:17:19,329
+apparently and it's if it's the major
+ 
+
+1019
+00:17:19,329 --> 00:17:21,000
+apparently and it's if it's the major
+short point in some cases because string
+
+1020
+00:17:21,000 --> 00:17:21,010
+short point in some cases because string
+ 
+
+1021
+00:17:21,010 --> 00:17:22,949
+short point in some cases because string
+operations are so common so whenever you
+
+1022
+00:17:22,949 --> 00:17:22,959
+operations are so common so whenever you
+ 
+
+1023
+00:17:22,959 --> 00:17:24,779
+operations are so common so whenever you
+pass a string like this and it's going
+
+1024
+00:17:24,779 --> 00:17:24,789
+pass a string like this and it's going
+ 
+
+1025
+00:17:24,789 --> 00:17:26,699
+pass a string like this and it's going
+to be read-only make sure you pass it by
+
+1026
+00:17:26,699 --> 00:17:26,709
+to be read-only make sure you pass it by
+ 
+
+1027
+00:17:26,709 --> 00:17:29,279
+to be read-only make sure you pass it by
+cons preference okay so we'll add Const
+
+1028
+00:17:29,279 --> 00:17:29,289
+cons preference okay so we'll add Const
+ 
+
+1029
+00:17:29,289 --> 00:17:31,289
+cons preference okay so we'll add Const
+over here at the front and reference
+
+1030
+00:17:31,289 --> 00:17:31,299
+over here at the front and reference
+ 
+
+1031
+00:17:31,299 --> 00:17:33,870
+over here at the front and reference
+what that tells us is that we this is a
+
+1032
+00:17:33,870 --> 00:17:33,880
+what that tells us is that we this is a
+ 
+
+1033
+00:17:33,880 --> 00:17:35,610
+what that tells us is that we this is a
+reference meaning that it won't get
+
+1034
+00:17:35,610 --> 00:17:35,620
+reference meaning that it won't get
+ 
+
+1035
+00:17:35,620 --> 00:17:37,320
+reference meaning that it won't get
+copied and constant means we're
+
+1036
+00:17:37,320 --> 00:17:37,330
+copied and constant means we're
+ 
+
+1037
+00:17:37,330 --> 00:17:39,510
+copied and constant means we're
+promising not to modify it here again I
+
+1038
+00:17:39,510 --> 00:17:39,520
+promising not to modify it here again I
+ 
+
+1039
+00:17:39,520 --> 00:17:41,010
+promising not to modify it here again I
+said promising because technically we
+
+1040
+00:17:41,010 --> 00:17:41,020
+said promising because technically we
+ 
+
+1041
+00:17:41,020 --> 00:17:42,990
+said promising because technically we
+could override dates we wanted to but of
+
+1042
+00:17:42,990 --> 00:17:43,000
+could override dates we wanted to but of
+ 
+
+1043
+00:17:43,000 --> 00:17:45,450
+could override dates we wanted to but of
+course we're we're promising not to so
+
+1044
+00:17:45,450 --> 00:17:45,460
+course we're we're promising not to so
+ 
+
+1045
+00:17:45,460 --> 00:17:46,950
+course we're we're promising not to so
+we're going to we're going to deny I'll
+
+1046
+00:17:46,950 --> 00:17:46,960
+we're going to we're going to deny I'll
+ 
+
+1047
+00:17:46,960 --> 00:17:48,630
+we're going to we're going to deny I'll
+have a video in the future about cause
+
+1048
+00:17:48,630 --> 00:17:48,640
+have a video in the future about cause
+ 
+
+1049
+00:17:48,640 --> 00:17:50,460
+have a video in the future about cause
+references are more kind of feature
+
+1050
+00:17:50,460 --> 00:17:50,470
+references are more kind of feature
+ 
+
+1051
+00:17:50,470 --> 00:17:52,980
+references are more kind of feature
+video because there's a lot to them and
+
+1052
+00:17:52,980 --> 00:17:52,990
+video because there's a lot to them and
+ 
+
+1053
+00:17:52,990 --> 00:17:54,539
+video because there's a lot to them and
+there's a few tricks that we can talk
+
+1054
+00:17:54,539 --> 00:17:54,549
+there's a few tricks that we can talk
+ 
+
+1055
+00:17:54,549 --> 00:17:56,610
+there's a few tricks that we can talk
+about but that is basically what strings
+
+1056
+00:17:56,610 --> 00:17:56,620
+about but that is basically what strings
+ 
+
+1057
+00:17:56,620 --> 00:17:58,409
+about but that is basically what strings
+are do you guys enjoy this video make
+
+1058
+00:17:58,409 --> 00:17:58,419
+are do you guys enjoy this video make
+ 
+
+1059
+00:17:58,419 --> 00:18:00,029
+are do you guys enjoy this video make
+sure you hit that like button if you
+
+1060
+00:18:00,029 --> 00:18:00,039
+sure you hit that like button if you
+ 
+
+1061
+00:18:00,039 --> 00:18:01,320
+sure you hit that like button if you
+really enjoy this series and you want to
+
+1062
+00:18:01,320 --> 00:18:01,330
+really enjoy this series and you want to
+ 
+
+1063
+00:18:01,330 --> 00:18:02,909
+really enjoy this series and you want to
+see more videos like this you can
+
+1064
+00:18:02,909 --> 00:18:02,919
+see more videos like this you can
+ 
+
+1065
+00:18:02,919 --> 00:18:04,200
+see more videos like this you can
+support me on patreon account for
+
+1066
+00:18:04,200 --> 00:18:04,210
+support me on patreon account for
+ 
+
+1067
+00:18:04,210 --> 00:18:05,880
+support me on patreon account for
+special channel there's a really nice
+
+1068
+00:18:05,880 --> 00:18:05,890
+special channel there's a really nice
+ 
+
+1069
+00:18:05,890 --> 00:18:07,770
+special channel there's a really nice
+community we've got going on slack I'm
+
+1070
+00:18:07,770 --> 00:18:07,780
+community we've got going on slack I'm
+ 
+
+1071
+00:18:07,780 --> 00:18:09,060
+community we've got going on slack I'm
+actually thinking maybe switching to
+
+1072
+00:18:09,060 --> 00:18:09,070
+actually thinking maybe switching to
+ 
+
+1073
+00:18:09,070 --> 00:18:10,470
+actually thinking maybe switching to
+this court because I think patreon
+
+1074
+00:18:10,470 --> 00:18:10,480
+this court because I think patreon
+ 
+
+1075
+00:18:10,480 --> 00:18:13,289
+this court because I think patreon
+offers discord rewards and kind of it's
+
+1076
+00:18:13,289 --> 00:18:13,299
+offers discord rewards and kind of it's
+ 
+
+1077
+00:18:13,299 --> 00:18:15,060
+offers discord rewards and kind of it's
+all built-in so it might be a bit set up
+
+1078
+00:18:15,060 --> 00:18:15,070
+all built-in so it might be a bit set up
+ 
+
+1079
+00:18:15,070 --> 00:18:17,490
+all built-in so it might be a bit set up
+but basically to place a certain amount
+
+1080
+00:18:17,490 --> 00:18:17,500
+but basically to place a certain amount
+ 
+
+1081
+00:18:17,500 --> 00:18:20,010
+but basically to place a certain amount
+you get access to trust videos as well
+
+1082
+00:18:20,010 --> 00:18:20,020
+you get access to trust videos as well
+ 
+
+1083
+00:18:20,020 --> 00:18:22,409
+you get access to trust videos as well
+as a like a discussion thread in which
+
+1084
+00:18:22,409 --> 00:18:22,419
+as a like a discussion thread in which
+ 
+
+1085
+00:18:22,419 --> 00:18:24,090
+as a like a discussion thread in which
+we can actually talk about what goes
+
+1086
+00:18:24,090 --> 00:18:24,100
+we can actually talk about what goes
+ 
+
+1087
+00:18:24,100 --> 00:18:25,950
+we can actually talk about what goes
+into these videos and plan it together
+
+1088
+00:18:25,950 --> 00:18:25,960
+into these videos and plan it together
+ 
+
+1089
+00:18:25,960 --> 00:18:27,360
+into these videos and plan it together
+that's pretty cool and of course it
+
+1090
+00:18:27,360 --> 00:18:27,370
+that's pretty cool and of course it
+ 
+
+1091
+00:18:27,370 --> 00:18:28,710
+that's pretty cool and of course it
+helps me make more videos which is
+
+1092
+00:18:28,710 --> 00:18:28,720
+helps me make more videos which is
+ 
+
+1093
+00:18:28,720 --> 00:18:30,899
+helps me make more videos which is
+always good if you have any questions
+
+1094
+00:18:30,899 --> 00:18:30,909
+always good if you have any questions
+ 
+
+1095
+00:18:30,909 --> 00:18:32,340
+always good if you have any questions
+about this episode or about strings or
+
+1096
+00:18:32,340 --> 00:18:32,350
+about this episode or about strings or
+ 
+
+1097
+00:18:32,350 --> 00:18:33,240
+about this episode or about strings or
+anything you can just leave a comment
+
+1098
+00:18:33,240 --> 00:18:33,250
+anything you can just leave a comment
+ 
+
+1099
+00:18:33,250 --> 00:18:35,370
+anything you can just leave a comment
+below I'll try to reply to as many as I
+
+1100
+00:18:35,370 --> 00:18:35,380
+below I'll try to reply to as many as I
+ 
+
+1101
+00:18:35,380 --> 00:18:37,110
+below I'll try to reply to as many as I
+can in this video I find it's a bit a
+
+1102
+00:18:37,110 --> 00:18:37,120
+can in this video I find it's a bit a
+ 
+
+1103
+00:18:37,120 --> 00:18:38,909
+can in this video I find it's a bit a
+bit more easy with the kind of money
+
+1104
+00:18:38,909 --> 00:18:38,919
+bit more easy with the kind of money
+ 
+
+1105
+00:18:38,919 --> 00:18:40,889
+bit more easy with the kind of money
+script anything as much this was more of
+
+1106
+00:18:40,889 --> 00:18:40,899
+script anything as much this was more of
+ 
+
+1107
+00:18:40,899 --> 00:18:42,539
+script anything as much this was more of
+a casual kind of conversation let me
+
+1108
+00:18:42,539 --> 00:18:42,549
+a casual kind of conversation let me
+ 
+
+1109
+00:18:42,549 --> 00:18:43,649
+a casual kind of conversation let me
+know what you think of these kind of
+
+1110
+00:18:43,649 --> 00:18:43,659
+know what you think of these kind of
+ 
+
+1111
+00:18:43,659 --> 00:18:45,749
+know what you think of these kind of
+videos they kind of make it a bit
+
+1112
+00:18:45,749 --> 00:18:45,759
+videos they kind of make it a bit
+ 
+
+1113
+00:18:45,759 --> 00:18:47,909
+videos they kind of make it a bit
+rambling looking at the time here and a
+
+1114
+00:18:47,909 --> 00:18:47,919
+rambling looking at the time here and a
+ 
+
+1115
+00:18:47,919 --> 00:18:50,190
+rambling looking at the time here and a
+lot has passed but I kind of like these
+
+1116
+00:18:50,190 --> 00:18:50,200
+lot has passed but I kind of like these
+ 
+
+1117
+00:18:50,200 --> 00:18:52,349
+lot has passed but I kind of like these
+more laid back videos there be easy for
+
+1118
+00:18:52,349 --> 00:18:52,359
+more laid back videos there be easy for
+ 
+
+1119
+00:18:52,359 --> 00:18:53,759
+more laid back videos there be easy for
+me to make as well I know I don't think
+
+1120
+00:18:53,759 --> 00:18:53,769
+me to make as well I know I don't think
+ 
+
+1121
+00:18:53,769 --> 00:18:55,200
+me to make as well I know I don't think
+I'm stressed because I'd like to
+
+1122
+00:18:55,200 --> 00:18:55,210
+I'm stressed because I'd like to
+ 
+
+1123
+00:18:55,210 --> 00:18:56,369
+I'm stressed because I'd like to
+Melbourne now and I'm going to work
+
+1124
+00:18:56,369 --> 00:18:56,379
+Melbourne now and I'm going to work
+ 
+
+1125
+00:18:56,379 --> 00:18:58,169
+Melbourne now and I'm going to work
+every day and coming home and just
+
+1126
+00:18:58,169 --> 00:18:58,179
+every day and coming home and just
+ 
+
+1127
+00:18:58,179 --> 00:18:59,609
+every day and coming home and just
+having our conversation with the camera
+
+1128
+00:18:59,609 --> 00:18:59,619
+having our conversation with the camera
+ 
+
+1129
+00:18:59,619 --> 00:19:01,379
+having our conversation with the camera
+probably means that I can probably
+
+1130
+00:19:01,379 --> 00:19:01,389
+probably means that I can probably
+ 
+
+1131
+00:19:01,389 --> 00:19:03,090
+probably means that I can probably
+release more than one video a week which
+
+1132
+00:19:03,090 --> 00:19:03,100
+release more than one video a week which
+ 
+
+1133
+00:19:03,100 --> 00:19:05,369
+release more than one video a week which
+is which is which is good so let me know
+
+1134
+00:19:05,369 --> 00:19:05,379
+is which is which is good so let me know
+ 
+
+1135
+00:19:05,379 --> 00:19:06,359
+is which is which is good so let me know
+what you think about that in the
+
+1136
+00:19:06,359 --> 00:19:06,369
+what you think about that in the
+ 
+
+1137
+00:19:06,369 --> 00:19:07,409
+what you think about that in the
+comments below and I'll see you guys
+
+1138
+00:19:07,409 --> 00:19:07,419
+comments below and I'll see you guys
+ 
+
+1139
+00:19:07,419 --> 00:19:07,799
+comments below and I'll see you guys
+later
+
+1140
+00:19:07,799 --> 00:19:07,809
+later
+ 
+
+1141
+00:19:07,809 --> 00:19:09,120
+later
+good bye
+
+1142
+00:19:09,120 --> 00:19:09,130
+good bye
+ 
+
+1143
+00:19:09,130 --> 00:19:17,610
+good bye
+[Music]
+
+1144
+00:19:17,610 --> 00:19:17,620
+
+ 
+
+1145
+00:19:17,620 --> 00:19:24,660
+
+[Music]
+

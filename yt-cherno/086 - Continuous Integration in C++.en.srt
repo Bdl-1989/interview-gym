@@ -1,0 +1,4475 @@
+1
+00:00:01,250 --> 00:00:02,929
+
+today we're going to be talking about
+
+2
+00:00:02,929 --> 00:00:02,939
+today we're going to be talking about
+ 
+
+3
+00:00:02,939 --> 00:00:04,789
+today we're going to be talking about
+continuous integration something that
+
+4
+00:00:04,789 --> 00:00:04,799
+continuous integration something that
+ 
+
+5
+00:00:04,799 --> 00:00:07,249
+continuous integration something that
+most software projects should be using
+
+6
+00:00:07,249 --> 00:00:07,259
+most software projects should be using
+ 
+
+7
+00:00:07,259 --> 00:00:08,570
+most software projects should be using
+now for those of you who don't know
+
+8
+00:00:08,570 --> 00:00:08,580
+now for those of you who don't know
+ 
+
+9
+00:00:08,580 --> 00:00:11,180
+now for those of you who don't know
+continuous integration or CI as it's
+
+10
+00:00:11,180 --> 00:00:11,190
+continuous integration or CI as it's
+ 
+
+11
+00:00:11,190 --> 00:00:13,600
+continuous integration or CI as it's
+often referred to is the process of
+
+12
+00:00:13,600 --> 00:00:13,610
+often referred to is the process of
+ 
+
+13
+00:00:13,610 --> 00:00:16,880
+often referred to is the process of
+continually integrating your code during
+
+14
+00:00:16,880 --> 00:00:16,890
+continually integrating your code during
+ 
+
+15
+00:00:16,890 --> 00:00:19,279
+continually integrating your code during
+development now this might not make much
+
+16
+00:00:19,279 --> 00:00:19,289
+development now this might not make much
+ 
+
+17
+00:00:19,289 --> 00:00:21,380
+development now this might not make much
+sense but what it essentially is is
+
+18
+00:00:21,380 --> 00:00:21,390
+sense but what it essentially is is
+ 
+
+19
+00:00:21,390 --> 00:00:23,540
+sense but what it essentially is is
+build automation and testing to cut a
+
+20
+00:00:23,540 --> 00:00:23,550
+build automation and testing to cut a
+ 
+
+21
+00:00:23,550 --> 00:00:25,730
+build automation and testing to cut a
+long story short in a software project
+
+22
+00:00:25,730 --> 00:00:25,740
+long story short in a software project
+ 
+
+23
+00:00:25,740 --> 00:00:27,589
+long story short in a software project
+where multiple developers across
+
+24
+00:00:27,589 --> 00:00:27,599
+where multiple developers across
+ 
+
+25
+00:00:27,599 --> 00:00:29,060
+where multiple developers across
+multiple different platforms are all
+
+26
+00:00:29,060 --> 00:00:29,070
+multiple different platforms are all
+ 
+
+27
+00:00:29,070 --> 00:00:31,460
+multiple different platforms are all
+working on that project and continually
+
+28
+00:00:31,460 --> 00:00:31,470
+working on that project and continually
+ 
+
+29
+00:00:31,470 --> 00:00:33,709
+working on that project and continually
+updating that code a lot of things can
+
+30
+00:00:33,709 --> 00:00:33,719
+updating that code a lot of things can
+ 
+
+31
+00:00:33,719 --> 00:00:35,840
+updating that code a lot of things can
+go wrong someone for example might not
+
+32
+00:00:35,840 --> 00:00:35,850
+go wrong someone for example might not
+ 
+
+33
+00:00:35,850 --> 00:00:37,910
+go wrong someone for example might not
+compile their code on all platforms or
+
+34
+00:00:37,910 --> 00:00:37,920
+compile their code on all platforms or
+ 
+
+35
+00:00:37,920 --> 00:00:41,060
+compile their code on all platforms or
+in all configurations and as a result it
+
+36
+00:00:41,060 --> 00:00:41,070
+in all configurations and as a result it
+ 
+
+37
+00:00:41,070 --> 00:00:42,530
+in all configurations and as a result it
+might completely break the build for
+
+38
+00:00:42,530 --> 00:00:42,540
+might completely break the build for
+ 
+
+39
+00:00:42,540 --> 00:00:44,209
+might completely break the build for
+other developers or it just might
+
+40
+00:00:44,209 --> 00:00:44,219
+other developers or it just might
+ 
+
+41
+00:00:44,219 --> 00:00:46,160
+other developers or it just might
+basically contribute bugs
+
+42
+00:00:46,160 --> 00:00:46,170
+basically contribute bugs
+ 
+
+43
+00:00:46,170 --> 00:00:48,410
+basically contribute bugs
+additionally some bugs might not be
+
+44
+00:00:48,410 --> 00:00:48,420
+additionally some bugs might not be
+ 
+
+45
+00:00:48,420 --> 00:00:50,150
+additionally some bugs might not be
+caught through a compilation error I
+
+46
+00:00:50,150 --> 00:00:50,160
+caught through a compilation error I
+ 
+
+47
+00:00:50,160 --> 00:00:51,740
+caught through a compilation error I
+mean I think it's pretty reasonable to
+
+48
+00:00:51,740 --> 00:00:51,750
+mean I think it's pretty reasonable to
+ 
+
+49
+00:00:51,750 --> 00:00:53,630
+mean I think it's pretty reasonable to
+expect someone to first compile their
+
+50
+00:00:53,630 --> 00:00:53,640
+expect someone to first compile their
+ 
+
+51
+00:00:53,640 --> 00:00:55,340
+expect someone to first compile their
+code before they actually committed
+
+52
+00:00:55,340 --> 00:00:55,350
+code before they actually committed
+ 
+
+53
+00:00:55,350 --> 00:00:57,500
+code before they actually committed
+especially if if it's a serious software
+
+54
+00:00:57,500 --> 00:00:57,510
+especially if if it's a serious software
+ 
+
+55
+00:00:57,510 --> 00:00:59,240
+especially if if it's a serious software
+project however a lot of bugs obviously
+
+56
+00:00:59,240 --> 00:00:59,250
+project however a lot of bugs obviously
+ 
+
+57
+00:00:59,250 --> 00:01:01,310
+project however a lot of bugs obviously
+manifest themselves at runtime and they
+
+58
+00:01:01,310 --> 00:01:01,320
+manifest themselves at runtime and they
+ 
+
+59
+00:01:01,320 --> 00:01:03,110
+manifest themselves at runtime and they
+might only occur on specific Hardware on
+
+60
+00:01:03,110 --> 00:01:03,120
+might only occur on specific Hardware on
+ 
+
+61
+00:01:03,120 --> 00:01:05,210
+might only occur on specific Hardware on
+a specific platform or their specific
+
+62
+00:01:05,210 --> 00:01:05,220
+a specific platform or their specific
+ 
+
+63
+00:01:05,220 --> 00:01:07,160
+a specific platform or their specific
+configuration it's really not that
+
+64
+00:01:07,160 --> 00:01:07,170
+configuration it's really not that
+ 
+
+65
+00:01:07,170 --> 00:01:09,050
+configuration it's really not that
+feasible for a developer to sit down and
+
+66
+00:01:09,050 --> 00:01:09,060
+feasible for a developer to sit down and
+ 
+
+67
+00:01:09,060 --> 00:01:10,789
+feasible for a developer to sit down and
+have to spend like an hour testing
+
+68
+00:01:10,789 --> 00:01:10,799
+have to spend like an hour testing
+ 
+
+69
+00:01:10,799 --> 00:01:13,280
+have to spend like an hour testing
+everything because they would probably
+
+70
+00:01:13,280 --> 00:01:13,290
+everything because they would probably
+ 
+
+71
+00:01:13,290 --> 00:01:15,350
+everything because they would probably
+rather be working on something else in
+
+72
+00:01:15,350 --> 00:01:15,360
+rather be working on something else in
+ 
+
+73
+00:01:15,360 --> 00:01:16,820
+rather be working on something else in
+fact you need them to be working on
+
+74
+00:01:16,820 --> 00:01:16,830
+fact you need them to be working on
+ 
+
+75
+00:01:16,830 --> 00:01:17,960
+fact you need them to be working on
+something else so obviously some
+
+76
+00:01:17,960 --> 00:01:17,970
+something else so obviously some
+ 
+
+77
+00:01:17,970 --> 00:01:19,609
+something else so obviously some
+problems can only be caught during
+
+78
+00:01:19,609 --> 00:01:19,619
+problems can only be caught during
+ 
+
+79
+00:01:19,619 --> 00:01:22,010
+problems can only be caught during
+runtime by potentially using unit tests
+
+80
+00:01:22,010 --> 00:01:22,020
+runtime by potentially using unit tests
+ 
+
+81
+00:01:22,020 --> 00:01:23,660
+runtime by potentially using unit tests
+or some kind of testing framework that
+
+82
+00:01:23,660 --> 00:01:23,670
+or some kind of testing framework that
+ 
+
+83
+00:01:23,670 --> 00:01:25,429
+or some kind of testing framework that
+you probably integrated into the project
+
+84
+00:01:25,429 --> 00:01:25,439
+you probably integrated into the project
+ 
+
+85
+00:01:25,439 --> 00:01:26,780
+you probably integrated into the project
+to make sure that everything is running
+
+86
+00:01:26,780 --> 00:01:26,790
+to make sure that everything is running
+ 
+
+87
+00:01:26,790 --> 00:01:28,399
+to make sure that everything is running
+correctly but it's quite common for you
+
+88
+00:01:28,399 --> 00:01:28,409
+correctly but it's quite common for you
+ 
+
+89
+00:01:28,409 --> 00:01:29,719
+correctly but it's quite common for you
+to want to run that on multiple
+
+90
+00:01:29,719 --> 00:01:29,729
+to want to run that on multiple
+ 
+
+91
+00:01:29,729 --> 00:01:32,060
+to want to run that on multiple
+platforms multiple configurations all of
+
+92
+00:01:32,060 --> 00:01:32,070
+platforms multiple configurations all of
+ 
+
+93
+00:01:32,070 --> 00:01:33,590
+platforms multiple configurations all of
+that stuff if that burden falls on to
+
+94
+00:01:33,590 --> 00:01:33,600
+that stuff if that burden falls on to
+ 
+
+95
+00:01:33,600 --> 00:01:35,120
+that stuff if that burden falls on to
+the developer instead of a developer
+
+96
+00:01:35,120 --> 00:01:35,130
+the developer instead of a developer
+ 
+
+97
+00:01:35,130 --> 00:01:36,890
+the developer instead of a developer
+working on actually you know a software
+
+98
+00:01:36,890 --> 00:01:36,900
+working on actually you know a software
+ 
+
+99
+00:01:36,900 --> 00:01:38,270
+working on actually you know a software
+engineering and actually programming
+
+100
+00:01:38,270 --> 00:01:38,280
+engineering and actually programming
+ 
+
+101
+00:01:38,280 --> 00:01:40,730
+engineering and actually programming
+more code and fixing other bugs they're
+
+102
+00:01:40,730 --> 00:01:40,740
+more code and fixing other bugs they're
+ 
+
+103
+00:01:40,740 --> 00:01:41,870
+more code and fixing other bugs they're
+going to be stuck doing all of the
+
+104
+00:01:41,870 --> 00:01:41,880
+going to be stuck doing all of the
+ 
+
+105
+00:01:41,880 --> 00:01:44,840
+going to be stuck doing all of the
+testing now that is not ideal and that's
+
+106
+00:01:44,840 --> 00:01:44,850
+testing now that is not ideal and that's
+ 
+
+107
+00:01:44,850 --> 00:01:47,120
+testing now that is not ideal and that's
+where continuous integration comes in it
+
+108
+00:01:47,120 --> 00:01:47,130
+where continuous integration comes in it
+ 
+
+109
+00:01:47,130 --> 00:01:49,670
+where continuous integration comes in it
+can help us automate that entire process
+
+110
+00:01:49,670 --> 00:01:49,680
+can help us automate that entire process
+ 
+
+111
+00:01:49,680 --> 00:01:52,399
+can help us automate that entire process
+of making sure that the code compiles on
+
+112
+00:01:52,399 --> 00:01:52,409
+of making sure that the code compiles on
+ 
+
+113
+00:01:52,409 --> 00:01:54,620
+of making sure that the code compiles on
+all platforms in all configurations for
+
+114
+00:01:54,620 --> 00:01:54,630
+all platforms in all configurations for
+ 
+
+115
+00:01:54,630 --> 00:01:57,200
+all platforms in all configurations for
+everyone and then also run some basic
+
+116
+00:01:57,200 --> 00:01:57,210
+everyone and then also run some basic
+ 
+
+117
+00:01:57,210 --> 00:01:59,060
+everyone and then also run some basic
+tests or any kind of automation tests
+
+118
+00:01:59,060 --> 00:01:59,070
+tests or any kind of automation tests
+ 
+
+119
+00:01:59,070 --> 00:02:00,620
+tests or any kind of automation tests
+that your heart desires that you've
+
+120
+00:02:00,620 --> 00:02:00,630
+that your heart desires that you've
+ 
+
+121
+00:02:00,630 --> 00:02:03,020
+that your heart desires that you've
+actually created to make sure that
+
+122
+00:02:03,020 --> 00:02:03,030
+actually created to make sure that
+ 
+
+123
+00:02:03,030 --> 00:02:05,420
+actually created to make sure that
+everything is a plus plus this is
+
+124
+00:02:05,420 --> 00:02:05,430
+everything is a plus plus this is
+ 
+
+125
+00:02:05,430 --> 00:02:06,859
+everything is a plus plus this is
+definitely one of those things that you
+
+126
+00:02:06,859 --> 00:02:06,869
+definitely one of those things that you
+ 
+
+127
+00:02:06,869 --> 00:02:08,779
+definitely one of those things that you
+don't think you need until you realize
+
+128
+00:02:08,779 --> 00:02:08,789
+don't think you need until you realize
+ 
+
+129
+00:02:08,789 --> 00:02:11,059
+don't think you need until you realize
+that everything just just getting out of
+
+130
+00:02:11,059 --> 00:02:11,069
+that everything just just getting out of
+ 
+
+131
+00:02:11,069 --> 00:02:13,170
+that everything just just getting out of
+hand if we completely dumb this down
+
+132
+00:02:13,170 --> 00:02:13,180
+hand if we completely dumb this down
+ 
+
+133
+00:02:13,180 --> 00:02:15,300
+hand if we completely dumb this down
+true what it is at its core basically
+
+134
+00:02:15,300 --> 00:02:15,310
+true what it is at its core basically
+ 
+
+135
+00:02:15,310 --> 00:02:17,819
+true what it is at its core basically
+what we want to be able to do is build
+
+136
+00:02:17,819 --> 00:02:17,829
+what we want to be able to do is build
+ 
+
+137
+00:02:17,829 --> 00:02:20,610
+what we want to be able to do is build
+our code after every commit that we make
+
+138
+00:02:20,610 --> 00:02:20,620
+our code after every commit that we make
+ 
+
+139
+00:02:20,620 --> 00:02:23,520
+our code after every commit that we make
+and then also maybe run the application
+
+140
+00:02:23,520 --> 00:02:23,530
+and then also maybe run the application
+ 
+
+141
+00:02:23,530 --> 00:02:25,589
+and then also maybe run the application
+to just see does it run without crashing
+
+142
+00:02:25,589 --> 00:02:25,599
+to just see does it run without crashing
+ 
+
+143
+00:02:25,599 --> 00:02:27,750
+to just see does it run without crashing
+what's the output potentially and that's
+
+144
+00:02:27,750 --> 00:02:27,760
+what's the output potentially and that's
+ 
+
+145
+00:02:27,760 --> 00:02:29,009
+what's the output potentially and that's
+what we're going to be doing today we're
+
+146
+00:02:29,009 --> 00:02:29,019
+what we're going to be doing today we're
+ 
+
+147
+00:02:29,019 --> 00:02:31,289
+what we're going to be doing today we're
+going to be setting up a C++ project so
+
+148
+00:02:31,289 --> 00:02:31,299
+going to be setting up a C++ project so
+ 
+
+149
+00:02:31,299 --> 00:02:33,720
+going to be setting up a C++ project so
+that we can automatically build and then
+
+150
+00:02:33,720 --> 00:02:33,730
+that we can automatically build and then
+ 
+
+151
+00:02:33,730 --> 00:02:36,420
+that we can automatically build and then
+test our application every time a new
+
+152
+00:02:36,420 --> 00:02:36,430
+test our application every time a new
+ 
+
+153
+00:02:36,430 --> 00:02:38,729
+test our application every time a new
+commit is pushed to get her and this is
+
+154
+00:02:38,729 --> 00:02:38,739
+commit is pushed to get her and this is
+ 
+
+155
+00:02:38,739 --> 00:02:41,280
+commit is pushed to get her and this is
+getting really bright think maybe if I
+
+156
+00:02:41,280 --> 00:02:41,290
+getting really bright think maybe if I
+ 
+
+157
+00:02:41,290 --> 00:02:45,929
+getting really bright think maybe if I
+just move this over here we're going to
+
+158
+00:02:45,929 --> 00:02:45,939
+just move this over here we're going to
+ 
+
+159
+00:02:45,939 --> 00:02:47,759
+just move this over here we're going to
+dynamically change the set and
+
+160
+00:02:47,759 --> 00:02:47,769
+dynamically change the set and
+ 
+
+161
+00:02:47,769 --> 00:02:49,319
+dynamically change the set and
+everything's gonna be a plus plus
+
+162
+00:02:49,319 --> 00:02:49,329
+everything's gonna be a plus plus
+ 
+
+163
+00:02:49,329 --> 00:02:50,849
+everything's gonna be a plus plus
+because it needs to because I need to
+
+164
+00:02:50,849 --> 00:02:50,859
+because it needs to because I need to
+ 
+
+165
+00:02:50,859 --> 00:02:53,909
+because it needs to because I need to
+get this video done otherwise my family
+
+166
+00:02:53,909 --> 00:02:53,919
+get this video done otherwise my family
+ 
+
+167
+00:02:53,919 --> 00:02:55,259
+get this video done otherwise my family
+is going to starve so we're gonna use
+
+168
+00:02:55,259 --> 00:02:55,269
+is going to starve so we're gonna use
+ 
+
+169
+00:02:55,269 --> 00:02:56,789
+is going to starve so we're gonna use
+Jenkins today as our continuous
+
+170
+00:02:56,789 --> 00:02:56,799
+Jenkins today as our continuous
+ 
+
+171
+00:02:56,799 --> 00:02:58,080
+Jenkins today as our continuous
+integration environment
+
+172
+00:02:58,080 --> 00:02:58,090
+integration environment
+ 
+
+173
+00:02:58,090 --> 00:02:59,940
+integration environment
+Jenkins is completely free and
+
+174
+00:02:59,940 --> 00:02:59,950
+Jenkins is completely free and
+ 
+
+175
+00:02:59,950 --> 00:03:01,440
+Jenkins is completely free and
+open-source I'll leave a link in
+
+176
+00:03:01,440 --> 00:03:01,450
+open-source I'll leave a link in
+ 
+
+177
+00:03:01,450 --> 00:03:02,940
+open-source I'll leave a link in
+description below for you guys to check
+
+178
+00:03:02,940 --> 00:03:02,950
+description below for you guys to check
+ 
+
+179
+00:03:02,950 --> 00:03:04,500
+description below for you guys to check
+it out it's also something that we used
+
+180
+00:03:04,500 --> 00:03:04,510
+it out it's also something that we used
+ 
+
+181
+00:03:04,510 --> 00:03:06,809
+it out it's also something that we used
+on a number of projects at EA so I quite
+
+182
+00:03:06,809 --> 00:03:06,819
+on a number of projects at EA so I quite
+ 
+
+183
+00:03:06,819 --> 00:03:09,089
+on a number of projects at EA so I quite
+like it you can just run Jenkins on any
+
+184
+00:03:09,089 --> 00:03:09,099
+like it you can just run Jenkins on any
+ 
+
+185
+00:03:09,099 --> 00:03:10,530
+like it you can just run Jenkins on any
+computer really you could run it on the
+
+186
+00:03:10,530 --> 00:03:10,540
+computer really you could run it on the
+ 
+
+187
+00:03:10,540 --> 00:03:12,000
+computer really you could run it on the
+computer that used to develop all of
+
+188
+00:03:12,000 --> 00:03:12,010
+computer that used to develop all of
+ 
+
+189
+00:03:12,010 --> 00:03:14,429
+computer that used to develop all of
+your code however typically you'd set it
+
+190
+00:03:14,429 --> 00:03:14,439
+your code however typically you'd set it
+ 
+
+191
+00:03:14,439 --> 00:03:15,959
+your code however typically you'd set it
+up on a server because you would want it
+
+192
+00:03:15,959 --> 00:03:15,969
+up on a server because you would want it
+ 
+
+193
+00:03:15,969 --> 00:03:18,030
+up on a server because you would want it
+to be running 24/7 and so I partnered
+
+194
+00:03:18,030 --> 00:03:18,040
+to be running 24/7 and so I partnered
+ 
+
+195
+00:03:18,040 --> 00:03:19,979
+to be running 24/7 and so I partnered
+with Leonard for this video to make all
+
+196
+00:03:19,979 --> 00:03:19,989
+with Leonard for this video to make all
+ 
+
+197
+00:03:19,989 --> 00:03:21,869
+with Leonard for this video to make all
+of this happen now what's Leonard I hear
+
+198
+00:03:21,869 --> 00:03:21,879
+of this happen now what's Leonard I hear
+ 
+
+199
+00:03:21,879 --> 00:03:24,059
+of this happen now what's Leonard I hear
+you ask well you know it provides Linux
+
+200
+00:03:24,059 --> 00:03:24,069
+you ask well you know it provides Linux
+ 
+
+201
+00:03:24,069 --> 00:03:25,649
+you ask well you know it provides Linux
+servers that make it easy for you to
+
+202
+00:03:25,649 --> 00:03:25,659
+servers that make it easy for you to
+ 
+
+203
+00:03:25,659 --> 00:03:28,890
+servers that make it easy for you to
+host your app side or project in the
+
+204
+00:03:28,890 --> 00:03:28,900
+host your app side or project in the
+ 
+
+205
+00:03:28,900 --> 00:03:30,360
+host your app side or project in the
+cloud if it runs on Linux
+
+206
+00:03:30,360 --> 00:03:30,370
+cloud if it runs on Linux
+ 
+
+207
+00:03:30,370 --> 00:03:32,189
+cloud if it runs on Linux
+it runs on Leonard so if you need a host
+
+208
+00:03:32,189 --> 00:03:32,199
+it runs on Leonard so if you need a host
+ 
+
+209
+00:03:32,199 --> 00:03:34,679
+it runs on Leonard so if you need a host
+like a website or a game server or set
+
+210
+00:03:34,679 --> 00:03:34,689
+like a website or a game server or set
+ 
+
+211
+00:03:34,689 --> 00:03:36,629
+like a website or a game server or set
+up a CI machine like we're doing today
+
+212
+00:03:36,629 --> 00:03:36,639
+up a CI machine like we're doing today
+ 
+
+213
+00:03:36,639 --> 00:03:38,909
+up a CI machine like we're doing today
+in this video Leonard has you covered
+
+214
+00:03:38,909 --> 00:03:38,919
+in this video Leonard has you covered
+ 
+
+215
+00:03:38,919 --> 00:03:40,679
+in this video Leonard has you covered
+they have data centers all around the
+
+216
+00:03:40,679 --> 00:03:40,689
+they have data centers all around the
+ 
+
+217
+00:03:40,689 --> 00:03:41,999
+they have data centers all around the
+world which means that you can set up a
+
+218
+00:03:41,999 --> 00:03:42,009
+world which means that you can set up a
+ 
+
+219
+00:03:42,009 --> 00:03:43,860
+world which means that you can set up a
+server in a location that is like
+
+220
+00:03:43,860 --> 00:03:43,870
+server in a location that is like
+ 
+
+221
+00:03:43,870 --> 00:03:45,539
+server in a location that is like
+geographically close to you which means
+
+222
+00:03:45,539 --> 00:03:45,549
+geographically close to you which means
+ 
+
+223
+00:03:45,549 --> 00:03:47,159
+geographically close to you which means
+that you'll get that low latency and
+
+224
+00:03:47,159 --> 00:03:47,169
+that you'll get that low latency and
+ 
+
+225
+00:03:47,169 --> 00:03:48,960
+that you'll get that low latency and
+you'll get the fastest speeds possible
+
+226
+00:03:48,960 --> 00:03:48,970
+you'll get the fastest speeds possible
+ 
+
+227
+00:03:48,970 --> 00:03:50,699
+you'll get the fastest speeds possible
+best of all in ER it comes with 24/7
+
+228
+00:03:50,699 --> 00:03:50,709
+best of all in ER it comes with 24/7
+ 
+
+229
+00:03:50,709 --> 00:03:52,020
+best of all in ER it comes with 24/7
+support that is a hundred percent
+
+230
+00:03:52,020 --> 00:03:52,030
+support that is a hundred percent
+ 
+
+231
+00:03:52,030 --> 00:03:54,210
+support that is a hundred percent
+managed by humans that's really
+
+232
+00:03:54,210 --> 00:03:54,220
+managed by humans that's really
+ 
+
+233
+00:03:54,220 --> 00:03:55,559
+managed by humans that's really
+important in case you need some help
+
+234
+00:03:55,559 --> 00:03:55,569
+important in case you need some help
+ 
+
+235
+00:03:55,569 --> 00:03:57,390
+important in case you need some help
+they have got your back I want to thank
+
+236
+00:03:57,390 --> 00:03:57,400
+they have got your back I want to thank
+ 
+
+237
+00:03:57,400 --> 00:03:58,710
+they have got your back I want to thank
+Lynn ardour for sponsoring this video
+
+238
+00:03:58,710 --> 00:03:58,720
+Lynn ardour for sponsoring this video
+ 
+
+239
+00:03:58,720 --> 00:04:00,420
+Lynn ardour for sponsoring this video
+making all of this possible I'll show
+
+240
+00:04:00,420 --> 00:04:00,430
+making all of this possible I'll show
+ 
+
+241
+00:04:00,430 --> 00:04:02,759
+making all of this possible I'll show
+you guys how to set up an actual lynyrd
+
+242
+00:04:02,759 --> 00:04:02,769
+you guys how to set up an actual lynyrd
+ 
+
+243
+00:04:02,769 --> 00:04:04,349
+you guys how to set up an actual lynyrd
+server so that we can get our Jenkins
+
+244
+00:04:04,349 --> 00:04:04,359
+server so that we can get our Jenkins
+ 
+
+245
+00:04:04,359 --> 00:04:06,300
+server so that we can get our Jenkins
+running on that and just how easy it is
+
+246
+00:04:06,300 --> 00:04:06,310
+running on that and just how easy it is
+ 
+
+247
+00:04:06,310 --> 00:04:08,909
+running on that and just how easy it is
+to set up Jenkins with Leonard and Linda
+
+248
+00:04:08,909 --> 00:04:08,919
+to set up Jenkins with Leonard and Linda
+ 
+
+249
+00:04:08,919 --> 00:04:10,110
+to set up Jenkins with Leonard and Linda
+have been nice enough to give you guys
+
+250
+00:04:10,110 --> 00:04:10,120
+have been nice enough to give you guys
+ 
+
+251
+00:04:10,120 --> 00:04:12,990
+have been nice enough to give you guys
+$20 credit on a newly noted account more
+
+252
+00:04:12,990 --> 00:04:13,000
+$20 credit on a newly noted account more
+ 
+
+253
+00:04:13,000 --> 00:04:15,119
+$20 credit on a newly noted account more
+on that later now a really basic staple
+
+254
+00:04:15,119 --> 00:04:15,129
+on that later now a really basic staple
+ 
+
+255
+00:04:15,129 --> 00:04:16,529
+on that later now a really basic staple
+sauce program that I've written here and
+
+256
+00:04:16,529 --> 00:04:16,539
+sauce program that I've written here and
+ 
+
+257
+00:04:16,539 --> 00:04:17,699
+sauce program that I've written here and
+I'll take you guys through that in a
+
+258
+00:04:17,699 --> 00:04:17,709
+I'll take you guys through that in a
+ 
+
+259
+00:04:17,709 --> 00:04:18,150
+I'll take you guys through that in a
+minute
+
+260
+00:04:18,150 --> 00:04:18,160
+minute
+ 
+
+261
+00:04:18,160 --> 00:04:20,040
+minute
+but really the first step here is to set
+
+262
+00:04:20,040 --> 00:04:20,050
+but really the first step here is to set
+ 
+
+263
+00:04:20,050 --> 00:04:21,840
+but really the first step here is to set
+up something called a Jenkins file so
+
+264
+00:04:21,840 --> 00:04:21,850
+up something called a Jenkins file so
+ 
+
+265
+00:04:21,850 --> 00:04:23,730
+up something called a Jenkins file so
+that we can actually tell Jenkins what
+
+266
+00:04:23,730 --> 00:04:23,740
+that we can actually tell Jenkins what
+ 
+
+267
+00:04:23,740 --> 00:04:25,680
+that we can actually tell Jenkins what
+it is we wanted to do with our project
+
+268
+00:04:25,680 --> 00:04:25,690
+it is we wanted to do with our project
+ 
+
+269
+00:04:25,690 --> 00:04:28,290
+it is we wanted to do with our project
+so here we have our repository inside a
+
+270
+00:04:28,290 --> 00:04:28,300
+so here we have our repository inside a
+ 
+
+271
+00:04:28,300 --> 00:04:29,790
+so here we have our repository inside a
+bunch and this is just a really simple
+
+272
+00:04:29,790 --> 00:04:29,800
+bunch and this is just a really simple
+ 
+
+273
+00:04:29,800 --> 00:04:31,530
+bunch and this is just a really simple
+simple sauce project as you'll see in a
+
+274
+00:04:31,530 --> 00:04:31,540
+simple sauce project as you'll see in a
+ 
+
+275
+00:04:31,540 --> 00:04:32,550
+simple sauce project as you'll see in a
+minute so let me just take you through
+
+276
+00:04:32,550 --> 00:04:32,560
+minute so let me just take you through
+ 
+
+277
+00:04:32,560 --> 00:04:34,470
+minute so let me just take you through
+the repository and show you what we've
+
+278
+00:04:34,470 --> 00:04:34,480
+the repository and show you what we've
+ 
+
+279
+00:04:34,480 --> 00:04:36,570
+the repository and show you what we've
+got here so first off there's this pre
+
+280
+00:04:36,570 --> 00:04:36,580
+got here so first off there's this pre
+ 
+
+281
+00:04:36,580 --> 00:04:38,550
+got here so first off there's this pre
+make five that lower file this is just a
+
+282
+00:04:38,550 --> 00:04:38,560
+make five that lower file this is just a
+ 
+
+283
+00:04:38,560 --> 00:04:40,380
+make five that lower file this is just a
+script for pre make so that we can
+
+284
+00:04:40,380 --> 00:04:40,390
+script for pre make so that we can
+ 
+
+285
+00:04:40,390 --> 00:04:42,300
+script for pre make so that we can
+actually construct our project files
+
+286
+00:04:42,300 --> 00:04:42,310
+actually construct our project files
+ 
+
+287
+00:04:42,310 --> 00:04:44,460
+actually construct our project files
+will get Jenkins to automatically do all
+
+288
+00:04:44,460 --> 00:04:44,470
+will get Jenkins to automatically do all
+ 
+
+289
+00:04:44,470 --> 00:04:46,170
+will get Jenkins to automatically do all
+of that stuff for us and that's why
+
+290
+00:04:46,170 --> 00:04:46,180
+of that stuff for us and that's why
+ 
+
+291
+00:04:46,180 --> 00:04:48,600
+of that stuff for us and that's why
+inside their scripts directory we've got
+
+292
+00:04:48,600 --> 00:04:48,610
+inside their scripts directory we've got
+ 
+
+293
+00:04:48,610 --> 00:04:51,480
+inside their scripts directory we've got
+this Linux build SH file this script
+
+294
+00:04:51,480 --> 00:04:51,490
+this Linux build SH file this script
+ 
+
+295
+00:04:51,490 --> 00:04:53,670
+this Linux build SH file this script
+simply runs pre make to generate make
+
+296
+00:04:53,670 --> 00:04:53,680
+simply runs pre make to generate make
+ 
+
+297
+00:04:53,680 --> 00:04:55,350
+simply runs pre make to generate make
+files for us and once we've got those
+
+298
+00:04:55,350 --> 00:04:55,360
+files for us and once we've got those
+ 
+
+299
+00:04:55,360 --> 00:04:57,390
+files for us and once we've got those
+make files we can call make to actually
+
+300
+00:04:57,390 --> 00:04:57,400
+make files we can call make to actually
+ 
+
+301
+00:04:57,400 --> 00:05:00,180
+make files we can call make to actually
+compile our project we've also got this
+
+302
+00:05:00,180 --> 00:05:00,190
+compile our project we've also got this
+ 
+
+303
+00:05:00,190 --> 00:05:02,430
+compile our project we've also got this
+Linux run of SH file this script here
+
+304
+00:05:02,430 --> 00:05:02,440
+Linux run of SH file this script here
+ 
+
+305
+00:05:02,440 --> 00:05:05,880
+Linux run of SH file this script here
+just runs our hello world program now if
+
+306
+00:05:05,880 --> 00:05:05,890
+just runs our hello world program now if
+ 
+
+307
+00:05:05,890 --> 00:05:07,470
+just runs our hello world program now if
+we go back to our main repository folder
+
+308
+00:05:07,470 --> 00:05:07,480
+we go back to our main repository folder
+ 
+
+309
+00:05:07,480 --> 00:05:09,150
+we go back to our main repository folder
+you'll see this hello world directory
+
+310
+00:05:09,150 --> 00:05:09,160
+you'll see this hello world directory
+ 
+
+311
+00:05:09,160 --> 00:05:11,070
+you'll see this hello world directory
+inside there inside source we have this
+
+312
+00:05:11,070 --> 00:05:11,080
+inside there inside source we have this
+ 
+
+313
+00:05:11,080 --> 00:05:13,170
+inside there inside source we have this
+hello world dot CPP file and you'll see
+
+314
+00:05:13,170 --> 00:05:13,180
+hello world dot CPP file and you'll see
+ 
+
+315
+00:05:13,180 --> 00:05:15,330
+hello world dot CPP file and you'll see
+that like that's it this is as simple as
+
+316
+00:05:15,330 --> 00:05:15,340
+that like that's it this is as simple as
+ 
+
+317
+00:05:15,340 --> 00:05:16,920
+that like that's it this is as simple as
+it gets really we just have a hello
+
+318
+00:05:16,920 --> 00:05:16,930
+it gets really we just have a hello
+ 
+
+319
+00:05:16,930 --> 00:05:19,680
+it gets really we just have a hello
+world program here and so finally we
+
+320
+00:05:19,680 --> 00:05:19,690
+world program here and so finally we
+ 
+
+321
+00:05:19,690 --> 00:05:21,660
+world program here and so finally we
+have this Jenkins file in our root
+
+322
+00:05:21,660 --> 00:05:21,670
+have this Jenkins file in our root
+ 
+
+323
+00:05:21,670 --> 00:05:23,640
+have this Jenkins file in our root
+repository this is this is the important
+
+324
+00:05:23,640 --> 00:05:23,650
+repository this is this is the important
+ 
+
+325
+00:05:23,650 --> 00:05:25,950
+repository this is this is the important
+file this is what tells Jenkins what on
+
+326
+00:05:25,950 --> 00:05:25,960
+file this is what tells Jenkins what on
+ 
+
+327
+00:05:25,960 --> 00:05:29,070
+file this is what tells Jenkins what on
+earth to do with our project so the way
+
+328
+00:05:29,070 --> 00:05:29,080
+earth to do with our project so the way
+ 
+
+329
+00:05:29,080 --> 00:05:30,660
+earth to do with our project so the way
+that this works is it's just a text
+
+330
+00:05:30,660 --> 00:05:30,670
+that this works is it's just a text
+ 
+
+331
+00:05:30,670 --> 00:05:32,850
+that this works is it's just a text
+files divided into stages here we have
+
+332
+00:05:32,850 --> 00:05:32,860
+files divided into stages here we have
+ 
+
+333
+00:05:32,860 --> 00:05:35,400
+files divided into stages here we have
+this build stage and this test stage so
+
+334
+00:05:35,400 --> 00:05:35,410
+this build stage and this test stage so
+ 
+
+335
+00:05:35,410 --> 00:05:36,780
+this build stage and this test stage so
+over here in the build stage this is
+
+336
+00:05:36,780 --> 00:05:36,790
+over here in the build stage this is
+ 
+
+337
+00:05:36,790 --> 00:05:39,180
+over here in the build stage this is
+what Jenkins needs to do to build our
+
+338
+00:05:39,180 --> 00:05:39,190
+what Jenkins needs to do to build our
+ 
+
+339
+00:05:39,190 --> 00:05:41,040
+what Jenkins needs to do to build our
+project so you can see here that there
+
+340
+00:05:41,040 --> 00:05:41,050
+project so you can see here that there
+ 
+
+341
+00:05:41,050 --> 00:05:42,150
+project so you can see here that there
+are multiple steps here and they're all
+
+342
+00:05:42,150 --> 00:05:42,160
+are multiple steps here and they're all
+ 
+
+343
+00:05:42,160 --> 00:05:44,070
+are multiple steps here and they're all
+just really commands we're just echoing
+
+344
+00:05:44,070 --> 00:05:44,080
+just really commands we're just echoing
+ 
+
+345
+00:05:44,080 --> 00:05:45,630
+just really commands we're just echoing
+out building into the command line so we
+
+346
+00:05:45,630 --> 00:05:45,640
+out building into the command line so we
+ 
+
+347
+00:05:45,640 --> 00:05:47,370
+out building into the command line so we
+can see it and we're marking our Linux
+
+348
+00:05:47,370 --> 00:05:47,380
+can see it and we're marking our Linux
+ 
+
+349
+00:05:47,380 --> 00:05:49,110
+can see it and we're marking our Linux
+build script as executable it's
+
+350
+00:05:49,110 --> 00:05:49,120
+build script as executable it's
+ 
+
+351
+00:05:49,120 --> 00:05:50,280
+build script as executable it's
+important to note here that by this
+
+352
+00:05:50,280 --> 00:05:50,290
+important to note here that by this
+ 
+
+353
+00:05:50,290 --> 00:05:52,380
+important to note here that by this
+stage Jenkins has already checked out
+
+354
+00:05:52,380 --> 00:05:52,390
+stage Jenkins has already checked out
+ 
+
+355
+00:05:52,390 --> 00:05:54,420
+stage Jenkins has already checked out
+our repository so we've got this we've
+
+356
+00:05:54,420 --> 00:05:54,430
+our repository so we've got this we've
+ 
+
+357
+00:05:54,430 --> 00:05:56,460
+our repository so we've got this we've
+cloned the repository and now we're able
+
+358
+00:05:56,460 --> 00:05:56,470
+cloned the repository and now we're able
+ 
+
+359
+00:05:56,470 --> 00:05:58,500
+cloned the repository and now we're able
+to obviously run the script files that
+
+360
+00:05:58,500 --> 00:05:58,510
+to obviously run the script files that
+ 
+
+361
+00:05:58,510 --> 00:06:00,300
+to obviously run the script files that
+we've got within the repository and we
+
+362
+00:06:00,300 --> 00:06:00,310
+we've got within the repository and we
+ 
+
+363
+00:06:00,310 --> 00:06:01,890
+we've got within the repository and we
+do that by first marking them as
+
+364
+00:06:01,890 --> 00:06:01,900
+do that by first marking them as
+ 
+
+365
+00:06:01,900 --> 00:06:04,200
+do that by first marking them as
+executable here and then just running
+
+366
+00:06:04,200 --> 00:06:04,210
+executable here and then just running
+ 
+
+367
+00:06:04,210 --> 00:06:05,640
+executable here and then just running
+them then we've got this archive
+
+368
+00:06:05,640 --> 00:06:05,650
+them then we've got this archive
+ 
+
+369
+00:06:05,650 --> 00:06:07,770
+them then we've got this archive
+artifacts part this is what actually
+
+370
+00:06:07,770 --> 00:06:07,780
+artifacts part this is what actually
+ 
+
+371
+00:06:07,780 --> 00:06:11,160
+artifacts part this is what actually
+saves the build program as an artifact
+
+372
+00:06:11,160 --> 00:06:11,170
+saves the build program as an artifact
+ 
+
+373
+00:06:11,170 --> 00:06:12,930
+saves the build program as an artifact
+so that we can then later run this
+
+374
+00:06:12,930 --> 00:06:12,940
+so that we can then later run this
+ 
+
+375
+00:06:12,940 --> 00:06:14,610
+so that we can then later run this
+because you can see that the next stage
+
+376
+00:06:14,610 --> 00:06:14,620
+because you can see that the next stage
+ 
+
+377
+00:06:14,620 --> 00:06:17,490
+because you can see that the next stage
+is test this is the testing stage and
+
+378
+00:06:17,490 --> 00:06:17,500
+is test this is the testing stage and
+ 
+
+379
+00:06:17,500 --> 00:06:19,860
+is test this is the testing stage and
+what happens here is we again mark the
+
+380
+00:06:19,860 --> 00:06:19,870
+what happens here is we again mark the
+ 
+
+381
+00:06:19,870 --> 00:06:22,110
+what happens here is we again mark the
+run script this time as executable so
+
+382
+00:06:22,110 --> 00:06:22,120
+run script this time as executable so
+ 
+
+383
+00:06:22,120 --> 00:06:23,880
+run script this time as executable so
+that we can run it and then we run it
+
+384
+00:06:23,880 --> 00:06:23,890
+that we can run it and then we run it
+ 
+
+385
+00:06:23,890 --> 00:06:26,580
+that we can run it and then we run it
+and this runs our program
+
+386
+00:06:26,580 --> 00:06:26,590
+and this runs our program
+ 
+
+387
+00:06:26,590 --> 00:06:28,110
+and this runs our program
+so that's it that's really all there is
+
+388
+00:06:28,110 --> 00:06:28,120
+so that's it that's really all there is
+ 
+
+389
+00:06:28,120 --> 00:06:30,090
+so that's it that's really all there is
+to it now we have a project and a
+
+390
+00:06:30,090 --> 00:06:30,100
+to it now we have a project and a
+ 
+
+391
+00:06:30,100 --> 00:06:32,220
+to it now we have a project and a
+Jenkins file which instructs Jenkins how
+
+392
+00:06:32,220 --> 00:06:32,230
+Jenkins file which instructs Jenkins how
+ 
+
+393
+00:06:32,230 --> 00:06:34,920
+Jenkins file which instructs Jenkins how
+to build and test our project now let's
+
+394
+00:06:34,920 --> 00:06:34,930
+to build and test our project now let's
+ 
+
+395
+00:06:34,930 --> 00:06:36,360
+to build and test our project now let's
+pop over to lynyrd and take a look at
+
+396
+00:06:36,360 --> 00:06:36,370
+pop over to lynyrd and take a look at
+ 
+
+397
+00:06:36,370 --> 00:06:37,860
+pop over to lynyrd and take a look at
+how we can actually set up a new server
+
+398
+00:06:37,860 --> 00:06:37,870
+how we can actually set up a new server
+ 
+
+399
+00:06:37,870 --> 00:06:40,170
+how we can actually set up a new server
+and install Jenkins the first thing
+
+400
+00:06:40,170 --> 00:06:40,180
+and install Jenkins the first thing
+ 
+
+401
+00:06:40,180 --> 00:06:41,490
+and install Jenkins the first thing
+we'll need to do is create some kind of
+
+402
+00:06:41,490 --> 00:06:41,500
+we'll need to do is create some kind of
+ 
+
+403
+00:06:41,500 --> 00:06:43,410
+we'll need to do is create some kind of
+server to run our Jenkins instance
+
+404
+00:06:43,410 --> 00:06:43,420
+server to run our Jenkins instance
+ 
+
+405
+00:06:43,420 --> 00:06:45,930
+server to run our Jenkins instance
+Leonard makes this really easy all we
+
+406
+00:06:45,930 --> 00:06:45,940
+Leonard makes this really easy all we
+ 
+
+407
+00:06:45,940 --> 00:06:47,400
+Leonard makes this really easy all we
+need to do is click on one-click apps
+
+408
+00:06:47,400 --> 00:06:47,410
+need to do is click on one-click apps
+ 
+
+409
+00:06:47,410 --> 00:06:49,800
+need to do is click on one-click apps
+select Jenkins and then choose our
+
+410
+00:06:49,800 --> 00:06:49,810
+select Jenkins and then choose our
+ 
+
+411
+00:06:49,810 --> 00:06:52,170
+select Jenkins and then choose our
+region and Leonard plan this first one
+
+412
+00:06:52,170 --> 00:06:52,180
+region and Leonard plan this first one
+ 
+
+413
+00:06:52,180 --> 00:06:54,480
+region and Leonard plan this first one
+should be fine for our needs we can give
+
+414
+00:06:54,480 --> 00:06:54,490
+should be fine for our needs we can give
+ 
+
+415
+00:06:54,490 --> 00:06:56,430
+should be fine for our needs we can give
+it a name and a root password and that's
+
+416
+00:06:56,430 --> 00:06:56,440
+it a name and a root password and that's
+ 
+
+417
+00:06:56,440 --> 00:06:57,330
+it a name and a root password and that's
+it we're done
+
+418
+00:06:57,330 --> 00:06:57,340
+it we're done
+ 
+
+419
+00:06:57,340 --> 00:06:59,310
+it we're done
+Leonard is now automatically going to
+
+420
+00:06:59,310 --> 00:06:59,320
+Leonard is now automatically going to
+ 
+
+421
+00:06:59,320 --> 00:07:01,110
+Leonard is now automatically going to
+allocate a server for us and install
+
+422
+00:07:01,110 --> 00:07:01,120
+allocate a server for us and install
+ 
+
+423
+00:07:01,120 --> 00:07:02,820
+allocate a server for us and install
+Jenkins on it so we're ready to go it's
+
+424
+00:07:02,820 --> 00:07:02,830
+Jenkins on it so we're ready to go it's
+ 
+
+425
+00:07:02,830 --> 00:07:04,350
+Jenkins on it so we're ready to go it's
+that easy and that's one of the things
+
+426
+00:07:04,350 --> 00:07:04,360
+that easy and that's one of the things
+ 
+
+427
+00:07:04,360 --> 00:07:06,180
+that easy and that's one of the things
+that I love about Leonard it's so easy
+
+428
+00:07:06,180 --> 00:07:06,190
+that I love about Leonard it's so easy
+ 
+
+429
+00:07:06,190 --> 00:07:07,830
+that I love about Leonard it's so easy
+to get going because I don't want to
+
+430
+00:07:07,830 --> 00:07:07,840
+to get going because I don't want to
+ 
+
+431
+00:07:07,840 --> 00:07:09,810
+to get going because I don't want to
+spend time setting up server stuff I
+
+432
+00:07:09,810 --> 00:07:09,820
+spend time setting up server stuff I
+ 
+
+433
+00:07:09,820 --> 00:07:11,640
+spend time setting up server stuff I
+want to spend time actually using my
+
+434
+00:07:11,640 --> 00:07:11,650
+want to spend time actually using my
+ 
+
+435
+00:07:11,650 --> 00:07:13,560
+want to spend time actually using my
+server to do the things I got the server
+
+436
+00:07:13,560 --> 00:07:13,570
+server to do the things I got the server
+ 
+
+437
+00:07:13,570 --> 00:07:15,540
+server to do the things I got the server
+for to gain access to our servers
+
+438
+00:07:15,540 --> 00:07:15,550
+for to gain access to our servers
+ 
+
+439
+00:07:15,550 --> 00:07:17,940
+for to gain access to our servers
+command line we can either SSH in or we
+
+440
+00:07:17,940 --> 00:07:17,950
+command line we can either SSH in or we
+ 
+
+441
+00:07:17,950 --> 00:07:19,530
+command line we can either SSH in or we
+can just use this console built into
+
+442
+00:07:19,530 --> 00:07:19,540
+can just use this console built into
+ 
+
+443
+00:07:19,540 --> 00:07:21,690
+can just use this console built into
+Leonard's website once Leonard has
+
+444
+00:07:21,690 --> 00:07:21,700
+Leonard's website once Leonard has
+ 
+
+445
+00:07:21,700 --> 00:07:23,370
+Leonard's website once Leonard has
+finished installing Jenkins for us we
+
+446
+00:07:23,370 --> 00:07:23,380
+finished installing Jenkins for us we
+ 
+
+447
+00:07:23,380 --> 00:07:25,080
+finished installing Jenkins for us we
+can simply navigate our browser to our
+
+448
+00:07:25,080 --> 00:07:25,090
+can simply navigate our browser to our
+ 
+
+449
+00:07:25,090 --> 00:07:27,180
+can simply navigate our browser to our
+server's IP address and finish the
+
+450
+00:07:27,180 --> 00:07:27,190
+server's IP address and finish the
+ 
+
+451
+00:07:27,190 --> 00:07:29,280
+server's IP address and finish the
+Jenkins setup process you can see that
+
+452
+00:07:29,280 --> 00:07:29,290
+Jenkins setup process you can see that
+ 
+
+453
+00:07:29,290 --> 00:07:31,140
+Jenkins setup process you can see that
+now Jenkins is in fact up and running
+
+454
+00:07:31,140 --> 00:07:31,150
+now Jenkins is in fact up and running
+ 
+
+455
+00:07:31,150 --> 00:07:32,970
+now Jenkins is in fact up and running
+and it's asking us to retrieve the root
+
+456
+00:07:32,970 --> 00:07:32,980
+and it's asking us to retrieve the root
+ 
+
+457
+00:07:32,980 --> 00:07:34,860
+and it's asking us to retrieve the root
+password from our file so let's go ahead
+
+458
+00:07:34,860 --> 00:07:34,870
+password from our file so let's go ahead
+ 
+
+459
+00:07:34,870 --> 00:07:36,990
+password from our file so let's go ahead
+and do that using the command line we'll
+
+460
+00:07:36,990 --> 00:07:37,000
+and do that using the command line we'll
+ 
+
+461
+00:07:37,000 --> 00:07:38,640
+and do that using the command line we'll
+plug in that password that we retrieved
+
+462
+00:07:38,640 --> 00:07:38,650
+plug in that password that we retrieved
+ 
+
+463
+00:07:38,650 --> 00:07:40,410
+plug in that password that we retrieved
+and now Jenkins is unlocked and we can
+
+464
+00:07:40,410 --> 00:07:40,420
+and now Jenkins is unlocked and we can
+ 
+
+465
+00:07:40,420 --> 00:07:42,720
+and now Jenkins is unlocked and we can
+continue on with the setup process I was
+
+466
+00:07:42,720 --> 00:07:42,730
+continue on with the setup process I was
+ 
+
+467
+00:07:42,730 --> 00:07:44,040
+continue on with the setup process I was
+going to select Install suggested
+
+468
+00:07:44,040 --> 00:07:44,050
+going to select Install suggested
+ 
+
+469
+00:07:44,050 --> 00:07:45,450
+going to select Install suggested
+plugins but if you like you can
+
+470
+00:07:45,450 --> 00:07:45,460
+plugins but if you like you can
+ 
+
+471
+00:07:45,460 --> 00:07:47,220
+plugins but if you like you can
+customize which plugins actually get
+
+472
+00:07:47,220 --> 00:07:47,230
+customize which plugins actually get
+ 
+
+473
+00:07:47,230 --> 00:07:49,020
+customize which plugins actually get
+installed once Jenkins has finished
+
+474
+00:07:49,020 --> 00:07:49,030
+installed once Jenkins has finished
+ 
+
+475
+00:07:49,030 --> 00:07:50,670
+installed once Jenkins has finished
+installing all of our plugins we'll need
+
+476
+00:07:50,670 --> 00:07:50,680
+installing all of our plugins we'll need
+ 
+
+477
+00:07:50,680 --> 00:07:52,890
+installing all of our plugins we'll need
+to create our first admin user I'll just
+
+478
+00:07:52,890 --> 00:07:52,900
+to create our first admin user I'll just
+ 
+
+479
+00:07:52,900 --> 00:07:54,660
+to create our first admin user I'll just
+fill in these details here and click
+
+480
+00:07:54,660 --> 00:07:54,670
+fill in these details here and click
+ 
+
+481
+00:07:54,670 --> 00:07:56,520
+fill in these details here and click
+Save and continue I'll leave this URL
+
+482
+00:07:56,520 --> 00:07:56,530
+Save and continue I'll leave this URL
+ 
+
+483
+00:07:56,530 --> 00:07:58,680
+Save and continue I'll leave this URL
+here as is and that's it Jenkins is
+
+484
+00:07:58,680 --> 00:07:58,690
+here as is and that's it Jenkins is
+ 
+
+485
+00:07:58,690 --> 00:08:00,810
+here as is and that's it Jenkins is
+ready we can now start using Jenkins now
+
+486
+00:08:00,810 --> 00:08:00,820
+ready we can now start using Jenkins now
+ 
+
+487
+00:08:00,820 --> 00:08:02,730
+ready we can now start using Jenkins now
+on a fresh Jenkins install one of the
+
+488
+00:08:02,730 --> 00:08:02,740
+on a fresh Jenkins install one of the
+ 
+
+489
+00:08:02,740 --> 00:08:03,870
+on a fresh Jenkins install one of the
+things that you might want to do is
+
+490
+00:08:03,870 --> 00:08:03,880
+things that you might want to do is
+ 
+
+491
+00:08:03,880 --> 00:08:06,090
+things that you might want to do is
+install blue ocean blue ocean is just a
+
+492
+00:08:06,090 --> 00:08:06,100
+install blue ocean blue ocean is just a
+ 
+
+493
+00:08:06,100 --> 00:08:08,970
+install blue ocean blue ocean is just a
+kind of newer more modern looking UI for
+
+494
+00:08:08,970 --> 00:08:08,980
+kind of newer more modern looking UI for
+ 
+
+495
+00:08:08,980 --> 00:08:10,800
+kind of newer more modern looking UI for
+Jenkins this is completely optional you
+
+496
+00:08:10,800 --> 00:08:10,810
+Jenkins this is completely optional you
+ 
+
+497
+00:08:10,810 --> 00:08:12,540
+Jenkins this is completely optional you
+don't really have to do this and in fact
+
+498
+00:08:12,540 --> 00:08:12,550
+don't really have to do this and in fact
+ 
+
+499
+00:08:12,550 --> 00:08:14,130
+don't really have to do this and in fact
+I tend to kind of switch between the two
+
+500
+00:08:14,130 --> 00:08:14,140
+I tend to kind of switch between the two
+ 
+
+501
+00:08:14,140 --> 00:08:15,750
+I tend to kind of switch between the two
+depending on what task I'm doing but I'm
+
+502
+00:08:15,750 --> 00:08:15,760
+depending on what task I'm doing but I'm
+ 
+
+503
+00:08:15,760 --> 00:08:17,250
+depending on what task I'm doing but I'm
+going to install blue ocean and show you
+
+504
+00:08:17,250 --> 00:08:17,260
+going to install blue ocean and show you
+ 
+
+505
+00:08:17,260 --> 00:08:18,660
+going to install blue ocean and show you
+what that's like so we'll select a blue
+
+506
+00:08:18,660 --> 00:08:18,670
+what that's like so we'll select a blue
+ 
+
+507
+00:08:18,670 --> 00:08:20,640
+what that's like so we'll select a blue
+ocean aggregator here and just click
+
+508
+00:08:20,640 --> 00:08:20,650
+ocean aggregator here and just click
+ 
+
+509
+00:08:20,650 --> 00:08:22,710
+ocean aggregator here and just click
+install without restart once that's done
+
+510
+00:08:22,710 --> 00:08:22,720
+install without restart once that's done
+ 
+
+511
+00:08:22,720 --> 00:08:24,540
+install without restart once that's done
+we can just click open blue ocean and
+
+512
+00:08:24,540 --> 00:08:24,550
+we can just click open blue ocean and
+ 
+
+513
+00:08:24,550 --> 00:08:26,580
+we can just click open blue ocean and
+then let's create our first pipeline a
+
+514
+00:08:26,580 --> 00:08:26,590
+then let's create our first pipeline a
+ 
+
+515
+00:08:26,590 --> 00:08:28,380
+then let's create our first pipeline a
+pipeline is going to be the actual
+
+516
+00:08:28,380 --> 00:08:28,390
+pipeline is going to be the actual
+ 
+
+517
+00:08:28,390 --> 00:08:30,540
+pipeline is going to be the actual
+continuous integration automation that
+
+518
+00:08:30,540 --> 00:08:30,550
+continuous integration automation that
+ 
+
+519
+00:08:30,550 --> 00:08:32,280
+continuous integration automation that
+we've been talking about our goal is to
+
+520
+00:08:32,280 --> 00:08:32,290
+we've been talking about our goal is to
+ 
+
+521
+00:08:32,290 --> 00:08:34,620
+we've been talking about our goal is to
+build and then test our project let's
+
+522
+00:08:34,620 --> 00:08:34,630
+build and then test our project let's
+ 
+
+523
+00:08:34,630 --> 00:08:36,150
+build and then test our project let's
+hook this up automatically through
+
+524
+00:08:36,150 --> 00:08:36,160
+hook this up automatically through
+ 
+
+525
+00:08:36,160 --> 00:08:37,770
+hook this up automatically through
+github now to do that we're going to
+
+526
+00:08:37,770 --> 00:08:37,780
+github now to do that we're going to
+ 
+
+527
+00:08:37,780 --> 00:08:39,840
+github now to do that we're going to
+have to create a github access token so
+
+528
+00:08:39,840 --> 00:08:39,850
+have to create a github access token so
+ 
+
+529
+00:08:39,850 --> 00:08:40,149
+have to create a github access token so
+let's
+
+530
+00:08:40,149 --> 00:08:40,159
+let's
+ 
+
+531
+00:08:40,159 --> 00:08:41,980
+let's
+over to github and set that up in our
+
+532
+00:08:41,980 --> 00:08:41,990
+over to github and set that up in our
+ 
+
+533
+00:08:41,990 --> 00:08:43,449
+over to github and set that up in our
+github profile settings I'm going to
+
+534
+00:08:43,449 --> 00:08:43,459
+github profile settings I'm going to
+ 
+
+535
+00:08:43,459 --> 00:08:45,129
+github profile settings I'm going to
+click on developer settings and then
+
+536
+00:08:45,129 --> 00:08:45,139
+click on developer settings and then
+ 
+
+537
+00:08:45,139 --> 00:08:47,230
+click on developer settings and then
+personal access tokens I'm then gonna
+
+538
+00:08:47,230 --> 00:08:47,240
+personal access tokens I'm then gonna
+ 
+
+539
+00:08:47,240 --> 00:08:49,240
+personal access tokens I'm then gonna
+click generate new token and I'll give
+
+540
+00:08:49,240 --> 00:08:49,250
+click generate new token and I'll give
+ 
+
+541
+00:08:49,250 --> 00:08:51,490
+click generate new token and I'll give
+it the name Jenkins example will give it
+
+542
+00:08:51,490 --> 00:08:51,500
+it the name Jenkins example will give it
+ 
+
+543
+00:08:51,500 --> 00:08:53,559
+it the name Jenkins example will give it
+full repository access full control of
+
+544
+00:08:53,559 --> 00:08:53,569
+full repository access full control of
+ 
+
+545
+00:08:53,569 --> 00:08:55,780
+full repository access full control of
+repository hooks and I'll also let it
+
+546
+00:08:55,780 --> 00:08:55,790
+repository hooks and I'll also let it
+ 
+
+547
+00:08:55,790 --> 00:08:57,850
+repository hooks and I'll also let it
+read our user profile data and email
+
+548
+00:08:57,850 --> 00:08:57,860
+read our user profile data and email
+ 
+
+549
+00:08:57,860 --> 00:08:59,290
+read our user profile data and email
+addresses this is important for Jenkins
+
+550
+00:08:59,290 --> 00:08:59,300
+addresses this is important for Jenkins
+ 
+
+551
+00:08:59,300 --> 00:09:01,119
+addresses this is important for Jenkins
+because it requires it I'll click
+
+552
+00:09:01,119 --> 00:09:01,129
+because it requires it I'll click
+ 
+
+553
+00:09:01,129 --> 00:09:02,980
+because it requires it I'll click
+generate token and that's it we've now
+
+554
+00:09:02,980 --> 00:09:02,990
+generate token and that's it we've now
+ 
+
+555
+00:09:02,990 --> 00:09:04,689
+generate token and that's it we've now
+got a token now I can copy and paste
+
+556
+00:09:04,689 --> 00:09:04,699
+got a token now I can copy and paste
+ 
+
+557
+00:09:04,699 --> 00:09:07,150
+got a token now I can copy and paste
+this into Jenkins without showing you
+
+558
+00:09:07,150 --> 00:09:07,160
+this into Jenkins without showing you
+ 
+
+559
+00:09:07,160 --> 00:09:08,829
+this into Jenkins without showing you
+what it is of course and I'll click
+
+560
+00:09:08,829 --> 00:09:08,839
+what it is of course and I'll click
+ 
+
+561
+00:09:08,839 --> 00:09:10,990
+what it is of course and I'll click
+connect I'll select the organization
+
+562
+00:09:10,990 --> 00:09:11,000
+connect I'll select the organization
+ 
+
+563
+00:09:11,000 --> 00:09:12,819
+connect I'll select the organization
+that contains my repository and then the
+
+564
+00:09:12,819 --> 00:09:12,829
+that contains my repository and then the
+ 
+
+565
+00:09:12,829 --> 00:09:15,009
+that contains my repository and then the
+actual repository and that's it you can
+
+566
+00:09:15,009 --> 00:09:15,019
+actual repository and that's it you can
+ 
+
+567
+00:09:15,019 --> 00:09:16,960
+actual repository and that's it you can
+see the Jenkins is immediately going to
+
+568
+00:09:16,960 --> 00:09:16,970
+see the Jenkins is immediately going to
+ 
+
+569
+00:09:16,970 --> 00:09:18,999
+see the Jenkins is immediately going to
+try and execute our pipeline by trying
+
+570
+00:09:18,999 --> 00:09:19,009
+try and execute our pipeline by trying
+ 
+
+571
+00:09:19,009 --> 00:09:20,559
+try and execute our pipeline by trying
+to clean the repository and then do
+
+572
+00:09:20,559 --> 00:09:20,569
+to clean the repository and then do
+ 
+
+573
+00:09:20,569 --> 00:09:22,540
+to clean the repository and then do
+whatever our jenkins file says let's
+
+574
+00:09:22,540 --> 00:09:22,550
+whatever our jenkins file says let's
+ 
+
+575
+00:09:22,550 --> 00:09:23,889
+whatever our jenkins file says let's
+click on this run here to see what
+
+576
+00:09:23,889 --> 00:09:23,899
+click on this run here to see what
+ 
+
+577
+00:09:23,899 --> 00:09:26,499
+click on this run here to see what
+exactly Jenkins is doing and oh you can
+
+578
+00:09:26,499 --> 00:09:26,509
+exactly Jenkins is doing and oh you can
+ 
+
+579
+00:09:26,509 --> 00:09:28,119
+exactly Jenkins is doing and oh you can
+see that it failed let's see what went
+
+580
+00:09:28,119 --> 00:09:28,129
+see that it failed let's see what went
+ 
+
+581
+00:09:28,129 --> 00:09:30,309
+see that it failed let's see what went
+wrong so scrolling through all this code
+
+582
+00:09:30,309 --> 00:09:30,319
+wrong so scrolling through all this code
+ 
+
+583
+00:09:30,319 --> 00:09:32,410
+wrong so scrolling through all this code
+here you can see that it cannot run
+
+584
+00:09:32,410 --> 00:09:32,420
+here you can see that it cannot run
+ 
+
+585
+00:09:32,420 --> 00:09:34,389
+here you can see that it cannot run
+program git and it says no such file or
+
+586
+00:09:34,389 --> 00:09:34,399
+program git and it says no such file or
+ 
+
+587
+00:09:34,399 --> 00:09:35,980
+program git and it says no such file or
+directory that's because our server
+
+588
+00:09:35,980 --> 00:09:35,990
+directory that's because our server
+ 
+
+589
+00:09:35,990 --> 00:09:37,990
+directory that's because our server
+doesn't actually have git installed and
+
+590
+00:09:37,990 --> 00:09:38,000
+doesn't actually have git installed and
+ 
+
+591
+00:09:38,000 --> 00:09:39,460
+doesn't actually have git installed and
+it needs get so that it can clone the
+
+592
+00:09:39,460 --> 00:09:39,470
+it needs get so that it can clone the
+ 
+
+593
+00:09:39,470 --> 00:09:41,319
+it needs get so that it can clone the
+repository let's go back to our service
+
+594
+00:09:41,319 --> 00:09:41,329
+repository let's go back to our service
+ 
+
+595
+00:09:41,329 --> 00:09:43,749
+repository let's go back to our service
+command line and install git we're
+
+596
+00:09:43,749 --> 00:09:43,759
+command line and install git we're
+ 
+
+597
+00:09:43,759 --> 00:09:45,280
+command line and install git we're
+already logged in as root here so no
+
+598
+00:09:45,280 --> 00:09:45,290
+already logged in as root here so no
+ 
+
+599
+00:09:45,290 --> 00:09:46,840
+already logged in as root here so no
+need to type sudo I'll just type in
+
+600
+00:09:46,840 --> 00:09:46,850
+need to type sudo I'll just type in
+ 
+
+601
+00:09:46,850 --> 00:09:49,780
+need to type sudo I'll just type in
+apt-get install git once that's done and
+
+602
+00:09:49,780 --> 00:09:49,790
+apt-get install git once that's done and
+ 
+
+603
+00:09:49,790 --> 00:09:50,980
+apt-get install git once that's done and
+while we've still got our command line
+
+604
+00:09:50,980 --> 00:09:50,990
+while we've still got our command line
+ 
+
+605
+00:09:50,990 --> 00:09:52,509
+while we've still got our command line
+open let's install everything else that
+
+606
+00:09:52,509 --> 00:09:52,519
+open let's install everything else that
+ 
+
+607
+00:09:52,519 --> 00:09:54,100
+open let's install everything else that
+we'll need we'll need to install make
+
+608
+00:09:54,100 --> 00:09:54,110
+we'll need we'll need to install make
+ 
+
+609
+00:09:54,110 --> 00:09:55,600
+we'll need we'll need to install make
+and then G plus plus so that we can
+
+610
+00:09:55,600 --> 00:09:55,610
+and then G plus plus so that we can
+ 
+
+611
+00:09:55,610 --> 00:09:57,490
+and then G plus plus so that we can
+actually compile our code once our
+
+612
+00:09:57,490 --> 00:09:57,500
+actually compile our code once our
+ 
+
+613
+00:09:57,500 --> 00:09:58,990
+actually compile our code once our
+server finishes installing everything
+
+614
+00:09:58,990 --> 00:09:59,000
+server finishes installing everything
+ 
+
+615
+00:09:59,000 --> 00:10:00,579
+server finishes installing everything
+let's go back to Jenkins and we'll just
+
+616
+00:10:00,579 --> 00:10:00,589
+let's go back to Jenkins and we'll just
+ 
+
+617
+00:10:00,589 --> 00:10:02,650
+let's go back to Jenkins and we'll just
+click this rerun button here this is
+
+618
+00:10:02,650 --> 00:10:02,660
+click this rerun button here this is
+ 
+
+619
+00:10:02,660 --> 00:10:05,170
+click this rerun button here this is
+going to rerun this specific run meaning
+
+620
+00:10:05,170 --> 00:10:05,180
+going to rerun this specific run meaning
+ 
+
+621
+00:10:05,180 --> 00:10:06,069
+going to rerun this specific run meaning
+it's not going to check out a different
+
+622
+00:10:06,069 --> 00:10:06,079
+it's not going to check out a different
+ 
+
+623
+00:10:06,079 --> 00:10:07,480
+it's not going to check out a different
+commit or anything is literally just
+
+624
+00:10:07,480 --> 00:10:07,490
+commit or anything is literally just
+ 
+
+625
+00:10:07,490 --> 00:10:09,550
+commit or anything is literally just
+going to rerun what just happened all
+
+626
+00:10:09,550 --> 00:10:09,560
+going to rerun what just happened all
+ 
+
+627
+00:10:09,560 --> 00:10:11,110
+going to rerun what just happened all
+right check out from version control
+
+628
+00:10:11,110 --> 00:10:11,120
+right check out from version control
+ 
+
+629
+00:10:11,120 --> 00:10:12,819
+right check out from version control
+succeeded and you can see everything
+
+630
+00:10:12,819 --> 00:10:12,829
+succeeded and you can see everything
+ 
+
+631
+00:10:12,829 --> 00:10:17,139
+succeeded and you can see everything
+else succeeded as well awesome sorry
+
+632
+00:10:17,139 --> 00:10:17,149
+else succeeded as well awesome sorry
+ 
+
+633
+00:10:17,149 --> 00:10:18,460
+else succeeded as well awesome sorry
+about that you can see here that there
+
+634
+00:10:18,460 --> 00:10:18,470
+about that you can see here that there
+ 
+
+635
+00:10:18,470 --> 00:10:20,350
+about that you can see here that there
+are two phases to our pipeline we've got
+
+636
+00:10:20,350 --> 00:10:20,360
+are two phases to our pipeline we've got
+ 
+
+637
+00:10:20,360 --> 00:10:22,389
+are two phases to our pipeline we've got
+the build that passed in two seconds and
+
+638
+00:10:22,389 --> 00:10:22,399
+the build that passed in two seconds and
+ 
+
+639
+00:10:22,399 --> 00:10:24,579
+the build that passed in two seconds and
+then the tests that pass in one second
+
+640
+00:10:24,579 --> 00:10:24,589
+then the tests that pass in one second
+ 
+
+641
+00:10:24,589 --> 00:10:26,650
+then the tests that pass in one second
+if we drop down this Linux run script
+
+642
+00:10:26,650 --> 00:10:26,660
+if we drop down this Linux run script
+ 
+
+643
+00:10:26,660 --> 00:10:28,030
+if we drop down this Linux run script
+you can see the output of our script
+
+644
+00:10:28,030 --> 00:10:28,040
+you can see the output of our script
+ 
+
+645
+00:10:28,040 --> 00:10:29,290
+you can see the output of our script
+which says hello world
+
+646
+00:10:29,290 --> 00:10:29,300
+which says hello world
+ 
+
+647
+00:10:29,300 --> 00:10:31,540
+which says hello world
+so our program ran successfully yay and
+
+648
+00:10:31,540 --> 00:10:31,550
+so our program ran successfully yay and
+ 
+
+649
+00:10:31,550 --> 00:10:33,699
+so our program ran successfully yay and
+going back to our list of runs you can
+
+650
+00:10:33,699 --> 00:10:33,709
+going back to our list of runs you can
+ 
+
+651
+00:10:33,709 --> 00:10:35,379
+going back to our list of runs you can
+see that this has a green checkmark
+
+652
+00:10:35,379 --> 00:10:35,389
+see that this has a green checkmark
+ 
+
+653
+00:10:35,389 --> 00:10:37,540
+see that this has a green checkmark
+status everything succeeded and our
+
+654
+00:10:37,540 --> 00:10:37,550
+status everything succeeded and our
+ 
+
+655
+00:10:37,550 --> 00:10:39,819
+status everything succeeded and our
+project is in fact sunny let's get out
+
+656
+00:10:39,819 --> 00:10:39,829
+project is in fact sunny let's get out
+ 
+
+657
+00:10:39,829 --> 00:10:41,199
+project is in fact sunny let's get out
+of blue ocean and see what regular
+
+658
+00:10:41,199 --> 00:10:41,209
+of blue ocean and see what regular
+ 
+
+659
+00:10:41,209 --> 00:10:42,819
+of blue ocean and see what regular
+Jenkins looks like so we're inside
+
+660
+00:10:42,819 --> 00:10:42,829
+Jenkins looks like so we're inside
+ 
+
+661
+00:10:42,829 --> 00:10:44,860
+Jenkins looks like so we're inside
+Jenkins example let's click on master
+
+662
+00:10:44,860 --> 00:10:44,870
+Jenkins example let's click on master
+ 
+
+663
+00:10:44,870 --> 00:10:46,900
+Jenkins example let's click on master
+if we click build now what's gonna
+
+664
+00:10:46,900 --> 00:10:46,910
+if we click build now what's gonna
+ 
+
+665
+00:10:46,910 --> 00:10:48,699
+if we click build now what's gonna
+happen is Jenkins is actually going to
+
+666
+00:10:48,699 --> 00:10:48,709
+happen is Jenkins is actually going to
+ 
+
+667
+00:10:48,709 --> 00:10:50,110
+happen is Jenkins is actually going to
+retrieve the latest commits it's gonna
+
+668
+00:10:50,110 --> 00:10:50,120
+retrieve the latest commits it's gonna
+ 
+
+669
+00:10:50,120 --> 00:10:52,360
+retrieve the latest commits it's gonna
+rerun that whole clone process and
+
+670
+00:10:52,360 --> 00:10:52,370
+rerun that whole clone process and
+ 
+
+671
+00:10:52,370 --> 00:10:54,090
+rerun that whole clone process and
+execute our pipeline
+
+672
+00:10:54,090 --> 00:10:54,100
+execute our pipeline
+ 
+
+673
+00:10:54,100 --> 00:10:56,129
+execute our pipeline
+let's see if that works out let's click
+
+674
+00:10:56,129 --> 00:10:56,139
+let's see if that works out let's click
+ 
+
+675
+00:10:56,139 --> 00:10:57,509
+let's see if that works out let's click
+on this specific run to get more
+
+676
+00:10:57,509 --> 00:10:57,519
+on this specific run to get more
+ 
+
+677
+00:10:57,519 --> 00:10:59,340
+on this specific run to get more
+information about it you can see here
+
+678
+00:10:59,340 --> 00:10:59,350
+information about it you can see here
+ 
+
+679
+00:10:59,350 --> 00:11:00,870
+information about it you can see here
+that it's already finished running this
+
+680
+00:11:00,870 --> 00:11:00,880
+that it's already finished running this
+ 
+
+681
+00:11:00,880 --> 00:11:02,790
+that it's already finished running this
+and we do in fact have a build artifact
+
+682
+00:11:02,790 --> 00:11:02,800
+and we do in fact have a build artifact
+ 
+
+683
+00:11:02,800 --> 00:11:04,350
+and we do in fact have a build artifact
+that we chose to keep from our build
+
+684
+00:11:04,350 --> 00:11:04,360
+that we chose to keep from our build
+ 
+
+685
+00:11:04,360 --> 00:11:06,300
+that we chose to keep from our build
+which is the hello world program this is
+
+686
+00:11:06,300 --> 00:11:06,310
+which is the hello world program this is
+ 
+
+687
+00:11:06,310 --> 00:11:08,400
+which is the hello world program this is
+literally the Linux program that we can
+
+688
+00:11:08,400 --> 00:11:08,410
+literally the Linux program that we can
+ 
+
+689
+00:11:08,410 --> 00:11:10,920
+literally the Linux program that we can
+well download and run on Linux if I
+
+690
+00:11:10,920 --> 00:11:10,930
+well download and run on Linux if I
+ 
+
+691
+00:11:10,930 --> 00:11:12,569
+well download and run on Linux if I
+click it is just going to download it we
+
+692
+00:11:12,569 --> 00:11:12,579
+click it is just going to download it we
+ 
+
+693
+00:11:12,579 --> 00:11:13,860
+click it is just going to download it we
+can also look at our console output
+
+694
+00:11:13,860 --> 00:11:13,870
+can also look at our console output
+ 
+
+695
+00:11:13,870 --> 00:11:16,079
+can also look at our console output
+which is just a kind of less formatted
+
+696
+00:11:16,079 --> 00:11:16,089
+which is just a kind of less formatted
+ 
+
+697
+00:11:16,089 --> 00:11:17,730
+which is just a kind of less formatted
+less sorted version of what we saw in
+
+698
+00:11:17,730 --> 00:11:17,740
+less sorted version of what we saw in
+ 
+
+699
+00:11:17,740 --> 00:11:19,470
+less sorted version of what we saw in
+blue ocean you can see that it's built
+
+700
+00:11:19,470 --> 00:11:19,480
+blue ocean you can see that it's built
+ 
+
+701
+00:11:19,480 --> 00:11:21,300
+blue ocean you can see that it's built
+it and then has run it here's our hello
+
+702
+00:11:21,300 --> 00:11:21,310
+it and then has run it here's our hello
+ 
+
+703
+00:11:21,310 --> 00:11:23,400
+it and then has run it here's our hello
+world output if we flip back to our
+
+704
+00:11:23,400 --> 00:11:23,410
+world output if we flip back to our
+ 
+
+705
+00:11:23,410 --> 00:11:25,139
+world output if we flip back to our
+github repository you can see that in
+
+706
+00:11:25,139 --> 00:11:25,149
+github repository you can see that in
+ 
+
+707
+00:11:25,149 --> 00:11:27,389
+github repository you can see that in
+fact our last commit was successful all
+
+708
+00:11:27,389 --> 00:11:27,399
+fact our last commit was successful all
+ 
+
+709
+00:11:27,399 --> 00:11:29,430
+fact our last commit was successful all
+checks have been passed because Jenkins
+
+710
+00:11:29,430 --> 00:11:29,440
+checks have been passed because Jenkins
+ 
+
+711
+00:11:29,440 --> 00:11:31,319
+checks have been passed because Jenkins
+automatically reflects that data back to
+
+712
+00:11:31,319 --> 00:11:31,329
+automatically reflects that data back to
+ 
+
+713
+00:11:31,329 --> 00:11:33,449
+automatically reflects that data back to
+github so that's super useful now the
+
+714
+00:11:33,449 --> 00:11:33,459
+github so that's super useful now the
+ 
+
+715
+00:11:33,459 --> 00:11:35,370
+github so that's super useful now the
+only issue here is that at the moment we
+
+716
+00:11:35,370 --> 00:11:35,380
+only issue here is that at the moment we
+ 
+
+717
+00:11:35,380 --> 00:11:37,499
+only issue here is that at the moment we
+have to manually click build now if we
+
+718
+00:11:37,499 --> 00:11:37,509
+have to manually click build now if we
+ 
+
+719
+00:11:37,509 --> 00:11:38,939
+have to manually click build now if we
+want to actually build the latest
+
+720
+00:11:38,939 --> 00:11:38,949
+want to actually build the latest
+ 
+
+721
+00:11:38,949 --> 00:11:40,710
+want to actually build the latest
+commits in our repository but what we
+
+722
+00:11:40,710 --> 00:11:40,720
+commits in our repository but what we
+ 
+
+723
+00:11:40,720 --> 00:11:42,809
+commits in our repository but what we
+can actually do is set up a web hook so
+
+724
+00:11:42,809 --> 00:11:42,819
+can actually do is set up a web hook so
+ 
+
+725
+00:11:42,819 --> 00:11:44,639
+can actually do is set up a web hook so
+that every time that we commit Jenkins
+
+726
+00:11:44,639 --> 00:11:44,649
+that every time that we commit Jenkins
+ 
+
+727
+00:11:44,649 --> 00:11:46,680
+that every time that we commit Jenkins
+will automatically run a build on that
+
+728
+00:11:46,680 --> 00:11:46,690
+will automatically run a build on that
+ 
+
+729
+00:11:46,690 --> 00:11:48,420
+will automatically run a build on that
+latest commit let's click on our
+
+730
+00:11:48,420 --> 00:11:48,430
+latest commit let's click on our
+ 
+
+731
+00:11:48,430 --> 00:11:50,309
+latest commit let's click on our
+repository settings and then web hooks
+
+732
+00:11:50,309 --> 00:11:50,319
+repository settings and then web hooks
+ 
+
+733
+00:11:50,319 --> 00:11:52,470
+repository settings and then web hooks
+and unless add a web hook now to set up
+
+734
+00:11:52,470 --> 00:11:52,480
+and unless add a web hook now to set up
+ 
+
+735
+00:11:52,480 --> 00:11:54,329
+and unless add a web hook now to set up
+this web hook with Jenkins we just need
+
+736
+00:11:54,329 --> 00:11:54,339
+this web hook with Jenkins we just need
+ 
+
+737
+00:11:54,339 --> 00:11:56,910
+this web hook with Jenkins we just need
+to drop in the URL of our server and
+
+738
+00:11:56,910 --> 00:11:56,920
+to drop in the URL of our server and
+ 
+
+739
+00:11:56,920 --> 00:11:59,429
+to drop in the URL of our server and
+then add four slash github - web hook
+
+740
+00:11:59,429 --> 00:11:59,439
+then add four slash github - web hook
+ 
+
+741
+00:11:59,439 --> 00:12:01,530
+then add four slash github - web hook
+we'll change the content type to be JSON
+
+742
+00:12:01,530 --> 00:12:01,540
+we'll change the content type to be JSON
+ 
+
+743
+00:12:01,540 --> 00:12:03,210
+we'll change the content type to be JSON
+and we can leave the secret blank
+
+744
+00:12:03,210 --> 00:12:03,220
+and we can leave the secret blank
+ 
+
+745
+00:12:03,220 --> 00:12:05,610
+and we can leave the secret blank
+because we have no secrets make sure
+
+746
+00:12:05,610 --> 00:12:05,620
+because we have no secrets make sure
+ 
+
+747
+00:12:05,620 --> 00:12:07,679
+because we have no secrets make sure
+that pushes is selected here under the
+
+748
+00:12:07,679 --> 00:12:07,689
+that pushes is selected here under the
+ 
+
+749
+00:12:07,689 --> 00:12:09,540
+that pushes is selected here under the
+individual events and that's it let's
+
+750
+00:12:09,540 --> 00:12:09,550
+individual events and that's it let's
+ 
+
+751
+00:12:09,550 --> 00:12:12,179
+individual events and that's it let's
+click add web hook now let's go back to
+
+752
+00:12:12,179 --> 00:12:12,189
+click add web hook now let's go back to
+ 
+
+753
+00:12:12,189 --> 00:12:14,129
+click add web hook now let's go back to
+Jenkins and we'll open blue ocean and
+
+754
+00:12:14,129 --> 00:12:14,139
+Jenkins and we'll open blue ocean and
+ 
+
+755
+00:12:14,139 --> 00:12:15,509
+Jenkins and we'll open blue ocean and
+we'll just keep this view here with all
+
+756
+00:12:15,509 --> 00:12:15,519
+we'll just keep this view here with all
+ 
+
+757
+00:12:15,519 --> 00:12:17,129
+we'll just keep this view here with all
+of our builds open so that when we
+
+758
+00:12:17,129 --> 00:12:17,139
+of our builds open so that when we
+ 
+
+759
+00:12:17,139 --> 00:12:18,990
+of our builds open so that when we
+commit something new we can see if it
+
+760
+00:12:18,990 --> 00:12:19,000
+commit something new we can see if it
+ 
+
+761
+00:12:19,000 --> 00:12:20,970
+commit something new we can see if it
+worked or not so going back to our Linux
+
+762
+00:12:20,970 --> 00:12:20,980
+worked or not so going back to our Linux
+ 
+
+763
+00:12:20,980 --> 00:12:22,110
+worked or not so going back to our Linux
+computer now let's go into the
+
+764
+00:12:22,110 --> 00:12:22,120
+computer now let's go into the
+ 
+
+765
+00:12:22,120 --> 00:12:24,179
+computer now let's go into the
+repository and change something I'll go
+
+766
+00:12:24,179 --> 00:12:24,189
+repository and change something I'll go
+ 
+
+767
+00:12:24,189 --> 00:12:26,040
+repository and change something I'll go
+into that HelloWorld source file and
+
+768
+00:12:26,040 --> 00:12:26,050
+into that HelloWorld source file and
+ 
+
+769
+00:12:26,050 --> 00:12:27,780
+into that HelloWorld source file and
+I'll change it to say hello Jenkins
+
+770
+00:12:27,780 --> 00:12:27,790
+I'll change it to say hello Jenkins
+ 
+
+771
+00:12:27,790 --> 00:12:29,639
+I'll change it to say hello Jenkins
+instead of hello world once we've done
+
+772
+00:12:29,639 --> 00:12:29,649
+instead of hello world once we've done
+ 
+
+773
+00:12:29,649 --> 00:12:31,410
+instead of hello world once we've done
+that let's commit this we'll go to our
+
+774
+00:12:31,410 --> 00:12:31,420
+that let's commit this we'll go to our
+ 
+
+775
+00:12:31,420 --> 00:12:33,329
+that let's commit this we'll go to our
+terminal let's just check out get status
+
+776
+00:12:33,329 --> 00:12:33,339
+terminal let's just check out get status
+ 
+
+777
+00:12:33,339 --> 00:12:35,579
+terminal let's just check out get status
+ok cool we've got that changed file and
+
+778
+00:12:35,579 --> 00:12:35,589
+ok cool we've got that changed file and
+ 
+
+779
+00:12:35,589 --> 00:12:37,050
+ok cool we've got that changed file and
+it's the only file that's changed inside
+
+780
+00:12:37,050 --> 00:12:37,060
+it's the only file that's changed inside
+ 
+
+781
+00:12:37,060 --> 00:12:38,370
+it's the only file that's changed inside
+this repository so let's go ahead and
+
+782
+00:12:38,370 --> 00:12:38,380
+this repository so let's go ahead and
+ 
+
+783
+00:12:38,380 --> 00:12:40,860
+this repository so let's go ahead and
+add it and then we'll commit it I'll
+
+784
+00:12:40,860 --> 00:12:40,870
+add it and then we'll commit it I'll
+ 
+
+785
+00:12:40,870 --> 00:12:42,809
+add it and then we'll commit it I'll
+just set the message to be updated
+
+786
+00:12:42,809 --> 00:12:42,819
+just set the message to be updated
+ 
+
+787
+00:12:42,819 --> 00:12:44,699
+just set the message to be updated
+program once we've done that let's push
+
+788
+00:12:44,699 --> 00:12:44,709
+program once we've done that let's push
+ 
+
+789
+00:12:44,709 --> 00:12:46,889
+program once we've done that let's push
+it to github
+
+790
+00:12:46,889 --> 00:12:46,899
+it to github
+ 
+
+791
+00:12:46,899 --> 00:12:48,210
+it to github
+you can say that as soon as we've pushed
+
+792
+00:12:48,210 --> 00:12:48,220
+you can say that as soon as we've pushed
+ 
+
+793
+00:12:48,220 --> 00:12:50,009
+you can say that as soon as we've pushed
+and you commit to the repository Jenkins
+
+794
+00:12:50,009 --> 00:12:50,019
+and you commit to the repository Jenkins
+ 
+
+795
+00:12:50,019 --> 00:12:51,720
+and you commit to the repository Jenkins
+has received this push event branch
+
+796
+00:12:51,720 --> 00:12:51,730
+has received this push event branch
+ 
+
+797
+00:12:51,730 --> 00:12:53,549
+has received this push event branch
+master and it's already running our
+
+798
+00:12:53,549 --> 00:12:53,559
+master and it's already running our
+ 
+
+799
+00:12:53,559 --> 00:12:56,009
+master and it's already running our
+pipeline that was honestly seconds after
+
+800
+00:12:56,009 --> 00:12:56,019
+pipeline that was honestly seconds after
+ 
+
+801
+00:12:56,019 --> 00:12:57,840
+pipeline that was honestly seconds after
+that push was actually made and you can
+
+802
+00:12:57,840 --> 00:12:57,850
+that push was actually made and you can
+ 
+
+803
+00:12:57,850 --> 00:12:59,850
+that push was actually made and you can
+see that a few seconds later six seconds
+
+804
+00:12:59,850 --> 00:12:59,860
+see that a few seconds later six seconds
+ 
+
+805
+00:12:59,860 --> 00:13:01,499
+see that a few seconds later six seconds
+later it's all completed successfully
+
+806
+00:13:01,499 --> 00:13:01,509
+later it's all completed successfully
+ 
+
+807
+00:13:01,509 --> 00:13:03,329
+later it's all completed successfully
+and our get message has come through
+
+808
+00:13:03,329 --> 00:13:03,339
+and our get message has come through
+ 
+
+809
+00:13:03,339 --> 00:13:05,369
+and our get message has come through
+here updated program so let's click on
+
+810
+00:13:05,369 --> 00:13:05,379
+here updated program so let's click on
+ 
+
+811
+00:13:05,379 --> 00:13:07,019
+here updated program so let's click on
+it and see what the result was and you
+
+812
+00:13:07,019 --> 00:13:07,029
+it and see what the result was and you
+ 
+
+813
+00:13:07,029 --> 00:13:08,999
+it and see what the result was and you
+can see that our output is in fact hello
+
+814
+00:13:08,999 --> 00:13:09,009
+can see that our output is in fact hello
+ 
+
+815
+00:13:09,009 --> 00:13:11,160
+can see that our output is in fact hello
+Jenkins all of our new changes have come
+
+816
+00:13:11,160 --> 00:13:11,170
+Jenkins all of our new changes have come
+ 
+
+817
+00:13:11,170 --> 00:13:13,019
+Jenkins all of our new changes have come
+through and run successfully so
+
+818
+00:13:13,019 --> 00:13:13,029
+through and run successfully so
+ 
+
+819
+00:13:13,029 --> 00:13:14,489
+through and run successfully so
+hopefully that gave you guys an idea of
+
+820
+00:13:14,489 --> 00:13:14,499
+hopefully that gave you guys an idea of
+ 
+
+821
+00:13:14,499 --> 00:13:16,530
+hopefully that gave you guys an idea of
+how you can actually set up CI for your
+
+822
+00:13:16,530 --> 00:13:16,540
+how you can actually set up CI for your
+ 
+
+823
+00:13:16,540 --> 00:13:17,790
+how you can actually set up CI for your
+project so that you're continually
+
+824
+00:13:17,790 --> 00:13:17,800
+project so that you're continually
+ 
+
+825
+00:13:17,800 --> 00:13:20,040
+project so that you're continually
+working in a stable environment now we
+
+826
+00:13:20,040 --> 00:13:20,050
+working in a stable environment now we
+ 
+
+827
+00:13:20,050 --> 00:13:22,290
+working in a stable environment now we
+did use linux completely for our whole
+
+828
+00:13:22,290 --> 00:13:22,300
+did use linux completely for our whole
+ 
+
+829
+00:13:22,300 --> 00:13:23,579
+did use linux completely for our whole
+environment today but you can definitely
+
+830
+00:13:23,579 --> 00:13:23,589
+environment today but you can definitely
+ 
+
+831
+00:13:23,589 --> 00:13:25,949
+environment today but you can definitely
+apply this to multiple platforms that's
+
+832
+00:13:25,949 --> 00:13:25,959
+apply this to multiple platforms that's
+ 
+
+833
+00:13:25,959 --> 00:13:27,359
+apply this to multiple platforms that's
+kind of the whole point it's very
+
+834
+00:13:27,359 --> 00:13:27,369
+kind of the whole point it's very
+ 
+
+835
+00:13:27,369 --> 00:13:28,859
+kind of the whole point it's very
+popular of course for applications these
+
+836
+00:13:28,859 --> 00:13:28,869
+popular of course for applications these
+ 
+
+837
+00:13:28,869 --> 00:13:31,199
+popular of course for applications these
+days true target multiple platforms but
+
+838
+00:13:31,199 --> 00:13:31,209
+days true target multiple platforms but
+ 
+
+839
+00:13:31,209 --> 00:13:33,480
+days true target multiple platforms but
+if I'm working on Windows using Visual
+
+840
+00:13:33,480 --> 00:13:33,490
+if I'm working on Windows using Visual
+ 
+
+841
+00:13:33,490 --> 00:13:36,780
+if I'm working on Windows using Visual
+Studio but my app also runs on like a
+
+842
+00:13:36,780 --> 00:13:36,790
+Studio but my app also runs on like a
+ 
+
+843
+00:13:36,790 --> 00:13:40,319
+Studio but my app also runs on like a
+mobile device or Mac or Linux I don't
+
+844
+00:13:40,319 --> 00:13:40,329
+mobile device or Mac or Linux I don't
+ 
+
+845
+00:13:40,329 --> 00:13:42,689
+mobile device or Mac or Linux I don't
+want to have to continually just open up
+
+846
+00:13:42,689 --> 00:13:42,699
+want to have to continually just open up
+ 
+
+847
+00:13:42,699 --> 00:13:44,519
+want to have to continually just open up
+that computer and run all the tests and
+
+848
+00:13:44,519 --> 00:13:44,529
+that computer and run all the tests and
+ 
+
+849
+00:13:44,529 --> 00:13:46,470
+that computer and run all the tests and
+actually make sure that my code compiles
+
+850
+00:13:46,470 --> 00:13:46,480
+actually make sure that my code compiles
+ 
+
+851
+00:13:46,480 --> 00:13:49,470
+actually make sure that my code compiles
+on clang and not just em SVC I want CI
+
+852
+00:13:49,470 --> 00:13:49,480
+on clang and not just em SVC I want CI
+ 
+
+853
+00:13:49,480 --> 00:13:51,360
+on clang and not just em SVC I want CI
+to do that for me and that's one of the
+
+854
+00:13:51,360 --> 00:13:51,370
+to do that for me and that's one of the
+ 
+
+855
+00:13:51,370 --> 00:13:53,069
+to do that for me and that's one of the
+really strong benefits of setting
+
+856
+00:13:53,069 --> 00:13:53,079
+really strong benefits of setting
+ 
+
+857
+00:13:53,079 --> 00:13:54,569
+really strong benefits of setting
+something like this up anyway that's
+
+858
+00:13:54,569 --> 00:13:54,579
+something like this up anyway that's
+ 
+
+859
+00:13:54,579 --> 00:13:56,069
+something like this up anyway that's
+probably a story for another video I
+
+860
+00:13:56,069 --> 00:13:56,079
+probably a story for another video I
+ 
+
+861
+00:13:56,079 --> 00:13:57,509
+probably a story for another video I
+hope you guys enjoyed this video if you
+
+862
+00:13:57,509 --> 00:13:57,519
+hope you guys enjoyed this video if you
+ 
+
+863
+00:13:57,519 --> 00:13:59,129
+hope you guys enjoyed this video if you
+did please hit that like button a huge
+
+864
+00:13:59,129 --> 00:13:59,139
+did please hit that like button a huge
+ 
+
+865
+00:13:59,139 --> 00:14:00,749
+did please hit that like button a huge
+thank you again to Leonard for
+
+866
+00:14:00,749 --> 00:14:00,759
+thank you again to Leonard for
+ 
+
+867
+00:14:00,759 --> 00:14:02,519
+thank you again to Leonard for
+sponsoring this video you guys can try
+
+868
+00:14:02,519 --> 00:14:02,529
+sponsoring this video you guys can try
+ 
+
+869
+00:14:02,529 --> 00:14:04,049
+sponsoring this video you guys can try
+later it out for yourselves there's a
+
+870
+00:14:04,049 --> 00:14:04,059
+later it out for yourselves there's a
+ 
+
+871
+00:14:04,059 --> 00:14:05,819
+later it out for yourselves there's a
+link in the description to get $20
+
+872
+00:14:05,819 --> 00:14:05,829
+link in the description to get $20
+ 
+
+873
+00:14:05,829 --> 00:14:08,160
+link in the description to get $20
+credit toward a new Lonard account check
+
+874
+00:14:08,160 --> 00:14:08,170
+credit toward a new Lonard account check
+ 
+
+875
+00:14:08,170 --> 00:14:09,179
+credit toward a new Lonard account check
+it out and let me know what you think
+
+876
+00:14:09,179 --> 00:14:09,189
+it out and let me know what you think
+ 
+
+877
+00:14:09,189 --> 00:14:10,470
+it out and let me know what you think
+you can use that credit to try out
+
+878
+00:14:10,470 --> 00:14:10,480
+you can use that credit to try out
+ 
+
+879
+00:14:10,480 --> 00:14:12,269
+you can use that credit to try out
+Leonard's growing list of applications
+
+880
+00:14:12,269 --> 00:14:12,279
+Leonard's growing list of applications
+ 
+
+881
+00:14:12,279 --> 00:14:14,160
+Leonard's growing list of applications
+such as setting up a Jenkins server like
+
+882
+00:14:14,160 --> 00:14:14,170
+such as setting up a Jenkins server like
+ 
+
+883
+00:14:14,170 --> 00:14:16,350
+such as setting up a Jenkins server like
+I did in this video we can really use it
+
+884
+00:14:16,350 --> 00:14:16,360
+I did in this video we can really use it
+ 
+
+885
+00:14:16,360 --> 00:14:17,669
+I did in this video we can really use it
+to host any projects you like online
+
+886
+00:14:17,669 --> 00:14:17,679
+to host any projects you like online
+ 
+
+887
+00:14:17,679 --> 00:14:19,230
+to host any projects you like online
+give them a shot and let me know what
+
+888
+00:14:19,230 --> 00:14:19,240
+give them a shot and let me know what
+ 
+
+889
+00:14:19,240 --> 00:14:20,910
+give them a shot and let me know what
+you guys think and I will see you next
+
+890
+00:14:20,910 --> 00:14:20,920
+you guys think and I will see you next
+ 
+
+891
+00:14:20,920 --> 00:14:21,560
+you guys think and I will see you next
+time goodbye
+
+892
+00:14:21,560 --> 00:14:21,570
+time goodbye
+ 
+
+893
+00:14:21,570 --> 00:14:36,850
+time goodbye
+[Music]
+
+894
+00:14:36,850 --> 00:14:36,860
+
+ 
+
+895
+00:14:36,860 --> 00:14:38,920
+
+you
+

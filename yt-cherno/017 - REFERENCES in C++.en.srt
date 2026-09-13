@@ -1,0 +1,3075 @@
+1
+00:00:00,120 --> 00:00:02,310
+
+hey what's up guys my name is the Cho
+
+2
+00:00:02,310 --> 00:00:02,320
+hey what's up guys my name is the Cho
+ 
+
+3
+00:00:02,320 --> 00:00:05,550
+hey what's up guys my name is the Cho
+and welcome back to my C++ Series today
+
+4
+00:00:05,550 --> 00:00:05,560
+and welcome back to my C++ Series today
+ 
+
+5
+00:00:05,560 --> 00:00:06,430
+and welcome back to my C++ Series today
+we're going to be talking about
+
+6
+00:00:06,430 --> 00:00:06,440
+we're going to be talking about
+ 
+
+7
+00:00:06,440 --> 00:00:08,270
+we're going to be talking about
+references last week we talked about
+
+8
+00:00:08,270 --> 00:00:08,280
+references last week we talked about
+ 
+
+9
+00:00:08,280 --> 00:00:10,310
+references last week we talked about
+pointers so if you didn't see that video
+
+10
+00:00:10,310 --> 00:00:10,320
+pointers so if you didn't see that video
+ 
+
+11
+00:00:10,320 --> 00:00:13,870
+pointers so if you didn't see that video
+you are 100% going to have to because
+
+12
+00:00:13,870 --> 00:00:13,880
+you are 100% going to have to because
+ 
+
+13
+00:00:13,880 --> 00:00:15,709
+you are 100% going to have to because
+references are really just an extension
+
+14
+00:00:15,709 --> 00:00:15,719
+references are really just an extension
+ 
+
+15
+00:00:15,719 --> 00:00:17,710
+references are really just an extension
+of pointers so you need to be able to
+
+16
+00:00:17,710 --> 00:00:17,720
+of pointers so you need to be able to
+ 
+
+17
+00:00:17,720 --> 00:00:19,870
+of pointers so you need to be able to
+understand at least at a basic level how
+
+18
+00:00:19,870 --> 00:00:19,880
+understand at least at a basic level how
+ 
+
+19
+00:00:19,880 --> 00:00:22,109
+understand at least at a basic level how
+pointers work in order to actually get
+
+20
+00:00:22,109 --> 00:00:22,119
+pointers work in order to actually get
+ 
+
+21
+00:00:22,119 --> 00:00:24,349
+pointers work in order to actually get
+this video so go ahead there'll be a
+
+22
+00:00:24,349 --> 00:00:24,359
+this video so go ahead there'll be a
+ 
+
+23
+00:00:24,359 --> 00:00:25,589
+this video so go ahead there'll be a
+link in the description below if you
+
+24
+00:00:25,589 --> 00:00:25,599
+link in the description below if you
+ 
+
+25
+00:00:25,599 --> 00:00:27,029
+link in the description below if you
+haven't seen the pointers video
+
+26
+00:00:27,029 --> 00:00:27,039
+haven't seen the pointers video
+ 
+
+27
+00:00:27,039 --> 00:00:28,790
+haven't seen the pointers video
+definitely watch that okay so pointers
+
+28
+00:00:28,790 --> 00:00:28,800
+definitely watch that okay so pointers
+ 
+
+29
+00:00:28,800 --> 00:00:30,830
+definitely watch that okay so pointers
+and references are two kind of keywords
+
+30
+00:00:30,830 --> 00:00:30,840
+and references are two kind of keywords
+ 
+
+31
+00:00:30,840 --> 00:00:33,110
+and references are two kind of keywords
+that are tossed around a lot in C++ and
+
+32
+00:00:33,110 --> 00:00:33,120
+that are tossed around a lot in C++ and
+ 
+
+33
+00:00:33,120 --> 00:00:35,110
+that are tossed around a lot in C++ and
+other languages uh they're essentially
+
+34
+00:00:35,110 --> 00:00:35,120
+other languages uh they're essentially
+ 
+
+35
+00:00:35,120 --> 00:00:36,229
+other languages uh they're essentially
+the same thing though I just want to
+
+36
+00:00:36,229 --> 00:00:36,239
+the same thing though I just want to
+ 
+
+37
+00:00:36,239 --> 00:00:37,709
+the same thing though I just want to
+start this video by saying that pointers
+
+38
+00:00:37,709 --> 00:00:37,719
+start this video by saying that pointers
+ 
+
+39
+00:00:37,719 --> 00:00:40,029
+start this video by saying that pointers
+and references are pretty much the same
+
+40
+00:00:40,029 --> 00:00:40,039
+and references are pretty much the same
+ 
+
+41
+00:00:40,039 --> 00:00:42,310
+and references are pretty much the same
+thing as far as what the computer will
+
+42
+00:00:42,310 --> 00:00:42,320
+thing as far as what the computer will
+ 
+
+43
+00:00:42,320 --> 00:00:44,229
+thing as far as what the computer will
+actually do with them now semantically
+
+44
+00:00:44,229 --> 00:00:44,239
+actually do with them now semantically
+ 
+
+45
+00:00:44,239 --> 00:00:46,189
+actually do with them now semantically
+so how we actually use them and how we
+
+46
+00:00:46,189 --> 00:00:46,199
+so how we actually use them and how we
+ 
+
+47
+00:00:46,199 --> 00:00:47,830
+so how we actually use them and how we
+write them there are some subtle
+
+48
+00:00:47,830 --> 00:00:47,840
+write them there are some subtle
+ 
+
+49
+00:00:47,840 --> 00:00:49,830
+write them there are some subtle
+differences but at the end of the day
+
+50
+00:00:49,830 --> 00:00:49,840
+differences but at the end of the day
+ 
+
+51
+00:00:49,840 --> 00:00:52,750
+differences but at the end of the day
+references are just pointers usually in
+
+52
+00:00:52,750 --> 00:00:52,760
+references are just pointers usually in
+ 
+
+53
+00:00:52,760 --> 00:00:54,790
+references are just pointers usually in
+Disguise that's just all they are it's
+
+54
+00:00:54,790 --> 00:00:54,800
+Disguise that's just all they are it's
+ 
+
+55
+00:00:54,800 --> 00:00:57,229
+Disguise that's just all they are it's
+just syntax sugar on top of pointers to
+
+56
+00:00:57,229 --> 00:00:57,239
+just syntax sugar on top of pointers to
+ 
+
+57
+00:00:57,239 --> 00:00:58,830
+just syntax sugar on top of pointers to
+make it a little bit easier to read and
+
+58
+00:00:58,830 --> 00:00:58,840
+make it a little bit easier to read and
+ 
+
+59
+00:00:58,840 --> 00:01:00,509
+make it a little bit easier to read and
+a little bit easier to follow a
+
+60
+00:01:00,509 --> 00:01:00,519
+a little bit easier to follow a
+ 
+
+61
+00:01:00,519 --> 00:01:02,470
+a little bit easier to follow a
+reference is essentially exactly what it
+
+62
+00:01:02,470 --> 00:01:02,480
+reference is essentially exactly what it
+ 
+
+63
+00:01:02,480 --> 00:01:03,830
+reference is essentially exactly what it
+sounds like it's a way for us to
+
+64
+00:01:03,830 --> 00:01:03,840
+sounds like it's a way for us to
+ 
+
+65
+00:01:03,840 --> 00:01:06,550
+sounds like it's a way for us to
+reference an existing variable unlike a
+
+66
+00:01:06,550 --> 00:01:06,560
+reference an existing variable unlike a
+ 
+
+67
+00:01:06,560 --> 00:01:08,590
+reference an existing variable unlike a
+pointer where you could create a new
+
+68
+00:01:08,590 --> 00:01:08,600
+pointer where you could create a new
+ 
+
+69
+00:01:08,600 --> 00:01:10,310
+pointer where you could create a new
+pointer variable and then set it equal
+
+70
+00:01:10,310 --> 00:01:10,320
+pointer variable and then set it equal
+ 
+
+71
+00:01:10,320 --> 00:01:11,830
+pointer variable and then set it equal
+to null pointer or something like that
+
+72
+00:01:11,830 --> 00:01:11,840
+to null pointer or something like that
+ 
+
+73
+00:01:11,840 --> 00:01:13,870
+to null pointer or something like that
+set it equal to zero you can't do that
+
+74
+00:01:13,870 --> 00:01:13,880
+set it equal to zero you can't do that
+ 
+
+75
+00:01:13,880 --> 00:01:15,550
+set it equal to zero you can't do that
+with references because references have
+
+76
+00:01:15,550 --> 00:01:15,560
+with references because references have
+ 
+
+77
+00:01:15,560 --> 00:01:18,230
+with references because references have
+to reference an already existing
+
+78
+00:01:18,230 --> 00:01:18,240
+to reference an already existing
+ 
+
+79
+00:01:18,240 --> 00:01:20,590
+to reference an already existing
+variable references themselves are not
+
+80
+00:01:20,590 --> 00:01:20,600
+variable references themselves are not
+ 
+
+81
+00:01:20,600 --> 00:01:23,030
+variable references themselves are not
+new variables They Don't Really occupy
+
+82
+00:01:23,030 --> 00:01:23,040
+new variables They Don't Really occupy
+ 
+
+83
+00:01:23,040 --> 00:01:25,830
+new variables They Don't Really occupy
+memory they don't really have storage
+
+84
+00:01:25,830 --> 00:01:25,840
+memory they don't really have storage
+ 
+
+85
+00:01:25,840 --> 00:01:28,390
+memory they don't really have storage
+they're not like your typical variable
+
+86
+00:01:28,390 --> 00:01:28,400
+they're not like your typical variable
+ 
+
+87
+00:01:28,400 --> 00:01:30,429
+they're not like your typical variable
+because what they are in instead is a
+
+88
+00:01:30,429 --> 00:01:30,439
+because what they are in instead is a
+ 
+
+89
+00:01:30,439 --> 00:01:32,310
+because what they are in instead is a
+reference to a variable I'm going to be
+
+90
+00:01:32,310 --> 00:01:32,320
+reference to a variable I'm going to be
+ 
+
+91
+00:01:32,320 --> 00:01:33,910
+reference to a variable I'm going to be
+bringing up a few different examples in
+
+92
+00:01:33,910 --> 00:01:33,920
+bringing up a few different examples in
+ 
+
+93
+00:01:33,920 --> 00:01:35,389
+bringing up a few different examples in
+this video however I'm going to keep it
+
+94
+00:01:35,389 --> 00:01:35,399
+this video however I'm going to keep it
+ 
+
+95
+00:01:35,399 --> 00:01:37,950
+this video however I'm going to keep it
+brief because references aren't that
+
+96
+00:01:37,950 --> 00:01:37,960
+brief because references aren't that
+ 
+
+97
+00:01:37,960 --> 00:01:40,270
+brief because references aren't that
+complicated and the best way really to
+
+98
+00:01:40,270 --> 00:01:40,280
+complicated and the best way really to
+ 
+
+99
+00:01:40,280 --> 00:01:41,510
+complicated and the best way really to
+learn how to use them is actually to
+
+100
+00:01:41,510 --> 00:01:41,520
+learn how to use them is actually to
+ 
+
+101
+00:01:41,520 --> 00:01:43,069
+learn how to use them is actually to
+start using them so as the series goes
+
+102
+00:01:43,069 --> 00:01:43,079
+start using them so as the series goes
+ 
+
+103
+00:01:43,079 --> 00:01:44,990
+start using them so as the series goes
+on we'll be using them all the time and
+
+104
+00:01:44,990 --> 00:01:45,000
+on we'll be using them all the time and
+ 
+
+105
+00:01:45,000 --> 00:01:46,230
+on we'll be using them all the time and
+you'll see what kind of the best
+
+106
+00:01:46,230 --> 00:01:46,240
+you'll see what kind of the best
+ 
+
+107
+00:01:46,240 --> 00:01:48,429
+you'll see what kind of the best
+practice is or at least my opinion on
+
+108
+00:01:48,429 --> 00:01:48,439
+practice is or at least my opinion on
+ 
+
+109
+00:01:48,439 --> 00:01:50,149
+practice is or at least my opinion on
+what the best practice is uh to do with
+
+110
+00:01:50,149 --> 00:01:50,159
+what the best practice is uh to do with
+ 
+
+111
+00:01:50,159 --> 00:01:52,109
+what the best practice is uh to do with
+references however if we jump into some
+
+112
+00:01:52,109 --> 00:01:52,119
+references however if we jump into some
+ 
+
+113
+00:01:52,119 --> 00:01:54,069
+references however if we jump into some
+code let's say that I make a variable
+
+114
+00:01:54,069 --> 00:01:54,079
+code let's say that I make a variable
+ 
+
+115
+00:01:54,079 --> 00:01:55,550
+code let's say that I make a variable
+I'll call it a and I'll set it equal to
+
+116
+00:01:55,550 --> 00:01:55,560
+I'll call it a and I'll set it equal to
+ 
+
+117
+00:01:55,560 --> 00:01:57,230
+I'll call it a and I'll set it equal to
+5 it's just going to be an integer if I
+
+118
+00:01:57,230 --> 00:01:57,240
+5 it's just going to be an integer if I
+ 
+
+119
+00:01:57,240 --> 00:01:58,749
+5 it's just going to be an integer if I
+want to create a reference to that
+
+120
+00:01:58,749 --> 00:01:58,759
+want to create a reference to that
+ 
+
+121
+00:01:58,759 --> 00:02:00,870
+want to create a reference to that
+variable I can do so by typing in the
+
+122
+00:02:00,870 --> 00:02:00,880
+variable I can do so by typing in the
+ 
+
+123
+00:02:00,880 --> 00:02:02,709
+variable I can do so by typing in the
+type of the variable followed by an
+
+124
+00:02:02,709 --> 00:02:02,719
+type of the variable followed by an
+ 
+
+125
+00:02:02,719 --> 00:02:04,830
+type of the variable followed by an
+ampersand note here that the Ampersand
+
+126
+00:02:04,830 --> 00:02:04,840
+ampersand note here that the Ampersand
+ 
+
+127
+00:02:04,840 --> 00:02:06,630
+ampersand note here that the Ampersand
+is actually part of the variable
+
+128
+00:02:06,630 --> 00:02:06,640
+is actually part of the variable
+ 
+
+129
+00:02:06,640 --> 00:02:09,469
+is actually part of the variable
+declaration in the previous video about
+
+130
+00:02:09,469 --> 00:02:09,479
+declaration in the previous video about
+ 
+
+131
+00:02:09,479 --> 00:02:11,550
+declaration in the previous video about
+pointers we learned that if we create a
+
+132
+00:02:11,550 --> 00:02:11,560
+pointers we learned that if we create a
+ 
+
+133
+00:02:11,560 --> 00:02:13,830
+pointers we learned that if we create a
+pointer uh we can use the Ampersand
+
+134
+00:02:13,830 --> 00:02:13,840
+pointer uh we can use the Ampersand
+ 
+
+135
+00:02:13,840 --> 00:02:15,309
+pointer uh we can use the Ampersand
+operator here to actually take the
+
+136
+00:02:15,309 --> 00:02:15,319
+operator here to actually take the
+ 
+
+137
+00:02:15,319 --> 00:02:18,110
+operator here to actually take the
+memory address of an existing variable
+
+138
+00:02:18,110 --> 00:02:18,120
+memory address of an existing variable
+ 
+
+139
+00:02:18,120 --> 00:02:19,869
+memory address of an existing variable
+it's different here because the
+
+140
+00:02:19,869 --> 00:02:19,879
+it's different here because the
+ 
+
+141
+00:02:19,879 --> 00:02:22,030
+it's different here because the
+Ampersand is actually part of the type
+
+142
+00:02:22,030 --> 00:02:22,040
+Ampersand is actually part of the type
+ 
+
+143
+00:02:22,040 --> 00:02:23,470
+Ampersand is actually part of the type
+it's not you can see it's not actually
+
+144
+00:02:23,470 --> 00:02:23,480
+it's not you can see it's not actually
+ 
+
+145
+00:02:23,480 --> 00:02:25,630
+it's not you can see it's not actually
+next to an existing variable it's part
+
+146
+00:02:25,630 --> 00:02:25,640
+next to an existing variable it's part
+ 
+
+147
+00:02:25,640 --> 00:02:27,910
+next to an existing variable it's part
+of the type so just note that difference
+
+148
+00:02:27,910 --> 00:02:27,920
+of the type so just note that difference
+ 
+
+149
+00:02:27,920 --> 00:02:29,030
+of the type so just note that difference
+because with a lot of people as soon as
+
+150
+00:02:29,030 --> 00:02:29,040
+because with a lot of people as soon as
+ 
+
+151
+00:02:29,040 --> 00:02:30,830
+because with a lot of people as soon as
+you see an ampan and they think oh it's
+
+152
+00:02:30,830 --> 00:02:30,840
+you see an ampan and they think oh it's
+ 
+
+153
+00:02:30,840 --> 00:02:32,509
+you see an ampan and they think oh it's
+a reference or oh it's definitely an
+
+154
+00:02:32,509 --> 00:02:32,519
+a reference or oh it's definitely an
+ 
+
+155
+00:02:32,519 --> 00:02:35,070
+a reference or oh it's definitely an
+address off it's kind of depending on
+
+156
+00:02:35,070 --> 00:02:35,080
+address off it's kind of depending on
+ 
+
+157
+00:02:35,080 --> 00:02:36,670
+address off it's kind of depending on
+context here so in this case because
+
+158
+00:02:36,670 --> 00:02:36,680
+context here so in this case because
+ 
+
+159
+00:02:36,680 --> 00:02:38,430
+context here so in this case because
+it's next to the type it's a reference
+
+160
+00:02:38,430 --> 00:02:38,440
+it's next to the type it's a reference
+ 
+
+161
+00:02:38,440 --> 00:02:40,070
+it's next to the type it's a reference
+so if we keep writing this I'll call
+
+162
+00:02:40,070 --> 00:02:40,080
+so if we keep writing this I'll call
+ 
+
+163
+00:02:40,080 --> 00:02:41,790
+so if we keep writing this I'll call
+this ref and I'll set this equal to a
+
+164
+00:02:41,790 --> 00:02:41,800
+this ref and I'll set this equal to a
+ 
+
+165
+00:02:41,800 --> 00:02:43,030
+this ref and I'll set this equal to a
+and that's really all you have to do
+
+166
+00:02:43,030 --> 00:02:43,040
+and that's really all you have to do
+ 
+
+167
+00:02:43,040 --> 00:02:45,670
+and that's really all you have to do
+there's no kind of weird operator or
+
+168
+00:02:45,670 --> 00:02:45,680
+there's no kind of weird operator or
+ 
+
+169
+00:02:45,680 --> 00:02:47,910
+there's no kind of weird operator or
+something that we have to use here we
+
+170
+00:02:47,910 --> 00:02:47,920
+something that we have to use here we
+ 
+
+171
+00:02:47,920 --> 00:02:49,229
+something that we have to use here we
+just set it equal to an existing
+
+172
+00:02:49,229 --> 00:02:49,239
+just set it equal to an existing
+ 
+
+173
+00:02:49,239 --> 00:02:51,589
+just set it equal to an existing
+variable and so what we've done now is
+
+174
+00:02:51,589 --> 00:02:51,599
+variable and so what we've done now is
+ 
+
+175
+00:02:51,599 --> 00:02:52,750
+variable and so what we've done now is
+we've essentially created something
+
+176
+00:02:52,750 --> 00:02:52,760
+we've essentially created something
+ 
+
+177
+00:02:52,760 --> 00:02:55,229
+we've essentially created something
+called an alias because this ref
+
+178
+00:02:55,229 --> 00:02:55,239
+called an alias because this ref
+ 
+
+179
+00:02:55,239 --> 00:02:57,350
+called an alias because this ref
+variable I say variable in quotes here
+
+180
+00:02:57,350 --> 00:02:57,360
+variable I say variable in quotes here
+ 
+
+181
+00:02:57,360 --> 00:02:59,470
+variable I say variable in quotes here
+because it's not really a variable it's
+
+182
+00:02:59,470 --> 00:02:59,480
+because it's not really a variable it's
+ 
+
+183
+00:02:59,480 --> 00:03:01,830
+because it's not really a variable it's
+just a a reference like this ref
+
+184
+00:03:01,830 --> 00:03:01,840
+just a a reference like this ref
+ 
+
+185
+00:03:01,840 --> 00:03:03,869
+just a a reference like this ref
+variable doesn't actually exist it just
+
+186
+00:03:03,869 --> 00:03:03,879
+variable doesn't actually exist it just
+ 
+
+187
+00:03:03,879 --> 00:03:05,750
+variable doesn't actually exist it just
+exists in our source code if you compile
+
+188
+00:03:05,750 --> 00:03:05,760
+exists in our source code if you compile
+ 
+
+189
+00:03:05,760 --> 00:03:08,070
+exists in our source code if you compile
+this code right now you're not going to
+
+190
+00:03:08,070 --> 00:03:08,080
+this code right now you're not going to
+ 
+
+191
+00:03:08,080 --> 00:03:10,270
+this code right now you're not going to
+get two variables created a and ref
+
+192
+00:03:10,270 --> 00:03:10,280
+get two variables created a and ref
+ 
+
+193
+00:03:10,280 --> 00:03:11,869
+get two variables created a and ref
+you're just going to have a what we can
+
+194
+00:03:11,869 --> 00:03:11,879
+you're just going to have a what we can
+ 
+
+195
+00:03:11,879 --> 00:03:14,630
+you're just going to have a what we can
+do now is we can use ref as if it was a
+
+196
+00:03:14,630 --> 00:03:14,640
+do now is we can use ref as if it was a
+ 
+
+197
+00:03:14,640 --> 00:03:17,990
+do now is we can use ref as if it was a
+so if we set ref now equal to 2 and then
+
+198
+00:03:17,990 --> 00:03:18,000
+so if we set ref now equal to 2 and then
+ 
+
+199
+00:03:18,000 --> 00:03:19,350
+so if we set ref now equal to 2 and then
+print
+
+200
+00:03:19,350 --> 00:03:19,360
+print
+ 
+
+201
+00:03:19,360 --> 00:03:21,830
+print
+a if we run our program here you're
+
+202
+00:03:21,830 --> 00:03:21,840
+a if we run our program here you're
+ 
+
+203
+00:03:21,840 --> 00:03:23,670
+a if we run our program here you're
+going to see that a is equal to 2 now
+
+204
+00:03:23,670 --> 00:03:23,680
+going to see that a is equal to 2 now
+ 
+
+205
+00:03:23,680 --> 00:03:25,030
+going to see that a is equal to 2 now
+because we're printing a and we've just
+
+206
+00:03:25,030 --> 00:03:25,040
+because we're printing a and we've just
+ 
+
+207
+00:03:25,040 --> 00:03:26,589
+because we're printing a and we've just
+changed ref to two because for all
+
+208
+00:03:26,589 --> 00:03:26,599
+changed ref to two because for all
+ 
+
+209
+00:03:26,599 --> 00:03:29,429
+changed ref to two because for all
+intents and purposes ref is a we've just
+
+210
+00:03:29,429 --> 00:03:29,439
+intents and purposes ref is a we've just
+ 
+
+211
+00:03:29,439 --> 00:03:31,949
+intents and purposes ref is a we've just
+created an alias for a and in this case
+
+212
+00:03:31,949 --> 00:03:31,959
+created an alias for a and in this case
+ 
+
+213
+00:03:31,959 --> 00:03:33,589
+created an alias for a and in this case
+our reference isn't a pointer or
+
+214
+00:03:33,589 --> 00:03:33,599
+our reference isn't a pointer or
+ 
+
+215
+00:03:33,599 --> 00:03:35,030
+our reference isn't a pointer or
+anything like that there's no need for
+
+216
+00:03:35,030 --> 00:03:35,040
+anything like that there's no need for
+ 
+
+217
+00:03:35,040 --> 00:03:36,270
+anything like that there's no need for
+the compiler to actually create a new
+
+218
+00:03:36,270 --> 00:03:36,280
+the compiler to actually create a new
+ 
+
+219
+00:03:36,280 --> 00:03:38,309
+the compiler to actually create a new
+variable if you compile this code it's
+
+220
+00:03:38,309 --> 00:03:38,319
+variable if you compile this code it's
+ 
+
+221
+00:03:38,319 --> 00:03:40,550
+variable if you compile this code it's
+just going to act as if we just set a to
+
+222
+00:03:40,550 --> 00:03:40,560
+just going to act as if we just set a to
+ 
+
+223
+00:03:40,560 --> 00:03:42,550
+just going to act as if we just set a to
+two because that's really what we did
+
+224
+00:03:42,550 --> 00:03:42,560
+two because that's really what we did
+ 
+
+225
+00:03:42,560 --> 00:03:43,750
+two because that's really what we did
+this is just something that we can write
+
+226
+00:03:43,750 --> 00:03:43,760
+this is just something that we can write
+ 
+
+227
+00:03:43,760 --> 00:03:45,429
+this is just something that we can write
+in our source code to make our lives
+
+228
+00:03:45,429 --> 00:03:45,439
+in our source code to make our lives
+ 
+
+229
+00:03:45,439 --> 00:03:47,429
+in our source code to make our lives
+easier if we wish to Alias a variable
+
+230
+00:03:47,429 --> 00:03:47,439
+easier if we wish to Alias a variable
+ 
+
+231
+00:03:47,439 --> 00:03:48,589
+easier if we wish to Alias a variable
+now let's try something a little bit
+
+232
+00:03:48,589 --> 00:03:48,599
+now let's try something a little bit
+ 
+
+233
+00:03:48,599 --> 00:03:50,229
+now let's try something a little bit
+more complicated suppose that we wanted
+
+234
+00:03:50,229 --> 00:03:50,239
+more complicated suppose that we wanted
+ 
+
+235
+00:03:50,239 --> 00:03:51,470
+more complicated suppose that we wanted
+to write a function which was supposed
+
+236
+00:03:51,470 --> 00:03:51,480
+to write a function which was supposed
+ 
+
+237
+00:03:51,480 --> 00:03:54,149
+to write a function which was supposed
+to increment an integer if we just write
+
+238
+00:03:54,149 --> 00:03:54,159
+to increment an integer if we just write
+ 
+
+239
+00:03:54,159 --> 00:03:56,110
+to increment an integer if we just write
+the function like
+
+240
+00:03:56,110 --> 00:03:56,120
+the function like
+ 
+
+241
+00:03:56,120 --> 00:03:59,910
+the function like
+this and then do something like value ++
+
+242
+00:03:59,910 --> 00:03:59,920
+this and then do something like value ++
+ 
+
+243
+00:03:59,920 --> 00:04:01,910
+this and then do something like value ++
+what will actually happen is if I create
+
+244
+00:04:01,910 --> 00:04:01,920
+what will actually happen is if I create
+ 
+
+245
+00:04:01,920 --> 00:04:04,910
+what will actually happen is if I create
+my integer over here and then I call
+
+246
+00:04:04,910 --> 00:04:04,920
+my integer over here and then I call
+ 
+
+247
+00:04:04,920 --> 00:04:07,390
+my integer over here and then I call
+increment with a as the parameter what's
+
+248
+00:04:07,390 --> 00:04:07,400
+increment with a as the parameter what's
+ 
+
+249
+00:04:07,400 --> 00:04:08,990
+increment with a as the parameter what's
+going to happen here is since we are
+
+250
+00:04:08,990 --> 00:04:09,000
+going to happen here is since we are
+ 
+
+251
+00:04:09,000 --> 00:04:10,509
+going to happen here is since we are
+just passing this by value you can see
+
+252
+00:04:10,509 --> 00:04:10,519
+just passing this by value you can see
+ 
+
+253
+00:04:10,519 --> 00:04:12,429
+just passing this by value you can see
+that we're not passing this as a pointer
+
+254
+00:04:12,429 --> 00:04:12,439
+that we're not passing this as a pointer
+ 
+
+255
+00:04:12,439 --> 00:04:14,190
+that we're not passing this as a pointer
+or as a reference or anything like that
+
+256
+00:04:14,190 --> 00:04:14,200
+or as a reference or anything like that
+ 
+
+257
+00:04:14,200 --> 00:04:16,789
+or as a reference or anything like that
+it's actually going to copy this value 5
+
+258
+00:04:16,789 --> 00:04:16,799
+it's actually going to copy this value 5
+ 
+
+259
+00:04:16,799 --> 00:04:18,710
+it's actually going to copy this value 5
+into this function just copy it's going
+
+260
+00:04:18,710 --> 00:04:18,720
+into this function just copy it's going
+ 
+
+261
+00:04:18,720 --> 00:04:20,069
+into this function just copy it's going
+to create a brand new variable called
+
+262
+00:04:20,069 --> 00:04:20,079
+to create a brand new variable called
+ 
+
+263
+00:04:20,079 --> 00:04:22,069
+to create a brand new variable called
+value with that so it's almost as if we
+
+264
+00:04:22,069 --> 00:04:22,079
+value with that so it's almost as if we
+ 
+
+265
+00:04:22,079 --> 00:04:24,390
+value with that so it's almost as if we
+were to write something like that that's
+
+266
+00:04:24,390 --> 00:04:24,400
+were to write something like that that's
+ 
+
+267
+00:04:24,400 --> 00:04:27,110
+were to write something like that that's
+exactly what will happen so instead of
+
+268
+00:04:27,110 --> 00:04:27,120
+exactly what will happen so instead of
+ 
+
+269
+00:04:27,120 --> 00:04:28,749
+exactly what will happen so instead of
+that and I can prove it of course if I
+
+270
+00:04:28,749 --> 00:04:28,759
+that and I can prove it of course if I
+ 
+
+271
+00:04:28,759 --> 00:04:31,029
+that and I can prove it of course if I
+just run my code here and we log this
+
+272
+00:04:31,029 --> 00:04:31,039
+just run my code here and we log this
+ 
+
+273
+00:04:31,039 --> 00:04:32,110
+just run my code here and we log this
+we're actually going to still end up
+
+274
+00:04:32,110 --> 00:04:32,120
+we're actually going to still end up
+ 
+
+275
+00:04:32,120 --> 00:04:33,830
+we're actually going to still end up
+with five printing to the console which
+
+276
+00:04:33,830 --> 00:04:33,840
+with five printing to the console which
+ 
+
+277
+00:04:33,840 --> 00:04:35,510
+with five printing to the console which
+you can see over here what I need to do
+
+278
+00:04:35,510 --> 00:04:35,520
+you can see over here what I need to do
+ 
+
+279
+00:04:35,520 --> 00:04:37,430
+you can see over here what I need to do
+is I actually need to pass this variable
+
+280
+00:04:37,430 --> 00:04:37,440
+is I actually need to pass this variable
+ 
+
+281
+00:04:37,440 --> 00:04:39,870
+is I actually need to pass this variable
+by reference in order for it to
+
+282
+00:04:39,870 --> 00:04:39,880
+by reference in order for it to
+ 
+
+283
+00:04:39,880 --> 00:04:41,430
+by reference in order for it to
+increment because what I really want to
+
+284
+00:04:41,430 --> 00:04:41,440
+increment because what I really want to
+ 
+
+285
+00:04:41,440 --> 00:04:43,590
+increment because what I really want to
+do is I want to actually affect this
+
+286
+00:04:43,590 --> 00:04:43,600
+do is I want to actually affect this
+ 
+
+287
+00:04:43,600 --> 00:04:45,990
+do is I want to actually affect this
+variable here so how can I achieve that
+
+288
+00:04:45,990 --> 00:04:46,000
+variable here so how can I achieve that
+ 
+
+289
+00:04:46,000 --> 00:04:48,390
+variable here so how can I achieve that
+how can I actually modify this variable
+
+290
+00:04:48,390 --> 00:04:48,400
+how can I actually modify this variable
+ 
+
+291
+00:04:48,400 --> 00:04:50,430
+how can I actually modify this variable
+by passing it into a function now last
+
+292
+00:04:50,430 --> 00:04:50,440
+by passing it into a function now last
+ 
+
+293
+00:04:50,440 --> 00:04:51,830
+by passing it into a function now last
+time we talked about pointers and
+
+294
+00:04:51,830 --> 00:04:51,840
+time we talked about pointers and
+ 
+
+295
+00:04:51,840 --> 00:04:53,909
+time we talked about pointers and
+remember pointers are memory addresses
+
+296
+00:04:53,909 --> 00:04:53,919
+remember pointers are memory addresses
+ 
+
+297
+00:04:53,919 --> 00:04:55,469
+remember pointers are memory addresses
+so theoretically I hope you're putting
+
+298
+00:04:55,469 --> 00:04:55,479
+so theoretically I hope you're putting
+ 
+
+299
+00:04:55,479 --> 00:04:56,870
+so theoretically I hope you're putting
+this together in your mind cuz it's so
+
+300
+00:04:56,870 --> 00:04:56,880
+this together in your mind cuz it's so
+ 
+
+301
+00:04:56,880 --> 00:04:58,950
+this together in your mind cuz it's so
+exciting but theoretically what we could
+
+302
+00:04:58,950 --> 00:04:58,960
+exciting but theoretically what we could
+ 
+
+303
+00:04:58,960 --> 00:05:00,990
+exciting but theoretically what we could
+do if we were really ever right is we
+
+304
+00:05:00,990 --> 00:05:01,000
+do if we were really ever right is we
+ 
+
+305
+00:05:01,000 --> 00:05:02,550
+do if we were really ever right is we
+could instead of passing the actual
+
+306
+00:05:02,550 --> 00:05:02,560
+could instead of passing the actual
+ 
+
+307
+00:05:02,560 --> 00:05:05,150
+could instead of passing the actual
+value five into that function we could
+
+308
+00:05:05,150 --> 00:05:05,160
+value five into that function we could
+ 
+
+309
+00:05:05,160 --> 00:05:07,070
+value five into that function we could
+pass the memory address of this a
+
+310
+00:05:07,070 --> 00:05:07,080
+pass the memory address of this a
+ 
+
+311
+00:05:07,080 --> 00:05:08,510
+pass the memory address of this a
+variable because then what we can do in
+
+312
+00:05:08,510 --> 00:05:08,520
+variable because then what we can do in
+ 
+
+313
+00:05:08,520 --> 00:05:10,390
+variable because then what we can do in
+that function is we can look up that
+
+314
+00:05:10,390 --> 00:05:10,400
+that function is we can look up that
+ 
+
+315
+00:05:10,400 --> 00:05:12,590
+that function is we can look up that
+memory address see that value five and
+
+316
+00:05:12,590 --> 00:05:12,600
+memory address see that value five and
+ 
+
+317
+00:05:12,600 --> 00:05:14,390
+memory address see that value five and
+then just modify that that memory
+
+318
+00:05:14,390 --> 00:05:14,400
+then just modify that that memory
+ 
+
+319
+00:05:14,400 --> 00:05:15,749
+then just modify that that memory
+address we can write to that memory
+
+320
+00:05:15,749 --> 00:05:15,759
+address we can write to that memory
+ 
+
+321
+00:05:15,759 --> 00:05:17,550
+address we can write to that memory
+address since we've passed that memory
+
+322
+00:05:17,550 --> 00:05:17,560
+address since we've passed that memory
+ 
+
+323
+00:05:17,560 --> 00:05:18,710
+address since we've passed that memory
+address into the function so let's give
+
+324
+00:05:18,710 --> 00:05:18,720
+address into the function so let's give
+ 
+
+325
+00:05:18,720 --> 00:05:20,230
+address into the function so let's give
+that a shot what I'll do is I'll modify
+
+326
+00:05:20,230 --> 00:05:20,240
+that a shot what I'll do is I'll modify
+ 
+
+327
+00:05:20,240 --> 00:05:22,749
+that a shot what I'll do is I'll modify
+this to actually take in a pointer and
+
+328
+00:05:22,749 --> 00:05:22,759
+this to actually take in a pointer and
+ 
+
+329
+00:05:22,759 --> 00:05:24,950
+this to actually take in a pointer and
+I'll just I'll still call it value and
+
+330
+00:05:24,950 --> 00:05:24,960
+I'll just I'll still call it value and
+ 
+
+331
+00:05:24,960 --> 00:05:26,390
+I'll just I'll still call it value and
+then what I'll do here in increment is
+
+332
+00:05:26,390 --> 00:05:26,400
+then what I'll do here in increment is
+ 
+
+333
+00:05:26,400 --> 00:05:29,710
+then what I'll do here in increment is
+I'll pass the memory address of a in
+
+334
+00:05:29,710 --> 00:05:29,720
+I'll pass the memory address of a in
+ 
+
+335
+00:05:29,720 --> 00:05:31,749
+I'll pass the memory address of a in
+instead of just the value five it's now
+
+336
+00:05:31,749 --> 00:05:31,759
+instead of just the value five it's now
+ 
+
+337
+00:05:31,759 --> 00:05:33,189
+instead of just the value five it's now
+passing the memory address of this
+
+338
+00:05:33,189 --> 00:05:33,199
+passing the memory address of this
+ 
+
+339
+00:05:33,199 --> 00:05:35,110
+passing the memory address of this
+variable one more thing I'll have to do
+
+340
+00:05:35,110 --> 00:05:35,120
+variable one more thing I'll have to do
+ 
+
+341
+00:05:35,120 --> 00:05:37,150
+variable one more thing I'll have to do
+is actually dreference this value so
+
+342
+00:05:37,150 --> 00:05:37,160
+is actually dreference this value so
+ 
+
+343
+00:05:37,160 --> 00:05:38,430
+is actually dreference this value so
+that we can actually write to that
+
+344
+00:05:38,430 --> 00:05:38,440
+that we can actually write to that
+ 
+
+345
+00:05:38,440 --> 00:05:40,350
+that we can actually write to that
+memory instead of modifying the pointer
+
+346
+00:05:40,350 --> 00:05:40,360
+memory instead of modifying the pointer
+ 
+
+347
+00:05:40,360 --> 00:05:42,670
+memory instead of modifying the pointer
+itself if I just do this without the D
+
+348
+00:05:42,670 --> 00:05:42,680
+itself if I just do this without the D
+ 
+
+349
+00:05:42,680 --> 00:05:45,110
+itself if I just do this without the D
+reference it's going to just increment
+
+350
+00:05:45,110 --> 00:05:45,120
+reference it's going to just increment
+ 
+
+351
+00:05:45,120 --> 00:05:46,870
+reference it's going to just increment
+that address right so a pointer of
+
+352
+00:05:46,870 --> 00:05:46,880
+that address right so a pointer of
+ 
+
+353
+00:05:46,880 --> 00:05:48,110
+that address right so a pointer of
+course just a memory address just an
+
+354
+00:05:48,110 --> 00:05:48,120
+course just a memory address just an
+ 
+
+355
+00:05:48,120 --> 00:05:50,790
+course just a memory address just an
+integer and if I do value Plus+ without
+
+356
+00:05:50,790 --> 00:05:50,800
+integer and if I do value Plus+ without
+ 
+
+357
+00:05:50,800 --> 00:05:52,550
+integer and if I do value Plus+ without
+the asterisk without the D reference
+
+358
+00:05:52,550 --> 00:05:52,560
+the asterisk without the D reference
+ 
+
+359
+00:05:52,560 --> 00:05:54,790
+the asterisk without the D reference
+operator then it is just going to in
+
+360
+00:05:54,790 --> 00:05:54,800
+operator then it is just going to in
+ 
+
+361
+00:05:54,800 --> 00:05:56,390
+operator then it is just going to in
+increment my memory address not the
+
+362
+00:05:56,390 --> 00:05:56,400
+increment my memory address not the
+ 
+
+363
+00:05:56,400 --> 00:05:58,150
+increment my memory address not the
+actual value there now because of the
+
+364
+00:05:58,150 --> 00:05:58,160
+actual value there now because of the
+ 
+
+365
+00:05:58,160 --> 00:05:59,870
+actual value there now because of the
+order of operations it's it's actually
+
+366
+00:05:59,870 --> 00:05:59,880
+order of operations it's it's actually
+ 
+
+367
+00:05:59,880 --> 00:06:02,110
+order of operations it's it's actually
+going to do the increment first and then
+
+368
+00:06:02,110 --> 00:06:02,120
+going to do the increment first and then
+ 
+
+369
+00:06:02,120 --> 00:06:04,070
+going to do the increment first and then
+D reference so what I want to do instead
+
+370
+00:06:04,070 --> 00:06:04,080
+D reference so what I want to do instead
+ 
+
+371
+00:06:04,080 --> 00:06:06,629
+D reference so what I want to do instead
+is D reference first and then increment
+
+372
+00:06:06,629 --> 00:06:06,639
+is D reference first and then increment
+ 
+
+373
+00:06:06,639 --> 00:06:08,070
+is D reference first and then increment
+because I don't want to increment the
+
+374
+00:06:08,070 --> 00:06:08,080
+because I don't want to increment the
+ 
+
+375
+00:06:08,080 --> 00:06:09,629
+because I don't want to increment the
+pointer and then dreference it I want to
+
+376
+00:06:09,629 --> 00:06:09,639
+pointer and then dreference it I want to
+ 
+
+377
+00:06:09,639 --> 00:06:11,070
+pointer and then dreference it I want to
+dreference the pointer first and then
+
+378
+00:06:11,070 --> 00:06:11,080
+dreference the pointer first and then
+ 
+
+379
+00:06:11,080 --> 00:06:13,110
+dreference the pointer first and then
+increment the value at the pointer so if
+
+380
+00:06:13,110 --> 00:06:13,120
+increment the value at the pointer so if
+ 
+
+381
+00:06:13,120 --> 00:06:14,629
+increment the value at the pointer so if
+I compile this code and run it you will
+
+382
+00:06:14,629 --> 00:06:14,639
+I compile this code and run it you will
+ 
+
+383
+00:06:14,639 --> 00:06:16,189
+I compile this code and run it you will
+see that I will get the value six
+
+384
+00:06:16,189 --> 00:06:16,199
+see that I will get the value six
+ 
+
+385
+00:06:16,199 --> 00:06:17,710
+see that I will get the value six
+printing so awesome we've successfully
+
+386
+00:06:17,710 --> 00:06:17,720
+printing so awesome we've successfully
+ 
+
+387
+00:06:17,720 --> 00:06:19,589
+printing so awesome we've successfully
+managed to pass a variable by reference
+
+388
+00:06:19,589 --> 00:06:19,599
+managed to pass a variable by reference
+ 
+
+389
+00:06:19,599 --> 00:06:21,550
+managed to pass a variable by reference
+into a function however this video is
+
+390
+00:06:21,550 --> 00:06:21,560
+into a function however this video is
+ 
+
+391
+00:06:21,560 --> 00:06:23,909
+into a function however this video is
+about references so we can do exactly
+
+392
+00:06:23,909 --> 00:06:23,919
+about references so we can do exactly
+ 
+
+393
+00:06:23,919 --> 00:06:26,029
+about references so we can do exactly
+what we just did here a lot easier with
+
+394
+00:06:26,029 --> 00:06:26,039
+what we just did here a lot easier with
+ 
+
+395
+00:06:26,039 --> 00:06:27,629
+what we just did here a lot easier with
+less code and with less kind of
+
+396
+00:06:27,629 --> 00:06:27,639
+less code and with less kind of
+ 
+
+397
+00:06:27,639 --> 00:06:29,990
+less code and with less kind of
+decorating our syntax if we just use a
+
+398
+00:06:29,990 --> 00:06:30,000
+decorating our syntax if we just use a
+ 
+
+399
+00:06:30,000 --> 00:06:31,230
+decorating our syntax if we just use a
+reference and that's what I would do in
+
+400
+00:06:31,230 --> 00:06:31,240
+reference and that's what I would do in
+ 
+
+401
+00:06:31,240 --> 00:06:32,749
+reference and that's what I would do in
+this situation I would use a reference
+
+402
+00:06:32,749 --> 00:06:32,759
+this situation I would use a reference
+ 
+
+403
+00:06:32,759 --> 00:06:34,430
+this situation I would use a reference
+so what we can do is rewrite this to
+
+404
+00:06:34,430 --> 00:06:34,440
+so what we can do is rewrite this to
+ 
+
+405
+00:06:34,440 --> 00:06:36,950
+so what we can do is rewrite this to
+take in a reference instead of a pointer
+
+406
+00:06:36,950 --> 00:06:36,960
+take in a reference instead of a pointer
+ 
+
+407
+00:06:36,960 --> 00:06:38,629
+take in a reference instead of a pointer
+and then what that means is that I lose
+
+408
+00:06:38,629 --> 00:06:38,639
+and then what that means is that I lose
+ 
+
+409
+00:06:38,639 --> 00:06:40,309
+and then what that means is that I lose
+this whole need of D referencing I can
+
+410
+00:06:40,309 --> 00:06:40,319
+this whole need of D referencing I can
+ 
+
+411
+00:06:40,319 --> 00:06:42,150
+this whole need of D referencing I can
+change this back to exactly what it was
+
+412
+00:06:42,150 --> 00:06:42,160
+change this back to exactly what it was
+ 
+
+413
+00:06:42,160 --> 00:06:43,510
+change this back to exactly what it was
+and then over here I don't need to pass
+
+414
+00:06:43,510 --> 00:06:43,520
+and then over here I don't need to pass
+ 
+
+415
+00:06:43,520 --> 00:06:45,029
+and then over here I don't need to pass
+the memory address of a I can just pass
+
+416
+00:06:45,029 --> 00:06:45,039
+the memory address of a I can just pass
+ 
+
+417
+00:06:45,039 --> 00:06:46,909
+the memory address of a I can just pass
+in a and since it is being passed by
+
+418
+00:06:46,909 --> 00:06:46,919
+in a and since it is being passed by
+ 
+
+419
+00:06:46,919 --> 00:06:48,589
+in a and since it is being passed by
+reference we've basically Rewritten the
+
+420
+00:06:48,589 --> 00:06:48,599
+reference we've basically Rewritten the
+ 
+
+421
+00:06:48,599 --> 00:06:50,110
+reference we've basically Rewritten the
+code to do exactly the same thing
+
+422
+00:06:50,110 --> 00:06:50,120
+code to do exactly the same thing
+ 
+
+423
+00:06:50,120 --> 00:06:52,350
+code to do exactly the same thing
+internally when it gets compiled it will
+
+424
+00:06:52,350 --> 00:06:52,360
+internally when it gets compiled it will
+ 
+
+425
+00:06:52,360 --> 00:06:54,029
+internally when it gets compiled it will
+be exactly the same as what we've
+
+426
+00:06:54,029 --> 00:06:54,039
+be exactly the same as what we've
+ 
+
+427
+00:06:54,039 --> 00:06:56,270
+be exactly the same as what we've
+written before however this time it just
+
+428
+00:06:56,270 --> 00:06:56,280
+written before however this time it just
+ 
+
+429
+00:06:56,280 --> 00:06:58,390
+written before however this time it just
+looks nicer in our source code again
+
+430
+00:06:58,390 --> 00:06:58,400
+looks nicer in our source code again
+ 
+
+431
+00:06:58,400 --> 00:07:00,110
+looks nicer in our source code again
+that's the only difference if I run my
+
+432
+00:07:00,110 --> 00:07:00,120
+that's the only difference if I run my
+ 
+
+433
+00:07:00,120 --> 00:07:03,270
+that's the only difference if I run my
+program you can see we get six so that
+
+434
+00:07:03,270 --> 00:07:03,280
+program you can see we get six so that
+ 
+
+435
+00:07:03,280 --> 00:07:05,270
+program you can see we get six so that
+is all that references really are they
+
+436
+00:07:05,270 --> 00:07:05,280
+is all that references really are they
+ 
+
+437
+00:07:05,280 --> 00:07:08,550
+is all that references really are they
+are just syntax sugar references there
+
+438
+00:07:08,550 --> 00:07:08,560
+are just syntax sugar references there
+ 
+
+439
+00:07:08,560 --> 00:07:10,270
+are just syntax sugar references there
+is nothing you can do with a reference
+
+440
+00:07:10,270 --> 00:07:10,280
+is nothing you can do with a reference
+ 
+
+441
+00:07:10,280 --> 00:07:11,830
+is nothing you can do with a reference
+that you cannot do with a pointer
+
+442
+00:07:11,830 --> 00:07:11,840
+that you cannot do with a pointer
+ 
+
+443
+00:07:11,840 --> 00:07:13,790
+that you cannot do with a pointer
+pointers are like references except
+
+444
+00:07:13,790 --> 00:07:13,800
+pointers are like references except
+ 
+
+445
+00:07:13,800 --> 00:07:14,830
+pointers are like references except
+they're even more useful and they're
+
+446
+00:07:14,830 --> 00:07:14,840
+they're even more useful and they're
+ 
+
+447
+00:07:14,840 --> 00:07:16,830
+they're even more useful and they're
+even more powerful however if you can
+
+448
+00:07:16,830 --> 00:07:16,840
+even more powerful however if you can
+ 
+
+449
+00:07:16,840 --> 00:07:18,270
+even more powerful however if you can
+get away with using a reference like
+
+450
+00:07:18,270 --> 00:07:18,280
+get away with using a reference like
+ 
+
+451
+00:07:18,280 --> 00:07:20,350
+get away with using a reference like
+what we just did here absolutely use a
+
+452
+00:07:20,350 --> 00:07:20,360
+what we just did here absolutely use a
+ 
+
+453
+00:07:20,360 --> 00:07:21,869
+what we just did here absolutely use a
+reference because it's going to be a lot
+
+454
+00:07:21,869 --> 00:07:21,879
+reference because it's going to be a lot
+ 
+
+455
+00:07:21,879 --> 00:07:24,150
+reference because it's going to be a lot
+cleaner and simpler to read not that
+
+456
+00:07:24,150 --> 00:07:24,160
+cleaner and simpler to read not that
+ 
+
+457
+00:07:24,160 --> 00:07:26,029
+cleaner and simpler to read not that
+pointers are really really difficult to
+
+458
+00:07:26,029 --> 00:07:26,039
+pointers are really really difficult to
+ 
+
+459
+00:07:26,039 --> 00:07:27,990
+pointers are really really difficult to
+read but it will look a lot cleaner in
+
+460
+00:07:27,990 --> 00:07:28,000
+read but it will look a lot cleaner in
+ 
+
+461
+00:07:28,000 --> 00:07:29,309
+read but it will look a lot cleaner in
+your source code one other important
+
+462
+00:07:29,309 --> 00:07:29,319
+your source code one other important
+ 
+
+463
+00:07:29,319 --> 00:07:30,189
+your source code one other important
+thing that I want to mention with
+
+464
+00:07:30,189 --> 00:07:30,199
+thing that I want to mention with
+ 
+
+465
+00:07:30,199 --> 00:07:31,830
+thing that I want to mention with
+references is that once you declare a
+
+466
+00:07:31,830 --> 00:07:31,840
+references is that once you declare a
+ 
+
+467
+00:07:31,840 --> 00:07:34,189
+references is that once you declare a
+reference you cannot change what it
+
+468
+00:07:34,189 --> 00:07:34,199
+reference you cannot change what it
+ 
+
+469
+00:07:34,199 --> 00:07:36,070
+reference you cannot change what it
+references what I mean by that is that
+
+470
+00:07:36,070 --> 00:07:36,080
+references what I mean by that is that
+ 
+
+471
+00:07:36,080 --> 00:07:38,869
+references what I mean by that is that
+suppose that I had two integers I Had A
+
+472
+00:07:38,869 --> 00:07:38,879
+suppose that I had two integers I Had A
+ 
+
+473
+00:07:38,879 --> 00:07:41,510
+suppose that I had two integers I Had A
+and B and B was set to eight a was set
+
+474
+00:07:41,510 --> 00:07:41,520
+and B and B was set to eight a was set
+ 
+
+475
+00:07:41,520 --> 00:07:43,230
+and B and B was set to eight a was set
+to five and then what I wanted to do is
+
+476
+00:07:43,230 --> 00:07:43,240
+to five and then what I wanted to do is
+ 
+
+477
+00:07:43,240 --> 00:07:45,990
+to five and then what I wanted to do is
+declare a reference that was set to a
+
+478
+00:07:45,990 --> 00:07:46,000
+declare a reference that was set to a
+ 
+
+479
+00:07:46,000 --> 00:07:47,869
+declare a reference that was set to a
+and then maybe later on in my code I
+
+480
+00:07:47,869 --> 00:07:47,879
+and then maybe later on in my code I
+ 
+
+481
+00:07:47,879 --> 00:07:49,469
+and then maybe later on in my code I
+decided oh actually you know what I want
+
+482
+00:07:49,469 --> 00:07:49,479
+decided oh actually you know what I want
+ 
+
+483
+00:07:49,479 --> 00:07:51,510
+decided oh actually you know what I want
+to set my reference to be referencing B
+
+484
+00:07:51,510 --> 00:07:51,520
+to set my reference to be referencing B
+ 
+
+485
+00:07:51,520 --> 00:07:52,950
+to set my reference to be referencing B
+can I do something like that the answer
+
+486
+00:07:52,950 --> 00:07:52,960
+can I do something like that the answer
+ 
+
+487
+00:07:52,960 --> 00:07:54,869
+can I do something like that the answer
+is no you can't do that what will happen
+
+488
+00:07:54,869 --> 00:07:54,879
+is no you can't do that what will happen
+ 
+
+489
+00:07:54,879 --> 00:07:57,309
+is no you can't do that what will happen
+in this case is that it will effectively
+
+490
+00:07:57,309 --> 00:07:57,319
+in this case is that it will effectively
+ 
+
+491
+00:07:57,319 --> 00:07:59,629
+in this case is that it will effectively
+create a reference to a and then when
+
+492
+00:07:59,629 --> 00:07:59,639
+create a reference to a and then when
+ 
+
+493
+00:07:59,639 --> 00:08:00,950
+create a reference to a and then when
+you decide to set that reference equal
+
+494
+00:08:00,950 --> 00:08:00,960
+you decide to set that reference equal
+ 
+
+495
+00:08:00,960 --> 00:08:03,550
+you decide to set that reference equal
+to B it will just set a equal to the
+
+496
+00:08:03,550 --> 00:08:03,560
+to B it will just set a equal to the
+ 
+
+497
+00:08:03,560 --> 00:08:05,589
+to B it will just set a equal to the
+value of B which is 8 so what you will
+
+498
+00:08:05,589 --> 00:08:05,599
+value of B which is 8 so what you will
+ 
+
+499
+00:08:05,599 --> 00:08:08,629
+value of B which is 8 so what you will
+end up with here is a being equal to 8
+
+500
+00:08:08,629 --> 00:08:08,639
+end up with here is a being equal to 8
+ 
+
+501
+00:08:08,639 --> 00:08:11,670
+end up with here is a being equal to 8
+and B being equal to 8 that is that's it
+
+502
+00:08:11,670 --> 00:08:11,680
+and B being equal to 8 that is that's it
+ 
+
+503
+00:08:11,680 --> 00:08:12,990
+and B being equal to 8 that is that's it
+that's what you'll get and of course
+
+504
+00:08:12,990 --> 00:08:13,000
+that's what you'll get and of course
+ 
+
+505
+00:08:13,000 --> 00:08:14,309
+that's what you'll get and of course
+because of that that also means that
+
+506
+00:08:14,309 --> 00:08:14,319
+because of that that also means that
+ 
+
+507
+00:08:14,319 --> 00:08:16,350
+because of that that also means that
+when you declare a reference you need to
+
+508
+00:08:16,350 --> 00:08:16,360
+when you declare a reference you need to
+ 
+
+509
+00:08:16,360 --> 00:08:18,309
+when you declare a reference you need to
+actually assign it to something you
+
+510
+00:08:18,309 --> 00:08:18,319
+actually assign it to something you
+ 
+
+511
+00:08:18,319 --> 00:08:20,670
+actually assign it to something you
+cannot just do this you can see that the
+
+512
+00:08:20,670 --> 00:08:20,680
+cannot just do this you can see that the
+ 
+
+513
+00:08:20,680 --> 00:08:22,149
+cannot just do this you can see that the
+compiler will not let you do that it
+
+514
+00:08:22,149 --> 00:08:22,159
+compiler will not let you do that it
+ 
+
+515
+00:08:22,159 --> 00:08:23,670
+compiler will not let you do that it
+requires an initializer when you declare
+
+516
+00:08:23,670 --> 00:08:23,680
+requires an initializer when you declare
+ 
+
+517
+00:08:23,680 --> 00:08:25,990
+requires an initializer when you declare
+a reference you have to immediately
+
+518
+00:08:25,990 --> 00:08:26,000
+a reference you have to immediately
+ 
+
+519
+00:08:26,000 --> 00:08:27,510
+a reference you have to immediately
+assign it to something because it has to
+
+520
+00:08:27,510 --> 00:08:27,520
+assign it to something because it has to
+ 
+
+521
+00:08:27,520 --> 00:08:28,710
+assign it to something because it has to
+reference something because remember
+
+522
+00:08:28,710 --> 00:08:28,720
+reference something because remember
+ 
+
+523
+00:08:28,720 --> 00:08:30,350
+reference something because remember
+it's not really a real variable it's a
+
+524
+00:08:30,350 --> 00:08:30,360
+it's not really a real variable it's a
+ 
+
+525
+00:08:30,360 --> 00:08:32,029
+it's not really a real variable it's a
+reference so in this example
+
+526
+00:08:32,029 --> 00:08:32,039
+reference so in this example
+ 
+
+527
+00:08:32,039 --> 00:08:33,990
+reference so in this example
+specifically what would I do if I
+
+528
+00:08:33,990 --> 00:08:34,000
+specifically what would I do if I
+ 
+
+529
+00:08:34,000 --> 00:08:34,990
+specifically what would I do if I
+actually wanted this kind of
+
+530
+00:08:34,990 --> 00:08:35,000
+actually wanted this kind of
+ 
+
+531
+00:08:35,000 --> 00:08:36,310
+actually wanted this kind of
+functionality if I wanted to actually
+
+532
+00:08:36,310 --> 00:08:36,320
+functionality if I wanted to actually
+ 
+
+533
+00:08:36,320 --> 00:08:38,829
+functionality if I wanted to actually
+change what ref was a reference of well
+
+534
+00:08:38,829 --> 00:08:38,839
+change what ref was a reference of well
+ 
+
+535
+00:08:38,839 --> 00:08:40,509
+change what ref was a reference of well
+of course as I mentioned earlier this
+
+536
+00:08:40,509 --> 00:08:40,519
+of course as I mentioned earlier this
+ 
+
+537
+00:08:40,519 --> 00:08:41,909
+of course as I mentioned earlier this
+isn't a real variable we would need to
+
+538
+00:08:41,909 --> 00:08:41,919
+isn't a real variable we would need to
+ 
+
+539
+00:08:41,919 --> 00:08:43,350
+isn't a real variable we would need to
+create some kind of variable of sorts
+
+540
+00:08:43,350 --> 00:08:43,360
+create some kind of variable of sorts
+ 
+
+541
+00:08:43,360 --> 00:08:45,590
+create some kind of variable of sorts
+that we could set up to point a first
+
+542
+00:08:45,590 --> 00:08:45,600
+that we could set up to point a first
+ 
+
+543
+00:08:45,600 --> 00:08:47,150
+that we could set up to point a first
+and then later on we could switch it to
+
+544
+00:08:47,150 --> 00:08:47,160
+and then later on we could switch it to
+ 
+
+545
+00:08:47,160 --> 00:08:49,070
+and then later on we could switch it to
+point to B and of course I keep saying
+
+546
+00:08:49,070 --> 00:08:49,080
+point to B and of course I keep saying
+ 
+
+547
+00:08:49,080 --> 00:08:50,670
+point to B and of course I keep saying
+the word point in the hopes that you'll
+
+548
+00:08:50,670 --> 00:08:50,680
+the word point in the hopes that you'll
+ 
+
+549
+00:08:50,680 --> 00:08:51,829
+the word point in the hopes that you'll
+understand that I'm talking about a
+
+550
+00:08:51,829 --> 00:08:51,839
+understand that I'm talking about a
+ 
+
+551
+00:08:51,839 --> 00:08:53,750
+understand that I'm talking about a
+pointer so instead of this let's just
+
+552
+00:08:53,750 --> 00:08:53,760
+pointer so instead of this let's just
+ 
+
+553
+00:08:53,760 --> 00:08:55,630
+pointer so instead of this let's just
+make this a pointer we can initially set
+
+554
+00:08:55,630 --> 00:08:55,640
+make this a pointer we can initially set
+ 
+
+555
+00:08:55,640 --> 00:08:57,350
+make this a pointer we can initially set
+it to the memory address of a and then
+
+556
+00:08:57,350 --> 00:08:57,360
+it to the memory address of a and then
+ 
+
+557
+00:08:57,360 --> 00:08:58,750
+it to the memory address of a and then
+when I wanted to switch to it being
+
+558
+00:08:58,750 --> 00:08:58,760
+when I wanted to switch to it being
+ 
+
+559
+00:08:58,760 --> 00:08:59,949
+when I wanted to switch to it being
+pointing to B
+
+560
+00:08:59,949 --> 00:08:59,959
+pointing to B
+ 
+
+561
+00:08:59,959 --> 00:09:01,750
+pointing to B
+I can just switch it like this because
+
+562
+00:09:01,750 --> 00:09:01,760
+I can just switch it like this because
+ 
+
+563
+00:09:01,760 --> 00:09:03,790
+I can just switch it like this because
+remember to actually start affecting the
+
+564
+00:09:03,790 --> 00:09:03,800
+remember to actually start affecting the
+ 
+
+565
+00:09:03,800 --> 00:09:06,350
+remember to actually start affecting the
+value that this pointer is pointing to I
+
+566
+00:09:06,350 --> 00:09:06,360
+value that this pointer is pointing to I
+ 
+
+567
+00:09:06,360 --> 00:09:08,509
+value that this pointer is pointing to I
+need to dreference the pointer first and
+
+568
+00:09:08,509 --> 00:09:08,519
+need to dreference the pointer first and
+ 
+
+569
+00:09:08,519 --> 00:09:09,910
+need to dreference the pointer first and
+then set it equal to something like this
+
+570
+00:09:09,910 --> 00:09:09,920
+then set it equal to something like this
+ 
+
+571
+00:09:09,920 --> 00:09:12,829
+then set it equal to something like this
+so in this case I'm setting a equal to 2
+
+572
+00:09:12,829 --> 00:09:12,839
+so in this case I'm setting a equal to 2
+ 
+
+573
+00:09:12,839 --> 00:09:15,190
+so in this case I'm setting a equal to 2
+and in this case I'm setting b equal to
+
+574
+00:09:15,190 --> 00:09:15,200
+and in this case I'm setting b equal to
+ 
+
+575
+00:09:15,200 --> 00:09:18,509
+and in this case I'm setting b equal to
+1 and if I was to log both of
+
+576
+00:09:18,509 --> 00:09:18,519
+1 and if I was to log both of
+ 
+
+577
+00:09:18,519 --> 00:09:21,550
+1 and if I was to log both of
+these they should be 2 and one and you
+
+578
+00:09:21,550 --> 00:09:21,560
+these they should be 2 and one and you
+ 
+
+579
+00:09:21,560 --> 00:09:23,829
+these they should be 2 and one and you
+can see that they are all right that's
+
+580
+00:09:23,829 --> 00:09:23,839
+can see that they are all right that's
+ 
+
+581
+00:09:23,839 --> 00:09:24,910
+can see that they are all right that's
+pretty much all I want to say really
+
+582
+00:09:24,910 --> 00:09:24,920
+pretty much all I want to say really
+ 
+
+583
+00:09:24,920 --> 00:09:26,910
+pretty much all I want to say really
+simple stuff we'll be using references a
+
+584
+00:09:26,910 --> 00:09:26,920
+simple stuff we'll be using references a
+ 
+
+585
+00:09:26,920 --> 00:09:28,710
+simple stuff we'll be using references a
+lot more in the future again they're one
+
+586
+00:09:28,710 --> 00:09:28,720
+lot more in the future again they're one
+ 
+
+587
+00:09:28,720 --> 00:09:30,310
+lot more in the future again they're one
+of those things that you just use all
+
+588
+00:09:30,310 --> 00:09:30,320
+of those things that you just use all
+ 
+
+589
+00:09:30,320 --> 00:09:33,550
+of those things that you just use all
+the time like pointers so you'll see a
+
+590
+00:09:33,550 --> 00:09:33,560
+the time like pointers so you'll see a
+ 
+
+591
+00:09:33,560 --> 00:09:35,350
+the time like pointers so you'll see a
+lot more examples down the road as this
+
+592
+00:09:35,350 --> 00:09:35,360
+lot more examples down the road as this
+ 
+
+593
+00:09:35,360 --> 00:09:37,230
+lot more examples down the road as this
+series progresses if you enjoy this
+
+594
+00:09:37,230 --> 00:09:37,240
+series progresses if you enjoy this
+ 
+
+595
+00:09:37,240 --> 00:09:38,750
+series progresses if you enjoy this
+video please hit the like button you can
+
+596
+00:09:38,750 --> 00:09:38,760
+video please hit the like button you can
+ 
+
+597
+00:09:38,760 --> 00:09:40,949
+video please hit the like button you can
+follow me on Twitter and Instagram and
+
+598
+00:09:40,949 --> 00:09:40,959
+follow me on Twitter and Instagram and
+ 
+
+599
+00:09:40,959 --> 00:09:42,470
+follow me on Twitter and Instagram and
+of course if you really enjoyed this
+
+600
+00:09:42,470 --> 00:09:42,480
+of course if you really enjoyed this
+ 
+
+601
+00:09:42,480 --> 00:09:44,069
+of course if you really enjoyed this
+video you can support me on patreon to
+
+602
+00:09:44,069 --> 00:09:44,079
+video you can support me on patreon to
+ 
+
+603
+00:09:44,079 --> 00:09:46,150
+video you can support me on patreon to
+make sure that I can continue these C++
+
+604
+00:09:46,150 --> 00:09:46,160
+make sure that I can continue these C++
+ 
+
+605
+00:09:46,160 --> 00:09:48,230
+make sure that I can continue these C++
+series videos and make more awesome
+
+606
+00:09:48,230 --> 00:09:48,240
+series videos and make more awesome
+ 
+
+607
+00:09:48,240 --> 00:09:50,829
+series videos and make more awesome
+videos in the future all right next
+
+608
+00:09:50,829 --> 00:09:50,839
+videos in the future all right next
+ 
+
+609
+00:09:50,839 --> 00:09:52,790
+videos in the future all right next
+time next time we're going to kick it up
+
+610
+00:09:52,790 --> 00:09:52,800
+time next time we're going to kick it up
+ 
+
+611
+00:09:52,800 --> 00:09:55,550
+time next time we're going to kick it up
+and not I'll see you guys later goodbye
+
+612
+00:09:55,550 --> 00:09:55,560
+and not I'll see you guys later goodbye
+ 
+
+613
+00:09:55,560 --> 00:10:04,110
+and not I'll see you guys later goodbye
+[Music]
+
+614
+00:10:04,110 --> 00:10:04,120
+
+ 
+
+615
+00:10:04,120 --> 00:10:11,169
+
+[Music]
+

@@ -1,0 +1,3735 @@
+1
+00:00:00,030 --> 00:00:01,699
+
+hey what's up guys my name is Archana
+
+2
+00:00:01,699 --> 00:00:01,709
+hey what's up guys my name is Archana
+ 
+
+3
+00:00:01,709 --> 00:00:04,190
+hey what's up guys my name is Archana
+welcome back to another C++ video it's
+
+4
+00:00:04,190 --> 00:00:04,200
+welcome back to another C++ video it's
+ 
+
+5
+00:00:04,200 --> 00:00:05,990
+welcome back to another C++ video it's
+been ages since the last one gonna get
+
+6
+00:00:05,990 --> 00:00:06,000
+been ages since the last one gonna get
+ 
+
+7
+00:00:06,000 --> 00:00:08,570
+been ages since the last one gonna get
+back into it now though dynamic casting
+
+8
+00:00:08,570 --> 00:00:08,580
+back into it now though dynamic casting
+ 
+
+9
+00:00:08,580 --> 00:00:09,620
+back into it now though dynamic casting
+that's what we're gonna be talking about
+
+10
+00:00:09,620 --> 00:00:09,630
+that's what we're gonna be talking about
+ 
+
+11
+00:00:09,630 --> 00:00:11,720
+that's what we're gonna be talking about
+today you guys don't know what casting
+
+12
+00:00:11,720 --> 00:00:11,730
+today you guys don't know what casting
+ 
+
+13
+00:00:11,730 --> 00:00:14,060
+today you guys don't know what casting
+is in general in C++ I've got a video
+
+14
+00:00:14,060 --> 00:00:14,070
+is in general in C++ I've got a video
+ 
+
+15
+00:00:14,070 --> 00:00:16,039
+is in general in C++ I've got a video
+about that so definitely check that out
+
+16
+00:00:16,039 --> 00:00:16,049
+about that so definitely check that out
+ 
+
+17
+00:00:16,049 --> 00:00:17,480
+about that so definitely check that out
+and familiarize yourself with that
+
+18
+00:00:17,480 --> 00:00:17,490
+and familiarize yourself with that
+ 
+
+19
+00:00:17,490 --> 00:00:20,630
+and familiarize yourself with that
+before you move on to this video if
+
+20
+00:00:20,630 --> 00:00:20,640
+before you move on to this video if
+ 
+
+21
+00:00:20,640 --> 00:00:22,189
+before you move on to this video if
+you're not familiar with the type system
+
+22
+00:00:22,189 --> 00:00:22,199
+you're not familiar with the type system
+ 
+
+23
+00:00:22,199 --> 00:00:23,810
+you're not familiar with the type system
+in general I have a few videos about
+
+24
+00:00:23,810 --> 00:00:23,820
+in general I have a few videos about
+ 
+
+25
+00:00:23,820 --> 00:00:25,880
+in general I have a few videos about
+that as well because casting is to do
+
+26
+00:00:25,880 --> 00:00:25,890
+that as well because casting is to do
+ 
+
+27
+00:00:25,890 --> 00:00:27,980
+that as well because casting is to do
+with types casting is a way for us to
+
+28
+00:00:27,980 --> 00:00:27,990
+with types casting is a way for us to
+ 
+
+29
+00:00:27,990 --> 00:00:30,500
+with types casting is a way for us to
+convert between the types that we use in
+
+30
+00:00:30,500 --> 00:00:30,510
+convert between the types that we use in
+ 
+
+31
+00:00:30,510 --> 00:00:32,389
+convert between the types that we use in
+C++ so you need to make sure that you
+
+32
+00:00:32,389 --> 00:00:32,399
+C++ so you need to make sure that you
+ 
+
+33
+00:00:32,399 --> 00:00:34,280
+C++ so you need to make sure that you
+kind of understand how the type system
+
+34
+00:00:34,280 --> 00:00:34,290
+kind of understand how the type system
+ 
+
+35
+00:00:34,290 --> 00:00:37,729
+kind of understand how the type system
+works and more so maybe the point that
+
+36
+00:00:37,729 --> 00:00:37,739
+works and more so maybe the point that
+ 
+
+37
+00:00:37,739 --> 00:00:39,650
+works and more so maybe the point that
+the type system isn't something that is
+
+38
+00:00:39,650 --> 00:00:39,660
+the type system isn't something that is
+ 
+
+39
+00:00:39,660 --> 00:00:41,930
+the type system isn't something that is
+particularly enforced in C++ it's
+
+40
+00:00:41,930 --> 00:00:41,940
+particularly enforced in C++ it's
+ 
+
+41
+00:00:41,940 --> 00:00:43,819
+particularly enforced in C++ it's
+something that sales class kind of gives
+
+42
+00:00:43,819 --> 00:00:43,829
+something that sales class kind of gives
+ 
+
+43
+00:00:43,829 --> 00:00:46,670
+something that sales class kind of gives
+us as a way to protect our code but it's
+
+44
+00:00:46,670 --> 00:00:46,680
+us as a way to protect our code but it's
+ 
+
+45
+00:00:46,680 --> 00:00:47,690
+us as a way to protect our code but it's
+not something that we have to
+
+46
+00:00:47,690 --> 00:00:47,700
+not something that we have to
+ 
+
+47
+00:00:47,700 --> 00:00:49,549
+not something that we have to
+necessarily stick to or use because we
+
+48
+00:00:49,549 --> 00:00:49,559
+necessarily stick to or use because we
+ 
+
+49
+00:00:49,559 --> 00:00:52,369
+necessarily stick to or use because we
+can freely cast between types of any
+
+50
+00:00:52,369 --> 00:00:52,379
+can freely cast between types of any
+ 
+
+51
+00:00:52,379 --> 00:00:54,860
+can freely cast between types of any
+types like if we so choose but dynamic
+
+52
+00:00:54,860 --> 00:00:54,870
+types like if we so choose but dynamic
+ 
+
+53
+00:00:54,870 --> 00:00:57,590
+types like if we so choose but dynamic
+casting is provided to us as some
+
+54
+00:00:57,590 --> 00:00:57,600
+casting is provided to us as some
+ 
+
+55
+00:00:57,600 --> 00:01:00,619
+casting is provided to us as some
+somewhat of like a safety net really for
+
+56
+00:01:00,619 --> 00:01:00,629
+somewhat of like a safety net really for
+ 
+
+57
+00:01:00,629 --> 00:01:02,270
+somewhat of like a safety net really for
+when we want to do a specific type of
+
+58
+00:01:02,270 --> 00:01:02,280
+when we want to do a specific type of
+ 
+
+59
+00:01:02,280 --> 00:01:04,219
+when we want to do a specific type of
+casting now I've gone through kind of
+
+60
+00:01:04,219 --> 00:01:04,229
+casting now I've gone through kind of
+ 
+
+61
+00:01:04,229 --> 00:01:06,530
+casting now I've gone through kind of
+C++ style casts there's two kind of ways
+
+62
+00:01:06,530 --> 00:01:06,540
+C++ style casts there's two kind of ways
+ 
+
+63
+00:01:06,540 --> 00:01:09,020
+C++ style casts there's two kind of ways
+to cast there's a c-style cast which is
+
+64
+00:01:09,020 --> 00:01:09,030
+to cast there's a c-style cast which is
+ 
+
+65
+00:01:09,030 --> 00:01:10,760
+to cast there's a c-style cast which is
+just when you write your new type in
+
+66
+00:01:10,760 --> 00:01:10,770
+just when you write your new type in
+ 
+
+67
+00:01:10,770 --> 00:01:13,160
+just when you write your new type in
+brackets before a variable but then
+
+68
+00:01:13,160 --> 00:01:13,170
+brackets before a variable but then
+ 
+
+69
+00:01:13,170 --> 00:01:15,170
+brackets before a variable but then
+there's also the simplest I'll cast like
+
+70
+00:01:15,170 --> 00:01:15,180
+there's also the simplest I'll cast like
+ 
+
+71
+00:01:15,180 --> 00:01:16,850
+there's also the simplest I'll cast like
+static cast Const casts I'll make
+
+72
+00:01:16,850 --> 00:01:16,860
+static cast Const casts I'll make
+ 
+
+73
+00:01:16,860 --> 00:01:19,160
+static cast Const casts I'll make
+probably more videos about that but
+
+74
+00:01:19,160 --> 00:01:19,170
+probably more videos about that but
+ 
+
+75
+00:01:19,170 --> 00:01:22,310
+probably more videos about that but
+dynamic cast is a C++ style cast that
+
+76
+00:01:22,310 --> 00:01:22,320
+dynamic cast is a C++ style cast that
+ 
+
+77
+00:01:22,320 --> 00:01:25,070
+dynamic cast is a C++ style cast that
+only works in C++ doesn't work in C and
+
+78
+00:01:25,070 --> 00:01:25,080
+only works in C++ doesn't work in C and
+ 
+
+79
+00:01:25,080 --> 00:01:26,990
+only works in C++ doesn't work in C and
+it doesn't extra work to make sure that
+
+80
+00:01:26,990 --> 00:01:27,000
+it doesn't extra work to make sure that
+ 
+
+81
+00:01:27,000 --> 00:01:29,270
+it doesn't extra work to make sure that
+well like the way that we actually cast
+
+82
+00:01:29,270 --> 00:01:29,280
+well like the way that we actually cast
+ 
+
+83
+00:01:29,280 --> 00:01:32,060
+well like the way that we actually cast
+right it's some it's a it's actually a
+
+84
+00:01:32,060 --> 00:01:32,070
+right it's some it's a it's actually a
+ 
+
+85
+00:01:32,070 --> 00:01:34,039
+right it's some it's a it's actually a
+valid cast we don't just cast between
+
+86
+00:01:34,039 --> 00:01:34,049
+valid cast we don't just cast between
+ 
+
+87
+00:01:34,049 --> 00:01:36,109
+valid cast we don't just cast between
+two types and and whatever happens
+
+88
+00:01:36,109 --> 00:01:36,119
+two types and and whatever happens
+ 
+
+89
+00:01:36,119 --> 00:01:37,910
+two types and and whatever happens
+happens it's not like that it actually
+
+90
+00:01:37,910 --> 00:01:37,920
+happens it's not like that it actually
+ 
+
+91
+00:01:37,920 --> 00:01:39,859
+happens it's not like that it actually
+does some validation for us to ensure
+
+92
+00:01:39,859 --> 00:01:39,869
+does some validation for us to ensure
+ 
+
+93
+00:01:39,869 --> 00:01:43,880
+does some validation for us to ensure
+that cast is valid now whether or not
+
+94
+00:01:43,880 --> 00:01:43,890
+that cast is valid now whether or not
+ 
+
+95
+00:01:43,890 --> 00:01:46,490
+that cast is valid now whether or not
+you use dynamic cast is again totally up
+
+96
+00:01:46,490 --> 00:01:46,500
+you use dynamic cast is again totally up
+ 
+
+97
+00:01:46,500 --> 00:01:48,050
+you use dynamic cast is again totally up
+to you I want to give you some points to
+
+98
+00:01:48,050 --> 00:01:48,060
+to you I want to give you some points to
+ 
+
+99
+00:01:48,060 --> 00:01:51,230
+to you I want to give you some points to
+kind of I guess educate you to a sense
+
+100
+00:01:51,230 --> 00:01:51,240
+kind of I guess educate you to a sense
+ 
+
+101
+00:01:51,240 --> 00:01:53,420
+kind of I guess educate you to a sense
+of whether or not you should be using
+
+102
+00:01:53,420 --> 00:01:53,430
+of whether or not you should be using
+ 
+
+103
+00:01:53,430 --> 00:01:54,740
+of whether or not you should be using
+that if that's something you want to do
+
+104
+00:01:54,740 --> 00:01:54,750
+that if that's something you want to do
+ 
+
+105
+00:01:54,750 --> 00:01:58,670
+that if that's something you want to do
+but more so a dynamic cast is is quite a
+
+106
+00:01:58,670 --> 00:01:58,680
+but more so a dynamic cast is is quite a
+ 
+
+107
+00:01:58,680 --> 00:02:00,289
+but more so a dynamic cast is is quite a
+it's it's a tool that's more like a
+
+108
+00:02:00,289 --> 00:02:00,299
+it's it's a tool that's more like a
+ 
+
+109
+00:02:00,299 --> 00:02:02,030
+it's it's a tool that's more like a
+function it's important to realize that
+
+110
+00:02:02,030 --> 00:02:02,040
+function it's important to realize that
+ 
+
+111
+00:02:02,040 --> 00:02:04,670
+function it's important to realize that
+it's not just like a cast that is done
+
+112
+00:02:04,670 --> 00:02:04,680
+it's not just like a cast that is done
+ 
+
+113
+00:02:04,680 --> 00:02:08,240
+it's not just like a cast that is done
+at like compile time it's evaluated at
+
+114
+00:02:08,240 --> 00:02:08,250
+at like compile time it's evaluated at
+ 
+
+115
+00:02:08,250 --> 00:02:10,070
+at like compile time it's evaluated at
+runtime and because of that it does have
+
+116
+00:02:10,070 --> 00:02:10,080
+runtime and because of that it does have
+ 
+
+117
+00:02:10,080 --> 00:02:12,170
+runtime and because of that it does have
+an Associated runtime cost I might even
+
+118
+00:02:12,170 --> 00:02:12,180
+an Associated runtime cost I might even
+ 
+
+119
+00:02:12,180 --> 00:02:13,460
+an Associated runtime cost I might even
+make a video in the
+
+120
+00:02:13,460 --> 00:02:13,470
+make a video in the
+ 
+
+121
+00:02:13,470 --> 00:02:15,890
+make a video in the
+future comparing the performance of this
+
+122
+00:02:15,890 --> 00:02:15,900
+future comparing the performance of this
+ 
+
+123
+00:02:15,900 --> 00:02:17,630
+future comparing the performance of this
+normal kind of static cast versus that
+
+124
+00:02:17,630 --> 00:02:17,640
+normal kind of static cast versus that
+ 
+
+125
+00:02:17,640 --> 00:02:20,090
+normal kind of static cast versus that
+dynamic cast because of course since the
+
+126
+00:02:20,090 --> 00:02:20,100
+dynamic cast because of course since the
+ 
+
+127
+00:02:20,100 --> 00:02:22,730
+dynamic cast because of course since the
+dynamic cast does extra work it does
+
+128
+00:02:22,730 --> 00:02:22,740
+dynamic cast does extra work it does
+ 
+
+129
+00:02:22,740 --> 00:02:24,350
+dynamic cast does extra work it does
+kind of come with a small performance
+
+130
+00:02:24,350 --> 00:02:24,360
+kind of come with a small performance
+ 
+
+131
+00:02:24,360 --> 00:02:27,500
+kind of come with a small performance
+cost and that's normal but what dynamic
+
+132
+00:02:27,500 --> 00:02:27,510
+cost and that's normal but what dynamic
+ 
+
+133
+00:02:27,510 --> 00:02:30,860
+cost and that's normal but what dynamic
+cast does is specifically it's used for
+
+134
+00:02:30,860 --> 00:02:30,870
+cast does is specifically it's used for
+ 
+
+135
+00:02:30,870 --> 00:02:32,690
+cast does is specifically it's used for
+casts along the inheritance hierarchy
+
+136
+00:02:32,690 --> 00:02:32,700
+casts along the inheritance hierarchy
+ 
+
+137
+00:02:32,700 --> 00:02:34,490
+casts along the inheritance hierarchy
+now if you don't know what inheritance
+
+138
+00:02:34,490 --> 00:02:34,500
+now if you don't know what inheritance
+ 
+
+139
+00:02:34,500 --> 00:02:36,740
+now if you don't know what inheritance
+is in civil puzzle what classes are in
+
+140
+00:02:36,740 --> 00:02:36,750
+is in civil puzzle what classes are in
+ 
+
+141
+00:02:36,750 --> 00:02:39,140
+is in civil puzzle what classes are in
+C++ check out my video on inheritance
+
+142
+00:02:39,140 --> 00:02:39,150
+C++ check out my video on inheritance
+ 
+
+143
+00:02:39,150 --> 00:02:40,430
+C++ check out my video on inheritance
+and on classes and all that stuff
+
+144
+00:02:40,430 --> 00:02:40,440
+and on classes and all that stuff
+ 
+
+145
+00:02:40,440 --> 00:02:42,950
+and on classes and all that stuff
+because that will help you out but
+
+146
+00:02:42,950 --> 00:02:42,960
+because that will help you out but
+ 
+
+147
+00:02:42,960 --> 00:02:44,540
+because that will help you out but
+essentially what that means is if I have
+
+148
+00:02:44,540 --> 00:02:44,550
+essentially what that means is if I have
+ 
+
+149
+00:02:44,550 --> 00:02:46,580
+essentially what that means is if I have
+a class that is a subclass of another
+
+150
+00:02:46,580 --> 00:02:46,590
+a class that is a subclass of another
+ 
+
+151
+00:02:46,590 --> 00:02:48,650
+a class that is a subclass of another
+class and I want to either cast to the
+
+152
+00:02:48,650 --> 00:02:48,660
+class and I want to either cast to the
+ 
+
+153
+00:02:48,660 --> 00:02:50,810
+class and I want to either cast to the
+base type or from the base type to a
+
+154
+00:02:50,810 --> 00:02:50,820
+base type or from the base type to a
+ 
+
+155
+00:02:50,820 --> 00:02:53,240
+base type or from the base type to a
+derived type that's where I can actually
+
+156
+00:02:53,240 --> 00:02:53,250
+derived type that's where I can actually
+ 
+
+157
+00:02:53,250 --> 00:02:55,730
+derived type that's where I can actually
+use a dynamic cast right so let's just
+
+158
+00:02:55,730 --> 00:02:55,740
+use a dynamic cast right so let's just
+ 
+
+159
+00:02:55,740 --> 00:02:57,770
+use a dynamic cast right so let's just
+say we have an entity we have an empty
+
+160
+00:02:57,770 --> 00:02:57,780
+say we have an entity we have an empty
+ 
+
+161
+00:02:57,780 --> 00:02:59,210
+say we have an entity we have an empty
+class which is like the class for kind
+
+162
+00:02:59,210 --> 00:02:59,220
+class which is like the class for kind
+ 
+
+163
+00:02:59,220 --> 00:03:01,400
+class which is like the class for kind
+of all of our entities in our game and
+
+164
+00:03:01,400 --> 00:03:01,410
+of all of our entities in our game and
+ 
+
+165
+00:03:01,410 --> 00:03:03,080
+of all of our entities in our game and
+then we have like a player class and
+
+166
+00:03:03,080 --> 00:03:03,090
+then we have like a player class and
+ 
+
+167
+00:03:03,090 --> 00:03:04,460
+then we have like a player class and
+maybe like an enemy class and they're
+
+168
+00:03:04,460 --> 00:03:04,470
+maybe like an enemy class and they're
+ 
+
+169
+00:03:04,470 --> 00:03:06,440
+maybe like an enemy class and they're
+both entities so they derive from the
+
+170
+00:03:06,440 --> 00:03:06,450
+both entities so they derive from the
+ 
+
+171
+00:03:06,450 --> 00:03:09,800
+both entities so they derive from the
+entity class right if I just want to
+
+172
+00:03:09,800 --> 00:03:09,810
+entity class right if I just want to
+ 
+
+173
+00:03:09,810 --> 00:03:12,530
+entity class right if I just want to
+cast a player object back to an entity
+
+174
+00:03:12,530 --> 00:03:12,540
+cast a player object back to an entity
+ 
+
+175
+00:03:12,540 --> 00:03:14,810
+cast a player object back to an entity
+object that that's easy I mean a player
+
+176
+00:03:14,810 --> 00:03:14,820
+object that that's easy I mean a player
+ 
+
+177
+00:03:14,820 --> 00:03:17,479
+object that that's easy I mean a player
+already has the type entity so that that
+
+178
+00:03:17,479 --> 00:03:17,489
+already has the type entity so that that
+ 
+
+179
+00:03:17,489 --> 00:03:19,310
+already has the type entity so that that
+can be done implicitly no casting is
+
+180
+00:03:19,310 --> 00:03:19,320
+can be done implicitly no casting is
+ 
+
+181
+00:03:19,320 --> 00:03:21,350
+can be done implicitly no casting is
+necessary although if we wanted to we
+
+182
+00:03:21,350 --> 00:03:21,360
+necessary although if we wanted to we
+ 
+
+183
+00:03:21,360 --> 00:03:23,210
+necessary although if we wanted to we
+could still use dynamic casts to do it
+
+184
+00:03:23,210 --> 00:03:23,220
+could still use dynamic casts to do it
+ 
+
+185
+00:03:23,220 --> 00:03:24,199
+could still use dynamic casts to do it
+now
+
+186
+00:03:24,199 --> 00:03:24,209
+now
+ 
+
+187
+00:03:24,209 --> 00:03:26,090
+now
+the other way around is where things get
+
+188
+00:03:26,090 --> 00:03:26,100
+the other way around is where things get
+ 
+
+189
+00:03:26,100 --> 00:03:27,830
+the other way around is where things get
+a little bit more complicated so by the
+
+190
+00:03:27,830 --> 00:03:27,840
+a little bit more complicated so by the
+ 
+
+191
+00:03:27,840 --> 00:03:29,630
+a little bit more complicated so by the
+other way around I mean if we have an
+
+192
+00:03:29,630 --> 00:03:29,640
+other way around I mean if we have an
+ 
+
+193
+00:03:29,640 --> 00:03:32,390
+other way around I mean if we have an
+entity instance and we want to cast it
+
+194
+00:03:32,390 --> 00:03:32,400
+entity instance and we want to cast it
+ 
+
+195
+00:03:32,400 --> 00:03:35,120
+entity instance and we want to cast it
+to a player we have no way of knowing
+
+196
+00:03:35,120 --> 00:03:35,130
+to a player we have no way of knowing
+ 
+
+197
+00:03:35,130 --> 00:03:37,220
+to a player we have no way of knowing
+whether or it's a player right it's as
+
+198
+00:03:37,220 --> 00:03:37,230
+whether or it's a player right it's as
+ 
+
+199
+00:03:37,230 --> 00:03:39,530
+whether or it's a player right it's as
+far as we know it is an entity pointer
+
+200
+00:03:39,530 --> 00:03:39,540
+far as we know it is an entity pointer
+ 
+
+201
+00:03:39,540 --> 00:03:41,420
+far as we know it is an entity pointer
+right it's an entity instance is an
+
+202
+00:03:41,420 --> 00:03:41,430
+right it's an entity instance is an
+ 
+
+203
+00:03:41,430 --> 00:03:44,240
+right it's an entity instance is an
+instance of an entity object right so
+
+204
+00:03:44,240 --> 00:03:44,250
+instance of an entity object right so
+ 
+
+205
+00:03:44,250 --> 00:03:46,910
+instance of an entity object right so
+what is an entity object well it could
+
+206
+00:03:46,910 --> 00:03:46,920
+what is an entity object well it could
+ 
+
+207
+00:03:46,920 --> 00:03:48,770
+what is an entity object well it could
+be of type entity could just be an
+
+208
+00:03:48,770 --> 00:03:48,780
+be of type entity could just be an
+ 
+
+209
+00:03:48,780 --> 00:03:50,900
+be of type entity could just be an
+entity could be neither player right or
+
+210
+00:03:50,900 --> 00:03:50,910
+entity could be neither player right or
+ 
+
+211
+00:03:50,910 --> 00:03:53,990
+entity could be neither player right or
+enemy right could just be an MC but it
+
+212
+00:03:53,990 --> 00:03:54,000
+enemy right could just be an MC but it
+ 
+
+213
+00:03:54,000 --> 00:03:57,229
+enemy right could just be an MC but it
+also could be a player or it could be an
+
+214
+00:03:57,229 --> 00:03:57,239
+also could be a player or it could be an
+ 
+
+215
+00:03:57,239 --> 00:03:59,449
+also could be a player or it could be an
+enemy that's totally valid we might have
+
+216
+00:03:59,449 --> 00:03:59,459
+enemy that's totally valid we might have
+ 
+
+217
+00:03:59,459 --> 00:04:00,890
+enemy that's totally valid we might have
+made it a player we might have made it
+
+218
+00:04:00,890 --> 00:04:00,900
+made it a player we might have made it
+ 
+
+219
+00:04:00,900 --> 00:04:02,690
+made it a player we might have made it
+an enemy or it could be a thief it could
+
+220
+00:04:02,690 --> 00:04:02,700
+an enemy or it could be a thief it could
+ 
+
+221
+00:04:02,700 --> 00:04:04,759
+an enemy or it could be a thief it could
+be one of three types if we want to say
+
+222
+00:04:04,759 --> 00:04:04,769
+be one of three types if we want to say
+ 
+
+223
+00:04:04,769 --> 00:04:06,530
+be one of three types if we want to say
+that actually I'm gonna cost this two
+
+224
+00:04:06,530 --> 00:04:06,540
+that actually I'm gonna cost this two
+ 
+
+225
+00:04:06,540 --> 00:04:09,590
+that actually I'm gonna cost this two
+player we don't know if it is a player
+
+226
+00:04:09,590 --> 00:04:09,600
+player we don't know if it is a player
+ 
+
+227
+00:04:09,600 --> 00:04:11,390
+player we don't know if it is a player
+or not the compiler has to either
+
+228
+00:04:11,390 --> 00:04:11,400
+or not the compiler has to either
+ 
+
+229
+00:04:11,400 --> 00:04:13,850
+or not the compiler has to either
+believe us and if we're wrong let's just
+
+230
+00:04:13,850 --> 00:04:13,860
+believe us and if we're wrong let's just
+ 
+
+231
+00:04:13,860 --> 00:04:15,140
+believe us and if we're wrong let's just
+say it was an enemy and we try and
+
+232
+00:04:15,140 --> 00:04:15,150
+say it was an enemy and we try and
+ 
+
+233
+00:04:15,150 --> 00:04:17,240
+say it was an enemy and we try and
+access data that is unique to player or
+
+234
+00:04:17,240 --> 00:04:17,250
+access data that is unique to player or
+ 
+
+235
+00:04:17,250 --> 00:04:19,009
+access data that is unique to player or
+a function that modifies doubt of this
+
+236
+00:04:19,009 --> 00:04:19,019
+a function that modifies doubt of this
+ 
+
+237
+00:04:19,019 --> 00:04:20,570
+a function that modifies doubt of this
+unique two player our program will
+
+238
+00:04:20,570 --> 00:04:20,580
+unique two player our program will
+ 
+
+239
+00:04:20,580 --> 00:04:21,830
+unique two player our program will
+probably crash and it'll be like a
+
+240
+00:04:21,830 --> 00:04:21,840
+probably crash and it'll be like a
+ 
+
+241
+00:04:21,840 --> 00:04:25,670
+probably crash and it'll be like a
+disaster so because of that dynamic cost
+
+242
+00:04:25,670 --> 00:04:25,680
+disaster so because of that dynamic cost
+ 
+
+243
+00:04:25,680 --> 00:04:27,379
+disaster so because of that dynamic cost
+is actually used
+
+244
+00:04:27,379 --> 00:04:27,389
+is actually used
+ 
+
+245
+00:04:27,389 --> 00:04:29,600
+is actually used
+to validate that so what happens is if
+
+246
+00:04:29,600 --> 00:04:29,610
+to validate that so what happens is if
+ 
+
+247
+00:04:29,610 --> 00:04:32,600
+to validate that so what happens is if
+we have an entity instance that is
+
+248
+00:04:32,600 --> 00:04:32,610
+we have an entity instance that is
+ 
+
+249
+00:04:32,610 --> 00:04:35,480
+we have an entity instance that is
+actually an enemy right but we cast it
+
+250
+00:04:35,480 --> 00:04:35,490
+actually an enemy right but we cast it
+ 
+
+251
+00:04:35,490 --> 00:04:37,100
+actually an enemy right but we cast it
+we try and cast it to a player using
+
+252
+00:04:37,100 --> 00:04:37,110
+we try and cast it to a player using
+ 
+
+253
+00:04:37,110 --> 00:04:39,559
+we try and cast it to a player using
+dynamic cast that cast will fail and
+
+254
+00:04:39,559 --> 00:04:39,569
+dynamic cast that cast will fail and
+ 
+
+255
+00:04:39,569 --> 00:04:41,600
+dynamic cast that cast will fail and
+that dynamic cast will return a null
+
+256
+00:04:41,600 --> 00:04:41,610
+that dynamic cast will return a null
+ 
+
+257
+00:04:41,610 --> 00:04:43,790
+that dynamic cast will return a null
+pointer will just return zero and then
+
+258
+00:04:43,790 --> 00:04:43,800
+pointer will just return zero and then
+ 
+
+259
+00:04:43,800 --> 00:04:45,320
+pointer will just return zero and then
+we can validate that or do whatever we
+
+260
+00:04:45,320 --> 00:04:45,330
+we can validate that or do whatever we
+ 
+
+261
+00:04:45,330 --> 00:04:46,580
+we can validate that or do whatever we
+want so basically we could use it to
+
+262
+00:04:46,580 --> 00:04:46,590
+want so basically we could use it to
+ 
+
+263
+00:04:46,590 --> 00:04:49,100
+want so basically we could use it to
+check to see if an object is a given
+
+264
+00:04:49,100 --> 00:04:49,110
+check to see if an object is a given
+ 
+
+265
+00:04:49,110 --> 00:04:51,559
+check to see if an object is a given
+type so in other words I can try and do
+
+266
+00:04:51,559 --> 00:04:51,569
+type so in other words I can try and do
+ 
+
+267
+00:04:51,569 --> 00:04:53,570
+type so in other words I can try and do
+a dynamic cast on that entity object to
+
+268
+00:04:53,570 --> 00:04:53,580
+a dynamic cast on that entity object to
+ 
+
+269
+00:04:53,580 --> 00:04:55,459
+a dynamic cast on that entity object to
+convert it to player and then check to
+
+270
+00:04:55,459 --> 00:04:55,469
+convert it to player and then check to
+ 
+
+271
+00:04:55,469 --> 00:04:56,899
+convert it to player and then check to
+see if that returns not with it returns
+
+272
+00:04:56,899 --> 00:04:56,909
+see if that returns not with it returns
+ 
+
+273
+00:04:56,909 --> 00:04:58,820
+see if that returns not with it returns
+null that it's not a player right this
+
+274
+00:04:58,820 --> 00:04:58,830
+null that it's not a player right this
+ 
+
+275
+00:04:58,830 --> 00:05:00,379
+null that it's not a player right this
+is a lot of stuff is more easily
+
+276
+00:05:00,379 --> 00:05:00,389
+is a lot of stuff is more easily
+ 
+
+277
+00:05:00,389 --> 00:05:01,459
+is a lot of stuff is more easily
+explained encouraged so let's just dive
+
+278
+00:05:01,459 --> 00:05:01,469
+explained encouraged so let's just dive
+ 
+
+279
+00:05:01,469 --> 00:05:03,830
+explained encouraged so let's just dive
+in take a look at a basic kind of setup
+
+280
+00:05:03,830 --> 00:05:03,840
+in take a look at a basic kind of setup
+ 
+
+281
+00:05:03,840 --> 00:05:05,990
+in take a look at a basic kind of setup
+in which this might be useful and how we
+
+282
+00:05:05,990 --> 00:05:06,000
+in which this might be useful and how we
+ 
+
+283
+00:05:06,000 --> 00:05:08,659
+in which this might be useful and how we
+could actually use dynamic casting okay
+
+284
+00:05:08,659 --> 00:05:08,669
+could actually use dynamic casting okay
+ 
+
+285
+00:05:08,669 --> 00:05:10,459
+could actually use dynamic casting okay
+so what does a blank C++ project here
+
+286
+00:05:10,459 --> 00:05:10,469
+so what does a blank C++ project here
+ 
+
+287
+00:05:10,469 --> 00:05:12,469
+so what does a blank C++ project here
+because I really wanted to kind of show
+
+288
+00:05:12,469 --> 00:05:12,479
+because I really wanted to kind of show
+ 
+
+289
+00:05:12,479 --> 00:05:14,149
+because I really wanted to kind of show
+you guys everything so if we do what I
+
+290
+00:05:14,149 --> 00:05:14,159
+you guys everything so if we do what I
+ 
+
+291
+00:05:14,159 --> 00:05:16,100
+you guys everything so if we do what I
+just described if we have like an entity
+
+292
+00:05:16,100 --> 00:05:16,110
+just described if we have like an entity
+ 
+
+293
+00:05:16,110 --> 00:05:19,249
+just described if we have like an entity
+right if we have a player which is an MC
+
+294
+00:05:19,249 --> 00:05:19,259
+right if we have a player which is an MC
+ 
+
+295
+00:05:19,259 --> 00:05:23,689
+right if we have a player which is an MC
+so a public entity and then we'll also
+
+296
+00:05:23,689 --> 00:05:23,699
+so a public entity and then we'll also
+ 
+
+297
+00:05:23,699 --> 00:05:26,329
+so a public entity and then we'll also
+have that enemy class that I talked
+
+298
+00:05:26,329 --> 00:05:26,339
+have that enemy class that I talked
+ 
+
+299
+00:05:26,339 --> 00:05:28,070
+have that enemy class that I talked
+about which is also going to be an su
+
+300
+00:05:28,070 --> 00:05:28,080
+about which is also going to be an su
+ 
+
+301
+00:05:28,080 --> 00:05:29,570
+about which is also going to be an su
+right now
+
+302
+00:05:29,570 --> 00:05:29,580
+right now
+ 
+
+303
+00:05:29,580 --> 00:05:31,070
+right now
+in terms of the data that these will
+
+304
+00:05:31,070 --> 00:05:31,080
+in terms of the data that these will
+ 
+
+305
+00:05:31,080 --> 00:05:35,329
+in terms of the data that these will
+have if it's not even required for us to
+
+306
+00:05:35,329 --> 00:05:35,339
+have if it's not even required for us to
+ 
+
+307
+00:05:35,339 --> 00:05:37,490
+have if it's not even required for us to
+actually add any data so I probably
+
+308
+00:05:37,490 --> 00:05:37,500
+actually add any data so I probably
+ 
+
+309
+00:05:37,500 --> 00:05:39,640
+actually add any data so I probably
+wanted just to keep this brief I think
+
+310
+00:05:39,640 --> 00:05:39,650
+wanted just to keep this brief I think
+ 
+
+311
+00:05:39,650 --> 00:05:41,929
+wanted just to keep this brief I think
+because it's not really worth going into
+
+312
+00:05:41,929 --> 00:05:41,939
+because it's not really worth going into
+ 
+
+313
+00:05:41,939 --> 00:05:43,760
+because it's not really worth going into
+that stuff but basically the idea is we
+
+314
+00:05:43,760 --> 00:05:43,770
+that stuff but basically the idea is we
+ 
+
+315
+00:05:43,770 --> 00:05:45,230
+that stuff but basically the idea is we
+have three different types that they're
+
+316
+00:05:45,230 --> 00:05:45,240
+have three different types that they're
+ 
+
+317
+00:05:45,240 --> 00:05:46,639
+have three different types that they're
+probably filled with functions filled
+
+318
+00:05:46,639 --> 00:05:46,649
+probably filled with functions filled
+ 
+
+319
+00:05:46,649 --> 00:05:48,170
+probably filled with functions filled
+with data that is unique to their
+
+320
+00:05:48,170 --> 00:05:48,180
+with data that is unique to their
+ 
+
+321
+00:05:48,180 --> 00:05:50,209
+with data that is unique to their
+specific types how do I make an entity
+
+322
+00:05:50,209 --> 00:05:50,219
+specific types how do I make an entity
+ 
+
+323
+00:05:50,219 --> 00:05:51,320
+specific types how do I make an entity
+well let's just say I want to make a
+
+324
+00:05:51,320 --> 00:05:51,330
+well let's just say I want to make a
+ 
+
+325
+00:05:51,330 --> 00:05:53,510
+well let's just say I want to make a
+player I can just type in player player
+
+326
+00:05:53,510 --> 00:05:53,520
+player I can just type in player player
+ 
+
+327
+00:05:53,520 --> 00:05:55,519
+player I can just type in player player
+equals new player now for this video
+
+328
+00:05:55,519 --> 00:05:55,529
+equals new player now for this video
+ 
+
+329
+00:05:55,529 --> 00:05:57,260
+equals new player now for this video
+we're just gonna be using raw pointers I
+
+330
+00:05:57,260 --> 00:05:57,270
+we're just gonna be using raw pointers I
+ 
+
+331
+00:05:57,270 --> 00:05:58,459
+we're just gonna be using raw pointers I
+might make a video in the future about
+
+332
+00:05:58,459 --> 00:05:58,469
+might make a video in the future about
+ 
+
+333
+00:05:58,469 --> 00:06:00,950
+might make a video in the future about
+dynamic casting with smart pointers but
+
+334
+00:06:00,950 --> 00:06:00,960
+dynamic casting with smart pointers but
+ 
+
+335
+00:06:00,960 --> 00:06:02,269
+dynamic casting with smart pointers but
+this video just can't cover kind of the
+
+336
+00:06:02,269 --> 00:06:02,279
+this video just can't cover kind of the
+ 
+
+337
+00:06:02,279 --> 00:06:04,639
+this video just can't cover kind of the
+original dynamic cast that is used with
+
+338
+00:06:04,639 --> 00:06:04,649
+original dynamic cast that is used with
+ 
+
+339
+00:06:04,649 --> 00:06:07,070
+original dynamic cast that is used with
+the raw pointers so we have a player
+
+340
+00:06:07,070 --> 00:06:07,080
+the raw pointers so we have a player
+ 
+
+341
+00:06:07,080 --> 00:06:09,619
+the raw pointers so we have a player
+right now the thing is this player
+
+342
+00:06:09,619 --> 00:06:09,629
+right now the thing is this player
+ 
+
+343
+00:06:09,629 --> 00:06:12,200
+right now the thing is this player
+already has two types it has both entity
+
+344
+00:06:12,200 --> 00:06:12,210
+already has two types it has both entity
+ 
+
+345
+00:06:12,210 --> 00:06:14,629
+already has two types it has both entity
+and player associated with it it's
+
+346
+00:06:14,629 --> 00:06:14,639
+and player associated with it it's
+ 
+
+347
+00:06:14,639 --> 00:06:16,309
+and player associated with it it's
+actually even got like a type list thing
+
+348
+00:06:16,309 --> 00:06:16,319
+actually even got like a type list thing
+ 
+
+349
+00:06:16,319 --> 00:06:17,510
+actually even got like a type list thing
+as well which we might talk about later
+
+350
+00:06:17,510 --> 00:06:17,520
+as well which we might talk about later
+ 
+
+351
+00:06:17,520 --> 00:06:20,059
+as well which we might talk about later
+but it's got the those two types and T
+
+352
+00:06:20,059 --> 00:06:20,069
+but it's got the those two types and T
+ 
+
+353
+00:06:20,069 --> 00:06:21,950
+but it's got the those two types and T
+and player so what I could do is easily
+
+354
+00:06:21,950 --> 00:06:21,960
+and player so what I could do is easily
+ 
+
+355
+00:06:21,960 --> 00:06:23,990
+and player so what I could do is easily
+just change this to entity right oh I
+
+356
+00:06:23,990 --> 00:06:24,000
+just change this to entity right oh I
+ 
+
+357
+00:06:24,000 --> 00:06:26,839
+just change this to entity right oh I
+can make an entity II a people player
+
+358
+00:06:26,839 --> 00:06:26,849
+can make an entity II a people player
+ 
+
+359
+00:06:26,849 --> 00:06:29,899
+can make an entity II a people player
+right implicit cost however once I've
+
+360
+00:06:29,899 --> 00:06:29,909
+right implicit cost however once I've
+ 
+
+361
+00:06:29,909 --> 00:06:32,240
+right implicit cost however once I've
+done that if I want to go back to player
+
+362
+00:06:32,240 --> 00:06:32,250
+done that if I want to go back to player
+ 
+
+363
+00:06:32,250 --> 00:06:35,360
+done that if I want to go back to player
+I can't easily do that so I can type in
+
+364
+00:06:35,360 --> 00:06:35,370
+I can't easily do that so I can type in
+ 
+
+365
+00:06:35,370 --> 00:06:38,089
+I can't easily do that so I can type in
+player P equals E right that's gonna
+
+366
+00:06:38,089 --> 00:06:38,099
+player P equals E right that's gonna
+ 
+
+367
+00:06:38,099 --> 00:06:39,139
+player P equals E right that's gonna
+give me an error
+
+368
+00:06:39,139 --> 00:06:39,149
+give me an error
+ 
+
+369
+00:06:39,149 --> 00:06:41,239
+give me an error
+why because well I have to
+
+370
+00:06:41,239 --> 00:06:41,249
+why because well I have to
+ 
+
+371
+00:06:41,249 --> 00:06:43,369
+why because well I have to
+the different types the reason is that
+
+372
+00:06:43,369 --> 00:06:43,379
+the different types the reason is that
+ 
+
+373
+00:06:43,379 --> 00:06:45,589
+the different types the reason is that
+this could have easily been an enemy you
+
+374
+00:06:45,589 --> 00:06:45,599
+this could have easily been an enemy you
+ 
+
+375
+00:06:45,599 --> 00:06:46,459
+this could have easily been an enemy you
+know what if I do
+
+376
+00:06:46,459 --> 00:06:46,469
+know what if I do
+ 
+
+377
+00:06:46,469 --> 00:06:50,149
+know what if I do
+MC easy one or whatever equals new enemy
+
+378
+00:06:50,149 --> 00:06:50,159
+MC easy one or whatever equals new enemy
+ 
+
+379
+00:06:50,159 --> 00:06:52,639
+MC easy one or whatever equals new enemy
+all right what happens here what about
+
+380
+00:06:52,639 --> 00:06:52,649
+all right what happens here what about
+ 
+
+381
+00:06:52,649 --> 00:06:54,919
+all right what happens here what about
+what happens if I do a one right
+
+382
+00:06:54,919 --> 00:06:54,929
+what happens if I do a one right
+ 
+
+383
+00:06:54,929 --> 00:06:57,079
+what happens if I do a one right
+we don't it's still an entity but is it
+
+384
+00:06:57,079 --> 00:06:57,089
+we don't it's still an entity but is it
+ 
+
+385
+00:06:57,089 --> 00:06:59,209
+we don't it's still an entity but is it
+a player is it an enemy we don't really
+
+386
+00:06:59,209 --> 00:06:59,219
+a player is it an enemy we don't really
+ 
+
+387
+00:06:59,219 --> 00:07:01,999
+a player is it an enemy we don't really
+know at this at this point so because of
+
+388
+00:07:01,999 --> 00:07:02,009
+know at this at this point so because of
+ 
+
+389
+00:07:02,009 --> 00:07:04,579
+know at this at this point so because of
+that system we have to actually reassure
+
+390
+00:07:04,579 --> 00:07:04,589
+that system we have to actually reassure
+ 
+
+391
+00:07:04,589 --> 00:07:06,709
+that system we have to actually reassure
+the compiler by saying that hey it is a
+
+392
+00:07:06,709 --> 00:07:06,719
+the compiler by saying that hey it is a
+ 
+
+393
+00:07:06,719 --> 00:07:09,859
+the compiler by saying that hey it is a
+player now in this case there this is
+
+394
+00:07:09,859 --> 00:07:09,869
+player now in this case there this is
+ 
+
+395
+00:07:09,869 --> 00:07:10,579
+player now in this case there this is
+dangerous
+
+396
+00:07:10,579 --> 00:07:10,589
+dangerous
+ 
+
+397
+00:07:10,589 --> 00:07:13,669
+dangerous
+because E one's actually an enemy and so
+
+398
+00:07:13,669 --> 00:07:13,679
+because E one's actually an enemy and so
+ 
+
+399
+00:07:13,679 --> 00:07:15,079
+because E one's actually an enemy and so
+if we cast it to a player this will
+
+400
+00:07:15,079 --> 00:07:15,089
+if we cast it to a player this will
+ 
+
+401
+00:07:15,089 --> 00:07:17,419
+if we cast it to a player this will
+initially work and in fact if enemy has
+
+402
+00:07:17,419 --> 00:07:17,429
+initially work and in fact if enemy has
+ 
+
+403
+00:07:17,429 --> 00:07:19,609
+initially work and in fact if enemy has
+a function that like player also has or
+
+404
+00:07:19,609 --> 00:07:19,619
+a function that like player also has or
+ 
+
+405
+00:07:19,619 --> 00:07:21,559
+a function that like player also has or
+MC also has and we try and run that
+
+406
+00:07:21,559 --> 00:07:21,569
+MC also has and we try and run that
+ 
+
+407
+00:07:21,569 --> 00:07:22,909
+MC also has and we try and run that
+function it'll probably work we probably
+
+408
+00:07:22,909 --> 00:07:22,919
+function it'll probably work we probably
+ 
+
+409
+00:07:22,919 --> 00:07:24,739
+function it'll probably work we probably
+won't even notice any issues with it but
+
+410
+00:07:24,739 --> 00:07:24,749
+won't even notice any issues with it but
+ 
+
+411
+00:07:24,749 --> 00:07:26,600
+won't even notice any issues with it but
+if we try and do something that is
+
+412
+00:07:26,600 --> 00:07:26,610
+if we try and do something that is
+ 
+
+413
+00:07:26,610 --> 00:07:28,459
+if we try and do something that is
+unique to player that enemy doesn't have
+
+414
+00:07:28,459 --> 00:07:28,469
+unique to player that enemy doesn't have
+ 
+
+415
+00:07:28,469 --> 00:07:30,979
+unique to player that enemy doesn't have
+such as access certain data members that
+
+416
+00:07:30,979 --> 00:07:30,989
+such as access certain data members that
+ 
+
+417
+00:07:30,989 --> 00:07:34,039
+such as access certain data members that
+only player has a not enemy since the
+
+418
+00:07:34,039 --> 00:07:34,049
+only player has a not enemy since the
+ 
+
+419
+00:07:34,049 --> 00:07:36,769
+only player has a not enemy since the
+underlying type is actually enemy our
+
+420
+00:07:36,769 --> 00:07:36,779
+underlying type is actually enemy our
+ 
+
+421
+00:07:36,779 --> 00:07:38,749
+underlying type is actually enemy our
+program will likely crash or do some
+
+422
+00:07:38,749 --> 00:07:38,759
+program will likely crash or do some
+ 
+
+423
+00:07:38,759 --> 00:07:40,759
+program will likely crash or do some
+really weird things that we really don't
+
+424
+00:07:40,759 --> 00:07:40,769
+really weird things that we really don't
+ 
+
+425
+00:07:40,769 --> 00:07:44,929
+really weird things that we really don't
+want it to do so because of that we can
+
+426
+00:07:44,929 --> 00:07:44,939
+want it to do so because of that we can
+ 
+
+427
+00:07:44,939 --> 00:07:46,939
+want it to do so because of that we can
+again instead of using R or casts or
+
+428
+00:07:46,939 --> 00:07:46,949
+again instead of using R or casts or
+ 
+
+429
+00:07:46,949 --> 00:07:48,889
+again instead of using R or casts or
+even like a static class because you can
+
+430
+00:07:48,889 --> 00:07:48,899
+even like a static class because you can
+ 
+
+431
+00:07:48,899 --> 00:07:50,629
+even like a static class because you can
+still use you know a static cast with
+
+432
+00:07:50,629 --> 00:07:50,639
+still use you know a static cast with
+ 
+
+433
+00:07:50,639 --> 00:07:52,429
+still use you know a static cast with
+this like that I mean that's fine
+
+434
+00:07:52,429 --> 00:07:52,439
+this like that I mean that's fine
+ 
+
+435
+00:07:52,439 --> 00:07:54,619
+this like that I mean that's fine
+instead about what we can do is swap
+
+436
+00:07:54,619 --> 00:07:54,629
+instead about what we can do is swap
+ 
+
+437
+00:07:54,629 --> 00:07:57,289
+instead about what we can do is swap
+this out for a dynamic cast right now if
+
+438
+00:07:57,289 --> 00:07:57,299
+this out for a dynamic cast right now if
+ 
+
+439
+00:07:57,299 --> 00:07:58,789
+this out for a dynamic cast right now if
+we try to do that at this rate it's
+
+440
+00:07:58,789 --> 00:07:58,799
+we try to do that at this rate it's
+ 
+
+441
+00:07:58,799 --> 00:08:00,019
+we try to do that at this rate it's
+gonna tell us that it needs to have a
+
+442
+00:08:00,019 --> 00:08:00,029
+gonna tell us that it needs to have a
+ 
+
+443
+00:08:00,029 --> 00:08:01,429
+gonna tell us that it needs to have a
+polymer off the class site because
+
+444
+00:08:01,429 --> 00:08:01,439
+polymer off the class site because
+ 
+
+445
+00:08:01,439 --> 00:08:03,529
+polymer off the class site because
+dynamic cast only works with polymer for
+
+446
+00:08:03,529 --> 00:08:03,539
+dynamic cast only works with polymer for
+ 
+
+447
+00:08:03,539 --> 00:08:04,879
+dynamic cast only works with polymer for
+class types how do we do that well we
+
+448
+00:08:04,879 --> 00:08:04,889
+class types how do we do that well we
+ 
+
+449
+00:08:04,889 --> 00:08:06,799
+class types how do we do that well we
+basically need to have some kind of
+
+450
+00:08:06,799 --> 00:08:06,809
+basically need to have some kind of
+ 
+
+451
+00:08:06,809 --> 00:08:09,079
+basically need to have some kind of
+virtual function table that actually
+
+452
+00:08:09,079 --> 00:08:09,089
+virtual function table that actually
+ 
+
+453
+00:08:09,089 --> 00:08:12,559
+virtual function table that actually
+tell us that it is in fact a polymorphic
+
+454
+00:08:12,559 --> 00:08:12,569
+tell us that it is in fact a polymorphic
+ 
+
+455
+00:08:12,569 --> 00:08:14,389
+tell us that it is in fact a polymorphic
+class type so we can make this we need
+
+456
+00:08:14,389 --> 00:08:14,399
+class type so we can make this we need
+ 
+
+457
+00:08:14,399 --> 00:08:17,119
+class type so we can make this we need
+to say virtual void you know print name
+
+458
+00:08:17,119 --> 00:08:17,129
+to say virtual void you know print name
+ 
+
+459
+00:08:17,129 --> 00:08:18,649
+to say virtual void you know print name
+or something like this doesn't really
+
+460
+00:08:18,649 --> 00:08:18,659
+or something like this doesn't really
+ 
+
+461
+00:08:18,659 --> 00:08:20,659
+or something like this doesn't really
+matter but the point is that we'll make
+
+462
+00:08:20,659 --> 00:08:20,669
+matter but the point is that we'll make
+ 
+
+463
+00:08:20,669 --> 00:08:22,549
+matter but the point is that we'll make
+this class have a V table and thus
+
+464
+00:08:22,549 --> 00:08:22,559
+this class have a V table and thus
+ 
+
+465
+00:08:22,559 --> 00:08:23,989
+this class have a V table and thus
+there's stuff to override which means
+
+466
+00:08:23,989 --> 00:08:23,999
+there's stuff to override which means
+ 
+
+467
+00:08:23,999 --> 00:08:26,029
+there's stuff to override which means
+that is it's a polymorphic type and we
+
+468
+00:08:26,029 --> 00:08:26,039
+that is it's a polymorphic type and we
+ 
+
+469
+00:08:26,039 --> 00:08:27,739
+that is it's a polymorphic type and we
+can use dynamic casting with it again if
+
+470
+00:08:27,739 --> 00:08:27,749
+can use dynamic casting with it again if
+ 
+
+471
+00:08:27,749 --> 00:08:30,259
+can use dynamic casting with it again if
+this was a real entity class it would
+
+472
+00:08:30,259 --> 00:08:30,269
+this was a real entity class it would
+ 
+
+473
+00:08:30,269 --> 00:08:31,819
+this was a real entity class it would
+definitely have virtual functions so
+
+474
+00:08:31,819 --> 00:08:31,829
+definitely have virtual functions so
+ 
+
+475
+00:08:31,829 --> 00:08:33,740
+definitely have virtual functions so
+this is just making it a little bit more
+
+476
+00:08:33,740 --> 00:08:33,750
+this is just making it a little bit more
+ 
+
+477
+00:08:33,750 --> 00:08:37,159
+this is just making it a little bit more
+realistic as well so we can cast it
+
+478
+00:08:37,159 --> 00:08:37,169
+realistic as well so we can cast it
+ 
+
+479
+00:08:37,169 --> 00:08:38,779
+realistic as well so we can cast it
+right so we've got our e which is a
+
+480
+00:08:38,779 --> 00:08:38,789
+right so we've got our e which is a
+ 
+
+481
+00:08:38,789 --> 00:08:41,420
+right so we've got our e which is a
+player or we can use a one which is that
+
+482
+00:08:41,420 --> 00:08:41,430
+player or we can use a one which is that
+ 
+
+483
+00:08:41,430 --> 00:08:43,189
+player or we can use a one which is that
+and actually actually an enemy so we
+
+484
+00:08:43,189 --> 00:08:43,199
+and actually actually an enemy so we
+ 
+
+485
+00:08:43,199 --> 00:08:45,350
+and actually actually an enemy so we
+could say actually player just to make
+
+486
+00:08:45,350 --> 00:08:45,360
+could say actually player just to make
+ 
+
+487
+00:08:45,360 --> 00:08:47,389
+could say actually player just to make
+this a little bit more clear and then we
+
+488
+00:08:47,389 --> 00:08:47,399
+this a little bit more clear and then we
+ 
+
+489
+00:08:47,399 --> 00:08:50,720
+this a little bit more clear and then we
+could see it say actually enemy all
+
+490
+00:08:50,720 --> 00:08:50,730
+could see it say actually enemy all
+ 
+
+491
+00:08:50,730 --> 00:08:53,480
+could see it say actually enemy all
+right so if we try and get our our enemy
+
+492
+00:08:53,480 --> 00:08:53,490
+right so if we try and get our our enemy
+ 
+
+493
+00:08:53,490 --> 00:08:55,070
+right so if we try and get our our enemy
+into a player this
+
+494
+00:08:55,070 --> 00:08:55,080
+into a player this
+ 
+
+495
+00:08:55,080 --> 00:08:57,620
+into a player this
+would fail right but if we try and
+
+496
+00:08:57,620 --> 00:08:57,630
+would fail right but if we try and
+ 
+
+497
+00:08:57,630 --> 00:09:00,740
+would fail right but if we try and
+convert this player to a player that
+
+498
+00:09:00,740 --> 00:09:00,750
+convert this player to a player that
+ 
+
+499
+00:09:00,750 --> 00:09:02,510
+convert this player to a player that
+should work even though they're both at
+
+500
+00:09:02,510 --> 00:09:02,520
+should work even though they're both at
+ 
+
+501
+00:09:02,520 --> 00:09:05,060
+should work even though they're both at
+them at the moment they're both entities
+
+502
+00:09:05,060 --> 00:09:05,070
+them at the moment they're both entities
+ 
+
+503
+00:09:05,070 --> 00:09:08,360
+them at the moment they're both entities
+okay so let's take a look at what this
+
+504
+00:09:08,360 --> 00:09:08,370
+okay so let's take a look at what this
+ 
+
+505
+00:09:08,370 --> 00:09:10,490
+okay so let's take a look at what this
+code will do if we were to execute it
+
+506
+00:09:10,490 --> 00:09:10,500
+code will do if we were to execute it
+ 
+
+507
+00:09:10,500 --> 00:09:12,200
+code will do if we were to execute it
+I'll put a breakpoint here and hit f5
+
+508
+00:09:12,200 --> 00:09:12,210
+I'll put a breakpoint here and hit f5
+ 
+
+509
+00:09:12,210 --> 00:09:14,090
+I'll put a breakpoint here and hit f5
+and of course you should make sure that
+
+510
+00:09:14,090 --> 00:09:14,100
+and of course you should make sure that
+ 
+
+511
+00:09:14,100 --> 00:09:15,620
+and of course you should make sure that
+my name is variables different things
+
+512
+00:09:15,620 --> 00:09:15,630
+my name is variables different things
+ 
+
+513
+00:09:15,630 --> 00:09:17,900
+my name is variables different things
+okay so this caste should fail right
+
+514
+00:09:17,900 --> 00:09:17,910
+okay so this caste should fail right
+ 
+
+515
+00:09:17,910 --> 00:09:20,480
+okay so this caste should fail right
+because this is actually an enemy and
+
+516
+00:09:20,480 --> 00:09:20,490
+because this is actually an enemy and
+ 
+
+517
+00:09:20,490 --> 00:09:21,950
+because this is actually an enemy and
+we're trying to cast it to a player so
+
+518
+00:09:21,950 --> 00:09:21,960
+we're trying to cast it to a player so
+ 
+
+519
+00:09:21,960 --> 00:09:23,990
+we're trying to cast it to a player so
+f10 and you can see this returns null
+
+520
+00:09:23,990 --> 00:09:24,000
+f10 and you can see this returns null
+ 
+
+521
+00:09:24,000 --> 00:09:26,090
+f10 and you can see this returns null
+the cast didn't work however if I try
+
+522
+00:09:26,090 --> 00:09:26,100
+the cast didn't work however if I try
+ 
+
+523
+00:09:26,100 --> 00:09:28,580
+the cast didn't work however if I try
+and do it here you can see that p1 is in
+
+524
+00:09:28,580 --> 00:09:28,590
+and do it here you can see that p1 is in
+ 
+
+525
+00:09:28,590 --> 00:09:31,190
+and do it here you can see that p1 is in
+fact a valid entity it successfully was
+
+526
+00:09:31,190 --> 00:09:31,200
+fact a valid entity it successfully was
+ 
+
+527
+00:09:31,200 --> 00:09:33,590
+fact a valid entity it successfully was
+able to cast it into a player because it
+
+528
+00:09:33,590 --> 00:09:33,600
+able to cast it into a player because it
+ 
+
+529
+00:09:33,600 --> 00:09:35,690
+able to cast it into a player because it
+actually was a player and that is
+
+530
+00:09:35,690 --> 00:09:35,700
+actually was a player and that is
+ 
+
+531
+00:09:35,700 --> 00:09:38,270
+actually was a player and that is
+essentially all the dynamic casters if
+
+532
+00:09:38,270 --> 00:09:38,280
+essentially all the dynamic casters if
+ 
+
+533
+00:09:38,280 --> 00:09:41,810
+essentially all the dynamic casters if
+the cast is valid then it returns the
+
+534
+00:09:41,810 --> 00:09:41,820
+the cast is valid then it returns the
+ 
+
+535
+00:09:41,820 --> 00:09:43,760
+the cast is valid then it returns the
+value that you want to play a pointer
+
+536
+00:09:43,760 --> 00:09:43,770
+value that you want to play a pointer
+ 
+
+537
+00:09:43,770 --> 00:09:46,700
+value that you want to play a pointer
+but if it is not valid because it's not
+
+538
+00:09:46,700 --> 00:09:46,710
+but if it is not valid because it's not
+ 
+
+539
+00:09:46,710 --> 00:09:48,080
+but if it is not valid because it's not
+the given type that you've kind of
+
+540
+00:09:48,080 --> 00:09:48,090
+the given type that you've kind of
+ 
+
+541
+00:09:48,090 --> 00:09:49,970
+the given type that you've kind of
+claimed that it is then it will just
+
+542
+00:09:49,970 --> 00:09:49,980
+claimed that it is then it will just
+ 
+
+543
+00:09:49,980 --> 00:09:51,830
+claimed that it is then it will just
+give you not that's what dynamic cast
+
+544
+00:09:51,830 --> 00:09:51,840
+give you not that's what dynamic cast
+ 
+
+545
+00:09:51,840 --> 00:09:54,230
+give you not that's what dynamic cast
+does in a nutshell now the question that
+
+546
+00:09:54,230 --> 00:09:54,240
+does in a nutshell now the question that
+ 
+
+547
+00:09:54,240 --> 00:09:56,360
+does in a nutshell now the question that
+you should have from this is but how
+
+548
+00:09:56,360 --> 00:09:56,370
+you should have from this is but how
+ 
+
+549
+00:09:56,370 --> 00:09:59,090
+you should have from this is but how
+does it know I haven't written anything
+
+550
+00:09:59,090 --> 00:09:59,100
+does it know I haven't written anything
+ 
+
+551
+00:09:59,100 --> 00:10:02,390
+does it know I haven't written anything
+and it's not like C++ or some managed
+
+552
+00:10:02,390 --> 00:10:02,400
+and it's not like C++ or some managed
+ 
+
+553
+00:10:02,400 --> 00:10:04,730
+and it's not like C++ or some managed
+language like C sharp or Java or
+
+554
+00:10:04,730 --> 00:10:04,740
+language like C sharp or Java or
+ 
+
+555
+00:10:04,740 --> 00:10:07,160
+language like C sharp or Java or
+anything like that how how does it know
+
+556
+00:10:07,160 --> 00:10:07,170
+anything like that how how does it know
+ 
+
+557
+00:10:07,170 --> 00:10:10,550
+anything like that how how does it know
+that player is actually a player like
+
+558
+00:10:10,550 --> 00:10:10,560
+that player is actually a player like
+ 
+
+559
+00:10:10,560 --> 00:10:11,900
+that player is actually a player like
+how does it know that this entity that I
+
+560
+00:10:11,900 --> 00:10:11,910
+how does it know that this entity that I
+ 
+
+561
+00:10:11,910 --> 00:10:13,580
+how does it know that this entity that I
+have is actually a player and not an
+
+562
+00:10:13,580 --> 00:10:13,590
+have is actually a player and not an
+ 
+
+563
+00:10:13,590 --> 00:10:15,980
+have is actually a player and not an
+enemy what the way that it does that is
+
+564
+00:10:15,980 --> 00:10:15,990
+enemy what the way that it does that is
+ 
+
+565
+00:10:15,990 --> 00:10:17,720
+enemy what the way that it does that is
+it actually stores runtime type
+
+566
+00:10:17,720 --> 00:10:17,730
+it actually stores runtime type
+ 
+
+567
+00:10:17,730 --> 00:10:19,130
+it actually stores runtime type
+information especially what it's called
+
+568
+00:10:19,130 --> 00:10:19,140
+information especially what it's called
+ 
+
+569
+00:10:19,140 --> 00:10:19,910
+information especially what it's called
+our TTI
+
+570
+00:10:19,910 --> 00:10:19,920
+our TTI
+ 
+
+571
+00:10:19,920 --> 00:10:22,460
+our TTI
+runtime type information it stores
+
+572
+00:10:22,460 --> 00:10:22,470
+runtime type information it stores
+ 
+
+573
+00:10:22,470 --> 00:10:24,590
+runtime type information it stores
+runtime type information about all of
+
+574
+00:10:24,590 --> 00:10:24,600
+runtime type information about all of
+ 
+
+575
+00:10:24,600 --> 00:10:27,740
+runtime type information about all of
+our types this does add an overhead but
+
+576
+00:10:27,740 --> 00:10:27,750
+our types this does add an overhead but
+ 
+
+577
+00:10:27,750 --> 00:10:29,330
+our types this does add an overhead but
+it lets you do things like dynamic
+
+578
+00:10:29,330 --> 00:10:29,340
+it lets you do things like dynamic
+ 
+
+579
+00:10:29,340 --> 00:10:31,640
+it lets you do things like dynamic
+casting so there's two things to
+
+580
+00:10:31,640 --> 00:10:31,650
+casting so there's two things to
+ 
+
+581
+00:10:31,650 --> 00:10:33,980
+casting so there's two things to
+consider here first of all our TTI adds
+
+582
+00:10:33,980 --> 00:10:33,990
+consider here first of all our TTI adds
+ 
+
+583
+00:10:33,990 --> 00:10:37,130
+consider here first of all our TTI adds
+overhead because suddenly types type
+
+584
+00:10:37,130 --> 00:10:37,140
+overhead because suddenly types type
+ 
+
+585
+00:10:37,140 --> 00:10:38,450
+overhead because suddenly types type
+types need to store more information
+
+586
+00:10:38,450 --> 00:10:38,460
+types need to store more information
+ 
+
+587
+00:10:38,460 --> 00:10:40,490
+types need to store more information
+about themselves than were otherwise
+
+588
+00:10:40,490 --> 00:10:40,500
+about themselves than were otherwise
+ 
+
+589
+00:10:40,500 --> 00:10:45,620
+about themselves than were otherwise
+present and big or to dynamic cast is
+
+590
+00:10:45,620 --> 00:10:45,630
+present and big or to dynamic cast is
+ 
+
+591
+00:10:45,630 --> 00:10:47,600
+present and big or to dynamic cast is
+also also takes time because we need to
+
+592
+00:10:47,600 --> 00:10:47,610
+also also takes time because we need to
+ 
+
+593
+00:10:47,610 --> 00:10:49,730
+also also takes time because we need to
+actually check to see does the type
+
+594
+00:10:49,730 --> 00:10:49,740
+actually check to see does the type
+ 
+
+595
+00:10:49,740 --> 00:10:51,800
+actually check to see does the type
+information match is this entity
+
+596
+00:10:51,800 --> 00:10:51,810
+information match is this entity
+ 
+
+597
+00:10:51,810 --> 00:10:55,490
+information match is this entity
+actually an enemy or is it a player what
+
+598
+00:10:55,490 --> 00:10:55,500
+actually an enemy or is it a player what
+ 
+
+599
+00:10:55,500 --> 00:10:56,660
+actually an enemy or is it a player what
+type is that we have to do that
+
+600
+00:10:56,660 --> 00:10:56,670
+type is that we have to do that
+ 
+
+601
+00:10:56,670 --> 00:10:57,710
+type is that we have to do that
+validation at runtime
+
+602
+00:10:57,710 --> 00:10:57,720
+validation at runtime
+ 
+
+603
+00:10:57,720 --> 00:11:00,230
+validation at runtime
+anytime we dynamic cost so because of
+
+604
+00:11:00,230 --> 00:11:00,240
+anytime we dynamic cost so because of
+ 
+
+605
+00:11:00,240 --> 00:11:03,950
+anytime we dynamic cost so because of
+that it does add that overhead now what
+
+606
+00:11:03,950 --> 00:11:03,960
+that it does add that overhead now what
+ 
+
+607
+00:11:03,960 --> 00:11:05,810
+that it does add that overhead now what
+we can actually do in our code here is
+
+608
+00:11:05,810 --> 00:11:05,820
+we can actually do in our code here is
+ 
+
+609
+00:11:05,820 --> 00:11:08,090
+we can actually do in our code here is
+turn runtime type information off if we
+
+610
+00:11:08,090 --> 00:11:08,100
+turn runtime type information off if we
+ 
+
+611
+00:11:08,100 --> 00:11:08,670
+turn runtime type information off if we
+don't need it
+
+612
+00:11:08,670 --> 00:11:08,680
+don't need it
+ 
+
+613
+00:11:08,680 --> 00:11:10,230
+don't need it
+so if we go to our properties and it's
+
+614
+00:11:10,230 --> 00:11:10,240
+so if we go to our properties and it's
+ 
+
+615
+00:11:10,240 --> 00:11:11,879
+so if we go to our properties and it's
+different favorite compiler but over
+
+616
+00:11:11,879 --> 00:11:11,889
+different favorite compiler but over
+ 
+
+617
+00:11:11,889 --> 00:11:14,639
+different favorite compiler but over
+here inside safe c++ and language and
+
+618
+00:11:14,639 --> 00:11:14,649
+here inside safe c++ and language and
+ 
+
+619
+00:11:14,649 --> 00:11:16,410
+here inside safe c++ and language and
+visual studio you can see we have this
+
+620
+00:11:16,410 --> 00:11:16,420
+visual studio you can see we have this
+ 
+
+621
+00:11:16,420 --> 00:11:18,660
+visual studio you can see we have this
+enable runtime type information if we
+
+622
+00:11:18,660 --> 00:11:18,670
+enable runtime type information if we
+ 
+
+623
+00:11:18,670 --> 00:11:20,670
+enable runtime type information if we
+were to switch that off and then we
+
+624
+00:11:20,670 --> 00:11:20,680
+were to switch that off and then we
+ 
+
+625
+00:11:20,680 --> 00:11:24,239
+were to switch that off and then we
+attempted to compile our code you would
+
+626
+00:11:24,239 --> 00:11:24,249
+attempted to compile our code you would
+ 
+
+627
+00:11:24,249 --> 00:11:27,030
+attempted to compile our code you would
+see that it actually would give us a
+
+628
+00:11:27,030 --> 00:11:27,040
+see that it actually would give us a
+ 
+
+629
+00:11:27,040 --> 00:11:28,859
+see that it actually would give us a
+warning which says dynamic class used on
+
+630
+00:11:28,859 --> 00:11:28,869
+warning which says dynamic class used on
+ 
+
+631
+00:11:28,869 --> 00:11:32,280
+warning which says dynamic class used on
+polymorphic type entity with this just
+
+632
+00:11:32,280 --> 00:11:32,290
+polymorphic type entity with this just
+ 
+
+633
+00:11:32,290 --> 00:11:33,569
+polymorphic type entity with this just
+means that we've switched off runtime
+
+634
+00:11:33,569 --> 00:11:33,579
+means that we've switched off runtime
+ 
+
+635
+00:11:33,579 --> 00:11:34,769
+means that we've switched off runtime
+type information so with that with our
+
+636
+00:11:34,769 --> 00:11:34,779
+type information so with that with our
+ 
+
+637
+00:11:34,779 --> 00:11:37,650
+type information so with that with our
+TTI off gives us unpredictable behavior
+
+638
+00:11:37,650 --> 00:11:37,660
+TTI off gives us unpredictable behavior
+ 
+
+639
+00:11:37,660 --> 00:11:41,129
+TTI off gives us unpredictable behavior
+and if we try and run this code and we
+
+640
+00:11:41,129 --> 00:11:41,139
+and if we try and run this code and we
+ 
+
+641
+00:11:41,139 --> 00:11:43,829
+and if we try and run this code and we
+hit f10 to get past this invalid dynamic
+
+642
+00:11:43,829 --> 00:11:43,839
+hit f10 to get past this invalid dynamic
+ 
+
+643
+00:11:43,839 --> 00:11:45,329
+hit f10 to get past this invalid dynamic
+cast you can see we actually get an
+
+644
+00:11:45,329 --> 00:11:45,339
+cast you can see we actually get an
+ 
+
+645
+00:11:45,339 --> 00:11:48,359
+cast you can see we actually get an
+access violation so that actually throws
+
+646
+00:11:48,359 --> 00:11:48,369
+access violation so that actually throws
+ 
+
+647
+00:11:48,369 --> 00:11:50,699
+access violation so that actually throws
+an error for us all right so it doesn't
+
+648
+00:11:50,699 --> 00:11:50,709
+an error for us all right so it doesn't
+ 
+
+649
+00:11:50,709 --> 00:11:51,929
+an error for us all right so it doesn't
+doesn't give us null because it can't
+
+650
+00:11:51,929 --> 00:11:51,939
+doesn't give us null because it can't
+ 
+
+651
+00:11:51,939 --> 00:11:53,280
+doesn't give us null because it can't
+because it doesn't have that type
+
+652
+00:11:53,280 --> 00:11:53,290
+because it doesn't have that type
+ 
+
+653
+00:11:53,290 --> 00:11:55,350
+because it doesn't have that type
+information so make sure that you are
+
+654
+00:11:55,350 --> 00:11:55,360
+information so make sure that you are
+ 
+
+655
+00:11:55,360 --> 00:11:57,329
+information so make sure that you are
+aware of the kind of implications the
+
+656
+00:11:57,329 --> 00:11:57,339
+aware of the kind of implications the
+ 
+
+657
+00:11:57,339 --> 00:12:00,329
+aware of the kind of implications the
+dynamic casts actually do because they
+
+658
+00:12:00,329 --> 00:12:00,339
+dynamic casts actually do because they
+ 
+
+659
+00:12:00,339 --> 00:12:02,819
+dynamic casts actually do because they
+do kind of do extra things and they do
+
+660
+00:12:02,819 --> 00:12:02,829
+do kind of do extra things and they do
+ 
+
+661
+00:12:02,829 --> 00:12:06,139
+do kind of do extra things and they do
+require that our TTI is on in most cases
+
+662
+00:12:06,139 --> 00:12:06,149
+require that our TTI is on in most cases
+ 
+
+663
+00:12:06,149 --> 00:12:08,970
+require that our TTI is on in most cases
+if we were to like for example do a cast
+
+664
+00:12:08,970 --> 00:12:08,980
+if we were to like for example do a cast
+ 
+
+665
+00:12:08,980 --> 00:12:11,340
+if we were to like for example do a cast
+from player to entity which is implicit
+
+666
+00:12:11,340 --> 00:12:11,350
+from player to entity which is implicit
+ 
+
+667
+00:12:11,350 --> 00:12:13,710
+from player to entity which is implicit
+anyway it would be fun it wouldn't crash
+
+668
+00:12:13,710 --> 00:12:13,720
+anyway it would be fun it wouldn't crash
+ 
+
+669
+00:12:13,720 --> 00:12:15,689
+anyway it would be fun it wouldn't crash
+but if we try and do something like this
+
+670
+00:12:15,689 --> 00:12:15,699
+but if we try and do something like this
+ 
+
+671
+00:12:15,699 --> 00:12:17,819
+but if we try and do something like this
+you can see it just just it just crashes
+
+672
+00:12:17,819 --> 00:12:17,829
+you can see it just just it just crashes
+ 
+
+673
+00:12:17,829 --> 00:12:20,340
+you can see it just just it just crashes
+doesn't even allow us to it at all and
+
+674
+00:12:20,340 --> 00:12:20,350
+doesn't even allow us to it at all and
+ 
+
+675
+00:12:20,350 --> 00:12:23,340
+doesn't even allow us to it at all and
+having our TTI on is pretty typical but
+
+676
+00:12:23,340 --> 00:12:23,350
+having our TTI on is pretty typical but
+ 
+
+677
+00:12:23,350 --> 00:12:25,259
+having our TTI on is pretty typical but
+also does add a bit of an overhead so
+
+678
+00:12:25,259 --> 00:12:25,269
+also does add a bit of an overhead so
+ 
+
+679
+00:12:25,269 --> 00:12:27,929
+also does add a bit of an overhead so
+just keep that in mind one last thing I
+
+680
+00:12:27,929 --> 00:12:27,939
+just keep that in mind one last thing I
+ 
+
+681
+00:12:27,939 --> 00:12:29,879
+just keep that in mind one last thing I
+want to show you is that because of
+
+682
+00:12:29,879 --> 00:12:29,889
+want to show you is that because of
+ 
+
+683
+00:12:29,889 --> 00:12:31,559
+want to show you is that because of
+dynamic because we have dynamic casts
+
+684
+00:12:31,559 --> 00:12:31,569
+dynamic because we have dynamic casts
+ 
+
+685
+00:12:31,569 --> 00:12:33,569
+dynamic because we have dynamic casts
+you know we can do that validation that
+
+686
+00:12:33,569 --> 00:12:33,579
+you know we can do that validation that
+ 
+
+687
+00:12:33,579 --> 00:12:35,160
+you know we can do that validation that
+I mentioned we can do something like if
+
+688
+00:12:35,160 --> 00:12:35,170
+I mentioned we can do something like if
+ 
+
+689
+00:12:35,170 --> 00:12:37,949
+I mentioned we can do something like if
+p0 now this is very similar to manage
+
+690
+00:12:37,949 --> 00:12:37,959
+p0 now this is very similar to manage
+ 
+
+691
+00:12:37,959 --> 00:12:40,499
+p0 now this is very similar to manage
+languages like C sharp or Java where we
+
+692
+00:12:40,499 --> 00:12:40,509
+languages like C sharp or Java where we
+ 
+
+693
+00:12:40,509 --> 00:12:43,290
+languages like C sharp or Java where we
+can basically try and check what is what
+
+694
+00:12:43,290 --> 00:12:43,300
+can basically try and check what is what
+ 
+
+695
+00:12:43,300 --> 00:12:45,030
+can basically try and check what is what
+something actually is so this actually
+
+696
+00:12:45,030 --> 00:12:45,040
+something actually is so this actually
+ 
+
+697
+00:12:45,040 --> 00:12:47,400
+something actually is so this actually
+enemy you know in like c-sharp we could
+
+698
+00:12:47,400 --> 00:12:47,410
+enemy you know in like c-sharp we could
+ 
+
+699
+00:12:47,410 --> 00:12:51,090
+enemy you know in like c-sharp we could
+do if if is if actually enemy is a
+
+700
+00:12:51,090 --> 00:12:51,100
+do if if is if actually enemy is a
+ 
+
+701
+00:12:51,100 --> 00:12:54,059
+do if if is if actually enemy is a
+player then we can do it all over in
+
+702
+00:12:54,059 --> 00:12:54,069
+player then we can do it all over in
+ 
+
+703
+00:12:54,069 --> 00:12:56,910
+player then we can do it all over in
+Java we have instance of so by using
+
+704
+00:12:56,910 --> 00:12:56,920
+Java we have instance of so by using
+ 
+
+705
+00:12:56,920 --> 00:12:58,829
+Java we have instance of so by using
+this kind of dynamic cast thing we can
+
+706
+00:12:58,829 --> 00:12:58,839
+this kind of dynamic cast thing we can
+ 
+
+707
+00:12:58,839 --> 00:13:00,600
+this kind of dynamic cast thing we can
+basically achieve the same thing we can
+
+708
+00:13:00,600 --> 00:13:00,610
+basically achieve the same thing we can
+ 
+
+709
+00:13:00,610 --> 00:13:03,660
+basically achieve the same thing we can
+say if dynamic cosplayer actually enemy
+
+710
+00:13:03,660 --> 00:13:03,670
+say if dynamic cosplayer actually enemy
+ 
+
+711
+00:13:03,670 --> 00:13:05,669
+say if dynamic cosplayer actually enemy
+right if actually enemy is a player
+
+712
+00:13:05,669 --> 00:13:05,679
+right if actually enemy is a player
+ 
+
+713
+00:13:05,679 --> 00:13:07,530
+right if actually enemy is a player
+instance then we can do the following
+
+714
+00:13:07,530 --> 00:13:07,540
+instance then we can do the following
+ 
+
+715
+00:13:07,540 --> 00:13:08,999
+instance then we can do the following
+code and if I just complete this you'll
+
+716
+00:13:08,999 --> 00:13:09,009
+code and if I just complete this you'll
+ 
+
+717
+00:13:09,009 --> 00:13:10,829
+code and if I just complete this you'll
+see that that's perfectly valid right
+
+718
+00:13:10,829 --> 00:13:10,839
+see that that's perfectly valid right
+ 
+
+719
+00:13:10,839 --> 00:13:13,379
+see that that's perfectly valid right
+but obviously we want to kind of cast it
+
+720
+00:13:13,379 --> 00:13:13,389
+but obviously we want to kind of cast it
+ 
+
+721
+00:13:13,389 --> 00:13:15,600
+but obviously we want to kind of cast it
+again and use it probably in that okay
+
+722
+00:13:15,600 --> 00:13:15,610
+again and use it probably in that okay
+ 
+
+723
+00:13:15,610 --> 00:13:17,850
+again and use it probably in that okay
+so therefore we'd probably do something
+
+724
+00:13:17,850 --> 00:13:17,860
+so therefore we'd probably do something
+ 
+
+725
+00:13:17,860 --> 00:13:20,519
+so therefore we'd probably do something
+like this this kind of code is pretty
+
+726
+00:13:20,519 --> 00:13:20,529
+like this this kind of code is pretty
+ 
+
+727
+00:13:20,529 --> 00:13:22,440
+like this this kind of code is pretty
+typical you see it all the time
+
+728
+00:13:22,440 --> 00:13:22,450
+typical you see it all the time
+ 
+
+729
+00:13:22,450 --> 00:13:24,930
+typical you see it all the time
+but just be aware that dynamic casting
+
+730
+00:13:24,930 --> 00:13:24,940
+but just be aware that dynamic casting
+ 
+
+731
+00:13:24,940 --> 00:13:28,020
+but just be aware that dynamic casting
+does incur a cost so if you're all about
+
+732
+00:13:28,020 --> 00:13:28,030
+does incur a cost so if you're all about
+ 
+
+733
+00:13:28,030 --> 00:13:29,490
+does incur a cost so if you're all about
+optimization if you try and write with
+
+734
+00:13:29,490 --> 00:13:29,500
+optimization if you try and write with
+ 
+
+735
+00:13:29,500 --> 00:13:31,440
+optimization if you try and write with
+really fast code you'll probably want to
+
+736
+00:13:31,440 --> 00:13:31,450
+really fast code you'll probably want to
+ 
+
+737
+00:13:31,450 --> 00:13:33,360
+really fast code you'll probably want to
+avoid that and I hope you guys enjoyed
+
+738
+00:13:33,360 --> 00:13:33,370
+avoid that and I hope you guys enjoyed
+ 
+
+739
+00:13:33,370 --> 00:13:34,890
+avoid that and I hope you guys enjoyed
+that video you can hit the like button
+
+740
+00:13:34,890 --> 00:13:34,900
+that video you can hit the like button
+ 
+
+741
+00:13:34,900 --> 00:13:36,330
+that video you can hit the like button
+you can also help support everything
+
+742
+00:13:36,330 --> 00:13:36,340
+you can also help support everything
+ 
+
+743
+00:13:36,340 --> 00:13:38,940
+you can also help support everything
+that I do on patreon for - the Cherno
+
+744
+00:13:38,940 --> 00:13:38,950
+that I do on patreon for - the Cherno
+ 
+
+745
+00:13:38,950 --> 00:13:41,510
+that I do on patreon for - the Cherno
+and I'll see you next time goodbye
+
+746
+00:13:41,510 --> 00:13:41,520
+and I'll see you next time goodbye
+ 
+
+747
+00:13:41,520 --> 00:13:59,490
+and I'll see you next time goodbye
+[Music]
+

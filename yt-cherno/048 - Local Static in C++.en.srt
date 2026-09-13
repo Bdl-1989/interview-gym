@@ -1,0 +1,2235 @@
+1
+00:00:00,040 --> 00:00:01,589
+
+hey what's up guys My Name Is AO and
+
+2
+00:00:01,589 --> 00:00:01,599
+hey what's up guys My Name Is AO and
+ 
+
+3
+00:00:01,599 --> 00:00:03,669
+hey what's up guys My Name Is AO and
+welcome back to my C++ series over the
+
+4
+00:00:03,669 --> 00:00:03,679
+welcome back to my C++ series over the
+ 
+
+5
+00:00:03,679 --> 00:00:05,150
+welcome back to my C++ series over the
+last couple of episodes we took a look
+
+6
+00:00:05,150 --> 00:00:05,160
+last couple of episodes we took a look
+ 
+
+7
+00:00:05,160 --> 00:00:07,150
+last couple of episodes we took a look
+at what the static keyword meant in
+
+8
+00:00:07,150 --> 00:00:07,160
+at what the static keyword meant in
+ 
+
+9
+00:00:07,160 --> 00:00:08,830
+at what the static keyword meant in
+certain contexts and today we're going
+
+10
+00:00:08,830 --> 00:00:08,840
+certain contexts and today we're going
+ 
+
+11
+00:00:08,840 --> 00:00:11,350
+certain contexts and today we're going
+to have a look at one other context that
+
+12
+00:00:11,350 --> 00:00:11,360
+to have a look at one other context that
+ 
+
+13
+00:00:11,360 --> 00:00:13,110
+to have a look at one other context that
+you might find the static keyword in and
+
+14
+00:00:13,110 --> 00:00:13,120
+you might find the static keyword in and
+ 
+
+15
+00:00:13,120 --> 00:00:14,629
+you might find the static keyword in and
+that is in a local scope so you can
+
+16
+00:00:14,629 --> 00:00:14,639
+that is in a local scope so you can
+ 
+
+17
+00:00:14,639 --> 00:00:16,870
+that is in a local scope so you can
+actually use static in a local scope to
+
+18
+00:00:16,870 --> 00:00:16,880
+actually use static in a local scope to
+ 
+
+19
+00:00:16,880 --> 00:00:18,830
+actually use static in a local scope to
+declare a variable and that has a bit of
+
+20
+00:00:18,830 --> 00:00:18,840
+declare a variable and that has a bit of
+ 
+
+21
+00:00:18,840 --> 00:00:20,390
+declare a variable and that has a bit of
+a different meaning than the other two
+
+22
+00:00:20,390 --> 00:00:20,400
+a different meaning than the other two
+ 
+
+23
+00:00:20,400 --> 00:00:21,990
+a different meaning than the other two
+Statics that we've looked at and the
+
+24
+00:00:21,990 --> 00:00:22,000
+Statics that we've looked at and the
+ 
+
+25
+00:00:22,000 --> 00:00:23,429
+Statics that we've looked at and the
+idea behind this meaning makes a lot
+
+26
+00:00:23,429 --> 00:00:23,439
+idea behind this meaning makes a lot
+ 
+
+27
+00:00:23,439 --> 00:00:24,950
+idea behind this meaning makes a lot
+more sense if you think about the two
+
+28
+00:00:24,950 --> 00:00:24,960
+more sense if you think about the two
+ 
+
+29
+00:00:24,960 --> 00:00:26,509
+more sense if you think about the two
+kind of considerations we have to make
+
+30
+00:00:26,509 --> 00:00:26,519
+kind of considerations we have to make
+ 
+
+31
+00:00:26,519 --> 00:00:28,429
+kind of considerations we have to make
+when we're declaring a variable and that
+
+32
+00:00:28,429 --> 00:00:28,439
+when we're declaring a variable and that
+ 
+
+33
+00:00:28,439 --> 00:00:30,550
+when we're declaring a variable and that
+is the lifetime of the variable and the
+
+34
+00:00:30,550 --> 00:00:30,560
+is the lifetime of the variable and the
+ 
+
+35
+00:00:30,560 --> 00:00:32,190
+is the lifetime of the variable and the
+scope of the variable the lifetime
+
+36
+00:00:32,190 --> 00:00:32,200
+scope of the variable the lifetime
+ 
+
+37
+00:00:32,200 --> 00:00:33,790
+scope of the variable the lifetime
+refers to how long that variable will
+
+38
+00:00:33,790 --> 00:00:33,800
+refers to how long that variable will
+ 
+
+39
+00:00:33,800 --> 00:00:35,910
+refers to how long that variable will
+actually stick around for in other words
+
+40
+00:00:35,910 --> 00:00:35,920
+actually stick around for in other words
+ 
+
+41
+00:00:35,920 --> 00:00:37,990
+actually stick around for in other words
+how long it will remain in our memory
+
+42
+00:00:37,990 --> 00:00:38,000
+how long it will remain in our memory
+ 
+
+43
+00:00:38,000 --> 00:00:39,630
+how long it will remain in our memory
+before it gets deleted and then the
+
+44
+00:00:39,630 --> 00:00:39,640
+before it gets deleted and then the
+ 
+
+45
+00:00:39,640 --> 00:00:41,869
+before it gets deleted and then the
+scope refers to where we can actually
+
+46
+00:00:41,869 --> 00:00:41,879
+scope refers to where we can actually
+ 
+
+47
+00:00:41,879 --> 00:00:43,750
+scope refers to where we can actually
+access that variable so of course if we
+
+48
+00:00:43,750 --> 00:00:43,760
+access that variable so of course if we
+ 
+
+49
+00:00:43,760 --> 00:00:45,790
+access that variable so of course if we
+declare a variable inside a function for
+
+50
+00:00:45,790 --> 00:00:45,800
+declare a variable inside a function for
+ 
+
+51
+00:00:45,800 --> 00:00:47,630
+declare a variable inside a function for
+example we can't just access it in
+
+52
+00:00:47,630 --> 00:00:47,640
+example we can't just access it in
+ 
+
+53
+00:00:47,640 --> 00:00:49,270
+example we can't just access it in
+another function because the variable we
+
+54
+00:00:49,270 --> 00:00:49,280
+another function because the variable we
+ 
+
+55
+00:00:49,280 --> 00:00:51,270
+another function because the variable we
+declared is going to be local to the
+
+56
+00:00:51,270 --> 00:00:51,280
+declared is going to be local to the
+ 
+
+57
+00:00:51,280 --> 00:00:53,349
+declared is going to be local to the
+function we declared it in so a static
+
+58
+00:00:53,349 --> 00:00:53,359
+function we declared it in so a static
+ 
+
+59
+00:00:53,359 --> 00:00:56,110
+function we declared it in so a static
+local variable allows us to declare a
+
+60
+00:00:56,110 --> 00:00:56,120
+local variable allows us to declare a
+ 
+
+61
+00:00:56,120 --> 00:00:58,470
+local variable allows us to declare a
+variable that has the lifetime of
+
+62
+00:00:58,470 --> 00:00:58,480
+variable that has the lifetime of
+ 
+
+63
+00:00:58,480 --> 00:01:00,830
+variable that has the lifetime of
+essentially our entire program
+
+64
+00:01:00,830 --> 00:01:00,840
+essentially our entire program
+ 
+
+65
+00:01:00,840 --> 00:01:03,270
+essentially our entire program
+however its scope is limited to be
+
+66
+00:01:03,270 --> 00:01:03,280
+however its scope is limited to be
+ 
+
+67
+00:01:03,280 --> 00:01:05,429
+however its scope is limited to be
+inside that function and this really has
+
+68
+00:01:05,429 --> 00:01:05,439
+inside that function and this really has
+ 
+
+69
+00:01:05,439 --> 00:01:07,230
+inside that function and this really has
+nothing to do with functions in
+
+70
+00:01:07,230 --> 00:01:07,240
+nothing to do with functions in
+ 
+
+71
+00:01:07,240 --> 00:01:08,749
+nothing to do with functions in
+particular I mean you can declare this
+
+72
+00:01:08,749 --> 00:01:08,759
+particular I mean you can declare this
+ 
+
+73
+00:01:08,759 --> 00:01:10,469
+particular I mean you can declare this
+in any scope really I'm just using
+
+74
+00:01:10,469 --> 00:01:10,479
+in any scope really I'm just using
+ 
+
+75
+00:01:10,479 --> 00:01:12,230
+in any scope really I'm just using
+function as an example it's not really
+
+76
+00:01:12,230 --> 00:01:12,240
+function as an example it's not really
+ 
+
+77
+00:01:12,240 --> 00:01:14,510
+function as an example it's not really
+just limited to being inside a function
+
+78
+00:01:14,510 --> 00:01:14,520
+just limited to being inside a function
+ 
+
+79
+00:01:14,520 --> 00:01:16,990
+just limited to being inside a function
+could be inside an if statement could be
+
+80
+00:01:16,990 --> 00:01:17,000
+could be inside an if statement could be
+ 
+
+81
+00:01:17,000 --> 00:01:18,429
+could be inside an if statement could be
+anywhere which is why again there's not
+
+82
+00:01:18,429 --> 00:01:18,439
+anywhere which is why again there's not
+ 
+
+83
+00:01:18,439 --> 00:01:20,190
+anywhere which is why again there's not
+much of a difference between static in a
+
+84
+00:01:20,190 --> 00:01:20,200
+much of a difference between static in a
+ 
+
+85
+00:01:20,200 --> 00:01:22,230
+much of a difference between static in a
+function scope versus static in a class
+
+86
+00:01:22,230 --> 00:01:22,240
+function scope versus static in a class
+ 
+
+87
+00:01:22,240 --> 00:01:24,789
+function scope versus static in a class
+scope because the lifetime is actually
+
+88
+00:01:24,789 --> 00:01:24,799
+scope because the lifetime is actually
+ 
+
+89
+00:01:24,799 --> 00:01:27,190
+scope because the lifetime is actually
+going to be the same the only difference
+
+90
+00:01:27,190 --> 00:01:27,200
+going to be the same the only difference
+ 
+
+91
+00:01:27,200 --> 00:01:28,789
+going to be the same the only difference
+is that the one in the class scope
+
+92
+00:01:28,789 --> 00:01:28,799
+is that the one in the class scope
+ 
+
+93
+00:01:28,799 --> 00:01:30,350
+is that the one in the class scope
+anything in the class can access it
+
+94
+00:01:30,350 --> 00:01:30,360
+anything in the class can access it
+ 
+
+95
+00:01:30,360 --> 00:01:31,789
+anything in the class can access it
+anything that has anything that is
+
+96
+00:01:31,789 --> 00:01:31,799
+anything that has anything that is
+ 
+
+97
+00:01:31,799 --> 00:01:33,630
+anything that has anything that is
+inside that class scope can access that
+
+98
+00:01:33,630 --> 00:01:33,640
+inside that class scope can access that
+ 
+
+99
+00:01:33,640 --> 00:01:35,350
+inside that class scope can access that
+static variable however of course if you
+
+100
+00:01:35,350 --> 00:01:35,360
+static variable however of course if you
+ 
+
+101
+00:01:35,360 --> 00:01:37,389
+static variable however of course if you
+declare one inside a function scope it's
+
+102
+00:01:37,389 --> 00:01:37,399
+declare one inside a function scope it's
+ 
+
+103
+00:01:37,399 --> 00:01:38,590
+declare one inside a function scope it's
+going to be local to that function
+
+104
+00:01:38,590 --> 00:01:38,600
+going to be local to that function
+ 
+
+105
+00:01:38,600 --> 00:01:40,270
+going to be local to that function
+instead of being local to that class
+
+106
+00:01:40,270 --> 00:01:40,280
+instead of being local to that class
+ 
+
+107
+00:01:40,280 --> 00:01:41,429
+instead of being local to that class
+let's jump in and take a look at some
+
+108
+00:01:41,429 --> 00:01:41,439
+let's jump in and take a look at some
+ 
+
+109
+00:01:41,439 --> 00:01:43,069
+let's jump in and take a look at some
+examples so the simplest example is
+
+110
+00:01:43,069 --> 00:01:43,079
+examples so the simplest example is
+ 
+
+111
+00:01:43,079 --> 00:01:45,310
+examples so the simplest example is
+going to be just to create a function
+
+112
+00:01:45,310 --> 00:01:45,320
+going to be just to create a function
+ 
+
+113
+00:01:45,320 --> 00:01:46,870
+going to be just to create a function
+and then declare some kind of static
+
+114
+00:01:46,870 --> 00:01:46,880
+and then declare some kind of static
+ 
+
+115
+00:01:46,880 --> 00:01:48,749
+and then declare some kind of static
+variable inside it so I'll just make
+
+116
+00:01:48,749 --> 00:01:48,759
+variable inside it so I'll just make
+ 
+
+117
+00:01:48,759 --> 00:01:52,030
+variable inside it so I'll just make
+static in I equals z what this means is
+
+118
+00:01:52,030 --> 00:01:52,040
+static in I equals z what this means is
+ 
+
+119
+00:01:52,040 --> 00:01:54,190
+static in I equals z what this means is
+that when I call function for the first
+
+120
+00:01:54,190 --> 00:01:54,200
+that when I call function for the first
+ 
+
+121
+00:01:54,200 --> 00:01:56,149
+that when I call function for the first
+time this variable will be initialized
+
+122
+00:01:56,149 --> 00:01:56,159
+time this variable will be initialized
+ 
+
+123
+00:01:56,159 --> 00:01:58,590
+time this variable will be initialized
+to zero and then on subsequent calls to
+
+124
+00:01:58,590 --> 00:01:58,600
+to zero and then on subsequent calls to
+ 
+
+125
+00:01:58,600 --> 00:02:00,389
+to zero and then on subsequent calls to
+functions it's not actually going to
+
+126
+00:02:00,389 --> 00:02:00,399
+functions it's not actually going to
+ 
+
+127
+00:02:00,399 --> 00:02:02,590
+functions it's not actually going to
+create a brand new variable really easy
+
+128
+00:02:02,590 --> 00:02:02,600
+create a brand new variable really easy
+ 
+
+129
+00:02:02,600 --> 00:02:04,590
+create a brand new variable really easy
+way to check this out is if I just print
+
+130
+00:02:04,590 --> 00:02:04,600
+way to check this out is if I just print
+ 
+
+131
+00:02:04,600 --> 00:02:07,069
+way to check this out is if I just print
+the value of I and then I increment it
+
+132
+00:02:07,069 --> 00:02:07,079
+the value of I and then I increment it
+ 
+
+133
+00:02:07,079 --> 00:02:09,229
+the value of I and then I increment it
+every time I call the function so if we
+
+134
+00:02:09,229 --> 00:02:09,239
+every time I call the function so if we
+ 
+
+135
+00:02:09,239 --> 00:02:11,110
+every time I call the function so if we
+didn't have static here what you would
+
+136
+00:02:11,110 --> 00:02:11,120
+didn't have static here what you would
+ 
+
+137
+00:02:11,120 --> 00:02:13,110
+didn't have static here what you would
+expect is that every time you call this
+
+138
+00:02:13,110 --> 00:02:13,120
+expect is that every time you call this
+ 
+
+139
+00:02:13,120 --> 00:02:15,670
+expect is that every time you call this
+function I gets set to zero then I gets
+
+140
+00:02:15,670 --> 00:02:15,680
+function I gets set to zero then I gets
+ 
+
+141
+00:02:15,680 --> 00:02:17,910
+function I gets set to zero then I gets
+incremented to one and then we print one
+
+142
+00:02:17,910 --> 00:02:17,920
+incremented to one and then we print one
+ 
+
+143
+00:02:17,920 --> 00:02:19,790
+incremented to one and then we print one
+to the console and in fact we can test
+
+144
+00:02:19,790 --> 00:02:19,800
+to the console and in fact we can test
+ 
+
+145
+00:02:19,800 --> 00:02:21,270
+to the console and in fact we can test
+that out by just calling function a
+
+146
+00:02:21,270 --> 00:02:21,280
+that out by just calling function a
+ 
+
+147
+00:02:21,280 --> 00:02:23,229
+that out by just calling function a
+whole bunch of times here we'll call it
+
+148
+00:02:23,229 --> 00:02:23,239
+whole bunch of times here we'll call it
+ 
+
+149
+00:02:23,239 --> 00:02:25,270
+whole bunch of times here we'll call it
+five times we'll hit our five to run our
+
+150
+00:02:25,270 --> 00:02:25,280
+five times we'll hit our five to run our
+ 
+
+151
+00:02:25,280 --> 00:02:27,470
+five times we'll hit our five to run our
+program and you can see that we get one
+
+152
+00:02:27,470 --> 00:02:27,480
+program and you can see that we get one
+ 
+
+153
+00:02:27,480 --> 00:02:29,270
+program and you can see that we get one
+printing five times because as I just
+
+154
+00:02:29,270 --> 00:02:29,280
+printing five times because as I just
+ 
+
+155
+00:02:29,280 --> 00:02:30,990
+printing five times because as I just
+explained we create a variable every
+
+156
+00:02:30,990 --> 00:02:31,000
+explained we create a variable every
+ 
+
+157
+00:02:31,000 --> 00:02:33,270
+explained we create a variable every
+single time and we set it equal to zero
+
+158
+00:02:33,270 --> 00:02:33,280
+single time and we set it equal to zero
+ 
+
+159
+00:02:33,280 --> 00:02:35,229
+single time and we set it equal to zero
+we then increment it to one and then we
+
+160
+00:02:35,229 --> 00:02:35,239
+we then increment it to one and then we
+ 
+
+161
+00:02:35,239 --> 00:02:37,470
+we then increment it to one and then we
+print that to the console now if we were
+
+162
+00:02:37,470 --> 00:02:37,480
+print that to the console now if we were
+ 
+
+163
+00:02:37,480 --> 00:02:40,390
+print that to the console now if we were
+to make this static then it's very very
+
+164
+00:02:40,390 --> 00:02:40,400
+to make this static then it's very very
+ 
+
+165
+00:02:40,400 --> 00:02:42,670
+to make this static then it's very very
+similar to if we had just moved this
+
+166
+00:02:42,670 --> 00:02:42,680
+similar to if we had just moved this
+ 
+
+167
+00:02:42,680 --> 00:02:45,949
+similar to if we had just moved this
+original declaration out here so if we
+
+168
+00:02:45,949 --> 00:02:45,959
+original declaration out here so if we
+ 
+
+169
+00:02:45,959 --> 00:02:47,710
+original declaration out here so if we
+run this code and it doesn't really
+
+170
+00:02:47,710 --> 00:02:47,720
+run this code and it doesn't really
+ 
+
+171
+00:02:47,720 --> 00:02:49,550
+run this code and it doesn't really
+matter if this has static or not in our
+
+172
+00:02:49,550 --> 00:02:49,560
+matter if this has static or not in our
+ 
+
+173
+00:02:49,560 --> 00:02:50,670
+matter if this has static or not in our
+case it's going to be the same if you
+
+174
+00:02:50,670 --> 00:02:50,680
+case it's going to be the same if you
+ 
+
+175
+00:02:50,680 --> 00:02:52,030
+case it's going to be the same if you
+want to know more about what static does
+
+176
+00:02:52,030 --> 00:02:52,040
+want to know more about what static does
+ 
+
+177
+00:02:52,040 --> 00:02:53,790
+want to know more about what static does
+in that sense you can check out the
+
+178
+00:02:53,790 --> 00:02:53,800
+in that sense you can check out the
+ 
+
+179
+00:02:53,800 --> 00:02:56,350
+in that sense you can check out the
+video that's linked somewhere so if I
+
+180
+00:02:56,350 --> 00:02:56,360
+video that's linked somewhere so if I
+ 
+
+181
+00:02:56,360 --> 00:02:58,910
+video that's linked somewhere so if I
+run this code you would expect I to be
+
+182
+00:02:58,910 --> 00:02:58,920
+run this code you would expect I to be
+ 
+
+183
+00:02:58,920 --> 00:03:00,949
+run this code you would expect I to be
+zero increment Ed five times and so
+
+184
+00:03:00,949 --> 00:03:00,959
+zero increment Ed five times and so
+ 
+
+185
+00:03:00,959 --> 00:03:03,229
+zero increment Ed five times and so
+you'll get 1 2 3 4 5 which is exactly
+
+186
+00:03:03,229 --> 00:03:03,239
+you'll get 1 2 3 4 5 which is exactly
+ 
+
+187
+00:03:03,239 --> 00:03:04,990
+you'll get 1 2 3 4 5 which is exactly
+what you get however the problem with
+
+188
+00:03:04,990 --> 00:03:05,000
+what you get however the problem with
+ 
+
+189
+00:03:05,000 --> 00:03:07,869
+what you get however the problem with
+this approach is that I can access I
+
+190
+00:03:07,869 --> 00:03:07,879
+this approach is that I can access I
+ 
+
+191
+00:03:07,879 --> 00:03:11,830
+this approach is that I can access I
+anywhere I could set I equal to 10 over
+
+192
+00:03:11,830 --> 00:03:11,840
+anywhere I could set I equal to 10 over
+ 
+
+193
+00:03:11,840 --> 00:03:13,470
+anywhere I could set I equal to 10 over
+here in between function calls and
+
+194
+00:03:13,470 --> 00:03:13,480
+here in between function calls and
+ 
+
+195
+00:03:13,480 --> 00:03:15,630
+here in between function calls and
+suddenly this dramatically changes what
+
+196
+00:03:15,630 --> 00:03:15,640
+suddenly this dramatically changes what
+ 
+
+197
+00:03:15,640 --> 00:03:18,550
+suddenly this dramatically changes what
+my program does so for cases where you
+
+198
+00:03:18,550 --> 00:03:18,560
+my program does so for cases where you
+ 
+
+199
+00:03:18,560 --> 00:03:20,990
+my program does so for cases where you
+want this kind of behavior however you
+
+200
+00:03:20,990 --> 00:03:21,000
+want this kind of behavior however you
+ 
+
+201
+00:03:21,000 --> 00:03:23,550
+want this kind of behavior however you
+do not want to give everyone access to
+
+202
+00:03:23,550 --> 00:03:23,560
+do not want to give everyone access to
+ 
+
+203
+00:03:23,560 --> 00:03:25,509
+do not want to give everyone access to
+that variable you can declare static in
+
+204
+00:03:25,509 --> 00:03:25,519
+that variable you can declare static in
+ 
+
+205
+00:03:25,519 --> 00:03:27,430
+that variable you can declare static in
+a local scope so let's get rid of this
+
+206
+00:03:27,430 --> 00:03:27,440
+a local scope so let's get rid of this
+ 
+
+207
+00:03:27,440 --> 00:03:29,030
+a local scope so let's get rid of this
+and move our I variable back into the
+
+208
+00:03:29,030 --> 00:03:29,040
+and move our I variable back into the
+ 
+
+209
+00:03:29,040 --> 00:03:30,350
+and move our I variable back into the
+function scope
+
+210
+00:03:30,350 --> 00:03:30,360
+function scope
+ 
+
+211
+00:03:30,360 --> 00:03:32,309
+function scope
+I'm going to stick static out the front
+
+212
+00:03:32,309 --> 00:03:32,319
+I'm going to stick static out the front
+ 
+
+213
+00:03:32,319 --> 00:03:34,550
+I'm going to stick static out the front
+which means that again the first time we
+
+214
+00:03:34,550 --> 00:03:34,560
+which means that again the first time we
+ 
+
+215
+00:03:34,560 --> 00:03:35,830
+which means that again the first time we
+we run this function it's going to set
+
+216
+00:03:35,830 --> 00:03:35,840
+we run this function it's going to set
+ 
+
+217
+00:03:35,840 --> 00:03:37,710
+we run this function it's going to set
+it equal to zero and create the variable
+
+218
+00:03:37,710 --> 00:03:37,720
+it equal to zero and create the variable
+ 
+
+219
+00:03:37,720 --> 00:03:39,630
+it equal to zero and create the variable
+in the first place then on subsequent
+
+220
+00:03:39,630 --> 00:03:39,640
+in the first place then on subsequent
+ 
+
+221
+00:03:39,640 --> 00:03:41,149
+in the first place then on subsequent
+times it's just going to refer to that
+
+222
+00:03:41,149 --> 00:03:41,159
+times it's just going to refer to that
+ 
+
+223
+00:03:41,159 --> 00:03:43,110
+times it's just going to refer to that
+original variable so if I run my code
+
+224
+00:03:43,110 --> 00:03:43,120
+original variable so if I run my code
+ 
+
+225
+00:03:43,120 --> 00:03:46,149
+original variable so if I run my code
+now you can see I get 1 2 3 4 5 and I
+
+226
+00:03:46,149 --> 00:03:46,159
+now you can see I get 1 2 3 4 5 and I
+ 
+
+227
+00:03:46,159 --> 00:03:47,670
+now you can see I get 1 2 3 4 5 and I
+get the exact same behavior as I did
+
+228
+00:03:47,670 --> 00:03:47,680
+get the exact same behavior as I did
+ 
+
+229
+00:03:47,680 --> 00:03:50,030
+get the exact same behavior as I did
+before however that I variable isn't
+
+230
+00:03:50,030 --> 00:03:50,040
+before however that I variable isn't
+ 
+
+231
+00:03:50,040 --> 00:03:51,550
+before however that I variable isn't
+visible in a global scope it's just
+
+232
+00:03:51,550 --> 00:03:51,560
+visible in a global scope it's just
+ 
+
+233
+00:03:51,560 --> 00:03:54,309
+visible in a global scope it's just
+local to that function now as for uses
+
+234
+00:03:54,309 --> 00:03:54,319
+local to that function now as for uses
+ 
+
+235
+00:03:54,319 --> 00:03:56,630
+local to that function now as for uses
+some people do like to discourage the
+
+236
+00:03:56,630 --> 00:03:56,640
+some people do like to discourage the
+ 
+
+237
+00:03:56,640 --> 00:03:59,110
+some people do like to discourage the
+use of this because of certain reasons
+
+238
+00:03:59,110 --> 00:03:59,120
+use of this because of certain reasons
+ 
+
+239
+00:03:59,120 --> 00:04:00,710
+use of this because of certain reasons
+that I don't fully understand because I
+
+240
+00:04:00,710 --> 00:04:00,720
+that I don't fully understand because I
+ 
+
+241
+00:04:00,720 --> 00:04:02,750
+that I don't fully understand because I
+don't really see a problem with this it
+
+242
+00:04:02,750 --> 00:04:02,760
+don't really see a problem with this it
+ 
+
+243
+00:04:02,760 --> 00:04:04,550
+don't really see a problem with this it
+definitely has its use it's one of those
+
+244
+00:04:04,550 --> 00:04:04,560
+definitely has its use it's one of those
+ 
+
+245
+00:04:04,560 --> 00:04:06,630
+definitely has its use it's one of those
+things where yes you can achieve the
+
+246
+00:04:06,630 --> 00:04:06,640
+things where yes you can achieve the
+ 
+
+247
+00:04:06,640 --> 00:04:09,670
+things where yes you can achieve the
+exact same behavior using other methods
+
+248
+00:04:09,670 --> 00:04:09,680
+exact same behavior using other methods
+ 
+
+249
+00:04:09,680 --> 00:04:11,110
+exact same behavior using other methods
+however that can also be said for
+
+250
+00:04:11,110 --> 00:04:11,120
+however that can also be said for
+ 
+
+251
+00:04:11,120 --> 00:04:13,149
+however that can also be said for
+classes you don't necessarily have to
+
+252
+00:04:13,149 --> 00:04:13,159
+classes you don't necessarily have to
+ 
+
+253
+00:04:13,159 --> 00:04:15,470
+classes you don't necessarily have to
+use classes at all to write a program
+
+254
+00:04:15,470 --> 00:04:15,480
+use classes at all to write a program
+ 
+
+255
+00:04:15,480 --> 00:04:17,390
+use classes at all to write a program
+however it does make your life easier
+
+256
+00:04:17,390 --> 00:04:17,400
+however it does make your life easier
+ 
+
+257
+00:04:17,400 --> 00:04:19,110
+however it does make your life easier
+same with this case it's one of those
+
+258
+00:04:19,110 --> 00:04:19,120
+same with this case it's one of those
+ 
+
+259
+00:04:19,120 --> 00:04:20,670
+same with this case it's one of those
+things that you can just do to keep your
+
+260
+00:04:20,670 --> 00:04:20,680
+things that you can just do to keep your
+ 
+
+261
+00:04:20,680 --> 00:04:22,390
+things that you can just do to keep your
+code a little bit cleaner another
+
+262
+00:04:22,390 --> 00:04:22,400
+code a little bit cleaner another
+ 
+
+263
+00:04:22,400 --> 00:04:24,390
+code a little bit cleaner another
+example might be if you had a Singleton
+
+264
+00:04:24,390 --> 00:04:24,400
+example might be if you had a Singleton
+ 
+
+265
+00:04:24,400 --> 00:04:27,390
+example might be if you had a Singleton
+class so a Singleton class is a class
+
+266
+00:04:27,390 --> 00:04:27,400
+class so a Singleton class is a class
+ 
+
+267
+00:04:27,400 --> 00:04:29,189
+class so a Singleton class is a class
+that should only have one instance in
+
+268
+00:04:29,189 --> 00:04:29,199
+that should only have one instance in
+ 
+
+269
+00:04:29,199 --> 00:04:30,749
+that should only have one instance in
+existence if I wanted to create this
+
+270
+00:04:30,749 --> 00:04:30,759
+existence if I wanted to create this
+ 
+
+271
+00:04:30,759 --> 00:04:32,950
+existence if I wanted to create this
+Singleton class without using this
+
+272
+00:04:32,950 --> 00:04:32,960
+Singleton class without using this
+ 
+
+273
+00:04:32,960 --> 00:04:35,310
+Singleton class without using this
+static local scope thing I would have to
+
+274
+00:04:35,310 --> 00:04:35,320
+static local scope thing I would have to
+ 
+
+275
+00:04:35,320 --> 00:04:37,749
+static local scope thing I would have to
+create some kind of static Singleton
+
+276
+00:04:37,749 --> 00:04:37,759
+create some kind of static Singleton
+ 
+
+277
+00:04:37,759 --> 00:04:40,189
+create some kind of static Singleton
+instance probably a pointer at this rate
+
+278
+00:04:40,189 --> 00:04:40,199
+instance probably a pointer at this rate
+ 
+
+279
+00:04:40,199 --> 00:04:43,550
+instance probably a pointer at this rate
+I'll set it here I would have to have a
+
+280
+00:04:43,550 --> 00:04:43,560
+I'll set it here I would have to have a
+ 
+
+281
+00:04:43,560 --> 00:04:44,790
+I'll set it here I would have to have a
+if I just wanted to return a normal
+
+282
+00:04:44,790 --> 00:04:44,800
+if I just wanted to return a normal
+ 
+
+283
+00:04:44,800 --> 00:04:45,909
+if I just wanted to return a normal
+reference I would have to have a
+
+284
+00:04:45,909 --> 00:04:45,919
+reference I would have to have a
+ 
+
+285
+00:04:45,919 --> 00:04:48,390
+reference I would have to have a
+Singleton reference returning get
+
+286
+00:04:48,390 --> 00:04:48,400
+Singleton reference returning get
+ 
+
+287
+00:04:48,400 --> 00:04:51,189
+Singleton reference returning get
+function which was static and returned
+
+288
+00:04:51,189 --> 00:04:51,199
+function which was static and returned
+ 
+
+289
+00:04:51,199 --> 00:04:53,390
+function which was static and returned
+my instance after dereferencing it of
+
+290
+00:04:53,390 --> 00:04:53,400
+my instance after dereferencing it of
+ 
+
+291
+00:04:53,400 --> 00:04:55,310
+my instance after dereferencing it of
+course I would then have to actually
+
+292
+00:04:55,310 --> 00:04:55,320
+course I would then have to actually
+ 
+
+293
+00:04:55,320 --> 00:04:57,670
+course I would then have to actually
+declare this instance over here
+
+294
+00:04:57,670 --> 00:04:57,680
+declare this instance over here
+ 
+
+295
+00:04:57,680 --> 00:05:00,830
+declare this instance over here
+Singleton Singleton as instance and we
+
+296
+00:05:00,830 --> 00:05:00,840
+Singleton Singleton as instance and we
+ 
+
+297
+00:05:00,840 --> 00:05:02,510
+Singleton Singleton as instance and we
+can probably set it equal to non pointer
+
+298
+00:05:02,510 --> 00:05:02,520
+can probably set it equal to non pointer
+ 
+
+299
+00:05:02,520 --> 00:05:05,189
+can probably set it equal to non pointer
+as a default and now I have the ability
+
+300
+00:05:05,189 --> 00:05:05,199
+as a default and now I have the ability
+ 
+
+301
+00:05:05,199 --> 00:05:07,310
+as a default and now I have the ability
+let's get rid of this now of course I
+
+302
+00:05:07,310 --> 00:05:07,320
+let's get rid of this now of course I
+ 
+
+303
+00:05:07,320 --> 00:05:09,670
+let's get rid of this now of course I
+have my Singleton class in which I can
+
+304
+00:05:09,670 --> 00:05:09,680
+have my Singleton class in which I can
+ 
+
+305
+00:05:09,680 --> 00:05:12,350
+have my Singleton class in which I can
+just call Singleton get and then do
+
+306
+00:05:12,350 --> 00:05:12,360
+just call Singleton get and then do
+ 
+
+307
+00:05:12,360 --> 00:05:14,590
+just call Singleton get and then do
+whatever I want with it so suppose we
+
+308
+00:05:14,590 --> 00:05:14,600
+whatever I want with it so suppose we
+ 
+
+309
+00:05:14,600 --> 00:05:17,390
+whatever I want with it so suppose we
+had a method here called hello don't
+
+310
+00:05:17,390 --> 00:05:17,400
+had a method here called hello don't
+ 
+
+311
+00:05:17,400 --> 00:05:18,590
+had a method here called hello don't
+really know what I'm doing just an
+
+312
+00:05:18,590 --> 00:05:18,600
+really know what I'm doing just an
+ 
+
+313
+00:05:18,600 --> 00:05:20,430
+really know what I'm doing just an
+example we could call that hello method
+
+314
+00:05:20,430 --> 00:05:20,440
+example we could call that hello method
+ 
+
+315
+00:05:20,440 --> 00:05:21,590
+example we could call that hello method
+and everything will be well you can see
+
+316
+00:05:21,590 --> 00:05:21,600
+and everything will be well you can see
+ 
+
+317
+00:05:21,600 --> 00:05:22,790
+and everything will be well you can see
+we've only got one instance of that
+
+318
+00:05:22,790 --> 00:05:22,800
+we've only got one instance of that
+ 
+
+319
+00:05:22,800 --> 00:05:24,189
+we've only got one instance of that
+class that we can use so we can kind of
+
+320
+00:05:24,189 --> 00:05:24,199
+class that we can use so we can kind of
+ 
+
+321
+00:05:24,199 --> 00:05:26,029
+class that we can use so we can kind of
+use it statically now this is quite a
+
+322
+00:05:26,029 --> 00:05:26,039
+use it statically now this is quite a
+ 
+
+323
+00:05:26,039 --> 00:05:27,909
+use it statically now this is quite a
+lot of code you don't necessarily have
+
+324
+00:05:27,909 --> 00:05:27,919
+lot of code you don't necessarily have
+ 
+
+325
+00:05:27,919 --> 00:05:30,070
+lot of code you don't necessarily have
+to do it this way another way to do this
+
+326
+00:05:30,070 --> 00:05:30,080
+to do it this way another way to do this
+ 
+
+327
+00:05:30,080 --> 00:05:31,350
+to do it this way another way to do this
+with our new found knowledge of this
+
+328
+00:05:31,350 --> 00:05:31,360
+with our new found knowledge of this
+ 
+
+329
+00:05:31,360 --> 00:05:33,550
+with our new found knowledge of this
+local static thing might be like this we
+
+330
+00:05:33,550 --> 00:05:33,560
+local static thing might be like this we
+ 
+
+331
+00:05:33,560 --> 00:05:36,550
+local static thing might be like this we
+can get rid of this entirely we can get
+
+332
+00:05:36,550 --> 00:05:36,560
+can get rid of this entirely we can get
+ 
+
+333
+00:05:36,560 --> 00:05:39,590
+can get rid of this entirely we can get
+rid of this external definition of s
+
+334
+00:05:39,590 --> 00:05:39,600
+rid of this external definition of s
+ 
+
+335
+00:05:39,600 --> 00:05:41,830
+rid of this external definition of s
+instance as well and then we can just
+
+336
+00:05:41,830 --> 00:05:41,840
+instance as well and then we can just
+ 
+
+337
+00:05:41,840 --> 00:05:45,309
+instance as well and then we can just
+expand our get function to actually
+
+338
+00:05:45,309 --> 00:05:45,319
+expand our get function to actually
+ 
+
+339
+00:05:45,319 --> 00:05:48,990
+expand our get function to actually
+create a static Singleton instance and
+
+340
+00:05:48,990 --> 00:05:49,000
+create a static Singleton instance and
+ 
+
+341
+00:05:49,000 --> 00:05:51,189
+create a static Singleton instance and
+then return that
+
+342
+00:05:51,189 --> 00:05:51,199
+then return that
+ 
+
+343
+00:05:51,199 --> 00:05:53,390
+then return that
+instance and there you go we get the
+
+344
+00:05:53,390 --> 00:05:53,400
+instance and there you go we get the
+ 
+
+345
+00:05:53,400 --> 00:05:54,670
+instance and there you go we get the
+exact same behavior you can see
+
+346
+00:05:54,670 --> 00:05:54,680
+exact same behavior you can see
+ 
+
+347
+00:05:54,680 --> 00:05:56,710
+exact same behavior you can see
+everything here stays the same we can
+
+348
+00:05:56,710 --> 00:05:56,720
+everything here stays the same we can
+ 
+
+349
+00:05:56,720 --> 00:05:58,309
+everything here stays the same we can
+run our code no problem of course the
+
+350
+00:05:58,309 --> 00:05:58,319
+run our code no problem of course the
+ 
+
+351
+00:05:58,319 --> 00:05:59,309
+run our code no problem of course the
+code is not actually going to do
+
+352
+00:05:59,309 --> 00:05:59,319
+code is not actually going to do
+ 
+
+353
+00:05:59,319 --> 00:06:00,550
+code is not actually going to do
+anything anything at this point but you
+
+354
+00:06:00,550 --> 00:06:00,560
+anything anything at this point but you
+ 
+
+355
+00:06:00,560 --> 00:06:01,909
+anything anything at this point but you
+can see it run successfully without
+
+356
+00:06:01,909 --> 00:06:01,919
+can see it run successfully without
+ 
+
+357
+00:06:01,919 --> 00:06:03,590
+can see it run successfully without
+crashing and we don't really have any
+
+358
+00:06:03,590 --> 00:06:03,600
+crashing and we don't really have any
+ 
+
+359
+00:06:03,600 --> 00:06:04,670
+crashing and we don't really have any
+problems with this at all and you can
+
+360
+00:06:04,670 --> 00:06:04,680
+problems with this at all and you can
+ 
+
+361
+00:06:04,680 --> 00:06:07,990
+problems with this at all and you can
+see that our code is a lot lot cleaner
+
+362
+00:06:07,990 --> 00:06:08,000
+see that our code is a lot lot cleaner
+ 
+
+363
+00:06:08,000 --> 00:06:10,070
+see that our code is a lot lot cleaner
+now of course if you didn't have the
+
+364
+00:06:10,070 --> 00:06:10,080
+now of course if you didn't have the
+ 
+
+365
+00:06:10,080 --> 00:06:12,870
+now of course if you didn't have the
+static keyword here then this Singleton
+
+366
+00:06:12,870 --> 00:06:12,880
+static keyword here then this Singleton
+ 
+
+367
+00:06:12,880 --> 00:06:15,230
+static keyword here then this Singleton
+since it is just created on the stack
+
+368
+00:06:15,230 --> 00:06:15,240
+since it is just created on the stack
+ 
+
+369
+00:06:15,240 --> 00:06:17,510
+since it is just created on the stack
+would get destroyed as soon as you hit
+
+370
+00:06:17,510 --> 00:06:17,520
+would get destroyed as soon as you hit
+ 
+
+371
+00:06:17,520 --> 00:06:19,230
+would get destroyed as soon as you hit
+this curly bracket and and then the
+
+372
+00:06:19,230 --> 00:06:19,240
+this curly bracket and and then the
+ 
+
+373
+00:06:19,240 --> 00:06:21,430
+this curly bracket and and then the
+function scope ends so this would be a
+
+374
+00:06:21,430 --> 00:06:21,440
+function scope ends so this would be a
+ 
+
+375
+00:06:21,440 --> 00:06:22,510
+function scope ends so this would be a
+grave error especially if you're
+
+376
+00:06:22,510 --> 00:06:22,520
+grave error especially if you're
+ 
+
+377
+00:06:22,520 --> 00:06:23,790
+grave error especially if you're
+returning it by reference if you're
+
+378
+00:06:23,790 --> 00:06:23,800
+returning it by reference if you're
+ 
+
+379
+00:06:23,800 --> 00:06:25,350
+returning it by reference if you're
+copying it of course you wouldn't really
+
+380
+00:06:25,350 --> 00:06:25,360
+copying it of course you wouldn't really
+ 
+
+381
+00:06:25,360 --> 00:06:26,950
+copying it of course you wouldn't really
+have a problem however since we are
+
+382
+00:06:26,950 --> 00:06:26,960
+have a problem however since we are
+ 
+
+383
+00:06:26,960 --> 00:06:29,830
+have a problem however since we are
+returning a reference to it this would
+
+384
+00:06:29,830 --> 00:06:29,840
+returning a reference to it this would
+ 
+
+385
+00:06:29,840 --> 00:06:31,309
+returning a reference to it this would
+would be a huge problem however by
+
+386
+00:06:31,309 --> 00:06:31,319
+would be a huge problem however by
+ 
+
+387
+00:06:31,319 --> 00:06:33,230
+would be a huge problem however by
+adding static where extending the
+
+388
+00:06:33,230 --> 00:06:33,240
+adding static where extending the
+ 
+
+389
+00:06:33,240 --> 00:06:35,230
+adding static where extending the
+lifetime of this to be essentially
+
+390
+00:06:35,230 --> 00:06:35,240
+lifetime of this to be essentially
+ 
+
+391
+00:06:35,240 --> 00:06:37,029
+lifetime of this to be essentially
+forever which means that every time we
+
+392
+00:06:37,029 --> 00:06:37,039
+forever which means that every time we
+ 
+
+393
+00:06:37,039 --> 00:06:38,950
+forever which means that every time we
+call get the first time it will actually
+
+394
+00:06:38,950 --> 00:06:38,960
+call get the first time it will actually
+ 
+
+395
+00:06:38,960 --> 00:06:41,189
+call get the first time it will actually
+construct that Singleton instance then
+
+396
+00:06:41,189 --> 00:06:41,199
+construct that Singleton instance then
+ 
+
+397
+00:06:41,199 --> 00:06:43,230
+construct that Singleton instance then
+on all subsequent times it will just
+
+398
+00:06:43,230 --> 00:06:43,240
+on all subsequent times it will just
+ 
+
+399
+00:06:43,240 --> 00:06:45,550
+on all subsequent times it will just
+return that existing instance so this is
+
+400
+00:06:45,550 --> 00:06:45,560
+return that existing instance so this is
+ 
+
+401
+00:06:45,560 --> 00:06:47,029
+return that existing instance so this is
+a great example of where you might want
+
+402
+00:06:47,029 --> 00:06:47,039
+a great example of where you might want
+ 
+
+403
+00:06:47,039 --> 00:06:48,469
+a great example of where you might want
+to use something like this it doesn't
+
+404
+00:06:48,469 --> 00:06:48,479
+to use something like this it doesn't
+ 
+
+405
+00:06:48,479 --> 00:06:50,070
+to use something like this it doesn't
+necessarily have to be with Singletons
+
+406
+00:06:50,070 --> 00:06:50,080
+necessarily have to be with Singletons
+ 
+
+407
+00:06:50,080 --> 00:06:51,749
+necessarily have to be with Singletons
+it can help you out a lot by replacing
+
+408
+00:06:51,749 --> 00:06:51,759
+it can help you out a lot by replacing
+ 
+
+409
+00:06:51,759 --> 00:06:53,670
+it can help you out a lot by replacing
+initialization functions where for
+
+410
+00:06:53,670 --> 00:06:53,680
+initialization functions where for
+ 
+
+411
+00:06:53,680 --> 00:06:55,629
+initialization functions where for
+example you might have to call a static
+
+412
+00:06:55,629 --> 00:06:55,639
+example you might have to call a static
+ 
+
+413
+00:06:55,639 --> 00:06:57,670
+example you might have to call a static
+initial where for example you might have
+
+414
+00:06:57,670 --> 00:06:57,680
+initial where for example you might have
+ 
+
+415
+00:06:57,680 --> 00:06:59,589
+initial where for example you might have
+to call a static initialization function
+
+416
+00:06:59,589 --> 00:06:59,599
+to call a static initialization function
+ 
+
+417
+00:06:59,599 --> 00:07:01,270
+to call a static initialization function
+at some point in your program to create
+
+418
+00:07:01,270 --> 00:07:01,280
+at some point in your program to create
+ 
+
+419
+00:07:01,280 --> 00:07:02,790
+at some point in your program to create
+all of your objects so that you could
+
+420
+00:07:02,790 --> 00:07:02,800
+all of your objects so that you could
+ 
+
+421
+00:07:02,800 --> 00:07:04,589
+all of your objects so that you could
+actually use the static get methods and
+
+422
+00:07:04,589 --> 00:07:04,599
+actually use the static get methods and
+ 
+
+423
+00:07:04,599 --> 00:07:05,749
+actually use the static get methods and
+stuff like that you can just kind of
+
+424
+00:07:05,749 --> 00:07:05,759
+stuff like that you can just kind of
+ 
+
+425
+00:07:05,759 --> 00:07:08,629
+stuff like that you can just kind of
+simplify that by using this in a lot of
+
+426
+00:07:08,629 --> 00:07:08,639
+simplify that by using this in a lot of
+ 
+
+427
+00:07:08,639 --> 00:07:10,270
+simplify that by using this in a lot of
+cases so you can see there are tons of
+
+428
+00:07:10,270 --> 00:07:10,280
+cases so you can see there are tons of
+ 
+
+429
+00:07:10,280 --> 00:07:12,150
+cases so you can see there are tons of
+uses for this and it's really not all
+
+430
+00:07:12,150 --> 00:07:12,160
+uses for this and it's really not all
+ 
+
+431
+00:07:12,160 --> 00:07:15,189
+uses for this and it's really not all
+that bad so feel free to use it that's
+
+432
+00:07:15,189 --> 00:07:15,199
+that bad so feel free to use it that's
+ 
+
+433
+00:07:15,199 --> 00:07:16,670
+that bad so feel free to use it that's
+my opinion let me know what you guys
+
+434
+00:07:16,670 --> 00:07:16,680
+my opinion let me know what you guys
+ 
+
+435
+00:07:16,680 --> 00:07:18,469
+my opinion let me know what you guys
+think of this static in a local scope
+
+436
+00:07:18,469 --> 00:07:18,479
+think of this static in a local scope
+ 
+
+437
+00:07:18,479 --> 00:07:20,270
+think of this static in a local scope
+thing in the comments below and I'll see
+
+438
+00:07:20,270 --> 00:07:20,280
+thing in the comments below and I'll see
+ 
+
+439
+00:07:20,280 --> 00:07:23,180
+thing in the comments below and I'll see
+you guys in the next video
+
+440
+00:07:23,180 --> 00:07:23,190
+you guys in the next video
+ 
+
+441
+00:07:23,190 --> 00:07:28,309
+you guys in the next video
+[Music]
+
+442
+00:07:28,309 --> 00:07:28,319
+[Music]
+ 
+
+443
+00:07:28,319 --> 00:07:35,150
+[Music]
+goodbye
+
+444
+00:07:35,150 --> 00:07:35,160
+
+ 
+
+445
+00:07:35,160 --> 00:07:38,270
+
+[Music]
+
+446
+00:07:38,270 --> 00:07:38,280
+[Music]
+ 
+
+447
+00:07:38,280 --> 00:07:41,280
+[Music]
+he
+

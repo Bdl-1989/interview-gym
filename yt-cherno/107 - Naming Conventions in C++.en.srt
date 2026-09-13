@@ -1,0 +1,5005 @@
+1
+00:00:00,000 --> 00:00:01,350
+
+You know, they say the hardest thing in
+
+2
+00:00:01,350 --> 00:00:01,360
+You know, they say the hardest thing in
+ 
+
+3
+00:00:01,360 --> 00:00:03,110
+You know, they say the hardest thing in
+programming is to name your variables,
+
+4
+00:00:03,110 --> 00:00:03,120
+programming is to name your variables,
+ 
+
+5
+00:00:03,120 --> 00:00:05,269
+programming is to name your variables,
+and they're not wrong. This video here
+
+6
+00:00:05,269 --> 00:00:05,279
+and they're not wrong. This video here
+ 
+
+7
+00:00:05,279 --> 00:00:07,590
+and they're not wrong. This video here
+will technically not help you with that,
+
+8
+00:00:07,590 --> 00:00:07,600
+will technically not help you with that,
+ 
+
+9
+00:00:07,600 --> 00:00:09,190
+will technically not help you with that,
+but it might help you to stay a little
+
+10
+00:00:09,190 --> 00:00:09,200
+but it might help you to stay a little
+ 
+
+11
+00:00:09,200 --> 00:00:11,190
+but it might help you to stay a little
+bit more organized, write clearer code,
+
+12
+00:00:11,190 --> 00:00:11,200
+bit more organized, write clearer code,
+ 
+
+13
+00:00:11,200 --> 00:00:12,870
+bit more organized, write clearer code,
+and understand what things like M
+
+14
+00:00:12,870 --> 00:00:12,880
+and understand what things like M
+ 
+
+15
+00:00:12,880 --> 00:00:14,709
+and understand what things like M
+underscore mean and why they're used.
+
+16
+00:00:14,709 --> 00:00:14,719
+underscore mean and why they're used.
+ 
+
+17
+00:00:14,719 --> 00:00:16,070
+underscore mean and why they're used.
+So, this is usually what people see and
+
+18
+00:00:16,070 --> 00:00:16,080
+So, this is usually what people see and
+ 
+
+19
+00:00:16,080 --> 00:00:18,189
+So, this is usually what people see and
+freak out. This kind of
+
+20
+00:00:18,189 --> 00:00:18,199
+freak out. This kind of
+ 
+
+21
+00:00:18,199 --> 00:00:20,550
+freak out. This kind of
+m_score prefix in front of variable
+
+22
+00:00:20,550 --> 00:00:20,560
+m_score prefix in front of variable
+ 
+
+23
+00:00:20,560 --> 00:00:23,029
+m_score prefix in front of variable
+names, it's honestly not that scary. It
+
+24
+00:00:23,029 --> 00:00:23,039
+names, it's honestly not that scary. It
+ 
+
+25
+00:00:23,039 --> 00:00:24,790
+names, it's honestly not that scary. It
+exists to add clarity to your code and
+
+26
+00:00:24,790 --> 00:00:24,800
+exists to add clarity to your code and
+ 
+
+27
+00:00:24,800 --> 00:00:26,630
+exists to add clarity to your code and
+enables you to more deeply understand
+
+28
+00:00:26,630 --> 00:00:26,640
+enables you to more deeply understand
+ 
+
+29
+00:00:26,640 --> 00:00:29,349
+enables you to more deeply understand
+what's going on just at a glance. And to
+
+30
+00:00:29,349 --> 00:00:29,359
+what's going on just at a glance. And to
+ 
+
+31
+00:00:29,359 --> 00:00:31,189
+what's going on just at a glance. And to
+be honest, that's important. Now, we're
+
+32
+00:00:31,189 --> 00:00:31,199
+be honest, that's important. Now, we're
+ 
+
+33
+00:00:31,199 --> 00:00:32,549
+be honest, that's important. Now, we're
+going to spend the rest of this video
+
+34
+00:00:32,549 --> 00:00:32,559
+going to spend the rest of this video
+ 
+
+35
+00:00:32,559 --> 00:00:34,310
+going to spend the rest of this video
+talking about the how and the why in
+
+36
+00:00:34,310 --> 00:00:34,320
+talking about the how and the why in
+ 
+
+37
+00:00:34,320 --> 00:00:36,229
+talking about the how and the why in
+much more depth, but let me just sort
+
+38
+00:00:36,229 --> 00:00:36,239
+much more depth, but let me just sort
+ 
+
+39
+00:00:36,239 --> 00:00:38,549
+much more depth, but let me just sort
+you out real quick. M underscore is
+
+40
+00:00:38,549 --> 00:00:38,559
+you out real quick. M underscore is
+ 
+
+41
+00:00:38,559 --> 00:00:40,549
+you out real quick. M underscore is
+typically used for private member
+
+42
+00:00:40,549 --> 00:00:40,559
+typically used for private member
+ 
+
+43
+00:00:40,559 --> 00:00:42,869
+typically used for private member
+variables. So, like private variables in
+
+44
+00:00:42,869 --> 00:00:42,879
+variables. So, like private variables in
+ 
+
+45
+00:00:42,879 --> 00:00:45,430
+variables. So, like private variables in
+a class, like here. S underscore usually
+
+46
+00:00:45,430 --> 00:00:45,440
+a class, like here. S underscore usually
+ 
+
+47
+00:00:45,440 --> 00:00:47,750
+a class, like here. S underscore usually
+means static. Now, I use this for both
+
+48
+00:00:47,750 --> 00:00:47,760
+means static. Now, I use this for both
+ 
+
+49
+00:00:47,760 --> 00:00:50,150
+means static. Now, I use this for both
+static class variables as well as
+
+50
+00:00:50,150 --> 00:00:50,160
+static class variables as well as
+ 
+
+51
+00:00:50,160 --> 00:00:51,990
+static class variables as well as
+non-class variables with internal
+
+52
+00:00:51,990 --> 00:00:52,000
+non-class variables with internal
+ 
+
+53
+00:00:52,000 --> 00:00:54,229
+non-class variables with internal
+linkage, such as this one here. G means
+
+54
+00:00:54,229 --> 00:00:54,239
+linkage, such as this one here. G means
+ 
+
+55
+00:00:54,239 --> 00:00:56,229
+linkage, such as this one here. G means
+global and is used for global variables.
+
+56
+00:00:56,229 --> 00:00:56,239
+global and is used for global variables.
+ 
+
+57
+00:00:56,239 --> 00:00:57,910
+global and is used for global variables.
+Those are the only three that I
+
+58
+00:00:57,910 --> 00:00:57,920
+Those are the only three that I
+ 
+
+59
+00:00:57,920 --> 00:01:00,069
+Those are the only three that I
+personally use in C++, but there are
+
+60
+00:01:00,069 --> 00:01:00,079
+personally use in C++, but there are
+ 
+
+61
+00:01:00,079 --> 00:01:02,069
+personally use in C++, but there are
+others such as C for constants. The
+
+62
+00:01:02,069 --> 00:01:02,079
+others such as C for constants. The
+ 
+
+63
+00:01:02,079 --> 00:01:03,510
+others such as C for constants. The
+thing is, you can really just make up
+
+64
+00:01:03,510 --> 00:01:03,520
+thing is, you can really just make up
+ 
+
+65
+00:01:03,520 --> 00:01:06,149
+thing is, you can really just make up
+any prefix that you want. It exists to
+
+66
+00:01:06,149 --> 00:01:06,159
+any prefix that you want. It exists to
+ 
+
+67
+00:01:06,159 --> 00:01:07,750
+any prefix that you want. It exists to
+add a little bit more information and
+
+68
+00:01:07,750 --> 00:01:07,760
+add a little bit more information and
+ 
+
+69
+00:01:07,760 --> 00:01:10,230
+add a little bit more information and
+context. I've seen some other ones out
+
+70
+00:01:10,230 --> 00:01:10,240
+context. I've seen some other ones out
+ 
+
+71
+00:01:10,240 --> 00:01:12,390
+context. I've seen some other ones out
+there that actually refer to like the
+
+72
+00:01:12,390 --> 00:01:12,400
+there that actually refer to like the
+ 
+
+73
+00:01:12,400 --> 00:01:14,789
+there that actually refer to like the
+kind of variable that it is. So like P
+
+74
+00:01:14,789 --> 00:01:14,799
+kind of variable that it is. So like P
+ 
+
+75
+00:01:14,799 --> 00:01:16,950
+kind of variable that it is. So like P
+for parameter or A for argument. I kind
+
+76
+00:01:16,950 --> 00:01:16,960
+for parameter or A for argument. I kind
+ 
+
+77
+00:01:16,960 --> 00:01:19,190
+for parameter or A for argument. I kind
+of made up this U prefix U underscore
+
+78
+00:01:19,190 --> 00:01:19,200
+of made up this U prefix U underscore
+ 
+
+79
+00:01:19,200 --> 00:01:20,870
+of made up this U prefix U underscore
+for uniform variables in shading
+
+80
+00:01:20,870 --> 00:01:20,880
+for uniform variables in shading
+ 
+
+81
+00:01:20,880 --> 00:01:22,390
+for uniform variables in shading
+languages. And I'm pretty sure I also
+
+82
+00:01:22,390 --> 00:01:22,400
+languages. And I'm pretty sure I also
+ 
+
+83
+00:01:22,400 --> 00:01:24,230
+languages. And I'm pretty sure I also
+used to use v underscore for varying
+
+84
+00:01:24,230 --> 00:01:24,240
+used to use v underscore for varying
+ 
+
+85
+00:01:24,240 --> 00:01:26,070
+used to use v underscore for varying
+back when that word was used more often.
+
+86
+00:01:26,070 --> 00:01:26,080
+back when that word was used more often.
+ 
+
+87
+00:01:26,080 --> 00:01:27,350
+back when that word was used more often.
+And that's the thing, you can make up
+
+88
+00:01:27,350 --> 00:01:27,360
+And that's the thing, you can make up
+ 
+
+89
+00:01:27,360 --> 00:01:29,350
+And that's the thing, you can make up
+any prefix that you like because the
+
+90
+00:01:29,350 --> 00:01:29,360
+any prefix that you like because the
+ 
+
+91
+00:01:29,360 --> 00:01:30,870
+any prefix that you like because the
+whole purpose of this is just to add a
+
+92
+00:01:30,870 --> 00:01:30,880
+whole purpose of this is just to add a
+ 
+
+93
+00:01:30,880 --> 00:01:32,230
+whole purpose of this is just to add a
+little bit more information, a little
+
+94
+00:01:32,230 --> 00:01:32,240
+little bit more information, a little
+ 
+
+95
+00:01:32,240 --> 00:01:34,630
+little bit more information, a little
+bit more context to a variable. Now,
+
+96
+00:01:34,630 --> 00:01:34,640
+bit more context to a variable. Now,
+ 
+
+97
+00:01:34,640 --> 00:01:36,550
+bit more context to a variable. Now,
+people also like to write these like in
+
+98
+00:01:36,550 --> 00:01:36,560
+people also like to write these like in
+ 
+
+99
+00:01:36,560 --> 00:01:38,630
+people also like to write these like in
+a different code style as well. In my
+
+100
+00:01:38,630 --> 00:01:38,640
+a different code style as well. In my
+ 
+
+101
+00:01:38,640 --> 00:01:40,149
+a different code style as well. In my
+code style, I write the letter first,
+
+102
+00:01:40,149 --> 00:01:40,159
+code style, I write the letter first,
+ 
+
+103
+00:01:40,159 --> 00:01:41,429
+code style, I write the letter first,
+then an underscore, and then the
+
+104
+00:01:41,429 --> 00:01:41,439
+then an underscore, and then the
+ 
+
+105
+00:01:41,439 --> 00:01:43,030
+then an underscore, and then the
+variable name beginning with a capital.
+
+106
+00:01:43,030 --> 00:01:43,040
+variable name beginning with a capital.
+ 
+
+107
+00:01:43,040 --> 00:01:44,390
+variable name beginning with a capital.
+So, the rest of the variable is in
+
+108
+00:01:44,390 --> 00:01:44,400
+So, the rest of the variable is in
+ 
+
+109
+00:01:44,400 --> 00:01:46,230
+So, the rest of the variable is in
+Pascal case. However, others like to
+
+110
+00:01:46,230 --> 00:01:46,240
+Pascal case. However, others like to
+ 
+
+111
+00:01:46,240 --> 00:01:48,310
+Pascal case. However, others like to
+have the variable name in camel case or
+
+112
+00:01:48,310 --> 00:01:48,320
+have the variable name in camel case or
+ 
+
+113
+00:01:48,320 --> 00:01:49,910
+have the variable name in camel case or
+snake case. And others don't even
+
+114
+00:01:49,910 --> 00:01:49,920
+snake case. And others don't even
+ 
+
+115
+00:01:49,920 --> 00:01:51,670
+snake case. And others don't even
+include the underscore. They just have
+
+116
+00:01:51,670 --> 00:01:51,680
+include the underscore. They just have
+ 
+
+117
+00:01:51,680 --> 00:01:53,749
+include the underscore. They just have
+like m and then the variable name in
+
+118
+00:01:53,749 --> 00:01:53,759
+like m and then the variable name in
+ 
+
+119
+00:01:53,759 --> 00:01:55,030
+like m and then the variable name in
+Pascal case. Lots of different
+
+120
+00:01:55,030 --> 00:01:55,040
+Pascal case. Lots of different
+ 
+
+121
+00:01:55,040 --> 00:01:56,710
+Pascal case. Lots of different
+variations all with the same point of
+
+122
+00:01:56,710 --> 00:01:56,720
+variations all with the same point of
+ 
+
+123
+00:01:56,720 --> 00:01:57,670
+variations all with the same point of
+just adding a little bit more
+
+124
+00:01:57,670 --> 00:01:57,680
+just adding a little bit more
+ 
+
+125
+00:01:57,680 --> 00:01:59,030
+just adding a little bit more
+information. So, the rest of this video
+
+126
+00:01:59,030 --> 00:01:59,040
+information. So, the rest of this video
+ 
+
+127
+00:01:59,040 --> 00:02:00,310
+information. So, the rest of this video
+we're just going to talk about why this
+
+128
+00:02:00,310 --> 00:02:00,320
+we're just going to talk about why this
+ 
+
+129
+00:02:00,320 --> 00:02:02,149
+we're just going to talk about why this
+is useful and why this is used, why I
+
+130
+00:02:02,149 --> 00:02:02,159
+is useful and why this is used, why I
+ 
+
+131
+00:02:02,159 --> 00:02:04,789
+is useful and why this is used, why I
+personally like to use this keyword. I
+
+132
+00:02:04,789 --> 00:02:04,799
+personally like to use this keyword. I
+ 
+
+133
+00:02:04,799 --> 00:02:06,630
+personally like to use this keyword. I
+personally, this video is just my
+
+134
+00:02:06,630 --> 00:02:06,640
+personally, this video is just my
+ 
+
+135
+00:02:06,640 --> 00:02:08,389
+personally, this video is just my
+opinion. Learning programming is all
+
+136
+00:02:08,389 --> 00:02:08,399
+opinion. Learning programming is all
+ 
+
+137
+00:02:08,399 --> 00:02:09,669
+opinion. Learning programming is all
+about practice. You can't just keep
+
+138
+00:02:09,669 --> 00:02:09,679
+about practice. You can't just keep
+ 
+
+139
+00:02:09,679 --> 00:02:11,830
+about practice. You can't just keep
+learning theory without actually writing
+
+140
+00:02:11,830 --> 00:02:11,840
+learning theory without actually writing
+ 
+
+141
+00:02:11,840 --> 00:02:13,750
+learning theory without actually writing
+code. And that's exactly why Bootdev,
+
+142
+00:02:13,750 --> 00:02:13,760
+code. And that's exactly why Bootdev,
+ 
+
+143
+00:02:13,760 --> 00:02:15,270
+code. And that's exactly why Bootdev,
+the sponsor of this video, is such a
+
+144
+00:02:15,270 --> 00:02:15,280
+the sponsor of this video, is such a
+ 
+
+145
+00:02:15,280 --> 00:02:16,630
+the sponsor of this video, is such a
+great place to learn programming.
+
+146
+00:02:16,630 --> 00:02:16,640
+great place to learn programming.
+ 
+
+147
+00:02:16,640 --> 00:02:18,309
+great place to learn programming.
+Boot.dev is a website that takes
+
+148
+00:02:18,309 --> 00:02:18,319
+Boot.dev is a website that takes
+ 
+
+149
+00:02:18,319 --> 00:02:20,229
+Boot.dev is a website that takes
+inspiration from modern game design to
+
+150
+00:02:20,229 --> 00:02:20,239
+inspiration from modern game design to
+ 
+
+151
+00:02:20,239 --> 00:02:21,910
+inspiration from modern game design to
+try and teach programming in a much more
+
+152
+00:02:21,910 --> 00:02:21,920
+try and teach programming in a much more
+ 
+
+153
+00:02:21,920 --> 00:02:23,670
+try and teach programming in a much more
+engaging and practical way. They're
+
+154
+00:02:23,670 --> 00:02:23,680
+engaging and practical way. They're
+ 
+
+155
+00:02:23,680 --> 00:02:24,630
+engaging and practical way. They're
+basically trying to make this whole
+
+156
+00:02:24,630 --> 00:02:24,640
+basically trying to make this whole
+ 
+
+157
+00:02:24,640 --> 00:02:26,150
+basically trying to make this whole
+difficult process of learning
+
+158
+00:02:26,150 --> 00:02:26,160
+difficult process of learning
+ 
+
+159
+00:02:26,160 --> 00:02:28,150
+difficult process of learning
+programming super fun for you and kind
+
+160
+00:02:28,150 --> 00:02:28,160
+programming super fun for you and kind
+ 
+
+161
+00:02:28,160 --> 00:02:30,070
+programming super fun for you and kind
+of communicate the sense of progress in
+
+162
+00:02:30,070 --> 00:02:30,080
+of communicate the sense of progress in
+ 
+
+163
+00:02:30,080 --> 00:02:31,750
+of communicate the sense of progress in
+a really, really effective way. They've
+
+164
+00:02:31,750 --> 00:02:31,760
+a really, really effective way. They've
+ 
+
+165
+00:02:31,760 --> 00:02:33,670
+a really, really effective way. They've
+got plenty of hands-on practical lessons
+
+166
+00:02:33,670 --> 00:02:33,680
+got plenty of hands-on practical lessons
+ 
+
+167
+00:02:33,680 --> 00:02:35,509
+got plenty of hands-on practical lessons
+that balance theory really well with
+
+168
+00:02:35,509 --> 00:02:35,519
+that balance theory really well with
+ 
+
+169
+00:02:35,519 --> 00:02:37,750
+that balance theory really well with
+actual practice. As you can see here,
+
+170
+00:02:37,750 --> 00:02:37,760
+actual practice. As you can see here,
+ 
+
+171
+00:02:37,760 --> 00:02:39,990
+actual practice. As you can see here,
+you'll actually be writing code and
+
+172
+00:02:39,990 --> 00:02:40,000
+you'll actually be writing code and
+ 
+
+173
+00:02:40,000 --> 00:02:41,910
+you'll actually be writing code and
+changing existing code, which as you can
+
+174
+00:02:41,910 --> 00:02:41,920
+changing existing code, which as you can
+ 
+
+175
+00:02:41,920 --> 00:02:43,350
+changing existing code, which as you can
+imagine is such an effective way to
+
+176
+00:02:43,350 --> 00:02:43,360
+imagine is such an effective way to
+ 
+
+177
+00:02:43,360 --> 00:02:44,630
+imagine is such an effective way to
+learn programming. As you go through
+
+178
+00:02:44,630 --> 00:02:44,640
+learn programming. As you go through
+ 
+
+179
+00:02:44,640 --> 00:02:45,990
+learn programming. As you go through
+their courses, every step of the way,
+
+180
+00:02:45,990 --> 00:02:46,000
+their courses, every step of the way,
+ 
+
+181
+00:02:46,000 --> 00:02:47,350
+their courses, every step of the way,
+you'll have to write actual code to
+
+182
+00:02:47,350 --> 00:02:47,360
+you'll have to write actual code to
+ 
+
+183
+00:02:47,360 --> 00:02:48,949
+you'll have to write actual code to
+implement solutions to problems. And
+
+184
+00:02:48,949 --> 00:02:48,959
+implement solutions to problems. And
+ 
+
+185
+00:02:48,959 --> 00:02:50,470
+implement solutions to problems. And
+they tie this in with gamelike systems
+
+186
+00:02:50,470 --> 00:02:50,480
+they tie this in with gamelike systems
+ 
+
+187
+00:02:50,480 --> 00:02:52,309
+they tie this in with gamelike systems
+to make it so much more fun. So, you'll
+
+188
+00:02:52,309 --> 00:02:52,319
+to make it so much more fun. So, you'll
+ 
+
+189
+00:02:52,319 --> 00:02:55,190
+to make it so much more fun. So, you'll
+earn XP, level up, complete quests, etc.
+
+190
+00:02:55,190 --> 00:02:55,200
+earn XP, level up, complete quests, etc.
+ 
+
+191
+00:02:55,200 --> 00:02:56,949
+earn XP, level up, complete quests, etc.
+Their courses mostly focus on back-end
+
+192
+00:02:56,949 --> 00:02:56,959
+Their courses mostly focus on back-end
+ 
+
+193
+00:02:56,959 --> 00:02:58,150
+Their courses mostly focus on back-end
+web development. So, they have like
+
+194
+00:02:58,150 --> 00:02:58,160
+web development. So, they have like
+ 
+
+195
+00:02:58,160 --> 00:03:00,470
+web development. So, they have like
+Python, Go, JavaScript. But no matter
+
+196
+00:03:00,470 --> 00:03:00,480
+Python, Go, JavaScript. But no matter
+ 
+
+197
+00:03:00,480 --> 00:03:01,990
+Python, Go, JavaScript. But no matter
+what kind of programming you're really
+
+198
+00:03:01,990 --> 00:03:02,000
+what kind of programming you're really
+ 
+
+199
+00:03:02,000 --> 00:03:03,350
+what kind of programming you're really
+interested in, if you're just learning,
+
+200
+00:03:03,350 --> 00:03:03,360
+interested in, if you're just learning,
+ 
+
+201
+00:03:03,360 --> 00:03:04,869
+interested in, if you're just learning,
+the language doesn't matter too much.
+
+202
+00:03:04,869 --> 00:03:04,879
+the language doesn't matter too much.
+ 
+
+203
+00:03:04,879 --> 00:03:06,470
+the language doesn't matter too much.
+It's more about learning the concept of
+
+204
+00:03:06,470 --> 00:03:06,480
+It's more about learning the concept of
+ 
+
+205
+00:03:06,480 --> 00:03:08,149
+It's more about learning the concept of
+programming in general and their
+
+206
+00:03:08,149 --> 00:03:08,159
+programming in general and their
+ 
+
+207
+00:03:08,159 --> 00:03:09,910
+programming in general and their
+teaching style just does that so well.
+
+208
+00:03:09,910 --> 00:03:09,920
+teaching style just does that so well.
+ 
+
+209
+00:03:09,920 --> 00:03:11,750
+teaching style just does that so well.
+They've also got this bear wizard AI
+
+210
+00:03:11,750 --> 00:03:11,760
+They've also got this bear wizard AI
+ 
+
+211
+00:03:11,760 --> 00:03:13,270
+They've also got this bear wizard AI
+chatbot that you can use to help you
+
+212
+00:03:13,270 --> 00:03:13,280
+chatbot that you can use to help you
+ 
+
+213
+00:03:13,280 --> 00:03:14,869
+chatbot that you can use to help you
+out. You can just ask it questions and
+
+214
+00:03:14,869 --> 00:03:14,879
+out. You can just ask it questions and
+ 
+
+215
+00:03:14,879 --> 00:03:16,470
+out. You can just ask it questions and
+ask for deeper explanations along the
+
+216
+00:03:16,470 --> 00:03:16,480
+ask for deeper explanations along the
+ 
+
+217
+00:03:16,480 --> 00:03:18,229
+ask for deeper explanations along the
+way and is specifically trained with
+
+218
+00:03:18,229 --> 00:03:18,239
+way and is specifically trained with
+ 
+
+219
+00:03:18,239 --> 00:03:20,149
+way and is specifically trained with
+their course materials. Just be prepared
+
+220
+00:03:20,149 --> 00:03:20,159
+their course materials. Just be prepared
+ 
+
+221
+00:03:20,159 --> 00:03:22,229
+their course materials. Just be prepared
+to feed him salmon. And check this out.
+
+222
+00:03:22,229 --> 00:03:22,239
+to feed him salmon. And check this out.
+ 
+
+223
+00:03:22,239 --> 00:03:24,550
+to feed him salmon. And check this out.
+All of their content is actually free to
+
+224
+00:03:24,550 --> 00:03:24,560
+All of their content is actually free to
+ 
+
+225
+00:03:24,560 --> 00:03:26,470
+All of their content is actually free to
+read and watch in guest mode. So, you
+
+226
+00:03:26,470 --> 00:03:26,480
+read and watch in guest mode. So, you
+ 
+
+227
+00:03:26,480 --> 00:03:28,309
+read and watch in guest mode. So, you
+can always check it out completely for
+
+228
+00:03:28,309 --> 00:03:28,319
+can always check it out completely for
+ 
+
+229
+00:03:28,319 --> 00:03:29,990
+can always check it out completely for
+free. You'll need a paid membership if
+
+230
+00:03:29,990 --> 00:03:30,000
+free. You'll need a paid membership if
+ 
+
+231
+00:03:30,000 --> 00:03:31,430
+free. You'll need a paid membership if
+you actually want to access the
+
+232
+00:03:31,430 --> 00:03:31,440
+you actually want to access the
+ 
+
+233
+00:03:31,440 --> 00:03:32,949
+you actually want to access the
+interactive features such as the
+
+234
+00:03:32,949 --> 00:03:32,959
+interactive features such as the
+ 
+
+235
+00:03:32,959 --> 00:03:34,630
+interactive features such as the
+hands-on programming. There's loads more
+
+236
+00:03:34,630 --> 00:03:34,640
+hands-on programming. There's loads more
+ 
+
+237
+00:03:34,640 --> 00:03:36,470
+hands-on programming. There's loads more
+to discover. Just head to boot.dev. Link
+
+238
+00:03:36,470 --> 00:03:36,480
+to discover. Just head to boot.dev. Link
+ 
+
+239
+00:03:36,480 --> 00:03:37,990
+to discover. Just head to boot.dev. Link
+will be in the description below. And
+
+240
+00:03:37,990 --> 00:03:38,000
+will be in the description below. And
+ 
+
+241
+00:03:38,000 --> 00:03:40,149
+will be in the description below. And
+you can also use code churno to get 25%
+
+242
+00:03:40,149 --> 00:03:40,159
+you can also use code churno to get 25%
+ 
+
+243
+00:03:40,159 --> 00:03:42,470
+you can also use code churno to get 25%
+off your entire first year if you choose
+
+244
+00:03:42,470 --> 00:03:42,480
+off your entire first year if you choose
+ 
+
+245
+00:03:42,480 --> 00:03:43,750
+off your entire first year if you choose
+the annual plan. Huge thank you to
+
+246
+00:03:43,750 --> 00:03:43,760
+the annual plan. Huge thank you to
+ 
+
+247
+00:03:43,760 --> 00:03:45,750
+the annual plan. Huge thank you to
+bootdev for sponsoring this video. So to
+
+248
+00:03:45,750 --> 00:03:45,760
+bootdev for sponsoring this video. So to
+ 
+
+249
+00:03:45,760 --> 00:03:47,830
+bootdev for sponsoring this video. So to
+illustrate this point of like you know
+
+250
+00:03:47,830 --> 00:03:47,840
+illustrate this point of like you know
+ 
+
+251
+00:03:47,840 --> 00:03:50,229
+illustrate this point of like you know
+naming conventions and variable names in
+
+252
+00:03:50,229 --> 00:03:50,239
+naming conventions and variable names in
+ 
+
+253
+00:03:50,239 --> 00:03:51,430
+naming conventions and variable names in
+general. I thought I would kind of
+
+254
+00:03:51,430 --> 00:03:51,440
+general. I thought I would kind of
+ 
+
+255
+00:03:51,440 --> 00:03:53,750
+general. I thought I would kind of
+present this in like three different
+
+256
+00:03:53,750 --> 00:03:53,760
+present this in like three different
+ 
+
+257
+00:03:53,760 --> 00:03:57,190
+present this in like three different
+levels of readability at least according
+
+258
+00:03:57,190 --> 00:03:57,200
+levels of readability at least according
+ 
+
+259
+00:03:57,200 --> 00:03:59,429
+levels of readability at least according
+to me. So first of all, why do we even
+
+260
+00:03:59,429 --> 00:03:59,439
+to me. So first of all, why do we even
+ 
+
+261
+00:03:59,439 --> 00:04:01,270
+to me. So first of all, why do we even
+name variables in the first place? Why
+
+262
+00:04:01,270 --> 00:04:01,280
+name variables in the first place? Why
+ 
+
+263
+00:04:01,280 --> 00:04:03,910
+name variables in the first place? Why
+not just write code like this? Ah yes,
+
+264
+00:04:03,910 --> 00:04:03,920
+not just write code like this? Ah yes,
+ 
+
+265
+00:04:03,920 --> 00:04:06,229
+not just write code like this? Ah yes,
+we have uh a new instance of a class
+
+266
+00:04:06,229 --> 00:04:06,239
+we have uh a new instance of a class
+ 
+
+267
+00:04:06,239 --> 00:04:08,470
+we have uh a new instance of a class
+called a and then we call a function on
+
+268
+00:04:08,470 --> 00:04:08,480
+called a and then we call a function on
+ 
+
+269
+00:04:08,480 --> 00:04:10,869
+called a and then we call a function on
+that a. We pass in a couple of ve 3es
+
+270
+00:04:10,869 --> 00:04:10,879
+that a. We pass in a couple of ve 3es
+ 
+
+271
+00:04:10,879 --> 00:04:13,830
+that a. We pass in a couple of ve 3es
+and a float and we name that variable b.
+
+272
+00:04:13,830 --> 00:04:13,840
+and a float and we name that variable b.
+ 
+
+273
+00:04:13,840 --> 00:04:15,270
+and a float and we name that variable b.
+Okay. Well, you know, let's take a look
+
+274
+00:04:15,270 --> 00:04:15,280
+Okay. Well, you know, let's take a look
+ 
+
+275
+00:04:15,280 --> 00:04:16,870
+Okay. Well, you know, let's take a look
+at that function because that should be
+
+276
+00:04:16,870 --> 00:04:16,880
+at that function because that should be
+ 
+
+277
+00:04:16,880 --> 00:04:18,629
+at that function because that should be
+easy to read, right? Okay. In this file,
+
+278
+00:04:18,629 --> 00:04:18,639
+easy to read, right? Okay. In this file,
+ 
+
+279
+00:04:18,639 --> 00:04:22,069
+easy to read, right? Okay. In this file,
+we have a strct called a with a double a
+
+280
+00:04:22,069 --> 00:04:22,079
+we have a strct called a with a double a
+ 
+
+281
+00:04:22,079 --> 00:04:25,110
+we have a strct called a with a double a
+ve 3. And then we have b which is a
+
+282
+00:04:25,110 --> 00:04:25,120
+ve 3. And then we have b which is a
+ 
+
+283
+00:04:25,120 --> 00:04:26,790
+ve 3. And then we have b which is a
+derives from a. So, it's also got that
+
+284
+00:04:26,790 --> 00:04:26,800
+derives from a. So, it's also got that
+ 
+
+285
+00:04:26,800 --> 00:04:28,790
+derives from a. So, it's also got that
+double a ve 3, but then it's also got
+
+286
+00:04:28,790 --> 00:04:28,800
+double a ve 3, but then it's also got
+ 
+
+287
+00:04:28,800 --> 00:04:30,710
+double a ve 3, but then it's also got
+another ve 3. And then we have a class
+
+288
+00:04:30,710 --> 00:04:30,720
+another ve 3. And then we have a class
+ 
+
+289
+00:04:30,720 --> 00:04:32,629
+another ve 3. And then we have a class
+called c. There's that function we were
+
+290
+00:04:32,629 --> 00:04:32,639
+called c. There's that function we were
+ 
+
+291
+00:04:32,639 --> 00:04:35,270
+called c. There's that function we were
+talking about. It returns a B pointer.
+
+292
+00:04:35,270 --> 00:04:35,280
+talking about. It returns a B pointer.
+ 
+
+293
+00:04:35,280 --> 00:04:37,110
+talking about. It returns a B pointer.
+So an instance of one of these. It's
+
+294
+00:04:37,110 --> 00:04:37,120
+So an instance of one of these. It's
+ 
+
+295
+00:04:37,120 --> 00:04:40,790
+So an instance of one of these. It's
+also got a vector of A's. So of this I
+
+296
+00:04:40,790 --> 00:04:40,800
+also got a vector of A's. So of this I
+ 
+
+297
+00:04:40,800 --> 00:04:43,590
+also got a vector of A's. So of this I
+guess called A. And then okay, what does
+
+298
+00:04:43,590 --> 00:04:43,600
+guess called A. And then okay, what does
+ 
+
+299
+00:04:43,600 --> 00:04:45,909
+guess called A. And then okay, what does
+this function do? So checks to see if
+
+300
+00:04:45,909 --> 00:04:45,919
+this function do? So checks to see if
+ 
+
+301
+00:04:45,919 --> 00:04:48,150
+this function do? So checks to see if
+we're within the size of double A, which
+
+302
+00:04:48,150 --> 00:04:48,160
+we're within the size of double A, which
+ 
+
+303
+00:04:48,160 --> 00:04:49,670
+we're within the size of double A, which
+is actually up here. Okay, so that's
+
+304
+00:04:49,670 --> 00:04:49,680
+is actually up here. Okay, so that's
+ 
+
+305
+00:04:49,680 --> 00:04:51,830
+is actually up here. Okay, so that's
+static vector B. So that's different
+
+306
+00:04:51,830 --> 00:04:51,840
+static vector B. So that's different
+ 
+
+307
+00:04:51,840 --> 00:04:55,590
+static vector B. So that's different
+from this. And then we we do this and
+
+308
+00:04:55,590 --> 00:04:55,600
+from this. And then we we do this and
+ 
+
+309
+00:04:55,600 --> 00:04:58,710
+from this. And then we we do this and
+then this A in place back. So I guess
+
+310
+00:04:58,710 --> 00:04:58,720
+then this A in place back. So I guess
+ 
+
+311
+00:04:58,720 --> 00:05:02,150
+then this A in place back. So I guess
+that goes to here and pushes D back into
+
+312
+00:05:02,150 --> 00:05:02,160
+that goes to here and pushes D back into
+ 
+
+313
+00:05:02,160 --> 00:05:03,590
+that goes to here and pushes D back into
+Anyway, I obviously know what this code
+
+314
+00:05:03,590 --> 00:05:03,600
+Anyway, I obviously know what this code
+ 
+
+315
+00:05:03,600 --> 00:05:05,670
+Anyway, I obviously know what this code
+does. I'm just pretending I Let's just
+
+316
+00:05:05,670 --> 00:05:05,680
+does. I'm just pretending I Let's just
+ 
+
+317
+00:05:05,680 --> 00:05:07,830
+does. I'm just pretending I Let's just
+skip past this. Now obviously this is a
+
+318
+00:05:07,830 --> 00:05:07,840
+skip past this. Now obviously this is a
+ 
+
+319
+00:05:07,840 --> 00:05:09,830
+skip past this. Now obviously this is a
+simple example that I just wrote just
+
+320
+00:05:09,830 --> 00:05:09,840
+simple example that I just wrote just
+ 
+
+321
+00:05:09,840 --> 00:05:11,430
+simple example that I just wrote just
+then. Even though this code is
+
+322
+00:05:11,430 --> 00:05:11,440
+then. Even though this code is
+ 
+
+323
+00:05:11,440 --> 00:05:12,950
+then. Even though this code is
+obfiscated, this is usually something we
+
+324
+00:05:12,950 --> 00:05:12,960
+obfiscated, this is usually something we
+ 
+
+325
+00:05:12,960 --> 00:05:15,110
+obfiscated, this is usually something we
+call obfiscated code. It's still not
+
+326
+00:05:15,110 --> 00:05:15,120
+call obfiscated code. It's still not
+ 
+
+327
+00:05:15,120 --> 00:05:17,029
+call obfiscated code. It's still not
+that difficult to actually tell what's
+
+328
+00:05:17,029 --> 00:05:17,039
+that difficult to actually tell what's
+ 
+
+329
+00:05:17,039 --> 00:05:18,710
+that difficult to actually tell what's
+going on. For those of you watching, if
+
+330
+00:05:18,710 --> 00:05:18,720
+going on. For those of you watching, if
+ 
+
+331
+00:05:18,720 --> 00:05:20,150
+going on. For those of you watching, if
+you would like to hazard a guess as to
+
+332
+00:05:20,150 --> 00:05:20,160
+you would like to hazard a guess as to
+ 
+
+333
+00:05:20,160 --> 00:05:21,670
+you would like to hazard a guess as to
+what this function is, what it maybe
+
+334
+00:05:21,670 --> 00:05:21,680
+what this function is, what it maybe
+ 
+
+335
+00:05:21,680 --> 00:05:23,270
+what this function is, what it maybe
+should be called, and what it's actually
+
+336
+00:05:23,270 --> 00:05:23,280
+should be called, and what it's actually
+ 
+
+337
+00:05:23,280 --> 00:05:24,790
+should be called, and what it's actually
+doing, drop a comment below. I think
+
+338
+00:05:24,790 --> 00:05:24,800
+doing, drop a comment below. I think
+ 
+
+339
+00:05:24,800 --> 00:05:27,510
+doing, drop a comment below. I think
+this will be a fun exercise. However, I
+
+340
+00:05:27,510 --> 00:05:27,520
+this will be a fun exercise. However, I
+ 
+
+341
+00:05:27,520 --> 00:05:29,909
+this will be a fun exercise. However, I
+I'm sure you can see that it's
+
+342
+00:05:29,909 --> 00:05:29,919
+I'm sure you can see that it's
+ 
+
+343
+00:05:29,919 --> 00:05:32,230
+I'm sure you can see that it's
+needlessly difficult to tell what's
+
+344
+00:05:32,230 --> 00:05:32,240
+needlessly difficult to tell what's
+ 
+
+345
+00:05:32,240 --> 00:05:34,790
+needlessly difficult to tell what's
+actually going on because none of these
+
+346
+00:05:34,790 --> 00:05:34,800
+actually going on because none of these
+ 
+
+347
+00:05:34,800 --> 00:05:36,710
+actually going on because none of these
+actually have any kind of meaningful
+
+348
+00:05:36,710 --> 00:05:36,720
+actually have any kind of meaningful
+ 
+
+349
+00:05:36,720 --> 00:05:38,870
+actually have any kind of meaningful
+name. It looks like it's just using a
+
+350
+00:05:38,870 --> 00:05:38,880
+name. It looks like it's just using a
+ 
+
+351
+00:05:38,880 --> 00:05:40,790
+name. It looks like it's just using a
+random like letter or two from the
+
+352
+00:05:40,790 --> 00:05:40,800
+random like letter or two from the
+ 
+
+353
+00:05:40,800 --> 00:05:42,150
+random like letter or two from the
+alphabet and it just makes this
+
+354
+00:05:42,150 --> 00:05:42,160
+alphabet and it just makes this
+ 
+
+355
+00:05:42,160 --> 00:05:44,070
+alphabet and it just makes this
+ridiculously hard to actually
+
+356
+00:05:44,070 --> 00:05:44,080
+ridiculously hard to actually
+ 
+
+357
+00:05:44,080 --> 00:05:45,830
+ridiculously hard to actually
+understand. Of course, you can still
+
+358
+00:05:45,830 --> 00:05:45,840
+understand. Of course, you can still
+ 
+
+359
+00:05:45,840 --> 00:05:48,310
+understand. Of course, you can still
+understand what the code is doing. You
+
+360
+00:05:48,310 --> 00:05:48,320
+understand what the code is doing. You
+ 
+
+361
+00:05:48,320 --> 00:05:50,950
+understand what the code is doing. You
+know, B time C and in place back. I
+
+362
+00:05:50,950 --> 00:05:50,960
+know, B time C and in place back. I
+ 
+
+363
+00:05:50,960 --> 00:05:52,550
+know, B time C and in place back. I
+mean, that's not obiscated. So it's
+
+364
+00:05:52,550 --> 00:05:52,560
+mean, that's not obiscated. So it's
+ 
+
+365
+00:05:52,560 --> 00:05:54,390
+mean, that's not obiscated. So it's
+still easy in a way to tell what the
+
+366
+00:05:54,390 --> 00:05:54,400
+still easy in a way to tell what the
+ 
+
+367
+00:05:54,400 --> 00:05:56,070
+still easy in a way to tell what the
+code is doing but not the meaning behind
+
+368
+00:05:56,070 --> 00:05:56,080
+code is doing but not the meaning behind
+ 
+
+369
+00:05:56,080 --> 00:05:57,990
+code is doing but not the meaning behind
+it. And that's the important thing. What
+
+370
+00:05:57,990 --> 00:05:58,000
+it. And that's the important thing. What
+ 
+
+371
+00:05:58,000 --> 00:06:00,150
+it. And that's the important thing. What
+is the actual purpose of this code?
+
+372
+00:06:00,150 --> 00:06:00,160
+is the actual purpose of this code?
+ 
+
+373
+00:06:00,160 --> 00:06:01,830
+is the actual purpose of this code?
+What's the implication of it? What is it
+
+374
+00:06:01,830 --> 00:06:01,840
+What's the implication of it? What is it
+ 
+
+375
+00:06:01,840 --> 00:06:03,830
+What's the implication of it? What is it
+trying to do? That's where the English
+
+376
+00:06:03,830 --> 00:06:03,840
+trying to do? That's where the English
+ 
+
+377
+00:06:03,840 --> 00:06:05,990
+trying to do? That's where the English
+language or whatever language I guess
+
+378
+00:06:05,990 --> 00:06:06,000
+language or whatever language I guess
+ 
+
+379
+00:06:06,000 --> 00:06:08,309
+language or whatever language I guess
+you're using. That's where that comes in
+
+380
+00:06:08,309 --> 00:06:08,319
+you're using. That's where that comes in
+ 
+
+381
+00:06:08,319 --> 00:06:09,749
+you're using. That's where that comes in
+rather than the actual programming
+
+382
+00:06:09,749 --> 00:06:09,759
+rather than the actual programming
+ 
+
+383
+00:06:09,759 --> 00:06:11,270
+rather than the actual programming
+language. You know, I made a video a
+
+384
+00:06:11,270 --> 00:06:11,280
+language. You know, I made a video a
+ 
+
+385
+00:06:11,280 --> 00:06:13,189
+language. You know, I made a video a
+while ago called like the most important
+
+386
+00:06:13,189 --> 00:06:13,199
+while ago called like the most important
+ 
+
+387
+00:06:13,199 --> 00:06:14,469
+while ago called like the most important
+things of programming or something. But
+
+388
+00:06:14,469 --> 00:06:14,479
+things of programming or something. But
+ 
+
+389
+00:06:14,479 --> 00:06:15,909
+things of programming or something. But
+anyway, in the thumbnail, I had number
+
+390
+00:06:15,909 --> 00:06:15,919
+anyway, in the thumbnail, I had number
+ 
+
+391
+00:06:15,919 --> 00:06:18,070
+anyway, in the thumbnail, I had number
+one listed as CPU or, you know,
+
+392
+00:06:18,070 --> 00:06:18,080
+one listed as CPU or, you know,
+ 
+
+393
+00:06:18,080 --> 00:06:19,510
+one listed as CPU or, you know,
+computer, device, whatever you're
+
+394
+00:06:19,510 --> 00:06:19,520
+computer, device, whatever you're
+ 
+
+395
+00:06:19,520 --> 00:06:21,230
+computer, device, whatever you're
+programming. And then number two was
+
+396
+00:06:21,230 --> 00:06:21,240
+programming. And then number two was
+ 
+
+397
+00:06:21,240 --> 00:06:24,230
+programming. And then number two was
+human. This is about the human part of
+
+398
+00:06:24,230 --> 00:06:24,240
+human. This is about the human part of
+ 
+
+399
+00:06:24,240 --> 00:06:25,909
+human. This is about the human part of
+this because the computer does not care
+
+400
+00:06:25,909 --> 00:06:25,919
+this because the computer does not care
+ 
+
+401
+00:06:25,919 --> 00:06:27,430
+this because the computer does not care
+what you call your variables obviously
+
+402
+00:06:27,430 --> 00:06:27,440
+what you call your variables obviously
+ 
+
+403
+00:06:27,440 --> 00:06:29,510
+what you call your variables obviously
+at all. Does not matter to it. However,
+
+404
+00:06:29,510 --> 00:06:29,520
+at all. Does not matter to it. However,
+ 
+
+405
+00:06:29,520 --> 00:06:31,430
+at all. Does not matter to it. However,
+to us, the developers, the programmers
+
+406
+00:06:31,430 --> 00:06:31,440
+to us, the developers, the programmers
+ 
+
+407
+00:06:31,440 --> 00:06:33,350
+to us, the developers, the programmers
+actually writing this code, that makes a
+
+408
+00:06:33,350 --> 00:06:33,360
+actually writing this code, that makes a
+ 
+
+409
+00:06:33,360 --> 00:06:36,230
+actually writing this code, that makes a
+huge difference obviously. And in turn,
+
+410
+00:06:36,230 --> 00:06:36,240
+huge difference obviously. And in turn,
+ 
+
+411
+00:06:36,240 --> 00:06:38,230
+huge difference obviously. And in turn,
+since we are the ones writing the code,
+
+412
+00:06:38,230 --> 00:06:38,240
+since we are the ones writing the code,
+ 
+
+413
+00:06:38,240 --> 00:06:39,990
+since we are the ones writing the code,
+at least for now, while AI hasn't taken
+
+414
+00:06:39,990 --> 00:06:40,000
+at least for now, while AI hasn't taken
+ 
+
+415
+00:06:40,000 --> 00:06:42,550
+at least for now, while AI hasn't taken
+over, since it affects us and we're the
+
+416
+00:06:42,550 --> 00:06:42,560
+over, since it affects us and we're the
+ 
+
+417
+00:06:42,560 --> 00:06:44,469
+over, since it affects us and we're the
+producers of this, then it can
+
+418
+00:06:44,469 --> 00:06:44,479
+producers of this, then it can
+ 
+
+419
+00:06:44,479 --> 00:06:46,390
+producers of this, then it can
+negatively affect the quality of our
+
+420
+00:06:46,390 --> 00:06:46,400
+negatively affect the quality of our
+ 
+
+421
+00:06:46,400 --> 00:06:48,710
+negatively affect the quality of our
+code, which in turn negatively affects
+
+422
+00:06:48,710 --> 00:06:48,720
+code, which in turn negatively affects
+ 
+
+423
+00:06:48,720 --> 00:06:51,430
+code, which in turn negatively affects
+the CPU executing that code. So then
+
+424
+00:06:51,430 --> 00:06:51,440
+the CPU executing that code. So then
+ 
+
+425
+00:06:51,440 --> 00:06:53,350
+the CPU executing that code. So then
+instead of writing code like this with
+
+426
+00:06:53,350 --> 00:06:53,360
+instead of writing code like this with
+ 
+
+427
+00:06:53,360 --> 00:06:54,710
+instead of writing code like this with
+these rubbish variable names, wouldn't
+
+428
+00:06:54,710 --> 00:06:54,720
+these rubbish variable names, wouldn't
+ 
+
+429
+00:06:54,720 --> 00:06:58,629
+these rubbish variable names, wouldn't
+it be better if it was this? All right,
+
+430
+00:06:58,629 --> 00:06:58,639
+it be better if it was this? All right,
+ 
+
+431
+00:06:58,639 --> 00:07:00,550
+it be better if it was this? All right,
+check this out. Now we're talking. And
+
+432
+00:07:00,550 --> 00:07:00,560
+check this out. Now we're talking. And
+ 
+
+433
+00:07:00,560 --> 00:07:02,710
+check this out. Now we're talking. And
+if we go back to the header file. Ah
+
+434
+00:07:02,710 --> 00:07:02,720
+if we go back to the header file. Ah
+ 
+
+435
+00:07:02,720 --> 00:07:05,270
+if we go back to the header file. Ah
+okay. So A was entity, B was projectile,
+
+436
+00:07:05,270 --> 00:07:05,280
+okay. So A was entity, B was projectile,
+ 
+
+437
+00:07:05,280 --> 00:07:07,270
+okay. So A was entity, B was projectile,
+we have game world fire projectile.
+
+438
+00:07:07,270 --> 00:07:07,280
+we have game world fire projectile.
+ 
+
+439
+00:07:07,280 --> 00:07:09,749
+we have game world fire projectile.
+Suddenly instead of this nonsensical
+
+440
+00:07:09,749 --> 00:07:09,759
+Suddenly instead of this nonsensical
+ 
+
+441
+00:07:09,759 --> 00:07:12,469
+Suddenly instead of this nonsensical
+code, we have this and it makes a lot
+
+442
+00:07:12,469 --> 00:07:12,479
+code, we have this and it makes a lot
+ 
+
+443
+00:07:12,479 --> 00:07:14,390
+code, we have this and it makes a lot
+more sense. So this is kind of level one
+
+444
+00:07:14,390 --> 00:07:14,400
+more sense. So this is kind of level one
+ 
+
+445
+00:07:14,400 --> 00:07:16,629
+more sense. So this is kind of level one
+in my little idea here. It's definitely
+
+446
+00:07:16,629 --> 00:07:16,639
+in my little idea here. It's definitely
+ 
+
+447
+00:07:16,639 --> 00:07:18,150
+in my little idea here. It's definitely
+an absolutely massive difference to what
+
+448
+00:07:18,150 --> 00:07:18,160
+an absolutely massive difference to what
+ 
+
+449
+00:07:18,160 --> 00:07:19,670
+an absolutely massive difference to what
+we had before. And it adds so much
+
+450
+00:07:19,670 --> 00:07:19,680
+we had before. And it adds so much
+ 
+
+451
+00:07:19,680 --> 00:07:21,830
+we had before. And it adds so much
+clarity, so much readability that a lot
+
+452
+00:07:21,830 --> 00:07:21,840
+clarity, so much readability that a lot
+ 
+
+453
+00:07:21,840 --> 00:07:23,430
+clarity, so much readability that a lot
+of people would probably just stop there
+
+454
+00:07:23,430 --> 00:07:23,440
+of people would probably just stop there
+ 
+
+455
+00:07:23,440 --> 00:07:25,110
+of people would probably just stop there
+and be more than content. And this is
+
+456
+00:07:25,110 --> 00:07:25,120
+and be more than content. And this is
+ 
+
+457
+00:07:25,120 --> 00:07:26,950
+and be more than content. And this is
+also how I used to write code for a long
+
+458
+00:07:26,950 --> 00:07:26,960
+also how I used to write code for a long
+ 
+
+459
+00:07:26,960 --> 00:07:28,469
+also how I used to write code for a long
+time when I was programming in Java
+
+460
+00:07:28,469 --> 00:07:28,479
+time when I was programming in Java
+ 
+
+461
+00:07:28,479 --> 00:07:30,469
+time when I was programming in Java
+before I really started using C++. I
+
+462
+00:07:30,469 --> 00:07:30,479
+before I really started using C++. I
+ 
+
+463
+00:07:30,479 --> 00:07:32,230
+before I really started using C++. I
+basically didn't use any kind of like m
+
+464
+00:07:32,230 --> 00:07:32,240
+basically didn't use any kind of like m
+ 
+
+465
+00:07:32,240 --> 00:07:33,430
+basically didn't use any kind of like m
+underscore or whatever naming
+
+466
+00:07:33,430 --> 00:07:33,440
+underscore or whatever naming
+ 
+
+467
+00:07:33,440 --> 00:07:35,189
+underscore or whatever naming
+conventions. I just wrote code like
+
+468
+00:07:35,189 --> 00:07:35,199
+conventions. I just wrote code like
+ 
+
+469
+00:07:35,199 --> 00:07:38,550
+conventions. I just wrote code like
+this. But to illustrate why this is
+
+470
+00:07:38,550 --> 00:07:38,560
+this. But to illustrate why this is
+ 
+
+471
+00:07:38,560 --> 00:07:40,870
+this. But to illustrate why this is
+still kind of not as clear, not as
+
+472
+00:07:40,870 --> 00:07:40,880
+still kind of not as clear, not as
+ 
+
+473
+00:07:40,880 --> 00:07:42,469
+still kind of not as clear, not as
+readable to me as it potentially could
+
+474
+00:07:42,469 --> 00:07:42,479
+readable to me as it potentially could
+ 
+
+475
+00:07:42,479 --> 00:07:45,189
+readable to me as it potentially could
+be, let's just focus on this particular
+
+476
+00:07:45,189 --> 00:07:45,199
+be, let's just focus on this particular
+ 
+
+477
+00:07:45,199 --> 00:07:46,710
+be, let's just focus on this particular
+function here. I'll drop it down a
+
+478
+00:07:46,710 --> 00:07:46,720
+function here. I'll drop it down a
+ 
+
+479
+00:07:46,720 --> 00:07:47,830
+function here. I'll drop it down a
+little bit because usually you wouldn't
+
+480
+00:07:47,830 --> 00:07:47,840
+little bit because usually you wouldn't
+ 
+
+481
+00:07:47,840 --> 00:07:49,270
+little bit because usually you wouldn't
+just have a single function in the file.
+
+482
+00:07:49,270 --> 00:07:49,280
+just have a single function in the file.
+ 
+
+483
+00:07:49,280 --> 00:07:50,710
+just have a single function in the file.
+So this would effectively just be
+
+484
+00:07:50,710 --> 00:07:50,720
+So this would effectively just be
+ 
+
+485
+00:07:50,720 --> 00:07:52,550
+So this would effectively just be
+somewhere in your source code. We have
+
+486
+00:07:52,550 --> 00:07:52,560
+somewhere in your source code. We have
+ 
+
+487
+00:07:52,560 --> 00:07:54,230
+somewhere in your source code. We have
+this function over here. And if we look
+
+488
+00:07:54,230 --> 00:07:54,240
+this function over here. And if we look
+ 
+
+489
+00:07:54,240 --> 00:07:56,469
+this function over here. And if we look
+at it at a glance, it kind of I mean to
+
+490
+00:07:56,469 --> 00:07:56,479
+at it at a glance, it kind of I mean to
+ 
+
+491
+00:07:56,479 --> 00:07:58,390
+at it at a glance, it kind of I mean to
+me honestly right now it just looks like
+
+492
+00:07:58,390 --> 00:07:58,400
+me honestly right now it just looks like
+ 
+
+493
+00:07:58,400 --> 00:08:00,070
+me honestly right now it just looks like
+it's got a couple inputs like it's got
+
+494
+00:08:00,070 --> 00:08:00,080
+it's got a couple inputs like it's got
+ 
+
+495
+00:08:00,080 --> 00:08:01,749
+it's got a couple inputs like it's got
+origin, direction, and speed as an
+
+496
+00:08:01,749 --> 00:08:01,759
+origin, direction, and speed as an
+ 
+
+497
+00:08:01,759 --> 00:08:04,390
+origin, direction, and speed as an
+input. It returns a projectile. So I
+
+498
+00:08:04,390 --> 00:08:04,400
+input. It returns a projectile. So I
+ 
+
+499
+00:08:04,400 --> 00:08:06,309
+input. It returns a projectile. So I
+mean you know if I need to copy and
+
+500
+00:08:06,309 --> 00:08:06,319
+mean you know if I need to copy and
+ 
+
+501
+00:08:06,319 --> 00:08:07,830
+mean you know if I need to copy and
+paste it into a completely different
+
+502
+00:08:07,830 --> 00:08:07,840
+paste it into a completely different
+ 
+
+503
+00:08:07,840 --> 00:08:09,830
+paste it into a completely different
+class if I need to reuse this code
+
+504
+00:08:09,830 --> 00:08:09,840
+class if I need to reuse this code
+ 
+
+505
+00:08:09,840 --> 00:08:11,749
+class if I need to reuse this code
+potentially in a different project. If I
+
+506
+00:08:11,749 --> 00:08:11,759
+potentially in a different project. If I
+ 
+
+507
+00:08:11,759 --> 00:08:13,029
+potentially in a different project. If I
+just want to kind of look at it
+
+508
+00:08:13,029 --> 00:08:13,039
+just want to kind of look at it
+ 
+
+509
+00:08:13,039 --> 00:08:15,430
+just want to kind of look at it
+functionally as just having some inputs
+
+510
+00:08:15,430 --> 00:08:15,440
+functionally as just having some inputs
+ 
+
+511
+00:08:15,440 --> 00:08:17,189
+functionally as just having some inputs
+and having some outputs and some code
+
+512
+00:08:17,189 --> 00:08:17,199
+and having some outputs and some code
+ 
+
+513
+00:08:17,199 --> 00:08:19,270
+and having some outputs and some code
+that processes the data. To me it kind
+
+514
+00:08:19,270 --> 00:08:19,280
+that processes the data. To me it kind
+ 
+
+515
+00:08:19,280 --> 00:08:20,390
+that processes the data. To me it kind
+of looks like the data that it's
+
+516
+00:08:20,390 --> 00:08:20,400
+of looks like the data that it's
+ 
+
+517
+00:08:20,400 --> 00:08:22,550
+of looks like the data that it's
+processing is basically all within this
+
+518
+00:08:22,550 --> 00:08:22,560
+processing is basically all within this
+ 
+
+519
+00:08:22,560 --> 00:08:24,309
+processing is basically all within this
+function. And that's a problem because
+
+520
+00:08:24,309 --> 00:08:24,319
+function. And that's a problem because
+ 
+
+521
+00:08:24,319 --> 00:08:25,990
+function. And that's a problem because
+if we have a look at this more closely.
+
+522
+00:08:25,990 --> 00:08:26,000
+if we have a look at this more closely.
+ 
+
+523
+00:08:26,000 --> 00:08:27,990
+if we have a look at this more closely.
+Well, next projectile index. What is
+
+524
+00:08:27,990 --> 00:08:28,000
+Well, next projectile index. What is
+ 
+
+525
+00:08:28,000 --> 00:08:29,589
+Well, next projectile index. What is
+that? That's not like one of the
+
+526
+00:08:29,589 --> 00:08:29,599
+that? That's not like one of the
+ 
+
+527
+00:08:29,599 --> 00:08:31,430
+that? That's not like one of the
+parameters. It's probably like a member
+
+528
+00:08:31,430 --> 00:08:31,440
+parameters. It's probably like a member
+ 
+
+529
+00:08:31,440 --> 00:08:34,230
+parameters. It's probably like a member
+variable. Oh, it's actually just a
+
+530
+00:08:34,230 --> 00:08:34,240
+variable. Oh, it's actually just a
+ 
+
+531
+00:08:34,240 --> 00:08:37,269
+variable. Oh, it's actually just a
+static un 32t. That's all the way up
+
+532
+00:08:37,269 --> 00:08:37,279
+static un 32t. That's all the way up
+ 
+
+533
+00:08:37,279 --> 00:08:38,790
+static un 32t. That's all the way up
+here. Okay. Then we create like the
+
+534
+00:08:38,790 --> 00:08:38,800
+here. Okay. Then we create like the
+ 
+
+535
+00:08:38,800 --> 00:08:40,630
+here. Okay. Then we create like the
+projectile. We have this projectile pool
+
+536
+00:08:40,630 --> 00:08:40,640
+projectile. We have this projectile pool
+ 
+
+537
+00:08:40,640 --> 00:08:42,709
+projectile. We have this projectile pool
+which again is not like in the class or
+
+538
+00:08:42,709 --> 00:08:42,719
+which again is not like in the class or
+ 
+
+539
+00:08:42,719 --> 00:08:44,790
+which again is not like in the class or
+anything. It's just static up here. It's
+
+540
+00:08:44,790 --> 00:08:44,800
+anything. It's just static up here. It's
+ 
+
+541
+00:08:44,800 --> 00:08:46,550
+anything. It's just static up here. It's
+effectively a kind of global variable
+
+542
+00:08:46,550 --> 00:08:46,560
+effectively a kind of global variable
+ 
+
+543
+00:08:46,560 --> 00:08:48,550
+effectively a kind of global variable
+but just locked to this translation unit
+
+544
+00:08:48,550 --> 00:08:48,560
+but just locked to this translation unit
+ 
+
+545
+00:08:48,560 --> 00:08:50,310
+but just locked to this translation unit
+to the CPP file. And then we have
+
+546
+00:08:50,310 --> 00:08:50,320
+to the CPP file. And then we have
+ 
+
+547
+00:08:50,320 --> 00:08:53,430
+to the CPP file. And then we have
+entities which oh okay that's inside the
+
+548
+00:08:53,430 --> 00:08:53,440
+entities which oh okay that's inside the
+ 
+
+549
+00:08:53,440 --> 00:08:55,590
+entities which oh okay that's inside the
+class. So as you can see it's kind of
+
+550
+00:08:55,590 --> 00:08:55,600
+class. So as you can see it's kind of
+ 
+
+551
+00:08:55,600 --> 00:08:57,910
+class. So as you can see it's kind of
+difficult for me to tell all of the
+
+552
+00:08:57,910 --> 00:08:57,920
+difficult for me to tell all of the
+ 
+
+553
+00:08:57,920 --> 00:09:00,630
+difficult for me to tell all of the
+different like branches like the strings
+
+554
+00:09:00,630 --> 00:09:00,640
+different like branches like the strings
+ 
+
+555
+00:09:00,640 --> 00:09:02,550
+different like branches like the strings
+you know of like where does this connect
+
+556
+00:09:02,550 --> 00:09:02,560
+you know of like where does this connect
+ 
+
+557
+00:09:02,560 --> 00:09:04,949
+you know of like where does this connect
+to? Where does the functionality of this
+
+558
+00:09:04,949 --> 00:09:04,959
+to? Where does the functionality of this
+ 
+
+559
+00:09:04,959 --> 00:09:07,430
+to? Where does the functionality of this
+function like what is it reaching for?
+
+560
+00:09:07,430 --> 00:09:07,440
+function like what is it reaching for?
+ 
+
+561
+00:09:07,440 --> 00:09:09,110
+function like what is it reaching for?
+What is it tied to? I guess you could
+
+562
+00:09:09,110 --> 00:09:09,120
+What is it tied to? I guess you could
+ 
+
+563
+00:09:09,120 --> 00:09:10,550
+What is it tied to? I guess you could
+picture it as like coupling in a way.
+
+564
+00:09:10,550 --> 00:09:10,560
+picture it as like coupling in a way.
+ 
+
+565
+00:09:10,560 --> 00:09:12,470
+picture it as like coupling in a way.
+What is it coupled to? It's very
+
+566
+00:09:12,470 --> 00:09:12,480
+What is it coupled to? It's very
+ 
+
+567
+00:09:12,480 --> 00:09:13,750
+What is it coupled to? It's very
+difficult for me to see. And even
+
+568
+00:09:13,750 --> 00:09:13,760
+difficult for me to see. And even
+ 
+
+569
+00:09:13,760 --> 00:09:15,030
+difficult for me to see. And even
+looking at this now, like I've just
+
+570
+00:09:15,030 --> 00:09:15,040
+looking at this now, like I've just
+ 
+
+571
+00:09:15,040 --> 00:09:18,070
+looking at this now, like I've just
+shown you what it is. And I still like
+
+572
+00:09:18,070 --> 00:09:18,080
+shown you what it is. And I still like
+ 
+
+573
+00:09:18,080 --> 00:09:19,670
+shown you what it is. And I still like
+need to keep reminding myself, okay,
+
+574
+00:09:19,670 --> 00:09:19,680
+need to keep reminding myself, okay,
+ 
+
+575
+00:09:19,680 --> 00:09:21,670
+need to keep reminding myself, okay,
+these two are static, I think. Yes. And
+
+576
+00:09:21,670 --> 00:09:21,680
+these two are static, I think. Yes. And
+ 
+
+577
+00:09:21,680 --> 00:09:22,870
+these two are static, I think. Yes. And
+then that's the member variable, and
+
+578
+00:09:22,870 --> 00:09:22,880
+then that's the member variable, and
+ 
+
+579
+00:09:22,880 --> 00:09:24,630
+then that's the member variable, and
+then everything else must be a local
+
+580
+00:09:24,630 --> 00:09:24,640
+then everything else must be a local
+ 
+
+581
+00:09:24,640 --> 00:09:26,630
+then everything else must be a local
+variable, either like a parameter or an
+
+582
+00:09:26,630 --> 00:09:26,640
+variable, either like a parameter or an
+ 
+
+583
+00:09:26,640 --> 00:09:28,310
+variable, either like a parameter or an
+actual like variable that was created in
+
+584
+00:09:28,310 --> 00:09:28,320
+actual like variable that was created in
+ 
+
+585
+00:09:28,320 --> 00:09:30,070
+actual like variable that was created in
+this scope. And you might think, well, I
+
+586
+00:09:30,070 --> 00:09:30,080
+this scope. And you might think, well, I
+ 
+
+587
+00:09:30,080 --> 00:09:32,150
+this scope. And you might think, well, I
+don't care about that. And that's that's
+
+588
+00:09:32,150 --> 00:09:32,160
+don't care about that. And that's that's
+ 
+
+589
+00:09:32,160 --> 00:09:35,110
+don't care about that. And that's that's
+okay. I once also didn't care about
+
+590
+00:09:35,110 --> 00:09:35,120
+okay. I once also didn't care about
+ 
+
+591
+00:09:35,120 --> 00:09:37,910
+okay. I once also didn't care about
+that. But as you start being involved in
+
+592
+00:09:37,910 --> 00:09:37,920
+that. But as you start being involved in
+ 
+
+593
+00:09:37,920 --> 00:09:40,630
+that. But as you start being involved in
+more complicated systems, like in my
+
+594
+00:09:40,630 --> 00:09:40,640
+more complicated systems, like in my
+ 
+
+595
+00:09:40,640 --> 00:09:42,630
+more complicated systems, like in my
+personal, again, my opinion, this video,
+
+596
+00:09:42,630 --> 00:09:42,640
+personal, again, my opinion, this video,
+ 
+
+597
+00:09:42,640 --> 00:09:45,190
+personal, again, my opinion, this video,
+in my personal day-to-day life, writing
+
+598
+00:09:45,190 --> 00:09:45,200
+in my personal day-to-day life, writing
+ 
+
+599
+00:09:45,200 --> 00:09:47,750
+in my personal day-to-day life, writing
+game engines, it's really useful to just
+
+600
+00:09:47,750 --> 00:09:47,760
+game engines, it's really useful to just
+ 
+
+601
+00:09:47,760 --> 00:09:50,389
+game engines, it's really useful to just
+be able to quickly tell what is local
+
+602
+00:09:50,389 --> 00:09:50,399
+be able to quickly tell what is local
+ 
+
+603
+00:09:50,399 --> 00:09:52,310
+be able to quickly tell what is local
+and what is not. And if it's not local,
+
+604
+00:09:52,310 --> 00:09:52,320
+and what is not. And if it's not local,
+ 
+
+605
+00:09:52,320 --> 00:09:54,150
+and what is not. And if it's not local,
+what kind of not local it is. So to give
+
+606
+00:09:54,150 --> 00:09:54,160
+what kind of not local it is. So to give
+ 
+
+607
+00:09:54,160 --> 00:09:55,509
+what kind of not local it is. So to give
+you an example of why that might be
+
+608
+00:09:55,509 --> 00:09:55,519
+you an example of why that might be
+ 
+
+609
+00:09:55,519 --> 00:09:57,190
+you an example of why that might be
+useful for something like this, other
+
+610
+00:09:57,190 --> 00:09:57,200
+useful for something like this, other
+ 
+
+611
+00:09:57,200 --> 00:09:58,710
+useful for something like this, other
+than just if I want to reuse this code
+
+612
+00:09:58,710 --> 00:09:58,720
+than just if I want to reuse this code
+ 
+
+613
+00:09:58,720 --> 00:09:59,990
+than just if I want to reuse this code
+in another project and I can't see what
+
+614
+00:09:59,990 --> 00:10:00,000
+in another project and I can't see what
+ 
+
+615
+00:10:00,000 --> 00:10:01,750
+in another project and I can't see what
+it's tied to, suppose for example, these
+
+616
+00:10:01,750 --> 00:10:01,760
+it's tied to, suppose for example, these
+ 
+
+617
+00:10:01,760 --> 00:10:02,870
+it's tied to, suppose for example, these
+projectiles were fired in like a
+
+618
+00:10:02,870 --> 00:10:02,880
+projectiles were fired in like a
+ 
+
+619
+00:10:02,880 --> 00:10:04,630
+projectiles were fired in like a
+multi-threaded context. We might have a
+
+620
+00:10:04,630 --> 00:10:04,640
+multi-threaded context. We might have a
+ 
+
+621
+00:10:04,640 --> 00:10:06,310
+multi-threaded context. We might have a
+whole job system that just fires
+
+622
+00:10:06,310 --> 00:10:06,320
+whole job system that just fires
+ 
+
+623
+00:10:06,320 --> 00:10:08,150
+whole job system that just fires
+projectiles from various entities
+
+624
+00:10:08,150 --> 00:10:08,160
+projectiles from various entities
+ 
+
+625
+00:10:08,160 --> 00:10:09,430
+projectiles from various entities
+because we might want to process our
+
+626
+00:10:09,430 --> 00:10:09,440
+because we might want to process our
+ 
+
+627
+00:10:09,440 --> 00:10:11,990
+because we might want to process our
+entities in parallel. Maybe we even have
+
+628
+00:10:11,990 --> 00:10:12,000
+entities in parallel. Maybe we even have
+ 
+
+629
+00:10:12,000 --> 00:10:13,829
+entities in parallel. Maybe we even have
+multiple game worlds. Like we could have
+
+630
+00:10:13,829 --> 00:10:13,839
+multiple game worlds. Like we could have
+ 
+
+631
+00:10:13,839 --> 00:10:15,829
+multiple game worlds. Like we could have
+a game world per thread, like a thread
+
+632
+00:10:15,829 --> 00:10:15,839
+a game world per thread, like a thread
+ 
+
+633
+00:10:15,839 --> 00:10:17,750
+a game world per thread, like a thread
+local game world. It's not immediately
+
+634
+00:10:17,750 --> 00:10:17,760
+local game world. It's not immediately
+ 
+
+635
+00:10:17,760 --> 00:10:19,350
+local game world. It's not immediately
+clear that that wouldn't really work
+
+636
+00:10:19,350 --> 00:10:19,360
+clear that that wouldn't really work
+ 
+
+637
+00:10:19,360 --> 00:10:21,269
+clear that that wouldn't really work
+because the projectile pool is actually
+
+638
+00:10:21,269 --> 00:10:21,279
+because the projectile pool is actually
+ 
+
+639
+00:10:21,279 --> 00:10:22,949
+because the projectile pool is actually
+static. It's effectively global here.
+
+640
+00:10:22,949 --> 00:10:22,959
+static. It's effectively global here.
+ 
+
+641
+00:10:22,959 --> 00:10:24,230
+static. It's effectively global here.
+And so we need to make sure that we
+
+642
+00:10:24,230 --> 00:10:24,240
+And so we need to make sure that we
+ 
+
+643
+00:10:24,240 --> 00:10:26,069
+And so we need to make sure that we
+actually manage that multi-threaded
+
+644
+00:10:26,069 --> 00:10:26,079
+actually manage that multi-threaded
+ 
+
+645
+00:10:26,079 --> 00:10:28,150
+actually manage that multi-threaded
+access to it and this next projectile
+
+646
+00:10:28,150 --> 00:10:28,160
+access to it and this next projectile
+ 
+
+647
+00:10:28,160 --> 00:10:30,069
+access to it and this next projectile
+index variable as well. like we would
+
+648
+00:10:30,069 --> 00:10:30,079
+index variable as well. like we would
+ 
+
+649
+00:10:30,079 --> 00:10:31,590
+index variable as well. like we would
+potentially make this atomic and then
+
+650
+00:10:31,590 --> 00:10:31,600
+potentially make this atomic and then
+ 
+
+651
+00:10:31,600 --> 00:10:33,990
+potentially make this atomic and then
+maybe have this be maybe thread local if
+
+652
+00:10:33,990 --> 00:10:34,000
+maybe have this be maybe thread local if
+ 
+
+653
+00:10:34,000 --> 00:10:35,590
+maybe have this be maybe thread local if
+we can afford that or we'd have to lock
+
+654
+00:10:35,590 --> 00:10:35,600
+we can afford that or we'd have to lock
+ 
+
+655
+00:10:35,600 --> 00:10:37,910
+we can afford that or we'd have to lock
+access to it. I don't know that I have
+
+656
+00:10:37,910 --> 00:10:37,920
+access to it. I don't know that I have
+ 
+
+657
+00:10:37,920 --> 00:10:41,110
+access to it. I don't know that I have
+to do that just by breezing over this
+
+658
+00:10:41,110 --> 00:10:41,120
+to do that just by breezing over this
+ 
+
+659
+00:10:41,120 --> 00:10:43,430
+to do that just by breezing over this
+code. I would actually have to go in
+
+660
+00:10:43,430 --> 00:10:43,440
+code. I would actually have to go in
+ 
+
+661
+00:10:43,440 --> 00:10:45,110
+code. I would actually have to go in
+look at these variables understand how
+
+662
+00:10:45,110 --> 00:10:45,120
+look at these variables understand how
+ 
+
+663
+00:10:45,120 --> 00:10:47,430
+look at these variables understand how
+this works much more deeply before my
+
+664
+00:10:47,430 --> 00:10:47,440
+this works much more deeply before my
+ 
+
+665
+00:10:47,440 --> 00:10:49,269
+this works much more deeply before my
+brain can kind of make those decisions.
+
+666
+00:10:49,269 --> 00:10:49,279
+brain can kind of make those decisions.
+ 
+
+667
+00:10:49,279 --> 00:10:51,190
+brain can kind of make those decisions.
+It's also potentially worth noting that
+
+668
+00:10:51,190 --> 00:10:51,200
+It's also potentially worth noting that
+ 
+
+669
+00:10:51,200 --> 00:10:53,269
+It's also potentially worth noting that
+if you're optimizing things like you
+
+670
+00:10:53,269 --> 00:10:53,279
+if you're optimizing things like you
+ 
+
+671
+00:10:53,279 --> 00:10:54,949
+if you're optimizing things like you
+definitely want to know where that
+
+672
+00:10:54,949 --> 00:10:54,959
+definitely want to know where that
+ 
+
+673
+00:10:54,959 --> 00:10:56,550
+definitely want to know where that
+memory is. I want to know if it's
+
+674
+00:10:56,550 --> 00:10:56,560
+memory is. I want to know if it's
+ 
+
+675
+00:10:56,560 --> 00:10:58,470
+memory is. I want to know if it's
+static. I want to know if it's inside
+
+676
+00:10:58,470 --> 00:10:58,480
+static. I want to know if it's inside
+ 
+
+677
+00:10:58,480 --> 00:11:01,269
+static. I want to know if it's inside
+like this class or is it local. That's
+
+678
+00:11:01,269 --> 00:11:01,279
+like this class or is it local. That's
+ 
+
+679
+00:11:01,279 --> 00:11:03,750
+like this class or is it local. That's
+like really important to know. Now, I do
+
+680
+00:11:03,750 --> 00:11:03,760
+like really important to know. Now, I do
+ 
+
+681
+00:11:03,760 --> 00:11:05,910
+like really important to know. Now, I do
+want to quickly point out that some
+
+682
+00:11:05,910 --> 00:11:05,920
+want to quickly point out that some
+ 
+
+683
+00:11:05,920 --> 00:11:08,790
+want to quickly point out that some
+idees or some like syntax highlighters
+
+684
+00:11:08,790 --> 00:11:08,800
+idees or some like syntax highlighters
+ 
+
+685
+00:11:08,800 --> 00:11:10,550
+idees or some like syntax highlighters
+probably depending on like your your
+
+686
+00:11:10,550 --> 00:11:10,560
+probably depending on like your your
+ 
+
+687
+00:11:10,560 --> 00:11:12,790
+probably depending on like your your
+settings or whatever, they may actually
+
+688
+00:11:12,790 --> 00:11:12,800
+settings or whatever, they may actually
+ 
+
+689
+00:11:12,800 --> 00:11:15,110
+settings or whatever, they may actually
+use a different color for certain
+
+690
+00:11:15,110 --> 00:11:15,120
+use a different color for certain
+ 
+
+691
+00:11:15,120 --> 00:11:16,710
+use a different color for certain
+variables. So, they might use a
+
+692
+00:11:16,710 --> 00:11:16,720
+variables. So, they might use a
+ 
+
+693
+00:11:16,720 --> 00:11:18,710
+variables. So, they might use a
+particular color for a local variable
+
+694
+00:11:18,710 --> 00:11:18,720
+particular color for a local variable
+ 
+
+695
+00:11:18,720 --> 00:11:20,710
+particular color for a local variable
+versus maybe like a static or a global
+
+696
+00:11:20,710 --> 00:11:20,720
+versus maybe like a static or a global
+ 
+
+697
+00:11:20,720 --> 00:11:22,710
+versus maybe like a static or a global
+variable or a class member variable.
+
+698
+00:11:22,710 --> 00:11:22,720
+variable or a class member variable.
+ 
+
+699
+00:11:22,720 --> 00:11:25,030
+variable or a class member variable.
+Like I've just opened this in VS Code as
+
+700
+00:11:25,030 --> 00:11:25,040
+Like I've just opened this in VS Code as
+ 
+
+701
+00:11:25,040 --> 00:11:26,550
+Like I've just opened this in VS Code as
+an example. And you can see that next
+
+702
+00:11:26,550 --> 00:11:26,560
+an example. And you can see that next
+ 
+
+703
+00:11:26,560 --> 00:11:29,750
+an example. And you can see that next
+projectile index uh well actually no
+
+704
+00:11:29,750 --> 00:11:29,760
+projectile index uh well actually no
+ 
+
+705
+00:11:29,760 --> 00:11:32,069
+projectile index uh well actually no
+next projectile index is white which
+
+706
+00:11:32,069 --> 00:11:32,079
+next projectile index is white which
+ 
+
+707
+00:11:32,079 --> 00:11:33,750
+next projectile index is white which
+makes it seem like maybe it's not. I
+
+708
+00:11:33,750 --> 00:11:33,760
+makes it seem like maybe it's not. I
+ 
+
+709
+00:11:33,760 --> 00:11:35,190
+makes it seem like maybe it's not. I
+mean yeah this is the syntax coloring
+
+710
+00:11:35,190 --> 00:11:35,200
+mean yeah this is the syntax coloring
+ 
+
+711
+00:11:35,200 --> 00:11:36,710
+mean yeah this is the syntax coloring
+here is all over the place so never
+
+712
+00:11:36,710 --> 00:11:36,720
+here is all over the place so never
+ 
+
+713
+00:11:36,720 --> 00:11:39,030
+here is all over the place so never
+mind. But in some circumstances yes your
+
+714
+00:11:39,030 --> 00:11:39,040
+mind. But in some circumstances yes your
+ 
+
+715
+00:11:39,040 --> 00:11:40,790
+mind. But in some circumstances yes your
+IDE your tool chain once it probably
+
+716
+00:11:40,790 --> 00:11:40,800
+IDE your tool chain once it probably
+ 
+
+717
+00:11:40,800 --> 00:11:42,310
+IDE your tool chain once it probably
+compiles everything it knows where
+
+718
+00:11:42,310 --> 00:11:42,320
+compiles everything it knows where
+ 
+
+719
+00:11:42,320 --> 00:11:44,550
+compiles everything it knows where
+variables actually are. It can point out
+
+720
+00:11:44,550 --> 00:11:44,560
+variables actually are. It can point out
+ 
+
+721
+00:11:44,560 --> 00:11:46,550
+variables actually are. It can point out
+what is like local and what is not
+
+722
+00:11:46,550 --> 00:11:46,560
+what is like local and what is not
+ 
+
+723
+00:11:46,560 --> 00:11:48,710
+what is like local and what is not
+local. And of course that can be useful.
+
+724
+00:11:48,710 --> 00:11:48,720
+local. And of course that can be useful.
+ 
+
+725
+00:11:48,720 --> 00:11:51,269
+local. And of course that can be useful.
+However it's not something that I seem
+
+726
+00:11:51,269 --> 00:11:51,279
+However it's not something that I seem
+ 
+
+727
+00:11:51,279 --> 00:11:53,350
+However it's not something that I seem
+to have here in Visual Studio. I don't
+
+728
+00:11:53,350 --> 00:11:53,360
+to have here in Visual Studio. I don't
+ 
+
+729
+00:11:53,360 --> 00:11:54,550
+to have here in Visual Studio. I don't
+really care about it obviously because I
+
+730
+00:11:54,550 --> 00:11:54,560
+really care about it obviously because I
+ 
+
+731
+00:11:54,560 --> 00:11:55,829
+really care about it obviously because I
+use the naming conventions, but let's
+
+732
+00:11:55,829 --> 00:11:55,839
+use the naming conventions, but let's
+ 
+
+733
+00:11:55,839 --> 00:11:57,269
+use the naming conventions, but let's
+just let's just go with it. In the past,
+
+734
+00:11:57,269 --> 00:11:57,279
+just let's just go with it. In the past,
+ 
+
+735
+00:11:57,279 --> 00:11:58,949
+just let's just go with it. In the past,
+I remember having that feature. Maybe
+
+736
+00:11:58,949 --> 00:11:58,959
+I remember having that feature. Maybe
+ 
+
+737
+00:11:58,959 --> 00:12:00,470
+I remember having that feature. Maybe
+that was like in Java or something. It
+
+738
+00:12:00,470 --> 00:12:00,480
+that was like in Java or something. It
+ 
+
+739
+00:12:00,480 --> 00:12:02,389
+that was like in Java or something. It
+was never really obvious enough to me
+
+740
+00:12:02,389 --> 00:12:02,399
+was never really obvious enough to me
+ 
+
+741
+00:12:02,399 --> 00:12:03,910
+was never really obvious enough to me
+just that the variable was a slightly
+
+742
+00:12:03,910 --> 00:12:03,920
+just that the variable was a slightly
+ 
+
+743
+00:12:03,920 --> 00:12:05,110
+just that the variable was a slightly
+different color cuz it usually wouldn't
+
+744
+00:12:05,110 --> 00:12:05,120
+different color cuz it usually wouldn't
+ 
+
+745
+00:12:05,120 --> 00:12:06,550
+different color cuz it usually wouldn't
+be a completely different color. But
+
+746
+00:12:06,550 --> 00:12:06,560
+be a completely different color. But
+ 
+
+747
+00:12:06,560 --> 00:12:08,150
+be a completely different color. But
+then again, that kind of relies on your
+
+748
+00:12:08,150 --> 00:12:08,160
+then again, that kind of relies on your
+ 
+
+749
+00:12:08,160 --> 00:12:09,910
+then again, that kind of relies on your
+like code environment, your IDE or
+
+750
+00:12:09,910 --> 00:12:09,920
+like code environment, your IDE or
+ 
+
+751
+00:12:09,920 --> 00:12:11,829
+like code environment, your IDE or
+whatever actually like compiling the
+
+752
+00:12:11,829 --> 00:12:11,839
+whatever actually like compiling the
+ 
+
+753
+00:12:11,839 --> 00:12:13,829
+whatever actually like compiling the
+code and making sense of it to highlight
+
+754
+00:12:13,829 --> 00:12:13,839
+code and making sense of it to highlight
+ 
+
+755
+00:12:13,839 --> 00:12:15,670
+code and making sense of it to highlight
+that for you. which also means it it
+
+756
+00:12:15,670 --> 00:12:15,680
+that for you. which also means it it
+ 
+
+757
+00:12:15,680 --> 00:12:18,230
+that for you. which also means it it
+wouldn't work in something like a git
+
+758
+00:12:18,230 --> 00:12:18,240
+wouldn't work in something like a git
+ 
+
+759
+00:12:18,240 --> 00:12:20,069
+wouldn't work in something like a git
+diff viewer or like if I'm just using
+
+760
+00:12:20,069 --> 00:12:20,079
+diff viewer or like if I'm just using
+ 
+
+761
+00:12:20,079 --> 00:12:21,829
+diff viewer or like if I'm just using
+fork and I want to quickly see like code
+
+762
+00:12:21,829 --> 00:12:21,839
+fork and I want to quickly see like code
+ 
+
+763
+00:12:21,839 --> 00:12:23,190
+fork and I want to quickly see like code
+changes and stuff. All right, this
+
+764
+00:12:23,190 --> 00:12:23,200
+changes and stuff. All right, this
+ 
+
+765
+00:12:23,200 --> 00:12:25,269
+changes and stuff. All right, this
+became a member or it became static. It
+
+766
+00:12:25,269 --> 00:12:25,279
+became a member or it became static. It
+ 
+
+767
+00:12:25,279 --> 00:12:26,790
+became a member or it became static. It
+wasn't before. Obviously, whatever you
+
+768
+00:12:26,790 --> 00:12:26,800
+wasn't before. Obviously, whatever you
+ 
+
+769
+00:12:26,800 --> 00:12:28,870
+wasn't before. Obviously, whatever you
+write in the actual variable name that's
+
+770
+00:12:28,870 --> 00:12:28,880
+write in the actual variable name that's
+ 
+
+771
+00:12:28,880 --> 00:12:30,790
+write in the actual variable name that's
+more or less permanent. You can't like
+
+772
+00:12:30,790 --> 00:12:30,800
+more or less permanent. You can't like
+ 
+
+773
+00:12:30,800 --> 00:12:32,949
+more or less permanent. You can't like
+get rid of that. It's actually in the
+
+774
+00:12:32,949 --> 00:12:32,959
+get rid of that. It's actually in the
+ 
+
+775
+00:12:32,959 --> 00:12:34,949
+get rid of that. It's actually in the
+code itself. It's not relying on some
+
+776
+00:12:34,949 --> 00:12:34,959
+code itself. It's not relying on some
+ 
+
+777
+00:12:34,959 --> 00:12:37,110
+code itself. It's not relying on some
+kind of external feature to go in and
+
+778
+00:12:37,110 --> 00:12:37,120
+kind of external feature to go in and
+ 
+
+779
+00:12:37,120 --> 00:12:39,430
+kind of external feature to go in and
+like decorate things for you. So now
+
+780
+00:12:39,430 --> 00:12:39,440
+like decorate things for you. So now
+ 
+
+781
+00:12:39,440 --> 00:12:42,870
+like decorate things for you. So now
+let's go from this to my version. So the
+
+782
+00:12:42,870 --> 00:12:42,880
+let's go from this to my version. So the
+ 
+
+783
+00:12:42,880 --> 00:12:44,470
+let's go from this to my version. So the
+only thing that has changed here are
+
+784
+00:12:44,470 --> 00:12:44,480
+only thing that has changed here are
+ 
+
+785
+00:12:44,480 --> 00:12:46,870
+only thing that has changed here are
+these two static variables and this m
+
+786
+00:12:46,870 --> 00:12:46,880
+these two static variables and this m
+ 
+
+787
+00:12:46,880 --> 00:12:50,710
+these two static variables and this m
+entities variable.h I honestly this is
+
+788
+00:12:50,710 --> 00:12:50,720
+entities variable.h I honestly this is
+ 
+
+789
+00:12:50,720 --> 00:12:52,150
+entities variable.h I honestly this is
+such a this is such a silly thing cuz
+
+790
+00:12:52,150 --> 00:12:52,160
+such a this is such a silly thing cuz
+ 
+
+791
+00:12:52,160 --> 00:12:53,829
+such a this is such a silly thing cuz
+this is just s such a small function
+
+792
+00:12:53,829 --> 00:12:53,839
+this is just s such a small function
+ 
+
+793
+00:12:53,839 --> 00:12:55,350
+this is just s such a small function
+like I don't know it's like it's like a
+
+794
+00:12:55,350 --> 00:12:55,360
+like I don't know it's like it's like a
+ 
+
+795
+00:12:55,360 --> 00:12:57,030
+like I don't know it's like it's like a
+weight has been lifted off my shoulders
+
+796
+00:12:57,030 --> 00:12:57,040
+weight has been lifted off my shoulders
+ 
+
+797
+00:12:57,040 --> 00:13:00,069
+weight has been lifted off my shoulders
+like I can actually understand a lot
+
+798
+00:13:00,069 --> 00:13:00,079
+like I can actually understand a lot
+ 
+
+799
+00:13:00,079 --> 00:13:02,470
+like I can actually understand a lot
+more about what is going on here. Now,
+
+800
+00:13:02,470 --> 00:13:02,480
+more about what is going on here. Now,
+ 
+
+801
+00:13:02,480 --> 00:13:04,389
+more about what is going on here. Now,
+of course, I'm used to this. Like, we
+
+802
+00:13:04,389 --> 00:13:04,399
+of course, I'm used to this. Like, we
+ 
+
+803
+00:13:04,399 --> 00:13:06,470
+of course, I'm used to this. Like, we
+used to use this convention at EA, and I
+
+804
+00:13:06,470 --> 00:13:06,480
+used to use this convention at EA, and I
+ 
+
+805
+00:13:06,480 --> 00:13:08,389
+used to use this convention at EA, and I
+obviously spent a lot of time reading
+
+806
+00:13:08,389 --> 00:13:08,399
+obviously spent a lot of time reading
+ 
+
+807
+00:13:08,399 --> 00:13:10,230
+obviously spent a lot of time reading
+and writing code when I was a full-time
+
+808
+00:13:10,230 --> 00:13:10,240
+and writing code when I was a full-time
+ 
+
+809
+00:13:10,240 --> 00:13:12,470
+and writing code when I was a full-time
+software engineer at EA. And it's also
+
+810
+00:13:12,470 --> 00:13:12,480
+software engineer at EA. And it's also
+ 
+
+811
+00:13:12,480 --> 00:13:13,990
+software engineer at EA. And it's also
+the code convention that I of course
+
+812
+00:13:13,990 --> 00:13:14,000
+the code convention that I of course
+ 
+
+813
+00:13:14,000 --> 00:13:15,829
+the code convention that I of course
+have adopted for like Hazel, and I just
+
+814
+00:13:15,829 --> 00:13:15,839
+have adopted for like Hazel, and I just
+ 
+
+815
+00:13:15,839 --> 00:13:17,829
+have adopted for like Hazel, and I just
+use it in like all of my programming
+
+816
+00:13:17,829 --> 00:13:17,839
+use it in like all of my programming
+ 
+
+817
+00:13:17,839 --> 00:13:19,590
+use it in like all of my programming
+basically. So, yes, there is that kind
+
+818
+00:13:19,590 --> 00:13:19,600
+basically. So, yes, there is that kind
+ 
+
+819
+00:13:19,600 --> 00:13:21,910
+basically. So, yes, there is that kind
+of familiarity thing where it's familiar
+
+820
+00:13:21,910 --> 00:13:21,920
+of familiarity thing where it's familiar
+ 
+
+821
+00:13:21,920 --> 00:13:24,389
+of familiarity thing where it's familiar
+to me. It might not be to you. So
+
+822
+00:13:24,389 --> 00:13:24,399
+to me. It might not be to you. So
+ 
+
+823
+00:13:24,399 --> 00:13:25,350
+to me. It might not be to you. So
+therefore, it's probably not going to be
+
+824
+00:13:25,350 --> 00:13:25,360
+therefore, it's probably not going to be
+ 
+
+825
+00:13:25,360 --> 00:13:27,430
+therefore, it's probably not going to be
+that dramatic. But hopefully you can
+
+826
+00:13:27,430 --> 00:13:27,440
+that dramatic. But hopefully you can
+ 
+
+827
+00:13:27,440 --> 00:13:30,389
+that dramatic. But hopefully you can
+just see why I like using it and why
+
+828
+00:13:30,389 --> 00:13:30,399
+just see why I like using it and why
+ 
+
+829
+00:13:30,399 --> 00:13:32,470
+just see why I like using it and why
+potentially you should try using it
+
+830
+00:13:32,470 --> 00:13:32,480
+potentially you should try using it
+ 
+
+831
+00:13:32,480 --> 00:13:33,829
+potentially you should try using it
+because looking at this function now,
+
+832
+00:13:33,829 --> 00:13:33,839
+because looking at this function now,
+ 
+
+833
+00:13:33,839 --> 00:13:35,509
+because looking at this function now,
+it's just way more clear. And if I drop
+
+834
+00:13:35,509 --> 00:13:35,519
+it's just way more clear. And if I drop
+ 
+
+835
+00:13:35,519 --> 00:13:36,710
+it's just way more clear. And if I drop
+this down a little bit so that we don't
+
+836
+00:13:36,710 --> 00:13:36,720
+this down a little bit so that we don't
+ 
+
+837
+00:13:36,720 --> 00:13:39,269
+this down a little bit so that we don't
+see the two static variables up here, I
+
+838
+00:13:39,269 --> 00:13:39,279
+see the two static variables up here, I
+ 
+
+839
+00:13:39,279 --> 00:13:40,790
+see the two static variables up here, I
+know now that okay, this is actually
+
+840
+00:13:40,790 --> 00:13:40,800
+know now that okay, this is actually
+ 
+
+841
+00:13:40,800 --> 00:13:42,310
+know now that okay, this is actually
+something that's like static. So the
+
+842
+00:13:42,310 --> 00:13:42,320
+something that's like static. So the
+ 
+
+843
+00:13:42,320 --> 00:13:44,230
+something that's like static. So the
+projectile pool is actually external
+
+844
+00:13:44,230 --> 00:13:44,240
+projectile pool is actually external
+ 
+
+845
+00:13:44,240 --> 00:13:45,590
+projectile pool is actually external
+first of all to this function, but also
+
+846
+00:13:45,590 --> 00:13:45,600
+first of all to this function, but also
+ 
+
+847
+00:13:45,600 --> 00:13:47,030
+first of all to this function, but also
+it's external to the class. It's just
+
+848
+00:13:47,030 --> 00:13:47,040
+it's external to the class. It's just
+ 
+
+849
+00:13:47,040 --> 00:13:48,949
+it's external to the class. It's just
+like a static kind of global internal
+
+850
+00:13:48,949 --> 00:13:48,959
+like a static kind of global internal
+ 
+
+851
+00:13:48,959 --> 00:13:50,870
+like a static kind of global internal
+variable up here. And then m underscore
+
+852
+00:13:50,870 --> 00:13:50,880
+variable up here. And then m underscore
+ 
+
+853
+00:13:50,880 --> 00:13:52,150
+variable up here. And then m underscore
+is the only thing that's actually tied
+
+854
+00:13:52,150 --> 00:13:52,160
+is the only thing that's actually tied
+ 
+
+855
+00:13:52,160 --> 00:13:53,829
+is the only thing that's actually tied
+to this class. and then everything else
+
+856
+00:13:53,829 --> 00:13:53,839
+to this class. and then everything else
+ 
+
+857
+00:13:53,839 --> 00:13:55,750
+to this class. and then everything else
+must be local. As you're scrolling
+
+858
+00:13:55,750 --> 00:13:55,760
+must be local. As you're scrolling
+ 
+
+859
+00:13:55,760 --> 00:13:58,069
+must be local. As you're scrolling
+through code and you just notice things
+
+860
+00:13:58,069 --> 00:13:58,079
+through code and you just notice things
+ 
+
+861
+00:13:58,079 --> 00:13:59,750
+through code and you just notice things
+like this, if I need to now take this
+
+862
+00:13:59,750 --> 00:13:59,760
+like this, if I need to now take this
+ 
+
+863
+00:13:59,760 --> 00:14:01,590
+like this, if I need to now take this
+function somewhere else, then I know
+
+864
+00:14:01,590 --> 00:14:01,600
+function somewhere else, then I know
+ 
+
+865
+00:14:01,600 --> 00:14:03,350
+function somewhere else, then I know
+that it's got basically like three
+
+866
+00:14:03,350 --> 00:14:03,360
+that it's got basically like three
+ 
+
+867
+00:14:03,360 --> 00:14:05,030
+that it's got basically like three
+dependencies. It's dependent on this
+
+868
+00:14:05,030 --> 00:14:05,040
+dependencies. It's dependent on this
+ 
+
+869
+00:14:05,040 --> 00:14:07,350
+dependencies. It's dependent on this
+projectile pool and its functionality as
+
+870
+00:14:07,350 --> 00:14:07,360
+projectile pool and its functionality as
+ 
+
+871
+00:14:07,360 --> 00:14:09,350
+projectile pool and its functionality as
+well as obviously the entity where it
+
+872
+00:14:09,350 --> 00:14:09,360
+well as obviously the entity where it
+ 
+
+873
+00:14:09,360 --> 00:14:11,110
+well as obviously the entity where it
+actually spawns that projectile. That's
+
+874
+00:14:11,110 --> 00:14:11,120
+actually spawns that projectile. That's
+ 
+
+875
+00:14:11,120 --> 00:14:13,189
+actually spawns that projectile. That's
+now immediately clear to me without
+
+876
+00:14:13,189 --> 00:14:13,199
+now immediately clear to me without
+ 
+
+877
+00:14:13,199 --> 00:14:14,870
+now immediately clear to me without
+having to dive in and actually start
+
+878
+00:14:14,870 --> 00:14:14,880
+having to dive in and actually start
+ 
+
+879
+00:14:14,880 --> 00:14:17,110
+having to dive in and actually start
+inspecting the code. If I show you some
+
+880
+00:14:17,110 --> 00:14:17,120
+inspecting the code. If I show you some
+ 
+
+881
+00:14:17,120 --> 00:14:18,550
+inspecting the code. If I show you some
+slightly more complicated code from
+
+882
+00:14:18,550 --> 00:14:18,560
+slightly more complicated code from
+ 
+
+883
+00:14:18,560 --> 00:14:21,509
+slightly more complicated code from
+Hazel for example, like this like submit
+
+884
+00:14:21,509 --> 00:14:21,519
+Hazel for example, like this like submit
+ 
+
+885
+00:14:21,519 --> 00:14:23,189
+Hazel for example, like this like submit
+physics debug mesh completely random
+
+886
+00:14:23,189 --> 00:14:23,199
+physics debug mesh completely random
+ 
+
+887
+00:14:23,199 --> 00:14:24,629
+physics debug mesh completely random
+function that I found here inside the
+
+888
+00:14:24,629 --> 00:14:24,639
+function that I found here inside the
+ 
+
+889
+00:14:24,639 --> 00:14:26,230
+function that I found here inside the
+scene renderer class. Same kind of
+
+890
+00:14:26,230 --> 00:14:26,240
+scene renderer class. Same kind of
+ 
+
+891
+00:14:26,240 --> 00:14:28,150
+scene renderer class. Same kind of
+situation. I can look through this and I
+
+892
+00:14:28,150 --> 00:14:28,160
+situation. I can look through this and I
+ 
+
+893
+00:14:28,160 --> 00:14:30,710
+situation. I can look through this and I
+know what is like a member variable over
+
+894
+00:14:30,710 --> 00:14:30,720
+know what is like a member variable over
+ 
+
+895
+00:14:30,720 --> 00:14:32,150
+know what is like a member variable over
+here. I mean there's nothing static
+
+896
+00:14:32,150 --> 00:14:32,160
+here. I mean there's nothing static
+ 
+
+897
+00:14:32,160 --> 00:14:33,590
+here. I mean there's nothing static
+inside here. There's nothing really
+
+898
+00:14:33,590 --> 00:14:33,600
+inside here. There's nothing really
+ 
+
+899
+00:14:33,600 --> 00:14:35,430
+inside here. There's nothing really
+static in this entire class to be
+
+900
+00:14:35,430 --> 00:14:35,440
+static in this entire class to be
+ 
+
+901
+00:14:35,440 --> 00:14:37,110
+static in this entire class to be
+honest. But as I'm going through this, I
+
+902
+00:14:37,110 --> 00:14:37,120
+honest. But as I'm going through this, I
+ 
+
+903
+00:14:37,120 --> 00:14:38,870
+honest. But as I'm going through this, I
+can way more easily see and understand
+
+904
+00:14:38,870 --> 00:14:38,880
+can way more easily see and understand
+ 
+
+905
+00:14:38,880 --> 00:14:40,470
+can way more easily see and understand
+like what the code is actually doing and
+
+906
+00:14:40,470 --> 00:14:40,480
+like what the code is actually doing and
+ 
+
+907
+00:14:40,480 --> 00:14:41,990
+like what the code is actually doing and
+how it's put together. Not to mention
+
+908
+00:14:41,990 --> 00:14:42,000
+how it's put together. Not to mention
+ 
+
+909
+00:14:42,000 --> 00:14:43,990
+how it's put together. Not to mention
+that I can also search for these things,
+
+910
+00:14:43,990 --> 00:14:44,000
+that I can also search for these things,
+ 
+
+911
+00:14:44,000 --> 00:14:45,670
+that I can also search for these things,
+right? So m underscore and I can
+
+912
+00:14:45,670 --> 00:14:45,680
+right? So m underscore and I can
+ 
+
+913
+00:14:45,680 --> 00:14:47,189
+right? So m underscore and I can
+immediately see like within a function.
+
+914
+00:14:47,189 --> 00:14:47,199
+immediately see like within a function.
+ 
+
+915
+00:14:47,199 --> 00:14:49,030
+immediately see like within a function.
+Okay, these are all member variables.
+
+916
+00:14:49,030 --> 00:14:49,040
+Okay, these are all member variables.
+ 
+
+917
+00:14:49,040 --> 00:14:50,550
+Okay, these are all member variables.
+There's also another advantage of not
+
+918
+00:14:50,550 --> 00:14:50,560
+There's also another advantage of not
+ 
+
+919
+00:14:50,560 --> 00:14:52,710
+There's also another advantage of not
+just having like no space here like m
+
+920
+00:14:52,710 --> 00:14:52,720
+just having like no space here like m
+ 
+
+921
+00:14:52,720 --> 00:14:54,069
+just having like no space here like m
+entities cuz then you can't really
+
+922
+00:14:54,069 --> 00:14:54,079
+entities cuz then you can't really
+ 
+
+923
+00:14:54,079 --> 00:14:55,590
+entities cuz then you can't really
+search for that unless you have maybe
+
+924
+00:14:55,590 --> 00:14:55,600
+search for that unless you have maybe
+ 
+
+925
+00:14:55,600 --> 00:14:56,870
+search for that unless you have maybe
+like a regular expression or something.
+
+926
+00:14:56,870 --> 00:14:56,880
+like a regular expression or something.
+ 
+
+927
+00:14:56,880 --> 00:14:58,310
+like a regular expression or something.
+But m underscore will obviously light
+
+928
+00:14:58,310 --> 00:14:58,320
+But m underscore will obviously light
+ 
+
+929
+00:14:58,320 --> 00:15:00,710
+But m underscore will obviously light
+that up. S will light that up since it
+
+930
+00:15:00,710 --> 00:15:00,720
+that up. S will light that up since it
+ 
+
+931
+00:15:00,720 --> 00:15:03,590
+that up. S will light that up since it
+happens to be important to me in my line
+
+932
+00:15:03,590 --> 00:15:03,600
+happens to be important to me in my line
+ 
+
+933
+00:15:03,600 --> 00:15:06,389
+happens to be important to me in my line
+of work where a variable actually is.
+
+934
+00:15:06,389 --> 00:15:06,399
+of work where a variable actually is.
+ 
+
+935
+00:15:06,399 --> 00:15:08,389
+of work where a variable actually is.
+This is obviously a game changer. It
+
+936
+00:15:08,389 --> 00:15:08,399
+This is obviously a game changer. It
+ 
+
+937
+00:15:08,399 --> 00:15:10,629
+This is obviously a game changer. It
+also by the way shows me exactly what is
+
+938
+00:15:10,629 --> 00:15:10,639
+also by the way shows me exactly what is
+ 
+
+939
+00:15:10,639 --> 00:15:12,550
+also by the way shows me exactly what is
+supposed to be like an implementation
+
+940
+00:15:12,550 --> 00:15:12,560
+supposed to be like an implementation
+ 
+
+941
+00:15:12,560 --> 00:15:14,230
+supposed to be like an implementation
+detail what is kind of internal and what
+
+942
+00:15:14,230 --> 00:15:14,240
+detail what is kind of internal and what
+ 
+
+943
+00:15:14,240 --> 00:15:16,150
+detail what is kind of internal and what
+is not because I would only use these
+
+944
+00:15:16,150 --> 00:15:16,160
+is not because I would only use these
+ 
+
+945
+00:15:16,160 --> 00:15:18,550
+is not because I would only use these
+for private variables effectively. So s
+
+946
+00:15:18,550 --> 00:15:18,560
+for private variables effectively. So s
+ 
+
+947
+00:15:18,560 --> 00:15:19,910
+for private variables effectively. So s
+projectile pull is obviously something
+
+948
+00:15:19,910 --> 00:15:19,920
+projectile pull is obviously something
+ 
+
+949
+00:15:19,920 --> 00:15:21,750
+projectile pull is obviously something
+that is static like to this class kind
+
+950
+00:15:21,750 --> 00:15:21,760
+that is static like to this class kind
+ 
+
+951
+00:15:21,760 --> 00:15:24,150
+that is static like to this class kind
+of private here. G underscore is an
+
+952
+00:15:24,150 --> 00:15:24,160
+of private here. G underscore is an
+ 
+
+953
+00:15:24,160 --> 00:15:25,990
+of private here. G underscore is an
+exception to that because if this was
+
+954
+00:15:25,990 --> 00:15:26,000
+exception to that because if this was
+ 
+
+955
+00:15:26,000 --> 00:15:27,670
+exception to that because if this was
+global I would still have the g here but
+
+956
+00:15:27,670 --> 00:15:27,680
+global I would still have the g here but
+ 
+
+957
+00:15:27,680 --> 00:15:29,670
+global I would still have the g here but
+I think it is important to just be aware
+
+958
+00:15:29,670 --> 00:15:29,680
+I think it is important to just be aware
+ 
+
+959
+00:15:29,680 --> 00:15:31,829
+I think it is important to just be aware
+of global variables if you do use them.
+
+960
+00:15:31,829 --> 00:15:31,839
+of global variables if you do use them.
+ 
+
+961
+00:15:31,839 --> 00:15:34,150
+of global variables if you do use them.
+But this m entities would not have this
+
+962
+00:15:34,150 --> 00:15:34,160
+But this m entities would not have this
+ 
+
+963
+00:15:34,160 --> 00:15:36,389
+But this m entities would not have this
+convention if it was public because then
+
+964
+00:15:36,389 --> 00:15:36,399
+convention if it was public because then
+ 
+
+965
+00:15:36,399 --> 00:15:38,470
+convention if it was public because then
+it's kind of like part of the API. You
+
+966
+00:15:38,470 --> 00:15:38,480
+it's kind of like part of the API. You
+ 
+
+967
+00:15:38,480 --> 00:15:40,389
+it's kind of like part of the API. You
+can see here with entity position and
+
+968
+00:15:40,389 --> 00:15:40,399
+can see here with entity position and
+ 
+
+969
+00:15:40,399 --> 00:15:42,389
+can see here with entity position and
+projectile velocity they're just public
+
+970
+00:15:42,389 --> 00:15:42,399
+projectile velocity they're just public
+ 
+
+971
+00:15:42,399 --> 00:15:44,150
+projectile velocity they're just public
+variables that are part of this strct.
+
+972
+00:15:44,150 --> 00:15:44,160
+variables that are part of this strct.
+ 
+
+973
+00:15:44,160 --> 00:15:45,990
+variables that are part of this strct.
+So in that case I just have them in
+
+974
+00:15:45,990 --> 00:15:46,000
+So in that case I just have them in
+ 
+
+975
+00:15:46,000 --> 00:15:48,310
+So in that case I just have them in
+Pascal case which also makes the code I
+
+976
+00:15:48,310 --> 00:15:48,320
+Pascal case which also makes the code I
+ 
+
+977
+00:15:48,320 --> 00:15:49,990
+Pascal case which also makes the code I
+think look a lot better. Like if I was
+
+978
+00:15:49,990 --> 00:15:50,000
+think look a lot better. Like if I was
+ 
+
+979
+00:15:50,000 --> 00:15:51,829
+think look a lot better. Like if I was
+to actually access these variables.
+
+980
+00:15:51,829 --> 00:15:51,839
+to actually access these variables.
+ 
+
+981
+00:15:51,839 --> 00:15:52,870
+to actually access these variables.
+Thank you for watching. I hope you
+
+982
+00:15:52,870 --> 00:15:52,880
+Thank you for watching. I hope you
+ 
+
+983
+00:15:52,880 --> 00:15:54,069
+Thank you for watching. I hope you
+enjoyed this video. I hope this added a
+
+984
+00:15:54,069 --> 00:15:54,079
+enjoyed this video. I hope this added a
+ 
+
+985
+00:15:54,079 --> 00:15:55,350
+enjoyed this video. I hope this added a
+little bit more clarity to what these
+
+986
+00:15:55,350 --> 00:15:55,360
+little bit more clarity to what these
+ 
+
+987
+00:15:55,360 --> 00:15:57,509
+little bit more clarity to what these
+naming conventions actually are and why
+
+988
+00:15:57,509 --> 00:15:57,519
+naming conventions actually are and why
+ 
+
+989
+00:15:57,519 --> 00:15:59,030
+naming conventions actually are and why
+they're used in the first place. Let me
+
+990
+00:15:59,030 --> 00:15:59,040
+they're used in the first place. Let me
+ 
+
+991
+00:15:59,040 --> 00:16:00,310
+they're used in the first place. Let me
+know what you think of these in the
+
+992
+00:16:00,310 --> 00:16:00,320
+know what you think of these in the
+ 
+
+993
+00:16:00,320 --> 00:16:01,910
+know what you think of these in the
+comment section below. Again, I really
+
+994
+00:16:01,910 --> 00:16:01,920
+comment section below. Again, I really
+ 
+
+995
+00:16:01,920 --> 00:16:03,509
+comment section below. Again, I really
+like them. Personally, in all of my
+
+996
+00:16:03,509 --> 00:16:03,519
+like them. Personally, in all of my
+ 
+
+997
+00:16:03,519 --> 00:16:04,629
+like them. Personally, in all of my
+experience, I think they help
+
+998
+00:16:04,629 --> 00:16:04,639
+experience, I think they help
+ 
+
+999
+00:16:04,639 --> 00:16:06,150
+experience, I think they help
+tremendously. I will see you guys next
+
+1000
+00:16:06,150 --> 00:16:06,160
+tremendously. I will see you guys next
+ 
+
+1001
+00:16:06,160 --> 00:16:09,279
+tremendously. I will see you guys next
+time. Goodbye.
+

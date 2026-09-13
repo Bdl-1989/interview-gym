@@ -1,0 +1,3825 @@
+1
+00:00:00,000 --> 00:00:01,850
+
+hey what's up guys my name is the chato
+
+2
+00:00:01,850 --> 00:00:01,860
+hey what's up guys my name is the chato
+ 
+
+3
+00:00:01,860 --> 00:00:04,910
+hey what's up guys my name is the chato
+and welcome back to my C++ series I
+
+4
+00:00:04,910 --> 00:00:04,920
+and welcome back to my C++ series I
+ 
+
+5
+00:00:04,920 --> 00:00:06,980
+and welcome back to my C++ series I
+don't know what this hand stuff is today
+
+6
+00:00:06,980 --> 00:00:06,990
+don't know what this hand stuff is today
+ 
+
+7
+00:00:06,990 --> 00:00:08,210
+don't know what this hand stuff is today
+I'm gonna be talking all about how you
+
+8
+00:00:08,210 --> 00:00:08,220
+I'm gonna be talking all about how you
+ 
+
+9
+00:00:08,220 --> 00:00:10,250
+I'm gonna be talking all about how you
+should be creating your objects in C++
+
+10
+00:00:10,250 --> 00:00:10,260
+should be creating your objects in C++
+ 
+
+11
+00:00:10,260 --> 00:00:12,740
+should be creating your objects in C++
+because C++ gives us a few different
+
+12
+00:00:12,740 --> 00:00:12,750
+because C++ gives us a few different
+ 
+
+13
+00:00:12,750 --> 00:00:15,049
+because C++ gives us a few different
+ways we can actually create an object
+
+14
+00:00:15,049 --> 00:00:15,059
+ways we can actually create an object
+ 
+
+15
+00:00:15,059 --> 00:00:16,369
+ways we can actually create an object
+now if you don't know what an object is
+
+16
+00:00:16,369 --> 00:00:16,379
+now if you don't know what an object is
+ 
+
+17
+00:00:16,379 --> 00:00:17,930
+now if you don't know what an object is
+or what a class is you definitely want
+
+18
+00:00:17,930 --> 00:00:17,940
+or what a class is you definitely want
+ 
+
+19
+00:00:17,940 --> 00:00:19,099
+or what a class is you definitely want
+to check out the video that I met on
+
+20
+00:00:19,099 --> 00:00:19,109
+to check out the video that I met on
+ 
+
+21
+00:00:19,109 --> 00:00:20,630
+to check out the video that I met on
+that there'll be a card on the screen or
+
+22
+00:00:20,630 --> 00:00:20,640
+that there'll be a card on the screen or
+ 
+
+23
+00:00:20,640 --> 00:00:22,010
+that there'll be a card on the screen or
+a link in the description below but
+
+24
+00:00:22,010 --> 00:00:22,020
+a link in the description below but
+ 
+
+25
+00:00:22,020 --> 00:00:23,660
+a link in the description below but
+basically when we've written a class and
+
+26
+00:00:23,660 --> 00:00:23,670
+basically when we've written a class and
+ 
+
+27
+00:00:23,670 --> 00:00:25,759
+basically when we've written a class and
+it comes time for us to actually start
+
+28
+00:00:25,759 --> 00:00:25,769
+it comes time for us to actually start
+ 
+
+29
+00:00:25,769 --> 00:00:27,740
+it comes time for us to actually start
+using the class that we've created we
+
+30
+00:00:27,740 --> 00:00:27,750
+using the class that we've created we
+ 
+
+31
+00:00:27,750 --> 00:00:29,900
+using the class that we've created we
+need to instantiate it usually unless
+
+32
+00:00:29,900 --> 00:00:29,910
+need to instantiate it usually unless
+ 
+
+33
+00:00:29,910 --> 00:00:31,609
+need to instantiate it usually unless
+it's like completely static but what I'm
+
+34
+00:00:31,609 --> 00:00:31,619
+it's like completely static but what I'm
+ 
+
+35
+00:00:31,619 --> 00:00:33,139
+it's like completely static but what I'm
+talking about that we need to
+
+36
+00:00:33,139 --> 00:00:33,149
+talking about that we need to
+ 
+
+37
+00:00:33,149 --> 00:00:35,360
+talking about that we need to
+instantiate our class how do we do it we
+
+38
+00:00:35,360 --> 00:00:35,370
+instantiate our class how do we do it we
+ 
+
+39
+00:00:35,370 --> 00:00:37,490
+instantiate our class how do we do it we
+basically have two choices here and the
+
+40
+00:00:37,490 --> 00:00:37,500
+basically have two choices here and the
+ 
+
+41
+00:00:37,500 --> 00:00:39,229
+basically have two choices here and the
+difference between the choices is where
+
+42
+00:00:39,229 --> 00:00:39,239
+difference between the choices is where
+ 
+
+43
+00:00:39,239 --> 00:00:41,510
+difference between the choices is where
+the memory comes from which memory were
+
+44
+00:00:41,510 --> 00:00:41,520
+the memory comes from which memory were
+ 
+
+45
+00:00:41,520 --> 00:00:43,250
+the memory comes from which memory were
+actually going to be creating our object
+
+46
+00:00:43,250 --> 00:00:43,260
+actually going to be creating our object
+ 
+
+47
+00:00:43,260 --> 00:00:46,190
+actually going to be creating our object
+in when we create an object in C++ it
+
+48
+00:00:46,190 --> 00:00:46,200
+in when we create an object in C++ it
+ 
+
+49
+00:00:46,200 --> 00:00:48,440
+in when we create an object in C++ it
+needs to occupy some memory even if we
+
+50
+00:00:48,440 --> 00:00:48,450
+needs to occupy some memory even if we
+ 
+
+51
+00:00:48,450 --> 00:00:50,299
+needs to occupy some memory even if we
+write a class that is completely empty
+
+52
+00:00:50,299 --> 00:00:50,309
+write a class that is completely empty
+ 
+
+53
+00:00:50,309 --> 00:00:52,639
+write a class that is completely empty
+no members no class members or nothing
+
+54
+00:00:52,639 --> 00:00:52,649
+no members no class members or nothing
+ 
+
+55
+00:00:52,649 --> 00:00:53,150
+no members no class members or nothing
+like that
+
+56
+00:00:53,150 --> 00:00:53,160
+like that
+ 
+
+57
+00:00:53,160 --> 00:00:55,549
+like that
+it has to it has to occupy at least one
+
+58
+00:00:55,549 --> 00:00:55,559
+it has to it has to occupy at least one
+ 
+
+59
+00:00:55,559 --> 00:00:56,930
+it has to it has to occupy at least one
+byte of memory but that's usually our
+
+60
+00:00:56,930 --> 00:00:56,940
+byte of memory but that's usually our
+ 
+
+61
+00:00:56,940 --> 00:00:58,459
+byte of memory but that's usually our
+case we have a lot of members in our
+
+62
+00:00:58,459 --> 00:00:58,469
+case we have a lot of members in our
+ 
+
+63
+00:00:58,469 --> 00:01:01,130
+case we have a lot of members in our
+classes and they need to be stored
+
+64
+00:01:01,130 --> 00:01:01,140
+classes and they need to be stored
+ 
+
+65
+00:01:01,140 --> 00:01:02,810
+classes and they need to be stored
+somewhere when we decide I want to start
+
+66
+00:01:02,810 --> 00:01:02,820
+somewhere when we decide I want to start
+ 
+
+67
+00:01:02,820 --> 00:01:04,160
+somewhere when we decide I want to start
+using this object I'm gonna create a
+
+68
+00:01:04,160 --> 00:01:04,170
+using this object I'm gonna create a
+ 
+
+69
+00:01:04,170 --> 00:01:05,570
+using this object I'm gonna create a
+bunch of variables the object has a
+
+70
+00:01:05,570 --> 00:01:05,580
+bunch of variables the object has a
+ 
+
+71
+00:01:05,580 --> 00:01:07,370
+bunch of variables the object has a
+bunch of variables we need to allocate
+
+72
+00:01:07,370 --> 00:01:07,380
+bunch of variables we need to allocate
+ 
+
+73
+00:01:07,380 --> 00:01:09,830
+bunch of variables we need to allocate
+memory somewhere in our computer so that
+
+74
+00:01:09,830 --> 00:01:09,840
+memory somewhere in our computer so that
+ 
+
+75
+00:01:09,840 --> 00:01:12,560
+memory somewhere in our computer so that
+we can actually remember what what what
+
+76
+00:01:12,560 --> 00:01:12,570
+we can actually remember what what what
+ 
+
+77
+00:01:12,570 --> 00:01:13,969
+we can actually remember what what what
+the variables are set to and their
+
+78
+00:01:13,969 --> 00:01:13,979
+the variables are set to and their
+ 
+
+79
+00:01:13,979 --> 00:01:15,469
+the variables are set to and their
+application is kind of added into two
+
+80
+00:01:15,469 --> 00:01:15,479
+application is kind of added into two
+ 
+
+81
+00:01:15,479 --> 00:01:17,210
+application is kind of added into two
+main sections of memory the stack and
+
+82
+00:01:17,210 --> 00:01:17,220
+main sections of memory the stack and
+ 
+
+83
+00:01:17,220 --> 00:01:19,730
+main sections of memory the stack and
+the heap now there are other sections of
+
+84
+00:01:19,730 --> 00:01:19,740
+the heap now there are other sections of
+ 
+
+85
+00:01:19,740 --> 00:01:22,550
+the heap now there are other sections of
+memory such as the area where our source
+
+86
+00:01:22,550 --> 00:01:22,560
+memory such as the area where our source
+ 
+
+87
+00:01:22,560 --> 00:01:24,950
+memory such as the area where our source
+code lives so by this point it's machine
+
+88
+00:01:24,950 --> 00:01:24,960
+code lives so by this point it's machine
+ 
+
+89
+00:01:24,960 --> 00:01:26,840
+code lives so by this point it's machine
+code so there's other sections of memory
+
+90
+00:01:26,840 --> 00:01:26,850
+code so there's other sections of memory
+ 
+
+91
+00:01:26,850 --> 00:01:28,880
+code so there's other sections of memory
+we're gonna talk about them later they
+
+92
+00:01:28,880 --> 00:01:28,890
+we're gonna talk about them later they
+ 
+
+93
+00:01:28,890 --> 00:01:30,230
+we're gonna talk about them later they
+don't really matter right now just think
+
+94
+00:01:30,230 --> 00:01:30,240
+don't really matter right now just think
+ 
+
+95
+00:01:30,240 --> 00:01:31,730
+don't really matter right now just think
+of it as the stack and the heap that's
+
+96
+00:01:31,730 --> 00:01:31,740
+of it as the stack and the heap that's
+ 
+
+97
+00:01:31,740 --> 00:01:33,740
+of it as the stack and the heap that's
+all we care about right now I am going
+
+98
+00:01:33,740 --> 00:01:33,750
+all we care about right now I am going
+ 
+
+99
+00:01:33,750 --> 00:01:36,440
+all we care about right now I am going
+to make an in-depth video about what the
+
+100
+00:01:36,440 --> 00:01:36,450
+to make an in-depth video about what the
+ 
+
+101
+00:01:36,450 --> 00:01:37,999
+to make an in-depth video about what the
+stack is and what the heat Bay is in
+
+102
+00:01:37,999 --> 00:01:38,009
+stack is and what the heat Bay is in
+ 
+
+103
+00:01:38,009 --> 00:01:39,679
+stack is and what the heat Bay is in
+this stack bus is behave and all that
+
+104
+00:01:39,679 --> 00:01:39,689
+this stack bus is behave and all that
+ 
+
+105
+00:01:39,689 --> 00:01:41,929
+this stack bus is behave and all that
+stuff if I've already made it when
+
+106
+00:01:41,929 --> 00:01:41,939
+stuff if I've already made it when
+ 
+
+107
+00:01:41,939 --> 00:01:43,010
+stuff if I've already made it when
+you're watching this video there'll be a
+
+108
+00:01:43,010 --> 00:01:43,020
+you're watching this video there'll be a
+ 
+
+109
+00:01:43,020 --> 00:01:44,990
+you're watching this video there'll be a
+card there if not it's coming soon so
+
+110
+00:01:44,990 --> 00:01:45,000
+card there if not it's coming soon so
+ 
+
+111
+00:01:45,000 --> 00:01:46,940
+card there if not it's coming soon so
+just hold on tight in C++ we get to
+
+112
+00:01:46,940 --> 00:01:46,950
+just hold on tight in C++ we get to
+ 
+
+113
+00:01:46,950 --> 00:01:50,149
+just hold on tight in C++ we get to
+choose where it goes whether our object
+
+114
+00:01:50,149 --> 00:01:50,159
+choose where it goes whether our object
+ 
+
+115
+00:01:50,159 --> 00:01:52,550
+choose where it goes whether our object
+gets created on the stack or on the heat
+
+116
+00:01:52,550 --> 00:01:52,560
+gets created on the stack or on the heat
+ 
+
+117
+00:01:52,560 --> 00:01:53,990
+gets created on the stack or on the heat
+and they kind of have different
+
+118
+00:01:53,990 --> 00:01:54,000
+and they kind of have different
+ 
+
+119
+00:01:54,000 --> 00:01:56,359
+and they kind of have different
+functional differences stack objects for
+
+120
+00:01:56,359 --> 00:01:56,369
+functional differences stack objects for
+ 
+
+121
+00:01:56,369 --> 00:01:58,969
+functional differences stack objects for
+example have an automatic lifespan right
+
+122
+00:01:58,969 --> 00:01:58,979
+example have an automatic lifespan right
+ 
+
+123
+00:01:58,979 --> 00:02:01,190
+example have an automatic lifespan right
+their lifetime is actually controlled by
+
+124
+00:02:01,190 --> 00:02:01,200
+their lifetime is actually controlled by
+ 
+
+125
+00:02:01,200 --> 00:02:03,020
+their lifetime is actually controlled by
+the scope that they declared and as soon
+
+126
+00:02:03,020 --> 00:02:03,030
+the scope that they declared and as soon
+ 
+
+127
+00:02:03,030 --> 00:02:04,700
+the scope that they declared and as soon
+as you as soon as that variable goes out
+
+128
+00:02:04,700 --> 00:02:04,710
+as you as soon as that variable goes out
+ 
+
+129
+00:02:04,710 --> 00:02:05,680
+as you as soon as that variable goes out
+of scope
+
+130
+00:02:05,680 --> 00:02:05,690
+of scope
+ 
+
+131
+00:02:05,690 --> 00:02:07,750
+of scope
+that's it that the memory is free
+
+132
+00:02:07,750 --> 00:02:07,760
+that's it that the memory is free
+ 
+
+133
+00:02:07,760 --> 00:02:10,420
+that's it that the memory is free
+because when that scope ends the stack
+
+134
+00:02:10,420 --> 00:02:10,430
+because when that scope ends the stack
+ 
+
+135
+00:02:10,430 --> 00:02:12,910
+because when that scope ends the stack
+pops and anything that was in that in
+
+136
+00:02:12,910 --> 00:02:12,920
+pops and anything that was in that in
+ 
+
+137
+00:02:12,920 --> 00:02:14,650
+pops and anything that was in that in
+that scope frame in that stack frame
+
+138
+00:02:14,650 --> 00:02:14,660
+that scope frame in that stack frame
+ 
+
+139
+00:02:14,660 --> 00:02:17,380
+that scope frame in that stack frame
+that gets that gets frayed now the heap
+
+140
+00:02:17,380 --> 00:02:17,390
+that gets that gets frayed now the heap
+ 
+
+141
+00:02:17,390 --> 00:02:19,720
+that gets that gets frayed now the heap
+is is different the heap is this big big
+
+142
+00:02:19,720 --> 00:02:19,730
+is is different the heap is this big big
+ 
+
+143
+00:02:19,730 --> 00:02:21,700
+is is different the heap is this big big
+big mysterious place where once you've
+
+144
+00:02:21,700 --> 00:02:21,710
+big mysterious place where once you've
+ 
+
+145
+00:02:21,710 --> 00:02:23,560
+big mysterious place where once you've
+allocated an object in that hip and
+
+146
+00:02:23,560 --> 00:02:23,570
+allocated an object in that hip and
+ 
+
+147
+00:02:23,570 --> 00:02:25,360
+allocated an object in that hip and
+you've actually created an object on the
+
+148
+00:02:25,360 --> 00:02:25,370
+you've actually created an object on the
+ 
+
+149
+00:02:25,370 --> 00:02:27,940
+you've actually created an object on the
+heap it's gonna sit there until you
+
+150
+00:02:27,940 --> 00:02:27,950
+heap it's gonna sit there until you
+ 
+
+151
+00:02:27,950 --> 00:02:30,040
+heap it's gonna sit there until you
+decide I no longer need it I want to
+
+152
+00:02:30,040 --> 00:02:30,050
+decide I no longer need it I want to
+ 
+
+153
+00:02:30,050 --> 00:02:31,390
+decide I no longer need it I want to
+free that object do whatever you like
+
+154
+00:02:31,390 --> 00:02:31,400
+free that object do whatever you like
+ 
+
+155
+00:02:31,400 --> 00:02:33,160
+free that object do whatever you like
+with that memory so let's take a look at
+
+156
+00:02:33,160 --> 00:02:33,170
+with that memory so let's take a look at
+ 
+
+157
+00:02:33,170 --> 00:02:34,660
+with that memory so let's take a look at
+what the code looks like for both of
+
+158
+00:02:34,660 --> 00:02:34,670
+what the code looks like for both of
+ 
+
+159
+00:02:34,670 --> 00:02:36,310
+what the code looks like for both of
+those methods of creating objects over
+
+160
+00:02:36,310 --> 00:02:36,320
+those methods of creating objects over
+ 
+
+161
+00:02:36,320 --> 00:02:38,260
+those methods of creating objects over
+here I've got a class called NC which
+
+162
+00:02:38,260 --> 00:02:38,270
+here I've got a class called NC which
+ 
+
+163
+00:02:38,270 --> 00:02:39,970
+here I've got a class called NC which
+just has a string now this string is
+
+164
+00:02:39,970 --> 00:02:39,980
+just has a string now this string is
+ 
+
+165
+00:02:39,980 --> 00:02:41,920
+just has a string now this string is
+just simply a sanest Raina put a little
+
+166
+00:02:41,920 --> 00:02:41,930
+just simply a sanest Raina put a little
+ 
+
+167
+00:02:41,930 --> 00:02:43,690
+just simply a sanest Raina put a little
+using up here just to simplify this code
+
+168
+00:02:43,690 --> 00:02:43,700
+using up here just to simplify this code
+ 
+
+169
+00:02:43,700 --> 00:02:44,890
+using up here just to simplify this code
+a little bit so that we're not writing
+
+170
+00:02:44,890 --> 00:02:44,900
+a little bit so that we're not writing
+ 
+
+171
+00:02:44,900 --> 00:02:47,590
+a little bit so that we're not writing
+STD string everywhere I usually do this
+
+172
+00:02:47,590 --> 00:02:47,600
+STD string everywhere I usually do this
+ 
+
+173
+00:02:47,600 --> 00:02:49,450
+STD string everywhere I usually do this
+because I don't like using namespace STD
+
+174
+00:02:49,450 --> 00:02:49,460
+because I don't like using namespace STD
+ 
+
+175
+00:02:49,460 --> 00:02:51,850
+because I don't like using namespace STD
+I know a lot of you ask me why I don't
+
+176
+00:02:51,850 --> 00:02:51,860
+I know a lot of you ask me why I don't
+ 
+
+177
+00:02:51,860 --> 00:02:54,460
+I know a lot of you ask me why I don't
+like using namespace STD I'm gonna make
+
+178
+00:02:54,460 --> 00:02:54,470
+like using namespace STD I'm gonna make
+ 
+
+179
+00:02:54,470 --> 00:02:57,610
+like using namespace STD I'm gonna make
+a video on that very soon so just wait
+
+180
+00:02:57,610 --> 00:02:57,620
+a video on that very soon so just wait
+ 
+
+181
+00:02:57,620 --> 00:02:59,620
+a video on that very soon so just wait
+for it but basically we've got a class
+
+182
+00:02:59,620 --> 00:02:59,630
+for it but basically we've got a class
+ 
+
+183
+00:02:59,630 --> 00:03:02,050
+for it but basically we've got a class
+with one member is a string and then
+
+184
+00:03:02,050 --> 00:03:02,060
+with one member is a string and then
+ 
+
+185
+00:03:02,060 --> 00:03:03,610
+with one member is a string and then
+we've got one constructor which doesn't
+
+186
+00:03:03,610 --> 00:03:03,620
+we've got one constructor which doesn't
+ 
+
+187
+00:03:03,620 --> 00:03:05,110
+we've got one constructor which doesn't
+take any parameters another constructor
+
+188
+00:03:05,110 --> 00:03:05,120
+take any parameters another constructor
+ 
+
+189
+00:03:05,120 --> 00:03:07,090
+take any parameters another constructor
+which does take in a string as a
+
+190
+00:03:07,090 --> 00:03:07,100
+which does take in a string as a
+ 
+
+191
+00:03:07,100 --> 00:03:08,740
+which does take in a string as a
+parameter and then we just set the name
+
+192
+00:03:08,740 --> 00:03:08,750
+parameter and then we just set the name
+ 
+
+193
+00:03:08,750 --> 00:03:10,660
+parameter and then we just set the name
+to whatever the parameter is and then
+
+194
+00:03:10,660 --> 00:03:10,670
+to whatever the parameter is and then
+ 
+
+195
+00:03:10,670 --> 00:03:12,310
+to whatever the parameter is and then
+finally we just have a simple getter
+
+196
+00:03:12,310 --> 00:03:12,320
+finally we just have a simple getter
+ 
+
+197
+00:03:12,320 --> 00:03:13,930
+finally we just have a simple getter
+thing the name so I'll just made like a
+
+198
+00:03:13,930 --> 00:03:13,940
+thing the name so I'll just made like a
+ 
+
+199
+00:03:13,940 --> 00:03:15,729
+thing the name so I'll just made like a
+little dummy class now let's try and
+
+200
+00:03:15,729 --> 00:03:15,739
+little dummy class now let's try and
+ 
+
+201
+00:03:15,739 --> 00:03:17,560
+little dummy class now let's try and
+create it in the main function how do we
+
+202
+00:03:17,560 --> 00:03:17,570
+create it in the main function how do we
+ 
+
+203
+00:03:17,570 --> 00:03:19,810
+create it in the main function how do we
+do that well the first option which is
+
+204
+00:03:19,810 --> 00:03:19,820
+do that well the first option which is
+ 
+
+205
+00:03:19,820 --> 00:03:21,820
+do that well the first option which is
+creating it on the stack is very very
+
+206
+00:03:21,820 --> 00:03:21,830
+creating it on the stack is very very
+ 
+
+207
+00:03:21,830 --> 00:03:22,330
+creating it on the stack is very very
+simple
+
+208
+00:03:22,330 --> 00:03:22,340
+simple
+ 
+
+209
+00:03:22,340 --> 00:03:24,460
+simple
+we basically type in the type of the
+
+210
+00:03:24,460 --> 00:03:24,470
+we basically type in the type of the
+ 
+
+211
+00:03:24,470 --> 00:03:26,710
+we basically type in the type of the
+class that we want to instantiate then
+
+212
+00:03:26,710 --> 00:03:26,720
+class that we want to instantiate then
+ 
+
+213
+00:03:26,720 --> 00:03:28,540
+class that we want to instantiate then
+we hit the spacebar and then we give it
+
+214
+00:03:28,540 --> 00:03:28,550
+we hit the spacebar and then we give it
+ 
+
+215
+00:03:28,550 --> 00:03:30,340
+we hit the spacebar and then we give it
+a name someone I call this entity and
+
+216
+00:03:30,340 --> 00:03:30,350
+a name someone I call this entity and
+ 
+
+217
+00:03:30,350 --> 00:03:32,290
+a name someone I call this entity and
+that's all there is to it now because
+
+218
+00:03:32,290 --> 00:03:32,300
+that's all there is to it now because
+ 
+
+219
+00:03:32,300 --> 00:03:33,729
+that's all there is to it now because
+we've written it like this it's actually
+
+220
+00:03:33,729 --> 00:03:33,739
+we've written it like this it's actually
+ 
+
+221
+00:03:33,739 --> 00:03:35,890
+we've written it like this it's actually
+calling the default constructor right
+
+222
+00:03:35,890 --> 00:03:35,900
+calling the default constructor right
+ 
+
+223
+00:03:35,900 --> 00:03:38,140
+calling the default constructor right
+this code might look a little bit weird
+
+224
+00:03:38,140 --> 00:03:38,150
+this code might look a little bit weird
+ 
+
+225
+00:03:38,150 --> 00:03:39,699
+this code might look a little bit weird
+to you if you're coming from a language
+
+226
+00:03:39,699 --> 00:03:39,709
+to you if you're coming from a language
+ 
+
+227
+00:03:39,709 --> 00:03:41,800
+to you if you're coming from a language
+like C sharp or Java in fact you might
+
+228
+00:03:41,800 --> 00:03:41,810
+like C sharp or Java in fact you might
+ 
+
+229
+00:03:41,810 --> 00:03:43,420
+like C sharp or Java in fact you might
+think this this leads to something
+
+230
+00:03:43,420 --> 00:03:43,430
+think this this leads to something
+ 
+
+231
+00:03:43,430 --> 00:03:45,040
+think this this leads to something
+called a null pointer exception or a
+
+232
+00:03:45,040 --> 00:03:45,050
+called a null pointer exception or a
+ 
+
+233
+00:03:45,050 --> 00:03:46,960
+called a null pointer exception or a
+null reference exception because it
+
+234
+00:03:46,960 --> 00:03:46,970
+null reference exception because it
+ 
+
+235
+00:03:46,970 --> 00:03:48,880
+null reference exception because it
+appears like we just haven't initialized
+
+236
+00:03:48,880 --> 00:03:48,890
+appears like we just haven't initialized
+ 
+
+237
+00:03:48,890 --> 00:03:51,490
+appears like we just haven't initialized
+our object but we have right as long as
+
+238
+00:03:51,490 --> 00:03:51,500
+our object but we have right as long as
+ 
+
+239
+00:03:51,500 --> 00:03:53,080
+our object but we have right as long as
+we have this default constructor here
+
+240
+00:03:53,080 --> 00:03:53,090
+we have this default constructor here
+ 
+
+241
+00:03:53,090 --> 00:03:55,960
+we have this default constructor here
+this is totally valid code we can now
+
+242
+00:03:55,960 --> 00:03:55,970
+this is totally valid code we can now
+ 
+
+243
+00:03:55,970 --> 00:03:58,449
+this is totally valid code we can now
+call and see don't get named and what
+
+244
+00:03:58,449 --> 00:03:58,459
+call and see don't get named and what
+ 
+
+245
+00:03:58,459 --> 00:04:02,229
+call and see don't get named and what
+we'll actually get is well we'll get the
+
+246
+00:04:02,229 --> 00:04:02,239
+we'll actually get is well we'll get the
+ 
+
+247
+00:04:02,239 --> 00:04:02,710
+we'll actually get is well we'll get the
+name
+
+248
+00:04:02,710 --> 00:04:02,720
+name
+ 
+
+249
+00:04:02,720 --> 00:04:04,210
+name
+we'll get unknown in this case because
+
+250
+00:04:04,210 --> 00:04:04,220
+we'll get unknown in this case because
+ 
+
+251
+00:04:04,220 --> 00:04:05,620
+we'll get unknown in this case because
+that's what the default constructor did
+
+252
+00:04:05,620 --> 00:04:05,630
+that's what the default constructor did
+ 
+
+253
+00:04:05,630 --> 00:04:06,090
+that's what the default constructor did
+so
+
+254
+00:04:06,090 --> 00:04:06,100
+so
+ 
+
+255
+00:04:06,100 --> 00:04:07,680
+so
+print this out to the console and see
+
+256
+00:04:07,680 --> 00:04:07,690
+print this out to the console and see
+ 
+
+257
+00:04:07,690 --> 00:04:09,360
+print this out to the console and see
+what we get there we have it unknown
+
+258
+00:04:09,360 --> 00:04:09,370
+what we get there we have it unknown
+ 
+
+259
+00:04:09,370 --> 00:04:11,010
+what we get there we have it unknown
+because what we've done here is actually
+
+260
+00:04:11,010 --> 00:04:11,020
+because what we've done here is actually
+ 
+
+261
+00:04:11,020 --> 00:04:12,450
+because what we've done here is actually
+different to what this code would have
+
+262
+00:04:12,450 --> 00:04:12,460
+different to what this code would have
+ 
+
+263
+00:04:12,460 --> 00:04:14,790
+different to what this code would have
+done in Java or C sharp and kind of will
+
+264
+00:04:14,790 --> 00:04:14,800
+done in Java or C sharp and kind of will
+ 
+
+265
+00:04:14,800 --> 00:04:16,140
+done in Java or C sharp and kind of will
+kind of get there in a minute if we
+
+266
+00:04:16,140 --> 00:04:16,150
+kind of get there in a minute if we
+ 
+
+267
+00:04:16,150 --> 00:04:18,300
+kind of get there in a minute if we
+wanted to specify a parameter all we
+
+268
+00:04:18,300 --> 00:04:18,310
+wanted to specify a parameter all we
+ 
+
+269
+00:04:18,310 --> 00:04:20,460
+wanted to specify a parameter all we
+need to do is just open our parentheses
+
+270
+00:04:20,460 --> 00:04:20,470
+need to do is just open our parentheses
+ 
+
+271
+00:04:20,470 --> 00:04:22,650
+need to do is just open our parentheses
+and give a name such as Cherno you can
+
+272
+00:04:22,650 --> 00:04:22,660
+and give a name such as Cherno you can
+ 
+
+273
+00:04:22,660 --> 00:04:24,660
+and give a name such as Cherno you can
+also do it this way we can write equals
+
+274
+00:04:24,660 --> 00:04:24,670
+also do it this way we can write equals
+ 
+
+275
+00:04:24,670 --> 00:04:26,790
+also do it this way we can write equals
+and then the type that's our constructor
+
+276
+00:04:26,790 --> 00:04:26,800
+and then the type that's our constructor
+ 
+
+277
+00:04:26,800 --> 00:04:29,190
+and then the type that's our constructor
+done right and if we hit up five to run
+
+278
+00:04:29,190 --> 00:04:29,200
+done right and if we hit up five to run
+ 
+
+279
+00:04:29,200 --> 00:04:31,050
+done right and if we hit up five to run
+our program we get chatter this time and
+
+280
+00:04:31,050 --> 00:04:31,060
+our program we get chatter this time and
+ 
+
+281
+00:04:31,060 --> 00:04:33,150
+our program we get chatter this time and
+everything's great so what's the deal
+
+282
+00:04:33,150 --> 00:04:33,160
+everything's great so what's the deal
+ 
+
+283
+00:04:33,160 --> 00:04:35,010
+everything's great so what's the deal
+with this when do we want to create our
+
+284
+00:04:35,010 --> 00:04:35,020
+with this when do we want to create our
+ 
+
+285
+00:04:35,020 --> 00:04:37,200
+with this when do we want to create our
+objects like this the answer is pretty
+
+286
+00:04:37,200 --> 00:04:37,210
+objects like this the answer is pretty
+ 
+
+287
+00:04:37,210 --> 00:04:39,690
+objects like this the answer is pretty
+much all the time if you can create an
+
+288
+00:04:39,690 --> 00:04:39,700
+much all the time if you can create an
+ 
+
+289
+00:04:39,700 --> 00:04:42,000
+much all the time if you can create an
+object like this do create an object
+
+290
+00:04:42,000 --> 00:04:42,010
+object like this do create an object
+ 
+
+291
+00:04:42,010 --> 00:04:44,040
+object like this do create an object
+like this that's basically the rule
+
+292
+00:04:44,040 --> 00:04:44,050
+like this that's basically the rule
+ 
+
+293
+00:04:44,050 --> 00:04:47,190
+like this that's basically the rule
+because this is the fastest way in C++
+
+294
+00:04:47,190 --> 00:04:47,200
+because this is the fastest way in C++
+ 
+
+295
+00:04:47,200 --> 00:04:50,100
+because this is the fastest way in C++
+and the most managed way in C++ to
+
+296
+00:04:50,100 --> 00:04:50,110
+and the most managed way in C++ to
+ 
+
+297
+00:04:50,110 --> 00:04:52,350
+and the most managed way in C++ to
+actually instantiate objects now let's
+
+298
+00:04:52,350 --> 00:04:52,360
+actually instantiate objects now let's
+ 
+
+299
+00:04:52,360 --> 00:04:54,300
+actually instantiate objects now let's
+talk about why why there would be
+
+300
+00:04:54,300 --> 00:04:54,310
+talk about why why there would be
+ 
+
+301
+00:04:54,310 --> 00:04:56,340
+talk about why why there would be
+reasons where you can't do this one of
+
+302
+00:04:56,340 --> 00:04:56,350
+reasons where you can't do this one of
+ 
+
+303
+00:04:56,350 --> 00:04:58,380
+reasons where you can't do this one of
+the reasons is if you actually want this
+
+304
+00:04:58,380 --> 00:04:58,390
+the reasons is if you actually want this
+ 
+
+305
+00:04:58,390 --> 00:05:00,900
+the reasons is if you actually want this
+to live outside of the life of this
+
+306
+00:05:00,900 --> 00:05:00,910
+to live outside of the life of this
+ 
+
+307
+00:05:00,910 --> 00:05:03,360
+to live outside of the life of this
+function if we had another function over
+
+308
+00:05:03,360 --> 00:05:03,370
+function if we had another function over
+ 
+
+309
+00:05:03,370 --> 00:05:05,730
+function if we had another function over
+here and we created our entity over in
+
+310
+00:05:05,730 --> 00:05:05,740
+here and we created our entity over in
+ 
+
+311
+00:05:05,740 --> 00:05:07,890
+here and we created our entity over in
+that function then as soon as we reached
+
+312
+00:05:07,890 --> 00:05:07,900
+that function then as soon as we reached
+ 
+
+313
+00:05:07,900 --> 00:05:10,110
+that function then as soon as we reached
+the end as soon as we reach this this
+
+314
+00:05:10,110 --> 00:05:10,120
+the end as soon as we reach this this
+ 
+
+315
+00:05:10,120 --> 00:05:13,230
+the end as soon as we reach this this
+this end curly bracket this entity gets
+
+316
+00:05:13,230 --> 00:05:13,240
+this end curly bracket this entity gets
+ 
+
+317
+00:05:13,240 --> 00:05:15,180
+this end curly bracket this entity gets
+destroyed from memory because what
+
+318
+00:05:15,180 --> 00:05:15,190
+destroyed from memory because what
+ 
+
+319
+00:05:15,190 --> 00:05:17,910
+destroyed from memory because what
+happens is when we call function a stack
+
+320
+00:05:17,910 --> 00:05:17,920
+happens is when we call function a stack
+ 
+
+321
+00:05:17,920 --> 00:05:19,410
+happens is when we call function a stack
+frame gets credit for this function
+
+322
+00:05:19,410 --> 00:05:19,420
+frame gets credit for this function
+ 
+
+323
+00:05:19,420 --> 00:05:21,360
+frame gets credit for this function
+which contains all the local variables
+
+324
+00:05:21,360 --> 00:05:21,370
+which contains all the local variables
+ 
+
+325
+00:05:21,370 --> 00:05:23,250
+which contains all the local variables
+that we declare which includes primitive
+
+326
+00:05:23,250 --> 00:05:23,260
+that we declare which includes primitive
+ 
+
+327
+00:05:23,260 --> 00:05:26,040
+that we declare which includes primitive
+types but also our classes our objects
+
+328
+00:05:26,040 --> 00:05:26,050
+types but also our classes our objects
+ 
+
+329
+00:05:26,050 --> 00:05:28,380
+types but also our classes our objects
+and when this function ends that stack
+
+330
+00:05:28,380 --> 00:05:28,390
+and when this function ends that stack
+ 
+
+331
+00:05:28,390 --> 00:05:30,180
+and when this function ends that stack
+frame gets destroyed which means that
+
+332
+00:05:30,180 --> 00:05:30,190
+frame gets destroyed which means that
+ 
+
+333
+00:05:30,190 --> 00:05:31,710
+frame gets destroyed which means that
+all of the memory that we had on the
+
+334
+00:05:31,710 --> 00:05:31,720
+all of the memory that we had on the
+ 
+
+335
+00:05:31,720 --> 00:05:33,840
+all of the memory that we had on the
+stack all the variables we created are
+
+336
+00:05:33,840 --> 00:05:33,850
+stack all the variables we created are
+ 
+
+337
+00:05:33,850 --> 00:05:36,450
+stack all the variables we created are
+gone so let's write some code that would
+
+338
+00:05:36,450 --> 00:05:36,460
+gone so let's write some code that would
+ 
+
+339
+00:05:36,460 --> 00:05:39,030
+gone so let's write some code that would
+actually fail scopes don't necessarily
+
+340
+00:05:39,030 --> 00:05:39,040
+actually fail scopes don't necessarily
+ 
+
+341
+00:05:39,040 --> 00:05:40,770
+actually fail scopes don't necessarily
+need to be functions they could be if
+
+342
+00:05:40,770 --> 00:05:40,780
+need to be functions they could be if
+ 
+
+343
+00:05:40,780 --> 00:05:42,420
+need to be functions they could be if
+statements for loops or even empty
+
+344
+00:05:42,420 --> 00:05:42,430
+statements for loops or even empty
+ 
+
+345
+00:05:42,430 --> 00:05:43,980
+statements for loops or even empty
+scopes in which we just have curly
+
+346
+00:05:43,980 --> 00:05:43,990
+scopes in which we just have curly
+ 
+
+347
+00:05:43,990 --> 00:05:46,080
+scopes in which we just have curly
+brackets like this if I've read an
+
+348
+00:05:46,080 --> 00:05:46,090
+brackets like this if I've read an
+ 
+
+349
+00:05:46,090 --> 00:05:47,910
+brackets like this if I've read an
+interesting point uh now this is this is
+
+350
+00:05:47,910 --> 00:05:47,920
+interesting point uh now this is this is
+ 
+
+351
+00:05:47,920 --> 00:05:50,310
+interesting point uh now this is this is
+basically a variable which points to an
+
+352
+00:05:50,310 --> 00:05:50,320
+basically a variable which points to an
+ 
+
+353
+00:05:50,320 --> 00:05:52,530
+basically a variable which points to an
+entity over here I'm going to assign it
+
+354
+00:05:52,530 --> 00:05:52,540
+entity over here I'm going to assign it
+ 
+
+355
+00:05:52,540 --> 00:05:54,570
+entity over here I'm going to assign it
+to the memory address all Barents the
+
+356
+00:05:54,570 --> 00:05:54,580
+to the memory address all Barents the
+ 
+
+357
+00:05:54,580 --> 00:05:56,070
+to the memory address all Barents the
+object that we've credit on the stack
+
+358
+00:05:56,070 --> 00:05:56,080
+object that we've credit on the stack
+ 
+
+359
+00:05:56,080 --> 00:05:57,540
+object that we've credit on the stack
+right over here I'm also going to
+
+360
+00:05:57,540 --> 00:05:57,550
+right over here I'm also going to
+ 
+
+361
+00:05:57,550 --> 00:05:59,010
+right over here I'm also going to
+simplify this because I usually write
+
+362
+00:05:59,010 --> 00:05:59,020
+simplify this because I usually write
+ 
+
+363
+00:05:59,020 --> 00:06:00,480
+simplify this because I usually write
+code that looks like this I'm going to
+
+364
+00:06:00,480 --> 00:06:00,490
+code that looks like this I'm going to
+ 
+
+365
+00:06:00,490 --> 00:06:02,550
+code that looks like this I'm going to
+hit f9 on this line just to set a
+
+366
+00:06:02,550 --> 00:06:02,560
+hit f9 on this line just to set a
+ 
+
+367
+00:06:02,560 --> 00:06:04,500
+hit f9 on this line just to set a
+breakpoint and we'll we'll inspect this
+
+368
+00:06:04,500 --> 00:06:04,510
+breakpoint and we'll we'll inspect this
+ 
+
+369
+00:06:04,510 --> 00:06:06,330
+breakpoint and we'll we'll inspect this
+so right over here we create a new
+
+370
+00:06:06,330 --> 00:06:06,340
+so right over here we create a new
+ 
+
+371
+00:06:06,340 --> 00:06:07,999
+so right over here we create a new
+entity object grade it's got the name
+
+372
+00:06:07,999 --> 00:06:08,009
+entity object grade it's got the name
+ 
+
+373
+00:06:08,009 --> 00:06:10,129
+entity object grade it's got the name
+everything's great when I hit f10 to
+
+374
+00:06:10,129 --> 00:06:10,139
+everything's great when I hit f10 to
+ 
+
+375
+00:06:10,139 --> 00:06:11,749
+everything's great when I hit f10 to
+move down you can see that we've now set
+
+376
+00:06:11,749 --> 00:06:11,759
+move down you can see that we've now set
+ 
+
+377
+00:06:11,759 --> 00:06:14,659
+move down you can see that we've now set
+our 8.0 right so if we hover over a it
+
+378
+00:06:14,659 --> 00:06:14,669
+our 8.0 right so if we hover over a it
+ 
+
+379
+00:06:14,669 --> 00:06:16,760
+our 8.0 right so if we hover over a it
+is in fact pointing to this correct
+
+380
+00:06:16,760 --> 00:06:16,770
+is in fact pointing to this correct
+ 
+
+381
+00:06:16,770 --> 00:06:18,200
+is in fact pointing to this correct
+memory address in the name is cheddar
+
+382
+00:06:18,200 --> 00:06:18,210
+memory address in the name is cheddar
+ 
+
+383
+00:06:18,210 --> 00:06:19,070
+memory address in the name is cheddar
+that's great
+
+384
+00:06:19,070 --> 00:06:19,080
+that's great
+ 
+
+385
+00:06:19,080 --> 00:06:22,219
+that's great
+however if we hit f10 again and we
+
+386
+00:06:22,219 --> 00:06:22,229
+however if we hit f10 again and we
+ 
+
+387
+00:06:22,229 --> 00:06:23,570
+however if we hit f10 again and we
+advance to this line and then maybe the
+
+388
+00:06:23,570 --> 00:06:23,580
+advance to this line and then maybe the
+ 
+
+389
+00:06:23,580 --> 00:06:25,670
+advance to this line and then maybe the
+next line and we hover over look at that
+
+390
+00:06:25,670 --> 00:06:25,680
+next line and we hover over look at that
+ 
+
+391
+00:06:25,680 --> 00:06:27,079
+next line and we hover over look at that
+it's still pointing to that same address
+
+392
+00:06:27,079 --> 00:06:27,089
+it's still pointing to that same address
+ 
+
+393
+00:06:27,089 --> 00:06:29,570
+it's still pointing to that same address
+that the name is gone because that
+
+394
+00:06:29,570 --> 00:06:29,580
+that the name is gone because that
+ 
+
+395
+00:06:29,580 --> 00:06:32,179
+that the name is gone because that
+object was was freed it was destroyed
+
+396
+00:06:32,179 --> 00:06:32,189
+object was was freed it was destroyed
+ 
+
+397
+00:06:32,189 --> 00:06:34,670
+object was was freed it was destroyed
+gone this channel HD doesn't exist
+
+398
+00:06:34,670 --> 00:06:34,680
+gone this channel HD doesn't exist
+ 
+
+399
+00:06:34,680 --> 00:06:35,989
+gone this channel HD doesn't exist
+anymore we were aged into the stack
+
+400
+00:06:35,989 --> 00:06:35,999
+anymore we were aged into the stack
+ 
+
+401
+00:06:35,999 --> 00:06:37,850
+anymore we were aged into the stack
+frame it's gone that's the end of China
+
+402
+00:06:37,850 --> 00:06:37,860
+frame it's gone that's the end of China
+ 
+
+403
+00:06:37,860 --> 00:06:39,889
+frame it's gone that's the end of China
+that's the end of that tremor go on
+
+404
+00:06:39,889 --> 00:06:39,899
+that's the end of that tremor go on
+ 
+
+405
+00:06:39,899 --> 00:06:41,809
+that's the end of that tremor go on
+cellular that's good right so if we
+
+406
+00:06:41,809 --> 00:06:41,819
+cellular that's good right so if we
+ 
+
+407
+00:06:41,819 --> 00:06:43,790
+cellular that's good right so if we
+wanted this channel to somehow live
+
+408
+00:06:43,790 --> 00:06:43,800
+wanted this channel to somehow live
+ 
+
+409
+00:06:43,800 --> 00:06:45,829
+wanted this channel to somehow live
+outside the scope we couldn't allocate
+
+410
+00:06:45,829 --> 00:06:45,839
+outside the scope we couldn't allocate
+ 
+
+411
+00:06:45,839 --> 00:06:47,119
+outside the scope we couldn't allocate
+it on the stack we would have to resort
+
+412
+00:06:47,119 --> 00:06:47,129
+it on the stack we would have to resort
+ 
+
+413
+00:06:47,129 --> 00:06:49,129
+it on the stack we would have to resort
+to heap allocation the other reason why
+
+414
+00:06:49,129 --> 00:06:49,139
+to heap allocation the other reason why
+ 
+
+415
+00:06:49,139 --> 00:06:50,629
+to heap allocation the other reason why
+we might not want to we'll be able to
+
+416
+00:06:50,629 --> 00:06:50,639
+we might not want to we'll be able to
+ 
+
+417
+00:06:50,639 --> 00:06:52,820
+we might not want to we'll be able to
+allocate on the staff is because if the
+
+418
+00:06:52,820 --> 00:06:52,830
+allocate on the staff is because if the
+ 
+
+419
+00:06:52,830 --> 00:06:54,709
+allocate on the staff is because if the
+size of this entity is actually too
+
+420
+00:06:54,709 --> 00:06:54,719
+size of this entity is actually too
+ 
+
+421
+00:06:54,719 --> 00:06:56,959
+size of this entity is actually too
+large we maybe have too many entities we
+
+422
+00:06:56,959 --> 00:06:56,969
+large we maybe have too many entities we
+ 
+
+423
+00:06:56,969 --> 00:06:58,369
+large we maybe have too many entities we
+might not have enough room to actually
+
+424
+00:06:58,369 --> 00:06:58,379
+might not have enough room to actually
+ 
+
+425
+00:06:58,379 --> 00:06:59,899
+might not have enough room to actually
+allocate on the stack because the stack
+
+426
+00:06:59,899 --> 00:06:59,909
+allocate on the stack because the stack
+ 
+
+427
+00:06:59,909 --> 00:07:01,579
+allocate on the stack because the stack
+is usually quite small it's usually one
+
+428
+00:07:01,579 --> 00:07:01,589
+is usually quite small it's usually one
+ 
+
+429
+00:07:01,589 --> 00:07:03,320
+is usually quite small it's usually one
+megabyte two megabytes it kind of
+
+430
+00:07:03,320 --> 00:07:03,330
+megabyte two megabytes it kind of
+ 
+
+431
+00:07:03,330 --> 00:07:04,969
+megabyte two megabytes it kind of
+depends on your platform and your
+
+432
+00:07:04,969 --> 00:07:04,979
+depends on your platform and your
+ 
+
+433
+00:07:04,979 --> 00:07:07,549
+depends on your platform and your
+compiler but if you have this giant
+
+434
+00:07:07,549 --> 00:07:07,559
+compiler but if you have this giant
+ 
+
+435
+00:07:07,559 --> 00:07:09,980
+compiler but if you have this giant
+class or you want to have a thousand of
+
+436
+00:07:09,980 --> 00:07:09,990
+class or you want to have a thousand of
+ 
+
+437
+00:07:09,990 --> 00:07:11,629
+class or you want to have a thousand of
+these classes you might not have enough
+
+438
+00:07:11,629 --> 00:07:11,639
+these classes you might not have enough
+ 
+
+439
+00:07:11,639 --> 00:07:13,100
+these classes you might not have enough
+room on the stack so you might have to
+
+440
+00:07:13,100 --> 00:07:13,110
+room on the stack so you might have to
+ 
+
+441
+00:07:13,110 --> 00:07:14,779
+room on the stack so you might have to
+allocate upon the heap let's take a look
+
+442
+00:07:14,779 --> 00:07:14,789
+allocate upon the heap let's take a look
+ 
+
+443
+00:07:14,789 --> 00:07:16,189
+allocate upon the heap let's take a look
+at what heap allocation looked like
+
+444
+00:07:16,189 --> 00:07:16,199
+at what heap allocation looked like
+ 
+
+445
+00:07:16,199 --> 00:07:17,839
+at what heap allocation looked like
+so if we wanted to convert this current
+
+446
+00:07:17,839 --> 00:07:17,849
+so if we wanted to convert this current
+ 
+
+447
+00:07:17,849 --> 00:07:19,939
+so if we wanted to convert this current
+here to actually allocate on the heap
+
+448
+00:07:19,939 --> 00:07:19,949
+here to actually allocate on the heap
+ 
+
+449
+00:07:19,949 --> 00:07:22,309
+here to actually allocate on the heap
+what we would do is we would first of
+
+450
+00:07:22,309 --> 00:07:22,319
+what we would do is we would first of
+ 
+
+451
+00:07:22,319 --> 00:07:24,559
+what we would do is we would first of
+all need to change the type the type is
+
+452
+00:07:24,559 --> 00:07:24,569
+all need to change the type the type is
+ 
+
+453
+00:07:24,569 --> 00:07:26,540
+all need to change the type the type is
+now no longer entity the type is an
+
+454
+00:07:26,540 --> 00:07:26,550
+now no longer entity the type is an
+ 
+
+455
+00:07:26,550 --> 00:07:28,969
+now no longer entity the type is an
+entity pointer and what we assigned to
+
+456
+00:07:28,969 --> 00:07:28,979
+entity pointer and what we assigned to
+ 
+
+457
+00:07:28,979 --> 00:07:32,059
+entity pointer and what we assigned to
+entity here is new entity now the
+
+458
+00:07:32,059 --> 00:07:32,069
+entity here is new entity now the
+ 
+
+459
+00:07:32,069 --> 00:07:34,459
+entity here is new entity now the
+biggest difference here is actually not
+
+460
+00:07:34,459 --> 00:07:34,469
+biggest difference here is actually not
+ 
+
+461
+00:07:34,469 --> 00:07:36,079
+biggest difference here is actually not
+the pointer which a lot of people notice
+
+462
+00:07:36,079 --> 00:07:36,089
+the pointer which a lot of people notice
+ 
+
+463
+00:07:36,089 --> 00:07:39,019
+the pointer which a lot of people notice
+it's the new keyword the new keyword is
+
+464
+00:07:39,019 --> 00:07:39,029
+it's the new keyword the new keyword is
+ 
+
+465
+00:07:39,029 --> 00:07:41,689
+it's the new keyword the new keyword is
+K and that's gonna be video on that new
+
+466
+00:07:41,689 --> 00:07:41,699
+K and that's gonna be video on that new
+ 
+
+467
+00:07:41,699 --> 00:07:44,089
+K and that's gonna be video on that new
+keyword very soon maybe even tomorrow
+
+468
+00:07:44,089 --> 00:07:44,099
+keyword very soon maybe even tomorrow
+ 
+
+469
+00:07:44,099 --> 00:07:46,279
+keyword very soon maybe even tomorrow
+we'll see and when we call new and see
+
+470
+00:07:46,279 --> 00:07:46,289
+we'll see and when we call new and see
+ 
+
+471
+00:07:46,289 --> 00:07:48,499
+we'll see and when we call new and see
+what actually happens is we allocate
+
+472
+00:07:48,499 --> 00:07:48,509
+what actually happens is we allocate
+ 
+
+473
+00:07:48,509 --> 00:07:50,149
+what actually happens is we allocate
+memory on the heap we call the
+
+474
+00:07:50,149 --> 00:07:50,159
+memory on the heap we call the
+ 
+
+475
+00:07:50,159 --> 00:07:52,909
+memory on the heap we call the
+constructor and this new entity actually
+
+476
+00:07:52,909 --> 00:07:52,919
+constructor and this new entity actually
+ 
+
+477
+00:07:52,919 --> 00:07:55,459
+constructor and this new entity actually
+returns an entity pointer it returns the
+
+478
+00:07:55,459 --> 00:07:55,469
+returns an entity pointer it returns the
+ 
+
+479
+00:07:55,469 --> 00:07:58,549
+returns an entity pointer it returns the
+location on the heap where this entity
+
+480
+00:07:58,549 --> 00:07:58,559
+location on the heap where this entity
+ 
+
+481
+00:07:58,559 --> 00:08:00,469
+location on the heap where this entity
+has actually been allocated which is why
+
+482
+00:08:00,469 --> 00:08:00,479
+has actually been allocated which is why
+ 
+
+483
+00:08:00,479 --> 00:08:02,269
+has actually been allocated which is why
+we have to assign us to an HD pointer
+
+484
+00:08:02,269 --> 00:08:02,279
+we have to assign us to an HD pointer
+ 
+
+485
+00:08:02,279 --> 00:08:05,869
+we have to assign us to an HD pointer
+and this this is where you people who
+
+486
+00:08:05,869 --> 00:08:05,879
+and this this is where you people who
+ 
+
+487
+00:08:05,879 --> 00:08:08,449
+and this this is where you people who
+know Java and c-sharp this is this is
+
+488
+00:08:08,449 --> 00:08:08,459
+know Java and c-sharp this is this is
+ 
+
+489
+00:08:08,459 --> 00:08:10,279
+know Java and c-sharp this is this is
+what the code actually looks like in
+
+490
+00:08:10,279 --> 00:08:10,289
+what the code actually looks like in
+ 
+
+491
+00:08:10,289 --> 00:08:12,019
+what the code actually looks like in
+Java or C sharp you would be writing
+
+492
+00:08:12,019 --> 00:08:12,029
+Java or C sharp you would be writing
+ 
+
+493
+00:08:12,029 --> 00:08:15,110
+Java or C sharp you would be writing
+code like this so usually when you come
+
+494
+00:08:15,110 --> 00:08:15,120
+code like this so usually when you come
+ 
+
+495
+00:08:15,120 --> 00:08:17,929
+code like this so usually when you come
+to C++ your instinct would be probably
+
+496
+00:08:17,929 --> 00:08:17,939
+to C++ your instinct would be probably
+ 
+
+497
+00:08:17,939 --> 00:08:20,130
+to C++ your instinct would be probably
+just to change the time and suddenly
+
+498
+00:08:20,130 --> 00:08:20,140
+just to change the time and suddenly
+ 
+
+499
+00:08:20,140 --> 00:08:22,620
+just to change the time and suddenly
+smashes Java code in c-sharp code and
+
+500
+00:08:22,620 --> 00:08:22,630
+smashes Java code in c-sharp code and
+ 
+
+501
+00:08:22,630 --> 00:08:24,930
+smashes Java code in c-sharp code and
+you're right it does matter Java and
+
+502
+00:08:24,930 --> 00:08:24,940
+you're right it does matter Java and
+ 
+
+503
+00:08:24,940 --> 00:08:26,670
+you're right it does matter Java and
+c-sharp code we just have an extra
+
+504
+00:08:26,670 --> 00:08:26,680
+c-sharp code we just have an extra
+ 
+
+505
+00:08:26,680 --> 00:08:28,620
+c-sharp code we just have an extra
+option in C++ so we can allocate on the
+
+506
+00:08:28,620 --> 00:08:28,630
+option in C++ so we can allocate on the
+ 
+
+507
+00:08:28,630 --> 00:08:31,080
+option in C++ so we can allocate on the
+stack you can't actually do that in Java
+
+508
+00:08:31,080 --> 00:08:31,090
+stack you can't actually do that in Java
+ 
+
+509
+00:08:31,090 --> 00:08:34,320
+stack you can't actually do that in Java
+or C shop in c-sharp you can in c-sharp
+
+510
+00:08:34,320 --> 00:08:34,330
+or C shop in c-sharp you can in c-sharp
+ 
+
+511
+00:08:34,330 --> 00:08:35,790
+or C shop in c-sharp you can in c-sharp
+there's something called a struct and
+
+512
+00:08:35,790 --> 00:08:35,800
+there's something called a struct and
+ 
+
+513
+00:08:35,800 --> 00:08:37,710
+there's something called a struct and
+that's a value-based type and so that
+
+514
+00:08:37,710 --> 00:08:37,720
+that's a value-based type and so that
+ 
+
+515
+00:08:37,720 --> 00:08:39,390
+that's a value-based type and so that
+actually is kind of allocated on the
+
+516
+00:08:39,390 --> 00:08:39,400
+actually is kind of allocated on the
+ 
+
+517
+00:08:39,400 --> 00:08:40,950
+actually is kind of allocated on the
+stack even though you use the new
+
+518
+00:08:40,950 --> 00:08:40,960
+stack even though you use the new
+ 
+
+519
+00:08:40,960 --> 00:08:43,500
+stack even though you use the new
+keyword but in Java everything's on the
+
+520
+00:08:43,500 --> 00:08:43,510
+keyword but in Java everything's on the
+ 
+
+521
+00:08:43,510 --> 00:08:46,110
+keyword but in Java everything's on the
+heap and it's a shop all classes on the
+
+522
+00:08:46,110 --> 00:08:46,120
+heap and it's a shop all classes on the
+ 
+
+523
+00:08:46,120 --> 00:08:48,090
+heap and it's a shop all classes on the
+hate the struct keyword is a bit
+
+524
+00:08:48,090 --> 00:08:48,100
+hate the struct keyword is a bit
+ 
+
+525
+00:08:48,100 --> 00:08:49,830
+hate the struct keyword is a bit
+different than it isn't it's a plus plus
+
+526
+00:08:49,830 --> 00:08:49,840
+different than it isn't it's a plus plus
+ 
+
+527
+00:08:49,840 --> 00:08:51,540
+different than it isn't it's a plus plus
+and one of the biggest problems that I
+
+528
+00:08:51,540 --> 00:08:51,550
+and one of the biggest problems that I
+ 
+
+529
+00:08:51,550 --> 00:08:54,270
+and one of the biggest problems that I
+see is that everyone who comes over from
+
+530
+00:08:54,270 --> 00:08:54,280
+see is that everyone who comes over from
+ 
+
+531
+00:08:54,280 --> 00:08:56,060
+see is that everyone who comes over from
+a managed language like Java or C sharp
+
+532
+00:08:56,060 --> 00:08:56,070
+a managed language like Java or C sharp
+ 
+
+533
+00:08:56,070 --> 00:08:58,650
+a managed language like Java or C sharp
+just uses the new keyword everywhere in
+
+534
+00:08:58,650 --> 00:08:58,660
+just uses the new keyword everywhere in
+ 
+
+535
+00:08:58,660 --> 00:09:01,680
+just uses the new keyword everywhere in
+C++ and you shouldn't be doing that for
+
+536
+00:09:01,680 --> 00:09:01,690
+C++ and you shouldn't be doing that for
+ 
+
+537
+00:09:01,690 --> 00:09:03,180
+C++ and you shouldn't be doing that for
+two reasons and those reasons we're
+
+538
+00:09:03,180 --> 00:09:03,190
+two reasons and those reasons we're
+ 
+
+539
+00:09:03,190 --> 00:09:04,230
+two reasons and those reasons we're
+going to talk about in that new video
+
+540
+00:09:04,230 --> 00:09:04,240
+going to talk about in that new video
+ 
+
+541
+00:09:04,240 --> 00:09:05,610
+going to talk about in that new video
+because this video is going to be huge
+
+542
+00:09:05,610 --> 00:09:05,620
+because this video is going to be huge
+ 
+
+543
+00:09:05,620 --> 00:09:07,110
+because this video is going to be huge
+if I talk about absolutely everything
+
+544
+00:09:07,110 --> 00:09:07,120
+if I talk about absolutely everything
+ 
+
+545
+00:09:07,120 --> 00:09:09,650
+if I talk about absolutely everything
+but to cut it short performance
+
+546
+00:09:09,650 --> 00:09:09,660
+but to cut it short performance
+ 
+
+547
+00:09:09,660 --> 00:09:11,880
+but to cut it short performance
+allocated on the heap takes longer than
+
+548
+00:09:11,880 --> 00:09:11,890
+allocated on the heap takes longer than
+ 
+
+549
+00:09:11,890 --> 00:09:13,620
+allocated on the heap takes longer than
+allocating on the stack and also wedding
+
+550
+00:09:13,620 --> 00:09:13,630
+allocating on the stack and also wedding
+ 
+
+551
+00:09:13,630 --> 00:09:14,820
+allocating on the stack and also wedding
+allocate on the heap you have to
+
+552
+00:09:14,820 --> 00:09:14,830
+allocate on the heap you have to
+ 
+
+553
+00:09:14,830 --> 00:09:17,220
+allocate on the heap you have to
+manually free that memory that you've
+
+554
+00:09:17,220 --> 00:09:17,230
+manually free that memory that you've
+ 
+
+555
+00:09:17,230 --> 00:09:19,320
+manually free that memory that you've
+allocated so once we do something like
+
+556
+00:09:19,320 --> 00:09:19,330
+allocated so once we do something like
+ 
+
+557
+00:09:19,330 --> 00:09:21,750
+allocated so once we do something like
+this in our safe us+ code we are
+
+558
+00:09:21,750 --> 00:09:21,760
+this in our safe us+ code we are
+ 
+
+559
+00:09:21,760 --> 00:09:24,090
+this in our safe us+ code we are
+actually responsible for freeing that
+
+560
+00:09:24,090 --> 00:09:24,100
+actually responsible for freeing that
+ 
+
+561
+00:09:24,100 --> 00:09:25,770
+actually responsible for freeing that
+memory say plus boss is not going to
+
+562
+00:09:25,770 --> 00:09:25,780
+memory say plus boss is not going to
+ 
+
+563
+00:09:25,780 --> 00:09:27,900
+memory say plus boss is not going to
+suddenly decide okay you're done with
+
+564
+00:09:27,900 --> 00:09:27,910
+suddenly decide okay you're done with
+ 
+
+565
+00:09:27,910 --> 00:09:29,310
+suddenly decide okay you're done with
+this entity object it doesn't know that
+
+566
+00:09:29,310 --> 00:09:29,320
+this entity object it doesn't know that
+ 
+
+567
+00:09:29,320 --> 00:09:31,290
+this entity object it doesn't know that
+we're done with it we have to tell it
+
+568
+00:09:31,290 --> 00:09:31,300
+we're done with it we have to tell it
+ 
+
+569
+00:09:31,300 --> 00:09:34,350
+we're done with it we have to tell it
+this memory is free and the way that we
+
+570
+00:09:34,350 --> 00:09:34,360
+this memory is free and the way that we
+ 
+
+571
+00:09:34,360 --> 00:09:38,070
+this memory is free and the way that we
+do that is we call delete and then the
+
+572
+00:09:38,070 --> 00:09:38,080
+do that is we call delete and then the
+ 
+
+573
+00:09:38,080 --> 00:09:40,350
+do that is we call delete and then the
+variable name so delete entity if you
+
+574
+00:09:40,350 --> 00:09:40,360
+variable name so delete entity if you
+ 
+
+575
+00:09:40,360 --> 00:09:42,660
+variable name so delete entity if you
+use the new keyword you use the delete
+
+576
+00:09:42,660 --> 00:09:42,670
+use the new keyword you use the delete
+ 
+
+577
+00:09:42,670 --> 00:09:45,060
+use the new keyword you use the delete
+keyword to clean up after yourself that
+
+578
+00:09:45,060 --> 00:09:45,070
+keyword to clean up after yourself that
+ 
+
+579
+00:09:45,070 --> 00:09:47,490
+keyword to clean up after yourself that
+is how simple sauce works so in our
+
+580
+00:09:47,490 --> 00:09:47,500
+is how simple sauce works so in our
+ 
+
+581
+00:09:47,500 --> 00:09:49,860
+is how simple sauce works so in our
+example since we do have to actually
+
+582
+00:09:49,860 --> 00:09:49,870
+example since we do have to actually
+ 
+
+583
+00:09:49,870 --> 00:09:51,810
+example since we do have to actually
+call delete to free this object if we
+
+584
+00:09:51,810 --> 00:09:51,820
+call delete to free this object if we
+ 
+
+585
+00:09:51,820 --> 00:09:53,970
+call delete to free this object if we
+were to remove delete down over here
+
+586
+00:09:53,970 --> 00:09:53,980
+were to remove delete down over here
+ 
+
+587
+00:09:53,980 --> 00:09:56,310
+were to remove delete down over here
+maybe even after this send get we're
+
+588
+00:09:56,310 --> 00:09:56,320
+maybe even after this send get we're
+ 
+
+589
+00:09:56,320 --> 00:09:58,350
+maybe even after this send get we're
+assigning this entity on to e so we'll
+
+590
+00:09:58,350 --> 00:09:58,360
+assigning this entity on to e so we'll
+ 
+
+591
+00:09:58,360 --> 00:09:59,940
+assigning this entity on to e so we'll
+get rid of this apps and we don't need
+
+592
+00:09:59,940 --> 00:09:59,950
+get rid of this apps and we don't need
+ 
+
+593
+00:09:59,950 --> 00:10:02,520
+get rid of this apps and we don't need
+it since entity is already a pointer and
+
+594
+00:10:02,520 --> 00:10:02,530
+it since entity is already a pointer and
+ 
+
+595
+00:10:02,530 --> 00:10:04,920
+it since entity is already a pointer and
+since NC is a pointer we actually have
+
+596
+00:10:04,920 --> 00:10:04,930
+since NC is a pointer we actually have
+ 
+
+597
+00:10:04,930 --> 00:10:07,650
+since NC is a pointer we actually have
+to either dereference this first and
+
+598
+00:10:07,650 --> 00:10:07,660
+to either dereference this first and
+ 
+
+599
+00:10:07,660 --> 00:10:09,810
+to either dereference this first and
+then call get name or we can use the
+
+600
+00:10:09,810 --> 00:10:09,820
+then call get name or we can use the
+ 
+
+601
+00:10:09,820 --> 00:10:11,550
+then call get name or we can use the
+error operator which does that for us
+
+602
+00:10:11,550 --> 00:10:11,560
+error operator which does that for us
+ 
+
+603
+00:10:11,560 --> 00:10:13,430
+error operator which does that for us
+gonna have a video on the arrow operator
+
+604
+00:10:13,430 --> 00:10:13,440
+gonna have a video on the arrow operator
+ 
+
+605
+00:10:13,440 --> 00:10:15,750
+gonna have a video on the arrow operator
+certain I'm getting tired of doing this
+
+606
+00:10:15,750 --> 00:10:15,760
+certain I'm getting tired of doing this
+ 
+
+607
+00:10:15,760 --> 00:10:19,170
+certain I'm getting tired of doing this
+but yet more videos and if we go down
+
+608
+00:10:19,170 --> 00:10:19,180
+but yet more videos and if we go down
+ 
+
+609
+00:10:19,180 --> 00:10:20,520
+but yet more videos and if we go down
+over here we'll just change the late
+
+610
+00:10:20,520 --> 00:10:20,530
+over here we'll just change the late
+ 
+
+611
+00:10:20,530 --> 00:10:22,260
+over here we'll just change the late
+entity to be delayed a so this is what
+
+612
+00:10:22,260 --> 00:10:22,270
+entity to be delayed a so this is what
+ 
+
+613
+00:10:22,270 --> 00:10:24,030
+entity to be delayed a so this is what
+our code looks like now we create an
+
+614
+00:10:24,030 --> 00:10:24,040
+our code looks like now we create an
+ 
+
+615
+00:10:24,040 --> 00:10:26,550
+our code looks like now we create an
+entity on the heap we assign and C to
+
+616
+00:10:26,550 --> 00:10:26,560
+entity on the heap we assign and C to
+ 
+
+617
+00:10:26,560 --> 00:10:28,230
+entity on the heap we assign and C to
+this we're not copying any data here
+
+618
+00:10:28,230 --> 00:10:28,240
+this we're not copying any data here
+ 
+
+619
+00:10:28,240 --> 00:10:28,790
+this we're not copying any data here
+really what
+
+620
+00:10:28,790 --> 00:10:28,800
+really what
+ 
+
+621
+00:10:28,800 --> 00:10:30,470
+really what
+doing is whether storing the memory
+
+622
+00:10:30,470 --> 00:10:30,480
+doing is whether storing the memory
+ 
+
+623
+00:10:30,480 --> 00:10:31,880
+doing is whether storing the memory
+dress the fantasy while copying the
+
+624
+00:10:31,880 --> 00:10:31,890
+dress the fantasy while copying the
+ 
+
+625
+00:10:31,890 --> 00:10:34,190
+dress the fantasy while copying the
+actual HD object just the memory address
+
+626
+00:10:34,190 --> 00:10:34,200
+actual HD object just the memory address
+ 
+
+627
+00:10:34,200 --> 00:10:36,829
+actual HD object just the memory address
+and if I hit f5 will be bugged this will
+
+628
+00:10:36,829 --> 00:10:36,839
+and if I hit f5 will be bugged this will
+ 
+
+629
+00:10:36,839 --> 00:10:38,630
+and if I hit f5 will be bugged this will
+hit f10 you can see that it gets set
+
+630
+00:10:38,630 --> 00:10:38,640
+hit f10 you can see that it gets set
+ 
+
+631
+00:10:38,640 --> 00:10:40,670
+hit f10 you can see that it gets set
+correctly we have our name sugar I'll
+
+632
+00:10:40,670 --> 00:10:40,680
+correctly we have our name sugar I'll
+ 
+
+633
+00:10:40,680 --> 00:10:42,350
+correctly we have our name sugar I'll
+get f10 again I'll go to I'll go to the
+
+634
+00:10:42,350 --> 00:10:42,360
+get f10 again I'll go to I'll go to the
+ 
+
+635
+00:10:42,360 --> 00:10:44,660
+get f10 again I'll go to I'll go to the
+scene get I'll hop on my mouse over in
+
+636
+00:10:44,660 --> 00:10:44,670
+scene get I'll hop on my mouse over in
+ 
+
+637
+00:10:44,670 --> 00:10:45,740
+scene get I'll hop on my mouse over in
+you can see it still has the name
+
+638
+00:10:45,740 --> 00:10:45,750
+you can see it still has the name
+ 
+
+639
+00:10:45,750 --> 00:10:48,290
+you can see it still has the name
+Chennai right because it only gets
+
+640
+00:10:48,290 --> 00:10:48,300
+Chennai right because it only gets
+ 
+
+641
+00:10:48,300 --> 00:10:50,780
+Chennai right because it only gets
+deleted and it gets free here and those
+
+642
+00:10:50,780 --> 00:10:50,790
+deleted and it gets free here and those
+ 
+
+643
+00:10:50,790 --> 00:10:52,280
+deleted and it gets free here and those
+are the two ways that we can create
+
+644
+00:10:52,280 --> 00:10:52,290
+are the two ways that we can create
+ 
+
+645
+00:10:52,290 --> 00:10:54,470
+are the two ways that we can create
+objects in C++ and choosing between the
+
+646
+00:10:54,470 --> 00:10:54,480
+objects in C++ and choosing between the
+ 
+
+647
+00:10:54,480 --> 00:10:57,170
+objects in C++ and choosing between the
+two is a matter of is my objects really
+
+648
+00:10:57,170 --> 00:10:57,180
+two is a matter of is my objects really
+ 
+
+649
+00:10:57,180 --> 00:10:59,030
+two is a matter of is my objects really
+really really big or do I want to
+
+650
+00:10:59,030 --> 00:10:59,040
+really really big or do I want to
+ 
+
+651
+00:10:59,040 --> 00:11:00,769
+really really big or do I want to
+explicitly control the lifetime of my
+
+652
+00:11:00,769 --> 00:11:00,779
+explicitly control the lifetime of my
+ 
+
+653
+00:11:00,779 --> 00:11:03,110
+explicitly control the lifetime of my
+object if you answered no to both of
+
+654
+00:11:03,110 --> 00:11:03,120
+object if you answered no to both of
+ 
+
+655
+00:11:03,120 --> 00:11:04,759
+object if you answered no to both of
+those questions I locate on the stack
+
+656
+00:11:04,759 --> 00:11:04,769
+those questions I locate on the stack
+ 
+
+657
+00:11:04,769 --> 00:11:06,680
+those questions I locate on the stack
+right create or get on the stack it's
+
+658
+00:11:06,680 --> 00:11:06,690
+right create or get on the stack it's
+ 
+
+659
+00:11:06,690 --> 00:11:10,160
+right create or get on the stack it's
+way easier it's automated and it's
+
+660
+00:11:10,160 --> 00:11:10,170
+way easier it's automated and it's
+ 
+
+661
+00:11:10,170 --> 00:11:12,170
+way easier it's automated and it's
+faster whereas allocated on the heap
+
+662
+00:11:12,170 --> 00:11:12,180
+faster whereas allocated on the heap
+ 
+
+663
+00:11:12,180 --> 00:11:14,060
+faster whereas allocated on the heap
+requires you to manually called delete
+
+664
+00:11:14,060 --> 00:11:14,070
+requires you to manually called delete
+ 
+
+665
+00:11:14,070 --> 00:11:16,100
+requires you to manually called delete
+which can lead to memory leaks if you
+
+666
+00:11:16,100 --> 00:11:16,110
+which can lead to memory leaks if you
+ 
+
+667
+00:11:16,110 --> 00:11:18,110
+which can lead to memory leaks if you
+forget to call delete I mean it's a bit
+
+668
+00:11:18,110 --> 00:11:18,120
+forget to call delete I mean it's a bit
+ 
+
+669
+00:11:18,120 --> 00:11:19,610
+forget to call delete I mean it's a bit
+harder than just like forgetting a lot
+
+670
+00:11:19,610 --> 00:11:19,620
+harder than just like forgetting a lot
+ 
+
+671
+00:11:19,620 --> 00:11:21,019
+harder than just like forgetting a lot
+of people think well how often you
+
+672
+00:11:21,019 --> 00:11:21,029
+of people think well how often you
+ 
+
+673
+00:11:21,029 --> 00:11:22,610
+of people think well how often you
+forget to call the waiter people knew
+
+674
+00:11:22,610 --> 00:11:22,620
+forget to call the waiter people knew
+ 
+
+675
+00:11:22,620 --> 00:11:24,769
+forget to call the waiter people knew
+you can you can miss it sometimes I
+
+676
+00:11:24,769 --> 00:11:24,779
+you can you can miss it sometimes I
+ 
+
+677
+00:11:24,779 --> 00:11:26,600
+you can you can miss it sometimes I
+guess it's good it gets complicated as
+
+678
+00:11:26,600 --> 00:11:26,610
+guess it's good it gets complicated as
+ 
+
+679
+00:11:26,610 --> 00:11:28,610
+guess it's good it gets complicated as
+well as well as will discover you can
+
+680
+00:11:28,610 --> 00:11:28,620
+well as well as will discover you can
+ 
+
+681
+00:11:28,620 --> 00:11:29,780
+well as well as will discover you can
+also use something called a smart
+
+682
+00:11:29,780 --> 00:11:29,790
+also use something called a smart
+ 
+
+683
+00:11:29,790 --> 00:11:31,940
+also use something called a smart
+pointer we're kind of gonna get to those
+
+684
+00:11:31,940 --> 00:11:31,950
+pointer we're kind of gonna get to those
+ 
+
+685
+00:11:31,950 --> 00:11:34,010
+pointer we're kind of gonna get to those
+eventually and Lincoln that I don't even
+
+686
+00:11:34,010 --> 00:11:34,020
+eventually and Lincoln that I don't even
+ 
+
+687
+00:11:34,020 --> 00:11:35,540
+eventually and Lincoln that I don't even
+know I'm getting really tired of doing
+
+688
+00:11:35,540 --> 00:11:35,550
+know I'm getting really tired of doing
+ 
+
+689
+00:11:35,550 --> 00:11:36,829
+know I'm getting really tired of doing
+this I'm not gonna keep track of this by
+
+690
+00:11:36,829 --> 00:11:36,839
+this I'm not gonna keep track of this by
+ 
+
+691
+00:11:36,839 --> 00:11:38,420
+this I'm not gonna keep track of this by
+the way I want to come back it's not
+
+692
+00:11:38,420 --> 00:11:38,430
+the way I want to come back it's not
+ 
+
+693
+00:11:38,430 --> 00:11:39,470
+the way I want to come back it's not
+like I'm gonna come back to this video
+
+694
+00:11:39,470 --> 00:11:39,480
+like I'm gonna come back to this video
+ 
+
+695
+00:11:39,480 --> 00:11:40,790
+like I'm gonna come back to this video
+in a few months and be like oh yeah
+
+696
+00:11:40,790 --> 00:11:40,800
+in a few months and be like oh yeah
+ 
+
+697
+00:11:40,800 --> 00:11:42,500
+in a few months and be like oh yeah
+better fill in all those cards so just
+
+698
+00:11:42,500 --> 00:11:42,510
+better fill in all those cards so just
+ 
+
+699
+00:11:42,510 --> 00:11:43,819
+better fill in all those cards so just
+search my channel for those videos if
+
+700
+00:11:43,819 --> 00:11:43,829
+search my channel for those videos if
+ 
+
+701
+00:11:43,829 --> 00:11:44,930
+search my channel for those videos if
+they're there that they're for the north
+
+702
+00:11:44,930 --> 00:11:44,940
+they're there that they're for the north
+ 
+
+703
+00:11:44,940 --> 00:11:46,790
+they're there that they're for the north
+panel but with smart pointers we can
+
+704
+00:11:46,790 --> 00:11:46,800
+panel but with smart pointers we can
+ 
+
+705
+00:11:46,800 --> 00:11:48,620
+panel but with smart pointers we can
+actually kind of still allocate on the
+
+706
+00:11:48,620 --> 00:11:48,630
+actually kind of still allocate on the
+ 
+
+707
+00:11:48,630 --> 00:11:51,110
+actually kind of still allocate on the
+heap and still get that kind of size
+
+708
+00:11:51,110 --> 00:11:51,120
+heap and still get that kind of size
+ 
+
+709
+00:11:51,120 --> 00:11:54,050
+heap and still get that kind of size
+advantage but also have our objects be
+
+710
+00:11:54,050 --> 00:11:54,060
+advantage but also have our objects be
+ 
+
+711
+00:11:54,060 --> 00:11:56,090
+advantage but also have our objects be
+automatically deleted when either the
+
+712
+00:11:56,090 --> 00:11:56,100
+automatically deleted when either the
+ 
+
+713
+00:11:56,100 --> 00:11:59,000
+automatically deleted when either the
+pointer goes out of scope or maybe like
+
+714
+00:11:59,000 --> 00:11:59,010
+pointer goes out of scope or maybe like
+ 
+
+715
+00:11:59,010 --> 00:12:00,860
+pointer goes out of scope or maybe like
+in the case of shared pointers when
+
+716
+00:12:00,860 --> 00:12:00,870
+in the case of shared pointers when
+ 
+
+717
+00:12:00,870 --> 00:12:02,690
+in the case of shared pointers when
+there are no more references will talk
+
+718
+00:12:02,690 --> 00:12:02,700
+there are no more references will talk
+ 
+
+719
+00:12:02,700 --> 00:12:05,420
+there are no more references will talk
+about oldest memory stuff in the future
+
+720
+00:12:05,420 --> 00:12:05,430
+about oldest memory stuff in the future
+ 
+
+721
+00:12:05,430 --> 00:12:06,590
+about oldest memory stuff in the future
+I don't want to get into it right now
+
+722
+00:12:06,590 --> 00:12:06,600
+I don't want to get into it right now
+ 
+
+723
+00:12:06,600 --> 00:12:08,510
+I don't want to get into it right now
+but if we're just talking about kind of
+
+724
+00:12:08,510 --> 00:12:08,520
+but if we're just talking about kind of
+ 
+
+725
+00:12:08,520 --> 00:12:10,670
+but if we're just talking about kind of
+primitive C++ two ways to make objects
+
+726
+00:12:10,670 --> 00:12:10,680
+primitive C++ two ways to make objects
+ 
+
+727
+00:12:10,680 --> 00:12:11,960
+primitive C++ two ways to make objects
+stack and heap
+
+728
+00:12:11,960 --> 00:12:11,970
+stack and heap
+ 
+
+729
+00:12:11,970 --> 00:12:14,150
+stack and heap
+those are my recent spread on the stack
+
+730
+00:12:14,150 --> 00:12:14,160
+those are my recent spread on the stack
+ 
+
+731
+00:12:14,160 --> 00:12:15,889
+those are my recent spread on the stack
+unless you absolutely can't do you guys
+
+732
+00:12:15,889 --> 00:12:15,899
+unless you absolutely can't do you guys
+ 
+
+733
+00:12:15,899 --> 00:12:17,000
+unless you absolutely can't do you guys
+enjoy this video then you can hit that
+
+734
+00:12:17,000 --> 00:12:17,010
+enjoy this video then you can hit that
+ 
+
+735
+00:12:17,010 --> 00:12:18,530
+enjoy this video then you can hit that
+like button and you can support this
+
+736
+00:12:18,530 --> 00:12:18,540
+like button and you can support this
+ 
+
+737
+00:12:18,540 --> 00:12:20,780
+like button and you can support this
+series on patreon.com for such the chair
+
+738
+00:12:20,780 --> 00:12:20,790
+series on patreon.com for such the chair
+ 
+
+739
+00:12:20,790 --> 00:12:22,760
+series on patreon.com for such the chair
+oh you'll get episodes early basically
+
+740
+00:12:22,760 --> 00:12:22,770
+oh you'll get episodes early basically
+ 
+
+741
+00:12:22,770 --> 00:12:24,590
+oh you'll get episodes early basically
+as soon as I'm done editing the episodes
+
+742
+00:12:24,590 --> 00:12:24,600
+as soon as I'm done editing the episodes
+ 
+
+743
+00:12:24,600 --> 00:12:26,150
+as soon as I'm done editing the episodes
+get released to all the patrons which is
+
+744
+00:12:26,150 --> 00:12:26,160
+get released to all the patrons which is
+ 
+
+745
+00:12:26,160 --> 00:12:28,639
+get released to all the patrons which is
+pretty cool you can also discuss and
+
+746
+00:12:28,639 --> 00:12:28,649
+pretty cool you can also discuss and
+ 
+
+747
+00:12:28,649 --> 00:12:30,410
+pretty cool you can also discuss and
+talk about what goes into these videos
+
+748
+00:12:30,410 --> 00:12:30,420
+talk about what goes into these videos
+ 
+
+749
+00:12:30,420 --> 00:12:32,030
+talk about what goes into these videos
+and make suggestions for new videos and
+
+750
+00:12:32,030 --> 00:12:32,040
+and make suggestions for new videos and
+ 
+
+751
+00:12:32,040 --> 00:12:34,519
+and make suggestions for new videos and
+all that fun stuff and you also help
+
+752
+00:12:34,519 --> 00:12:34,529
+all that fun stuff and you also help
+ 
+
+753
+00:12:34,529 --> 00:12:36,020
+all that fun stuff and you also help
+support this series and make sure that I
+
+754
+00:12:36,020 --> 00:12:36,030
+support this series and make sure that I
+ 
+
+755
+00:12:36,030 --> 00:12:37,880
+support this series and make sure that I
+keep making videos next time I'm pretty
+
+756
+00:12:37,880 --> 00:12:37,890
+keep making videos next time I'm pretty
+ 
+
+757
+00:12:37,890 --> 00:12:38,960
+keep making videos next time I'm pretty
+sure we're gonna talk about the new
+
+758
+00:12:38,960 --> 00:12:38,970
+sure we're gonna talk about the new
+ 
+
+759
+00:12:38,970 --> 00:12:40,670
+sure we're gonna talk about the new
+keyword so that should be exciting
+
+760
+00:12:40,670 --> 00:12:40,680
+keyword so that should be exciting
+ 
+
+761
+00:12:40,680 --> 00:12:42,500
+keyword so that should be exciting
+definitely watch that video it'll be in
+
+762
+00:12:42,500 --> 00:12:42,510
+definitely watch that video it'll be in
+ 
+
+763
+00:12:42,510 --> 00:12:53,390
+definitely watch that video it'll be in
+the haha I'm done goodbye
+
+764
+00:12:53,390 --> 00:12:53,400
+
+ 
+
+765
+00:12:53,400 --> 00:12:55,460
+
+you
+

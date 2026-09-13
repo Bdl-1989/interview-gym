@@ -1,0 +1,5705 @@
+1
+00:00:00,320 --> 00:00:02,430
+
+hey what's up guys my name is a Cho and
+
+2
+00:00:02,430 --> 00:00:02,440
+hey what's up guys my name is a Cho and
+ 
+
+3
+00:00:02,440 --> 00:00:04,749
+hey what's up guys my name is a Cho and
+welcome to another episode of my C++
+
+4
+00:00:04,749 --> 00:00:04,759
+welcome to another episode of my C++
+ 
+
+5
+00:00:04,759 --> 00:00:06,749
+welcome to another episode of my C++
+series So today we're going to learn all
+
+6
+00:00:06,749 --> 00:00:06,759
+series So today we're going to learn all
+ 
+
+7
+00:00:06,759 --> 00:00:08,830
+series So today we're going to learn all
+about how C++ Works we're going to kind
+
+8
+00:00:08,830 --> 00:00:08,840
+about how C++ Works we're going to kind
+ 
+
+9
+00:00:08,840 --> 00:00:11,190
+about how C++ Works we're going to kind
+of try and keep it simple for now but
+
+10
+00:00:11,190 --> 00:00:11,200
+of try and keep it simple for now but
+ 
+
+11
+00:00:11,200 --> 00:00:12,910
+of try and keep it simple for now but
+we're going to learn about how we go
+
+12
+00:00:12,910 --> 00:00:12,920
+we're going to learn about how we go
+ 
+
+13
+00:00:12,920 --> 00:00:15,390
+we're going to learn about how we go
+from the source file the actual text
+
+14
+00:00:15,390 --> 00:00:15,400
+from the source file the actual text
+ 
+
+15
+00:00:15,400 --> 00:00:18,189
+from the source file the actual text
+file to an actual executable binary so
+
+16
+00:00:18,189 --> 00:00:18,199
+file to an actual executable binary so
+ 
+
+17
+00:00:18,199 --> 00:00:19,910
+file to an actual executable binary so
+program that we can run the basic
+
+18
+00:00:19,910 --> 00:00:19,920
+program that we can run the basic
+ 
+
+19
+00:00:19,920 --> 00:00:22,590
+program that we can run the basic
+workflow of writing a C++ program is you
+
+20
+00:00:22,590 --> 00:00:22,600
+workflow of writing a C++ program is you
+ 
+
+21
+00:00:22,600 --> 00:00:25,070
+workflow of writing a C++ program is you
+have a series of source files which you
+
+22
+00:00:25,070 --> 00:00:25,080
+have a series of source files which you
+ 
+
+23
+00:00:25,080 --> 00:00:27,830
+have a series of source files which you
+write actual text in and then you pass
+
+24
+00:00:27,830 --> 00:00:27,840
+write actual text in and then you pass
+ 
+
+25
+00:00:27,840 --> 00:00:29,589
+write actual text in and then you pass
+it through a compiler which compiles it
+
+26
+00:00:29,589 --> 00:00:29,599
+it through a compiler which compiles it
+ 
+
+27
+00:00:29,599 --> 00:00:32,030
+it through a compiler which compiles it
+into some kind of binary now that binary
+
+28
+00:00:32,030 --> 00:00:32,040
+into some kind of binary now that binary
+ 
+
+29
+00:00:32,040 --> 00:00:33,869
+into some kind of binary now that binary
+can be some sort of library or it can be
+
+30
+00:00:33,869 --> 00:00:33,879
+can be some sort of library or it can be
+ 
+
+31
+00:00:33,879 --> 00:00:36,150
+can be some sort of library or it can be
+an actual executable program today we're
+
+32
+00:00:36,150 --> 00:00:36,160
+an actual executable program today we're
+ 
+
+33
+00:00:36,160 --> 00:00:37,470
+an actual executable program today we're
+going to talk specifically about
+
+34
+00:00:37,470 --> 00:00:37,480
+going to talk specifically about
+ 
+
+35
+00:00:37,480 --> 00:00:39,549
+going to talk specifically about
+executable programs or executable
+
+36
+00:00:39,549 --> 00:00:39,559
+executable programs or executable
+ 
+
+37
+00:00:39,559 --> 00:00:41,590
+executable programs or executable
+binaries so let's hop on over to visual
+
+38
+00:00:41,590 --> 00:00:41,600
+binaries so let's hop on over to visual
+ 
+
+39
+00:00:41,600 --> 00:00:43,630
+binaries so let's hop on over to visual
+studio and check it out okay so here we
+
+40
+00:00:43,630 --> 00:00:43,640
+studio and check it out okay so here we
+ 
+
+41
+00:00:43,640 --> 00:00:45,310
+studio and check it out okay so here we
+have our hello world application that we
+
+42
+00:00:45,310 --> 00:00:45,320
+have our hello world application that we
+ 
+
+43
+00:00:45,320 --> 00:00:46,790
+have our hello world application that we
+wrote in the previous video when we
+
+44
+00:00:46,790 --> 00:00:46,800
+wrote in the previous video when we
+ 
+
+45
+00:00:46,800 --> 00:00:48,910
+wrote in the previous video when we
+learned how to set up C++ on Windows
+
+46
+00:00:48,910 --> 00:00:48,920
+learned how to set up C++ on Windows
+ 
+
+47
+00:00:48,920 --> 00:00:50,189
+learned how to set up C++ on Windows
+it's a pretty basic program but there
+
+48
+00:00:50,189 --> 00:00:50,199
+it's a pretty basic program but there
+ 
+
+49
+00:00:50,199 --> 00:00:51,790
+it's a pretty basic program but there
+are quite a number of things going on
+
+50
+00:00:51,790 --> 00:00:51,800
+are quite a number of things going on
+ 
+
+51
+00:00:51,800 --> 00:00:53,750
+are quite a number of things going on
+here first of all we have this include
+
+52
+00:00:53,750 --> 00:00:53,760
+here first of all we have this include
+ 
+
+53
+00:00:53,760 --> 00:00:55,630
+here first of all we have this include
+IO stream statement now this is
+
+54
+00:00:55,630 --> 00:00:55,640
+IO stream statement now this is
+ 
+
+55
+00:00:55,640 --> 00:00:56,950
+IO stream statement now this is
+something called a pre-processor
+
+56
+00:00:56,950 --> 00:00:56,960
+something called a pre-processor
+ 
+
+57
+00:00:56,960 --> 00:00:58,310
+something called a pre-processor
+statement anything that begins with a
+
+58
+00:00:58,310 --> 00:00:58,320
+statement anything that begins with a
+ 
+
+59
+00:00:58,320 --> 00:01:00,590
+statement anything that begins with a
+hash is a pre-processor statement the
+
+60
+00:01:00,590 --> 00:01:00,600
+hash is a pre-processor statement the
+ 
+
+61
+00:01:00,600 --> 00:01:02,270
+hash is a pre-processor statement the
+first thing that a compiler does when it
+
+62
+00:01:02,270 --> 00:01:02,280
+first thing that a compiler does when it
+ 
+
+63
+00:01:02,280 --> 00:01:03,750
+first thing that a compiler does when it
+receives a source file is it
+
+64
+00:01:03,750 --> 00:01:03,760
+receives a source file is it
+ 
+
+65
+00:01:03,760 --> 00:01:05,910
+receives a source file is it
+pre-processes all of your pre-processor
+
+66
+00:01:05,910 --> 00:01:05,920
+pre-processes all of your pre-processor
+ 
+
+67
+00:01:05,920 --> 00:01:07,230
+pre-processes all of your pre-processor
+statements that's why they're called
+
+68
+00:01:07,230 --> 00:01:07,240
+statements that's why they're called
+ 
+
+69
+00:01:07,240 --> 00:01:08,710
+statements that's why they're called
+pre-processor statements because they
+
+70
+00:01:08,710 --> 00:01:08,720
+pre-processor statements because they
+ 
+
+71
+00:01:08,720 --> 00:01:10,350
+pre-processor statements because they
+happen just before the actual
+
+72
+00:01:10,350 --> 00:01:10,360
+happen just before the actual
+ 
+
+73
+00:01:10,360 --> 00:01:12,310
+happen just before the actual
+compilation in this case is something
+
+74
+00:01:12,310 --> 00:01:12,320
+compilation in this case is something
+ 
+
+75
+00:01:12,320 --> 00:01:14,550
+compilation in this case is something
+called include what include will do is
+
+76
+00:01:14,550 --> 00:01:14,560
+called include what include will do is
+ 
+
+77
+00:01:14,560 --> 00:01:16,630
+called include what include will do is
+find a file so in this case we're
+
+78
+00:01:16,630 --> 00:01:16,640
+find a file so in this case we're
+ 
+
+79
+00:01:16,640 --> 00:01:18,990
+find a file so in this case we're
+looking for a file called iostream take
+
+80
+00:01:18,990 --> 00:01:19,000
+looking for a file called iostream take
+ 
+
+81
+00:01:19,000 --> 00:01:21,230
+looking for a file called iostream take
+all of the contents of that file and
+
+82
+00:01:21,230 --> 00:01:21,240
+all of the contents of that file and
+ 
+
+83
+00:01:21,240 --> 00:01:23,310
+all of the contents of that file and
+just paste it into this current file
+
+84
+00:01:23,310 --> 00:01:23,320
+just paste it into this current file
+ 
+
+85
+00:01:23,320 --> 00:01:24,870
+just paste it into this current file
+these files that you include are
+
+86
+00:01:24,870 --> 00:01:24,880
+these files that you include are
+ 
+
+87
+00:01:24,880 --> 00:01:26,510
+these files that you include are
+typically called header files and we'll
+
+88
+00:01:26,510 --> 00:01:26,520
+typically called header files and we'll
+ 
+
+89
+00:01:26,520 --> 00:01:28,149
+typically called header files and we'll
+discuss them more in depth as the series
+
+90
+00:01:28,149 --> 00:01:28,159
+discuss them more in depth as the series
+ 
+
+91
+00:01:28,159 --> 00:01:29,670
+discuss them more in depth as the series
+goes on the reason we're including
+
+92
+00:01:29,670 --> 00:01:29,680
+goes on the reason we're including
+ 
+
+93
+00:01:29,680 --> 00:01:31,230
+goes on the reason we're including
+something something called IO stream is
+
+94
+00:01:31,230 --> 00:01:31,240
+something something called IO stream is
+ 
+
+95
+00:01:31,240 --> 00:01:32,950
+something something called IO stream is
+because we need a declaration for a
+
+96
+00:01:32,950 --> 00:01:32,960
+because we need a declaration for a
+ 
+
+97
+00:01:32,960 --> 00:01:34,990
+because we need a declaration for a
+function called C out which lets us
+
+98
+00:01:34,990 --> 00:01:35,000
+function called C out which lets us
+ 
+
+99
+00:01:35,000 --> 00:01:36,990
+function called C out which lets us
+print stuff to our console next we have
+
+100
+00:01:36,990 --> 00:01:37,000
+print stuff to our console next we have
+ 
+
+101
+00:01:37,000 --> 00:01:38,550
+print stuff to our console next we have
+this main function now the main function
+
+102
+00:01:38,550 --> 00:01:38,560
+this main function now the main function
+ 
+
+103
+00:01:38,560 --> 00:01:40,830
+this main function now the main function
+is very important because every C++
+
+104
+00:01:40,830 --> 00:01:40,840
+is very important because every C++
+ 
+
+105
+00:01:40,840 --> 00:01:42,870
+is very important because every C++
+program has something like this the main
+
+106
+00:01:42,870 --> 00:01:42,880
+program has something like this the main
+ 
+
+107
+00:01:42,880 --> 00:01:44,510
+program has something like this the main
+function is called the entry point it's
+
+108
+00:01:44,510 --> 00:01:44,520
+function is called the entry point it's
+ 
+
+109
+00:01:44,520 --> 00:01:46,630
+function is called the entry point it's
+the entry point for our application that
+
+110
+00:01:46,630 --> 00:01:46,640
+the entry point for our application that
+ 
+
+111
+00:01:46,640 --> 00:01:48,670
+the entry point for our application that
+means that when we run our application
+
+112
+00:01:48,670 --> 00:01:48,680
+means that when we run our application
+ 
+
+113
+00:01:48,680 --> 00:01:50,709
+means that when we run our application
+our computer starts executing code that
+
+114
+00:01:50,709 --> 00:01:50,719
+our computer starts executing code that
+ 
+
+115
+00:01:50,719 --> 00:01:52,590
+our computer starts executing code that
+begins in this function as the program
+
+116
+00:01:52,590 --> 00:01:52,600
+begins in this function as the program
+ 
+
+117
+00:01:52,600 --> 00:01:54,550
+begins in this function as the program
+is running our computer will execute the
+
+118
+00:01:54,550 --> 00:01:54,560
+is running our computer will execute the
+ 
+
+119
+00:01:54,560 --> 00:01:56,670
+is running our computer will execute the
+lines of code that we type in order of
+
+120
+00:01:56,670 --> 00:01:56,680
+lines of code that we type in order of
+ 
+
+121
+00:01:56,680 --> 00:01:57,709
+lines of code that we type in order of
+course there are certain things that can
+
+122
+00:01:57,709 --> 00:01:57,719
+course there are certain things that can
+ 
+
+123
+00:01:57,719 --> 00:02:00,149
+course there are certain things that can
+break or change the order of execution
+
+124
+00:02:00,149 --> 00:02:00,159
+break or change the order of execution
+ 
+
+125
+00:02:00,159 --> 00:02:01,590
+break or change the order of execution
+and those are primarily called control
+
+126
+00:02:01,590 --> 00:02:01,600
+and those are primarily called control
+ 
+
+127
+00:02:01,600 --> 00:02:03,590
+and those are primarily called control
+flow statements or calls to other
+
+128
+00:02:03,590 --> 00:02:03,600
+flow statements or calls to other
+ 
+
+129
+00:02:03,600 --> 00:02:06,109
+flow statements or calls to other
+functions but the gist is that our code
+
+130
+00:02:06,109 --> 00:02:06,119
+functions but the gist is that our code
+ 
+
+131
+00:02:06,119 --> 00:02:08,550
+functions but the gist is that our code
+gets executed line by line so the first
+
+132
+00:02:08,550 --> 00:02:08,560
+gets executed line by line so the first
+ 
+
+133
+00:02:08,560 --> 00:02:10,070
+gets executed line by line so the first
+thing that will get executed in our
+
+134
+00:02:10,070 --> 00:02:10,080
+thing that will get executed in our
+ 
+
+135
+00:02:10,080 --> 00:02:12,510
+thing that will get executed in our
+application will be this hello world C
+
+136
+00:02:12,510 --> 00:02:12,520
+application will be this hello world C
+ 
+
+137
+00:02:12,520 --> 00:02:14,630
+application will be this hello world C
+out statement and then the next thing is
+
+138
+00:02:14,630 --> 00:02:14,640
+out statement and then the next thing is
+ 
+
+139
+00:02:14,640 --> 00:02:17,190
+out statement and then the next thing is
+this cin.get function and then since
+
+140
+00:02:17,190 --> 00:02:17,200
+this cin.get function and then since
+ 
+
+141
+00:02:17,200 --> 00:02:18,509
+this cin.get function and then since
+that's all that we've got inside our
+
+142
+00:02:18,509 --> 00:02:18,519
+that's all that we've got inside our
+ 
+
+143
+00:02:18,519 --> 00:02:20,630
+that's all that we've got inside our
+main function our program will terminate
+
+144
+00:02:20,630 --> 00:02:20,640
+main function our program will terminate
+ 
+
+145
+00:02:20,640 --> 00:02:21,949
+main function our program will terminate
+now for those of you who are familiar
+
+146
+00:02:21,949 --> 00:02:21,959
+now for those of you who are familiar
+ 
+
+147
+00:02:21,959 --> 00:02:23,509
+now for those of you who are familiar
+with functions you might notice that the
+
+148
+00:02:23,509 --> 00:02:23,519
+with functions you might notice that the
+ 
+
+149
+00:02:23,519 --> 00:02:25,949
+with functions you might notice that the
+return type for main is actually int
+
+150
+00:02:25,949 --> 00:02:25,959
+return type for main is actually int
+ 
+
+151
+00:02:25,959 --> 00:02:27,790
+return type for main is actually int
+however we're not returning an integer
+
+152
+00:02:27,790 --> 00:02:27,800
+however we're not returning an integer
+ 
+
+153
+00:02:27,800 --> 00:02:29,270
+however we're not returning an integer
+that's because the main function is
+
+154
+00:02:29,270 --> 00:02:29,280
+that's because the main function is
+ 
+
+155
+00:02:29,280 --> 00:02:31,990
+that's because the main function is
+actually a case you don't have to return
+
+156
+00:02:31,990 --> 00:02:32,000
+actually a case you don't have to return
+ 
+
+157
+00:02:32,000 --> 00:02:33,990
+actually a case you don't have to return
+any kind of value from the main function
+
+158
+00:02:33,990 --> 00:02:34,000
+any kind of value from the main function
+ 
+
+159
+00:02:34,000 --> 00:02:35,470
+any kind of value from the main function
+if you don't return anything it will
+
+160
+00:02:35,470 --> 00:02:35,480
+if you don't return anything it will
+ 
+
+161
+00:02:35,480 --> 00:02:37,150
+if you don't return anything it will
+assume that you're returning zero this
+
+162
+00:02:37,150 --> 00:02:37,160
+assume that you're returning zero this
+ 
+
+163
+00:02:37,160 --> 00:02:38,509
+assume that you're returning zero this
+only applies to the main function though
+
+164
+00:02:38,509 --> 00:02:38,519
+only applies to the main function though
+ 
+
+165
+00:02:38,519 --> 00:02:40,149
+only applies to the main function though
+it's a special case all right so let's
+
+166
+00:02:40,149 --> 00:02:40,159
+it's a special case all right so let's
+ 
+
+167
+00:02:40,159 --> 00:02:41,470
+it's a special case all right so let's
+talk a little bit more about what this
+
+168
+00:02:41,470 --> 00:02:41,480
+talk a little bit more about what this
+ 
+
+169
+00:02:41,480 --> 00:02:43,509
+talk a little bit more about what this
+is actually doing this kind of syntax
+
+170
+00:02:43,509 --> 00:02:43,519
+is actually doing this kind of syntax
+ 
+
+171
+00:02:43,519 --> 00:02:44,869
+is actually doing this kind of syntax
+might look strange for someone who's new
+
+172
+00:02:44,869 --> 00:02:44,879
+might look strange for someone who's new
+ 
+
+173
+00:02:44,879 --> 00:02:46,949
+might look strange for someone who's new
+to C++ and it is a little bit
+
+174
+00:02:46,949 --> 00:02:46,959
+to C++ and it is a little bit
+ 
+
+175
+00:02:46,959 --> 00:02:48,350
+to C++ and it is a little bit
+unfortunate that it's actually written
+
+176
+00:02:48,350 --> 00:02:48,360
+unfortunate that it's actually written
+ 
+
+177
+00:02:48,360 --> 00:02:49,589
+unfortunate that it's actually written
+this way because it doesn't make too
+
+178
+00:02:49,589 --> 00:02:49,599
+this way because it doesn't make too
+ 
+
+179
+00:02:49,599 --> 00:02:51,390
+this way because it doesn't make too
+much sense when you first look at it but
+
+180
+00:02:51,390 --> 00:02:51,400
+much sense when you first look at it but
+ 
+
+181
+00:02:51,400 --> 00:02:53,390
+much sense when you first look at it but
+basically these left angular brackets
+
+182
+00:02:53,390 --> 00:02:53,400
+basically these left angular brackets
+ 
+
+183
+00:02:53,400 --> 00:02:55,110
+basically these left angular brackets
+which look kind of like a bit shift left
+
+184
+00:02:55,110 --> 00:02:55,120
+which look kind of like a bit shift left
+ 
+
+185
+00:02:55,120 --> 00:02:57,430
+which look kind of like a bit shift left
+operator are actually just an overloaded
+
+186
+00:02:57,430 --> 00:02:57,440
+operator are actually just an overloaded
+ 
+
+187
+00:02:57,440 --> 00:03:00,149
+operator are actually just an overloaded
+operator so you need to think of them as
+
+188
+00:03:00,149 --> 00:03:00,159
+operator so you need to think of them as
+ 
+
+189
+00:03:00,159 --> 00:03:02,110
+operator so you need to think of them as
+a function now I know they look like an
+
+190
+00:03:02,110 --> 00:03:02,120
+a function now I know they look like an
+ 
+
+191
+00:03:02,120 --> 00:03:04,589
+a function now I know they look like an
+operator but here's the thing operators
+
+192
+00:03:04,589 --> 00:03:04,599
+operator but here's the thing operators
+ 
+
+193
+00:03:04,599 --> 00:03:06,990
+operator but here's the thing operators
+are just functions so in this case this
+
+194
+00:03:06,990 --> 00:03:07,000
+are just functions so in this case this
+ 
+
+195
+00:03:07,000 --> 00:03:08,869
+are just functions so in this case this
+would actually be the same thing as if
+
+196
+00:03:08,869 --> 00:03:08,879
+would actually be the same thing as if
+ 
+
+197
+00:03:08,879 --> 00:03:11,990
+would actually be the same thing as if
+it was something like c. print and then
+
+198
+00:03:11,990 --> 00:03:12,000
+it was something like c. print and then
+ 
+
+199
+00:03:12,000 --> 00:03:14,110
+it was something like c. print and then
+hello world is our parameter and then
+
+200
+00:03:14,110 --> 00:03:14,120
+hello world is our parameter and then
+ 
+
+201
+00:03:14,120 --> 00:03:15,910
+hello world is our parameter and then
+maybe we would follow it on along with
+
+202
+00:03:15,910 --> 00:03:15,920
+maybe we would follow it on along with
+ 
+
+203
+00:03:15,920 --> 00:03:18,670
+maybe we would follow it on along with
+another
+
+204
+00:03:18,670 --> 00:03:18,680
+
+ 
+
+205
+00:03:18,680 --> 00:03:21,149
+
+print that's all it is you have to think
+
+206
+00:03:21,149 --> 00:03:21,159
+print that's all it is you have to think
+ 
+
+207
+00:03:21,159 --> 00:03:22,710
+print that's all it is you have to think
+of these operators as functions and if
+
+208
+00:03:22,710 --> 00:03:22,720
+of these operators as functions and if
+ 
+
+209
+00:03:22,720 --> 00:03:24,270
+of these operators as functions and if
+you think of them that way then this
+
+210
+00:03:24,270 --> 00:03:24,280
+you think of them that way then this
+ 
+
+211
+00:03:24,280 --> 00:03:26,070
+you think of them that way then this
+makes a little bit more sense so what
+
+212
+00:03:26,070 --> 00:03:26,080
+makes a little bit more sense so what
+ 
+
+213
+00:03:26,080 --> 00:03:27,869
+makes a little bit more sense so what
+we're actually doing here is we're
+
+214
+00:03:27,869 --> 00:03:27,879
+we're actually doing here is we're
+ 
+
+215
+00:03:27,879 --> 00:03:30,630
+we're actually doing here is we're
+pushing this hollow World string into
+
+216
+00:03:30,630 --> 00:03:30,640
+pushing this hollow World string into
+ 
+
+217
+00:03:30,640 --> 00:03:32,429
+pushing this hollow World string into
+this C out which basically causes it to
+
+218
+00:03:32,429 --> 00:03:32,439
+this C out which basically causes it to
+ 
+
+219
+00:03:32,439 --> 00:03:34,110
+this C out which basically causes it to
+get printed to the console and then
+
+220
+00:03:34,110 --> 00:03:34,120
+get printed to the console and then
+ 
+
+221
+00:03:34,120 --> 00:03:36,190
+get printed to the console and then
+we're pushing an end line this end line
+
+222
+00:03:36,190 --> 00:03:36,200
+we're pushing an end line this end line
+ 
+
+223
+00:03:36,200 --> 00:03:37,509
+we're pushing an end line this end line
+basically just tells our console to
+
+224
+00:03:37,509 --> 00:03:37,519
+basically just tells our console to
+ 
+
+225
+00:03:37,519 --> 00:03:39,869
+basically just tells our console to
+advance to the next line the cn. getet
+
+226
+00:03:39,869 --> 00:03:39,879
+advance to the next line the cn. getet
+ 
+
+227
+00:03:39,879 --> 00:03:41,429
+advance to the next line the cn. getet
+function in our case will basically just
+
+228
+00:03:41,429 --> 00:03:41,439
+function in our case will basically just
+ 
+
+229
+00:03:41,439 --> 00:03:42,949
+function in our case will basically just
+wait until we press enter before
+
+230
+00:03:42,949 --> 00:03:42,959
+wait until we press enter before
+ 
+
+231
+00:03:42,959 --> 00:03:44,869
+wait until we press enter before
+advancing to our next line of code which
+
+232
+00:03:44,869 --> 00:03:44,879
+advancing to our next line of code which
+ 
+
+233
+00:03:44,879 --> 00:03:46,750
+advancing to our next line of code which
+is nothing so basically what I'm saying
+
+234
+00:03:46,750 --> 00:03:46,760
+is nothing so basically what I'm saying
+ 
+
+235
+00:03:46,760 --> 00:03:49,190
+is nothing so basically what I'm saying
+is our program's execution will pause on
+
+236
+00:03:49,190 --> 00:03:49,200
+is our program's execution will pause on
+ 
+
+237
+00:03:49,200 --> 00:03:51,630
+is our program's execution will pause on
+this line until we press enter Because
+
+238
+00:03:51,630 --> 00:03:51,640
+this line until we press enter Because
+ 
+
+239
+00:03:51,640 --> 00:03:53,270
+this line until we press enter Because
+this function is just going to wait for
+
+240
+00:03:53,270 --> 00:03:53,280
+this function is just going to wait for
+ 
+
+241
+00:03:53,280 --> 00:03:55,190
+this function is just going to wait for
+us to press enter and then we advance to
+
+242
+00:03:55,190 --> 00:03:55,200
+us to press enter and then we advance to
+ 
+
+243
+00:03:55,200 --> 00:03:56,550
+us to press enter and then we advance to
+the next line which is nothing which
+
+244
+00:03:56,550 --> 00:03:56,560
+the next line which is nothing which
+ 
+
+245
+00:03:56,560 --> 00:03:58,149
+the next line which is nothing which
+means that we actually return zero
+
+246
+00:03:58,149 --> 00:03:58,159
+means that we actually return zero
+ 
+
+247
+00:03:58,159 --> 00:03:59,750
+means that we actually return zero
+meaning our program executed successful
+
+248
+00:03:59,750 --> 00:03:59,760
+meaning our program executed successful
+ 
+
+249
+00:03:59,760 --> 00:04:01,509
+meaning our program executed successful
+sucessfully and that's it that is our
+
+250
+00:04:01,509 --> 00:04:01,519
+sucessfully and that's it that is our
+ 
+
+251
+00:04:01,519 --> 00:04:04,190
+sucessfully and that's it that is our
+entire program okay so that's our source
+
+252
+00:04:04,190 --> 00:04:04,200
+entire program okay so that's our source
+ 
+
+253
+00:04:04,200 --> 00:04:06,110
+entire program okay so that's our source
+file we've actually got a file called
+
+254
+00:04:06,110 --> 00:04:06,120
+file we've actually got a file called
+ 
+
+255
+00:04:06,120 --> 00:04:08,990
+file we've actually got a file called
+main.cpp which is a source file how do
+
+256
+00:04:08,990 --> 00:04:09,000
+main.cpp which is a source file how do
+ 
+
+257
+00:04:09,000 --> 00:04:11,750
+main.cpp which is a source file how do
+we get from this text to an actual
+
+258
+00:04:11,750 --> 00:04:11,760
+we get from this text to an actual
+ 
+
+259
+00:04:11,760 --> 00:04:14,030
+we get from this text to an actual
+executable binary file so basically we
+
+260
+00:04:14,030 --> 00:04:14,040
+executable binary file so basically we
+ 
+
+261
+00:04:14,040 --> 00:04:16,509
+executable binary file so basically we
+go through a few stages first we have
+
+262
+00:04:16,509 --> 00:04:16,519
+go through a few stages first we have
+ 
+
+263
+00:04:16,519 --> 00:04:18,430
+go through a few stages first we have
+this include IO stream this is something
+
+264
+00:04:18,430 --> 00:04:18,440
+this include IO stream this is something
+ 
+
+265
+00:04:18,440 --> 00:04:20,710
+this include IO stream this is something
+called a pre-processor statement so this
+
+266
+00:04:20,710 --> 00:04:20,720
+called a pre-processor statement so this
+ 
+
+267
+00:04:20,720 --> 00:04:23,310
+called a pre-processor statement so this
+pre-processor statement gets evaluated
+
+268
+00:04:23,310 --> 00:04:23,320
+pre-processor statement gets evaluated
+ 
+
+269
+00:04:23,320 --> 00:04:25,430
+pre-processor statement gets evaluated
+before we compiled the file in this case
+
+270
+00:04:25,430 --> 00:04:25,440
+before we compiled the file in this case
+ 
+
+271
+00:04:25,440 --> 00:04:27,189
+before we compiled the file in this case
+what it does is it includes all of the
+
+272
+00:04:27,189 --> 00:04:27,199
+what it does is it includes all of the
+ 
+
+273
+00:04:27,199 --> 00:04:29,830
+what it does is it includes all of the
+contents of the io stream file into this
+
+274
+00:04:29,830 --> 00:04:29,840
+contents of the io stream file into this
+ 
+
+275
+00:04:29,840 --> 00:04:32,070
+contents of the io stream file into this
+file and I mean literally it just it
+
+276
+00:04:32,070 --> 00:04:32,080
+file and I mean literally it just it
+ 
+
+277
+00:04:32,080 --> 00:04:35,350
+file and I mean literally it just it
+copies and pastes that file into this
+
+278
+00:04:35,350 --> 00:04:35,360
+copies and pastes that file into this
+ 
+
+279
+00:04:35,360 --> 00:04:37,590
+copies and pastes that file into this
+file and again as I said we will talk
+
+280
+00:04:37,590 --> 00:04:37,600
+file and again as I said we will talk
+ 
+
+281
+00:04:37,600 --> 00:04:39,510
+file and again as I said we will talk
+about header files in more depth in the
+
+282
+00:04:39,510 --> 00:04:39,520
+about header files in more depth in the
+ 
+
+283
+00:04:39,520 --> 00:04:41,230
+about header files in more depth in the
+future so don't worry too much if you
+
+284
+00:04:41,230 --> 00:04:41,240
+future so don't worry too much if you
+ 
+
+285
+00:04:41,240 --> 00:04:43,150
+future so don't worry too much if you
+don't understand this for now all you
+
+286
+00:04:43,150 --> 00:04:43,160
+don't understand this for now all you
+ 
+
+287
+00:04:43,160 --> 00:04:45,790
+don't understand this for now all you
+need to know is we include this file so
+
+288
+00:04:45,790 --> 00:04:45,800
+need to know is we include this file so
+ 
+
+289
+00:04:45,800 --> 00:04:48,390
+need to know is we include this file so
+that we can use the C out and cin
+
+290
+00:04:48,390 --> 00:04:48,400
+that we can use the C out and cin
+ 
+
+291
+00:04:48,400 --> 00:04:50,350
+that we can use the C out and cin
+functions once our pre-processor
+
+292
+00:04:50,350 --> 00:04:50,360
+functions once our pre-processor
+ 
+
+293
+00:04:50,360 --> 00:04:52,430
+functions once our pre-processor
+statements have been evaluated our file
+
+294
+00:04:52,430 --> 00:04:52,440
+statements have been evaluated our file
+ 
+
+295
+00:04:52,440 --> 00:04:54,830
+statements have been evaluated our file
+gets compiled this is the stage where
+
+296
+00:04:54,830 --> 00:04:54,840
+gets compiled this is the stage where
+ 
+
+297
+00:04:54,840 --> 00:04:58,150
+gets compiled this is the stage where
+our compiler transforms all of this C++
+
+298
+00:04:58,150 --> 00:04:58,160
+our compiler transforms all of this C++
+ 
+
+299
+00:04:58,160 --> 00:05:00,230
+our compiler transforms all of this C++
+code into actual
+
+300
+00:05:00,230 --> 00:05:00,240
+code into actual
+ 
+
+301
+00:05:00,240 --> 00:05:02,189
+code into actual
+machine code there are several important
+
+302
+00:05:02,189 --> 00:05:02,199
+machine code there are several important
+ 
+
+303
+00:05:02,199 --> 00:05:03,629
+machine code there are several important
+settings that determine how this
+
+304
+00:05:03,629 --> 00:05:03,639
+settings that determine how this
+ 
+
+305
+00:05:03,639 --> 00:05:05,390
+settings that determine how this
+actually happens so let's take a brief
+
+306
+00:05:05,390 --> 00:05:05,400
+actually happens so let's take a brief
+ 
+
+307
+00:05:05,400 --> 00:05:07,110
+actually happens so let's take a brief
+look at them in Visual Studio we have
+
+308
+00:05:07,110 --> 00:05:07,120
+look at them in Visual Studio we have
+ 
+
+309
+00:05:07,120 --> 00:05:09,950
+look at them in Visual Studio we have
+these two important drop- down menus up
+
+310
+00:05:09,950 --> 00:05:09,960
+these two important drop- down menus up
+ 
+
+311
+00:05:09,960 --> 00:05:11,749
+these two important drop- down menus up
+here one's called a solution
+
+312
+00:05:11,749 --> 00:05:11,759
+here one's called a solution
+ 
+
+313
+00:05:11,759 --> 00:05:13,150
+here one's called a solution
+configuration and one's called a
+
+314
+00:05:13,150 --> 00:05:13,160
+configuration and one's called a
+ 
+
+315
+00:05:13,160 --> 00:05:14,950
+configuration and one's called a
+solution platform by default this will
+
+316
+00:05:14,950 --> 00:05:14,960
+solution platform by default this will
+ 
+
+317
+00:05:14,960 --> 00:05:16,670
+solution platform by default this will
+probably be set to debug and then either
+
+318
+00:05:16,670 --> 00:05:16,680
+probably be set to debug and then either
+ 
+
+319
+00:05:16,680 --> 00:05:19,510
+probably be set to debug and then either
+x86 or win32 they're actually the same
+
+320
+00:05:19,510 --> 00:05:19,520
+x86 or win32 they're actually the same
+ 
+
+321
+00:05:19,520 --> 00:05:20,830
+x86 or win32 they're actually the same
+if we drop down the debug you'll see
+
+322
+00:05:20,830 --> 00:05:20,840
+if we drop down the debug you'll see
+ 
+
+323
+00:05:20,840 --> 00:05:22,590
+if we drop down the debug you'll see
+that we've got two options debug and
+
+324
+00:05:22,590 --> 00:05:22,600
+that we've got two options debug and
+ 
+
+325
+00:05:22,600 --> 00:05:24,230
+that we've got two options debug and
+release these two options are defaults
+
+326
+00:05:24,230 --> 00:05:24,240
+release these two options are defaults
+ 
+
+327
+00:05:24,240 --> 00:05:26,309
+release these two options are defaults
+for any new project in visual studio and
+
+328
+00:05:26,309 --> 00:05:26,319
+for any new project in visual studio and
+ 
+
+329
+00:05:26,319 --> 00:05:28,029
+for any new project in visual studio and
+then under solution platform you'll see
+
+330
+00:05:28,029 --> 00:05:28,039
+then under solution platform you'll see
+ 
+
+331
+00:05:28,039 --> 00:05:30,510
+then under solution platform you'll see
+we've got x64 and X8 6 is our two
+
+332
+00:05:30,510 --> 00:05:30,520
+we've got x64 and X8 6 is our two
+ 
+
+333
+00:05:30,520 --> 00:05:33,070
+we've got x64 and X8 6 is our two
+options again these are just defaults a
+
+334
+00:05:33,070 --> 00:05:33,080
+options again these are just defaults a
+ 
+
+335
+00:05:33,080 --> 00:05:35,629
+options again these are just defaults a
+configuration is simply a set of rules
+
+336
+00:05:35,629 --> 00:05:35,639
+configuration is simply a set of rules
+ 
+
+337
+00:05:35,639 --> 00:05:37,469
+configuration is simply a set of rules
+which applies to the building of a
+
+338
+00:05:37,469 --> 00:05:37,479
+which applies to the building of a
+ 
+
+339
+00:05:37,479 --> 00:05:40,629
+which applies to the building of a
+project whereas the solution platform is
+
+340
+00:05:40,629 --> 00:05:40,639
+project whereas the solution platform is
+ 
+
+341
+00:05:40,639 --> 00:05:42,510
+project whereas the solution platform is
+what platform we're targeting with our
+
+342
+00:05:42,510 --> 00:05:42,520
+what platform we're targeting with our
+ 
+
+343
+00:05:42,520 --> 00:05:45,230
+what platform we're targeting with our
+current compilation so a good example of
+
+344
+00:05:45,230 --> 00:05:45,240
+current compilation so a good example of
+ 
+
+345
+00:05:45,240 --> 00:05:47,629
+current compilation so a good example of
+that would be x86 is targeting Windows
+
+346
+00:05:47,629 --> 00:05:47,639
+that would be x86 is targeting Windows
+ 
+
+347
+00:05:47,639 --> 00:05:49,590
+that would be x86 is targeting Windows
+32-bit which means that we will generate
+
+348
+00:05:49,590 --> 00:05:49,600
+32-bit which means that we will generate
+ 
+
+349
+00:05:49,600 --> 00:05:52,029
+32-bit which means that we will generate
+a 32-bit application for Windows for
+
+350
+00:05:52,029 --> 00:05:52,039
+a 32-bit application for Windows for
+ 
+
+351
+00:05:52,039 --> 00:05:53,350
+a 32-bit application for Windows for
+more complicated projects where you
+
+352
+00:05:53,350 --> 00:05:53,360
+more complicated projects where you
+ 
+
+353
+00:05:53,360 --> 00:05:55,350
+more complicated projects where you
+might be targeting different platforms
+
+354
+00:05:55,350 --> 00:05:55,360
+might be targeting different platforms
+ 
+
+355
+00:05:55,360 --> 00:05:57,629
+might be targeting different platforms
+you might have Android as a platform in
+
+356
+00:05:57,629 --> 00:05:57,639
+you might have Android as a platform in
+ 
+
+357
+00:05:57,639 --> 00:05:59,670
+you might have Android as a platform in
+that dropdown and then if you wanted to
+
+358
+00:05:59,670 --> 00:05:59,680
+that dropdown and then if you wanted to
+ 
+
+359
+00:05:59,680 --> 00:06:01,790
+that dropdown and then if you wanted to
+build and deploy and debug on Android
+
+360
+00:06:01,790 --> 00:06:01,800
+build and deploy and debug on Android
+ 
+
+361
+00:06:01,800 --> 00:06:03,710
+build and deploy and debug on Android
+you would change your platform to be
+
+362
+00:06:03,710 --> 00:06:03,720
+you would change your platform to be
+ 
+
+363
+00:06:03,720 --> 00:06:05,749
+you would change your platform to be
+Android and the solution configuration
+
+364
+00:06:05,749 --> 00:06:05,759
+Android and the solution configuration
+ 
+
+365
+00:06:05,759 --> 00:06:07,670
+Android and the solution configuration
+is a set of rules that defines the
+
+366
+00:06:07,670 --> 00:06:07,680
+is a set of rules that defines the
+ 
+
+367
+00:06:07,680 --> 00:06:09,589
+is a set of rules that defines the
+compilation for that platform so let's
+
+368
+00:06:09,589 --> 00:06:09,599
+compilation for that platform so let's
+ 
+
+369
+00:06:09,599 --> 00:06:10,870
+compilation for that platform so let's
+take a look at some of the rules that we
+
+370
+00:06:10,870 --> 00:06:10,880
+take a look at some of the rules that we
+ 
+
+371
+00:06:10,880 --> 00:06:13,350
+take a look at some of the rules that we
+can change in our project let's right
+
+372
+00:06:13,350 --> 00:06:13,360
+can change in our project let's right
+ 
+
+373
+00:06:13,360 --> 00:06:15,350
+can change in our project let's right
+click on it and hit properties so here
+
+374
+00:06:15,350 --> 00:06:15,360
+click on it and hit properties so here
+ 
+
+375
+00:06:15,360 --> 00:06:17,270
+click on it and hit properties so here
+we have visual Studios property Pages
+
+376
+00:06:17,270 --> 00:06:17,280
+we have visual Studios property Pages
+ 
+
+377
+00:06:17,280 --> 00:06:19,309
+we have visual Studios property Pages
+these Define the rules that are used to
+
+378
+00:06:19,309 --> 00:06:19,319
+these Define the rules that are used to
+ 
+
+379
+00:06:19,319 --> 00:06:20,870
+these Define the rules that are used to
+build certain configurations and
+
+380
+00:06:20,870 --> 00:06:20,880
+build certain configurations and
+ 
+
+381
+00:06:20,880 --> 00:06:22,710
+build certain configurations and
+platforms the first thing that you need
+
+382
+00:06:22,710 --> 00:06:22,720
+platforms the first thing that you need
+ 
+
+383
+00:06:22,720 --> 00:06:25,430
+platforms the first thing that you need
+to notice is this configuration and
+
+384
+00:06:25,430 --> 00:06:25,440
+to notice is this configuration and
+ 
+
+385
+00:06:25,440 --> 00:06:29,550
+to notice is this configuration and
+platform area make sure that your config
+
+386
+00:06:29,550 --> 00:06:29,560
+platform area make sure that your config
+ 
+
+387
+00:06:29,560 --> 00:06:32,189
+platform area make sure that your config
+configuration and your platform is set
+
+388
+00:06:32,189 --> 00:06:32,199
+configuration and your platform is set
+ 
+
+389
+00:06:32,199 --> 00:06:33,710
+configuration and your platform is set
+to the one that you actually want to
+
+390
+00:06:33,710 --> 00:06:33,720
+to the one that you actually want to
+ 
+
+391
+00:06:33,720 --> 00:06:35,830
+to the one that you actually want to
+modify for some reason sometimes it
+
+392
+00:06:35,830 --> 00:06:35,840
+modify for some reason sometimes it
+ 
+
+393
+00:06:35,840 --> 00:06:37,629
+modify for some reason sometimes it
+might be set to release however you're
+
+394
+00:06:37,629 --> 00:06:37,639
+might be set to release however you're
+ 
+
+395
+00:06:37,639 --> 00:06:39,430
+might be set to release however you're
+clearly building debug which means that
+
+396
+00:06:39,430 --> 00:06:39,440
+clearly building debug which means that
+ 
+
+397
+00:06:39,440 --> 00:06:41,150
+clearly building debug which means that
+none of these changes will apply to your
+
+398
+00:06:41,150 --> 00:06:41,160
+none of these changes will apply to your
+ 
+
+399
+00:06:41,160 --> 00:06:43,029
+none of these changes will apply to your
+current configuration and if you missed
+
+400
+00:06:43,029 --> 00:06:43,039
+current configuration and if you missed
+ 
+
+401
+00:06:43,039 --> 00:06:44,189
+current configuration and if you missed
+that you might be wondering why
+
+402
+00:06:44,189 --> 00:06:44,199
+that you might be wondering why
+ 
+
+403
+00:06:44,199 --> 00:06:45,670
+that you might be wondering why
+nothing's working I've had that happen a
+
+404
+00:06:45,670 --> 00:06:45,680
+nothing's working I've had that happen a
+ 
+
+405
+00:06:45,680 --> 00:06:47,950
+nothing's working I've had that happen a
+few times it's kind of annoying so we've
+
+406
+00:06:47,950 --> 00:06:47,960
+few times it's kind of annoying so we've
+ 
+
+407
+00:06:47,960 --> 00:06:49,390
+few times it's kind of annoying so we've
+got our debug configuration you can see
+
+408
+00:06:49,390 --> 00:06:49,400
+got our debug configuration you can see
+ 
+
+409
+00:06:49,400 --> 00:06:51,990
+got our debug configuration you can see
+we've got win32 now win32 is exactly the
+
+410
+00:06:51,990 --> 00:06:52,000
+we've got win32 now win32 is exactly the
+ 
+
+411
+00:06:52,000 --> 00:06:54,150
+we've got win32 now win32 is exactly the
+same as x86 okay they are the same
+
+412
+00:06:54,150 --> 00:06:54,160
+same as x86 okay they are the same
+ 
+
+413
+00:06:54,160 --> 00:06:55,150
+same as x86 okay they are the same
+they've got different names for some
+
+414
+00:06:55,150 --> 00:06:55,160
+they've got different names for some
+ 
+
+415
+00:06:55,160 --> 00:06:56,589
+they've got different names for some
+reason but they are the same here we've
+
+416
+00:06:56,589 --> 00:06:56,599
+reason but they are the same here we've
+ 
+
+417
+00:06:56,599 --> 00:06:58,550
+reason but they are the same here we've
+got some general information about our
+
+418
+00:06:58,550 --> 00:06:58,560
+got some general information about our
+ 
+
+419
+00:06:58,560 --> 00:07:00,950
+got some general information about our
+SDK version our output directory our
+
+420
+00:07:00,950 --> 00:07:00,960
+SDK version our output directory our
+ 
+
+421
+00:07:00,960 --> 00:07:02,309
+SDK version our output directory our
+intermediate directory and stuff like
+
+422
+00:07:02,309 --> 00:07:02,319
+intermediate directory and stuff like
+ 
+
+423
+00:07:02,319 --> 00:07:04,189
+intermediate directory and stuff like
+that the important thing to note here is
+
+424
+00:07:04,189 --> 00:07:04,199
+that the important thing to note here is
+ 
+
+425
+00:07:04,199 --> 00:07:06,629
+that the important thing to note here is
+that our configuration type is set to
+
+426
+00:07:06,629 --> 00:07:06,639
+that our configuration type is set to
+ 
+
+427
+00:07:06,639 --> 00:07:08,550
+that our configuration type is set to
+application if we wanted it to be a
+
+428
+00:07:08,550 --> 00:07:08,560
+application if we wanted it to be a
+ 
+
+429
+00:07:08,560 --> 00:07:10,309
+application if we wanted it to be a
+library we could we could change it here
+
+430
+00:07:10,309 --> 00:07:10,319
+library we could we could change it here
+ 
+
+431
+00:07:10,319 --> 00:07:11,790
+library we could we could change it here
+but this is basically the binary that
+
+432
+00:07:11,790 --> 00:07:11,800
+but this is basically the binary that
+ 
+
+433
+00:07:11,800 --> 00:07:13,390
+but this is basically the binary that
+the compiler will output since we're
+
+434
+00:07:13,390 --> 00:07:13,400
+the compiler will output since we're
+ 
+
+435
+00:07:13,400 --> 00:07:15,710
+the compiler will output since we're
+going for an executable binary we leave
+
+436
+00:07:15,710 --> 00:07:15,720
+going for an executable binary we leave
+ 
+
+437
+00:07:15,720 --> 00:07:18,270
+going for an executable binary we leave
+it set to application. EXE the compiler
+
+438
+00:07:18,270 --> 00:07:18,280
+it set to application. EXE the compiler
+ 
+
+439
+00:07:18,280 --> 00:07:20,749
+it set to application. EXE the compiler
+settings are located under cc++ we've
+
+440
+00:07:20,749 --> 00:07:20,759
+settings are located under cc++ we've
+ 
+
+441
+00:07:20,759 --> 00:07:22,150
+settings are located under cc++ we've
+got important settings here such as
+
+442
+00:07:22,150 --> 00:07:22,160
+got important settings here such as
+ 
+
+443
+00:07:22,160 --> 00:07:24,430
+got important settings here such as
+include directories optimization
+
+444
+00:07:24,430 --> 00:07:24,440
+include directories optimization
+ 
+
+445
+00:07:24,440 --> 00:07:26,589
+include directories optimization
+settings that we may want to use code
+
+446
+00:07:26,589 --> 00:07:26,599
+settings that we may want to use code
+ 
+
+447
+00:07:26,599 --> 00:07:28,830
+settings that we may want to use code
+generation settings pre-processor
+
+448
+00:07:28,830 --> 00:07:28,840
+generation settings pre-processor
+ 
+
+449
+00:07:28,840 --> 00:07:31,070
+generation settings pre-processor
+definitions and a whole lot of stuff
+
+450
+00:07:31,070 --> 00:07:31,080
+definitions and a whole lot of stuff
+ 
+
+451
+00:07:31,080 --> 00:07:32,390
+definitions and a whole lot of stuff
+that we're not even going to touch
+
+452
+00:07:32,390 --> 00:07:32,400
+that we're not even going to touch
+ 
+
+453
+00:07:32,400 --> 00:07:35,029
+that we're not even going to touch
+anytime soon the default Visual Studio
+
+454
+00:07:35,029 --> 00:07:35,039
+anytime soon the default Visual Studio
+ 
+
+455
+00:07:35,039 --> 00:07:36,950
+anytime soon the default Visual Studio
+configuration is actually pretty good so
+
+456
+00:07:36,950 --> 00:07:36,960
+configuration is actually pretty good so
+ 
+
+457
+00:07:36,960 --> 00:07:38,749
+configuration is actually pretty good so
+we don't really have to do anything but
+
+458
+00:07:38,749 --> 00:07:38,759
+we don't really have to do anything but
+ 
+
+459
+00:07:38,759 --> 00:07:40,950
+we don't really have to do anything but
+these are the rules that govern how our
+
+460
+00:07:40,950 --> 00:07:40,960
+these are the rules that govern how our
+ 
+
+461
+00:07:40,960 --> 00:07:42,749
+these are the rules that govern how our
+files will get compiled you can see the
+
+462
+00:07:42,749 --> 00:07:42,759
+files will get compiled you can see the
+ 
+
+463
+00:07:42,759 --> 00:07:44,110
+files will get compiled you can see the
+difference between the debug and the
+
+464
+00:07:44,110 --> 00:07:44,120
+difference between the debug and the
+ 
+
+465
+00:07:44,120 --> 00:07:45,749
+difference between the debug and the
+release configuration pretty well if you
+
+466
+00:07:45,749 --> 00:07:45,759
+release configuration pretty well if you
+ 
+
+467
+00:07:45,759 --> 00:07:47,510
+release configuration pretty well if you
+go into the optimization tab under
+
+468
+00:07:47,510 --> 00:07:47,520
+go into the optimization tab under
+ 
+
+469
+00:07:47,520 --> 00:07:49,790
+go into the optimization tab under
+optimization if I change this to release
+
+470
+00:07:49,790 --> 00:07:49,800
+optimization if I change this to release
+ 
+
+471
+00:07:49,800 --> 00:07:51,309
+optimization if I change this to release
+you'll see that the optimization is set
+
+472
+00:07:51,309 --> 00:07:51,319
+you'll see that the optimization is set
+ 
+
+473
+00:07:51,319 --> 00:07:53,629
+you'll see that the optimization is set
+to maximize speed whereas in debug it's
+
+474
+00:07:53,629 --> 00:07:53,639
+to maximize speed whereas in debug it's
+ 
+
+475
+00:07:53,639 --> 00:07:55,629
+to maximize speed whereas in debug it's
+set to disabled that's a great example
+
+476
+00:07:55,629 --> 00:07:55,639
+set to disabled that's a great example
+ 
+
+477
+00:07:55,639 --> 00:07:58,149
+set to disabled that's a great example
+of why debug mode by default is slower a
+
+478
+00:07:58,149 --> 00:07:58,159
+of why debug mode by default is slower a
+ 
+
+479
+00:07:58,159 --> 00:07:59,790
+of why debug mode by default is slower a
+lot slower than release mode because
+
+480
+00:07:59,790 --> 00:07:59,800
+lot slower than release mode because
+ 
+
+481
+00:07:59,800 --> 00:08:01,670
+lot slower than release mode because
+optimization is turned off but of course
+
+482
+00:08:01,670 --> 00:08:01,680
+optimization is turned off but of course
+ 
+
+483
+00:08:01,680 --> 00:08:04,029
+optimization is turned off but of course
+turning off optimization will help us to
+
+484
+00:08:04,029 --> 00:08:04,039
+turning off optimization will help us to
+ 
+
+485
+00:08:04,039 --> 00:08:06,230
+turning off optimization will help us to
+debug our code as we will later discover
+
+486
+00:08:06,230 --> 00:08:06,240
+debug our code as we will later discover
+ 
+
+487
+00:08:06,240 --> 00:08:07,550
+debug our code as we will later discover
+if you want to know more about how the
+
+488
+00:08:07,550 --> 00:08:07,560
+if you want to know more about how the
+ 
+
+489
+00:08:07,560 --> 00:08:09,230
+if you want to know more about how the
+compiler works I've made a dedicated
+
+490
+00:08:09,230 --> 00:08:09,240
+compiler works I've made a dedicated
+ 
+
+491
+00:08:09,240 --> 00:08:11,869
+compiler works I've made a dedicated
+video in depth covering exactly how all
+
+492
+00:08:11,869 --> 00:08:11,879
+video in depth covering exactly how all
+ 
+
+493
+00:08:11,879 --> 00:08:13,790
+video in depth covering exactly how all
+of that happens so go check that out if
+
+494
+00:08:13,790 --> 00:08:13,800
+of that happens so go check that out if
+ 
+
+495
+00:08:13,800 --> 00:08:15,149
+of that happens so go check that out if
+you're interested the link will be in
+
+496
+00:08:15,149 --> 00:08:15,159
+you're interested the link will be in
+ 
+
+497
+00:08:15,159 --> 00:08:17,629
+you're interested the link will be in
+the description below each CPP file in
+
+498
+00:08:17,629 --> 00:08:17,639
+the description below each CPP file in
+ 
+
+499
+00:08:17,639 --> 00:08:20,189
+the description below each CPP file in
+our project gets compiled header files
+
+500
+00:08:20,189 --> 00:08:20,199
+our project gets compiled header files
+ 
+
+501
+00:08:20,199 --> 00:08:23,029
+our project gets compiled header files
+do not get compiled at all just CPP
+
+502
+00:08:23,029 --> 00:08:23,039
+do not get compiled at all just CPP
+ 
+
+503
+00:08:23,039 --> 00:08:25,550
+do not get compiled at all just CPP
+files remember header files get included
+
+504
+00:08:25,550 --> 00:08:25,560
+files remember header files get included
+ 
+
+505
+00:08:25,560 --> 00:08:27,309
+files remember header files get included
+via a pre-processor statement called
+
+506
+00:08:27,309 --> 00:08:27,319
+via a pre-processor statement called
+ 
+
+507
+00:08:27,319 --> 00:08:30,430
+via a pre-processor statement called
+include into a CP f file and that's when
+
+508
+00:08:30,430 --> 00:08:30,440
+include into a CP f file and that's when
+ 
+
+509
+00:08:30,440 --> 00:08:32,230
+include into a CP f file and that's when
+they get compiled so we've got a bunch
+
+510
+00:08:32,230 --> 00:08:32,240
+they get compiled so we've got a bunch
+ 
+
+511
+00:08:32,240 --> 00:08:34,350
+they get compiled so we've got a bunch
+of CPP files that we've compiled and
+
+512
+00:08:34,350 --> 00:08:34,360
+of CPP files that we've compiled and
+ 
+
+513
+00:08:34,360 --> 00:08:36,630
+of CPP files that we've compiled and
+they actually get compiled individually
+
+514
+00:08:36,630 --> 00:08:36,640
+they actually get compiled individually
+ 
+
+515
+00:08:36,640 --> 00:08:38,630
+they actually get compiled individually
+every CPP file will get compiled into
+
+516
+00:08:38,630 --> 00:08:38,640
+every CPP file will get compiled into
+ 
+
+517
+00:08:38,640 --> 00:08:40,589
+every CPP file will get compiled into
+something called an object file the
+
+518
+00:08:40,589 --> 00:08:40,599
+something called an object file the
+ 
+
+519
+00:08:40,599 --> 00:08:42,269
+something called an object file the
+extension for that using visual Studios
+
+520
+00:08:42,269 --> 00:08:42,279
+extension for that using visual Studios
+ 
+
+521
+00:08:42,279 --> 00:08:45,070
+extension for that using visual Studios
+compiler is obj once we have all of
+
+522
+00:08:45,070 --> 00:08:45,080
+compiler is obj once we have all of
+ 
+
+523
+00:08:45,080 --> 00:08:47,150
+compiler is obj once we have all of
+those individual obj files which are the
+
+524
+00:08:47,150 --> 00:08:47,160
+those individual obj files which are the
+ 
+
+525
+00:08:47,160 --> 00:08:49,509
+those individual obj files which are the
+result of compiling our CPP files we
+
+526
+00:08:49,509 --> 00:08:49,519
+result of compiling our CPP files we
+ 
+
+527
+00:08:49,519 --> 00:08:51,630
+result of compiling our CPP files we
+need some way to stitch them together
+
+528
+00:08:51,630 --> 00:08:51,640
+need some way to stitch them together
+ 
+
+529
+00:08:51,640 --> 00:08:54,310
+need some way to stitch them together
+into one exe file and that's where our
+
+530
+00:08:54,310 --> 00:08:54,320
+into one exe file and that's where our
+ 
+
+531
+00:08:54,320 --> 00:08:56,190
+into one exe file and that's where our
+friend the Linker comes in you can see
+
+532
+00:08:56,190 --> 00:08:56,200
+friend the Linker comes in you can see
+ 
+
+533
+00:08:56,200 --> 00:08:58,030
+friend the Linker comes in you can see
+the Linker settings under this Linker
+
+534
+00:08:58,030 --> 00:08:58,040
+the Linker settings under this Linker
+ 
+
+535
+00:08:58,040 --> 00:08:59,829
+the Linker settings under this Linker
+tab but basically what the the Linker
+
+536
+00:08:59,829 --> 00:08:59,839
+tab but basically what the the Linker
+ 
+
+537
+00:08:59,839 --> 00:09:02,829
+tab but basically what the the Linker
+does is it takes all of those obj files
+
+538
+00:09:02,829 --> 00:09:02,839
+does is it takes all of those obj files
+ 
+
+539
+00:09:02,839 --> 00:09:04,750
+does is it takes all of those obj files
+and it glues them together so the
+
+540
+00:09:04,750 --> 00:09:04,760
+and it glues them together so the
+ 
+
+541
+00:09:04,760 --> 00:09:07,670
+and it glues them together so the
+linker's job is to take all of our obj
+
+542
+00:09:07,670 --> 00:09:07,680
+linker's job is to take all of our obj
+ 
+
+543
+00:09:07,680 --> 00:09:10,230
+linker's job is to take all of our obj
+files and Stitch them together into one
+
+544
+00:09:10,230 --> 00:09:10,240
+files and Stitch them together into one
+ 
+
+545
+00:09:10,240 --> 00:09:12,470
+files and Stitch them together into one
+exe file of course the way that it does
+
+546
+00:09:12,470 --> 00:09:12,480
+exe file of course the way that it does
+ 
+
+547
+00:09:12,480 --> 00:09:15,030
+exe file of course the way that it does
+that is actually kind of complicated so
+
+548
+00:09:15,030 --> 00:09:15,040
+that is actually kind of complicated so
+ 
+
+549
+00:09:15,040 --> 00:09:17,310
+that is actually kind of complicated so
+I've made a specific video covering that
+
+550
+00:09:17,310 --> 00:09:17,320
+I've made a specific video covering that
+ 
+
+551
+00:09:17,320 --> 00:09:18,670
+I've made a specific video covering that
+go ahead and check that out the link
+
+552
+00:09:18,670 --> 00:09:18,680
+go ahead and check that out the link
+ 
+
+553
+00:09:18,680 --> 00:09:20,470
+go ahead and check that out the link
+will be in the description below so
+
+554
+00:09:20,470 --> 00:09:20,480
+will be in the description below so
+ 
+
+555
+00:09:20,480 --> 00:09:22,470
+will be in the description below so
+let's take a look at this in action the
+
+556
+00:09:22,470 --> 00:09:22,480
+let's take a look at this in action the
+ 
+
+557
+00:09:22,480 --> 00:09:23,990
+let's take a look at this in action the
+first thing I'm going to do is actually
+
+558
+00:09:23,990 --> 00:09:24,000
+first thing I'm going to do is actually
+ 
+
+559
+00:09:24,000 --> 00:09:26,910
+first thing I'm going to do is actually
+just compile this CPP file in Visual
+
+560
+00:09:26,910 --> 00:09:26,920
+just compile this CPP file in Visual
+ 
+
+561
+00:09:26,920 --> 00:09:28,310
+just compile this CPP file in Visual
+Studio you can compile files
+
+562
+00:09:28,310 --> 00:09:28,320
+Studio you can compile files
+ 
+
+563
+00:09:28,320 --> 00:09:30,829
+Studio you can compile files
+individually by hitting contrl F7 you
+
+564
+00:09:30,829 --> 00:09:30,839
+individually by hitting contrl F7 you
+ 
+
+565
+00:09:30,839 --> 00:09:32,590
+individually by hitting contrl F7 you
+can see our output here shows that we're
+
+566
+00:09:32,590 --> 00:09:32,600
+can see our output here shows that we're
+ 
+
+567
+00:09:32,600 --> 00:09:34,710
+can see our output here shows that we're
+actually building this main CVP file and
+
+568
+00:09:34,710 --> 00:09:34,720
+actually building this main CVP file and
+ 
+
+569
+00:09:34,720 --> 00:09:36,269
+actually building this main CVP file and
+that it succeeded if you don't want to
+
+570
+00:09:36,269 --> 00:09:36,279
+that it succeeded if you don't want to
+ 
+
+571
+00:09:36,279 --> 00:09:37,990
+that it succeeded if you don't want to
+hit contr F7 you can actually bring up
+
+572
+00:09:37,990 --> 00:09:38,000
+hit contr F7 you can actually bring up
+ 
+
+573
+00:09:38,000 --> 00:09:40,470
+hit contr F7 you can actually bring up
+this compile button you can do so by
+
+574
+00:09:40,470 --> 00:09:40,480
+this compile button you can do so by
+ 
+
+575
+00:09:40,480 --> 00:09:41,990
+this compile button you can do so by
+right clicking here and clicking on
+
+576
+00:09:41,990 --> 00:09:42,000
+right clicking here and clicking on
+ 
+
+577
+00:09:42,000 --> 00:09:43,990
+right clicking here and clicking on
+build and then going add or remove
+
+578
+00:09:43,990 --> 00:09:44,000
+build and then going add or remove
+ 
+
+579
+00:09:44,000 --> 00:09:46,190
+build and then going add or remove
+buttons customize and then adding a
+
+580
+00:09:46,190 --> 00:09:46,200
+buttons customize and then adding a
+ 
+
+581
+00:09:46,200 --> 00:09:50,870
+buttons customize and then adding a
+command under build called compile so if
+
+582
+00:09:50,870 --> 00:09:50,880
+command under build called compile so if
+ 
+
+583
+00:09:50,880 --> 00:09:52,389
+command under build called compile so if
+we hit that button you can see that we
+
+584
+00:09:52,389 --> 00:09:52,399
+we hit that button you can see that we
+ 
+
+585
+00:09:52,399 --> 00:09:54,150
+we hit that button you can see that we
+get our file compiling if we were to
+
+586
+00:09:54,150 --> 00:09:54,160
+get our file compiling if we were to
+ 
+
+587
+00:09:54,160 --> 00:09:55,710
+get our file compiling if we were to
+make some kind of syntax error here for
+
+588
+00:09:55,710 --> 00:09:55,720
+make some kind of syntax error here for
+ 
+
+589
+00:09:55,720 --> 00:09:57,910
+make some kind of syntax error here for
+example I'm forgetting a semicolon if I
+
+590
+00:09:57,910 --> 00:09:57,920
+example I'm forgetting a semicolon if I
+ 
+
+591
+00:09:57,920 --> 00:10:00,030
+example I'm forgetting a semicolon if I
+compile that file you'll see that we get
+
+592
+00:10:00,030 --> 00:10:00,040
+compile that file you'll see that we get
+ 
+
+593
+00:10:00,040 --> 00:10:02,069
+compile that file you'll see that we get
+an error now Visual Studio presents us
+
+594
+00:10:02,069 --> 00:10:02,079
+an error now Visual Studio presents us
+ 
+
+595
+00:10:02,079 --> 00:10:04,110
+an error now Visual Studio presents us
+with errors in many different ways one
+
+596
+00:10:04,110 --> 00:10:04,120
+with errors in many different ways one
+ 
+
+597
+00:10:04,120 --> 00:10:06,269
+with errors in many different ways one
+of which is this error list and another
+
+598
+00:10:06,269 --> 00:10:06,279
+of which is this error list and another
+ 
+
+599
+00:10:06,279 --> 00:10:08,670
+of which is this error list and another
+way is inside this output window I'm
+
+600
+00:10:08,670 --> 00:10:08,680
+way is inside this output window I'm
+ 
+
+601
+00:10:08,680 --> 00:10:10,630
+way is inside this output window I'm
+going to tell you guys right now this
+
+602
+00:10:10,630 --> 00:10:10,640
+going to tell you guys right now this
+ 
+
+603
+00:10:10,640 --> 00:10:14,030
+going to tell you guys right now this
+error list is mostly garbage it might
+
+604
+00:10:14,030 --> 00:10:14,040
+error list is mostly garbage it might
+ 
+
+605
+00:10:14,040 --> 00:10:16,230
+error list is mostly garbage it might
+appear to be readable for really small
+
+606
+00:10:16,230 --> 00:10:16,240
+appear to be readable for really small
+ 
+
+607
+00:10:16,240 --> 00:10:18,550
+appear to be readable for really small
+things like this but you never ever want
+
+608
+00:10:18,550 --> 00:10:18,560
+things like this but you never ever want
+ 
+
+609
+00:10:18,560 --> 00:10:20,350
+things like this but you never ever want
+to rely on it a lot of the times it's
+
+610
+00:10:20,350 --> 00:10:20,360
+to rely on it a lot of the times it's
+ 
+
+611
+00:10:20,360 --> 00:10:21,949
+to rely on it a lot of the times it's
+actually missing information the way
+
+612
+00:10:21,949 --> 00:10:21,959
+actually missing information the way
+ 
+
+613
+00:10:21,959 --> 00:10:23,509
+actually missing information the way
+that the error list works is it
+
+614
+00:10:23,509 --> 00:10:23,519
+that the error list works is it
+ 
+
+615
+00:10:23,519 --> 00:10:26,269
+that the error list works is it
+basically pauses our output window
+
+616
+00:10:26,269 --> 00:10:26,279
+basically pauses our output window
+ 
+
+617
+00:10:26,279 --> 00:10:28,630
+basically pauses our output window
+looking for the word error and then
+
+618
+00:10:28,630 --> 00:10:28,640
+looking for the word error and then
+ 
+
+619
+00:10:28,640 --> 00:10:30,269
+looking for the word error and then
+grabs information from there that it can
+
+620
+00:10:30,269 --> 00:10:30,279
+grabs information from there that it can
+ 
+
+621
+00:10:30,279 --> 00:10:32,990
+grabs information from there that it can
+find and puts it into this eror list so
+
+622
+00:10:32,990 --> 00:10:33,000
+find and puts it into this eror list so
+ 
+
+623
+00:10:33,000 --> 00:10:34,829
+find and puts it into this eror list so
+it's it's a good overview you want to
+
+624
+00:10:34,829 --> 00:10:34,839
+it's it's a good overview you want to
+ 
+
+625
+00:10:34,839 --> 00:10:36,910
+it's it's a good overview you want to
+use it like an overview but if you want
+
+626
+00:10:36,910 --> 00:10:36,920
+use it like an overview but if you want
+ 
+
+627
+00:10:36,920 --> 00:10:38,790
+use it like an overview but if you want
+more details and if you want all the
+
+628
+00:10:38,790 --> 00:10:38,800
+more details and if you want all the
+ 
+
+629
+00:10:38,800 --> 00:10:40,269
+more details and if you want all the
+information about the error that you've
+
+630
+00:10:40,269 --> 00:10:40,279
+information about the error that you've
+ 
+
+631
+00:10:40,279 --> 00:10:42,829
+information about the error that you've
+just had look at the output window so
+
+632
+00:10:42,829 --> 00:10:42,839
+just had look at the output window so
+ 
+
+633
+00:10:42,839 --> 00:10:44,470
+just had look at the output window so
+for the rest of this series I am
+
+634
+00:10:44,470 --> 00:10:44,480
+for the rest of this series I am
+ 
+
+635
+00:10:44,480 --> 00:10:45,710
+for the rest of this series I am
+actually going to be looking at this
+
+636
+00:10:45,710 --> 00:10:45,720
+actually going to be looking at this
+ 
+
+637
+00:10:45,720 --> 00:10:47,629
+actually going to be looking at this
+output window for error messages so get
+
+638
+00:10:47,629 --> 00:10:47,639
+output window for error messages so get
+ 
+
+639
+00:10:47,639 --> 00:10:48,990
+output window for error messages so get
+used to that you can see that we've got
+
+640
+00:10:48,990 --> 00:10:49,000
+used to that you can see that we've got
+ 
+
+641
+00:10:49,000 --> 00:10:51,430
+used to that you can see that we've got
+an error here it says syntax error
+
+642
+00:10:51,430 --> 00:10:51,440
+an error here it says syntax error
+ 
+
+643
+00:10:51,440 --> 00:10:54,509
+an error here it says syntax error
+missing semicolon before a curly bracket
+
+644
+00:10:54,509 --> 00:10:54,519
+missing semicolon before a curly bracket
+ 
+
+645
+00:10:54,519 --> 00:10:56,150
+missing semicolon before a curly bracket
+it tells you which line number the error
+
+646
+00:10:56,150 --> 00:10:56,160
+it tells you which line number the error
+ 
+
+647
+00:10:56,160 --> 00:10:58,310
+it tells you which line number the error
+is on if you double click on this actual
+
+648
+00:10:58,310 --> 00:10:58,320
+is on if you double click on this actual
+ 
+
+649
+00:10:58,320 --> 00:11:00,750
+is on if you double click on this actual
+line you will be taken to where the
+
+650
+00:11:00,750 --> 00:11:00,760
+line you will be taken to where the
+ 
+
+651
+00:11:00,760 --> 00:11:03,150
+line you will be taken to where the
+error is in your source code so let's go
+
+652
+00:11:03,150 --> 00:11:03,160
+error is in your source code so let's go
+ 
+
+653
+00:11:03,160 --> 00:11:05,350
+error is in your source code so let's go
+ahead and fix that by adding a semicolon
+
+654
+00:11:05,350 --> 00:11:05,360
+ahead and fix that by adding a semicolon
+ 
+
+655
+00:11:05,360 --> 00:11:07,670
+ahead and fix that by adding a semicolon
+and then hitting contrl F7 or compile to
+
+656
+00:11:07,670 --> 00:11:07,680
+and then hitting contrl F7 or compile to
+ 
+
+657
+00:11:07,680 --> 00:11:10,350
+and then hitting contrl F7 or compile to
+build this one file so we've compiled a
+
+658
+00:11:10,350 --> 00:11:10,360
+build this one file so we've compiled a
+ 
+
+659
+00:11:10,360 --> 00:11:12,990
+build this one file so we've compiled a
+file when you compile files individually
+
+660
+00:11:12,990 --> 00:11:13,000
+file when you compile files individually
+ 
+
+661
+00:11:13,000 --> 00:11:14,750
+file when you compile files individually
+no linking happens obviously you're just
+
+662
+00:11:14,750 --> 00:11:14,760
+no linking happens obviously you're just
+ 
+
+663
+00:11:14,760 --> 00:11:16,990
+no linking happens obviously you're just
+compiling a single file so the Linker
+
+664
+00:11:16,990 --> 00:11:17,000
+compiling a single file so the Linker
+ 
+
+665
+00:11:17,000 --> 00:11:19,310
+compiling a single file so the Linker
+isn't invoked at all let's go ahead and
+
+666
+00:11:19,310 --> 00:11:19,320
+isn't invoked at all let's go ahead and
+ 
+
+667
+00:11:19,320 --> 00:11:20,910
+isn't invoked at all let's go ahead and
+check out what the compiler actually
+
+668
+00:11:20,910 --> 00:11:20,920
+check out what the compiler actually
+ 
+
+669
+00:11:20,920 --> 00:11:22,470
+check out what the compiler actually
+generated if we right click on our
+
+670
+00:11:22,470 --> 00:11:22,480
+generated if we right click on our
+ 
+
+671
+00:11:22,480 --> 00:11:24,110
+generated if we right click on our
+Hollow World project you'll see an open
+
+672
+00:11:24,110 --> 00:11:24,120
+Hollow World project you'll see an open
+ 
+
+673
+00:11:24,120 --> 00:11:26,389
+Hollow World project you'll see an open
+folder in file explorer button this will
+
+674
+00:11:26,389 --> 00:11:26,399
+folder in file explorer button this will
+ 
+
+675
+00:11:26,399 --> 00:11:28,990
+folder in file explorer button this will
+open up our File Explorer by default
+
+676
+00:11:28,990 --> 00:11:29,000
+open up our File Explorer by default
+ 
+
+677
+00:11:29,000 --> 00:11:30,590
+open up our File Explorer by default
+visual studio will output our buildt
+
+678
+00:11:30,590 --> 00:11:30,600
+visual studio will output our buildt
+ 
+
+679
+00:11:30,600 --> 00:11:32,550
+visual studio will output our buildt
+files into this debug folder and you can
+
+680
+00:11:32,550 --> 00:11:32,560
+files into this debug folder and you can
+ 
+
+681
+00:11:32,560 --> 00:11:34,110
+files into this debug folder and you can
+see if we go in there you can see a
+
+682
+00:11:34,110 --> 00:11:34,120
+see if we go in there you can see a
+ 
+
+683
+00:11:34,120 --> 00:11:37,110
+see if we go in there you can see a
+main. obj file this is the object file
+
+684
+00:11:37,110 --> 00:11:37,120
+main. obj file this is the object file
+ 
+
+685
+00:11:37,120 --> 00:11:39,030
+main. obj file this is the object file
+that our compiler has generated again
+
+686
+00:11:39,030 --> 00:11:39,040
+that our compiler has generated again
+ 
+
+687
+00:11:39,040 --> 00:11:41,150
+that our compiler has generated again
+you will have one of these for every
+
+688
+00:11:41,150 --> 00:11:41,160
+you will have one of these for every
+ 
+
+689
+00:11:41,160 --> 00:11:44,269
+you will have one of these for every
+single C++ file in your project if we go
+
+690
+00:11:44,269 --> 00:11:44,279
+single C++ file in your project if we go
+ 
+
+691
+00:11:44,279 --> 00:11:46,230
+single C++ file in your project if we go
+back to visual studio and we build the
+
+692
+00:11:46,230 --> 00:11:46,240
+back to visual studio and we build the
+ 
+
+693
+00:11:46,240 --> 00:11:48,269
+back to visual studio and we build the
+actual project so I'm doing more than
+
+694
+00:11:48,269 --> 00:11:48,279
+actual project so I'm doing more than
+ 
+
+695
+00:11:48,279 --> 00:11:50,190
+actual project so I'm doing more than
+just building one file here I'm actually
+
+696
+00:11:50,190 --> 00:11:50,200
+just building one file here I'm actually
+ 
+
+697
+00:11:50,200 --> 00:11:52,829
+just building one file here I'm actually
+building the entire project you can see
+
+698
+00:11:52,829 --> 00:11:52,839
+building the entire project you can see
+ 
+
+699
+00:11:52,839 --> 00:11:55,350
+building the entire project you can see
+that we actually get that exe file and
+
+700
+00:11:55,350 --> 00:11:55,360
+that we actually get that exe file and
+ 
+
+701
+00:11:55,360 --> 00:11:56,990
+that we actually get that exe file and
+again if we go back to our file explorer
+
+702
+00:11:56,990 --> 00:11:57,000
+again if we go back to our file explorer
+ 
+
+703
+00:11:57,000 --> 00:11:58,710
+again if we go back to our file explorer
+that will actually be in the directory
+
+704
+00:11:58,710 --> 00:11:58,720
+that will actually be in the directory
+ 
+
+705
+00:11:58,720 --> 00:12:01,350
+that will actually be in the directory
+of your solution and then in the debug
+
+706
+00:12:01,350 --> 00:12:01,360
+of your solution and then in the debug
+ 
+
+707
+00:12:01,360 --> 00:12:03,430
+of your solution and then in the debug
+folder I know visual Studios default
+
+708
+00:12:03,430 --> 00:12:03,440
+folder I know visual Studios default
+ 
+
+709
+00:12:03,440 --> 00:12:04,990
+folder I know visual Studios default
+paths are a little bit weird I usually
+
+710
+00:12:04,990 --> 00:12:05,000
+paths are a little bit weird I usually
+ 
+
+711
+00:12:05,000 --> 00:12:06,350
+paths are a little bit weird I usually
+like to change them but I'm trying not
+
+712
+00:12:06,350 --> 00:12:06,360
+like to change them but I'm trying not
+ 
+
+713
+00:12:06,360 --> 00:12:07,829
+like to change them but I'm trying not
+to complicate things here and there's
+
+714
+00:12:07,829 --> 00:12:07,839
+to complicate things here and there's
+ 
+
+715
+00:12:07,839 --> 00:12:09,829
+to complicate things here and there's
+our hello world.exe file which we can
+
+716
+00:12:09,829 --> 00:12:09,839
+our hello world.exe file which we can
+ 
+
+717
+00:12:09,839 --> 00:12:13,509
+our hello world.exe file which we can
+run and imprints the text hello world so
+
+718
+00:12:13,509 --> 00:12:13,519
+run and imprints the text hello world so
+ 
+
+719
+00:12:13,519 --> 00:12:15,710
+run and imprints the text hello world so
+that's a pretty simple overview but what
+
+720
+00:12:15,710 --> 00:12:15,720
+that's a pretty simple overview but what
+ 
+
+721
+00:12:15,720 --> 00:12:18,710
+that's a pretty simple overview but what
+happens when we have multiple C++ files
+
+722
+00:12:18,710 --> 00:12:18,720
+happens when we have multiple C++ files
+ 
+
+723
+00:12:18,720 --> 00:12:20,750
+happens when we have multiple C++ files
+let's take a look at a simple example so
+
+724
+00:12:20,750 --> 00:12:20,760
+let's take a look at a simple example so
+ 
+
+725
+00:12:20,760 --> 00:12:22,230
+let's take a look at a simple example so
+suppose that we've got our Hollow World
+
+726
+00:12:22,230 --> 00:12:22,240
+suppose that we've got our Hollow World
+ 
+
+727
+00:12:22,240 --> 00:12:23,750
+suppose that we've got our Hollow World
+printing to the console here but I don't
+
+728
+00:12:23,750 --> 00:12:23,760
+printing to the console here but I don't
+ 
+
+729
+00:12:23,760 --> 00:12:25,509
+printing to the console here but I don't
+want to use the C out function I want to
+
+730
+00:12:25,509 --> 00:12:25,519
+want to use the C out function I want to
+ 
+
+731
+00:12:25,519 --> 00:12:27,790
+want to use the C out function I want to
+use my own logging function and then
+
+732
+00:12:27,790 --> 00:12:27,800
+use my own logging function and then
+ 
+
+733
+00:12:27,800 --> 00:12:30,030
+use my own logging function and then
+maybe that will wrap this out function
+
+734
+00:12:30,030 --> 00:12:30,040
+maybe that will wrap this out function
+ 
+
+735
+00:12:30,040 --> 00:12:32,790
+maybe that will wrap this out function
+so let's create a function called log
+
+736
+00:12:32,790 --> 00:12:32,800
+so let's create a function called log
+ 
+
+737
+00:12:32,800 --> 00:12:37,150
+so let's create a function called log
+which will take in a C string called
+
+738
+00:12:37,150 --> 00:12:37,160
+which will take in a C string called
+ 
+
+739
+00:12:37,160 --> 00:12:40,030
+which will take in a C string called
+message and print that
+
+740
+00:12:40,030 --> 00:12:40,040
+message and print that
+ 
+
+741
+00:12:40,040 --> 00:12:43,269
+message and print that
+message to the console simple enough now
+
+742
+00:12:43,269 --> 00:12:43,279
+message to the console simple enough now
+ 
+
+743
+00:12:43,279 --> 00:12:44,750
+message to the console simple enough now
+don't worry if you're not sure what a
+
+744
+00:12:44,750 --> 00:12:44,760
+don't worry if you're not sure what a
+ 
+
+745
+00:12:44,760 --> 00:12:47,790
+don't worry if you're not sure what a
+const CH pointer is we're going to talk
+
+746
+00:12:47,790 --> 00:12:47,800
+const CH pointer is we're going to talk
+ 
+
+747
+00:12:47,800 --> 00:12:50,470
+const CH pointer is we're going to talk
+about strings in another video for now
+
+748
+00:12:50,470 --> 00:12:50,480
+about strings in another video for now
+ 
+
+749
+00:12:50,480 --> 00:12:52,030
+about strings in another video for now
+all you have to know is that a cons CH
+
+750
+00:12:52,030 --> 00:12:52,040
+all you have to know is that a cons CH
+ 
+
+751
+00:12:52,040 --> 00:12:54,350
+all you have to know is that a cons CH
+pointer is basically just a type that
+
+752
+00:12:54,350 --> 00:12:54,360
+pointer is basically just a type that
+ 
+
+753
+00:12:54,360 --> 00:12:56,470
+pointer is basically just a type that
+can hold a string of text so now we can
+
+754
+00:12:56,470 --> 00:12:56,480
+can hold a string of text so now we can
+ 
+
+755
+00:12:56,480 --> 00:12:57,829
+can hold a string of text so now we can
+rewrite our code so that instead of
+
+756
+00:12:57,829 --> 00:12:57,839
+rewrite our code so that instead of
+ 
+
+757
+00:12:57,839 --> 00:12:59,670
+rewrite our code so that instead of
+calling C out and then printing hello
+
+758
+00:12:59,670 --> 00:12:59,680
+calling C out and then printing hello
+ 
+
+759
+00:12:59,680 --> 00:13:02,949
+calling C out and then printing hello
+world we call this log function and then
+
+760
+00:13:02,949 --> 00:13:02,959
+world we call this log function and then
+ 
+
+761
+00:13:02,959 --> 00:13:05,710
+world we call this log function and then
+pass in hello world as a parameter we
+
+762
+00:13:05,710 --> 00:13:05,720
+pass in hello world as a parameter we
+ 
+
+763
+00:13:05,720 --> 00:13:07,150
+pass in hello world as a parameter we
+can go ahead and hit the local Windows
+
+764
+00:13:07,150 --> 00:13:07,160
+can go ahead and hit the local Windows
+ 
+
+765
+00:13:07,160 --> 00:13:08,590
+can go ahead and hit the local Windows
+debugger button here just to make sure
+
+766
+00:13:08,590 --> 00:13:08,600
+debugger button here just to make sure
+ 
+
+767
+00:13:08,600 --> 00:13:10,949
+debugger button here just to make sure
+that it still works and you can see it
+
+768
+00:13:10,949 --> 00:13:10,959
+that it still works and you can see it
+ 
+
+769
+00:13:10,959 --> 00:13:13,550
+that it still works and you can see it
+does fantastic we've written our first
+
+770
+00:13:13,550 --> 00:13:13,560
+does fantastic we've written our first
+ 
+
+771
+00:13:13,560 --> 00:13:15,710
+does fantastic we've written our first
+function that was easy so now let's take
+
+772
+00:13:15,710 --> 00:13:15,720
+function that was easy so now let's take
+ 
+
+773
+00:13:15,720 --> 00:13:17,470
+function that was easy so now let's take
+that function and put it into a
+
+774
+00:13:17,470 --> 00:13:17,480
+that function and put it into a
+ 
+
+775
+00:13:17,480 --> 00:13:19,269
+that function and put it into a
+different file because I don't want to
+
+776
+00:13:19,269 --> 00:13:19,279
+different file because I don't want to
+ 
+
+777
+00:13:19,279 --> 00:13:21,470
+different file because I don't want to
+have this main.cpp file cluttered with
+
+778
+00:13:21,470 --> 00:13:21,480
+have this main.cpp file cluttered with
+ 
+
+779
+00:13:21,480 --> 00:13:23,550
+have this main.cpp file cluttered with
+all of my code I want to separate my
+
+780
+00:13:23,550 --> 00:13:23,560
+all of my code I want to separate my
+ 
+
+781
+00:13:23,560 --> 00:13:25,350
+all of my code I want to separate my
+code into multiple files to keep things
+
+782
+00:13:25,350 --> 00:13:25,360
+code into multiple files to keep things
+ 
+
+783
+00:13:25,360 --> 00:13:27,430
+code into multiple files to keep things
+nice and clean and organized we'll make
+
+784
+00:13:27,430 --> 00:13:27,440
+nice and clean and organized we'll make
+ 
+
+785
+00:13:27,440 --> 00:13:29,350
+nice and clean and organized we'll make
+a new file under source files by going
+
+786
+00:13:29,350 --> 00:13:29,360
+a new file under source files by going
+ 
+
+787
+00:13:29,360 --> 00:13:31,350
+a new file under source files by going
+right click add new item we'll make a
+
+788
+00:13:31,350 --> 00:13:31,360
+right click add new item we'll make a
+ 
+
+789
+00:13:31,360 --> 00:13:35,150
+right click add new item we'll make a
+CPP file we'll call it log.
+
+790
+00:13:35,150 --> 00:13:35,160
+CPP file we'll call it log.
+ 
+
+791
+00:13:35,160 --> 00:13:37,509
+CPP file we'll call it log.
+CPP and we'll click add so what I'm
+
+792
+00:13:37,509 --> 00:13:37,519
+CPP and we'll click add so what I'm
+ 
+
+793
+00:13:37,519 --> 00:13:39,230
+CPP and we'll click add so what I'm
+going to do here is I'm going to go back
+
+794
+00:13:39,230 --> 00:13:39,240
+going to do here is I'm going to go back
+ 
+
+795
+00:13:39,240 --> 00:13:43,949
+going to do here is I'm going to go back
+to main and I'm going to cut this log
+
+796
+00:13:43,949 --> 00:13:43,959
+to main and I'm going to cut this log
+ 
+
+797
+00:13:43,959 --> 00:13:46,550
+to main and I'm going to cut this log
+function and paste it into here so now
+
+798
+00:13:46,550 --> 00:13:46,560
+function and paste it into here so now
+ 
+
+799
+00:13:46,560 --> 00:13:48,350
+function and paste it into here so now
+we've got a function inside our log. CPP
+
+800
+00:13:48,350 --> 00:13:48,360
+we've got a function inside our log. CPP
+ 
+
+801
+00:13:48,360 --> 00:13:50,110
+we've got a function inside our log. CPP
+file called log let's try and compile
+
+802
+00:13:50,110 --> 00:13:50,120
+file called log let's try and compile
+ 
+
+803
+00:13:50,120 --> 00:13:52,030
+file called log let's try and compile
+just this file hey check this out we get
+
+804
+00:13:52,030 --> 00:13:52,040
+just this file hey check this out we get
+ 
+
+805
+00:13:52,040 --> 00:13:53,629
+just this file hey check this out we get
+a bunch of errors and if we look at our
+
+806
+00:13:53,629 --> 00:13:53,639
+a bunch of errors and if we look at our
+ 
+
+807
+00:13:53,639 --> 00:13:55,670
+a bunch of errors and if we look at our
+output window you'll see that c out is
+
+808
+00:13:55,670 --> 00:13:55,680
+output window you'll see that c out is
+ 
+
+809
+00:13:55,680 --> 00:13:57,350
+output window you'll see that c out is
+not a member of STD basically it's
+
+810
+00:13:57,350 --> 00:13:57,360
+not a member of STD basically it's
+ 
+
+811
+00:13:57,360 --> 00:13:59,269
+not a member of STD basically it's
+telling us that it has no idea what C
+
+812
+00:13:59,269 --> 00:13:59,279
+telling us that it has no idea what C
+ 
+
+813
+00:13:59,279 --> 00:14:01,670
+telling us that it has no idea what C
+out is the reason is because we haven't
+
+814
+00:14:01,670 --> 00:14:01,680
+out is the reason is because we haven't
+ 
+
+815
+00:14:01,680 --> 00:14:04,790
+out is the reason is because we haven't
+included the Declaration for C out every
+
+816
+00:14:04,790 --> 00:14:04,800
+included the Declaration for C out every
+ 
+
+817
+00:14:04,800 --> 00:14:07,829
+included the Declaration for C out every
+kind of symbol in C++ needs some kind of
+
+818
+00:14:07,829 --> 00:14:07,839
+kind of symbol in C++ needs some kind of
+ 
+
+819
+00:14:07,839 --> 00:14:10,990
+kind of symbol in C++ needs some kind of
+Declaration C out is defined inside a
+
+820
+00:14:10,990 --> 00:14:11,000
+Declaration C out is defined inside a
+ 
+
+821
+00:14:11,000 --> 00:14:14,069
+Declaration C out is defined inside a
+file that we included in main.cpp and
+
+822
+00:14:14,069 --> 00:14:14,079
+file that we included in main.cpp and
+ 
+
+823
+00:14:14,079 --> 00:14:16,350
+file that we included in main.cpp and
+that file of course was iostream so
+
+824
+00:14:16,350 --> 00:14:16,360
+that file of course was iostream so
+ 
+
+825
+00:14:16,360 --> 00:14:18,710
+that file of course was iostream so
+let's go ahead and grab iostream and put
+
+826
+00:14:18,710 --> 00:14:18,720
+let's go ahead and grab iostream and put
+ 
+
+827
+00:14:18,720 --> 00:14:20,550
+let's go ahead and grab iostream and put
+it at the top of this file so that we
+
+828
+00:14:20,550 --> 00:14:20,560
+it at the top of this file so that we
+ 
+
+829
+00:14:20,560 --> 00:14:23,069
+it at the top of this file so that we
+include iostream by doing so we include
+
+830
+00:14:23,069 --> 00:14:23,079
+include iostream by doing so we include
+ 
+
+831
+00:14:23,079 --> 00:14:25,470
+include iostream by doing so we include
+a declaration for this C out function
+
+832
+00:14:25,470 --> 00:14:25,480
+a declaration for this C out function
+ 
+
+833
+00:14:25,480 --> 00:14:27,110
+a declaration for this C out function
+let's go ahead and compile this file
+
+834
+00:14:27,110 --> 00:14:27,120
+let's go ahead and compile this file
+ 
+
+835
+00:14:27,120 --> 00:14:29,310
+let's go ahead and compile this file
+once again you can see now it succeeds
+
+836
+00:14:29,310 --> 00:14:29,320
+once again you can see now it succeeds
+ 
+
+837
+00:14:29,320 --> 00:14:31,189
+once again you can see now it succeeds
+great so back in main I want to call
+
+838
+00:14:31,189 --> 00:14:31,199
+great so back in main I want to call
+ 
+
+839
+00:14:31,199 --> 00:14:32,990
+great so back in main I want to call
+this log function can I do that let's
+
+840
+00:14:32,990 --> 00:14:33,000
+this log function can I do that let's
+ 
+
+841
+00:14:33,000 --> 00:14:36,829
+this log function can I do that let's
+hit contr F7 no I can't because log is
+
+842
+00:14:36,829 --> 00:14:36,839
+hit contr F7 no I can't because log is
+ 
+
+843
+00:14:36,839 --> 00:14:39,269
+hit contr F7 no I can't because log is
+not found we also get a complaint about
+
+844
+00:14:39,269 --> 00:14:39,279
+not found we also get a complaint about
+ 
+
+845
+00:14:39,279 --> 00:14:41,150
+not found we also get a complaint about
+cin but we already know that that's
+
+846
+00:14:41,150 --> 00:14:41,160
+cin but we already know that that's
+ 
+
+847
+00:14:41,160 --> 00:14:43,150
+cin but we already know that that's
+because we removed the io stream include
+
+848
+00:14:43,150 --> 00:14:43,160
+because we removed the io stream include
+ 
+
+849
+00:14:43,160 --> 00:14:46,230
+because we removed the io stream include
+and we have no idea what cin is we can
+
+850
+00:14:46,230 --> 00:14:46,240
+and we have no idea what cin is we can
+ 
+
+851
+00:14:46,240 --> 00:14:49,389
+and we have no idea what cin is we can
+restore that include and our problem
+
+852
+00:14:49,389 --> 00:14:49,399
+restore that include and our problem
+ 
+
+853
+00:14:49,399 --> 00:14:51,590
+restore that include and our problem
+should be fixed however you can see that
+
+854
+00:14:51,590 --> 00:14:51,600
+should be fixed however you can see that
+ 
+
+855
+00:14:51,600 --> 00:14:54,829
+should be fixed however you can see that
+log is still not found so what's going
+
+856
+00:14:54,829 --> 00:14:54,839
+log is still not found so what's going
+ 
+
+857
+00:14:54,839 --> 00:14:57,870
+log is still not found so what's going
+on here we've moved a function from one
+
+858
+00:14:57,870 --> 00:14:57,880
+on here we've moved a function from one
+ 
+
+859
+00:14:57,880 --> 00:14:59,790
+on here we've moved a function from one
+file into the other
+
+860
+00:14:59,790 --> 00:14:59,800
+file into the other
+ 
+
+861
+00:14:59,800 --> 00:15:02,310
+file into the other
+and we are compiling each file
+
+862
+00:15:02,310 --> 00:15:02,320
+and we are compiling each file
+ 
+
+863
+00:15:02,320 --> 00:15:03,990
+and we are compiling each file
+separately for the minute so this
+
+864
+00:15:03,990 --> 00:15:04,000
+separately for the minute so this
+ 
+
+865
+00:15:04,000 --> 00:15:06,749
+separately for the minute so this
+main.cpp file has no idea that there's a
+
+866
+00:15:06,749 --> 00:15:06,759
+main.cpp file has no idea that there's a
+ 
+
+867
+00:15:06,759 --> 00:15:08,790
+main.cpp file has no idea that there's a
+function called log somewhere and since
+
+868
+00:15:08,790 --> 00:15:08,800
+function called log somewhere and since
+ 
+
+869
+00:15:08,800 --> 00:15:11,269
+function called log somewhere and since
+it doesn't recognize what log is it
+
+870
+00:15:11,269 --> 00:15:11,279
+it doesn't recognize what log is it
+ 
+
+871
+00:15:11,279 --> 00:15:13,670
+it doesn't recognize what log is it
+gives us a compile error we can fix this
+
+872
+00:15:13,670 --> 00:15:13,680
+gives us a compile error we can fix this
+ 
+
+873
+00:15:13,680 --> 00:15:15,389
+gives us a compile error we can fix this
+by providing something called a
+
+874
+00:15:15,389 --> 00:15:15,399
+by providing something called a
+ 
+
+875
+00:15:15,399 --> 00:15:18,590
+by providing something called a
+declaration a declaration is exactly
+
+876
+00:15:18,590 --> 00:15:18,600
+declaration a declaration is exactly
+ 
+
+877
+00:15:18,600 --> 00:15:20,350
+declaration a declaration is exactly
+what it sounds like we're declaring that
+
+878
+00:15:20,350 --> 00:15:20,360
+what it sounds like we're declaring that
+ 
+
+879
+00:15:20,360 --> 00:15:22,829
+what it sounds like we're declaring that
+something called log exists now this is
+
+880
+00:15:22,829 --> 00:15:22,839
+something called log exists now this is
+ 
+
+881
+00:15:22,839 --> 00:15:24,710
+something called log exists now this is
+almost like a promise because we can
+
+882
+00:15:24,710 --> 00:15:24,720
+almost like a promise because we can
+ 
+
+883
+00:15:24,720 --> 00:15:27,509
+almost like a promise because we can
+just say hey compiler there's a function
+
+884
+00:15:27,509 --> 00:15:27,519
+just say hey compiler there's a function
+ 
+
+885
+00:15:27,519 --> 00:15:30,350
+just say hey compiler there's a function
+called log however but the compiler will
+
+886
+00:15:30,350 --> 00:15:30,360
+called log however but the compiler will
+ 
+
+887
+00:15:30,360 --> 00:15:31,949
+called log however but the compiler will
+just believe us and that's the great
+
+888
+00:15:31,949 --> 00:15:31,959
+just believe us and that's the great
+ 
+
+889
+00:15:31,959 --> 00:15:33,509
+just believe us and that's the great
+thing about the compiler it'll be like
+
+890
+00:15:33,509 --> 00:15:33,519
+thing about the compiler it'll be like
+ 
+
+891
+00:15:33,519 --> 00:15:35,949
+thing about the compiler it'll be like
+oh yeah cool I totally trust you because
+
+892
+00:15:35,949 --> 00:15:35,959
+oh yeah cool I totally trust you because
+ 
+
+893
+00:15:35,959 --> 00:15:37,189
+oh yeah cool I totally trust you because
+the compiler doesn't care about
+
+894
+00:15:37,189 --> 00:15:37,199
+the compiler doesn't care about
+ 
+
+895
+00:15:37,199 --> 00:15:39,189
+the compiler doesn't care about
+resolving where that log function
+
+896
+00:15:39,189 --> 00:15:39,199
+resolving where that log function
+ 
+
+897
+00:15:39,199 --> 00:15:41,389
+resolving where that log function
+actually is defined so we have two
+
+898
+00:15:41,389 --> 00:15:41,399
+actually is defined so we have two
+ 
+
+899
+00:15:41,399 --> 00:15:43,670
+actually is defined so we have two
+different words here declarations and
+
+900
+00:15:43,670 --> 00:15:43,680
+different words here declarations and
+ 
+
+901
+00:15:43,680 --> 00:15:45,870
+different words here declarations and
+definitions declarations are just a
+
+902
+00:15:45,870 --> 00:15:45,880
+definitions declarations are just a
+ 
+
+903
+00:15:45,880 --> 00:15:48,710
+definitions declarations are just a
+statement which say hey this symbol this
+
+904
+00:15:48,710 --> 00:15:48,720
+statement which say hey this symbol this
+ 
+
+905
+00:15:48,720 --> 00:15:51,949
+statement which say hey this symbol this
+function exists and then a definition is
+
+906
+00:15:51,949 --> 00:15:51,959
+function exists and then a definition is
+ 
+
+907
+00:15:51,959 --> 00:15:54,309
+function exists and then a definition is
+something that says this is what this
+
+908
+00:15:54,309 --> 00:15:54,319
+something that says this is what this
+ 
+
+909
+00:15:54,319 --> 00:15:56,790
+something that says this is what this
+function is this is the body of this
+
+910
+00:15:56,790 --> 00:15:56,800
+function is this is the body of this
+ 
+
+911
+00:15:56,800 --> 00:15:58,990
+function is this is the body of this
+function so let's go ahead and write a
+
+912
+00:15:58,990 --> 00:15:59,000
+function so let's go ahead and write a
+ 
+
+913
+00:15:59,000 --> 00:16:01,230
+function so let's go ahead and write a
+decaration for our log function a
+
+914
+00:16:01,230 --> 00:16:01,240
+decaration for our log function a
+ 
+
+915
+00:16:01,240 --> 00:16:03,350
+decaration for our log function a
+declaration looks very similar to an
+
+916
+00:16:03,350 --> 00:16:03,360
+declaration looks very similar to an
+ 
+
+917
+00:16:03,360 --> 00:16:05,389
+declaration looks very similar to an
+actual definition this is something
+
+918
+00:16:05,389 --> 00:16:05,399
+actual definition this is something
+ 
+
+919
+00:16:05,399 --> 00:16:06,990
+actual definition this is something
+called a definition because you can see
+
+920
+00:16:06,990 --> 00:16:07,000
+called a definition because you can see
+ 
+
+921
+00:16:07,000 --> 00:16:08,949
+called a definition because you can see
+that not only have we declared something
+
+922
+00:16:08,949 --> 00:16:08,959
+that not only have we declared something
+ 
+
+923
+00:16:08,959 --> 00:16:10,430
+that not only have we declared something
+with the name log a function with the
+
+924
+00:16:10,430 --> 00:16:10,440
+with the name log a function with the
+ 
+
+925
+00:16:10,440 --> 00:16:12,949
+with the name log a function with the
+name log we've also given it a body
+
+926
+00:16:12,949 --> 00:16:12,959
+name log we've also given it a body
+ 
+
+927
+00:16:12,959 --> 00:16:14,749
+name log we've also given it a body
+which actually contains what code will
+
+928
+00:16:14,749 --> 00:16:14,759
+which actually contains what code will
+ 
+
+929
+00:16:14,759 --> 00:16:16,509
+which actually contains what code will
+run when we call this function so back
+
+930
+00:16:16,509 --> 00:16:16,519
+run when we call this function so back
+ 
+
+931
+00:16:16,519 --> 00:16:18,990
+run when we call this function so back
+in main let's write a declaration and a
+
+932
+00:16:18,990 --> 00:16:19,000
+in main let's write a declaration and a
+ 
+
+933
+00:16:19,000 --> 00:16:20,710
+in main let's write a declaration and a
+declaration looks very similar to a
+
+934
+00:16:20,710 --> 00:16:20,720
+declaration looks very similar to a
+ 
+
+935
+00:16:20,720 --> 00:16:23,670
+declaration looks very similar to a
+definition however what it doesn't have
+
+936
+00:16:23,670 --> 00:16:23,680
+definition however what it doesn't have
+ 
+
+937
+00:16:23,680 --> 00:16:25,949
+definition however what it doesn't have
+is the actual body so you can see I can
+
+938
+00:16:25,949 --> 00:16:25,959
+is the actual body so you can see I can
+ 
+
+939
+00:16:25,959 --> 00:16:28,309
+is the actual body so you can see I can
+just put a semicolon at the end of this
+
+940
+00:16:28,309 --> 00:16:28,319
+just put a semicolon at the end of this
+ 
+
+941
+00:16:28,319 --> 00:16:30,269
+just put a semicolon at the end of this
+and that is the end of that in fact you
+
+942
+00:16:30,269 --> 00:16:30,279
+and that is the end of that in fact you
+ 
+
+943
+00:16:30,279 --> 00:16:31,829
+and that is the end of that in fact you
+don't even have to specify the name of
+
+944
+00:16:31,829 --> 00:16:31,839
+don't even have to specify the name of
+ 
+
+945
+00:16:31,839 --> 00:16:33,949
+don't even have to specify the name of
+the parameter because it doesn't matter
+
+946
+00:16:33,949 --> 00:16:33,959
+the parameter because it doesn't matter
+ 
+
+947
+00:16:33,959 --> 00:16:35,910
+the parameter because it doesn't matter
+you can just write that as a rule of
+
+948
+00:16:35,910 --> 00:16:35,920
+you can just write that as a rule of
+ 
+
+949
+00:16:35,920 --> 00:16:37,870
+you can just write that as a rule of
+thumb though I do like to specify the
+
+950
+00:16:37,870 --> 00:16:37,880
+thumb though I do like to specify the
+ 
+
+951
+00:16:37,880 --> 00:16:40,230
+thumb though I do like to specify the
+name because it makes more sense so
+
+952
+00:16:40,230 --> 00:16:40,240
+name because it makes more sense so
+ 
+
+953
+00:16:40,240 --> 00:16:42,509
+name because it makes more sense so
+let's compile this file now Hey look
+
+954
+00:16:42,509 --> 00:16:42,519
+let's compile this file now Hey look
+ 
+
+955
+00:16:42,519 --> 00:16:44,069
+let's compile this file now Hey look
+check this out the compiler totally
+
+956
+00:16:44,069 --> 00:16:44,079
+check this out the compiler totally
+ 
+
+957
+00:16:44,079 --> 00:16:45,749
+check this out the compiler totally
+bought it so you might be wondering at
+
+958
+00:16:45,749 --> 00:16:45,759
+bought it so you might be wondering at
+ 
+
+959
+00:16:45,759 --> 00:16:48,189
+bought it so you might be wondering at
+this stage well well hey how does the
+
+960
+00:16:48,189 --> 00:16:48,199
+this stage well well hey how does the
+ 
+
+961
+00:16:48,199 --> 00:16:50,590
+this stage well well hey how does the
+compiler know that we actually have a
+
+962
+00:16:50,590 --> 00:16:50,600
+compiler know that we actually have a
+ 
+
+963
+00:16:50,600 --> 00:16:53,030
+compiler know that we actually have a
+log function in another file if we're
+
+964
+00:16:53,030 --> 00:16:53,040
+log function in another file if we're
+ 
+
+965
+00:16:53,040 --> 00:16:55,069
+log function in another file if we're
+just compiling this one file and the
+
+966
+00:16:55,069 --> 00:16:55,079
+just compiling this one file and the
+ 
+
+967
+00:16:55,079 --> 00:16:57,189
+just compiling this one file and the
+answer is it doesn't it just it trusts
+
+968
+00:16:57,189 --> 00:16:57,199
+answer is it doesn't it just it trusts
+ 
+
+969
+00:16:57,199 --> 00:16:59,269
+answer is it doesn't it just it trusts
+us so then your second question should
+
+970
+00:16:59,269 --> 00:16:59,279
+us so then your second question should
+ 
+
+971
+00:16:59,279 --> 00:17:03,590
+us so then your second question should
+be how does it actually run the right
+
+972
+00:17:03,590 --> 00:17:03,600
+be how does it actually run the right
+ 
+
+973
+00:17:03,600 --> 00:17:06,630
+be how does it actually run the right
+code that is where the Linker comes in
+
+974
+00:17:06,630 --> 00:17:06,640
+code that is where the Linker comes in
+ 
+
+975
+00:17:06,640 --> 00:17:08,789
+code that is where the Linker comes in
+when we build our entire project not
+
+976
+00:17:08,789 --> 00:17:08,799
+when we build our entire project not
+ 
+
+977
+00:17:08,799 --> 00:17:10,789
+when we build our entire project not
+just this one file but if I actually
+
+978
+00:17:10,789 --> 00:17:10,799
+just this one file but if I actually
+ 
+
+979
+00:17:10,799 --> 00:17:13,309
+just this one file but if I actually
+right click and hit build once our files
+
+980
+00:17:13,309 --> 00:17:13,319
+right click and hit build once our files
+ 
+
+981
+00:17:13,319 --> 00:17:14,909
+right click and hit build once our files
+have been compiled the Linker will
+
+982
+00:17:14,909 --> 00:17:14,919
+have been compiled the Linker will
+ 
+
+983
+00:17:14,919 --> 00:17:17,189
+have been compiled the Linker will
+actually find the definition of that log
+
+984
+00:17:17,189 --> 00:17:17,199
+actually find the definition of that log
+ 
+
+985
+00:17:17,199 --> 00:17:19,150
+actually find the definition of that log
+function and wire it up to the log
+
+986
+00:17:19,150 --> 00:17:19,160
+function and wire it up to the log
+ 
+
+987
+00:17:19,160 --> 00:17:21,549
+function and wire it up to the log
+function that we call here in main.cpp
+
+988
+00:17:21,549 --> 00:17:21,559
+function that we call here in main.cpp
+ 
+
+989
+00:17:21,559 --> 00:17:24,270
+function that we call here in main.cpp
+if it can't find that definition that's
+
+990
+00:17:24,270 --> 00:17:24,280
+if it can't find that definition that's
+ 
+
+991
+00:17:24,280 --> 00:17:26,309
+if it can't find that definition that's
+when we get a Linker error now linking
+
+992
+00:17:26,309 --> 00:17:26,319
+when we get a Linker error now linking
+ 
+
+993
+00:17:26,319 --> 00:17:28,350
+when we get a Linker error now linking
+errors are something that look very
+
+994
+00:17:28,350 --> 00:17:28,360
+errors are something that look very
+ 
+
+995
+00:17:28,360 --> 00:17:31,350
+errors are something that look very
+scary and a lot of people get scared so
+
+996
+00:17:31,350 --> 00:17:31,360
+scary and a lot of people get scared so
+ 
+
+997
+00:17:31,360 --> 00:17:33,070
+scary and a lot of people get scared so
+let's go ahead and look at an example of
+
+998
+00:17:33,070 --> 00:17:33,080
+let's go ahead and look at an example of
+ 
+
+999
+00:17:33,080 --> 00:17:34,950
+let's go ahead and look at an example of
+that so right now if I just run my
+
+1000
+00:17:34,950 --> 00:17:34,960
+that so right now if I just run my
+ 
+
+1001
+00:17:34,960 --> 00:17:36,870
+that so right now if I just run my
+program you'll see that it's still
+
+1002
+00:17:36,870 --> 00:17:36,880
+program you'll see that it's still
+ 
+
+1003
+00:17:36,880 --> 00:17:38,830
+program you'll see that it's still
+prints out the text hello world and
+
+1004
+00:17:38,830 --> 00:17:38,840
+prints out the text hello world and
+ 
+
+1005
+00:17:38,840 --> 00:17:40,350
+prints out the text hello world and
+everything runs successfully however
+
+1006
+00:17:40,350 --> 00:17:40,360
+everything runs successfully however
+ 
+
+1007
+00:17:40,360 --> 00:17:42,669
+everything runs successfully however
+let's remove this or at least change it
+
+1008
+00:17:42,669 --> 00:17:42,679
+let's remove this or at least change it
+ 
+
+1009
+00:17:42,679 --> 00:17:44,510
+let's remove this or at least change it
+a little bit for example I'll change
+
+1010
+00:17:44,510 --> 00:17:44,520
+a little bit for example I'll change
+ 
+
+1011
+00:17:44,520 --> 00:17:47,990
+a little bit for example I'll change
+this to loger save the file go back here
+
+1012
+00:17:47,990 --> 00:17:48,000
+this to loger save the file go back here
+ 
+
+1013
+00:17:48,000 --> 00:17:50,029
+this to loger save the file go back here
+to main.cpp I'll try and compile this
+
+1014
+00:17:50,029 --> 00:17:50,039
+to main.cpp I'll try and compile this
+ 
+
+1015
+00:17:50,039 --> 00:17:51,789
+to main.cpp I'll try and compile this
+file by itself you can see that we get
+
+1016
+00:17:51,789 --> 00:17:51,799
+file by itself you can see that we get
+ 
+
+1017
+00:17:51,799 --> 00:17:54,070
+file by itself you can see that we get
+no problems what soever however let's
+
+1018
+00:17:54,070 --> 00:17:54,080
+no problems what soever however let's
+ 
+
+1019
+00:17:54,080 --> 00:17:55,789
+no problems what soever however let's
+right click on this Hol world and hit
+
+1020
+00:17:55,789 --> 00:17:55,799
+right click on this Hol world and hit
+ 
+
+1021
+00:17:55,799 --> 00:17:58,230
+right click on this Hol world and hit
+build and check this out we get a pretty
+
+1022
+00:17:58,230 --> 00:17:58,240
+build and check this out we get a pretty
+ 
+
+1023
+00:17:58,240 --> 00:17:59,990
+build and check this out we get a pretty
+scary look looking error message which
+
+1024
+00:17:59,990 --> 00:18:00,000
+scary look looking error message which
+ 
+
+1025
+00:18:00,000 --> 00:18:02,590
+scary look looking error message which
+also unfortunately looks scary in our
+
+1026
+00:18:02,590 --> 00:18:02,600
+also unfortunately looks scary in our
+ 
+
+1027
+00:18:02,600 --> 00:18:04,390
+also unfortunately looks scary in our
+output window now the reason this looks
+
+1028
+00:18:04,390 --> 00:18:04,400
+output window now the reason this looks
+ 
+
+1029
+00:18:04,400 --> 00:18:05,909
+output window now the reason this looks
+so scary is because it's actually got
+
+1030
+00:18:05,909 --> 00:18:05,919
+so scary is because it's actually got
+ 
+
+1031
+00:18:05,919 --> 00:18:07,470
+so scary is because it's actually got
+some extra information about our
+
+1032
+00:18:07,470 --> 00:18:07,480
+some extra information about our
+ 
+
+1033
+00:18:07,480 --> 00:18:09,270
+some extra information about our
+function signature for example it's got
+
+1034
+00:18:09,270 --> 00:18:09,280
+function signature for example it's got
+ 
+
+1035
+00:18:09,280 --> 00:18:11,029
+function signature for example it's got
+the calling convention here as well as
+
+1036
+00:18:11,029 --> 00:18:11,039
+the calling convention here as well as
+ 
+
+1037
+00:18:11,039 --> 00:18:13,110
+the calling convention here as well as
+an actual ID but basically what it's
+
+1038
+00:18:13,110 --> 00:18:13,120
+an actual ID but basically what it's
+ 
+
+1039
+00:18:13,120 --> 00:18:14,549
+an actual ID but basically what it's
+telling you is that you have an
+
+1040
+00:18:14,549 --> 00:18:14,559
+telling you is that you have an
+ 
+
+1041
+00:18:14,559 --> 00:18:18,070
+telling you is that you have an
+unresolved external symbol called log
+
+1042
+00:18:18,070 --> 00:18:18,080
+unresolved external symbol called log
+ 
+
+1043
+00:18:18,080 --> 00:18:19,669
+unresolved external symbol called log
+which returns which has this return
+
+1044
+00:18:19,669 --> 00:18:19,679
+which returns which has this return
+ 
+
+1045
+00:18:19,679 --> 00:18:22,470
+which returns which has this return
+value and these parameters and your
+
+1046
+00:18:22,470 --> 00:18:22,480
+value and these parameters and your
+ 
+
+1047
+00:18:22,480 --> 00:18:24,870
+value and these parameters and your
+referencing this function inside main an
+
+1048
+00:18:24,870 --> 00:18:24,880
+referencing this function inside main an
+ 
+
+1049
+00:18:24,880 --> 00:18:26,470
+referencing this function inside main an
+unresolved external symbol means that
+
+1050
+00:18:26,470 --> 00:18:26,480
+unresolved external symbol means that
+ 
+
+1051
+00:18:26,480 --> 00:18:28,430
+unresolved external symbol means that
+the Linker was unable to resolve a
+
+1052
+00:18:28,430 --> 00:18:28,440
+the Linker was unable to resolve a
+ 
+
+1053
+00:18:28,440 --> 00:18:30,390
+the Linker was unable to resolve a
+symbol remember linker's job is to
+
+1054
+00:18:30,390 --> 00:18:30,400
+symbol remember linker's job is to
+ 
+
+1055
+00:18:30,400 --> 00:18:32,669
+symbol remember linker's job is to
+resolve symbols it has to wire up
+
+1056
+00:18:32,669 --> 00:18:32,679
+resolve symbols it has to wire up
+ 
+
+1057
+00:18:32,679 --> 00:18:35,270
+resolve symbols it has to wire up
+functions and it couldn't find what to
+
+1058
+00:18:35,270 --> 00:18:35,280
+functions and it couldn't find what to
+ 
+
+1059
+00:18:35,280 --> 00:18:37,710
+functions and it couldn't find what to
+wire log to because we don't have a
+
+1060
+00:18:37,710 --> 00:18:37,720
+wire log to because we don't have a
+ 
+
+1061
+00:18:37,720 --> 00:18:39,750
+wire log to because we don't have a
+function called log that's actually
+
+1062
+00:18:39,750 --> 00:18:39,760
+function called log that's actually
+ 
+
+1063
+00:18:39,760 --> 00:18:41,750
+function called log that's actually
+defined that has a body so the way that
+
+1064
+00:18:41,750 --> 00:18:41,760
+defined that has a body so the way that
+ 
+
+1065
+00:18:41,760 --> 00:18:44,310
+defined that has a body so the way that
+we can fix this is by fixing our
+
+1066
+00:18:44,310 --> 00:18:44,320
+we can fix this is by fixing our
+ 
+
+1067
+00:18:44,320 --> 00:18:47,390
+we can fix this is by fixing our
+function we need to provide a definition
+
+1068
+00:18:47,390 --> 00:18:47,400
+function we need to provide a definition
+ 
+
+1069
+00:18:47,400 --> 00:18:49,750
+function we need to provide a definition
+for this log function in other words we
+
+1070
+00:18:49,750 --> 00:18:49,760
+for this log function in other words we
+ 
+
+1071
+00:18:49,760 --> 00:18:51,430
+for this log function in other words we
+have to provide a body for this log
+
+1072
+00:18:51,430 --> 00:18:51,440
+have to provide a body for this log
+ 
+
+1073
+00:18:51,440 --> 00:18:52,950
+have to provide a body for this log
+function doesn't have to be inside this
+
+1074
+00:18:52,950 --> 00:18:52,960
+function doesn't have to be inside this
+ 
+
+1075
+00:18:52,960 --> 00:18:55,190
+function doesn't have to be inside this
+file it can be inside main but it has to
+
+1076
+00:18:55,190 --> 00:18:55,200
+file it can be inside main but it has to
+ 
+
+1077
+00:18:55,200 --> 00:18:57,870
+file it can be inside main but it has to
+be somewhere and if we compile this
+
+1078
+00:18:57,870 --> 00:18:57,880
+be somewhere and if we compile this
+ 
+
+1079
+00:18:57,880 --> 00:18:59,549
+be somewhere and if we compile this
+you'll see that we don't get any errors
+
+1080
+00:18:59,549 --> 00:18:59,559
+you'll see that we don't get any errors
+ 
+
+1081
+00:18:59,559 --> 00:19:01,149
+you'll see that we don't get any errors
+if we go back to our file explorer and
+
+1082
+00:19:01,149 --> 00:19:01,159
+if we go back to our file explorer and
+ 
+
+1083
+00:19:01,159 --> 00:19:03,070
+if we go back to our file explorer and
+look at what we've got inside our
+
+1084
+00:19:03,070 --> 00:19:03,080
+look at what we've got inside our
+ 
+
+1085
+00:19:03,080 --> 00:19:04,950
+look at what we've got inside our
+intermediate folder here you'll see that
+
+1086
+00:19:04,950 --> 00:19:04,960
+intermediate folder here you'll see that
+ 
+
+1087
+00:19:04,960 --> 00:19:07,110
+intermediate folder here you'll see that
+we've got two obj files because the
+
+1088
+00:19:07,110 --> 00:19:07,120
+we've got two obj files because the
+ 
+
+1089
+00:19:07,120 --> 00:19:09,390
+we've got two obj files because the
+compiler generates an object file for
+
+1090
+00:19:09,390 --> 00:19:09,400
+compiler generates an object file for
+ 
+
+1091
+00:19:09,400 --> 00:19:11,830
+compiler generates an object file for
+each of our CPP files the Linker will
+
+1092
+00:19:11,830 --> 00:19:11,840
+each of our CPP files the Linker will
+ 
+
+1093
+00:19:11,840 --> 00:19:13,549
+each of our CPP files the Linker will
+then take them and Stitch them together
+
+1094
+00:19:13,549 --> 00:19:13,559
+then take them and Stitch them together
+ 
+
+1095
+00:19:13,559 --> 00:19:16,270
+then take them and Stitch them together
+into an ex file so in our lovely example
+
+1096
+00:19:16,270 --> 00:19:16,280
+into an ex file so in our lovely example
+ 
+
+1097
+00:19:16,280 --> 00:19:18,669
+into an ex file so in our lovely example
+we have our log definition inside this
+
+1098
+00:19:18,669 --> 00:19:18,679
+we have our log definition inside this
+ 
+
+1099
+00:19:18,679 --> 00:19:21,909
+we have our log definition inside this
+log obj file and our main function
+
+1100
+00:19:21,909 --> 00:19:21,919
+log obj file and our main function
+ 
+
+1101
+00:19:21,919 --> 00:19:24,549
+log obj file and our main function
+inside our main. obj file and so the
+
+1102
+00:19:24,549 --> 00:19:24,559
+inside our main. obj file and so the
+ 
+
+1103
+00:19:24,559 --> 00:19:26,990
+inside our main. obj file and so the
+Linker will basically take that log
+
+1104
+00:19:26,990 --> 00:19:27,000
+Linker will basically take that log
+ 
+
+1105
+00:19:27,000 --> 00:19:30,710
+Linker will basically take that log
+definition from log and put it into a
+
+1106
+00:19:30,710 --> 00:19:30,720
+definition from log and put it into a
+ 
+
+1107
+00:19:30,720 --> 00:19:33,270
+definition from log and put it into a
+common binary which is our hello
+
+1108
+00:19:33,270 --> 00:19:33,280
+common binary which is our hello
+ 
+
+1109
+00:19:33,280 --> 00:19:35,549
+common binary which is our hello
+world.exe file which contains a
+
+1110
+00:19:35,549 --> 00:19:35,559
+world.exe file which contains a
+ 
+
+1111
+00:19:35,559 --> 00:19:37,950
+world.exe file which contains a
+definition for both Main and log and
+
+1112
+00:19:37,950 --> 00:19:37,960
+definition for both Main and log and
+ 
+
+1113
+00:19:37,960 --> 00:19:40,310
+definition for both Main and log and
+that is a basic overview of how C++
+
+1114
+00:19:40,310 --> 00:19:40,320
+that is a basic overview of how C++
+ 
+
+1115
+00:19:40,320 --> 00:19:42,310
+that is a basic overview of how C++
+works again I highly encourage you to
+
+1116
+00:19:42,310 --> 00:19:42,320
+works again I highly encourage you to
+ 
+
+1117
+00:19:42,320 --> 00:19:44,590
+works again I highly encourage you to
+check out the in-depth videos about how
+
+1118
+00:19:44,590 --> 00:19:44,600
+check out the in-depth videos about how
+ 
+
+1119
+00:19:44,600 --> 00:19:46,390
+check out the in-depth videos about how
+compiling and linking works because
+
+1120
+00:19:46,390 --> 00:19:46,400
+compiling and linking works because
+ 
+
+1121
+00:19:46,400 --> 00:19:48,149
+compiling and linking works because
+they're going to be way more information
+
+1122
+00:19:48,149 --> 00:19:48,159
+they're going to be way more information
+ 
+
+1123
+00:19:48,159 --> 00:19:49,909
+they're going to be way more information
+than this video this video was just made
+
+1124
+00:19:49,909 --> 00:19:49,919
+than this video this video was just made
+ 
+
+1125
+00:19:49,919 --> 00:19:51,630
+than this video this video was just made
+to show you kind of an overview of the
+
+1126
+00:19:51,630 --> 00:19:51,640
+to show you kind of an overview of the
+ 
+
+1127
+00:19:51,640 --> 00:19:54,070
+to show you kind of an overview of the
+pipeline of how you go from source files
+
+1128
+00:19:54,070 --> 00:19:54,080
+pipeline of how you go from source files
+ 
+
+1129
+00:19:54,080 --> 00:19:56,549
+pipeline of how you go from source files
+to an actual binary as always don't
+
+1130
+00:19:56,549 --> 00:19:56,559
+to an actual binary as always don't
+ 
+
+1131
+00:19:56,559 --> 00:19:58,190
+to an actual binary as always don't
+forget to follow me on Twitter and
+
+1132
+00:19:58,190 --> 00:19:58,200
+forget to follow me on Twitter and
+ 
+
+1133
+00:19:58,200 --> 00:19:59,149
+forget to follow me on Twitter and
+Instagram
+
+1134
+00:19:59,149 --> 00:19:59,159
+Instagram
+ 
+
+1135
+00:19:59,159 --> 00:20:00,430
+Instagram
+if you really enjoyed this video and you
+
+1136
+00:20:00,430 --> 00:20:00,440
+if you really enjoyed this video and you
+ 
+
+1137
+00:20:00,440 --> 00:20:01,950
+if you really enjoyed this video and you
+want to see more you can support me on
+
+1138
+00:20:01,950 --> 00:20:01,960
+want to see more you can support me on
+ 
+
+1139
+00:20:01,960 --> 00:20:04,070
+want to see more you can support me on
+patreon I'll see you guys next time
+
+1140
+00:20:04,070 --> 00:20:04,080
+patreon I'll see you guys next time
+ 
+
+1141
+00:20:04,080 --> 00:20:07,080
+patreon I'll see you guys next time
+goodbye
+

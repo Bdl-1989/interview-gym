@@ -1,0 +1,2115 @@
+1
+00:00:00,120 --> 00:00:02,149
+
+hey what's up guys my name is Aero and
+
+2
+00:00:02,149 --> 00:00:02,159
+hey what's up guys my name is Aero and
+ 
+
+3
+00:00:02,159 --> 00:00:04,230
+hey what's up guys my name is Aero and
+welcome to a brand new series this
+
+4
+00:00:04,230 --> 00:00:04,240
+welcome to a brand new series this
+ 
+
+5
+00:00:04,240 --> 00:00:05,710
+welcome to a brand new series this
+series is going to teach you everything
+
+6
+00:00:05,710 --> 00:00:05,720
+series is going to teach you everything
+ 
+
+7
+00:00:05,720 --> 00:00:07,710
+series is going to teach you everything
+you need to know about C++ we're going
+
+8
+00:00:07,710 --> 00:00:07,720
+you need to know about C++ we're going
+ 
+
+9
+00:00:07,720 --> 00:00:09,830
+you need to know about C++ we're going
+to learn C++ specifically in the context
+
+10
+00:00:09,830 --> 00:00:09,840
+to learn C++ specifically in the context
+ 
+
+11
+00:00:09,840 --> 00:00:11,350
+to learn C++ specifically in the context
+of game development however it's not
+
+12
+00:00:11,350 --> 00:00:11,360
+of game development however it's not
+ 
+
+13
+00:00:11,360 --> 00:00:13,030
+of game development however it's not
+just going to apply to game development
+
+14
+00:00:13,030 --> 00:00:13,040
+just going to apply to game development
+ 
+
+15
+00:00:13,040 --> 00:00:14,230
+just going to apply to game development
+or game programming we're just going to
+
+16
+00:00:14,230 --> 00:00:14,240
+or game programming we're just going to
+ 
+
+17
+00:00:14,240 --> 00:00:17,269
+or game programming we're just going to
+use games as an example this series is
+
+18
+00:00:17,269 --> 00:00:17,279
+use games as an example this series is
+ 
+
+19
+00:00:17,279 --> 00:00:18,710
+use games as an example this series is
+going to apply to pretty much everyone
+
+20
+00:00:18,710 --> 00:00:18,720
+going to apply to pretty much everyone
+ 
+
+21
+00:00:18,720 --> 00:00:20,029
+going to apply to pretty much everyone
+whether you're a beginner or you're
+
+22
+00:00:20,029 --> 00:00:20,039
+whether you're a beginner or you're
+ 
+
+23
+00:00:20,039 --> 00:00:21,630
+whether you're a beginner or you're
+Advanced we'll cover the basics of the
+
+24
+00:00:21,630 --> 00:00:21,640
+Advanced we'll cover the basics of the
+ 
+
+25
+00:00:21,640 --> 00:00:23,550
+Advanced we'll cover the basics of the
+language but we'll be quite concise with
+
+26
+00:00:23,550 --> 00:00:23,560
+language but we'll be quite concise with
+ 
+
+27
+00:00:23,560 --> 00:00:26,150
+language but we'll be quite concise with
+that so basically if you are a beginner
+
+28
+00:00:26,150 --> 00:00:26,160
+that so basically if you are a beginner
+ 
+
+29
+00:00:26,160 --> 00:00:27,669
+that so basically if you are a beginner
+you can still follow along with this
+
+30
+00:00:27,669 --> 00:00:27,679
+you can still follow along with this
+ 
+
+31
+00:00:27,679 --> 00:00:28,910
+you can still follow along with this
+series but you're going to have to be
+
+32
+00:00:28,910 --> 00:00:28,920
+series but you're going to have to be
+ 
+
+33
+00:00:28,920 --> 00:00:30,710
+series but you're going to have to be
+able to Google things and do some
+
+34
+00:00:30,710 --> 00:00:30,720
+able to Google things and do some
+ 
+
+35
+00:00:30,720 --> 00:00:32,670
+able to Google things and do some
+research and find find some of the
+
+36
+00:00:32,670 --> 00:00:32,680
+research and find find some of the
+ 
+
+37
+00:00:32,680 --> 00:00:34,430
+research and find find some of the
+basics out for yourself basically just
+
+38
+00:00:34,430 --> 00:00:34,440
+basics out for yourself basically just
+ 
+
+39
+00:00:34,440 --> 00:00:36,069
+basics out for yourself basically just
+be a normal person and Google things
+
+40
+00:00:36,069 --> 00:00:36,079
+be a normal person and Google things
+ 
+
+41
+00:00:36,079 --> 00:00:37,470
+be a normal person and Google things
+that you don't understand I don't want
+
+42
+00:00:37,470 --> 00:00:37,480
+that you don't understand I don't want
+ 
+
+43
+00:00:37,480 --> 00:00:39,389
+that you don't understand I don't want
+to dwell on the basics for too long and
+
+44
+00:00:39,389 --> 00:00:39,399
+to dwell on the basics for too long and
+ 
+
+45
+00:00:39,399 --> 00:00:40,910
+to dwell on the basics for too long and
+cover them in extreme detail so just
+
+46
+00:00:40,910 --> 00:00:40,920
+cover them in extreme detail so just
+ 
+
+47
+00:00:40,920 --> 00:00:42,270
+cover them in extreme detail so just
+make sure you Google things and you'll
+
+48
+00:00:42,270 --> 00:00:42,280
+make sure you Google things and you'll
+ 
+
+49
+00:00:42,280 --> 00:00:44,830
+make sure you Google things and you'll
+be fine so now the question is why why
+
+50
+00:00:44,830 --> 00:00:44,840
+be fine so now the question is why why
+ 
+
+51
+00:00:44,840 --> 00:00:47,950
+be fine so now the question is why why
+would I want to learn C++ isn't C++ kind
+
+52
+00:00:47,950 --> 00:00:47,960
+would I want to learn C++ isn't C++ kind
+ 
+
+53
+00:00:47,960 --> 00:00:49,869
+would I want to learn C++ isn't C++ kind
+of an outdated language why what good is
+
+54
+00:00:49,869 --> 00:00:49,879
+of an outdated language why what good is
+ 
+
+55
+00:00:49,879 --> 00:00:52,430
+of an outdated language why what good is
+there in learning C++ nowadays so C++ is
+
+56
+00:00:52,430 --> 00:00:52,440
+there in learning C++ nowadays so C++ is
+ 
+
+57
+00:00:52,440 --> 00:00:54,069
+there in learning C++ nowadays so C++ is
+still pretty much the most used language
+
+58
+00:00:54,069 --> 00:00:54,079
+still pretty much the most used language
+ 
+
+59
+00:00:54,079 --> 00:00:57,069
+still pretty much the most used language
+when you need to write fast code that
+
+60
+00:00:57,069 --> 00:00:57,079
+when you need to write fast code that
+ 
+
+61
+00:00:57,079 --> 00:00:59,189
+when you need to write fast code that
+performs well or if you're writing for a
+
+62
+00:00:59,189 --> 00:00:59,199
+performs well or if you're writing for a
+ 
+
+63
+00:00:59,199 --> 00:01:01,150
+performs well or if you're writing for a
+weird AR arure or a platform and you
+
+64
+00:01:01,150 --> 00:01:01,160
+weird AR arure or a platform and you
+ 
+
+65
+00:01:01,160 --> 00:01:02,750
+weird AR arure or a platform and you
+need the code to run natively if you
+
+66
+00:01:02,750 --> 00:01:02,760
+need the code to run natively if you
+ 
+
+67
+00:01:02,760 --> 00:01:05,390
+need the code to run natively if you
+want direct control over Hardware C++ is
+
+68
+00:01:05,390 --> 00:01:05,400
+want direct control over Hardware C++ is
+ 
+
+69
+00:01:05,400 --> 00:01:06,990
+want direct control over Hardware C++ is
+for you the games industry for example
+
+70
+00:01:06,990 --> 00:01:07,000
+for you the games industry for example
+ 
+
+71
+00:01:07,000 --> 00:01:09,870
+for you the games industry for example
+uses C++ extensively and game engines
+
+72
+00:01:09,870 --> 00:01:09,880
+uses C++ extensively and game engines
+ 
+
+73
+00:01:09,880 --> 00:01:12,149
+uses C++ extensively and game engines
+like Unity unreal frostbite they're all
+
+74
+00:01:12,149 --> 00:01:12,159
+like Unity unreal frostbite they're all
+ 
+
+75
+00:01:12,159 --> 00:01:14,630
+like Unity unreal frostbite they're all
+written in C++ so the question is why
+
+76
+00:01:14,630 --> 00:01:14,640
+written in C++ so the question is why
+ 
+
+77
+00:01:14,640 --> 00:01:16,070
+written in C++ so the question is why
+why would we want direct access to
+
+78
+00:01:16,070 --> 00:01:16,080
+why would we want direct access to
+ 
+
+79
+00:01:16,080 --> 00:01:17,310
+why would we want direct access to
+Hardware why are all of these game
+
+80
+00:01:17,310 --> 00:01:17,320
+Hardware why are all of these game
+ 
+
+81
+00:01:17,320 --> 00:01:19,510
+Hardware why are all of these game
+engines written in C++ why not use
+
+82
+00:01:19,510 --> 00:01:19,520
+engines written in C++ why not use
+ 
+
+83
+00:01:19,520 --> 00:01:21,109
+engines written in C++ why not use
+another language the biggest reason for
+
+84
+00:01:21,109 --> 00:01:21,119
+another language the biggest reason for
+ 
+
+85
+00:01:21,119 --> 00:01:23,510
+another language the biggest reason for
+using C++ is the direct control over
+
+86
+00:01:23,510 --> 00:01:23,520
+using C++ is the direct control over
+ 
+
+87
+00:01:23,520 --> 00:01:25,030
+using C++ is the direct control over
+Hardware let's talk a little bit about
+
+88
+00:01:25,030 --> 00:01:25,040
+Hardware let's talk a little bit about
+ 
+
+89
+00:01:25,040 --> 00:01:27,469
+Hardware let's talk a little bit about
+how C++ works so you write your code in
+
+90
+00:01:27,469 --> 00:01:27,479
+how C++ works so you write your code in
+ 
+
+91
+00:01:27,479 --> 00:01:30,950
+how C++ works so you write your code in
+C++ you pass your code into compiler and
+
+92
+00:01:30,950 --> 00:01:30,960
+C++ you pass your code into compiler and
+ 
+
+93
+00:01:30,960 --> 00:01:33,190
+C++ you pass your code into compiler and
+that compiler will output machine code
+
+94
+00:01:33,190 --> 00:01:33,200
+that compiler will output machine code
+ 
+
+95
+00:01:33,200 --> 00:01:35,670
+that compiler will output machine code
+for your Target platform machine code is
+
+96
+00:01:35,670 --> 00:01:35,680
+for your Target platform machine code is
+ 
+
+97
+00:01:35,680 --> 00:01:37,149
+for your Target platform machine code is
+the actual instructions that your
+
+98
+00:01:37,149 --> 00:01:37,159
+the actual instructions that your
+ 
+
+99
+00:01:37,159 --> 00:01:39,630
+the actual instructions that your
+devic's CPU will actually perform so
+
+100
+00:01:39,630 --> 00:01:39,640
+devic's CPU will actually perform so
+ 
+
+101
+00:01:39,640 --> 00:01:42,350
+devic's CPU will actually perform so
+using C++ we can literally control every
+
+102
+00:01:42,350 --> 00:01:42,360
+using C++ we can literally control every
+ 
+
+103
+00:01:42,360 --> 00:01:44,550
+using C++ we can literally control every
+single instruction that your CPU
+
+104
+00:01:44,550 --> 00:01:44,560
+single instruction that your CPU
+ 
+
+105
+00:01:44,560 --> 00:01:47,030
+single instruction that your CPU
+executes what platforms the C++ run on
+
+106
+00:01:47,030 --> 00:01:47,040
+executes what platforms the C++ run on
+ 
+
+107
+00:01:47,040 --> 00:01:48,870
+executes what platforms the C++ run on
+you ask pretty much anything you just
+
+108
+00:01:48,870 --> 00:01:48,880
+you ask pretty much anything you just
+ 
+
+109
+00:01:48,880 --> 00:01:50,590
+you ask pretty much anything you just
+need a compiler that will output machine
+
+110
+00:01:50,590 --> 00:01:50,600
+need a compiler that will output machine
+ 
+
+111
+00:01:50,600 --> 00:01:52,910
+need a compiler that will output machine
+code for that platform for example an
+
+112
+00:01:52,910 --> 00:01:52,920
+code for that platform for example an
+ 
+
+113
+00:01:52,920 --> 00:01:55,670
+code for that platform for example an
+x64 compiler will output x64 machine
+
+114
+00:01:55,670 --> 00:01:55,680
+x64 compiler will output x64 machine
+ 
+
+115
+00:01:55,680 --> 00:01:58,709
+x64 compiler will output x64 machine
+code and thus run on x64 CPUs so to give
+
+116
+00:01:58,709 --> 00:01:58,719
+code and thus run on x64 CPUs so to give
+ 
+
+117
+00:01:58,719 --> 00:01:59,830
+code and thus run on x64 CPUs so to give
+you an example of some of theat
+
+118
+00:01:59,830 --> 00:01:59,840
+you an example of some of theat
+ 
+
+119
+00:01:59,840 --> 00:02:01,990
+you an example of some of theat
+platforms that C++ is commonly used to
+
+120
+00:02:01,990 --> 00:02:02,000
+platforms that C++ is commonly used to
+ 
+
+121
+00:02:02,000 --> 00:02:05,109
+platforms that C++ is commonly used to
+develop for Windows Mac Linux any other
+
+122
+00:02:05,109 --> 00:02:05,119
+develop for Windows Mac Linux any other
+ 
+
+123
+00:02:05,119 --> 00:02:06,630
+develop for Windows Mac Linux any other
+desktop operating systems pretty much
+
+124
+00:02:06,630 --> 00:02:06,640
+desktop operating systems pretty much
+ 
+
+125
+00:02:06,640 --> 00:02:09,109
+desktop operating systems pretty much
+all of them mobile operating systems iOS
+
+126
+00:02:09,109 --> 00:02:09,119
+all of them mobile operating systems iOS
+ 
+
+127
+00:02:09,119 --> 00:02:10,589
+all of them mobile operating systems iOS
+Android for example you can write
+
+128
+00:02:10,589 --> 00:02:10,599
+Android for example you can write
+ 
+
+129
+00:02:10,599 --> 00:02:13,750
+Android for example you can write
+applications in C++ and all the consoles
+
+130
+00:02:13,750 --> 00:02:13,760
+applications in C++ and all the consoles
+ 
+
+131
+00:02:13,760 --> 00:02:16,070
+applications in C++ and all the consoles
+so Xbox PlayStation all the Nintendo
+
+132
+00:02:16,070 --> 00:02:16,080
+so Xbox PlayStation all the Nintendo
+ 
+
+133
+00:02:16,080 --> 00:02:19,309
+so Xbox PlayStation all the Nintendo
+stuff like the 3DS the Wii U the switch
+
+134
+00:02:19,309 --> 00:02:19,319
+stuff like the 3DS the Wii U the switch
+ 
+
+135
+00:02:19,319 --> 00:02:21,550
+stuff like the 3DS the Wii U the switch
+everything C++ is great when you need
+
+136
+00:02:21,550 --> 00:02:21,560
+everything C++ is great when you need
+ 
+
+137
+00:02:21,560 --> 00:02:23,430
+everything C++ is great when you need
+wide platform support because as long as
+
+138
+00:02:23,430 --> 00:02:23,440
+wide platform support because as long as
+ 
+
+139
+00:02:23,440 --> 00:02:26,110
+wide platform support because as long as
+there's a compiler you can get C++ to
+
+140
+00:02:26,110 --> 00:02:26,120
+there's a compiler you can get C++ to
+ 
+
+141
+00:02:26,120 --> 00:02:27,990
+there's a compiler you can get C++ to
+compile into native code that will run
+
+142
+00:02:27,990 --> 00:02:28,000
+compile into native code that will run
+ 
+
+143
+00:02:28,000 --> 00:02:30,070
+compile into native code that will run
+on that platform of course there are are
+
+144
+00:02:30,070 --> 00:02:30,080
+on that platform of course there are are
+ 
+
+145
+00:02:30,080 --> 00:02:31,949
+on that platform of course there are are
+other native languages out there it's
+
+146
+00:02:31,949 --> 00:02:31,959
+other native languages out there it's
+ 
+
+147
+00:02:31,959 --> 00:02:33,630
+other native languages out there it's
+just that C++ is the one that's been
+
+148
+00:02:33,630 --> 00:02:33,640
+just that C++ is the one that's been
+ 
+
+149
+00:02:33,640 --> 00:02:35,670
+just that C++ is the one that's been
+around since the early 80s and it's just
+
+150
+00:02:35,670 --> 00:02:35,680
+around since the early 80s and it's just
+ 
+
+151
+00:02:35,680 --> 00:02:38,430
+around since the early 80s and it's just
+so popular and everyone knows it that
+
+152
+00:02:38,430 --> 00:02:38,440
+so popular and everyone knows it that
+ 
+
+153
+00:02:38,440 --> 00:02:40,869
+so popular and everyone knows it that
+it's just everyone's using it other
+
+154
+00:02:40,869 --> 00:02:40,879
+it's just everyone's using it other
+ 
+
+155
+00:02:40,879 --> 00:02:43,270
+it's just everyone's using it other
+languages like C or Java differ because
+
+156
+00:02:43,270 --> 00:02:43,280
+languages like C or Java differ because
+ 
+
+157
+00:02:43,280 --> 00:02:45,270
+languages like C or Java differ because
+they run on a virtual machine this means
+
+158
+00:02:45,270 --> 00:02:45,280
+they run on a virtual machine this means
+ 
+
+159
+00:02:45,280 --> 00:02:46,670
+they run on a virtual machine this means
+that your code gets compiled into an
+
+160
+00:02:46,670 --> 00:02:46,680
+that your code gets compiled into an
+ 
+
+161
+00:02:46,680 --> 00:02:48,270
+that your code gets compiled into an
+Intermediate Language first and then
+
+162
+00:02:48,270 --> 00:02:48,280
+Intermediate Language first and then
+ 
+
+163
+00:02:48,280 --> 00:02:49,869
+Intermediate Language first and then
+when you actually run your application
+
+164
+00:02:49,869 --> 00:02:49,879
+when you actually run your application
+ 
+
+165
+00:02:49,879 --> 00:02:52,229
+when you actually run your application
+on that Target platform the VM the
+
+166
+00:02:52,229 --> 00:02:52,239
+on that Target platform the VM the
+ 
+
+167
+00:02:52,239 --> 00:02:54,509
+on that Target platform the VM the
+virtual machine will basically converted
+
+168
+00:02:54,509 --> 00:02:54,519
+virtual machine will basically converted
+ 
+
+169
+00:02:54,519 --> 00:02:56,910
+virtual machine will basically converted
+into machine code at runtime so picture
+
+170
+00:02:56,910 --> 00:02:56,920
+into machine code at runtime so picture
+ 
+
+171
+00:02:56,920 --> 00:02:58,190
+into machine code at runtime so picture
+this if you will pretend that you wrote
+
+172
+00:02:58,190 --> 00:02:58,200
+this if you will pretend that you wrote
+ 
+
+173
+00:02:58,200 --> 00:02:59,710
+this if you will pretend that you wrote
+a book in English but you want someone
+
+174
+00:02:59,710 --> 00:02:59,720
+a book in English but you want someone
+ 
+
+175
+00:02:59,720 --> 00:03:01,910
+a book in English but you want someone
+some in Germany who only speaks German
+
+176
+00:03:01,910 --> 00:03:01,920
+some in Germany who only speaks German
+ 
+
+177
+00:03:01,920 --> 00:03:03,550
+some in Germany who only speaks German
+to read your book so what you've decided
+
+178
+00:03:03,550 --> 00:03:03,560
+to read your book so what you've decided
+ 
+
+179
+00:03:03,560 --> 00:03:05,670
+to read your book so what you've decided
+to do is actually sell the book in
+
+180
+00:03:05,670 --> 00:03:05,680
+to do is actually sell the book in
+ 
+
+181
+00:03:05,680 --> 00:03:09,710
+to do is actually sell the book in
+English at the German store however when
+
+182
+00:03:09,710 --> 00:03:09,720
+English at the German store however when
+ 
+
+183
+00:03:09,720 --> 00:03:11,710
+English at the German store however when
+you buy the book you also get like a
+
+184
+00:03:11,710 --> 00:03:11,720
+you buy the book you also get like a
+ 
+
+185
+00:03:11,720 --> 00:03:14,070
+you buy the book you also get like a
+translator like an actual person to come
+
+186
+00:03:14,070 --> 00:03:14,080
+translator like an actual person to come
+ 
+
+187
+00:03:14,080 --> 00:03:15,710
+translator like an actual person to come
+home with you I know this metaphor is
+
+188
+00:03:15,710 --> 00:03:15,720
+home with you I know this metaphor is
+ 
+
+189
+00:03:15,720 --> 00:03:17,229
+home with you I know this metaphor is
+getting a bit weird but just bear with
+
+190
+00:03:17,229 --> 00:03:17,239
+getting a bit weird but just bear with
+ 
+
+191
+00:03:17,239 --> 00:03:19,229
+getting a bit weird but just bear with
+me so the person comes home and then
+
+192
+00:03:19,229 --> 00:03:19,239
+me so the person comes home and then
+ 
+
+193
+00:03:19,239 --> 00:03:20,830
+me so the person comes home and then
+when the when that German person wants
+
+194
+00:03:20,830 --> 00:03:20,840
+when the when that German person wants
+ 
+
+195
+00:03:20,840 --> 00:03:23,550
+when the when that German person wants
+to read the book The translator reads
+
+196
+00:03:23,550 --> 00:03:23,560
+to read the book The translator reads
+ 
+
+197
+00:03:23,560 --> 00:03:26,070
+to read the book The translator reads
+the book in English and then just
+
+198
+00:03:26,070 --> 00:03:26,080
+the book in English and then just
+ 
+
+199
+00:03:26,080 --> 00:03:27,630
+the book in English and then just
+basically starts talking in German so
+
+200
+00:03:27,630 --> 00:03:27,640
+basically starts talking in German so
+ 
+
+201
+00:03:27,640 --> 00:03:29,110
+basically starts talking in German so
+he's like live translating the whole
+
+202
+00:03:29,110 --> 00:03:29,120
+he's like live translating the whole
+ 
+
+203
+00:03:29,120 --> 00:03:30,270
+he's like live translating the whole
+book for the person
+
+204
+00:03:30,270 --> 00:03:30,280
+book for the person
+ 
+
+205
+00:03:30,280 --> 00:03:31,949
+book for the person
+that's kind of what running on a virtual
+
+206
+00:03:31,949 --> 00:03:31,959
+that's kind of what running on a virtual
+ 
+
+207
+00:03:31,959 --> 00:03:33,789
+that's kind of what running on a virtual
+machine is like of course it would be a
+
+208
+00:03:33,789 --> 00:03:33,799
+machine is like of course it would be a
+ 
+
+209
+00:03:33,799 --> 00:03:35,270
+machine is like of course it would be a
+lot more efficient if you just
+
+210
+00:03:35,270 --> 00:03:35,280
+lot more efficient if you just
+ 
+
+211
+00:03:35,280 --> 00:03:37,789
+lot more efficient if you just
+translated the book itself into German
+
+212
+00:03:37,789 --> 00:03:37,799
+translated the book itself into German
+ 
+
+213
+00:03:37,799 --> 00:03:40,070
+translated the book itself into German
+and then sold that in German stores so
+
+214
+00:03:40,070 --> 00:03:40,080
+and then sold that in German stores so
+ 
+
+215
+00:03:40,080 --> 00:03:41,789
+and then sold that in German stores so
+that way it would be in the native
+
+216
+00:03:41,789 --> 00:03:41,799
+that way it would be in the native
+ 
+
+217
+00:03:41,799 --> 00:03:43,990
+that way it would be in the native
+language in German and that's of course
+
+218
+00:03:43,990 --> 00:03:44,000
+language in German and that's of course
+ 
+
+219
+00:03:44,000 --> 00:03:45,789
+language in German and that's of course
+not a perfect metaphor but that's kind
+
+220
+00:03:45,789 --> 00:03:45,799
+not a perfect metaphor but that's kind
+ 
+
+221
+00:03:45,799 --> 00:03:48,190
+not a perfect metaphor but that's kind
+of what it's like to run C++ versus a
+
+222
+00:03:48,190 --> 00:03:48,200
+of what it's like to run C++ versus a
+ 
+
+223
+00:03:48,200 --> 00:03:51,070
+of what it's like to run C++ versus a
+language like Java or C C++ is a native
+
+224
+00:03:51,070 --> 00:03:51,080
+language like Java or C C++ is a native
+ 
+
+225
+00:03:51,080 --> 00:03:53,030
+language like Java or C C++ is a native
+language the C++ compiler produces
+
+226
+00:03:53,030 --> 00:03:53,040
+language the C++ compiler produces
+ 
+
+227
+00:03:53,040 --> 00:03:55,030
+language the C++ compiler produces
+machine code for that Target platform
+
+228
+00:03:55,030 --> 00:03:55,040
+machine code for that Target platform
+ 
+
+229
+00:03:55,040 --> 00:03:56,869
+machine code for that Target platform
+and for that Target architecture and
+
+230
+00:03:56,869 --> 00:03:56,879
+and for that Target architecture and
+ 
+
+231
+00:03:56,879 --> 00:03:58,190
+and for that Target architecture and
+then that's it it's there it's native
+
+232
+00:03:58,190 --> 00:03:58,200
+then that's it it's there it's native
+ 
+
+233
+00:03:58,200 --> 00:03:59,670
+then that's it it's there it's native
+code it will only run on that platform
+
+234
+00:03:59,670 --> 00:03:59,680
+code it will only run on that platform
+ 
+
+235
+00:03:59,680 --> 00:04:01,670
+code it will only run on that platform
+platform however it's already in that
+
+236
+00:04:01,670 --> 00:04:01,680
+platform however it's already in that
+ 
+
+237
+00:04:01,680 --> 00:04:03,309
+platform however it's already in that
+platform's machine code language so
+
+238
+00:04:03,309 --> 00:04:03,319
+platform's machine code language so
+ 
+
+239
+00:04:03,319 --> 00:04:04,990
+platform's machine code language so
+there's absolutely no translation or
+
+240
+00:04:04,990 --> 00:04:05,000
+there's absolutely no translation or
+ 
+
+241
+00:04:05,000 --> 00:04:07,030
+there's absolutely no translation or
+anything required you just run the M you
+
+242
+00:04:07,030 --> 00:04:07,040
+anything required you just run the M you
+ 
+
+243
+00:04:07,040 --> 00:04:09,270
+anything required you just run the M you
+just push the machine code instructions
+
+244
+00:04:09,270 --> 00:04:09,280
+just push the machine code instructions
+ 
+
+245
+00:04:09,280 --> 00:04:10,990
+just push the machine code instructions
+CPU instructions into the CPU and it
+
+246
+00:04:10,990 --> 00:04:11,000
+CPU instructions into the CPU and it
+ 
+
+247
+00:04:11,000 --> 00:04:12,830
+CPU instructions into the CPU and it
+will perform all of your instructions of
+
+248
+00:04:12,830 --> 00:04:12,840
+will perform all of your instructions of
+ 
+
+249
+00:04:12,840 --> 00:04:15,110
+will perform all of your instructions of
+course just because your code is native
+
+250
+00:04:15,110 --> 00:04:15,120
+course just because your code is native
+ 
+
+251
+00:04:15,120 --> 00:04:17,189
+course just because your code is native
+doesn't mean it's going to be fast if
+
+252
+00:04:17,189 --> 00:04:17,199
+doesn't mean it's going to be fast if
+ 
+
+253
+00:04:17,199 --> 00:04:19,830
+doesn't mean it's going to be fast if
+you write bad code in C++ it's going to
+
+254
+00:04:19,830 --> 00:04:19,840
+you write bad code in C++ it's going to
+ 
+
+255
+00:04:19,840 --> 00:04:22,430
+you write bad code in C++ it's going to
+be slow in fact it'll likely even be
+
+256
+00:04:22,430 --> 00:04:22,440
+be slow in fact it'll likely even be
+ 
+
+257
+00:04:22,440 --> 00:04:24,350
+be slow in fact it'll likely even be
+slower than virtual machine languages
+
+258
+00:04:24,350 --> 00:04:24,360
+slower than virtual machine languages
+ 
+
+259
+00:04:24,360 --> 00:04:26,150
+slower than virtual machine languages
+like C or Java because they tend to
+
+260
+00:04:26,150 --> 00:04:26,160
+like C or Java because they tend to
+ 
+
+261
+00:04:26,160 --> 00:04:27,909
+like C or Java because they tend to
+optimize things on the fly a lot better
+
+262
+00:04:27,909 --> 00:04:27,919
+optimize things on the fly a lot better
+ 
+
+263
+00:04:27,919 --> 00:04:30,909
+optimize things on the fly a lot better
+than C++ will so if you right bad C++
+
+264
+00:04:30,909 --> 00:04:30,919
+than C++ will so if you right bad C++
+ 
+
+265
+00:04:30,919 --> 00:04:33,710
+than C++ will so if you right bad C++
+C++ will definitely be slower than C or
+
+266
+00:04:33,710 --> 00:04:33,720
+C++ will definitely be slower than C or
+ 
+
+267
+00:04:33,720 --> 00:04:35,469
+C++ will definitely be slower than C or
+Java and because of that I mean I love
+
+268
+00:04:35,469 --> 00:04:35,479
+Java and because of that I mean I love
+ 
+
+269
+00:04:35,479 --> 00:04:37,390
+Java and because of that I mean I love
+using languages like C when I just need
+
+270
+00:04:37,390 --> 00:04:37,400
+using languages like C when I just need
+ 
+
+271
+00:04:37,400 --> 00:04:39,629
+using languages like C when I just need
+a write tools or things that don't
+
+272
+00:04:39,629 --> 00:04:39,639
+a write tools or things that don't
+ 
+
+273
+00:04:39,639 --> 00:04:41,950
+a write tools or things that don't
+necessarily need me to squeeze every bit
+
+274
+00:04:41,950 --> 00:04:41,960
+necessarily need me to squeeze every bit
+ 
+
+275
+00:04:41,960 --> 00:04:44,310
+necessarily need me to squeeze every bit
+of performance out of them C is a
+
+276
+00:04:44,310 --> 00:04:44,320
+of performance out of them C is a
+ 
+
+277
+00:04:44,320 --> 00:04:45,749
+of performance out of them C is a
+fantastic language for that but this
+
+278
+00:04:45,749 --> 00:04:45,759
+fantastic language for that but this
+ 
+
+279
+00:04:45,759 --> 00:04:47,029
+fantastic language for that but this
+series is going to be for when we
+
+280
+00:04:47,029 --> 00:04:47,039
+series is going to be for when we
+ 
+
+281
+00:04:47,039 --> 00:04:48,670
+series is going to be for when we
+actually need that performance for when
+
+282
+00:04:48,670 --> 00:04:48,680
+actually need that performance for when
+ 
+
+283
+00:04:48,680 --> 00:04:50,270
+actually need that performance for when
+we need to write C++ so we're going to
+
+284
+00:04:50,270 --> 00:04:50,280
+we need to write C++ so we're going to
+ 
+
+285
+00:04:50,280 --> 00:04:52,270
+we need to write C++ so we're going to
+learn all about how to write C++
+
+286
+00:04:52,270 --> 00:04:52,280
+learn all about how to write C++
+ 
+
+287
+00:04:52,280 --> 00:04:54,430
+learn all about how to write C++
+correctly how to write good code how to
+
+288
+00:04:54,430 --> 00:04:54,440
+correctly how to write good code how to
+ 
+
+289
+00:04:54,440 --> 00:04:56,950
+correctly how to write good code how to
+ride fast code so what are we going to
+
+290
+00:04:56,950 --> 00:04:56,960
+ride fast code so what are we going to
+ 
+
+291
+00:04:56,960 --> 00:04:59,749
+ride fast code so what are we going to
+cover you may ask well of course from
+
+292
+00:04:59,749 --> 00:04:59,759
+cover you may ask well of course from
+ 
+
+293
+00:04:59,759 --> 00:05:00,870
+cover you may ask well of course from
+the beginning we're going to start with
+
+294
+00:05:00,870 --> 00:05:00,880
+the beginning we're going to start with
+ 
+
+295
+00:05:00,880 --> 00:05:03,150
+the beginning we're going to start with
+the basics I'm going to be real concise
+
+296
+00:05:03,150 --> 00:05:03,160
+the basics I'm going to be real concise
+ 
+
+297
+00:05:03,160 --> 00:05:05,230
+the basics I'm going to be real concise
+when it comes to the basics cuz I don't
+
+298
+00:05:05,230 --> 00:05:05,240
+when it comes to the basics cuz I don't
+ 
+
+299
+00:05:05,240 --> 00:05:07,310
+when it comes to the basics cuz I don't
+really want to dwell on them too much if
+
+300
+00:05:07,310 --> 00:05:07,320
+really want to dwell on them too much if
+ 
+
+301
+00:05:07,320 --> 00:05:09,710
+really want to dwell on them too much if
+you've never programmed before I still
+
+302
+00:05:09,710 --> 00:05:09,720
+you've never programmed before I still
+ 
+
+303
+00:05:09,720 --> 00:05:11,310
+you've never programmed before I still
+do encourage you to watch this series
+
+304
+00:05:11,310 --> 00:05:11,320
+do encourage you to watch this series
+ 
+
+305
+00:05:11,320 --> 00:05:12,629
+do encourage you to watch this series
+but as I said earlier you're going to
+
+306
+00:05:12,629 --> 00:05:12,639
+but as I said earlier you're going to
+ 
+
+307
+00:05:12,639 --> 00:05:14,350
+but as I said earlier you're going to
+have to just Google the things that you
+
+308
+00:05:14,350 --> 00:05:14,360
+have to just Google the things that you
+ 
+
+309
+00:05:14,360 --> 00:05:16,270
+have to just Google the things that you
+don't understand it should be pretty
+
+310
+00:05:16,270 --> 00:05:16,280
+don't understand it should be pretty
+ 
+
+311
+00:05:16,280 --> 00:05:19,110
+don't understand it should be pretty
+easy to follow the key to learning
+
+312
+00:05:19,110 --> 00:05:19,120
+easy to follow the key to learning
+ 
+
+313
+00:05:19,120 --> 00:05:20,749
+easy to follow the key to learning
+anything new really is just to play
+
+314
+00:05:20,749 --> 00:05:20,759
+anything new really is just to play
+ 
+
+315
+00:05:20,759 --> 00:05:22,189
+anything new really is just to play
+around with it and just to experiment
+
+316
+00:05:22,189 --> 00:05:22,199
+around with it and just to experiment
+ 
+
+317
+00:05:22,199 --> 00:05:23,790
+around with it and just to experiment
+with it so I'm sure you'll be absolutely
+
+318
+00:05:23,790 --> 00:05:23,800
+with it so I'm sure you'll be absolutely
+ 
+
+319
+00:05:23,800 --> 00:05:25,749
+with it so I'm sure you'll be absolutely
+fine if you're just passionate about it
+
+320
+00:05:25,749 --> 00:05:25,759
+fine if you're just passionate about it
+ 
+
+321
+00:05:25,759 --> 00:05:27,590
+fine if you're just passionate about it
+and if you actually have the W the
+
+322
+00:05:27,590 --> 00:05:27,600
+and if you actually have the W the
+ 
+
+323
+00:05:27,600 --> 00:05:29,230
+and if you actually have the W the
+willingness to learn we'll talk about
+
+324
+00:05:29,230 --> 00:05:29,240
+willingness to learn we'll talk about
+ 
+
+325
+00:05:29,240 --> 00:05:31,469
+willingness to learn we'll talk about
+how to use C++ library to your advantage
+
+326
+00:05:31,469 --> 00:05:31,479
+how to use C++ library to your advantage
+ 
+
+327
+00:05:31,479 --> 00:05:33,070
+how to use C++ library to your advantage
+and what things to kind of avoid if you
+
+328
+00:05:33,070 --> 00:05:33,080
+and what things to kind of avoid if you
+ 
+
+329
+00:05:33,080 --> 00:05:34,469
+and what things to kind of avoid if you
+care about performance we'll talk about
+
+330
+00:05:34,469 --> 00:05:34,479
+care about performance we'll talk about
+ 
+
+331
+00:05:34,479 --> 00:05:36,710
+care about performance we'll talk about
+how C++ actually works we'll talk about
+
+332
+00:05:36,710 --> 00:05:36,720
+how C++ actually works we'll talk about
+ 
+
+333
+00:05:36,720 --> 00:05:39,390
+how C++ actually works we'll talk about
+stuff like memory and pointers seriously
+
+334
+00:05:39,390 --> 00:05:39,400
+stuff like memory and pointers seriously
+ 
+
+335
+00:05:39,400 --> 00:05:40,790
+stuff like memory and pointers seriously
+this for some reason is taught
+
+336
+00:05:40,790 --> 00:05:40,800
+this for some reason is taught
+ 
+
+337
+00:05:40,800 --> 00:05:42,990
+this for some reason is taught
+absolutely terribly in most cases so
+
+338
+00:05:42,990 --> 00:05:43,000
+absolutely terribly in most cases so
+ 
+
+339
+00:05:43,000 --> 00:05:45,070
+absolutely terribly in most cases so
+we're going to actually teach pointers
+
+340
+00:05:45,070 --> 00:05:45,080
+we're going to actually teach pointers
+ 
+
+341
+00:05:45,080 --> 00:05:47,309
+we're going to actually teach pointers
+and memory and stuff properly this time
+
+342
+00:05:47,309 --> 00:05:47,319
+and memory and stuff properly this time
+ 
+
+343
+00:05:47,319 --> 00:05:50,189
+and memory and stuff properly this time
+memory Arenas custom allocators Smart
+
+344
+00:05:50,189 --> 00:05:50,199
+memory Arenas custom allocators Smart
+ 
+
+345
+00:05:50,199 --> 00:05:53,070
+memory Arenas custom allocators Smart
+pointers move sematics stuff like that
+
+346
+00:05:53,070 --> 00:05:53,080
+pointers move sematics stuff like that
+ 
+
+347
+00:05:53,080 --> 00:05:54,510
+pointers move sematics stuff like that
+templates and how to actually use them
+
+348
+00:05:54,510 --> 00:05:54,520
+templates and how to actually use them
+ 
+
+349
+00:05:54,520 --> 00:05:55,510
+templates and how to actually use them
+properly if you know how to use
+
+350
+00:05:55,510 --> 00:05:55,520
+properly if you know how to use
+ 
+
+351
+00:05:55,520 --> 00:05:57,390
+properly if you know how to use
+templates well they're extremely
+
+352
+00:05:57,390 --> 00:05:57,400
+templates well they're extremely
+ 
+
+353
+00:05:57,400 --> 00:05:58,749
+templates well they're extremely
+powerful and they'll make your life a
+
+354
+00:05:58,749 --> 00:05:58,759
+powerful and they'll make your life a
+ 
+
+355
+00:05:58,759 --> 00:06:00,430
+powerful and they'll make your life a
+lot easier we'll talk about stuff like
+
+356
+00:06:00,430 --> 00:06:00,440
+lot easier we'll talk about stuff like
+ 
+
+357
+00:06:00,440 --> 00:06:02,550
+lot easier we'll talk about stuff like
+macros and how to program for multiple
+
+358
+00:06:02,550 --> 00:06:02,560
+macros and how to program for multiple
+ 
+
+359
+00:06:02,560 --> 00:06:04,110
+macros and how to program for multiple
+platforms we'll write our own data
+
+360
+00:06:04,110 --> 00:06:04,120
+platforms we'll write our own data
+ 
+
+361
+00:06:04,120 --> 00:06:05,550
+platforms we'll write our own data
+structures and learn how to make them a
+
+362
+00:06:05,550 --> 00:06:05,560
+structures and learn how to make them a
+ 
+
+363
+00:06:05,560 --> 00:06:07,029
+structures and learn how to make them a
+lot faster than the standard ones you
+
+364
+00:06:07,029 --> 00:06:07,039
+lot faster than the standard ones you
+ 
+
+365
+00:06:07,039 --> 00:06:08,990
+lot faster than the standard ones you
+get with the C++ Library we'll even
+
+366
+00:06:08,990 --> 00:06:09,000
+get with the C++ Library we'll even
+ 
+
+367
+00:06:09,000 --> 00:06:10,950
+get with the C++ Library we'll even
+cover lowlevel optimization via compiler
+
+368
+00:06:10,950 --> 00:06:10,960
+cover lowlevel optimization via compiler
+ 
+
+369
+00:06:10,960 --> 00:06:13,029
+cover lowlevel optimization via compiler
+intrinsics and assembly such as writing
+
+370
+00:06:13,029 --> 00:06:13,039
+intrinsics and assembly such as writing
+ 
+
+371
+00:06:13,039 --> 00:06:15,710
+intrinsics and assembly such as writing
+our maths and S and that's pretty much
+
+372
+00:06:15,710 --> 00:06:15,720
+our maths and S and that's pretty much
+ 
+
+373
+00:06:15,720 --> 00:06:16,950
+our maths and S and that's pretty much
+it we'll probably cover a lot of things
+
+374
+00:06:16,950 --> 00:06:16,960
+it we'll probably cover a lot of things
+ 
+
+375
+00:06:16,960 --> 00:06:18,710
+it we'll probably cover a lot of things
+along the way if there are specific
+
+376
+00:06:18,710 --> 00:06:18,720
+along the way if there are specific
+ 
+
+377
+00:06:18,720 --> 00:06:20,749
+along the way if there are specific
+things that you guys request or things
+
+378
+00:06:20,749 --> 00:06:20,759
+things that you guys request or things
+ 
+
+379
+00:06:20,759 --> 00:06:22,589
+things that you guys request or things
+that probably could involve me talking
+
+380
+00:06:22,589 --> 00:06:22,599
+that probably could involve me talking
+ 
+
+381
+00:06:22,599 --> 00:06:24,230
+that probably could involve me talking
+for 10 minutes about I might make a
+
+382
+00:06:24,230 --> 00:06:24,240
+for 10 minutes about I might make a
+ 
+
+383
+00:06:24,240 --> 00:06:26,029
+for 10 minutes about I might make a
+separate video about them just in
+
+384
+00:06:26,029 --> 00:06:26,039
+separate video about them just in
+ 
+
+385
+00:06:26,039 --> 00:06:28,070
+separate video about them just in
+general lastly if you want to know who I
+
+386
+00:06:28,070 --> 00:06:28,080
+general lastly if you want to know who I
+ 
+
+387
+00:06:28,080 --> 00:06:29,790
+general lastly if you want to know who I
+am I'm a software engineer who on the
+
+388
+00:06:29,790 --> 00:06:29,800
+am I'm a software engineer who on the
+ 
+
+389
+00:06:29,800 --> 00:06:31,870
+am I'm a software engineer who on the
+game engine team at EA Melbourne we make
+
+390
+00:06:31,870 --> 00:06:31,880
+game engine team at EA Melbourne we make
+ 
+
+391
+00:06:31,880 --> 00:06:33,350
+game engine team at EA Melbourne we make
+pretty much the best 3D mobile game
+
+392
+00:06:33,350 --> 00:06:33,360
+pretty much the best 3D mobile game
+ 
+
+393
+00:06:33,360 --> 00:06:35,350
+pretty much the best 3D mobile game
+engine out there so the games that we've
+
+394
+00:06:35,350 --> 00:06:35,360
+engine out there so the games that we've
+ 
+
+395
+00:06:35,360 --> 00:06:37,469
+engine out there so the games that we've
+recently shipped were need to speed No
+
+396
+00:06:37,469 --> 00:06:37,479
+recently shipped were need to speed No
+ 
+
+397
+00:06:37,479 --> 00:06:40,749
+recently shipped were need to speed No
+Limits and Need for Speed No Limits VR
+
+398
+00:06:40,749 --> 00:06:40,759
+Limits and Need for Speed No Limits VR
+ 
+
+399
+00:06:40,759 --> 00:06:41,909
+Limits and Need for Speed No Limits VR
+you can follow me on Twitter or
+
+400
+00:06:41,909 --> 00:06:41,919
+you can follow me on Twitter or
+ 
+
+401
+00:06:41,919 --> 00:06:43,150
+you can follow me on Twitter or
+Instagram if you want to get to know me
+
+402
+00:06:43,150 --> 00:06:43,160
+Instagram if you want to get to know me
+ 
+
+403
+00:06:43,160 --> 00:06:45,070
+Instagram if you want to get to know me
+better episodes for this series will be
+
+404
+00:06:45,070 --> 00:06:45,080
+better episodes for this series will be
+ 
+
+405
+00:06:45,080 --> 00:06:47,550
+better episodes for this series will be
+released around every week or so
+
+406
+00:06:47,550 --> 00:06:47,560
+released around every week or so
+ 
+
+407
+00:06:47,560 --> 00:06:49,390
+released around every week or so
+depending on my schedule if you want to
+
+408
+00:06:49,390 --> 00:06:49,400
+depending on my schedule if you want to
+ 
+
+409
+00:06:49,400 --> 00:06:50,950
+depending on my schedule if you want to
+support this series and ensure that the
+
+410
+00:06:50,950 --> 00:06:50,960
+support this series and ensure that the
+ 
+
+411
+00:06:50,960 --> 00:06:52,870
+support this series and ensure that the
+videos get out as soon as possible and
+
+412
+00:06:52,870 --> 00:06:52,880
+videos get out as soon as possible and
+ 
+
+413
+00:06:52,880 --> 00:06:55,070
+videos get out as soon as possible and
+you can do so by going to patreon.com
+
+414
+00:06:55,070 --> 00:06:55,080
+you can do so by going to patreon.com
+ 
+
+415
+00:06:55,080 --> 00:06:56,670
+you can do so by going to patreon.com
+Theo other than that this series should
+
+416
+00:06:56,670 --> 00:06:56,680
+Theo other than that this series should
+ 
+
+417
+00:06:56,680 --> 00:06:58,430
+Theo other than that this series should
+be an absolute blast I'm really looking
+
+418
+00:06:58,430 --> 00:06:58,440
+be an absolute blast I'm really looking
+ 
+
+419
+00:06:58,440 --> 00:07:00,749
+be an absolute blast I'm really looking
+forward to it let's let C++ correctly
+
+420
+00:07:00,749 --> 00:07:00,759
+forward to it let's let C++ correctly
+ 
+
+421
+00:07:00,759 --> 00:07:03,309
+forward to it let's let C++ correctly
+I'll see you guys next week goodbye
+
+422
+00:07:03,309 --> 00:07:03,319
+I'll see you guys next week goodbye
+ 
+
+423
+00:07:03,319 --> 00:07:06,319
+I'll see you guys next week goodbye
+Voom
+

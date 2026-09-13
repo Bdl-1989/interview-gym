@@ -1,0 +1,955 @@
+1
+00:00:00,160 --> 00:00:02,430
+
+hey what's up guys my name is Aero and
+
+2
+00:00:02,430 --> 00:00:02,440
+hey what's up guys my name is Aero and
+ 
+
+3
+00:00:02,440 --> 00:00:05,510
+hey what's up guys my name is Aero and
+welcome back to my C++ Series so you've
+
+4
+00:00:05,510 --> 00:00:05,520
+welcome back to my C++ Series so you've
+ 
+
+5
+00:00:05,520 --> 00:00:08,509
+welcome back to my C++ Series so you've
+decided to use a
+
+6
+00:00:08,509 --> 00:00:08,519
+
+ 
+
+7
+00:00:08,519 --> 00:00:10,950
+
+Mac there are plenty of different tools
+
+8
+00:00:10,950 --> 00:00:10,960
+Mac there are plenty of different tools
+ 
+
+9
+00:00:10,960 --> 00:00:13,150
+Mac there are plenty of different tools
+you can use to build C++ applications on
+
+10
+00:00:13,150 --> 00:00:13,160
+you can use to build C++ applications on
+ 
+
+11
+00:00:13,160 --> 00:00:14,549
+you can use to build C++ applications on
+Mac but the one that I'm going to
+
+12
+00:00:14,549 --> 00:00:14,559
+Mac but the one that I'm going to
+ 
+
+13
+00:00:14,559 --> 00:00:17,230
+Mac but the one that I'm going to
+recommend is xcode xcode is an ID
+
+14
+00:00:17,230 --> 00:00:17,240
+recommend is xcode xcode is an ID
+ 
+
+15
+00:00:17,240 --> 00:00:20,910
+recommend is xcode xcode is an ID
+written by Apple it's not too bad it can
+
+16
+00:00:20,910 --> 00:00:20,920
+written by Apple it's not too bad it can
+ 
+
+17
+00:00:20,920 --> 00:00:23,990
+written by Apple it's not too bad it can
+be slow on large projects for example we
+
+18
+00:00:23,990 --> 00:00:24,000
+be slow on large projects for example we
+ 
+
+19
+00:00:24,000 --> 00:00:26,669
+be slow on large projects for example we
+use xcode over at EA to build games for
+
+20
+00:00:26,669 --> 00:00:26,679
+use xcode over at EA to build games for
+ 
+
+21
+00:00:26,679 --> 00:00:29,470
+use xcode over at EA to build games for
+iOS and I can tell you that some of the
+
+22
+00:00:29,470 --> 00:00:29,480
+iOS and I can tell you that some of the
+ 
+
+23
+00:00:29,480 --> 00:00:32,069
+iOS and I can tell you that some of the
+compil times are upwards of 20 minutes
+
+24
+00:00:32,069 --> 00:00:32,079
+compil times are upwards of 20 minutes
+ 
+
+25
+00:00:32,079 --> 00:00:34,350
+compil times are upwards of 20 minutes
+for games like Need for Speed No Limits
+
+26
+00:00:34,350 --> 00:00:34,360
+for games like Need for Speed No Limits
+ 
+
+27
+00:00:34,360 --> 00:00:36,670
+for games like Need for Speed No Limits
+it's also a nightmare to actually write
+
+28
+00:00:36,670 --> 00:00:36,680
+it's also a nightmare to actually write
+ 
+
+29
+00:00:36,680 --> 00:00:38,310
+it's also a nightmare to actually write
+code because everything's lagging like
+
+30
+00:00:38,310 --> 00:00:38,320
+code because everything's lagging like
+ 
+
+31
+00:00:38,320 --> 00:00:39,709
+code because everything's lagging like
+crazy when you've got a project that
+
+32
+00:00:39,709 --> 00:00:39,719
+crazy when you've got a project that
+ 
+
+33
+00:00:39,719 --> 00:00:42,630
+crazy when you've got a project that
+large however for small projects like
+
+34
+00:00:42,630 --> 00:00:42,640
+large however for small projects like
+ 
+
+35
+00:00:42,640 --> 00:00:44,830
+large however for small projects like
+this and to learn C++ I still think
+
+36
+00:00:44,830 --> 00:00:44,840
+this and to learn C++ I still think
+ 
+
+37
+00:00:44,840 --> 00:00:47,430
+this and to learn C++ I still think
+xcode is probably the best IDE so let's
+
+38
+00:00:47,430 --> 00:00:47,440
+xcode is probably the best IDE so let's
+ 
+
+39
+00:00:47,440 --> 00:00:49,709
+xcode is probably the best IDE so let's
+go ahead and install it okay so on your
+
+40
+00:00:49,709 --> 00:00:49,719
+go ahead and install it okay so on your
+ 
+
+41
+00:00:49,719 --> 00:00:52,150
+go ahead and install it okay so on your
+Mac we're going to go to the App Store
+
+42
+00:00:52,150 --> 00:00:52,160
+Mac we're going to go to the App Store
+ 
+
+43
+00:00:52,160 --> 00:00:54,389
+Mac we're going to go to the App Store
+we're going to type in
+
+44
+00:00:54,389 --> 00:00:54,399
+we're going to type in
+ 
+
+45
+00:00:54,399 --> 00:00:56,869
+we're going to type in
+xcode and then we're going to install it
+
+46
+00:00:56,869 --> 00:00:56,879
+xcode and then we're going to install it
+ 
+
+47
+00:00:56,879 --> 00:00:58,310
+xcode and then we're going to install it
+and of course this will take some time
+
+48
+00:00:58,310 --> 00:00:58,320
+and of course this will take some time
+ 
+
+49
+00:00:58,320 --> 00:00:59,950
+and of course this will take some time
+depending on how fast your internet is
+
+50
+00:00:59,950 --> 00:00:59,960
+depending on how fast your internet is
+ 
+
+51
+00:00:59,960 --> 00:01:02,349
+depending on how fast your internet is
+is all right so once X code is installed
+
+52
+00:01:02,349 --> 00:01:02,359
+is all right so once X code is installed
+ 
+
+53
+00:01:02,359 --> 00:01:04,030
+is all right so once X code is installed
+let's go ahead and open it we'll accept
+
+54
+00:01:04,030 --> 00:01:04,040
+let's go ahead and open it we'll accept
+ 
+
+55
+00:01:04,040 --> 00:01:06,990
+let's go ahead and open it we'll accept
+all of the terms and
+
+56
+00:01:06,990 --> 00:01:07,000
+all of the terms and
+ 
+
+57
+00:01:07,000 --> 00:01:09,190
+all of the terms and
+conditions xcode's going to go ahead and
+
+58
+00:01:09,190 --> 00:01:09,200
+conditions xcode's going to go ahead and
+ 
+
+59
+00:01:09,200 --> 00:01:11,310
+conditions xcode's going to go ahead and
+install some components for us okay so
+
+60
+00:01:11,310 --> 00:01:11,320
+install some components for us okay so
+ 
+
+61
+00:01:11,320 --> 00:01:12,789
+install some components for us okay so
+once that's done we're going to create a
+
+62
+00:01:12,789 --> 00:01:12,799
+once that's done we're going to create a
+ 
+
+63
+00:01:12,799 --> 00:01:15,310
+once that's done we're going to create a
+new xcode project for the template we're
+
+64
+00:01:15,310 --> 00:01:15,320
+new xcode project for the template we're
+ 
+
+65
+00:01:15,320 --> 00:01:17,230
+new xcode project for the template we're
+just going to click on Mac OS and then
+
+66
+00:01:17,230 --> 00:01:17,240
+just going to click on Mac OS and then
+ 
+
+67
+00:01:17,240 --> 00:01:19,149
+just going to click on Mac OS and then
+choose command line tool we'll give it a
+
+68
+00:01:19,149 --> 00:01:19,159
+choose command line tool we'll give it a
+ 
+
+69
+00:01:19,159 --> 00:01:22,670
+choose command line tool we'll give it a
+name so hello world in this case and
+
+70
+00:01:22,670 --> 00:01:22,680
+name so hello world in this case and
+ 
+
+71
+00:01:22,680 --> 00:01:23,749
+name so hello world in this case and
+then under the language we're going to
+
+72
+00:01:23,749 --> 00:01:23,759
+then under the language we're going to
+ 
+
+73
+00:01:23,759 --> 00:01:25,830
+then under the language we're going to
+select C++ you'll have to put in some
+
+74
+00:01:25,830 --> 00:01:25,840
+select C++ you'll have to put in some
+ 
+
+75
+00:01:25,840 --> 00:01:27,590
+select C++ you'll have to put in some
+kind of organization identifier like
+
+76
+00:01:27,590 --> 00:01:27,600
+kind of organization identifier like
+ 
+
+77
+00:01:27,600 --> 00:01:30,030
+kind of organization identifier like
+com. your comp's the suggested one so
+
+78
+00:01:30,030 --> 00:01:30,040
+com. your comp's the suggested one so
+ 
+
+79
+00:01:30,040 --> 00:01:31,310
+com. your comp's the suggested one so
+you can do something like com do
+
+80
+00:01:31,310 --> 00:01:31,320
+you can do something like com do
+ 
+
+81
+00:01:31,320 --> 00:01:32,670
+you can do something like com do
+whatever domain name you own it doesn't
+
+82
+00:01:32,670 --> 00:01:32,680
+whatever domain name you own it doesn't
+ 
+
+83
+00:01:32,680 --> 00:01:33,910
+whatever domain name you own it doesn't
+really matter this is just supposed to
+
+84
+00:01:33,910 --> 00:01:33,920
+really matter this is just supposed to
+ 
+
+85
+00:01:33,920 --> 00:01:35,590
+really matter this is just supposed to
+be some kind of unique identifier it
+
+86
+00:01:35,590 --> 00:01:35,600
+be some kind of unique identifier it
+ 
+
+87
+00:01:35,600 --> 00:01:37,749
+be some kind of unique identifier it
+doesn't really matter what it is um just
+
+88
+00:01:37,749 --> 00:01:37,759
+doesn't really matter what it is um just
+ 
+
+89
+00:01:37,759 --> 00:01:39,350
+doesn't really matter what it is um just
+put something in there and hit
+
+90
+00:01:39,350 --> 00:01:39,360
+put something in there and hit
+ 
+
+91
+00:01:39,360 --> 00:01:41,230
+put something in there and hit
+next then you're going to want to select
+
+92
+00:01:41,230 --> 00:01:41,240
+next then you're going to want to select
+ 
+
+93
+00:01:41,240 --> 00:01:44,109
+next then you're going to want to select
+a location for this um I like to store
+
+94
+00:01:44,109 --> 00:01:44,119
+a location for this um I like to store
+ 
+
+95
+00:01:44,119 --> 00:01:46,830
+a location for this um I like to store
+things inside my user directory and then
+
+96
+00:01:46,830 --> 00:01:46,840
+things inside my user directory and then
+ 
+
+97
+00:01:46,840 --> 00:01:49,950
+things inside my user directory and then
+in a folder called Dev so I'll make a
+
+98
+00:01:49,950 --> 00:01:49,960
+in a folder called Dev so I'll make a
+ 
+
+99
+00:01:49,960 --> 00:01:52,830
+in a folder called Dev so I'll make a
+folder called Dev and then just click
+
+100
+00:01:52,830 --> 00:01:52,840
+folder called Dev and then just click
+ 
+
+101
+00:01:52,840 --> 00:01:55,310
+folder called Dev and then just click
+create in there all right so there we go
+
+102
+00:01:55,310 --> 00:01:55,320
+create in there all right so there we go
+ 
+
+103
+00:01:55,320 --> 00:01:57,429
+create in there all right so there we go
+xcode would like to access your contacts
+
+104
+00:01:57,429 --> 00:01:57,439
+xcode would like to access your contacts
+ 
+
+105
+00:01:57,439 --> 00:01:59,670
+xcode would like to access your contacts
+we don't really need that for this um
+
+106
+00:01:59,670 --> 00:01:59,680
+we don't really need that for this um
+ 
+
+107
+00:01:59,680 --> 00:02:00,950
+we don't really need that for this um
+this this is basically what an xcode
+
+108
+00:02:00,950 --> 00:02:00,960
+this this is basically what an xcode
+ 
+
+109
+00:02:00,960 --> 00:02:02,709
+this this is basically what an xcode
+project looks like there's a few project
+
+110
+00:02:02,709 --> 00:02:02,719
+project looks like there's a few project
+ 
+
+111
+00:02:02,719 --> 00:02:04,190
+project looks like there's a few project
+settings that you'll find inside the
+
+112
+00:02:04,190 --> 00:02:04,200
+settings that you'll find inside the
+ 
+
+113
+00:02:04,200 --> 00:02:06,109
+settings that you'll find inside the
+actual if you click on the actual name
+
+114
+00:02:06,109 --> 00:02:06,119
+actual if you click on the actual name
+ 
+
+115
+00:02:06,119 --> 00:02:07,350
+actual if you click on the actual name
+of the project you've got all these
+
+116
+00:02:07,350 --> 00:02:07,360
+of the project you've got all these
+ 
+
+117
+00:02:07,360 --> 00:02:09,070
+of the project you've got all these
+build settings and build phases for the
+
+118
+00:02:09,070 --> 00:02:09,080
+build settings and build phases for the
+ 
+
+119
+00:02:09,080 --> 00:02:10,389
+build settings and build phases for the
+most part we don't really need to touch
+
+120
+00:02:10,389 --> 00:02:10,399
+most part we don't really need to touch
+ 
+
+121
+00:02:10,399 --> 00:02:12,030
+most part we don't really need to touch
+anything so you'll see that we've Al
+
+122
+00:02:12,030 --> 00:02:12,040
+anything so you'll see that we've Al
+ 
+
+123
+00:02:12,040 --> 00:02:14,830
+anything so you'll see that we've Al
+we've already got a main. CPP file and
+
+124
+00:02:14,830 --> 00:02:14,840
+we've already got a main. CPP file and
+ 
+
+125
+00:02:14,840 --> 00:02:16,150
+we've already got a main. CPP file and
+we've already got a bunch of code but
+
+126
+00:02:16,150 --> 00:02:16,160
+we've already got a bunch of code but
+ 
+
+127
+00:02:16,160 --> 00:02:17,350
+we've already got a bunch of code but
+I'm going to type it out again just so
+
+128
+00:02:17,350 --> 00:02:17,360
+I'm going to type it out again just so
+ 
+
+129
+00:02:17,360 --> 00:02:19,550
+I'm going to type it out again just so
+that it matches the other videos so
+
+130
+00:02:19,550 --> 00:02:19,560
+that it matches the other videos so
+ 
+
+131
+00:02:19,560 --> 00:02:22,070
+that it matches the other videos so
+basically we're going to do include IO
+
+132
+00:02:22,070 --> 00:02:22,080
+basically we're going to do include IO
+ 
+
+133
+00:02:22,080 --> 00:02:24,509
+basically we're going to do include IO
+stream int
+
+134
+00:02:24,509 --> 00:02:24,519
+stream int
+ 
+
+135
+00:02:24,519 --> 00:02:28,750
+stream int
+main stdc out hello
+
+136
+00:02:28,750 --> 00:02:28,760
+main stdc out hello
+ 
+
+137
+00:02:28,760 --> 00:02:31,710
+main stdc out hello
+world
+
+138
+00:02:31,710 --> 00:02:31,720
+world
+ 
+
+139
+00:02:31,720 --> 00:02:33,030
+world
+and then we'll do our
+
+140
+00:02:33,030 --> 00:02:33,040
+and then we'll do our
+ 
+
+141
+00:02:33,040 --> 00:02:35,949
+and then we'll do our
+STD cin.get
+
+142
+00:02:35,949 --> 00:02:35,959
+STD cin.get
+ 
+
+143
+00:02:35,959 --> 00:02:38,710
+STD cin.get
+save that and then all you have to do to
+
+144
+00:02:38,710 --> 00:02:38,720
+save that and then all you have to do to
+ 
+
+145
+00:02:38,720 --> 00:02:41,070
+save that and then all you have to do to
+actually build it is you can hit product
+
+146
+00:02:41,070 --> 00:02:41,080
+actually build it is you can hit product
+ 
+
+147
+00:02:41,080 --> 00:02:42,309
+actually build it is you can hit product
+and then
+
+148
+00:02:42,309 --> 00:02:42,319
+and then
+ 
+
+149
+00:02:42,319 --> 00:02:44,470
+and then
+build that will compile it for you there
+
+150
+00:02:44,470 --> 00:02:44,480
+build that will compile it for you there
+ 
+
+151
+00:02:44,480 --> 00:02:46,110
+build that will compile it for you there
+you go build succeeded and then if you
+
+152
+00:02:46,110 --> 00:02:46,120
+you go build succeeded and then if you
+ 
+
+153
+00:02:46,120 --> 00:02:47,430
+you go build succeeded and then if you
+want to run it you can just hit this
+
+154
+00:02:47,430 --> 00:02:47,440
+want to run it you can just hit this
+ 
+
+155
+00:02:47,440 --> 00:02:49,190
+want to run it you can just hit this
+play button that will also build it as
+
+156
+00:02:49,190 --> 00:02:49,200
+play button that will also build it as
+ 
+
+157
+00:02:49,200 --> 00:02:50,750
+play button that will also build it as
+well you'll have to enable developer
+
+158
+00:02:50,750 --> 00:02:50,760
+well you'll have to enable developer
+ 
+
+159
+00:02:50,760 --> 00:02:56,350
+well you'll have to enable developer
+mode if this is your first time running
+
+160
+00:02:56,350 --> 00:02:56,360
+
+ 
+
+161
+00:02:56,360 --> 00:02:58,869
+
+xcode and off we go so the build
+
+162
+00:02:58,869 --> 00:02:58,879
+xcode and off we go so the build
+ 
+
+163
+00:02:58,879 --> 00:03:00,750
+xcode and off we go so the build
+succeeded and you should see a console
+
+164
+00:03:00,750 --> 00:03:00,760
+succeeded and you should see a console
+ 
+
+165
+00:03:00,760 --> 00:03:03,030
+succeeded and you should see a console
+pop out in the bottom here with your
+
+166
+00:03:03,030 --> 00:03:03,040
+pop out in the bottom here with your
+ 
+
+167
+00:03:03,040 --> 00:03:05,270
+pop out in the bottom here with your
+output we'll just hit enter and you can
+
+168
+00:03:05,270 --> 00:03:05,280
+output we'll just hit enter and you can
+ 
+
+169
+00:03:05,280 --> 00:03:06,949
+output we'll just hit enter and you can
+see the program terminates successfully
+
+170
+00:03:06,949 --> 00:03:06,959
+see the program terminates successfully
+ 
+
+171
+00:03:06,959 --> 00:03:08,750
+see the program terminates successfully
+and that's it we're ready to learn C++
+
+172
+00:03:08,750 --> 00:03:08,760
+and that's it we're ready to learn C++
+ 
+
+173
+00:03:08,760 --> 00:03:10,910
+and that's it we're ready to learn C++
+on Mac all right you've got xcode up and
+
+174
+00:03:10,910 --> 00:03:10,920
+on Mac all right you've got xcode up and
+ 
+
+175
+00:03:10,920 --> 00:03:12,470
+on Mac all right you've got xcode up and
+running you're finally ready to learn
+
+176
+00:03:12,470 --> 00:03:12,480
+running you're finally ready to learn
+ 
+
+177
+00:03:12,480 --> 00:03:14,710
+running you're finally ready to learn
+some C++ over the next few videos we're
+
+178
+00:03:14,710 --> 00:03:14,720
+some C++ over the next few videos we're
+ 
+
+179
+00:03:14,720 --> 00:03:16,670
+some C++ over the next few videos we're
+going to start learning how C++ actually
+
+180
+00:03:16,670 --> 00:03:16,680
+going to start learning how C++ actually
+ 
+
+181
+00:03:16,680 --> 00:03:18,270
+going to start learning how C++ actually
+works because that's pretty much the key
+
+182
+00:03:18,270 --> 00:03:18,280
+works because that's pretty much the key
+ 
+
+183
+00:03:18,280 --> 00:03:20,070
+works because that's pretty much the key
+to writing it properly until then make
+
+184
+00:03:20,070 --> 00:03:20,080
+to writing it properly until then make
+ 
+
+185
+00:03:20,080 --> 00:03:21,750
+to writing it properly until then make
+sure you follow me on Twitter and
+
+186
+00:03:21,750 --> 00:03:21,760
+sure you follow me on Twitter and
+ 
+
+187
+00:03:21,760 --> 00:03:23,550
+sure you follow me on Twitter and
+Instagram and if you really like this
+
+188
+00:03:23,550 --> 00:03:23,560
+Instagram and if you really like this
+ 
+
+189
+00:03:23,560 --> 00:03:25,710
+Instagram and if you really like this
+series you can support it on patreon
+
+190
+00:03:25,710 --> 00:03:25,720
+series you can support it on patreon
+ 
+
+191
+00:03:25,720 --> 00:03:30,159
+series you can support it on patreon
+well I'll see you guys next time goodbye
+

@@ -1,0 +1,4955 @@
+1
+00:00:00,000 --> 00:00:01,510
+
+Hey, what's up guys? My name is Cherno.
+
+2
+00:00:01,510 --> 00:00:01,520
+Hey, what's up guys? My name is Cherno.
+ 
+
+3
+00:00:01,520 --> 00:00:04,710
+Hey, what's up guys? My name is Cherno.
+Welcome back to my C++ series. So, today
+
+4
+00:00:04,710 --> 00:00:04,720
+Welcome back to my C++ series. So, today
+ 
+
+5
+00:00:04,720 --> 00:00:06,110
+Welcome back to my C++ series. So, today
+we're going to be talking all about
+
+6
+00:00:06,110 --> 00:00:06,120
+we're going to be talking all about
+ 
+
+7
+00:00:06,120 --> 00:00:07,470
+we're going to be talking all about
+iterators. This is going to serve as
+
+8
+00:00:07,470 --> 00:00:07,480
+iterators. This is going to serve as
+ 
+
+9
+00:00:07,480 --> 00:00:10,070
+iterators. This is going to serve as
+more of an introductory video to
+
+10
+00:00:10,070 --> 00:00:10,080
+more of an introductory video to
+ 
+
+11
+00:00:10,080 --> 00:00:11,710
+more of an introductory video to
+iterators. A lot of people have been
+
+12
+00:00:11,710 --> 00:00:11,720
+iterators. A lot of people have been
+ 
+
+13
+00:00:11,720 --> 00:00:13,550
+iterators. A lot of people have been
+asking me, what are iterators? Should I
+
+14
+00:00:13,550 --> 00:00:13,560
+asking me, what are iterators? Should I
+ 
+
+15
+00:00:13,560 --> 00:00:15,630
+asking me, what are iterators? Should I
+be using iterators? Have they been
+
+16
+00:00:15,630 --> 00:00:15,640
+be using iterators? Have they been
+ 
+
+17
+00:00:15,640 --> 00:00:18,870
+be using iterators? Have they been
+somewhat replaced in the language? This
+
+18
+00:00:18,870 --> 00:00:18,880
+somewhat replaced in the language? This
+ 
+
+19
+00:00:18,880 --> 00:00:20,190
+somewhat replaced in the language? This
+especially comes up a lot in
+
+20
+00:00:20,190 --> 00:00:20,200
+especially comes up a lot in
+ 
+
+21
+00:00:20,200 --> 00:00:22,390
+especially comes up a lot in
+universities who are still maybe not
+
+22
+00:00:22,390 --> 00:00:22,400
+universities who are still maybe not
+ 
+
+23
+00:00:22,400 --> 00:00:24,750
+universities who are still maybe not
+using the latest C++ standard. In fact,
+
+24
+00:00:24,750 --> 00:00:24,760
+using the latest C++ standard. In fact,
+ 
+
+25
+00:00:24,760 --> 00:00:26,630
+using the latest C++ standard. In fact,
+a lot of people message me and say, help
+
+26
+00:00:26,630 --> 00:00:26,640
+a lot of people message me and say, help
+ 
+
+27
+00:00:26,640 --> 00:00:30,390
+a lot of people message me and say, help
+me, my university is using C++ 03. Which
+
+28
+00:00:30,390 --> 00:00:30,400
+me, my university is using C++ 03. Which
+ 
+
+29
+00:00:30,400 --> 00:00:32,470
+me, my university is using C++ 03. Which
+is a shame because it's 2020, but we're
+
+30
+00:00:32,470 --> 00:00:32,480
+is a shame because it's 2020, but we're
+ 
+
+31
+00:00:32,480 --> 00:00:34,350
+is a shame because it's 2020, but we're
+not going to get into the educational
+
+32
+00:00:34,350 --> 00:00:34,360
+not going to get into the educational
+ 
+
+33
+00:00:34,360 --> 00:00:37,350
+not going to get into the educational
+system in this video. The point is, what
+
+34
+00:00:37,350 --> 00:00:37,360
+system in this video. The point is, what
+ 
+
+35
+00:00:37,360 --> 00:00:40,070
+system in this video. The point is, what
+are iterators and do I really need to
+
+36
+00:00:40,070 --> 00:00:40,080
+are iterators and do I really need to
+ 
+
+37
+00:00:40,080 --> 00:00:42,710
+are iterators and do I really need to
+know how to use them? So, iterators are
+
+38
+00:00:42,710 --> 00:00:42,720
+know how to use them? So, iterators are
+ 
+
+39
+00:00:42,720 --> 00:00:44,750
+know how to use them? So, iterators are
+essentially a way for you to iterate
+
+40
+00:00:44,750 --> 00:00:44,760
+essentially a way for you to iterate
+ 
+
+41
+00:00:44,760 --> 00:00:47,350
+essentially a way for you to iterate
+over a collection of elements. Now, the
+
+42
+00:00:47,350 --> 00:00:47,360
+over a collection of elements. Now, the
+ 
+
+43
+00:00:47,360 --> 00:00:49,870
+over a collection of elements. Now, the
+thing is, an iterator is really up to
+
+44
+00:00:49,870 --> 00:00:49,880
+thing is, an iterator is really up to
+ 
+
+45
+00:00:49,880 --> 00:00:51,910
+thing is, an iterator is really up to
+the implementation in terms of how it's
+
+46
+00:00:51,910 --> 00:00:51,920
+the implementation in terms of how it's
+ 
+
+47
+00:00:51,920 --> 00:00:54,670
+the implementation in terms of how it's
+used, meaning that I could write a class
+
+48
+00:00:54,670 --> 00:00:54,680
+used, meaning that I could write a class
+ 
+
+49
+00:00:54,680 --> 00:00:57,230
+used, meaning that I could write a class
+called Apple and then add an iterator to
+
+50
+00:00:57,230 --> 00:00:57,240
+called Apple and then add an iterator to
+ 
+
+51
+00:00:57,240 --> 00:00:58,230
+called Apple and then add an iterator to
+it.
+
+52
+00:00:58,230 --> 00:00:58,240
+it.
+ 
+
+53
+00:00:58,240 --> 00:01:00,070
+it.
+That might not make sense to you, but I
+
+54
+00:01:00,070 --> 00:01:00,080
+That might not make sense to you, but I
+ 
+
+55
+00:01:00,080 --> 00:01:01,510
+That might not make sense to you, but I
+could use it in some kind of special
+
+56
+00:01:01,510 --> 00:01:01,520
+could use it in some kind of special
+ 
+
+57
+00:01:01,520 --> 00:01:03,230
+could use it in some kind of special
+way. It's kind of like operator
+
+58
+00:01:03,230 --> 00:01:03,240
+way. It's kind of like operator
+ 
+
+59
+00:01:03,240 --> 00:01:06,110
+way. It's kind of like operator
+overloading. You can make the plus plus
+
+60
+00:01:06,110 --> 00:01:06,120
+overloading. You can make the plus plus
+ 
+
+61
+00:01:06,120 --> 00:01:08,710
+overloading. You can make the plus plus
+operator do anything. But, for the most
+
+62
+00:01:08,710 --> 00:01:08,720
+operator do anything. But, for the most
+ 
+
+63
+00:01:08,720 --> 00:01:10,470
+operator do anything. But, for the most
+case, if we look at the standard C++
+
+64
+00:01:10,470 --> 00:01:10,480
+case, if we look at the standard C++
+ 
+
+65
+00:01:10,480 --> 00:01:12,950
+case, if we look at the standard C++
+library, we can see that iterators are
+
+66
+00:01:12,950 --> 00:01:12,960
+library, we can see that iterators are
+ 
+
+67
+00:01:12,960 --> 00:01:14,830
+library, we can see that iterators are
+usually used for iterating over data
+
+68
+00:01:14,830 --> 00:01:14,840
+usually used for iterating over data
+ 
+
+69
+00:01:14,840 --> 00:01:16,390
+usually used for iterating over data
+structures. So, whether that be a simple
+
+70
+00:01:16,390 --> 00:01:16,400
+structures. So, whether that be a simple
+ 
+
+71
+00:01:16,400 --> 00:01:17,990
+structures. So, whether that be a simple
+array that you want to traverse or get
+
+72
+00:01:17,990 --> 00:01:18,000
+array that you want to traverse or get
+ 
+
+73
+00:01:18,000 --> 00:01:19,510
+array that you want to traverse or get
+through every element in that array.
+
+74
+00:01:19,510 --> 00:01:19,520
+through every element in that array.
+ 
+
+75
+00:01:19,520 --> 00:01:21,230
+through every element in that array.
+Maybe you have a vector, you want to go
+
+76
+00:01:21,230 --> 00:01:21,240
+Maybe you have a vector, you want to go
+ 
+
+77
+00:01:21,240 --> 00:01:23,310
+Maybe you have a vector, you want to go
+backwards through every element. Maybe
+
+78
+00:01:23,310 --> 00:01:23,320
+backwards through every element. Maybe
+ 
+
+79
+00:01:23,320 --> 00:01:24,630
+backwards through every element. Maybe
+you have something a little bit more
+
+80
+00:01:24,630 --> 00:01:24,640
+you have something a little bit more
+ 
+
+81
+00:01:24,640 --> 00:01:27,070
+you have something a little bit more
+complicated like a set or a map or even
+
+82
+00:01:27,070 --> 00:01:27,080
+complicated like a set or a map or even
+ 
+
+83
+00:01:27,080 --> 00:01:28,710
+complicated like a set or a map or even
+a tree data structure. I want to
+
+84
+00:01:28,710 --> 00:01:28,720
+a tree data structure. I want to
+ 
+
+85
+00:01:28,720 --> 00:01:31,190
+a tree data structure. I want to
+traverse that. How do I do that? Well,
+
+86
+00:01:31,190 --> 00:01:31,200
+traverse that. How do I do that? Well,
+ 
+
+87
+00:01:31,200 --> 00:01:32,790
+traverse that. How do I do that? Well,
+you need to use an iterator. It's really
+
+88
+00:01:32,790 --> 00:01:32,800
+you need to use an iterator. It's really
+ 
+
+89
+00:01:32,800 --> 00:01:34,470
+you need to use an iterator. It's really
+easy to overlook iterators when you're
+
+90
+00:01:34,470 --> 00:01:34,480
+easy to overlook iterators when you're
+ 
+
+91
+00:01:34,480 --> 00:01:35,670
+easy to overlook iterators when you're
+just dealing with a simple data
+
+92
+00:01:35,670 --> 00:01:35,680
+just dealing with a simple data
+ 
+
+93
+00:01:35,680 --> 00:01:37,230
+just dealing with a simple data
+structure like a vector because we can
+
+94
+00:01:37,230 --> 00:01:37,240
+structure like a vector because we can
+ 
+
+95
+00:01:37,240 --> 00:01:38,950
+structure like a vector because we can
+simply use the index operator. Using the
+
+96
+00:01:38,950 --> 00:01:38,960
+simply use the index operator. Using the
+ 
+
+97
+00:01:38,960 --> 00:01:40,910
+simply use the index operator. Using the
+square brackets, we can simply stick a
+
+98
+00:01:40,910 --> 00:01:40,920
+square brackets, we can simply stick a
+ 
+
+99
+00:01:40,920 --> 00:01:43,310
+square brackets, we can simply stick a
+value into there and retrieve that
+
+100
+00:01:43,310 --> 00:01:43,320
+value into there and retrieve that
+ 
+
+101
+00:01:43,320 --> 00:01:45,150
+value into there and retrieve that
+element at that given index. But, this
+
+102
+00:01:45,150 --> 00:01:45,160
+element at that given index. But, this
+ 
+
+103
+00:01:45,160 --> 00:01:46,670
+element at that given index. But, this
+doesn't always work for other data
+
+104
+00:01:46,670 --> 00:01:46,680
+doesn't always work for other data
+ 
+
+105
+00:01:46,680 --> 00:01:48,830
+doesn't always work for other data
+structures such as sets which don't
+
+106
+00:01:48,830 --> 00:01:48,840
+structures such as sets which don't
+ 
+
+107
+00:01:48,840 --> 00:01:51,150
+structures such as sets which don't
+really contain all of our elements in
+
+108
+00:01:51,150 --> 00:01:51,160
+really contain all of our elements in
+ 
+
+109
+00:01:51,160 --> 00:01:53,070
+really contain all of our elements in
+order. So, anyway, long story short
+
+110
+00:01:53,070 --> 00:01:53,080
+order. So, anyway, long story short
+ 
+
+111
+00:01:53,080 --> 00:01:54,510
+order. So, anyway, long story short
+because I honestly think this does not
+
+112
+00:01:54,510 --> 00:01:54,520
+because I honestly think this does not
+ 
+
+113
+00:01:54,520 --> 00:01:56,990
+because I honestly think this does not
+need to be complicated at all. Iterators
+
+114
+00:01:56,990 --> 00:01:57,000
+need to be complicated at all. Iterators
+ 
+
+115
+00:01:57,000 --> 00:01:59,990
+need to be complicated at all. Iterators
+are used to iterate over a collection of
+
+116
+00:01:59,990 --> 00:02:00,000
+are used to iterate over a collection of
+ 
+
+117
+00:02:00,000 --> 00:02:02,070
+are used to iterate over a collection of
+elements, and iterating over them is
+
+118
+00:02:02,070 --> 00:02:02,080
+elements, and iterating over them is
+ 
+
+119
+00:02:02,080 --> 00:02:04,070
+elements, and iterating over them is
+really simple, as we'll see in a minute.
+
+120
+00:02:04,070 --> 00:02:04,080
+really simple, as we'll see in a minute.
+ 
+
+121
+00:02:04,080 --> 00:02:06,230
+really simple, as we'll see in a minute.
+But first, you know what isn't stuck in
+
+122
+00:02:06,230 --> 00:02:06,240
+But first, you know what isn't stuck in
+ 
+
+123
+00:02:06,240 --> 00:02:09,029
+But first, you know what isn't stuck in
+2003 in terms of education? Skillshare.
+
+124
+00:02:09,029 --> 00:02:09,039
+2003 in terms of education? Skillshare.
+ 
+
+125
+00:02:09,039 --> 00:02:10,430
+2003 in terms of education? Skillshare.
+For those of you who do not know what
+
+126
+00:02:10,430 --> 00:02:10,440
+For those of you who do not know what
+ 
+
+127
+00:02:10,440 --> 00:02:12,510
+For those of you who do not know what
+Skillshare is, Skillshare is an online
+
+128
+00:02:12,510 --> 00:02:12,520
+Skillshare is, Skillshare is an online
+ 
+
+129
+00:02:12,520 --> 00:02:14,830
+Skillshare is, Skillshare is an online
+learning platform, a community of people
+
+130
+00:02:14,830 --> 00:02:14,840
+learning platform, a community of people
+ 
+
+131
+00:02:14,840 --> 00:02:17,390
+learning platform, a community of people
+who come together to learn a new skill
+
+132
+00:02:17,390 --> 00:02:17,400
+who come together to learn a new skill
+ 
+
+133
+00:02:17,400 --> 00:02:19,470
+who come together to learn a new skill
+on the internet. Whatever it is that
+
+134
+00:02:19,470 --> 00:02:19,480
+on the internet. Whatever it is that
+ 
+
+135
+00:02:19,480 --> 00:02:21,070
+on the internet. Whatever it is that
+you're trying to learn, whether that be
+
+136
+00:02:21,070 --> 00:02:21,080
+you're trying to learn, whether that be
+ 
+
+137
+00:02:21,080 --> 00:02:23,430
+you're trying to learn, whether that be
+illustration, photography, marketing,
+
+138
+00:02:23,430 --> 00:02:23,440
+illustration, photography, marketing,
+ 
+
+139
+00:02:23,440 --> 00:02:26,150
+illustration, photography, marketing,
+business, productivity,
+
+140
+00:02:26,150 --> 00:02:26,160
+business, productivity,
+ 
+
+141
+00:02:26,160 --> 00:02:28,350
+business, productivity,
+literally almost anything. Skillshare
+
+142
+00:02:28,350 --> 00:02:28,360
+literally almost anything. Skillshare
+ 
+
+143
+00:02:28,360 --> 00:02:30,910
+literally almost anything. Skillshare
+has thousands of amazing classes for you
+
+144
+00:02:30,910 --> 00:02:30,920
+has thousands of amazing classes for you
+ 
+
+145
+00:02:30,920 --> 00:02:33,430
+has thousands of amazing classes for you
+to choose from, and I love the fact that
+
+146
+00:02:33,430 --> 00:02:33,440
+to choose from, and I love the fact that
+ 
+
+147
+00:02:33,440 --> 00:02:35,910
+to choose from, and I love the fact that
+they're all really concise and simple
+
+148
+00:02:35,910 --> 00:02:35,920
+they're all really concise and simple
+ 
+
+149
+00:02:35,920 --> 00:02:37,949
+they're all really concise and simple
+and to the point. Even if you don't need
+
+150
+00:02:37,949 --> 00:02:37,959
+and to the point. Even if you don't need
+ 
+
+151
+00:02:37,959 --> 00:02:39,870
+and to the point. Even if you don't need
+to learn a new skill, I mean, I didn't
+
+152
+00:02:39,870 --> 00:02:39,880
+to learn a new skill, I mean, I didn't
+ 
+
+153
+00:02:39,880 --> 00:02:41,750
+to learn a new skill, I mean, I didn't
+think that I wanted to learn about
+
+154
+00:02:41,750 --> 00:02:41,760
+think that I wanted to learn about
+ 
+
+155
+00:02:41,760 --> 00:02:43,990
+think that I wanted to learn about
+illustration, but to be honest, it's
+
+156
+00:02:43,990 --> 00:02:44,000
+illustration, but to be honest, it's
+ 
+
+157
+00:02:44,000 --> 00:02:46,310
+illustration, but to be honest, it's
+been helping me relax so much, which I
+
+158
+00:02:46,310 --> 00:02:46,320
+been helping me relax so much, which I
+ 
+
+159
+00:02:46,320 --> 00:02:48,110
+been helping me relax so much, which I
+feel is really needed these days.
+
+160
+00:02:48,110 --> 00:02:48,120
+feel is really needed these days.
+ 
+
+161
+00:02:48,120 --> 00:02:50,190
+feel is really needed these days.
+Something like productivity, it it's not
+
+162
+00:02:50,190 --> 00:02:50,200
+Something like productivity, it it's not
+ 
+
+163
+00:02:50,200 --> 00:02:52,110
+Something like productivity, it it's not
+something that you necessarily always
+
+164
+00:02:52,110 --> 00:02:52,120
+something that you necessarily always
+ 
+
+165
+00:02:52,120 --> 00:02:53,830
+something that you necessarily always
+set out to learn, but if you if you come
+
+166
+00:02:53,830 --> 00:02:53,840
+set out to learn, but if you if you come
+ 
+
+167
+00:02:53,840 --> 00:02:55,390
+set out to learn, but if you if you come
+across a class that teaches you to be
+
+168
+00:02:55,390 --> 00:02:55,400
+across a class that teaches you to be
+ 
+
+169
+00:02:55,400 --> 00:02:57,070
+across a class that teaches you to be
+more productive,
+
+170
+00:02:57,070 --> 00:02:57,080
+more productive,
+ 
+
+171
+00:02:57,080 --> 00:02:58,390
+more productive,
+why not spend a few minutes going
+
+172
+00:02:58,390 --> 00:02:58,400
+why not spend a few minutes going
+ 
+
+173
+00:02:58,400 --> 00:02:59,790
+why not spend a few minutes going
+through that? And you can do that with
+
+174
+00:02:59,790 --> 00:02:59,800
+through that? And you can do that with
+ 
+
+175
+00:02:59,800 --> 00:03:01,830
+through that? And you can do that with
+Skillshare because of those concise
+
+176
+00:03:01,830 --> 00:03:01,840
+Skillshare because of those concise
+ 
+
+177
+00:03:01,840 --> 00:03:04,470
+Skillshare because of those concise
+classes. Coming in at just under $10 a
+
+178
+00:03:04,470 --> 00:03:04,480
+classes. Coming in at just under $10 a
+ 
+
+179
+00:03:04,480 --> 00:03:06,270
+classes. Coming in at just under $10 a
+month for an annual subscription, it is
+
+180
+00:03:06,270 --> 00:03:06,280
+month for an annual subscription, it is
+ 
+
+181
+00:03:06,280 --> 00:03:08,670
+month for an annual subscription, it is
+an amazing offer, but an even better
+
+182
+00:03:08,670 --> 00:03:08,680
+an amazing offer, but an even better
+ 
+
+183
+00:03:08,680 --> 00:03:10,390
+an amazing offer, but an even better
+offer is the fact that Skillshare is
+
+184
+00:03:10,390 --> 00:03:10,400
+offer is the fact that Skillshare is
+ 
+
+185
+00:03:10,400 --> 00:03:12,430
+offer is the fact that Skillshare is
+offering the first 1,000 people who
+
+186
+00:03:12,430 --> 00:03:12,440
+offering the first 1,000 people who
+ 
+
+187
+00:03:12,440 --> 00:03:13,990
+offering the first 1,000 people who
+click the link in the description below
+
+188
+00:03:13,990 --> 00:03:14,000
+click the link in the description below
+ 
+
+189
+00:03:14,000 --> 00:03:16,990
+click the link in the description below
+and sign up two free months of
+
+190
+00:03:16,990 --> 00:03:17,000
+and sign up two free months of
+ 
+
+191
+00:03:17,000 --> 00:03:19,110
+and sign up two free months of
+Skillshare Premium. That's two whole
+
+192
+00:03:19,110 --> 00:03:19,120
+Skillshare Premium. That's two whole
+ 
+
+193
+00:03:19,120 --> 00:03:20,949
+Skillshare Premium. That's two whole
+months to check out the wide variety of
+
+194
+00:03:20,949 --> 00:03:20,959
+months to check out the wide variety of
+ 
+
+195
+00:03:20,959 --> 00:03:23,110
+months to check out the wide variety of
+courses that they have on that platform
+
+196
+00:03:23,110 --> 00:03:23,120
+courses that they have on that platform
+ 
+
+197
+00:03:23,120 --> 00:03:24,630
+courses that they have on that platform
+and decide for yourself if you want to
+
+198
+00:03:24,630 --> 00:03:24,640
+and decide for yourself if you want to
+ 
+
+199
+00:03:24,640 --> 00:03:26,790
+and decide for yourself if you want to
+stay and learn more or not. Huge thank
+
+200
+00:03:26,790 --> 00:03:26,800
+stay and learn more or not. Huge thank
+ 
+
+201
+00:03:26,800 --> 00:03:28,150
+stay and learn more or not. Huge thank
+you, as always, to Skillshare for
+
+202
+00:03:28,150 --> 00:03:28,160
+you, as always, to Skillshare for
+ 
+
+203
+00:03:28,160 --> 00:03:30,670
+you, as always, to Skillshare for
+sponsoring this video. Let's dive in and
+
+204
+00:03:30,670 --> 00:03:30,680
+sponsoring this video. Let's dive in and
+ 
+
+205
+00:03:30,680 --> 00:03:32,750
+sponsoring this video. Let's dive in and
+take a look at what iterators are all
+
+206
+00:03:32,750 --> 00:03:32,760
+take a look at what iterators are all
+ 
+
+207
+00:03:32,760 --> 00:03:34,630
+take a look at what iterators are all
+about. So, as mentioned earlier,
+
+208
+00:03:34,630 --> 00:03:34,640
+about. So, as mentioned earlier,
+ 
+
+209
+00:03:34,640 --> 00:03:36,949
+about. So, as mentioned earlier,
+iterators are used to iterate over a
+
+210
+00:03:36,949 --> 00:03:36,959
+iterators are used to iterate over a
+ 
+
+211
+00:03:36,959 --> 00:03:40,070
+iterators are used to iterate over a
+collection of data. Now, you can really
+
+212
+00:03:40,070 --> 00:03:40,080
+collection of data. Now, you can really
+ 
+
+213
+00:03:40,080 --> 00:03:41,830
+collection of data. Now, you can really
+interpret this however you like. It's
+
+214
+00:03:41,830 --> 00:03:41,840
+interpret this however you like. It's
+ 
+
+215
+00:03:41,840 --> 00:03:43,550
+interpret this however you like. It's
+possible to write custom iterators to do
+
+216
+00:03:43,550 --> 00:03:43,560
+possible to write custom iterators to do
+ 
+
+217
+00:03:43,560 --> 00:03:45,390
+possible to write custom iterators to do
+a whole range of things, but usually
+
+218
+00:03:45,390 --> 00:03:45,400
+a whole range of things, but usually
+ 
+
+219
+00:03:45,400 --> 00:03:46,990
+a whole range of things, but usually
+when we think of an iterator, we think
+
+220
+00:03:46,990 --> 00:03:47,000
+when we think of an iterator, we think
+ 
+
+221
+00:03:47,000 --> 00:03:48,949
+when we think of an iterator, we think
+of having a collection of values, such
+
+222
+00:03:48,949 --> 00:03:48,959
+of having a collection of values, such
+ 
+
+223
+00:03:48,959 --> 00:03:50,470
+of having a collection of values, such
+as this vector here, and we want to
+
+224
+00:03:50,470 --> 00:03:50,480
+as this vector here, and we want to
+ 
+
+225
+00:03:50,480 --> 00:03:52,510
+as this vector here, and we want to
+traverse the entire collection, part of
+
+226
+00:03:52,510 --> 00:03:52,520
+traverse the entire collection, part of
+ 
+
+227
+00:03:52,520 --> 00:03:54,030
+traverse the entire collection, part of
+the collection, maybe we want to go
+
+228
+00:03:54,030 --> 00:03:54,040
+the collection, maybe we want to go
+ 
+
+229
+00:03:54,040 --> 00:03:55,430
+the collection, maybe we want to go
+backwards through the collection. We
+
+230
+00:03:55,430 --> 00:03:55,440
+backwards through the collection. We
+ 
+
+231
+00:03:55,440 --> 00:03:56,950
+backwards through the collection. We
+essentially have the desire to get
+
+232
+00:03:56,950 --> 00:03:56,960
+essentially have the desire to get
+ 
+
+233
+00:03:56,960 --> 00:03:59,150
+essentially have the desire to get
+through at least some of the values
+
+234
+00:03:59,150 --> 00:03:59,160
+through at least some of the values
+ 
+
+235
+00:03:59,160 --> 00:04:01,110
+through at least some of the values
+inside this collection. So, how do we do
+
+236
+00:04:01,110 --> 00:04:01,120
+inside this collection. So, how do we do
+ 
+
+237
+00:04:01,120 --> 00:04:02,390
+inside this collection. So, how do we do
+that? Well, let's look at some simple
+
+238
+00:04:02,390 --> 00:04:02,400
+that? Well, let's look at some simple
+ 
+
+239
+00:04:02,400 --> 00:04:04,750
+that? Well, let's look at some simple
+examples. We have a vector here. We have
+
+240
+00:04:04,750 --> 00:04:04,760
+examples. We have a vector here. We have
+ 
+
+241
+00:04:04,760 --> 00:04:07,230
+examples. We have a vector here. We have
+five values. How do I print them all out
+
+242
+00:04:07,230 --> 00:04:07,240
+five values. How do I print them all out
+ 
+
+243
+00:04:07,240 --> 00:04:09,190
+five values. How do I print them all out
+to the console? There are a number of
+
+244
+00:04:09,190 --> 00:04:09,200
+to the console? There are a number of
+ 
+
+245
+00:04:09,200 --> 00:04:10,390
+to the console? There are a number of
+ways we could of course do that. The
+
+246
+00:04:10,390 --> 00:04:10,400
+ways we could of course do that. The
+ 
+
+247
+00:04:10,400 --> 00:04:12,670
+ways we could of course do that. The
+most common way which you'll probably
+
+248
+00:04:12,670 --> 00:04:12,680
+most common way which you'll probably
+ 
+
+249
+00:04:12,680 --> 00:04:14,710
+most common way which you'll probably
+think of is a for loop that simply
+
+250
+00:04:14,710 --> 00:04:14,720
+think of is a for loop that simply
+ 
+
+251
+00:04:14,720 --> 00:04:17,590
+think of is a for loop that simply
+iterates through values.size like this
+
+252
+00:04:17,590 --> 00:04:17,600
+iterates through values.size like this
+ 
+
+253
+00:04:17,600 --> 00:04:19,349
+iterates through values.size like this
+so that we go through all of the five
+
+254
+00:04:19,349 --> 00:04:19,359
+so that we go through all of the five
+ 
+
+255
+00:04:19,359 --> 00:04:21,710
+so that we go through all of the five
+values that we have here. And then we
+
+256
+00:04:21,710 --> 00:04:21,720
+values that we have here. And then we
+ 
+
+257
+00:04:21,720 --> 00:04:24,190
+values that we have here. And then we
+simply use the index operator here with
+
+258
+00:04:24,190 --> 00:04:24,200
+simply use the index operator here with
+ 
+
+259
+00:04:24,200 --> 00:04:26,950
+simply use the index operator here with
+the I variable to just retrieve the data
+
+260
+00:04:26,950 --> 00:04:26,960
+the I variable to just retrieve the data
+ 
+
+261
+00:04:26,960 --> 00:04:29,390
+the I variable to just retrieve the data
+at a particular index inside our array
+
+262
+00:04:29,390 --> 00:04:29,400
+at a particular index inside our array
+ 
+
+263
+00:04:29,400 --> 00:04:31,150
+at a particular index inside our array
+here. So, if I print this out into the
+
+264
+00:04:31,150 --> 00:04:31,160
+here. So, if I print this out into the
+ 
+
+265
+00:04:31,160 --> 00:04:33,270
+here. So, if I print this out into the
+console like this,
+
+266
+00:04:33,270 --> 00:04:33,280
+console like this,
+ 
+
+267
+00:04:33,280 --> 00:04:36,470
+console like this,
+and I'll add in a little std::cin.get
+
+268
+00:04:36,470 --> 00:04:36,480
+and I'll add in a little std::cin.get
+ 
+
+269
+00:04:36,480 --> 00:04:39,190
+and I'll add in a little std::cin.get
+over here, we should see 1 2 3 4 5 being
+
+270
+00:04:39,190 --> 00:04:39,200
+over here, we should see 1 2 3 4 5 being
+ 
+
+271
+00:04:39,200 --> 00:04:40,830
+over here, we should see 1 2 3 4 5 being
+printed out to the console. And you can
+
+272
+00:04:40,830 --> 00:04:40,840
+printed out to the console. And you can
+ 
+
+273
+00:04:40,840 --> 00:04:42,590
+printed out to the console. And you can
+see that's what we get. So, we've
+
+274
+00:04:42,590 --> 00:04:42,600
+see that's what we get. So, we've
+ 
+
+275
+00:04:42,600 --> 00:04:45,110
+see that's what we get. So, we've
+essentially iterated through this entire
+
+276
+00:04:45,110 --> 00:04:45,120
+essentially iterated through this entire
+ 
+
+277
+00:04:45,120 --> 00:04:46,750
+essentially iterated through this entire
+collection. And this is a pretty common
+
+278
+00:04:46,750 --> 00:04:46,760
+collection. And this is a pretty common
+ 
+
+279
+00:04:46,760 --> 00:04:48,350
+collection. And this is a pretty common
+way of doing that. Now, let's also look
+
+280
+00:04:48,350 --> 00:04:48,360
+way of doing that. Now, let's also look
+ 
+
+281
+00:04:48,360 --> 00:04:50,030
+way of doing that. Now, let's also look
+at another way that we might do this
+
+282
+00:04:50,030 --> 00:04:50,040
+at another way that we might do this
+ 
+
+283
+00:04:50,040 --> 00:04:51,950
+at another way that we might do this
+because we don't really need this I
+
+284
+00:04:51,950 --> 00:04:51,960
+because we don't really need this I
+ 
+
+285
+00:04:51,960 --> 00:04:53,430
+because we don't really need this I
+variable. Is there a cleaner way that we
+
+286
+00:04:53,430 --> 00:04:53,440
+variable. Is there a cleaner way that we
+ 
+
+287
+00:04:53,440 --> 00:04:54,590
+variable. Is there a cleaner way that we
+can write this? And of course, there's
+
+288
+00:04:54,590 --> 00:04:54,600
+can write this? And of course, there's
+ 
+
+289
+00:04:54,600 --> 00:04:56,270
+can write this? And of course, there's
+something called a range-based for loop
+
+290
+00:04:56,270 --> 00:04:56,280
+something called a range-based for loop
+ 
+
+291
+00:04:56,280 --> 00:04:59,070
+something called a range-based for loop
+since C++ 11. So, what we can actually
+
+292
+00:04:59,070 --> 00:04:59,080
+since C++ 11. So, what we can actually
+ 
+
+293
+00:04:59,080 --> 00:05:01,470
+since C++ 11. So, what we can actually
+do is write the data type here, which is
+
+294
+00:05:01,470 --> 00:05:01,480
+do is write the data type here, which is
+ 
+
+295
+00:05:01,480 --> 00:05:03,790
+do is write the data type here, which is
+int, a name for the current element that
+
+296
+00:05:03,790 --> 00:05:03,800
+int, a name for the current element that
+ 
+
+297
+00:05:03,800 --> 00:05:06,230
+int, a name for the current element that
+we're iterating over, and then finally
+
+298
+00:05:06,230 --> 00:05:06,240
+we're iterating over, and then finally
+ 
+
+299
+00:05:06,240 --> 00:05:07,590
+we're iterating over, and then finally
+the actual collection, which in this
+
+300
+00:05:07,590 --> 00:05:07,600
+the actual collection, which in this
+ 
+
+301
+00:05:07,600 --> 00:05:08,990
+the actual collection, which in this
+case is values. So, in other words,
+
+302
+00:05:08,990 --> 00:05:09,000
+case is values. So, in other words,
+ 
+
+303
+00:05:09,000 --> 00:05:10,390
+case is values. So, in other words,
+we're going through all of the values
+
+304
+00:05:10,390 --> 00:05:10,400
+we're going through all of the values
+ 
+
+305
+00:05:10,400 --> 00:05:12,909
+we're going through all of the values
+here. And then we now have this integer
+
+306
+00:05:12,909 --> 00:05:12,919
+here. And then we now have this integer
+ 
+
+307
+00:05:12,919 --> 00:05:15,150
+here. And then we now have this integer
+value to play with. That's our current
+
+308
+00:05:15,150 --> 00:05:15,160
+value to play with. That's our current
+ 
+
+309
+00:05:15,160 --> 00:05:17,030
+value to play with. That's our current
+value's I equivalent. So, we can just
+
+310
+00:05:17,030 --> 00:05:17,040
+value's I equivalent. So, we can just
+ 
+
+311
+00:05:17,040 --> 00:05:18,830
+value's I equivalent. So, we can just
+simply print that out to the console
+
+312
+00:05:18,830 --> 00:05:18,840
+simply print that out to the console
+ 
+
+313
+00:05:18,840 --> 00:05:20,950
+simply print that out to the console
+like this. And well, you can see that
+
+314
+00:05:20,950 --> 00:05:20,960
+like this. And well, you can see that
+ 
+
+315
+00:05:20,960 --> 00:05:22,710
+like this. And well, you can see that
+that that results in some very very
+
+316
+00:05:22,710 --> 00:05:22,720
+that that results in some very very
+ 
+
+317
+00:05:22,720 --> 00:05:24,830
+that that results in some very very
+clean code. This is usually my preferred
+
+318
+00:05:24,830 --> 00:05:24,840
+clean code. This is usually my preferred
+ 
+
+319
+00:05:24,840 --> 00:05:26,510
+clean code. This is usually my preferred
+way of iterating through collections if
+
+320
+00:05:26,510 --> 00:05:26,520
+way of iterating through collections if
+ 
+
+321
+00:05:26,520 --> 00:05:28,630
+way of iterating through collections if
+I don't need that I variable. And there
+
+322
+00:05:28,630 --> 00:05:28,640
+I don't need that I variable. And there
+ 
+
+323
+00:05:28,640 --> 00:05:30,230
+I don't need that I variable. And there
+you can see we have the same result as
+
+324
+00:05:30,230 --> 00:05:30,240
+you can see we have the same result as
+ 
+
+325
+00:05:30,240 --> 00:05:31,390
+you can see we have the same result as
+before.
+
+326
+00:05:31,390 --> 00:05:31,400
+before.
+ 
+
+327
+00:05:31,400 --> 00:05:33,430
+before.
+So, how does this even work? I mean, it
+
+328
+00:05:33,430 --> 00:05:33,440
+So, how does this even work? I mean, it
+ 
+
+329
+00:05:33,440 --> 00:05:35,270
+So, how does this even work? I mean, it
+looks like seemingly magic code, and it
+
+330
+00:05:35,270 --> 00:05:35,280
+looks like seemingly magic code, and it
+ 
+
+331
+00:05:35,280 --> 00:05:37,390
+looks like seemingly magic code, and it
+seems to work for this vector class. So,
+
+332
+00:05:37,390 --> 00:05:37,400
+seems to work for this vector class. So,
+ 
+
+333
+00:05:37,400 --> 00:05:39,430
+seems to work for this vector class. So,
+what exactly makes it work with the
+
+334
+00:05:39,430 --> 00:05:39,440
+what exactly makes it work with the
+ 
+
+335
+00:05:39,440 --> 00:05:40,909
+what exactly makes it work with the
+vector class? Does the vector class
+
+336
+00:05:40,909 --> 00:05:40,919
+vector class? Does the vector class
+ 
+
+337
+00:05:40,919 --> 00:05:43,270
+vector class? Does the vector class
+contain something specific that makes
+
+338
+00:05:43,270 --> 00:05:43,280
+contain something specific that makes
+ 
+
+339
+00:05:43,280 --> 00:05:45,150
+contain something specific that makes
+this range-based for loop work? And how
+
+340
+00:05:45,150 --> 00:05:45,160
+this range-based for loop work? And how
+ 
+
+341
+00:05:45,160 --> 00:05:47,550
+this range-based for loop work? And how
+does that work? So, the answer is yes,
+
+342
+00:05:47,550 --> 00:05:47,560
+does that work? So, the answer is yes,
+ 
+
+343
+00:05:47,560 --> 00:05:49,110
+does that work? So, the answer is yes,
+it has something called an iterator.
+
+344
+00:05:49,110 --> 00:05:49,120
+it has something called an iterator.
+ 
+
+345
+00:05:49,120 --> 00:05:50,710
+it has something called an iterator.
+Now, we're not really going to get into
+
+346
+00:05:50,710 --> 00:05:50,720
+Now, we're not really going to get into
+ 
+
+347
+00:05:50,720 --> 00:05:52,270
+Now, we're not really going to get into
+this too much. There's a lot of
+
+348
+00:05:52,270 --> 00:05:52,280
+this too much. There's a lot of
+ 
+
+349
+00:05:52,280 --> 00:05:54,390
+this too much. There's a lot of
+different types of iterators here, and
+
+350
+00:05:54,390 --> 00:05:54,400
+different types of iterators here, and
+ 
+
+351
+00:05:54,400 --> 00:05:55,990
+different types of iterators here, and
+we're actually going to even have a look
+
+352
+00:05:55,990 --> 00:05:56,000
+we're actually going to even have a look
+ 
+
+353
+00:05:56,000 --> 00:05:58,030
+we're actually going to even have a look
+at writing our own iterators for our
+
+354
+00:05:58,030 --> 00:05:58,040
+at writing our own iterators for our
+ 
+
+355
+00:05:58,040 --> 00:06:00,310
+at writing our own iterators for our
+custom data structure classes in the
+
+356
+00:06:00,310 --> 00:06:00,320
+custom data structure classes in the
+ 
+
+357
+00:06:00,320 --> 00:06:01,870
+custom data structure classes in the
+future. But today, we're just going to
+
+358
+00:06:01,870 --> 00:06:01,880
+future. But today, we're just going to
+ 
+
+359
+00:06:01,880 --> 00:06:04,230
+future. But today, we're just going to
+discuss how it actually works in
+
+360
+00:06:04,230 --> 00:06:04,240
+discuss how it actually works in
+ 
+
+361
+00:06:04,240 --> 00:06:06,190
+discuss how it actually works in
+practice and how you can use it.
+
+362
+00:06:06,190 --> 00:06:06,200
+practice and how you can use it.
+ 
+
+363
+00:06:06,200 --> 00:06:08,550
+practice and how you can use it.
+Basically, a range-based for loop works
+
+364
+00:06:08,550 --> 00:06:08,560
+Basically, a range-based for loop works
+ 
+
+365
+00:06:08,560 --> 00:06:10,670
+Basically, a range-based for loop works
+because the vector class provides a
+
+366
+00:06:10,670 --> 00:06:10,680
+because the vector class provides a
+ 
+
+367
+00:06:10,680 --> 00:06:13,470
+because the vector class provides a
+begin and end function, which returns an
+
+368
+00:06:13,470 --> 00:06:13,480
+begin and end function, which returns an
+ 
+
+369
+00:06:13,480 --> 00:06:15,470
+begin and end function, which returns an
+iterator at a particular position. So,
+
+370
+00:06:15,470 --> 00:06:15,480
+iterator at a particular position. So,
+ 
+
+371
+00:06:15,480 --> 00:06:17,030
+iterator at a particular position. So,
+in other words, this is really just some
+
+372
+00:06:17,030 --> 00:06:17,040
+in other words, this is really just some
+ 
+
+373
+00:06:17,040 --> 00:06:19,310
+in other words, this is really just some
+shorthand code for the more extended
+
+374
+00:06:19,310 --> 00:06:19,320
+shorthand code for the more extended
+ 
+
+375
+00:06:19,320 --> 00:06:20,510
+shorthand code for the more extended
+version, which we're going to take a
+
+376
+00:06:20,510 --> 00:06:20,520
+version, which we're going to take a
+ 
+
+377
+00:06:20,520 --> 00:06:22,470
+version, which we're going to take a
+look at here. So, if we were to write
+
+378
+00:06:22,470 --> 00:06:22,480
+look at here. So, if we were to write
+ 
+
+379
+00:06:22,480 --> 00:06:24,909
+look at here. So, if we were to write
+this out, you'll see that std::vector
+
+380
+00:06:24,909 --> 00:06:24,919
+this out, you'll see that std::vector
+ 
+
+381
+00:06:24,919 --> 00:06:27,510
+this out, you'll see that std::vector
+with that template specialization of int
+
+382
+00:06:27,510 --> 00:06:27,520
+with that template specialization of int
+ 
+
+383
+00:06:27,520 --> 00:06:30,270
+with that template specialization of int
+actually has another type inside it
+
+384
+00:06:30,270 --> 00:06:30,280
+actually has another type inside it
+ 
+
+385
+00:06:30,280 --> 00:06:31,909
+actually has another type inside it
+called iterator. And there's a few
+
+386
+00:06:31,909 --> 00:06:31,919
+called iterator. And there's a few
+ 
+
+387
+00:06:31,919 --> 00:06:33,350
+called iterator. And there's a few
+different ones, as you can probably see
+
+388
+00:06:33,350 --> 00:06:33,360
+different ones, as you can probably see
+ 
+
+389
+00:06:33,360 --> 00:06:35,430
+different ones, as you can probably see
+here. There's iterator, there's reverse
+
+390
+00:06:35,430 --> 00:06:35,440
+here. There's iterator, there's reverse
+ 
+
+391
+00:06:35,440 --> 00:06:37,590
+here. There's iterator, there's reverse
+iterator, there's const iterator. So,
+
+392
+00:06:37,590 --> 00:06:37,600
+iterator, there's const iterator. So,
+ 
+
+393
+00:06:37,600 --> 00:06:39,470
+iterator, there's const iterator. So,
+just the regular iterator is what we can
+
+394
+00:06:39,470 --> 00:06:39,480
+just the regular iterator is what we can
+ 
+
+395
+00:06:39,480 --> 00:06:41,350
+just the regular iterator is what we can
+use to iterate through the values in a
+
+396
+00:06:41,350 --> 00:06:41,360
+use to iterate through the values in a
+ 
+
+397
+00:06:41,360 --> 00:06:43,110
+use to iterate through the values in a
+forward fashion in forward direction
+
+398
+00:06:43,110 --> 00:06:43,120
+forward fashion in forward direction
+ 
+
+399
+00:06:43,120 --> 00:06:45,230
+forward fashion in forward direction
+from beginning to end. Reverse iterator
+
+400
+00:06:45,230 --> 00:06:45,240
+from beginning to end. Reverse iterator
+ 
+
+401
+00:06:45,240 --> 00:06:46,950
+from beginning to end. Reverse iterator
+will do the opposite. It will actually
+
+402
+00:06:46,950 --> 00:06:46,960
+will do the opposite. It will actually
+ 
+
+403
+00:06:46,960 --> 00:06:49,070
+will do the opposite. It will actually
+start at the end and go back to the
+
+404
+00:06:49,070 --> 00:06:49,080
+start at the end and go back to the
+ 
+
+405
+00:06:49,080 --> 00:06:51,190
+start at the end and go back to the
+beginning. And then, the const versions
+
+406
+00:06:51,190 --> 00:06:51,200
+beginning. And then, the const versions
+ 
+
+407
+00:06:51,200 --> 00:06:52,950
+beginning. And then, the const versions
+of these are the same, but we can use it
+
+408
+00:06:52,950 --> 00:06:52,960
+of these are the same, but we can use it
+ 
+
+409
+00:06:52,960 --> 00:06:54,630
+of these are the same, but we can use it
+on a const vector because it's not going
+
+410
+00:06:54,630 --> 00:06:54,640
+on a const vector because it's not going
+ 
+
+411
+00:06:54,640 --> 00:06:56,710
+on a const vector because it's not going
+to actually let us affect the values.
+
+412
+00:06:56,710 --> 00:06:56,720
+to actually let us affect the values.
+ 
+
+413
+00:06:56,720 --> 00:06:57,790
+to actually let us affect the values.
+It's not going to let us mutate the
+
+414
+00:06:57,790 --> 00:06:57,800
+It's not going to let us mutate the
+ 
+
+415
+00:06:57,800 --> 00:07:00,110
+It's not going to let us mutate the
+values, just simply read them. So, if we
+
+416
+00:07:00,110 --> 00:07:00,120
+values, just simply read them. So, if we
+ 
+
+417
+00:07:00,120 --> 00:07:02,110
+values, just simply read them. So, if we
+just select the normal iterator, that's
+
+418
+00:07:02,110 --> 00:07:02,120
+just select the normal iterator, that's
+ 
+
+419
+00:07:02,120 --> 00:07:04,470
+just select the normal iterator, that's
+what we have here, how can we use this
+
+420
+00:07:04,470 --> 00:07:04,480
+what we have here, how can we use this
+ 
+
+421
+00:07:04,480 --> 00:07:06,470
+what we have here, how can we use this
+to iterate through all of the variables
+
+422
+00:07:06,470 --> 00:07:06,480
+to iterate through all of the variables
+ 
+
+423
+00:07:06,480 --> 00:07:08,230
+to iterate through all of the variables
+or all of the elements inside this
+
+424
+00:07:08,230 --> 00:07:08,240
+or all of the elements inside this
+ 
+
+425
+00:07:08,240 --> 00:07:10,630
+or all of the elements inside this
+std::vector? Well, you'd write a for
+
+426
+00:07:10,630 --> 00:07:10,640
+std::vector? Well, you'd write a for
+ 
+
+427
+00:07:10,640 --> 00:07:12,550
+std::vector? Well, you'd write a for
+loop just like you did here. So, we'd
+
+428
+00:07:12,550 --> 00:07:12,560
+loop just like you did here. So, we'd
+ 
+
+429
+00:07:12,560 --> 00:07:14,550
+loop just like you did here. So, we'd
+have an iterator, we can call it IT.
+
+430
+00:07:14,550 --> 00:07:14,560
+have an iterator, we can call it IT.
+ 
+
+431
+00:07:14,560 --> 00:07:15,710
+have an iterator, we can call it IT.
+That's a common name for it, for
+
+432
+00:07:15,710 --> 00:07:15,720
+That's a common name for it, for
+ 
+
+433
+00:07:15,720 --> 00:07:17,470
+That's a common name for it, for
+iterator. And we'll set this to the
+
+434
+00:07:17,470 --> 00:07:17,480
+iterator. And we'll set this to the
+ 
+
+435
+00:07:17,480 --> 00:07:19,390
+iterator. And we'll set this to the
+beginning of our collection, which is
+
+436
+00:07:19,390 --> 00:07:19,400
+beginning of our collection, which is
+ 
+
+437
+00:07:19,400 --> 00:07:21,510
+beginning of our collection, which is
+going to be values.begin.
+
+438
+00:07:21,510 --> 00:07:21,520
+going to be values.begin.
+ 
+
+439
+00:07:21,520 --> 00:07:23,590
+going to be values.begin.
+Then, we need to check the end
+
+440
+00:07:23,590 --> 00:07:23,600
+Then, we need to check the end
+ 
+
+441
+00:07:23,600 --> 00:07:24,950
+Then, we need to check the end
+conditions. So, in other words, just
+
+442
+00:07:24,950 --> 00:07:24,960
+conditions. So, in other words, just
+ 
+
+443
+00:07:24,960 --> 00:07:27,350
+conditions. So, in other words, just
+like with any other for loop, at what
+
+444
+00:07:27,350 --> 00:07:27,360
+like with any other for loop, at what
+ 
+
+445
+00:07:27,360 --> 00:07:29,470
+like with any other for loop, at what
+condition does this for loop break? At
+
+446
+00:07:29,470 --> 00:07:29,480
+condition does this for loop break? At
+ 
+
+447
+00:07:29,480 --> 00:07:31,630
+condition does this for loop break? At
+what condition does it terminate? So, it
+
+448
+00:07:31,630 --> 00:07:31,640
+what condition does it terminate? So, it
+ 
+
+449
+00:07:31,640 --> 00:07:34,390
+what condition does it terminate? So, it
+terminates if this iterator, or rather,
+
+450
+00:07:34,390 --> 00:07:34,400
+terminates if this iterator, or rather,
+ 
+
+451
+00:07:34,400 --> 00:07:36,470
+terminates if this iterator, or rather,
+at what condition does it not terminate,
+
+452
+00:07:36,470 --> 00:07:36,480
+at what condition does it not terminate,
+ 
+
+453
+00:07:36,480 --> 00:07:38,470
+at what condition does it not terminate,
+right? So, this for loop will run as
+
+454
+00:07:38,470 --> 00:07:38,480
+right? So, this for loop will run as
+ 
+
+455
+00:07:38,480 --> 00:07:39,830
+right? So, this for loop will run as
+long as this statement is going to be
+
+456
+00:07:39,830 --> 00:07:39,840
+long as this statement is going to be
+ 
+
+457
+00:07:39,840 --> 00:07:42,350
+long as this statement is going to be
+true. So, as long as the iterator is not
+
+458
+00:07:42,350 --> 00:07:42,360
+true. So, as long as the iterator is not
+ 
+
+459
+00:07:42,360 --> 00:07:45,590
+true. So, as long as the iterator is not
+equal to the end of this collection. So,
+
+460
+00:07:45,590 --> 00:07:45,600
+equal to the end of this collection. So,
+ 
+
+461
+00:07:45,600 --> 00:07:48,030
+equal to the end of this collection. So,
+values.end will return an iterator that
+
+462
+00:07:48,030 --> 00:07:48,040
+values.end will return an iterator that
+ 
+
+463
+00:07:48,040 --> 00:07:50,070
+values.end will return an iterator that
+is actually already outside of the
+
+464
+00:07:50,070 --> 00:07:50,080
+is actually already outside of the
+ 
+
+465
+00:07:50,080 --> 00:07:51,470
+is actually already outside of the
+accepted range. It's basically an
+
+466
+00:07:51,470 --> 00:07:51,480
+accepted range. It's basically an
+ 
+
+467
+00:07:51,480 --> 00:07:53,950
+accepted range. It's basically an
+invalid iterator. So, this is not really
+
+468
+00:07:53,950 --> 00:07:53,960
+invalid iterator. So, this is not really
+ 
+
+469
+00:07:53,960 --> 00:07:56,110
+invalid iterator. So, this is not really
+the end. It's not the last element. It's
+
+470
+00:07:56,110 --> 00:07:56,120
+the end. It's not the last element. It's
+ 
+
+471
+00:07:56,120 --> 00:07:58,310
+the end. It's not the last element. It's
+the element after the last element, if
+
+472
+00:07:58,310 --> 00:07:58,320
+the element after the last element, if
+ 
+
+473
+00:07:58,320 --> 00:08:00,150
+the element after the last element, if
+that makes sense. And then finally, we
+
+474
+00:08:00,150 --> 00:08:00,160
+that makes sense. And then finally, we
+ 
+
+475
+00:08:00,160 --> 00:08:01,750
+that makes sense. And then finally, we
+need to write iterator plus plus. You
+
+476
+00:08:01,750 --> 00:08:01,760
+need to write iterator plus plus. You
+ 
+
+477
+00:08:01,760 --> 00:08:04,470
+need to write iterator plus plus. You
+can also write it as plus plus iterator
+
+478
+00:08:04,470 --> 00:08:04,480
+can also write it as plus plus iterator
+ 
+
+479
+00:08:04,480 --> 00:08:06,630
+can also write it as plus plus iterator
+or as a postfix as well, iterator plus
+
+480
+00:08:06,630 --> 00:08:06,640
+or as a postfix as well, iterator plus
+ 
+
+481
+00:08:06,640 --> 00:08:08,350
+or as a postfix as well, iterator plus
+plus. It doesn't matter in this case.
+
+482
+00:08:08,350 --> 00:08:08,360
+plus. It doesn't matter in this case.
+ 
+
+483
+00:08:08,360 --> 00:08:10,110
+plus. It doesn't matter in this case.
+Now, let me just slightly clean up this
+
+484
+00:08:10,110 --> 00:08:10,120
+Now, let me just slightly clean up this
+ 
+
+485
+00:08:10,120 --> 00:08:11,590
+Now, let me just slightly clean up this
+code and drop it down a bit so that you
+
+486
+00:08:11,590 --> 00:08:11,600
+code and drop it down a bit so that you
+ 
+
+487
+00:08:11,600 --> 00:08:14,030
+code and drop it down a bit so that you
+can see it all. Okay. So, that's it.
+
+488
+00:08:14,030 --> 00:08:14,040
+can see it all. Okay. So, that's it.
+ 
+
+489
+00:08:14,040 --> 00:08:15,430
+can see it all. Okay. So, that's it.
+We're going through all of our values.
+
+490
+00:08:15,430 --> 00:08:15,440
+We're going through all of our values.
+ 
+
+491
+00:08:15,440 --> 00:08:16,909
+We're going through all of our values.
+So, now that we have an iterator though,
+
+492
+00:08:16,909 --> 00:08:16,919
+So, now that we have an iterator though,
+ 
+
+493
+00:08:16,919 --> 00:08:18,950
+So, now that we have an iterator though,
+how do we get the value at that iterator
+
+494
+00:08:18,950 --> 00:08:18,960
+how do we get the value at that iterator
+ 
+
+495
+00:08:18,960 --> 00:08:21,230
+how do we get the value at that iterator
+position? Well, you have to dereference
+
+496
+00:08:21,230 --> 00:08:21,240
+position? Well, you have to dereference
+ 
+
+497
+00:08:21,240 --> 00:08:23,310
+position? Well, you have to dereference
+the iterator as if it was a pointer.
+
+498
+00:08:23,310 --> 00:08:23,320
+the iterator as if it was a pointer.
+ 
+
+499
+00:08:23,320 --> 00:08:25,110
+the iterator as if it was a pointer.
+This works because they've just
+
+500
+00:08:25,110 --> 00:08:25,120
+This works because they've just
+ 
+
+501
+00:08:25,120 --> 00:08:27,350
+This works because they've just
+implemented this dereference operator
+
+502
+00:08:27,350 --> 00:08:27,360
+implemented this dereference operator
+ 
+
+503
+00:08:27,360 --> 00:08:29,550
+implemented this dereference operator
+kind of asterisk function inside the
+
+504
+00:08:29,550 --> 00:08:29,560
+kind of asterisk function inside the
+ 
+
+505
+00:08:29,560 --> 00:08:31,870
+kind of asterisk function inside the
+actual iterator class. Okay. So, now to
+
+506
+00:08:31,870 --> 00:08:31,880
+actual iterator class. Okay. So, now to
+ 
+
+507
+00:08:31,880 --> 00:08:33,070
+actual iterator class. Okay. So, now to
+print this out to the console, we'll
+
+508
+00:08:33,070 --> 00:08:33,080
+print this out to the console, we'll
+ 
+
+509
+00:08:33,080 --> 00:08:34,830
+print this out to the console, we'll
+follow the same strategy as before. We
+
+510
+00:08:34,830 --> 00:08:34,840
+follow the same strategy as before. We
+ 
+
+511
+00:08:34,840 --> 00:08:36,390
+follow the same strategy as before. We
+simply dereference the iterator and
+
+512
+00:08:36,390 --> 00:08:36,400
+simply dereference the iterator and
+ 
+
+513
+00:08:36,400 --> 00:08:38,270
+simply dereference the iterator and
+print it out like this. And now what we
+
+514
+00:08:38,270 --> 00:08:38,280
+print it out like this. And now what we
+ 
+
+515
+00:08:38,280 --> 00:08:40,950
+print it out like this. And now what we
+should see is our 1 2 3 4 5 elements
+
+516
+00:08:40,950 --> 00:08:40,960
+should see is our 1 2 3 4 5 elements
+ 
+
+517
+00:08:40,960 --> 00:08:42,950
+should see is our 1 2 3 4 5 elements
+being printed for the third time. And
+
+518
+00:08:42,950 --> 00:08:42,960
+being printed for the third time. And
+ 
+
+519
+00:08:42,960 --> 00:08:45,190
+being printed for the third time. And
+that is of course what we see over here.
+
+520
+00:08:45,190 --> 00:08:45,200
+that is of course what we see over here.
+ 
+
+521
+00:08:45,200 --> 00:08:47,750
+that is of course what we see over here.
+Great. So, why would you ever use
+
+522
+00:08:47,750 --> 00:08:47,760
+Great. So, why would you ever use
+ 
+
+523
+00:08:47,760 --> 00:08:49,910
+Great. So, why would you ever use
+iterators like this? And to be honest,
+
+524
+00:08:49,910 --> 00:08:49,920
+iterators like this? And to be honest,
+ 
+
+525
+00:08:49,920 --> 00:08:51,510
+iterators like this? And to be honest,
+the answer is you probably wouldn't
+
+526
+00:08:51,510 --> 00:08:51,520
+the answer is you probably wouldn't
+ 
+
+527
+00:08:51,520 --> 00:08:52,990
+the answer is you probably wouldn't
+these days because a range-based for
+
+528
+00:08:52,990 --> 00:08:53,000
+these days because a range-based for
+ 
+
+529
+00:08:53,000 --> 00:08:55,430
+these days because a range-based for
+loop is essentially shorthand for this.
+
+530
+00:08:55,430 --> 00:08:55,440
+loop is essentially shorthand for this.
+ 
+
+531
+00:08:55,440 --> 00:08:57,150
+loop is essentially shorthand for this.
+And of course, it looks a lot cleaner.
+
+532
+00:08:57,150 --> 00:08:57,160
+And of course, it looks a lot cleaner.
+ 
+
+533
+00:08:57,160 --> 00:08:58,670
+And of course, it looks a lot cleaner.
+However, there are certain situations
+
+534
+00:08:58,670 --> 00:08:58,680
+However, there are certain situations
+ 
+
+535
+00:08:58,680 --> 00:09:00,190
+However, there are certain situations
+where you might want to manipulate the
+
+536
+00:09:00,190 --> 00:09:00,200
+where you might want to manipulate the
+ 
+
+537
+00:09:00,200 --> 00:09:02,350
+where you might want to manipulate the
+position of the iterator. A good example
+
+538
+00:09:02,350 --> 00:09:02,360
+position of the iterator. A good example
+ 
+
+539
+00:09:02,360 --> 00:09:04,430
+position of the iterator. A good example
+is if you want to erase an element but
+
+540
+00:09:04,430 --> 00:09:04,440
+is if you want to erase an element but
+ 
+
+541
+00:09:04,440 --> 00:09:06,190
+is if you want to erase an element but
+still keep iterating over the rest of
+
+542
+00:09:06,190 --> 00:09:06,200
+still keep iterating over the rest of
+ 
+
+543
+00:09:06,200 --> 00:09:07,510
+still keep iterating over the rest of
+the collection. In that case, the
+
+544
+00:09:07,510 --> 00:09:07,520
+the collection. In that case, the
+ 
+
+545
+00:09:07,520 --> 00:09:09,070
+the collection. In that case, the
+iterator gets invalidated. You have to
+
+546
+00:09:09,070 --> 00:09:09,080
+iterator gets invalidated. You have to
+ 
+
+547
+00:09:09,080 --> 00:09:10,870
+iterator gets invalidated. You have to
+deal with that. Or maybe you want to
+
+548
+00:09:10,870 --> 00:09:10,880
+deal with that. Or maybe you want to
+ 
+
+549
+00:09:10,880 --> 00:09:12,390
+deal with that. Or maybe you want to
+insert something into the middle based
+
+550
+00:09:12,390 --> 00:09:12,400
+insert something into the middle based
+ 
+
+551
+00:09:12,400 --> 00:09:13,870
+insert something into the middle based
+on a certain condition. There's a few
+
+552
+00:09:13,870 --> 00:09:13,880
+on a certain condition. There's a few
+ 
+
+553
+00:09:13,880 --> 00:09:15,350
+on a certain condition. There's a few
+different scenarios in which you just
+
+554
+00:09:15,350 --> 00:09:15,360
+different scenarios in which you just
+ 
+
+555
+00:09:15,360 --> 00:09:17,350
+different scenarios in which you just
+simply can't use this because it just
+
+556
+00:09:17,350 --> 00:09:17,360
+simply can't use this because it just
+ 
+
+557
+00:09:17,360 --> 00:09:18,790
+simply can't use this because it just
+wouldn't work. You need to be able to
+
+558
+00:09:18,790 --> 00:09:18,800
+wouldn't work. You need to be able to
+ 
+
+559
+00:09:18,800 --> 00:09:20,670
+wouldn't work. You need to be able to
+manipulate the position of the iterator.
+
+560
+00:09:20,670 --> 00:09:20,680
+manipulate the position of the iterator.
+ 
+
+561
+00:09:20,680 --> 00:09:22,670
+manipulate the position of the iterator.
+And we'll probably get into those in a
+
+562
+00:09:22,670 --> 00:09:22,680
+And we'll probably get into those in a
+ 
+
+563
+00:09:22,680 --> 00:09:24,670
+And we'll probably get into those in a
+future video. But obviously, for
+
+564
+00:09:24,670 --> 00:09:24,680
+future video. But obviously, for
+ 
+
+565
+00:09:24,680 --> 00:09:27,030
+future video. But obviously, for
+something like a vector or an array with
+
+566
+00:09:27,030 --> 00:09:27,040
+something like a vector or an array with
+ 
+
+567
+00:09:27,040 --> 00:09:29,430
+something like a vector or an array with
+an index operator that simply takes in a
+
+568
+00:09:29,430 --> 00:09:29,440
+an index operator that simply takes in a
+ 
+
+569
+00:09:29,440 --> 00:09:31,230
+an index operator that simply takes in a
+numerical index, it just the same as
+
+570
+00:09:31,230 --> 00:09:31,240
+numerical index, it just the same as
+ 
+
+571
+00:09:31,240 --> 00:09:33,030
+numerical index, it just the same as
+like it would for an array here, they're
+
+572
+00:09:33,030 --> 00:09:33,040
+like it would for an array here, they're
+ 
+
+573
+00:09:33,040 --> 00:09:35,350
+like it would for an array here, they're
+not really necessary. You don't actually
+
+574
+00:09:35,350 --> 00:09:35,360
+not really necessary. You don't actually
+ 
+
+575
+00:09:35,360 --> 00:09:37,390
+not really necessary. You don't actually
+have to write code like this because we
+
+576
+00:09:37,390 --> 00:09:37,400
+have to write code like this because we
+ 
+
+577
+00:09:37,400 --> 00:09:39,710
+have to write code like this because we
+can, of course, just write a normal for
+
+578
+00:09:39,710 --> 00:09:39,720
+can, of course, just write a normal for
+ 
+
+579
+00:09:39,720 --> 00:09:42,430
+can, of course, just write a normal for
+loop and use I as the index. However,
+
+580
+00:09:42,430 --> 00:09:42,440
+loop and use I as the index. However,
+ 
+
+581
+00:09:42,440 --> 00:09:45,350
+loop and use I as the index. However,
+iterators are essentially mandatory for
+
+582
+00:09:45,350 --> 00:09:45,360
+iterators are essentially mandatory for
+ 
+
+583
+00:09:45,360 --> 00:09:47,270
+iterators are essentially mandatory for
+other types that don't have such a
+
+584
+00:09:47,270 --> 00:09:47,280
+other types that don't have such a
+ 
+
+585
+00:09:47,280 --> 00:09:49,550
+other types that don't have such a
+simple indexing system because, of
+
+586
+00:09:49,550 --> 00:09:49,560
+simple indexing system because, of
+ 
+
+587
+00:09:49,560 --> 00:09:51,230
+simple indexing system because, of
+course, not everything is just a
+
+588
+00:09:51,230 --> 00:09:51,240
+course, not everything is just a
+ 
+
+589
+00:09:51,240 --> 00:09:53,710
+course, not everything is just a
+contiguous array with an index like we
+
+590
+00:09:53,710 --> 00:09:53,720
+contiguous array with an index like we
+ 
+
+591
+00:09:53,720 --> 00:09:55,470
+contiguous array with an index like we
+have here. I mean, think of something
+
+592
+00:09:55,470 --> 00:09:55,480
+have here. I mean, think of something
+ 
+
+593
+00:09:55,480 --> 00:09:57,630
+have here. I mean, think of something
+like a tree data structure. How do we
+
+594
+00:09:57,630 --> 00:09:57,640
+like a tree data structure. How do we
+ 
+
+595
+00:09:57,640 --> 00:09:59,750
+like a tree data structure. How do we
+traverse through a tree? We can't just
+
+596
+00:09:59,750 --> 00:09:59,760
+traverse through a tree? We can't just
+ 
+
+597
+00:09:59,760 --> 00:10:01,630
+traverse through a tree? We can't just
+increment an index. What about an
+
+598
+00:10:01,630 --> 00:10:01,640
+increment an index. What about an
+ 
+
+599
+00:10:01,640 --> 00:10:03,510
+increment an index. What about an
+unordered set? I mean, that contains a
+
+600
+00:10:03,510 --> 00:10:03,520
+unordered set? I mean, that contains a
+ 
+
+601
+00:10:03,520 --> 00:10:06,310
+unordered set? I mean, that contains a
+bunch of unordered elements. If I wanted
+
+602
+00:10:06,310 --> 00:10:06,320
+bunch of unordered elements. If I wanted
+ 
+
+603
+00:10:06,320 --> 00:10:07,870
+bunch of unordered elements. If I wanted
+to print all of them out to the console,
+
+604
+00:10:07,870 --> 00:10:07,880
+to print all of them out to the console,
+ 
+
+605
+00:10:07,880 --> 00:10:09,750
+to print all of them out to the console,
+how would I do that? The example I'm
+
+606
+00:10:09,750 --> 00:10:09,760
+how would I do that? The example I'm
+ 
+
+607
+00:10:09,760 --> 00:10:11,590
+how would I do that? The example I'm
+going to show you is specifically the
+
+608
+00:10:11,590 --> 00:10:11,600
+going to show you is specifically the
+ 
+
+609
+00:10:11,600 --> 00:10:13,510
+going to show you is specifically the
+unordered map here. So, an unordered map
+
+610
+00:10:13,510 --> 00:10:13,520
+unordered map here. So, an unordered map
+ 
+
+611
+00:10:13,520 --> 00:10:15,350
+unordered map here. So, an unordered map
+is essentially a hash map. It obviously
+
+612
+00:10:15,350 --> 00:10:15,360
+is essentially a hash map. It obviously
+ 
+
+613
+00:10:15,360 --> 00:10:17,790
+is essentially a hash map. It obviously
+doesn't store its variables in any kind
+
+614
+00:10:17,790 --> 00:10:17,800
+doesn't store its variables in any kind
+ 
+
+615
+00:10:17,800 --> 00:10:19,790
+doesn't store its variables in any kind
+of order, and we need to actually know
+
+616
+00:10:19,790 --> 00:10:19,800
+of order, and we need to actually know
+ 
+
+617
+00:10:19,800 --> 00:10:22,230
+of order, and we need to actually know
+the keys of the entries if we want to
+
+618
+00:10:22,230 --> 00:10:22,240
+the keys of the entries if we want to
+ 
+
+619
+00:10:22,240 --> 00:10:24,550
+the keys of the entries if we want to
+get the values out of there unless we
+
+620
+00:10:24,550 --> 00:10:24,560
+get the values out of there unless we
+ 
+
+621
+00:10:24,560 --> 00:10:25,990
+get the values out of there unless we
+iterate through them, and that's what
+
+622
+00:10:25,990 --> 00:10:26,000
+iterate through them, and that's what
+ 
+
+623
+00:10:26,000 --> 00:10:27,510
+iterate through them, and that's what
+we're going to do here. So, let's create
+
+624
+00:10:27,510 --> 00:10:27,520
+we're going to do here. So, let's create
+ 
+
+625
+00:10:27,520 --> 00:10:29,710
+we're going to do here. So, let's create
+a little map here. I'm going to just
+
+626
+00:10:29,710 --> 00:10:29,720
+a little map here. I'm going to just
+ 
+
+627
+00:10:29,720 --> 00:10:32,350
+a little map here. I'm going to just
+write an unordered map
+
+628
+00:10:32,350 --> 00:10:32,360
+write an unordered map
+ 
+
+629
+00:10:32,360 --> 00:10:34,750
+write an unordered map
+of STD string to maybe int. We'll call
+
+630
+00:10:34,750 --> 00:10:34,760
+of STD string to maybe int. We'll call
+ 
+
+631
+00:10:34,760 --> 00:10:36,910
+of STD string to maybe int. We'll call
+this map. So, maybe this will like
+
+632
+00:10:36,910 --> 00:10:36,920
+this map. So, maybe this will like
+ 
+
+633
+00:10:36,920 --> 00:10:39,430
+this map. So, maybe this will like
+contain like some kind of name like
+
+634
+00:10:39,430 --> 00:10:39,440
+contain like some kind of name like
+ 
+
+635
+00:10:39,440 --> 00:10:41,710
+contain like some kind of name like
+Cherno and maybe an associated score.
+
+636
+00:10:41,710 --> 00:10:41,720
+Cherno and maybe an associated score.
+ 
+
+637
+00:10:41,720 --> 00:10:44,150
+Cherno and maybe an associated score.
+So, we'll write Cherno 5 and maybe, I
+
+638
+00:10:44,150 --> 00:10:44,160
+So, we'll write Cherno 5 and maybe, I
+ 
+
+639
+00:10:44,160 --> 00:10:46,350
+So, we'll write Cherno 5 and maybe, I
+don't know, C++ 2 because obviously I'm
+
+640
+00:10:46,350 --> 00:10:46,360
+don't know, C++ 2 because obviously I'm
+ 
+
+641
+00:10:46,360 --> 00:10:48,470
+don't know, C++ 2 because obviously I'm
+cooler than C++. So, with this map in
+
+642
+00:10:48,470 --> 00:10:48,480
+cooler than C++. So, with this map in
+ 
+
+643
+00:10:48,480 --> 00:10:50,950
+cooler than C++. So, with this map in
+mind, if I wanted to iterate through it,
+
+644
+00:10:50,950 --> 00:10:50,960
+mind, if I wanted to iterate through it,
+ 
+
+645
+00:10:50,960 --> 00:10:52,350
+mind, if I wanted to iterate through it,
+how would I do it? Well, obviously I
+
+646
+00:10:52,350 --> 00:10:52,360
+how would I do it? Well, obviously I
+ 
+
+647
+00:10:52,360 --> 00:10:54,390
+how would I do it? Well, obviously I
+can't use a for loop like this because
+
+648
+00:10:54,390 --> 00:10:54,400
+can't use a for loop like this because
+ 
+
+649
+00:10:54,400 --> 00:10:56,710
+can't use a for loop like this because
+if I did that, well, my index would just
+
+650
+00:10:56,710 --> 00:10:56,720
+if I did that, well, my index would just
+ 
+
+651
+00:10:56,720 --> 00:10:59,390
+if I did that, well, my index would just
+be like zero or one if I checked the map
+
+652
+00:10:59,390 --> 00:10:59,400
+be like zero or one if I checked the map
+ 
+
+653
+00:10:59,400 --> 00:11:01,350
+be like zero or one if I checked the map
+size, and that's not what I need. I need
+
+654
+00:11:01,350 --> 00:11:01,360
+size, and that's not what I need. I need
+ 
+
+655
+00:11:01,360 --> 00:11:03,630
+size, and that's not what I need. I need
+to actually iterate using the correct
+
+656
+00:11:03,630 --> 00:11:03,640
+to actually iterate using the correct
+ 
+
+657
+00:11:03,640 --> 00:11:06,270
+to actually iterate using the correct
+keys here. So, I'm forced to write some
+
+658
+00:11:06,270 --> 00:11:06,280
+keys here. So, I'm forced to write some
+ 
+
+659
+00:11:06,280 --> 00:11:08,110
+keys here. So, I'm forced to write some
+sort of iterator. So, let's write this
+
+660
+00:11:08,110 --> 00:11:08,120
+sort of iterator. So, let's write this
+ 
+
+661
+00:11:08,120 --> 00:11:09,870
+sort of iterator. So, let's write this
+out as a for loop that actually uses
+
+662
+00:11:09,870 --> 00:11:09,880
+out as a for loop that actually uses
+ 
+
+663
+00:11:09,880 --> 00:11:11,470
+out as a for loop that actually uses
+iterators. So, what I'll do is I'll take
+
+664
+00:11:11,470 --> 00:11:11,480
+iterators. So, what I'll do is I'll take
+ 
+
+665
+00:11:11,480 --> 00:11:12,990
+iterators. So, what I'll do is I'll take
+the entire type, and you can see it's
+
+666
+00:11:12,990 --> 00:11:13,000
+the entire type, and you can see it's
+ 
+
+667
+00:11:13,000 --> 00:11:14,950
+the entire type, and you can see it's
+getting quite long, and then maybe I
+
+668
+00:11:14,950 --> 00:11:14,960
+getting quite long, and then maybe I
+ 
+
+669
+00:11:14,960 --> 00:11:16,670
+getting quite long, and then maybe I
+don't want to like modify these values.
+
+670
+00:11:16,670 --> 00:11:16,680
+don't want to like modify these values.
+ 
+
+671
+00:11:16,680 --> 00:11:18,070
+don't want to like modify these values.
+I just want to access them, so I want to
+
+672
+00:11:18,070 --> 00:11:18,080
+I just want to access them, so I want to
+ 
+
+673
+00:11:18,080 --> 00:11:20,390
+I just want to access them, so I want to
+use a const iterator. Okay, this is a
+
+674
+00:11:20,390 --> 00:11:20,400
+use a const iterator. Okay, this is a
+ 
+
+675
+00:11:20,400 --> 00:11:22,670
+use a const iterator. Okay, this is a
+huge type, and because of that, it's
+
+676
+00:11:22,670 --> 00:11:22,680
+huge type, and because of that, it's
+ 
+
+677
+00:11:22,680 --> 00:11:24,990
+huge type, and because of that, it's
+pretty common to use either a type def
+
+678
+00:11:24,990 --> 00:11:25,000
+pretty common to use either a type def
+ 
+
+679
+00:11:25,000 --> 00:11:26,710
+pretty common to use either a type def
+or using along with the type. So, in
+
+680
+00:11:26,710 --> 00:11:26,720
+or using along with the type. So, in
+ 
+
+681
+00:11:26,720 --> 00:11:28,590
+or using along with the type. So, in
+other words, maybe I could replace this
+
+682
+00:11:28,590 --> 00:11:28,600
+other words, maybe I could replace this
+ 
+
+683
+00:11:28,600 --> 00:11:30,870
+other words, maybe I could replace this
+part of it if I wanted to and just call
+
+684
+00:11:30,870 --> 00:11:30,880
+part of it if I wanted to and just call
+ 
+
+685
+00:11:30,880 --> 00:11:32,950
+part of it if I wanted to and just call
+it a score map, and then that would
+
+686
+00:11:32,950 --> 00:11:32,960
+it a score map, and then that would
+ 
+
+687
+00:11:32,960 --> 00:11:35,150
+it a score map, and then that would
+obviously simplify things a lot, so I
+
+688
+00:11:35,150 --> 00:11:35,160
+obviously simplify things a lot, so I
+ 
+
+689
+00:11:35,160 --> 00:11:37,830
+obviously simplify things a lot, so I
+can just do this now. Maybe I even want
+
+690
+00:11:37,830 --> 00:11:37,840
+can just do this now. Maybe I even want
+ 
+
+691
+00:11:37,840 --> 00:11:40,470
+can just do this now. Maybe I even want
+to define some kind of score map const
+
+692
+00:11:40,470 --> 00:11:40,480
+to define some kind of score map const
+ 
+
+693
+00:11:40,480 --> 00:11:42,230
+to define some kind of score map const
+iterator or something like that. I could
+
+694
+00:11:42,230 --> 00:11:42,240
+iterator or something like that. I could
+ 
+
+695
+00:11:42,240 --> 00:11:45,630
+iterator or something like that. I could
+also do that by just assigning this to
+
+696
+00:11:45,630 --> 00:11:45,640
+also do that by just assigning this to
+ 
+
+697
+00:11:45,640 --> 00:11:47,790
+also do that by just assigning this to
+score map const iterator, and now all I
+
+698
+00:11:47,790 --> 00:11:47,800
+score map const iterator, and now all I
+ 
+
+699
+00:11:47,800 --> 00:11:49,790
+score map const iterator, and now all I
+have to do is write code like this. I
+
+700
+00:11:49,790 --> 00:11:49,800
+have to do is write code like this. I
+ 
+
+701
+00:11:49,800 --> 00:11:51,070
+have to do is write code like this. I
+honestly end up doing stuff like this a
+
+702
+00:11:51,070 --> 00:11:51,080
+honestly end up doing stuff like this a
+ 
+
+703
+00:11:51,080 --> 00:11:53,150
+honestly end up doing stuff like this a
+lot. I don't I don't ever really use
+
+704
+00:11:53,150 --> 00:11:53,160
+lot. I don't I don't ever really use
+ 
+
+705
+00:11:53,160 --> 00:11:55,630
+lot. I don't I don't ever really use
+using with iterators like this, but I do
+
+706
+00:11:55,630 --> 00:11:55,640
+using with iterators like this, but I do
+ 
+
+707
+00:11:55,640 --> 00:11:57,150
+using with iterators like this, but I do
+use it with the type sometimes, so I'll
+
+708
+00:11:57,150 --> 00:11:57,160
+use it with the type sometimes, so I'll
+ 
+
+709
+00:11:57,160 --> 00:11:59,110
+use it with the type sometimes, so I'll
+leave it like that here, and then just
+
+710
+00:11:59,110 --> 00:11:59,120
+leave it like that here, and then just
+ 
+
+711
+00:11:59,120 --> 00:12:01,150
+leave it like that here, and then just
+implement this as score map const
+
+712
+00:12:01,150 --> 00:12:01,160
+implement this as score map const
+ 
+
+713
+00:12:01,160 --> 00:12:02,670
+implement this as score map const
+iterator. So, iterating through this
+
+714
+00:12:02,670 --> 00:12:02,680
+iterator. So, iterating through this
+ 
+
+715
+00:12:02,680 --> 00:12:04,590
+iterator. So, iterating through this
+map, I'll set the iterator equal to the
+
+716
+00:12:04,590 --> 00:12:04,600
+map, I'll set the iterator equal to the
+ 
+
+717
+00:12:04,600 --> 00:12:06,110
+map, I'll set the iterator equal to the
+beginning of the map, of course, like I
+
+718
+00:12:06,110 --> 00:12:06,120
+beginning of the map, of course, like I
+ 
+
+719
+00:12:06,120 --> 00:12:08,470
+beginning of the map, of course, like I
+did before. I'll make sure that it
+
+720
+00:12:08,470 --> 00:12:08,480
+did before. I'll make sure that it
+ 
+
+721
+00:12:08,480 --> 00:12:10,670
+did before. I'll make sure that it
+iterates until we reach the end of the
+
+722
+00:12:10,670 --> 00:12:10,680
+iterates until we reach the end of the
+ 
+
+723
+00:12:10,680 --> 00:12:12,150
+iterates until we reach the end of the
+map, and then I'll increment the
+
+724
+00:12:12,150 --> 00:12:12,160
+map, and then I'll increment the
+ 
+
+725
+00:12:12,160 --> 00:12:13,750
+map, and then I'll increment the
+iterator. Now, this is a little bit
+
+726
+00:12:13,750 --> 00:12:13,760
+iterator. Now, this is a little bit
+ 
+
+727
+00:12:13,760 --> 00:12:16,270
+iterator. Now, this is a little bit
+different because this is a map. I'm
+
+728
+00:12:16,270 --> 00:12:16,280
+different because this is a map. I'm
+ 
+
+729
+00:12:16,280 --> 00:12:17,750
+different because this is a map. I'm
+iterating through a map, so how does
+
+730
+00:12:17,750 --> 00:12:17,760
+iterating through a map, so how does
+ 
+
+731
+00:12:17,760 --> 00:12:19,270
+iterating through a map, so how does
+that work? I don't just have one
+
+732
+00:12:19,270 --> 00:12:19,280
+that work? I don't just have one
+ 
+
+733
+00:12:19,280 --> 00:12:21,110
+that work? I don't just have one
+element, right? Like I would with like a
+
+734
+00:12:21,110 --> 00:12:21,120
+element, right? Like I would with like a
+ 
+
+735
+00:12:21,120 --> 00:12:23,750
+element, right? Like I would with like a
+set or a vector or an array or something
+
+736
+00:12:23,750 --> 00:12:23,760
+set or a vector or an array or something
+ 
+
+737
+00:12:23,760 --> 00:12:25,550
+set or a vector or an array or something
+like that. I actually have two elements,
+
+738
+00:12:25,550 --> 00:12:25,560
+like that. I actually have two elements,
+ 
+
+739
+00:12:25,560 --> 00:12:27,070
+like that. I actually have two elements,
+the key and the value, so how do I
+
+740
+00:12:27,070 --> 00:12:27,080
+the key and the value, so how do I
+ 
+
+741
+00:12:27,080 --> 00:12:29,030
+the key and the value, so how do I
+access them? Well, instead of just
+
+742
+00:12:29,030 --> 00:12:29,040
+access them? Well, instead of just
+ 
+
+743
+00:12:29,040 --> 00:12:30,670
+access them? Well, instead of just
+dereferencing it, you can actually use
+
+744
+00:12:30,670 --> 00:12:30,680
+dereferencing it, you can actually use
+ 
+
+745
+00:12:30,680 --> 00:12:33,630
+dereferencing it, you can actually use
+the arrow operator and access two little
+
+746
+00:12:33,630 --> 00:12:33,640
+the arrow operator and access two little
+ 
+
+747
+00:12:33,640 --> 00:12:36,270
+the arrow operator and access two little
+elements here. We have first and second.
+
+748
+00:12:36,270 --> 00:12:36,280
+elements here. We have first and second.
+ 
+
+749
+00:12:36,280 --> 00:12:38,670
+elements here. We have first and second.
+First is going to be the key, so I can
+
+750
+00:12:38,670 --> 00:12:38,680
+First is going to be the key, so I can
+ 
+
+751
+00:12:38,680 --> 00:12:41,030
+First is going to be the key, so I can
+just go ahead and assign that to key
+
+752
+00:12:41,030 --> 00:12:41,040
+just go ahead and assign that to key
+ 
+
+753
+00:12:41,040 --> 00:12:42,950
+just go ahead and assign that to key
+like that. And then the second one is
+
+754
+00:12:42,950 --> 00:12:42,960
+like that. And then the second one is
+ 
+
+755
+00:12:42,960 --> 00:12:45,110
+like that. And then the second one is
+going to be my value, and I'll just use
+
+756
+00:12:45,110 --> 00:12:45,120
+going to be my value, and I'll just use
+ 
+
+757
+00:12:45,120 --> 00:12:47,150
+going to be my value, and I'll just use
+the ampersand here to get this as a
+
+758
+00:12:47,150 --> 00:12:47,160
+the ampersand here to get this as a
+ 
+
+759
+00:12:47,160 --> 00:12:48,630
+the ampersand here to get this as a
+reference so that I'm not actually
+
+760
+00:12:48,630 --> 00:12:48,640
+reference so that I'm not actually
+ 
+
+761
+00:12:48,640 --> 00:12:50,910
+reference so that I'm not actually
+copying the value. So, I have iterator
+
+762
+00:12:50,910 --> 00:12:50,920
+copying the value. So, I have iterator
+ 
+
+763
+00:12:50,920 --> 00:12:52,870
+copying the value. So, I have iterator
+first and iterator second. Let's go
+
+764
+00:12:52,870 --> 00:12:52,880
+first and iterator second. Let's go
+ 
+
+765
+00:12:52,880 --> 00:12:54,550
+first and iterator second. Let's go
+ahead and print that out to the console.
+
+766
+00:12:54,550 --> 00:12:54,560
+ahead and print that out to the console.
+ 
+
+767
+00:12:54,560 --> 00:12:56,910
+ahead and print that out to the console.
+We'll print the key followed by an equal
+
+768
+00:12:56,910 --> 00:12:56,920
+We'll print the key followed by an equal
+ 
+
+769
+00:12:56,920 --> 00:13:00,310
+We'll print the key followed by an equal
+sign and then value like this. Let's go
+
+770
+00:13:00,310 --> 00:13:00,320
+sign and then value like this. Let's go
+ 
+
+771
+00:13:00,320 --> 00:13:01,910
+sign and then value like this. Let's go
+ahead and run this, and in fact, what I
+
+772
+00:13:01,910 --> 00:13:01,920
+ahead and run this, and in fact, what I
+ 
+
+773
+00:13:01,920 --> 00:13:04,350
+ahead and run this, and in fact, what I
+might do is just take away the other
+
+774
+00:13:04,350 --> 00:13:04,360
+might do is just take away the other
+ 
+
+775
+00:13:04,360 --> 00:13:06,070
+might do is just take away the other
+code that we had here to keep our
+
+776
+00:13:06,070 --> 00:13:06,080
+code that we had here to keep our
+ 
+
+777
+00:13:06,080 --> 00:13:07,750
+code that we had here to keep our
+console nice and clean. All right, check
+
+778
+00:13:07,750 --> 00:13:07,760
+console nice and clean. All right, check
+ 
+
+779
+00:13:07,760 --> 00:13:08,990
+console nice and clean. All right, check
+this out. So, we have channel equals
+
+780
+00:13:08,990 --> 00:13:09,000
+this out. So, we have channel equals
+ 
+
+781
+00:13:09,000 --> 00:13:11,350
+this out. So, we have channel equals
+five and C++ equals two. Cool, we're
+
+782
+00:13:11,350 --> 00:13:11,360
+five and C++ equals two. Cool, we're
+ 
+
+783
+00:13:11,360 --> 00:13:13,030
+five and C++ equals two. Cool, we're
+able to iterate through all of this.
+
+784
+00:13:13,030 --> 00:13:13,040
+able to iterate through all of this.
+ 
+
+785
+00:13:13,040 --> 00:13:15,750
+able to iterate through all of this.
+Now, how can we maybe improve this code
+
+786
+00:13:15,750 --> 00:13:15,760
+Now, how can we maybe improve this code
+ 
+
+787
+00:13:15,760 --> 00:13:17,630
+Now, how can we maybe improve this code
+to make it a little bit better? How can
+
+788
+00:13:17,630 --> 00:13:17,640
+to make it a little bit better? How can
+ 
+
+789
+00:13:17,640 --> 00:13:20,390
+to make it a little bit better? How can
+we use the same kind of range-based for
+
+790
+00:13:20,390 --> 00:13:20,400
+we use the same kind of range-based for
+ 
+
+791
+00:13:20,400 --> 00:13:23,270
+we use the same kind of range-based for
+loops, but with a map? Well, let's check
+
+792
+00:13:23,270 --> 00:13:23,280
+loops, but with a map? Well, let's check
+ 
+
+793
+00:13:23,280 --> 00:13:25,510
+loops, but with a map? Well, let's check
+that out. So, I'm going to write for
+
+794
+00:13:25,510 --> 00:13:25,520
+that out. So, I'm going to write for
+ 
+
+795
+00:13:25,520 --> 00:13:27,990
+that out. So, I'm going to write for
+auto KV, that's going to stand for key
+
+796
+00:13:27,990 --> 00:13:28,000
+auto KV, that's going to stand for key
+ 
+
+797
+00:13:28,000 --> 00:13:31,390
+auto KV, that's going to stand for key
+value in this case, and then map. Yeah,
+
+798
+00:13:31,390 --> 00:13:31,400
+value in this case, and then map. Yeah,
+ 
+
+799
+00:13:31,400 --> 00:13:33,430
+value in this case, and then map. Yeah,
+it's that simple. So, what this will do
+
+800
+00:13:33,430 --> 00:13:33,440
+it's that simple. So, what this will do
+ 
+
+801
+00:13:33,440 --> 00:13:35,790
+it's that simple. So, what this will do
+is actually retrieve this pair, this
+
+802
+00:13:35,790 --> 00:13:35,800
+is actually retrieve this pair, this
+ 
+
+803
+00:13:35,800 --> 00:13:37,790
+is actually retrieve this pair, this
+iterator first and iterator second. If
+
+804
+00:13:37,790 --> 00:13:37,800
+iterator first and iterator second. If
+ 
+
+805
+00:13:37,800 --> 00:13:39,030
+iterator first and iterator second. If
+you actually look at what it is, it's an
+
+806
+00:13:39,030 --> 00:13:39,040
+you actually look at what it is, it's an
+ 
+
+807
+00:13:39,040 --> 00:13:41,790
+you actually look at what it is, it's an
+STD pair. So, this is us now retrieving
+
+808
+00:13:41,790 --> 00:13:41,800
+STD pair. So, this is us now retrieving
+ 
+
+809
+00:13:41,800 --> 00:13:44,430
+STD pair. So, this is us now retrieving
+that STD pair, and now we can actually
+
+810
+00:13:44,430 --> 00:13:44,440
+that STD pair, and now we can actually
+ 
+
+811
+00:13:44,440 --> 00:13:46,150
+that STD pair, and now we can actually
+access the elements from within that.
+
+812
+00:13:46,150 --> 00:13:46,160
+access the elements from within that.
+ 
+
+813
+00:13:46,160 --> 00:13:48,670
+access the elements from within that.
+So, I still need this, unfortunately,
+
+814
+00:13:48,670 --> 00:13:48,680
+So, I still need this, unfortunately,
+ 
+
+815
+00:13:48,680 --> 00:13:50,230
+So, I still need this, unfortunately,
+but this obviously cleans up the code
+
+816
+00:13:50,230 --> 00:13:50,240
+but this obviously cleans up the code
+ 
+
+817
+00:13:50,240 --> 00:13:53,270
+but this obviously cleans up the code
+because I can just do KV.first
+
+818
+00:13:53,270 --> 00:13:53,280
+because I can just do KV.first
+ 
+
+819
+00:13:53,280 --> 00:13:55,870
+because I can just do KV.first
+and KV.second like that. And then
+
+820
+00:13:55,870 --> 00:13:55,880
+and KV.second like that. And then
+ 
+
+821
+00:13:55,880 --> 00:13:57,950
+and KV.second like that. And then
+obviously, if I print this out, I should
+
+822
+00:13:57,950 --> 00:13:57,960
+obviously, if I print this out, I should
+ 
+
+823
+00:13:57,960 --> 00:13:59,550
+obviously, if I print this out, I should
+get the same result. Let me just add
+
+824
+00:13:59,550 --> 00:13:59,560
+get the same result. Let me just add
+ 
+
+825
+00:13:59,560 --> 00:14:03,030
+get the same result. Let me just add
+some end lines between this and here,
+
+826
+00:14:03,030 --> 00:14:03,040
+some end lines between this and here,
+ 
+
+827
+00:14:03,040 --> 00:14:04,750
+some end lines between this and here,
+maybe. Let's see what we get. All right,
+
+828
+00:14:04,750 --> 00:14:04,760
+maybe. Let's see what we get. All right,
+ 
+
+829
+00:14:04,760 --> 00:14:05,990
+maybe. Let's see what we get. All right,
+as you can see, we get the same result,
+
+830
+00:14:05,990 --> 00:14:06,000
+as you can see, we get the same result,
+ 
+
+831
+00:14:06,000 --> 00:14:08,590
+as you can see, we get the same result,
+obviously, but this again looks a lot
+
+832
+00:14:08,590 --> 00:14:08,600
+obviously, but this again looks a lot
+ 
+
+833
+00:14:08,600 --> 00:14:10,790
+obviously, but this again looks a lot
+cleaner. Now, can we do better than
+
+834
+00:14:10,790 --> 00:14:10,800
+cleaner. Now, can we do better than
+ 
+
+835
+00:14:10,800 --> 00:14:13,910
+cleaner. Now, can we do better than
+that? Well, yes, we can. As of C++ 17,
+
+836
+00:14:13,910 --> 00:14:13,920
+that? Well, yes, we can. As of C++ 17,
+ 
+
+837
+00:14:13,920 --> 00:14:16,310
+that? Well, yes, we can. As of C++ 17,
+we're able to use structured bindings.
+
+838
+00:14:16,310 --> 00:14:16,320
+we're able to use structured bindings.
+ 
+
+839
+00:14:16,320 --> 00:14:17,710
+we're able to use structured bindings.
+What that means is that this code is
+
+840
+00:14:17,710 --> 00:14:17,720
+What that means is that this code is
+ 
+
+841
+00:14:17,720 --> 00:14:19,670
+What that means is that this code is
+going to look even cleaner. We can
+
+842
+00:14:19,670 --> 00:14:19,680
+going to look even cleaner. We can
+ 
+
+843
+00:14:19,680 --> 00:14:21,670
+going to look even cleaner. We can
+actually retrieve this key and value
+
+844
+00:14:21,670 --> 00:14:21,680
+actually retrieve this key and value
+ 
+
+845
+00:14:21,680 --> 00:14:24,310
+actually retrieve this key and value
+right here inside this statement. We can
+
+846
+00:14:24,310 --> 00:14:24,320
+right here inside this statement. We can
+ 
+
+847
+00:14:24,320 --> 00:14:27,430
+right here inside this statement. We can
+simply write auto key, value with these
+
+848
+00:14:27,430 --> 00:14:27,440
+simply write auto key, value with these
+ 
+
+849
+00:14:27,440 --> 00:14:28,830
+simply write auto key, value with these
+kind of square brackets here, and
+
+850
+00:14:28,830 --> 00:14:28,840
+kind of square brackets here, and
+ 
+
+851
+00:14:28,840 --> 00:14:30,790
+kind of square brackets here, and
+iterate through our map. So, if I drop
+
+852
+00:14:30,790 --> 00:14:30,800
+iterate through our map. So, if I drop
+ 
+
+853
+00:14:30,800 --> 00:14:32,110
+iterate through our map. So, if I drop
+this over here,
+
+854
+00:14:32,110 --> 00:14:32,120
+this over here,
+ 
+
+855
+00:14:32,120 --> 00:14:34,070
+this over here,
+that's all we end up with. And if I hit
+
+856
+00:14:34,070 --> 00:14:34,080
+that's all we end up with. And if I hit
+ 
+
+857
+00:14:34,080 --> 00:14:36,270
+that's all we end up with. And if I hit
+a five, there we go. We're now iterating
+
+858
+00:14:36,270 --> 00:14:36,280
+a five, there we go. We're now iterating
+ 
+
+859
+00:14:36,280 --> 00:14:38,670
+a five, there we go. We're now iterating
+through this map three different ways.
+
+860
+00:14:38,670 --> 00:14:38,680
+through this map three different ways.
+ 
+
+861
+00:14:38,680 --> 00:14:40,710
+through this map three different ways.
+And of course, this code looks much,
+
+862
+00:14:40,710 --> 00:14:40,720
+And of course, this code looks much,
+ 
+
+863
+00:14:40,720 --> 00:14:42,310
+And of course, this code looks much,
+much cleaner. Now, keep in mind that you
+
+864
+00:14:42,310 --> 00:14:42,320
+much cleaner. Now, keep in mind that you
+ 
+
+865
+00:14:42,320 --> 00:14:43,710
+much cleaner. Now, keep in mind that you
+will have to make sure that your
+
+866
+00:14:43,710 --> 00:14:43,720
+will have to make sure that your
+ 
+
+867
+00:14:43,720 --> 00:14:45,670
+will have to make sure that your
+compiler supports C++ 17 and that you're
+
+868
+00:14:45,670 --> 00:14:45,680
+compiler supports C++ 17 and that you're
+ 
+
+869
+00:14:45,680 --> 00:14:47,350
+compiler supports C++ 17 and that you're
+actually compiling with that. If we go
+
+870
+00:14:47,350 --> 00:14:47,360
+actually compiling with that. If we go
+ 
+
+871
+00:14:47,360 --> 00:14:49,470
+actually compiling with that. If we go
+into properties here as an example, you
+
+872
+00:14:49,470 --> 00:14:49,480
+into properties here as an example, you
+ 
+
+873
+00:14:49,480 --> 00:14:51,430
+into properties here as an example, you
+can see that my C++ language standard
+
+874
+00:14:51,430 --> 00:14:51,440
+can see that my C++ language standard
+ 
+
+875
+00:14:51,440 --> 00:14:54,390
+can see that my C++ language standard
+under C++ and language in Visual Studio
+
+876
+00:14:54,390 --> 00:14:54,400
+under C++ and language in Visual Studio
+ 
+
+877
+00:14:54,400 --> 00:14:56,230
+under C++ and language in Visual Studio
+is set as C++ 17. If you're getting
+
+878
+00:14:56,230 --> 00:14:56,240
+is set as C++ 17. If you're getting
+ 
+
+879
+00:14:56,240 --> 00:14:58,230
+is set as C++ 17. If you're getting
+compiler errors, which is quite common,
+
+880
+00:14:58,230 --> 00:14:58,240
+compiler errors, which is quite common,
+ 
+
+881
+00:14:58,240 --> 00:14:59,150
+compiler errors, which is quite common,
+then make sure that you're actually
+
+882
+00:14:59,150 --> 00:14:59,160
+then make sure that you're actually
+ 
+
+883
+00:14:59,160 --> 00:15:02,590
+then make sure that you're actually
+compiling with C++ 17. Okay, so in
+
+884
+00:15:02,590 --> 00:15:02,600
+compiling with C++ 17. Okay, so in
+ 
+
+885
+00:15:02,600 --> 00:15:04,710
+compiling with C++ 17. Okay, so in
+summary, the only way that we can
+
+886
+00:15:04,710 --> 00:15:04,720
+summary, the only way that we can
+ 
+
+887
+00:15:04,720 --> 00:15:06,510
+summary, the only way that we can
+iterate through a map or a set or
+
+888
+00:15:06,510 --> 00:15:06,520
+iterate through a map or a set or
+ 
+
+889
+00:15:06,520 --> 00:15:08,310
+iterate through a map or a set or
+something that is essentially unordered
+
+890
+00:15:08,310 --> 00:15:08,320
+something that is essentially unordered
+ 
+
+891
+00:15:08,320 --> 00:15:09,910
+something that is essentially unordered
+and doesn't have a simple kind of
+
+892
+00:15:09,910 --> 00:15:09,920
+and doesn't have a simple kind of
+ 
+
+893
+00:15:09,920 --> 00:15:13,230
+and doesn't have a simple kind of
+incrementing index system is by using an
+
+894
+00:15:13,230 --> 00:15:13,240
+incrementing index system is by using an
+ 
+
+895
+00:15:13,240 --> 00:15:14,910
+incrementing index system is by using an
+iterator. And today, we've discussed
+
+896
+00:15:14,910 --> 00:15:14,920
+iterator. And today, we've discussed
+ 
+
+897
+00:15:14,920 --> 00:15:16,710
+iterator. And today, we've discussed
+both using a normal iterator, a const
+
+898
+00:15:16,710 --> 00:15:16,720
+both using a normal iterator, a const
+ 
+
+899
+00:15:16,720 --> 00:15:18,230
+both using a normal iterator, a const
+iterator, range-based for loops, which
+
+900
+00:15:18,230 --> 00:15:18,240
+iterator, range-based for loops, which
+ 
+
+901
+00:15:18,240 --> 00:15:20,270
+iterator, range-based for loops, which
+actually use iterators, as well as
+
+902
+00:15:20,270 --> 00:15:20,280
+actually use iterators, as well as
+ 
+
+903
+00:15:20,280 --> 00:15:21,829
+actually use iterators, as well as
+structured bindings with maps, which is
+
+904
+00:15:21,829 --> 00:15:21,839
+structured bindings with maps, which is
+ 
+
+905
+00:15:21,839 --> 00:15:24,350
+structured bindings with maps, which is
+pretty cool. And just to be super clear,
+
+906
+00:15:24,350 --> 00:15:24,360
+pretty cool. And just to be super clear,
+ 
+
+907
+00:15:24,360 --> 00:15:27,030
+pretty cool. And just to be super clear,
+the reason these range-based for loop
+
+908
+00:15:27,030 --> 00:15:27,040
+the reason these range-based for loop
+ 
+
+909
+00:15:27,040 --> 00:15:29,270
+the reason these range-based for loop
+shortcuts work is because we have an
+
+910
+00:15:29,270 --> 00:15:29,280
+shortcuts work is because we have an
+ 
+
+911
+00:15:29,280 --> 00:15:32,110
+shortcuts work is because we have an
+actual begin function inside our map or
+
+912
+00:15:32,110 --> 00:15:32,120
+actual begin function inside our map or
+ 
+
+913
+00:15:32,120 --> 00:15:34,310
+actual begin function inside our map or
+inside our well, whatever collection or
+
+914
+00:15:34,310 --> 00:15:34,320
+inside our well, whatever collection or
+ 
+
+915
+00:15:34,320 --> 00:15:36,790
+inside our well, whatever collection or
+data structure we're using that actually
+
+916
+00:15:36,790 --> 00:15:36,800
+data structure we're using that actually
+ 
+
+917
+00:15:36,800 --> 00:15:38,470
+data structure we're using that actually
+returns an iterator in the first place.
+
+918
+00:15:38,470 --> 00:15:38,480
+returns an iterator in the first place.
+ 
+
+919
+00:15:38,480 --> 00:15:40,310
+returns an iterator in the first place.
+If we didn't have that, then that would
+
+920
+00:15:40,310 --> 00:15:40,320
+If we didn't have that, then that would
+ 
+
+921
+00:15:40,320 --> 00:15:42,350
+If we didn't have that, then that would
+in fact not work. Okay, so hopefully
+
+922
+00:15:42,350 --> 00:15:42,360
+in fact not work. Okay, so hopefully
+ 
+
+923
+00:15:42,360 --> 00:15:43,910
+in fact not work. Okay, so hopefully
+that was a good introduction to
+
+924
+00:15:43,910 --> 00:15:43,920
+that was a good introduction to
+ 
+
+925
+00:15:43,920 --> 00:15:45,470
+that was a good introduction to
+iterators. There is of course a lot more
+
+926
+00:15:45,470 --> 00:15:45,480
+iterators. There is of course a lot more
+ 
+
+927
+00:15:45,480 --> 00:15:47,030
+iterators. There is of course a lot more
+topics that we can actually cover in
+
+928
+00:15:47,030 --> 00:15:47,040
+topics that we can actually cover in
+ 
+
+929
+00:15:47,040 --> 00:15:49,030
+topics that we can actually cover in
+terms of iterators. I would like to for
+
+930
+00:15:49,030 --> 00:15:49,040
+terms of iterators. I would like to for
+ 
+
+931
+00:15:49,040 --> 00:15:51,270
+terms of iterators. I would like to for
+one write our own iterators and we'll be
+
+932
+00:15:51,270 --> 00:15:51,280
+one write our own iterators and we'll be
+ 
+
+933
+00:15:51,280 --> 00:15:53,190
+one write our own iterators and we'll be
+adding them to the data structures that
+
+934
+00:15:53,190 --> 00:15:53,200
+adding them to the data structures that
+ 
+
+935
+00:15:53,200 --> 00:15:54,510
+adding them to the data structures that
+we've been going over the last few
+
+936
+00:15:54,510 --> 00:15:54,520
+we've been going over the last few
+ 
+
+937
+00:15:54,520 --> 00:15:57,510
+we've been going over the last few
+episodes of this series as well. As I
+
+938
+00:15:57,510 --> 00:15:57,520
+episodes of this series as well. As I
+ 
+
+939
+00:15:57,520 --> 00:15:58,870
+episodes of this series as well. As I
+mentioned, there's also some advanced
+
+940
+00:15:58,870 --> 00:15:58,880
+mentioned, there's also some advanced
+ 
+
+941
+00:15:58,880 --> 00:16:00,150
+mentioned, there's also some advanced
+things that you can try to do with
+
+942
+00:16:00,150 --> 00:16:00,160
+things that you can try to do with
+ 
+
+943
+00:16:00,160 --> 00:16:01,990
+things that you can try to do with
+iterators and I would encourage you to
+
+944
+00:16:01,990 --> 00:16:02,000
+iterators and I would encourage you to
+ 
+
+945
+00:16:02,000 --> 00:16:04,070
+iterators and I would encourage you to
+try that out as an exercise, as
+
+946
+00:16:04,070 --> 00:16:04,080
+try that out as an exercise, as
+ 
+
+947
+00:16:04,080 --> 00:16:06,110
+try that out as an exercise, as
+homework, if you will. So for example,
+
+948
+00:16:06,110 --> 00:16:06,120
+homework, if you will. So for example,
+ 
+
+949
+00:16:06,120 --> 00:16:07,990
+homework, if you will. So for example,
+try and remove an element from the
+
+950
+00:16:07,990 --> 00:16:08,000
+try and remove an element from the
+ 
+
+951
+00:16:08,000 --> 00:16:10,670
+try and remove an element from the
+center of a vector and see if you can
+
+952
+00:16:10,670 --> 00:16:10,680
+center of a vector and see if you can
+ 
+
+953
+00:16:10,680 --> 00:16:12,390
+center of a vector and see if you can
+adjust the iterator to deal with that.
+
+954
+00:16:12,390 --> 00:16:12,400
+adjust the iterator to deal with that.
+ 
+
+955
+00:16:12,400 --> 00:16:15,150
+adjust the iterator to deal with that.
+And likewise, maybe add an element into
+
+956
+00:16:15,150 --> 00:16:15,160
+And likewise, maybe add an element into
+ 
+
+957
+00:16:15,160 --> 00:16:17,310
+And likewise, maybe add an element into
+the middle of the vector and see if your
+
+958
+00:16:17,310 --> 00:16:17,320
+the middle of the vector and see if your
+ 
+
+959
+00:16:17,320 --> 00:16:18,830
+the middle of the vector and see if your
+iterator can deal with that. Those are
+
+960
+00:16:18,830 --> 00:16:18,840
+iterator can deal with that. Those are
+ 
+
+961
+00:16:18,840 --> 00:16:21,070
+iterator can deal with that. Those are
+great exercises and I might be revealing
+
+962
+00:16:21,070 --> 00:16:21,080
+great exercises and I might be revealing
+ 
+
+963
+00:16:21,080 --> 00:16:22,590
+great exercises and I might be revealing
+those solutions in the future. But
+
+964
+00:16:22,590 --> 00:16:22,600
+those solutions in the future. But
+ 
+
+965
+00:16:22,600 --> 00:16:23,750
+those solutions in the future. But
+anyway, I hope you guys enjoyed this
+
+966
+00:16:23,750 --> 00:16:23,760
+anyway, I hope you guys enjoyed this
+ 
+
+967
+00:16:23,760 --> 00:16:25,829
+anyway, I hope you guys enjoyed this
+video. If you did, as always, please do
+
+968
+00:16:25,829 --> 00:16:25,839
+video. If you did, as always, please do
+ 
+
+969
+00:16:25,839 --> 00:16:27,350
+video. If you did, as always, please do
+not forget to hit that like button and
+
+970
+00:16:27,350 --> 00:16:27,360
+not forget to hit that like button and
+ 
+
+971
+00:16:27,360 --> 00:16:29,430
+not forget to hit that like button and
+subscribe if you are new to this
+
+972
+00:16:29,430 --> 00:16:29,440
+subscribe if you are new to this
+ 
+
+973
+00:16:29,440 --> 00:16:30,910
+subscribe if you are new to this
+channel. We've got plenty more C++
+
+974
+00:16:30,910 --> 00:16:30,920
+channel. We've got plenty more C++
+ 
+
+975
+00:16:30,920 --> 00:16:32,829
+channel. We've got plenty more C++
+videos coming soon. Next time, I think
+
+976
+00:16:32,829 --> 00:16:32,839
+videos coming soon. Next time, I think
+ 
+
+977
+00:16:32,839 --> 00:16:34,710
+videos coming soon. Next time, I think
+we'll have a go at actually writing our
+
+978
+00:16:34,710 --> 00:16:34,720
+we'll have a go at actually writing our
+ 
+
+979
+00:16:34,720 --> 00:16:36,470
+we'll have a go at actually writing our
+own iterators and adding them to our
+
+980
+00:16:36,470 --> 00:16:36,480
+own iterators and adding them to our
+ 
+
+981
+00:16:36,480 --> 00:16:38,590
+own iterators and adding them to our
+data structure classes. But until then,
+
+982
+00:16:38,590 --> 00:16:38,600
+data structure classes. But until then,
+ 
+
+983
+00:16:38,600 --> 00:16:39,829
+data structure classes. But until then,
+I hope you guys have a great day.
+
+984
+00:16:39,829 --> 00:16:39,839
+I hope you guys have a great day.
+ 
+
+985
+00:16:39,839 --> 00:16:41,310
+I hope you guys have a great day.
+Definitely don't forget to check out
+
+986
+00:16:41,310 --> 00:16:41,320
+Definitely don't forget to check out
+ 
+
+987
+00:16:41,320 --> 00:16:42,590
+Definitely don't forget to check out
+Skillshare using the link in the
+
+988
+00:16:42,590 --> 00:16:42,600
+Skillshare using the link in the
+ 
+
+989
+00:16:42,600 --> 00:16:44,270
+Skillshare using the link in the
+description below and I will see you
+
+990
+00:16:44,270 --> 00:16:44,280
+description below and I will see you
+ 
+
+991
+00:16:44,280 --> 00:16:47,400
+description below and I will see you
+next time. Goodbye.
+

@@ -1,0 +1,3635 @@
+1
+00:00:00,000 --> 00:00:01,400
+
+hey what look guys my name is a China
+
+2
+00:00:01,400 --> 00:00:01,410
+hey what look guys my name is a China
+ 
+
+3
+00:00:01,410 --> 00:00:04,309
+hey what look guys my name is a China
+welcome back to my C++ series so today
+
+4
+00:00:04,309 --> 00:00:04,319
+welcome back to my C++ series so today
+ 
+
+5
+00:00:04,319 --> 00:00:05,840
+welcome back to my C++ series so today
+we're gonna be talking all about costing
+
+6
+00:00:05,840 --> 00:00:05,850
+we're gonna be talking all about costing
+ 
+
+7
+00:00:05,850 --> 00:00:07,550
+we're gonna be talking all about costing
+in C++ we really haven't talked about
+
+8
+00:00:07,550 --> 00:00:07,560
+in C++ we really haven't talked about
+ 
+
+9
+00:00:07,560 --> 00:00:10,250
+in C++ we really haven't talked about
+this often although we have in fact used
+
+10
+00:00:10,250 --> 00:00:10,260
+this often although we have in fact used
+ 
+
+11
+00:00:10,260 --> 00:00:12,620
+this often although we have in fact used
+costing and will talk more about kind of
+
+12
+00:00:12,620 --> 00:00:12,630
+costing and will talk more about kind of
+ 
+
+13
+00:00:12,630 --> 00:00:14,539
+costing and will talk more about kind of
+say style costing as well as save us
+
+14
+00:00:14,539 --> 00:00:14,549
+say style costing as well as save us
+ 
+
+15
+00:00:14,549 --> 00:00:17,210
+say style costing as well as save us
+lost out costing and this this video one
+
+16
+00:00:17,210 --> 00:00:17,220
+lost out costing and this this video one
+ 
+
+17
+00:00:17,220 --> 00:00:18,890
+lost out costing and this this video one
+color absolutely everything we'll get
+
+18
+00:00:18,890 --> 00:00:18,900
+color absolutely everything we'll get
+ 
+
+19
+00:00:18,900 --> 00:00:20,480
+color absolutely everything we'll get
+into this as a series kind of goes on
+
+20
+00:00:20,480 --> 00:00:20,490
+into this as a series kind of goes on
+ 
+
+21
+00:00:20,490 --> 00:00:23,210
+into this as a series kind of goes on
+and I think that this topic is one of
+
+22
+00:00:23,210 --> 00:00:23,220
+and I think that this topic is one of
+ 
+
+23
+00:00:23,220 --> 00:00:24,380
+and I think that this topic is one of
+those things that you just have to
+
+24
+00:00:24,380 --> 00:00:24,390
+those things that you just have to
+ 
+
+25
+00:00:24,390 --> 00:00:26,599
+those things that you just have to
+practice with and kind of learn through
+
+26
+00:00:26,599 --> 00:00:26,609
+practice with and kind of learn through
+ 
+
+27
+00:00:26,609 --> 00:00:28,189
+practice with and kind of learn through
+experience rather than me just telling
+
+28
+00:00:28,189 --> 00:00:28,199
+experience rather than me just telling
+ 
+
+29
+00:00:28,199 --> 00:00:30,019
+experience rather than me just telling
+you this is how it works because if you
+
+30
+00:00:30,019 --> 00:00:30,029
+you this is how it works because if you
+ 
+
+31
+00:00:30,029 --> 00:00:31,820
+you this is how it works because if you
+just take in the theory with no practice
+
+32
+00:00:31,820 --> 00:00:31,830
+just take in the theory with no practice
+ 
+
+33
+00:00:31,830 --> 00:00:33,979
+just take in the theory with no practice
+for this specific topic it's not really
+
+34
+00:00:33,979 --> 00:00:33,989
+for this specific topic it's not really
+ 
+
+35
+00:00:33,989 --> 00:00:36,470
+for this specific topic it's not really
+gonna help you that much so just keep
+
+36
+00:00:36,470 --> 00:00:36,480
+gonna help you that much so just keep
+ 
+
+37
+00:00:36,480 --> 00:00:37,400
+gonna help you that much so just keep
+that in mind okay cool
+
+38
+00:00:37,400 --> 00:00:37,410
+that in mind okay cool
+ 
+
+39
+00:00:37,410 --> 00:00:38,810
+that in mind okay cool
+so first of all what is casting well
+
+40
+00:00:38,810 --> 00:00:38,820
+so first of all what is casting well
+ 
+
+41
+00:00:38,820 --> 00:00:40,010
+so first of all what is casting well
+what I'm talking about casting I'm
+
+42
+00:00:40,010 --> 00:00:40,020
+what I'm talking about casting I'm
+ 
+
+43
+00:00:40,020 --> 00:00:41,389
+what I'm talking about casting I'm
+specifically talking about typecasting
+
+44
+00:00:41,389 --> 00:00:41,399
+specifically talking about typecasting
+ 
+
+45
+00:00:41,399 --> 00:00:43,819
+specifically talking about typecasting
+or any kind of conversions that we have
+
+46
+00:00:43,819 --> 00:00:43,829
+or any kind of conversions that we have
+ 
+
+47
+00:00:43,829 --> 00:00:45,770
+or any kind of conversions that we have
+to do within the type system that we
+
+48
+00:00:45,770 --> 00:00:45,780
+to do within the type system that we
+ 
+
+49
+00:00:45,780 --> 00:00:48,799
+to do within the type system that we
+have available to us in C++ C++ being a
+
+50
+00:00:48,799 --> 00:00:48,809
+have available to us in C++ C++ being a
+ 
+
+51
+00:00:48,809 --> 00:00:50,540
+have available to us in C++ C++ being a
+strongly typed language basically just
+
+52
+00:00:50,540 --> 00:00:50,550
+strongly typed language basically just
+ 
+
+53
+00:00:50,550 --> 00:00:53,510
+strongly typed language basically just
+means that there is a type system and
+
+54
+00:00:53,510 --> 00:00:53,520
+means that there is a type system and
+ 
+
+55
+00:00:53,520 --> 00:00:56,000
+means that there is a type system and
+types enforce if I make something as an
+
+56
+00:00:56,000 --> 00:00:56,010
+types enforce if I make something as an
+ 
+
+57
+00:00:56,010 --> 00:00:56,479
+types enforce if I make something as an
+integer
+
+58
+00:00:56,479 --> 00:00:56,489
+integer
+ 
+
+59
+00:00:56,489 --> 00:00:58,639
+integer
+I can't suddenly just start treating it
+
+60
+00:00:58,639 --> 00:00:58,649
+I can't suddenly just start treating it
+ 
+
+61
+00:00:58,649 --> 00:01:00,410
+I can't suddenly just start treating it
+as if it was a double or a flirt or
+
+62
+00:01:00,410 --> 00:01:00,420
+as if it was a double or a flirt or
+ 
+
+63
+00:01:00,420 --> 00:01:02,599
+as if it was a double or a flirt or
+something like that or vice versa I have
+
+64
+00:01:02,599 --> 00:01:02,609
+something like that or vice versa I have
+ 
+
+65
+00:01:02,609 --> 00:01:04,520
+something like that or vice versa I have
+to kind of stick to my type unless
+
+66
+00:01:04,520 --> 00:01:04,530
+to kind of stick to my type unless
+ 
+
+67
+00:01:04,530 --> 00:01:06,679
+to kind of stick to my type unless
+there's an easy implicit conversion
+
+68
+00:01:06,679 --> 00:01:06,689
+there's an easy implicit conversion
+ 
+
+69
+00:01:06,689 --> 00:01:09,289
+there's an easy implicit conversion
+which means that this simple swaps knows
+
+70
+00:01:09,289 --> 00:01:09,299
+which means that this simple swaps knows
+ 
+
+71
+00:01:09,299 --> 00:01:10,399
+which means that this simple swaps knows
+how to convert between the two types
+
+72
+00:01:10,399 --> 00:01:10,409
+how to convert between the two types
+ 
+
+73
+00:01:10,409 --> 00:01:12,830
+how to convert between the two types
+with no data loss and basically what's
+
+74
+00:01:12,830 --> 00:01:12,840
+with no data loss and basically what's
+ 
+
+75
+00:01:12,840 --> 00:01:14,510
+with no data loss and basically what's
+labeled as an implicit conversion as
+
+76
+00:01:14,510 --> 00:01:14,520
+labeled as an implicit conversion as
+ 
+
+77
+00:01:14,520 --> 00:01:16,730
+labeled as an implicit conversion as
+well or there's an explicit conversion
+
+78
+00:01:16,730 --> 00:01:16,740
+well or there's an explicit conversion
+ 
+
+79
+00:01:16,740 --> 00:01:18,289
+well or there's an explicit conversion
+which is where I'm actually telling
+
+80
+00:01:18,289 --> 00:01:18,299
+which is where I'm actually telling
+ 
+
+81
+00:01:18,299 --> 00:01:20,690
+which is where I'm actually telling
+simple as hey you need to convert this
+
+82
+00:01:20,690 --> 00:01:20,700
+simple as hey you need to convert this
+ 
+
+83
+00:01:20,700 --> 00:01:24,440
+simple as hey you need to convert this
+type into this type now we have covered
+
+84
+00:01:24,440 --> 00:01:24,450
+type into this type now we have covered
+ 
+
+85
+00:01:24,450 --> 00:01:27,410
+type into this type now we have covered
+kind of casting and type conversions to
+
+86
+00:01:27,410 --> 00:01:27,420
+kind of casting and type conversions to
+ 
+
+87
+00:01:27,420 --> 00:01:29,120
+kind of casting and type conversions to
+an extent when we talked about type
+
+88
+00:01:29,120 --> 00:01:29,130
+an extent when we talked about type
+ 
+
+89
+00:01:29,130 --> 00:01:30,800
+an extent when we talked about type
+punting so if you haven't seen that
+
+90
+00:01:30,800 --> 00:01:30,810
+punting so if you haven't seen that
+ 
+
+91
+00:01:30,810 --> 00:01:32,120
+punting so if you haven't seen that
+video definitely check that out
+
+92
+00:01:32,120 --> 00:01:32,130
+video definitely check that out
+ 
+
+93
+00:01:32,130 --> 00:01:33,980
+video definitely check that out
+but in this video we're gonna kind of
+
+94
+00:01:33,980 --> 00:01:33,990
+but in this video we're gonna kind of
+ 
+
+95
+00:01:33,990 --> 00:01:36,170
+but in this video we're gonna kind of
+formally cover what casting actually
+
+96
+00:01:36,170 --> 00:01:36,180
+formally cover what casting actually
+ 
+
+97
+00:01:36,180 --> 00:01:39,319
+formally cover what casting actually
+means and see how we can use it so the
+
+98
+00:01:39,319 --> 00:01:39,329
+means and see how we can use it so the
+ 
+
+99
+00:01:39,329 --> 00:01:40,760
+means and see how we can use it so the
+way that we perform type conversions is
+
+100
+00:01:40,760 --> 00:01:40,770
+way that we perform type conversions is
+ 
+
+101
+00:01:40,770 --> 00:01:43,730
+way that we perform type conversions is
+visibly explicit type conversions is one
+
+102
+00:01:43,730 --> 00:01:43,740
+visibly explicit type conversions is one
+ 
+
+103
+00:01:43,740 --> 00:01:45,469
+visibly explicit type conversions is one
+of two ways really or at least I see it
+
+104
+00:01:45,469 --> 00:01:45,479
+of two ways really or at least I see it
+ 
+
+105
+00:01:45,479 --> 00:01:47,300
+of two ways really or at least I see it
+as one of two ways there's the kind of C
+
+106
+00:01:47,300 --> 00:01:47,310
+as one of two ways there's the kind of C
+ 
+
+107
+00:01:47,310 --> 00:01:49,880
+as one of two ways there's the kind of C
+style costs and then we also have a C++
+
+108
+00:01:49,880 --> 00:01:49,890
+style costs and then we also have a C++
+ 
+
+109
+00:01:49,890 --> 00:01:51,770
+style costs and then we also have a C++
+style costs now if we just take a look
+
+110
+00:01:51,770 --> 00:01:51,780
+style costs now if we just take a look
+ 
+
+111
+00:01:51,780 --> 00:01:53,450
+style costs now if we just take a look
+at a quick example I just say I've
+
+112
+00:01:53,450 --> 00:01:53,460
+at a quick example I just say I've
+ 
+
+113
+00:01:53,460 --> 00:01:55,850
+at a quick example I just say I've
+gotten the integer like this I'll call
+
+114
+00:01:55,850 --> 00:01:55,860
+gotten the integer like this I'll call
+ 
+
+115
+00:01:55,860 --> 00:01:58,100
+gotten the integer like this I'll call
+it a and I'll set it equal to 5 and I
+
+116
+00:01:58,100 --> 00:01:58,110
+it a and I'll set it equal to 5 and I
+ 
+
+117
+00:01:58,110 --> 00:01:59,240
+it a and I'll set it equal to 5 and I
+want to I want to treat it as a double
+
+118
+00:01:59,240 --> 00:01:59,250
+want to I want to treat it as a double
+ 
+
+119
+00:01:59,250 --> 00:02:02,240
+want to I want to treat it as a double
+now in this scenario if I make a double
+
+120
+00:02:02,240 --> 00:02:02,250
+now in this scenario if I make a double
+ 
+
+121
+00:02:02,250 --> 00:02:05,270
+now in this scenario if I make a double
+called value and set it equal to a you
+
+122
+00:02:05,270 --> 00:02:05,280
+called value and set it equal to a you
+ 
+
+123
+00:02:05,280 --> 00:02:06,950
+called value and set it equal to a you
+can see that that we don't need to
+
+124
+00:02:06,950 --> 00:02:06,960
+can see that that we don't need to
+ 
+
+125
+00:02:06,960 --> 00:02:09,359
+can see that that we don't need to
+explicitly specify hey I want you
+
+126
+00:02:09,359 --> 00:02:09,369
+explicitly specify hey I want you
+ 
+
+127
+00:02:09,369 --> 00:02:12,089
+explicitly specify hey I want you
+a into a double because that's that's a
+
+128
+00:02:12,089 --> 00:02:12,099
+a into a double because that's that's a
+ 
+
+129
+00:02:12,099 --> 00:02:13,619
+a into a double because that's that's a
+that's kind of a conversion that it
+
+130
+00:02:13,619 --> 00:02:13,629
+that's kind of a conversion that it
+ 
+
+131
+00:02:13,629 --> 00:02:15,869
+that's kind of a conversion that it
+deems as implicit it's easy to do
+
+132
+00:02:15,869 --> 00:02:15,879
+deems as implicit it's easy to do
+ 
+
+133
+00:02:15,879 --> 00:02:17,040
+deems as implicit it's easy to do
+there's no data loss anything like that
+
+134
+00:02:17,040 --> 00:02:17,050
+there's no data loss anything like that
+ 
+
+135
+00:02:17,050 --> 00:02:19,500
+there's no data loss anything like that
+now if I had something the other way
+
+136
+00:02:19,500 --> 00:02:19,510
+now if I had something the other way
+ 
+
+137
+00:02:19,510 --> 00:02:21,390
+now if I had something the other way
+around where I had maybe double value
+
+138
+00:02:21,390 --> 00:02:21,400
+around where I had maybe double value
+ 
+
+139
+00:02:21,400 --> 00:02:23,580
+around where I had maybe double value
+equals like five point three five point
+
+140
+00:02:23,580 --> 00:02:23,590
+equals like five point three five point
+ 
+
+141
+00:02:23,590 --> 00:02:24,839
+equals like five point three five point
+two five or something like that and I
+
+142
+00:02:24,839 --> 00:02:24,849
+two five or something like that and I
+ 
+
+143
+00:02:24,849 --> 00:02:27,900
+two five or something like that and I
+wanted to convert it into a integer that
+
+144
+00:02:27,900 --> 00:02:27,910
+wanted to convert it into a integer that
+ 
+
+145
+00:02:27,910 --> 00:02:29,789
+wanted to convert it into a integer that
+would also be deemed as an implicit
+
+146
+00:02:29,789 --> 00:02:29,799
+would also be deemed as an implicit
+ 
+
+147
+00:02:29,799 --> 00:02:31,380
+would also be deemed as an implicit
+conversion because it's not something
+
+148
+00:02:31,380 --> 00:02:31,390
+conversion because it's not something
+ 
+
+149
+00:02:31,390 --> 00:02:33,479
+conversion because it's not something
+that we necessarily have to specify hey
+
+150
+00:02:33,479 --> 00:02:33,489
+that we necessarily have to specify hey
+ 
+
+151
+00:02:33,489 --> 00:02:34,979
+that we necessarily have to specify hey
+I'm converting this type into this type
+
+152
+00:02:34,979 --> 00:02:34,989
+I'm converting this type into this type
+ 
+
+153
+00:02:34,989 --> 00:02:37,589
+I'm converting this type into this type
+now if we did want to be explicit for
+
+154
+00:02:37,589 --> 00:02:37,599
+now if we did want to be explicit for
+ 
+
+155
+00:02:37,599 --> 00:02:40,530
+now if we did want to be explicit for
+example what we can actually do is just
+
+156
+00:02:40,530 --> 00:02:40,540
+example what we can actually do is just
+ 
+
+157
+00:02:40,540 --> 00:02:44,100
+example what we can actually do is just
+cast this double into into an integer by
+
+158
+00:02:44,100 --> 00:02:44,110
+cast this double into into an integer by
+ 
+
+159
+00:02:44,110 --> 00:02:45,539
+cast this double into into an integer by
+doing something like this right now of
+
+160
+00:02:45,539 --> 00:02:45,549
+doing something like this right now of
+ 
+
+161
+00:02:45,549 --> 00:02:47,309
+doing something like this right now of
+course in this case it implicitly is
+
+162
+00:02:47,309 --> 00:02:47,319
+course in this case it implicitly is
+ 
+
+163
+00:02:47,319 --> 00:02:49,020
+course in this case it implicitly is
+able to do that but for the sake of this
+
+164
+00:02:49,020 --> 00:02:49,030
+able to do that but for the sake of this
+ 
+
+165
+00:02:49,030 --> 00:02:50,819
+able to do that but for the sake of this
+let's and since we are talking about
+
+166
+00:02:50,819 --> 00:02:50,829
+let's and since we are talking about
+ 
+
+167
+00:02:50,829 --> 00:02:52,770
+let's and since we are talking about
+cost and let's pretend it wasn't so we
+
+168
+00:02:52,770 --> 00:02:52,780
+cost and let's pretend it wasn't so we
+ 
+
+169
+00:02:52,780 --> 00:02:54,150
+cost and let's pretend it wasn't so we
+have an implicit we have an explicit
+
+170
+00:02:54,150 --> 00:02:54,160
+have an implicit we have an explicit
+ 
+
+171
+00:02:54,160 --> 00:02:55,680
+have an implicit we have an explicit
+conversion here because we're saying I
+
+172
+00:02:55,680 --> 00:02:55,690
+conversion here because we're saying I
+ 
+
+173
+00:02:55,690 --> 00:02:57,479
+conversion here because we're saying I
+want this value to be competitive to an
+
+174
+00:02:57,479 --> 00:02:57,489
+want this value to be competitive to an
+ 
+
+175
+00:02:57,489 --> 00:03:01,039
+want this value to be competitive to an
+integer now why we need this is kind of
+
+176
+00:03:01,039 --> 00:03:01,049
+integer now why we need this is kind of
+ 
+
+177
+00:03:01,049 --> 00:03:05,190
+integer now why we need this is kind of
+it's not really perhaps a better example
+
+178
+00:03:05,190 --> 00:03:05,200
+it's not really perhaps a better example
+ 
+
+179
+00:03:05,200 --> 00:03:07,619
+it's not really perhaps a better example
+might be like if we wanted to maybe have
+
+180
+00:03:07,619 --> 00:03:07,629
+might be like if we wanted to maybe have
+ 
+
+181
+00:03:07,629 --> 00:03:10,830
+might be like if we wanted to maybe have
+another double here called a and we
+
+182
+00:03:10,830 --> 00:03:10,840
+another double here called a and we
+ 
+
+183
+00:03:10,840 --> 00:03:13,590
+another double here called a and we
+wanted to add you know five point three
+
+184
+00:03:13,590 --> 00:03:13,600
+wanted to add you know five point three
+ 
+
+185
+00:03:13,600 --> 00:03:17,550
+wanted to add you know five point three
+to this value now if we just kind of get
+
+186
+00:03:17,550 --> 00:03:17,560
+to this value now if we just kind of get
+ 
+
+187
+00:03:17,560 --> 00:03:20,479
+to this value now if we just kind of get
+rid of this and print what a actually is
+
+188
+00:03:20,479 --> 00:03:20,489
+rid of this and print what a actually is
+ 
+
+189
+00:03:20,489 --> 00:03:23,160
+rid of this and print what a actually is
+then what you might see it's obviously
+
+190
+00:03:23,160 --> 00:03:23,170
+then what you might see it's obviously
+ 
+
+191
+00:03:23,170 --> 00:03:25,080
+then what you might see it's obviously
+what you might expect with kind of
+
+192
+00:03:25,080 --> 00:03:25,090
+what you might expect with kind of
+ 
+
+193
+00:03:25,090 --> 00:03:27,180
+what you might expect with kind of
+adding five point two five to five point
+
+194
+00:03:27,180 --> 00:03:27,190
+adding five point two five to five point
+ 
+
+195
+00:03:27,190 --> 00:03:30,960
+adding five point two five to five point
+three now if I cost this value into an
+
+196
+00:03:30,960 --> 00:03:30,970
+three now if I cost this value into an
+ 
+
+197
+00:03:30,970 --> 00:03:32,819
+three now if I cost this value into an
+integer then that's going to converted
+
+198
+00:03:32,819 --> 00:03:32,829
+integer then that's going to converted
+ 
+
+199
+00:03:32,829 --> 00:03:34,020
+integer then that's going to converted
+into an integer which means it's going
+
+200
+00:03:34,020 --> 00:03:34,030
+into an integer which means it's going
+ 
+
+201
+00:03:34,030 --> 00:03:35,490
+into an integer which means it's going
+to truncate at the point two five and
+
+202
+00:03:35,490 --> 00:03:35,500
+to truncate at the point two five and
+ 
+
+203
+00:03:35,500 --> 00:03:37,140
+to truncate at the point two five and
+I'll end up just being five plus five
+
+204
+00:03:37,140 --> 00:03:37,150
+I'll end up just being five plus five
+ 
+
+205
+00:03:37,150 --> 00:03:38,430
+I'll end up just being five plus five
+point three which instead of giving us
+
+206
+00:03:38,430 --> 00:03:38,440
+point three which instead of giving us
+ 
+
+207
+00:03:38,440 --> 00:03:40,800
+point three which instead of giving us
+ten point five five would give us the
+
+208
+00:03:40,800 --> 00:03:40,810
+ten point five five would give us the
+ 
+
+209
+00:03:40,810 --> 00:03:42,569
+ten point five five would give us the
+value ten point three submit in this
+
+210
+00:03:42,569 --> 00:03:42,579
+value ten point three submit in this
+ 
+
+211
+00:03:42,579 --> 00:03:44,400
+value ten point three submit in this
+case is actually changing it and this
+
+212
+00:03:44,400 --> 00:03:44,410
+case is actually changing it and this
+ 
+
+213
+00:03:44,410 --> 00:03:45,990
+case is actually changing it and this
+actual technique that we've used is
+
+214
+00:03:45,990 --> 00:03:46,000
+actual technique that we've used is
+ 
+
+215
+00:03:46,000 --> 00:03:47,670
+actual technique that we've used is
+called a safe style cost because we
+
+216
+00:03:47,670 --> 00:03:47,680
+called a safe style cost because we
+ 
+
+217
+00:03:47,680 --> 00:03:49,259
+called a safe style cost because we
+basically specified the type that were
+
+218
+00:03:49,259 --> 00:03:49,269
+basically specified the type that were
+ 
+
+219
+00:03:49,269 --> 00:03:51,449
+basically specified the type that were
+causing to in parentheses like this and
+
+220
+00:03:51,449 --> 00:03:51,459
+causing to in parentheses like this and
+ 
+
+221
+00:03:51,459 --> 00:03:52,440
+causing to in parentheses like this and
+then the variable that we're actually
+
+222
+00:03:52,440 --> 00:03:52,450
+then the variable that we're actually
+ 
+
+223
+00:03:52,450 --> 00:03:54,770
+then the variable that we're actually
+costing optionally we can of course
+
+224
+00:03:54,770 --> 00:03:54,780
+costing optionally we can of course
+ 
+
+225
+00:03:54,780 --> 00:03:57,720
+costing optionally we can of course
+surrounded in parentheses like this
+
+226
+00:03:57,720 --> 00:03:57,730
+surrounded in parentheses like this
+ 
+
+227
+00:03:57,730 --> 00:03:59,610
+surrounded in parentheses like this
+which is particularly useful if maybe we
+
+228
+00:03:59,610 --> 00:03:59,620
+which is particularly useful if maybe we
+ 
+
+229
+00:03:59,620 --> 00:04:01,979
+which is particularly useful if maybe we
+wanted to cost that entire thing into an
+
+230
+00:04:01,979 --> 00:04:01,989
+wanted to cost that entire thing into an
+ 
+
+231
+00:04:01,989 --> 00:04:04,259
+wanted to cost that entire thing into an
+int once it had actually evaluated in
+
+232
+00:04:04,259 --> 00:04:04,269
+int once it had actually evaluated in
+ 
+
+233
+00:04:04,269 --> 00:04:06,270
+int once it had actually evaluated in
+fact if we do this will still get 10 as
+
+234
+00:04:06,270 --> 00:04:06,280
+fact if we do this will still get 10 as
+ 
+
+235
+00:04:06,280 --> 00:04:08,970
+fact if we do this will still get 10 as
+the value because value is gonna be five
+
+236
+00:04:08,970 --> 00:04:08,980
+the value because value is gonna be five
+ 
+
+237
+00:04:08,980 --> 00:04:10,170
+the value because value is gonna be five
+point two five plus five point three
+
+238
+00:04:10,170 --> 00:04:10,180
+point two five plus five point three
+ 
+
+239
+00:04:10,180 --> 00:04:11,819
+point two five plus five point three
+which gives us ten point five five and
+
+240
+00:04:11,819 --> 00:04:11,829
+which gives us ten point five five and
+ 
+
+241
+00:04:11,829 --> 00:04:13,979
+which gives us ten point five five and
+then it would get truncated into an ant
+
+242
+00:04:13,979 --> 00:04:13,989
+then it would get truncated into an ant
+ 
+
+243
+00:04:13,989 --> 00:04:17,099
+then it would get truncated into an ant
+now the C++ way of doing this would be
+
+244
+00:04:17,099 --> 00:04:17,109
+now the C++ way of doing this would be
+ 
+
+245
+00:04:17,109 --> 00:04:18,080
+now the C++ way of doing this would be
+by using as a both
+
+246
+00:04:18,080 --> 00:04:18,090
+by using as a both
+ 
+
+247
+00:04:18,090 --> 00:04:20,539
+by using as a both
+starcast and it'll be four days who
+
+248
+00:04:20,539 --> 00:04:20,549
+starcast and it'll be four days who
+ 
+
+249
+00:04:20,549 --> 00:04:22,450
+starcast and it'll be four days who
+would use something called a static cast
+
+250
+00:04:22,450 --> 00:04:22,460
+would use something called a static cast
+ 
+
+251
+00:04:22,460 --> 00:04:25,670
+would use something called a static cast
+and to do that basically this would look
+
+252
+00:04:25,670 --> 00:04:25,680
+and to do that basically this would look
+ 
+
+253
+00:04:25,680 --> 00:04:27,590
+and to do that basically this would look
+like the following so let me just get
+
+254
+00:04:27,590 --> 00:04:27,600
+like the following so let me just get
+ 
+
+255
+00:04:27,600 --> 00:04:30,020
+like the following so let me just get
+back to where we were before which is
+
+256
+00:04:30,020 --> 00:04:30,030
+back to where we were before which is
+ 
+
+257
+00:04:30,030 --> 00:04:33,170
+back to where we were before which is
+just this and then it's been this would
+
+258
+00:04:33,170 --> 00:04:33,180
+just this and then it's been this would
+ 
+
+259
+00:04:33,180 --> 00:04:36,890
+just this and then it's been this would
+just be a static cost what we're passing
+
+260
+00:04:36,890 --> 00:04:36,900
+just be a static cost what we're passing
+ 
+
+261
+00:04:36,900 --> 00:04:38,990
+just be a static cost what we're passing
+into which is it needs and then the
+
+262
+00:04:38,990 --> 00:04:39,000
+into which is it needs and then the
+ 
+
+263
+00:04:39,000 --> 00:04:42,379
+into which is it needs and then the
+value and then we'd add 5.3 and that
+
+264
+00:04:42,379 --> 00:04:42,389
+value and then we'd add 5.3 and that
+ 
+
+265
+00:04:42,389 --> 00:04:46,129
+value and then we'd add 5.3 and that
+would be our value now C++ tile costs we
+
+266
+00:04:46,129 --> 00:04:46,139
+would be our value now C++ tile costs we
+ 
+
+267
+00:04:46,139 --> 00:04:47,570
+would be our value now C++ tile costs we
+have a number of them one of them is
+
+268
+00:04:47,570 --> 00:04:47,580
+have a number of them one of them is
+ 
+
+269
+00:04:47,580 --> 00:04:49,189
+have a number of them one of them is
+called static cost we have something
+
+270
+00:04:49,189 --> 00:04:49,199
+called static cost we have something
+ 
+
+271
+00:04:49,199 --> 00:04:50,930
+called static cost we have something
+else called reinterpret cost we have
+
+272
+00:04:50,930 --> 00:04:50,940
+else called reinterpret cost we have
+ 
+
+273
+00:04:50,940 --> 00:04:52,550
+else called reinterpret cost we have
+something called dynamic cost and we
+
+274
+00:04:52,550 --> 00:04:52,560
+something called dynamic cost and we
+ 
+
+275
+00:04:52,560 --> 00:04:53,870
+something called dynamic cost and we
+have something something called const
+
+276
+00:04:53,870 --> 00:04:53,880
+have something something called const
+ 
+
+277
+00:04:53,880 --> 00:04:55,490
+have something something called const
+cost there's a kind of the four main
+
+278
+00:04:55,490 --> 00:04:55,500
+cost there's a kind of the four main
+ 
+
+279
+00:04:55,500 --> 00:04:57,800
+cost there's a kind of the four main
+costs now what you have to realize is
+
+280
+00:04:57,800 --> 00:04:57,810
+costs now what you have to realize is
+ 
+
+281
+00:04:57,810 --> 00:05:01,040
+costs now what you have to realize is
+that they do not do anything that C
+
+282
+00:05:01,040 --> 00:05:01,050
+that they do not do anything that C
+ 
+
+283
+00:05:01,050 --> 00:05:04,400
+that they do not do anything that C
+style casts cannot do what I mean by
+
+284
+00:05:04,400 --> 00:05:04,410
+style casts cannot do what I mean by
+ 
+
+285
+00:05:04,410 --> 00:05:05,900
+style casts cannot do what I mean by
+that is that sure they might do
+
+286
+00:05:05,900 --> 00:05:05,910
+that is that sure they might do
+ 
+
+287
+00:05:05,910 --> 00:05:07,820
+that is that sure they might do
+additional things but the actual
+
+288
+00:05:07,820 --> 00:05:07,830
+additional things but the actual
+ 
+
+289
+00:05:07,830 --> 00:05:10,659
+additional things but the actual
+conversion the result of what you get is
+
+290
+00:05:10,659 --> 00:05:10,669
+conversion the result of what you get is
+ 
+
+291
+00:05:10,669 --> 00:05:14,960
+conversion the result of what you get is
+a successful type conversion c-style
+
+292
+00:05:14,960 --> 00:05:14,970
+a successful type conversion c-style
+ 
+
+293
+00:05:14,970 --> 00:05:17,420
+a successful type conversion c-style
+cast can achieve all of that so this
+
+294
+00:05:17,420 --> 00:05:17,430
+cast can achieve all of that so this
+ 
+
+295
+00:05:17,430 --> 00:05:18,740
+cast can achieve all of that so this
+isn't really adding new functionality
+
+296
+00:05:18,740 --> 00:05:18,750
+isn't really adding new functionality
+ 
+
+297
+00:05:18,750 --> 00:05:21,469
+isn't really adding new functionality
+what it is adding is kind of like syntax
+
+298
+00:05:21,469 --> 00:05:21,479
+what it is adding is kind of like syntax
+ 
+
+299
+00:05:21,479 --> 00:05:24,469
+what it is adding is kind of like syntax
+sugar to your code now of course dynamic
+
+300
+00:05:24,469 --> 00:05:24,479
+sugar to your code now of course dynamic
+ 
+
+301
+00:05:24,479 --> 00:05:26,270
+sugar to your code now of course dynamic
+cast which we'll talk about specifically
+
+302
+00:05:26,270 --> 00:05:26,280
+cast which we'll talk about specifically
+ 
+
+303
+00:05:26,280 --> 00:05:27,650
+cast which we'll talk about specifically
+in another video I'll show you an
+
+304
+00:05:27,650 --> 00:05:27,660
+in another video I'll show you an
+ 
+
+305
+00:05:27,660 --> 00:05:29,390
+in another video I'll show you an
+example of it working here but we'll
+
+306
+00:05:29,390 --> 00:05:29,400
+example of it working here but we'll
+ 
+
+307
+00:05:29,400 --> 00:05:30,950
+example of it working here but we'll
+talk more in depth about what it
+
+308
+00:05:30,950 --> 00:05:30,960
+talk more in depth about what it
+ 
+
+309
+00:05:30,960 --> 00:05:32,029
+talk more in depth about what it
+actually does and how it works in
+
+310
+00:05:32,029 --> 00:05:32,039
+actually does and how it works in
+ 
+
+311
+00:05:32,039 --> 00:05:34,159
+actually does and how it works in
+another video that for example will
+
+312
+00:05:34,159 --> 00:05:34,169
+another video that for example will
+ 
+
+313
+00:05:34,169 --> 00:05:36,200
+another video that for example will
+actually perform a check and may return
+
+314
+00:05:36,200 --> 00:05:36,210
+actually perform a check and may return
+ 
+
+315
+00:05:36,210 --> 00:05:39,140
+actually perform a check and may return
+null if the conversion wasn't successful
+
+316
+00:05:39,140 --> 00:05:39,150
+null if the conversion wasn't successful
+ 
+
+317
+00:05:39,150 --> 00:05:41,510
+null if the conversion wasn't successful
+so it does do extra things which also
+
+318
+00:05:41,510 --> 00:05:41,520
+so it does do extra things which also
+ 
+
+319
+00:05:41,520 --> 00:05:42,860
+so it does do extra things which also
+means that it actually kind of slows you
+
+320
+00:05:42,860 --> 00:05:42,870
+means that it actually kind of slows you
+ 
+
+321
+00:05:42,870 --> 00:05:45,529
+means that it actually kind of slows you
+down but for the for the most part all
+
+322
+00:05:45,529 --> 00:05:45,539
+down but for the for the most part all
+ 
+
+323
+00:05:45,539 --> 00:05:47,270
+down but for the for the most part all
+of these hippos boss style casts don't
+
+324
+00:05:47,270 --> 00:05:47,280
+of these hippos boss style casts don't
+ 
+
+325
+00:05:47,280 --> 00:05:50,510
+of these hippos boss style casts don't
+do anything really extra they just kind
+
+326
+00:05:50,510 --> 00:05:50,520
+do anything really extra they just kind
+ 
+
+327
+00:05:50,520 --> 00:05:53,469
+do anything really extra they just kind
+of are a way to put into English words
+
+328
+00:05:53,469 --> 00:05:53,479
+of are a way to put into English words
+ 
+
+329
+00:05:53,479 --> 00:05:56,060
+of are a way to put into English words
+static cast for example that it's a
+
+330
+00:05:56,060 --> 00:05:56,070
+static cast for example that it's a
+ 
+
+331
+00:05:56,070 --> 00:05:58,909
+static cast for example that it's a
+static cast and they also do some other
+
+332
+00:05:58,909 --> 00:05:58,919
+static cast and they also do some other
+ 
+
+333
+00:05:58,919 --> 00:06:00,440
+static cast and they also do some other
+compile time checks in the case of
+
+334
+00:06:00,440 --> 00:06:00,450
+compile time checks in the case of
+ 
+
+335
+00:06:00,450 --> 00:06:02,060
+compile time checks in the case of
+static cast to see if that conversions
+
+336
+00:06:02,060 --> 00:06:02,070
+static cast to see if that conversions
+ 
+
+337
+00:06:02,070 --> 00:06:03,860
+static cast to see if that conversions
+actually at all ever possible and
+
+338
+00:06:03,860 --> 00:06:03,870
+actually at all ever possible and
+ 
+
+339
+00:06:03,870 --> 00:06:06,050
+actually at all ever possible and
+reinterpret cast as well is kind of
+
+340
+00:06:06,050 --> 00:06:06,060
+reinterpret cast as well is kind of
+ 
+
+341
+00:06:06,060 --> 00:06:07,670
+reinterpret cast as well is kind of
+putting into words the whole type Pawnee
+
+342
+00:06:07,670 --> 00:06:07,680
+putting into words the whole type Pawnee
+ 
+
+343
+00:06:07,680 --> 00:06:09,290
+putting into words the whole type Pawnee
+thing that we talked about it's just a
+
+344
+00:06:09,290 --> 00:06:09,300
+thing that we talked about it's just a
+ 
+
+345
+00:06:09,300 --> 00:06:10,370
+thing that we talked about it's just a
+way to put it into words like
+
+346
+00:06:10,370 --> 00:06:10,380
+way to put it into words like
+ 
+
+347
+00:06:10,380 --> 00:06:12,050
+way to put it into words like
+reinterpret cast I'm reinterpreting this
+
+348
+00:06:12,050 --> 00:06:12,060
+reinterpret cast I'm reinterpreting this
+ 
+
+349
+00:06:12,060 --> 00:06:14,360
+reinterpret cast I'm reinterpreting this
+memory as something else Const cast I'm
+
+350
+00:06:14,360 --> 00:06:14,370
+memory as something else Const cast I'm
+ 
+
+351
+00:06:14,370 --> 00:06:16,580
+memory as something else Const cast I'm
+removing cost I'm adding Const the
+
+352
+00:06:16,580 --> 00:06:16,590
+removing cost I'm adding Const the
+ 
+
+353
+00:06:16,590 --> 00:06:18,920
+removing cost I'm adding Const the
+benefit to having all these costs apart
+
+354
+00:06:18,920 --> 00:06:18,930
+benefit to having all these costs apart
+ 
+
+355
+00:06:18,930 --> 00:06:20,600
+benefit to having all these costs apart
+from those kind of compile time checks
+
+356
+00:06:20,600 --> 00:06:20,610
+from those kind of compile time checks
+ 
+
+357
+00:06:20,610 --> 00:06:22,790
+from those kind of compile time checks
+that you might receive is you can now
+
+358
+00:06:22,790 --> 00:06:22,800
+that you might receive is you can now
+ 
+
+359
+00:06:22,800 --> 00:06:24,800
+that you might receive is you can now
+search for them in your code base all
+
+360
+00:06:24,800 --> 00:06:24,810
+search for them in your code base all
+ 
+
+361
+00:06:24,810 --> 00:06:26,540
+search for them in your code base all
+right if I want to see where I wear my
+
+362
+00:06:26,540 --> 00:06:26,550
+right if I want to see where I wear my
+ 
+
+363
+00:06:26,550 --> 00:06:29,020
+right if I want to see where I wear my
+casting is maybe I having performance
+
+364
+00:06:29,020 --> 00:06:29,030
+casting is maybe I having performance
+ 
+
+365
+00:06:29,030 --> 00:06:30,760
+casting is maybe I having performance
+shoes and I want to not dynamic cast
+
+366
+00:06:30,760 --> 00:06:30,770
+shoes and I want to not dynamic cast
+ 
+
+367
+00:06:30,770 --> 00:06:32,860
+shoes and I want to not dynamic cast
+something I can search for dynamic cast
+
+368
+00:06:32,860 --> 00:06:32,870
+something I can search for dynamic cast
+ 
+
+369
+00:06:32,870 --> 00:06:35,350
+something I can search for dynamic cast
+I can search for static cast if you just
+
+370
+00:06:35,350 --> 00:06:35,360
+I can search for static cast if you just
+ 
+
+371
+00:06:35,360 --> 00:06:37,870
+I can search for static cast if you just
+have a cast like sa self.cards like int
+
+372
+00:06:37,870 --> 00:06:37,880
+have a cast like sa self.cards like int
+ 
+
+373
+00:06:37,880 --> 00:06:39,340
+have a cast like sa self.cards like int
+or whatever like we did with that
+
+374
+00:06:39,340 --> 00:06:39,350
+or whatever like we did with that
+ 
+
+375
+00:06:39,350 --> 00:06:41,620
+or whatever like we did with that
+previous example how you're going to
+
+376
+00:06:41,620 --> 00:06:41,630
+previous example how you're going to
+ 
+
+377
+00:06:41,630 --> 00:06:43,510
+previous example how you're going to
+search for that you can't really search
+
+378
+00:06:43,510 --> 00:06:43,520
+search for that you can't really search
+ 
+
+379
+00:06:43,520 --> 00:06:44,860
+search for that you can't really search
+for it's not something that you can of
+
+380
+00:06:44,860 --> 00:06:44,870
+for it's not something that you can of
+ 
+
+381
+00:06:44,870 --> 00:06:46,330
+for it's not something that you can of
+course you could use like a regex or
+
+382
+00:06:46,330 --> 00:06:46,340
+course you could use like a regex or
+ 
+
+383
+00:06:46,340 --> 00:06:48,130
+course you could use like a regex or
+something like that and actually just I
+
+384
+00:06:48,130 --> 00:06:48,140
+something like that and actually just I
+ 
+
+385
+00:06:48,140 --> 00:06:50,020
+something like that and actually just I
+don't know it just it wouldn't actually
+
+386
+00:06:50,020 --> 00:06:50,030
+don't know it just it wouldn't actually
+ 
+
+387
+00:06:50,030 --> 00:06:52,180
+don't know it just it wouldn't actually
+be practical to do that whereas here
+
+388
+00:06:52,180 --> 00:06:52,190
+be practical to do that whereas here
+ 
+
+389
+00:06:52,190 --> 00:06:54,100
+be practical to do that whereas here
+we've got actual English words that are
+
+390
+00:06:54,100 --> 00:06:54,110
+we've got actual English words that are
+ 
+
+391
+00:06:54,110 --> 00:06:56,200
+we've got actual English words that are
+very easy to search for so it just helps
+
+392
+00:06:56,200 --> 00:06:56,210
+very easy to search for so it just helps
+ 
+
+393
+00:06:56,210 --> 00:06:58,390
+very easy to search for so it just helps
+us both as a programmer reading our code
+
+394
+00:06:58,390 --> 00:06:58,400
+us both as a programmer reading our code
+ 
+
+395
+00:06:58,400 --> 00:07:01,090
+us both as a programmer reading our code
+and writing our code but also it helps
+
+396
+00:07:01,090 --> 00:07:01,100
+and writing our code but also it helps
+ 
+
+397
+00:07:01,100 --> 00:07:02,500
+and writing our code but also it helps
+us to reduce kind of errors that we
+
+398
+00:07:02,500 --> 00:07:02,510
+us to reduce kind of errors that we
+ 
+
+399
+00:07:02,510 --> 00:07:04,270
+us to reduce kind of errors that we
+might accidentally make if we try and
+
+400
+00:07:04,270 --> 00:07:04,280
+might accidentally make if we try and
+ 
+
+401
+00:07:04,280 --> 00:07:05,950
+might accidentally make if we try and
+cast certain things that are
+
+402
+00:07:05,950 --> 00:07:05,960
+cast certain things that are
+ 
+
+403
+00:07:05,960 --> 00:07:08,680
+cast certain things that are
+incompatible good example is we've got a
+
+404
+00:07:08,680 --> 00:07:08,690
+incompatible good example is we've got a
+ 
+
+405
+00:07:08,690 --> 00:07:10,840
+incompatible good example is we've got a
+few classes here banks derived in
+
+406
+00:07:10,840 --> 00:07:10,850
+few classes here banks derived in
+ 
+
+407
+00:07:10,850 --> 00:07:13,570
+few classes here banks derived in
+another class if I just try and cost
+
+408
+00:07:13,570 --> 00:07:13,580
+another class if I just try and cost
+ 
+
+409
+00:07:13,580 --> 00:07:16,030
+another class if I just try and cost
+this value which is clearly an int into
+
+410
+00:07:16,030 --> 00:07:16,040
+this value which is clearly an int into
+ 
+
+411
+00:07:16,040 --> 00:07:18,250
+this value which is clearly an int into
+like I don't know another class that's
+
+412
+00:07:18,250 --> 00:07:18,260
+like I don't know another class that's
+ 
+
+413
+00:07:18,260 --> 00:07:21,640
+like I don't know another class that's
+going to result in an error because well
+
+414
+00:07:21,640 --> 00:07:21,650
+going to result in an error because well
+ 
+
+415
+00:07:21,650 --> 00:07:23,050
+going to result in an error because well
+it came in this case it's going to be
+
+416
+00:07:23,050 --> 00:07:23,060
+it came in this case it's going to be
+ 
+
+417
+00:07:23,060 --> 00:07:25,030
+it came in this case it's going to be
+because of a constructor but if I add
+
+418
+00:07:25,030 --> 00:07:25,040
+because of a constructor but if I add
+ 
+
+419
+00:07:25,040 --> 00:07:26,380
+because of a constructor but if I add
+like a pointer or something like that
+
+420
+00:07:26,380 --> 00:07:26,390
+like a pointer or something like that
+ 
+
+421
+00:07:26,390 --> 00:07:28,720
+like a pointer or something like that
+now to this case you can see it's an
+
+422
+00:07:28,720 --> 00:07:28,730
+now to this case you can see it's an
+ 
+
+423
+00:07:28,730 --> 00:07:30,550
+now to this case you can see it's an
+invalid type conversion so what simple
+
+424
+00:07:30,550 --> 00:07:30,560
+invalid type conversion so what simple
+ 
+
+425
+00:07:30,560 --> 00:07:31,660
+invalid type conversion so what simple
+class has done is the compiler has
+
+426
+00:07:31,660 --> 00:07:31,670
+class has done is the compiler has
+ 
+
+427
+00:07:31,670 --> 00:07:33,160
+class has done is the compiler has
+looked at that and been like that's
+
+428
+00:07:33,160 --> 00:07:33,170
+looked at that and been like that's
+ 
+
+429
+00:07:33,170 --> 00:07:36,040
+looked at that and been like that's
+never gonna work right and even if we do
+
+430
+00:07:36,040 --> 00:07:36,050
+never gonna work right and even if we do
+ 
+
+431
+00:07:36,050 --> 00:07:38,920
+never gonna work right and even if we do
+take the memory address of it right
+
+432
+00:07:38,920 --> 00:07:38,930
+take the memory address of it right
+ 
+
+433
+00:07:38,930 --> 00:07:40,210
+take the memory address of it right
+which of course gives us an inner
+
+434
+00:07:40,210 --> 00:07:40,220
+which of course gives us an inner
+ 
+
+435
+00:07:40,220 --> 00:07:42,310
+which of course gives us an inner
+pointer and we try and type on it that's
+
+436
+00:07:42,310 --> 00:07:42,320
+pointer and we try and type on it that's
+ 
+
+437
+00:07:42,320 --> 00:07:43,900
+pointer and we try and type on it that's
+not gonna work it's invalid type
+
+438
+00:07:43,900 --> 00:07:43,910
+not gonna work it's invalid type
+ 
+
+439
+00:07:43,910 --> 00:07:46,780
+not gonna work it's invalid type
+conversion now for type owning as I just
+
+440
+00:07:46,780 --> 00:07:46,790
+conversion now for type owning as I just
+ 
+
+441
+00:07:46,790 --> 00:07:47,950
+conversion now for type owning as I just
+explained we would need to use
+
+442
+00:07:47,950 --> 00:07:47,960
+explained we would need to use
+ 
+
+443
+00:07:47,960 --> 00:07:49,570
+explained we would need to use
+reinterpret cast and if we do you can
+
+444
+00:07:49,570 --> 00:07:49,580
+reinterpret cast and if we do you can
+ 
+
+445
+00:07:49,580 --> 00:07:51,310
+reinterpret cast and if we do you can
+see we don't get any errors who've now
+
+446
+00:07:51,310 --> 00:07:51,320
+see we don't get any errors who've now
+ 
+
+447
+00:07:51,320 --> 00:07:54,070
+see we don't get any errors who've now
+reinterpreted the data that is at that
+
+448
+00:07:54,070 --> 00:07:54,080
+reinterpreted the data that is at that
+ 
+
+449
+00:07:54,080 --> 00:07:56,350
+reinterpreted the data that is at that
+value pointer into being a pointer to
+
+450
+00:07:56,350 --> 00:07:56,360
+value pointer into being a pointer to
+ 
+
+451
+00:07:56,360 --> 00:07:59,770
+value pointer into being a pointer to
+another class instance but the point is
+
+452
+00:07:59,770 --> 00:07:59,780
+another class instance but the point is
+ 
+
+453
+00:07:59,780 --> 00:08:01,930
+another class instance but the point is
+with with things like this it adds
+
+454
+00:08:01,930 --> 00:08:01,940
+with with things like this it adds
+ 
+
+455
+00:08:01,940 --> 00:08:03,880
+with with things like this it adds
+actual compile time checking because it
+
+456
+00:08:03,880 --> 00:08:03,890
+actual compile time checking because it
+ 
+
+457
+00:08:03,890 --> 00:08:05,200
+actual compile time checking because it
+knows that we can't do certain
+
+458
+00:08:05,200 --> 00:08:05,210
+knows that we can't do certain
+ 
+
+459
+00:08:05,210 --> 00:08:08,020
+knows that we can't do certain
+conversions whereas this wouldn't be the
+
+460
+00:08:08,020 --> 00:08:08,030
+conversions whereas this wouldn't be the
+ 
+
+461
+00:08:08,030 --> 00:08:10,420
+conversions whereas this wouldn't be the
+case of course if we just used a normal
+
+462
+00:08:10,420 --> 00:08:10,430
+case of course if we just used a normal
+ 
+
+463
+00:08:10,430 --> 00:08:11,890
+case of course if we just used a normal
+say star cast it were just kind of
+
+464
+00:08:11,890 --> 00:08:11,900
+say star cast it were just kind of
+ 
+
+465
+00:08:11,900 --> 00:08:14,170
+say star cast it were just kind of
+default to doing what a range Shepherd
+
+466
+00:08:14,170 --> 00:08:14,180
+default to doing what a range Shepherd
+ 
+
+467
+00:08:14,180 --> 00:08:16,000
+default to doing what a range Shepherd
+cast would do and I'm saying a lot of
+
+468
+00:08:16,000 --> 00:08:16,010
+cast would do and I'm saying a lot of
+ 
+
+469
+00:08:16,010 --> 00:08:17,980
+cast would do and I'm saying a lot of
+words and it might be a little bit hard
+
+470
+00:08:17,980 --> 00:08:17,990
+words and it might be a little bit hard
+ 
+
+471
+00:08:17,990 --> 00:08:21,550
+words and it might be a little bit hard
+to follow but again the best way to to
+
+472
+00:08:21,550 --> 00:08:21,560
+to follow but again the best way to to
+ 
+
+473
+00:08:21,560 --> 00:08:23,470
+to follow but again the best way to to
+actually learn this stuff is just a
+
+474
+00:08:23,470 --> 00:08:23,480
+actually learn this stuff is just a
+ 
+
+475
+00:08:23,480 --> 00:08:27,550
+actually learn this stuff is just a
+practice it try and build yourself an
+
+476
+00:08:27,550 --> 00:08:27,560
+practice it try and build yourself an
+ 
+
+477
+00:08:27,560 --> 00:08:30,100
+practice it try and build yourself an
+example of using static cast or
+
+478
+00:08:30,100 --> 00:08:30,110
+example of using static cast or
+ 
+
+479
+00:08:30,110 --> 00:08:32,950
+example of using static cast or
+interpret cast a Const cast a dynamic
+
+480
+00:08:32,950 --> 00:08:32,960
+interpret cast a Const cast a dynamic
+ 
+
+481
+00:08:32,960 --> 00:08:34,310
+interpret cast a Const cast a dynamic
+cast I'll show you a dynamic car
+
+482
+00:08:34,310 --> 00:08:34,320
+cast I'll show you a dynamic car
+ 
+
+483
+00:08:34,320 --> 00:08:36,080
+cast I'll show you a dynamic car
+cast example any minute but just trying
+
+484
+00:08:36,080 --> 00:08:36,090
+cast example any minute but just trying
+ 
+
+485
+00:08:36,090 --> 00:08:39,320
+cast example any minute but just trying
+to get yourself and then that's the best
+
+486
+00:08:39,320 --> 00:08:39,330
+to get yourself and then that's the best
+ 
+
+487
+00:08:39,330 --> 00:08:40,730
+to get yourself and then that's the best
+way to kind of work out how it actually
+
+488
+00:08:40,730 --> 00:08:40,740
+way to kind of work out how it actually
+ 
+
+489
+00:08:40,740 --> 00:08:43,820
+way to kind of work out how it actually
+works and when you can use each one so
+
+490
+00:08:43,820 --> 00:08:43,830
+works and when you can use each one so
+ 
+
+491
+00:08:43,830 --> 00:08:46,700
+works and when you can use each one so
+if we take a look at dynamic cast what
+
+492
+00:08:46,700 --> 00:08:46,710
+if we take a look at dynamic cast what
+ 
+
+493
+00:08:46,710 --> 00:08:49,310
+if we take a look at dynamic cast what
+dynamic class will actually do is
+
+494
+00:08:49,310 --> 00:08:49,320
+dynamic class will actually do is
+ 
+
+495
+00:08:49,320 --> 00:08:50,810
+dynamic class will actually do is
+suppose that we had maybe we made a
+
+496
+00:08:50,810 --> 00:08:50,820
+suppose that we had maybe we made a
+ 
+
+497
+00:08:50,820 --> 00:08:53,120
+suppose that we had maybe we made a
+derived class instance right so I said
+
+498
+00:08:53,120 --> 00:08:53,130
+derived class instance right so I said
+ 
+
+499
+00:08:53,130 --> 00:08:55,310
+derived class instance right so I said
+derived derived equals new derived and
+
+500
+00:08:55,310 --> 00:08:55,320
+derived derived equals new derived and
+ 
+
+501
+00:08:55,320 --> 00:08:57,230
+derived derived equals new derived and
+then somewhere along the line I decided
+
+502
+00:08:57,230 --> 00:08:57,240
+then somewhere along the line I decided
+ 
+
+503
+00:08:57,240 --> 00:09:00,980
+then somewhere along the line I decided
+to actually cast that into a base right
+
+504
+00:09:00,980 --> 00:09:00,990
+to actually cast that into a base right
+ 
+
+505
+00:09:00,990 --> 00:09:04,730
+to actually cast that into a base right
+so a base base equals derived now what I
+
+506
+00:09:04,730 --> 00:09:04,740
+so a base base equals derived now what I
+ 
+
+507
+00:09:04,740 --> 00:09:07,160
+so a base base equals derived now what I
+want to do later is figure out ok hey I
+
+508
+00:09:07,160 --> 00:09:07,170
+want to do later is figure out ok hey I
+ 
+
+509
+00:09:07,170 --> 00:09:10,100
+want to do later is figure out ok hey I
+have a base pointer is it actually a
+
+510
+00:09:10,100 --> 00:09:10,110
+have a base pointer is it actually a
+ 
+
+511
+00:09:10,110 --> 00:09:12,560
+have a base pointer is it actually a
+derived instance or is it in another
+
+512
+00:09:12,560 --> 00:09:12,570
+derived instance or is it in another
+ 
+
+513
+00:09:12,570 --> 00:09:14,210
+derived instance or is it in another
+classes since we can say they both
+
+514
+00:09:14,210 --> 00:09:14,220
+classes since we can say they both
+ 
+
+515
+00:09:14,220 --> 00:09:18,290
+classes since we can say they both
+extend base now if I try and use it what
+
+516
+00:09:18,290 --> 00:09:18,300
+extend base now if I try and use it what
+ 
+
+517
+00:09:18,300 --> 00:09:20,030
+extend base now if I try and use it what
+I can do with dynamic cast is actually
+
+518
+00:09:20,030 --> 00:09:20,040
+I can do with dynamic cast is actually
+ 
+
+519
+00:09:20,040 --> 00:09:22,130
+I can do with dynamic cast is actually
+kind of not only asked that question but
+
+520
+00:09:22,130 --> 00:09:22,140
+kind of not only asked that question but
+ 
+
+521
+00:09:22,140 --> 00:09:24,020
+kind of not only asked that question but
+attempt that conversion and do something
+
+522
+00:09:24,020 --> 00:09:24,030
+attempt that conversion and do something
+ 
+
+523
+00:09:24,030 --> 00:09:26,690
+attempt that conversion and do something
+if it fails so we know for a fact based
+
+524
+00:09:26,690 --> 00:09:26,700
+if it fails so we know for a fact based
+ 
+
+525
+00:09:26,700 --> 00:09:28,790
+if it fails so we know for a fact based
+on this code that base is actually an
+
+526
+00:09:28,790 --> 00:09:28,800
+on this code that base is actually an
+ 
+
+527
+00:09:28,800 --> 00:09:31,310
+on this code that base is actually an
+instance of the derived class but let's
+
+528
+00:09:31,310 --> 00:09:31,320
+instance of the derived class but let's
+ 
+
+529
+00:09:31,320 --> 00:09:32,870
+instance of the derived class but let's
+pretend that we didn't know that and
+
+530
+00:09:32,870 --> 00:09:32,880
+pretend that we didn't know that and
+ 
+
+531
+00:09:32,880 --> 00:09:36,160
+pretend that we didn't know that and
+we'll just say another class AC equals
+
+532
+00:09:36,160 --> 00:09:36,170
+we'll just say another class AC equals
+ 
+
+533
+00:09:36,170 --> 00:09:42,830
+we'll just say another class AC equals
+dynamic cast another class and then AC
+
+534
+00:09:42,830 --> 00:09:42,840
+dynamic cast another class and then AC
+ 
+
+535
+00:09:42,840 --> 00:09:46,130
+dynamic cast another class and then AC
+right and one pointer and of course ok
+
+536
+00:09:46,130 --> 00:09:46,140
+right and one pointer and of course ok
+ 
+
+537
+00:09:46,140 --> 00:09:48,230
+right and one pointer and of course ok
+now what's gonna happen here is if we
+
+538
+00:09:48,230 --> 00:09:48,240
+now what's gonna happen here is if we
+ 
+
+539
+00:09:48,240 --> 00:09:50,960
+now what's gonna happen here is if we
+had just used a static cast which by the
+
+540
+00:09:50,960 --> 00:09:50,970
+had just used a static cast which by the
+ 
+
+541
+00:09:50,970 --> 00:09:53,450
+had just used a static cast which by the
+way we can see we can do in this case it
+
+542
+00:09:53,450 --> 00:09:53,460
+way we can see we can do in this case it
+ 
+
+543
+00:09:53,460 --> 00:09:55,520
+way we can see we can do in this case it
+does the same thing as a safe star cast
+
+544
+00:09:55,520 --> 00:09:55,530
+does the same thing as a safe star cast
+ 
+
+545
+00:09:55,530 --> 00:09:57,530
+does the same thing as a safe star cast
+or if we use this a star cast it would
+
+546
+00:09:57,530 --> 00:09:57,540
+or if we use this a star cast it would
+ 
+
+547
+00:09:57,540 --> 00:09:59,330
+or if we use this a star cast it would
+just work like isn't it would just give
+
+548
+00:09:59,330 --> 00:09:59,340
+just work like isn't it would just give
+ 
+
+549
+00:09:59,340 --> 00:10:01,700
+just work like isn't it would just give
+us that value and of course things might
+
+550
+00:10:01,700 --> 00:10:01,710
+us that value and of course things might
+ 
+
+551
+00:10:01,710 --> 00:10:04,490
+us that value and of course things might
+go wrong later on because you know AC is
+
+552
+00:10:04,490 --> 00:10:04,500
+go wrong later on because you know AC is
+ 
+
+553
+00:10:04,500 --> 00:10:06,500
+go wrong later on because you know AC is
+not in fact another class it's actually
+
+554
+00:10:06,500 --> 00:10:06,510
+not in fact another class it's actually
+ 
+
+555
+00:10:06,510 --> 00:10:08,690
+not in fact another class it's actually
+a derived instance we've just basically
+
+556
+00:10:08,690 --> 00:10:08,700
+a derived instance we've just basically
+ 
+
+557
+00:10:08,700 --> 00:10:11,300
+a derived instance we've just basically
+type ones it but with dynamic cast what
+
+558
+00:10:11,300 --> 00:10:11,310
+type ones it but with dynamic cast what
+ 
+
+559
+00:10:11,310 --> 00:10:12,950
+type ones it but with dynamic cast what
+it's actually going to do is it's going
+
+560
+00:10:12,950 --> 00:10:12,960
+it's actually going to do is it's going
+ 
+
+561
+00:10:12,960 --> 00:10:16,280
+it's actually going to do is it's going
+to see if that is actually the case and
+
+562
+00:10:16,280 --> 00:10:16,290
+to see if that is actually the case and
+ 
+
+563
+00:10:16,290 --> 00:10:18,290
+to see if that is actually the case and
+of course over here I need to make sure
+
+564
+00:10:18,290 --> 00:10:18,300
+of course over here I need to make sure
+ 
+
+565
+00:10:18,300 --> 00:10:21,650
+of course over here I need to make sure
+I pass in base and not AC let's hit that
+
+566
+00:10:21,650 --> 00:10:21,660
+I pass in base and not AC let's hit that
+ 
+
+567
+00:10:21,660 --> 00:10:24,260
+I pass in base and not AC let's hit that
+five and see what happens so you can see
+
+568
+00:10:24,260 --> 00:10:24,270
+five and see what happens so you can see
+ 
+
+569
+00:10:24,270 --> 00:10:26,420
+five and see what happens so you can see
+once I actually do that if I hit f10 AC
+
+570
+00:10:26,420 --> 00:10:26,430
+once I actually do that if I hit f10 AC
+ 
+
+571
+00:10:26,430 --> 00:10:28,220
+once I actually do that if I hit f10 AC
+is equal to null because it is in fact
+
+572
+00:10:28,220 --> 00:10:28,230
+is equal to null because it is in fact
+ 
+
+573
+00:10:28,230 --> 00:10:29,780
+is equal to null because it is in fact
+not bad and of course you could then
+
+574
+00:10:29,780 --> 00:10:29,790
+not bad and of course you could then
+ 
+
+575
+00:10:29,790 --> 00:10:32,150
+not bad and of course you could then
+check it you could say if not AC or if
+
+576
+00:10:32,150 --> 00:10:32,160
+check it you could say if not AC or if
+ 
+
+577
+00:10:32,160 --> 00:10:34,760
+check it you could say if not AC or if
+IC equals null then maybe we know that
+
+578
+00:10:34,760 --> 00:10:34,770
+IC equals null then maybe we know that
+ 
+
+579
+00:10:34,770 --> 00:10:36,710
+IC equals null then maybe we know that
+it's not that class or a way to check
+
+580
+00:10:36,710 --> 00:10:36,720
+it's not that class or a way to check
+ 
+
+581
+00:10:36,720 --> 00:10:38,570
+it's not that class or a way to check
+for if it is that class is just to say
+
+582
+00:10:38,570 --> 00:10:38,580
+for if it is that class is just to say
+ 
+
+583
+00:10:38,580 --> 00:10:41,360
+for if it is that class is just to say
+if AC that means that the type of
+
+584
+00:10:41,360 --> 00:10:41,370
+if AC that means that the type of
+ 
+
+585
+00:10:41,370 --> 00:10:42,890
+if AC that means that the type of
+conversion was successful and we now
+
+586
+00:10:42,890 --> 00:10:42,900
+conversion was successful and we now
+ 
+
+587
+00:10:42,900 --> 00:10:43,290
+conversion was successful and we now
+know
+
+588
+00:10:43,290 --> 00:10:43,300
+know
+ 
+
+589
+00:10:43,300 --> 00:10:45,930
+know
+bass is in fact an instance and instance
+
+590
+00:10:45,930 --> 00:10:45,940
+bass is in fact an instance and instance
+ 
+
+591
+00:10:45,940 --> 00:10:49,440
+bass is in fact an instance and instance
+of derived right sorry an instance of
+
+592
+00:10:49,440 --> 00:10:49,450
+of derived right sorry an instance of
+ 
+
+593
+00:10:49,450 --> 00:10:52,860
+of derived right sorry an instance of
+another class and of course if I do
+
+594
+00:10:52,860 --> 00:10:52,870
+another class and of course if I do
+ 
+
+595
+00:10:52,870 --> 00:10:54,389
+another class and of course if I do
+change this around so it works by
+
+596
+00:10:54,389 --> 00:10:54,399
+change this around so it works by
+ 
+
+597
+00:10:54,399 --> 00:10:57,870
+change this around so it works by
+setting it equal to derived hit at five
+
+598
+00:10:57,870 --> 00:10:57,880
+setting it equal to derived hit at five
+ 
+
+599
+00:10:57,880 --> 00:10:59,610
+setting it equal to derived hit at five
+and then you can see if I hit up ten
+
+600
+00:10:59,610 --> 00:10:59,620
+and then you can see if I hit up ten
+ 
+
+601
+00:10:59,620 --> 00:11:01,560
+and then you can see if I hit up ten
+here it does in fact you also valid
+
+602
+00:11:01,560 --> 00:11:01,570
+here it does in fact you also valid
+ 
+
+603
+00:11:01,570 --> 00:11:03,269
+here it does in fact you also valid
+pointer because that conversion was
+
+604
+00:11:03,269 --> 00:11:03,279
+pointer because that conversion was
+ 
+
+605
+00:11:03,279 --> 00:11:05,400
+pointer because that conversion was
+successful so dynamic cast is a great
+
+606
+00:11:05,400 --> 00:11:05,410
+successful so dynamic cast is a great
+ 
+
+607
+00:11:05,410 --> 00:11:07,560
+successful so dynamic cast is a great
+way to see if it's actually worked now
+
+608
+00:11:07,560 --> 00:11:07,570
+way to see if it's actually worked now
+ 
+
+609
+00:11:07,570 --> 00:11:09,329
+way to see if it's actually worked now
+this does tie in very closely to the
+
+610
+00:11:09,329 --> 00:11:09,339
+this does tie in very closely to the
+ 
+
+611
+00:11:09,339 --> 00:11:11,910
+this does tie in very closely to the
+runtime type information RT TI and it
+
+612
+00:11:11,910 --> 00:11:11,920
+runtime type information RT TI and it
+ 
+
+613
+00:11:11,920 --> 00:11:13,560
+runtime type information RT TI and it
+requires requires a whole bunch of
+
+614
+00:11:13,560 --> 00:11:13,570
+requires requires a whole bunch of
+ 
+
+615
+00:11:13,570 --> 00:11:14,610
+requires requires a whole bunch of
+things which we'll talk about in a
+
+616
+00:11:14,610 --> 00:11:14,620
+things which we'll talk about in a
+ 
+
+617
+00:11:14,620 --> 00:11:17,280
+things which we'll talk about in a
+specific video about dynamic casting but
+
+618
+00:11:17,280 --> 00:11:17,290
+specific video about dynamic casting but
+ 
+
+619
+00:11:17,290 --> 00:11:18,990
+specific video about dynamic casting but
+just so you know these casting operators
+
+620
+00:11:18,990 --> 00:11:19,000
+just so you know these casting operators
+ 
+
+621
+00:11:19,000 --> 00:11:20,880
+just so you know these casting operators
+are kind of available to you as a way to
+
+622
+00:11:20,880 --> 00:11:20,890
+are kind of available to you as a way to
+ 
+
+623
+00:11:20,890 --> 00:11:24,000
+are kind of available to you as a way to
+simplify casting and to maybe make it
+
+624
+00:11:24,000 --> 00:11:24,010
+simplify casting and to maybe make it
+ 
+
+625
+00:11:24,010 --> 00:11:26,310
+simplify casting and to maybe make it
+more solid in the sense that it will do
+
+626
+00:11:26,310 --> 00:11:26,320
+more solid in the sense that it will do
+ 
+
+627
+00:11:26,320 --> 00:11:28,410
+more solid in the sense that it will do
+compile time checking dynamic cast will
+
+628
+00:11:28,410 --> 00:11:28,420
+compile time checking dynamic cast will
+ 
+
+629
+00:11:28,420 --> 00:11:31,410
+compile time checking dynamic cast will
+do runtime checking and you'll get all
+
+630
+00:11:31,410 --> 00:11:31,420
+do runtime checking and you'll get all
+ 
+
+631
+00:11:31,420 --> 00:11:33,090
+do runtime checking and you'll get all
+that kind of hopefully more solid code
+
+632
+00:11:33,090 --> 00:11:33,100
+that kind of hopefully more solid code
+ 
+
+633
+00:11:33,100 --> 00:11:35,730
+that kind of hopefully more solid code
+base by using casting operators like
+
+634
+00:11:35,730 --> 00:11:35,740
+base by using casting operators like
+ 
+
+635
+00:11:35,740 --> 00:11:38,069
+base by using casting operators like
+that me personally I tend to use C style
+
+636
+00:11:38,069 --> 00:11:38,079
+that me personally I tend to use C style
+ 
+
+637
+00:11:38,079 --> 00:11:40,740
+that me personally I tend to use C style
+casts most of the time but I do
+
+638
+00:11:40,740 --> 00:11:40,750
+casts most of the time but I do
+ 
+
+639
+00:11:40,750 --> 00:11:42,389
+casts most of the time but I do
+encourage if you're working on a brand
+
+640
+00:11:42,389 --> 00:11:42,399
+encourage if you're working on a brand
+ 
+
+641
+00:11:42,399 --> 00:11:43,920
+encourage if you're working on a brand
+new project that you're starting from
+
+642
+00:11:43,920 --> 00:11:43,930
+new project that you're starting from
+ 
+
+643
+00:11:43,930 --> 00:11:45,569
+new project that you're starting from
+scratch or if you have a very small
+
+644
+00:11:45,569 --> 00:11:45,579
+scratch or if you have a very small
+ 
+
+645
+00:11:45,579 --> 00:11:47,639
+scratch or if you have a very small
+project you should use sea salt say
+
+646
+00:11:47,639 --> 00:11:47,649
+project you should use sea salt say
+ 
+
+647
+00:11:47,649 --> 00:11:50,069
+project you should use sea salt say
+sorry C++ start casting like static cast
+
+648
+00:11:50,069 --> 00:11:50,079
+sorry C++ start casting like static cast
+ 
+
+649
+00:11:50,079 --> 00:11:52,260
+sorry C++ start casting like static cast
+dynamic re interpret cast all of that
+
+650
+00:11:52,260 --> 00:11:52,270
+dynamic re interpret cast all of that
+ 
+
+651
+00:11:52,270 --> 00:11:56,329
+dynamic re interpret cast all of that
+kind of stuff because those those casts
+
+652
+00:11:56,329 --> 00:11:56,339
+kind of stuff because those those casts
+ 
+
+653
+00:11:56,339 --> 00:11:59,160
+kind of stuff because those those casts
+do make your code more solid and are
+
+654
+00:11:59,160 --> 00:11:59,170
+do make your code more solid and are
+ 
+
+655
+00:11:59,170 --> 00:12:02,730
+do make your code more solid and are
+better for everyone involved really and
+
+656
+00:12:02,730 --> 00:12:02,740
+better for everyone involved really and
+ 
+
+657
+00:12:02,740 --> 00:12:04,980
+better for everyone involved really and
+cons car didn't really touch on but
+
+658
+00:12:04,980 --> 00:12:04,990
+cons car didn't really touch on but
+ 
+
+659
+00:12:04,990 --> 00:12:06,569
+cons car didn't really touch on but
+that's just literally you use it to add
+
+660
+00:12:06,569 --> 00:12:06,579
+that's just literally you use it to add
+ 
+
+661
+00:12:06,579 --> 00:12:09,510
+that's just literally you use it to add
+or remove Const to something easy you
+
+662
+00:12:09,510 --> 00:12:09,520
+or remove Const to something easy you
+ 
+
+663
+00:12:09,520 --> 00:12:11,340
+or remove Const to something easy you
+can add constantly anyway but it's
+
+664
+00:12:11,340 --> 00:12:11,350
+can add constantly anyway but it's
+ 
+
+665
+00:12:11,350 --> 00:12:13,829
+can add constantly anyway but it's
+mostly for removing Const and again it's
+
+666
+00:12:13,829 --> 00:12:13,839
+mostly for removing Const and again it's
+ 
+
+667
+00:12:13,839 --> 00:12:14,940
+mostly for removing Const and again it's
+good to just have that in your code base
+
+668
+00:12:14,940 --> 00:12:14,950
+good to just have that in your code base
+ 
+
+669
+00:12:14,950 --> 00:12:16,440
+good to just have that in your code base
+because now you can search for all the
+
+670
+00:12:16,440 --> 00:12:16,450
+because now you can search for all the
+ 
+
+671
+00:12:16,450 --> 00:12:18,180
+because now you can search for all the
+naughty times you've decided to remove
+
+672
+00:12:18,180 --> 00:12:18,190
+naughty times you've decided to remove
+ 
+
+673
+00:12:18,190 --> 00:12:20,790
+naughty times you've decided to remove
+Const and maybe fix that or just come up
+
+674
+00:12:20,790 --> 00:12:20,800
+Const and maybe fix that or just come up
+ 
+
+675
+00:12:20,800 --> 00:12:22,470
+Const and maybe fix that or just come up
+with something else as well
+
+676
+00:12:22,470 --> 00:12:22,480
+with something else as well
+ 
+
+677
+00:12:22,480 --> 00:12:23,880
+with something else as well
+so that's really useful and then the
+
+678
+00:12:23,880 --> 00:12:23,890
+so that's really useful and then the
+ 
+
+679
+00:12:23,890 --> 00:12:25,769
+so that's really useful and then the
+other thing was reinterpret cost if you
+
+680
+00:12:25,769 --> 00:12:25,779
+other thing was reinterpret cost if you
+ 
+
+681
+00:12:25,779 --> 00:12:27,060
+other thing was reinterpret cost if you
+look at that type hunting video that
+
+682
+00:12:27,060 --> 00:12:27,070
+look at that type hunting video that
+ 
+
+683
+00:12:27,070 --> 00:12:27,960
+look at that type hunting video that
+I've linked at the beginning of this
+
+684
+00:12:27,960 --> 00:12:27,970
+I've linked at the beginning of this
+ 
+
+685
+00:12:27,970 --> 00:12:31,439
+I've linked at the beginning of this
+video everything I did there you can
+
+686
+00:12:31,439 --> 00:12:31,449
+video everything I did there you can
+ 
+
+687
+00:12:31,449 --> 00:12:32,790
+video everything I did there you can
+basically use very Tober cost so that
+
+688
+00:12:32,790 --> 00:12:32,800
+basically use very Tober cost so that
+ 
+
+689
+00:12:32,800 --> 00:12:34,350
+basically use very Tober cost so that
+kind of that's what reinterpret cast is
+
+690
+00:12:34,350 --> 00:12:34,360
+kind of that's what reinterpret cast is
+ 
+
+691
+00:12:34,360 --> 00:12:36,269
+kind of that's what reinterpret cast is
+used for it's when I don't actually want
+
+692
+00:12:36,269 --> 00:12:36,279
+used for it's when I don't actually want
+ 
+
+693
+00:12:36,279 --> 00:12:38,040
+used for it's when I don't actually want
+to convert anything I just want to take
+
+694
+00:12:38,040 --> 00:12:38,050
+to convert anything I just want to take
+ 
+
+695
+00:12:38,050 --> 00:12:40,120
+to convert anything I just want to take
+that kind of pointer and interpret it
+
+696
+00:12:40,120 --> 00:12:40,130
+that kind of pointer and interpret it
+ 
+
+697
+00:12:40,130 --> 00:12:41,320
+that kind of pointer and interpret it
+something else I want to interpret
+
+698
+00:12:41,320 --> 00:12:41,330
+something else I want to interpret
+ 
+
+699
+00:12:41,330 --> 00:12:43,840
+something else I want to interpret
+existing memory as another type that's
+
+700
+00:12:43,840 --> 00:12:43,850
+existing memory as another type that's
+ 
+
+701
+00:12:43,850 --> 00:12:45,250
+existing memory as another type that's
+what our interpret caste is useful
+
+702
+00:12:45,250 --> 00:12:45,260
+what our interpret caste is useful
+ 
+
+703
+00:12:45,260 --> 00:12:46,540
+what our interpret caste is useful
+anyway I hope you guys enjoyed this
+
+704
+00:12:46,540 --> 00:12:46,550
+anyway I hope you guys enjoyed this
+ 
+
+705
+00:12:46,550 --> 00:12:47,860
+anyway I hope you guys enjoyed this
+video if you didn't hear that like
+
+706
+00:12:47,860 --> 00:12:47,870
+video if you didn't hear that like
+ 
+
+707
+00:12:47,870 --> 00:12:49,570
+video if you didn't hear that like
+button you can help support this series
+
+708
+00:12:49,570 --> 00:12:49,580
+button you can help support this series
+ 
+
+709
+00:12:49,580 --> 00:12:50,920
+button you can help support this series
+by going to patreon accomplice after the
+
+710
+00:12:50,920 --> 00:12:50,930
+by going to patreon accomplice after the
+ 
+
+711
+00:12:50,930 --> 00:12:53,050
+by going to patreon accomplice after the
+turn okay showed out to everyone who
+
+712
+00:12:53,050 --> 00:12:53,060
+turn okay showed out to everyone who
+ 
+
+713
+00:12:53,060 --> 00:12:54,670
+turn okay showed out to everyone who
+supports this series because it would
+
+714
+00:12:54,670 --> 00:12:54,680
+supports this series because it would
+ 
+
+715
+00:12:54,680 --> 00:12:56,500
+supports this series because it would
+not be here without you guys and it
+
+716
+00:12:56,500 --> 00:12:56,510
+not be here without you guys and it
+ 
+
+717
+00:12:56,510 --> 00:12:58,720
+not be here without you guys and it
+certainly wouldn't be wouldn't be an
+
+718
+00:12:58,720 --> 00:12:58,730
+certainly wouldn't be wouldn't be an
+ 
+
+719
+00:12:58,730 --> 00:13:00,910
+certainly wouldn't be wouldn't be an
+ongoing thing that I keep keep doing so
+
+720
+00:13:00,910 --> 00:13:00,920
+ongoing thing that I keep keep doing so
+ 
+
+721
+00:13:00,920 --> 00:13:02,530
+ongoing thing that I keep keep doing so
+yeah thank you because I love making
+
+722
+00:13:02,530 --> 00:13:02,540
+yeah thank you because I love making
+ 
+
+723
+00:13:02,540 --> 00:13:05,830
+yeah thank you because I love making
+videos for you guys I will see you next
+
+724
+00:13:05,830 --> 00:13:05,840
+videos for you guys I will see you next
+ 
+
+725
+00:13:05,840 --> 00:13:08,050
+videos for you guys I will see you next
+time good bye
+
+726
+00:13:08,050 --> 00:13:08,060
+time good bye
+ 
+
+727
+00:13:08,060 --> 00:13:23,240
+time good bye
+[Music]
+

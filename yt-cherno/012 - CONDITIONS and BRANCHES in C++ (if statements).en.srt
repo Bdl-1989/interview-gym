@@ -1,0 +1,6865 @@
+1
+00:00:00,000 --> 00:00:01,939
+
+hey what's up guys my name is vashanoo
+
+2
+00:00:01,939 --> 00:00:01,949
+hey what's up guys my name is vashanoo
+ 
+
+3
+00:00:01,949 --> 00:00:04,820
+hey what's up guys my name is vashanoo
+and welcome back to my c++ series so
+
+4
+00:00:04,820 --> 00:00:04,830
+and welcome back to my c++ series so
+ 
+
+5
+00:00:04,830 --> 00:00:06,070
+and welcome back to my c++ series so
+today we're going to be taking a look at
+
+6
+00:00:06,070 --> 00:00:06,080
+today we're going to be taking a look at
+ 
+
+7
+00:00:06,080 --> 00:00:07,970
+today we're going to be taking a look at
+conditionals in other words if
+
+8
+00:00:07,970 --> 00:00:07,980
+conditionals in other words if
+ 
+
+9
+00:00:07,980 --> 00:00:12,410
+conditionals in other words if
+statements if if-else else is everything
+
+10
+00:00:12,410 --> 00:00:12,420
+statements if if-else else is everything
+ 
+
+11
+00:00:12,420 --> 00:00:14,180
+statements if if-else else is everything
+now I know that for a lot of you you
+
+12
+00:00:14,180 --> 00:00:14,190
+now I know that for a lot of you you
+ 
+
+13
+00:00:14,190 --> 00:00:15,410
+now I know that for a lot of you you
+might think that you already know
+
+14
+00:00:15,410 --> 00:00:15,420
+might think that you already know
+ 
+
+15
+00:00:15,420 --> 00:00:16,640
+might think that you already know
+everything there is to know about if
+
+16
+00:00:16,640 --> 00:00:16,650
+everything there is to know about if
+ 
+
+17
+00:00:16,650 --> 00:00:18,140
+everything there is to know about if
+statements and out statements and all of
+
+18
+00:00:18,140 --> 00:00:18,150
+statements and out statements and all of
+ 
+
+19
+00:00:18,150 --> 00:00:20,630
+statements and out statements and all of
+that kind of branching behavior in C++
+
+20
+00:00:20,630 --> 00:00:20,640
+that kind of branching behavior in C++
+ 
+
+21
+00:00:20,640 --> 00:00:22,189
+that kind of branching behavior in C++
+but I do encourage you to still watch
+
+22
+00:00:22,189 --> 00:00:22,199
+but I do encourage you to still watch
+ 
+
+23
+00:00:22,199 --> 00:00:23,330
+but I do encourage you to still watch
+the video because you might learn
+
+24
+00:00:23,330 --> 00:00:23,340
+the video because you might learn
+ 
+
+25
+00:00:23,340 --> 00:00:24,859
+the video because you might learn
+something new I'm actually going to go a
+
+26
+00:00:24,859 --> 00:00:24,869
+something new I'm actually going to go a
+ 
+
+27
+00:00:24,869 --> 00:00:26,570
+something new I'm actually going to go a
+little bit deeper as to how it works in
+
+28
+00:00:26,570 --> 00:00:26,580
+little bit deeper as to how it works in
+ 
+
+29
+00:00:26,580 --> 00:00:28,910
+little bit deeper as to how it works in
+C++ so so it's worth hanging around
+
+30
+00:00:28,910 --> 00:00:28,920
+C++ so so it's worth hanging around
+ 
+
+31
+00:00:28,920 --> 00:00:32,120
+C++ so so it's worth hanging around
+right so what I mean by conditions or if
+
+32
+00:00:32,120 --> 00:00:32,130
+right so what I mean by conditions or if
+ 
+
+33
+00:00:32,130 --> 00:00:35,180
+right so what I mean by conditions or if
+statements or branching what what is all
+
+34
+00:00:35,180 --> 00:00:35,190
+statements or branching what what is all
+ 
+
+35
+00:00:35,190 --> 00:00:36,889
+statements or branching what what is all
+of this basically there are certain
+
+36
+00:00:36,889 --> 00:00:36,899
+of this basically there are certain
+ 
+
+37
+00:00:36,899 --> 00:00:38,840
+of this basically there are certain
+times when we write our programs that we
+
+38
+00:00:38,840 --> 00:00:38,850
+times when we write our programs that we
+ 
+
+39
+00:00:38,850 --> 00:00:41,240
+times when we write our programs that we
+want to evaluate a certain condition and
+
+40
+00:00:41,240 --> 00:00:41,250
+want to evaluate a certain condition and
+ 
+
+41
+00:00:41,250 --> 00:00:43,190
+want to evaluate a certain condition and
+then decide what could we want to
+
+42
+00:00:43,190 --> 00:00:43,200
+then decide what could we want to
+ 
+
+43
+00:00:43,200 --> 00:00:45,080
+then decide what could we want to
+execute as a result of that evaluation
+
+44
+00:00:45,080 --> 00:00:45,090
+execute as a result of that evaluation
+ 
+
+45
+00:00:45,090 --> 00:00:47,360
+execute as a result of that evaluation
+so for example let's say we have a
+
+46
+00:00:47,360 --> 00:00:47,370
+so for example let's say we have a
+ 
+
+47
+00:00:47,370 --> 00:00:49,819
+so for example let's say we have a
+variable called X and is equal to 5 we
+
+48
+00:00:49,819 --> 00:00:49,829
+variable called X and is equal to 5 we
+ 
+
+49
+00:00:49,829 --> 00:00:51,260
+variable called X and is equal to 5 we
+want to be able to write code that does
+
+50
+00:00:51,260 --> 00:00:51,270
+want to be able to write code that does
+ 
+
+51
+00:00:51,270 --> 00:00:53,540
+want to be able to write code that does
+something specific if that value is
+
+52
+00:00:53,540 --> 00:00:53,550
+something specific if that value is
+ 
+
+53
+00:00:53,550 --> 00:00:55,400
+something specific if that value is
+equal to 5 that's essentially what a
+
+54
+00:00:55,400 --> 00:00:55,410
+equal to 5 that's essentially what a
+ 
+
+55
+00:00:55,410 --> 00:00:57,950
+equal to 5 that's essentially what a
+condition is the condition is is X equal
+
+56
+00:00:57,950 --> 00:00:57,960
+condition is the condition is is X equal
+ 
+
+57
+00:00:57,960 --> 00:00:59,630
+condition is the condition is is X equal
+to 5 and then based on that we can
+
+58
+00:00:59,630 --> 00:00:59,640
+to 5 and then based on that we can
+ 
+
+59
+00:00:59,640 --> 00:01:02,090
+to 5 and then based on that we can
+branch to the appropriate branch of code
+
+60
+00:01:02,090 --> 00:01:02,100
+branch to the appropriate branch of code
+ 
+
+61
+00:01:02,100 --> 00:01:03,709
+branch to the appropriate branch of code
+so there's actually two things that
+
+62
+00:01:03,709 --> 00:01:03,719
+so there's actually two things that
+ 
+
+63
+00:01:03,719 --> 00:01:05,210
+so there's actually two things that
+happen when we write an if statement and
+
+64
+00:01:05,210 --> 00:01:05,220
+happen when we write an if statement and
+ 
+
+65
+00:01:05,220 --> 00:01:06,859
+happen when we write an if statement and
+when we run that code there's the
+
+66
+00:01:06,859 --> 00:01:06,869
+when we run that code there's the
+ 
+
+67
+00:01:06,869 --> 00:01:09,020
+when we run that code there's the
+evaluation of the actual condition and
+
+68
+00:01:09,020 --> 00:01:09,030
+evaluation of the actual condition and
+ 
+
+69
+00:01:09,030 --> 00:01:11,090
+evaluation of the actual condition and
+then there's the branch depending on
+
+70
+00:01:11,090 --> 00:01:11,100
+then there's the branch depending on
+ 
+
+71
+00:01:11,100 --> 00:01:14,330
+then there's the branch depending on
+that evaluation so in other words if our
+
+72
+00:01:14,330 --> 00:01:14,340
+that evaluation so in other words if our
+ 
+
+73
+00:01:14,340 --> 00:01:16,219
+that evaluation so in other words if our
+condition evaluates is true we need to
+
+74
+00:01:16,219 --> 00:01:16,229
+condition evaluates is true we need to
+ 
+
+75
+00:01:16,229 --> 00:01:18,109
+condition evaluates is true we need to
+jump to a certain part of our source
+
+76
+00:01:18,109 --> 00:01:18,119
+jump to a certain part of our source
+ 
+
+77
+00:01:18,119 --> 00:01:20,300
+jump to a certain part of our source
+code if the evaluation is false we need
+
+78
+00:01:20,300 --> 00:01:20,310
+code if the evaluation is false we need
+ 
+
+79
+00:01:20,310 --> 00:01:22,039
+code if the evaluation is false we need
+to jump to another part of our source
+
+80
+00:01:22,039 --> 00:01:22,049
+to jump to another part of our source
+ 
+
+81
+00:01:22,049 --> 00:01:23,600
+to jump to another part of our source
+code and of course I'm saying source
+
+82
+00:01:23,600 --> 00:01:23,610
+code and of course I'm saying source
+ 
+
+83
+00:01:23,610 --> 00:01:25,460
+code and of course I'm saying source
+code but in a running application it
+
+84
+00:01:25,460 --> 00:01:25,470
+code but in a running application it
+ 
+
+85
+00:01:25,470 --> 00:01:27,260
+code but in a running application it
+really means machine instructions so in
+
+86
+00:01:27,260 --> 00:01:27,270
+really means machine instructions so in
+ 
+
+87
+00:01:27,270 --> 00:01:29,450
+really means machine instructions so in
+other words we branch to one section of
+
+88
+00:01:29,450 --> 00:01:29,460
+other words we branch to one section of
+ 
+
+89
+00:01:29,460 --> 00:01:31,789
+other words we branch to one section of
+our machine code our CPU instructions or
+
+90
+00:01:31,789 --> 00:01:31,799
+our machine code our CPU instructions or
+ 
+
+91
+00:01:31,799 --> 00:01:33,710
+our machine code our CPU instructions or
+we branch to another section of our CPU
+
+92
+00:01:33,710 --> 00:01:33,720
+we branch to another section of our CPU
+ 
+
+93
+00:01:33,720 --> 00:01:35,149
+we branch to another section of our CPU
+instructions now when we start an
+
+94
+00:01:35,149 --> 00:01:35,159
+instructions now when we start an
+ 
+
+95
+00:01:35,159 --> 00:01:36,859
+instructions now when we start an
+application that entire application
+
+96
+00:01:36,859 --> 00:01:36,869
+application that entire application
+ 
+
+97
+00:01:36,869 --> 00:01:38,270
+application that entire application
+along with all of its modules gets
+
+98
+00:01:38,270 --> 00:01:38,280
+along with all of its modules gets
+ 
+
+99
+00:01:38,280 --> 00:01:40,429
+along with all of its modules gets
+loaded into memory so basically all
+
+100
+00:01:40,429 --> 00:01:40,439
+loaded into memory so basically all
+ 
+
+101
+00:01:40,439 --> 00:01:42,109
+loaded into memory so basically all
+those instructions that make up our
+
+102
+00:01:42,109 --> 00:01:42,119
+those instructions that make up our
+ 
+
+103
+00:01:42,119 --> 00:01:44,090
+those instructions that make up our
+program are now stored in memory and
+
+104
+00:01:44,090 --> 00:01:44,100
+program are now stored in memory and
+ 
+
+105
+00:01:44,100 --> 00:01:46,160
+program are now stored in memory and
+when we have a condition that results in
+
+106
+00:01:46,160 --> 00:01:46,170
+when we have a condition that results in
+ 
+
+107
+00:01:46,170 --> 00:01:47,810
+when we have a condition that results in
+a branch we're basically telling the
+
+108
+00:01:47,810 --> 00:01:47,820
+a branch we're basically telling the
+ 
+
+109
+00:01:47,820 --> 00:01:49,969
+a branch we're basically telling the
+computer hey jumpsuit this part of our
+
+110
+00:01:49,969 --> 00:01:49,979
+computer hey jumpsuit this part of our
+ 
+
+111
+00:01:49,979 --> 00:01:51,800
+computer hey jumpsuit this part of our
+memory and start executing our
+
+112
+00:01:51,800 --> 00:01:51,810
+memory and start executing our
+ 
+
+113
+00:01:51,810 --> 00:01:53,630
+memory and start executing our
+instructions from there because of all
+
+114
+00:01:53,630 --> 00:01:53,640
+instructions from there because of all
+ 
+
+115
+00:01:53,640 --> 00:01:55,460
+instructions from there because of all
+that jumping around memory and branching
+
+116
+00:01:55,460 --> 00:01:55,470
+that jumping around memory and branching
+ 
+
+117
+00:01:55,470 --> 00:01:56,990
+that jumping around memory and branching
+this is actually a little bit more
+
+118
+00:01:56,990 --> 00:01:57,000
+this is actually a little bit more
+ 
+
+119
+00:01:57,000 --> 00:01:59,510
+this is actually a little bit more
+complicated than my seam and there are
+
+120
+00:01:59,510 --> 00:01:59,520
+complicated than my seam and there are
+ 
+
+121
+00:01:59,520 --> 00:02:00,980
+complicated than my seam and there are
+quite a few things here that are worth
+
+122
+00:02:00,980 --> 00:02:00,990
+quite a few things here that are worth
+ 
+
+123
+00:02:00,990 --> 00:02:03,170
+quite a few things here that are worth
+exploring for example the fact that we
+
+124
+00:02:03,170 --> 00:02:03,180
+exploring for example the fact that we
+ 
+
+125
+00:02:03,180 --> 00:02:05,600
+exploring for example the fact that we
+actually have to check a condition and
+
+126
+00:02:05,600 --> 00:02:05,610
+actually have to check a condition and
+ 
+
+127
+00:02:05,610 --> 00:02:07,429
+actually have to check a condition and
+then jump to a different portion of our
+
+128
+00:02:07,429 --> 00:02:07,439
+then jump to a different portion of our
+ 
+
+129
+00:02:07,439 --> 00:02:09,290
+then jump to a different portion of our
+memory and start executing instructions
+
+130
+00:02:09,290 --> 00:02:09,300
+memory and start executing instructions
+ 
+
+131
+00:02:09,300 --> 00:02:11,809
+memory and start executing instructions
+from there actually means that if
+
+132
+00:02:11,809 --> 00:02:11,819
+from there actually means that if
+ 
+
+133
+00:02:11,819 --> 00:02:12,949
+from there actually means that if
+statements and
+
+134
+00:02:12,949 --> 00:02:12,959
+statements and
+ 
+
+135
+00:02:12,959 --> 00:02:14,929
+statements and
+branches in general do carry a little
+
+136
+00:02:14,929 --> 00:02:14,939
+branches in general do carry a little
+ 
+
+137
+00:02:14,939 --> 00:02:16,520
+branches in general do carry a little
+bit of overhead and if you're trying to
+
+138
+00:02:16,520 --> 00:02:16,530
+bit of overhead and if you're trying to
+ 
+
+139
+00:02:16,530 --> 00:02:18,380
+bit of overhead and if you're trying to
+write very fast code you might decide
+
+140
+00:02:18,380 --> 00:02:18,390
+write very fast code you might decide
+ 
+
+141
+00:02:18,390 --> 00:02:21,199
+write very fast code you might decide
+not to use if statement at all in fact a
+
+142
+00:02:21,199 --> 00:02:21,209
+not to use if statement at all in fact a
+ 
+
+143
+00:02:21,209 --> 00:02:23,149
+not to use if statement at all in fact a
+lot of optimized code will specifically
+
+144
+00:02:23,149 --> 00:02:23,159
+lot of optimized code will specifically
+ 
+
+145
+00:02:23,159 --> 00:02:25,339
+lot of optimized code will specifically
+avoid branching avoid experiments
+
+146
+00:02:25,339 --> 00:02:25,349
+avoid branching avoid experiments
+ 
+
+147
+00:02:25,349 --> 00:02:27,110
+avoid branching avoid experiments
+because by doing so it's going to slow
+
+148
+00:02:27,110 --> 00:02:27,120
+because by doing so it's going to slow
+ 
+
+149
+00:02:27,120 --> 00:02:28,729
+because by doing so it's going to slow
+the program down eventually in this
+
+150
+00:02:28,729 --> 00:02:28,739
+the program down eventually in this
+ 
+
+151
+00:02:28,739 --> 00:02:30,559
+the program down eventually in this
+series we are going to be taking a look
+
+152
+00:02:30,559 --> 00:02:30,569
+series we are going to be taking a look
+ 
+
+153
+00:02:30,569 --> 00:02:32,390
+series we are going to be taking a look
+at some examples of optimization by
+
+154
+00:02:32,390 --> 00:02:32,400
+at some examples of optimization by
+ 
+
+155
+00:02:32,400 --> 00:02:34,009
+at some examples of optimization by
+doing things like them removing branches
+
+156
+00:02:34,009 --> 00:02:34,019
+doing things like them removing branches
+ 
+
+157
+00:02:34,019 --> 00:02:36,410
+doing things like them removing branches
+but that's just the way too early right
+
+158
+00:02:36,410 --> 00:02:36,420
+but that's just the way too early right
+ 
+
+159
+00:02:36,420 --> 00:02:38,030
+but that's just the way too early right
+now I mean I've got some huge plans for
+
+160
+00:02:38,030 --> 00:02:38,040
+now I mean I've got some huge plans for
+ 
+
+161
+00:02:38,040 --> 00:02:39,289
+now I mean I've got some huge plans for
+this series so you're going to want to
+
+162
+00:02:39,289 --> 00:02:39,299
+this series so you're going to want to
+ 
+
+163
+00:02:39,299 --> 00:02:40,879
+this series so you're going to want to
+you're going to want to stay tuned
+
+164
+00:02:40,879 --> 00:02:40,889
+you're going to want to stay tuned
+ 
+
+165
+00:02:40,889 --> 00:02:42,649
+you're going to want to stay tuned
+anyway without complicating this too
+
+166
+00:02:42,649 --> 00:02:42,659
+anyway without complicating this too
+ 
+
+167
+00:02:42,659 --> 00:02:45,289
+anyway without complicating this too
+much remember a condition which at a
+
+168
+00:02:45,289 --> 00:02:45,299
+much remember a condition which at a
+ 
+
+169
+00:02:45,299 --> 00:02:47,030
+much remember a condition which at a
+condition that's our if statement if
+
+170
+00:02:47,030 --> 00:02:47,040
+condition that's our if statement if
+ 
+
+171
+00:02:47,040 --> 00:02:49,970
+condition that's our if statement if
+something is true then we want to jump
+
+172
+00:02:49,970 --> 00:02:49,980
+something is true then we want to jump
+ 
+
+173
+00:02:49,980 --> 00:02:52,670
+something is true then we want to jump
+or execute a certain bunch of code
+
+174
+00:02:52,670 --> 00:02:52,680
+or execute a certain bunch of code
+ 
+
+175
+00:02:52,680 --> 00:02:55,420
+or execute a certain bunch of code
+that's basically all there is to it so
+
+176
+00:02:55,420 --> 00:02:55,430
+that's basically all there is to it so
+ 
+
+177
+00:02:55,430 --> 00:02:58,099
+that's basically all there is to it so
+example time I've got this very basic
+
+178
+00:02:58,099 --> 00:02:58,109
+example time I've got this very basic
+ 
+
+179
+00:02:58,109 --> 00:02:59,539
+example time I've got this very basic
+application that we've been using for
+
+180
+00:02:59,539 --> 00:02:59,549
+application that we've been using for
+ 
+
+181
+00:02:59,549 --> 00:03:02,089
+application that we've been using for
+like the last few episodes or so I'm
+
+182
+00:03:02,089 --> 00:03:02,099
+like the last few episodes or so I'm
+ 
+
+183
+00:03:02,099 --> 00:03:03,800
+like the last few episodes or so I'm
+going to add a very base if there menu
+
+184
+00:03:03,800 --> 00:03:03,810
+going to add a very base if there menu
+ 
+
+185
+00:03:03,810 --> 00:03:04,490
+going to add a very base if there menu
+let's have it
+
+186
+00:03:04,490 --> 00:03:04,500
+let's have it
+ 
+
+187
+00:03:04,500 --> 00:03:06,289
+let's have it
+let's have that X example let's have int
+
+188
+00:03:06,289 --> 00:03:06,299
+let's have that X example let's have int
+ 
+
+189
+00:03:06,299 --> 00:03:09,050
+let's have that X example let's have int
+x equals 5 and then let's say hey I only
+
+190
+00:03:09,050 --> 00:03:09,060
+x equals 5 and then let's say hey I only
+ 
+
+191
+00:03:09,060 --> 00:03:10,819
+x equals 5 and then let's say hey I only
+want to print hello world if X is
+
+192
+00:03:10,819 --> 00:03:10,829
+want to print hello world if X is
+ 
+
+193
+00:03:10,829 --> 00:03:13,099
+want to print hello world if X is
+actually equal to 5 so what I can do to
+
+194
+00:03:13,099 --> 00:03:13,109
+actually equal to 5 so what I can do to
+ 
+
+195
+00:03:13,109 --> 00:03:15,050
+actually equal to 5 so what I can do to
+make that happen is just type in s and
+
+196
+00:03:15,050 --> 00:03:15,060
+make that happen is just type in s and
+ 
+
+197
+00:03:15,060 --> 00:03:17,330
+make that happen is just type in s and
+then the condition that I want now in
+
+198
+00:03:17,330 --> 00:03:17,340
+then the condition that I want now in
+ 
+
+199
+00:03:17,340 --> 00:03:19,309
+then the condition that I want now in
+order for us to actually facilitate that
+
+200
+00:03:19,309 --> 00:03:19,319
+order for us to actually facilitate that
+ 
+
+201
+00:03:19,319 --> 00:03:20,629
+order for us to actually facilitate that
+condition in order for us to actually
+
+202
+00:03:20,629 --> 00:03:20,639
+condition in order for us to actually
+ 
+
+203
+00:03:20,639 --> 00:03:23,719
+condition in order for us to actually
+check to see is X equal to 5 we actually
+
+204
+00:03:23,719 --> 00:03:23,729
+check to see is X equal to 5 we actually
+ 
+
+205
+00:03:23,729 --> 00:03:24,979
+check to see is X equal to 5 we actually
+have to perform something called in
+
+206
+00:03:24,979 --> 00:03:24,989
+have to perform something called in
+ 
+
+207
+00:03:24,989 --> 00:03:26,930
+have to perform something called in
+comparison in other words this is
+
+208
+00:03:26,930 --> 00:03:26,940
+comparison in other words this is
+ 
+
+209
+00:03:26,940 --> 00:03:29,360
+comparison in other words this is
+something where we compare one value to
+
+210
+00:03:29,360 --> 00:03:29,370
+something where we compare one value to
+ 
+
+211
+00:03:29,370 --> 00:03:31,819
+something where we compare one value to
+another and that actually is a type of
+
+212
+00:03:31,819 --> 00:03:31,829
+another and that actually is a type of
+ 
+
+213
+00:03:31,829 --> 00:03:33,800
+another and that actually is a type of
+bullying statement so in other words if
+
+214
+00:03:33,800 --> 00:03:33,810
+bullying statement so in other words if
+ 
+
+215
+00:03:33,810 --> 00:03:36,110
+bullying statement so in other words if
+the type of true or false statement X
+
+216
+00:03:36,110 --> 00:03:36,120
+the type of true or false statement X
+ 
+
+217
+00:03:36,120 --> 00:03:38,240
+the type of true or false statement X
+will either be 5 or it won't be so we
+
+218
+00:03:38,240 --> 00:03:38,250
+will either be 5 or it won't be so we
+ 
+
+219
+00:03:38,250 --> 00:03:40,280
+will either be 5 or it won't be so we
+get true or false now if we wanted to
+
+220
+00:03:40,280 --> 00:03:40,290
+get true or false now if we wanted to
+ 
+
+221
+00:03:40,290 --> 00:03:42,050
+get true or false now if we wanted to
+store a boolean statement we know that
+
+222
+00:03:42,050 --> 00:03:42,060
+store a boolean statement we know that
+ 
+
+223
+00:03:42,060 --> 00:03:43,759
+store a boolean statement we know that
+we can use the bull data type so I can
+
+224
+00:03:43,759 --> 00:03:43,769
+we can use the bull data type so I can
+ 
+
+225
+00:03:43,769 --> 00:03:46,069
+we can use the bull data type so I can
+type in something like bull comparison
+
+226
+00:03:46,069 --> 00:03:46,079
+type in something like bull comparison
+ 
+
+227
+00:03:46,079 --> 00:03:50,659
+type in something like bull comparison
+results equals x 5 now this this
+
+228
+00:03:50,659 --> 00:03:50,669
+results equals x 5 now this this
+ 
+
+229
+00:03:50,669 --> 00:03:52,640
+results equals x 5 now this this
+operator over here this double equal
+
+230
+00:03:52,640 --> 00:03:52,650
+operator over here this double equal
+ 
+
+231
+00:03:52,650 --> 00:03:55,369
+operator over here this double equal
+sign is called an equality operator it's
+
+232
+00:03:55,369 --> 00:03:55,379
+sign is called an equality operator it's
+ 
+
+233
+00:03:55,379 --> 00:03:57,710
+sign is called an equality operator it's
+basically going to check to see if X is
+
+234
+00:03:57,710 --> 00:03:57,720
+basically going to check to see if X is
+ 
+
+235
+00:03:57,720 --> 00:04:00,679
+basically going to check to see if X is
+equal to 5 if it is equal to 5 the
+
+236
+00:04:00,679 --> 00:04:00,689
+equal to 5 if it is equal to 5 the
+ 
+
+237
+00:04:00,689 --> 00:04:02,689
+equal to 5 if it is equal to 5 the
+result of this comparison will return
+
+238
+00:04:02,689 --> 00:04:02,699
+result of this comparison will return
+ 
+
+239
+00:04:02,699 --> 00:04:05,569
+result of this comparison will return
+true however if X is not 5 we will get
+
+240
+00:04:05,569 --> 00:04:05,579
+true however if X is not 5 we will get
+ 
+
+241
+00:04:05,579 --> 00:04:07,550
+true however if X is not 5 we will get
+false so once this line of code gets
+
+242
+00:04:07,550 --> 00:04:07,560
+false so once this line of code gets
+ 
+
+243
+00:04:07,560 --> 00:04:09,439
+false so once this line of code gets
+executed comparison result will be
+
+244
+00:04:09,439 --> 00:04:09,449
+executed comparison result will be
+ 
+
+245
+00:04:09,449 --> 00:04:10,399
+executed comparison result will be
+either true or false
+
+246
+00:04:10,399 --> 00:04:10,409
+either true or false
+ 
+
+247
+00:04:10,409 --> 00:04:12,199
+either true or false
+depending on that value of x now the
+
+248
+00:04:12,199 --> 00:04:12,209
+depending on that value of x now the
+ 
+
+249
+00:04:12,209 --> 00:04:13,819
+depending on that value of x now the
+reason that this operator works the way
+
+250
+00:04:13,819 --> 00:04:13,829
+reason that this operator works the way
+ 
+
+251
+00:04:13,829 --> 00:04:15,229
+reason that this operator works the way
+that it does is because it's been
+
+252
+00:04:15,229 --> 00:04:15,239
+that it does is because it's been
+ 
+
+253
+00:04:15,239 --> 00:04:16,999
+that it does is because it's been
+overloaded in the c standard library
+
+254
+00:04:16,999 --> 00:04:17,009
+overloaded in the c standard library
+ 
+
+255
+00:04:17,009 --> 00:04:19,460
+overloaded in the c standard library
+donna was someone has written a function
+
+256
+00:04:19,460 --> 00:04:19,470
+donna was someone has written a function
+ 
+
+257
+00:04:19,470 --> 00:04:21,529
+donna was someone has written a function
+that says I'm going to accept two
+
+258
+00:04:21,529 --> 00:04:21,539
+that says I'm going to accept two
+ 
+
+259
+00:04:21,539 --> 00:04:23,570
+that says I'm going to accept two
+integers and then I'm going to check the
+
+260
+00:04:23,570 --> 00:04:23,580
+integers and then I'm going to check the
+ 
+
+261
+00:04:23,580 --> 00:04:24,210
+integers and then I'm going to check the
+memory of
+
+262
+00:04:24,210 --> 00:04:24,220
+memory of
+ 
+
+263
+00:04:24,220 --> 00:04:25,890
+memory of
+to integers to make sure that they are
+
+264
+00:04:25,890 --> 00:04:25,900
+to integers to make sure that they are
+ 
+
+265
+00:04:25,900 --> 00:04:28,050
+to integers to make sure that they are
+equal and if they are I'm going to
+
+266
+00:04:28,050 --> 00:04:28,060
+equal and if they are I'm going to
+ 
+
+267
+00:04:28,060 --> 00:04:29,610
+equal and if they are I'm going to
+return true that's really all there is
+
+268
+00:04:29,610 --> 00:04:29,620
+return true that's really all there is
+ 
+
+269
+00:04:29,620 --> 00:04:31,350
+return true that's really all there is
+to it all these operators that you see
+
+270
+00:04:31,350 --> 00:04:31,360
+to it all these operators that you see
+ 
+
+271
+00:04:31,360 --> 00:04:34,290
+to it all these operators that you see
+in C and C++ they're not like magic or
+
+272
+00:04:34,290 --> 00:04:34,300
+in C and C++ they're not like magic or
+ 
+
+273
+00:04:34,300 --> 00:04:34,680
+in C and C++ they're not like magic or
+anything
+
+274
+00:04:34,680 --> 00:04:34,690
+anything
+ 
+
+275
+00:04:34,690 --> 00:04:36,720
+anything
+they've been implemented in a certain
+
+276
+00:04:36,720 --> 00:04:36,730
+they've been implemented in a certain
+ 
+
+277
+00:04:36,730 --> 00:04:39,480
+they've been implemented in a certain
+way in that standard library in the case
+
+278
+00:04:39,480 --> 00:04:39,490
+way in that standard library in the case
+ 
+
+279
+00:04:39,490 --> 00:04:41,220
+way in that standard library in the case
+of something like an integer in fact in
+
+280
+00:04:41,220 --> 00:04:41,230
+of something like an integer in fact in
+ 
+
+281
+00:04:41,230 --> 00:04:43,050
+of something like an integer in fact in
+most primitive data structures really
+
+282
+00:04:43,050 --> 00:04:43,060
+most primitive data structures really
+ 
+
+283
+00:04:43,060 --> 00:04:45,000
+most primitive data structures really
+all you're doing when you check to see
+
+284
+00:04:45,000 --> 00:04:45,010
+all you're doing when you check to see
+ 
+
+285
+00:04:45,010 --> 00:04:47,490
+all you're doing when you check to see
+if if two integers for example a equal
+
+286
+00:04:47,490 --> 00:04:47,500
+if if two integers for example a equal
+ 
+
+287
+00:04:47,500 --> 00:04:49,440
+if if two integers for example a equal
+is you're basically grabbing their 4
+
+288
+00:04:49,440 --> 00:04:49,450
+is you're basically grabbing their 4
+ 
+
+289
+00:04:49,450 --> 00:04:51,090
+is you're basically grabbing their 4
+bytes of memory that they take up and
+
+290
+00:04:51,090 --> 00:04:51,100
+bytes of memory that they take up and
+ 
+
+291
+00:04:51,100 --> 00:04:53,310
+bytes of memory that they take up and
+just comparing each byte each bit of
+
+292
+00:04:53,310 --> 00:04:53,320
+just comparing each byte each bit of
+ 
+
+293
+00:04:53,320 --> 00:04:55,560
+just comparing each byte each bit of
+that memory has to be equal to that
+
+294
+00:04:55,560 --> 00:04:55,570
+that memory has to be equal to that
+ 
+
+295
+00:04:55,570 --> 00:04:57,870
+that memory has to be equal to that
+other variable in order for this integer
+
+296
+00:04:57,870 --> 00:04:57,880
+other variable in order for this integer
+ 
+
+297
+00:04:57,880 --> 00:05:00,240
+other variable in order for this integer
+to be equal so finally we can use that
+
+298
+00:05:00,240 --> 00:05:00,250
+to be equal so finally we can use that
+ 
+
+299
+00:05:00,250 --> 00:05:02,160
+to be equal so finally we can use that
+comparison result over here inside our
+
+300
+00:05:02,160 --> 00:05:02,170
+comparison result over here inside our
+ 
+
+301
+00:05:02,170 --> 00:05:04,260
+comparison result over here inside our
+if statement to say that in comparison
+
+302
+00:05:04,260 --> 00:05:04,270
+if statement to say that in comparison
+ 
+
+303
+00:05:04,270 --> 00:05:06,420
+if statement to say that in comparison
+result is true now there's two ways we
+
+304
+00:05:06,420 --> 00:05:06,430
+result is true now there's two ways we
+ 
+
+305
+00:05:06,430 --> 00:05:07,950
+result is true now there's two ways we
+could raise this we could write if
+
+306
+00:05:07,950 --> 00:05:07,960
+could raise this we could write if
+ 
+
+307
+00:05:07,960 --> 00:05:10,170
+could raise this we could write if
+comparison results equals equals true
+
+308
+00:05:10,170 --> 00:05:10,180
+comparison results equals equals true
+ 
+
+309
+00:05:10,180 --> 00:05:13,440
+comparison results equals equals true
+however that's not necessary because if
+
+310
+00:05:13,440 --> 00:05:13,450
+however that's not necessary because if
+ 
+
+311
+00:05:13,450 --> 00:05:15,600
+however that's not necessary because if
+we just put this comparison results if
+
+312
+00:05:15,600 --> 00:05:15,610
+we just put this comparison results if
+ 
+
+313
+00:05:15,610 --> 00:05:17,550
+we just put this comparison results if
+we just write if comparison result
+
+314
+00:05:17,550 --> 00:05:17,560
+we just write if comparison result
+ 
+
+315
+00:05:17,560 --> 00:05:19,110
+we just write if comparison result
+that's going to give us the same effect
+
+316
+00:05:19,110 --> 00:05:19,120
+that's going to give us the same effect
+ 
+
+317
+00:05:19,120 --> 00:05:21,600
+that's going to give us the same effect
+as if we write true so in other words if
+
+318
+00:05:21,600 --> 00:05:21,610
+as if we write true so in other words if
+ 
+
+319
+00:05:21,610 --> 00:05:23,820
+as if we write true so in other words if
+composite result isn't true then it's if
+
+320
+00:05:23,820 --> 00:05:23,830
+composite result isn't true then it's if
+ 
+
+321
+00:05:23,830 --> 00:05:25,500
+composite result isn't true then it's if
+seaman will not run we then need to
+
+322
+00:05:25,500 --> 00:05:25,510
+seaman will not run we then need to
+ 
+
+323
+00:05:25,510 --> 00:05:27,930
+seaman will not run we then need to
+specify some kind of body in for this if
+
+324
+00:05:27,930 --> 00:05:27,940
+specify some kind of body in for this if
+ 
+
+325
+00:05:27,940 --> 00:05:29,909
+specify some kind of body in for this if
+statement so in other words where do we
+
+326
+00:05:29,909 --> 00:05:29,919
+statement so in other words where do we
+ 
+
+327
+00:05:29,919 --> 00:05:31,710
+statement so in other words where do we
+branch to what happens what code you
+
+328
+00:05:31,710 --> 00:05:31,720
+branch to what happens what code you
+ 
+
+329
+00:05:31,720 --> 00:05:33,990
+branch to what happens what code you
+want me to run if that condition is true
+
+330
+00:05:33,990 --> 00:05:34,000
+want me to run if that condition is true
+ 
+
+331
+00:05:34,000 --> 00:05:36,480
+want me to run if that condition is true
+so we can create a body here and put in
+
+332
+00:05:36,480 --> 00:05:36,490
+so we can create a body here and put in
+ 
+
+333
+00:05:36,490 --> 00:05:39,090
+so we can create a body here and put in
+that log function and there you go we've
+
+334
+00:05:39,090 --> 00:05:39,100
+that log function and there you go we've
+ 
+
+335
+00:05:39,100 --> 00:05:40,140
+that log function and there you go we've
+now created a branch
+
+336
+00:05:40,140 --> 00:05:40,150
+now created a branch
+ 
+
+337
+00:05:40,150 --> 00:05:42,960
+now created a branch
+so if comparison result is true we're
+
+338
+00:05:42,960 --> 00:05:42,970
+so if comparison result is true we're
+ 
+
+339
+00:05:42,970 --> 00:05:44,219
+so if comparison result is true we're
+going to print hello world to the
+
+340
+00:05:44,219 --> 00:05:44,229
+going to print hello world to the
+ 
+
+341
+00:05:44,229 --> 00:05:46,230
+going to print hello world to the
+console otherwise we're not going to now
+
+342
+00:05:46,230 --> 00:05:46,240
+console otherwise we're not going to now
+ 
+
+343
+00:05:46,240 --> 00:05:47,550
+console otherwise we're not going to now
+there are quite a few interesting things
+
+344
+00:05:47,550 --> 00:05:47,560
+there are quite a few interesting things
+ 
+
+345
+00:05:47,560 --> 00:05:49,050
+there are quite a few interesting things
+that can actually talk about even with
+
+346
+00:05:49,050 --> 00:05:49,060
+that can actually talk about even with
+ 
+
+347
+00:05:49,060 --> 00:05:50,550
+that can actually talk about even with
+with this little code that we've written
+
+348
+00:05:50,550 --> 00:05:50,560
+with this little code that we've written
+ 
+
+349
+00:05:50,560 --> 00:05:52,770
+with this little code that we've written
+because there's just so much that's
+
+350
+00:05:52,770 --> 00:05:52,780
+because there's just so much that's
+ 
+
+351
+00:05:52,780 --> 00:05:54,930
+because there's just so much that's
+going on here so let's just kind of let
+
+352
+00:05:54,930 --> 00:05:54,940
+going on here so let's just kind of let
+ 
+
+353
+00:05:54,940 --> 00:05:56,190
+going on here so let's just kind of let
+us kind of run this program first see
+
+354
+00:05:56,190 --> 00:05:56,200
+us kind of run this program first see
+ 
+
+355
+00:05:56,200 --> 00:05:57,360
+us kind of run this program first see
+what happens and we'll kind of walk
+
+356
+00:05:57,360 --> 00:05:57,370
+what happens and we'll kind of walk
+ 
+
+357
+00:05:57,370 --> 00:05:59,280
+what happens and we'll kind of walk
+through it line by line so if I hit f5
+
+358
+00:05:59,280 --> 00:05:59,290
+through it line by line so if I hit f5
+ 
+
+359
+00:05:59,290 --> 00:06:01,650
+through it line by line so if I hit f5
+right now to run my program you can see
+
+360
+00:06:01,650 --> 00:06:01,660
+right now to run my program you can see
+ 
+
+361
+00:06:01,660 --> 00:06:03,780
+right now to run my program you can see
+that I do get that hollow world however
+
+362
+00:06:03,780 --> 00:06:03,790
+that I do get that hollow world however
+ 
+
+363
+00:06:03,790 --> 00:06:06,360
+that I do get that hollow world however
+if I change X to be something like 6 and
+
+364
+00:06:06,360 --> 00:06:06,370
+if I change X to be something like 6 and
+ 
+
+365
+00:06:06,370 --> 00:06:08,790
+if I change X to be something like 6 and
+I hit f5 nothing's actually going to be
+
+366
+00:06:08,790 --> 00:06:08,800
+I hit f5 nothing's actually going to be
+ 
+
+367
+00:06:08,800 --> 00:06:11,370
+I hit f5 nothing's actually going to be
+printed if we put a breakpoint here now
+
+368
+00:06:11,370 --> 00:06:11,380
+printed if we put a breakpoint here now
+ 
+
+369
+00:06:11,380 --> 00:06:12,810
+printed if we put a breakpoint here now
+I tell the breakpoints and debugging in
+
+370
+00:06:12,810 --> 00:06:12,820
+I tell the breakpoints and debugging in
+ 
+
+371
+00:06:12,820 --> 00:06:14,490
+I tell the breakpoints and debugging in
+my previous video so if you haven't
+
+372
+00:06:14,490 --> 00:06:14,500
+my previous video so if you haven't
+ 
+
+373
+00:06:14,500 --> 00:06:15,540
+my previous video so if you haven't
+check that out you're going to want to
+
+374
+00:06:15,540 --> 00:06:15,550
+check that out you're going to want to
+ 
+
+375
+00:06:15,550 --> 00:06:16,500
+check that out you're going to want to
+check that out it'll be like a little
+
+376
+00:06:16,500 --> 00:06:16,510
+check that out it'll be like a little
+ 
+
+377
+00:06:16,510 --> 00:06:18,510
+check that out it'll be like a little
+thing on the screen or something link
+
+378
+00:06:18,510 --> 00:06:18,520
+thing on the screen or something link
+ 
+
+379
+00:06:18,520 --> 00:06:19,830
+thing on the screen or something link
+will also be in the description we're
+
+380
+00:06:19,830 --> 00:06:19,840
+will also be in the description we're
+ 
+
+381
+00:06:19,840 --> 00:06:21,150
+will also be in the description we're
+using a lot of techniques from that
+
+382
+00:06:21,150 --> 00:06:21,160
+using a lot of techniques from that
+ 
+
+383
+00:06:21,160 --> 00:06:22,860
+using a lot of techniques from that
+video in this video so you're going to
+
+384
+00:06:22,860 --> 00:06:22,870
+video in this video so you're going to
+ 
+
+385
+00:06:22,870 --> 00:06:24,120
+video in this video so you're going to
+want to check that out I'm going to hit
+
+386
+00:06:24,120 --> 00:06:24,130
+want to check that out I'm going to hit
+ 
+
+387
+00:06:24,130 --> 00:06:26,670
+want to check that out I'm going to hit
+f5 now with my breakpoints set let's
+
+388
+00:06:26,670 --> 00:06:26,680
+f5 now with my breakpoints set let's
+ 
+
+389
+00:06:26,680 --> 00:06:28,200
+f5 now with my breakpoints set let's
+just close this memory view here and
+
+390
+00:06:28,200 --> 00:06:28,210
+just close this memory view here and
+ 
+
+391
+00:06:28,210 --> 00:06:30,090
+just close this memory view here and
+then I'm going to hit as 10 we're going
+
+392
+00:06:30,090 --> 00:06:30,100
+then I'm going to hit as 10 we're going
+ 
+
+393
+00:06:30,100 --> 00:06:31,950
+then I'm going to hit as 10 we're going
+to see that X is in fact equal to 6
+
+394
+00:06:31,950 --> 00:06:31,960
+to see that X is in fact equal to 6
+ 
+
+395
+00:06:31,960 --> 00:06:34,140
+to see that X is in fact equal to 6
+where of course comparing it C is years
+
+396
+00:06:34,140 --> 00:06:34,150
+where of course comparing it C is years
+ 
+
+397
+00:06:34,150 --> 00:06:37,020
+where of course comparing it C is years
+x 5 of course it's not 5 so if I hit f10
+
+398
+00:06:37,020 --> 00:06:37,030
+x 5 of course it's not 5 so if I hit f10
+ 
+
+399
+00:06:37,030 --> 00:06:38,970
+x 5 of course it's not 5 so if I hit f10
+person result will be set default and
+
+400
+00:06:38,970 --> 00:06:38,980
+person result will be set default and
+ 
+
+401
+00:06:38,980 --> 00:06:41,700
+person result will be set default and
+finally but hit f10 over here on this if
+
+402
+00:06:41,700 --> 00:06:41,710
+finally but hit f10 over here on this if
+ 
+
+403
+00:06:41,710 --> 00:06:43,890
+finally but hit f10 over here on this if
+statement it will evaluate that if
+
+404
+00:06:43,890 --> 00:06:43,900
+statement it will evaluate that if
+ 
+
+405
+00:06:43,900 --> 00:06:45,990
+statement it will evaluate that if
+statement and you can see it it jumps
+
+406
+00:06:45,990 --> 00:06:46,000
+statement and you can see it it jumps
+ 
+
+407
+00:06:46,000 --> 00:06:48,390
+statement and you can see it it jumps
+right to this and get so it's never
+
+408
+00:06:48,390 --> 00:06:48,400
+right to this and get so it's never
+ 
+
+409
+00:06:48,400 --> 00:06:50,850
+right to this and get so it's never
+crossed this line of code if this line
+
+410
+00:06:50,850 --> 00:06:50,860
+crossed this line of code if this line
+ 
+
+411
+00:06:50,860 --> 00:06:52,740
+crossed this line of code if this line
+of code was never caught because we've
+
+412
+00:06:52,740 --> 00:06:52,750
+of code was never caught because we've
+ 
+
+413
+00:06:52,750 --> 00:06:55,680
+of code was never caught because we've
+basically said hey only log hello world
+
+414
+00:06:55,680 --> 00:06:55,690
+basically said hey only log hello world
+ 
+
+415
+00:06:55,690 --> 00:06:58,470
+basically said hey only log hello world
+if comparison results true if we want to
+
+416
+00:06:58,470 --> 00:06:58,480
+if comparison results true if we want to
+ 
+
+417
+00:06:58,480 --> 00:06:59,700
+if comparison results true if we want to
+take a look deeper into the
+
+418
+00:06:59,700 --> 00:06:59,710
+take a look deeper into the
+ 
+
+419
+00:06:59,710 --> 00:07:00,750
+take a look deeper into the
+behind-the-scenes of what's actually
+
+420
+00:07:00,750 --> 00:07:00,760
+behind-the-scenes of what's actually
+ 
+
+421
+00:07:00,760 --> 00:07:02,430
+behind-the-scenes of what's actually
+happening here what CPU instructions
+
+422
+00:07:02,430 --> 00:07:02,440
+happening here what CPU instructions
+ 
+
+423
+00:07:02,440 --> 00:07:04,800
+happening here what CPU instructions
+were running we could compile this to
+
+424
+00:07:04,800 --> 00:07:04,810
+were running we could compile this to
+ 
+
+425
+00:07:04,810 --> 00:07:07,410
+were running we could compile this to
+assembly and inspect the absolute sembly
+
+426
+00:07:07,410 --> 00:07:07,420
+assembly and inspect the absolute sembly
+ 
+
+427
+00:07:07,420 --> 00:07:08,910
+assembly and inspect the absolute sembly
+however there's actually one more thing
+
+428
+00:07:08,910 --> 00:07:08,920
+however there's actually one more thing
+ 
+
+429
+00:07:08,920 --> 00:07:10,410
+however there's actually one more thing
+we could do as part of debugging and
+
+430
+00:07:10,410 --> 00:07:10,420
+we could do as part of debugging and
+ 
+
+431
+00:07:10,420 --> 00:07:12,240
+we could do as part of debugging and
+that is use a disassembly of this
+
+432
+00:07:12,240 --> 00:07:12,250
+that is use a disassembly of this
+ 
+
+433
+00:07:12,250 --> 00:07:14,040
+that is use a disassembly of this
+current earning code so if we hit f5 to
+
+434
+00:07:14,040 --> 00:07:14,050
+current earning code so if we hit f5 to
+ 
+
+435
+00:07:14,050 --> 00:07:15,960
+current earning code so if we hit f5 to
+run our program with a breakpoint set
+
+436
+00:07:15,960 --> 00:07:15,970
+run our program with a breakpoint set
+ 
+
+437
+00:07:15,970 --> 00:07:18,390
+run our program with a breakpoint set
+what I can do is right click here this
+
+438
+00:07:18,390 --> 00:07:18,400
+what I can do is right click here this
+ 
+
+439
+00:07:18,400 --> 00:07:20,280
+what I can do is right click here this
+is once my application spawns right I
+
+440
+00:07:20,280 --> 00:07:20,290
+is once my application spawns right I
+ 
+
+441
+00:07:20,290 --> 00:07:22,170
+is once my application spawns right I
+can right click here and select go to
+
+442
+00:07:22,170 --> 00:07:22,180
+can right click here and select go to
+ 
+
+443
+00:07:22,180 --> 00:07:24,450
+can right click here and select go to
+disassembly and then you can see I jump
+
+444
+00:07:24,450 --> 00:07:24,460
+disassembly and then you can see I jump
+ 
+
+445
+00:07:24,460 --> 00:07:26,430
+disassembly and then you can see I jump
+into this view where we have both our
+
+446
+00:07:26,430 --> 00:07:26,440
+into this view where we have both our
+ 
+
+447
+00:07:26,440 --> 00:07:28,470
+into this view where we have both our
+source code and then the associated
+
+448
+00:07:28,470 --> 00:07:28,480
+source code and then the associated
+ 
+
+449
+00:07:28,480 --> 00:07:30,810
+source code and then the associated
+assembly instruction that is that source
+
+450
+00:07:30,810 --> 00:07:30,820
+assembly instruction that is that source
+ 
+
+451
+00:07:30,820 --> 00:07:32,460
+assembly instruction that is that source
+code so in other words our compiler has
+
+452
+00:07:32,460 --> 00:07:32,470
+code so in other words our compiler has
+ 
+
+453
+00:07:32,470 --> 00:07:35,040
+code so in other words our compiler has
+compiled this source code into this line
+
+454
+00:07:35,040 --> 00:07:35,050
+compiled this source code into this line
+ 
+
+455
+00:07:35,050 --> 00:07:38,460
+compiled this source code into this line
+and this source code into all of these
+
+456
+00:07:38,460 --> 00:07:38,470
+and this source code into all of these
+ 
+
+457
+00:07:38,470 --> 00:07:40,470
+and this source code into all of these
+instructions and we can actually step
+
+458
+00:07:40,470 --> 00:07:40,480
+instructions and we can actually step
+ 
+
+459
+00:07:40,480 --> 00:07:42,120
+instructions and we can actually step
+through this assembly line by line and
+
+460
+00:07:42,120 --> 00:07:42,130
+through this assembly line by line and
+ 
+
+461
+00:07:42,130 --> 00:07:43,620
+through this assembly line by line and
+even take a look at what the registers
+
+462
+00:07:43,620 --> 00:07:43,630
+even take a look at what the registers
+ 
+
+463
+00:07:43,630 --> 00:07:46,020
+even take a look at what the registers
+in our CPU actually contain so it's
+
+464
+00:07:46,020 --> 00:07:46,030
+in our CPU actually contain so it's
+ 
+
+465
+00:07:46,030 --> 00:07:47,400
+in our CPU actually contain so it's
+pretty cool this disassembly views
+
+466
+00:07:47,400 --> 00:07:47,410
+pretty cool this disassembly views
+ 
+
+467
+00:07:47,410 --> 00:07:49,380
+pretty cool this disassembly views
+actually amazingly useful when you're
+
+468
+00:07:49,380 --> 00:07:49,390
+actually amazingly useful when you're
+ 
+
+469
+00:07:49,390 --> 00:07:51,120
+actually amazingly useful when you're
+trying to debug either source code that
+
+470
+00:07:51,120 --> 00:07:51,130
+trying to debug either source code that
+ 
+
+471
+00:07:51,130 --> 00:07:52,650
+trying to debug either source code that
+you don't have access to some rewards
+
+472
+00:07:52,650 --> 00:07:52,660
+you don't have access to some rewards
+ 
+
+473
+00:07:52,660 --> 00:07:54,270
+you don't have access to some rewards
+the after results to actually debugging
+
+474
+00:07:54,270 --> 00:07:54,280
+the after results to actually debugging
+ 
+
+475
+00:07:54,280 --> 00:07:55,590
+the after results to actually debugging
+CPU instructions that's an absolute
+
+476
+00:07:55,590 --> 00:07:55,600
+CPU instructions that's an absolute
+ 
+
+477
+00:07:55,600 --> 00:07:56,250
+CPU instructions that's an absolute
+nightmare
+
+478
+00:07:56,250 --> 00:07:56,260
+nightmare
+ 
+
+479
+00:07:56,260 --> 00:07:57,900
+nightmare
+by the way trying to avoid that as much
+
+480
+00:07:57,900 --> 00:07:57,910
+by the way trying to avoid that as much
+ 
+
+481
+00:07:57,910 --> 00:07:59,820
+by the way trying to avoid that as much
+you can but also it's really useful to
+
+482
+00:07:59,820 --> 00:07:59,830
+you can but also it's really useful to
+ 
+
+483
+00:07:59,830 --> 00:08:02,250
+you can but also it's really useful to
+quickly see what code the compiler has
+
+484
+00:08:02,250 --> 00:08:02,260
+quickly see what code the compiler has
+ 
+
+485
+00:08:02,260 --> 00:08:04,200
+quickly see what code the compiler has
+actually generated in instead of setting
+
+486
+00:08:04,200 --> 00:08:04,210
+actually generated in instead of setting
+ 
+
+487
+00:08:04,210 --> 00:08:06,300
+actually generated in instead of setting
+up that whole outputting to a file stuff
+
+488
+00:08:06,300 --> 00:08:06,310
+up that whole outputting to a file stuff
+ 
+
+489
+00:08:06,310 --> 00:08:07,830
+up that whole outputting to a file stuff
+that I covered in my how to people
+
+490
+00:08:07,830 --> 00:08:07,840
+that I covered in my how to people
+ 
+
+491
+00:08:07,840 --> 00:08:09,750
+that I covered in my how to people
+compiler works video instead of setting
+
+492
+00:08:09,750 --> 00:08:09,760
+compiler works video instead of setting
+ 
+
+493
+00:08:09,760 --> 00:08:11,880
+compiler works video instead of setting
+all that up we can just kind of look at
+
+494
+00:08:11,880 --> 00:08:11,890
+all that up we can just kind of look at
+ 
+
+495
+00:08:11,890 --> 00:08:14,160
+all that up we can just kind of look at
+the disassembly view and so back here
+
+496
+00:08:14,160 --> 00:08:14,170
+the disassembly view and so back here
+ 
+
+497
+00:08:14,170 --> 00:08:15,900
+the disassembly view and so back here
+you can see that the first thing that's
+
+498
+00:08:15,900 --> 00:08:15,910
+you can see that the first thing that's
+ 
+
+499
+00:08:15,910 --> 00:08:17,310
+you can see that the first thing that's
+happening here now I'm not going to I'm
+
+500
+00:08:17,310 --> 00:08:17,320
+happening here now I'm not going to I'm
+ 
+
+501
+00:08:17,320 --> 00:08:19,350
+happening here now I'm not going to I'm
+not going to just spend half an hour now
+
+502
+00:08:19,350 --> 00:08:19,360
+not going to just spend half an hour now
+ 
+
+503
+00:08:19,360 --> 00:08:22,170
+not going to just spend half an hour now
+teaching you guys assembly I do I do
+
+504
+00:08:22,170 --> 00:08:22,180
+teaching you guys assembly I do I do
+ 
+
+505
+00:08:22,180 --> 00:08:23,850
+teaching you guys assembly I do I do
+intend to make some videos on that in
+
+506
+00:08:23,850 --> 00:08:23,860
+intend to make some videos on that in
+ 
+
+507
+00:08:23,860 --> 00:08:25,290
+intend to make some videos on that in
+the future I think you guys want that
+
+508
+00:08:25,290 --> 00:08:25,300
+the future I think you guys want that
+ 
+
+509
+00:08:25,300 --> 00:08:27,500
+the future I think you guys want that
+you can leave a comment below because I
+
+510
+00:08:27,500 --> 00:08:27,510
+you can leave a comment below because I
+ 
+
+511
+00:08:27,510 --> 00:08:31,050
+you can leave a comment below because I
+get asked this a lot but basically I'm
+
+512
+00:08:31,050 --> 00:08:31,060
+get asked this a lot but basically I'm
+ 
+
+513
+00:08:31,060 --> 00:08:32,370
+get asked this a lot but basically I'm
+not going to spend a bunch of time now
+
+514
+00:08:32,370 --> 00:08:32,380
+not going to spend a bunch of time now
+ 
+
+515
+00:08:32,380 --> 00:08:33,510
+not going to spend a bunch of time now
+explaining how everything works and it's
+
+516
+00:08:33,510 --> 00:08:33,520
+explaining how everything works and it's
+ 
+
+517
+00:08:33,520 --> 00:08:35,190
+explaining how everything works and it's
+going to kind of gloss over this so if
+
+518
+00:08:35,190 --> 00:08:35,200
+going to kind of gloss over this so if
+ 
+
+519
+00:08:35,200 --> 00:08:36,510
+going to kind of gloss over this so if
+you are interested and you want to learn
+
+520
+00:08:36,510 --> 00:08:36,520
+you are interested and you want to learn
+ 
+
+521
+00:08:36,520 --> 00:08:38,070
+you are interested and you want to learn
+more you can either google it or you can
+
+522
+00:08:38,070 --> 00:08:38,080
+more you can either google it or you can
+ 
+
+523
+00:08:38,080 --> 00:08:39,270
+more you can either google it or you can
+drop comment below and I'll try and make
+
+524
+00:08:39,270 --> 00:08:39,280
+drop comment below and I'll try and make
+ 
+
+525
+00:08:39,280 --> 00:08:41,940
+drop comment below and I'll try and make
+a video sometime soon in the future but
+
+526
+00:08:41,940 --> 00:08:41,950
+a video sometime soon in the future but
+ 
+
+527
+00:08:41,950 --> 00:08:44,130
+a video sometime soon in the future but
+if we look at this code you can see that
+
+528
+00:08:44,130 --> 00:08:44,140
+if we look at this code you can see that
+ 
+
+529
+00:08:44,140 --> 00:08:45,420
+if we look at this code you can see that
+what's happening here is we're actually
+
+530
+00:08:45,420 --> 00:08:45,430
+what's happening here is we're actually
+ 
+
+531
+00:08:45,430 --> 00:08:47,040
+what's happening here is we're actually
+loading a register with certain value
+
+532
+00:08:47,040 --> 00:08:47,050
+loading a register with certain value
+ 
+
+533
+00:08:47,050 --> 00:08:49,110
+loading a register with certain value
+this move instruction more basically
+
+534
+00:08:49,110 --> 00:08:49,120
+this move instruction more basically
+ 
+
+535
+00:08:49,120 --> 00:08:50,790
+this move instruction more basically
+means move we're moving the values
+
+536
+00:08:50,790 --> 00:08:50,800
+means move we're moving the values
+ 
+
+537
+00:08:50,800 --> 00:08:53,430
+means move we're moving the values
+six into this register right so you can
+
+538
+00:08:53,430 --> 00:08:53,440
+six into this register right so you can
+ 
+
+539
+00:08:53,440 --> 00:08:54,960
+six into this register right so you can
+think of this as we're setting that act
+
+540
+00:08:54,960 --> 00:08:54,970
+think of this as we're setting that act
+ 
+
+541
+00:08:54,970 --> 00:08:57,329
+think of this as we're setting that act
+variable to be sick if we here at ten
+
+542
+00:08:57,329 --> 00:08:57,339
+variable to be sick if we here at ten
+ 
+
+543
+00:08:57,339 --> 00:08:58,500
+variable to be sick if we here at ten
+we'll get that we'll get to the next
+
+544
+00:08:58,500 --> 00:08:58,510
+we'll get that we'll get to the next
+ 
+
+545
+00:08:58,510 --> 00:09:00,900
+we'll get that we'll get to the next
+instruction now this is our actual
+
+546
+00:09:00,900 --> 00:09:00,910
+instruction now this is our actual
+ 
+
+547
+00:09:00,910 --> 00:09:03,269
+instruction now this is our actual
+bullying stance right so what we're
+
+548
+00:09:03,269 --> 00:09:03,279
+bullying stance right so what we're
+ 
+
+549
+00:09:03,279 --> 00:09:05,370
+bullying stance right so what we're
+doing is we're actually loading five
+
+550
+00:09:05,370 --> 00:09:05,380
+doing is we're actually loading five
+ 
+
+551
+00:09:05,380 --> 00:09:07,590
+doing is we're actually loading five
+into that same register now this is
+
+552
+00:09:07,590 --> 00:09:07,600
+into that same register now this is
+ 
+
+553
+00:09:07,600 --> 00:09:09,269
+into that same register now this is
+interesting because the compiler has
+
+554
+00:09:09,269 --> 00:09:09,279
+interesting because the compiler has
+ 
+
+555
+00:09:09,279 --> 00:09:10,980
+interesting because the compiler has
+decided to do some pretty fancy things
+
+556
+00:09:10,980 --> 00:09:10,990
+decided to do some pretty fancy things
+ 
+
+557
+00:09:10,990 --> 00:09:12,810
+decided to do some pretty fancy things
+with our code so if we keep reading this
+
+558
+00:09:12,810 --> 00:09:12,820
+with our code so if we keep reading this
+ 
+
+559
+00:09:12,820 --> 00:09:14,730
+with our code so if we keep reading this
+the next instruction is going to be a J
+
+560
+00:09:14,730 --> 00:09:14,740
+the next instruction is going to be a J
+ 
+
+561
+00:09:14,740 --> 00:09:17,370
+the next instruction is going to be a J
+and E which means jump not equal so in
+
+562
+00:09:17,370 --> 00:09:17,380
+and E which means jump not equal so in
+ 
+
+563
+00:09:17,380 --> 00:09:19,740
+and E which means jump not equal so in
+other words if this comparison fails
+
+564
+00:09:19,740 --> 00:09:19,750
+other words if this comparison fails
+ 
+
+565
+00:09:19,750 --> 00:09:22,410
+other words if this comparison fails
+right right now this comparison all
+
+566
+00:09:22,410 --> 00:09:22,420
+right right now this comparison all
+ 
+
+567
+00:09:22,420 --> 00:09:23,730
+right right now this comparison all
+you're doing is comparing those two
+
+568
+00:09:23,730 --> 00:09:23,740
+you're doing is comparing those two
+ 
+
+569
+00:09:23,740 --> 00:09:25,620
+you're doing is comparing those two
+values five and six if they're not equal
+
+570
+00:09:25,620 --> 00:09:25,630
+values five and six if they're not equal
+ 
+
+571
+00:09:25,630 --> 00:09:27,960
+values five and six if they're not equal
+we're going to be jumping to this memory
+
+572
+00:09:27,960 --> 00:09:27,970
+we're going to be jumping to this memory
+ 
+
+573
+00:09:27,970 --> 00:09:29,190
+we're going to be jumping to this memory
+address now the memory address is
+
+574
+00:09:29,190 --> 00:09:29,200
+address now the memory address is
+ 
+
+575
+00:09:29,200 --> 00:09:31,980
+address now the memory address is
+actually this value here there are 1 b 5
+
+576
+00:09:31,980 --> 00:09:31,990
+actually this value here there are 1 b 5
+ 
+
+577
+00:09:31,990 --> 00:09:35,340
+actually this value here there are 1 b 5
+9 b 7 right so if we just look at the
+
+578
+00:09:35,340 --> 00:09:35,350
+9 b 7 right so if we just look at the
+ 
+
+579
+00:09:35,350 --> 00:09:37,139
+9 b 7 right so if we just look at the
+end of that early 9 b 7 you can see that
+
+580
+00:09:37,139 --> 00:09:37,149
+end of that early 9 b 7 you can see that
+ 
+
+581
+00:09:37,149 --> 00:09:39,120
+end of that early 9 b 7 you can see that
+it's actually this line of code so if
+
+582
+00:09:39,120 --> 00:09:39,130
+it's actually this line of code so if
+ 
+
+583
+00:09:39,130 --> 00:09:40,980
+it's actually this line of code so if
+these are not equal we're going to jump
+
+584
+00:09:40,980 --> 00:09:40,990
+these are not equal we're going to jump
+ 
+
+585
+00:09:40,990 --> 00:09:42,630
+these are not equal we're going to jump
+to this line of code now when we know
+
+586
+00:09:42,630 --> 00:09:42,640
+to this line of code now when we know
+ 
+
+587
+00:09:42,640 --> 00:09:44,880
+to this line of code now when we know
+that it's not equal so if i hit f10 you
+
+588
+00:09:44,880 --> 00:09:44,890
+that it's not equal so if i hit f10 you
+ 
+
+589
+00:09:44,890 --> 00:09:46,530
+that it's not equal so if i hit f10 you
+can see that our instruction pointer so
+
+590
+00:09:46,530 --> 00:09:46,540
+can see that our instruction pointer so
+ 
+
+591
+00:09:46,540 --> 00:09:48,960
+can see that our instruction pointer so
+this yellow arrow is actually what our
+
+592
+00:09:48,960 --> 00:09:48,970
+this yellow arrow is actually what our
+ 
+
+593
+00:09:48,970 --> 00:09:50,100
+this yellow arrow is actually what our
+CPU is executing
+
+594
+00:09:50,100 --> 00:09:50,110
+CPU is executing
+ 
+
+595
+00:09:50,110 --> 00:09:52,650
+CPU is executing
+it's jumped to that memorator asset o to
+
+596
+00:09:52,650 --> 00:09:52,660
+it's jumped to that memorator asset o to
+ 
+
+597
+00:09:52,660 --> 00:09:54,150
+it's jumped to that memorator asset o to
+give your next instruction which is
+
+598
+00:09:54,150 --> 00:09:54,160
+give your next instruction which is
+ 
+
+599
+00:09:54,160 --> 00:09:56,220
+give your next instruction which is
+going to be moving a certain value in
+
+600
+00:09:56,220 --> 00:09:56,230
+going to be moving a certain value in
+ 
+
+601
+00:09:56,230 --> 00:09:59,340
+going to be moving a certain value in
+this case 0 into this register now this
+
+602
+00:09:59,340 --> 00:09:59,350
+this case 0 into this register now this
+ 
+
+603
+00:09:59,350 --> 00:10:02,519
+this case 0 into this register now this
+register which is EBP which is an actual
+
+604
+00:10:02,519 --> 00:10:02,529
+register which is EBP which is an actual
+ 
+
+605
+00:10:02,529 --> 00:10:04,710
+register which is EBP which is an actual
+register minus a certain offset here
+
+606
+00:10:04,710 --> 00:10:04,720
+register minus a certain offset here
+ 
+
+607
+00:10:04,720 --> 00:10:06,389
+register minus a certain offset here
+we're going to be loading the values 0
+
+608
+00:10:06,389 --> 00:10:06,399
+we're going to be loading the values 0
+ 
+
+609
+00:10:06,399 --> 00:10:08,819
+we're going to be loading the values 0
+into it now this comes back to what
+
+610
+00:10:08,819 --> 00:10:08,829
+into it now this comes back to what
+ 
+
+611
+00:10:08,829 --> 00:10:11,220
+into it now this comes back to what
+bullying are when I talk about variables
+
+612
+00:10:11,220 --> 00:10:11,230
+bullying are when I talk about variables
+ 
+
+613
+00:10:11,230 --> 00:10:13,139
+bullying are when I talk about variables
+and C++ in that video which you're also
+
+614
+00:10:13,139 --> 00:10:13,149
+and C++ in that video which you're also
+ 
+
+615
+00:10:13,149 --> 00:10:14,430
+and C++ in that video which you're also
+going to want check out if you haven't I
+
+616
+00:10:14,430 --> 00:10:14,440
+going to want check out if you haven't I
+ 
+
+617
+00:10:14,440 --> 00:10:16,440
+going to want check out if you haven't I
+talked about the fact that a bullying is
+
+618
+00:10:16,440 --> 00:10:16,450
+talked about the fact that a bullying is
+ 
+
+619
+00:10:16,450 --> 00:10:18,930
+talked about the fact that a bullying is
+essentially a one byte data type and
+
+620
+00:10:18,930 --> 00:10:18,940
+essentially a one byte data type and
+ 
+
+621
+00:10:18,940 --> 00:10:20,730
+essentially a one byte data type and
+like any data type of course there's no
+
+622
+00:10:20,730 --> 00:10:20,740
+like any data type of course there's no
+ 
+
+623
+00:10:20,740 --> 00:10:23,579
+like any data type of course there's no
+concept of true or false in C++ so how
+
+624
+00:10:23,579 --> 00:10:23,589
+concept of true or false in C++ so how
+ 
+
+625
+00:10:23,589 --> 00:10:26,310
+concept of true or false in C++ so how
+do bullies even work basically if the
+
+626
+00:10:26,310 --> 00:10:26,320
+do bullies even work basically if the
+ 
+
+627
+00:10:26,320 --> 00:10:29,010
+do bullies even work basically if the
+value is zero then it's false and if the
+
+628
+00:10:29,010 --> 00:10:29,020
+value is zero then it's false and if the
+ 
+
+629
+00:10:29,020 --> 00:10:31,440
+value is zero then it's false and if the
+value is anything but zero the value is
+
+630
+00:10:31,440 --> 00:10:31,450
+value is anything but zero the value is
+ 
+
+631
+00:10:31,450 --> 00:10:33,420
+value is anything but zero the value is
+crude again we're just dipping with
+
+632
+00:10:33,420 --> 00:10:33,430
+crude again we're just dipping with
+ 
+
+633
+00:10:33,430 --> 00:10:34,889
+crude again we're just dipping with
+numbers computers deal with numbers here
+
+634
+00:10:34,889 --> 00:10:34,899
+numbers computers deal with numbers here
+ 
+
+635
+00:10:34,899 --> 00:10:37,740
+numbers computers deal with numbers here
+but because we've got that huge one bite
+
+636
+00:10:37,740 --> 00:10:37,750
+but because we've got that huge one bite
+ 
+
+637
+00:10:37,750 --> 00:10:40,079
+but because we've got that huge one bite
+of addressable memory and if we create a
+
+638
+00:10:40,079 --> 00:10:40,089
+of addressable memory and if we create a
+ 
+
+639
+00:10:40,089 --> 00:10:41,730
+of addressable memory and if we create a
+boolean is actually going to occupy one
+
+640
+00:10:41,730 --> 00:10:41,740
+boolean is actually going to occupy one
+ 
+
+641
+00:10:41,740 --> 00:10:43,980
+boolean is actually going to occupy one
+byte of memory we don't necessarily have
+
+642
+00:10:43,980 --> 00:10:43,990
+byte of memory we don't necessarily have
+ 
+
+643
+00:10:43,990 --> 00:10:46,769
+byte of memory we don't necessarily have
+to make sure that that one bit is set to
+
+644
+00:10:46,769 --> 00:10:46,779
+to make sure that that one bit is set to
+ 
+
+645
+00:10:46,779 --> 00:10:49,230
+to make sure that that one bit is set to
+one so like it's really if anything
+
+646
+00:10:49,230 --> 00:10:49,240
+one so like it's really if anything
+ 
+
+647
+00:10:49,240 --> 00:10:51,960
+one so like it's really if anything
+there is not zero then it's going to be
+
+648
+00:10:51,960 --> 00:10:51,970
+there is not zero then it's going to be
+ 
+
+649
+00:10:51,970 --> 00:10:54,180
+there is not zero then it's going to be
+true right if we if we were just dealing
+
+650
+00:10:54,180 --> 00:10:54,190
+true right if we if we were just dealing
+ 
+
+651
+00:10:54,190 --> 00:10:55,769
+true right if we if we were just dealing
+with one bit of course we'd only have
+
+652
+00:10:55,769 --> 00:10:55,779
+with one bit of course we'd only have
+ 
+
+653
+00:10:55,779 --> 00:10:58,139
+with one bit of course we'd only have
+two possible values 0 & 1 and if it was
+
+654
+00:10:58,139 --> 00:10:58,149
+two possible values 0 & 1 and if it was
+ 
+
+655
+00:10:58,149 --> 00:10:59,790
+two possible values 0 & 1 and if it was
+0 it would be false in this one it will
+
+656
+00:10:59,790 --> 00:10:59,800
+0 it would be false in this one it will
+ 
+
+657
+00:10:59,800 --> 00:11:01,439
+0 it would be false in this one it will
+be true however since we have such a
+
+658
+00:11:01,439 --> 00:11:01,449
+be true however since we have such a
+ 
+
+659
+00:11:01,449 --> 00:11:03,320
+be true however since we have such a
+such a big range of numbers
+
+660
+00:11:03,320 --> 00:11:03,330
+such a big range of numbers
+ 
+
+661
+00:11:03,330 --> 00:11:04,940
+such a big range of numbers
+we can safely say that even if the value
+
+662
+00:11:04,940 --> 00:11:04,950
+we can safely say that even if the value
+ 
+
+663
+00:11:04,950 --> 00:11:07,790
+we can safely say that even if the value
+is say 100 that's also going to be true
+
+664
+00:11:07,790 --> 00:11:07,800
+is say 100 that's also going to be true
+ 
+
+665
+00:11:07,800 --> 00:11:10,190
+is say 100 that's also going to be true
+of course and just zero will actually be
+
+666
+00:11:10,190 --> 00:11:10,200
+of course and just zero will actually be
+ 
+
+667
+00:11:10,200 --> 00:11:11,960
+of course and just zero will actually be
+false so that being said what's actually
+
+668
+00:11:11,960 --> 00:11:11,970
+false so that being said what's actually
+ 
+
+669
+00:11:11,970 --> 00:11:13,759
+false so that being said what's actually
+happening here is we're loading zero
+
+670
+00:11:13,759 --> 00:11:13,769
+happening here is we're loading zero
+ 
+
+671
+00:11:13,769 --> 00:11:16,009
+happening here is we're loading zero
+into that register so we're assigning
+
+672
+00:11:16,009 --> 00:11:16,019
+into that register so we're assigning
+ 
+
+673
+00:11:16,019 --> 00:11:19,009
+into that register so we're assigning
+zero into that into that bullying so
+
+674
+00:11:19,009 --> 00:11:19,019
+zero into that into that bullying so
+ 
+
+675
+00:11:19,019 --> 00:11:20,780
+zero into that into that bullying so
+false is zero get that into your head
+
+676
+00:11:20,780 --> 00:11:20,790
+false is zero get that into your head
+ 
+
+677
+00:11:20,790 --> 00:11:24,139
+false is zero get that into your head
+false is zero and true is usually one if
+
+678
+00:11:24,139 --> 00:11:24,149
+false is zero and true is usually one if
+ 
+
+679
+00:11:24,149 --> 00:11:27,290
+false is zero and true is usually one if
+we explicitly load a value in it will
+
+680
+00:11:27,290 --> 00:11:27,300
+we explicitly load a value in it will
+ 
+
+681
+00:11:27,300 --> 00:11:29,690
+we explicitly load a value in it will
+probably be one however there's nothing
+
+682
+00:11:29,690 --> 00:11:29,700
+probably be one however there's nothing
+ 
+
+683
+00:11:29,700 --> 00:11:32,780
+probably be one however there's nothing
+really that that that actually sources
+
+684
+00:11:32,780 --> 00:11:32,790
+really that that that actually sources
+ 
+
+685
+00:11:32,790 --> 00:11:33,889
+really that that that actually sources
+us to be setting one it could be
+
+686
+00:11:33,889 --> 00:11:33,899
+us to be setting one it could be
+ 
+
+687
+00:11:33,899 --> 00:11:37,130
+us to be setting one it could be
+anything right so false is actually zero
+
+688
+00:11:37,130 --> 00:11:37,140
+anything right so false is actually zero
+ 
+
+689
+00:11:37,140 --> 00:11:40,910
+anything right so false is actually zero
+true is actually one asterisk so so this
+
+690
+00:11:40,910 --> 00:11:40,920
+true is actually one asterisk so so this
+ 
+
+691
+00:11:40,920 --> 00:11:43,040
+true is actually one asterisk so so this
+move instruction is loading zero into
+
+692
+00:11:43,040 --> 00:11:43,050
+move instruction is loading zero into
+ 
+
+693
+00:11:43,050 --> 00:11:45,050
+move instruction is loading zero into
+that memory which is equal to false
+
+694
+00:11:45,050 --> 00:11:45,060
+that memory which is equal to false
+ 
+
+695
+00:11:45,060 --> 00:11:47,180
+that memory which is equal to false
+right so it's basically setting that
+
+696
+00:11:47,180 --> 00:11:47,190
+right so it's basically setting that
+ 
+
+697
+00:11:47,190 --> 00:11:49,370
+right so it's basically setting that
+bullying to fault because of comparison
+
+698
+00:11:49,370 --> 00:11:49,380
+bullying to fault because of comparison
+ 
+
+699
+00:11:49,380 --> 00:11:51,980
+bullying to fault because of comparison
+failed if we keep going here there's
+
+700
+00:11:51,980 --> 00:11:51,990
+failed if we keep going here there's
+ 
+
+701
+00:11:51,990 --> 00:11:53,509
+failed if we keep going here there's
+going to be some other kind of code that
+
+702
+00:11:53,509 --> 00:11:53,519
+going to be some other kind of code that
+ 
+
+703
+00:11:53,519 --> 00:11:55,759
+going to be some other kind of code that
+we don't really care about and finally
+
+704
+00:11:55,759 --> 00:11:55,769
+we don't really care about and finally
+ 
+
+705
+00:11:55,769 --> 00:11:58,250
+we don't really care about and finally
+we get to the if instruction so what
+
+706
+00:11:58,250 --> 00:11:58,260
+we get to the if instruction so what
+ 
+
+707
+00:11:58,260 --> 00:11:59,660
+we get to the if instruction so what
+we're doing in the S instruction is
+
+708
+00:11:59,660 --> 00:11:59,670
+we're doing in the S instruction is
+ 
+
+709
+00:11:59,670 --> 00:12:01,430
+we're doing in the S instruction is
+again we're just loading certain values
+
+710
+00:12:01,430 --> 00:12:01,440
+again we're just loading certain values
+ 
+
+711
+00:12:01,440 --> 00:12:03,440
+again we're just loading certain values
+each of the EAX register we're testing
+
+712
+00:12:03,440 --> 00:12:03,450
+each of the EAX register we're testing
+ 
+
+713
+00:12:03,450 --> 00:12:05,840
+each of the EAX register we're testing
+to see if that EAX register actually
+
+714
+00:12:05,840 --> 00:12:05,850
+to see if that EAX register actually
+ 
+
+715
+00:12:05,850 --> 00:12:07,579
+to see if that EAX register actually
+passes our conditions now this test
+
+716
+00:12:07,579 --> 00:12:07,589
+passes our conditions now this test
+ 
+
+717
+00:12:07,589 --> 00:12:09,170
+passes our conditions now this test
+instruction is going to basically
+
+718
+00:12:09,170 --> 00:12:09,180
+instruction is going to basically
+ 
+
+719
+00:12:09,180 --> 00:12:11,360
+instruction is going to basically
+perform an add a bitwise and operation
+
+720
+00:12:11,360 --> 00:12:11,370
+perform an add a bitwise and operation
+ 
+
+721
+00:12:11,370 --> 00:12:12,470
+perform an add a bitwise and operation
+on those two registers I don't want to
+
+722
+00:12:12,470 --> 00:12:12,480
+on those two registers I don't want to
+ 
+
+723
+00:12:12,480 --> 00:12:14,990
+on those two registers I don't want to
+get too in-depth into this but basically
+
+724
+00:12:14,990 --> 00:12:15,000
+get too in-depth into this but basically
+ 
+
+725
+00:12:15,000 --> 00:12:17,900
+get too in-depth into this but basically
+if this test operations succeeds you can
+
+726
+00:12:17,900 --> 00:12:17,910
+if this test operations succeeds you can
+ 
+
+727
+00:12:17,910 --> 00:12:20,030
+if this test operations succeeds you can
+see that we're going to jump equal so in
+
+728
+00:12:20,030 --> 00:12:20,040
+see that we're going to jump equal so in
+ 
+
+729
+00:12:20,040 --> 00:12:22,069
+see that we're going to jump equal so in
+other words if that test operation is is
+
+730
+00:12:22,069 --> 00:12:22,079
+other words if that test operation is is
+ 
+
+731
+00:12:22,079 --> 00:12:24,319
+other words if that test operation is is
+true we're actually going to be jumping
+
+732
+00:12:24,319 --> 00:12:24,329
+true we're actually going to be jumping
+ 
+
+733
+00:12:24,329 --> 00:12:27,350
+true we're actually going to be jumping
+to the memory that is 90 F which is
+
+734
+00:12:27,350 --> 00:12:27,360
+to the memory that is 90 F which is
+ 
+
+735
+00:12:27,360 --> 00:12:28,699
+to the memory that is 90 F which is
+actually this line of code here so it's
+
+736
+00:12:28,699 --> 00:12:28,709
+actually this line of code here so it's
+ 
+
+737
+00:12:28,709 --> 00:12:31,880
+actually this line of code here so it's
+get past that actual logging if this is
+
+738
+00:12:31,880 --> 00:12:31,890
+get past that actual logging if this is
+ 
+
+739
+00:12:31,890 --> 00:12:34,430
+get past that actual logging if this is
+not the case right so we don't jump
+
+740
+00:12:34,430 --> 00:12:34,440
+not the case right so we don't jump
+ 
+
+741
+00:12:34,440 --> 00:12:36,199
+not the case right so we don't jump
+equal so we only the fact that it says
+
+742
+00:12:36,199 --> 00:12:36,209
+equal so we only the fact that it says
+ 
+
+743
+00:12:36,209 --> 00:12:38,690
+equal so we only the fact that it says
+it's not a regular jump instruction
+
+744
+00:12:38,690 --> 00:12:38,700
+it's not a regular jump instruction
+ 
+
+745
+00:12:38,700 --> 00:12:41,389
+it's not a regular jump instruction
+right which is JMP it's jump equal so
+
+746
+00:12:41,389 --> 00:12:41,399
+right which is JMP it's jump equal so
+ 
+
+747
+00:12:41,399 --> 00:12:42,860
+right which is JMP it's jump equal so
+it's only if the conditional jump
+
+748
+00:12:42,860 --> 00:12:42,870
+it's only if the conditional jump
+ 
+
+749
+00:12:42,870 --> 00:12:45,079
+it's only if the conditional jump
+statement so in other words if this
+
+750
+00:12:45,079 --> 00:12:45,089
+statement so in other words if this
+ 
+
+751
+00:12:45,089 --> 00:12:47,090
+statement so in other words if this
+fails then which is going to advance to
+
+752
+00:12:47,090 --> 00:12:47,100
+fails then which is going to advance to
+ 
+
+753
+00:12:47,100 --> 00:12:49,160
+fails then which is going to advance to
+the next line of code which is here rise
+
+754
+00:12:49,160 --> 00:12:49,170
+the next line of code which is here rise
+ 
+
+755
+00:12:49,170 --> 00:12:50,900
+the next line of code which is here rise
+the next TP instruction which is
+
+756
+00:12:50,900 --> 00:12:50,910
+the next TP instruction which is
+ 
+
+757
+00:12:50,910 --> 00:12:51,920
+the next TP instruction which is
+actually going to do a little bit
+
+758
+00:12:51,920 --> 00:12:51,930
+actually going to do a little bit
+ 
+
+759
+00:12:51,930 --> 00:12:53,900
+actually going to do a little bit
+however we know that this test is going
+
+760
+00:12:53,900 --> 00:12:53,910
+however we know that this test is going
+ 
+
+761
+00:12:53,910 --> 00:12:55,910
+however we know that this test is going
+to succeed because converse and result
+
+762
+00:12:55,910 --> 00:12:55,920
+to succeed because converse and result
+ 
+
+763
+00:12:55,920 --> 00:12:58,400
+to succeed because converse and result
+is false and so if we hit f10 you can
+
+764
+00:12:58,400 --> 00:12:58,410
+is false and so if we hit f10 you can
+ 
+
+765
+00:12:58,410 --> 00:13:00,560
+is false and so if we hit f10 you can
+see we actually do jump over here and we
+
+766
+00:13:00,560 --> 00:13:00,570
+see we actually do jump over here and we
+ 
+
+767
+00:13:00,570 --> 00:13:02,630
+see we actually do jump over here and we
+continue running our program kind of as
+
+768
+00:13:02,630 --> 00:13:02,640
+continue running our program kind of as
+ 
+
+769
+00:13:02,640 --> 00:13:04,960
+continue running our program kind of as
+normal all right so it's kind of a
+
+770
+00:13:04,960 --> 00:13:04,970
+normal all right so it's kind of a
+ 
+
+771
+00:13:04,970 --> 00:13:07,220
+normal all right so it's kind of a
+deeper look at what actually happens
+
+772
+00:13:07,220 --> 00:13:07,230
+deeper look at what actually happens
+ 
+
+773
+00:13:07,230 --> 00:13:08,900
+deeper look at what actually happens
+behind the scenes the new statement now
+
+774
+00:13:08,900 --> 00:13:08,910
+behind the scenes the new statement now
+ 
+
+775
+00:13:08,910 --> 00:13:11,090
+behind the scenes the new statement now
+keep in mind I am compiling this and
+
+776
+00:13:11,090 --> 00:13:11,100
+keep in mind I am compiling this and
+ 
+
+777
+00:13:11,100 --> 00:13:13,100
+keep in mind I am compiling this and
+running this in debug mode which means
+
+778
+00:13:13,100 --> 00:13:13,110
+running this in debug mode which means
+ 
+
+779
+00:13:13,110 --> 00:13:15,079
+running this in debug mode which means
+that it's not going to optimize our code
+
+780
+00:13:15,079 --> 00:13:15,089
+that it's not going to optimize our code
+ 
+
+781
+00:13:15,089 --> 00:13:16,950
+that it's not going to optimize our code
+at all so if we
+
+782
+00:13:16,950 --> 00:13:16,960
+at all so if we
+ 
+
+783
+00:13:16,960 --> 00:13:18,720
+at all so if we
+that's our code we can see that all of
+
+784
+00:13:18,720 --> 00:13:18,730
+that's our code we can see that all of
+ 
+
+785
+00:13:18,730 --> 00:13:20,610
+that's our code we can see that all of
+this can actually really be simplified
+
+786
+00:13:20,610 --> 00:13:20,620
+this can actually really be simplified
+ 
+
+787
+00:13:20,620 --> 00:13:22,740
+this can actually really be simplified
+the compiler knows that this variable ax
+
+788
+00:13:22,740 --> 00:13:22,750
+the compiler knows that this variable ax
+ 
+
+789
+00:13:22,750 --> 00:13:25,140
+the compiler knows that this variable ax
+is hard 26 we're doing comparison to
+
+790
+00:13:25,140 --> 00:13:25,150
+is hard 26 we're doing comparison to
+ 
+
+791
+00:13:25,150 --> 00:13:27,180
+is hard 26 we're doing comparison to
+five it can actually do that itself we
+
+792
+00:13:27,180 --> 00:13:27,190
+five it can actually do that itself we
+ 
+
+793
+00:13:27,190 --> 00:13:28,350
+five it can actually do that itself we
+don't have to do that comparison at
+
+794
+00:13:28,350 --> 00:13:28,360
+don't have to do that comparison at
+ 
+
+795
+00:13:28,360 --> 00:13:30,930
+don't have to do that comparison at
+runtime we can actually see here's six
+
+796
+00:13:30,930 --> 00:13:30,940
+runtime we can actually see here's six
+ 
+
+797
+00:13:30,940 --> 00:13:32,520
+runtime we can actually see here's six
+equal to five we can do that at compile
+
+798
+00:13:32,520 --> 00:13:32,530
+equal to five we can do that at compile
+ 
+
+799
+00:13:32,530 --> 00:13:34,620
+equal to five we can do that at compile
+time and so something called constant
+
+800
+00:13:34,620 --> 00:13:34,630
+time and so something called constant
+ 
+
+801
+00:13:34,630 --> 00:13:36,210
+time and so something called constant
+folding will happen so it'll turn this
+
+802
+00:13:36,210 --> 00:13:36,220
+folding will happen so it'll turn this
+ 
+
+803
+00:13:36,220 --> 00:13:38,370
+folding will happen so it'll turn this
+all into a constant variable because it
+
+804
+00:13:38,370 --> 00:13:38,380
+all into a constant variable because it
+ 
+
+805
+00:13:38,380 --> 00:13:39,930
+all into a constant variable because it
+is a constant variable all of its know
+
+806
+00:13:39,930 --> 00:13:39,940
+is a constant variable all of its know
+ 
+
+807
+00:13:39,940 --> 00:13:42,090
+is a constant variable all of its know
+in a compile time and then it's going to
+
+808
+00:13:42,090 --> 00:13:42,100
+in a compile time and then it's going to
+ 
+
+809
+00:13:42,100 --> 00:13:44,550
+in a compile time and then it's going to
+actually get rid of this if comparison
+
+810
+00:13:44,550 --> 00:13:44,560
+actually get rid of this if comparison
+ 
+
+811
+00:13:44,560 --> 00:13:46,230
+actually get rid of this if comparison
+result if statement all together and
+
+812
+00:13:46,230 --> 00:13:46,240
+result if statement all together and
+ 
+
+813
+00:13:46,240 --> 00:13:48,630
+result if statement all together and
+leave us with just STD see and I get
+
+814
+00:13:48,630 --> 00:13:48,640
+leave us with just STD see and I get
+ 
+
+815
+00:13:48,640 --> 00:13:51,750
+leave us with just STD see and I get
+like it'll just remove basically lines 6
+
+816
+00:13:51,750 --> 00:13:51,760
+like it'll just remove basically lines 6
+ 
+
+817
+00:13:51,760 --> 00:13:52,770
+like it'll just remove basically lines 6
+through 11
+
+818
+00:13:52,770 --> 00:13:52,780
+through 11
+ 
+
+819
+00:13:52,780 --> 00:13:54,600
+through 11
+because they're never going to run so
+
+820
+00:13:54,600 --> 00:13:54,610
+because they're never going to run so
+ 
+
+821
+00:13:54,610 --> 00:13:56,910
+because they're never going to run so
+why compile them why do that why do that
+
+822
+00:13:56,910 --> 00:13:56,920
+why compile them why do that why do that
+ 
+
+823
+00:13:56,920 --> 00:13:58,830
+why compile them why do that why do that
+conditional check at run time that's
+
+824
+00:13:58,830 --> 00:13:58,840
+conditional check at run time that's
+ 
+
+825
+00:13:58,840 --> 00:14:00,570
+conditional check at run time that's
+just going to take extra time and we
+
+826
+00:14:00,570 --> 00:14:00,580
+just going to take extra time and we
+ 
+
+827
+00:14:00,580 --> 00:14:02,220
+just going to take extra time and we
+clearly don't need it keep in mind if
+
+828
+00:14:02,220 --> 00:14:02,230
+clearly don't need it keep in mind if
+ 
+
+829
+00:14:02,230 --> 00:14:03,420
+clearly don't need it keep in mind if
+you if you're trying to play around with
+
+830
+00:14:03,420 --> 00:14:03,430
+you if you're trying to play around with
+ 
+
+831
+00:14:03,430 --> 00:14:04,950
+you if you're trying to play around with
+this and see how things work by looking
+
+832
+00:14:04,950 --> 00:14:04,960
+this and see how things work by looking
+ 
+
+833
+00:14:04,960 --> 00:14:07,020
+this and see how things work by looking
+at the business emply just make sure
+
+834
+00:14:07,020 --> 00:14:07,030
+at the business emply just make sure
+ 
+
+835
+00:14:07,030 --> 00:14:08,430
+at the business emply just make sure
+you're in debug mode and make sure
+
+836
+00:14:08,430 --> 00:14:08,440
+you're in debug mode and make sure
+ 
+
+837
+00:14:08,440 --> 00:14:10,140
+you're in debug mode and make sure
+you've got optimization turned off as
+
+838
+00:14:10,140 --> 00:14:10,150
+you've got optimization turned off as
+ 
+
+839
+00:14:10,150 --> 00:14:12,500
+you've got optimization turned off as
+much as possible because if you don't
+
+840
+00:14:12,500 --> 00:14:12,510
+much as possible because if you don't
+ 
+
+841
+00:14:12,510 --> 00:14:14,910
+much as possible because if you don't
+the compiler will do it will perform
+
+842
+00:14:14,910 --> 00:14:14,920
+the compiler will do it will perform
+ 
+
+843
+00:14:14,920 --> 00:14:16,410
+the compiler will do it will perform
+some of this magic and you'll just get
+
+844
+00:14:16,410 --> 00:14:16,420
+some of this magic and you'll just get
+ 
+
+845
+00:14:16,420 --> 00:14:18,450
+some of this magic and you'll just get
+rekt all right so back to this we know
+
+846
+00:14:18,450 --> 00:14:18,460
+rekt all right so back to this we know
+ 
+
+847
+00:14:18,460 --> 00:14:20,730
+rekt all right so back to this we know
+that this comparison result is it's a
+
+848
+00:14:20,730 --> 00:14:20,740
+that this comparison result is it's a
+ 
+
+849
+00:14:20,740 --> 00:14:22,650
+that this comparison result is it's a
+boolean right and a boolean is really
+
+850
+00:14:22,650 --> 00:14:22,660
+boolean right and a boolean is really
+ 
+
+851
+00:14:22,660 --> 00:14:24,900
+boolean right and a boolean is really
+just basically an integer right it's
+
+852
+00:14:24,900 --> 00:14:24,910
+just basically an integer right it's
+ 
+
+853
+00:14:24,910 --> 00:14:26,280
+just basically an integer right it's
+going to be 0 for false than anything
+
+854
+00:14:26,280 --> 00:14:26,290
+going to be 0 for false than anything
+ 
+
+855
+00:14:26,290 --> 00:14:28,740
+going to be 0 for false than anything
+else such as 1 for true so what does if
+
+856
+00:14:28,740 --> 00:14:28,750
+else such as 1 for true so what does if
+ 
+
+857
+00:14:28,750 --> 00:14:30,270
+else such as 1 for true so what does if
+statement is actually doing is it's
+
+858
+00:14:30,270 --> 00:14:30,280
+statement is actually doing is it's
+ 
+
+859
+00:14:30,280 --> 00:14:32,910
+statement is actually doing is it's
+checking to see hey is this number 0
+
+860
+00:14:32,910 --> 00:14:32,920
+checking to see hey is this number 0
+ 
+
+861
+00:14:32,920 --> 00:14:36,540
+checking to see hey is this number 0
+right if it is zero then that's it's not
+
+862
+00:14:36,540 --> 00:14:36,550
+right if it is zero then that's it's not
+ 
+
+863
+00:14:36,550 --> 00:14:38,100
+right if it is zero then that's it's not
+going to perform that if statement
+
+864
+00:14:38,100 --> 00:14:38,110
+going to perform that if statement
+ 
+
+865
+00:14:38,110 --> 00:14:40,470
+going to perform that if statement
+however if it is anything other than 0
+
+866
+00:14:40,470 --> 00:14:40,480
+however if it is anything other than 0
+ 
+
+867
+00:14:40,480 --> 00:14:42,840
+however if it is anything other than 0
+such as 1 it is going to jump into that
+
+868
+00:14:42,840 --> 00:14:42,850
+such as 1 it is going to jump into that
+ 
+
+869
+00:14:42,850 --> 00:14:44,460
+such as 1 it is going to jump into that
+if statement that's kind of why this
+
+870
+00:14:44,460 --> 00:14:44,470
+if statement that's kind of why this
+ 
+
+871
+00:14:44,470 --> 00:14:46,230
+if statement that's kind of why this
+whole thing works and we don't have to
+
+872
+00:14:46,230 --> 00:14:46,240
+whole thing works and we don't have to
+ 
+
+873
+00:14:46,240 --> 00:14:47,970
+whole thing works and we don't have to
+do something like equals equals true
+
+874
+00:14:47,970 --> 00:14:47,980
+do something like equals equals true
+ 
+
+875
+00:14:47,980 --> 00:14:49,500
+do something like equals equals true
+because we don't need to be checking hey
+
+876
+00:14:49,500 --> 00:14:49,510
+because we don't need to be checking hey
+ 
+
+877
+00:14:49,510 --> 00:14:51,810
+because we don't need to be checking hey
+is it equal to 1 or is it equal to true
+
+878
+00:14:51,810 --> 00:14:51,820
+is it equal to 1 or is it equal to true
+ 
+
+879
+00:14:51,820 --> 00:14:53,580
+is it equal to 1 or is it equal to true
+or anything like that we can just kind
+
+880
+00:14:53,580 --> 00:14:53,590
+or anything like that we can just kind
+ 
+
+881
+00:14:53,590 --> 00:14:56,190
+or anything like that we can just kind
+of say hey is this value not 0 that's
+
+882
+00:14:56,190 --> 00:14:56,200
+of say hey is this value not 0 that's
+ 
+
+883
+00:14:56,200 --> 00:14:57,930
+of say hey is this value not 0 that's
+really what this is doing is saying take
+
+884
+00:14:57,930 --> 00:14:57,940
+really what this is doing is saying take
+ 
+
+885
+00:14:57,940 --> 00:14:59,970
+really what this is doing is saying take
+a look at the memory behind comparison
+
+886
+00:14:59,970 --> 00:14:59,980
+a look at the memory behind comparison
+ 
+
+887
+00:14:59,980 --> 00:15:02,220
+a look at the memory behind comparison
+results right what is comparison results
+
+888
+00:15:02,220 --> 00:15:02,230
+results right what is comparison results
+ 
+
+889
+00:15:02,230 --> 00:15:05,700
+results right what is comparison results
+is it 0 if it's not 0 then execute is
+
+890
+00:15:05,700 --> 00:15:05,710
+is it 0 if it's not 0 then execute is
+ 
+
+891
+00:15:05,710 --> 00:15:08,610
+is it 0 if it's not 0 then execute is
+code if it is 0 do not that is what an
+
+892
+00:15:08,610 --> 00:15:08,620
+code if it is 0 do not that is what an
+ 
+
+893
+00:15:08,620 --> 00:15:10,500
+code if it is 0 do not that is what an
+if statement boils down to so for
+
+894
+00:15:10,500 --> 00:15:10,510
+if statement boils down to so for
+ 
+
+895
+00:15:10,510 --> 00:15:13,110
+if statement boils down to so for
+example if I just write F 1 over here
+
+896
+00:15:13,110 --> 00:15:13,120
+example if I just write F 1 over here
+ 
+
+897
+00:15:13,120 --> 00:15:15,240
+example if I just write F 1 over here
+and run my code it's going to compile
+
+898
+00:15:15,240 --> 00:15:15,250
+and run my code it's going to compile
+ 
+
+899
+00:15:15,250 --> 00:15:17,310
+and run my code it's going to compile
+just fine and you're going to see that
+
+900
+00:15:17,310 --> 00:15:17,320
+just fine and you're going to see that
+ 
+
+901
+00:15:17,320 --> 00:15:18,990
+just fine and you're going to see that
+HelloWorld does actually get printed
+
+902
+00:15:18,990 --> 00:15:19,000
+HelloWorld does actually get printed
+ 
+
+903
+00:15:19,000 --> 00:15:22,560
+HelloWorld does actually get printed
+right and if I type F 0 then it's not
+
+904
+00:15:22,560 --> 00:15:22,570
+right and if I type F 0 then it's not
+ 
+
+905
+00:15:22,570 --> 00:15:24,120
+right and if I type F 0 then it's not
+pretty simple we already know that it
+
+906
+00:15:24,120 --> 00:15:24,130
+pretty simple we already know that it
+ 
+
+907
+00:15:24,130 --> 00:15:25,680
+pretty simple we already know that it
+works that way with this comparison
+
+908
+00:15:25,680 --> 00:15:25,690
+works that way with this comparison
+ 
+
+909
+00:15:25,690 --> 00:15:27,270
+works that way with this comparison
+result of course we don't need to store
+
+910
+00:15:27,270 --> 00:15:27,280
+result of course we don't need to store
+ 
+
+911
+00:15:27,280 --> 00:15:28,140
+result of course we don't need to store
+this in a variable
+
+912
+00:15:28,140 --> 00:15:28,150
+this in a variable
+ 
+
+913
+00:15:28,150 --> 00:15:29,640
+this in a variable
+and I did this was I just wanted to show
+
+914
+00:15:29,640 --> 00:15:29,650
+and I did this was I just wanted to show
+ 
+
+915
+00:15:29,650 --> 00:15:31,650
+and I did this was I just wanted to show
+you guys that this condition is is
+
+916
+00:15:31,650 --> 00:15:31,660
+you guys that this condition is is
+ 
+
+917
+00:15:31,660 --> 00:15:34,020
+you guys that this condition is is
+actually a bullying type you can just
+
+918
+00:15:34,020 --> 00:15:34,030
+actually a bullying type you can just
+ 
+
+919
+00:15:34,030 --> 00:15:37,260
+actually a bullying type you can just
+write if x equals equals five over here
+
+920
+00:15:37,260 --> 00:15:37,270
+write if x equals equals five over here
+ 
+
+921
+00:15:37,270 --> 00:15:39,210
+write if x equals equals five over here
+and that will sink your code quite a bit
+
+922
+00:15:39,210 --> 00:15:39,220
+and that will sink your code quite a bit
+ 
+
+923
+00:15:39,220 --> 00:15:41,220
+and that will sink your code quite a bit
+if our if statement is just one line of
+
+924
+00:15:41,220 --> 00:15:41,230
+if our if statement is just one line of
+ 
+
+925
+00:15:41,230 --> 00:15:43,020
+if our if statement is just one line of
+code as well we don't need to provide
+
+926
+00:15:43,020 --> 00:15:43,030
+code as well we don't need to provide
+ 
+
+927
+00:15:43,030 --> 00:15:44,760
+code as well we don't need to provide
+curly brackets for a body we can just
+
+928
+00:15:44,760 --> 00:15:44,770
+curly brackets for a body we can just
+ 
+
+929
+00:15:44,770 --> 00:15:46,800
+curly brackets for a body we can just
+write something like this and it will be
+
+930
+00:15:46,800 --> 00:15:46,810
+write something like this and it will be
+ 
+
+931
+00:15:46,810 --> 00:15:48,870
+write something like this and it will be
+fine you can even form out this some
+
+932
+00:15:48,870 --> 00:15:48,880
+fine you can even form out this some
+ 
+
+933
+00:15:48,880 --> 00:15:50,310
+fine you can even form out this some
+people format this to be on one line I
+
+934
+00:15:50,310 --> 00:15:50,320
+people format this to be on one line I
+ 
+
+935
+00:15:50,320 --> 00:15:52,260
+people format this to be on one line I
+personally do not do that it's a little
+
+936
+00:15:52,260 --> 00:15:52,270
+personally do not do that it's a little
+ 
+
+937
+00:15:52,270 --> 00:15:53,640
+personally do not do that it's a little
+bit annoying one it's on one line
+
+938
+00:15:53,640 --> 00:15:53,650
+bit annoying one it's on one line
+ 
+
+939
+00:15:53,650 --> 00:15:55,500
+bit annoying one it's on one line
+because if you're trying to debug so for
+
+940
+00:15:55,500 --> 00:15:55,510
+because if you're trying to debug so for
+ 
+
+941
+00:15:55,510 --> 00:15:56,970
+because if you're trying to debug so for
+example if I put a breakpoint here
+
+942
+00:15:56,970 --> 00:15:56,980
+example if I put a breakpoint here
+ 
+
+943
+00:15:56,980 --> 00:15:59,670
+example if I put a breakpoint here
+you're going to see that it's actually
+
+944
+00:15:59,670 --> 00:15:59,680
+you're going to see that it's actually
+ 
+
+945
+00:15:59,680 --> 00:16:01,230
+you're going to see that it's actually
+going to hit this line and I have no
+
+946
+00:16:01,230 --> 00:16:01,240
+going to hit this line and I have no
+ 
+
+947
+00:16:01,240 --> 00:16:02,610
+going to hit this line and I have no
+idea if it's actually doing the
+
+948
+00:16:02,610 --> 00:16:02,620
+idea if it's actually doing the
+ 
+
+949
+00:16:02,620 --> 00:16:04,170
+idea if it's actually doing the
+comparison or if it's actually logging
+
+950
+00:16:04,170 --> 00:16:04,180
+comparison or if it's actually logging
+ 
+
+951
+00:16:04,180 --> 00:16:05,700
+comparison or if it's actually logging
+the function if I hit f10 is just going
+
+952
+00:16:05,700 --> 00:16:05,710
+the function if I hit f10 is just going
+ 
+
+953
+00:16:05,710 --> 00:16:07,530
+the function if I hit f10 is just going
+to go past I have no idea what's going
+
+954
+00:16:07,530 --> 00:16:07,540
+to go past I have no idea what's going
+ 
+
+955
+00:16:07,540 --> 00:16:09,810
+to go past I have no idea what's going
+on whereas if I do separate it out into
+
+956
+00:16:09,810 --> 00:16:09,820
+on whereas if I do separate it out into
+ 
+
+957
+00:16:09,820 --> 00:16:12,390
+on whereas if I do separate it out into
+two lines like this I can actually check
+
+958
+00:16:12,390 --> 00:16:12,400
+two lines like this I can actually check
+ 
+
+959
+00:16:12,400 --> 00:16:14,580
+two lines like this I can actually check
+you can see that if I get at ten look
+
+960
+00:16:14,580 --> 00:16:14,590
+you can see that if I get at ten look
+ 
+
+961
+00:16:14,590 --> 00:16:16,170
+you can see that if I get at ten look
+it's not going to that line so clearly
+
+962
+00:16:16,170 --> 00:16:16,180
+it's not going to that line so clearly
+ 
+
+963
+00:16:16,180 --> 00:16:18,810
+it's not going to that line so clearly
+that line has not been executed nice and
+
+964
+00:16:18,810 --> 00:16:18,820
+that line has not been executed nice and
+ 
+
+965
+00:16:18,820 --> 00:16:19,290
+that line has not been executed nice and
+simple
+
+966
+00:16:19,290 --> 00:16:19,300
+simple
+ 
+
+967
+00:16:19,300 --> 00:16:20,790
+simple
+because bullying's are just a numeric
+
+968
+00:16:20,790 --> 00:16:20,800
+because bullying's are just a numeric
+ 
+
+969
+00:16:20,800 --> 00:16:22,380
+because bullying's are just a numeric
+values and because it's if statement is
+
+970
+00:16:22,380 --> 00:16:22,390
+values and because it's if statement is
+ 
+
+971
+00:16:22,390 --> 00:16:24,060
+values and because it's if statement is
+basically just checking something
+
+972
+00:16:24,060 --> 00:16:24,070
+basically just checking something
+ 
+
+973
+00:16:24,070 --> 00:16:26,160
+basically just checking something
+numerically you can do some pretty
+
+974
+00:16:26,160 --> 00:16:26,170
+numerically you can do some pretty
+ 
+
+975
+00:16:26,170 --> 00:16:27,150
+numerically you can do some pretty
+interesting things with if statements
+
+976
+00:16:27,150 --> 00:16:27,160
+interesting things with if statements
+ 
+
+977
+00:16:27,160 --> 00:16:30,210
+interesting things with if statements
+for example I can just write if X right
+
+978
+00:16:30,210 --> 00:16:30,220
+for example I can just write if X right
+ 
+
+979
+00:16:30,220 --> 00:16:33,480
+for example I can just write if X right
+and then if I run that code it's going
+
+980
+00:16:33,480 --> 00:16:33,490
+and then if I run that code it's going
+ 
+
+981
+00:16:33,490 --> 00:16:35,610
+and then if I run that code it's going
+to basically be again evaluating hey is
+
+982
+00:16:35,610 --> 00:16:35,620
+to basically be again evaluating hey is
+ 
+
+983
+00:16:35,620 --> 00:16:39,510
+to basically be again evaluating hey is
+is X zero or is it not and of course X
+
+984
+00:16:39,510 --> 00:16:39,520
+is X zero or is it not and of course X
+ 
+
+985
+00:16:39,520 --> 00:16:41,850
+is X zero or is it not and of course X
+is 6 so if I hit us and we're going to
+
+986
+00:16:41,850 --> 00:16:41,860
+is 6 so if I hit us and we're going to
+ 
+
+987
+00:16:41,860 --> 00:16:44,010
+is 6 so if I hit us and we're going to
+jump into that log function and actually
+
+988
+00:16:44,010 --> 00:16:44,020
+jump into that log function and actually
+ 
+
+989
+00:16:44,020 --> 00:16:46,200
+jump into that log function and actually
+perform that that log it's also very
+
+990
+00:16:46,200 --> 00:16:46,210
+perform that that log it's also very
+ 
+
+991
+00:16:46,210 --> 00:16:48,180
+perform that that log it's also very
+common to use this trick with pointers
+
+992
+00:16:48,180 --> 00:16:48,190
+common to use this trick with pointers
+ 
+
+993
+00:16:48,190 --> 00:16:50,070
+common to use this trick with pointers
+so if we want to check to see if a
+
+994
+00:16:50,070 --> 00:16:50,080
+so if we want to check to see if a
+ 
+
+995
+00:16:50,080 --> 00:16:52,800
+so if we want to check to see if a
+pointer is null null of course is 0 we
+
+996
+00:16:52,800 --> 00:16:52,810
+pointer is null null of course is 0 we
+ 
+
+997
+00:16:52,810 --> 00:16:54,540
+pointer is null null of course is 0 we
+can just basically put that pointer in
+
+998
+00:16:54,540 --> 00:16:54,550
+can just basically put that pointer in
+ 
+
+999
+00:16:54,550 --> 00:16:57,150
+can just basically put that pointer in
+an F statement condition like this and
+
+1000
+00:16:57,150 --> 00:16:57,160
+an F statement condition like this and
+ 
+
+1001
+00:16:57,160 --> 00:16:59,490
+an F statement condition like this and
+see and see if it's null or not so in
+
+1002
+00:16:59,490 --> 00:16:59,500
+see and see if it's null or not so in
+ 
+
+1003
+00:16:59,500 --> 00:17:01,200
+see and see if it's null or not so in
+other words if I had a pointer for
+
+1004
+00:17:01,200 --> 00:17:01,210
+other words if I had a pointer for
+ 
+
+1005
+00:17:01,210 --> 00:17:04,860
+other words if I had a pointer for
+example const char pointer equals hello
+
+1006
+00:17:04,860 --> 00:17:04,870
+example const char pointer equals hello
+ 
+
+1007
+00:17:04,870 --> 00:17:09,960
+example const char pointer equals hello
+I could just say is pointer log pointer
+
+1008
+00:17:09,960 --> 00:17:09,970
+I could just say is pointer log pointer
+ 
+
+1009
+00:17:09,970 --> 00:17:12,449
+I could just say is pointer log pointer
+and if I run this code you can see
+
+1010
+00:17:12,449 --> 00:17:12,459
+and if I run this code you can see
+ 
+
+1011
+00:17:12,459 --> 00:17:14,040
+and if I run this code you can see
+pointer is actually touching something
+
+1012
+00:17:14,040 --> 00:17:14,050
+pointer is actually touching something
+ 
+
+1013
+00:17:14,050 --> 00:17:15,900
+pointer is actually touching something
+it's not null and because of that we're
+
+1014
+00:17:15,900 --> 00:17:15,910
+it's not null and because of that we're
+ 
+
+1015
+00:17:15,910 --> 00:17:17,579
+it's not null and because of that we're
+going to be able to print that to the
+
+1016
+00:17:17,579 --> 00:17:17,589
+going to be able to print that to the
+ 
+
+1017
+00:17:17,589 --> 00:17:20,340
+going to be able to print that to the
+console over here okay at this point it
+
+1018
+00:17:20,340 --> 00:17:20,350
+console over here okay at this point it
+ 
+
+1019
+00:17:20,350 --> 00:17:23,610
+console over here okay at this point it
+was equal to null so it could be 0 or
+
+1020
+00:17:23,610 --> 00:17:23,620
+was equal to null so it could be 0 or
+ 
+
+1021
+00:17:23,620 --> 00:17:25,140
+was equal to null so it could be 0 or
+null pointer or whatever you want to
+
+1022
+00:17:25,140 --> 00:17:25,150
+null pointer or whatever you want to
+ 
+
+1023
+00:17:25,150 --> 00:17:26,820
+null pointer or whatever you want to
+type you can see that this code will not
+
+1024
+00:17:26,820 --> 00:17:26,830
+type you can see that this code will not
+ 
+
+1025
+00:17:26,830 --> 00:17:29,040
+type you can see that this code will not
+run okay so basically instead of writing
+
+1026
+00:17:29,040 --> 00:17:29,050
+run okay so basically instead of writing
+ 
+
+1027
+00:17:29,050 --> 00:17:31,650
+run okay so basically instead of writing
+if pointer does not equal null pointer
+
+1028
+00:17:31,650 --> 00:17:31,660
+if pointer does not equal null pointer
+ 
+
+1029
+00:17:31,660 --> 00:17:33,480
+if pointer does not equal null pointer
+we can be a little bit more concise and
+
+1030
+00:17:33,480 --> 00:17:33,490
+we can be a little bit more concise and
+ 
+
+1031
+00:17:33,490 --> 00:17:35,490
+we can be a little bit more concise and
+just write each pointer that is more of
+
+1032
+00:17:35,490 --> 00:17:35,500
+just write each pointer that is more of
+ 
+
+1033
+00:17:35,500 --> 00:17:37,110
+just write each pointer that is more of
+a matter of style as well some people do
+
+1034
+00:17:37,110 --> 00:17:37,120
+a matter of style as well some people do
+ 
+
+1035
+00:17:37,120 --> 00:17:39,120
+a matter of style as well some people do
+like to be explicit because they claim
+
+1036
+00:17:39,120 --> 00:17:39,130
+like to be explicit because they claim
+ 
+
+1037
+00:17:39,130 --> 00:17:39,850
+like to be explicit because they claim
+that it makes the
+
+1038
+00:17:39,850 --> 00:17:39,860
+that it makes the
+ 
+
+1039
+00:17:39,860 --> 00:17:42,160
+that it makes the
+more readable I personally don't mind I
+
+1040
+00:17:42,160 --> 00:17:42,170
+more readable I personally don't mind I
+ 
+
+1041
+00:17:42,170 --> 00:17:43,600
+more readable I personally don't mind I
+usually end up writing code like this
+
+1042
+00:17:43,600 --> 00:17:43,610
+usually end up writing code like this
+ 
+
+1043
+00:17:43,610 --> 00:17:46,330
+usually end up writing code like this
+because to me it makes sense right this
+
+1044
+00:17:46,330 --> 00:17:46,340
+because to me it makes sense right this
+ 
+
+1045
+00:17:46,340 --> 00:17:48,520
+because to me it makes sense right this
+pointer is basically a valid value hey
+
+1046
+00:17:48,520 --> 00:17:48,530
+pointer is basically a valid value hey
+ 
+
+1047
+00:17:48,530 --> 00:17:50,680
+pointer is basically a valid value hey
+do this right keep secure nice and clean
+
+1048
+00:17:50,680 --> 00:17:50,690
+do this right keep secure nice and clean
+ 
+
+1049
+00:17:50,690 --> 00:17:52,330
+do this right keep secure nice and clean
+and something that you can do in C++
+
+1050
+00:17:52,330 --> 00:17:52,340
+and something that you can do in C++
+ 
+
+1051
+00:17:52,340 --> 00:17:53,470
+and something that you can do in C++
+that you can't really do in other
+
+1052
+00:17:53,470 --> 00:17:53,480
+that you can't really do in other
+ 
+
+1053
+00:17:53,480 --> 00:17:55,990
+that you can't really do in other
+languages such as Java or C sharp so
+
+1054
+00:17:55,990 --> 00:17:56,000
+languages such as Java or C sharp so
+ 
+
+1055
+00:17:56,000 --> 00:17:57,669
+languages such as Java or C sharp so
+they're a little bit more explicit but
+
+1056
+00:17:57,669 --> 00:17:57,679
+they're a little bit more explicit but
+ 
+
+1057
+00:17:57,679 --> 00:18:00,070
+they're a little bit more explicit but
+it still applies again it's kind of a
+
+1058
+00:18:00,070 --> 00:18:00,080
+it still applies again it's kind of a
+ 
+
+1059
+00:18:00,080 --> 00:18:01,870
+it still applies again it's kind of a
+raw language right so anything really
+
+1060
+00:18:01,870 --> 00:18:01,880
+raw language right so anything really
+ 
+
+1061
+00:18:01,880 --> 00:18:04,539
+raw language right so anything really
+goes now if we want to do something else
+
+1062
+00:18:04,539 --> 00:18:04,549
+goes now if we want to do something else
+ 
+
+1063
+00:18:04,549 --> 00:18:07,539
+goes now if we want to do something else
+right so basically I'm saying here if
+
+1064
+00:18:07,539 --> 00:18:07,549
+right so basically I'm saying here if
+ 
+
+1065
+00:18:07,549 --> 00:18:10,060
+right so basically I'm saying here if
+pointer is a valid value right if it's
+
+1066
+00:18:10,060 --> 00:18:10,070
+pointer is a valid value right if it's
+ 
+
+1067
+00:18:10,070 --> 00:18:12,070
+pointer is a valid value right if it's
+not null then log but what if I want to
+
+1068
+00:18:12,070 --> 00:18:12,080
+not null then log but what if I want to
+ 
+
+1069
+00:18:12,080 --> 00:18:14,049
+not null then log but what if I want to
+run some code that only happens if this
+
+1070
+00:18:14,049 --> 00:18:14,059
+run some code that only happens if this
+ 
+
+1071
+00:18:14,059 --> 00:18:15,940
+run some code that only happens if this
+is not the case right that's why an else
+
+1072
+00:18:15,940 --> 00:18:15,950
+is not the case right that's why an else
+ 
+
+1073
+00:18:15,950 --> 00:18:18,600
+is not the case right that's why an else
+statement comes in so I can write L log
+
+1074
+00:18:18,600 --> 00:18:18,610
+statement comes in so I can write L log
+ 
+
+1075
+00:18:18,610 --> 00:18:22,840
+statement comes in so I can write L log
+pointer is null right and then if I run
+
+1076
+00:18:22,840 --> 00:18:22,850
+pointer is null right and then if I run
+ 
+
+1077
+00:18:22,850 --> 00:18:24,880
+pointer is null right and then if I run
+my program right now you can see what's
+
+1078
+00:18:24,880 --> 00:18:24,890
+my program right now you can see what's
+ 
+
+1079
+00:18:24,890 --> 00:18:26,200
+my program right now you can see what's
+going to happen it's going to print
+
+1080
+00:18:26,200 --> 00:18:26,210
+going to happen it's going to print
+ 
+
+1081
+00:18:26,210 --> 00:18:28,419
+going to happen it's going to print
+pointer is null of course because if I
+
+1082
+00:18:28,419 --> 00:18:28,429
+pointer is null of course because if I
+ 
+
+1083
+00:18:28,429 --> 00:18:29,980
+pointer is null of course because if I
+step through this line by line by using
+
+1084
+00:18:29,980 --> 00:18:29,990
+step through this line by line by using
+ 
+
+1085
+00:18:29,990 --> 00:18:32,560
+step through this line by line by using
+the debugger the pointer is going to be
+
+1086
+00:18:32,560 --> 00:18:32,570
+the debugger the pointer is going to be
+ 
+
+1087
+00:18:32,570 --> 00:18:34,990
+the debugger the pointer is going to be
+null or zero it's not going to perform
+
+1088
+00:18:34,990 --> 00:18:35,000
+null or zero it's not going to perform
+ 
+
+1089
+00:18:35,000 --> 00:18:36,580
+null or zero it's not going to perform
+this and it's going to jump right to the
+
+1090
+00:18:36,580 --> 00:18:36,590
+this and it's going to jump right to the
+ 
+
+1091
+00:18:36,590 --> 00:18:38,919
+this and it's going to jump right to the
+out pretty cool now similarly we can
+
+1092
+00:18:38,919 --> 00:18:38,929
+out pretty cool now similarly we can
+ 
+
+1093
+00:18:38,929 --> 00:18:41,380
+out pretty cool now similarly we can
+also use LTS to keep checking for
+
+1094
+00:18:41,380 --> 00:18:41,390
+also use LTS to keep checking for
+ 
+
+1095
+00:18:41,390 --> 00:18:43,030
+also use LTS to keep checking for
+conditions so in other words I could
+
+1096
+00:18:43,030 --> 00:18:43,040
+conditions so in other words I could
+ 
+
+1097
+00:18:43,040 --> 00:18:44,770
+conditions so in other words I could
+check to see its point that is equal to
+
+1098
+00:18:44,770 --> 00:18:44,780
+check to see its point that is equal to
+ 
+
+1099
+00:18:44,780 --> 00:18:46,570
+check to see its point that is equal to
+hello or something like that and then
+
+1100
+00:18:46,570 --> 00:18:46,580
+hello or something like that and then
+ 
+
+1101
+00:18:46,580 --> 00:18:49,720
+hello or something like that and then
+maybe a log pointer is hello right and
+
+1102
+00:18:49,720 --> 00:18:49,730
+maybe a log pointer is hello right and
+ 
+
+1103
+00:18:49,730 --> 00:18:51,460
+maybe a log pointer is hello right and
+what's going to happen is because this
+
+1104
+00:18:51,460 --> 00:18:51,470
+what's going to happen is because this
+ 
+
+1105
+00:18:51,470 --> 00:18:54,039
+what's going to happen is because this
+is an else if it's actually only going
+
+1106
+00:18:54,039 --> 00:18:54,049
+is an else if it's actually only going
+ 
+
+1107
+00:18:54,049 --> 00:18:56,380
+is an else if it's actually only going
+to check this condition if this one
+
+1108
+00:18:56,380 --> 00:18:56,390
+to check this condition if this one
+ 
+
+1109
+00:18:56,390 --> 00:18:59,200
+to check this condition if this one
+fails right so the code that I've
+
+1110
+00:18:59,200 --> 00:18:59,210
+fails right so the code that I've
+ 
+
+1111
+00:18:59,210 --> 00:19:00,909
+fails right so the code that I've
+written here would theoretically never
+
+1112
+00:19:00,909 --> 00:19:00,919
+written here would theoretically never
+ 
+
+1113
+00:19:00,919 --> 00:19:03,159
+written here would theoretically never
+run right or at least this part would
+
+1114
+00:19:03,159 --> 00:19:03,169
+run right or at least this part would
+ 
+
+1115
+00:19:03,169 --> 00:19:05,680
+run right or at least this part would
+never run because it's pointer was not
+
+1116
+00:19:05,680 --> 00:19:05,690
+never run because it's pointer was not
+ 
+
+1117
+00:19:05,690 --> 00:19:08,470
+never run because it's pointer was not
+null then this disk would catch it right
+
+1118
+00:19:08,470 --> 00:19:08,480
+null then this disk would catch it right
+ 
+
+1119
+00:19:08,480 --> 00:19:11,620
+null then this disk would catch it right
+and this would not so again if I set if
+
+1120
+00:19:11,620 --> 00:19:11,630
+and this would not so again if I set if
+ 
+
+1121
+00:19:11,630 --> 00:19:13,750
+and this would not so again if I set if
+I set my code to something like hello
+
+1122
+00:19:13,750 --> 00:19:13,760
+I set my code to something like hello
+ 
+
+1123
+00:19:13,760 --> 00:19:17,320
+I set my code to something like hello
+and then I hit f5 what's going to happen
+
+1124
+00:19:17,320 --> 00:19:17,330
+and then I hit f5 what's going to happen
+ 
+
+1125
+00:19:17,330 --> 00:19:19,659
+and then I hit f5 what's going to happen
+is pointer is going to be not null so
+
+1126
+00:19:19,659 --> 00:19:19,669
+is pointer is going to be not null so
+ 
+
+1127
+00:19:19,669 --> 00:19:21,520
+is pointer is going to be not null so
+this branch this branch is actually
+
+1128
+00:19:21,520 --> 00:19:21,530
+this branch this branch is actually
+ 
+
+1129
+00:19:21,530 --> 00:19:23,770
+this branch this branch is actually
+going to catch that and then if I hit a
+
+1130
+00:19:23,770 --> 00:19:23,780
+going to catch that and then if I hit a
+ 
+
+1131
+00:19:23,780 --> 00:19:25,120
+going to catch that and then if I hit a
+turn you can see we jump all the way
+
+1132
+00:19:25,120 --> 00:19:25,130
+turn you can see we jump all the way
+ 
+
+1133
+00:19:25,130 --> 00:19:26,500
+turn you can see we jump all the way
+over here because none of this really
+
+1134
+00:19:26,500 --> 00:19:26,510
+over here because none of this really
+ 
+
+1135
+00:19:26,510 --> 00:19:28,810
+over here because none of this really
+matters right only do these things only
+
+1136
+00:19:28,810 --> 00:19:28,820
+matters right only do these things only
+ 
+
+1137
+00:19:28,820 --> 00:19:32,049
+matters right only do these things only
+even check this if this first one fails
+
+1138
+00:19:32,049 --> 00:19:32,059
+even check this if this first one fails
+ 
+
+1139
+00:19:32,059 --> 00:19:34,090
+even check this if this first one fails
+however if I had written something like
+
+1140
+00:19:34,090 --> 00:19:34,100
+however if I had written something like
+ 
+
+1141
+00:19:34,100 --> 00:19:37,659
+however if I had written something like
+if without an else yes right then you
+
+1142
+00:19:37,659 --> 00:19:37,669
+if without an else yes right then you
+ 
+
+1143
+00:19:37,669 --> 00:19:39,669
+if without an else yes right then you
+can see that it is actually still going
+
+1144
+00:19:39,669 --> 00:19:39,679
+can see that it is actually still going
+ 
+
+1145
+00:19:39,679 --> 00:19:41,020
+can see that it is actually still going
+to check that and that's going to
+
+1146
+00:19:41,020 --> 00:19:41,030
+to check that and that's going to
+ 
+
+1147
+00:19:41,030 --> 00:19:42,610
+to check that and that's going to
+succeed and we actually end up printing
+
+1148
+00:19:42,610 --> 00:19:42,620
+succeed and we actually end up printing
+ 
+
+1149
+00:19:42,620 --> 00:19:44,530
+succeed and we actually end up printing
+two things to the console so just
+
+1150
+00:19:44,530 --> 00:19:44,540
+two things to the console so just
+ 
+
+1151
+00:19:44,540 --> 00:19:46,480
+two things to the console so just
+something to keep in mind now an else if
+
+1152
+00:19:46,480 --> 00:19:46,490
+something to keep in mind now an else if
+ 
+
+1153
+00:19:46,490 --> 00:19:48,070
+something to keep in mind now an else if
+statement is actually a little bit of a
+
+1154
+00:19:48,070 --> 00:19:48,080
+statement is actually a little bit of a
+ 
+
+1155
+00:19:48,080 --> 00:19:49,990
+statement is actually a little bit of a
+trick that you might not realize is
+
+1156
+00:19:49,990 --> 00:19:50,000
+trick that you might not realize is
+ 
+
+1157
+00:19:50,000 --> 00:19:51,590
+trick that you might not realize is
+actually that we happen
+
+1158
+00:19:51,590 --> 00:19:51,600
+actually that we happen
+ 
+
+1159
+00:19:51,600 --> 00:19:53,540
+actually that we happen
+it's really just kind of cleverly hidden
+
+1160
+00:19:53,540 --> 00:19:53,550
+it's really just kind of cleverly hidden
+ 
+
+1161
+00:19:53,550 --> 00:19:55,340
+it's really just kind of cleverly hidden
+syntax in a way so if we jump back to
+
+1162
+00:19:55,340 --> 00:19:55,350
+syntax in a way so if we jump back to
+ 
+
+1163
+00:19:55,350 --> 00:19:57,560
+syntax in a way so if we jump back to
+our code what we'll see if I try and
+
+1164
+00:19:57,560 --> 00:19:57,570
+our code what we'll see if I try and
+ 
+
+1165
+00:19:57,570 --> 00:19:59,750
+our code what we'll see if I try and
+writers else if statement is it is
+
+1166
+00:19:59,750 --> 00:19:59,760
+writers else if statement is it is
+ 
+
+1167
+00:19:59,760 --> 00:20:01,340
+writers else if statement is it is
+actually it is actually two separate
+
+1168
+00:20:01,340 --> 00:20:01,350
+actually it is actually two separate
+ 
+
+1169
+00:20:01,350 --> 00:20:03,500
+actually it is actually two separate
+statements it's an L and isn't yes
+
+1170
+00:20:03,500 --> 00:20:03,510
+statements it's an L and isn't yes
+ 
+
+1171
+00:20:03,510 --> 00:20:05,030
+statements it's an L and isn't yes
+completely separate because check this
+
+1172
+00:20:05,030 --> 00:20:05,040
+completely separate because check this
+ 
+
+1173
+00:20:05,040 --> 00:20:07,720
+completely separate because check this
+out
+
+1174
+00:20:07,720 --> 00:20:07,730
+
+ 
+
+1175
+00:20:07,730 --> 00:20:11,300
+
+that is exactly what happens right so
+
+1176
+00:20:11,300 --> 00:20:11,310
+that is exactly what happens right so
+ 
+
+1177
+00:20:11,310 --> 00:20:13,160
+that is exactly what happens right so
+basically we're saying without else if
+
+1178
+00:20:13,160 --> 00:20:13,170
+basically we're saying without else if
+ 
+
+1179
+00:20:13,170 --> 00:20:15,470
+basically we're saying without else if
+it's just it's just kind of combined
+
+1180
+00:20:15,470 --> 00:20:15,480
+it's just it's just kind of combined
+ 
+
+1181
+00:20:15,480 --> 00:20:17,360
+it's just it's just kind of combined
+into one line yeah right the same way
+
+1182
+00:20:17,360 --> 00:20:17,370
+into one line yeah right the same way
+ 
+
+1183
+00:20:17,370 --> 00:20:18,770
+into one line yeah right the same way
+that were kind of combining this into
+
+1184
+00:20:18,770 --> 00:20:18,780
+that were kind of combining this into
+ 
+
+1185
+00:20:18,780 --> 00:20:20,840
+that were kind of combining this into
+one line it's kind of like if we had
+
+1186
+00:20:20,840 --> 00:20:20,850
+one line it's kind of like if we had
+ 
+
+1187
+00:20:20,850 --> 00:20:23,720
+one line it's kind of like if we had
+written this in a way right so again out
+
+1188
+00:20:23,720 --> 00:20:23,730
+written this in a way right so again out
+ 
+
+1189
+00:20:23,730 --> 00:20:25,640
+written this in a way right so again out
+if just to just a clever little else and
+
+1190
+00:20:25,640 --> 00:20:25,650
+if just to just a clever little else and
+ 
+
+1191
+00:20:25,650 --> 00:20:28,430
+if just to just a clever little else and
+then yes so basically what we're saying
+
+1192
+00:20:28,430 --> 00:20:28,440
+then yes so basically what we're saying
+ 
+
+1193
+00:20:28,440 --> 00:20:32,060
+then yes so basically what we're saying
+is if this condition fails then try to
+
+1194
+00:20:32,060 --> 00:20:32,070
+is if this condition fails then try to
+ 
+
+1195
+00:20:32,070 --> 00:20:34,250
+is if this condition fails then try to
+an if pointer equal follow so again it's
+
+1196
+00:20:34,250 --> 00:20:34,260
+an if pointer equal follow so again it's
+ 
+
+1197
+00:20:34,260 --> 00:20:36,410
+an if pointer equal follow so again it's
+going to only do that comparison is that
+
+1198
+00:20:36,410 --> 00:20:36,420
+going to only do that comparison is that
+ 
+
+1199
+00:20:36,420 --> 00:20:38,420
+going to only do that comparison is that
+else gets triggered which will happen if
+
+1200
+00:20:38,420 --> 00:20:38,430
+else gets triggered which will happen if
+ 
+
+1201
+00:20:38,430 --> 00:20:40,160
+else gets triggered which will happen if
+this is false and then it will run our
+
+1202
+00:20:40,160 --> 00:20:40,170
+this is false and then it will run our
+ 
+
+1203
+00:20:40,170 --> 00:20:43,660
+this is false and then it will run our
+code so yeah clever little trick I
+
+1204
+00:20:43,660 --> 00:20:43,670
+code so yeah clever little trick I
+ 
+
+1205
+00:20:43,670 --> 00:20:45,830
+code so yeah clever little trick I
+remember when I found that out it kind
+
+1206
+00:20:45,830 --> 00:20:45,840
+remember when I found that out it kind
+ 
+
+1207
+00:20:45,840 --> 00:20:47,150
+remember when I found that out it kind
+of blew my mind because I didn't really
+
+1208
+00:20:47,150 --> 00:20:47,160
+of blew my mind because I didn't really
+ 
+
+1209
+00:20:47,160 --> 00:20:48,350
+of blew my mind because I didn't really
+I didn't realize it at the time I
+
+1210
+00:20:48,350 --> 00:20:48,360
+I didn't realize it at the time I
+ 
+
+1211
+00:20:48,360 --> 00:20:50,000
+I didn't realize it at the time I
+thought else it was actually some kind
+
+1212
+00:20:50,000 --> 00:20:50,010
+thought else it was actually some kind
+ 
+
+1213
+00:20:50,010 --> 00:20:52,460
+thought else it was actually some kind
+of just keyword combination but no L
+
+1214
+00:20:52,460 --> 00:20:52,470
+of just keyword combination but no L
+ 
+
+1215
+00:20:52,470 --> 00:20:54,470
+of just keyword combination but no L
+this is literally just there is no else
+
+1216
+00:20:54,470 --> 00:20:54,480
+this is literally just there is no else
+ 
+
+1217
+00:20:54,480 --> 00:20:56,810
+this is literally just there is no else
+is keyword in C++ they just there's
+
+1218
+00:20:56,810 --> 00:20:56,820
+is keyword in C++ they just there's
+ 
+
+1219
+00:20:56,820 --> 00:20:58,910
+is keyword in C++ they just there's
+Elton as s right and all we're doing
+
+1220
+00:20:58,910 --> 00:20:58,920
+Elton as s right and all we're doing
+ 
+
+1221
+00:20:58,920 --> 00:21:01,880
+Elton as s right and all we're doing
+here is were saying else yes that's
+
+1222
+00:21:01,880 --> 00:21:01,890
+here is were saying else yes that's
+ 
+
+1223
+00:21:01,890 --> 00:21:02,390
+here is were saying else yes that's
+right
+
+1224
+00:21:02,390 --> 00:21:02,400
+right
+ 
+
+1225
+00:21:02,400 --> 00:21:03,920
+right
+pretty cool all right so anyway I've
+
+1226
+00:21:03,920 --> 00:21:03,930
+pretty cool all right so anyway I've
+ 
+
+1227
+00:21:03,930 --> 00:21:06,230
+pretty cool all right so anyway I've
+said pretty much all I can about the
+
+1228
+00:21:06,230 --> 00:21:06,240
+said pretty much all I can about the
+ 
+
+1229
+00:21:06,240 --> 00:21:08,120
+said pretty much all I can about the
+basics of if statements and conditionals
+
+1230
+00:21:08,120 --> 00:21:08,130
+basics of if statements and conditionals
+ 
+
+1231
+00:21:08,130 --> 00:21:09,500
+basics of if statements and conditionals
+and branches and jumps and all that
+
+1232
+00:21:09,500 --> 00:21:09,510
+and branches and jumps and all that
+ 
+
+1233
+00:21:09,510 --> 00:21:11,360
+and branches and jumps and all that
+stuff hope you guys understand how this
+
+1234
+00:21:11,360 --> 00:21:11,370
+stuff hope you guys understand how this
+ 
+
+1235
+00:21:11,370 --> 00:21:13,220
+stuff hope you guys understand how this
+all works so I'm pretty sure I covered
+
+1236
+00:21:13,220 --> 00:21:13,230
+all works so I'm pretty sure I covered
+ 
+
+1237
+00:21:13,230 --> 00:21:15,080
+all works so I'm pretty sure I covered
+like everything if you didn't get much
+
+1238
+00:21:15,080 --> 00:21:15,090
+like everything if you didn't get much
+ 
+
+1239
+00:21:15,090 --> 00:21:16,550
+like everything if you didn't get much
+don't worry I've made this very
+
+1240
+00:21:16,550 --> 00:21:16,560
+don't worry I've made this very
+ 
+
+1241
+00:21:16,560 --> 00:21:18,530
+don't worry I've made this very
+complicated but on the other hand I have
+
+1242
+00:21:18,530 --> 00:21:18,540
+complicated but on the other hand I have
+ 
+
+1243
+00:21:18,540 --> 00:21:20,930
+complicated but on the other hand I have
+shown you a little bit extra than I
+
+1244
+00:21:20,930 --> 00:21:20,940
+shown you a little bit extra than I
+ 
+
+1245
+00:21:20,940 --> 00:21:23,420
+shown you a little bit extra than I
+think most tutorial on if statements
+
+1246
+00:21:23,420 --> 00:21:23,430
+think most tutorial on if statements
+ 
+
+1247
+00:21:23,430 --> 00:21:25,310
+think most tutorial on if statements
+probably would have will be using if
+
+1248
+00:21:25,310 --> 00:21:25,320
+probably would have will be using if
+ 
+
+1249
+00:21:25,320 --> 00:21:27,440
+probably would have will be using if
+statements everywhere in our code this
+
+1250
+00:21:27,440 --> 00:21:27,450
+statements everywhere in our code this
+ 
+
+1251
+00:21:27,450 --> 00:21:30,110
+statements everywhere in our code this
+they're too real there's two real parts
+
+1252
+00:21:30,110 --> 00:21:30,120
+they're too real there's two real parts
+ 
+
+1253
+00:21:30,120 --> 00:21:31,370
+they're too real there's two real parts
+to programming there's kind of
+
+1254
+00:21:31,370 --> 00:21:31,380
+to programming there's kind of
+ 
+
+1255
+00:21:31,380 --> 00:21:33,020
+to programming there's kind of
+mathematical programming and logical
+
+1256
+00:21:33,020 --> 00:21:33,030
+mathematical programming and logical
+ 
+
+1257
+00:21:33,030 --> 00:21:34,610
+mathematical programming and logical
+program unless I like to divide
+
+1258
+00:21:34,610 --> 00:21:34,620
+program unless I like to divide
+ 
+
+1259
+00:21:34,620 --> 00:21:36,770
+program unless I like to divide
+programming into those kind of two to
+
+1260
+00:21:36,770 --> 00:21:36,780
+programming into those kind of two to
+ 
+
+1261
+00:21:36,780 --> 00:21:39,950
+programming into those kind of two to
+two terms right there's like programming
+
+1262
+00:21:39,950 --> 00:21:39,960
+two terms right there's like programming
+ 
+
+1263
+00:21:39,960 --> 00:21:42,140
+two terms right there's like programming
+where you can actually just do like
+
+1264
+00:21:42,140 --> 00:21:42,150
+where you can actually just do like
+ 
+
+1265
+00:21:42,150 --> 00:21:43,880
+where you can actually just do like
+mathematical operations and that does
+
+1266
+00:21:43,880 --> 00:21:43,890
+mathematical operations and that does
+ 
+
+1267
+00:21:43,890 --> 00:21:46,220
+mathematical operations and that does
+make up a lot in fact most fast code is
+
+1268
+00:21:46,220 --> 00:21:46,230
+make up a lot in fact most fast code is
+ 
+
+1269
+00:21:46,230 --> 00:21:48,170
+make up a lot in fact most fast code is
+actually written by doing like
+
+1270
+00:21:48,170 --> 00:21:48,180
+actually written by doing like
+ 
+
+1271
+00:21:48,180 --> 00:21:49,640
+actually written by doing like
+mathematical operations essentially
+
+1272
+00:21:49,640 --> 00:21:49,650
+mathematical operations essentially
+ 
+
+1273
+00:21:49,650 --> 00:21:51,890
+mathematical operations essentially
+instead of the second part of
+
+1274
+00:21:51,890 --> 00:21:51,900
+instead of the second part of
+ 
+
+1275
+00:21:51,900 --> 00:21:53,120
+instead of the second part of
+programming on the second kind of
+
+1276
+00:21:53,120 --> 00:21:53,130
+programming on the second kind of
+ 
+
+1277
+00:21:53,130 --> 00:21:54,440
+programming on the second kind of
+section of programming that I call
+
+1278
+00:21:54,440 --> 00:21:54,450
+section of programming that I call
+ 
+
+1279
+00:21:54,450 --> 00:21:56,060
+section of programming that I call
+logical programming which is all about
+
+1280
+00:21:56,060 --> 00:21:56,070
+logical programming which is all about
+ 
+
+1281
+00:21:56,070 --> 00:21:58,670
+logical programming which is all about
+logic right so hey if this is this then
+
+1282
+00:21:58,670 --> 00:21:58,680
+logic right so hey if this is this then
+ 
+
+1283
+00:21:58,680 --> 00:22:00,840
+logic right so hey if this is this then
+do that right if there's been that
+
+1284
+00:22:00,840 --> 00:22:00,850
+do that right if there's been that
+ 
+
+1285
+00:22:00,850 --> 00:22:02,600
+do that right if there's been that
+that's kind of a little bit more boring
+
+1286
+00:22:02,600 --> 00:22:02,610
+that's kind of a little bit more boring
+ 
+
+1287
+00:22:02,610 --> 00:22:05,399
+that's kind of a little bit more boring
+I'm not saying that I'm not saying that
+
+1288
+00:22:05,399 --> 00:22:05,409
+I'm not saying that I'm not saying that
+ 
+
+1289
+00:22:05,409 --> 00:22:06,629
+I'm not saying that I'm not saying that
+it doesn't have a place of course it
+
+1290
+00:22:06,629 --> 00:22:06,639
+it doesn't have a place of course it
+ 
+
+1291
+00:22:06,639 --> 00:22:09,060
+it doesn't have a place of course it
+does it's you can't write there is no
+
+1292
+00:22:09,060 --> 00:22:09,070
+does it's you can't write there is no
+ 
+
+1293
+00:22:09,070 --> 00:22:11,190
+does it's you can't write there is no
+game written there is no there is no
+
+1294
+00:22:11,190 --> 00:22:11,200
+game written there is no there is no
+ 
+
+1295
+00:22:11,200 --> 00:22:12,990
+game written there is no there is no
+real application or game written without
+
+1296
+00:22:12,990 --> 00:22:13,000
+real application or game written without
+ 
+
+1297
+00:22:13,000 --> 00:22:14,370
+real application or game written without
+using if statements or anything like
+
+1298
+00:22:14,370 --> 00:22:14,380
+using if statements or anything like
+ 
+
+1299
+00:22:14,380 --> 00:22:16,590
+using if statements or anything like
+that I'm just saying that in the future
+
+1300
+00:22:16,590 --> 00:22:16,600
+that I'm just saying that in the future
+ 
+
+1301
+00:22:16,600 --> 00:22:18,149
+that I'm just saying that in the future
+as we kind of learn to write better code
+
+1302
+00:22:18,149 --> 00:22:18,159
+as we kind of learn to write better code
+ 
+
+1303
+00:22:18,159 --> 00:22:20,789
+as we kind of learn to write better code
+you'll see that a lot of the cases where
+
+1304
+00:22:20,789 --> 00:22:20,799
+you'll see that a lot of the cases where
+ 
+
+1305
+00:22:20,799 --> 00:22:22,799
+you'll see that a lot of the cases where
+you might have used an if statement I
+
+1306
+00:22:22,799 --> 00:22:22,809
+you might have used an if statement I
+ 
+
+1307
+00:22:22,809 --> 00:22:25,169
+you might have used an if statement I
+would not write I would try and somehow
+
+1308
+00:22:25,169 --> 00:22:25,179
+would not write I would try and somehow
+ 
+
+1309
+00:22:25,179 --> 00:22:27,600
+would not write I would try and somehow
+make some kind of mathematical like
+
+1310
+00:22:27,600 --> 00:22:27,610
+make some kind of mathematical like
+ 
+
+1311
+00:22:27,610 --> 00:22:29,129
+make some kind of mathematical like
+calculation out of it instead of
+
+1312
+00:22:29,129 --> 00:22:29,139
+calculation out of it instead of
+ 
+
+1313
+00:22:29,139 --> 00:22:31,379
+calculation out of it instead of
+actually performing like a comparison
+
+1314
+00:22:31,379 --> 00:22:31,389
+actually performing like a comparison
+ 
+
+1315
+00:22:31,389 --> 00:22:33,210
+actually performing like a comparison
+and a branch based off that because by
+
+1316
+00:22:33,210 --> 00:22:33,220
+and a branch based off that because by
+ 
+
+1317
+00:22:33,220 --> 00:22:34,649
+and a branch based off that because by
+doing so you can actually apply your
+
+1318
+00:22:34,649 --> 00:22:34,659
+doing so you can actually apply your
+ 
+
+1319
+00:22:34,659 --> 00:22:36,389
+doing so you can actually apply your
+program down quite a bit
+
+1320
+00:22:36,389 --> 00:22:36,399
+program down quite a bit
+ 
+
+1321
+00:22:36,399 --> 00:22:38,399
+program down quite a bit
+and if quote-unquote consider kind of
+
+1322
+00:22:38,399 --> 00:22:38,409
+and if quote-unquote consider kind of
+ 
+
+1323
+00:22:38,409 --> 00:22:40,980
+and if quote-unquote consider kind of
+work code it might make more sense but
+
+1324
+00:22:40,980 --> 00:22:40,990
+work code it might make more sense but
+ 
+
+1325
+00:22:40,990 --> 00:22:42,360
+work code it might make more sense but
+anyway I'm just going around I'm just
+
+1326
+00:22:42,360 --> 00:22:42,370
+anyway I'm just going around I'm just
+ 
+
+1327
+00:22:42,370 --> 00:22:43,440
+anyway I'm just going around I'm just
+going to keep rambling on I'm going to
+
+1328
+00:22:43,440 --> 00:22:43,450
+going to keep rambling on I'm going to
+ 
+
+1329
+00:22:43,450 --> 00:22:44,669
+going to keep rambling on I'm going to
+going to stop right here do you have
+
+1330
+00:22:44,669 --> 00:22:44,679
+going to stop right here do you have
+ 
+
+1331
+00:22:44,679 --> 00:22:45,869
+going to stop right here do you have
+enjoy this video please hit that like
+
+1332
+00:22:45,869 --> 00:22:45,879
+enjoy this video please hit that like
+ 
+
+1333
+00:22:45,879 --> 00:22:47,460
+enjoy this video please hit that like
+button you can follow me on Twitter and
+
+1334
+00:22:47,460 --> 00:22:47,470
+button you can follow me on Twitter and
+ 
+
+1335
+00:22:47,470 --> 00:22:50,970
+button you can follow me on Twitter and
+Instagram just to do so and if you
+
+1336
+00:22:50,970 --> 00:22:50,980
+Instagram just to do so and if you
+ 
+
+1337
+00:22:50,980 --> 00:22:52,440
+Instagram just to do so and if you
+really like this series you can support
+
+1338
+00:22:52,440 --> 00:22:52,450
+really like this series you can support
+ 
+
+1339
+00:22:52,450 --> 00:22:54,509
+really like this series you can support
+me on patreon link is in the description
+
+1340
+00:22:54,509 --> 00:22:54,519
+me on patreon link is in the description
+ 
+
+1341
+00:22:54,519 --> 00:22:57,480
+me on patreon link is in the description
+patreon.com 4/2 Cherno you can support
+
+1342
+00:22:57,480 --> 00:22:57,490
+patreon.com 4/2 Cherno you can support
+ 
+
+1343
+00:22:57,490 --> 00:22:59,190
+patreon.com 4/2 Cherno you can support
+the creation of more episodes of this
+
+1344
+00:22:59,190 --> 00:22:59,200
+the creation of more episodes of this
+ 
+
+1345
+00:22:59,200 --> 00:23:01,379
+the creation of more episodes of this
+series as well as the early drafts and
+
+1346
+00:23:01,379 --> 00:23:01,389
+series as well as the early drafts and
+ 
+
+1347
+00:23:01,389 --> 00:23:02,850
+series as well as the early drafts and
+even kind of there's like a nice little
+
+1348
+00:23:02,850 --> 00:23:02,860
+even kind of there's like a nice little
+ 
+
+1349
+00:23:02,860 --> 00:23:04,529
+even kind of there's like a nice little
+group chat that we have going on flat
+
+1350
+00:23:04,529 --> 00:23:04,539
+group chat that we have going on flat
+ 
+
+1351
+00:23:04,539 --> 00:23:06,119
+group chat that we have going on flat
+where we talk about stuff life in
+
+1352
+00:23:06,119 --> 00:23:06,129
+where we talk about stuff life in
+ 
+
+1353
+00:23:06,129 --> 00:23:08,430
+where we talk about stuff life in
+general as well but we try and talk
+
+1354
+00:23:08,430 --> 00:23:08,440
+general as well but we try and talk
+ 
+
+1355
+00:23:08,440 --> 00:23:09,749
+general as well but we try and talk
+about what actually goes into these
+
+1356
+00:23:09,749 --> 00:23:09,759
+about what actually goes into these
+ 
+
+1357
+00:23:09,759 --> 00:23:13,200
+about what actually goes into these
+episodes and and basically you guys use
+
+1358
+00:23:13,200 --> 00:23:13,210
+episodes and and basically you guys use
+ 
+
+1359
+00:23:13,210 --> 00:23:14,970
+episodes and and basically you guys use
+supporters help me plan these episodes
+
+1360
+00:23:14,970 --> 00:23:14,980
+supporters help me plan these episodes
+ 
+
+1361
+00:23:14,980 --> 00:23:17,369
+supporters help me plan these episodes
+and make them as good as they are so if
+
+1362
+00:23:17,369 --> 00:23:17,379
+and make them as good as they are so if
+ 
+
+1363
+00:23:17,379 --> 00:23:18,749
+and make them as good as they are so if
+you want to be part of that you can jump
+
+1364
+00:23:18,749 --> 00:23:18,759
+you want to be part of that you can jump
+ 
+
+1365
+00:23:18,759 --> 00:23:21,480
+you want to be part of that you can jump
+in by going patreon.com 4-2 Cherno alpha
+
+1366
+00:23:21,480 --> 00:23:21,490
+in by going patreon.com 4-2 Cherno alpha
+ 
+
+1367
+00:23:21,490 --> 00:23:22,830
+in by going patreon.com 4-2 Cherno alpha
+Matt guys I hope you enjoy this episode
+
+1368
+00:23:22,830 --> 00:23:22,840
+Matt guys I hope you enjoy this episode
+ 
+
+1369
+00:23:22,840 --> 00:23:28,210
+Matt guys I hope you enjoy this episode
+I'll see you very soon goodbye
+
+1370
+00:23:28,210 --> 00:23:28,220
+
+ 
+
+1371
+00:23:28,220 --> 00:23:33,940
+
+[Music]
+
+1372
+00:23:33,940 --> 00:23:33,950
+
+ 
+
+1373
+00:23:33,950 --> 00:23:41,309
+
+[Music]
+
